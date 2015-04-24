@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.youloft.calendar" pkg="com.youloft.calendar">
+    <Method signature="com.youloft.util.Strings.a(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)V">
+        <Remove-Method index="0" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="1" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="0" signature="java.io.File.getParentFile()Ljava/io/File;"/>
+        <Remove-Method index="1" signature="java.io.File.getParentFile()Ljava/io/File;"/>
+        <Remove-Method index="0" signature="java.io.File.mkdirs()Z"/>
+    </Method>
+</Apk>

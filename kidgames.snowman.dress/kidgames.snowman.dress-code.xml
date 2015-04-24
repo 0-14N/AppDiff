@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="kidgames.snowman.dress" pkg="kidgames.snowman.dress">
+    <Method signature="com.millennialmedia.google.gson.reflect.TypeToken.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="kidgames.snowman.dress.Start.onResume()V">
+        <Remove-Method index="0" signature="com.mopub.mobileads.MoPubInterstitial.isReady()Z"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MoPubInterstitial.show()Z"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MoPubInterstitial.load()V"/>
+        <Remove-Method index="0" signature="java.lang.System.currentTimeMillis()J"/>
+        <Remove-Method index="1" signature="java.lang.System.currentTimeMillis()J"/>
+        <Remove-Method index="0" signature="java.lang.Long.valueOf(J)Ljava/lang/Long;"/>
+        <Remove-Method index="1" signature="java.lang.Long.valueOf(J)Ljava/lang/Long;"/>
+        <Remove-Method index="0" signature="java.lang.Long.longValue()J"/>
+        <Remove-Method index="1" signature="java.lang.Long.longValue()J"/>
+    </Method>
+    <Method signature="com.google.ads.util.i$c.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.google.ads.util.i$a.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.util.Formatter$FormatSpecifier.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.Object.getClass()Ljava/lang/Class;"/>
+        <Remove-Method index="0" signature="java.lang.Class.getSimpleName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="kidgames.snowman.dress.Start.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.appbrain.AppBrain.init(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.ironsource.mobilcore.MobileCore.init(Landroid/app/Activity;Ljava/lang/String;Lcom/ironsource/mobilcore/MobileCore$LOG_TYPE;)V"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MoPubInterstitial.&lt;init&gt;(Landroid/app/Activity;Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="com.mopub.mobileads.MoPubInterstitial.&lt;init&gt;(Landroid/app/Activity;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="kidgames.snowman.dress.Start.showInterstitialAd()V"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.bind.TypeAdapters$29.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.lang.StackTraceElement.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="com.millennialmedia.google.gson.internal.$Gson$Types.typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.text.AttributedCharacterIterator$Attribute.toString()Ljava/lang/String;"/>
+    <Method signature="com.google.ads.AdSize.toString()Ljava/lang/String;"/>
+    <Method signature="com.millennialmedia.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.toString()Ljava/lang/String;"/>
+    <Method signature="javax.crypto.SunJCE_f.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.lang.Enum.compareTo(Ljava/lang/Object;)I">
+        <Remove-Method index="0" signature="com.millennialmedia.android.AdCacheThreadPool$AdCacheTask.compareTo(Lcom/millennialmedia/android/AdCacheThreadPool$AdCacheTask;)I"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.bind.TypeAdapters$28.toString()Ljava/lang/String;"/>
+    <Method signature="com.millennialmedia.google.gson.internal.bind.TypeAdapters$30.toString()Ljava/lang/String;"/>
+    <Method signature="com.millennialmedia.android.AdCacheThreadPool$AdCacheTask.compareTo(Ljava/lang/Object;)I">
+        <Add-Method index="0" signature="com.millennialmedia.android.AdCacheThreadPool$AdCacheTask.compareTo(Lcom/millennialmedia/android/AdCacheThreadPool$AdCacheTask;)I"/>
+    </Method>
+    <Method signature="com.google.ads.util.i.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Object.getClass()Ljava/lang/Class;"/>
+        <Add-Method index="0" signature="java.lang.Class.getSimpleName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.$Gson$Types$GenericArrayTypeImpl.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.millennialmedia.google.gson.internal.$Gson$Types.typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.$Gson$Types$WildcardTypeImpl.toString()Ljava/lang/String;"/>
+    <Method signature="java.util.Formatter$FixedString.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.ads.util.i$a.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.sec.android.ad.AdException.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+</Apk>

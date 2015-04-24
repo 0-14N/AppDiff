@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.ming.footballtvguide" pkg="com.ming.footballtvguide">
+    <Method signature="com.ming.footballtvguide.WebPage.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.ming.footballtvguide.WebPage.addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adview.AdsMogoLayout.&lt;init&gt;(Landroid/app/Activity;Ljava/lang/String;Z)V"/>
+        <Remove-Method index="0" signature="android.widget.FrameLayout$LayoutParams.&lt;init&gt;(II)V"/>
+    </Method>
+</Apk>

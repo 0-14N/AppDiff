@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.ARMANgoplus.ARStudyWords" pkg="com.ARMANgoplus.ARStudyWords">
+    <Method signature="java.lang.Thread.run()V"/>
+    <Method signature="java.lang.Thread.start()V"/>
+    <Method signature="com.ARMANgoplus.ARStudyWords.activity.DownloadInfoActivity$MyClickListener.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="com.ARMANgoplus.ARStudyWords.activity.DownloadInfoActivity.onCreate(Landroid/os/Bundle;)V"/>
+    <Method signature="com.ARMANgoplus.ARStudyWords.activity.LaunchActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="net.youmi.android.appoffers.YoumiOffersManager.init(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+</Apk>

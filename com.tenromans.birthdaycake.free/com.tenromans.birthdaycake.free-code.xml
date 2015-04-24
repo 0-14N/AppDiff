@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.tenromans.birthdaycake.free" pkg="com.tenromans.birthdaycake.free">
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/RepeatPreference$DaysOfWeek" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tenromans/birthdaycake/birthdays/BirthdayChecker$SampleRequestListener" super-signatures="Lcom/facebook/android/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$MonthValueParser" super-signatures="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$SimpleValueParser#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/StringUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/StaticDay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/HttpUtils$MD5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/HttpUtils$HttpUtilsResponse" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/RssTaskPreferenceActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/HeaderPreference" super-signatures="Landroid/preference/Preference#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/SchedulerConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/CompatibilityAPI3" super-signatures="Lcom/buzzbox/mob/android/scheduler/Compatibility#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/FastByteArrayOutputStream" super-signatures="Ljava/io/OutputStream#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ScheduledService" super-signatures="Lcom/buzzbox/mob/android/scheduler/WakefulIntentService#Landroid/app/IntentService#Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/HttpUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/DayOfMonthValueMatcher" super-signatures="Lcom/buzzbox/mob/android/scheduler/cron/IntArrayValueMatcher#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/SchedulerPreferenceActivity$SimpleTime" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/NotificationClickActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/DiffDayCalendar" super-signatures="Ljava/util/GregorianCalendar#Ljava/util/Calendar#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ScheduledTask" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/GenericRssParser$SingleResult" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/AnalyticsManager$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/Task" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/HttpUtils$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/SchedulerPreferenceActivity$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/NetworkChangeReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/SchedulerManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/AlarmReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tenromans/birthdaycake/birthdays/BirthdayTask" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/Logger" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/Predictor" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/GenericRssParser$Result" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/flurry/android/Flog" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/AnalyticsManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/Compatibility" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/task/RssReaderTask" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$HourValueParser" super-signatures="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$SimpleValueParser#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/SchedulerPreferenceActivity$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/Logger$Entry" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tenromans/birthdaycake/Deliver$LoginDialogListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/SchedulerPreferenceActivity$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$ValueParser" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/RepeatPreference" super-signatures="Landroid/preference/ListPreference#Landroid/preference/DialogPreference#Landroid/preference/Preference#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/SchedulerPreferenceActivity$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/TaskResult" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$DayOfWeekValueParser" super-signatures="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$SimpleValueParser#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/AlwaysTrueValueMatcher" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$DayOfMonthValueParser" super-signatures="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$SimpleValueParser#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tenromans/birthdaycake/Log" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/SchedulerPreferenceActivity$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/CompatibilityAPI7" super-signatures="Lcom/buzzbox/mob/android/scheduler/Compatibility#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/task/test" super-signatures="Lcom/buzzbox/mob/android/scheduler/task/RssReaderTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$SimpleValueParser" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/analytics/AnalyticsManager$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/TaskResult$RetryPolicy" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/HeaderPreference$1$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tenromans/birthdaycake/Deliver$SessionListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/MetaDataUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/TimeUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tenromans/birthdaycake/birthdays/BirthdayTask$SampleRequestListener" super-signatures="Lcom/facebook/android/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/HeaderPreference$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/task/package-info" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tenromans/birthdaycake/birthdays/BirthdayAlarmSetter" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/BootReceiverSchedulerManager" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/IntArrayValueMatcher" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/ValueMatcher" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/TimeChangeReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/SchedulerPreferenceActivity" super-signatures="Landroid/preference/PreferenceActivity#Landroid/app/ListActivity#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/SchedulerPreferenceActivity$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/RepeatPreference$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/NotificationMessage" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/InvalidPatternException" super-signatures="Ljava/lang/RuntimeException#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$MinuteValueParser" super-signatures="Lcom/buzzbox/mob/android/scheduler/cron/SchedulingPattern$SimpleValueParser#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/WakefulIntentService" super-signatures="Landroid/app/IntentService#Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/SchedulerLogActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/GenericRssParser" super-signatures="Lorg/xml/sax/helpers/DefaultHandler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/SchedulerManager$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/buzzbox/mob/android/scheduler/ui/RssTaskPreferenceActivity$1" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.tenromans.birthdaycake.BirthdayCakeActivity.showAd(I)V">
+        <Replace-Method original-index="0" original-signature="com.tenromans.util.Log.d(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.tenromans.birthdaycake.Log.d(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.setId(I)V"/>
+    </Method>
+    <Method signature="com.tenromans.birthdaycake.micdroid.SimpleRecorder.start()V">
+        <Replace-Method original-index="0" original-signature="com.tenromans.util.Log.d(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.tenromans.birthdaycake.Log.d(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.flurry.android.FlurryAgent.onStartSession(Landroid/content/Context;Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.flurry.android.ah.b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" replace-index="0" replace-signature="com.flurry.android.Flog.b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I"/>
+        <Replace-Method original-index="0" original-signature="com.flurry.android.FlurryAgent.b(Landroid/content/Context;Ljava/lang/String;)V" replace-index="0" replace-signature="com.flurry.android.FlurryAgent.a(Landroid/content/Context;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.tenromans.birthdaycake.birthdays.BirthdayChecker.&lt;init&gt;()V">
+        <Remove-Method index="0" signature="java.util.Date.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.flurry.android.b.run()V">
+        <Add-Method index="0" signature="com.flurry.android.FlurryAgent.a()V"/>
+        <Remove-Method index="0" signature="android.os.Handler.postDelayed(Ljava/lang/Runnable;J)Z"/>
+        <Remove-Method index="0" signature="com.flurry.android.u.d()V"/>
+        <Remove-Method index="0" signature="com.flurry.android.FlurryAgent.b(Lcom/flurry/android/FlurryAgent;)V"/>
+        <Remove-Method index="0" signature="com.flurry.android.FlurryAgent.c(Lcom/flurry/android/FlurryAgent;)V"/>
+        <Remove-Method index="0" signature="com.flurry.android.FlurryAgent.d(Lcom/flurry/android/FlurryAgent;)Landroid/os/Handler;"/>
+        <Remove-Method index="0" signature="com.flurry.android.l.&lt;init&gt;(Lcom/flurry/android/b;)V"/>
+        <Remove-Method index="0" signature="com.flurry.android.FlurryAgent.g()J"/>
+        <Remove-Method index="0" signature="com.flurry.android.FlurryAgent.h()Z"/>
+        <Remove-Method index="0" signature="com.flurry.android.FlurryAgent.e(Lcom/flurry/android/FlurryAgent;)Lcom/flurry/android/u;"/>
+    </Method>
+    <Method signature="com.tenromans.birthdaycake.birthdays.BirthdayService.onStart(Landroid/content/Intent;I)V">
+        <Replace-Method original-index="0" original-signature="com.tenromans.util.Log.d(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.tenromans.birthdaycake.Log.d(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.flurry.android.FlurryAgent.onEndSession(Landroid/content/Context;)V">
+        <Replace-Method original-index="0" original-signature="com.flurry.android.ah.b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" replace-index="0" replace-signature="com.flurry.android.Flog.b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I"/>
+        <Replace-Method original-index="0" original-signature="com.flurry.android.FlurryAgent.a(Landroid/content/Context;Z)V" replace-index="0" replace-signature="com.flurry.android.FlurryAgent.b(Landroid/content/Context;Z)V"/>
+    </Method>
+    <Method signature="com.tenromans.birthdaycake.BirthdayCakeActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.tenromans.birthdaycake.Log.setDebug(Z)V"/>
+        <Add-Method index="0" signature="com.tenromans.birthdaycake.Log.setDebug(Z)V"/>
+        <Remove-Method index="0" signature="com.tenromans.util.Log.d(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.tenromans.util.Log.setDebug(Z)V"/>
+        <Remove-Method index="0" signature="com.greystripe.android.sdk.GSSDK.initialize(Landroid/content/Context;Ljava/lang/String;)Lcom/greystripe/android/sdk/GSSDK;"/>
+        <Remove-Method index="0" signature="com.tenromans.util.Log.d(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.tenromans.util.Log.setDebug(Z)V"/>
+        <Remove-Method index="0" signature="com.greystripe.android.sdk.GSSDK.initialize(Landroid/content/Context;Ljava/lang/String;)Lcom/greystripe/android/sdk/GSSDK;"/>
+    </Method>
+    <Method signature="com.tenromans.birthdaycake.BirthdayCake.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.tenromans.birthdaycake.BirthdayCake.showAd()V"/>
+        <Add-Method index="0" signature="com.tenromans.birthdaycake.BirthdayCake.initializeBuzzBox()V"/>
+        <Add-Method index="0" signature="com.tenromans.birthdaycake.UpdateMessage.getVersionName(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.tenromans.birthdaycake.UpdateMessage.show(Landroid/app/Activity;Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="com.tenromans.birthdaycake.BirthdayCake.initializeDebugFacebookButton()V"/>
+        <Remove-Method index="0" signature="com.tenromans.birthdaycake.BirthdayCake.showDelayedDialogs(Lcom/tenromans/birthdaycake/BirthdayCake;)V"/>
+    </Method>
+    <Method signature="com.tenromans.birthdaycake.Flavor.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.tenromans.birthdaycake.Flavor.getApplication()Landroid/app/Application;"/>
+        <Add-Method index="0" signature="com.tenromans.birthdaycake.BirthdayCakeApplication.getGssdk()Lcom/greystripe/android/sdk/GSSDK;"/>
+        <Add-Method index="0" signature="com.greystripe.android.sdk.GSSDK.displayAd(Landroid/app/Activity;)Z"/>
+    </Method>
+    <Method signature="com.flurry.android.FlurryAgent.onEvent(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.flurry.android.FlurryAgent.a(Ljava/lang/String;Ljava/util/Map;Z)V" replace-index="0" replace-signature="com.flurry.android.FlurryAgent.a(Ljava/lang/String;Ljava/util/Map;)V"/>
+        <Replace-Method original-index="0" original-signature="com.flurry.android.ah.b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" replace-index="0" replace-signature="com.flurry.android.Flog.b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I"/>
+    </Method>
+    <Method signature="com.tenromans.birthdaycake.BirthdayCake.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="com.tenromans.birthdaycake.BirthdayCake.loginToFacebook()V"/>
+    </Method>
+    <Method signature="com.flurry.android.FlurryAgent.onPageView()V">
+        <Replace-Method original-index="0" original-signature="com.flurry.android.ah.b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" replace-index="0" replace-signature="com.flurry.android.Flog.b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I"/>
+        <Replace-Method original-index="0" original-signature="com.flurry.android.FlurryAgent.j()V" replace-index="0" replace-signature="com.flurry.android.FlurryAgent.d()V"/>
+    </Method>
+    <Method signature="com.tenromans.birthdaycake.Deliver.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.greystripe.android.sdk.GSSDK.displayAd(Landroid/app/Activity;)Z"/>
+    </Method>
+    <Method signature="com.tenromans.birthdaycake.BirthdayCakeActivity$1.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.tenromans.util.Log.d(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.tenromans.birthdaycake.Log.d(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+</Apk>

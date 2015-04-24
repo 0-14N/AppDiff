@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.tida.android.activity1" pkg="com.tida.android.activity1">
+    <Method signature="com.tida.android.activity.SubjectActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.tida.android.activity.SubjectActivity.getIntent()Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.getExtras()Landroid/os/Bundle;"/>
+        <Add-Method index="0" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+    </Method>
+    <Method signature="com.tida.android.activity.SubjectActivity3.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.tida.android.activity.SubjectActivity3.getIntent()Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.getExtras()Landroid/os/Bundle;"/>
+        <Add-Method index="0" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+    </Method>
+    <Method signature="com.tida.android.activity.MainActivity$MyAdapter$1.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="1" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="2" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="com.tida.android.activity.SubjectActivity2.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.tida.android.activity.SubjectActivity2.getIntent()Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.getExtras()Landroid/os/Bundle;"/>
+        <Add-Method index="0" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+    </Method>
+</Apk>

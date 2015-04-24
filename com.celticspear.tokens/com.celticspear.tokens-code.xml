@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.celticspear.tokens" pkg="com.celticspear.tokens">
+    <Add-Class signature="Lnet/crazymedia/iad/d/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/t" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/p" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/l" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/d" super-signatures="Landroid/graphics/drawable/Drawable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/Workspace" super-signatures="Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/KuguoAdsManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/h" super-signatures="Lcom/umeng/common/net/l#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/k" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/w" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/ReportPolicy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPush" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/h" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/am" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/i" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/f$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/h$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/p" super-signatures="Lnet/crazymedia/iad/b/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/k" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/g" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/b" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/a" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/ImageGallery" super-signatures="Landroid/widget/Gallery#Landroid/widget/AbsSpinner#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gamegod/touydig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/o" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/v" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a/c" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ad" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/JavaScriptCallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/h" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i$b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/c" super-signatures="Lcom/umeng/common/b/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/c" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/a" super-signatures="Lcom/kuguo/b/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ac" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/f" super-signatures="Ljava/util/concurrent/ConcurrentLinkedQueue#Ljava/util/AbstractQueue#Ljava/util/AbstractCollection#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/f$b" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ai" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ah" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/t" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/celticspear/tokens/tutorial/AbstractTutorial$3$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/l" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/Gender" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent$a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aj" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/y" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/m" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/r" super-signatures="Lnet/crazymedia/iad/b/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i$c" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/g" super-signatures="Lcom/umeng/common/net/k#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/e" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a$b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c$a" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/j" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/i" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/Log" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/f" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/an" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/m" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/f" super-signatures="Lcom/umeng/common/net/j#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/celticspear/tokens/tutorial/AbstractTutorial$1$1" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/u" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/UmengOnlineConfigureListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/s" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/BoutiqueActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/g" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/s" super-signatures="Lnet/crazymedia/iad/b/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/al" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/FoldView" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/n" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/celticspear/tokens/MapScreen$2$1" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.celticspear.tokens.ScoresScreen.&lt;init&gt;(Lcom/celticspear/tokens/TokensActivity;Lcom/celticspear/tokens/AbstractScreen;Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;)V">
+        <Replace-Method original-index="0" original-signature="com.celticspear.tokens.ScoresScreen.setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/IEntity;[Ljava/lang/String;)V" replace-index="0" replace-signature="com.celticspear.tokens.ScoresScreen.setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;[Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.celticspear.tokens.ScoresScreen.centerX(Lorg/andengine/entity/shape/RectangularShape;)V" replace-index="0" replace-signature="com.celticspear.tokens.ScoresScreen.center(Lorg/andengine/entity/shape/RectangularShape;)V"/>
+        <Replace-Method original-index="1" original-signature="com.celticspear.tokens.ScoresScreen.centerX(Lorg/andengine/entity/shape/RectangularShape;)V" replace-index="1" replace-signature="com.celticspear.tokens.ScoresScreen.center(Lorg/andengine/entity/shape/RectangularShape;)V"/>
+        <Replace-Method original-index="2" original-signature="com.celticspear.tokens.ScoresScreen.centerX(Lorg/andengine/entity/shape/RectangularShape;)V" replace-index="2" replace-signature="com.celticspear.tokens.ScoresScreen.center(Lorg/andengine/entity/shape/RectangularShape;)V"/>
+        <Remove-Method index="0" signature="com.celticspear.tokens.ScoresScreen.centerY(Lorg/andengine/entity/shape/RectangularShape;F)V"/>
+        <Remove-Method index="1" signature="com.celticspear.tokens.ScoresScreen.centerY(Lorg/andengine/entity/shape/RectangularShape;F)V"/>
+    </Method>
+    <Method signature="com.celticspear.tokens.tutorial.AbstractTutorial.makeSequenceOfTwoAnimations(Lorg/andengine/entity/sprite/AnimatedSprite;[JLorg/andengine/entity/sprite/AnimatedSprite;[JZ)V">
+        <Replace-Method original-index="0" original-signature="com.celticspear.tokens.tutorial.AbstractTutorial$3.&lt;init&gt;(Lcom/celticspear/tokens/tutorial/AbstractTutorial;Lorg/andengine/entity/sprite/AnimatedSprite;Lorg/andengine/entity/sprite/AnimatedSprite;[JZ)V" replace-index="0" replace-signature="com.celticspear.tokens.tutorial.AbstractTutorial$2.&lt;init&gt;(Lcom/celticspear/tokens/tutorial/AbstractTutorial;Lorg/andengine/entity/sprite/AnimatedSprite;Lorg/andengine/entity/sprite/AnimatedSprite;[JZ)V"/>
+    </Method>
+    <Method signature="com.celticspear.tokens.PuzzleGameScreen.&lt;init&gt;(Lcom/celticspear/tokens/TokensActivity;Lcom/celticspear/tokens/AbstractScreen;)V">
+        <Replace-Method original-index="0" original-signature="com.celticspear.tokens.PuzzleGameScreen.setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/IEntity;[Ljava/lang/String;[I)V" replace-index="0" replace-signature="com.celticspear.tokens.PuzzleGameScreen.setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;[Ljava/lang/String;[I)V"/>
+    </Method>
+    <Method signature="com.celticspear.tokens.ArcadeGameScreen$8.run()V">
+        <Replace-Method original-index="0" original-signature="com.celticspear.tokens.ArcadeGameScreen.centerX(Lorg/andengine/entity/shape/RectangularShape;)V" replace-index="0" replace-signature="com.celticspear.tokens.ArcadeGameScreen.center(Lorg/andengine/entity/shape/RectangularShape;)V"/>
+    </Method>
+    <Method signature="com.celticspear.tokens.ArcadeGameScreen.&lt;init&gt;(Lcom/celticspear/tokens/TokensActivity;Lcom/celticspear/tokens/AbstractScreen;Lcom/celticspear/tokens/bonus/BonusNest$BonusType;Lcom/celticspear/tokens/bonus/BonusNest$BonusType;IILcom/celticspear/tokens/MapScreen$Level;)V">
+        <Replace-Method original-index="0" original-signature="com.celticspear.tokens.ArcadeGameScreen.setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/IEntity;[Ljava/lang/String;[I)V" replace-index="0" replace-signature="com.celticspear.tokens.ArcadeGameScreen.setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;[Ljava/lang/String;[I)V"/>
+        <Replace-Method original-index="0" original-signature="com.celticspear.tokens.ArcadeGameScreen.centerX(Lorg/andengine/entity/shape/RectangularShape;)V" replace-index="0" replace-signature="com.celticspear.tokens.ArcadeGameScreen.center(Lorg/andengine/entity/shape/RectangularShape;)V"/>
+    </Method>
+    <Method signature="com.celticspear.tokens.tutorial.AbstractTutorial.setTextToBubble(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.getWidth()F" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.getWidth()F"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.getHeight()F" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.getHeight()F"/>
+    </Method>
+    <Method signature="org.andengine.ui.activity.BaseGameActivity.onDestroy()V">
+        <Add-Method index="0" signature="com.gamegod.touydig.destroy(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.celticspear.tokens.MapScreen.&lt;init&gt;(Lcom/celticspear/tokens/TokensActivity;Lcom/celticspear/tokens/AbstractScreen;Z)V">
+        <Replace-Method original-index="1" original-signature="com.celticspear.tokens.MapScreen.buildPage(Lcom/celticspear/tokens/TokensActivity;ZII)Lorg/andengine/entity/IEntity;" replace-index="1" replace-signature="org.andengine.entity.scene.Scene.registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V"/>
+        <Replace-Method original-index="2" original-signature="com.celticspear.tokens.MapScreen.buildPage(Lcom/celticspear/tokens/TokensActivity;ZII)Lorg/andengine/entity/IEntity;" replace-index="1" replace-signature="org.andengine.entity.scene.Scene.registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V"/>
+        <Replace-Method original-index="1" original-signature="com.celticspear.tokens.MapScreen.buildPage(Lcom/celticspear/tokens/TokensActivity;ZII)Lorg/andengine/entity/IEntity;" replace-index="0" replace-signature="com.celticspear.tokens.MapScreen$Level.getArtefact()Lcom/celticspear/tokens/artefact/Artefact;"/>
+        <Replace-Method original-index="2" original-signature="com.celticspear.tokens.MapScreen.buildPage(Lcom/celticspear/tokens/TokensActivity;ZII)Lorg/andengine/entity/IEntity;" replace-index="0" replace-signature="com.celticspear.tokens.MapScreen$Level.getArtefact()Lcom/celticspear/tokens/artefact/Artefact;"/>
+        <Replace-Method original-index="2" original-signature="java.util.LinkedList.add(Ljava/lang/Object;)Z" replace-index="3" replace-signature="com.celticspear.tokens.TokensActivity.getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;"/>
+        <Replace-Method original-index="2" original-signature="java.util.LinkedList.add(Ljava/lang/Object;)Z" replace-index="0" replace-signature="org.andengine.entity.text.Text.&lt;init&gt;(FFLorg/andengine/opengl/font/IFont;Ljava/lang/CharSequence;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Replace-Method original-index="0" original-signature="java.util.LinkedList.add(Ljava/lang/Object;)Z" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Replace-Method original-index="1" original-signature="java.util.LinkedList.add(Ljava/lang/Object;)Z" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Replace-Method original-index="0" original-signature="com.celticspear.tokens.MapScreen.setPagePositions()V" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.MapScreen.setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;[Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.TokensActivity.getGameScreenYShift()F"/>
+        <Add-Method index="1" signature="com.celticspear.tokens.TokensActivity.getGameScreenYShift()F"/>
+        <Add-Method index="2" signature="com.celticspear.tokens.TokensActivity.getGameScreenYShift()F"/>
+        <Add-Method index="3" signature="com.celticspear.tokens.TokensActivity.getGameScreenYShift()F"/>
+        <Add-Method index="4" signature="com.celticspear.tokens.TokensActivity.getGameScreenYShift()F"/>
+        <Add-Method index="5" signature="com.celticspear.tokens.TokensActivity.getGameScreenYShift()F"/>
+        <Add-Method index="6" signature="com.celticspear.tokens.TokensActivity.getGameScreenYShift()F"/>
+        <Add-Method index="7" signature="com.celticspear.tokens.TokensActivity.getGameScreenYShift()F"/>
+        <Add-Method index="8" signature="com.celticspear.tokens.TokensActivity.getGameScreenYShift()F"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.TokensActivity.getTextures()Ljava/util/Map;"/>
+        <Add-Method index="1" signature="com.celticspear.tokens.TokensActivity.getTextures()Ljava/util/Map;"/>
+        <Add-Method index="2" signature="com.celticspear.tokens.TokensActivity.getTextures()Ljava/util/Map;"/>
+        <Add-Method index="3" signature="com.celticspear.tokens.TokensActivity.getTextures()Ljava/util/Map;"/>
+        <Add-Method index="4" signature="com.celticspear.tokens.TokensActivity.getTextures()Ljava/util/Map;"/>
+        <Add-Method index="5" signature="com.celticspear.tokens.TokensActivity.getTextures()Ljava/util/Map;"/>
+        <Add-Method index="6" signature="com.celticspear.tokens.TokensActivity.getTextures()Ljava/util/Map;"/>
+        <Add-Method index="7" signature="com.celticspear.tokens.TokensActivity.getTextures()Ljava/util/Map;"/>
+        <Add-Method index="0" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="1" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="2" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="3" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="4" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="5" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="6" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="7" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="8" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.TokensActivity.getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;"/>
+        <Add-Method index="1" signature="com.celticspear.tokens.TokensActivity.getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;"/>
+        <Add-Method index="2" signature="com.celticspear.tokens.TokensActivity.getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;"/>
+        <Add-Method index="4" signature="com.celticspear.tokens.TokensActivity.getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;"/>
+        <Add-Method index="5" signature="com.celticspear.tokens.TokensActivity.getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;"/>
+        <Add-Method index="6" signature="com.celticspear.tokens.TokensActivity.getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;"/>
+        <Add-Method index="7" signature="com.celticspear.tokens.TokensActivity.getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;"/>
+        <Add-Method index="8" signature="com.celticspear.tokens.TokensActivity.getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.TokensActivity.getFonts()Ljava/util/Map;"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.TokensActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.MapScreen.center(Lorg/andengine/entity/shape/RectangularShape;)V"/>
+        <Add-Method index="0" signature="java.util.List.get(I)Ljava/lang/Object;"/>
+        <Add-Method index="1" signature="java.util.List.get(I)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="org.andengine.entity.sprite.Sprite.getWidth()F"/>
+        <Add-Method index="1" signature="org.andengine.entity.sprite.Sprite.getWidth()F"/>
+        <Add-Method index="0" signature="org.andengine.entity.sprite.Sprite.getHeight()F"/>
+        <Add-Method index="1" signature="org.andengine.entity.sprite.Sprite.getHeight()F"/>
+        <Add-Method index="0" signature="org.andengine.entity.sprite.Sprite.setPosition(FF)V"/>
+        <Add-Method index="0" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="org.andengine.entity.sprite.Sprite.setScale(F)V"/>
+        <Add-Method index="0" signature="org.andengine.entity.sprite.Sprite.registerEntityModifier(Lorg/andengine/entity/modifier/IEntityModifier;)V"/>
+        <Add-Method index="0" signature="org.andengine.entity.scene.Scene.registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.artefact.Artefact.getStringId()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="org.andengine.entity.sprite.Sprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Add-Method index="2" signature="org.andengine.entity.sprite.Sprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Add-Method index="3" signature="org.andengine.entity.sprite.Sprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Add-Method index="4" signature="org.andengine.entity.sprite.Sprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Add-Method index="5" signature="org.andengine.entity.sprite.Sprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Add-Method index="6" signature="org.andengine.entity.sprite.Sprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Add-Method index="0" signature="org.andengine.entity.modifier.ScaleModifier.&lt;init&gt;(FFF)V"/>
+        <Add-Method index="0" signature="org.andengine.util.modifier.ease.EaseBounceOut.getInstance()Lorg/andengine/util/modifier/ease/EaseBounceOut;"/>
+        <Add-Method index="0" signature="org.andengine.entity.modifier.ScaleModifier.&lt;init&gt;(FFFLorg/andengine/util/modifier/ease/IEaseFunction;)V"/>
+        <Add-Method index="0" signature="org.andengine.entity.modifier.SequenceEntityModifier.&lt;init&gt;([Lorg/andengine/entity/modifier/IEntityModifier;)V"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.InvisibleSpriteButton.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;Ljava/lang/Runnable;)V"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.MapScreen$ArtefactPart.values()[Lcom/celticspear/tokens/MapScreen$ArtefactPart;"/>
+        <Add-Method index="1" signature="com.celticspear.tokens.MapScreen$ArtefactPart.values()[Lcom/celticspear/tokens/MapScreen$ArtefactPart;"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.MapScreen$1.&lt;init&gt;(Lcom/celticspear/tokens/MapScreen;I)V"/>
+        <Add-Method index="0" signature="com.celticspear.tokens.MapScreen.showIdolWithShining()V"/>
+        <Remove-Method index="0" signature="java.util.LinkedList.iterator()Ljava/util/Iterator;"/>
+        <Remove-Method index="0" signature="java.util.Iterator.hasNext()Z"/>
+        <Remove-Method index="0" signature="java.util.Iterator.next()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="java.util.LinkedList.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.celticspear.tokens.MapScreen.buildPage(Lcom/celticspear/tokens/TokensActivity;ZII)Lorg/andengine/entity/IEntity;"/>
+        <Remove-Method index="0" signature="com.celticspear.tokens.MapScreen$1.&lt;init&gt;(Lcom/celticspear/tokens/MapScreen;)V"/>
+    </Method>
+    <Method signature="com.celticspear.tokens.tutorial.TokenTutorial.&lt;init&gt;(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/scene/Scene;[[Lcom/celticspear/tokens/token/IToken;)V">
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.getX()F" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.getX()F"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.getY()F" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.getY()F"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.setPosition(FF)V" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.setPosition(FF)V"/>
+    </Method>
+    <Method signature="com.celticspear.tokens.EditorGameScreen.&lt;init&gt;(Lcom/celticspear/tokens/TokensActivity;Lcom/celticspear/tokens/AbstractScreen;Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.celticspear.tokens.EditorGameScreen.setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/IEntity;[Ljava/lang/String;[I)V" replace-index="0" replace-signature="com.celticspear.tokens.EditorGameScreen.setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;[Ljava/lang/String;[I)V"/>
+    </Method>
+    <Method signature="com.celticspear.tokens.TitleScreen.attachTextToButton(Lorg/andengine/entity/sprite/ButtonSprite;Ljava/lang/String;I)V">
+        <Add-Method index="0" signature="com.celticspear.tokens.TitleScreen.center(Lorg/andengine/entity/shape/RectangularShape;)V"/>
+        <Remove-Method index="0" signature="com.celticspear.tokens.TitleScreen.centerX(Lorg/andengine/entity/shape/RectangularShape;)V"/>
+        <Remove-Method index="0" signature="org.andengine.entity.sprite.ButtonSprite.getHeight()F"/>
+        <Remove-Method index="0" signature="com.celticspear.tokens.TitleScreen.centerY(Lorg/andengine/entity/shape/RectangularShape;F)V"/>
+    </Method>
+    <Method signature="com.celticspear.tokens.tutorial.AbstractTutorial.&lt;init&gt;(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/scene/Scene;)V">
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.getWidth()F" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.getWidth()F"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.setScale(F)V" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.setScale(F)V"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.setZIndex(I)V" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.setZIndex(I)V"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.setZIndex(I)V" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.attachChild(Lorg/andengine/entity/IEntity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.attachChild(Lorg/andengine/entity/IEntity;)V" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.setZIndex(I)V"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.attachChild(Lorg/andengine/entity/IEntity;)V" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.attachChild(Lorg/andengine/entity/IEntity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.sprite.ButtonSprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.&lt;init&gt;(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.scene.Scene.registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.setZIndex(I)V"/>
+        <Replace-Method original-index="0" original-signature="org.andengine.entity.scene.Scene.registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V" replace-index="0" replace-signature="org.andengine.entity.sprite.Sprite.attachChild(Lorg/andengine/entity/IEntity;)V"/>
+        <Remove-Method index="0" signature="org.andengine.entity.sprite.ButtonSprite.setOnClickListener(Lorg/andengine/entity/sprite/ButtonSprite$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="com.celticspear.tokens.tutorial.AbstractTutorial$1.&lt;init&gt;(Lcom/celticspear/tokens/tutorial/AbstractTutorial;)V"/>
+    </Method>
+</Apk>

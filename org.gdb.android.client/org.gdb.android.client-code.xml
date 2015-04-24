@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="org.gdb.android.client" pkg="org.gdb.android.client">
+    <Method signature="org.gdb.android.client.ShopDetailActivity.e()V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lx.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;I)V" replace-index="0" replace-signature="org.gdb.android.client.lu.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;I)V"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.lx.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;I)V" replace-index="1" replace-signature="org.gdb.android.client.lu.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;I)V"/>
+        <Replace-Method original-index="2" original-signature="org.gdb.android.client.lx.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;I)V" replace-index="2" replace-signature="org.gdb.android.client.lu.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;I)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.ShowBrotherShopActivity.onResume()V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.md.a()Z" replace-index="0" replace-signature="org.gdb.android.client.ma.a()Z"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.md.b()V" replace-index="0" replace-signature="org.gdb.android.client.ma.b()V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.md.a(Landroid/app/Activity;J[Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.ma.a(Landroid/app/Activity;J[Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.UsePrizeActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nk.&lt;init&gt;(Lorg/gdb/android/client/UsePrizeActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nh.&lt;init&gt;(Lorg/gdb/android/client/UsePrizeActivity;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.mv.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.vo.ExtentionVO.getDownloadUrl()Ljava/lang/String;" replace-index="1" replace-signature="org.gdb.android.client.TestActivity.a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.StartActivity.getPackageName()Ljava/lang/String;" replace-index="1" replace-signature="org.gdb.android.client.TestActivity.a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.StartActivity.a(Ljava/lang/String;)V" replace-index="0" replace-signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.StartActivity.finish()V" replace-index="0" replace-signature="org.gdb.android.client.utils.v.d(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.TestActivity.a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.dismiss()V"/>
+        <Remove-Method index="1" signature="org.gdb.android.client.vo.ExtentionVO.getDownloadUrl()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="org.gdb.android.client.StartActivity.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="org.gdb.android.client.SettingsActivity.onResume()V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.SettingsActivity.b()V" replace-index="0" replace-signature="org.gdb.android.client.SettingsActivity.a()V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.lb.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ShopDetailActivity.c(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/ShopVO;" replace-index="1" replace-signature="org.gdb.android.client.utils.ag.a(Landroid/content/Context;Lorg/gdb/android/client/map/POI;Z)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getLat()D"/>
+        <Add-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getLng()D"/>
+        <Add-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getName()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getAddress()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="1" signature="org.gdb.android.client.ShopDetailActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.h.a.a()Lorg/gdb/android/client/h/a;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.b(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/LocationVO;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.map.POI.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.map.POI.a(D)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.map.POI.b(D)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.map.POI.a(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.map.POI.b(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.utils.ag.a(Landroid/content/Context;Lorg/gdb/android/client/map/POI;Z)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Z)Landroid/content/Intent;"/>
+        <Add-Method index="1" signature="android.content.Intent.putExtra(Ljava/lang/String;Z)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.h.a.b(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.ShopVO.getId()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.UserVO.getCurrentId()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.d(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/ma;"/>
+    </Method>
+    <Method signature="org.gdb.android.client.nq.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V">
+        <Replace-Method original-index="0" original-signature="java.util.TimerTask.&lt;init&gt;()V" replace-index="0" replace-signature="java.lang.Object.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.ni.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.UseCouponActivity.a(Lorg/gdb/android/client/UseCouponActivity;Lorg/gdb/android/client/vo/CouponVO;)V" replace-index="0" replace-signature="org.gdb.android.client.UsePrizeActivity.a(Lorg/gdb/android/client/UsePrizeActivity;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.vo.AwardVO.getId()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.UsePrizeActivity.a(Lorg/gdb/android/client/UsePrizeActivity;)Lorg/gdb/android/client/vo/AwardVO;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.nh.a(Lorg/gdb/android/client/nh;)Lorg/gdb/android/client/vo/CouponVO;"/>
+    </Method>
+    <Method signature="org.gdb.android.client.nf.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.dismiss()V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.ne.a(Lorg/gdb/android/client/ne;)Lorg/gdb/android/client/vo/CouponVO;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.UseCouponActivity.a(Lorg/gdb/android/client/UseCouponActivity;Lorg/gdb/android/client/vo/CouponVO;)V"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences$Editor.remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.TestActivity.a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="1" signature="org.gdb.android.client.TestActivity.a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.utils.v.d(Landroid/content/Context;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.ShopDetailActivity.f()V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.le.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="1" original-signature="android.content.Intent.putExtra(Ljava/lang/String;Z)Landroid/content/Intent;" replace-index="0" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.map.POI.b(Ljava/lang/String;)V" replace-index="0" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.utils.ag.a(Landroid/content/Context;Lorg/gdb/android/client/map/POI;Z)Landroid/content/Intent;" replace-index="0" replace-signature="org.gdb.android.client.ShopDetailActivity.c(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/ShopVO;"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getLat()D"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getLng()D"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getName()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getAddress()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.h.a.a()Lorg/gdb/android/client/h/a;"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Z)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.b(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/LocationVO;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.map.POI.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.map.POI.a(D)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.map.POI.b(D)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.map.POI.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.utils.ag.a(Landroid/content/Context;Lorg/gdb/android/client/map/POI;Z)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.h.a.b(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.WebMapActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ns.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.nn.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ns.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ns.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.nl.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ns.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.nm.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ns.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ns.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="1" replace-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nt.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nn.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nt.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nt.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nl.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nt.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nm.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nt.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nt.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nw.&lt;init&gt;(B)V" replace-index="0" replace-signature="org.gdb.android.client.nt.&lt;init&gt;(B)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nn.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nl.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nm.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nn.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nl.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nm.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.nn.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.nl.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.nm.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.nn.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.nn.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.np.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.nl.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.nl.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.nm.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.nm.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.no.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.nu.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V" replace-index="1" replace-signature="org.gdb.android.client.nr.&lt;init&gt;(Lorg/gdb/android/client/WebMapActivity;B)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.ky.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.utils.ag.a(Landroid/content/Context;Lorg/gdb/android/client/map/POI;Z)Landroid/content/Intent;" replace-index="0" replace-signature="org.gdb.android.client.ShopDetailActivity.c(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/ShopVO;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.vo.UserVO.getCurrentId()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.d(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/lx;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getLat()D"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getLng()D"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getName()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.LocationVO.getAddress()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="1" signature="org.gdb.android.client.ShopDetailActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="1" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.h.a.a()Lorg/gdb/android/client/h/a;"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Z)Landroid/content/Intent;"/>
+        <Remove-Method index="1" signature="android.content.Intent.putExtra(Ljava/lang/String;Z)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.b(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/LocationVO;"/>
+        <Remove-Method index="1" signature="org.gdb.android.client.ShopDetailActivity.b(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/LocationVO;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.map.POI.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.map.POI.a(D)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.map.POI.b(D)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.map.POI.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.map.POI.b(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.utils.ag.a(Landroid/content/Context;Lorg/gdb/android/client/map/POI;Z)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.h.a.b(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.StartActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mq.&lt;init&gt;(Lorg/gdb/android/client/StartActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.mn.&lt;init&gt;(Lorg/gdb/android/client/StartActivity;)V"/>
+        <Remove-Method index="0" signature="net.youmi.android.appoffers.YoumiOffersManager.init(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.UseCouponActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nh.&lt;init&gt;(Lorg/gdb/android/client/UseCouponActivity;Lorg/gdb/android/client/vo/CouponVO;)V" replace-index="0" replace-signature="org.gdb.android.client.ne.&lt;init&gt;(Lorg/gdb/android/client/UseCouponActivity;Lorg/gdb/android/client/vo/CouponVO;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.mw.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.StartActivity.finish()V" replace-index="0" replace-signature="org.gdb.android.client.utils.v.d(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Add-Method index="0" signature="org.gdb.android.client.TestActivity.a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="1" signature="org.gdb.android.client.TestActivity.a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.dismiss()V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.ShopDetailActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.j()V" replace-index="0" replace-signature="org.gdb.android.client.lx.j()V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.SinaFriendActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.d()V" replace-index="0" replace-signature="org.gdb.android.client.mm.d()V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.kl.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="org.gdb.android.client.SettingsActivity.d(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.show()V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.SettingsActivity.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.a()Landroid/widget/Button;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.km.&lt;init&gt;(Lorg/gdb/android/client/kl;Lorg/gdb/android/client/widget/ConfirmDialog;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.nl.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.widget.ConfirmDialog.dismiss()V" replace-index="0" replace-signature="org.gdb.android.client.ns.b()V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.UsePrizeActivity.a(Lorg/gdb/android/client/UsePrizeActivity;)Lorg/gdb/android/client/vo/AwardVO;" replace-index="1" replace-signature="org.gdb.android.client.WebMapActivity.f(Lorg/gdb/android/client/WebMapActivity;)Lorg/gdb/android/client/map/POI;"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.UsePrizeActivity.a(Lorg/gdb/android/client/UsePrizeActivity;Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.h.a.b(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.map.POI.b()D"/>
+        <Add-Method index="0" signature="org.gdb.android.client.map.POI.a()D"/>
+        <Add-Method index="0" signature="org.gdb.android.client.ns.a(Landroid/app/Activity;J[Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.WebMapActivity.f(Lorg/gdb/android/client/WebMapActivity;)Lorg/gdb/android/client/map/POI;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.vo.UserVO.getCurrentId()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.WebMapActivity.g(Lorg/gdb/android/client/WebMapActivity;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.h.a.a()Lorg/gdb/android/client/h/a;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.WebMapActivity.a()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.AwardVO.getId()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="org.gdb.android.client.TestActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nd.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.mu.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nd.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.mv.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nd.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.mw.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ne.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.mu.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ne.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.mv.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ne.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.mw.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nf.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.mu.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nf.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.mv.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.nf.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.mw.&lt;init&gt;(Lorg/gdb/android/client/TestActivity;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.ne.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;" replace-index="0" replace-signature="org.gdb.android.client.widget.ConfirmDialog.a(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences$Editor.remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" replace-index="0" replace-signature="org.gdb.android.client.widget.ConfirmDialog.a(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.show()V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.UseCouponActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.a()Landroid/widget/Button;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.nf.&lt;init&gt;(Lorg/gdb/android/client/ne;Lorg/gdb/android/client/widget/ConfirmDialog;)V"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.TestActivity.a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="1" signature="org.gdb.android.client.TestActivity.a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.utils.v.d(Landroid/content/Context;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.nh.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.UseCouponActivity.getString(I)Ljava/lang/String;" replace-index="0" replace-signature="org.gdb.android.client.UsePrizeActivity.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="org.gdb.android.client.km.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.widget.ConfirmDialog.dismiss()V" replace-index="0" replace-signature="org.gdb.android.client.SettingsActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.SettingsActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.Thread.start()V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.kn.&lt;init&gt;(Lorg/gdb/android/client/km;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.SettingsActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kr.b()V" replace-index="0" replace-signature="org.gdb.android.client.ko.b()V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.SettingsActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kp.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.km.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kp.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kn.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kp.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kf.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kp.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kg.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kp.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kh.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kq.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.km.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kq.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kn.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kq.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kf.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kq.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kg.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kq.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kh.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ke.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.km.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ke.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kn.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ke.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kf.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ke.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kg.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ke.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kh.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kr.&lt;init&gt;(B)V" replace-index="0" replace-signature="org.gdb.android.client.ko.&lt;init&gt;(B)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kr.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.ko.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kr.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.ko.b(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kr.b(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.ko.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kr.b(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.ko.b(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kr.a(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.ko.a(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kj.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.km.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kj.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kn.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kj.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kf.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kj.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kg.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kj.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kh.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kr.a(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.ko.a(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kk.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.km.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kk.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kn.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kk.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kf.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kk.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kg.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.kk.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kh.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ko.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.km.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ko.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kn.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ko.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kf.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ko.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kg.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ko.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kh.&lt;init&gt;(Lorg/gdb/android/client/SettingsActivity;)V"/>
+        <Add-Method index="0" signature="android.widget.TextView.setVisibility(I)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.lu.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ShopDetailActivity.d(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/ma;" replace-index="0" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;I)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.dismiss()V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.ShopVO.getBrand()Lorg/gdb/android/client/vo/BrandVO;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.BrandVO.getId()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.UserVO.getCurrentId()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="org.gdb.android.client.kd.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="org.gdb.android.client.SettingsActivity.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="org.gdb.android.client.ShopDetailActivity.a(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d()Z" replace-index="0" replace-signature="org.gdb.android.client.lx.d()Z"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.ma.d()Z" replace-index="1" replace-signature="org.gdb.android.client.lx.d()Z"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d()Z" replace-index="0" replace-signature="org.gdb.android.client.lx.i()Z"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.ma.d()Z" replace-index="1" replace-signature="org.gdb.android.client.lx.i()Z"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.i()Z" replace-index="0" replace-signature="org.gdb.android.client.lx.d()Z"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.ma.i()Z" replace-index="1" replace-signature="org.gdb.android.client.lx.d()Z"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.i()Z" replace-index="0" replace-signature="org.gdb.android.client.lx.i()Z"/>
+        <Replace-Method original-index="1" original-signature="org.gdb.android.client.ma.i()Z" replace-index="1" replace-signature="org.gdb.android.client.lx.i()Z"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.f()Z" replace-index="0" replace-signature="org.gdb.android.client.lx.f()Z"/>
+    </Method>
+    <Method signature="org.gdb.android.client.ShopDetailActivity.b()V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lg.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ld.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lg.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.le.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lg.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ls.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lg.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lq.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lh.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ld.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lh.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.le.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lh.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ls.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lh.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lq.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lv.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ld.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lv.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.le.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lv.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ls.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lv.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lq.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lt.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ld.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lt.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.le.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lt.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ls.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lt.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lq.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.ShopDetailActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.la.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lo.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.la.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lp.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.la.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kq.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.la.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kr.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.la.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ks.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.le.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lo.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.le.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lp.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.le.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kq.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.le.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kr.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.le.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ks.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lf.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lo.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lf.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lp.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lf.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kq.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lf.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kr.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lf.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ks.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.&lt;init&gt;(B)V" replace-index="0" replace-signature="org.gdb.android.client.lx.&lt;init&gt;(B)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.f(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lr.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lo.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lr.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lp.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lr.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kq.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lr.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kr.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.lr.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ks.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.a(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.f(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ls.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lo.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ls.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.lp.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ls.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kq.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ls.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.kr.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ls.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V" replace-index="0" replace-signature="org.gdb.android.client.ks.&lt;init&gt;(Lorg/gdb/android/client/ShopDetailActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.b(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.f(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.c(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.f(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.d(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.f(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.e(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.f(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.a(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.f(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.f(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.c(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.f(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.d(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.f(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.f(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.f(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.f(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.f(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ma.f(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V" replace-index="0" replace-signature="org.gdb.android.client.lx.f(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="org.gdb.android.client.kc.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="org.gdb.android.client.SettingsActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="org.gdb.android.client.kx.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="org.gdb.android.client.vo.ShopVO.getId()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.lx.e(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.vo.UserVO.getCurrentId()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.d(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/lx;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="org.gdb.android.client.lg.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.ShopDetailActivity.c(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/ShopVO;" replace-index="0" replace-signature="org.gdb.android.client.ShopDetailActivity.y(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/CouponVO;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.widget.ConfirmDialog.dismiss()V"/>
+        <Add-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.getApplicationContext()Landroid/content/Context;"/>
+        <Add-Method index="0" signature="org.gdb.android.client.ShopDetailActivity.x(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/widget/ConfirmDialog;"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="org.gdb.android.client.vo.ShopVO.getId()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.os.Bundle.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtras(Landroid/os/Bundle;)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="org.gdb.android.client.SinaFriendActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.&lt;init&gt;(B)V" replace-index="0" replace-signature="org.gdb.android.client.mm.&lt;init&gt;(B)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.a(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.mm.a(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.a(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.mm.a(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.a(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.mm.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.a(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.mm.a(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.a(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.mm.a(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.a(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.mm.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.mm.a(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.mm.a(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.b(Lorg/gdb/android/client/remote/y;)V" replace-index="0" replace-signature="org.gdb.android.client.mm.b(Lorg/gdb/android/client/remote/y;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mp.b(Lorg/gdb/android/client/remote/x;)V" replace-index="0" replace-signature="org.gdb.android.client.mm.b(Lorg/gdb/android/client/remote/x;)V"/>
+        <Replace-Method original-index="0" original-signature="org.gdb.android.client.mo.&lt;init&gt;(Lorg/gdb/android/client/SinaFriendActivity;B)V" replace-index="0" replace-signature="org.gdb.android.client.ml.&lt;init&gt;(Lorg/gdb/android/client/SinaFriendActivity;B)V"/>
+    </Method>
+</Apk>

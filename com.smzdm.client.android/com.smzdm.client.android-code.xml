@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.smzdm.client.android" pkg="com.smzdm.client.android">
+    <Method signature="com.smzdm.client.android.activity.UserCenterActivity.onResume()V">
+        <Add-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.n()V"/>
+        <Add-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.r()V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.l()V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.p()V"/>
+    </Method>
+    <Method signature="com.smzdm.client.android.activity.UserCenterActivity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.smzdm.client.android.activity.UserCenterActivity.r()V" replace-index="0" replace-signature="com.smzdm.client.android.activity.UserCenterActivity.s()V"/>
+    </Method>
+    <Method signature="com.smzdm.client.android.activity.UserCenterActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.j()V"/>
+    </Method>
+    <Method signature="com.smzdm.client.android.activity.UserCenterActivity.b()V">
+        <Add-Method index="0" signature="java.lang.reflect.Field.setAccessible(Z)V"/>
+        <Add-Method index="0" signature="java.lang.reflect.Field.setBoolean(Ljava/lang/Object;Z)V"/>
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="android.view.ViewConfiguration.get(Landroid/content/Context;)Landroid/view/ViewConfiguration;"/>
+        <Add-Method index="0" signature="java.lang.Class.getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="1" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="2" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="3" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="4" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="5" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="6" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="7" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="8" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="9" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="10" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="11" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="12" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="13" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="14" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="15" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="16" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="17" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="18" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="19" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="20" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="21" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="22" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="23" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="24" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="25" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="26" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="27" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="28" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="29" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="30" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="31" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="32" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="33" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="34" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="35" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="36" signature="com.smzdm.client.android.activity.UserCenterActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.extend.circleimageview.CircleImageView.setImageBitmap(Landroid/graphics/Bitmap;)V"/>
+        <Remove-Method index="1" signature="com.smzdm.client.android.extend.circleimageview.CircleImageView.setImageBitmap(Landroid/graphics/Bitmap;)V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.extend.circleimageview.CircleImageView.setAlpha(F)V"/>
+        <Remove-Method index="0" signature="android.support.v7.widget.SwitchCompat.setChecked(Z)V"/>
+        <Remove-Method index="1" signature="android.support.v7.widget.SwitchCompat.setChecked(Z)V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.extend.circleimageview.CircleImageView.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="android.widget.RelativeLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="1" signature="android.widget.RelativeLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="2" signature="android.widget.RelativeLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="3" signature="android.widget.RelativeLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="4" signature="android.widget.RelativeLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="5" signature="android.widget.RelativeLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="6" signature="android.widget.RelativeLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="7" signature="android.widget.RelativeLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="8" signature="android.widget.RelativeLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="9" signature="android.widget.RelativeLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="1" signature="android.widget.LinearLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="2" signature="android.widget.LinearLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="3" signature="android.widget.LinearLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="4" signature="android.widget.LinearLayout.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="android.support.v7.widget.SwitchCompat.setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.j()V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.k()V"/>
+    </Method>
+    <Method signature="com.smzdm.client.android.activity.UserCenterActivity.f(Lcom/smzdm/client/android/activity/UserCenterActivity;)V">
+        <Replace-Method original-index="0" original-signature="com.smzdm.client.android.activity.UserCenterActivity.p()V" replace-index="0" replace-signature="com.smzdm.client.android.activity.UserCenterActivity.q()V"/>
+    </Method>
+    <Method signature="com.smzdm.client.android.activity.UserCenterActivity.q()V">
+        <Add-Method index="0" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Add-Method index="1" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Add-Method index="2" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Add-Method index="3" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Add-Method index="4" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Add-Method index="5" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Add-Method index="6" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.a(Lcom/smzdm/client/android/extend/c/r;)V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.b.c.i()Z"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.extend.c.b.a.&lt;init&gt;(ILjava/lang/String;Ljava/lang/Class;Ljava/util/Map;Ljava/util/Map;Lcom/smzdm/client/android/extend/c/z;Lcom/smzdm/client/android/extend/c/y;)V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.b.a.a()Ljava/util/Map;"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.cr.&lt;init&gt;(Lcom/smzdm/client/android/activity/UserCenterActivity;)V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.cs.&lt;init&gt;(Lcom/smzdm/client/android/activity/UserCenterActivity;)V"/>
+    </Method>
+    <Method signature="com.smzdm.client.android.activity.UserCenterActivity.g(Lcom/smzdm/client/android/activity/UserCenterActivity;)V">
+        <Replace-Method original-index="0" original-signature="com.smzdm.client.android.activity.UserCenterActivity.q()V" replace-index="0" replace-signature="com.smzdm.client.android.activity.UserCenterActivity.r()V"/>
+    </Method>
+    <Method signature="com.smzdm.client.android.activity.UserCenterActivity.a()V">
+        <Add-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.getPackageManager()Landroid/content/pm/PackageManager;"/>
+        <Add-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.getPackageName()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.content.pm.PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"/>
+        <Add-Method index="0" signature="android.os.Bundle.get(Ljava/lang/String;)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="java.lang.Object.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Add-Method index="1" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="java.lang.reflect.Field.setAccessible(Z)V"/>
+        <Remove-Method index="0" signature="java.lang.reflect.Field.setBoolean(Ljava/lang/Object;Z)V"/>
+        <Remove-Method index="0" signature="java.lang.Class.getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;"/>
+        <Remove-Method index="0" signature="android.view.ViewConfiguration.get(Landroid/content/Context;)Landroid/view/ViewConfiguration;"/>
+    </Method>
+    <Method signature="com.smzdm.client.android.activity.UserCenterActivity.m()V">
+        <Add-Method index="0" signature="com.smzdm.client.android.b.d.ordinal()I"/>
+        <Add-Method index="0" signature="android.widget.TextView.setText(I)V"/>
+        <Add-Method index="1" signature="android.widget.TextView.setText(I)V"/>
+        <Add-Method index="2" signature="android.widget.TextView.setText(I)V"/>
+        <Add-Method index="0" signature="com.smzdm.client.android.b.c.d()Lcom/smzdm/client/android/b/d;"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.UserCenterActivity.a(Lcom/smzdm/client/android/extend/c/r;)V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.extend.c.b.a.&lt;init&gt;(ILjava/lang/String;Ljava/lang/Class;Ljava/util/Map;Ljava/util/Map;Lcom/smzdm/client/android/extend/c/z;Lcom/smzdm/client/android/extend/c/y;)V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.b.a.a()Ljava/util/Map;"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.cd.&lt;init&gt;(Lcom/smzdm/client/android/activity/UserCenterActivity;)V"/>
+        <Remove-Method index="0" signature="com.smzdm.client.android.activity.co.&lt;init&gt;(Lcom/smzdm/client/android/activity/UserCenterActivity;)V"/>
+    </Method>
+</Apk>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="net.harryzhou.ship_fishing" pkg="net.harryzhou.ship_fishing">
+    <Add-Class signature="Lcom/baidu/mobads/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/AppActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/AdSettings$Education" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/AdViewListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/AdSize" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/InterstitialAdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/AdSettings$Salary" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/InterstitialAd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/AdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/a/c" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/MultiFuncService" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/IconsAd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/AdSettings" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/AdSettings$Sex" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/c" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.giderosmobile.android.shootfishActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V" replace-index="0" replace-signature="com.baidu.mobads.AdView.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.baidu.mobads.AdView.setListener(Lcom/baidu/mobads/AdViewListener;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.setAdListener(Lcom/google/ads/AdListener;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdRequest.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.loadAd(Lcom/google/ads/AdRequest;)V"/>
+    </Method>
+</Apk>

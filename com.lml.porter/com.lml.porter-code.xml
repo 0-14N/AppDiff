@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.lml.porter" pkg="com.lml.porter">
+    <Add-Class signature="Lcn/domob/android/ads/p$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/R" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity$8" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/A$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/O" super-signatures="Lcn/domob/android/ads/L#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c$c" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/af$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/Z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/H" super-signatures="Lcn/domob/android/ads/c#Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/B$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/N" super-signatures="Lcn/domob/android/ads/L#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/w$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/t$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/G" super-signatures="Landroid/widget/ViewFlipper#Landroid/widget/ViewAnimator#Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/E$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ad" super-signatures="Lcn/domob/android/ads/Z#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/I$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/f" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/l$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/J" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z$c" super-signatures="Lcn/domob/android/ads/z$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/g" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/a$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/P" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/l$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/M" super-signatures="Lcn/domob/android/ads/L#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/k$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$1$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/f$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$k" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity$5" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/m" super-signatures="Lcn/domob/android/ads/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$1$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/L" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/I$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/E$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/F$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/r$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/V$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/V$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$2$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/D$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/l$b$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobSplashAdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/X" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/E$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/A" super-signatures="Lcn/domob/android/ads/i#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$1$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/Q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/K$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdEventListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobInterstitialAd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/q$a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/f" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobInterstitialAdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c$c$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ab" super-signatures="Lcn/domob/android/ads/Z#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/E$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$l" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/n$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/U" super-signatures="Lcn/domob/android/ads/L#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/lml/porter/Porter$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/W" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/A$1$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/w" super-signatures="Lcn/domob/android/ads/DomobAdView#Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/m$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/lml/porter/Porter$TimeCount" super-signatures="Lcom/lml/porter/AdvancedCountdownTimer#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/r$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/aa" super-signatures="Lcn/domob/android/ads/Z#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/T" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/K" super-signatures="Lcn/domob/android/ads/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/V" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/b$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/r$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/lml/porter/Porter$3$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z$f" super-signatures="Lcn/domob/android/ads/z$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/D$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$a" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac" super-signatures="Lcn/domob/android/ads/c#Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$2$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/af$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/q$a$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/q$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/f$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/B" super-signatures="Lcn/domob/android/ads/DomobAdView#Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/C" super-signatures="Lcn/domob/android/ads/m#Lcn/domob/android/ads/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/f$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/Y" super-signatures="Lcn/domob/android/ads/Z#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/E$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$3" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/r$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/p$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/s$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/a$b" super-signatures="Lcn/domob/android/ads/a$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/v$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/D" super-signatures="Lcn/domob/android/ads/H#Lcn/domob/android/ads/c#Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/I" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/q$a$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/h$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/E$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobSplashAd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/q$a$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/P$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/v$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$d" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z$h" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z$e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac$f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/S" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/K$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z$g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/l$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobInterstitialAd$BorderType" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c$3$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/h" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/h" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/a$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/E" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$c" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c$1" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/F" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z$b" super-signatures="Lcn/domob/android/ads/z$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobUpdater" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity$9" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/a" super-signatures="Ljava/lang/Object"/>
+    <Method signature="java.lang.Thread.run()V"/>
+    <Method signature="com.lml.porter.Porter.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.lml.porter.Porter$TimeCount.start(J)Lcom/lml/porter/AdvancedCountdownTimer;"/>
+        <Add-Method index="0" signature="com.lml.porter.Porter$TimeCount.&lt;init&gt;(Lcom/lml/porter/Porter;JJ)V"/>
+    </Method>
+    <Method signature="com.lml.porter.Porter.initDialog()V">
+        <Replace-Method original-index="0" original-signature="com.lml.porter.Porter$3.&lt;init&gt;(Lcom/lml/porter/Porter;)V" replace-index="0" replace-signature="com.lml.porter.Porter$6.&lt;init&gt;(Lcom/lml/porter/Porter;)V"/>
+    </Method>
+    <Method signature="com.lml.porter.PorterView$RefreshHandler.handleMessage(Landroid/os/Message;)V">
+        <Add-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="1" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.Object.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.lml.porter.Porter.onDestroy()V">
+        <Remove-Method index="0" signature="com.google.ads.AdView.destroyDrawingCache()V"/>
+    </Method>
+    <Method signature="java.util.Vector.indexOf(Ljava/lang/Object;I)I"/>
+    <Method signature="java.util.HashMap.getEntry(Ljava/lang/Object;)Ljava/util/HashMap$Entry;"/>
+    <Method signature="java.util.HashMap.get(Ljava/lang/Object;)Ljava/lang/Object;">
+        <Add-Method index="0" signature="java.lang.Object.hashCode()I"/>
+        <Add-Method index="0" signature="java.lang.Object.equals(Ljava/lang/Object;)Z"/>
+    </Method>
+    <Method signature="java.lang.Thread.start()V"/>
+    <Method signature="com.lml.porter.Porter.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.lml.porter.Porter$TimeCount.start(J)Lcom/lml/porter/AdvancedCountdownTimer;"/>
+        <Add-Method index="1" signature="com.lml.porter.Porter$TimeCount.start(J)Lcom/lml/porter/AdvancedCountdownTimer;"/>
+        <Add-Method index="0" signature="android.widget.ImageView.getVisibility()I"/>
+        <Add-Method index="0" signature="android.widget.ImageView.setVisibility(I)V"/>
+        <Add-Method index="1" signature="android.widget.ImageView.setVisibility(I)V"/>
+        <Add-Method index="0" signature="com.lml.porter.Porter$TimeCount.resume()V"/>
+        <Add-Method index="0" signature="android.widget.Button.setBackgroundResource(I)V"/>
+        <Add-Method index="1" signature="android.widget.Button.setBackgroundResource(I)V"/>
+        <Add-Method index="0" signature="com.lml.porter.Porter$TimeCount.pause()V"/>
+        <Add-Method index="0" signature="com.lml.porter.Porter.reStartTime()V"/>
+        <Add-Method index="1" signature="com.lml.porter.Porter.reStartTime()V"/>
+    </Method>
+    <Method signature="com.lml.porter.Porter.initView()V"/>
+    <Method signature="com.lml.porter.Porter$1$1.run()V">
+        <Add-Method index="0" signature="com.lml.porter.Porter$TimeCount.cancel()V"/>
+    </Method>
+    <Method signature="com.lml.porter.Porter.addAdvertisement()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V" replace-index="0" replace-signature="cn.domob.android.ads.DomobAdView.&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdRequest.&lt;init&gt;()V" replace-index="0" replace-signature="com.lml.porter.Porter$2.&lt;init&gt;(Lcom/lml/porter/Porter;)V"/>
+        <Add-Method index="0" signature="cn.domob.android.ads.DomobAdView.setAdEventListener(Lcn/domob/android/ads/DomobAdEventListener;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.loadAd(Lcom/google/ads/AdRequest;)V"/>
+    </Method>
+    <Method signature="java.util.HashMap.putForCreate(Ljava/lang/Object;Ljava/lang/Object;)V">
+        <Add-Method index="0" signature="java.lang.Object.hashCode()I"/>
+        <Add-Method index="0" signature="java.lang.Object.equals(Ljava/lang/Object;)Z"/>
+    </Method>
+</Apk>

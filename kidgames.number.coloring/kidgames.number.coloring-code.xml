@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="kidgames.number.coloring" pkg="kidgames.number.coloring">
+    <Method signature="com.google.gson.reflect.TypeToken.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.AdCacheThreadPool$AdCacheTask.compareTo(Ljava/lang/Object;)I">
+        <Add-Method index="0" signature="com.millennialmedia.android.AdCacheThreadPool$AdCacheTask.compareTo(Lcom/millennialmedia/android/AdCacheThreadPool$AdCacheTask;)I"/>
+    </Method>
+    <Method signature="java.util.Formatter$FormatSpecifier.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.Object.getClass()Ljava/lang/Class;"/>
+        <Remove-Method index="0" signature="java.lang.Class.getSimpleName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="android.os.Handler.postDelayed(Ljava/lang/Runnable;J)Z">
+        <Remove-Method index="0" signature="android.util.Log.v(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.google.ads.util.b.a(Ljava/lang/String;I)Z"/>
+        <Remove-Method index="0" signature="com.google.ads.util.b.a(Lcom/google/ads/util/b$a;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.google.gson.internal.bind.TypeAdapters$29.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.PreCacheWorker$1.downloadCompleted(Lcom/millennialmedia/android/CachedAd;Z)V">
+        <Remove-Method index="0" signature="com.millennialmedia.android.VideoAd.getId()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.v(Ljava/lang/String;[Ljava/lang/Object;)V"/>
+        <Remove-Method index="1" signature="com.millennialmedia.android.MMSDK$Log.v(Ljava/lang/String;[Ljava/lang/Object;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.AdCache.getIncompleteDownload(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;">
+        <Add-Method index="0" signature="com.millennialmedia.android.AdCache.loadIncompleteDownloadHashMap(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.d(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.lang.System.currentTimeMillis()J"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.e(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.HandShake.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="1" signature="com.millennialmedia.android.HandShake.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="java.text.AttributedCharacterIterator$Attribute.toString()Ljava/lang/String;"/>
+    <Method signature="javax.crypto.SunJCE_f.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.ads.util.i$c.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="com.google.ads.util.i$a.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.gson.internal.$Gson$Types$WildcardTypeImpl.toString()Ljava/lang/String;"/>
+    <Method signature="kidgames.number.coloring.Open.onResume()V">
+        <Remove-Method index="0" signature="com.appbrain.AdService.maybeShowInterstitial(Landroid/app/Activity;)Z"/>
+        <Remove-Method index="0" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.appbrain.AppBrain.getAds()Lcom/appbrain/AdService;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.VideoAd.download(Landroid/content/Context;)Z"/>
+    <Method signature="java.lang.StringBuffer.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.io.File.compareTo(Ljava/lang/Object;)I">
+        <Remove-Method index="0" signature="com.millennialmedia.android.AdCacheThreadPool$AdCacheTask.compareTo(Lcom/millennialmedia/android/AdCacheThreadPool$AdCacheTask;)I"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.CachedAd.getId()Ljava/lang/String;">
+        <Remove-Method index="0" signature="com.millennialmedia.android.AdCache.loadIncompleteDownloadHashMap(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HandShake$AdTypeHandShake.deserializeFromObj(Lorg/json/JSONObject;)V">
+        <Remove-Method index="0" signature="java.lang.Object.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.VideoAd.delete(Landroid/content/Context;)V">
+        <Add-Method index="0" signature="com.millennialmedia.android.VideoAd.getId()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.v(Ljava/lang/String;[Ljava/lang/Object;)V"/>
+        <Remove-Method index="0" signature="java.util.LinkedHashMap.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HandShake.unlockAdTypeDownload(Ljava/lang/String;)V">
+        <Add-Method index="0" signature="java.util.LinkedHashMap.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+    </Method>
+    <Method signature="kidgames.number.coloring.Main$1.run()V">
+        <Remove-Method index="0" signature="kidgames.number.coloring.Main.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="1" signature="kidgames.number.coloring.Main.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Remove-Method index="1" signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+        <Remove-Method index="1" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.addFlags(I)Landroid/content/Intent;"/>
+        <Remove-Method index="1" signature="android.content.Intent.addFlags(I)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HandShake$AdTypeHandShake.&lt;init&gt;(Lcom/millennialmedia/android/HandShake;)V">
+        <Add-Method index="0" signature="java.lang.Object.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="android.support.v4.app.LoaderManagerImpl.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="android.os.Bundle.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.Integer.toHexString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="kidgames.number.coloring.Main.onCreate(Landroid/os/Bundle;)V"/>
+    <Method signature="com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.toString()Ljava/lang/String;"/>
+    <Method signature="com.millennialmedia.android.MMSDK$Log.d(Ljava/lang/String;)V">
+        <Add-Method index="0" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.AdCache.cleanUpExpiredAds(Landroid/content/Context;)V">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.google.gson.internal.bind.TypeAdapters$30.toString()Ljava/lang/String;"/>
+    <Method signature="com.google.gson.internal.bind.TypeAdapters$28.toString()Ljava/lang/String;"/>
+    <Method signature="kidgames.number.coloring.Open.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.appbrain.AppBrain.init(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HandShake.setAdUrl(Landroid/content/Context;Ljava/lang/String;)V">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.ads.util.i.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Object.getClass()Ljava/lang/Class;"/>
+        <Add-Method index="0" signature="java.lang.Class.getSimpleName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.gson.internal.$Gson$Types$GenericArrayTypeImpl.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.google.gson.internal.$Gson$Types.typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HandShake.sharedHandShake(Landroid/content/Context;)Lcom/millennialmedia/android/HandShake;">
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.d(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.System.currentTimeMillis()J"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.e(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.HandShake.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="1" signature="com.millennialmedia.android.HandShake.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="java.util.Formatter$FixedString.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.ads.util.i$a.toString()Ljava/lang/String;"/>
+    </Method>
+</Apk>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.ztapps.saverdoctor" pkg="com.ztapps.saverdoctor">
+    <Method signature="com.ztapps.saverdoctor.activity.BatteryTabActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.ztapps.saverdoctor.h.a.a(Landroid/app/Activity;)V"/>
+    </Method>
+    <Method signature="com.ztapps.saverdoctor.activity.AboutActivity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.ztapps.saverdoctor.h.c.&lt;init&gt;()V" replace-index="0" replace-signature="com.ztapps.saverdoctor.h.b.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.ztapps.saverdoctor.h.c.b(Landroid/content/Context;)V" replace-index="0" replace-signature="com.ztapps.saverdoctor.h.b.b(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.ztapps.saverdoctor.i.n.a(Landroid/content/Context;I)Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.ztapps.saverdoctor.h.b.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V">
+        <Remove-Method index="0" signature="com.google.a.a.a.bf.a(Ljava/util/Map;)V"/>
+        <Remove-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Remove-Method index="0" signature="com.google.a.a.a.au.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Lcom/google/a/a/a/au;"/>
+        <Remove-Method index="0" signature="com.google.a.a.a.au.a()Ljava/util/Map;"/>
+    </Method>
+    <Method signature="com.ztapps.saverdoctor.h.a.a(Landroid/content/Context;)Lcom/ztapps/saverdoctor/h/a;">
+        <Add-Method index="0" signature="com.ztapps.saverdoctor.h.b.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.ztapps.saverdoctor.h.b.b(Landroid/content/Context;)Lcom/ztapps/saverdoctor/h/b;"/>
+    </Method>
+</Apk>

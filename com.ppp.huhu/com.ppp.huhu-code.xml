@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.ppp.huhu" pkg="com.ppp.huhu">
+    <Method signature="com.ppp.huhu.list_edit.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.ppp.huhu.list_edit$1.&lt;init&gt;(Lcom/ppp/huhu/list_edit;Landroid/content/Intent;)V" replace-index="0" replace-signature="com.ppp.huhu.list_edit$1.&lt;init&gt;(Lcom/ppp/huhu/list_edit;)V"/>
+        <Replace-Method original-index="0" original-signature="com.ppp.huhu.list_edit$2.&lt;init&gt;(Lcom/ppp/huhu/list_edit;)V" replace-index="0" replace-signature="com.ppp.huhu.list_edit$1.&lt;init&gt;(Lcom/ppp/huhu/list_edit;)V"/>
+        <Remove-Method index="0" signature="android.widget.EditText.setFocusableInTouchMode(Z)V"/>
+        <Remove-Method index="1" signature="android.widget.EditText.setFocusableInTouchMode(Z)V"/>
+        <Remove-Method index="0" signature="android.widget.ImageView.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="com.ppp.huhu.list_edit$1.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;" replace-index="0" replace-signature="android.widget.LinearLayout.setVisibility(I)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;" replace-index="1" replace-signature="android.widget.ImageView.setBackgroundResource(I)V"/>
+        <Replace-Method original-index="1" original-signature="com.ppp.huhu.list_edit.startActivity(Landroid/content/Intent;)V" replace-index="0" replace-signature="android.widget.ImageView.setBackgroundResource(I)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" replace-index="1" replace-signature="android.widget.LinearLayout.setVisibility(I)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" replace-index="1" replace-signature="android.widget.ImageView.setBackgroundResource(I)V"/>
+        <Add-Method index="0" signature="com.ppp.huhu.list_edit.saveState()V"/>
+        <Remove-Method index="0" signature="com.ppp.huhu.list_edit.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.widget.EditText.getText()Landroid/text/Editable;"/>
+        <Remove-Method index="0" signature="android.text.Editable.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.ppp.huhu.list_edit.getTitle()Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.setType(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.Intent.createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="com.ppp.huhu.color_pick.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.ppp.huhu.color_pick.requestWindowFeature(I)Z"/>
+    </Method>
+    <Method signature="com.ppp.huhu.list_edit.onStop()V">
+        <Add-Method index="0" signature="android.database.Cursor.close()V"/>
+        <Add-Method index="1" signature="android.database.Cursor.close()V"/>
+        <Add-Method index="0" signature="com.ppp.huhu.list_edit.saveState()V"/>
+    </Method>
+</Apk>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.hschinese.hellowords" pkg="com.hschinese.hellowords">
+    <Method signature="com.hschinese.hellowords.activity.WordPracticeActivity.getLocalCheckPoint(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.hschinese.hellowords.task.GenericTask.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;" replace-index="0" replace-signature="com.hschinese.hellowords.task.GenericTask.executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;"/>
+    </Method>
+</Apk>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.jiuzhansoft.massage" pkg="com.jiuzhansoft.massage">
+    <Add-Class signature="Landroid/support/v4/view/MenuCompat$BaseMenuVersionImpl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$7$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/MenuCompat$MenuVersionImpl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/AlwaysMarqueeTextView" super-signatures="Landroid/widget/TextView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$3$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/activity/BaseActivity$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$7$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$7$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$8$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$3$1" super-signatures="Lcom/massage/utils/adapter/CirculationGalleryAdapter#Lcom/massage/utils/adapter/MySimpleAdapter#Lcom/massage/utils/adapter/SimpleBeanAdapter#Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/activity/BaseActivity$10" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/activity/BaseActivity$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$3$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$5$2$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/HCSparseArray" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$5$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/PagerAdapter$DataSetObserver" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/activity/BaseActivity$1$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$5$2$1$1" super-signatures="Lcom/massage/utils/adapter/MySimpleAdapter#Lcom/massage/utils/adapter/SimpleBeanAdapter#Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$3$1$1" super-signatures="Landroid/graphics/drawable/Drawable#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/MenuCompat$HoneycombMenuVersionImpl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$5$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity$6$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/activity/BaseActivity$11" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$7$1$1" super-signatures="Lcom/massage/utils/adapter/MySimpleAdapter#Lcom/massage/utils/adapter/SimpleBeanAdapter#Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ViewPager$DataSetObserver" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$5$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/MenuCompatHoneycomb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$3$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/jiuzhansoft/massage/activity/BaseActivity$7" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.jiuzhansoft.massage.application.JiuZhanApplication.killStage()V">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.application.JiuZhanApplication.setMainMenuActivity(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.application.JiuZhanApplication.setMainMenuActivity(Lcom/jiuzhansoft/massage/subActivity/MainMenuActivity;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.attachActivity(Landroid/support/v4/app/FragmentActivity;Landroid/support/v4/app/FragmentContainer;Landroid/support/v4/app/Fragment;)V" replace-index="0" replace-signature="android.support.v4.app.FragmentManagerImpl.attachActivity(Landroid/support/v4/app/FragmentActivity;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.SystemSetting$3.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.jiuzhansoft.massage.subActivity.SystemSetting.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="com.jiuzhansoft.massage.subActivity.SystemSetting.finish()V"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.bluetooth.BluetoothInterface.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentActivity.onStart()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.getLoaderManager(Ljava/lang/String;ZZ)Landroid/support/v4/app/LoaderManagerImpl;" replace-index="0" replace-signature="android.support.v4.app.FragmentActivity.getLoaderManager(IZZ)Landroid/support/v4/app/LoaderManagerImpl;"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.util.SimpleArrayMap.valueAt(I)Ljava/lang/Object;" replace-index="0" replace-signature="android.support.v4.app.HCSparseArray.valueAt(I)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="android.support.v4.app.HCSparseArray.size()I"/>
+        <Remove-Method index="0" signature="android.support.v4.util.SimpleArrayMap.size()I"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.HumanAcupuncturePoints$8$3.run()V">
+        <Add-Method index="0" signature="com.jiuzhansoft.massage.subActivity.HumanAcupuncturePoints.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="0" signature="android.view.View.findViewById(I)Landroid/view/View;"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.BaseActivity.post(Ljava/lang/Runnable;)V">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.BaseActivity$3.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/BaseActivity;Ljava/lang/Runnable;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.BaseActivity$8.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/BaseActivity;Ljava/lang/Runnable;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.SystemSetting.initView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="android.widget.ImageButton.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="android.widget.ImageButton.setClickable(Z)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.BaseActivity.onStop()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onStop()V" replace-index="0" replace-signature="android.app.Activity.onStop()V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.utils.GlobalInitialization.networkInitialization(Z)V">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.application.JiuZhanApplication.getMainMenuActivity()Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;" replace-index="0" replace-signature="com.jiuzhansoft.massage.application.JiuZhanApplication.getMainMenuActivity()Lcom/jiuzhansoft/massage/subActivity/MainMenuActivity;"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity.onClick(Landroid/view/View;)V"/>
+    <Method signature="com.jiuzhansoft.massage.user.RegisterActivity.initBtn()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setVisibility(I)V" replace-index="0" replace-signature="android.widget.Button.setVisibility(I)V"/>
+    </Method>
+    <Method signature="java.lang.Thread.run()V"/>
+    <Method signature="android.support.v4.app.LoaderManagerImpl.finishRetain()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.util.SparseArrayCompat.size()I" replace-index="0" replace-signature="android.support.v4.app.HCSparseArray.size()I"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.util.SparseArrayCompat.valueAt(I)Ljava/lang/Object;" replace-index="0" replace-signature="android.support.v4.app.HCSparseArray.valueAt(I)Ljava/lang/Object;"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.user.UserLoginActivity.handleClickEvent()V">
+        <Remove-Method index="0" signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.service.MusicService.next()V">
+        <Remove-Method index="0" signature="android.os.Handler.removeMessages(I)V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.service.MusicService.initCurrentTime()V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.service.MusicService.setup()V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.service.MusicService.refreshLRC()V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.user.ChangePasswordActivity.initView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setVisibility(I)V" replace-index="0" replace-signature="android.widget.Button.setVisibility(I)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity.setupViews()V">
+        <Add-Method index="0" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="android.media.AudioManager.getStreamVolume(I)I"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity.initfilter()V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity.setData()V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.utils.GlobalInitialization$1.onEnd(Lcom/massage/utils/http/HttpResponse;)V">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.application.JiuZhanApplication.getMainMenuActivity()Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;" replace-index="0" replace-signature="com.jiuzhansoft.massage.application.JiuZhanApplication.getMainMenuActivity()Lcom/jiuzhansoft/massage/subActivity/MainMenuActivity;"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.BaseActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onDestroy()V" replace-index="0" replace-signature="android.app.Activity.onDestroy()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onDestroy()V" replace-index="0" replace-signature="android.app.Activity.onDestroy()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onDestroy()V" replace-index="0" replace-signature="android.app.Activity.onDestroy()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onDestroy()V" replace-index="0" replace-signature="android.app.Activity.onDestroy()V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.HumanAcupuncturePoints$8$1.run()V">
+        <Replace-Method original-index="0" original-signature="com.massage.utils.frame.RoundedRectListView.setAdapter(Landroid/widget/ListAdapter;)V" replace-index="0" replace-signature="android.widget.ListView.setAdapter(Landroid/widget/ListAdapter;)V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.application.JiuZhanApplication.getCurrentMyActivity()Lcom/jiuzhansoft/massage/activity/BaseActivity;"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.application.JiuZhanApplication.getInstance()Lcom/jiuzhansoft/massage/application/JiuZhanApplication;"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$3.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.application.JiuZhanApplication.exitAll(Landroid/app/Activity;)V" replace-index="0" replace-signature="android.app.AlertDialog.dismiss()V"/>
+    </Method>
+    <Method signature="java.lang.Thread.start()V"/>
+    <Method signature="com.jiuzhansoft.massage.activity.BaseActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onCreate(Landroid/os/Bundle;)V" replace-index="0" replace-signature="android.app.Activity.onCreate(Landroid/os/Bundle;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onCreate(Landroid/os/Bundle;)V" replace-index="0" replace-signature="android.app.Activity.onCreate(Landroid/os/Bundle;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.BaseActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.BaseActivity$7.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.BaseActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.BaseActivity$7.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onCreate(Landroid/os/Bundle;)V" replace-index="0" replace-signature="android.app.Activity.onCreate(Landroid/os/Bundle;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onCreate(Landroid/os/Bundle;)V" replace-index="0" replace-signature="android.app.Activity.onCreate(Landroid/os/Bundle;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.BaseActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.BaseActivity$7.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.BaseActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.BaseActivity$7.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentManagerImpl.saveAllState()Landroid/os/Parcelable;">
+        <Add-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="android.support.v4.util.LogWriter.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.io.PrintWriter.&lt;init&gt;(Ljava/io/Writer;)V"/>
+        <Add-Method index="0" signature="android.support.v4.app.FragmentManagerImpl.dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentManagerImpl.throwException(Ljava/lang/RuntimeException;)V"/>
+        <Remove-Method index="1" signature="android.support.v4.app.FragmentManagerImpl.throwException(Ljava/lang/RuntimeException;)V"/>
+        <Remove-Method index="2" signature="android.support.v4.app.FragmentManagerImpl.throwException(Ljava/lang/RuntimeException;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.BaseActivity.onResume()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onResume()V" replace-index="0" replace-signature="android.app.Activity.onResume()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onResume()V" replace-index="0" replace-signature="android.app.Activity.onResume()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onResume()V" replace-index="0" replace-signature="android.app.Activity.onResume()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onResume()V" replace-index="0" replace-signature="android.app.Activity.onResume()V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity.showHintDialog()V">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;Landroid/app/AlertDialog;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$3.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;Landroid/app/AlertDialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;Landroid/app/AlertDialog;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$4.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$6.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$3.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;Landroid/app/AlertDialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$6.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$4.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.service.MusicService.onCreate()V">
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.service.MusicService.setListData()V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.MusicListActivity.setupViews()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.HomeActivity2.initView()V">
+        <Remove-Method index="0" signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.subActivity.homeview.MyTimeView.setOnTouchListener(Landroid/view/View$OnTouchListener;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.user.ResetPasswordActivity.initView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity.checkNetState()Z">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$3.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$1.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$3.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$4.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$1.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$4.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.SystemSetting.initcontent()V"/>
+    <Method signature="com.jiuzhansoft.game.Game6.initView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentManagerImpl.dispatchDestroy()V">
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentManagerImpl.execPendingActions()Z"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.game.Game5.initView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.LoaderManagerImpl.doReportStart()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.util.SparseArrayCompat.size()I" replace-index="0" replace-signature="android.support.v4.app.HCSparseArray.size()I"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.util.SparseArrayCompat.valueAt(I)Ljava/lang/Object;" replace-index="0" replace-signature="android.support.v4.app.HCSparseArray.valueAt(I)Ljava/lang/Object;"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity.loading()V">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$7.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.MainMenuActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.jiuzhansoft.massage.application.JiuZhanApplication.setMainMenuActivity(Lcom/jiuzhansoft/massage/subActivity/MainMenuActivity;)V"/>
+        <Add-Method index="0" signature="com.jiuzhansoft.massage.application.JiuZhanApplication.getInstance()Lcom/jiuzhansoft/massage/application/JiuZhanApplication;"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.game.GameList2.initView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.BaseActivity.finish()V">
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentActivity.finish()V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.game.Game4.initView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.service.MusicService.onDestroy()V">
+        <Remove-Method index="0" signature="android.os.Handler.removeMessages(I)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.application.JiuZhanApplication.setMainMenuActivity(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity.getStringFromPreference(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity.getStringFromPreference(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity.registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="0" signature="android.widget.TextView.getPaint()Landroid/text/TextPaint;"/>
+        <Remove-Method index="0" signature="android.text.TextPaint.setFakeBoldText(Z)V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.application.JiuZhanApplication.getInstance()Lcom/jiuzhansoft/massage/application/JiuZhanApplication;"/>
+        <Remove-Method index="0" signature="java.lang.Thread.start()V"/>
+        <Remove-Method index="0" signature="java.lang.Thread.&lt;init&gt;(Ljava/lang/Runnable;)V"/>
+        <Remove-Method index="0" signature="android.content.IntentFilter.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="android.content.IntentFilter.addAction(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$1.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.activity.DisplaySplashScreenActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.game.GameList2.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.jiuzhansoft.game.GameList2.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentActivity.doReallyStop(Z)V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onReallyStop()V" replace-index="0" replace-signature="android.support.v4.app.FragmentActivity.onReallyStop(Z)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentActivity$1.handleMessage(Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.onResumeFragments()V" replace-index="0" replace-signature="android.support.v4.app.FragmentManagerImpl.dispatchResume()V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.HomeActivity2$11$1.run()V"/>
+    <Method signature="android.support.v4.app.FragmentManagerImpl.execPendingActions()Z">
+        <Remove-Method index="0" signature="android.support.v4.app.LoaderManagerImpl.hasRunningLoaders()Z"/>
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentManagerImpl.startPendingDeferredFragments()V"/>
+        <Remove-Method index="0" signature="java.util.ArrayList.get(I)Ljava/lang/Object;"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.game.Game2.initView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.activity.ErrorActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="java.lang.String.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.io.PrintStream.println(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentManagerImpl.putFragment(Landroid/os/Bundle;Ljava/lang/String;Landroid/support/v4/app/Fragment;)V">
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentManagerImpl.throwException(Ljava/lang/RuntimeException;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.service.MusicService.onStart(Landroid/content/Intent;I)V">
+        <Remove-Method index="0" signature="android.os.Bundle.getInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.service.MusicService.initCurrentTime()V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.service.MusicService.setup()V"/>
+        <Remove-Method index="0" signature="com.jiuzhansoft.massage.service.MusicService.refreshLRC()V"/>
+        <Remove-Method index="0" signature="android.content.Intent.getExtras()Landroid/os/Bundle;"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.seekTo(I)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentManagerImpl.restoreAllState(Landroid/os/Parcelable;Ljava/util/ArrayList;)V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentState.instantiate(Landroid/support/v4/app/FragmentActivity;Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/Fragment;" replace-index="0" replace-signature="android.support.v4.app.FragmentState.instantiate(Landroid/support/v4/app/FragmentActivity;)Landroid/support/v4/app/Fragment;"/>
+        <Remove-Method index="0" signature="android.support.v4.app.BackStackRecord.dump(Ljava/lang/String;Ljava/io/PrintWriter;Z)V"/>
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentManagerImpl.throwException(Ljava/lang/RuntimeException;)V"/>
+        <Remove-Method index="0" signature="java.util.ArrayList.contains(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="android.support.v4.util.LogWriter.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.io.PrintWriter.&lt;init&gt;(Ljava/io/Writer;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.HumanAcupuncturePointsListActivity.initComponent()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentManagerImpl.saveFragmentBasicState(Landroid/support/v4/app/Fragment;)Landroid/os/Bundle;">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.Fragment.performSaveInstanceState(Landroid/os/Bundle;)V" replace-index="0" replace-signature="android.support.v4.app.Fragment.onSaveInstanceState(Landroid/os/Bundle;)V"/>
+        <Remove-Method index="0" signature="android.os.Bundle.putBoolean(Ljava/lang/String;Z)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentManagerImpl.moveToState(IIIZ)V">
+        <Add-Method index="0" signature="android.support.v4.app.FragmentManagerImpl.moveToState(Landroid/support/v4/app/Fragment;III)V"/>
+        <Remove-Method index="0" signature="android.support.v4.app.LoaderManagerImpl.hasRunningLoaders()Z"/>
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentManagerImpl.startPendingDeferredFragments()V"/>
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentManagerImpl.moveToState(Landroid/support/v4/app/Fragment;IIIZ)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity.isVerification()Z">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/Button;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/Button;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/Button;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$3.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/EditText;Ljava/lang/String;Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/Button;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$4.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/Button;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$6.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/EditText;Ljava/lang/String;Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/Button;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$6.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/EditText;Ljava/lang/String;Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$3.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/EditText;Ljava/lang/String;Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$6.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/EditText;Ljava/lang/String;Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$4.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$6.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/EditText;Ljava/lang/String;Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$7.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/Button;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$7.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$3.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/EditText;Ljava/lang/String;Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$7.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$4.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$7.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$8.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$2.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/Button;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$8.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$3.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/widget/EditText;Ljava/lang/String;Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$8.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$4.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$8.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$5.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity.connectBluetooth()Z">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$4.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.MusicDemoActivity$1.&lt;init&gt;(Lcom/jiuzhansoft/massage/subActivity/MusicDemoActivity;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.AcupuncturePointDetailInfoActivity.initView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.HomeActivity2.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.jiuzhansoft.massage.subActivity.HomeActivity2.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.massage.subActivity.HomeActivity2$8.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.jiuzhansoft.massage.subActivity.HomeActivity2.verificationCode(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.jiuzhansoft.massage.subActivity.HomeActivity2.verificationCode(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.jiuzhansoft.game.Game3.initView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.ImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+    </Method>
+</Apk>

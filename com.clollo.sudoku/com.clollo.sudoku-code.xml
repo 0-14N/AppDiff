@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.clollo.sudoku" pkg="com.clollo.sudoku">
+    <Method signature="com.google.android.gms.internal.r.M()Z">
+        <Remove-Method index="0" signature="com.google.android.gms.internal.cs.a(Landroid/view/ViewGroup;Lcom/google/android/gms/internal/x;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="com.google.android.gms.internal.cs.a(Landroid/view/ViewGroup;Lcom/google/android/gms/internal/x;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+</Apk>

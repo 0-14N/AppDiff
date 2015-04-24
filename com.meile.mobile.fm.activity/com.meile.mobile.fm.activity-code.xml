@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.meile.mobile.fm.activity" pkg="com.meile.mobile.fm.activity">
+    <Method signature="com.meile.mobile.fm.activity.AboutActivity$1.handleMessage(Landroid/os/Message;)V">
+        <Add-Method index="0" signature="com.meile.mobile.fm.util.FmUtil.getAppVersionCode()I"/>
+        <Remove-Method index="0" signature="com.meile.mobile.fm.util.FmUtil.changeVersionStringToInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="com.meile.mobile.fm.util.FmUtil.changeVersionStringToInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.meile.mobile.fm.util.FmUtil.getAppVersionName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.meile.mobile.fm.activity.AboutActivity$2.run()V">
+        <Replace-Method original-index="0" original-signature="com.meile.mobile.fm.network.FmApi.getRadioVersionName()Ljava/lang/String;" replace-index="0" replace-signature="com.meile.mobile.fm.network.FmApi.getRadioVersionCode()I"/>
+    </Method>
+</Apk>

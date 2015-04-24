@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="org.dayup.gnotes" pkg="org.dayup.gnotes">
+    <Add-Class signature="La/a/gz" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gs" super-signatures="Lcom/g/a/t#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/au" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ex" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ha" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cg" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/aa" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/hb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ft" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/hd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gt" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/em" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/h" super-signatures="Lcom/g/a/l#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/de" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ac" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gh" super-signatures="La/a/cz#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ep" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/g" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/k" super-signatures="Lcom/g/a/l#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/dayup/gnotes/d/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ch" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bi" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/m" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bt" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/al" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cu" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/d" super-signatures="Lcom/g/a/b#Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/k" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gk" super-signatures="La/a/cv#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ff" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/d" super-signatures="La/a/ej#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dx" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ci" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/i" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/j" super-signatures="Lcom/g/a/l#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cs" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ay" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ey" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/eb" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/s" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/q" super-signatures="Lcom/g/a/t#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/eq" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bs" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ce" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/hf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/av" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/m" super-signatures="Lcom/g/a/l#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ck" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/b" super-signatures="La/a/ad#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/el" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ag" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ei" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/eh" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ek" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ec" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ee" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bq" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/q" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/o" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fz" super-signatures="La/a/dp#La/a/du#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ew" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ax" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fk" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/as" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ej" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/co" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/eu" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ge" super-signatures="La/a/gg#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/en" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fu" super-signatures="La/a/cv#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bo" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ba" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bc" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fc" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fg" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dp" super-signatures="La/a/du#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/e" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cc" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/hc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/az" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bk" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dm" super-signatures="La/a/dj#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cq" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/c" super-signatures="La/a/cn#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ds" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ev" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dl" super-signatures="La/a/dj#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/w" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/aq" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/er" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/u" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fm" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/eo" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/et" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/eg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/i" super-signatures="Lcom/g/a/l#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ea" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bg" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/di" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ga" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/da" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bz" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dn" super-signatures="La/a/du#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/aw" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ap" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a" super-signatures="La/a/ak#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/by" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ct" super-signatures="La/a/dc#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/c" super-signatures="Lcom/g/a/b#Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gf" super-signatures="La/a/gg#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dh" super-signatures="La/a/dj#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cz" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dz" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/he" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ai" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ca" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/y" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fs" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dv" super-signatures="La/a/cz#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/r" super-signatures="Lcom/g/a/t#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ed" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bm" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dd" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/db" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/aj" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dt" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bu" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/du" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gm" super-signatures="La/a/cv#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/do" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ez" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bw" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ae" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gr" super-signatures="Lcom/g/a/t#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/es" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/at" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/dk" super-signatures="La/a/dj#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/ef" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fe" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/bj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/e" super-signatures="Lcom/g/a/b#Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/gi" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/an" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/df" super-signatures="La/a/gd#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/br" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/g/a/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cm" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fa" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/go" super-signatures="La/a/cv#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/fi" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/be" super-signatures="La/a/gc#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/cn" super-signatures="Ljava/lang/Object"/>
+    <Method signature="org.dayup.gnotes.promotion.o.run()V">
+        <Replace-Method original-index="0" original-signature="org.dayup.gnotes.d.f.isCancelled()Z" replace-index="0" replace-signature="org.dayup.gnotes.d.g.isCancelled()Z"/>
+        <Replace-Method original-index="0" original-signature="org.dayup.gnotes.d.f.isCancelled()Z" replace-index="0" replace-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;"/>
+        <Replace-Method original-index="0" original-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;" replace-index="0" replace-signature="org.dayup.gnotes.d.g.isCancelled()Z"/>
+        <Replace-Method original-index="0" original-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;" replace-index="0" replace-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;"/>
+        <Replace-Method original-index="1" original-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;" replace-index="1" replace-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;"/>
+    </Method>
+    <Method signature="org.dayup.gnotes.promotion.h.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.dayup.gnotes.d.f.cancel(Z)Z" replace-index="0" replace-signature="org.dayup.gnotes.d.g.cancel(Z)Z"/>
+        <Replace-Method original-index="0" original-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;" replace-index="0" replace-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;"/>
+        <Replace-Method original-index="1" original-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;" replace-index="1" replace-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;"/>
+    </Method>
+    <Method signature="org.dayup.activities.BaseListAcitivity.onResume()V">
+        <Add-Method index="0" signature="org.dayup.gnotes.d.f.a(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="org.dayup.gnotes.d.b.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V">
+        <Add-Method index="0" signature="org.dayup.gnotes.d.f.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="org.dayup.activities.BaseAcitivity.onResume()V">
+        <Add-Method index="0" signature="org.dayup.gnotes.d.f.a(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="org.dayup.gnotes.d.f.a(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="org.dayup.activities.CommonPreferenceActivity.onResume()V">
+        <Add-Method index="0" signature="org.dayup.gnotes.d.f.a(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="org.dayup.gnotes.d.f.a(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="org.dayup.gnotes.promotion.i.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.dayup.gnotes.d.f.cancel(Z)Z" replace-index="0" replace-signature="org.dayup.gnotes.d.g.cancel(Z)Z"/>
+        <Replace-Method original-index="0" original-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;" replace-index="0" replace-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;"/>
+        <Replace-Method original-index="1" original-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;" replace-index="1" replace-signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;"/>
+    </Method>
+    <Method signature="org.dayup.gnotes.promotion.PromotionAppStoreActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="org.dayup.gnotes.d.f.cancel(Z)Z" replace-index="0" replace-signature="org.dayup.gnotes.d.g.cancel(Z)Z"/>
+    </Method>
+</Apk>

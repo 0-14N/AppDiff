@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.happybluefin.galaxyinvader" pkg="com.happybluefin.galaxyinvader">
+    <Method signature="com.happybluefin.pay.google.Consts$PurchaseState.values()[Lcom/happybluefin/pay/google/Consts$PurchaseState;">
+        <Add-Method index="0" signature="Lcom.happybluefin.pay.google.Consts$PurchaseState.clone()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="java.lang.System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V"/>
+    </Method>
+    <Method signature="com.happybluefin.pay.google.Consts$ResponseCode.values()[Lcom/happybluefin/pay/google/Consts$ResponseCode;">
+        <Add-Method index="0" signature="Lcom.happybluefin.pay.google.Consts$ResponseCode.clone()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="java.lang.System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V"/>
+    </Method>
+</Apk>

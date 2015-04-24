@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.kia.android.moviesns" pkg="com.kia.android.moviesns">
+    <Add-Class signature="Lcom/umeng/common/net/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/onlineconfig/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/m" super-signatures="Lcom/umeng/analytics/a/l#Lcom/umeng/analytics/a/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/util/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/ReportPolicy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/m$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/util/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/d$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/m" super-signatures="Lcom/umeng/common/net/r#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/b$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/h" super-signatures="Lcom/umeng/analytics/a/l#Lcom/umeng/analytics/a/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/d$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/m$b" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/p$b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/e" super-signatures="Lorg/json/JSONObject#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/p$c" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/util/DeltaUpdate" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgentJSInterface$a" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/onlineconfig/b" super-signatures="Lcom/umeng/common/net/t#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/o" super-signatures="Lcom/umeng/common/net/t#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/onlineconfig/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/util/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/e" super-signatures="Lcom/umeng/analytics/a/l#Lcom/umeng/analytics/a/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/util/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/util/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/onlineconfig/a$b" super-signatures="Lcom/umeng/common/net/r#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$e" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/b" super-signatures="Lcom/umeng/analytics/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/util/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/onlineconfig/a$a" super-signatures="Lcom/umeng/common/net/s#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/d" super-signatures="Lcom/umeng/analytics/a/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/util/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/Gender" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/c" super-signatures="Lorg/json/JSONObject#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/p$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a$b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$b" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c$a" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/j" super-signatures="Lorg/json/JSONObject#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/l" super-signatures="Lcom/umeng/analytics/a/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/Log" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgentJSInterface" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/util/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/f" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/util/c" super-signatures="Lcom/umeng/common/util/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$c" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/n" super-signatures="Lcom/umeng/common/net/s#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/o$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/onlineconfig/UmengOnlineConfigureListener" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.kia.android.moviesns.ui.fragment.Home100Fragment.switchScreenToMovieList()V">
+        <Replace-Method original-index="0" original-signature="android.widget.EditText.setHint(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.widget.EditText.setHint(I)V"/>
+    </Method>
+    <Method signature="com.kia.android.moviesns.ui.activity.BaseOtherActivity.onPause()V">
+        <Add-Method index="0" signature="com.umeng.analytics.MobclickAgent.onPause(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.kia.android.moviesns.ui.activity.make.Make300Activity.initMusic()V">
+        <Add-Method index="0" signature="com.kia.android.moviesns.ui.activity.make.Make300Activity.getMusicDataFilePath()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.kia.android.moviesns.ui.activity.BaseMainActivity.onResume()V">
+        <Add-Method index="0" signature="com.umeng.analytics.MobclickAgent.onResume(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.kia.android.moviesns.ui.fragment.Home100Fragment.setListKind(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.app.AlertDialog$Builder.setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="1" original-signature="android.app.AlertDialog$Builder.setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;" replace-index="1" replace-signature="android.app.AlertDialog$Builder.setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="0" original-signature="android.widget.EditText.setHint(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.widget.EditText.setHint(I)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="1" signature="android.app.AlertDialog$Builder.setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+    </Method>
+    <Method signature="com.kia.android.moviesns.ui.activity.make.Make300Activity.loadMusicList(I)V">
+        <Add-Method index="0" signature="com.kia.android.moviesns.ui.activity.make.Make300Activity.getMusicDataFilePath()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.kia.android.moviesns.ui.activity.IntroActivity.onResume()V">
+        <Add-Method index="0" signature="com.umeng.analytics.MobclickAgent.onResume(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.kia.android.moviesns.ui.activity.setting.Set500Activity.showContent(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.kia.android.moviesns.ApplicationImpl.getTermsOfUseAndPrivatePrivacy()Lcom/kia/android/moviesns/TermsOfUseAndPrivatePrivacy;"/>
+        <Add-Method index="1" signature="com.kia.android.moviesns.ApplicationImpl.getTermsOfUseAndPrivatePrivacy()Lcom/kia/android/moviesns/TermsOfUseAndPrivatePrivacy;"/>
+        <Add-Method index="0" signature="com.kia.android.moviesns.TermsOfUseAndPrivatePrivacy.getPrivatePrivacy()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.kia.android.moviesns.TermsOfUseAndPrivatePrivacy.getTermsOfUse()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.os.AsyncTask.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;"/>
+        <Remove-Method index="0" signature="java.util.Locale.getDefault()Ljava/util/Locale;"/>
+        <Remove-Method index="0" signature="com.kia.android.moviesns.ui.activity.setting.Set500Activity$1.&lt;init&gt;(Lcom/kia/android/moviesns/ui/activity/setting/Set500Activity;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.util.Locale.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="1" signature="java.util.Locale.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="2" signature="java.util.Locale.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="3" signature="java.util.Locale.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="4" signature="java.util.Locale.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="5" signature="java.util.Locale.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="6" signature="java.util.Locale.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="7" signature="java.util.Locale.equals(Ljava/lang/Object;)Z"/>
+    </Method>
+    <Method signature="com.kia.android.moviesns.ui.activity.HomeAlbum200Activity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.kia.android.moviesns.util.Utils.showReportDialog(Landroid/content/Context;Ljava/lang/String;Lcom/kia/android/moviesns/ui/dialog/CustomReportDialog$OnCustomReportDialogListener;)V" replace-index="0" replace-signature="com.kia.android.moviesns.util.Utils.showReportDialog(Landroid/content/Context;ILcom/kia/android/moviesns/ui/dialog/CustomReportDialog$OnCustomReportDialogListener;)V"/>
+    </Method>
+    <Method signature="com.kia.android.moviesns.ui.activity.make.Make200Activity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="0" original-signature="android.app.AlertDialog$Builder.setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+    </Method>
+    <Method signature="com.kia.android.moviesns.ui.activity.BaseOtherActivity.onResume()V">
+        <Add-Method index="0" signature="com.umeng.analytics.MobclickAgent.onResume(Landroid/content/Context;)V"/>
+    </Method>
+</Apk>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="biz.nicenight.nicenight" pkg="biz.nicenight.nicenight">
+    <Add-Class signature="Lbiz/nicenight/nicenight/ui/aw" super-signatures="Ljava/lang/Object"/>
+    <Method signature="biz.nicenight.nicenight.ui.ar.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="biz.nicenight.nicenight.ui.UserInfoActivity.finish()V" replace-index="0" replace-signature="biz.nicenight.nicenight.ui.UmengDownActivity.finish()V"/>
+    </Method>
+    <Method signature="biz.nicenight.nicenight.ui.SettingActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="biz.nicenight.nicenight.ui.ao.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/SettingActivity;)V" replace-index="0" replace-signature="biz.nicenight.nicenight.ui.ap.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/SettingActivity;)V"/>
+    </Method>
+    <Method signature="biz.nicenight.nicenight.ui.WhatsnewDoor.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="biz.nicenight.nicenight.ui.av.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/WhatsnewDoor;)V" replace-index="0" replace-signature="biz.nicenight.nicenight.ui.aw.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/WhatsnewDoor;)V"/>
+    </Method>
+    <Method signature="biz.nicenight.nicenight.ui.UserInfoActivity.a()V">
+        <Replace-Method original-index="0" original-signature="biz.nicenight.nicenight.ui.ar.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/UserInfoActivity;)V" replace-index="0" replace-signature="biz.nicenight.nicenight.ui.au.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/UserInfoActivity;)V"/>
+    </Method>
+    <Method signature="biz.nicenight.nicenight.a.p.a()Ljava/util/List;"/>
+    <Method signature="biz.nicenight.nicenight.ui.NoticePeopleActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="biz.nicenight.nicenight.ui.al.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/NoticePeopleActivity;)V" replace-index="0" replace-signature="biz.nicenight.nicenight.ui.ao.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/NoticePeopleActivity;)V"/>
+    </Method>
+    <Method signature="biz.nicenight.nicenight.ui.UmengDownActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="biz.nicenight.nicenight.ui.aq.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/UmengDownActivity;)V" replace-index="0" replace-signature="biz.nicenight.nicenight.ui.ar.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/UmengDownActivity;)V"/>
+    </Method>
+    <Method signature="biz.nicenight.nicenight.ui.ViewPicActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="biz.nicenight.nicenight.ui.au.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/ViewPicActivity;)V" replace-index="0" replace-signature="biz.nicenight.nicenight.ui.av.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/ViewPicActivity;)V"/>
+    </Method>
+    <Method signature="biz.nicenight.nicenight.ui.NearbyActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="biz.nicenight.nicenight.ui.ai.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/NearbyActivity;)V" replace-index="0" replace-signature="biz.nicenight.nicenight.ui.ak.&lt;init&gt;(Lbiz/nicenight/nicenight/ui/NearbyActivity;)V"/>
+    </Method>
+    <Method signature="biz.nicenight.nicenight.ui.as.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="biz.nicenight.nicenight.ui.UserInfoActivity.startActivity(Landroid/content/Intent;)V" replace-index="0" replace-signature="biz.nicenight.nicenight.ui.UserInfoActivity.finish()V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Remove-Method index="0" signature="biz.nicenight.nicenight.ui.UserInfoActivity.a(Lbiz/nicenight/nicenight/ui/UserInfoActivity;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+    </Method>
+</Apk>

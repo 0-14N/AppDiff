@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.angrymobgames.muffinknightfree" pkg="com.angrymobgames.muffinknightfree">
+    <Method signature="com.unity3d.player.UnityPlayerActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="android.widget.Toast.show()V"/>
+        <Add-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+        <Add-Method index="0" signature="android.widget.Toast.show()V"/>
+        <Add-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+    </Method>
+</Apk>

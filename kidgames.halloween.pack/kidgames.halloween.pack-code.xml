@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="kidgames.halloween.pack" pkg="kidgames.halloween.pack">
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMMicrophone$Recorder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidVideoPlayerActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidCommandResize" super-signatures="Lcom/mopub/mobileads/MraidCommand#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/util/VersionCode" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/HandShake$NuanceCredentials" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMSpeechkit$SpeechKitHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidView$BaseMraidListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidCommandSetResizeProperties" super-signatures="Lcom/mopub/mobileads/MraidCommand#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMAdView$MMAdViewWebViewClientListener" super-signatures="Lcom/millennialmedia/android/MMAdImpl$BasicWebViewClientListener#Lcom/millennialmedia/android/MMWebViewClient$MMWebViewClientListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidDisplayController$OrientationBroadcastReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMSpeechkit" super-signatures="Lcom/millennialmedia/android/MMJSObject#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$State" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidVideoPlayerActivity$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMSpeechkit$SingletonHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidCommandPlayVideo" super-signatures="Lcom/mopub/mobileads/MraidCommand#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/AdViewOverlayView$OverlayWebViewClientListener" super-signatures="Lcom/millennialmedia/android/MMAdImpl$BasicWebViewClientListener#Lcom/millennialmedia/android/MMWebViewClient$MMWebViewClientListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/factories/AdFetchTaskFactory" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/InlineVideoView$MediaController$MediaClickListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidCommandGetResizeProperties" super-signatures="Lcom/mopub/mobileads/MraidCommand#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMMicrophone$Recorder$AudioRunnable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidDisplayController$4$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMSpeechkit$SpeechKitHolder$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/InlineVideoView$TransparentHandler" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMAdImpl$BasicWebViewClientListener" super-signatures="Lcom/millennialmedia/android/MMWebViewClient$MMWebViewClientListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/VideoAd$VideoIterator" super-signatures="Lcom/millennialmedia/android/AdCache$Iterator#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/VideoPlayerActivity$VideoRedirectionListener" super-signatures="Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/VideoPlayerActivity$VideoRedirectionListener$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/InlineVideoView$DownloadRunnable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/util/MraidUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMSDK$Event$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/InlineVideoView$VideoTouchListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMMicrophone$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMLayout$LayoutGestureListener" super-signatures="Landroid/view/GestureDetector$SimpleOnGestureListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/InlineVideoView$VideoCompletionListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MRaid$Finished" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/AdViewOverlayView$AnimationListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/BaseHtmlWebView$TouchState" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$AudioLevelTracker" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMSpeechkit$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidDisplayController$MoPubMediaScannerConnectionClient" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/util/Reflection$MethodBuilder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidDisplayController$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$Result" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/InlineVideoView$VideoErrorListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/CachedVideoPlayerActivity$CachedVideoWebViewClientListener" super-signatures="Lcom/millennialmedia/android/MMWebViewClient$MMWebViewClientListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMMicrophone$Recorder$SingletonHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMWebView$WebGestureListener" super-signatures="Landroid/view/GestureDetector$SimpleOnGestureListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/util/Views" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$Listener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/InlineVideoView$VideoPreparedListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/util/Streams" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidCommandGetMaxSize" super-signatures="Lcom/mopub/mobileads/MraidCommand#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidCommandCreateCalendarEvent" super-signatures="Lcom/mopub/mobileads/MraidCommand#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidCommandGetDefaultPosition" super-signatures="Lcom/mopub/mobileads/MraidCommand#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/VideoAd$VideoFilenameFilter" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMWebView$WebTouchListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMMicrophone" super-signatures="Lcom/millennialmedia/android/MMJSObject#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/util/Reflection" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMSDK$Event$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/AdViewOverlayView$OverlayRedirectionListenerImpl" super-signatures="Lcom/millennialmedia/android/MMAdImpl$MMAdImplRedirectionListenerImpl#Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidView$MraidListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMMedia$Audio$PeriodicListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidCommandStorePicture" super-signatures="Lcom/mopub/mobileads/MraidCommand#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidCommandGetCurrentPosition" super-signatures="Lcom/mopub/mobileads/MraidCommand#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/InlineVideoView$VideoHandler" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/AdViewController$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/BridgeMMMicrophone$Recorder$State" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$CustomWordsOp" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidSupportsProperty" super-signatures="Lcom/mopub/mobileads/MraidProperty#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidDisplayController$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidCommandGetScreenSize" super-signatures="Lcom/mopub/mobileads/MraidCommand#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/mopub/mobileads/MraidVideoPlayerActivity$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/NVASpeechKit$5" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.millennialmedia.android.MMSDK.getDpiHeight(Landroid/content/Context;)Ljava/lang/String;">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.MMSDK.needsRealDisplayMethod()Z" replace-index="0" replace-signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK.getRawSize(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK.getDpiHeightFrom(Landroid/util/DisplayMetrics;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Remove-Method index="1" signature="java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="android.view.WindowManager.getDefaultDisplay()Landroid/view/Display;"/>
+        <Remove-Method index="0" signature="java.lang.Integer.intValue()I"/>
+        <Remove-Method index="0" signature="java.lang.Integer.toString(I)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.Integer.toString(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.Class.getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"/>
+        <Remove-Method index="1" signature="java.lang.Class.getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"/>
+        <Remove-Method index="0" signature="android.app.Activity.getWindowManager()Landroid/view/WindowManager;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.VideoAd.handleSharedVideoFile(Landroid/content/Context;)V">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.VideoAd$1.&lt;init&gt;(Lcom/millennialmedia/android/VideoAd;Landroid/content/Context;)V" replace-index="0" replace-signature="com.millennialmedia.android.VideoAd$VideoIterator.&lt;init&gt;(Landroid/content/Context;Lcom/millennialmedia/android/VideoAd;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HandShake.getAdUrl()Ljava/lang/String;">
+        <Add-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="0" signature="java.lang.String.replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.webkit.URLUtil.isHttpUrl(Ljava/lang/String;)Z"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMWebView$4.run()V">
+        <Add-Method index="0" signature="com.millennialmedia.android.MMAdView.handleMraidResize(Lcom/millennialmedia/android/DTOResizeParameters;)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMWebView.loadUrl(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMWebView$4.handleMraidResize(Lcom/millennialmedia/android/DTOResizeParameters;)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView.getContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView.enableHardwareAcceleration()V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView.loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView.disableAllAcceleration()V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.HandShake.sharedHandShake(Landroid/content/Context;)Lcom/millennialmedia/android/HandShake;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMSDK$Event$4.run()V">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.RequestListener.requestCompleted(Lcom/millennialmedia/android/MMAd;)V" replace-index="0" replace-signature="com.millennialmedia.android.RequestListener.MMAdOverlayLaunched(Lcom/millennialmedia/android/MMAd;)V"/>
+    </Method>
+    <Method signature="com.mopub.mobileads.MraidDisplayController.&lt;init&gt;(Lcom/mopub/mobileads/MraidView;Lcom/mopub/mobileads/MraidView$ExpansionStyle;Lcom/mopub/mobileads/MraidView$NativeCloseButtonStyle;)V">
+        <Replace-Method original-index="0" original-signature="com.mopub.mobileads.MraidDisplayController$2.&lt;init&gt;(Lcom/mopub/mobileads/MraidDisplayController;)V" replace-index="0" replace-signature="com.mopub.mobileads.MraidDisplayController$OrientationBroadcastReceiver.&lt;init&gt;(Lcom/mopub/mobileads/MraidDisplayController;)V"/>
+        <Add-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getMraidView()Lcom/mopub/mobileads/MraidView;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidView.getContext()Landroid/content/Context;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.AdCache.iterateCachedAds(Landroid/content/Context;ILcom/millennialmedia/android/AdCache$Iterator;)V"/>
+    <Method signature="com.millennialmedia.android.HttpGetRequest.get(Ljava/lang/String;)Lorg/apache/http/HttpResponse;">
+        <Add-Method index="0" signature="java.lang.Exception.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMWebView$7.run()V">
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMAdView.handleUnresize()V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView.loadUrl(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView.invalidate()V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView$7.handleUnresize()V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HandShake.loadHandShake(Landroid/content/Context;)Z"/>
+    <Method signature="com.millennialmedia.android.MMSDK$Event.requestFailed(Lcom/millennialmedia/android/MMAdImpl;Lcom/millennialmedia/android/MMException;)V">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.MMSDK$Event$5.&lt;init&gt;(Lcom/millennialmedia/android/MMAdImpl;Lcom/millennialmedia/android/MMException;)V" replace-index="0" replace-signature="com.millennialmedia.android.MMSDK$Event$7.&lt;init&gt;(Lcom/millennialmedia/android/MMAdImpl;Lcom/millennialmedia/android/MMException;)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.VideoPlayerActivity$3.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.VideoView.seekTo(I)V" replace-index="0" replace-signature="android.widget.Button.setBackgroundResource(I)V"/>
+        <Add-Method index="0" signature="android.widget.VideoView.isPlaying()Z"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.VideoPlayerActivity.pauseVideoByUser()V"/>
+        <Add-Method index="1" signature="android.widget.Button.setBackgroundResource(I)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.VideoPlayerActivity.playVideo(I)V"/>
+        <Add-Method index="1" signature="com.millennialmedia.android.VideoPlayerActivity.playVideo(I)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.VideoPlayerActivity.resumeVideo()V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMSDK.insertUrlCommonValues(Landroid/content/Context;Ljava/util/Map;)V">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.MMSDK.hasAccelerometer(Landroid/content/Context;)Ljava/lang/String;" replace-index="0" replace-signature="com.millennialmedia.android.MMSDK.getDensityString(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK.hasSpeechKit(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK.hasVoiceAbility(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMSDK.getMetrics(Landroid/content/Context;)Landroid/util/DisplayMetrics;"/>
+        <Remove-Method index="0" signature="java.lang.Float.toString(F)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMWebView$5.run()V">
+        <Add-Method index="0" signature="com.millennialmedia.android.MMAdView.handleUnresize()V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMWebView.setMraidDefault()V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMWebView.invalidate()V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMWebView$5.handleUnresize()V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView.buildDrawingCache()V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView.getDrawingCache()Landroid/graphics/Bitmap;"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMAdImpl.prepareTransition(Landroid/graphics/Bitmap;)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView.destroyDrawingCache()V"/>
+        <Remove-Method index="0" signature="android.graphics.Bitmap.createBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;"/>
+        <Remove-Method index="0" signature="java.lang.Object.notify()V"/>
+        <Remove-Method index="1" signature="java.lang.Object.notify()V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.d(Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HttpGetRequest.&lt;init&gt;()V">
+        <Replace-Method original-index="0" original-signature="org.apache.http.impl.client.DefaultHttpClient.&lt;init&gt;()V" replace-index="0" replace-signature="org.apache.http.impl.client.DefaultHttpClient.&lt;init&gt;(Lorg/apache/http/params/HttpParams;)V"/>
+        <Add-Method index="0" signature="org.apache.http.params.BasicHttpParams.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="org.apache.http.params.HttpConnectionParams.setConnectionTimeout(Lorg/apache/http/params/HttpParams;I)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MRaid$1.run()V">
+        <Add-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MRaid$Finished.finished()V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+        <Add-Method index="2" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MRaid.storeMraidUrl(Landroid/content/Context;Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MRaid$Finished.finished()V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+        <Add-Method index="2" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MRaid.storeMraidUrl(Landroid/content/Context;Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MRaid.storeMraidUrl(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MRaid.storeMraidUrl(Landroid/content/Context;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.VideoAd.isOnDisk(Landroid/content/Context;)Z">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.VideoAd$2.&lt;init&gt;(Lcom/millennialmedia/android/VideoAd;)V" replace-index="0" replace-signature="com.millennialmedia.android.VideoAd$VideoFilenameFilter.&lt;init&gt;(Lcom/millennialmedia/android/VideoAd;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMSDK.getDpiWidth(Landroid/content/Context;)Ljava/lang/String;">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.MMSDK.needsRealDisplayMethod()Z" replace-index="0" replace-signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK.getRawSize(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK.getDpiWidthFrom(Landroid/util/DisplayMetrics;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Remove-Method index="1" signature="java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="android.view.WindowManager.getDefaultDisplay()Landroid/view/Display;"/>
+        <Remove-Method index="0" signature="java.lang.Integer.intValue()I"/>
+        <Remove-Method index="0" signature="java.lang.Integer.toString(I)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.Integer.toString(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.Class.getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"/>
+        <Remove-Method index="1" signature="java.lang.Class.getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"/>
+        <Remove-Method index="0" signature="android.app.Activity.getWindowManager()Landroid/view/WindowManager;"/>
+    </Method>
+    <Method signature="com.mopub.mobileads.MraidDisplayController.initializeScreenMetrics()V">
+        <Add-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getMraidView()Lcom/mopub/mobileads/MraidView;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidView.getContext()Landroid/content/Context;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMWebView$6.run()V">
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMAdView.handleMraidResize(Lcom/millennialmedia/android/DTOResizeParameters;)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MMWebView$6.handleMraidResize(Lcom/millennialmedia/android/DTOResizeParameters;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.VideoPlayerActivity$4.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.Button.setBackgroundResource(I)V" replace-index="0" replace-signature="com.millennialmedia.android.VideoPlayerActivity.dismiss()V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Button.setBackgroundResource(I)V" replace-index="0" replace-signature="com.millennialmedia.android.VideoPlayerActivity.dismiss()V"/>
+        <Remove-Method index="0" signature="android.widget.VideoView.isPlaying()Z"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.VideoPlayerActivity.pauseVideoByUser()V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.VideoPlayerActivity.playVideo(I)V"/>
+        <Remove-Method index="1" signature="com.millennialmedia.android.VideoPlayerActivity.playVideo(I)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.VideoPlayerActivity.resumeVideo()V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMAdImplController$RequestAdRunnable.isHandledHtmlResponse(Lorg/apache/http/HttpEntity;)Z">
+        <Add-Method index="0" signature="com.millennialmedia.android.MMAdImplController.setLastHeaders(Lcom/millennialmedia/android/HttpMMHeaders;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.AdCache.isExternalStorageAvailable(Landroid/content/Context;)Z">
+        <Add-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+    </Method>
+    <Method signature="com.mopub.mobileads.MraidDisplayController.createAdContainerLayout()Landroid/widget/FrameLayout;">
+        <Add-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getMraidView()Lcom/mopub/mobileads/MraidView;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidView.getContext()Landroid/content/Context;"/>
+    </Method>
+    <Method signature="com.mopub.mobileads.MraidDisplayController.initialize()V">
+        <Add-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getContext()Landroid/content/Context;"/>
+        <Add-Method index="0" signature="com.mopub.mobileads.MraidDisplayController$OrientationBroadcastReceiver.register(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getMraidView()Lcom/mopub/mobileads/MraidView;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidView.getContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="android.content.Context.registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.IntentFilter.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.AdCache.getInternalCacheDirectory(Landroid/content/Context;)Ljava/io/File;">
+        <Add-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/io/File;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMActivity.finish()V">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.MMSDK$Event.overlayClosed(Landroid/content/Context;J)V" replace-index="0" replace-signature="com.millennialmedia.android.MMAdImplController.getAdImplWithId(J)Lcom/millennialmedia/android/MMAdImpl;"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Event.overlayClosed(Lcom/millennialmedia/android/MMAdImpl;)V"/>
+    </Method>
+    <Method signature="com.mopub.mobileads.MraidDisplayController.createExpansionLayout()Landroid/widget/RelativeLayout;">
+        <Add-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getMraidView()Lcom/mopub/mobileads/MraidView;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidView.getContext()Landroid/content/Context;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MRaid.saveIncludedMMJS(Landroid/content/Context;Ljava/lang/String;)Z">
+        <Add-Method index="0" signature="com.millennialmedia.android.MRaid.storeMraidUrl(Landroid/content/Context;Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.MRaid.storeMraidUrl(Landroid/content/Context;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMSDK$Event$3.run()V">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.RequestListener.MMAdOverlayLaunched(Lcom/millennialmedia/android/MMAd;)V" replace-index="0" replace-signature="com.millennialmedia.android.RequestListener.MMAdRequestIsCaching(Lcom/millennialmedia/android/MMAd;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HandShake.deserializeFromObj(Lorg/json/JSONObject;)V">
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.millennialmedia.google.gson.Gson.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="com.millennialmedia.google.gson.Gson.fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;"/>
+    </Method>
+    <Method signature="com.mopub.mobileads.MraidDisplayController.createPlaceholderView()Landroid/widget/FrameLayout;">
+        <Add-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidDisplayController.getMraidView()Lcom/mopub/mobileads/MraidView;"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidView.getContext()Landroid/content/Context;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HandShake.saveHandShake(Landroid/content/Context;)V"/>
+    <Method signature="com.millennialmedia.android.MMSDK$Event.fetchStartedCaching(Lcom/millennialmedia/android/MMAdImpl;)V">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.MMSDK$Event$2.&lt;init&gt;(Lcom/millennialmedia/android/MMAdImpl;)V" replace-index="0" replace-signature="com.millennialmedia.android.MMSDK$Event$3.&lt;init&gt;(Lcom/millennialmedia/android/MMAdImpl;)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MRaid.hasMraidLocally(Landroid/content/Context;)Z">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.d(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.io.File.getAbsolutePath()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMSDK$Event$2.run()V">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.RequestListener.MMAdRequestIsCaching(Lcom/millennialmedia/android/MMAd;)V" replace-index="0" replace-signature="com.millennialmedia.android.RequestListener.onSingleTap(Lcom/millennialmedia/android/MMAd;)V"/>
+    </Method>
+    <Method signature="com.mopub.mobileads.MraidActivity.getAdView()Landroid/view/View;">
+        <Replace-Method original-index="0" original-signature="com.mopub.mobileads.MraidView.setOnReadyListener(Lcom/mopub/mobileads/MraidView$OnReadyListener;)V" replace-index="0" replace-signature="com.mopub.mobileads.MraidView.setMraidListener(Lcom/mopub/mobileads/MraidView$MraidListener;)V"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidActivity$3.&lt;init&gt;(Lcom/mopub/mobileads/MraidActivity;)V"/>
+        <Remove-Method index="0" signature="com.mopub.mobileads.MraidView.setOnCloseListener(Lcom/mopub/mobileads/MraidView$OnCloseListener;)V"/>
+    </Method>
+    <Method signature="com.mopub.mobileads.BaseWebView.&lt;init&gt;(Landroid/content/Context;)V">
+        <Add-Method index="0" signature="com.mopub.mobileads.BaseWebView.enablePlugins(Z)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MRaid.isMRaidUpdated(Landroid/content/Context;Ljava/lang/String;)Z">
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MRaid.getPreviousUrl(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.io.File.list(Ljava/io/FilenameFilter;)[Ljava/lang/String;"/>
+    <Method signature="com.mopub.mobileads.MraidActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.mopub.mobileads.util.VersionCode.currentApiLevel()Lcom/mopub/mobileads/util/VersionCode;"/>
+        <Add-Method index="0" signature="com.mopub.mobileads.util.VersionCode.isAtLeast(Lcom/mopub/mobileads/util/VersionCode;)Z"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HttpMMHeaders.&lt;init&gt;([Lorg/apache/http/Header;)V">
+        <Add-Method index="0" signature="com.millennialmedia.android.HttpMMHeaders.checkAcid(Lorg/apache/http/Header;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMSDK$Event.requestCompleted(Lcom/millennialmedia/android/MMAdImpl;)V">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.MMSDK$Event$4.&lt;init&gt;(Lcom/millennialmedia/android/MMAdImpl;)V" replace-index="0" replace-signature="com.millennialmedia.android.MMSDK$Event$6.&lt;init&gt;(Lcom/millennialmedia/android/MMAdImpl;)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK$Log.w(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.HandShake$1.run()V">
+        <Replace-Method original-index="0" original-signature="com.millennialmedia.android.HttpGetRequest.&lt;init&gt;()V" replace-index="0" replace-signature="com.millennialmedia.android.HttpGetRequest.&lt;init&gt;(I)V"/>
+        <Replace-Method original-index="1" original-signature="com.millennialmedia.android.HttpGetRequest.&lt;init&gt;()V" replace-index="0" replace-signature="com.millennialmedia.android.HttpGetRequest.&lt;init&gt;(I)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMSDK.getMetrics(Landroid/content/Context;)Landroid/util/DisplayMetrics;">
+        <Add-Method index="0" signature="java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="java.lang.Class.getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.MMSDK.needsRealDisplayMethod()Z"/>
+    </Method>
+    <Method signature="com.millennialmedia.android.MMSDK$Event$5.run()V">
+        <Add-Method index="0" signature="com.millennialmedia.android.RequestListener.MMAdOverlayClosed(Lcom/millennialmedia/android/MMAd;)V"/>
+        <Add-Method index="0" signature="com.millennialmedia.android.RequestListener.MMAdOverlayClosed(Lcom/millennialmedia/android/MMAd;)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.RequestListener.requestFailed(Lcom/millennialmedia/android/MMAd;Lcom/millennialmedia/android/MMException;)V"/>
+        <Remove-Method index="0" signature="com.millennialmedia.android.RequestListener.requestFailed(Lcom/millennialmedia/android/MMAd;Lcom/millennialmedia/android/MMException;)V"/>
+    </Method>
+    <Method signature="com.mopub.mobileads.MraidActivity$1.&lt;init&gt;(Lcom/mopub/mobileads/MraidActivity;)V">
+        <Replace-Method original-index="0" original-signature="java.lang.Object.&lt;init&gt;()V" replace-index="0" replace-signature="com.mopub.mobileads.MraidView$BaseMraidListener.&lt;init&gt;()V"/>
+    </Method>
+</Apk>

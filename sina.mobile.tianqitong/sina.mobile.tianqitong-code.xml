@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="sina.mobile.tianqitong" pkg="sina.mobile.tianqitong">
+    <Method signature="com.sina.tianqitong.ui.main.MainTabActivity.a(IIIIII)V">
+        <Replace-Method original-index="0" original-signature="com.sina.tianqitong.ui.main.MainTabActivity.L()V" replace-index="0" replace-signature="com.sina.tianqitong.ui.main.MainTabActivity.K()V"/>
+        <Replace-Method original-index="1" original-signature="com.sina.tianqitong.ui.main.MainTabActivity.L()V" replace-index="1" replace-signature="com.sina.tianqitong.ui.main.MainTabActivity.K()V"/>
+        <Replace-Method original-index="2" original-signature="com.sina.tianqitong.ui.main.MainTabActivity.L()V" replace-index="2" replace-signature="com.sina.tianqitong.ui.main.MainTabActivity.K()V"/>
+        <Replace-Method original-index="3" original-signature="com.sina.tianqitong.ui.main.MainTabActivity.L()V" replace-index="3" replace-signature="com.sina.tianqitong.ui.main.MainTabActivity.K()V"/>
+    </Method>
+    <Method signature="com.sina.tianqitong.ui.main.MainTabActivity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.sina.tianqitong.ui.main.a.c(Landroid/app/Activity;)V" replace-index="6" replace-signature="sina.mobile.tianqitong.TQTApp.a()Lsina/mobile/tianqitong/TQTApp;"/>
+    </Method>
+    <Method signature="com.sina.tianqitong.ui.main.MainTabActivity.u()V">
+        <Remove-Method index="0" signature="com.sina.tianqitong.ui.main.MainTabActivity.K()V"/>
+    </Method>
+</Apk>

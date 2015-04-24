@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.soft.filemanager" pkg="com.soft.filemanager">
+    <Add-Class signature="Lcn/domob/android/ads/by" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/en" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bf" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/v" super-signatures="Landroid/widget/ViewFlipper#Landroid/widget/ViewAnimator#Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bs" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/au" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/l" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bz" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/an" super-signatures="Lcn/domob/android/ads/ad#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/at" super-signatures="Lcn/domob/android/ads/au#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/cd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ee" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cc" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/r" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ex" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bk" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/fb" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ce" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aa" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/cb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/au" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ek" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dz" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ca" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/g" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/q" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/br" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/k" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/az" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/j" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bz" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bd" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dt" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ak" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/aw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/d" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/be" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/di" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ez" super-signatures="Lcn/domob/android/ads/ex#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ea" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/af" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/b" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/d" super-signatures="Ljava/util/concurrent/ConcurrentLinkedQueue#Ljava/util/AbstractQueue#Ljava/util/AbstractCollection#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/k" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cs" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/ImageGallery" super-signatures="Landroid/widget/Gallery#Landroid/widget/AbsSpinner#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bs" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bf" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ad" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ed" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ck" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/cc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ec" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/by" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ba" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/el" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ay" super-signatures="Lcn/domob/android/ads/au#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ey" super-signatures="Lcn/domob/android/ads/ex#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ax" super-signatures="Lcn/domob/android/ads/aw#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ba" super-signatures="Lcn/domob/android/ads/bs#Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/es" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ab" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/w" super-signatures="Lcn/domob/android/ads/bs#Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/aa" super-signatures="Lcn/domob/android/ads/bq#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ch" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bt" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ej" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ag" super-signatures="Lcn/domob/android/ads/ad#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ev" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ax" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ew" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/df" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/as" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/f" super-signatures="Lcom/kuguo/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ei" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bd" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ai" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/j" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/af" super-signatures="Lcn/domob/android/ads/ad#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/av" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bp" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bt" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/br" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/g" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/aj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/aq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cr" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dk" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ds" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bn" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cz" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/da" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/db" super-signatures="Lcn/domob/android/ads/bq#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ca" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/at" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/et" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ao" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/em" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ef" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aj" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/er" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bp" super-signatures="Landroid/widget/ListView#Landroid/widget/AbsListView#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bk" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bi" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/e" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/de" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bi" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/D" super-signatures="Lcn/domob/android/ads/w#Lcn/domob/android/ads/bs#Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/z" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/du" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/av" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bm" super-signatures="Lcn/domob/android/ads/au#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/co" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/cf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ay" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ci" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/as" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/c" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/k" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/fa" super-signatures="Lcn/domob/android/ads/ex#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/al" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bj" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/f" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ep" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ct" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/be" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/an" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bl" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bb" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/h" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/do" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/h" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/az" super-signatures="Lcn/domob/android/ads/au#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ce" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/BoutiqueActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bc" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/s" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/al" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/a" super-signatures="Landroid/graphics/drawable/Drawable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/FoldView" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ae" super-signatures="Lcn/domob/android/ads/ad#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/n" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/a" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.soft.filemanager.activities.MainActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.a(Landroid/app/Activity;Landroid/widget/LinearLayout;)Lcom/google/ads/AdView;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.a(Landroid/app/Activity;Landroid/widget/LinearLayout;)Lcn/domob/android/ads/DomobAdView;"/>
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.o()V" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.n()V"/>
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.j()V" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.i()V"/>
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.j()V" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.l()V"/>
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.m()V" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.i()V"/>
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.m()V" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.l()V"/>
+        <Add-Method index="0" signature="com.kuguo.ad.a.a()Lcom/kuguo/ad/a;"/>
+        <Add-Method index="0" signature="com.kuguo.ad.a.a(Landroid/content/Context;Z)V"/>
+        <Remove-Method index="0" signature="com.soft.filemanager.activities.MainActivity.g()Z"/>
+        <Remove-Method index="0" signature="com.soft.filemanager.activities.MainActivity.getApplicationContext()Landroid/content/Context;"/>
+        <Remove-Method index="1" signature="com.soft.filemanager.activities.MainActivity.getApplicationContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.wIwzugDT.REXxAgdQ105357.a.b()V"/>
+        <Remove-Method index="0" signature="com.pad.android.xappad.AdController.&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.pad.android.xappad.AdController.loadIcon()V"/>
+        <Remove-Method index="0" signature="com.wIwzugDT.REXxAgdQ105357.a.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.ba.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.n()V" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.m()V"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.bb.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.n()V" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.m()V"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.bc.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.n()V" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.m()V"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.q.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.activities.SimpleTextEditActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.SimpleTextEditActivity.h()V" replace-index="0" replace-signature="com.soft.filemanager.activities.SimpleTextEditActivity.g()V"/>
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.SimpleTextEditActivity.l()V" replace-index="0" replace-signature="com.soft.filemanager.activities.SimpleTextEditActivity.k()V"/>
+    </Method>
+    <Method signature="com.soft.filemanager.activities.MainActivity.a(I[Ljava/lang/Object;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.o.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+        <Replace-Method original-index="1" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="1" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.p.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.j.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.AbstractBaseActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.AbstractBaseActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+        <Replace-Method original-index="1" original-signature="com.soft.filemanager.activities.AbstractBaseActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="1" replace-signature="com.soft.filemanager.activities.AbstractBaseActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.activities.AbstractBaseActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.soft.filemanager.activities.AbstractBaseActivity.getApplicationContext()Landroid/content/Context;"/>
+        <Remove-Method index="1" signature="com.soft.filemanager.activities.AbstractBaseActivity.getApplicationContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="java.lang.String.trim()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.wIwzugDT.REXxAgdQ105357.a.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.wIwzugDT.REXxAgdQ105357.a.b()V"/>
+        <Remove-Method index="0" signature="com.pad.android.xappad.AdController.&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.pad.android.xappad.AdController.loadIcon()V"/>
+        <Remove-Method index="0" signature="java.lang.String.equalsIgnoreCase(Ljava/lang/String;)Z"/>
+        <Remove-Method index="1" signature="java.lang.String.equalsIgnoreCase(Ljava/lang/String;)Z"/>
+        <Remove-Method index="2" signature="java.lang.String.equalsIgnoreCase(Ljava/lang/String;)Z"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.ag.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.activities.u.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.i()Lcom/soft/filemanager/activities/AbstractBaseActivity;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.h()Lcom/soft/filemanager/activities/AbstractBaseActivity;"/>
+        <Replace-Method original-index="1" original-signature="com.soft.filemanager.activities.MainActivity.i()Lcom/soft/filemanager/activities/AbstractBaseActivity;" replace-index="1" replace-signature="com.soft.filemanager.activities.MainActivity.h()Lcom/soft/filemanager/activities/AbstractBaseActivity;"/>
+        <Replace-Method original-index="2" original-signature="com.soft.filemanager.activities.MainActivity.i()Lcom/soft/filemanager/activities/AbstractBaseActivity;" replace-index="2" replace-signature="com.soft.filemanager.activities.MainActivity.h()Lcom/soft/filemanager/activities/AbstractBaseActivity;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.ak.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.ae.a()V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.activities.v.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.i()Lcom/soft/filemanager/activities/AbstractBaseActivity;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.h()Lcom/soft/filemanager/activities/AbstractBaseActivity;"/>
+        <Replace-Method original-index="1" original-signature="com.soft.filemanager.activities.MainActivity.i()Lcom/soft/filemanager/activities/AbstractBaseActivity;" replace-index="1" replace-signature="com.soft.filemanager.activities.MainActivity.h()Lcom/soft/filemanager/activities/AbstractBaseActivity;"/>
+        <Replace-Method original-index="2" original-signature="com.soft.filemanager.activities.MainActivity.i()Lcom/soft/filemanager/activities/AbstractBaseActivity;" replace-index="2" replace-signature="com.soft.filemanager.activities.MainActivity.h()Lcom/soft/filemanager/activities/AbstractBaseActivity;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.activities.AbstractBaseActivity.f()Z">
+        <Remove-Method index="0" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Remove-Method index="1" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="java.lang.System.currentTimeMillis()J"/>
+        <Remove-Method index="0" signature="java.lang.String.equalsIgnoreCase(Ljava/lang/String;)Z"/>
+        <Remove-Method index="1" signature="java.lang.String.equalsIgnoreCase(Ljava/lang/String;)Z"/>
+        <Remove-Method index="2" signature="java.lang.String.equalsIgnoreCase(Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="com.soft.filemanager.d.a(Landroid/content/Context;)J"/>
+        <Remove-Method index="0" signature="java.lang.Long.parseLong(Ljava/lang/String;)J"/>
+        <Remove-Method index="0" signature="java.lang.String.trim()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.aj.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.activities.SearchActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.SearchActivity.j()V" replace-index="0" replace-signature="com.soft.filemanager.activities.SearchActivity.i()V"/>
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.SearchActivity.h()V" replace-index="0" replace-signature="com.soft.filemanager.activities.SearchActivity.g()V"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.ah.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.k()Lcom/soft/filemanager/FileManagerApplication;" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.j()Lcom/soft/filemanager/FileManagerApplication;"/>
+    </Method>
+    <Method signature="com.soft.filemanager.e.az.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.soft.filemanager.activities.MainActivity.n()V" replace-index="0" replace-signature="com.soft.filemanager.activities.MainActivity.m()V"/>
+    </Method>
+</Apk>

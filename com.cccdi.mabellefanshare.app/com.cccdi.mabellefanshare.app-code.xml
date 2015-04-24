@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.cccdi.mabellefanshare.app" pkg="com.cccdi.mabellefanshare.app">
+    <Add-Class signature="Lcom/cccdi/mabellefanshare/widget/SimpleDialog$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/cccdi/mabellefanshare/mabelleobj/MabelleAlipay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/cccdi/mabellefanshare/fragment/IndexFragment$6$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/cccdi/mabellefanshare/fragment/IndexFragment$6$2" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.cccdi.mabellefanshare.MainActivity.toggleMenu()V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.MainActivity$10.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;I)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity$8.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;I)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.MainActivity.retrievePopupMessage()V">
+        <Add-Method index="0" signature="com.cccdi.mabellefanshare.MainActivity$2.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.MainActivity$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.IndexFragment.onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;">
+        <Add-Method index="0" signature="android.support.v4.app.Fragment.onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.fragment.IndexFragment.init_landscape_layout(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/View;)V"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.fragment.IndexFragment.retrieveLandscapeIndexInfo()V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.MainActivity.onResume()V">
+        <Add-Method index="0" signature="android.support.v4.app.FragmentActivity.onResume()V"/>
+        <Add-Method index="0" signature="cn.jpush.android.api.JPushInterface.onResume(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.onResume()V"/>
+        <Remove-Method index="0" signature="android.content.Intent.getBooleanExtra(Ljava/lang/String;Z)Z"/>
+        <Remove-Method index="0" signature="android.content.Intent.getStringExtra(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="android.content.Intent.getStringExtra(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.MainActivity.setIntent(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.getInstance(Landroid/app/Activity;)Lcom/sromku/simple/fb/SimpleFacebook;"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.gcm.GcmFragmentActivity.onResume()V"/>
+        <Remove-Method index="0" signature="android.view.View.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.listener.BannerClickManager.&lt;init&gt;(Landroid/app/Activity;)V"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.listener.BannerClickManager.performClickAction(Landroid/view/View;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.MainActivity.getUnreadMessage()V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.MainActivity$11.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity$13.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.MainActivity$12.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity$14.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.IndexFragment.onSaveInstanceState(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.onSaveInstanceState(Landroid/os/Bundle;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.MainActivity.onSaveInstanceState(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.gcm.GcmFragmentActivity.onSaveInstanceState(Landroid/os/Bundle;)V"/>
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.onSaveInstanceState(Landroid/os/Bundle;)V"/>
+        <Remove-Method index="0" signature="android.os.Bundle.putInt(Ljava/lang/String;I)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.IndexFragment.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentActivity.getSystemService(Ljava/lang/String;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.&lt;init&gt;(Landroid/app/Activity;Lcom/facebook/Session$StatusCallback;)V"/>
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.onCreate(Landroid/os/Bundle;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.CouponDetailFragment$5.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.CouponDetailFragment$5$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment$5;)V" replace-index="1" replace-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Replace-Method original-index="0" original-signature="com.sromku.simple.fb.entities.Feed$Builder.setLink(Ljava/lang/String;)Lcom/sromku/simple/fb/entities/Feed$Builder;" replace-index="2" replace-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Replace-Method original-index="0" original-signature="com.sromku.simple.fb.entities.Feed$Builder.setDescription(Ljava/lang/String;)Lcom/sromku/simple/fb/entities/Feed$Builder;" replace-index="2" replace-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Replace-Method original-index="0" original-signature="com.sromku.simple.fb.entities.Feed$Builder.setPicture(Ljava/lang/String;)Lcom/sromku/simple/fb/entities/Feed$Builder;" replace-index="2" replace-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Replace-Method original-index="0" original-signature="com.sromku.simple.fb.entities.Feed$Builder.build()Lcom/sromku/simple/fb/entities/Feed;" replace-index="2" replace-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Replace-Method original-index="0" original-signature="com.sromku.simple.fb.entities.Feed$Builder.setMessage(Ljava/lang/String;)Lcom/sromku/simple/fb/entities/Feed$Builder;" replace-index="2" replace-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.login(Lcom/sromku/simple/fb/listeners/OnLoginListener;)V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.isLogin()Z"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.publish(Lcom/sromku/simple/fb/entities/Feed;ZLcom/sromku/simple/fb/listeners/OnPublishListener;)V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.entities.Feed$Builder.setName(Ljava/lang/String;)Lcom/sromku/simple/fb/entities/Feed$Builder;"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.entities.Feed$Builder.setCaption(Ljava/lang/String;)Lcom/sromku/simple/fb/entities/Feed$Builder;"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.getInstance()Lcom/sromku/simple/fb/SimpleFacebook;"/>
+        <Remove-Method index="1" signature="com.sromku.simple.fb.SimpleFacebook.getInstance()Lcom/sromku/simple/fb/SimpleFacebook;"/>
+        <Remove-Method index="2" signature="com.sromku.simple.fb.SimpleFacebook.getInstance()Lcom/sromku/simple/fb/SimpleFacebook;"/>
+        <Remove-Method index="0" signature="java.net.URLEncoder.encode(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.entities.Feed$Builder.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="android.content.Intent.setAction(Ljava/lang/String;)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.ProductSliderFragment$1.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.facebook.UiLifecycleHelper.&lt;init&gt;(Landroid/app/Activity;Lcom/facebook/Session$StatusCallback;)V" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$ShareDialogBuilder.setLink(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilderBase;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$ShareDialogBuilder.setPicture(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilderBase;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$ShareDialogBuilder.build()Lcom/facebook/widget/FacebookDialog;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog.present()Lcom/facebook/widget/FacebookDialog$PendingCall;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$ShareDialogBuilder.&lt;init&gt;(Landroid/app/Activity;)V"/>
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.trackPendingDialogCall(Lcom/facebook/widget/FacebookDialog$PendingCall;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.IndexFragment.onResume()V">
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.onResume()V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.RegisterFragment.onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;">
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.Constant.getFanSharerGeneralURL()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.Constant.getFanSharerURL()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.CouponDetailFragment$5$1.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment$5;)V">
+        <Replace-Method original-index="0" original-signature="com.sromku.simple.fb.listeners.OnPublishListener.&lt;init&gt;()V" replace-index="0" replace-signature="java.lang.Object.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.IndexSliderFragment2$3.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.cccdi.mabellefanshare.fragment.IndexSliderFragment2.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentActivity.startActivityForResult(Landroid/content/Intent;I)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.MainActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.gcm.GcmFragmentActivity.onCreate(Landroid/os/Bundle;)V" replace-index="0" replace-signature="android.support.v4.app.FragmentActivity.onCreate(Landroid/os/Bundle;)V"/>
+        <Remove-Method index="0" signature="android.os.Bundle.getInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.&lt;init&gt;(Landroid/app/Activity;Lcom/facebook/Session$StatusCallback;)V"/>
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.onCreate(Landroid/os/Bundle;)V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.getInstance(Landroid/app/Activity;)Lcom/sromku/simple/fb/SimpleFacebook;"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.MainActivity$2.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.logout(Lcom/sromku/simple/fb/listeners/OnLogoutListener;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.IndexFragment.retrieveIndexInfo()V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$7.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$1.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$8.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$2.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$8.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$8.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$9.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$2.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$9.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$9.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$10.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$2.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$10.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$10.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/IndexFragment;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.NotificationFragment.retrieveNotification()V">
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.request.MabelleJsonObjectRequest.&lt;init&gt;(Ljava/lang/String;Lorg/json/JSONObject;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.Constant.getReadMessageURL()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.fragment.NotificationFragment$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;)V"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.fragment.NotificationFragment$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.MainActivity.init_menu()V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.MainActivity$8.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.MainActivity$8.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity$7.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.MainActivity$9.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.MainActivity$9.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity$7.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.MainActivity.retrieveInfo()V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.MainActivity$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.MainActivity$7.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.WeeklyCompleteFragment$1.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.fragment.WeeklyCompleteFragment.invite()V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.getInstance()Lcom/sromku/simple/fb/SimpleFacebook;"/>
+        <Remove-Method index="1" signature="com.sromku.simple.fb.SimpleFacebook.getInstance()Lcom/sromku/simple/fb/SimpleFacebook;"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.fragment.WeeklyCompleteFragment$1$1.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment$1;)V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.login(Lcom/sromku/simple/fb/listeners/OnLoginListener;)V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.isLogin()Z"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$9.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$9.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$9.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$9.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.facebook.widget.FacebookDialog$PhotoShareDialogBuilder.&lt;init&gt;(Landroid/app/Activity;)V" replace-index="0" replace-signature="java.io.File.&lt;init&gt;(Ljava/io/File;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$8.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$3.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$8.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$4.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$8.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$5.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$8.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.ProductFragment$8$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/fragment/ProductFragment$8;Landroid/view/View;)V"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$PhotoShareDialogBuilder.addPhotoFiles(Ljava/util/Collection;)Lcom/facebook/widget/FacebookDialog$PhotoDialogBuilderBase;"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.MainActivity.getUiLifeCycleHelper()Lcom/facebook/UiLifecycleHelper;"/>
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.trackPendingDialogCall(Lcom/facebook/widget/FacebookDialog$PendingCall;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.setAction(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$PhotoShareDialogBuilder.build()Lcom/facebook/widget/FacebookDialog;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog.present()Lcom/facebook/widget/FacebookDialog$PendingCall;"/>
+        <Remove-Method index="0" signature="java.util.ArrayList.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="java.util.ArrayList.add(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog.canPresentShareDialog(Landroid/content/Context;[Lcom/facebook/widget/FacebookDialog$ShareDialogFeature;)Z"/>
+        <Remove-Method index="0" signature="android.content.Intent.createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.MainActivity.onDestroy()V">
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.gcm.GcmFragmentActivity.onDestroy()V"/>
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.onDestroy()V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.IndexFragment.onPause()V">
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.onPause()V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.IndexFragment.init_portrait_layout(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment.init_portrait_header(Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment.init_header(Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.fragment.IndexFragment.init_portrait_footer(Landroid/view/View;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.fragment.IndexFragment.init_footer(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.Constant.getLoginWebURL()Ljava/lang/String;">
+        <Add-Method index="0" signature="com.cccdi.mabellefanshare.AppApplication.getContext()Landroid/content/Context;"/>
+        <Add-Method index="0" signature="cn.jpush.android.api.JPushInterface.getRegistrationID(Landroid/content/Context;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.ContactFragment$1.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.WeeklyFragment$11.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.widget.PaymentWebDialog.show()V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.getInstance()Lcom/sromku/simple/fb/SimpleFacebook;"/>
+        <Remove-Method index="1" signature="com.sromku.simple.fb.SimpleFacebook.getInstance()Lcom/sromku/simple/fb/SimpleFacebook;"/>
+        <Remove-Method index="2" signature="com.sromku.simple.fb.SimpleFacebook.getInstance()Lcom/sromku/simple/fb/SimpleFacebook;"/>
+        <Remove-Method index="0" signature="com.cccdi.mabellefanshare.widget.PaymentWebDialog.&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Lcom/cccdi/mabellefanshare/widget/PaymentWebDialog$OnPaymentDialogCloseListener;)V"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.login(Lcom/sromku/simple/fb/listeners/OnLoginListener;)V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.getProfile(Lcom/sromku/simple/fb/listeners/OnProfileListener;)V"/>
+        <Remove-Method index="0" signature="com.sromku.simple.fb.SimpleFacebook.isLogin()Z"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.ProductFragment$9.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.mabelleobj.MabelleProductDetail.getMountNo()Ljava/lang/String;" replace-index="2" replace-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.mabelleobj.MabelleProductDetail.getFullSizeURL()Ljava/util/ArrayList;" replace-index="2" replace-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Replace-Method original-index="0" original-signature="android.content.Intent.setAction(Ljava/lang/String;)Landroid/content/Intent;" replace-index="2" replace-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Remove-Method index="0" signature="java.util.ArrayList.get(I)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$ShareDialogBuilder.setPicture(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilderBase;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$ShareDialogBuilder.setCaption(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilderBase;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$ShareDialogBuilder.setLink(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilderBase;"/>
+        <Remove-Method index="0" signature="java.lang.String.substring(II)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$ShareDialogBuilder.build()Lcom/facebook/widget/FacebookDialog;"/>
+        <Remove-Method index="0" signature="java.lang.String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog.canPresentShareDialog(Landroid/content/Context;[Lcom/facebook/widget/FacebookDialog$ShareDialogFeature;)Z"/>
+        <Remove-Method index="0" signature="com.facebook.widget.FacebookDialog$ShareDialogBuilder.&lt;init&gt;(Landroid/app/Activity;)V"/>
+        <Remove-Method index="0" signature="java.net.URLEncoder.encode(Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.MyAccFragment.init_gridview(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V"/>
+    <Method signature="com.cccdi.mabellefanshare.widget.SimpleDialog.&lt;init&gt;(Landroid/content/Context;I)V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.widget.SimpleDialog$6.&lt;init&gt;(Lcom/cccdi/mabellefanshare/widget/SimpleDialog;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.widget.SimpleDialog$7.&lt;init&gt;(Lcom/cccdi/mabellefanshare/widget/SimpleDialog;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.SearchFragment.onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;">
+        <Add-Method index="0" signature="android.widget.EditText.setVisibility(I)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.IndexFragment.onDestroy()V">
+        <Remove-Method index="0" signature="com.facebook.UiLifecycleHelper.onDestroy()V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.MainActivity.updateUserGreeting(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cccdi.mabellefanshare.MainActivity$13.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity$10.&lt;init&gt;(Lcom/cccdi/mabellefanshare/MainActivity;)V"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.Constant.getContactUsURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;">
+        <Remove-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.IndexFragment$11.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="com.cccdi.mabellefanshare.MainActivity.switchToListingFragment(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.view.View.getTag()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentActivity.getSystemService(Ljava/lang/String;)Ljava/lang/Object;"/>
+        <Remove-Method index="1" signature="android.support.v4.app.FragmentActivity.getSystemService(Ljava/lang/String;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="android.widget.TextView.getText()Ljava/lang/CharSequence;"/>
+        <Remove-Method index="1" signature="android.widget.TextView.getText()Ljava/lang/CharSequence;"/>
+        <Remove-Method index="2" signature="android.widget.TextView.getText()Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="android.text.ClipboardManager.setText(Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="0" signature="android.content.ClipboardManager.setPrimaryClip(Landroid/content/ClipData;)V"/>
+        <Remove-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+        <Remove-Method index="0" signature="android.content.ClipData.newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;"/>
+    </Method>
+    <Method signature="com.cccdi.mabellefanshare.fragment.ProductFragment.onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;">
+        <Remove-Method index="0" signature="com.google.android.gms.analytics.Tracker.setScreenName(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.android.gms.analytics.Tracker.send(Ljava/util/Map;)V"/>
+        <Remove-Method index="0" signature="com.google.android.gms.analytics.HitBuilders$AppViewBuilder.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.google.android.gms.analytics.HitBuilders$AppViewBuilder.build()Ljava/util/Map;"/>
+    </Method>
+</Apk>

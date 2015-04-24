@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.james.SmartNotepad" pkg="com.james.SmartNotepad">
+    <Add-Class signature="Lcom/admob/android/ads/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bw" super-signatures="Lcom/admob/android/ads/ba#Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bz" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bc" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bk" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/AdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/az" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bf" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ch" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ba" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bx" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bo" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/be" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/cl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/r" super-signatures="Lcom/admob/android/ads/a/a#Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ac" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/co" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/al" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bd" super-signatures="Lcom/admob/android/ads/bc#Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/cn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bt" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bu" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/p" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/aj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/cd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ca" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ck" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/br" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/at" super-signatures="Landroid/view/animation/TranslateAnimation#Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/s" super-signatures="Lcom/admob/android/ads/a/a#Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/cg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ce" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/AdMobActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ar" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/f" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/cj" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/cp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/by" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bi" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ax" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ap" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bv" super-signatures="Lcom/admob/android/ads/ba#Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/au" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ci" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/c" super-signatures="Lcom/admob/android/ads/o#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/a/a" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/cc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/av" super-signatures="Landroid/view/animation/AlphaAnimation#Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/cb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/j" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/as" super-signatures="Landroid/view/animation/ScaleAnimation#Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/aq" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bs" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/analytics/InstallReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/aw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/cm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/an" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/cf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/analytics/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/ay" super-signatures="Landroid/widget/TextView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/admob/android/ads/bg" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Method signature="com.james.SmartNotepad.Settings.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.james.SmartNotepad.Settings.requestWindowFeature(I)Z"/>
+        <Remove-Method index="0" signature="com.james.SmartNotepad.Settings.setFeatureDrawableResource(II)V"/>
+    </Method>
+    <Method signature="com.james.SmartNotepad.NoteView.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="1" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="0" signature="com.admob.android.ads.ak.c()V"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.addView(Landroid/view/View;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/f;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.e.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.a(Lcom/google/ads/e;)V"/>
+    </Method>
+    <Method signature="com.james.SmartNotepad.NoteEdit.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="1" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setEnabled(Z)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setEnabled(Z)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setText(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.widget.Button.setText(Ljava/lang/CharSequence;)V"/>
+        <Add-Method index="0" signature="com.admob.android.ads.ak.c()V"/>
+    </Method>
+    <Method signature="com.james.SmartNotepad.About.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="1" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="0" signature="com.admob.android.ads.ak.c()V"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.addView(Landroid/view/View;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/f;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.e.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.a(Lcom/google/ads/e;)V"/>
+    </Method>
+    <Method signature="com.james.SmartNotepad.SdcardList.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdView.a(Lcom/google/ads/e;)V" replace-index="0" replace-signature="com.admob.android.ads.ak.c()V"/>
+        <Add-Method index="1" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="1" signature="com.james.SmartNotepad.CustomButton.a()V"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.addView(Landroid/view/View;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/f;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.e.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.james.SmartNotepad.Translate.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setEnabled(Z)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setEnabled(Z)V" replace-index="1" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setEnabled(Z)V" replace-index="0" replace-signature="android.widget.Button.setCompoundDrawablesWithIntrinsicBounds(IIII)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setEnabled(Z)V" replace-index="0" replace-signature="android.widget.Button.setCompoundDrawablesWithIntrinsicBounds(IIII)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setCompoundDrawablesWithIntrinsicBounds(IIII)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setCompoundDrawablesWithIntrinsicBounds(IIII)V" replace-index="0" replace-signature="android.widget.Button.setCompoundDrawablesWithIntrinsicBounds(IIII)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setCompoundDrawablesWithIntrinsicBounds(IIII)V" replace-index="1" replace-signature="android.widget.Button.setCompoundDrawablesWithIntrinsicBounds(IIII)V"/>
+    </Method>
+    <Method signature="com.james.SmartNotepad.Translate.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="1" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="4" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="4" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="4" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="4" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setEnabled(Z)V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setEnabled(Z)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setText(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.widget.Button.setText(Ljava/lang/CharSequence;)V"/>
+        <Add-Method index="0" signature="com.admob.android.ads.ak.c()V"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.addView(Landroid/view/View;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/f;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.e.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.a(Lcom/google/ads/e;)V"/>
+    </Method>
+    <Method signature="com.james.SmartNotepad.NoteAdd.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="1" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="3" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="3" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="2" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setEnabled(Z)V" replace-index="2" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setEnabled(Z)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setText(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.widget.Button.setText(Ljava/lang/CharSequence;)V"/>
+        <Add-Method index="0" signature="com.admob.android.ads.ak.c()V"/>
+    </Method>
+    <Method signature="com.james.SmartNotepad.NoteSearch.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V" replace-index="0" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Replace-Method original-index="1" original-signature="com.james.SmartNotepad.CustomButton.a()V" replace-index="1" replace-signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="0" signature="com.admob.android.ads.ak.c()V"/>
+        <Remove-Method index="1" signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="com.james.SmartNotepad.CustomButton.a()V"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.addView(Landroid/view/View;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/f;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.e.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.a(Lcom/google/ads/e;)V"/>
+    </Method>
+    <Method signature="com.james.SmartNotepad.NoteList.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="1" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="2" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="3" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="0" signature="com.admob.android.ads.ak.c()V"/>
+        <Add-Method index="0" signature="com.admob.android.ads.bt.&lt;init&gt;(Lcom/admob/android/ads/bx;Lcom/admob/android/ads/br;)V"/>
+        <Add-Method index="0" signature="com.admob.android.ads.bt.a(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="1" signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="2" signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="3" signature="com.james.SmartNotepad.CustomButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="com.james.SmartNotepad.CustomButton.a()V"/>
+        <Remove-Method index="1" signature="com.james.SmartNotepad.CustomButton.a()V"/>
+        <Remove-Method index="2" signature="com.james.SmartNotepad.CustomButton.a()V"/>
+        <Remove-Method index="3" signature="com.james.SmartNotepad.CustomButton.a()V"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.addView(Landroid/view/View;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/f;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.e.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.a(Lcom/google/ads/e;)V"/>
+    </Method>
+</Apk>

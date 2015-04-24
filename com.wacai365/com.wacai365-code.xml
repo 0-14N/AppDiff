@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.wacai365" pkg="com.wacai365">
+    <Method signature="com.wacai365.bank.ag.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.NbkLoginActivity_.e()V" replace-index="0" replace-signature="com.wacai365.bank.NbkLoginActivity_.g()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.am.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.NbkLoginActivity_.c()V" replace-index="0" replace-signature="com.wacai365.bank.NbkLoginActivity_.e()V"/>
+    </Method>
+    <Method signature="com.wacai365.setting.ch.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.setting.ManualBookActivity_.b()V" replace-index="0" replace-signature="com.wacai365.setting.ManualBookActivity_.e()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.TaobaoLoginActivity_$4.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.TaobaoLoginActivity_.taobaoRefresh()V" replace-index="0" replace-signature="com.wacai365.bank.TaobaoLoginActivity_.toProblemDialog()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.ak.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.NbkLoginActivity_.b()V" replace-index="0" replace-signature="com.wacai365.bank.NbkLoginActivity_.d()V"/>
+    </Method>
+    <Method signature="com.wacai365.setting.cj.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.setting.ManualBookActivity_.d()V" replace-index="0" replace-signature="com.wacai365.setting.ManualBookActivity_.b()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.af.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.NbkLoginActivity_.a()V" replace-index="0" replace-signature="com.wacai365.bank.NbkLoginActivity_.b()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.ah.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.NbkLoginActivity_.f()V" replace-index="0" replace-signature="com.wacai365.bank.NbkLoginActivity_.a()V"/>
+    </Method>
+    <Method signature="com.wacai365.setting.ck.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.setting.ManualBookActivity_.e()V" replace-index="0" replace-signature="com.wacai365.setting.ManualBookActivity_.c()V"/>
+    </Method>
+    <Method signature="com.wacai365.setting.ci.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.setting.ManualBookActivity_.c()V" replace-index="0" replace-signature="com.wacai365.setting.ManualBookActivity_.d()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.TaobaoLoginActivity_$2.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.TaobaoLoginActivity_.toProblemDialog()V" replace-index="0" replace-signature="com.wacai365.bank.TaobaoLoginActivity_.toSafety()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.ai.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.NbkLoginActivity_.g()V" replace-index="0" replace-signature="com.wacai365.bank.NbkLoginActivity_.c()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.TaobaoLoginActivity_$1.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.TaobaoLoginActivity_.toSafety()V" replace-index="0" replace-signature="com.wacai365.bank.TaobaoLoginActivity_.taobaoRefresh()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.aj.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.NbkLoginActivity_.b()V" replace-index="0" replace-signature="com.wacai365.bank.NbkLoginActivity_.h()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.ac.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.NbkLoginActivity_.h()V" replace-index="0" replace-signature="com.wacai365.bank.NbkLoginActivity_.b()V"/>
+    </Method>
+    <Method signature="com.wacai365.bank.al.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wacai365.bank.NbkLoginActivity_.d()V" replace-index="0" replace-signature="com.wacai365.bank.NbkLoginActivity_.f()V"/>
+    </Method>
+</Apk>

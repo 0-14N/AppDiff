@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.seventeenmiles.sketch" pkg="com.seventeenmiles.sketch">
+    <Add-Class signature="Lcom/qzone/FileService" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/qzone/FileDownloader" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/qzone/AlarmReceiver$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/qzone/ContentLauncher" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/qzone/BuildConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/qzone/DownloadThread" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/qzone/DBOpenHelper" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/qzone/AlarmReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/qzone/BootReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Method signature="com.seventeenmiles.sketch.SketchEdit.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.graphics.Bitmap.getConfig()Landroid/graphics/Bitmap$Config;" replace-index="0" replace-signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Replace-Method original-index="0" original-signature="android.graphics.Bitmap.copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;" replace-index="17" replace-signature="java.lang.ref.SoftReference.&lt;init&gt;(Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.res.Resources.getDimension(I)F" replace-index="17" replace-signature="java.lang.ref.SoftReference.&lt;init&gt;(Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.i.&lt;init&gt;()V" replace-index="0" replace-signature="com.seventeenmiles.sketch.h.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.i.&lt;init&gt;()V" replace-index="0" replace-signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.i.a(Landroid/app/Activity;Lcom/google/ads/AdView;Landroid/widget/LinearLayout;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.h.a(Landroid/app/Activity;Lcom/google/ads/AdView;Landroid/widget/LinearLayout;)V"/>
+        <Replace-Method original-index="0" original-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;" replace-index="17" replace-signature="java.lang.ref.SoftReference.&lt;init&gt;(Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="1" original-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;" replace-index="17" replace-signature="java.lang.ref.SoftReference.&lt;init&gt;(Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.imagefilter.h.a(Landroid/content/Context;Landroid/net/Uri;IZ)Landroid/graphics/Bitmap;" replace-index="0" replace-signature="com.seventeenmiles.imagefilter.g.a(Landroid/content/Context;Ljava/lang/String;IZ)Landroid/graphics/Bitmap;"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.SketchEdit.a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" replace-index="0" replace-signature="com.seventeenmiles.imagefilter.g.a(Landroid/content/Context;Ljava/lang/String;IZ)Landroid/graphics/Bitmap;"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.z.&lt;init&gt;(Lcom/seventeenmiles/sketch/SketchEdit;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.h.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.z.&lt;init&gt;(Lcom/seventeenmiles/sketch/SketchEdit;)V" replace-index="0" replace-signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="1" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="2" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="3" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="4" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="5" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="6" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="7" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="8" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="9" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="10" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="11" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="12" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="13" signature="com.seventeenmiles.sketch.AutoBgImageButton.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="0" signature="com.seventeenmiles.sketch.SketchEdit.getAssets()Landroid/content/res/AssetManager;"/>
+        <Add-Method index="0" signature="android.graphics.Typeface.createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;"/>
+        <Add-Method index="1" signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Add-Method index="2" signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="1" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="2" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="3" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="4" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="5" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="6" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="7" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="8" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="9" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="10" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="11" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="12" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="13" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="14" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="15" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="16" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="17" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="18" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="19" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="20" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="21" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="22" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="23" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="24" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="25" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="26" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="27" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="28" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="29" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="30" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="31" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="32" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="33" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="34" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="35" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="36" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="37" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="38" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="39" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="40" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="41" signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="1" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="2" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="3" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="4" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="5" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="6" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="7" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="8" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="9" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="10" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="11" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="12" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="13" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="14" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="15" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="16" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="17" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="18" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="19" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="20" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="21" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="22" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="23" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="24" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="25" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="26" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="27" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="0" signature="com.seventeenmiles.b.p.a(I)V"/>
+        <Add-Method index="0" signature="com.seventeenmiles.sketch.SketchEdit.a(Lcom/seventeenmiles/sketch/t;)V"/>
+        <Add-Method index="0" signature="com.seventeenmiles.sketch.q.&lt;init&gt;(Lcom/seventeenmiles/sketch/SketchEdit;)V"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.SketchEdit.getPackageName()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.SketchEdit.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.getBoolean(Ljava/lang/String;Z)Z"/>
+        <Remove-Method index="0" signature="android.widget.ImageView.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.SketchEdit.getApplicationContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.SketchEdit.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.AdMobActivity.a()Lcom/google/ads/AdView;"/>
+        <Remove-Method index="0" signature="java.lang.Class.getSimpleName()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.SketchEdit.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.af.a(Landroid/content/Context;)Landroid/graphics/Typeface;"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.b.q.a(I)V"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.SketchEdit.a(Lcom/seventeenmiles/sketch/ab;)V"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.f.a()V"/>
+    </Method>
+    <Method signature="com.google.ads.AdActivity.g()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.c.b(Z)V" replace-index="0" replace-signature="com.google.ads.a.c.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.i()Lcom/google/ads/a/c;" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.a()V" replace-index="0" replace-signature="com.google.ads.a.q.a()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.p()V" replace-index="0" replace-signature="com.google.ads.a.q.p()V"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.crop.a.a(II)V">
+        <Add-Method index="0" signature="com.seventeenmiles.sketch.crop.view.a.a()Landroid/graphics/Rect;"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.SketchActivity.onSaveInstanceState(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.net.Uri.toString()Ljava/lang/String;" replace-index="0" replace-signature="android.net.Uri.getPath()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.g.&lt;init&gt;(Lcom/seventeenmiles/sketch/More;)V">
+        <Replace-Method original-index="0" original-signature="android.webkit.WebChromeClient.&lt;init&gt;()V" replace-index="0" replace-signature="android.webkit.WebViewClient.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.e.handleMessage(Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="android.net.Uri.toString()Ljava/lang/String;" replace-index="0" replace-signature="java.io.File.getAbsolutePath()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;" replace-index="0" replace-signature="java.io.File.getAbsolutePath()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.os.Environment.getExternalStorageDirectory()Ljava/io/File;"/>
+        <Remove-Method index="1" signature="android.net.Uri.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.a.a.b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.ads.n.run()V">
+        <Add-Method index="0" signature="android.app.Activity.getContentResolver()Landroid/content/ContentResolver;"/>
+        <Add-Method index="0" signature="android.content.ContentResolver.query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;"/>
+        <Add-Method index="0" signature="android.database.Cursor.moveToFirst()Z"/>
+        <Add-Method index="0" signature="android.database.Cursor.getColumnNames()[Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.database.Cursor.getColumnName(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.database.Cursor.getColumnIndex(Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="android.database.Cursor.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.app.Activity.getApplicationContext()Landroid/content/Context;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences$Editor.putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences$Editor.putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Add-Method index="0" signature="com.google.ads.util.d.b(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Add-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="0" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="0" signature="java.util.Date.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.util.Date.getTime()J"/>
+        <Remove-Method index="0" signature="com.google.ads.a.r.u()V"/>
+    </Method>
+    <Method signature="com.google.ads.a.j.run()V">
+        <Replace-Method original-index="0" original-signature="java.util.List.contains(Ljava/lang/Object;)Z" replace-index="0" replace-signature="com.google.ads.a.q.g()Lcom/google/ads/y;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.o.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.q.j()Lcom/google/ads/a/x;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.o.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.q.j()Lcom/google/ads/a/x;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.o.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.p.&lt;init&gt;(Lcom/google/ads/a/q;Ljava/util/LinkedList;IZLjava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.o.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.p.&lt;init&gt;(Lcom/google/ads/a/q;Ljava/util/LinkedList;IZLjava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.o.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.n.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.o.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V" replace-index="1" replace-signature="com.google.ads.a.n.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.z.a(Ljava/lang/String;)Lcom/google/ads/z;" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.z.a(Ljava/lang/String;)Lcom/google/ads/z;" replace-index="0" replace-signature="com.google.ads.a.q.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.z.a(Ljava/lang/String;)Lcom/google/ads/z;" replace-index="0" replace-signature="com.google.ads.a.s.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.z.a(Ljava/lang/String;)Lcom/google/ads/z;" replace-index="1" replace-signature="com.google.ads.a.q.b(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.z.a(Ljava/lang/String;)Lcom/google/ads/z;" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.z.a(Ljava/lang/String;)Lcom/google/ads/z;" replace-index="0" replace-signature="com.google.ads.w.a(Ljava/lang/String;)Lcom/google/ads/w;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.k.&lt;init&gt;(Lcom/google/ads/a/j;Lcom/google/ads/z;)V" replace-index="0" replace-signature="com.google.ads.a.k.&lt;init&gt;(Lcom/google/ads/a/j;Lcom/google/ads/w;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.q.&lt;init&gt;(Lcom/google/ads/a/r;Landroid/webkit/WebView;Ljava/util/LinkedList;IZLjava/lang/String;Lcom/google/ads/g;)V" replace-index="0" replace-signature="com.google.ads.a.q.j()Lcom/google/ads/a/x;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.q.&lt;init&gt;(Lcom/google/ads/a/r;Landroid/webkit/WebView;Ljava/util/LinkedList;IZLjava/lang/String;Lcom/google/ads/g;)V" replace-index="0" replace-signature="com.google.ads.a.p.&lt;init&gt;(Lcom/google/ads/a/q;Ljava/util/LinkedList;IZLjava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.q.&lt;init&gt;(Lcom/google/ads/a/r;Landroid/webkit/WebView;Ljava/util/LinkedList;IZLjava/lang/String;Lcom/google/ads/g;)V" replace-index="1" replace-signature="com.google.ads.a.n.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="java.lang.Object.equals(Ljava/lang/Object;)Z" replace-index="1" replace-signature="java.lang.Object.equals(Ljava/lang/Object;)Z"/>
+        <Replace-Method original-index="1" original-signature="java.lang.Object.equals(Ljava/lang/Object;)Z" replace-index="1" replace-signature="java.lang.Object.equals(Ljava/lang/Object;)Z"/>
+        <Replace-Method original-index="2" original-signature="java.lang.Object.equals(Ljava/lang/Object;)Z" replace-index="2" replace-signature="java.lang.Object.equals(Ljava/lang/Object;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.util.ac.a()Ljava/lang/Object;" replace-index="0" replace-signature="com.google.ads.a.q.g()Lcom/google/ads/y;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.c()V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.c()V"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.c()V"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.s.a(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.s.a(Z)V"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.s.a(Z)V"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.s.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.b(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.b(Z)V"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="1" replace-signature="com.google.ads.a.q.b(Z)V"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="1" replace-signature="com.google.ads.a.q.b(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.w.a(Ljava/lang/String;)Lcom/google/ads/w;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.w.a(Ljava/lang/String;)Lcom/google/ads/w;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.w.a(Ljava/lang/String;)Lcom/google/ads/w;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.w.a(Ljava/lang/String;)Lcom/google/ads/w;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.a(Ljava/lang/Runnable;)V" replace-index="0" replace-signature="com.google.ads.a.q.a(Ljava/lang/Runnable;)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.a(Ljava/lang/Runnable;)V" replace-index="3" replace-signature="com.google.ads.a.q.a(Ljava/lang/Runnable;)V"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.a.r.a(Ljava/lang/Runnable;)V" replace-index="2" replace-signature="com.google.ads.a.q.a(Ljava/lang/Runnable;)V"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.a.r.a(Ljava/lang/Runnable;)V" replace-index="3" replace-signature="com.google.ads.a.q.a(Ljava/lang/Runnable;)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.k()Lcom/google/ads/a/w;" replace-index="0" replace-signature="com.google.ads.a.q.j()Lcom/google/ads/a/x;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.k()Lcom/google/ads/a/w;" replace-index="0" replace-signature="com.google.ads.a.p.&lt;init&gt;(Lcom/google/ads/a/q;Ljava/util/LinkedList;IZLjava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.k()Lcom/google/ads/a/w;" replace-index="1" replace-signature="com.google.ads.a.n.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.j()Lcom/google/ads/a/y;" replace-index="0" replace-signature="com.google.ads.a.q.j()Lcom/google/ads/a/x;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.j()Lcom/google/ads/a/y;" replace-index="0" replace-signature="com.google.ads.a.p.&lt;init&gt;(Lcom/google/ads/a/q;Ljava/util/LinkedList;IZLjava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.j()Lcom/google/ads/a/y;" replace-index="1" replace-signature="com.google.ads.a.n.&lt;init&gt;(Lcom/google/ads/a/j;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.i()Lcom/google/ads/a/c;" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.i()Lcom/google/ads/a/c;" replace-index="0" replace-signature="com.google.ads.a.q.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.i()Lcom/google/ads/a/c;" replace-index="0" replace-signature="com.google.ads.a.s.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.i()Lcom/google/ads/a/c;" replace-index="1" replace-signature="com.google.ads.a.q.b(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.i()Lcom/google/ads/a/c;" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.i()Lcom/google/ads/a/c;" replace-index="0" replace-signature="com.google.ads.w.a(Ljava/lang/String;)Lcom/google/ads/w;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.b(Z)V" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.b(Z)V" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.b(Z)V" replace-index="0" replace-signature="com.google.ads.a.q.c()V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.b(Z)V" replace-index="0" replace-signature="com.google.ads.a.q.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.b(Z)V" replace-index="0" replace-signature="com.google.ads.a.s.a(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.b(Z)V" replace-index="0" replace-signature="com.google.ads.a.s.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.b(Z)V" replace-index="0" replace-signature="com.google.ads.a.q.b(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.b(Z)V" replace-index="1" replace-signature="com.google.ads.a.q.b(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.b(Z)V" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.b(Z)V" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.b(Z)V" replace-index="0" replace-signature="com.google.ads.w.a(Ljava/lang/String;)Lcom/google/ads/w;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.b(Z)V" replace-index="0" replace-signature="com.google.ads.w.a(Ljava/lang/String;)Lcom/google/ads/w;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.g()Lcom/google/ads/ab;" replace-index="0" replace-signature="com.google.ads.a.q.g()Lcom/google/ads/y;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.t.a(Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.q.m()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.t.a(Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.s.a(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.t.a(Z)V" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.t.a(Z)V" replace-index="0" replace-signature="com.google.ads.a.q.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.t.a(Z)V" replace-index="0" replace-signature="com.google.ads.a.s.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.t.a(Z)V" replace-index="0" replace-signature="com.google.ads.a.q.b(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.t.a(Z)V" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.t.a(Z)V" replace-index="0" replace-signature="com.google.ads.w.a(Ljava/lang/String;)Lcom/google/ads/w;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.c()V" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.c()V" replace-index="0" replace-signature="com.google.ads.a.q.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.c()V" replace-index="0" replace-signature="com.google.ads.a.s.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.c()V" replace-index="0" replace-signature="com.google.ads.a.q.b(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.c()V" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.c()V" replace-index="0" replace-signature="com.google.ads.w.a(Ljava/lang/String;)Lcom/google/ads/w;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.m()J" replace-index="0" replace-signature="com.google.ads.a.q.m()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.m()J" replace-index="0" replace-signature="com.google.ads.a.s.a(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.h()V" replace-index="0" replace-signature="com.google.ads.a.x.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.y.c()V" replace-index="0" replace-signature="com.google.ads.a.x.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.ab.a(Lcom/google/ads/z;I)V" replace-index="0" replace-signature="com.google.ads.y.a(Lcom/google/ads/w;I)V"/>
+        <Replace-Method original-index="9" original-signature="com.google.ads.a.j.a(Lcom/google/ads/e;Z)V" replace-index="1" replace-signature="com.google.ads.a.q.a(Ljava/lang/Runnable;)V"/>
+        <Add-Method index="0" signature="java.lang.Object.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="com.google.ads.a.p.ordinal()I"/>
+        <Remove-Method index="0" signature="java.util.Arrays.asList([Ljava/lang/Object;)Ljava/util/List;"/>
+        <Remove-Method index="1" signature="com.google.ads.util.ac.a()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.a.r.k()Lcom/google/ads/a/w;"/>
+        <Remove-Method index="0" signature="com.google.ads.a.w.q()V"/>
+        <Remove-Method index="1" signature="com.google.ads.a.w.q()V"/>
+        <Remove-Method index="0" signature="com.google.ads.a.w.w()V"/>
+        <Remove-Method index="0" signature="com.google.ads.a.w.t()V"/>
+        <Remove-Method index="0" signature="com.google.ads.a.w.x()V"/>
+        <Remove-Method index="0" signature="com.google.ads.a.w.u()V"/>
+        <Remove-Method index="0" signature="com.google.ads.a.w.r()V"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.SketchEdit.onDestroy()V">
+        <Add-Method index="0" signature="android.graphics.Bitmap.isRecycled()Z"/>
+        <Add-Method index="0" signature="android.graphics.Bitmap.recycle()V"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.SketchEdit.b(Landroid/graphics/Bitmap;)V"/>
+        <Remove-Method index="1" signature="com.seventeenmiles.sketch.SketchEdit.b(Landroid/graphics/Bitmap;)V"/>
+    </Method>
+    <Method signature="com.seventeenmiles.b.i.&lt;init&gt;(Landroid/app/Activity;Landroid/os/Handler;)V">
+        <Remove-Method index="0" signature="com.seventeenmiles.imagefilter.a.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.SettingActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.j.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/content/SharedPreferences;Landroid/preference/Preference;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.i.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/content/SharedPreferences;Landroid/preference/Preference;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.j.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/content/SharedPreferences;Landroid/preference/Preference;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.j.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.j.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/content/SharedPreferences;Landroid/preference/Preference;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.m.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/preference/Preference;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.m.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.i.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/content/SharedPreferences;Landroid/preference/Preference;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.m.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.j.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.m.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.m.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/preference/Preference;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.n.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/preference/Preference;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.i.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/content/SharedPreferences;Landroid/preference/Preference;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.n.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/preference/Preference;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.j.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.n.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/preference/Preference;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.m.&lt;init&gt;(Lcom/seventeenmiles/sketch/SettingActivity;Landroid/preference/Preference;)V"/>
+    </Method>
+    <Method signature="com.google.ads.AdActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.q()V" replace-index="0" replace-signature="com.google.ads.a.q.q()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="2" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="3" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.ar.a()Z" replace-index="0" replace-signature="com.google.ads.am.a()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.ar.b()Z" replace-index="0" replace-signature="com.google.ads.am.b()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.t()V" replace-index="0" replace-signature="com.google.ads.a.q.s()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.n()Z" replace-index="0" replace-signature="com.google.ads.a.q.n()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.l()I" replace-index="0" replace-signature="com.google.ads.a.q.l()I"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.l()I" replace-index="1" replace-signature="com.google.ads.a.q.l()I"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.i()Lcom/google/ads/a/c;" replace-index="0" replace-signature="com.google.ads.a.q.i()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.c.&lt;init&gt;(Lcom/google/ads/ar;Lcom/google/ads/g;)V" replace-index="0" replace-signature="com.google.ads.a.c.&lt;init&gt;(Lcom/google/ads/am;Lcom/google/ads/g;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.y.a(Lcom/google/ads/a/r;Ljava/util/Map;ZZ)Lcom/google/ads/a/y;" replace-index="0" replace-signature="com.google.ads.a.x.a(Lcom/google/ads/a/q;Ljava/util/Map;ZZ)Lcom/google/ads/a/x;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdActivity.a(Lcom/google/ads/a/c;ZIZZ)V" replace-index="0" replace-signature="com.google.ads.AdActivity.a(Lcom/google/ads/a/c;ZIZ)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.c.b(Z)V" replace-index="0" replace-signature="com.google.ads.a.c.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.y.a()V" replace-index="0" replace-signature="com.google.ads.a.x.a()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.y.d()V" replace-index="0" replace-signature="com.google.ads.a.x.d()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.s.&lt;init&gt;(Landroid/os/Bundle;)V" replace-index="0" replace-signature="com.google.ads.a.r.&lt;init&gt;(Landroid/os/Bundle;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.s.b()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.r.b()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.s.c()Ljava/util/HashMap;" replace-index="0" replace-signature="com.google.ads.a.r.c()Ljava/util/HashMap;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdActivity.b(Lcom/google/ads/a/r;)V" replace-index="0" replace-signature="com.google.ads.AdActivity.b(Lcom/google/ads/a/q;)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdActivity.b(Lcom/google/ads/a/r;)V" replace-index="1" replace-signature="com.google.ads.AdActivity.b(Lcom/google/ads/a/q;)V"/>
+        <Add-Method index="1" signature="com.google.ads.AdActivity.a(Lcom/google/ads/a/c;ZIZ)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdActivity.a(Lcom/google/ads/a/c;ZIZZ)V"/>
+        <Remove-Method index="0" signature="com.google.ads.a.c.e()Z"/>
+    </Method>
+    <Method signature="com.google.ads.af.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.ac.a(Lcom/google/ads/ac;Lcom/google/ads/aj;)Z" replace-index="0" replace-signature="com.google.ads.ae.h()Z"/>
+        <Add-Method index="0" signature="com.google.ads.b.b.a()V"/>
+        <Add-Method index="0" signature="java.lang.Object.getClass()Ljava/lang/Class;"/>
+        <Add-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.google.ads.ae.e()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.google.ads.util.d.b(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Add-Method index="0" signature="com.google.ads.ae.a(Lcom/google/ads/ae;)Lcom/google/ads/b/b;"/>
+        <Add-Method index="1" signature="com.google.ads.ae.a(Lcom/google/ads/ae;)Lcom/google/ads/b/b;"/>
+        <Add-Method index="2" signature="com.google.ads.ae.a(Lcom/google/ads/ae;)Lcom/google/ads/b/b;"/>
+        <Add-Method index="0" signature="com.google.ads.util.b.a(Ljava/lang/Object;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.ads.a.r.a(Landroid/view/View;Lcom/google/ads/aj;Lcom/google/ads/ag;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.ac.c(Lcom/google/ads/ac;)Lcom/google/ads/a/r;"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.ImageCropActivity.a(Lcom/seventeenmiles/sketch/d;)V">
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.imagefilter.h.a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" replace-index="0" replace-signature="com.seventeenmiles.imagefilter.g.a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.crop.g.run()V">
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.crop.a.g(Lcom/seventeenmiles/sketch/crop/a;)V"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.AdMobActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.qzone.BootReceiver.CheckStart(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.qzone.BootReceiver.CheckInstalled(Landroid/app/Activity;)Z"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.ImageCropActivity.a()V">
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.imagefilter.h.a(Landroid/content/Context;Landroid/net/Uri;IZ)Landroid/graphics/Bitmap;" replace-index="0" replace-signature="com.seventeenmiles.imagefilter.g.a(Landroid/content/Context;Ljava/lang/String;IZ)Landroid/graphics/Bitmap;"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.ImageCropActivity.getBaseContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.ImageCropActivity.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.seventeenmiles.a.a.a(Landroid/content/Context;Landroid/os/Handler;Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)Z">
+        <Remove-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Remove-Method index="1" signature="java.lang.Exception.printStackTrace()V"/>
+        <Remove-Method index="2" signature="java.lang.Exception.printStackTrace()V"/>
+        <Remove-Method index="3" signature="java.lang.Exception.printStackTrace()V"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.b.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="android.app.ProgressDialog.isShowing()Z"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.ImageCropActivity.b(Lcom/seventeenmiles/sketch/ImageCropActivity;)Landroid/app/ProgressDialog;"/>
+    </Method>
+    <Method signature="com.google.ads.a.k.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.a(Lcom/google/ads/z;)V" replace-index="0" replace-signature="com.google.ads.a.q.a(Lcom/google/ads/w;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.j.c(Lcom/google/ads/a/j;)Lcom/google/ads/a/r;" replace-index="0" replace-signature="com.google.ads.a.j.a(Lcom/google/ads/a/j;)Lcom/google/ads/a/q;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.a.j.c(Lcom/google/ads/a/j;)Lcom/google/ads/a/r;" replace-index="0" replace-signature="com.google.ads.a.j.a(Lcom/google/ads/a/j;)Lcom/google/ads/a/q;"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.stopLoading()V"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.destroy()V"/>
+        <Remove-Method index="0" signature="com.google.ads.a.r.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.a.r.f()Lcom/google/ads/ar;"/>
+        <Remove-Method index="0" signature="com.google.ads.util.ab.a()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.a.x.b(Lcom/google/ads/g;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.a.j.a(Lcom/google/ads/a/j;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="1" signature="com.google.ads.a.j.a(Lcom/google/ads/a/j;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="2" signature="com.google.ads.a.j.a(Lcom/google/ads/a/j;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="1" signature="com.google.ads.a.j.c(Lcom/google/ads/a/j;)Lcom/google/ads/a/r;"/>
+        <Remove-Method index="0" signature="com.google.ads.a.j.b(Lcom/google/ads/a/j;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.ads.a.j.d(Lcom/google/ads/a/j;)Lcom/google/ads/g;"/>
+        <Remove-Method index="1" signature="com.google.ads.a.j.d(Lcom/google/ads/a/j;)Lcom/google/ads/g;"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.SketchActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.seventeenmiles.sketch.n.&lt;init&gt;(Lcom/seventeenmiles/sketch/SketchActivity;)V"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.q.&lt;init&gt;(Lcom/seventeenmiles/sketch/SketchActivity;)V"/>
+    </Method>
+    <Method signature="com.google.ads.AdView.a(Landroid/app/Activity;Lcom/google/ads/g;Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.z.a(Landroid/app/Activity;Lcom/google/ads/a/r;)Landroid/view/ViewGroup;" replace-index="0" replace-signature="com.google.ads.a.y.a(Landroid/app/Activity;Lcom/google/ads/a/q;)Landroid/view/ViewGroup;"/>
+        <Add-Method index="0" signature="com.google.ads.am.a(Lcom/google/ads/a;Ljava/lang/String;Landroid/app/Activity;Landroid/view/ViewGroup;Lcom/google/ads/g;)Lcom/google/ads/am;"/>
+        <Add-Method index="0" signature="com.google.ads.a.q.&lt;init&gt;(Lcom/google/ads/am;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.a.r.&lt;init&gt;(Lcom/google/ads/a;Landroid/app/Activity;Lcom/google/ads/g;Ljava/lang/String;Landroid/view/ViewGroup;)V"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.More.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.i.&lt;init&gt;()V" replace-index="0" replace-signature="com.seventeenmiles.sketch.h.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.i.a(Landroid/app/Activity;Lcom/google/ads/AdView;Landroid/widget/LinearLayout;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.h.a(Landroid/app/Activity;Lcom/google/ads/AdView;Landroid/widget/LinearLayout;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.h.&lt;init&gt;(Lcom/seventeenmiles/sketch/More;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.f.&lt;init&gt;(Lcom/seventeenmiles/sketch/More;)V"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.AdMobActivity.a()Lcom/google/ads/AdView;"/>
+    </Method>
+    <Method signature="com.google.ads.a.j.a(Ljava/util/Map;Landroid/app/Activity;)Ljava/lang/String;">
+        <Replace-Method original-index="0" original-signature="android.content.Context.getResources()Landroid/content/res/Resources;" replace-index="0" replace-signature="com.google.ads.a.w.b()Lcom/google/ads/g;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.getWidth()I" replace-index="1" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.getWidth()I" replace-index="0" replace-signature="com.google.ads.v.c()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.getWidth()I" replace-index="0" replace-signature="com.google.ads.v.b()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.getHeight()I" replace-index="1" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.getHeight()I" replace-index="0" replace-signature="com.google.ads.v.c()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.getHeight()I" replace-index="0" replace-signature="com.google.ads.v.b()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="android.telephony.TelephonyManager.getNetworkType()I" replace-index="1" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="0" original-signature="android.telephony.TelephonyManager.getNetworkType()I" replace-index="0" replace-signature="com.google.ads.v.c()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="android.telephony.TelephonyManager.getNetworkType()I" replace-index="0" replace-signature="com.google.ads.v.b()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.k()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.v.f()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.k()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.v.k()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.k()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.v.m()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.k()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.v.p()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.l()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.v.g()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.m()J" replace-index="0" replace-signature="com.google.ads.a.v.h()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.o()J" replace-index="0" replace-signature="com.google.ads.a.v.i()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.E()J" replace-index="0" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.E()J" replace-index="0" replace-signature="com.google.ads.a.v.q()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.n.&lt;init&gt;(Lcom/google/ads/a/j;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.m.&lt;init&gt;(Lcom/google/ads/a/j;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.y.a()Lcom/google/ads/y;" replace-index="0" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.y.a()Lcom/google/ads/y;" replace-index="1" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.y.a()Lcom/google/ads/y;" replace-index="0" replace-signature="com.google.ads.v.c()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.y.a()Lcom/google/ads/y;" replace-index="0" replace-signature="com.google.ads.v.b()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.y.a()Lcom/google/ads/y;" replace-index="0" replace-signature="com.google.ads.a.v.q()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.a()V" replace-index="0" replace-signature="com.google.ads.a.v.a()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.ar.b()Z" replace-index="0" replace-signature="com.google.ads.a.v.j()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.ar.b()Z" replace-index="0" replace-signature="com.google.ads.am.b()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.y.c()Ljava/math/BigInteger;" replace-index="1" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.y.c()Ljava/math/BigInteger;" replace-index="0" replace-signature="com.google.ads.v.c()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.y.c()Ljava/math/BigInteger;" replace-index="0" replace-signature="com.google.ads.v.b()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.y.b()Ljava/math/BigInteger;" replace-index="1" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.y.b()Ljava/math/BigInteger;" replace-index="0" replace-signature="com.google.ads.v.c()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.y.b()Ljava/math/BigInteger;" replace-index="0" replace-signature="com.google.ads.v.b()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.x.b()Lcom/google/ads/g;" replace-index="0" replace-signature="com.google.ads.a.w.b()Lcom/google/ads/g;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.k()Lcom/google/ads/a/v;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="0" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="1" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="2" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="2" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="4" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="3" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="5" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="3" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="6" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="3" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="7" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="3" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="8" original-signature="com.google.ads.a.r.f()Lcom/google/ads/ar;" replace-index="3" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.k()Lcom/google/ads/a/w;" replace-index="0" replace-signature="com.google.ads.a.q.k()Lcom/google/ads/a/v;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.r.k()Lcom/google/ads/a/w;" replace-index="0" replace-signature="com.google.ads.a.q.f()Lcom/google/ads/am;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.i()V" replace-index="0" replace-signature="com.google.ads.a.v.d()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.D()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.v.f()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.D()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.v.k()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.D()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.v.m()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.D()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.v.p()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.A()Z" replace-index="0" replace-signature="com.google.ads.a.v.f()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.A()Z" replace-index="0" replace-signature="com.google.ads.a.v.k()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.A()Z" replace-index="0" replace-signature="com.google.ads.a.v.m()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.A()Z" replace-index="0" replace-signature="com.google.ads.a.v.p()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.y()Z" replace-index="0" replace-signature="com.google.ads.a.v.j()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.y()Z" replace-index="0" replace-signature="com.google.ads.am.b()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.v()J" replace-index="1" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.v()J" replace-index="0" replace-signature="com.google.ads.v.c()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.v()J" replace-index="0" replace-signature="com.google.ads.v.b()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.s()J" replace-index="1" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.s()J" replace-index="0" replace-signature="com.google.ads.v.c()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.s()J" replace-index="0" replace-signature="com.google.ads.v.b()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.p()J" replace-index="1" replace-signature="com.google.ads.v.a()Lcom/google/ads/v;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.p()J" replace-index="0" replace-signature="com.google.ads.v.c()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.p()J" replace-index="0" replace-signature="com.google.ads.v.b()Ljava/math/BigInteger;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.w.j()J" replace-index="0" replace-signature="com.google.ads.a.v.e()J"/>
+        <Add-Method index="0" signature="com.google.ads.a.o.&lt;init&gt;(Lcom/google/ads/a/j;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.getParent()Landroid/view/ViewParent;"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.getLocationOnScreen([I)V"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getDisplayMetrics()Landroid/util/DisplayMetrics;"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.isShown()Z"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.getWidth()I"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.getHeight()I"/>
+        <Remove-Method index="0" signature="com.google.ads.a.w.n()J"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.length()I"/>
+    </Method>
+    <Method signature="com.seventeenmiles.sketch.ImageCropActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.i.&lt;init&gt;()V" replace-index="0" replace-signature="com.seventeenmiles.sketch.h.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.i.a(Landroid/app/Activity;Lcom/google/ads/AdView;Landroid/widget/LinearLayout;)V" replace-index="0" replace-signature="com.seventeenmiles.sketch.h.a(Landroid/app/Activity;Lcom/google/ads/AdView;Landroid/widget/LinearLayout;)V"/>
+        <Replace-Method original-index="0" original-signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;" replace-index="0" replace-signature="java.lang.ref.SoftReference.&lt;init&gt;(Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="0" original-signature="com.seventeenmiles.sketch.af.a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/ProgressDialog;" replace-index="0" replace-signature="java.lang.ref.SoftReference.&lt;init&gt;(Ljava/lang/Object;)V"/>
+        <Add-Method index="0" signature="com.seventeenmiles.sketch.ImageCropActivity.getAssets()Landroid/content/res/AssetManager;"/>
+        <Add-Method index="0" signature="android.app.ProgressDialog.setCancelable(Z)V"/>
+        <Add-Method index="0" signature="android.graphics.Typeface.createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;"/>
+        <Add-Method index="0" signature="android.app.ProgressDialog.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.app.ProgressDialog.setProgressStyle(I)V"/>
+        <Add-Method index="0" signature="android.app.ProgressDialog.setMessage(Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.ImageCropActivity.getApplicationContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.AdMobActivity.a()Lcom/google/ads/AdView;"/>
+        <Remove-Method index="0" signature="com.seventeenmiles.sketch.af.a(Landroid/content/Context;)Landroid/graphics/Typeface;"/>
+    </Method>
+</Apk>

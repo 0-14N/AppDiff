@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="cn.dxy.idxyer" pkg="cn.dxy.idxyer">
+    <Method signature="cn.dxy.idxyer.activity.PrefsActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.z.&lt;init&gt;(Lcn/dxy/idxyer/activity/PrefsActivity;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.x.&lt;init&gt;(Lcn/dxy/idxyer/activity/PrefsActivity;)V"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.PictureViewsActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.x.&lt;init&gt;(Lcn/dxy/idxyer/activity/PictureViewsActivity;I)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.w.&lt;init&gt;(Lcn/dxy/idxyer/activity/PictureViewsActivity;I)V"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.StartupActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.W.&lt;init&gt;(Lcn/dxy/idxyer/activity/StartupActivity;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.V.&lt;init&gt;(Lcn/dxy/idxyer/activity/StartupActivity;)V"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.InfoActivity.j()V">
+        <Remove-Method index="0" signature="android.webkit.WebView.setWebChromeClient(Landroid/webkit/WebChromeClient;)V"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.F.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="cn.dxy.idxyer.api.model.User.getUserId()Ljava/lang/Long;"/>
+        <Add-Method index="0" signature="cn.dxy.idxyer.a.c.Y.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;"/>
+        <Add-Method index="0" signature="cn.dxy.idxyer.api.e.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="cn.dxy.idxyer.a.c.Y.&lt;init&gt;(Lcn/dxy/idxyer/a/c/g;Landroid/content/Context;Lcn/dxy/idxyer/api/e;)V"/>
+        <Add-Method index="0" signature="cn.dxy.idxyer.activity.ProfileActivity.b(Lcn/dxy/idxyer/activity/ProfileActivity;)Lcn/dxy/idxyer/a/c/g;"/>
+        <Add-Method index="0" signature="cn.dxy.idxyer.activity.ProfileActivity.a(Lcn/dxy/idxyer/activity/ProfileActivity;)Lcn/dxy/idxyer/api/model/User;"/>
+        <Remove-Method index="0" signature="cn.dxy.idxyer.activity.ProfileActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.PictureViewActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.t.&lt;init&gt;(Lcn/dxy/idxyer/activity/PictureViewActivity;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.r.&lt;init&gt;(Lcn/dxy/idxyer/activity/PictureViewActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.t.&lt;init&gt;(Lcn/dxy/idxyer/activity/PictureViewActivity;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.u.&lt;init&gt;(Lcn/dxy/idxyer/activity/PictureViewActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.v.&lt;init&gt;(Lcn/dxy/idxyer/activity/PictureViewActivity;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.r.&lt;init&gt;(Lcn/dxy/idxyer/activity/PictureViewActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.v.&lt;init&gt;(Lcn/dxy/idxyer/activity/PictureViewActivity;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.u.&lt;init&gt;(Lcn/dxy/idxyer/activity/PictureViewActivity;)V"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.MainActivity.e()V">
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.k.&lt;init&gt;(Lcn/dxy/idxyer/activity/MainActivity;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.j.&lt;init&gt;(Lcn/dxy/idxyer/activity/MainActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.l.&lt;init&gt;(Lcn/dxy/idxyer/activity/MainActivity;Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;II)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.k.&lt;init&gt;(Lcn/dxy/idxyer/activity/MainActivity;Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;II)V"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.SearchActivity.e()V">
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.S.&lt;init&gt;(Lcn/dxy/idxyer/activity/SearchActivity;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.R.&lt;init&gt;(Lcn/dxy/idxyer/activity/SearchActivity;)V"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.SearchActivity.j()V">
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.R.&lt;init&gt;(Lcn/dxy/idxyer/activity/SearchActivity;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.O.&lt;init&gt;(Lcn/dxy/idxyer/activity/SearchActivity;)V"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.SelectUserActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.V.&lt;init&gt;(Lcn/dxy/idxyer/activity/SelectUserActivity;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.S.&lt;init&gt;(Lcn/dxy/idxyer/activity/SelectUserActivity;)V"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.L.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.ProfileActivity.startActivity(Landroid/content/Intent;)V" replace-index="0" replace-signature="cn.dxy.idxyer.activity.ProfileActivity.c(Landroid/content/Intent;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" replace-index="0" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="1" original-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="cn.dxy.idxyer.api.model.User.getInfoUserId()Ljava/lang/Long;"/>
+        <Add-Method index="1" signature="cn.dxy.idxyer.api.model.User.getInfoUserId()Ljava/lang/Long;"/>
+        <Add-Method index="2" signature="cn.dxy.idxyer.api.model.User.getInfoUserId()Ljava/lang/Long;"/>
+        <Add-Method index="3" signature="cn.dxy.idxyer.api.model.User.getInfoUserId()Ljava/lang/Long;"/>
+        <Add-Method index="4" signature="cn.dxy.idxyer.api.model.User.getInfoUserId()Ljava/lang/Long;"/>
+        <Add-Method index="5" signature="cn.dxy.idxyer.api.model.User.getInfoUserId()Ljava/lang/Long;"/>
+        <Add-Method index="1" signature="cn.dxy.idxyer.activity.ProfileActivity.c(Landroid/content/Intent;)V"/>
+        <Add-Method index="2" signature="cn.dxy.idxyer.activity.ProfileActivity.c(Landroid/content/Intent;)V"/>
+        <Add-Method index="3" signature="cn.dxy.idxyer.activity.ProfileActivity.c(Landroid/content/Intent;)V"/>
+        <Add-Method index="4" signature="cn.dxy.idxyer.activity.ProfileActivity.c(Landroid/content/Intent;)V"/>
+        <Add-Method index="5" signature="cn.dxy.idxyer.activity.ProfileActivity.c(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="android.view.View.getId()I"/>
+        <Add-Method index="2" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+        <Add-Method index="3" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+        <Add-Method index="4" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+        <Add-Method index="5" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="cn.dxy.idxyer.activity.K.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="cn.dxy.idxyer.activity.ProfileActivity.a(Lcn/dxy/idxyer/activity/ProfileActivity;)Lcn/dxy/idxyer/api/model/User;" replace-index="0" replace-signature="cn.dxy.idxyer.api.model.User.getInfoAvatar120(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="cn.dxy.idxyer.activity.ProfileActivity.e(Lcn/dxy/idxyer/activity/ProfileActivity;)I"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+</Apk>

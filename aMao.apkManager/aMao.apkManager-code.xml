@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="aMao.apkManager" pkg="aMao.apkManager">
+    <Add-Class signature="Lcom/google/ads/ai$b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/internal/c$d" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/mediation/customevent/CustomEvent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/mediation/customevent/CustomEventExtras" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/az" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.google.ads.an.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.a(Landroid/view/View;Lcom/google/ads/h;Lcom/google/ads/f;Z)V" replace-index="0" replace-signature="com.google.ads.internal.d.a(Lcom/google/ads/f;Z)V"/>
+        <Remove-Method index="0" signature="com.google.ads.e.d(Lcom/google/ads/e;)Lcom/google/ads/h;"/>
+    </Method>
+    <Method signature="com.google.ads.aq.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.v()V" replace-index="0" replace-signature="com.google.ads.internal.d.t()V"/>
+    </Method>
+    <Method signature="com.google.ads.ac.run()V">
+        <Add-Method index="0" signature="java.net.HttpURLConnection.setInstanceFollowRedirects(Z)V"/>
+        <Add-Method index="0" signature="java.net.HttpURLConnection.connect()V"/>
+        <Add-Method index="0" signature="java.net.HttpURLConnection.getResponseCode()I"/>
+        <Add-Method index="0" signature="java.net.HttpURLConnection.disconnect()V"/>
+        <Add-Method index="1" signature="java.net.HttpURLConnection.disconnect()V"/>
+        <Add-Method index="0" signature="java.net.URL.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.google.ads.util.AdUtil.a(Ljava/net/HttpURLConnection;Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.google.ads.util.b.d(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Add-Method index="0" signature="java.net.URL.openConnection()Ljava/net/URLConnection;"/>
+        <Add-Method index="0" signature="com.google.ads.util.b.e(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.y()V"/>
+    </Method>
+    <Method signature="aMao.appManager.appManagerActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="aMao.a.a.d()V"/>
+        <Remove-Method index="0" signature="aMao.a.a.a(Landroid/content/Context;Landroid/widget/LinearLayout;)V"/>
+    </Method>
+    <Method signature="aMao.apkManager.ApkInstallActivity.a(Z)V">
+        <Add-Method index="0" signature="android.view.View.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="android.view.View.setEnabled(Z)V"/>
+    </Method>
+    <Method signature="aMao.apkManager.Preferences.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="aMao.apkManager.Preferences.a(Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="aMao.apkManager.Preferences.a(Ljava/lang/String;)V"/>
+        <Add-Method index="2" signature="aMao.apkManager.Preferences.a(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="aMao.a.a.a(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="aMao.a.a.a(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equalsIgnoreCase(Ljava/lang/String;)Z"/>
+        <Add-Method index="1" signature="java.lang.String.equalsIgnoreCase(Ljava/lang/String;)Z"/>
+    </Method>
+    <Method signature="com.google.ads.c.a(Lorg/json/JSONObject;)Lcom/google/ads/a;">
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.&lt;init&gt;(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/HashMap;)V" replace-index="0" replace-signature="com.google.ads.a.&lt;init&gt;(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/HashMap;)V"/>
+        <Add-Method index="0" signature="com.google.ads.c.a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/util/List;"/>
+    </Method>
+    <Method signature="com.google.ads.AdActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/AdWebView;ZIZ)V" replace-index="1" replace-signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/AdWebView;ZIZZ)V"/>
+        <Add-Method index="0" signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/AdWebView;ZIZZ)V"/>
+        <Add-Method index="0" signature="com.google.ads.internal.AdWebView.e()Z"/>
+        <Remove-Method index="1" signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/AdWebView;ZIZ)V"/>
+    </Method>
+    <Method signature="aMao.a.a.c()V">
+        <Replace-Method original-index="0" original-signature="aMao.a.a.g()Z" replace-index="0" replace-signature="aMao.a.a.h()Z"/>
+        <Replace-Method original-index="1" original-signature="aMao.a.a.g()Z" replace-index="1" replace-signature="aMao.a.a.h()Z"/>
+        <Replace-Method original-index="0" original-signature="aMao.a.a.h()Z" replace-index="0" replace-signature="aMao.a.a.i()Z"/>
+    </Method>
+    <Method signature="com.google.ads.internal.c.a(Ljava/util/Map;Landroid/app/Activity;)Ljava/lang/String;">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.r()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.y()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.s()Z" replace-index="0" replace-signature="com.google.ads.internal.g.A()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.s()Z" replace-index="0" replace-signature="com.google.ads.internal.g.D()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.u()Z" replace-index="0" replace-signature="com.google.ads.internal.g.A()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.u()Z" replace-index="0" replace-signature="com.google.ads.internal.g.D()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.x()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.A()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.x()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.D()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.y()J" replace-index="0" replace-signature="com.google.ads.internal.g.E()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.r.&lt;init&gt;(Lcom/google/ads/internal/c;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.internal.s.&lt;init&gt;(Lcom/google/ads/internal/c;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.s()J"/>
+        <Replace-Method original-index="1" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.v()J"/>
+        <Replace-Method original-index="0" original-signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;" replace-index="1" replace-signature="com.google.ads.AdView.getWidth()I"/>
+        <Replace-Method original-index="1" original-signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;" replace-index="1" replace-signature="com.google.ads.AdView.getHeight()I"/>
+        <Replace-Method original-index="2" original-signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;" replace-index="0" replace-signature="android.telephony.TelephonyManager.getNetworkType()I"/>
+        <Add-Method index="0" signature="com.google.ads.AdView.getParent()Landroid/view/ViewParent;"/>
+        <Add-Method index="0" signature="com.google.ads.AdView.getLocationOnScreen([I)V"/>
+        <Add-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getDisplayMetrics()Landroid/util/DisplayMetrics;"/>
+        <Add-Method index="0" signature="com.google.ads.AdView.isShown()Z"/>
+        <Add-Method index="0" signature="com.google.ads.AdView.getWidth()I"/>
+        <Add-Method index="0" signature="com.google.ads.AdView.getHeight()I"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.t.&lt;init&gt;(Lcom/google/ads/internal/c;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.google.ads.av.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.av.a(Ljava/lang/String;Ljava/lang/Throwable;Lcom/google/ads/g$a;)V" replace-index="0" replace-signature="com.google.ads.util.b.b(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Add-Method index="0" signature="com.google.ads.mediation.MediationInterstitialAdapter.showInterstitial()V"/>
+        <Add-Method index="0" signature="com.google.ads.h.h()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.h.a(Lcom/google/ads/mediation/MediationAdapter;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.mediation.MediationAdapter.getServerParametersType()Ljava/lang/Class;"/>
+        <Remove-Method index="0" signature="java.lang.Class.newInstance()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.mediation.MediationServerParameters.load(Ljava/util/Map;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.mediation.MediationAdapter.getAdditionalParametersType()Ljava/lang/Class;"/>
+        <Remove-Method index="0" signature="com.google.ads.AdRequest.getNetworkExtras(Ljava/lang/Class;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.h.a()Z"/>
+        <Remove-Method index="0" signature="com.google.ads.mediation.MediationInterstitialAdapter.requestInterstitialAd(Lcom/google/ads/mediation/MediationInterstitialListener;Landroid/app/Activity;Lcom/google/ads/mediation/MediationServerParameters;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/NetworkExtras;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.h.k()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.h.b()Lcom/google/ads/AdSize;"/>
+        <Remove-Method index="0" signature="com.google.ads.mediation.MediationBannerAdapter.requestBannerAd(Lcom/google/ads/mediation/MediationBannerListener;Landroid/app/Activity;Lcom/google/ads/mediation/MediationServerParameters;Lcom/google/ads/AdSize;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/NetworkExtras;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.util.b.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.g.a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.aw.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="com.google.ads.aw.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="2" signature="com.google.ads.aw.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="com.google.ads.av.a(Ljava/lang/String;Ljava/lang/Throwable;Lcom/google/ads/g$a;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.mediation.MediationAdRequest.&lt;init&gt;(Lcom/google/ads/AdRequest;Landroid/content/Context;Z)V"/>
+        <Remove-Method index="0" signature="com.google.ads.ay.&lt;init&gt;(Lcom/google/ads/h;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.ax.&lt;init&gt;(Lcom/google/ads/h;)V"/>
+    </Method>
+    <Method signature="com.google.ads.ar.run()V">
+        <Add-Method index="0" signature="com.google.ads.internal.d.v()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.b(Lcom/google/ads/c;)V"/>
+    </Method>
+    <Method signature="com.google.ads.au.run()V">
+        <Add-Method index="0" signature="com.google.ads.h.l()Z"/>
+        <Add-Method index="0" signature="com.google.ads.mediation.MediationAdapter.destroy()V"/>
+        <Add-Method index="0" signature="java.lang.Object.getClass()Ljava/lang/Class;"/>
+        <Add-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.google.ads.util.b.a(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.google.ads.h.a(Lcom/google/ads/h;)Lcom/google/ads/mediation/MediationAdapter;"/>
+        <Add-Method index="1" signature="com.google.ads.h.a(Lcom/google/ads/h;)Lcom/google/ads/mediation/MediationAdapter;"/>
+        <Add-Method index="2" signature="com.google.ads.h.a(Lcom/google/ads/h;)Lcom/google/ads/mediation/MediationAdapter;"/>
+        <Add-Method index="0" signature="com.google.ads.util.a.b(Ljava/lang/Object;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.mediation.MediationInterstitialAdapter.showInterstitial()V"/>
+    </Method>
+    <Method signature="com.google.ads.as.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.a(Landroid/view/View;Lcom/google/ads/h;Lcom/google/ads/f;Z)V" replace-index="0" replace-signature="com.google.ads.internal.d.b(Lcom/google/ads/c;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.util.b.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.e.a(Lcom/google/ads/e;Lcom/google/ads/h;)Z"/>
+    </Method>
+    <Method signature="aMao.a.b.handleMessage(Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="0" replace-signature="aMao.a.a.e()Landroid/app/Activity;"/>
+        <Replace-Method original-index="1" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="1" replace-signature="aMao.a.a.e()Landroid/app/Activity;"/>
+        <Replace-Method original-index="2" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="2" replace-signature="aMao.a.a.e()Landroid/app/Activity;"/>
+        <Replace-Method original-index="3" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="3" replace-signature="aMao.a.a.e()Landroid/app/Activity;"/>
+        <Replace-Method original-index="4" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="4" replace-signature="aMao.a.a.e()Landroid/app/Activity;"/>
+        <Replace-Method original-index="5" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="5" replace-signature="aMao.a.a.e()Landroid/app/Activity;"/>
+        <Replace-Method original-index="6" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="6" replace-signature="aMao.a.a.e()Landroid/app/Activity;"/>
+        <Replace-Method original-index="9" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="7" replace-signature="aMao.a.a.e()Landroid/app/Activity;"/>
+        <Replace-Method original-index="8" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="0" replace-signature="aMao.a.a.f()Landroid/os/Handler;"/>
+        <Replace-Method original-index="0" original-signature="aMao.a.a.e()Landroid/os/Handler;" replace-index="0" replace-signature="aMao.a.a.f()Landroid/os/Handler;"/>
+        <Remove-Method index="7" signature="aMao.a.a.d()Landroid/app/Activity;"/>
+        <Remove-Method index="0" signature="com.waps.AppConnect.getInstance(Landroid/content/Context;)Lcom/waps/AppConnect;"/>
+        <Remove-Method index="0" signature="com.waps.AppConnect.showOffers(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="aMao.apkManager.ApkInstallActivity.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="aMao.apkManager.ApkInstallActivity.d()Ljava/lang/Boolean;"/>
+        <Add-Method index="0" signature="aMao.apkManager.ApkInstallActivity.a(Z)V"/>
+    </Method>
+    <Method signature="aMao.a.d.a()Ljava/lang/String;">
+        <Replace-Method original-index="0" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="0" replace-signature="aMao.a.a.e()Landroid/app/Activity;"/>
+        <Replace-Method original-index="1" original-signature="aMao.a.a.d()Landroid/app/Activity;" replace-index="1" replace-signature="aMao.a.a.e()Landroid/app/Activity;"/>
+    </Method>
+    <Method signature="com.google.ads.internal.c.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.s.&lt;init&gt;(Lcom/google/ads/internal/c;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.internal.t.&lt;init&gt;(Lcom/google/ads/internal/c;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.s.&lt;init&gt;(Lcom/google/ads/internal/c;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V" replace-index="1" replace-signature="com.google.ads.internal.t.&lt;init&gt;(Lcom/google/ads/internal/c;Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.google.ads.internal.c$d.ordinal()I"/>
+        <Add-Method index="0" signature="com.google.ads.internal.g.r()V"/>
+        <Add-Method index="0" signature="com.google.ads.internal.g.u()V"/>
+        <Add-Method index="0" signature="com.google.ads.internal.g.x()V"/>
+        <Add-Method index="0" signature="com.google.ads.internal.g.t()V"/>
+        <Add-Method index="0" signature="com.google.ads.internal.g.w()V"/>
+        <Add-Method index="0" signature="com.google.ads.internal.g.q()V"/>
+        <Add-Method index="1" signature="com.google.ads.internal.g.q()V"/>
+    </Method>
+    <Method signature="aMao.apkManager.ApkInstallActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="aMao.a.a.d()V"/>
+        <Remove-Method index="0" signature="aMao.a.a.a(Landroid/content/Context;Landroid/widget/LinearLayout;)V"/>
+    </Method>
+    <Method signature="com.google.ads.at.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.l()Z" replace-index="0" replace-signature="com.google.ads.e.a(Lcom/google/ads/e;Lcom/google/ads/h;)Z"/>
+        <Add-Method index="0" signature="com.google.ads.internal.d.a(Landroid/view/View;Lcom/google/ads/h;Lcom/google/ads/f;Z)V"/>
+        <Add-Method index="0" signature="com.google.ads.e.c(Lcom/google/ads/e;)Lcom/google/ads/internal/d;"/>
+        <Remove-Method index="0" signature="com.google.ads.mediation.MediationAdapter.destroy()V"/>
+        <Remove-Method index="0" signature="java.lang.Object.getClass()Ljava/lang/Class;"/>
+        <Remove-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.ads.h.h()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.ads.util.b.b(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.ads.h.a(Lcom/google/ads/h;)Lcom/google/ads/mediation/MediationAdapter;"/>
+        <Remove-Method index="1" signature="com.google.ads.h.a(Lcom/google/ads/h;)Lcom/google/ads/mediation/MediationAdapter;"/>
+        <Remove-Method index="2" signature="com.google.ads.h.a(Lcom/google/ads/h;)Lcom/google/ads/mediation/MediationAdapter;"/>
+        <Remove-Method index="0" signature="com.google.ads.util.a.b(Ljava/lang/Object;)V"/>
+    </Method>
+    <Method signature="com.google.ads.ap.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.t()V" replace-index="0" replace-signature="com.google.ads.internal.d.u()V"/>
+    </Method>
+    <Method signature="com.google.ads.ao.run()V">
+        <Add-Method index="0" signature="com.google.ads.internal.d.a(Landroid/view/View;Lcom/google/ads/h;Lcom/google/ads/f;Z)V"/>
+        <Add-Method index="0" signature="com.google.ads.e.d(Lcom/google/ads/e;)Lcom/google/ads/h;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.u()V"/>
+    </Method>
+    <Method signature="com.google.ads.am.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.e.c(Lcom/google/ads/e;)Lcom/google/ads/internal/d;" replace-index="0" replace-signature="com.google.ads.e.a(Lcom/google/ads/e;Lcom/google/ads/c;Lcom/google/ads/AdRequest;)V"/>
+        <Add-Method index="0" signature="com.google.ads.e.a(Lcom/google/ads/e;)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="com.google.ads.e.b(Lcom/google/ads/e;)Ljava/lang/Thread;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.a(Lcom/google/ads/f;Z)V"/>
+    </Method>
+    <Method signature="com.google.ads.k.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.af.a(Landroid/webkit/WebView;Z)V" replace-index="0" replace-signature="com.google.ads.ag.a(Landroid/webkit/WebView;Z)V"/>
+    </Method>
+</Apk>

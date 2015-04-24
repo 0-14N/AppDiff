@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.wuchun.exercisetools" pkg="com.wuchun.exercisetools">
+    <Add-Class signature="Lcom/feiwoone/banner/f/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/Q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/B" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/w" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/I" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/A" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/h" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/x" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/f" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/A" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/N" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/M" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/r" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/WebViewActivity$1" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/F" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/S" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/C" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/J" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/G" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/AdBanner" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/RecevieAdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/AdComponent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/J" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/SR" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/h" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/WA" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/K" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/P" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/al" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/G" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/O" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/H" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/I" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/AppWallManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/aj" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/AdReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/z" super-signatures="Lcom/feiwofour/coverscreen/r#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/D" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/b" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/E" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/V" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/T" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/WA" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/j" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/j" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/b" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/SR" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/g/a" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/c" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/Z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/e" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/an" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/X" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/p" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/Y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/i" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/CoverAdComponent" super-signatures="Lcom/feiwofour/coverscreen/AdComponent#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/R" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/WebViewActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/B" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/L" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/W" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wuchun/exercisetools/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/b" super-signatures="Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/SA" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/C" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/l" super-signatures="Lcom/feiwofour/coverscreen/R#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/D" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/U" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/H" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/K" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwofour/coverscreen/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/c" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/F" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/appwall/E" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.wuchun.exercisetools.Pacecount.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.wuchun.exercisetools.g.setImageResource(I)V" replace-index="0" replace-signature="com.wuchun.exercisetools.f.setImageResource(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.wuchun.exercisetools.f.&lt;init&gt;(Lcom/wuchun/exercisetools/Pacecount;)V" replace-index="0" replace-signature="com.wuchun.exercisetools.e.&lt;init&gt;(Lcom/wuchun/exercisetools/Pacecount;)V"/>
+        <Replace-Method original-index="0" original-signature="com.wuchun.exercisetools.f.&lt;init&gt;(Lcom/wuchun/exercisetools/Pacecount;)V" replace-index="0" replace-signature="com.wuchun.exercisetools.f.&lt;init&gt;(Lcom/wuchun/exercisetools/Pacecount;Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.wuchun.exercisetools.h.&lt;init&gt;(Lcom/wuchun/exercisetools/Pacecount;)V" replace-index="0" replace-signature="com.wuchun.exercisetools.g.&lt;init&gt;(Lcom/wuchun/exercisetools/Pacecount;)V"/>
+        <Replace-Method original-index="0" original-signature="com.wuchun.exercisetools.g.&lt;init&gt;(Lcom/wuchun/exercisetools/Pacecount;Landroid/content/Context;)V" replace-index="0" replace-signature="com.wuchun.exercisetools.e.&lt;init&gt;(Lcom/wuchun/exercisetools/Pacecount;)V"/>
+        <Replace-Method original-index="0" original-signature="com.wuchun.exercisetools.g.&lt;init&gt;(Lcom/wuchun/exercisetools/Pacecount;Landroid/content/Context;)V" replace-index="0" replace-signature="com.wuchun.exercisetools.f.&lt;init&gt;(Lcom/wuchun/exercisetools/Pacecount;Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.wuchun.exercisetools.MainActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.mobads.InterstitialAd.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.feiwoone.banner.AdBanner.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.feiwoone.banner.AdBanner.setAppKey(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.feiwoone.banner.AdBanner.setRecevieAdListener(Lcom/feiwoone/banner/RecevieAdListener;)V"/>
+        <Add-Method index="0" signature="com.feiwofour.coverscreen.CoverAdComponent.init(Landroid/content/Context;Ljava/lang/String;)Lcom/feiwofour/coverscreen/CoverAdComponent;"/>
+        <Add-Method index="0" signature="com.feiwofour.coverscreen.CoverAdComponent.showAd(Landroid/content/Context;)I"/>
+        <Add-Method index="0" signature="com.feiwo.appwall.AppWallManager.init(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.setListener(Lcom/baidu/mobads/AdViewListener;)V"/>
+        <Remove-Method index="0" signature="com.wuchun.exercisetools.d.&lt;init&gt;(Lcom/wuchun/exercisetools/MainActivity;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.InterstitialAd.setListener(Lcom/baidu/mobads/InterstitialAdListener;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.InterstitialAd.loadAd()V"/>
+    </Method>
+    <Method signature="com.wuchun.exercisetools.WeightCalculator.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="android.widget.LinearLayout.addView(Landroid/view/View;)V"/>
+        <Add-Method index="0" signature="com.feiwoone.banner.AdBanner.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.feiwoone.banner.AdBanner.setAppKey(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.feiwoone.banner.AdBanner.setRecevieAdListener(Lcom/feiwoone/banner/RecevieAdListener;)V"/>
+        <Add-Method index="0" signature="com.wuchun.exercisetools.q.&lt;init&gt;(Lcom/wuchun/exercisetools/WeightCalculator;)V"/>
+    </Method>
+    <Method signature="com.wuchun.exercisetools.DrawPaceNum.a()Ljava/util/ArrayList;">
+        <Replace-Method original-index="0" original-signature="com.wuchun.exercisetools.e.getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;" replace-index="0" replace-signature="com.wuchun.exercisetools.d.getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;"/>
+        <Replace-Method original-index="0" original-signature="com.wuchun.exercisetools.e.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.wuchun.exercisetools.d.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.wuchun.exercisetools.ResultActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="android.widget.LinearLayout.addView(Landroid/view/View;)V"/>
+        <Add-Method index="0" signature="com.feiwoone.banner.AdBanner.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.feiwoone.banner.AdBanner.setAppKey(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.feiwoone.banner.AdBanner.setRecevieAdListener(Lcom/feiwoone/banner/RecevieAdListener;)V"/>
+        <Add-Method index="0" signature="com.wuchun.exercisetools.h.&lt;init&gt;(Lcom/wuchun/exercisetools/ResultActivity;)V"/>
+        <Add-Method index="0" signature="com.feiwofour.coverscreen.CoverAdComponent.init(Landroid/content/Context;Ljava/lang/String;)Lcom/feiwofour/coverscreen/CoverAdComponent;"/>
+        <Add-Method index="0" signature="com.feiwofour.coverscreen.CoverAdComponent.showAd(Landroid/content/Context;)I"/>
+    </Method>
+    <Method signature="com.wuchun.exercisetools.WalkingService.b()Ljava/util/ArrayList;">
+        <Replace-Method original-index="0" original-signature="com.wuchun.exercisetools.e.getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;" replace-index="0" replace-signature="com.wuchun.exercisetools.d.getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;"/>
+        <Replace-Method original-index="0" original-signature="com.wuchun.exercisetools.e.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.wuchun.exercisetools.d.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.wuchun.exercisetools.MainActivity.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.feiwo.appwall.AppWallManager.showAppWall(Landroid/content/Context;)V"/>
+        <Add-Method index="1" signature="com.feiwo.appwall.AppWallManager.showAppWall(Landroid/content/Context;)V"/>
+        <Add-Method index="2" signature="com.feiwo.appwall.AppWallManager.showAppWall(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.InterstitialAd.isAdReady()Z"/>
+        <Remove-Method index="1" signature="com.baidu.mobads.InterstitialAd.isAdReady()Z"/>
+        <Remove-Method index="2" signature="com.baidu.mobads.InterstitialAd.isAdReady()Z"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.InterstitialAd.showAd(Landroid/app/Activity;)V"/>
+        <Remove-Method index="1" signature="com.baidu.mobads.InterstitialAd.showAd(Landroid/app/Activity;)V"/>
+        <Remove-Method index="2" signature="com.baidu.mobads.InterstitialAd.showAd(Landroid/app/Activity;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.InterstitialAd.loadAd()V"/>
+        <Remove-Method index="1" signature="com.baidu.mobads.InterstitialAd.loadAd()V"/>
+        <Remove-Method index="2" signature="com.baidu.mobads.InterstitialAd.loadAd()V"/>
+    </Method>
+</Apk>

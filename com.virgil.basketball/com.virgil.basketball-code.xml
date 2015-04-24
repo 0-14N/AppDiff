@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.virgil.basketball" pkg="com.virgil.basketball">
+    <Method signature="com.virgil.basketball.view.MainMenuView$6.run()V">
+        <Remove-Method index="0" signature="com.virgil.basketball.BasketBallActivity.getPackageName()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+</Apk>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.happylife.english.junior" pkg="com.happylife.english.junior">
+    <Method signature="com.happylife.english.junior.SplashActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="net.youmi.android.appoffers.YoumiOffersManager.init(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.happylife.english.junior.MainActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="net.youmi.android.appoffers.YoumiOffersManager.checkStatus(Landroid/content/Context;Lnet/youmi/android/appoffers/CheckStatusNotifier;)Z"/>
+    </Method>
+</Apk>

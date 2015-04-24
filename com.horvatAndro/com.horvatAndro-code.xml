@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.horvatAndro" pkg="com.horvatAndro">
+    <Method signature="com.horvatAndro.HorvatAndro$1.handleMessage(Landroid/os/Message;)V">
+        <Remove-Method index="0" signature="java.lang.Boolean.valueOf(Z)Ljava/lang/Boolean;"/>
+    </Method>
+    <Method signature="com.horvatAndro.HorvatAndro.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.horvatAndro.HorvatAndro.setRequestedOrientation(I)V"/>
+    </Method>
+    <Method signature="com.horvatAndro.AndroidRssReader$2$1.run()V">
+        <Remove-Method index="0" signature="java.lang.String.length()I"/>
+        <Remove-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+    </Method>
+</Apk>

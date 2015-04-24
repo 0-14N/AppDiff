@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.happybluefin.android.timer" pkg="com.happybluefin.android.timer">
+    <Method signature="com.happybluefin.android.timer.window.MainWindow.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.happybluefin.android.timer.window.MainWindow._initOnlineParam()V"/>
+    </Method>
+    <Method signature="com.happybluefin.android.timer.window.MainWindow._initView()V">
+        <Remove-Method index="0" signature="android.media.MediaPlayer.create(Landroid/content/Context;I)Landroid/media/MediaPlayer;"/>
+    </Method>
+    <Method signature="com.happybluefin.android.timer.window.MainWindow$UpdateThread.run()V">
+        <Remove-Method index="0" signature="android.media.MediaPlayer.stop()V"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.prepare()V"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.start()V"/>
+        <Remove-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.stop()V"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.prepare()V"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.start()V"/>
+        <Remove-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+    </Method>
+    <Method signature="com.happybluefin.android.timer.window.MainWindow$1.handleMessage(Landroid/os/Message;)V">
+        <Remove-Method index="0" signature="android.app.AlertDialog.setCancelable(Z)V"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog.setCanceledOnTouchOutside(Z)V"/>
+        <Remove-Method index="0" signature="com.happybluefin.android.framework.dialog.MessageDialog.getInstance()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="1" signature="com.happybluefin.android.framework.dialog.MessageDialog.getInstance()Landroid/app/AlertDialog;"/>
+    </Method>
+    <Method signature="com.happybluefin.android.timer.window.MainWindow.access$16(Lcom/happybluefin/android/timer/window/MainWindow;)V">
+        <Replace-Method original-index="0" original-signature="com.happybluefin.android.timer.window.MainWindow._start()V" replace-index="0" replace-signature="com.happybluefin.android.timer.window.MainWindow._stop()V"/>
+    </Method>
+</Apk>

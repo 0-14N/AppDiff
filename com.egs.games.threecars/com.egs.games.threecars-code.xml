@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.egs.games.threecars" pkg="com.egs.games.threecars">
+    <Method signature="com.enjoygame.tool.gamecenter.GameCenter.onStart()V">
+        <Remove-Method index="0" signature="com.enjoygame.tool.gamecenter.GameCenter.getGameHelper()Lcom/enjoygame/tool/gamecenter/GameHelper;"/>
+        <Remove-Method index="0" signature="com.enjoygame.tool.gamecenter.GameHelper.onStart(Landroid/app/Activity;)V"/>
+    </Method>
+    <Method signature="com.enjoygame.tool.gamecenter.GameCenter$1.run()V">
+        <Remove-Method index="0" signature="com.enjoygame.tool.gamecenter.GameHelper.beginUserInitiatedSignIn()V"/>
+    </Method>
+    <Method signature="com.enjoygame.tool.gamecenter.GameCenter.onStop()V">
+        <Remove-Method index="0" signature="com.enjoygame.tool.gamecenter.GameCenter.getGameHelper()Lcom/enjoygame/tool/gamecenter/GameHelper;"/>
+        <Remove-Method index="0" signature="com.enjoygame.tool.gamecenter.GameHelper.onStop()V"/>
+    </Method>
+</Apk>

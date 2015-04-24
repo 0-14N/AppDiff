@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.youku.meidian" pkg="com.youku.meidian">
+    <Method signature="com.youku.meidian.activity.v.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CameraActivity_.i()V" replace-index="0" replace-signature="com.youku.meidian.activity.CameraActivity_.g()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialManagerActivity_.e(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialManagerActivity.e()V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialManagerActivity.g()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialShopActivity_.g()V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.dc.&lt;init&gt;(Lcom/youku/meidian/activity/MaterialShopActivity_;)V" replace-index="0" replace-signature="com.youku.meidian.activity.db.&lt;init&gt;(Lcom/youku/meidian/activity/MaterialShopActivity_;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.eb.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MixVideoActivity_.k()V" replace-index="0" replace-signature="com.youku.meidian.activity.MixVideoActivity_.h()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.ao.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CropVideoActivity_.d()V" replace-index="0" replace-signature="com.youku.meidian.activity.CropVideoActivity_.e()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.cz.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialShopActivity.finish()V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialShopActivity_.h()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.fp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.VideoShareActivity.onBackPressed()V" replace-index="0" replace-signature="com.youku.meidian.activity.VideoShareActivity_.g()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.ea.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MixVideoActivity_.e()V" replace-index="0" replace-signature="com.youku.meidian.activity.MixVideoActivity_.k()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.da.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialShopActivity_.h()V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialShopActivity.finish()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.fr.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.VideoShareActivity_.h()V" replace-index="0" replace-signature="com.youku.meidian.activity.VideoShareActivity_.e()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.x.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CameraActivity_.f()V" replace-index="0" replace-signature="com.youku.meidian.activity.CameraActivity_.e()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.dz.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MixVideoActivity_.g()V" replace-index="0" replace-signature="com.youku.meidian.activity.MixVideoActivity_.j()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialManagerActivity_.d()V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.cs.&lt;init&gt;(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V" replace-index="0" replace-signature="com.youku.meidian.activity.cr.&lt;init&gt;(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.fq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.VideoShareActivity_.g()V" replace-index="0" replace-signature="com.youku.meidian.util.z.a(Landroid/app/Activity;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.gm.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.VideoShareThumbActivity_.d()V" replace-index="0" replace-signature="com.youku.meidian.activity.VideoShareThumbActivity.onBackPressed()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.cp.run()V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialManagerActivity_.a(Lcom/youku/meidian/activity/MaterialManagerActivity_;Ljava/util/ArrayList;)V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialManagerActivity_.b(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.z.run()V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CameraActivity_.a(Lcom/youku/meidian/activity/CameraActivity_;)V" replace-index="0" replace-signature="com.youku.meidian.activity.CameraActivity_.a(Lcom/youku/meidian/activity/CameraActivity_;Landroid/view/View;I)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialShopActivity_.d()V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.de.&lt;init&gt;(Lcom/youku/meidian/activity/MaterialShopActivity_;)V" replace-index="0" replace-signature="com.youku.meidian.activity.dc.&lt;init&gt;(Lcom/youku/meidian/activity/MaterialShopActivity_;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.gl.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.VideoShareThumbActivity.onBackPressed()V" replace-index="0" replace-signature="com.youku.meidian.activity.VideoShareThumbActivity_.d()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MixVideoActivity_.a(Lorg/a/a/b/a;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.ed.&lt;init&gt;(Lcom/youku/meidian/activity/MixVideoActivity_;)V" replace-index="0" replace-signature="com.youku.meidian.activity.dw.&lt;init&gt;(Lcom/youku/meidian/activity/MixVideoActivity_;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.ab.run()V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CameraActivity_.c(Lcom/youku/meidian/activity/CameraActivity_;)V" replace-index="0" replace-signature="com.youku.meidian.activity.CameraActivity_.b(Lcom/youku/meidian/activity/CameraActivity_;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.s.run()V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CameraActivity_.a(Lcom/youku/meidian/activity/CameraActivity_;Landroid/view/View;I)V" replace-index="0" replace-signature="com.youku.meidian.activity.CameraActivity_.c(Lcom/youku/meidian/activity/CameraActivity_;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialShopActivity_.a(Lcom/youku/meidian/activity/MaterialShopActivity_;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialShopActivity.f()V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialShopActivity.g()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.fv.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.util.z.a(Landroid/app/Activity;)V" replace-index="0" replace-signature="com.youku.meidian.activity.VideoShareActivity.onBackPressed()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialShopActivity_.b(Lcom/youku/meidian/activity/MaterialShopActivity_;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialShopActivity.g()V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialShopActivity.d()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.am.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CropVideoActivity_.e()V" replace-index="0" replace-signature="com.youku.meidian.activity.CropVideoActivity_.d()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.aa.run()V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CameraActivity_.b(Lcom/youku/meidian/activity/CameraActivity_;)V" replace-index="0" replace-signature="com.youku.meidian.activity.CameraActivity_.a(Lcom/youku/meidian/activity/CameraActivity_;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialManagerActivity_.h()V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.cr.&lt;init&gt;(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V" replace-index="0" replace-signature="com.youku.meidian.activity.cs.&lt;init&gt;(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.r.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CameraActivity_.g()V" replace-index="0" replace-signature="com.youku.meidian.activity.CameraActivity_.h()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.dy.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MixVideoActivity_.h()V" replace-index="0" replace-signature="com.youku.meidian.activity.MixVideoActivity_.g()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialManagerActivity_.d(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialManagerActivity.d()V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialManagerActivity.h()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.cq.run()V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialManagerActivity_.b(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialManagerActivity_.a(Lcom/youku/meidian/activity/MaterialManagerActivity_;Ljava/util/ArrayList;)V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialManagerActivity_.c(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialManagerActivity.h()V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialManagerActivity.d()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.u.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CameraActivity_.h()V" replace-index="0" replace-signature="com.youku.meidian.activity.CameraActivity_.f()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.fu.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.VideoShareActivity_.e()V" replace-index="0" replace-signature="com.youku.meidian.activity.VideoShareActivity_.h()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialShopActivity_.d(Lcom/youku/meidian/activity/MaterialShopActivity_;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialShopActivity.d()V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialShopActivity.f()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.MaterialManagerActivity_.a(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.MaterialManagerActivity.g()V" replace-index="0" replace-signature="com.youku.meidian.activity.MaterialManagerActivity.e()V"/>
+    </Method>
+    <Method signature="com.youku.meidian.activity.w.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.youku.meidian.activity.CameraActivity_.e()V" replace-index="0" replace-signature="com.youku.meidian.activity.CameraActivity_.i()V"/>
+    </Method>
+</Apk>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.twoxlgames.xlr8" pkg="com.twoxlgames.xlr8">
+    <Add-Class signature="Lxlr8" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.twoxlgames.tech.AndroidUtils.i()Landroid/content/pm/PackageInfo;">
+        <Replace-Method original-index="0" original-signature="android.content.pm.PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;" replace-index="0" replace-signature="xlr8.getPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"/>
+    </Method>
+    <Method signature="s.a(Landroid/content/SharedPreferences$Editor;)V">
+        <Replace-Method original-index="0" original-signature="java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" replace-index="0" replace-signature="xlr8.invokeHook(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"/>
+    </Method>
+    <Method signature="L.a(Ljava/io/File;Ljava/lang/String;)LF;">
+        <Replace-Method original-index="0" original-signature="java.io.File.length()J" replace-index="0" replace-signature="xlr8.length(Ljava/io/File;)J"/>
+    </Method>
+    <Method signature="com.twoxlgames.tech.installer.Downloader.a(LH;Ljava/io/File;)V">
+        <Replace-Method original-index="0" original-signature="java.io.File.length()J" replace-index="0" replace-signature="xlr8.length(Ljava/io/File;)J"/>
+        <Replace-Method original-index="1" original-signature="java.io.File.length()J" replace-index="1" replace-signature="xlr8.length(Ljava/io/File;)J"/>
+    </Method>
+    <Method signature="com.twoxlgames.xlr8.xlr8.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="android.widget.Toast.show()V"/>
+        <Add-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+    </Method>
+</Apk>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.saltchucker" pkg="com.saltchucker">
+    <Method signature="com.saltchucker.util.ErrCode.isNetWorkError(Ljava/lang/String;)Z">
+        <Replace-Method original-index="0" original-signature="com.saltchucker.mapapi.MyApplicaton.errorEditUser()V" replace-index="0" replace-signature="com.saltchucker.mapapi.MyApplicaton.beforeErrorEditUser()V"/>
+    </Method>
+    <Method signature="com.saltchucker.service.CounectServiceSocket$6.onKick()V">
+        <Replace-Method original-index="0" original-signature="com.saltchucker.mapapi.MyApplicaton.errorEditUser()V" replace-index="0" replace-signature="com.saltchucker.mapapi.MyApplicaton.beforeErrorEditUser()V"/>
+    </Method>
+    <Method signature="com.saltchucker.util.ErrCode.isNetWorkErrorNoToast(Ljava/lang/String;)Z">
+        <Replace-Method original-index="0" original-signature="com.saltchucker.mapapi.MyApplicaton.errorEditUser()V" replace-index="0" replace-signature="com.saltchucker.mapapi.MyApplicaton.beforeErrorEditUser()V"/>
+    </Method>
+</Apk>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="edu.umich.PowerTutor" pkg="edu.umich.PowerTutor">
+    <Method signature="edu.umich.PowerTutor.ui.PowerPie.updateDisplayText()V">
+        <Add-Method index="0" signature="edu.umich.PowerTutor.ui.PowerPie.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="edu.umich.PowerTutor.ui.PowerPie.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="2" signature="edu.umich.PowerTutor.ui.PowerPie.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="3" signature="edu.umich.PowerTutor.ui.PowerPie.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="edu.umich.PowerTutor.ui.PowerViewer.refreshView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.widget.TextView.setText(I)V"/>
+    </Method>
+    <Method signature="edu.umich.PowerTutor.ui.PowerTop.refreshView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.widget.TextView.setText(I)V"/>
+        <Add-Method index="0" signature="edu.umich.PowerTutor.ui.PowerTop.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="edu.umich.PowerTutor.ui.PowerTabs.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="android.content.res.Resources.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.res.Resources.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="edu.umich.PowerTutor.ui.Help.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="edu.umich.PowerTutor.ui.UMLogger$11.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;" replace-index="0" replace-signature="android.widget.Toast.makeText(Landroid/content/Context;II)Landroid/widget/Toast;"/>
+    </Method>
+    <Method signature="edu.umich.PowerTutor.ui.UMLogger.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.Button.setText(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.widget.Button.setText(I)V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Button.setText(Ljava/lang/CharSequence;)V" replace-index="1" replace-signature="android.widget.Button.setText(I)V"/>
+    </Method>
+    <Method signature="edu.umich.PowerTutor.ui.PowerPie.refreshView()V">
+        <Replace-Method original-index="0" original-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.widget.TextView.setText(I)V"/>
+    </Method>
+    <Method signature="edu.umich.PowerTutor.ui.PowerPie.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="edu.umich.PowerTutor.ui.PowerPie.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="1" signature="edu.umich.PowerTutor.ui.PowerPie.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getStringArray(I)[Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.res.Resources.getStringArray(I)[Ljava/lang/String;"/>
+    </Method>
+    <Method signature="edu.umich.PowerTutor.ui.PowerTop.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="edu.umich.PowerTutor.ui.PowerTop.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="1" signature="edu.umich.PowerTutor.ui.PowerTop.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="2" signature="edu.umich.PowerTutor.ui.PowerTop.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getStringArray(I)[Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.res.Resources.getStringArray(I)[Ljava/lang/String;"/>
+        <Add-Method index="2" signature="android.content.res.Resources.getStringArray(I)[Ljava/lang/String;"/>
+    </Method>
+</Apk>

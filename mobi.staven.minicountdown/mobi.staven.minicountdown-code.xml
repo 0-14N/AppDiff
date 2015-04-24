@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="mobi.staven.minicountdown" pkg="mobi.staven.minicountdown">
+    <Method signature="mobi.staven.minicountdown.activity.HomeActivity_$8.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_widget()V" replace-index="0" replace-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_search()V"/>
+    </Method>
+    <Method signature="mobi.staven.minicountdown.activity.HomeActivity_$4.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_modify()V" replace-index="0" replace-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_delete()V"/>
+    </Method>
+    <Method signature="mobi.staven.minicountdown.activity.HomeActivity_$6.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_delete()V" replace-index="0" replace-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_add()V"/>
+    </Method>
+    <Method signature="mobi.staven.minicountdown.activity.HomeActivity_$2.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_onoff()V" replace-index="0" replace-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_widget()V"/>
+    </Method>
+    <Method signature="mobi.staven.minicountdown.activity.HomeActivity_$3.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_search()V" replace-index="0" replace-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_onoff()V"/>
+    </Method>
+    <Method signature="mobi.staven.minicountdown.activity.HomeActivity_$5.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_add()V" replace-index="0" replace-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_calendar()V"/>
+    </Method>
+    <Method signature="mobi.staven.minicountdown.activity.HomeActivity_$9.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_import()V" replace-index="0" replace-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_modify()V"/>
+    </Method>
+    <Method signature="mobi.staven.minicountdown.activity.HomeActivity_$1.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_calendar()V" replace-index="0" replace-signature="mobi.staven.minicountdown.activity.HomeActivity_.btn_import()V"/>
+    </Method>
+</Apk>

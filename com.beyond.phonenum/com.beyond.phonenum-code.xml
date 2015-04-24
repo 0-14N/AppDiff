@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.beyond.phonenum" pkg="com.beyond.phonenum">
+    <Method signature="com.lotuseed.android.Session.tryResetSession(Landroid/content/Context;)Z">
+        <Replace-Method original-index="0" original-signature="com.lotuseed.android.Base64.encodeToString([BIII)Ljava/lang/String;" replace-index="0" replace-signature="android.util.Base64.encodeToString([BIII)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.lotuseed.android.Session.createNewSessionData(Landroid/content/Context;Ljava/lang/String;)V">
+        <Add-Method index="0" signature="android.content.Context.getApplicationInfo()Landroid/content/pm/ApplicationInfo;"/>
+        <Add-Method index="1" signature="android.content.Context.getApplicationInfo()Landroid/content/pm/ApplicationInfo;"/>
+        <Add-Method index="0" signature="android.net.TrafficStats.getMobileRxBytes()J"/>
+        <Add-Method index="0" signature="android.net.TrafficStats.getMobileTxBytes()J"/>
+        <Add-Method index="0" signature="android.net.TrafficStats.getTotalRxBytes()J"/>
+        <Add-Method index="0" signature="android.net.TrafficStats.getTotalTxBytes()J"/>
+        <Add-Method index="0" signature="android.net.TrafficStats.getUidRxBytes(I)J"/>
+        <Add-Method index="0" signature="android.net.TrafficStats.getUidTxBytes(I)J"/>
+        <Remove-Method index="0" signature="com.lotuseed.android.Profile.getTrafficStats(Landroid/content/Context;)[J"/>
+    </Method>
+</Apk>

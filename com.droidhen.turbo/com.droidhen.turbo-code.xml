@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.droidhen.turbo" pkg="com.droidhen.turbo">
+    <Method signature="com.google.ads.AdView.a(Landroid/content/Context;Lcom/google/ads/AdSize;Landroid/util/AttributeSet;)Z">
+        <Remove-Method index="0" signature="com.google.ads.AdView.a(Landroid/content/Context;Ljava/lang/String;Lcom/google/ads/AdSize;Landroid/util/AttributeSet;)V"/>
+    </Method>
+</Apk>

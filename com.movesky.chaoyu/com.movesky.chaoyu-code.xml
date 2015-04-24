@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.movesky.chaoyu" pkg="com.movesky.chaoyu">
+    <Add-Class signature="Lcom/movesky/ali/AlixDefine" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/oauthv1/Base64Encoder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/api/PrivateAPI" super-signatures="Lcom/tencent/weibo/api/BasicAPI#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$11" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MBuf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MStorage$1" super-signatures="Lcom/tencent/mm/sdk/storage/MStorageEvent#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginOAuth$Receiver$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSWeibo$1$2" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weibo/android/R$drawable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MTimerHandler" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/alipay/android/app/IAliPay$Stub$Proxy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Limpl/android/com/twitterapime/io/HttpConnectionImpl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/iflytek/cloud/b/c/b$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/Header" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/MMAppMgr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/WXApiImplV10" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$19" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/KVConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/PClass$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/Activity_WebView$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/PhoneUtil16Impl$1" super-signatures="Landroid/telephony/PhoneStateListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/constants/ErrorCodeConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MTimerHandler$CallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSTencentWeibo$2" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginOAuth$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Limpl/android/com/twitterapime/xauth/ui/WebViewOAuthDialogWrapper$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/FilePathGenerator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MAlarmHandler$IBumper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$27" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/DBCommon$clsTbl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$13" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/app_package/R_App$string" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AlixId" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/IWXAPI" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/Util$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/QueueWorkerThread$ThreadObject" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$21" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/WXMediaMessage$Builder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/channel/MMessageUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/MultipartEntity" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$26" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSRecord$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/SemiXml" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$17" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/package-info" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/CrashHandler$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$12" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginProviderConstants$OAuth" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/SmoothScrollToPosition21below" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliMobileSecurePayHelper$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/BaseResp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$7" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/FilesCopy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/LBSManager$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MMHandlerThread" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/iflytek/cloud/record/PcmPlayer$b" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$18" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$15" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/CharSequences" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/algorithm/LRUMap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weibo/android/R$layout" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MStorage$IOnStorageLoaded" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/event/IEvent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weibo/android/R$attr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/channel/MMessageAct" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/ObserverPool$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/alipay/android/app/IAliPay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/event/EventPoolFactory" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$25" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/constants/MyErrorCodeHashMap" super-signatures="Ljava/util/HashMap#Ljava/util/AbstractMap#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MStorageEvent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$24" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/ObserverPool$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSPoints" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/iflytek/cloud/util/a/b$a" super-signatures="Landroid/database/ContentObserver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$12" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/ZrdCommon$TM" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MStorage" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginProviderConstants$SharedPref" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/IAutoDBItem$MAutoDBInfo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/TimeLogger" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/algorithm/LRUMap$PreRemoveCallback" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/alipay/android/app/IAliPay$Stub" super-signatures="Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$8" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MMHandlerThread$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/IAutoDBItem" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSTTS$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSWeibo$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSVideoPlayer$1" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/algorithm/TypeTransform" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSPlayer" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/InetUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/CharSequences$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MAlarmHandler$CallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$IGetMethod" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/api/TAPI" super-signatures="Lcom/tencent/weibo/api/BasicAPI#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliMobileSecurePayHelper$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/webview/OAuthV1AuthorizeWebView$1" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/chaoyu/R$layout" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MMHandlerThread$ResetCallback" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSTwitter" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$28" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/ShowMessageFromWX$Resp" super-signatures="Lcom/tencent/mm/sdk/openapi/BaseResp#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/PhoneUtil$MacInfo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/chaoyu/R$drawable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/alipay/android/app/IAlixPay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/Profile" super-signatures="Lcom/tencent/mm/sdk/plugin/BaseProfile#Lcom/tencent/mm/sdk/storage/IAutoDBItem#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/LBSManager$OnLocationGotListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$16" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliMobileSecurePayer$2" super-signatures="Lcom/alipay/android/app/IRemoteServiceCallback$Stub#Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/channel/ConstantsMMessage" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Limpl/android/com/twitterapime/xauth/ui/WebViewOAuthDialogWrapper$WebViewClientOAuth$1" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/SyncTask" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/IMMPluginAPI" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/content/AbstractContentBody" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/CloudVar$VarName" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/algorithm/Base64" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/chaoyu/R$id" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/algorithm/MD5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/PClass" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MAlarmHandler" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/DeviceInfo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliMobileSecurePayHelper$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/iflytek/cloud/speech/SpeechUnderstander$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginProviderConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/app_package/R_App$layout" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MAutoDBItem" super-signatures="Lcom/tencent/mm/sdk/storage/IAutoDBItem#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/package-info" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/ZrdCommon$StrEx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/CharSequences$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginMsg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/ObserverPool$Event" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ad/Advert" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSSinaWeibo$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$11" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/api/SearchAPI" super-signatures="Lcom/tencent/weibo/api/BasicAPI#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliComm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/ChannelUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$14" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliBaseHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weibo/android/R$id" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$20" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginProviderConstants$PluginIntent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSVideoPlayer" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/beans/OAuth" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSWeibo$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/algorithm/LRUMap$TimeVal" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/Activity_WebView$MyWebViewDownLoadListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/api/RequestAPI" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/PhoneStatusWatcher" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/PhoneUtil$CellInfo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSTTS" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/Util" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Limpl/android/com/twitterapime/xauth/ui/WebViewOAuthDialogWrapper$WebViewClientOAuth" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$BitmapFactory" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$DownloadTask" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/BaseResp$ErrCode" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSTencentWeibo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ad/ADScore" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSWeibo$1$3" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/PhoneStatusWatcher$PhoneCallListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$10" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/DBCommon$clsQuery" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/ZrdCommon$BitmapEx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/CloudVar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/Log$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/BaseProfile" super-signatures="Lcom/tencent/mm/sdk/storage/IAutoDBItem#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliMobileSecurePayer$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weibo/android/R$styleable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/LogHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/ObserverPool$Listener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/ISQLiteDatabase" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/channel/MMessage$CallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weibo/android/R$color" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Limpl/android/com/twitterapime/parser/SAXParser" super-signatures="Lcom/twitterapime/parser/Parser#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/HttpMultipart" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$6" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/SendAuth$Req" super-signatures="Lcom/tencent/mm/sdk/openapi/BaseReq#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSPlayer$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSWeChat" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSTwitter$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$3" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSTencentWeibo$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$5" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/ConstantsUI$Contact" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/SystemProperty" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/PhoneUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliNetworkManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliMobileSecurePayHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/utils/QSSLSocketFactory$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/chaoyu/R$styleable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/MinimalField" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/channel/package-info" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MMHandlerThread$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Limpl/android/com/twitterapime/xauth/ui/WebViewOAuthDialogWrapper" super-signatures="Lcom/twitterapime/xauth/ui/OAuthDialogWrapper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/SendMessageToWX$Resp" super-signatures="Lcom/tencent/mm/sdk/openapi/BaseResp#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/chaoyu/R" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/app_package/R_App$drawable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/oauthv1/OAuthV1" super-signatures="Lcom/tencent/weibo/beans/OAuth#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MMHandlerThread$3$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliMobileSecurePayer" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/WXAppLaunchData$Builder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/Build" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSSinaWeibo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/CrashHandler$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/chaoyu/R$string" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/BuildConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$ISetMethod" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weibo/android/R" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/SendMessageToWX" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/alipay/android/app/IAlixPay$Stub" super-signatures="Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/iflytek/cloud/speech/TextUnderstander$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSTwitter$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/api/FriendsAPI" super-signatures="Lcom/tencent/weibo/api/BasicAPI#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/ConstantsUI" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/iflytek/cloud/speech/a/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/QueueWorkerThread" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSWeibo$1$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginAPIImpl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/LVBuffer" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$9" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/PClass$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/platformtools/CnToSpell" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/constants/APIConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/LocaleUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/event/IListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/exceptions/QweibosdkException" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/Util$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/content/InputStreamBody" super-signatures="Lorg/apache/http/entity/mime/content/AbstractContentBody#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/content/ContentDescriptor" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/alipay/android/app/IRemoteServiceCallback" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliRsa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/MIME" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MStorage$2" super-signatures="Lcom/tencent/mm/sdk/storage/MStorageEvent#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/FormBodyPart" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/exceptions/OAuthClientException" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSFile" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/ZrdCommon" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginProviderConstants$PluginDB" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Limpl/android/com/twitterapime/parser/SAXAttributes" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MMEntryLock" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/app_package/R_App$id" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/ConstantsAPI" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/PhoneUtil20Impl$1" super-signatures="Landroid/telephony/PhoneStateListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliMobileSecurePayHelper$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSRecord" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/chaoyu/R$style" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$AnimationHelper$IHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/SendAuth" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/api/UserAPI" super-signatures="Lcom/tencent/weibo/api/BasicAPI#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/DBCommon$clsApp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/app_package/R_App" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/PhoneUtil20Impl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/api/BasicAPI" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliMobileSecurePayer$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$SmoothScrollFactory" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/algorithm/LRUMap$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/content/StringBody" super-signatures="Lorg/apache/http/entity/mime/content/AbstractContentBody#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliBase64" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weibo/android/R$string" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/Activity_WebView$2" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MDBItem" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/QueueWorkerThread$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/ShowMessageFromWX$Req" super-signatures="Lcom/tencent/mm/sdk/openapi/BaseReq#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/GetMessageFromWX$Req" super-signatures="Lcom/tencent/mm/sdk/openapi/BaseReq#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/algorithm/UIN" super-signatures="Ljava/lang/Number#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/HttpMultipartMode" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/HttpMultipart$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginProviderConstants$Resolver" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/iflytek/cloud/util/a/b$b" super-signatures="Landroid/database/ContentObserver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$23" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/CrashHandler" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/LBSManager$LocationCache" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/DBCommon" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MStorageEvent$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/QueueWorkerThread$WorkerThread" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/chaoyu/R$attr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSFile$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/alipay/android/app/IAlixPay$Stub$Proxy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/algorithm/LRUMap$OnClearListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/BaseReq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/SendMessageToWX$Req" super-signatures="Lcom/tencent/mm/sdk/openapi/BaseReq#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliComm$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/content/ContentBody" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/alipay/android/app/IRemoteServiceCallback$Stub" super-signatures="Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/AnimationHelperImpl21below" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/app_package/R_App$ad_account_info" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/CloudVar$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/BluetoothUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/SyncTask$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginMsg$ReceiverHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MMHandlerThread$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/DB_Query" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/AnimationHelperImpl22" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/GetMessageFromWX$Resp" super-signatures="Lcom/tencent/mm/sdk/openapi/BaseResp#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/PhoneUtil16Impl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$SmoothScrollFactory$IScroll" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/constants/OAuthConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/ZrdCommon$ZrdLog" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/IWXAPIEventHandler" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MAutoStorage" super-signatures="Lcom/tencent/mm/sdk/storage/MStorage#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/AuthDialogListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/chaoyu/R$dimen" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/content/FileBody" super-signatures="Lorg/apache/http/entity/mime/content/AbstractContentBody#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/ShowMessageFromWX" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/Activity_WebView$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/JpegTools" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/SmoothScrollToPosition22" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSPoints$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/oauthv1/OAuthV1Client$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliNetworkManager$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weibo/android/R$style" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/WXAppLaunchData" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/utils/QStrOperate" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MStorage$IOnStorageChange" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/oauthv1/OAuthV1Client" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/ContentProviderDB" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$22" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/oauthv1/OAuthV1Request" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/Activity_WebView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/utils/QArrayList" super-signatures="Ljava/util/ArrayList#Ljava/util/AbstractList#Ljava/util/AbstractCollection#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/http/entity/mime/content/ByteArrayBody" super-signatures="Lorg/apache/http/entity/mime/content/AbstractContentBody#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/package-info" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MMHandlerThread$IWaitWorkThread" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSWeibo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/Activity_VideoView$SeekBarChangeEvent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/MAutoDBFieldAnnotation" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/MMSharedPreferences$REditor" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/PClass$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$4" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSVideoPlayer$2" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/PhoneStatusWatcher$1" super-signatures="Landroid/telephony/PhoneStateListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/api/InfoAPI" super-signatures="Lcom/tencent/weibo/api/BasicAPI#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSWeibo$2$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/ali/AliResultChecker" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/ZrdCommon$FileEx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/SendAuth$Resp" super-signatures="Lcom/tencent/mm/sdk/openapi/BaseResp#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/Activity_VideoView$ClickEvent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/chaoyu/R$color" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/SensorController$SensorEventCallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/TrafficStats" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/alipay/android/app/IRemoteServiceCallback$Stub$Proxy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/iflytek/cloud/b/a/b$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$10" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/Activity_WebView$1" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$2" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/YSJson" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/event/EventPoolFactory$IEventPool" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$AnimationHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/FilePathGenerator$DIR_HASH_TYPE" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/beans/RouteCfg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/package-info" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/GetMessageFromWX" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/MMSharedPreferences" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/utils/QSSLSocketFactory" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/NetStatusUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/plugin/MMPluginOAuth$IResult" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/WXAPIFactory" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/SpecilApiUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/CursorFieldHelper$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSHtml$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/storage/package-info" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/ObserverPool" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/Log" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/movesky/webapp/YSSinaWeibo$1$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weibo/android/R$dimen" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/api/StatusesAPI" super-signatures="Lcom/tencent/weibo/api/BasicAPI#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zrd/common/DBCommon$clsHelper" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/platformtools/MMApplicationContext" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/iflytek/cloud/speech/SpeechUser$a" super-signatures="Lcom/iflytek/cloud/b/b/d$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weibo/utils/QHttpClient" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Limpl/android/com/twitterapime/parser/SAXParser$WrapperHandler" super-signatures="Lorg/xml/sax/helpers/DefaultHandler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/mm/sdk/openapi/WXMediaMessage$IMediaObject" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.weibo.net.Utility.imageContentToUpload(Ljava/io/OutputStream;Landroid/graphics/Bitmap;)V">
+        <Add-Method index="0" signature="java.io.BufferedInputStream.close()V"/>
+        <Add-Method index="1" signature="java.io.BufferedInputStream.close()V"/>
+    </Method>
+    <Method signature="com.twitterapime.io.HttpConnector.open(Ljava/lang/String;)Lcom/twitterapime/io/HttpConnection;">
+        <Replace-Method original-index="0" original-signature="impl.a.a.a.a.a.&lt;init&gt;()V" replace-index="0" replace-signature="impl.android.com.twitterapime.io.HttpConnectionImpl.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.movesky.webapp.Activity_VideoView.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.a.a.b.a(Ljava/lang/String;)V" replace-index="0" replace-signature="com.zrd.common.ZrdCommon$ZrdLog.Log(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="com.a.a.b.a(Ljava/lang/String;)V" replace-index="1" replace-signature="com.zrd.common.ZrdCommon$ZrdLog.Log(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="2" original-signature="com.a.a.b.a(Ljava/lang/String;)V" replace-index="2" replace-signature="com.zrd.common.ZrdCommon$ZrdLog.Log(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.ab.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_VideoView$ClickEvent.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V"/>
+        <Replace-Method original-index="1" original-signature="com.movesky.webapp.ab.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V" replace-index="1" replace-signature="com.movesky.webapp.Activity_VideoView$ClickEvent.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V"/>
+        <Replace-Method original-index="2" original-signature="com.movesky.webapp.ab.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V" replace-index="2" replace-signature="com.movesky.webapp.Activity_VideoView$ClickEvent.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.ab.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_VideoView$SeekBarChangeEvent.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V"/>
+        <Replace-Method original-index="1" original-signature="com.movesky.webapp.ab.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_VideoView$SeekBarChangeEvent.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V"/>
+        <Replace-Method original-index="2" original-signature="com.movesky.webapp.ab.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_VideoView$SeekBarChangeEvent.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.e.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V" replace-index="2" replace-signature="com.movesky.webapp.Activity_VideoView$ClickEvent.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.e.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_VideoView$SeekBarChangeEvent.&lt;init&gt;(Lcom/movesky/webapp/Activity_VideoView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.b.&lt;init&gt;(Landroid/view/SurfaceView;Landroid/widget/SeekBar;)V" replace-index="0" replace-signature="com.movesky.webapp.YSVideoPlayer.&lt;init&gt;(Landroid/view/SurfaceView;Landroid/widget/SeekBar;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.b.a(Ljava/lang/String;)V" replace-index="0" replace-signature="com.movesky.webapp.YSVideoPlayer.playYSUrl(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.twitterapime.parser.ParserFactory.getParser(I)Lcom/twitterapime/parser/Parser;">
+        <Replace-Method original-index="0" original-signature="impl.a.a.a.c.b.&lt;init&gt;()V" replace-index="0" replace-signature="impl.android.com.twitterapime.parser.SAXParser.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.movesky.webapp.Activity_WebView.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.a.a.b.a(Ljava/lang/String;)V" replace-index="0" replace-signature="com.zrd.common.ZrdCommon$ZrdLog.SetLevel(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.b.a(Ljava/lang/String;)V" replace-index="0" replace-signature="com.zrd.common.ZrdCommon$ZrdLog.Log(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="com.a.a.b.a(Ljava/lang/String;)V" replace-index="1" replace-signature="com.zrd.common.ZrdCommon$ZrdLog.Log(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.b.a()V" replace-index="0" replace-signature="com.zrd.common.ZrdCommon$ZrdLog.SetLevel(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.b.a()V" replace-index="0" replace-signature="com.zrd.common.ZrdCommon$ZrdLog.Log(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.u.a(Ljava/lang/String;)V" replace-index="0" replace-signature="com.movesky.webapp.YSHtml.SetWokdPath(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.a.b.a(Landroid/content/Context;)V" replace-index="0" replace-signature="com.movesky.ad.Advert.SetAdvertLayoutHeight(Landroid/content/Context;I)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.u.a(Landroid/content/Context;Ljava/lang/String;)Z" replace-index="0" replace-signature="com.movesky.webapp.YSHtml.AppDecodeFile(Landroid/content/Context;Ljava/lang/String;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.av.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$MyWebViewDownLoadListener.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;Lcom/movesky/webapp/Activity_WebView$MyWebViewDownLoadListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.av.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$1.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.av.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$2.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.av.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$3.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.av.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$4.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.ac.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$MyWebViewDownLoadListener.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;Lcom/movesky/webapp/Activity_WebView$MyWebViewDownLoadListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.ac.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$1.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.ac.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$2.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.ac.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$3.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.ac.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$4.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.z.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$MyWebViewDownLoadListener.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;Lcom/movesky/webapp/Activity_WebView$MyWebViewDownLoadListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.z.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$1.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.z.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$2.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.z.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$3.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.z.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$4.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.aa.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$MyWebViewDownLoadListener.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;Lcom/movesky/webapp/Activity_WebView$MyWebViewDownLoadListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.aa.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$1.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.aa.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$2.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.aa.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$3.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.aa.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$4.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.y.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$MyWebViewDownLoadListener.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;Lcom/movesky/webapp/Activity_WebView$MyWebViewDownLoadListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.y.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$1.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.y.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$2.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.y.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$3.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.movesky.webapp.y.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V" replace-index="0" replace-signature="com.movesky.webapp.Activity_WebView$4.&lt;init&gt;(Lcom/movesky/webapp/Activity_WebView;)V"/>
+        <Add-Method index="0" signature="com.movesky.webapp.YSWeChat.regToWx(Landroid/content/Context;)Z"/>
+        <Add-Method index="0" signature="com.movesky.ad.ADScore.GoogleCheck(Landroid/content/Context;)I"/>
+        <Remove-Method index="0" signature="com.movesky.webapp.ad.a(Landroid/content/Context;)Z"/>
+    </Method>
+    <Method signature="com.tencent.weibo.webview.OAuthV1AuthorizeWebView.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.tencent.weibo.b.d.e()Ljava/lang/String;" replace-index="0" replace-signature="com.tencent.weibo.oauthv1.OAuthV1.getOauthToken()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.tencent.weibo.webview.a.&lt;init&gt;(Lcom/tencent/weibo/webview/OAuthV1AuthorizeWebView;)V" replace-index="0" replace-signature="com.tencent.weibo.webview.OAuthV1AuthorizeWebView$1.&lt;init&gt;(Lcom/tencent/weibo/webview/OAuthV1AuthorizeWebView;)V"/>
+    </Method>
+    <Method signature="com.movesky.chaoyu.wxapi.WXEntryActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.tencent.mm.sdk.openapi.c.a(Landroid/content/Intent;Lcom/tencent/mm/sdk/openapi/m;)Z" replace-index="0" replace-signature="com.tencent.mm.sdk.openapi.IWXAPI.handleIntent(Landroid/content/Intent;Lcom/tencent/mm/sdk/openapi/IWXAPIEventHandler;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.tencent.mm.sdk.openapi.b.a(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/sdk/openapi/c;" replace-index="0" replace-signature="com.tencent.mm.sdk.openapi.WXAPIFactory.createWXAPI(Landroid/content/Context;Ljava/lang/String;Z)Lcom/tencent/mm/sdk/openapi/IWXAPI;"/>
+    </Method>
+</Apk>

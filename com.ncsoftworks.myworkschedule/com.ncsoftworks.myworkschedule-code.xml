@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.ncsoftworks.myworkschedule" pkg="com.ncsoftworks.myworkschedule">
+    <Method signature="com.ncsoftworks.myworkschedule.EditActivity.setEditMode()V">
+        <Add-Method index="0" signature="com.ncsoftworks.myworkschedule.EditActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.ncsoftworks.myworkschedule.EditActivity.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.ncsoftworks.myworkschedule.EditActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.ncsoftworks.myworkschedule.EditActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.ncsoftworks.myworkschedule.EditActivity.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.ncsoftworks.myworkschedule.SettingsActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.ncsoftworks.myworkschedule.SettingsActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.ncsoftworks.myworkschedule.SettingsActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="2" signature="com.ncsoftworks.myworkschedule.SettingsActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="3" signature="com.ncsoftworks.myworkschedule.SettingsActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="4" signature="com.ncsoftworks.myworkschedule.SettingsActivity.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="5" signature="com.ncsoftworks.myworkschedule.SettingsActivity.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.ncsoftworks.myworkschedule.MyWorkSchedule.firstTimeCheck()V">
+        <Add-Method index="0" signature="com.ncsoftworks.myworkschedule.MyWorkSchedule.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.ncsoftworks.myworkschedule.MyWorkSchedule.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="2" signature="com.ncsoftworks.myworkschedule.MyWorkSchedule.getString(I)Ljava/lang/String;"/>
+    </Method>
+</Apk>

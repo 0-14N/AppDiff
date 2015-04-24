@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.gameimax.kidsspaandsalon" pkg="com.gameimax.kidsspaandsalon">
+    <Method signature="com.gameimax.kidsspaandsalon.kids_spa_and_salon.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.gameimax.kidsspaandsalon.kids_spa_and_salon.setupAdmob()V" replace-index="0" replace-signature="com.gameimax.kidsspaandsalon.kids_spa_and_salon.setupInMobi()V"/>
+    </Method>
+</Apk>

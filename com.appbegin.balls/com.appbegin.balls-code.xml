@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.appbegin.balls" pkg="com.appbegin.balls">
+    <Add-Class signature="Lcom/chartboost/sdk/impl/a$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/Libraries/e$c" super-signatures="Landroid/graphics/drawable/BitmapDrawable#Landroid/graphics/drawable/Drawable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/b$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/aq$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/h$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$l" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$d" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$q" super-signatures="Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/bf$b" super-signatures="Lcom/chartboost/sdk/impl/bf#Lcom/chartboost/sdk/impl/ba#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ba$h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/Libraries/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/b$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/h$a$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$i" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/Chartboost$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/b$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/Chartboost$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$b" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/m$1" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ba$e" super-signatures="Lcom/chartboost/sdk/impl/ba$h#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/h$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/h$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/a$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/j$1" super-signatures="Lorg/apache/http/impl/client/DefaultHttpClient#Lorg/apache/http/impl/client/AbstractHttpClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/o$a" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$h" super-signatures="Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/appbegin/balls/ballgame$4$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/bf$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/j$a" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/h$a$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/f$1" super-signatures="Landroid/graphics/drawable/Drawable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ba$d" super-signatures="Lcom/chartboost/sdk/impl/ba$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ag$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/n$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/j$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/h$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/b$b$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ag$2" super-signatures="Ljava/lang/ThreadLocal#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$k" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/h$a" super-signatures="Lcom/chartboost/sdk/b$b#Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ba$c" super-signatures="Lcom/chartboost/sdk/impl/ba$h#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/h$a$a" super-signatures="Landroid/widget/ArrayAdapter#Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$c" super-signatures="Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/b$a$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$e" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/n$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/i$1" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/Analytics/CBAnalytics" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$o" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/h$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/appbegin/balls/ballgame$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/a$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ba$h$a$2" super-signatures="Lcom/chartboost/sdk/impl/ba$h$a#Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$g" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ba$b" super-signatures="Lcom/chartboost/sdk/impl/ba$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ba$h$a$1" super-signatures="Lcom/chartboost/sdk/impl/ba$h$a#Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$f" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/a$b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/b$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/a$c" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/b$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/Libraries/e$e" super-signatures="Ljava/io/FilterInputStream#Ljava/io/InputStream#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$p" super-signatures="Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/b$b" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/j$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$m" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/b$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$n" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/Chartboost$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ba$g" super-signatures="Lcom/chartboost/sdk/impl/ba$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/a$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/n$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$j" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/Chartboost$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/Libraries/e$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/q$1" super-signatures="Landroid/database/DataSetObserver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/s$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/q$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/ltad/interstitial/InterstitialAd$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ba$f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/b$a$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/a$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/h$a$a$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/s$1" super-signatures="Landroid/view/OrientationEventListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ad$r" super-signatures="Lcom/chartboost/sdk/impl/ad$c#Lcom/chartboost/sdk/impl/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/Chartboost$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/ba$h$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/n$b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chartboost/sdk/impl/v$c" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/appbegin/balls/ballgame$4$1" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.chartboost.sdk.CBImpressionActivity.onStop()V">
+        <Add-Method index="0" signature="com.chartboost.sdk.Chartboost.b(Landroid/app/Activity;)V"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.Chartboost.d(Lcom/chartboost/sdk/Libraries/l;)V"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.Libraries.l.a(Landroid/app/Activity;)Lcom/chartboost/sdk/Libraries/l;"/>
+    </Method>
+    <Method signature="com.appbegin.balls.ballgame.onDestroy()V">
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.destroy()V"/>
+    </Method>
+    <Method signature="com.appbegin.balls.ballgame$4.run()V">
+        <Replace-Method original-index="0" original-signature="com.ltad.core.Adunion.getInstance(Landroid/app/Activity;)Lcom/ltad/core/Adunion;" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="0" original-signature="com.ltad.core.Adunion.linkTo(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="android.app.AlertDialog.show()V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.create()Landroid/app/AlertDialog;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setIcon(I)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="com.appbegin.balls.ballgame$4$1.&lt;init&gt;(Lcom/appbegin/balls/ballgame$4;)V"/>
+        <Add-Method index="0" signature="com.appbegin.balls.ballgame$4$2.&lt;init&gt;(Lcom/appbegin/balls/ballgame$4;)V"/>
+    </Method>
+    <Method signature="com.appbegin.balls.ballgame.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.setBackgroundColor(I)V"/>
+        <Add-Method index="1" signature="com.google.android.gms.ads.AdView.setBackgroundColor(I)V"/>
+        <Add-Method index="0" signature="com.appbegin.balls.ballgame.addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Add-Method index="0" signature="com.chartboost.sdk.Chartboost.sharedChartboost()Lcom/chartboost/sdk/Chartboost;"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.setAdSize(Lcom/google/android/gms/ads/AdSize;)V"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.setAdUnitId(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdRequest$Builder.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdRequest$Builder.build()Lcom/google/android/gms/ads/AdRequest;"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+        <Add-Method index="0" signature="com.chartboost.sdk.Chartboost.onStart(Landroid/app/Activity;)V"/>
+        <Add-Method index="0" signature="com.chartboost.sdk.Chartboost.cacheMoreApps()V"/>
+        <Add-Method index="0" signature="com.chartboost.sdk.Chartboost.startSession()V"/>
+        <Add-Method index="0" signature="com.chartboost.sdk.Chartboost.onCreate(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/chartboost/sdk/ChartboostDelegate;)V"/>
+        <Remove-Method index="0" signature="com.ltad.core.Adunion.getInstance(Landroid/app/Activity;)Lcom/ltad/core/Adunion;"/>
+        <Remove-Method index="1" signature="com.ltad.core.Adunion.getInstance(Landroid/app/Activity;)Lcom/ltad/core/Adunion;"/>
+        <Remove-Method index="0" signature="com.surprise.pluginSdk.utils.Util_PostLog.postBaseLog(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.ltad.core.Adunion.showBannerAd(I)V"/>
+        <Remove-Method index="0" signature="com.ltad.core.Adunion.showInterstitialAd(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.chartboost.sdk.Chartboost.&lt;init&gt;()V">
+        <Replace-Method original-index="0" original-signature="android.util.SparseBooleanArray.&lt;init&gt;()V" replace-index="0" replace-signature="java.util.ArrayList.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="android.util.SparseBooleanArray.&lt;init&gt;()V" replace-index="0" replace-signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="android.util.SparseBooleanArray.&lt;init&gt;()V" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost$a.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$a;)V"/>
+        <Replace-Method original-index="0" original-signature="android.util.SparseBooleanArray.&lt;init&gt;()V" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost$1.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;)V"/>
+        <Replace-Method original-index="0" original-signature="android.util.SparseBooleanArray.&lt;init&gt;()V" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost$2.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;)V"/>
+        <Replace-Method original-index="0" original-signature="android.util.SparseBooleanArray.&lt;init&gt;()V" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost$3.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;)V"/>
+        <Replace-Method original-index="0" original-signature="com.chartboost.sdk.Chartboost$b.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$1;)V" replace-index="0" replace-signature="java.util.ArrayList.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.chartboost.sdk.Chartboost$b.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$1;)V" replace-index="1" replace-signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.chartboost.sdk.Chartboost$b.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$1;)V" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost$a.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$a;)V"/>
+        <Replace-Method original-index="0" original-signature="com.chartboost.sdk.Chartboost$b.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$1;)V" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost$1.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;)V"/>
+        <Replace-Method original-index="0" original-signature="com.chartboost.sdk.Chartboost$b.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$1;)V" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost$2.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;)V"/>
+        <Replace-Method original-index="0" original-signature="com.chartboost.sdk.Chartboost$b.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$1;)V" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost$3.&lt;init&gt;(Lcom/chartboost/sdk/Chartboost;)V"/>
+        <Add-Method index="2" signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="com.chartboost.sdk.impl.j.&lt;init&gt;(Ljava/lang/String;Lcom/chartboost/sdk/impl/j$c;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.chartboost.sdk.impl.m.&lt;init&gt;(Lcom/chartboost/sdk/impl/m$a;)V"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.impl.ax.a()Lcom/chartboost/sdk/impl/ax;"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.c.a(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/c;"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.CBPreferences.getInstance()Lcom/chartboost/sdk/CBPreferences;"/>
+    </Method>
+    <Method signature="com.appbegin.balls.ballgame$3.run()V">
+        <Replace-Method original-index="0" original-signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;" replace-index="0" replace-signature="com.google.android.gms.ads.AdView.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="android.app.AlertDialog.show()V" replace-index="0" replace-signature="com.google.android.gms.ads.AdView.setVisibility(I)V"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.isEnabled()Z"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.getVisibility()I"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.create()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setIcon(I)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="com.appbegin.balls.ballgame$3$1.&lt;init&gt;(Lcom/appbegin/balls/ballgame$3;)V"/>
+        <Remove-Method index="0" signature="com.appbegin.balls.ballgame$3$2.&lt;init&gt;(Lcom/appbegin/balls/ballgame$3;)V"/>
+    </Method>
+    <Method signature="com.appbegin.balls.ballgame.onResume()V">
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.resume()V"/>
+    </Method>
+    <Method signature="com.appbegin.balls.ballgame$2.run()V">
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.isEnabled()Z"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.setEnabled(Z)V"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.getVisibility()I"/>
+        <Add-Method index="0" signature="com.google.android.gms.ads.AdView.setVisibility(I)V"/>
+    </Method>
+    <Method signature="com.chartboost.sdk.CBImpressionActivity.onDestroy()V">
+        <Remove-Method index="0" signature="com.chartboost.sdk.Chartboost.b(Landroid/app/Activity;)V"/>
+    </Method>
+    <Method signature="com.appbegin.balls.ballgame$5.run()V">
+        <Add-Method index="0" signature="com.chartboost.sdk.Chartboost.cacheMoreApps()V"/>
+        <Add-Method index="0" signature="com.chartboost.sdk.Chartboost.showMoreApps()V"/>
+    </Method>
+    <Method signature="com.chartboost.sdk.Chartboost$b.run()V">
+        <Replace-Method original-index="0" original-signature="com.chartboost.sdk.Chartboost.getContext()Landroid/content/Context;" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost.hasCachedInterstitial(Ljava/lang/String;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.chartboost.sdk.Chartboost.clearCache()V" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost.b(Lcom/chartboost/sdk/Chartboost;)Ljava/util/Map;"/>
+        <Replace-Method original-index="0" original-signature="com.chartboost.sdk.Libraries.l.hashCode()I" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost.b(Lcom/chartboost/sdk/Chartboost;)Ljava/util/Map;"/>
+        <Replace-Method original-index="0" original-signature="com.chartboost.sdk.Chartboost.b(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/CBImpressionActivity;" replace-index="0" replace-signature="com.chartboost.sdk.Chartboost.hasCachedInterstitial(Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="java.util.Map.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="com.chartboost.sdk.Chartboost.a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a;)V"/>
+        <Add-Method index="0" signature="com.chartboost.sdk.Chartboost.a(Lcom/chartboost/sdk/Chartboost;Ljava/lang/String;Z)V"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.Chartboost$b.a()Lcom/chartboost/sdk/ChartboostDelegate;"/>
+        <Remove-Method index="1" signature="com.chartboost.sdk.Chartboost.b(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/CBImpressionActivity;"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.Chartboost.a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/CBImpressionActivity;)Lcom/chartboost/sdk/CBImpressionActivity;"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.Chartboost.a(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/CBPreferences;"/>
+        <Remove-Method index="0" signature="java.lang.Object.hashCode()I"/>
+        <Remove-Method index="1" signature="java.lang.Object.hashCode()I"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.CBPreferences.setDelegate(Lcom/chartboost/sdk/ChartboostDelegate;)V"/>
+    </Method>
+</Apk>

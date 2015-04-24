@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.micrograss.free.CliffRocks" pkg="com.micrograss.free.CliffRocks">
+    <Method signature="com.adsmogo.adapters.api.C.run()V">
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.SXmXaXaXtXoAdapter.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.FXrXaXcXtXaXlAdapter.a(Landroid/webkit/WebView;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.FXrXaXcXtXaXlAdapter.a(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.FXrXaXcXtXaXlAdapter.a(Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.t.run()V">
+        <Replace-Method original-index="0" original-signature="android.webkit.WebView.getSettings()Landroid/webkit/WebSettings;" replace-index="1" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="android.webkit.WebView.getSettings()Landroid/webkit/WebSettings;" replace-index="1" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="android.webkit.WebSettings.setJavaScriptEnabled(Z)V" replace-index="3" replace-signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="0" original-signature="android.webkit.WebView.loadUrl(Ljava/lang/String;)V" replace-index="3" replace-signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="0" original-signature="android.webkit.WebSettings.setDefaultTextEncodingName(Ljava/lang/String;)V" replace-index="3" replace-signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="0" original-signature="android.webkit.WebView.setHorizontalScrollBarEnabled(Z)V" replace-index="3" replace-signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="0" original-signature="android.webkit.WebView.setVerticalScrollBarEnabled(Z)V" replace-index="3" replace-signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="1" original-signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Lcom/adsmogo/model/obj/Adwo;" replace-index="0" replace-signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.a(Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter;)Ljava/lang/ref/WeakReference;"/>
+        <Replace-Method original-index="1" original-signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;" replace-index="0" replace-signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.a(Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter;)Ljava/lang/ref/WeakReference;"/>
+        <Replace-Method original-index="3" original-signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;" replace-index="0" replace-signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.a(Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter;)Ljava/lang/ref/WeakReference;"/>
+        <Add-Method index="0" signature="org.apache.http.client.HttpClient.execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;"/>
+        <Add-Method index="0" signature="org.apache.http.HttpResponse.getStatusLine()Lorg/apache/http/StatusLine;"/>
+        <Add-Method index="1" signature="org.apache.http.HttpResponse.getStatusLine()Lorg/apache/http/StatusLine;"/>
+        <Add-Method index="0" signature="org.apache.http.StatusLine.getStatusCode()I"/>
+        <Add-Method index="1" signature="org.apache.http.StatusLine.getStatusCode()I"/>
+        <Add-Method index="0" signature="org.apache.http.HttpResponse.getEntity()Lorg/apache/http/HttpEntity;"/>
+        <Add-Method index="0" signature="com.adsmogo.model.obj.LmMob.getType()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.adsmogo.model.obj.LmMob.getType()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="1" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="com.adsmogo.model.obj.LmMob.getClickUrl()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.adsmogo.model.obj.LmMob.getClickUrl()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.model.obj.LmMob.getShowText()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Add-Method index="0" signature="com.adsmogo.model.obj.LmMob.getShowImg()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="4" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.GetUserInfo.getIpAddress()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.apache.http.params.BasicHttpParams.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="org.apache.http.params.HttpConnectionParams.setConnectionTimeout(Lorg/apache/http/params/HttpParams;I)V"/>
+        <Add-Method index="0" signature="org.apache.http.params.HttpConnectionParams.setSoTimeout(Lorg/apache/http/params/HttpParams;I)V"/>
+        <Add-Method index="0" signature="org.apache.http.impl.client.DefaultHttpClient.&lt;init&gt;(Lorg/apache/http/params/HttpParams;)V"/>
+        <Add-Method index="0" signature="org.apache.http.client.methods.HttpGet.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.apache.http.util.EntityUtils.toString(Lorg/apache/http/HttpEntity;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.a()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.GetUserInfo.getLmMobUID(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.b()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.a(Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.s.&lt;init&gt;(Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.a(Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="1" signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.a(Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="2" signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.a(Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.model.obj.Adwo.getAdurl()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.setWebViewClient(Landroid/webkit/WebViewClient;)V"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.setOnTouchListener(Landroid/view/View$OnTouchListener;)V"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Lcom/adsmogo/model/obj/Adwo;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Remove-Method index="1" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;Landroid/webkit/WebView;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="2" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="4" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="5" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="6" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.w.&lt;init&gt;(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;B)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.u.&lt;init&gt;(Lcom/adsmogo/adapters/api/t;)V"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.N.run()V">
+        <Replace-Method original-index="0" original-signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(Ljava/lang/String;)V" replace-index="0" replace-signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a()V"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.s.run()V">
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.b(Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.H.run()V">
+        <Add-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.SXuXiXzXoXnXgAPIAdapter.c(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;)Ljava/lang/ref/WeakReference;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.SXuXiXzXoXnXgAPIAdapter.a(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;Lcom/adsmogo/adview/AdsMogoLayout;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.SXuXiXzXoXnXgAPIAdapter.b(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;)Lcom/adsmogo/model/obj/SuizongAD;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.G.&lt;init&gt;(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.LXmXMXoXbAPIAdapter.b(Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.m.run()V">
+        <Add-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.AXdXuXuAdapter.a(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.adsmogo.util.k.run()V">
+        <Replace-Method original-index="0" original-signature="com.adsmogo.util.l.&lt;init&gt;(Lcom/adsmogo/util/k;Lcom/adsmogo/util/n;Landroid/graphics/Bitmap;)V" replace-index="0" replace-signature="com.adsmogo.util.l.&lt;init&gt;(Lcom/adsmogo/util/k;Lcom/adsmogo/util/m;Landroid/graphics/drawable/Drawable;)V"/>
+        <Replace-Method original-index="0" original-signature="android.os.Handler.post(Ljava/lang/Runnable;)Z" replace-index="0" replace-signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.adsmogo.util.j.a(Ljava/lang/String;)Landroid/graphics/Bitmap;" replace-index="0" replace-signature="com.adsmogo.util.j.a(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.n.run()V">
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="android.webkit.WebView.getSettings()Landroid/webkit/WebSettings;"/>
+        <Replace-Method original-index="1" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="1" replace-signature="android.webkit.WebView.getSettings()Landroid/webkit/WebSettings;"/>
+        <Replace-Method original-index="0" original-signature="org.apache.http.params.BasicHttpParams.&lt;init&gt;()V" replace-index="0" replace-signature="android.webkit.WebView.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="org.apache.http.params.BasicHttpParams.&lt;init&gt;()V" replace-index="0" replace-signature="com.adsmogo.adapters.api.o.&lt;init&gt;(Lcom/adsmogo/adapters/api/n;)V"/>
+        <Replace-Method original-index="0" original-signature="com.adsmogo.adapters.api.AXdXuXuAdapter.e(Lcom/adsmogo/adapters/api/AXdXuXuAdapter;)Ljava/lang/String;" replace-index="1" replace-signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Lcom/adsmogo/model/obj/Adwo;"/>
+        <Replace-Method original-index="1" original-signature="com.adsmogo.adapters.api.AXdXuXuAdapter.e(Lcom/adsmogo/adapters/api/AXdXuXuAdapter;)Ljava/lang/String;" replace-index="1" replace-signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Lcom/adsmogo/model/obj/Adwo;"/>
+        <Replace-Method original-index="0" original-signature="com.adsmogo.adapters.api.AXdXuXuAdapter.e(Lcom/adsmogo/adapters/api/AXdXuXuAdapter;)Ljava/lang/String;" replace-index="1" replace-signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Replace-Method original-index="1" original-signature="com.adsmogo.adapters.api.AXdXuXuAdapter.e(Lcom/adsmogo/adapters/api/AXdXuXuAdapter;)Ljava/lang/String;" replace-index="1" replace-signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Replace-Method original-index="2" original-signature="com.adsmogo.adapters.api.AXdXuXuAdapter.e(Lcom/adsmogo/adapters/api/AXdXuXuAdapter;)Ljava/lang/String;" replace-index="2" replace-signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Replace-Method original-index="2" original-signature="com.adsmogo.adapters.api.AXdXuXuAdapter.e(Lcom/adsmogo/adapters/api/AXdXuXuAdapter;)Ljava/lang/String;" replace-index="0" replace-signature="com.adsmogo.adapters.api.q.&lt;init&gt;(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;B)V"/>
+        <Replace-Method original-index="0" original-signature="org.apache.http.client.methods.HttpPost.&lt;init&gt;(Ljava/lang/String;)V" replace-index="0" replace-signature="android.webkit.WebSettings.setJavaScriptEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="org.apache.http.client.methods.HttpPost.&lt;init&gt;(Ljava/lang/String;)V" replace-index="0" replace-signature="android.webkit.WebView.loadUrl(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.apache.http.client.methods.HttpPost.&lt;init&gt;(Ljava/lang/String;)V" replace-index="0" replace-signature="android.webkit.WebSettings.setDefaultTextEncodingName(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.apache.http.client.methods.HttpPost.&lt;init&gt;(Ljava/lang/String;)V" replace-index="0" replace-signature="android.webkit.WebView.setHorizontalScrollBarEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="org.apache.http.client.methods.HttpPost.&lt;init&gt;(Ljava/lang/String;)V" replace-index="0" replace-signature="android.webkit.WebView.setVerticalScrollBarEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.adsmogo.adapters.api.AXdXuXuAdapter.a(Lcom/adsmogo/adapters/api/AXdXuXuAdapter;Ljava/lang/String;)Ljava/util/ArrayList;" replace-index="0" replace-signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Add-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="com.adsmogo.model.obj.Adwo.getAdurl()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.webkit.WebView.setWebViewClient(Landroid/webkit/WebViewClient;)V"/>
+        <Add-Method index="0" signature="android.webkit.WebView.setOnTouchListener(Landroid/view/View$OnTouchListener;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Lcom/adsmogo/model/obj/Adwo;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="1" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.a(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;Landroid/webkit/WebView;)V"/>
+        <Add-Method index="3" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Add-Method index="4" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Add-Method index="5" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Add-Method index="6" signature="com.adsmogo.adapters.api.AXdXwXoApiAdapter.b(Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="0" signature="org.apache.http.client.methods.HttpPost.setEntity(Lorg/apache/http/HttpEntity;)V"/>
+        <Remove-Method index="0" signature="org.apache.http.client.HttpClient.execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;"/>
+        <Remove-Method index="0" signature="org.apache.http.HttpResponse.getStatusLine()Lorg/apache/http/StatusLine;"/>
+        <Remove-Method index="0" signature="org.apache.http.StatusLine.getStatusCode()I"/>
+        <Remove-Method index="0" signature="org.apache.http.HttpResponse.getEntity()Lorg/apache/http/HttpEntity;"/>
+        <Remove-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="org.apache.http.params.HttpConnectionParams.setConnectionTimeout(Lorg/apache/http/params/HttpParams;I)V"/>
+        <Remove-Method index="0" signature="org.apache.http.params.HttpConnectionParams.setSoTimeout(Lorg/apache/http/params/HttpParams;I)V"/>
+        <Remove-Method index="0" signature="org.apache.http.impl.client.DefaultHttpClient.&lt;init&gt;(Lorg/apache/http/params/HttpParams;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.util.L.w(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Remove-Method index="0" signature="org.apache.http.client.entity.UrlEncodedFormEntity.&lt;init&gt;(Ljava/util/List;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.util.L.v(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Remove-Method index="1" signature="com.adsmogo.util.L.v(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Remove-Method index="0" signature="org.apache.http.util.EntityUtils.toString(Lorg/apache/http/HttpEntity;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.json.JSONObject.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="org.json.JSONObject.isNull(Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="org.json.JSONObject.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.z.run()V">
+        <Replace-Method original-index="0" original-signature="com.adsmogo.adapters.api.CXaXsXeXeSourceAdapter.a(Lcom/adsmogo/adview/AdsMogoLayout;Ljava/lang/String;)Lcom/adsmogo/model/obj/CaseeAD;" replace-index="0" replace-signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(Ljava/lang/String;I)Lcom/adsmogo/model/obj/PublicCustom;"/>
+        <Replace-Method original-index="1" original-signature="com.adsmogo.adapters.api.CXaXsXeXeSourceAdapter.b(Lcom/adsmogo/adapters/api/CXaXsXeXeSourceAdapter;)Lcom/adsmogo/controller/listener/AdsMogoCoreListener;" replace-index="1" replace-signature="com.adsmogo.adapters.api.PublicCustomAdapter.getRation()Lcom/adsmogo/model/obj/Ration;"/>
+        <Replace-Method original-index="0" original-signature="com.adsmogo.adapters.api.CXaXsXeXeSourceAdapter.b(Lcom/adsmogo/adapters/api/CXaXsXeXeSourceAdapter;)Lcom/adsmogo/controller/listener/AdsMogoCoreListener;" replace-index="0" replace-signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(Lcom/adsmogo/adapters/api/PublicCustomAdapter;)Lcom/adsmogo/model/obj/PublicCustom;"/>
+        <Replace-Method original-index="0" original-signature="com.adsmogo.adapters.api.CXaXsXeXeSourceAdapter.c(Lcom/adsmogo/adapters/api/CXaXsXeXeSourceAdapter;)Landroid/widget/RelativeLayout;" replace-index="0" replace-signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(Ljava/lang/String;I)Lcom/adsmogo/model/obj/PublicCustom;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.getRation()Lcom/adsmogo/model/obj/Ration;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(Lcom/adsmogo/adapters/api/PublicCustomAdapter;Lcom/adsmogo/model/obj/PublicCustom;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.util.L.w(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.b(Lcom/adsmogo/adapters/api/PublicCustomAdapter;)V"/>
+        <Remove-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.adsmogo.controller.listener.AdsMogoCoreListener.requestAdFail(Landroid/view/ViewGroup;)V"/>
+        <Remove-Method index="0" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Remove-Method index="0" signature="com.adsmogo.util.L.d(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.CXaXsXeXeSourceAdapter.a(Lcom/adsmogo/adapters/api/CXaXsXeXeSourceAdapter;)Ljava/lang/ref/WeakReference;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.CXaXsXeXeSourceAdapter.a(Lcom/adsmogo/model/obj/CaseeAD;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.CXaXsXeXeSourceAdapter.a()Lcom/adsmogo/model/obj/CaseeAD;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.y.&lt;init&gt;(Lcom/adsmogo/adapters/api/CXaXsXeXeSourceAdapter;)V"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.y.run()V">
+        <Replace-Method original-index="0" original-signature="com.adsmogo.adapters.api.CXaXsXeXeSourceAdapter.d(Lcom/adsmogo/adapters/api/CXaXsXeXeSourceAdapter;)V" replace-index="0" replace-signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.O.run()V">
+        <Add-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;)Ljava/lang/ref/WeakReference;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.N.&lt;init&gt;(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.getRation()Lcom/adsmogo/model/obj/Ration;"/>
+        <Remove-Method index="1" signature="com.adsmogo.adapters.api.PublicCustomAdapter.getRation()Lcom/adsmogo/model/obj/Ration;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(Ljava/lang/String;I)Lcom/adsmogo/model/obj/PublicCustom;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(ZLandroid/view/ViewGroup;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.util.L.w(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(Lcom/adsmogo/adapters/api/PublicCustomAdapter;Lcom/adsmogo/model/obj/PublicCustom;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(Lcom/adsmogo/adapters/api/PublicCustomAdapter;)Lcom/adsmogo/model/obj/PublicCustom;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.b(Lcom/adsmogo/adapters/api/PublicCustomAdapter;)V"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.D.run()V">
+        <Add-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.SXmXaXaXtXoAdapter.a(Lcom/adsmogo/adapters/api/SXmXaXaXtXoAdapter;)Ljava/lang/ref/WeakReference;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.C.&lt;init&gt;(Lcom/adsmogo/adapters/api/SXmXaXaXtXoAdapter;Lcom/adsmogo/adapters/api/SXmXaXaXtXoAdapter;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.FXrXaXcXtXaXlAdapter.b(Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.P.run()V">
+        <Replace-Method original-index="0" original-signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(ZLandroid/view/ViewGroup;)V" replace-index="3" replace-signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Add-Method index="1" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="com.adsmogo.controller.adsmogoconfigsource.AdsMogoConfigCenter.getLatitudeAndlongitude()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.split(Ljava/lang/String;)[Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.apache.http.client.HttpClient.execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;"/>
+        <Add-Method index="0" signature="org.apache.http.HttpResponse.getStatusLine()Lorg/apache/http/StatusLine;"/>
+        <Add-Method index="0" signature="org.apache.http.StatusLine.getStatusCode()I"/>
+        <Add-Method index="0" signature="org.apache.http.HttpResponse.getEntity()Lorg/apache/http/HttpEntity;"/>
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="com.adsmogo.util.e.a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Z"/>
+        <Add-Method index="0" signature="java.lang.String.toLowerCase()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="1" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="2" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="3" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="4" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="5" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="6" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;)Ljava/lang/ref/WeakReference;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="1" signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="2" signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="4" signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="5" signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="6" signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="7" signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="8" signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="9" signature="com.adsmogo.util.L.e(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="0" signature="org.json.JSONObject.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="org.json.JSONObject.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.json.JSONObject.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="org.json.JSONObject.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="2" signature="org.json.JSONObject.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="3" signature="org.json.JSONObject.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.GetUserInfo.getIDByMAC(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.encryption.SHA1.SHA(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.GetUserInfo.getPackageName(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.GetUserInfo.getIpAddress()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.GetUserInfo.getMccInfo(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.GetUserInfo.getMncInfo(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.AdsMogoScreenCalc.getWidthAndHeight(Landroid/content/Context;)[I"/>
+        <Add-Method index="0" signature="com.adsmogo.util.GetUserInfo.getNetworkType(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.GetUserInfo.getImei(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.util.GetUserInfo.getImsi(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.b()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.b(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.b(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.apache.http.params.BasicHttpParams.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="org.apache.http.params.HttpConnectionParams.setConnectionTimeout(Lorg/apache/http/params/HttpParams;I)V"/>
+        <Add-Method index="0" signature="org.apache.http.params.HttpConnectionParams.setSoTimeout(Lorg/apache/http/params/HttpParams;I)V"/>
+        <Add-Method index="0" signature="org.apache.http.impl.client.DefaultHttpClient.&lt;init&gt;(Lorg/apache/http/params/HttpParams;)V"/>
+        <Add-Method index="0" signature="org.apache.http.client.methods.HttpGet.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.util.L.v(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="1" signature="com.adsmogo.util.L.v(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+        <Add-Method index="0" signature="org.apache.http.util.EntityUtils.toString(Lorg/apache/http/HttpEntity;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="1" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="2" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="3" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="4" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="5" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="6" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="7" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;Lorg/json/JSONObject;)Lcom/adsmogo/model/obj/WeiQian;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.a(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;Lcom/adsmogo/model/obj/WeiQian;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.WXeXiXQXiXaXnAPIAdapter.c(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;)Lcom/adsmogo/model/obj/WeiQian;"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.O.&lt;init&gt;(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="4" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="5" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="6" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="7" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="8" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="9" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="10" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="11" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="12" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="1" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="2" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="java.lang.String.replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.c(Lcom/adsmogo/adapters/api/PublicCustomAdapter;)Landroid/webkit/WebView;"/>
+    </Method>
+    <Method signature="com.adsmogo.adapters.api.A.run()V">
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.a(ZLandroid/view/ViewGroup;)V"/>
+        <Add-Method index="0" signature="com.adsmogo.adapters.api.PublicCustomAdapter.c(Lcom/adsmogo/adapters/api/PublicCustomAdapter;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Remove-Method index="1" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.adsmogo.model.obj.Ftad.getAdviewurl1()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.adsmogo.model.obj.Ftad.getAdviewparam2()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adapters.api.FXrXaXcXtXaXlAdapter.a(Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;)Ljava/lang/ref/WeakReference;"/>
+        <Remove-Method index="0" signature="com.adsmogo.adview.ShowFullDialog.&lt;init&gt;(Landroid/app/Activity;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.adview.ShowFullDialog.showFullAdDialog(Ljava/lang/String;Ljava/lang/String;Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;)V"/>
+    </Method>
+    <Method signature="com.adsmogo.util.l.run()V">
+        <Replace-Method original-index="0" original-signature="com.adsmogo.util.n.a(Landroid/graphics/Bitmap;)V" replace-index="0" replace-signature="com.adsmogo.util.m.a(Landroid/graphics/drawable/Drawable;)V"/>
+    </Method>
+</Apk>

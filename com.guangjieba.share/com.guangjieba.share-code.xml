@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.guangjieba.share" pkg="com.guangjieba.share">
+    <Method signature="com.guangjieba.share.ui.user.cs.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.LoginActivity.a(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.ProfileActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/ProfileActivity_$IntentBuilder_;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.ProfileActivity_$IntentBuilder_.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.h.aj.run()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.h.af.c(Lcom/guangjieba/share/model/h/af;Lcom/guangjieba/share/model/bean/UserModel$User;)V" replace-index="0" replace-signature="com.guangjieba.share.model.h.af.b(Lcom/guangjieba/share/model/h/af;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.h.al.run()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.h.af.c(Lcom/guangjieba/share/model/h/af;)V" replace-index="0" replace-signature="com.guangjieba.share.model.h.af.a(Lcom/guangjieba/share/model/h/af;Lcom/guangjieba/share/model/bean/UserModel$User;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.h.n.a(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.h.l.a()V" replace-index="0" replace-signature="com.guangjieba.share.model.h.l.c()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.e.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.LoginActivity_.d()V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.RegisterActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/RegisterActivity_$IntentBuilder_;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.RegisterActivity_$IntentBuilder_.a(Z)Lcom/guangjieba/share/ui/user/RegisterActivity_$IntentBuilder_;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.RegisterActivity_$IntentBuilder_.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.d.a.a(Lcom/guangjieba/share/model/b;Lcom/guangjieba/share/model/a;[Ljava/lang/Long;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.d.a.c()V" replace-index="0" replace-signature="com.guangjieba.share.model.d.a.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.order.ar.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.guangjieba.share.ui.order.OrderDetailActivity_.d()V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.a.setStyle(II)V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.order.OrderDetailActivity.getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.a.show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.c.a()Lcom/guangjieba/share/widget/f;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.order.al.&lt;init&gt;(Lcom/guangjieba/share/ui/order/OrderDetailActivity;)V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.f.c(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.f.d(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.f.b(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.f.a()Lcom/guangjieba/share/widget/a;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.a.a(Lcom/guangjieba/share/widget/b;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.g.e.a(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.g.c.a()V" replace-index="0" replace-signature="com.guangjieba.share.model.g.c.c()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.ca.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.widget.f.a(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;" replace-index="0" replace-signature="com.guangjieba.share.widget.f.d(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.g.f.c(Lcom/guangjieba/share/model/g/f;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.c()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.f.b.a(Lcom/guangjieba/share/model/f/b;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.c()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.b()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.h.ai.run()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.h.af.b(Lcom/guangjieba/share/model/h/af;Lcom/guangjieba/share/model/bean/UserModel$User;)V" replace-index="0" replace-signature="com.guangjieba.share.model.h.af.c(Lcom/guangjieba/share/model/h/af;Lcom/guangjieba/share/model/bean/UserModel$User;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.h.an.run()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.h.af.a(Lcom/guangjieba/share/model/h/af;Lcom/guangjieba/share/model/bean/UserModel$User;)V" replace-index="0" replace-signature="com.guangjieba.share.model.h.af.a(Lcom/guangjieba/share/model/h/af;Z)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.order.p.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.widget.f.c(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;" replace-index="0" replace-signature="com.guangjieba.share.widget.f.a(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.order.NotifyOrderActivity_.d()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.order.ak.&lt;init&gt;(Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.guangjieba.share.ui.order.ai.&lt;init&gt;(Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.d.g.c(Lcom/guangjieba/share/model/d/g;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.b()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.cq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;" replace-index="0" replace-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.c(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.bk.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.user.RegisterActivity_.e()V" replace-index="0" replace-signature="com.guangjieba.share.ui.user.RegisterActivity_.d()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.d.f.a(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.d.a.a()V" replace-index="0" replace-signature="com.guangjieba.share.model.d.a.c()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.c.b.c(Lcom/guangjieba/share/model/c/b;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.c()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.b()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.h.ak.run()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.h.af.b(Lcom/guangjieba/share/model/h/af;)V" replace-index="0" replace-signature="com.guangjieba.share.model.h.af.c(Lcom/guangjieba/share/model/h/af;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.f.b.b()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.f.d.&lt;init&gt;(Lcom/guangjieba/share/model/f/b;)V" replace-index="0" replace-signature="com.guangjieba.share.model.f.c.&lt;init&gt;(Lcom/guangjieba/share/model/f/b;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.protal.ag.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.category.ListWithCategoryActivity_$IntentBuilder_.c(Ljava/lang/String;)Lcom/guangjieba/share/ui/category/ListWithCategoryActivity_$IntentBuilder_;" replace-index="0" replace-signature="com.guangjieba.share.ui.category.ListWithCategoryActivity_$IntentBuilder_.a(Ljava/lang/String;)Lcom/guangjieba/share/ui/category/ListWithCategoryActivity_$IntentBuilder_;"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.c.b.a(Lcom/guangjieba/share/model/c/b;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.b()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.c()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.b.b.c(Lcom/guangjieba/share/model/b/b;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.a()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.c()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.d.a.a(Lcom/guangjieba/share/model/b;Ljava/lang/String;I)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.d.a.c()V" replace-index="0" replace-signature="com.guangjieba.share.model.d.a.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.category.ListWithCategoryFragment_.a(Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.category.ah.f()V" replace-index="0" replace-signature="com.guangjieba.share.ui.category.ah.g()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.bs.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.guangjieba.share.ApplicationController.a()Lcom/guangjieba/share/model/bean/UserModel$User;"/>
+        <Add-Method index="0" signature="android.widget.Toast.show()V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.a.setStyle(II)V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.SettingsActivity.getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.a.show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.c.a()Lcom/guangjieba/share/widget/f;"/>
+        <Add-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.bo.&lt;init&gt;(Lcom/guangjieba/share/ui/user/SettingsActivity;)V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.f.a(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.f.d(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.f.b(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.f.a()Lcom/guangjieba/share/widget/a;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.a.a(Lcom/guangjieba/share/widget/b;)V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.SettingsActivity_.d()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.br.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a()V"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.widget.a.show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V" replace-index="0" replace-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a()V"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.widget.f.c(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;" replace-index="0" replace-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.c(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.widget.f.d(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;" replace-index="0" replace-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.c(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.widget.f.b(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;" replace-index="0" replace-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.c(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.goods.MultiTabActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a(I)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ApplicationController.a()Lcom/guangjieba/share/model/bean/UserModel$User;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.a.setStyle(II)V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.SettingsActivity.getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.c.a()Lcom/guangjieba/share/widget/f;"/>
+        <Remove-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.bo.&lt;init&gt;(Lcom/guangjieba/share/ui/user/SettingsActivity;)V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.f.a()Lcom/guangjieba/share/widget/a;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.a.a(Lcom/guangjieba/share/widget/b;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.protal.ah.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.category.ListWithCategoryActivity_$IntentBuilder_.c(Ljava/lang/String;)Lcom/guangjieba/share/ui/category/ListWithCategoryActivity_$IntentBuilder_;" replace-index="0" replace-signature="com.guangjieba.share.ui.category.ListWithCategoryActivity_$IntentBuilder_.a(Ljava/lang/String;)Lcom/guangjieba/share/ui/category/ListWithCategoryActivity_$IntentBuilder_;"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.h.af.a(Lcom/guangjieba/share/model/h/af;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.c()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.widget.v.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.guangjieba.share.widget.t.getActivity()Landroid/support/v4/app/FragmentActivity;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.order.OrderListActivity.a(Landroid/content/Context;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.d.d.a(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.d.a.a()V" replace-index="0" replace-signature="com.guangjieba.share.model.d.a.c()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.bq.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.SettingsActivity_.d()V"/>
+        <Remove-Method index="0" signature="com.umeng.a.a.a(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.UpdataActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/UpdataActivity_$IntentBuilder_;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.UpdataActivity_$IntentBuilder_.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.bj.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.user.RegisterActivity_.d()V" replace-index="0" replace-signature="com.guangjieba.share.ui.user.RegisterActivity_.e()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.b.b.b(Lcom/guangjieba/share/model/b/b;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.c()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.b()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.category.ListWithCategoryFragment_.b(Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.category.ah.g()V" replace-index="0" replace-signature="com.guangjieba.share.ui.category.ah.f()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.co.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.cm.getSherlockActivity()Lcom/actionbarsherlock/app/SherlockFragmentActivity;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.SettingsActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/SettingsActivity_$IntentBuilder_;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.SettingsActivity_$IntentBuilder_.a()V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.LoginActivity.a(Landroid/content/Context;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.d.a.a(Lcom/guangjieba/share/model/b;Lcom/guangjieba/share/model/a;II)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.d.a.c()V" replace-index="0" replace-signature="com.guangjieba.share.model.d.a.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.d.g.b(Lcom/guangjieba/share/model/d/g;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.c()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.b()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.d.g.a(Lcom/guangjieba/share/model/d/g;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.a()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.c()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.b.b.b()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.b.c.&lt;init&gt;(Lcom/guangjieba/share/model/b/b;)V" replace-index="0" replace-signature="com.guangjieba.share.model.b.d.&lt;init&gt;(Lcom/guangjieba/share/model/b/b;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.g.f.b(Lcom/guangjieba/share/model/g/f;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.a()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.b()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.f.b.b(Lcom/guangjieba/share/model/f/b;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.b()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.c()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.ct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.user.ShareGiftsActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/ShareGiftsActivity_$IntentBuilder_;" replace-index="0" replace-signature="com.guangjieba.share.ui.user.ProfileActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/ProfileActivity_$IntentBuilder_;"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.user.ShareGiftsActivity_$IntentBuilder_.a()V" replace-index="0" replace-signature="com.guangjieba.share.ui.user.ProfileActivity_$IntentBuilder_.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.category.ListWithCategoryFragment_.f()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.category.ap.&lt;init&gt;(Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.guangjieba.share.ui.category.aq.&lt;init&gt;(Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.order.ah.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.widget.f.c(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;" replace-index="0" replace-signature="com.guangjieba.share.widget.f.a(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+        <Replace-Method original-index="1" original-signature="com.guangjieba.share.widget.f.c(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;" replace-index="1" replace-signature="com.guangjieba.share.widget.f.a(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.order.AddressListFragment_.f()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.order.t.&lt;init&gt;(Lcom/guangjieba/share/ui/order/AddressListFragment_;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.guangjieba.share.ui.order.r.&lt;init&gt;(Lcom/guangjieba/share/ui/order/AddressListFragment_;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.h.am.run()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.h.af.a(Lcom/guangjieba/share/model/h/af;Z)V" replace-index="0" replace-signature="com.guangjieba.share.model.h.af.a(Lcom/guangjieba/share/model/h/af;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.ShareGiftsActivity_.d()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.user.cc.&lt;init&gt;(Lcom/guangjieba/share/ui/user/ShareGiftsActivity_;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.guangjieba.share.ui.user.cb.&lt;init&gt;(Lcom/guangjieba/share/ui/user/ShareGiftsActivity_;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.bp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.goods.MultiTabActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;" replace-index="0" replace-signature="com.umeng.a.a.a(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a()V" replace-index="0" replace-signature="com.guangjieba.share.ui.user.UpdataActivity_$IntentBuilder_.a()V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.UpdataActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/UpdataActivity_$IntentBuilder_;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a(I)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.category.ListWithCategoryFragment_.g()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.category.aq.&lt;init&gt;(Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.guangjieba.share.ui.category.ap.&lt;init&gt;(Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.d.a.a(Lcom/guangjieba/share/model/b;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.d.a.c()V" replace-index="0" replace-signature="com.guangjieba.share.model.d.a.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.cr.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.user.SettingsActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/SettingsActivity_$IntentBuilder_;" replace-index="0" replace-signature="com.guangjieba.share.ui.order.OrderListActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/order/OrderListActivity_$IntentBuilder_;"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.user.SettingsActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/SettingsActivity_$IntentBuilder_;" replace-index="0" replace-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a(I)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.user.SettingsActivity_$IntentBuilder_.a()V" replace-index="0" replace-signature="com.guangjieba.share.ui.order.OrderListActivity_$IntentBuilder_.a()V"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.user.SettingsActivity_$IntentBuilder_.a()V" replace-index="0" replace-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a()V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.model.h.ao.a()Lcom/guangjieba/share/model/h/ap;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.model.h.ap.r()Lb/a/a/a/c;"/>
+        <Add-Method index="0" signature="b.a.a.a.c.a(Z)Lb/a/a/a/e;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.model.h.ap.u()V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.b.h.b()V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.model.h.ao.o()Lb/a/a/a/d;"/>
+        <Add-Method index="0" signature="b.a.a.a.d.a()Z"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.goods.MultiTabActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.c(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.cm.getSherlockActivity()Lcom/actionbarsherlock/app/SherlockFragmentActivity;"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.b.b.a(Lcom/guangjieba/share/model/b/b;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.b()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.a()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.d.g.b()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.d.j.&lt;init&gt;(Lcom/guangjieba/share/model/d/g;)V" replace-index="0" replace-signature="com.guangjieba.share.model.d.i.&lt;init&gt;(Lcom/guangjieba/share/model/d/g;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.h.ah.run()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.h.af.a(Lcom/guangjieba/share/model/h/af;Ljava/lang/String;)V" replace-index="0" replace-signature="com.guangjieba.share.model.h.af.b(Lcom/guangjieba/share/model/h/af;Lcom/guangjieba/share/model/bean/UserModel$User;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.f.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.RegisterActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/RegisterActivity_$IntentBuilder_;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.RegisterActivity_$IntentBuilder_.a(Z)Lcom/guangjieba/share/ui/user/RegisterActivity_$IntentBuilder_;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.user.RegisterActivity_$IntentBuilder_.a()V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.user.LoginActivity_.d()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.widget.w.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="com.guangjieba.share.widget.t.getActivity()Landroid/support/v4/app/FragmentActivity;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.order.OrderListActivity.a(Landroid/content/Context;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.g.f.a(Lcom/guangjieba/share/model/g/f;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.e.a.b()V" replace-index="0" replace-signature="com.guangjieba.share.model.e.a.c()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.user.cp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.order.OrderListActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/order/OrderListActivity_$IntentBuilder_;" replace-index="0" replace-signature="com.guangjieba.share.ui.user.ShareGiftsActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/ShareGiftsActivity_$IntentBuilder_;"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.order.OrderListActivity_$IntentBuilder_.a()V" replace-index="0" replace-signature="com.guangjieba.share.ui.user.ShareGiftsActivity_$IntentBuilder_.a()V"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a(I)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;" replace-index="0" replace-signature="com.guangjieba.share.ui.user.ShareGiftsActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/ShareGiftsActivity_$IntentBuilder_;"/>
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a()V" replace-index="0" replace-signature="com.guangjieba.share.ui.user.ShareGiftsActivity_$IntentBuilder_.a()V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.model.h.ao.a()Lcom/guangjieba/share/model/h/ap;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.model.h.ap.r()Lb/a/a/a/c;"/>
+        <Remove-Method index="0" signature="b.a.a.a.c.a(Z)Lb/a/a/a/e;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.model.h.ap.u()V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.b.h.b()V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.model.h.ao.o()Lb/a/a/a/d;"/>
+        <Remove-Method index="0" signature="b.a.a.a.d.a()Z"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.goods.MultiTabActivity_.a(Landroid/content/Context;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.goods.MultiTabActivity_$IntentBuilder_.a(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;"/>
+    </Method>
+    <Method signature="com.guangjieba.share.ui.order.as.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.guangjieba.share.widget.a.setStyle(II)V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.order.OrderDetailActivity.getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.a.show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.c.a()Lcom/guangjieba/share/widget/f;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.ui.order.al.&lt;init&gt;(Lcom/guangjieba/share/ui/order/OrderDetailActivity;)V"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.f.a(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.f.d(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.f.b(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.f.a()Lcom/guangjieba/share/widget/a;"/>
+        <Add-Method index="0" signature="com.guangjieba.share.widget.a.a(Lcom/guangjieba/share/widget/b;)V"/>
+        <Remove-Method index="0" signature="com.guangjieba.share.ui.order.OrderDetailActivity_.d()V"/>
+    </Method>
+    <Method signature="com.guangjieba.share.model.g.f.b()V">
+        <Replace-Method original-index="0" original-signature="com.guangjieba.share.model.g.g.&lt;init&gt;(Lcom/guangjieba/share/model/g/f;)V" replace-index="0" replace-signature="com.guangjieba.share.model.g.h.&lt;init&gt;(Lcom/guangjieba/share/model/g/f;)V"/>
+    </Method>
+</Apk>

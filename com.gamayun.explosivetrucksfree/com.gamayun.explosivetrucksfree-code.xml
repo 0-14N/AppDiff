@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.gamayun.explosivetrucksfree" pkg="com.gamayun.explosivetrucksfree">
+    <Add-Class signature="Lnet/crazymedia/iad/d/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/t" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/p" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/l" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/d" super-signatures="Landroid/graphics/drawable/Drawable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/Workspace" super-signatures="Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ae$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/KuguoAdsManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/h" super-signatures="Lcom/umeng/common/net/l#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/k" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/w" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ae$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/ReportPolicy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPush" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/h" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/am" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/i" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ae$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/f$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/h$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/p" super-signatures="Lnet/crazymedia/iad/b/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/k" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/g" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/b" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/a" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/ImageGallery" super-signatures="Landroid/widget/Gallery#Landroid/widget/AbsSpinner#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gamegod/touydig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/o" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/v" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a/c" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ad" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/JavaScriptCallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/h" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i$b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/c" super-signatures="Lcom/umeng/common/b/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/c" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/a" super-signatures="Lcom/kuguo/b/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ac" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/f" super-signatures="Ljava/util/concurrent/ConcurrentLinkedQueue#Ljava/util/AbstractQueue#Ljava/util/AbstractCollection#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/f$b" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ai" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ah" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/t" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/l" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/Gender" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent$a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aj" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/y" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/m" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/r" super-signatures="Lnet/crazymedia/iad/b/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i$c" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/g" super-signatures="Lcom/umeng/common/net/k#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/e" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a$b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c$a" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/j" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/i" super-signatures="Lnet/crazymedia/iad/b/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/Log" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/f" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/an" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/m" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/f" super-signatures="Lcom/umeng/common/net/j#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/u" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/UmengOnlineConfigureListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/s" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/BoutiqueActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/g" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/s" super-signatures="Lnet/crazymedia/iad/b/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/al" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/FoldView" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/n" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Method signature="java.util.Hashtable.containsKey(Ljava/lang/Object;)Z">
+        <Remove-Method index="0" signature="java.lang.Object.hashCode()I"/>
+    </Method>
+    <Method signature="com.google.ads.e.a(Ljava/lang/String;Landroid/app/Activity;Lcom/google/ads/AdRequest;Lcom/google/ads/f;Ljava/util/HashMap;J)Z">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.m()Lcom/google/ads/internal/g;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.f()Landroid/view/View;" replace-index="0" replace-signature="com.google.ads.h.e()Landroid/view/View;"/>
+        <Remove-Method index="0" signature="com.google.ads.h.e()Lcom/google/ads/g$a;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.a(Lcom/google/ads/g$a;)V"/>
+    </Method>
+    <Method signature="com.google.ads.internal.f.b()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+    </Method>
+    <Method signature="com.google.ads.AdActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.u()V" replace-index="0" replace-signature="com.google.ads.internal.d.t()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="2" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="3" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.w()V" replace-index="0" replace-signature="com.google.ads.internal.d.v()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.q()Z" replace-index="0" replace-signature="com.google.ads.internal.d.p()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.n()I" replace-index="0" replace-signature="com.google.ads.internal.d.m()I"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.n()I" replace-index="1" replace-signature="com.google.ads.internal.d.m()I"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.k()Lcom/google/ads/internal/AdWebView;" replace-index="0" replace-signature="com.google.ads.internal.d.j()Lcom/google/ads/internal/AdWebView;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/AdWebView;ZIZZ)V" replace-index="0" replace-signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/AdWebView;ZIZ)V"/>
+        <Add-Method index="1" signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/AdWebView;ZIZ)V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.AdWebView.e()Z"/>
+        <Remove-Method index="0" signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/AdWebView;ZIZZ)V"/>
+    </Method>
+    <Method signature="java.util.AbstractMap.equals(Ljava/lang/Object;)Z">
+        <Remove-Method index="0" signature="java.util.AbstractMap.size()I"/>
+    </Method>
+    <Method signature="com.google.ads.e$6.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.v()V" replace-index="0" replace-signature="com.google.ads.internal.d.u()V"/>
+    </Method>
+    <Method signature="com.google.ads.internal.f.h(Ljava/net/HttpURLConnection;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.s()Z" replace-index="0" replace-signature="com.google.ads.internal.d.r()Z"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.s()Z" replace-index="1" replace-signature="com.google.ads.internal.d.r()Z"/>
+    </Method>
+    <Method signature="com.google.ads.internal.d.a(Lcom/google/ads/AdRequest;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.p()Z" replace-index="0" replace-signature="com.google.ads.internal.d.o()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.ag.a(Landroid/content/Context;J)Z" replace-index="0" replace-signature="com.google.ads.ae.a(Landroid/content/Context;J)Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.ag.a(Landroid/app/Activity;)V" replace-index="0" replace-signature="com.google.ads.ae.a(Landroid/app/Activity;)V"/>
+    </Method>
+    <Method signature="java.security.PermissionCollection.toString()Ljava/lang/String;"/>
+    <Method signature="com.google.ads.e.b(Lcom/google/ads/c;Lcom/google/ads/AdRequest;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Add-Method index="0" signature="com.google.ads.a.d()Ljava/util/HashMap;"/>
+        <Remove-Method index="0" signature="com.google.ads.a.d()Ljava/util/List;"/>
+        <Remove-Method index="0" signature="com.google.ads.a.e()Ljava/util/HashMap;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.m()Lcom/google/ads/internal/g;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.c()V"/>
+    </Method>
+    <Method signature="com.google.ads.i.a(Lcom/google/ads/mediation/MediationAdapter;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.k()V" replace-index="0" replace-signature="com.google.ads.h.j()V"/>
+    </Method>
+    <Method signature="com.google.ads.internal.c$1.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.c(Lcom/google/ads/internal/c;)Lcom/google/ads/internal/d;" replace-index="0" replace-signature="com.google.ads.internal.c.a(Lcom/google/ads/internal/c;)Lcom/google/ads/internal/d;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.internal.c.c(Lcom/google/ads/internal/c;)Lcom/google/ads/internal/d;" replace-index="0" replace-signature="com.google.ads.internal.c.a(Lcom/google/ads/internal/c;)Lcom/google/ads/internal/d;"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.stopLoading()V"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.destroy()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.a(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.h()Lcom/google/ads/m;"/>
+        <Remove-Method index="0" signature="com.google.ads.util.i$b.a()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.h.b(Lcom/google/ads/AdSize;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.c.a(Lcom/google/ads/internal/c;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="1" signature="com.google.ads.internal.c.a(Lcom/google/ads/internal/c;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="2" signature="com.google.ads.internal.c.a(Lcom/google/ads/internal/c;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="1" signature="com.google.ads.internal.c.c(Lcom/google/ads/internal/c;)Lcom/google/ads/internal/d;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.c.b(Lcom/google/ads/internal/c;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.c.d(Lcom/google/ads/internal/c;)Lcom/google/ads/AdSize;"/>
+        <Remove-Method index="1" signature="com.google.ads.internal.c.d(Lcom/google/ads/internal/c;)Lcom/google/ads/AdSize;"/>
+    </Method>
+    <Method signature="com.google.ads.internal.d.a(F)V">
+        <Remove-Method index="0" signature="com.google.ads.internal.d.s()Z"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.e()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.f()V"/>
+    </Method>
+    <Method signature="com.google.ads.h.d()Z">
+        <Add-Method index="0" signature="com.google.ads.h.c()Z"/>
+    </Method>
+    <Method signature="java.util.AbstractList.hashCode()I"/>
+    <Method signature="com.google.ads.AdRequest.getRequestMap(Landroid/content/Context;)Ljava/util/Map;">
+        <Replace-Method original-index="0" original-signature="com.google.ads.ah.a(Landroid/content/Context;)Z" replace-index="0" replace-signature="com.google.ads.af.a(Landroid/content/Context;)Z"/>
+        <Remove-Method index="0" signature="com.google.ads.doubleclick.DfpExtras.getExtras()Ljava/util/Map;"/>
+        <Remove-Method index="1" signature="com.google.ads.doubleclick.DfpExtras.getExtras()Ljava/util/Map;"/>
+        <Remove-Method index="2" signature="com.google.ads.doubleclick.DfpExtras.getExtras()Ljava/util/Map;"/>
+        <Remove-Method index="0" signature="java.util.Map.isEmpty()Z"/>
+        <Remove-Method index="1" signature="java.util.Map.isEmpty()Z"/>
+        <Remove-Method index="0" signature="com.google.ads.doubleclick.DfpExtras.getPublisherProvidedId()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+    </Method>
+    <Method signature="com.google.ads.internal.f.a(Ljava/net/HttpURLConnection;)V">
+        <Remove-Method index="0" signature="com.google.ads.internal.f.l(Ljava/net/HttpURLConnection;)V"/>
+    </Method>
+    <Method signature="com.google.ads.AdView.a(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V">
+        <Add-Method index="0" signature="com.google.ads.m.a(Lcom/google/ads/Ad;Ljava/lang/String;Landroid/app/Activity;Landroid/view/ViewGroup;Lcom/google/ads/AdSize;)Lcom/google/ads/m;"/>
+        <Add-Method index="0" signature="com.google.ads.internal.d.&lt;init&gt;(Lcom/google/ads/m;Z)V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.&lt;init&gt;(Lcom/google/ads/Ad;Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;Landroid/view/ViewGroup;Z)V"/>
+    </Method>
+    <Method signature="java.util.AbstractList.equals(Ljava/lang/Object;)Z"/>
+    <Method signature="com.google.ads.h$2.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.h()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.h.g()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.util.Vector.indexOf(Ljava/lang/Object;I)I"/>
+    <Method signature="java.util.HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+    <Method signature="java.util.HashMap$Entry.hashCode()I"/>
+    <Method signature="java.util.Hashtable.get(Ljava/lang/Object;)Ljava/lang/Object;">
+        <Remove-Method index="0" signature="java.lang.Object.hashCode()I"/>
+    </Method>
+    <Method signature="com.google.ads.e$5.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.t()V" replace-index="0" replace-signature="com.google.ads.internal.d.s()V"/>
+    </Method>
+    <Method signature="com.google.ads.internal.c.a(Lcom/google/ads/AdRequest$ErrorCode;Z)V">
+        <Add-Method index="0" signature="com.google.ads.internal.f.a()V"/>
+    </Method>
+    <Method signature="com.google.ads.internal.c$e.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.C()V" replace-index="0" replace-signature="com.google.ads.internal.d.B()V"/>
+        <Add-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.stopLoading()V"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.destroy()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.h()Lcom/google/ads/m;"/>
+        <Remove-Method index="0" signature="com.google.ads.util.i$b.a()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.h.b(Lcom/google/ads/AdSize;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.k()Lcom/google/ads/internal/AdWebView;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.AdWebView.setAdSize(Lcom/google/ads/AdSize;)V"/>
+    </Method>
+    <Method signature="com.google.ads.internal.c.&lt;init&gt;(Lcom/google/ads/internal/d;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+    </Method>
+    <Method signature="com.google.ads.i.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.i.a(Ljava/lang/String;Ljava/lang/Throwable;Lcom/google/ads/g$a;)V" replace-index="0" replace-signature="com.google.ads.i.a(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.i.a(Ljava/lang/String;Ljava/lang/Throwable;Lcom/google/ads/g$a;)V" replace-index="1" replace-signature="com.google.ads.i.a(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="com.gamayun.explosivetrucksfree.ActivityPlay$2.handleMessage(Landroid/os/Message;)V">
+        <Add-Method index="0" signature="java.lang.String.startsWith(Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.setData(Landroid/net/Uri;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.util.Log.v(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="android.os.Vibrator.vibrate(J)V"/>
+    </Method>
+    <Method signature="com.google.ads.AdView.setAdListener(Lcom/google/ads/AdListener;)V">
+        <Remove-Method index="0" signature="com.google.ads.internal.d.h()Lcom/google/ads/m;"/>
+    </Method>
+    <Method signature="java.text.SimpleDateFormat.format(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;">
+        <Remove-Method index="0" signature="java.text.FieldPosition.getFieldDelegate()Ljava/text/Format$FieldDelegate;"/>
+    </Method>
+    <Method signature="com.google.ads.internal.c$a.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.k()Lcom/google/ads/internal/AdWebView;" replace-index="0" replace-signature="com.google.ads.internal.d.j()Lcom/google/ads/internal/AdWebView;"/>
+    </Method>
+    <Method signature="com.google.ads.internal.c.a(Ljava/util/Map;Landroid/app/Activity;)Ljava/lang/String;">
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.getWidth()I" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.getHeight()I" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="android.telephony.TelephonyManager.getNetworkType()I" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.o()J" replace-index="0" replace-signature="com.google.ads.internal.g.i()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.j()J" replace-index="0" replace-signature="com.google.ads.internal.g.e()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.k()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.p()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.k()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.m()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.k()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.k()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.k()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.f()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.l()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.g()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.m()J" replace-index="0" replace-signature="com.google.ads.internal.g.h()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.E()J" replace-index="0" replace-signature="com.google.ads.internal.g.q()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.h()Ljava/lang/String;" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.c.h()Ljava/lang/String;" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.e()Ljava/lang/String;" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="2" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="2" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="4" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="3" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="5" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="3" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="6" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="3" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="7" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="3" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="8" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="3" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.l()Lcom/google/ads/internal/g;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.m()Lcom/google/ads/internal/g;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.m()Lcom/google/ads/internal/g;" replace-index="0" replace-signature="com.google.ads.internal.d.l()Lcom/google/ads/internal/g;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.i()V" replace-index="0" replace-signature="com.google.ads.internal.g.d()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.D()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.p()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.D()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.m()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.D()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.k()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.D()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.internal.g.f()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.A()Z" replace-index="0" replace-signature="com.google.ads.internal.g.p()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.A()Z" replace-index="0" replace-signature="com.google.ads.internal.g.m()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.A()Z" replace-index="0" replace-signature="com.google.ads.internal.g.k()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.A()Z" replace-index="0" replace-signature="com.google.ads.internal.g.f()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.y()Z" replace-index="0" replace-signature="com.google.ads.internal.g.j()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.v()J" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.s()J" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.g.p()J" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.google.ads.internal.c$d.&lt;init&gt;(Lcom/google/ads/internal/c;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.getParent()Landroid/view/ViewParent;"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.getLocationOnScreen([I)V"/>
+        <Remove-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getDisplayMetrics()Landroid/util/DisplayMetrics;"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.isShown()Z"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.getWidth()I"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.getHeight()I"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.n()J"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.length()I"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.c.g()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.google.ads.internal.c.g()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.ads.internal.c.b()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.i()Lcom/google/ads/d;" replace-index="0" replace-signature="com.google.ads.internal.d.h()Lcom/google/ads/d;"/>
+    </Method>
+    <Method signature="com.google.ads.h$1.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.l()Z" replace-index="0" replace-signature="com.google.ads.h.k()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.h()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.h.g()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.ads.AdView.isRefreshing()Z">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.s()Z" replace-index="0" replace-signature="com.google.ads.internal.d.r()Z"/>
+    </Method>
+    <Method signature="java.util.HashMap.removeEntryForKey(Ljava/lang/Object;)Ljava/util/HashMap$Entry;"/>
+    <Method signature="java.text.DecimalFormat.format(JLjava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;">
+        <Remove-Method index="0" signature="java.text.FieldPosition.getFieldDelegate()Ljava/text/Format$FieldDelegate;"/>
+    </Method>
+    <Method signature="com.google.ads.e.a(Lcom/google/ads/c;Lcom/google/ads/internal/d;)Z">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+    </Method>
+    <Method signature="java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String;"/>
+    <Method signature="com.gamayun.explosivetrucksfree.ActivityPlay.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.view.Display.getRotation()I" replace-index="0" replace-signature="android.view.Display.getOrientation()I"/>
+        <Add-Method index="0" signature="java.lang.Math.random()D"/>
+        <Add-Method index="0" signature="com.gamegod.touydig.init(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="java.util.HashMap.getEntry(Ljava/lang/Object;)Ljava/util/HashMap$Entry;"/>
+    <Method signature="com.google.ads.c.a(Lorg/json/JSONObject;)Lcom/google/ads/a;">
+        <Replace-Method original-index="0" original-signature="com.google.ads.a.&lt;init&gt;(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/HashMap;)V" replace-index="0" replace-signature="com.google.ads.a.&lt;init&gt;(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/HashMap;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.c.a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/util/List;"/>
+    </Method>
+    <Method signature="java.lang.Object.toString()Ljava/lang/String;"/>
+    <Method signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/d;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.v()V" replace-index="0" replace-signature="com.google.ads.internal.d.u()V"/>
+    </Method>
+    <Method signature="com.google.ads.internal.g.a()V"/>
+    <Method signature="java.util.HashMap.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+    <Method signature="com.google.ads.AdActivity.d()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.k()Lcom/google/ads/internal/AdWebView;" replace-index="0" replace-signature="com.google.ads.internal.d.j()Lcom/google/ads/internal/AdWebView;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.t()V" replace-index="0" replace-signature="com.google.ads.internal.d.s()V"/>
+    </Method>
+    <Method signature="com.google.ads.e$4.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.u()V" replace-index="0" replace-signature="com.google.ads.internal.d.t()V"/>
+    </Method>
+    <Method signature="com.google.ads.internal.c.run()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.f()Ljava/lang/String;" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.b(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.internal.c.f(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.b(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.internal.c.f(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.i()V" replace-index="0" replace-signature="com.google.ads.internal.c.e()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.i()V" replace-index="0" replace-signature="com.google.ads.internal.c.e()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.j()V" replace-index="0" replace-signature="com.google.ads.internal.c.f()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.j()V" replace-index="0" replace-signature="com.google.ads.internal.c.f()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.o()J" replace-index="0" replace-signature="com.google.ads.internal.d.n()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.o()J" replace-index="0" replace-signature="com.google.ads.internal.d.n()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.f()Ljava/lang/String;" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.b(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.internal.c.f(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.b(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.internal.c.f(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.i()V" replace-index="0" replace-signature="com.google.ads.internal.c.e()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.i()V" replace-index="0" replace-signature="com.google.ads.internal.c.e()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.j()V" replace-index="0" replace-signature="com.google.ads.internal.c.f()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.c.j()V" replace-index="0" replace-signature="com.google.ads.internal.c.f()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.internal.d.g()Lcom/google/ads/m;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.o()J" replace-index="0" replace-signature="com.google.ads.internal.d.n()J"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.o()J" replace-index="0" replace-signature="com.google.ads.internal.d.n()J"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.c$d.ordinal()I"/>
+        <Remove-Method index="0" signature="java.util.List.contains(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="java.util.Arrays.asList([Ljava/lang/Object;)Ljava/util/List;"/>
+        <Remove-Method index="0" signature="com.google.ads.util.i$c.a()Ljava/lang/Object;"/>
+        <Remove-Method index="1" signature="com.google.ads.util.i$c.a()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.m()Lcom/google/ads/internal/g;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.q()V"/>
+        <Remove-Method index="1" signature="com.google.ads.internal.g.q()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.w()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.t()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.x()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.u()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.r()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.c$d.ordinal()I"/>
+        <Remove-Method index="0" signature="java.util.List.contains(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="java.util.Arrays.asList([Ljava/lang/Object;)Ljava/util/List;"/>
+        <Remove-Method index="0" signature="com.google.ads.util.i$c.a()Ljava/lang/Object;"/>
+        <Remove-Method index="1" signature="com.google.ads.util.i$c.a()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.m()Lcom/google/ads/internal/g;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.q()V"/>
+        <Remove-Method index="1" signature="com.google.ads.internal.g.q()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.w()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.t()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.x()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.u()V"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.g.r()V"/>
+    </Method>
+    <Method signature="com.google.ads.AdSize.createAdSize(Lcom/google/ads/AdSize;Landroid/content/Context;)Lcom/google/ads/AdSize;">
+        <Add-Method index="0" signature="com.google.ads.AdSize.isFullWidth()Z"/>
+        <Add-Method index="0" signature="com.google.ads.AdSize.isAutoHeight()Z"/>
+    </Method>
+    <Method signature="java.util.HashMap.putForCreate(Ljava/lang/Object;Ljava/lang/Object;)V"/>
+    <Method signature="com.gamayun.explosivetrucksfree.ActivityPlay.onDestroy()V">
+        <Add-Method index="0" signature="com.gamegod.touydig.destroy(Landroid/content/Context;)V"/>
+    </Method>
+</Apk>

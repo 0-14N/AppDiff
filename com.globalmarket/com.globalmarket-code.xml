@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.globalmarket" pkg="com.globalmarket">
+    <Method signature="com.globalmarket.activity.MainActivity.onResume()V">
+        <Remove-Method index="0" signature="com.globalmarket.utils.MyApplicationHelper.getAtNum()I"/>
+        <Remove-Method index="0" signature="com.globalmarket.utils.MyApplicationHelper.setAtNum(I)V"/>
+        <Remove-Method index="0" signature="com.globalmarket.activity.MainActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Remove-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+</Apk>

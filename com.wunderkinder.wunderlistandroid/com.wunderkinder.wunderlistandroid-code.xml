@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.wunderkinder.wunderlistandroid" pkg="com.wunderkinder.wunderlistandroid">
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushSettings$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/FrontiaError" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$37" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener$DescribeMessageResult" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$16" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushService" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wunderkinder/wunderlistandroid/util/Utils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/silentupdate/SilentManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$6" super-signatures="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub#Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$27" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/FrontiaApplication" super-signatures="Landroid/app/Application#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$4" super-signatures="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub#Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wunderkinder/wunderlistandroid/util/push/BaiduPushMessageReceiver$1" super-signatures="Lcom/wunderlist/sync/callbacks/SyncCallback#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/BasicPushNotificationBuilder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/LoadExecutor" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$26" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$4" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$35" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaDeepLink" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$39" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgeBasicPushNotificationBuilder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$5" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$13" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$24" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$28" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$d$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$b$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$8" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wunderkinder/wunderlistandroid/util/push/BaiduPushMessageReceiver" super-signatures="Lcom/baidu/frontia/api/FrontiaPushMessageReceiver#Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/silentupdate/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$IOSContent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgeCustomPushNotificationBuilder" super-signatures="Lcom/baidu/android/pushservice/apiproxy/BridgePushNotificationBuilder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub" super-signatures="Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$17" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushService$Stub" super-signatures="Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener$DescribeMessageListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$14" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$40" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$18" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushSettings" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$AndroidContent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/Frontia" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$NotificationContent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgePushManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$4" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/framework/IModule" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/FrontiaQuery$SortOrder" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$Trigger" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$33" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$7" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$10" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$23" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$6" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$8" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$15" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$11" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgePushSettings" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgeInternal" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$3" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$34" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$21" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$22" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/IPushLightappListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$FrontiaPushBasicNotificationBuilder" super-signatures="Lcom/baidu/frontia/api/FrontiaPushUtil$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$FrontiaPushCustomNotificationBuilder" super-signatures="Lcom/baidu/frontia/api/FrontiaPushUtil$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/lightapp/LightAppPush$a" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$36" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$a$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$9" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$31" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgePushNotificationBuilder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$c$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener$PushMessageListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$3" super-signatures="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub#Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$5" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$30" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wunderkinder/wlapi/WLAPIApplication$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$43" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/lightapp/LightAppPush" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$29" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$32" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushService$Stub$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$20" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener$ListMessageListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$25" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/silentupdate/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$38" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$3" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$7" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$6" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wunderkinder/wunderlistandroid/util/push/BaiduHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$MessageContent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushMessageReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$5" super-signatures="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub#Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$19" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$41" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/FrontiaQuery" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener$CommonMessageListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgePushConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$DeployStatus" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$12" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$DefaultNotificationStyle" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder" super-signatures="Lcom/baidu/android/pushservice/PushNotificationBuilder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/LoadExecutor$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/silentupdate/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushServiceListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/BasicPushNotificationBuilder$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$42" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$44" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.wunderkinder.wunderlistandroid.persistence.AppDataController.initializeDependentServices(Landroid/content/Context;)V">
+        <Replace-Method original-index="0" original-signature="com.wunderkinder.wunderlistandroid.util.push.PushHelper.with(Landroid/content/Context;)Lcom/wunderkinder/wunderlistandroid/util/push/GcmHelper;" replace-index="0" replace-signature="com.wunderkinder.wunderlistandroid.util.push.PushHelper.with(Landroid/content/Context;)Lcom/wunderkinder/wunderlistandroid/util/push/BaiduHelper;"/>
+        <Replace-Method original-index="0" original-signature="com.wunderkinder.wunderlistandroid.util.push.GcmHelper.initializePushNotifications()V" replace-index="0" replace-signature="com.wunderkinder.wunderlistandroid.util.push.BaiduHelper.initializePushNotifications()V"/>
+    </Method>
+    <Method signature="com.wunderkinder.wunderlistandroid.activity.WLMainFragmentActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.wunderkinder.wunderlistandroid.util.push.PushHelper.with(Landroid/content/Context;)Lcom/wunderkinder/wunderlistandroid/util/push/GcmHelper;" replace-index="0" replace-signature="com.wunderkinder.wunderlistandroid.util.push.PushHelper.with(Landroid/content/Context;)Lcom/wunderkinder/wunderlistandroid/util/push/BaiduHelper;"/>
+        <Replace-Method original-index="0" original-signature="com.wunderkinder.wunderlistandroid.util.push.GcmHelper.initializePushNotifications()V" replace-index="0" replace-signature="com.wunderkinder.wunderlistandroid.util.push.BaiduHelper.initializePushNotifications()V"/>
+    </Method>
+    <Method signature="com.wunderkinder.wunderlistandroid.util.PromotionUtil.getPromotionCode()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.util.UUID.randomUUID()Ljava/util/UUID;"/>
+        <Remove-Method index="0" signature="java.util.UUID.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.wunderkinder.wunderlistandroid.util.PromotionUtil.getPromotionProviderName()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.String.hashCode()I"/>
+        <Remove-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="1" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="2" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="3" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="4" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="5" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="6" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="7" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="com.wunderkinder.wunderlistandroid.util.PromotionUtil.getOperatorCode()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.wunderkinder.wunderlistandroid.util.PromotionUtil.isEligibleForPromotion()Z">
+        <Remove-Method index="0" signature="com.wunderkinder.wunderlistandroid.util.PromotionUtil.isEligibleForTelekomPromotion()Z"/>
+    </Method>
+    <Method signature="com.wunderkinder.wunderlistandroid.activity.fragment.WLProAccountFragment.onActivityCreated(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.wunderkinder.wunderlistandroid.util.billing.IabHelper.startSetup(Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper$OnIabSetupFinishedListener;)V" replace-index="0" replace-signature="com.wunderkinder.wunderlistandroid.activity.fragment.WLProAccountFragment.fetchProductsSubscriptions(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.wunderkinder.wunderlistandroid.observer.AmazonPurchasingObserver.&lt;init&gt;(Landroid/app/Activity;)V"/>
+        <Add-Method index="0" signature="com.wunderkinder.wunderlistandroid.observer.AmazonPurchasingObserver.setListener(Lcom/wunderkinder/wunderlistandroid/interfaces/AmazonAppPurchasingObserverListener;)V"/>
+        <Add-Method index="0" signature="com.amazon.inapp.purchasing.PurchasingManager.registerObserver(Lcom/amazon/inapp/purchasing/PurchasingObserver;)V"/>
+        <Add-Method index="1" signature="com.wunderkinder.wunderlistandroid.activity.fragment.WLProAccountFragment.fetchProductsSubscriptions(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.wunderkinder.wunderlistandroid.util.billing.IabHelper.&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.wunderkinder.wunderlistandroid.util.billing.IabHelper.enableDebugLogging(Z)V"/>
+        <Remove-Method index="0" signature="com.wunderkinder.wunderlistandroid.activity.fragment.WLProAccountFragment$1.&lt;init&gt;(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;)V"/>
+    </Method>
+</Apk>

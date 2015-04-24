@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.koutong.remotehd" pkg="com.koutong.remotehd">
+    <Method signature="com.koutong.remote.MainActivity.onStop()V">
+        <Remove-Method index="0" signature="java.lang.String.indexOf(Ljava/lang/String;)I"/>
+    </Method>
+</Apk>

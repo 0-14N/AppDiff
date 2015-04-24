@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="OurBirdMan.Pandora" pkg="OurBirdMan.Pandora">
+    <Add-Class signature="LOurBirdMan/Pandora/UI/v" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="LOurBirdMan/Pandora/UI/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="LOurBirdMan/Pandora/UI/t" super-signatures="Lorg/xml/sax/helpers/DefaultHandler#Ljava/lang/Object"/>
+    <Add-Class signature="LOurBirdMan/Pandora/UI/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="LOurBirdMan/Pandora/UI/AcAbout" super-signatures="LOurBirdMan/Pandora/UI/ActivityBase#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="LOurBirdMan/Pandora/UI/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="LOurBirdMan/Pandora/UI/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="LOurBirdMan/Pandora/UI/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="LOurBirdMan/Pandora/UI/r" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Method signature="OurBirdMan.Pandora.UI.l.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.i.b(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.k.a(LOurBirdMan/Pandora/UI/k;)Landroid/content/Context;"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.i.b(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.k.a(LOurBirdMan/Pandora/UI/k;)Landroid/content/Context;"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.i.b(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.k.b(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.i.b(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.k.b(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.i.b(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.n.&lt;init&gt;(LOurBirdMan/Pandora/UI/k;)V"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.i.b(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.n.&lt;init&gt;(LOurBirdMan/Pandora/UI/k;)V"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.i.b(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.k.c(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.i.b(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.k.c(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.i.c(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.k.a(LOurBirdMan/Pandora/UI/k;)Landroid/content/Context;"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.i.c(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.k.a(LOurBirdMan/Pandora/UI/k;)Landroid/content/Context;"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.i.c(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.k.b(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.i.c(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.k.b(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.i.c(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.n.&lt;init&gt;(LOurBirdMan/Pandora/UI/k;)V"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.i.c(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.n.&lt;init&gt;(LOurBirdMan/Pandora/UI/k;)V"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.i.c(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.k.c(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.i.c(LOurBirdMan/Pandora/UI/i;)Landroid/widget/Button;" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.k.c(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Add-Method index="0" signature="android.view.LayoutInflater.inflate(ILandroid/view/ViewGroup;)Landroid/view/View;"/>
+        <Add-Method index="0" signature="android.view.View.findViewById(I)Landroid/view/View;"/>
+        <Add-Method index="1" signature="android.view.View.findViewById(I)Landroid/view/View;"/>
+        <Add-Method index="0" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="1" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog.show()V"/>
+        <Add-Method index="1" signature="OurBirdMan.Pandora.UI.k.a(LOurBirdMan/Pandora/UI/k;)Landroid/content/Context;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.view.LayoutInflater.from(Landroid/content/Context;)Landroid/view/LayoutInflater;"/>
+        <Add-Method index="0" signature="OurBirdMan.Pandora.UI.k.a(LOurBirdMan/Pandora/UI/k;Landroid/widget/Button;)V"/>
+        <Add-Method index="0" signature="OurBirdMan.Pandora.UI.k.b(LOurBirdMan/Pandora/UI/k;Landroid/widget/Button;)V"/>
+        <Add-Method index="0" signature="OurBirdMan.Pandora.UI.k.b(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Add-Method index="2" signature="OurBirdMan.Pandora.UI.k.b(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Add-Method index="1" signature="OurBirdMan.Pandora.UI.n.&lt;init&gt;(LOurBirdMan/Pandora/UI/k;)V"/>
+        <Add-Method index="0" signature="OurBirdMan.Pandora.UI.k.c(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Add-Method index="2" signature="OurBirdMan.Pandora.UI.k.c(LOurBirdMan/Pandora/UI/k;)Landroid/widget/Button;"/>
+        <Add-Method index="0" signature="OurBirdMan.Pandora.UI.k.d(LOurBirdMan/Pandora/UI/k;)I"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="OurBirdMan.Pandora.UI.m.&lt;init&gt;(LOurBirdMan/Pandora/UI/k;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.create()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="android.view.View.getId()I"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.UI.i.a(LOurBirdMan/Pandora/UI/i;I)V"/>
+        <Remove-Method index="1" signature="OurBirdMan.Pandora.UI.i.a(LOurBirdMan/Pandora/UI/i;I)V"/>
+    </Method>
+    <Method signature="OurBirdMan.Pandora.UI.AcMore.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.h.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMore;)V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.j.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMore;)V"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.o.&lt;init&gt;(Ljava/util/List;Landroid/content/Context;)V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.r.&lt;init&gt;(Ljava/util/List;Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="OurBirdMan.Pandora.UI.AcCategory.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.a.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcCategory;)V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.c.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcCategory;)V"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.UI.AcCategory.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="OurBirdMan.Pandora.UI.AcCategory.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="2" signature="OurBirdMan.Pandora.UI.AcCategory.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="3" signature="OurBirdMan.Pandora.UI.AcCategory.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="4" signature="OurBirdMan.Pandora.UI.AcCategory.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="5" signature="OurBirdMan.Pandora.UI.AcCategory.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="6" signature="OurBirdMan.Pandora.UI.AcCategory.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="7" signature="OurBirdMan.Pandora.UI.AcCategory.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="8" signature="OurBirdMan.Pandora.UI.AcCategory.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="9" signature="OurBirdMan.Pandora.UI.AcCategory.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="OurBirdMan.Pandora.UI.AcLogo.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.c.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcLogo;)V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.e.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcLogo;)V"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.b.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcLogo;)V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.d.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcLogo;)V"/>
+    </Method>
+    <Method signature="OurBirdMan.Pandora.UI.AcMainx.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.n.a(Landroid/content/Context;)V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.q.a(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="OurBirdMan.Pandora.UI.d.run()V">
+        <Add-Method index="0" signature="java.lang.InterruptedException.printStackTrace()V"/>
+        <Add-Method index="0" signature="android.os.Message.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.lang.Thread.sleep(J)V"/>
+        <Add-Method index="0" signature="OurBirdMan.Pandora.UI.AcLogo.a(LOurBirdMan/Pandora/UI/AcLogo;)LOurBirdMan/Pandora/UI/e;"/>
+        <Add-Method index="0" signature="java.lang.InterruptedException.printStackTrace()V"/>
+        <Add-Method index="0" signature="android.os.Message.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.lang.Thread.sleep(J)V"/>
+        <Add-Method index="0" signature="OurBirdMan.Pandora.UI.AcLogo.a(LOurBirdMan/Pandora/UI/AcLogo;)LOurBirdMan/Pandora/UI/e;"/>
+        <Remove-Method index="0" signature="java.lang.String.substring(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.util.List.size()I"/>
+        <Remove-Method index="0" signature="java.util.List.get(I)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="java.lang.String.contains(Ljava/lang/CharSequence;)Z"/>
+        <Remove-Method index="0" signature="android.os.Message.obtain()Landroid/os/Message;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.UI.AcMainx.c(LOurBirdMan/Pandora/UI/AcMainx;)LOurBirdMan/Pandora/UI/e;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.UI.MyApp.a(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.b.a.a(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.a.b.a(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.a.b.b(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.b.c.a(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.substring(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.util.List.size()I"/>
+        <Remove-Method index="0" signature="java.util.List.get(I)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="java.lang.String.contains(Ljava/lang/CharSequence;)Z"/>
+        <Remove-Method index="0" signature="android.os.Message.obtain()Landroid/os/Message;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.UI.AcMainx.c(LOurBirdMan/Pandora/UI/AcMainx;)LOurBirdMan/Pandora/UI/e;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.UI.MyApp.a(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.b.a.a(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.a.b.a(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.a.b.b(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.b.c.a(Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="OurBirdMan.Pandora.UI.AcMainx.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.e.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.g.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.e.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.o.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.f.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.h.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.f.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.h.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V"/>
+        <Replace-Method original-index="2" original-signature="OurBirdMan.Pandora.UI.f.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V" replace-index="2" replace-signature="OurBirdMan.Pandora.UI.h.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.n.a(Ljava/util/List;)Ljava/util/List;" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.q.a(Ljava/util/List;)Ljava/util/List;"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.m.&lt;init&gt;()V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.g.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.m.&lt;init&gt;()V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.g.&lt;init&gt;(LOurBirdMan/Pandora/UI/AcMainx;)V"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.m.&lt;init&gt;()V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.o.&lt;init&gt;()V"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.m.&lt;init&gt;()V" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.o.&lt;init&gt;()V"/>
+        <Replace-Method original-index="2" original-signature="OurBirdMan.Pandora.UI.m.&lt;init&gt;()V" replace-index="2" replace-signature="OurBirdMan.Pandora.UI.o.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.i.&lt;init&gt;(Landroid/content/Context;Ljava/util/List;)V" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.k.&lt;init&gt;(Landroid/content/Context;Ljava/util/List;)V"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.UI.AcMainx.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="OurBirdMan.Pandora.UI.AcMainx.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="OurBirdMan.Pandora.a.c.a(Landroid/content/Context;)Z">
+        <Replace-Method original-index="0" original-signature="OurBirdMan.Pandora.UI.p.a(Landroid/content/Context;)Ljava/lang/String;" replace-index="0" replace-signature="OurBirdMan.Pandora.UI.x.a(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="OurBirdMan.Pandora.UI.p.a(Landroid/content/Context;)Ljava/lang/String;" replace-index="1" replace-signature="OurBirdMan.Pandora.UI.x.a(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Replace-Method original-index="2" original-signature="OurBirdMan.Pandora.UI.p.a(Landroid/content/Context;)Ljava/lang/String;" replace-index="2" replace-signature="OurBirdMan.Pandora.UI.x.a(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="OurBirdMan.Pandora.b.c.a(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="OurBirdMan.Pandora.b.c.a(Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+</Apk>

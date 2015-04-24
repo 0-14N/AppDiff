@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="mobilehome.backup" pkg="mobilehome.backup">
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$25" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup$19" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdManager$DomobLocationListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/SettingList$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdEngine$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore$7$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$21" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdEngine$e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$2" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/e" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/SettingList$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore$13" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/SettingList" super-signatures="Landroid/preference/PreferenceActivity#Landroid/app/ListActivity#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView$e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$14" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$2" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And21$15" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdEngine$RecvHandler" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/g" super-signatures="Landroid/widget/TextView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$13" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$3" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$5$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And21$25" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdEngine$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/R$xml" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$12" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/BuildConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$24" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/j" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And21$20" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdEngine" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$26" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$23" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$11" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/SettingList$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdBuilder$ShowClickAnimViewThread" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$16" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup$25" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And21$14" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$4" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$12" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$6$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$13" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$20" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdBuilder$ClickThread" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$10" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup$23" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And21$18" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup$22" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$7$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$15" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$17" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$9$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And21$19" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup$5$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdEngine$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/Constants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$18" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/d" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$8$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$8$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And21$22" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$6$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup$24" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$6$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And21$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And21$21" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup$18" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/SettingList$3$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And21$23" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdBuilder" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And21$24" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/k" super-signatures="Lcn/domob/android/ads/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$3$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore$14" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup$20" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$7$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$22" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup$21" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/h" super-signatures="Landroid/widget/ViewFlipper#Landroid/widget/ViewAnimator#Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$11" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$19" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$10" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$15" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DBHelper$AdTable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DBHelper$ConfTable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore_And40$3" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And40$14" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore$5$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Restore$8$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lmobilehome/backup/Backup_And21$5$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdEngine$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DBHelper" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Method signature="mobilehome.backup.Restore.access$4(Lmobilehome/backup/Restore;)V">
+        <Replace-Method original-index="0" original-signature="mobilehome.backup.Restore.ShowProgressMsg2()V" replace-index="0" replace-signature="mobilehome.backup.Restore.ShowProgressMsg3()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup$6.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="mobilehome.backup.Backup.getBaseContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.create(Landroid/content/Context;I)Landroid/media/MediaPlayer;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup$4.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.content.Intent.setData(Landroid/net/Uri;)Landroid/content/Intent;" replace-index="0" replace-signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21.access$4(Lmobilehome/backup/Restore_And21;)V">
+        <Replace-Method original-index="0" original-signature="mobilehome.backup.Restore_And21.ShowProgressMsg2()V" replace-index="0" replace-signature="mobilehome.backup.Restore_And21.ShowProgressMsg3()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21$12.run()V">
+        <Add-Method index="0" signature="java.util.List.clear()V"/>
+        <Add-Method index="1" signature="java.util.List.clear()V"/>
+        <Add-Method index="2" signature="java.util.List.clear()V"/>
+        <Add-Method index="3" signature="java.util.List.clear()V"/>
+        <Add-Method index="4" signature="java.util.List.clear()V"/>
+        <Add-Method index="5" signature="java.util.List.clear()V"/>
+        <Add-Method index="6" signature="java.util.List.clear()V"/>
+        <Add-Method index="7" signature="java.util.List.clear()V"/>
+        <Add-Method index="8" signature="java.util.List.clear()V"/>
+        <Add-Method index="9" signature="java.util.List.clear()V"/>
+        <Add-Method index="10" signature="java.util.List.clear()V"/>
+        <Add-Method index="11" signature="java.util.List.clear()V"/>
+        <Add-Method index="12" signature="java.util.List.clear()V"/>
+        <Add-Method index="13" signature="java.util.List.clear()V"/>
+        <Add-Method index="14" signature="java.util.List.clear()V"/>
+        <Add-Method index="15" signature="java.util.List.clear()V"/>
+        <Add-Method index="16" signature="java.util.List.clear()V"/>
+        <Add-Method index="17" signature="java.util.List.clear()V"/>
+        <Add-Method index="18" signature="java.util.List.clear()V"/>
+        <Add-Method index="19" signature="java.util.List.clear()V"/>
+        <Add-Method index="20" signature="java.util.List.clear()V"/>
+        <Add-Method index="21" signature="java.util.List.clear()V"/>
+        <Add-Method index="22" signature="java.util.List.clear()V"/>
+        <Add-Method index="23" signature="java.util.List.clear()V"/>
+        <Add-Method index="24" signature="java.util.List.clear()V"/>
+        <Add-Method index="25" signature="java.util.List.clear()V"/>
+        <Add-Method index="26" signature="java.util.List.clear()V"/>
+        <Add-Method index="27" signature="java.util.List.clear()V"/>
+        <Add-Method index="28" signature="java.util.List.clear()V"/>
+        <Add-Method index="0" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.os.Message.setData(Landroid/os/Bundle;)V"/>
+        <Add-Method index="0" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="1" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="2" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="3" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="4" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="5" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="6" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="7" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="8" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="9" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="10" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="11" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="12" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="13" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="14" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="15" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="16" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="17" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="18" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="19" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="20" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="21" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="22" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="23" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="24" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="25" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="26" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="27" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="28" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="29" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="android.os.Bundle.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.io.FileInputStream.&lt;init&gt;(Ljava/io/File;)V"/>
+        <Remove-Method index="0" signature="java.io.FileInputStream.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Login$5.run()V">
+        <Remove-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.google.ads.AdView.loadAd(Lcom/google/ads/AdRequest;)V"/>
+        <Remove-Method index="0" signature="mobilehome.backup.SoundToDB.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdRequest.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore$2.handleMessage(Landroid/os/Message;)V">
+        <Add-Method index="0" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setIcon(I)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.widget.TextView.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.widget.TextView.setGravity(I)V"/>
+        <Add-Method index="0" signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+        <Add-Method index="0" signature="android.widget.TextView.setTextSize(F)V"/>
+        <Add-Method index="0" signature="android.os.Message.getData()Landroid/os/Bundle;"/>
+        <Add-Method index="1" signature="android.os.Message.getData()Landroid/os/Bundle;"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore$2$1.&lt;init&gt;(Lmobilehome/backup/Restore$2;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.os.Handler.handleMessage(Landroid/os/Message;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore$8.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="1" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="2" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="3" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="1" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="2" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="3" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setIcon(I)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Add-Method index="0" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="1" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.io.File.exists()Z"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore$8$1.&lt;init&gt;(Lmobilehome/backup/Restore$8;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore.access$3(Lmobilehome/backup/Restore;)V">
+        <Replace-Method original-index="0" original-signature="mobilehome.backup.Restore.ShowProgressMsg1()V" replace-index="0" replace-signature="mobilehome.backup.Restore.ShowProgressMsg2()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore$12.run()V">
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.Exception.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.os.Message.setData(Landroid/os/Bundle;)V"/>
+        <Add-Method index="0" signature="android.os.Bundle.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.io.FileInputStream.&lt;init&gt;(Ljava/io/File;)V"/>
+        <Remove-Method index="0" signature="java.io.FileInputStream.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21$7.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="1" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="2" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="3" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="1" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="2" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="3" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="1" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21$11.run()V">
+        <Replace-Method original-index="0" original-signature="java.lang.String.equals(Ljava/lang/Object;)Z" replace-index="0" replace-signature="java.lang.String.contains(Ljava/lang/CharSequence;)Z"/>
+        <Replace-Method original-index="2" original-signature="java.lang.String.equals(Ljava/lang/Object;)Z" replace-index="1" replace-signature="java.lang.String.contains(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="0" signature="java.util.List.clear()V"/>
+        <Add-Method index="1" signature="java.util.List.clear()V"/>
+        <Add-Method index="2" signature="java.util.List.clear()V"/>
+        <Add-Method index="3" signature="java.util.List.clear()V"/>
+        <Add-Method index="4" signature="java.util.List.clear()V"/>
+        <Add-Method index="5" signature="java.util.List.clear()V"/>
+        <Add-Method index="6" signature="java.util.List.clear()V"/>
+        <Add-Method index="7" signature="java.util.List.clear()V"/>
+        <Add-Method index="8" signature="java.util.List.clear()V"/>
+        <Add-Method index="9" signature="java.util.List.clear()V"/>
+        <Add-Method index="10" signature="java.util.List.clear()V"/>
+        <Add-Method index="0" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.os.Message.setData(Landroid/os/Bundle;)V"/>
+        <Add-Method index="0" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="1" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="2" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="3" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="4" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="5" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="android.os.Bundle.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup$7.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="mobilehome.backup.Backup.getBaseContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.create(Landroid/content/Context;I)Landroid/media/MediaPlayer;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Login.onResume()V">
+        <Remove-Method index="0" signature="mobilehome.backup.Login.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getConfiguration()Landroid/content/res/Configuration;"/>
+        <Remove-Method index="0" signature="java.util.Locale.getCountry()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup_And21.access$13(Lmobilehome/backup/Backup_And21;)V">
+        <Replace-Method original-index="0" original-signature="mobilehome.backup.Backup_And21.Backup_ContactsToSD()V" replace-index="0" replace-signature="mobilehome.backup.Backup_And21.Check_Storage()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore$7.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="1" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="2" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="3" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="1" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="2" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="3" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setIcon(I)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Add-Method index="0" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="1" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.io.File.exists()Z"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore$7$1.&lt;init&gt;(Lmobilehome/backup/Restore$7;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21.access$5(Lmobilehome/backup/Restore_And21;)V">
+        <Replace-Method original-index="0" original-signature="mobilehome.backup.Restore_And21.ShowProgressMsg3()V" replace-index="0" replace-signature="mobilehome.backup.Restore_And21.ShowProgressMsg4()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21.access$3(Lmobilehome/backup/Restore_And21;)V">
+        <Replace-Method original-index="0" original-signature="mobilehome.backup.Restore_And21.ShowProgressMsg1()V" replace-index="0" replace-signature="mobilehome.backup.Restore_And21.ShowProgressMsg2()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup_And21$4.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.content.Intent.setData(Landroid/net/Uri;)Landroid/content/Intent;" replace-index="0" replace-signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore.access$5(Lmobilehome/backup/Restore;)V">
+        <Replace-Method original-index="0" original-signature="mobilehome.backup.Restore.ShowProgressMsg3()V" replace-index="0" replace-signature="mobilehome.backup.Restore.ShowProgressMsg4()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21$2.handleMessage(Landroid/os/Message;)V">
+        <Add-Method index="0" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setIcon(I)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.widget.TextView.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.widget.TextView.setGravity(I)V"/>
+        <Add-Method index="0" signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+        <Add-Method index="0" signature="android.widget.TextView.setTextSize(F)V"/>
+        <Add-Method index="0" signature="android.os.Message.getData()Landroid/os/Bundle;"/>
+        <Add-Method index="1" signature="android.os.Message.getData()Landroid/os/Bundle;"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore_And21$2$1.&lt;init&gt;(Lmobilehome/backup/Restore_And21$2;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.os.Handler.handleMessage(Landroid/os/Message;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21$8.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="1" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="2" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="3" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="1" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="2" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="3" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="1" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21$5.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="1" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="2" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="3" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="1" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="2" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="3" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="1" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="mobilehome.backup.BackupRestore.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="mobilehome.backup.SoundToDB.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore$5.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="1" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="2" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="3" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="1" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="2" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="3" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setIcon(I)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Add-Method index="0" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="1" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.io.File.exists()Z"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="mobilehome.backup.Restore$5$1.&lt;init&gt;(Lmobilehome/backup/Restore$5;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore$4.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.content.Intent.setData(Landroid/net/Uri;)Landroid/content/Intent;" replace-index="0" replace-signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore$11.run()V">
+        <Replace-Method original-index="0" original-signature="java.lang.String.equals(Ljava/lang/Object;)Z" replace-index="1" replace-signature="java.util.List.size()I"/>
+        <Add-Method index="0" signature="java.util.List.size()I"/>
+        <Add-Method index="2" signature="java.util.List.size()I"/>
+        <Add-Method index="3" signature="java.util.List.size()I"/>
+        <Add-Method index="4" signature="java.util.List.size()I"/>
+        <Add-Method index="5" signature="java.util.List.size()I"/>
+        <Add-Method index="6" signature="java.util.List.size()I"/>
+        <Add-Method index="7" signature="java.util.List.size()I"/>
+        <Add-Method index="8" signature="java.util.List.size()I"/>
+        <Add-Method index="9" signature="java.util.List.size()I"/>
+        <Add-Method index="10" signature="java.util.List.size()I"/>
+        <Add-Method index="11" signature="java.util.List.size()I"/>
+        <Add-Method index="12" signature="java.util.List.size()I"/>
+        <Add-Method index="13" signature="java.util.List.size()I"/>
+        <Add-Method index="0" signature="java.util.List.clear()V"/>
+        <Add-Method index="1" signature="java.util.List.clear()V"/>
+        <Add-Method index="2" signature="java.util.List.clear()V"/>
+        <Add-Method index="3" signature="java.util.List.clear()V"/>
+        <Add-Method index="4" signature="java.util.List.clear()V"/>
+        <Add-Method index="5" signature="java.util.List.clear()V"/>
+        <Add-Method index="6" signature="java.util.List.clear()V"/>
+        <Add-Method index="7" signature="java.util.List.clear()V"/>
+        <Add-Method index="8" signature="java.util.List.clear()V"/>
+        <Add-Method index="9" signature="java.util.List.clear()V"/>
+        <Add-Method index="10" signature="java.util.List.clear()V"/>
+        <Add-Method index="0" signature="java.lang.Exception.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.os.Message.setData(Landroid/os/Bundle;)V"/>
+        <Add-Method index="0" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="1" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="2" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="3" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="4" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="5" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="6" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="7" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="8" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="9" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="10" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="4" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="5" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.os.Bundle.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.io.FileInputStream.&lt;init&gt;(Ljava/io/File;)V"/>
+        <Remove-Method index="0" signature="java.io.FileInputStream.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore$6.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.os.Environment.getExternalStorageState()Ljava/lang/String;" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="0" original-signature="java.lang.String.equals(Ljava/lang/Object;)Z" replace-index="0" replace-signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Replace-Method original-index="0" original-signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Replace-Method original-index="1" original-signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V" replace-index="1" replace-signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="2" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="3" signature="mobilehome.backup.Restore.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="1" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="2" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="3" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="1" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="mobilehome.backup.Restore$6$2.&lt;init&gt;(Lmobilehome/backup/Restore$6;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.google.ads.AdView.loadAd(Lcom/google/ads/AdRequest;)V"/>
+        <Remove-Method index="0" signature="mobilehome.backup.SoundToDB.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdRequest.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup_And21$8.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="mobilehome.backup.Backup_And21.getBaseContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.create(Landroid/content/Context;I)Landroid/media/MediaPlayer;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21$4.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.content.Intent.setData(Landroid/net/Uri;)Landroid/content/Intent;" replace-index="0" replace-signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup_And21$7.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="mobilehome.backup.Backup_And21.getBaseContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.create(Landroid/content/Context;I)Landroid/media/MediaPlayer;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21$6.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.os.Environment.getExternalStorageState()Ljava/lang/String;" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="0" original-signature="java.lang.String.equals(Ljava/lang/Object;)Z" replace-index="1" replace-signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Replace-Method original-index="1" original-signature="java.lang.String.equals(Ljava/lang/Object;)Z" replace-index="0" replace-signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Replace-Method original-index="0" original-signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Replace-Method original-index="1" original-signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V" replace-index="1" replace-signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Replace-Method original-index="2" original-signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V" replace-index="2" replace-signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="3" signature="mobilehome.backup.Restore_And21.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="1" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="0" signature="mobilehome.backup.Restore_And21$6$3.&lt;init&gt;(Lmobilehome/backup/Restore_And21$6;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup_And21$6.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="mobilehome.backup.Backup_And21.getBaseContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.create(Landroid/content/Context;I)Landroid/media/MediaPlayer;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Restore_And21$13.run()V">
+        <Replace-Method original-index="1" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.os.Message.setData(Landroid/os/Bundle;)V"/>
+        <Add-Method index="0" signature="android.os.Bundle.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.io.FileInputStream.&lt;init&gt;(Ljava/io/File;)V"/>
+        <Remove-Method index="0" signature="java.io.FileInputStream.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup$8.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="mobilehome.backup.Backup.getBaseContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.media.MediaPlayer.create(Landroid/content/Context;I)Landroid/media/MediaPlayer;"/>
+    </Method>
+    <Method signature="mobilehome.backup.BackupRestore.onResume()V">
+        <Remove-Method index="0" signature="mobilehome.backup.BackupRestore.getBaseContext()Landroid/content/Context;"/>
+        <Remove-Method index="1" signature="mobilehome.backup.BackupRestore.getBaseContext()Landroid/content/Context;"/>
+        <Remove-Method index="2" signature="mobilehome.backup.BackupRestore.getBaseContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="1" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="2" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Remove-Method index="1" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Remove-Method index="2" signature="android.content.res.Resources.getText(I)Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Remove-Method index="2" signature="java.lang.CharSequence.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.database.Cursor.getCount()I"/>
+        <Remove-Method index="0" signature="android.database.Cursor.requery()Z"/>
+        <Remove-Method index="0" signature="android.database.Cursor.moveToFirst()Z"/>
+        <Remove-Method index="0" signature="android.database.Cursor.getInt(I)I"/>
+        <Remove-Method index="0" signature="mobilehome.backup.BackupRestore$4.&lt;init&gt;(Lmobilehome/backup/BackupRestore;)V"/>
+        <Remove-Method index="0" signature="mobilehome.backup.SoundToDB.insert(I)J"/>
+        <Remove-Method index="0" signature="mobilehome.backup.SoundToDB.select()Landroid/database/Cursor;"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup.access$13(Lmobilehome/backup/Backup;)V">
+        <Replace-Method original-index="0" original-signature="mobilehome.backup.Backup.Backup_ContactsToSD()V" replace-index="0" replace-signature="mobilehome.backup.Backup.Check_Storage()V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.kuad.KuBanner.setAPID(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.kuad.KuBanner.setkuADListener(Lcom/kuad/kuADListener;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.loadAd(Lcom/google/ads/AdRequest;)V"/>
+        <Remove-Method index="0" signature="mobilehome.backup.SoundToDB.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdRequest.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="mobilehome.backup.Backup$9.&lt;init&gt;(Lmobilehome/backup/Backup;)V"/>
+    </Method>
+    <Method signature="mobilehome.backup.Backup_And21.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.kuad.KuBanner.setAPID(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.kuad.KuBanner.setkuADListener(Lcom/kuad/kuADListener;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.loadAd(Lcom/google/ads/AdRequest;)V"/>
+        <Remove-Method index="0" signature="mobilehome.backup.SoundToDB.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="mobilehome.backup.Backup_And21$9.&lt;init&gt;(Lmobilehome/backup/Backup_And21;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdRequest.&lt;init&gt;()V"/>
+    </Method>
+</Apk>

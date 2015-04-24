@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.lofty.game.popcandy" pkg="com.lofty.game.popcandy">
+    <Add-Class signature="Lcn/zm/spt/R2" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/bangcle/protect/ApplicationWrapper" super-signatures="Landroid/app/Application#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/bangcle/protect/ACall" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/bangcle/protect/Util" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/bangcle/protect/FirstApplication" super-signatures="Landroid/app/Application#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lneo/proxy/DistributeReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/bangcle/protect/MyClassLoader" super-signatures="Ldalvik/system/DexClassLoader#Ldalvik/system/BaseDexClassLoader#Ljava/lang/ClassLoader#Ljava/lang/Object"/>
+    <Method signature="com.otomod.ad.provider.ImageProvider.onCreate()Z">
+        <Add-Method index="0" signature="android.content.ContentProvider.onCreate()Z"/>
+        <Add-Method index="0" signature="com.bangcle.protect.Util.addProvider(Landroid/content/ContentProvider;)V"/>
+    </Method>
+</Apk>

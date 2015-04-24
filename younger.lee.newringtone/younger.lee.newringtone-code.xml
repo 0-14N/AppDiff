@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="younger.lee.newringtone" pkg="younger.lee.newringtone">
+    <Add-Class signature="Lyounger/lee/newringtone/MoreRingtoneActivity$5" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Method signature="younger.lee.newringtone.PlayerActivity$7.&lt;init&gt;(Lyounger/lee/newringtone/PlayerActivity;)V">
+        <Replace-Method original-index="0" original-signature="java.lang.Object.&lt;init&gt;()V" replace-index="0" replace-signature="android.os.Handler.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="younger.lee.newringtone.PlayerActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="android.widget.ProgressBar.setMax(I)V"/>
+        <Remove-Method index="0" signature="android.widget.SeekBar.setMax(I)V"/>
+        <Remove-Method index="0" signature="android.widget.SeekBar.setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V"/>
+        <Remove-Method index="0" signature="younger.lee.newringtone.PlayerActivity$8.&lt;init&gt;(Lyounger/lee/newringtone/PlayerActivity;)V"/>
+    </Method>
+    <Method signature="younger.lee.newringtone.MoreRingtoneActivity.onMoreRingClickHandler()V"/>
+</Apk>

@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.zarosun.zxht_saler" pkg="com.zarosun.zxht_saler">
+    <Method signature="com.zarosun.zxht_saler.ui.info.setting.z.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.j()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.dc.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.bu.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ew.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.a()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.bk.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.k()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.n.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.BackDepositFailActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.BackDepositFailActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.cu.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.l()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.k()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.fx.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.a()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.l()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.bz.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.j()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.au.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.cy.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ga.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.retun.l.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.j()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.bk.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyDetailActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyDetailActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.d.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.CollectFragment_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.CollectFragment_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.bd.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.j()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.ds.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveFragment_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveFragment_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.gc.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.retun.m.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.cw.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.u.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.InfoOrderActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.InfoOrderActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.fa.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.o()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.n()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.cs.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.l.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.HomeActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.HomeActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.fv.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.setting.ab.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.y.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.InfoOrderActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.InfoOrderActivity_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.fu.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.ao.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.NewPasswordActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.NewPasswordActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.da.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.n()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.et.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.cz.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.dx.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.br.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyFragment_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyFragment_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.db.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.p()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.bo.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyFragment_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyFragment_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.setting.aa.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.ah.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.LoginActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.LoginActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.aj.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.LoginActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.LoginActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.bi.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.retun.ae.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.retun.InfoReceiveActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.retun.InfoReceiveActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.retun.ad.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.retun.InfoReceiveActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.retun.InfoReceiveActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.t.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.InfoOrderActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.InfoOrderActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.eq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.j()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.x.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.InfoOrderActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.InfoOrderActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.de.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.f.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.EditOfferActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.EditOfferActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.ev.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.q()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.cd.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.k()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.retun.j.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.k()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.m.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.HomeActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.HomeActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.cu.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.n()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.be.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopFragment_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopFragment_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.bq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.be.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoPersonActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoPersonActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.search.g.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.search.SearchActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.search.SearchActivity_.a()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.fz.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.a()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.retun.n.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.cr.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.bj.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.ai.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.LoginActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.LoginActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.bh.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.k()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.cw.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.m()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.bm.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.fw.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.l()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.k()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.fc.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.p()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.j()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.ap.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.NewPasswordActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.NewPasswordActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.setting.ae.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.k()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ft.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.k()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.bf.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoPersonActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoPersonActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.br.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.ca.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.j()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.ey.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.a()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.eu.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.bq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.at.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.k()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.al.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.LoginActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.LoginActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.aa.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.ForgetPasswordActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.ForgetPasswordActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.es.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.retun.o.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.j()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.ax.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.n()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.widget.e.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.widget.PhotoSelectActivity_.selectLocalPhotos()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.widget.PhotoSelectActivity_.cancel()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.bp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyFragment_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyFragment_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.dt.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveFragment_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveFragment_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.cb.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.a()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ex.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.bp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.bt.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.ak.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.LoginActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.LoginActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.cs.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.j()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.cx.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.setting.x.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.cz.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.q()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.o()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.d.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.AgreeBackGoodsActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.AgreeBackGoodsActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.fb.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.c.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.CollectFragment_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.CollectFragment_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.x.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.ForgetPasswordActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.ForgetPasswordActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.bi.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyDetailActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyDetailActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.eg.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.bs.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.be.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.j()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.eo.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.l()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.o()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.bo.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.j()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.k()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.setting.af.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ee.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.k()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.ce.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.a()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.ct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.m()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.bv.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.av.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.j()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.bl.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.bt.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ev.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.setting.ad.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.cq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.a()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.e.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.EditOfferActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.EditOfferActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.j.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.HomeActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.HomeActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.retun.k.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.search.e.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.search.SearchActivity_.a()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.search.SearchActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.aw.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.k()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.er.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.cx.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.a()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.j()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.ay.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleChoosePlaceActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleChoosePlaceActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.bu.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.bw.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.ReceiveGoodsActivity_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.cy.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.l()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.gd.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.bg.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.dy.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.fy.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.ap.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.o()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.l()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.dd.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.o()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.bw.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoSellerUpdateActivity_.k()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.o.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.BackDepositFailActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.BackDepositFailActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ec.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.bp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.k()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.bm.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopGoodsDetailActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopGoodsDetailActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.be.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleFragment_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleFragment_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.i.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.HomeActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.HomeActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.dr.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveFragment_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveFragment_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.az.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleChoosePlaceActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleChoosePlaceActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.az.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.es.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.n()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.l()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.retun.i.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.retun.AddReceiveInfoActivity_.k()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.w.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.InfoOrderActivity_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.InfoOrderActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.ex.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.m()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.eu.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.d.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.EditOfferActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.EditOfferActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.widget.f.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.widget.PhotoSelectActivity_.cancel()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.widget.PhotoSelectActivity_.selectLocalPhotos()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.bq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyFragment_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.WantobuyFragment_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.er.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.q()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.bn.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopGoodsDetailActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopGoodsDetailActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.cv.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.bf.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.RegisterActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.setting.ac.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.j()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.da.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.a()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.f()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.ay.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.bc.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleFragment_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleFragment_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.cr.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.p()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.a()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.dp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveFragment_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveFragment_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.eq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsDownActivity_.a()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.en.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.m()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.g.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.EditOfferActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.EditOfferActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ea.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.k()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.wantobuy.c.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.wantobuy.EditOfferActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.wantobuy.EditOfferActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ef.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.l()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.et.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.eb.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.l()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.aq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.g()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.dz.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.i()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.a()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.ar.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.l()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.o()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.ep.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.a()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.p()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.bd.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopFragment_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopFragment_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ed.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.a()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsApplyActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.k.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.HomeActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.HomeActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.bd.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleFragment_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleFragment_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.as.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.n()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.m()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.bm.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.j()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.bl.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.f()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.h()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.retun.ac.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.retun.InfoReceiveActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.retun.InfoReceiveActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.account.z.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.account.ForgetPasswordActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.account.ForgetPasswordActivity_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.dq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveFragment_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveFragment_.g()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.gb.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopWillAddGoodsActivity_.e()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.cp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.l()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.e.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.CollectFragment_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.CollectFragment_.d()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.shop.ct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.k()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.shop.ShopModifyGoodsActivity_.b()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.setting.w.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.setting.InfoSettingActivity_.k()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.an.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.m()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.InfoFragment_.j()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.cv.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.d()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.q()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.bk.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.b()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddActivity_.i()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.info.order.c.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.info.order.AgreeBackGoodsActivity_.e()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.info.order.AgreeBackGoodsActivity_.c()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.cq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.h()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveAddGoodsActivity_.l()V"/>
+    </Method>
+    <Method signature="com.zarosun.zxht_saler.ui.frashsale.ez.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.c()V" replace-index="0" replace-signature="com.zarosun.zxht_saler.ui.frashsale.FrashSaleLiveModifyGoodsActivity_.f()V"/>
+    </Method>
+</Apk>

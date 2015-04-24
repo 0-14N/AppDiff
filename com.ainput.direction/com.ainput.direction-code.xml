@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.ainput.direction" pkg="com.ainput.direction">
+    <Add-Class signature="Lcom/hkk2/brcup/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/l/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/d/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/k/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/i/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/s" super-signatures="Landroid/widget/TextView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/l/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/s/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/l/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/e/a" super-signatures="Lcom/hkk2/brcup/e/e#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/k/g" super-signatures="Lcom/wzx/brworld/k/j#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/j/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/ah" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/n/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/cup" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/s/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/k" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/t" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/n/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/d/c" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/s/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/d/e" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/o/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/g/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/f/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/m/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/c/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/j/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/l/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/o/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/l/h" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/a/c" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/s/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/t/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/l" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/Worldcup" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/h" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/a" super-signatures="Landroid/widget/ListView#Landroid/widget/AbsListView#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/e/c" super-signatures="Ljava/util/concurrent/ConcurrentLinkedQueue#Ljava/util/AbstractQueue#Ljava/util/AbstractCollection#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/j" super-signatures="Landroid/os/CountDownTimer#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/k/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/t/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/h/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/t/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/ag" super-signatures="Landroid/widget/GridView#Landroid/widget/AbsListView#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/f/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/m/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/k/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/q/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/q/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/q/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/j/a" super-signatures="Lcom/wzx/brworld/j/e#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/Worldts" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/i/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/b/h" super-signatures="Lcom/wzx/brworld/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/j/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/s/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/i/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/k/e" super-signatures="Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/a" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/e/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/m" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/s/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/l/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/e" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/o/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/o" super-signatures="Landroid/widget/Gallery#Landroid/widget/AbsSpinner#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/af" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/e/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/i/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/k/b" super-signatures="Lcom/wzx/brworld/k/j#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/n/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/p/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/f/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/e/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/n/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/b/g" super-signatures="Lcom/wzx/brworld/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/brazil" super-signatures="Landroid/app/IntentService#Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/l/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/q/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/e/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/ak" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/i/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/i/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/f/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/l" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/l/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/q" super-signatures="Landroid/graphics/drawable/Drawable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/f/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/l/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/ag" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/f/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/b/e" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/j/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/q/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/Worldcup" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/ae" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/c" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/d/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/t/a" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/h" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/e/d" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/d/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/j/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/a/f" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/k/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/c" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/j" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/f" super-signatures="Landroid/widget/Gallery#Landroid/widget/AbsSpinner#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/a/d" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/t/d" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/cup" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/b/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/g" super-signatures="Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/f/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/x" super-signatures="Landroid/widget/Gallery#Landroid/widget/AbsSpinner#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/j/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/l" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/s/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/p" super-signatures="Landroid/widget/GridView#Landroid/widget/AbsListView#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/k/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/j/c" super-signatures="Ljava/util/concurrent/ConcurrentLinkedQueue#Ljava/util/AbstractQueue#Ljava/util/AbstractCollection#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/m/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/b/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/i/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/m" super-signatures="Landroid/os/CountDownTimer#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/n" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/k/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/s/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/i/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/t/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/d/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/f/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/f/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/f/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/e/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/e/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/f" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/n/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/d/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/a/a" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/j/d" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/k" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/j/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/b/f" super-signatures="Landroid/graphics/drawable/ColorDrawable#Landroid/graphics/drawable/Drawable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/j" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/g/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/i/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/r/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/v" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/b/c" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/k/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/hkk2/brcup/h/r" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wzx/brworld/i/f" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.google.android.gms.internal.aq.c(Z)V">
+        <Replace-Method original-index="0" original-signature="com.google.android.gms.internal.dd.a(Landroid/content/Context;Lcom/google/android/gms/internal/ab;ZZLcom/google/android/gms/internal/go;Lcom/google/android/gms/internal/db;)Lcom/google/android/gms/internal/dd;" replace-index="0" replace-signature="com.google.android.gms.internal.dd.a(Landroid/content/Context;Lcom/google/android/gms/internal/ab;ZZLcom/google/android/gms/internal/gn;Lcom/google/android/gms/internal/db;)Lcom/google/android/gms/internal/dd;"/>
+        <Replace-Method original-index="0" original-signature="com.google.android.gms.internal.ce.a(Lcom/google/android/gms/internal/gt;Lcom/google/android/gms/internal/av;Lcom/google/android/gms/internal/m;Lcom/google/android/gms/internal/ay;Z)V" replace-index="0" replace-signature="com.google.android.gms.internal.ce.a(Lcom/google/android/gms/internal/gp;Lcom/google/android/gms/internal/av;Lcom/google/android/gms/internal/m;Lcom/google/android/gms/internal/ay;Z)V"/>
+    </Method>
+    <Method signature="com.GameActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.b.&lt;init&gt;(Lcom/GameActivity;)V" replace-index="0" replace-signature="com.a.&lt;init&gt;(Lcom/GameActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.ainput.direction.bj.a([Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="com.ainput.direction.bg.a([Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.wzx.brworld.Worldts.brazilworld(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/wzx/brworld/Worldts;"/>
+        <Add-Method index="0" signature="com.wzx.brworld.Worldts.show()V"/>
+        <Remove-Method index="0" signature="com.yvjmflv.mkzpnzq152807.MA.&lt;init&gt;(Landroid/app/Activity;Lcom/yvjmflv/mkzpnzq152807/AdListener;Z)V"/>
+    </Method>
+    <Method signature="com.google.android.gms.a.j.a(Landroid/content/Context;)Ljava/lang/Object;">
+        <Replace-Method original-index="0" original-signature="com.google.android.gms.internal.dm.a(Ljava/lang/Object;)Ljava/lang/Object;" replace-index="0" replace-signature="com.google.android.gms.internal.dl.a(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Replace-Method original-index="0" original-signature="com.google.android.gms.common.c.c(Landroid/content/Context;)Landroid/content/Context;" replace-index="0" replace-signature="com.google.android.gms.common.b.b(Landroid/content/Context;)Landroid/content/Context;"/>
+    </Method>
+    <Method signature="com.ainput.direction.c.run()V">
+        <Replace-Method original-index="0" original-signature="com.yvjmflv.mkzpnzq152807.AdView.&lt;init&gt;(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)V" replace-index="0" replace-signature="android.widget.LinearLayout.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.yvjmflv.mkzpnzq152807.AdView.&lt;init&gt;(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)V" replace-index="0" replace-signature="android.widget.ImageView.setImageBitmap(Landroid/graphics/Bitmap;)V"/>
+        <Add-Method index="0" signature="android.widget.LinearLayout.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Add-Method index="0" signature="android.widget.LinearLayout$LayoutParams.setMargins(IIII)V"/>
+        <Add-Method index="0" signature="java.util.List.size()I"/>
+        <Add-Method index="0" signature="java.util.List.get(I)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="com.ainput.direction.a.a()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.ainput.direction.a.b()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.widget.ImageView.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="0" signature="android.widget.LinearLayout.addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Add-Method index="0" signature="android.widget.LinearLayout$LayoutParams.&lt;init&gt;(II)V"/>
+        <Add-Method index="1" signature="android.widget.LinearLayout$LayoutParams.&lt;init&gt;(II)V"/>
+        <Add-Method index="0" signature="java.lang.Math.min(II)I"/>
+        <Add-Method index="0" signature="android.widget.ImageView.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.ainput.a.c.a(Landroid/content/Context;Ljava/lang/String;II)Landroid/graphics/Bitmap;"/>
+        <Add-Method index="0" signature="com.ainput.direction.d.&lt;init&gt;(Lcom/ainput/direction/c;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.google.android.gms.internal.aq.a(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.google.android.gms.internal.gt.a()V" replace-index="0" replace-signature="com.google.android.gms.internal.gp.a()V"/>
+    </Method>
+    <Method signature="com.google.android.gms.tagmanager.bg.&lt;init&gt;(Landroid/content/Context;)V">
+        <Replace-Method original-index="0" original-signature="com.google.android.gms.internal.ed.b()Lcom/google/android/gms/internal/eb;" replace-index="0" replace-signature="com.google.android.gms.internal.eb.b()Lcom/google/android/gms/internal/ea;"/>
+        <Replace-Method original-index="0" original-signature="com.google.android.gms.tagmanager.bg.&lt;init&gt;(Landroid/content/Context;Lcom/google/android/gms/internal/eb;Ljava/lang/String;ILjava/util/concurrent/Executor;)V" replace-index="0" replace-signature="com.google.android.gms.tagmanager.bg.&lt;init&gt;(Landroid/content/Context;Lcom/google/android/gms/internal/ea;Ljava/lang/String;ILjava/util/concurrent/Executor;)V"/>
+    </Method>
+    <Method signature="com.google.android.gms.tagmanager.bg.b(Ljava/util/List;J)V">
+        <Add-Method index="0" signature="com.google.android.gms.internal.ea.a()J"/>
+    </Method>
+    <Method signature="com.ainput.direction.aq.run()V">
+        <Replace-Method original-index="0" original-signature="com.ainput.direction.a.b.show()V" replace-index="0" replace-signature="com.ainput.direction.ad.show()V"/>
+        <Replace-Method original-index="0" original-signature="com.ainput.direction.a.b.&lt;init&gt;(Landroid/content/Context;II)V" replace-index="0" replace-signature="com.ainput.direction.ad.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.google.android.gms.tagmanager.bg.b()Ljava/util/List;">
+        <Add-Method index="0" signature="com.google.android.gms.internal.ea.a()J"/>
+    </Method>
+</Apk>

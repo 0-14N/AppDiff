@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.icatch.wificam.app" pkg="com.icatch.wificam.app">
+    <Add-Class signature="Lcom/icatch/wificam/app/Activity/Main$RefreshAeromodellingInfo" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/icatch/wificam/app/Activity/PbPhotoActivity$WeiXinThread" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/icatch/wificam/app/Activity/PbPhotoActivity$12" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/icatch/wificam/app/controller/SDKEvent$WxShareListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/icatch/wificam/app/Activity/PbPhotoActivity$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/icatch/wificam/app/Activity/Main$15" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/icatch/wificam/app/fuction/WifiCheck$5$1" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/icatch/wificam/app/Activity/Main$4$1" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Method signature="com.icatch.wificam.app.Activity.Main$6.onClick(Landroid/view/View;)V"/>
+    <Method signature="com.icatch.wificam.app.Activity.Main$8.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.PbPhotoActivity$5.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity.showDeleteEnsureDialog()V"/>
+        <Remove-Method index="0" signature="android.support.v4.view.ViewPager.getCurrentItem()I"/>
+        <Remove-Method index="0" signature="android.support.v4.view.ViewPager.setCurrentItem(I)V"/>
+        <Remove-Method index="0" signature="java.util.concurrent.Future.cancel(Z)Z"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity.startLoadBitmapThread(I)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.fuction.WifiCheck$1.handleMessage(Landroid/os/Message;)V"/>
+    <Method signature="com.icatch.wificam.app.Activity.Main.sdCardIsNotReadyAlert(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.Main$13.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/Main;)V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main$14.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/Main;)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.controller.UIDisplayResource.initLogoStampUIString()V">
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.controller.sdkApi.CameraProperties.getsupportedLogoStamp()Ljava/util/List;" replace-index="0" replace-signature="com.icatch.wificam.app.controller.sdkApi.CameraProperties.getsupportedDSTMode()Ljava/util/List;"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.PbPhotoActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.PbPhotoActivity$1.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/PbPhotoActivity;)V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.PbPhotoActivity$7.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/PbPhotoActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.PbPhotoActivity$1.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/PbPhotoActivity;)V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.PbPhotoActivity$WeiXinThread.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/PbPhotoActivity;Lcom/icatch/wificam/app/Activity/PbPhotoActivity$WeiXinThread;)V"/>
+        <Add-Method index="0" signature="android.widget.Button.setVisibility(I)V"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.common.GlobalApp.getProductId()I"/>
+        <Add-Method index="1" signature="com.icatch.wificam.app.common.GlobalApp.getProductId()I"/>
+        <Add-Method index="0" signature="java.lang.Thread.&lt;init&gt;(Ljava/lang/Runnable;)V"/>
+        <Add-Method index="0" signature="java.lang.Thread.start()V"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity.getApplicationContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.baidu.mapapi.SDKInitializer.initialize(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.controller.sdkApi.CameraProperties.getCurrentWiFiMode()I"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main.initStatus()V">
+        <Remove-Method index="0" signature="com.icatch.wificam.app.controller.UIDisplayResource.getinstance()Lcom/icatch/wificam/app/controller/UIDisplayResource;"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.PbPhotoActivity$2.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.support.v4.view.ViewPager.getCurrentItem()I"/>
+        <Add-Method index="0" signature="android.app.AlertDialog.setCancelable(Z)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog.show()V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity$2$1.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/PbPhotoActivity$2;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.create()Landroid/app/AlertDialog;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity.showDownloadEnsureDialog()V"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.PbPhotoActivity$4.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="java.util.List.get(I)Ljava/lang/Object;"/>
+        <Add-Method index="1" signature="java.util.List.get(I)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="com.icatch.wificam.customer.type.ICatchFile.getFileName()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.icatch.wificam.customer.type.ICatchFile.getFileName()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.util.concurrent.ExecutorService.submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity.sendReq(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.Thread.sleep(J)V"/>
+        <Add-Method index="0" signature="android.os.Environment.getExternalStorageDirectory()Ljava/io/File;"/>
+        <Add-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.util.concurrent.Executors.newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;"/>
+        <Add-Method index="0" signature="java.io.File.exists()Z"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity$DownloadThread.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/PbPhotoActivity;Lcom/icatch/wificam/app/Activity/PbPhotoActivity$DownloadThread;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity.showDeleteEnsureDialog()V"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main.onStart()V">
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.Main$10.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/Main;)V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main$11.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/Main;)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.Main$2.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/Main;)V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main$10.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/Main;)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.controller.sdkApi.CameraProperties.hasFuction(I)Z" replace-index="1" replace-signature="com.icatch.wificam.app.common.GlobalApp.getProductId()I"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.Main.showAeromodellingInfo()V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main.hideAeromodellingInfo()V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="java.lang.Object.getClass()Ljava/lang/Class;"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.PbPhotoActivity$6.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="java.util.ArrayList.size()I"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main.changeCameraMode(Lcom/icatch/wificam/customer/type/ICatchPreviewMode;)Z">
+        <Remove-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.common.GlobalApp.getProductId()I"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main.access$21(Lcom/icatch/wificam/app/Activity/Main;)V">
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.Main.showTimePickerFragemnt()V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main.showDatePickerFragemnt()V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main$7.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.fuction.SettingView.&lt;init&gt;(Landroid/content/Context;Landroid/os/Handler;)V" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.ExtendComponent.Preview.stop()Z"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.ExtendComponent.Preview.start()V"/>
+        <Add-Method index="0" signature="android.media.MediaPlayer.start()V"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.fuction.SettingView.showSettingDialog(I)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main.showWarningDlg(Landroid/content/Context;)V">
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.Main$14.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/Main;)V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main$15.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/Main;)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main$5.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.ExtendComponent.Preview.start()V" replace-index="0" replace-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V"/>
+        <Replace-Method original-index="0" original-signature="android.media.MediaPlayer.start()V" replace-index="0" replace-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V"/>
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.icatch.wificam.app.fuction.SettingView.&lt;init&gt;(Landroid/content/Context;Landroid/widget/ListView;ILandroid/os/Handler;)V"/>
+        <Add-Method index="0" signature="android.widget.TextView.setText(I)V"/>
+        <Add-Method index="1" signature="android.widget.TextView.setText(I)V"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.Activity.Main.setRequestedOrientation(I)V"/>
+        <Add-Method index="1" signature="com.icatch.wificam.app.Activity.Main.setRequestedOrientation(I)V"/>
+        <Add-Method index="1" signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V"/>
+        <Add-Method index="0" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Add-Method index="1" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.common.GlobalApp.getProductId()I"/>
+        <Add-Method index="1" signature="com.icatch.wificam.app.common.GlobalApp.getProductId()I"/>
+        <Add-Method index="1" signature="com.icatch.wificam.app.fuction.SettingView.&lt;init&gt;(Landroid/content/Context;Landroid/widget/ListView;ILandroid/os/Handler;)V"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.ExtendComponent.Preview.stop()Z"/>
+        <Remove-Method index="1" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main.onDestroy()V">
+        <Remove-Method index="0" signature="java.util.Timer.cancel()V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.controller.UIDisplayResource.initSettingMenu()V">
+        <Add-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.common.GlobalApp.getProductId()I"/>
+        <Add-Method index="1" signature="com.icatch.wificam.app.common.GlobalApp.getProductId()I"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main$3.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.Main.sdCardIsNotReadyAlert(Ljava/lang/String;)V" replace-index="0" replace-signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.Activity.Main.sdCardIsNotReadyAlert(Ljava/lang/String;)V" replace-index="6" replace-signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.Main.sdCardIsNotReadyAlert(Ljava/lang/String;)V" replace-index="0" replace-signature="android.widget.Toast.setText(I)V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.Activity.Main.sdCardIsNotReadyAlert(Ljava/lang/String;)V" replace-index="1" replace-signature="android.widget.Toast.setText(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.Main.sdCardIsFullAlert()V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main.startActivity(Landroid/content/Intent;)V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.Activity.Main.sdCardIsFullAlert()V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main.startActivity(Landroid/content/Intent;)V"/>
+        <Replace-Method original-index="0" original-signature="android.media.MediaPlayer.start()V" replace-index="3" replace-signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Replace-Method original-index="0" original-signature="android.media.MediaPlayer.start()V" replace-index="0" replace-signature="android.widget.Toast.setText(I)V"/>
+        <Replace-Method original-index="0" original-signature="java.util.Timer.cancel()V" replace-index="6" replace-signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Replace-Method original-index="1" original-signature="java.util.Timer.cancel()V" replace-index="6" replace-signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Replace-Method original-index="0" original-signature="java.util.Timer.cancel()V" replace-index="0" replace-signature="android.widget.Toast.setText(I)V"/>
+        <Replace-Method original-index="1" original-signature="java.util.Timer.cancel()V" replace-index="0" replace-signature="android.widget.Toast.setText(I)V"/>
+        <Replace-Method original-index="0" original-signature="java.util.Timer.schedule(Ljava/util/TimerTask;JJ)V" replace-index="6" replace-signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Replace-Method original-index="0" original-signature="java.util.Timer.schedule(Ljava/util/TimerTask;JJ)V" replace-index="0" replace-signature="android.widget.Toast.setText(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.controller.UIDisplayResource.getRecordingRemainTime()Ljava/lang/String;" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V" replace-index="6" replace-signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.widget.Toast.setText(I)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Button.setBackgroundResource(I)V" replace-index="6" replace-signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Button.setBackgroundResource(I)V" replace-index="6" replace-signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Button.setBackgroundResource(I)V" replace-index="0" replace-signature="android.widget.Toast.setText(I)V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Button.setBackgroundResource(I)V" replace-index="1" replace-signature="android.widget.Toast.setText(I)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Button.setEnabled(Z)V" replace-index="6" replace-signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Button.setEnabled(Z)V" replace-index="1" replace-signature="android.widget.Toast.setText(I)V"/>
+        <Replace-Method original-index="0" original-signature="java.util.Timer.&lt;init&gt;(Z)V" replace-index="0" replace-signature="android.content.Intent.&lt;init&gt;()V"/>
+        <Add-Method index="1" signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Add-Method index="2" signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Add-Method index="4" signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Add-Method index="5" signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Add-Method index="7" signature="com.icatch.wificam.app.controller.SDKEvent.delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V"/>
+        <Add-Method index="0" signature="android.widget.Toast.setDuration(I)V"/>
+        <Add-Method index="1" signature="android.widget.Toast.setDuration(I)V"/>
+        <Add-Method index="0" signature="android.content.Intent.setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.controller.sdkApi.CameraProperties.isSDCardExist()Z"/>
+        <Remove-Method index="1" signature="com.icatch.wificam.app.controller.sdkApi.CameraProperties.isSDCardExist()Z"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.Activity.Main.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.icatch.wificam.app.Activity.Main.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.controller.sdkApi.CameraProperties.getRecordingRemainTime()I"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.controller.sdkApi.CameraAction.startMovieRecord()Z"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.Activity.Main.getApplicationContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.controller.sdkApi.CameraAction.stopVideoCapture()Z"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.Activity.Main.forbidePhotoCapture()Z"/>
+        <Remove-Method index="0" signature="java.util.concurrent.ExecutorService.submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.fuction.CameraCaptureThread.&lt;init&gt;(Landroid/content/Context;Landroid/os/Handler;)V"/>
+        <Remove-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="java.lang.System.currentTimeMillis()J"/>
+        <Remove-Method index="1" signature="java.lang.System.currentTimeMillis()J"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.Activity.Main$3$1.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/Main$3;)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.Main$4.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main.sdCardIsNotReadyAlert(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="android.media.MediaPlayer.start()V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="java.util.Timer.cancel()V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="java.util.Timer.schedule(Ljava/util/TimerTask;JJ)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="android.widget.Button.setBackgroundResource(I)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main.sdCardIsNotReadyAlert(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main.sdCardIsNotReadyAlert(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="android.media.MediaPlayer.start()V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="android.media.MediaPlayer.start()V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="java.util.Timer.cancel()V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="java.util.Timer.cancel()V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="java.util.Timer.schedule(Ljava/util/TimerTask;JJ)V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="java.util.Timer.schedule(Ljava/util/TimerTask;JJ)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="android.widget.Button.setBackgroundResource(I)V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="android.widget.Button.setBackgroundResource(I)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Toast.setText(I)V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.TextView.setText(I)V" replace-index="0" replace-signature="com.icatch.wificam.app.fuction.CameraCaptureThread.&lt;init&gt;(Landroid/content/Context;Landroid/os/Handler;)V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.TextView.setText(I)V" replace-index="0" replace-signature="com.icatch.wificam.app.fuction.CameraCaptureThread.&lt;init&gt;(Landroid/content/Context;Landroid/os/Handler;)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.Activity.Main.setRequestedOrientation(I)V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main.sdCardIsFullAlert()V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.Activity.Main.setRequestedOrientation(I)V" replace-index="1" replace-signature="com.icatch.wificam.app.Activity.Main.sdCardIsFullAlert()V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main.sdCardIsNotReadyAlert(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="1" replace-signature="com.icatch.wificam.app.Activity.Main.sdCardIsNotReadyAlert(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="android.media.MediaPlayer.start()V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="android.media.MediaPlayer.start()V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="java.util.Timer.cancel()V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="1" replace-signature="java.util.Timer.cancel()V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="java.util.Timer.schedule(Ljava/util/TimerTask;JJ)V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="java.util.Timer.schedule(Ljava/util/TimerTask;JJ)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="android.widget.Button.setBackgroundResource(I)V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="android.widget.Button.setBackgroundResource(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.fuction.SettingView.showSettingMainMenu()V" replace-index="0" replace-signature="android.widget.Button.setEnabled(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.icatch.wificam.app.fuction.SettingView.&lt;init&gt;(Landroid/content/Context;Landroid/widget/ListView;ILandroid/os/Handler;)V" replace-index="0" replace-signature="com.icatch.wificam.app.controller.UIDisplayResource.getRecordingRemainTime()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="com.icatch.wificam.app.fuction.SettingView.&lt;init&gt;(Landroid/content/Context;Landroid/widget/ListView;ILandroid/os/Handler;)V" replace-index="0" replace-signature="com.icatch.wificam.app.controller.UIDisplayResource.getRecordingRemainTime()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.makeText(Landroid/content/Context;II)Landroid/widget/Toast;" replace-index="0" replace-signature="com.icatch.wificam.app.Activity.Main.getString(I)Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Toast.makeText(Landroid/content/Context;II)Landroid/widget/Toast;" replace-index="1" replace-signature="com.icatch.wificam.app.Activity.Main.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.controller.sdkApi.CameraProperties.isSDCardExist()Z"/>
+        <Add-Method index="1" signature="com.icatch.wificam.app.controller.sdkApi.CameraProperties.isSDCardExist()Z"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.controller.sdkApi.CameraProperties.getRecordingRemainTime()I"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.controller.sdkApi.CameraAction.startMovieRecord()Z"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.controller.sdkApi.CameraAction.stopVideoCapture()Z"/>
+        <Add-Method index="1" signature="android.widget.Button.setBackgroundResource(I)V"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.Activity.Main.forbidePhotoCapture()Z"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.ExtendComponent.Preview.stop()Z"/>
+        <Add-Method index="0" signature="java.util.concurrent.ExecutorService.submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="2" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="3" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="4" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="5" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="6" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="7" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="8" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.util.Timer.&lt;init&gt;(Z)V"/>
+        <Add-Method index="0" signature="java.lang.System.currentTimeMillis()J"/>
+        <Add-Method index="1" signature="java.lang.System.currentTimeMillis()J"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.Activity.Main$4$1.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/Main$4;)V"/>
+        <Remove-Method index="1" signature="android.widget.Toast.show()V"/>
+        <Remove-Method index="0" signature="android.widget.Toast.setDuration(I)V"/>
+        <Remove-Method index="1" signature="android.widget.Toast.setDuration(I)V"/>
+        <Remove-Method index="0" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Remove-Method index="1" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.common.GlobalApp.getProductId()I"/>
+        <Remove-Method index="1" signature="com.icatch.wificam.app.common.GlobalApp.getProductId()I"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.controller.SDKEvent.addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V">
+        <Add-Method index="0" signature="com.icatch.wificam.app.controller.SDKEvent$WxShareListener.&lt;init&gt;(Lcom/icatch/wificam/app/controller/SDKEvent;)V"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.PbPhotoActivity$3.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity.showDownloadEnsureDialog()V"/>
+        <Add-Method index="0" signature="com.icatch.wificam.app.common.WriteLogToDevice.writeLog(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.support.v4.view.ViewPager.getCurrentItem()I"/>
+        <Remove-Method index="0" signature="java.util.List.get(I)Ljava/lang/Object;"/>
+        <Remove-Method index="1" signature="java.util.List.get(I)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.customer.type.ICatchFile.getFileName()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.icatch.wificam.customer.type.ICatchFile.getFileName()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.util.concurrent.ExecutorService.submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity.sendShareImageReq(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.lang.Thread.sleep(J)V"/>
+        <Remove-Method index="0" signature="android.os.Environment.getExternalStorageDirectory()Ljava/io/File;"/>
+        <Remove-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="0" signature="java.util.concurrent.Executors.newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;"/>
+        <Remove-Method index="0" signature="com.icatch.wificam.app.Activity.PbPhotoActivity$DownloadThread.&lt;init&gt;(Lcom/icatch/wificam/app/Activity/PbPhotoActivity;Lcom/icatch/wificam/app/Activity/PbPhotoActivity$DownloadThread;)V"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.icatch.wificam.app.Activity.PbMainActivity.onCreate(Landroid/os/Bundle;)V"/>
+</Apk>

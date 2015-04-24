@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.l99.lotto" pkg="com.l99.lotto">
+    <Method signature="fz.a(Lev;)Lfa;">
+        <Add-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="hp.a(Ljava/lang/String;)Ljava/util/Date;">
+        <Remove-Method index="0" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="hp.parseFileXmlMessage(Ljava/lang/String;)Lhg;">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="3" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="4" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="5" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="2" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="3" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="4" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="5" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.l99.lotto.business.play.sub.SoccerFragment.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="java.util.HashMap.isEmpty()Z"/>
+        <Add-Method index="1" signature="java.util.HashMap.isEmpty()Z"/>
+        <Add-Method index="2" signature="java.util.HashMap.isEmpty()Z"/>
+        <Add-Method index="3" signature="java.util.HashMap.isEmpty()Z"/>
+        <Add-Method index="4" signature="java.util.HashMap.isEmpty()Z"/>
+        <Add-Method index="5" signature="java.util.HashMap.isEmpty()Z"/>
+    </Method>
+    <Method signature="fz.getUrl()Ljava/lang/String;">
+        <Add-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="fy.a(Lev;)Lfa;">
+        <Add-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="fz.getHeaders()Ljava/util/Map;">
+        <Add-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+</Apk>

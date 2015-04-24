@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.lvping.mobile.cityguide.fuzhou164" pkg="com.lvping.mobile.cityguide.fuzhou164">
+    <Method signature="com.mobile.core.entity.FileInfo.setRatio(Ljava/lang/Integer;)V">
+        <Remove-Method index="0" signature="com.mobile.core.entity.FileInfo.setChanged()V"/>
+        <Remove-Method index="0" signature="com.mobile.core.entity.FileInfo.notifyObservers()V"/>
+    </Method>
+    <Method signature="com.lvping.mobile.cityguide.ui.adapter.download.CityDownloadOperation.&lt;init&gt;(Ljava/util/List;Lcom/lvping/mobile/cityguide/ui/activity/common/IDownloadRegister;)V">
+        <Replace-Method original-index="0" original-signature="com.lvping.mobile.cityguide.ui.adapter.download.CityDownloadOperation$3.&lt;init&gt;(Lcom/lvping/mobile/cityguide/ui/adapter/download/CityDownloadOperation;)V" replace-index="0" replace-signature="com.lvping.mobile.cityguide.ui.adapter.download.CityDownloadOperation$2.&lt;init&gt;(Lcom/lvping/mobile/cityguide/ui/adapter/download/CityDownloadOperation;)V"/>
+    </Method>
+    <Method signature="com.lvping.mobile.cityguide.ui.adapter.download.CityDownloadOperation.initFileInfo(ILjava/util/List;)Lcom/mobile/core/entity/FileInfo;">
+        <Remove-Method index="0" signature="com.mobile.core.entity.FileInfo.addObserver(Ljava/util/Observer;)V"/>
+        <Remove-Method index="0" signature="com.lvping.mobile.cityguide.ui.adapter.download.CityDownloadOperation$2.&lt;init&gt;(Lcom/lvping/mobile/cityguide/ui/adapter/download/CityDownloadOperation;ILcom/mobile/core/entity/FileInfo;)V"/>
+    </Method>
+    <Method signature="com.mobile.core.entity.FileInfo.&lt;init&gt;()V">
+        <Replace-Method original-index="0" original-signature="java.util.Observable.&lt;init&gt;()V" replace-index="0" replace-signature="java.lang.Object.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.lvping.mobile.cityguide.ui.adapter.download.CityDownloadOperation.createEvent(Ljava/lang/Integer;Lcom/mobile/core/entity/FileInfo;)Lcom/mobile/core/http/IDownload$IDownLoadEvent;">
+        <Replace-Method original-index="0" original-signature="com.lvping.mobile.cityguide.ui.adapter.download.CityDownloadOperation$1.&lt;init&gt;(Lcom/lvping/mobile/cityguide/ui/adapter/download/CityDownloadOperation;Lcom/mobile/core/entity/FileInfo;)V" replace-index="0" replace-signature="com.lvping.mobile.cityguide.ui.adapter.download.CityDownloadOperation$1.&lt;init&gt;(Lcom/lvping/mobile/cityguide/ui/adapter/download/CityDownloadOperation;Lcom/mobile/core/entity/FileInfo;Ljava/lang/Integer;)V"/>
+    </Method>
+</Apk>

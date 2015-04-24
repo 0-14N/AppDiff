@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="cn.bluesky.waterpipes" pkg="cn.bluesky.waterpipes">
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/K" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/G" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/SR" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/aj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/c" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/AdReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/V" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/s" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/C" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/d/b" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/B" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/Z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/h" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/A" super-signatures="Lcom/fivefeiwo/coverscreen/s#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/AdBanner" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/b" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/q" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/aq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/an" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/D" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/CPManager" super-signatures="Lcom/fivefeiwo/coverscreen/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/SA" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/Y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/H" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/E" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/Q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/P" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/h" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/RecevieAdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/al" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/M" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/U" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/d/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/X" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/O" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/j" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/WebViewActivity$1" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/phonegap/DroidGap$6$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/I" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/W" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/d/e" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/R" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/j" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/phonegap/DroidGap$12$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/T" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/y" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/F" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/S" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/d/c" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/WA" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/d/f" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/L" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/b" super-signatures="Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/WebViewActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/m" super-signatures="Lcom/fivefeiwo/coverscreen/T#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/J" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/g/a" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fivefeiwo/coverscreen/N" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/c" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Method signature="com.phonegap.DroidGap$6.run()V">
+        <Replace-Method original-index="0" original-signature="com.phonegap.DroidGap.setFullScreen()V" replace-index="0" replace-signature="android.webkit.WebView.loadUrl(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap.init()V"/>
+        <Add-Method index="0" signature="java.util.Stack.push(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="android.webkit.WebView.clearHistory()V"/>
+        <Add-Method index="0" signature="com.phonegap.CallbackServer.init(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.util.Stack.size()I"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap.getStringProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.phonegap.DroidGap.getStringProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.length()I"/>
+        <Add-Method index="0" signature="java.lang.String.indexOf(I)I"/>
+        <Add-Method index="0" signature="java.lang.String.substring(II)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.substring(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap.spinnerStart(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.phonegap.CallbackServer.reinit(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.phonegap.api.PluginManager.reinit()V"/>
+        <Add-Method index="0" signature="com.phonegap.CallbackServer.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="com.phonegap.api.PluginManager.&lt;init&gt;(Landroid/webkit/WebView;Lcom/phonegap/api/PhonegapActivity;)V"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap$6$1.&lt;init&gt;(Lcom/phonegap/DroidGap$6;Lcom/phonegap/DroidGap;ILjava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.Thread.&lt;init&gt;(Ljava/lang/Runnable;)V"/>
+        <Add-Method index="0" signature="java.lang.Thread.start()V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap.onDestroy()V">
+        <Add-Method index="0" signature="com.fivefeiwo.coverscreen.CPManager.destory(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.adsmogo.interstitial.AdsMogoInterstitialManager.shareInstance()Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;"/>
+        <Remove-Method index="0" signature="com.adsmogo.interstitial.AdsMogoInterstitialManager.removeDefaultInterstitialInstance()V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$5.run()V">
+        <Add-Method index="0" signature="com.fivefeiwo.coverscreen.CPManager.showAd(Landroid/content/Context;)I"/>
+        <Remove-Method index="0" signature="com.adsmogo.interstitial.AdsMogoInterstitialManager.shareInstance()Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;"/>
+        <Remove-Method index="1" signature="com.adsmogo.interstitial.AdsMogoInterstitialManager.shareInstance()Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;"/>
+        <Remove-Method index="0" signature="android.util.Log.v(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.adsmogo.interstitial.AdsMogoInterstitialManager.defaultInterstitial()Lcom/adsmogo/interstitial/AdsMogoInterstitial;"/>
+        <Remove-Method index="0" signature="com.adsmogo.interstitial.AdsMogoInterstitialManager.containDefaultInterstitia()Z"/>
+        <Remove-Method index="0" signature="com.adsmogo.interstitial.AdsMogoInterstitial.interstitialShow(Z)V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$8.run()V">
+        <Add-Method index="0" signature="java.lang.InterruptedException.printStackTrace()V"/>
+        <Add-Method index="0" signature="java.lang.Object.wait(J)V"/>
+        <Add-Method index="0" signature="com.phonegap.api.LOG.d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap.init()V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap.loadUrlIntoView(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.phonegap.DroidGap$7.&lt;init&gt;(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V" replace-index="0" replace-signature="com.phonegap.DroidGap$6.&lt;init&gt;(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$7.run()V">
+        <Remove-Method index="0" signature="java.util.Stack.push(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.clearHistory()V"/>
+        <Remove-Method index="0" signature="com.phonegap.CallbackServer.init(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.util.Stack.size()I"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap.getStringProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.phonegap.DroidGap.getStringProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.length()I"/>
+        <Remove-Method index="0" signature="java.lang.String.indexOf(I)I"/>
+        <Remove-Method index="0" signature="java.lang.String.substring(II)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.substring(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap.spinnerStart(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.loadUrl(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.phonegap.CallbackServer.reinit(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.phonegap.api.PluginManager.reinit()V"/>
+        <Remove-Method index="0" signature="com.phonegap.CallbackServer.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.phonegap.api.PluginManager.&lt;init&gt;(Landroid/webkit/WebView;Lcom/phonegap/api/PhonegapActivity;)V"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap$7$1.&lt;init&gt;(Lcom/phonegap/DroidGap$7;Lcom/phonegap/DroidGap;ILjava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.lang.Thread.&lt;init&gt;(Ljava/lang/Runnable;)V"/>
+        <Remove-Method index="0" signature="java.lang.Thread.start()V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$13.run()V">
+        <Replace-Method original-index="0" original-signature="android.app.AlertDialog$Builder.setCancelable(Z)Landroid/app/AlertDialog$Builder;" replace-index="0" replace-signature="android.view.Window.addFlags(I)V"/>
+        <Replace-Method original-index="0" original-signature="android.app.AlertDialog$Builder.setCancelable(Z)Landroid/app/AlertDialog$Builder;" replace-index="0" replace-signature="android.view.Window.clearFlags(I)V"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap.getWindow()Landroid/view/Window;"/>
+        <Add-Method index="1" signature="com.phonegap.DroidGap.getWindow()Landroid/view/Window;"/>
+        <Add-Method index="2" signature="com.phonegap.DroidGap.getWindow()Landroid/view/Window;"/>
+        <Add-Method index="3" signature="com.phonegap.DroidGap.getWindow()Landroid/view/Window;"/>
+        <Add-Method index="1" signature="android.view.Window.addFlags(I)V"/>
+        <Add-Method index="1" signature="android.view.Window.clearFlags(I)V"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.create()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap$13$1.&lt;init&gt;(Lcom/phonegap/DroidGap$13;ZLcom/phonegap/DroidGap;)V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$12.run()V">
+        <Replace-Method original-index="0" original-signature="android.webkit.WebView.setVisibility(I)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="android.webkit.WebView.setVisibility(I)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="0" original-signature="com.phonegap.DroidGap.displayError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setCancelable(Z)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap$12$1.&lt;init&gt;(Lcom/phonegap/DroidGap$12;ZLcom/phonegap/DroidGap;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.create()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$11.run()V">
+        <Add-Method index="0" signature="android.webkit.WebView.setVisibility(I)V"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap.displayError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap.showWebPage(Ljava/lang/String;ZZLjava/util/HashMap;)V"/>
+    </Method>
+</Apk>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.hy.minifetion" pkg="com.hy.minifetion">
+    <Add-Class signature="Lb/a/a/h/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/l" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/g" super-signatures="Lb/a/a/d/a#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/r" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/n" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/d" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/c" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/b/a" super-signatures="Lb/a/a/d/a/f#Lb/a/a/d/a#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/g" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b/f" super-signatures="Lb/a/a/d/d#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/b/c" super-signatures="Lb/a/a/c/b/a#Lb/a/a/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/p" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a" super-signatures="Lb/a/a/f#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/i" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/b/b" super-signatures="Lb/a/a/d/a/f#Lb/a/a/d/a#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/q" super-signatures="Lb/a/a/c/a/j#Lb/a/a/f#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/d" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/c" super-signatures="Lb/a/a/d/a#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/o" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/f" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/g/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/f/g" super-signatures="Lb/a/a/f/f#Lb/a/a/f/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/g" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/g" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/b/a" super-signatures="Lb/a/a/e/a#Lb/a/a/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/d" super-signatures="Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d" super-signatures="Lb/a/a/f#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/f/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/b/d" super-signatures="Lb/a/a/c/b/a#Lb/a/a/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/o" super-signatures="Lb/a/a/a/a#Lb/a/a/a/i#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/j" super-signatures="Lb/a/a/f#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/m" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/a" super-signatures="Lb/a/a/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b/h" super-signatures="Lb/a/a/d/d#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/g/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/l" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/b/a" super-signatures="Lb/a/a/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/t" super-signatures="Lb/a/a/h/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/j" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/q" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/r" super-signatures="Lb/a/a/c/a/b#Lb/a/a/c/a/g#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/p" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/l" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/f/i" super-signatures="Lb/a/a/f/c#Lb/a/a/f/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b/a" super-signatures="Lb/a/a/d/d#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/d" super-signatures="Lb/a/a/f#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/e" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/o" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/h" super-signatures="Lb/a/a/f#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/d" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/f/h" super-signatures="Lb/a/a/f/f#Lb/a/a/f/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/p" super-signatures="Lb/a/a/f#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b/b" super-signatures="Lb/a/a/d/d#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/a/a" super-signatures="Lb/a/a/d/a/c#Lb/a/a/d/a#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/f" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/b/b" super-signatures="Lb/a/a/f#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/j" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/r" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/i" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/w" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/x" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/h" super-signatures="Lb/a/a/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/f/c" super-signatures="Lb/a/a/f/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/f/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/f" super-signatures="Lb/a/a/f#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/v" super-signatures="Lb/a/a/c/a/g#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/o" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/k" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/h" super-signatures="Lb/a/a/d/a#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/n" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/f" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/f/f" super-signatures="Lb/a/a/f/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/b" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/b/e" super-signatures="Lb/a/a/f#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/a/b" super-signatures="Lb/a/a/d/a/c#Lb/a/a/d/a#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/f" super-signatures="Lb/a/a/a/i#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/i" super-signatures="Lb/a/a/d/a#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/h" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/c" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/p" super-signatures="Lb/a/a/c/a/g#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/a" super-signatures="Lb/a/a/c/a/b#Lb/a/a/c/a/g#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/v" super-signatures="Lb/a/a/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/i" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b/j" super-signatures="Lb/a/a/d/d#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/b" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b/c" super-signatures="Lb/a/a/d/d#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a" super-signatures="Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/f" super-signatures="Lb/a/a/d/a#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/h" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/k" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/b" super-signatures="Lb/a/a/c/a/g#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/a" super-signatures="Lb/a/a/a/i#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b/e" super-signatures="Lb/a/a/d/d#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/a/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/c/e" super-signatures="Lb/a/a/c/c/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/d/q" super-signatures="Lb/a/a/c/d/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/w" super-signatures="Lb/a/a/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/s" super-signatures="Lb/a/a/c/a/b#Lb/a/a/c/a/g#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/f/e" super-signatures="Lb/a/a/f/c#Lb/a/a/f/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/e" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/c/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/h/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b/i" super-signatures="Lb/a/a/d/d#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/f/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b/g" super-signatures="Lb/a/a/d/d#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/e/b/c" super-signatures="Lb/a/a/e/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lb/a/a/d/b/d" super-signatures="Lb/a/a/d/d#Lb/a/a/d/c#Ljava/lang/Object"/>
+    <Method signature="com.hy.minifetion.a.o.a(Z)I">
+        <Replace-Method original-index="0" original-signature="net.a.a.d.a.a()Lnet/a/a/d/b;" replace-index="0" replace-signature="b.a.a.d.a.a()Lb/a/a/d/b;"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.l()Z" replace-index="0" replace-signature="b.a.a.c.l()Z"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.d.a.a.&lt;init&gt;()V" replace-index="0" replace-signature="b.a.a.d.a.a.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.a(ZLnet/a/a/d/a/b;)V" replace-index="0" replace-signature="b.a.a.c.a(ZLb/a/a/d/a/b;)V"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.d.a.a.b()Lnet/a/a/d/a;" replace-index="0" replace-signature="b.a.a.d.a.a.b()Lb/a/a/d/a;"/>
+    </Method>
+    <Method signature="com.a.a.a(Landroid/app/Activity;Landroid/view/View;)Z">
+        <Replace-Method original-index="0" original-signature="com.a.h.a(Landroid/app/Activity;)V" replace-index="0" replace-signature="com.a.e.a(Landroid/app/Activity;)V"/>
+        <Remove-Method index="0" signature="com.a.a.a(Landroid/content/Context;Z)V"/>
+        <Remove-Method index="1" signature="com.a.a.a(Landroid/content/Context;Z)V"/>
+        <Remove-Method index="0" signature="net.u.m.st.ccsbxssd.ppeazssd(Landroid/content/Context;)Lnet/u/m/st/ccsbxssd;"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.InterstitialAd.setAppSid(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.InterstitialAd.setAppSec(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.a.d.&lt;init&gt;(Landroid/app/Activity;ILandroid/view/View;Lcom/baidu/mobads/InterstitialAd;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.InterstitialAd.setListener(Lcom/baidu/mobads/InterstitialAdListener;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.InterstitialAd.loadAd()V"/>
+        <Remove-Method index="0" signature="net.u.m.ccsafssd.getInstance(Landroid/content/Context;)Lnet/u/m/ccsafssd;"/>
+        <Remove-Method index="0" signature="com.a.f.&lt;init&gt;(Landroid/app/Activity;ILandroid/view/View;)V"/>
+        <Remove-Method index="0" signature="net.u.m.ccsafssd.init(Ljava/lang/String;Ljava/lang/String;Z)V"/>
+        <Remove-Method index="0" signature="net.u.m.st.ccsbxssd.ppecxssd(Landroid/content/Context;Lnet/u/m/st/ccsbwssd;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.InterstitialAd.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.hy.minifetion.ui.dl.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.a.h.b(Landroid/app/Activity;)V" replace-index="0" replace-signature="com.a.e.b(Landroid/app/Activity;)V"/>
+    </Method>
+    <Method signature="com.hy.minifetion.aa.i(Ljava/lang/String;)Z">
+        <Replace-Method original-index="0" original-signature="net.a.a.h.a.&lt;init&gt;(Ljava/lang/String;)V" replace-index="0" replace-signature="b.a.a.h.a.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.h.a.a()Z" replace-index="0" replace-signature="b.a.a.h.a.a()Z"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.h.a.b()Z" replace-index="0" replace-signature="b.a.a.h.a.b()Z"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.h.a.b()Z" replace-index="0" replace-signature="b.a.a.h.a.c()Z"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.h.a.c()Z" replace-index="0" replace-signature="b.a.a.h.a.b()Z"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.h.a.c()Z" replace-index="0" replace-signature="b.a.a.h.a.c()Z"/>
+    </Method>
+    <Method signature="com.hy.minifetion.a.o.b(Lcom/hy/minifetion/a/ab;)I">
+        <Replace-Method original-index="0" original-signature="net.a.a.c.l()Z" replace-index="0" replace-signature="b.a.a.c.l()Z"/>
+        <Replace-Method original-index="1" original-signature="net.a.a.c.l()Z" replace-index="1" replace-signature="b.a.a.c.l()Z"/>
+        <Replace-Method original-index="0" original-signature="com.hy.minifetion.a.o.a(Lnet/a/a/g;)I" replace-index="0" replace-signature="com.hy.minifetion.a.o.a(Lb/a/a/g;)I"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.a(Z)V" replace-index="0" replace-signature="b.a.a.c.a(Z)V"/>
+        <Replace-Method original-index="1" original-signature="net.a.a.c.a(Z)V" replace-index="1" replace-signature="b.a.a.c.a(Z)V"/>
+        <Replace-Method original-index="2" original-signature="net.a.a.c.a(Z)V" replace-index="2" replace-signature="b.a.a.c.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.hy.minifetion.a.o.c(Lcom/hy/minifetion/a/ab;)Lnet/a/a/g;" replace-index="0" replace-signature="com.hy.minifetion.a.o.c(Lcom/hy/minifetion/a/ab;)Lb/a/a/g;"/>
+    </Method>
+    <Method signature="com.hy.minifetion.a.o.c()I">
+        <Replace-Method original-index="0" original-signature="net.a.a.c.j()Lnet/a/a/a;" replace-index="0" replace-signature="b.a.a.c.j()Lb/a/a/a;"/>
+        <Replace-Method original-index="1" original-signature="net.a.a.c.j()Lnet/a/a/a;" replace-index="1" replace-signature="b.a.a.c.j()Lb/a/a/a;"/>
+    </Method>
+    <Method signature="com.hy.minifetion.a.r.run()V">
+        <Replace-Method original-index="0" original-signature="net.a.a.c.j()Lnet/a/a/a;" replace-index="0" replace-signature="b.a.a.c.j()Lb/a/a/a;"/>
+        <Replace-Method original-index="1" original-signature="net.a.a.c.j()Lnet/a/a/a;" replace-index="1" replace-signature="b.a.a.c.j()Lb/a/a/a;"/>
+        <Replace-Method original-index="2" original-signature="net.a.a.c.j()Lnet/a/a/a;" replace-index="2" replace-signature="b.a.a.c.j()Lb/a/a/a;"/>
+    </Method>
+    <Method signature="com.hy.minifetion.ui.k.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.a.g.e()Ljava/lang/String;" replace-index="0" replace-signature="com.a.d.e()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="com.a.g.e()Ljava/lang/String;" replace-index="1" replace-signature="com.a.d.e()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.hy.minifetion.a.o.a()Z">
+        <Replace-Method original-index="0" original-signature="net.a.a.g.a.a(Ljava/lang/String;)Lnet/a/a/a/a;" replace-index="0" replace-signature="b.a.a.g.a.a(Ljava/lang/String;)Lb/a/a/a/a;"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.a.a.t()J" replace-index="0" replace-signature="b.a.a.a.a.t()J"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.g()Lnet/a/a/g/a;" replace-index="0" replace-signature="b.a.a.c.g()Lb/a/a/g/a;"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.f()Lnet/a/a/a/o;" replace-index="0" replace-signature="b.a.a.c.f()Lb/a/a/a/o;"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.a.o.w()Ljava/lang/String;" replace-index="0" replace-signature="b.a.a.a.o.w()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.hy.minifetion.ui.j.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.a.g.e()Ljava/lang/String;" replace-index="0" replace-signature="com.a.d.e()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="com.a.g.e()Ljava/lang/String;" replace-index="1" replace-signature="com.a.d.e()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.l.&lt;init&gt;(Landroid/content/Context;Lcom/a/g;)V" replace-index="0" replace-signature="com.a.h.&lt;init&gt;(Landroid/content/Context;Lcom/a/d;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.l.a()V" replace-index="0" replace-signature="com.a.h.a()V"/>
+    </Method>
+    <Method signature="com.hy.minifetion.ui.FriendListActivity.onDestroy()V">
+        <Remove-Method index="0" signature="net.u.m.st.ccsbxssd.ppeazssd(Landroid/content/Context;)Lnet/u/m/st/ccsbxssd;"/>
+        <Remove-Method index="0" signature="net.u.m.st.ccsbxssd.ppebmssd()V"/>
+    </Method>
+    <Method signature="com.hy.minifetion.ui.LoginActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.a.a.a(Landroid/content/Context;Z)V"/>
+    </Method>
+    <Method signature="com.hy.minifetion.a.o.b()V">
+        <Replace-Method original-index="0" original-signature="net.a.a.c.l()Z" replace-index="0" replace-signature="b.a.a.c.l()Z"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.k()V" replace-index="0" replace-signature="b.a.a.c.k()V"/>
+    </Method>
+    <Method signature="com.a.a.a(Landroid/app/Activity;Landroid/widget/ListView;Z)Z">
+        <Replace-Method original-index="0" original-signature="com.a.q.&lt;init&gt;()V" replace-index="0" replace-signature="com.a.m.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.a.k.&lt;init&gt;()V" replace-index="0" replace-signature="com.a.m.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.setAppSid(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.setAppSec(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.setListener(Lcom/baidu/mobads/AdViewListener;)V"/>
+    </Method>
+    <Method signature="com.hy.minifetion.a.o.b(Lcom/hy/minifetion/a/o;)V">
+        <Replace-Method original-index="0" original-signature="net.a.a.c.l()Z" replace-index="0" replace-signature="b.a.a.c.l()Z"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.l()Z" replace-index="0" replace-signature="b.a.a.c.m()Z"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.a(Z)V" replace-index="0" replace-signature="b.a.a.c.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.a(I)V" replace-index="0" replace-signature="b.a.a.c.a(I)V"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.m()Z" replace-index="0" replace-signature="b.a.a.c.l()Z"/>
+        <Replace-Method original-index="0" original-signature="net.a.a.c.m()Z" replace-index="0" replace-signature="b.a.a.c.m()Z"/>
+    </Method>
+    <Method signature="com.hy.minifetion.ui.i.&lt;init&gt;(Lcom/hy/minifetion/ui/AppDialog;Ljava/util/List;)V">
+        <Replace-Method original-index="0" original-signature="com.a.g.i()I" replace-index="0" replace-signature="com.a.d.i()I"/>
+        <Replace-Method original-index="1" original-signature="com.a.g.i()I" replace-index="1" replace-signature="com.a.d.i()I"/>
+        <Replace-Method original-index="0" original-signature="com.a.g.a()Ljava/lang/String;" replace-index="0" replace-signature="com.a.d.a()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.g.d()Ljava/lang/String;" replace-index="0" replace-signature="com.a.d.d()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.g.d()Ljava/lang/String;" replace-index="0" replace-signature="com.a.d.b()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.g.d()Ljava/lang/String;" replace-index="1" replace-signature="com.hy.minifetion.ui.i.a(Lcom/a/d;Landroid/widget/ImageView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.g.g()J" replace-index="0" replace-signature="com.a.d.g()J"/>
+        <Replace-Method original-index="1" original-signature="com.a.g.g()J" replace-index="1" replace-signature="com.a.d.g()J"/>
+        <Replace-Method original-index="2" original-signature="com.a.g.g()J" replace-index="2" replace-signature="com.a.d.g()J"/>
+        <Replace-Method original-index="3" original-signature="com.a.g.g()J" replace-index="3" replace-signature="com.a.d.g()J"/>
+        <Replace-Method original-index="0" original-signature="com.a.g.b()Ljava/lang/String;" replace-index="0" replace-signature="com.a.d.d()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="com.a.g.b()Ljava/lang/String;" replace-index="0" replace-signature="com.a.d.d()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.g.b()Ljava/lang/String;" replace-index="0" replace-signature="com.a.d.b()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="com.a.g.b()Ljava/lang/String;" replace-index="1" replace-signature="com.a.d.b()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.g.b()Ljava/lang/String;" replace-index="1" replace-signature="com.hy.minifetion.ui.i.a(Lcom/a/d;Landroid/widget/ImageView;)V"/>
+        <Replace-Method original-index="1" original-signature="com.a.g.b()Ljava/lang/String;" replace-index="1" replace-signature="com.hy.minifetion.ui.i.a(Lcom/a/d;Landroid/widget/ImageView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.g.e()Ljava/lang/String;" replace-index="0" replace-signature="com.a.d.e()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="com.a.g.e()Ljava/lang/String;" replace-index="1" replace-signature="com.a.d.e()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.g.c()Ljava/lang/String;" replace-index="0" replace-signature="com.a.d.c()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.hy.minifetion.ui.j.&lt;init&gt;(Lcom/hy/minifetion/ui/i;ILcom/a/g;)V" replace-index="0" replace-signature="com.hy.minifetion.ui.j.&lt;init&gt;(Lcom/hy/minifetion/ui/i;ILcom/a/d;)V"/>
+        <Replace-Method original-index="0" original-signature="com.hy.minifetion.ui.j.&lt;init&gt;(Lcom/hy/minifetion/ui/i;ILcom/a/g;)V" replace-index="0" replace-signature="com.hy.minifetion.ui.k.&lt;init&gt;(Lcom/hy/minifetion/ui/i;Lcom/a/d;)V"/>
+        <Replace-Method original-index="1" original-signature="com.hy.minifetion.ui.i.a(Lcom/a/g;Landroid/widget/ImageView;)V" replace-index="0" replace-signature="com.a.d.d()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="com.hy.minifetion.ui.i.a(Lcom/a/g;Landroid/widget/ImageView;)V" replace-index="0" replace-signature="com.a.d.b()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.hy.minifetion.ui.i.a(Lcom/a/g;Landroid/widget/ImageView;)V" replace-index="0" replace-signature="com.hy.minifetion.ui.i.a(Lcom/a/d;Landroid/widget/ImageView;)V"/>
+        <Replace-Method original-index="1" original-signature="com.hy.minifetion.ui.i.a(Lcom/a/g;Landroid/widget/ImageView;)V" replace-index="1" replace-signature="com.hy.minifetion.ui.i.a(Lcom/a/d;Landroid/widget/ImageView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.hy.minifetion.ui.k.&lt;init&gt;(Lcom/hy/minifetion/ui/i;Lcom/a/g;)V" replace-index="0" replace-signature="com.hy.minifetion.ui.j.&lt;init&gt;(Lcom/hy/minifetion/ui/i;ILcom/a/d;)V"/>
+        <Replace-Method original-index="0" original-signature="com.hy.minifetion.ui.k.&lt;init&gt;(Lcom/hy/minifetion/ui/i;Lcom/a/g;)V" replace-index="0" replace-signature="com.hy.minifetion.ui.k.&lt;init&gt;(Lcom/hy/minifetion/ui/i;Lcom/a/d;)V"/>
+    </Method>
+    <Method signature="com.a.a.a(Landroid/app/Activity;Landroid/widget/LinearLayout;I)Z">
+        <Replace-Method original-index="0" original-signature="com.a.q.&lt;init&gt;()V" replace-index="0" replace-signature="com.a.m.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.mobads.AdView.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.a.m.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.a.k.&lt;init&gt;()V" replace-index="0" replace-signature="com.a.m.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.setAppSid(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.setAppSec(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.baidu.mobads.AdView.setListener(Lcom/baidu/mobads/AdViewListener;)V"/>
+    </Method>
+</Apk>

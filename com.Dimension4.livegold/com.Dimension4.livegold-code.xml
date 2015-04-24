@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.Dimension4.livegold" pkg="com.Dimension4.livegold">
+    <Add-Class signature="Lcom/adsmogo/controller/service/UpdateService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ca" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/by" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/en" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/g" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ak" super-signatures="Landroid/support/v4/view/aj#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/Extra" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ax" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMBannerAdView" super-signatures="Lcom/millennialmedia/android/MMAdView#Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/aq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/au" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/d" super-signatures="Ljava/util/ArrayList#Ljava/util/AbstractList#Ljava/util/AbstractCollection#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/v" super-signatures="Landroid/widget/ViewFlipper#Landroid/widget/ViewAnimator#Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/d/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/au" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/e/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/av" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/v" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/an" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/as" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/PublicCustom" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/SXmXaXaXtXoAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/VideoLogEvent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/InterstitialAd" super-signatures="Lcom/millennialmedia/android/j#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ba" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/a/d" super-signatures="Lcom/adsmogo/controller/adsmogoconfigsource/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/aq" super-signatures="Lcom/google/ads/util/z#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/aw" super-signatures="Lcom/google/ads/ba#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ao" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobAdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/w" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/JSController$ReflectedParcelable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/AdsMogoScreenCalc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/av" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/e" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/a/i" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/JSController$Properties" super-signatures="Lcom/inmobi/androidsdk/ai/controller/JSController$ReflectedParcelable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/y" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/MillennialVersion" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/count/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/d/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ba" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/fd" super-signatures="Lcn/domob/android/ads/fc#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/l" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/az" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/ShowInfoDialog" super-signatures="Landroid/app/ProgressDialog#Landroid/app/AlertDialog#Landroid/app/Dialog#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/JSController$PlayerProperties" super-signatures="Lcom/inmobi/androidsdk/ai/controller/JSController$ReflectedParcelable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/activity/InMobiAdActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/au" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/bb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/au" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ah" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/i" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/a/b" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dv" super-signatures="Lcn/domob/android/ads/DomobAdView#Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/AdsMogoDexClassLoader" super-signatures="Ljava/lang/ClassLoader#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/an" super-signatures="Lcn/domob/android/ads/ad#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/AXdXCXhXiXnXaApiAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/az" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/AXdXwXoApiAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/aq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/at" super-signatures="Lcn/domob/android/ads/au#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/b/c" super-signatures="Lcom/adsmogo/controller/adsmogoconfigsource/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/r" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/d/e" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/d" super-signatures="Landroid/support/v4/app/Fragment#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/br" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/AdsMogoNetWorkHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/s" super-signatures="Landroid/support/v4/app/q#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/a/a" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/e" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/d/c" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ee" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ak" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/b/e" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/aq" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ar" super-signatures="Lcom/google/ads/util/z#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/a/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ck" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/aw" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/encryption/CryptUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ex" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/MillennialAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/a/b" super-signatures="Lcom/adsmogo/controller/adsmogoconfigsource/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bk" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/fb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/bd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/JSController$ExpandProperties" super-signatures="Lcom/inmobi/androidsdk/ai/controller/JSController$ReflectedParcelable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/activity/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/at" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/c/b" super-signatures="Ljava/io/Writer#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/a/b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMConversionTracker" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/AdwoKey" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ac" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/AdsMogoConfigData" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/AdwoAdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/l" super-signatures="Landroid/view/View$AccessibilityDelegate#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bs" super-signatures="Lcom/millennialmedia/android/az#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/fc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/a" super-signatures="Landroid/support/v4/app/p#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/an" super-signatures="Landroid/support/v4/view/am#Landroid/support/v4/view/al#Landroid/support/v4/view/ak#Landroid/support/v4/view/aj#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/t" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/n" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ek" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/as" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dz" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/f" super-signatures="Lorg/apache/cordova/p#Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/p" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/Gender" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bt" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/bd" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/widget/e" super-signatures="Lcom/Dimension4/widget/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/as" super-signatures="Lcom/google/ads/util/z#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/DomobVersion" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/VideoAd" super-signatures="Lcom/millennialmedia/android/j#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/AppActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/e/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/widget/f" super-signatures="Lcom/Dimension4/widget/e#Lcom/Dimension4/widget/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/bg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/ShowFullScreenDialog" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/l" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bz" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/AdsMogoWebView" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/service/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bc" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/Update" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/f/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/bf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/q" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/at" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bz" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/AdsMogoLayout" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/aw" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/d/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/AdsMogoRequestDomain" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/bc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/widget/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/d/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/al" super-signatures="Landroid/support/v4/view/ak#Landroid/support/v4/view/aj#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dt" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/aw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/a/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/bb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/e" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/bf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/e" super-signatures="Landroid/support/v4/view/b#Landroid/support/v4/view/g#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/a/a/c" super-signatures="Lcom/inmobi/a/a/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/ab" super-signatures="Landroid/support/v4/app/Fragment#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/i" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/y" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/c/b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/aw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/APIAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/j" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/s" super-signatures="Landroid/support/v4/app/Fragment#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/be" super-signatures="Ljava/lang/Error#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/aj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/i" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/c" super-signatures="Lcom/umeng/common/net/t#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/di" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/fe" super-signatures="Lcn/domob/android/ads/fc#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/ac" super-signatures="Lcom/google/ads/util/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/as" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/a/a/e" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/IMWebView" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/widget/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ez" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ea" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/widget/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ae" super-signatures="Lcom/millennialmedia/android/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/az" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/p" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/ab" super-signatures="Lcom/google/ads/util/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/IMAdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/a/a" super-signatures="Lorg/apache/http/conn/ssl/SSLSocketFactory#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/g" super-signatures="Lcom/inmobi/androidsdk/ai/controller/JSController#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/b" super-signatures="Landroid/support/v4/view/g#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/k" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cs" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/e" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/d" super-signatures="Lcom/millennialmedia/android/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/u" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/AdsModel" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/d/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/BrowserActivity" super-signatures="Lorg/apache/cordova/DroidGap#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/f" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/GoogleAdMobAdsAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/GetUserInfo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/al" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/z" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/aj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/am" super-signatures="Landroid/support/v4/view/al#Landroid/support/v4/view/ak#Landroid/support/v4/view/aj#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/v" super-signatures="Landroid/util/AndroidRuntimeException#Ljava/lang/RuntimeException#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/j" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/f" super-signatures="Lcom/umeng/common/net/v#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bs" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/a" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/activity/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/by" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/al" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bf" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/AdsMogoTargeting" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/h" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/encryption/Base64" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/AXdXfXoXnXiXcAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ba" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/u" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/c" super-signatures="Lorg/apache/cordova/c#Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ed" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ck" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/g" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/InmobiSdkAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/at" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/DroidGap" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/y" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ec" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/listener/AdsMogoListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/al" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/bc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/CaseeAD" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/f" super-signatures="Ljava/util/HashMap#Ljava/util/AbstractMap#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/c/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/n" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/l" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/w" super-signatures="Lcom/google/ads/a/y#Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/GoogleAdMobAdsVersion" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/el" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ac" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/au" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ay" super-signatures="Lcn/domob/android/ads/au#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/aj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/v" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/Version" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/c" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ey" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ax" super-signatures="Lcn/domob/android/ads/aw#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ba" super-signatures="Lcn/domob/android/ads/bs#Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/AdwoVersion" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/e" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/au" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ba" super-signatures="Landroid/database/DataSetObserver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/es" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bk" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/aq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/p" super-signatures="Ljava/io/FilterInputStream#Ljava/io/InputStream#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/w" super-signatures="Lcn/domob/android/ads/bs#Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/listener/AdsMogoCoreListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/o" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/f/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/z" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMBroadcastReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/aa" super-signatures="Lcn/domob/android/ads/bq#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ch" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cp" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/count/AdsCount" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/x" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/b/d" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ej" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/b/b" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/DomobActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/an" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/be" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/r" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/k" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ab" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/AXdXuXuAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/v" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/ShowFullDialog" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/y" super-signatures="Landroid/database/DataSetObserver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/m" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/CXaXsXeXeSourceAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bl" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ag" super-signatures="Lcn/domob/android/ads/ad#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/az" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/LmMob" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/activity/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/f" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ev" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/an" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/a/a" super-signatures="Lcom/adsmogo/controller/adsmogoconfigsource/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/AdsMogoCustomEventPlatformEnum" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ff" super-signatures="Lcn/domob/android/ads/fc#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ew" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/f" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/VideoPlayer" super-signatures="Lcom/millennialmedia/android/MMActivity#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/t" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/AdsMogoAdapterFactory" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/df" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/p" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/j" super-signatures="Landroid/support/v4/app/i#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/Adchina" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/count/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/k" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/AdsMogoUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/bc" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/z" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/BaiduJsonAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/AdsMogoUtilTool" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/d" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ax" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/p" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/i" super-signatures="Landroid/view/View$AccessibilityDelegate#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bi" super-signatures="Lcom/millennialmedia/android/bg#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ei" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bd" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bn" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/IMBrowserActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/a" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/at" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/x" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/bb" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/InmobiAD" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/j" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/fg" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/b" super-signatures="Lcom/millennialmedia/android/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/AdsMogoConfigCenter" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/al" super-signatures="Lcom/millennialmedia/android/bl#Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/t" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/af" super-signatures="Lcn/domob/android/ads/ad#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/av" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bp" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ax" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/i" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/bd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bt" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/AdsMogoAdapter" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/VideoView" super-signatures="Landroid/view/SurfaceView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/br" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/activity/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/activity/AdCreativeTesting" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/as" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/av" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/WeiQian" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/av" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/service/CountService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cn" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/JuDianAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/aj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/w" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/aq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/t" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/CordovaWebView" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cr" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/a" super-signatures="Landroid/widget/VideoView#Landroid/view/SurfaceView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/j" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/h" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dk" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ds" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/widget/b" super-signatures="Lcom/Dimension4/widget/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/o" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/aj" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/AdsMogoCore" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/m" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ce" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/SuizongAD" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/doubleclick/b" super-signatures="Lcom/google/ads/i#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ag" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/y" super-signatures="Lcom/google/ads/util/p#Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/JuDianVersion" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cz" super-signatures="Lcn/domob/android/ads/bq#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cs" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/da" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/db" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/j" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/e" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/OverlaySettings" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ca" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/x" super-signatures="Landroid/view/GestureDetector$SimpleOnGestureListener#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/bb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/r" super-signatures="Landroid/support/v4/app/n#Landroid/support/v4/view/v#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/PublicCustomAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/d/f" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/et" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/encryption/MD5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ad" super-signatures="Landroid/text/method/SingleLineTransformationMethod#Landroid/text/method/ReplacementTransformationMethod#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/d" super-signatures="Landroid/support/v4/view/a/b#Landroid/support/v4/view/a/e#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/d" super-signatures="Lcom/umeng/common/net/u#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/m" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/f/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/JSController" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/em" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ef" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/j" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/u" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ct" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/er" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/b/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/co" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/MMAdView" super-signatures="Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/phonegap/api/PhonegapActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/service/b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ba" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/LXmXMXoXbAPIAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/a" super-signatures="Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ax" super-signatures="Landroid/support/v4/view/a#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/b" super-signatures="Landroid/support/v4/view/a/e#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/AdsMogoConfigDataList" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/de" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bi" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/c/a" super-signatures="Lcom/google/ads/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/g" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/f" super-signatures="Lcom/inmobi/androidsdk/ai/controller/JSController#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/be" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/AdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/du" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/c" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/widget/d" super-signatures="Landroid/view/MenuInflater#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ax" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bm" super-signatures="Lcn/domob/android/ads/au#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/co" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ci" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/c" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/f/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/n" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/BaiduJsonVersion" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/as" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/a/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/o" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/a/c" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/p" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/an" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/j" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/b/c" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/ap" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/VideoImage" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/aw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/u" super-signatures="Landroid/support/v4/app/Fragment#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a" super-signatures="Lcom/inmobi/androidsdk/ai/controller/JSController#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/u" super-signatures="Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/fa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/al" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/av" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/InmobiSdkVersion" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/c" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/at" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/p" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/aj" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ep" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/apps/analytics/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/api/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/d/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ct" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/be" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/j" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/am" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/az" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/encryption/SHA1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/a" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/bl" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/cm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/g" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/b/f" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/ad" super-signatures="Lcom/google/ads/util/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/s" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/h" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/count/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/do" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/h" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/b/b" super-signatures="Lcom/adsmogo/controller/adsmogoconfigsource/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/doubleclick/a" super-signatures="Lcom/google/ads/b/a/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/a/h" super-signatures="Ljava/util/HashMap#Ljava/util/AbstractMap#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/d" super-signatures="Ljava/lang/RuntimeException#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/az" super-signatures="Lcn/domob/android/ads/au#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/b" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/StandAlone" super-signatures="Lorg/apache/cordova/DroidGap#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/L" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/b/a" super-signatures="Lcom/adsmogo/controller/adsmogoconfigsource/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/j" super-signatures="Lcom/google/ads/util/h#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/n" super-signatures="Landroid/support/v4/view/v#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/q" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/RLPAD" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/util/RepeatCheck" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ce" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/JuAdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/a/h" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/apache/cordova/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/app/f" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/n" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/Ration" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/JSController$Dimensions" super-signatures="Lcom/inmobi/androidsdk/ai/controller/JSController$ReflectedParcelable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ch" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/b/a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adwo/adsdk/ar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/activity/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/eh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/bf" super-signatures="Lcom/millennialmedia/android/bg#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/mobads/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/Ftad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/APIAD" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/Adwo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/controller/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/z" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/androidsdk/ai/container/b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/activity/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/huawei/juad/android/d/b" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/inmobi/activity/LauncherActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/util/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/ae" super-signatures="Lcn/domob/android/ads/ad#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/adsmogoconfigsource/e" super-signatures="Lcom/adsmogo/controller/adsmogoconfigsource/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/RLPSaxParser" super-signatures="Lorg/xml/sax/helpers/DefaultHandler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/AdsMogoCustomEventPlatformAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/service/a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/dy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/ads/cq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/livegold/h" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/AdwoAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/controller/count/c" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/model/obj/Aduu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adview/u" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/Dimension4/widget/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/millennialmedia/android/ci" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/domob/android/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adsmogo/adapters/sdk/DomobAdapter" super-signatures="Lcom/adsmogo/adapters/AdsMogoAdapter#Ljava/lang/Object"/>
+    <Method signature="android.support.v4.app.FragmentActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.attachActivity(Landroid/support/v4/app/FragmentActivity;)V" replace-index="0" replace-signature="android.support.v4.app.j.a(Landroid/support/v4/app/FragmentActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.attachActivity(Landroid/support/v4/app/FragmentActivity;)V" replace-index="0" replace-signature="android.support.v4.app.j.a(Landroid/support/v4/app/FragmentActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.restoreAllState(Landroid/os/Parcelable;Ljava/util/ArrayList;)V" replace-index="0" replace-signature="android.support.v4.app.j.a(Landroid/os/Parcelable;Ljava/util/ArrayList;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.restoreAllState(Landroid/os/Parcelable;Ljava/util/ArrayList;)V" replace-index="0" replace-signature="android.support.v4.app.j.a(Landroid/os/Parcelable;Ljava/util/ArrayList;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchCreate()V" replace-index="0" replace-signature="android.support.v4.app.j.h()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchCreate()V" replace-index="0" replace-signature="android.support.v4.app.j.h()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.attachActivity(Landroid/support/v4/app/FragmentActivity;)V" replace-index="0" replace-signature="android.support.v4.app.j.a(Landroid/support/v4/app/FragmentActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.attachActivity(Landroid/support/v4/app/FragmentActivity;)V" replace-index="0" replace-signature="android.support.v4.app.j.a(Landroid/support/v4/app/FragmentActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.restoreAllState(Landroid/os/Parcelable;Ljava/util/ArrayList;)V" replace-index="0" replace-signature="android.support.v4.app.j.a(Landroid/os/Parcelable;Ljava/util/ArrayList;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.restoreAllState(Landroid/os/Parcelable;Ljava/util/ArrayList;)V" replace-index="0" replace-signature="android.support.v4.app.j.a(Landroid/os/Parcelable;Ljava/util/ArrayList;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchCreate()V" replace-index="0" replace-signature="android.support.v4.app.j.h()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchCreate()V" replace-index="0" replace-signature="android.support.v4.app.j.h()V"/>
+    </Method>
+    <Method signature="com.umeng.common.net.q.run()V">
+        <Add-Method index="0" signature="android.widget.Toast.show()V"/>
+        <Add-Method index="0" signature="com.umeng.common.net.b.b(Lcom/umeng/common/net/b;)Lcom/umeng/common/net/DownloadingService;"/>
+        <Add-Method index="0" signature="com.umeng.common.net.b.a(Lcom/umeng/common/net/b;)Landroid/content/Context;"/>
+        <Add-Method index="0" signature="com.umeng.common.c.a(Landroid/content/Context;)Lcom/umeng/common/c;"/>
+        <Add-Method index="0" signature="com.umeng.common.c.d(Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;II)Landroid/widget/Toast;"/>
+        <Remove-Method index="0" signature="com.umeng.common.net.p.a(Ljava/io/File;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentActivity.onStop()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchStop()V" replace-index="0" replace-signature="android.support.v4.app.j.m()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchStop()V" replace-index="0" replace-signature="android.support.v4.app.j.m()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchStop()V" replace-index="0" replace-signature="android.support.v4.app.j.m()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchStop()V" replace-index="0" replace-signature="android.support.v4.app.j.m()V"/>
+    </Method>
+    <Method signature="com.Dimension4.livegold.GoldActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.GoldActivity.getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" replace-index="0" replace-signature="com.Dimension4.livegold.GoldActivity.d()Landroid/support/v4/app/i;"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.GoldActivity.getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" replace-index="0" replace-signature="com.Dimension4.livegold.m.&lt;init&gt;(Lcom/Dimension4/livegold/GoldActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.view.ViewPager.setAdapter(Landroid/support/v4/view/PagerAdapter;)V" replace-index="0" replace-signature="android.support.v4.view.ViewPager.a(Landroid/support/v4/view/v;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.GoldActivity$SectionsPagerAdapter.&lt;init&gt;(Lcom/Dimension4/livegold/GoldActivity;Landroid/support/v4/app/FragmentManager;)V" replace-index="0" replace-signature="com.Dimension4.livegold.r.&lt;init&gt;(Lcom/Dimension4/livegold/GoldActivity;Landroid/support/v4/app/i;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CurrenciesData.getInstance()Lcom/Dimension4/livegold/CurrenciesData;" replace-index="0" replace-signature="com.Dimension4.livegold.e.a()Lcom/Dimension4/livegold/e;"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CurrenciesData.getInstance()Lcom/Dimension4/livegold/CurrenciesData;" replace-index="0" replace-signature="com.Dimension4.livegold.aa.a()Lcom/Dimension4/livegold/aa;"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CurrenciesData.getInstance()Lcom/Dimension4/livegold/CurrenciesData;" replace-index="0" replace-signature="com.umeng.b.b.a(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CustomMetalData.getInstance()Lcom/Dimension4/livegold/CustomMetalData;" replace-index="0" replace-signature="com.Dimension4.livegold.i.a()Lcom/Dimension4/livegold/i;"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CommonData.SetContent(Landroid/content/Context;)V" replace-index="0" replace-signature="com.Dimension4.livegold.b.a(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CommonData.SetContent(Landroid/content/Context;)V" replace-index="0" replace-signature="com.Dimension4.livegold.e.a(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.SettingsData.getInstance()Lcom/Dimension4/livegold/SettingsData;" replace-index="0" replace-signature="com.Dimension4.livegold.e.a()Lcom/Dimension4/livegold/e;"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.SettingsData.getInstance()Lcom/Dimension4/livegold/SettingsData;" replace-index="0" replace-signature="com.Dimension4.livegold.aa.a()Lcom/Dimension4/livegold/aa;"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.SettingsData.getInstance()Lcom/Dimension4/livegold/SettingsData;" replace-index="0" replace-signature="com.umeng.b.b.a(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.SettingsFragment.&lt;init&gt;()V" replace-index="0" replace-signature="com.Dimension4.livegold.ab.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.analytics.MobclickAgent.onError(Landroid/content/Context;)V" replace-index="0" replace-signature="com.umeng.a.a.c(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.update.UmengUpdateAgent.update(Landroid/content/Context;)V" replace-index="0" replace-signature="com.Dimension4.livegold.e.a()Lcom/Dimension4/livegold/e;"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.update.UmengUpdateAgent.update(Landroid/content/Context;)V" replace-index="0" replace-signature="com.Dimension4.livegold.aa.a()Lcom/Dimension4/livegold/aa;"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.update.UmengUpdateAgent.update(Landroid/content/Context;)V" replace-index="0" replace-signature="com.umeng.b.b.a(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.update.UmengUpdateAgent.setUpdateAutoPopup(Z)V" replace-index="0" replace-signature="com.umeng.b.b.a()V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.GoldActivity$2.&lt;init&gt;(Lcom/Dimension4/livegold/GoldActivity;)V" replace-index="0" replace-signature="com.Dimension4.livegold.GoldActivity.d()Landroid/support/v4/app/i;"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.GoldActivity$2.&lt;init&gt;(Lcom/Dimension4/livegold/GoldActivity;)V" replace-index="0" replace-signature="com.Dimension4.livegold.m.&lt;init&gt;(Lcom/Dimension4/livegold/GoldActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.update.UmengUpdateAgent.setUpdateListener(Lcom/umeng/update/UmengUpdateListener;)V" replace-index="0" replace-signature="com.umeng.b.b.a(Lcom/umeng/b/e;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.SettingsData.SetContent(Landroid/content/Context;)V" replace-index="0" replace-signature="com.Dimension4.livegold.aa.a(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CustomMetalData.Load(Landroid/content/Context;)Z" replace-index="0" replace-signature="com.Dimension4.livegold.i.b(Landroid/content/Context;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CurrenciesData.InitFlags(Landroid/content/Context;)V" replace-index="0" replace-signature="com.Dimension4.livegold.b.a(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CurrenciesData.InitFlags(Landroid/content/Context;)V" replace-index="0" replace-signature="com.Dimension4.livegold.e.a(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.widget.ActionBarHelper.onCreate(Landroid/os/Bundle;)V" replace-index="0" replace-signature="com.Dimension4.widget.a.a(Landroid/os/Bundle;)V"/>
+    </Method>
+    <Method signature="com.umeng.common.net.DownloadingService.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.c.a(Landroid/content/Context;)Lcom/umeng/common/net/c;" replace-index="0" replace-signature="com.umeng.common.net.i.a(Landroid/content/Context;)Lcom/umeng/common/net/i;"/>
+        <Replace-Method original-index="1" original-signature="com.umeng.common.net.c.a(Landroid/content/Context;)Lcom/umeng/common/net/c;" replace-index="1" replace-signature="com.umeng.common.net.i.a(Landroid/content/Context;)Lcom/umeng/common/net/i;"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.Log.b(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.umeng.common.a.b(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.c.finalize()V" replace-index="0" replace-signature="com.umeng.common.net.i.finalize()V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.c.a(I)V" replace-index="0" replace-signature="com.umeng.common.net.i.a()V"/>
+    </Method>
+    <Method signature="com.umeng.common.net.DownloadingService.a(Landroid/app/Notification;I)V">
+        <Replace-Method original-index="0" original-signature="com.umeng.common.a.a.f(Landroid/content/Context;)I" replace-index="0" replace-signature="com.umeng.common.a.a.d(Landroid/content/Context;)I"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.a.c.e(Landroid/content/Context;)I" replace-index="0" replace-signature="com.umeng.common.c.d(Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.c.c(Ljava/lang/String;)I" replace-index="0" replace-signature="com.umeng.common.c.b(Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.umeng.common.net.DownloadingService.a(Landroid/content/Context;Landroid/content/Intent;)Z">
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.DownloadingService$b.start()V" replace-index="0" replace-signature="com.umeng.common.net.b.start()V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.DownloadingService$b.a(I)V" replace-index="0" replace-signature="com.umeng.common.net.b.a(I)V"/>
+        <Replace-Method original-index="1" original-signature="com.umeng.common.net.DownloadingService$b.a(I)V" replace-index="1" replace-signature="com.umeng.common.net.b.a(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.Log.c(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.umeng.common.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="com.umeng.common.Log.c(Ljava/lang/String;Ljava/lang/String;)V" replace-index="1" replace-signature="com.umeng.common.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="2" original-signature="com.umeng.common.Log.c(Ljava/lang/String;Ljava/lang/String;)V" replace-index="2" replace-signature="com.umeng.common.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="2" original-signature="com.umeng.common.Log.c(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.umeng.common.b.g(Landroid/content/Context;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.b.m(Landroid/content/Context;)Z" replace-index="2" replace-signature="com.umeng.common.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.b.m(Landroid/content/Context;)Z" replace-index="0" replace-signature="com.umeng.common.b.g(Landroid/content/Context;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.a.c.a(Landroid/content/Context;)I" replace-index="0" replace-signature="com.umeng.common.c.a(Landroid/content/Context;)Lcom/umeng/common/c;"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.a.c.a(Landroid/content/Context;)I" replace-index="0" replace-signature="com.umeng.common.c.d(Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.DownloadingService$b.&lt;init&gt;(Lcom/umeng/common/net/DownloadingService;Landroid/content/Context;Lcom/umeng/common/net/a$a;IILcom/umeng/common/net/DownloadingService$a;)V" replace-index="0" replace-signature="com.umeng.common.net.b.&lt;init&gt;(Lcom/umeng/common/net/DownloadingService;Landroid/content/Context;Lcom/umeng/common/net/f;IILcom/umeng/common/net/a;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.DownloadingService.b(Landroid/app/Notification;I)V" replace-index="0" replace-signature="android.app.NotificationManager.notify(ILandroid/app/Notification;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.DownloadingService.a(Lcom/umeng/common/net/a$a;JJJ)V" replace-index="0" replace-signature="com.umeng.common.net.DownloadingService.b(Lcom/umeng/common/net/f;JJJ)V"/>
+        <Add-Method index="0" signature="android.widget.RemoteViews.setTextViewText(ILjava/lang/CharSequence;)V"/>
+        <Add-Method index="0" signature="android.widget.RemoteViews.setInt(ILjava/lang/String;I)V"/>
+        <Add-Method index="1" signature="com.umeng.common.c.a(Landroid/content/Context;)Lcom/umeng/common/c;"/>
+        <Add-Method index="2" signature="com.umeng.common.c.a(Landroid/content/Context;)Lcom/umeng/common/c;"/>
+        <Add-Method index="1" signature="com.umeng.common.c.d(Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="com.umeng.common.a.a.d(Landroid/content/Context;)I"/>
+        <Add-Method index="0" signature="com.umeng.common.c.b(Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.umeng.common.net.DownloadingService.a(I)V">
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.DownloadingService$b.a(I)V" replace-index="0" replace-signature="com.umeng.common.net.b.a(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.Log.c(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.umeng.common.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.umeng.common.net.DownloadingService.d()V"/>
+        <Remove-Method index="0" signature="com.umeng.common.net.DownloadingService$d.b()V"/>
+        <Remove-Method index="0" signature="com.umeng.common.net.DownloadingService.e()V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentActivity.onStart()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.execPendingActions()Z" replace-index="0" replace-signature="android.support.v4.app.j.i()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.execPendingActions()Z" replace-index="0" replace-signature="android.support.v4.app.j.g()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.execPendingActions()Z" replace-index="0" replace-signature="android.support.v4.app.j.d()Z"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.execPendingActions()Z" replace-index="0" replace-signature="android.support.v4.app.j.j()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchActivityCreated()V" replace-index="0" replace-signature="android.support.v4.app.j.i()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchActivityCreated()V" replace-index="0" replace-signature="android.support.v4.app.j.g()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchActivityCreated()V" replace-index="0" replace-signature="android.support.v4.app.j.d()Z"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchActivityCreated()V" replace-index="0" replace-signature="android.support.v4.app.j.j()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.noteStateNotSaved()V" replace-index="0" replace-signature="android.support.v4.app.j.i()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.noteStateNotSaved()V" replace-index="0" replace-signature="android.support.v4.app.j.g()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.noteStateNotSaved()V" replace-index="0" replace-signature="android.support.v4.app.j.d()Z"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.noteStateNotSaved()V" replace-index="0" replace-signature="android.support.v4.app.j.j()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchStart()V" replace-index="0" replace-signature="android.support.v4.app.j.i()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchStart()V" replace-index="0" replace-signature="android.support.v4.app.j.g()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchStart()V" replace-index="0" replace-signature="android.support.v4.app.j.d()Z"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchStart()V" replace-index="0" replace-signature="android.support.v4.app.j.j()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.getLoaderManager(IZZ)Landroid/support/v4/app/LoaderManagerImpl;" replace-index="0" replace-signature="android.support.v4.app.s.b()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.getLoaderManager(IZZ)Landroid/support/v4/app/LoaderManagerImpl;" replace-index="0" replace-signature="android.support.v4.app.FragmentActivity.b(I)Landroid/support/v4/app/s;"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.util.SparseArrayCompat.valueAt(I)Ljava/lang/Object;" replace-index="0" replace-signature="android.support.v4.c.c.e(I)Ljava/lang/Object;"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.util.SparseArrayCompat.size()I" replace-index="0" replace-signature="android.support.v4.c.c.a()I"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.LoaderManagerImpl.doStart()V" replace-index="0" replace-signature="android.support.v4.app.s.b()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.LoaderManagerImpl.doStart()V" replace-index="0" replace-signature="android.support.v4.app.FragmentActivity.b(I)Landroid/support/v4/app/s;"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.LoaderManagerImpl.doReportStart()V" replace-index="0" replace-signature="android.support.v4.app.s.g()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.LoaderManagerImpl.finishRetain()V" replace-index="0" replace-signature="android.support.v4.app.s.e()V"/>
+    </Method>
+    <Method signature="com.google.ads.AdActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.u()V" replace-index="0" replace-signature="com.google.ads.a.r.r()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="0" replace-signature="com.google.ads.a.r.g()Lcom/google/ads/as;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="1" replace-signature="com.google.ads.a.r.g()Lcom/google/ads/as;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="2" replace-signature="com.google.ads.a.r.g()Lcom/google/ads/as;"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.internal.d.h()Lcom/google/ads/m;" replace-index="3" replace-signature="com.google.ads.a.r.g()Lcom/google/ads/as;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.m.a()Z" replace-index="0" replace-signature="com.google.ads.as.a()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.m.b()Z" replace-index="0" replace-signature="com.google.ads.as.b()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.w()V" replace-index="0" replace-signature="com.google.ads.a.r.u()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.q()Z" replace-index="0" replace-signature="com.google.ads.a.r.o()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.util.i$b.a()Ljava/lang/Object;" replace-index="0" replace-signature="com.google.ads.util.ab.a()Ljava/lang/Object;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.util.i$b.a()Ljava/lang/Object;" replace-index="1" replace-signature="com.google.ads.util.ab.a()Ljava/lang/Object;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.util.i$c.a()Ljava/lang/Object;" replace-index="0" replace-signature="com.google.ads.util.ac.a()Ljava/lang/Object;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.util.i$c.a()Ljava/lang/Object;" replace-index="1" replace-signature="com.google.ads.util.ac.a()Ljava/lang/Object;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.setWebViewClient(Landroid/webkit/WebViewClient;)V" replace-index="0" replace-signature="com.google.ads.a.c.setWebViewClient(Landroid/webkit/WebViewClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.setWebViewClient(Landroid/webkit/WebViewClient;)V" replace-index="0" replace-signature="com.google.ads.a.c.loadUrl(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.n()I" replace-index="0" replace-signature="com.google.ads.a.r.m()I"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.internal.d.n()I" replace-index="1" replace-signature="com.google.ads.a.r.m()I"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.d.k()Lcom/google/ads/internal/AdWebView;" replace-index="0" replace-signature="com.google.ads.a.r.j()Lcom/google/ads/a/c;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.c()V" replace-index="0" replace-signature="com.google.ads.a.c.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.e()Z" replace-index="0" replace-signature="com.google.ads.a.c.loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.e()Z" replace-index="0" replace-signature="com.google.ads.a.c.e()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.i.a(Z)V" replace-index="0" replace-signature="com.google.ads.a.y.a()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.i.a(Z)V" replace-index="2" replace-signature="com.google.ads.util.d.a(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.i.d(Z)V" replace-index="0" replace-signature="com.google.ads.a.y.d()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.util.b.a(Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.y.a()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.util.b.a(Ljava/lang/String;)V" replace-index="2" replace-signature="com.google.ads.util.d.a(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.e.&lt;init&gt;(Landroid/os/Bundle;)V" replace-index="0" replace-signature="com.google.ads.a.s.&lt;init&gt;(Landroid/os/Bundle;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.e.&lt;init&gt;(Landroid/os/Bundle;)V" replace-index="0" replace-signature="android.content.ComponentName.&lt;init&gt;(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.e.b()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.a.s.b()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.e.b()Ljava/lang/String;" replace-index="0" replace-signature="android.content.Intent.setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.e.c()Ljava/util/HashMap;" replace-index="0" replace-signature="android.content.Intent.getExtras()Landroid/os/Bundle;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.e.c()Ljava/util/HashMap;" replace-index="0" replace-signature="com.google.ads.a.s.c()Ljava/util/HashMap;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.e.c()Ljava/util/HashMap;" replace-index="0" replace-signature="android.content.Intent.addCategory(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.e.c()Ljava/util/HashMap;" replace-index="0" replace-signature="android.content.Intent.putExtras(Landroid/os/Bundle;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdActivity.a(Ljava/util/HashMap;Lcom/google/ads/internal/d;)V" replace-index="0" replace-signature="com.google.ads.AdActivity.a(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdActivity.b(Ljava/util/HashMap;Lcom/google/ads/internal/d;)V" replace-index="0" replace-signature="com.google.ads.AdActivity.a(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.&lt;init&gt;(Lcom/google/ads/m;Lcom/google/ads/AdSize;)V" replace-index="0" replace-signature="com.google.ads.a.c.&lt;init&gt;(Lcom/google/ads/as;Lcom/google/ads/g;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.i.a(Lcom/google/ads/internal/d;Ljava/util/Map;ZZ)Lcom/google/ads/internal/i;" replace-index="0" replace-signature="com.google.ads.a.y.a(Lcom/google/ads/a/r;Ljava/util/Map;ZZ)Lcom/google/ads/a/y;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.loadUrl(Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.c.setWebViewClient(Landroid/webkit/WebViewClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.loadUrl(Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.c.loadUrl(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/AdWebView;ZIZZ)V" replace-index="0" replace-signature="com.google.ads.AdActivity.a(Lcom/google/ads/a/c;ZIZZ)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdActivity.a(Lcom/google/ads/internal/AdWebView;ZIZZ)V" replace-index="1" replace-signature="com.google.ads.AdActivity.a(Lcom/google/ads/a/c;ZIZZ)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.c.loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.google.ads.a.c.e()Z"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.setIsExpandedMraid(Z)V" replace-index="0" replace-signature="com.google.ads.a.c.b(Z)V"/>
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.google.ads.AdActivity.b(Lcom/google/ads/a/r;)V"/>
+        <Add-Method index="0" signature="com.google.ads.AdActivity.startActivityForResult(Landroid/content/Intent;I)V"/>
+        <Add-Method index="0" signature="android.content.ActivityNotFoundException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="android.content.ActivityNotFoundException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.google.ads.AdActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="1" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="2" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="1" signature="com.google.ads.AdActivity.b(Lcom/google/ads/a/r;)V"/>
+        <Add-Method index="0" signature="com.google.ads.util.d.a(Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="com.google.ads.util.d.a(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.google.ads.AdActivity.a(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Add-Method index="1" signature="com.google.ads.AdActivity.a(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Add-Method index="0" signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+        <Add-Method index="1" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.getAction()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.LoaderManagerImpl.doDestroy()V" replace-index="0" replace-signature="android.support.v4.app.s.h()V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentActivity.doReallyStop(Z)V" replace-index="0" replace-signature="android.support.v4.app.FragmentActivity.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.dispatchDestroy()V" replace-index="0" replace-signature="android.support.v4.app.j.o()V"/>
+    </Method>
+    <Method signature="com.google.ads.AdActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.stopLoading()V" replace-index="0" replace-signature="com.google.ads.a.c.stopLoading()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.internal.AdWebView.destroy()V" replace-index="0" replace-signature="com.google.ads.a.c.destroy()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdActivity.d()V" replace-index="0" replace-signature="com.google.ads.AdActivity.g()V"/>
+    </Method>
+    <Method signature="java.lang.Thread.run()V"/>
+    <Method signature="com.umeng.common.net.DownloadingService.onCreate()V">
+        <Replace-Method original-index="0" original-signature="com.umeng.common.Log.c(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.umeng.common.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.d.&lt;init&gt;(Lcom/umeng/common/net/DownloadingService;)V" replace-index="0" replace-signature="com.umeng.common.net.l.&lt;init&gt;(Lcom/umeng/common/net/DownloadingService;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.d.&lt;init&gt;(Lcom/umeng/common/net/DownloadingService;)V" replace-index="0" replace-signature="com.umeng.common.net.m.&lt;init&gt;(Lcom/umeng/common/net/DownloadingService;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.e.&lt;init&gt;(Lcom/umeng/common/net/DownloadingService;)V" replace-index="0" replace-signature="com.umeng.common.net.l.&lt;init&gt;(Lcom/umeng/common/net/DownloadingService;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.common.net.e.&lt;init&gt;(Lcom/umeng/common/net/DownloadingService;)V" replace-index="0" replace-signature="com.umeng.common.net.m.&lt;init&gt;(Lcom/umeng/common/net/DownloadingService;)V"/>
+    </Method>
+    <Method signature="java.io.Writer.write(Ljava/lang/String;II)V"/>
+    <Method signature="java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String;"/>
+    <Method signature="android.support.v4.app.FragmentActivity.onSaveInstanceState(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.saveAllState()Landroid/os/Parcelable;" replace-index="0" replace-signature="android.support.v4.app.j.f()Landroid/os/Parcelable;"/>
+    </Method>
+    <Method signature="com.Dimension4.livegold.GoldActivity.onResume()V">
+        <Replace-Method original-index="0" original-signature="com.umeng.analytics.MobclickAgent.onResume(Landroid/content/Context;)V" replace-index="0" replace-signature="com.umeng.a.a.b(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.GoldActivity.handlingSavedSettingsPreference()V" replace-index="0" replace-signature="com.Dimension4.livegold.GoldActivity.h()V"/>
+    </Method>
+    <Method signature="java.lang.Thread.start()V"/>
+    <Method signature="com.google.ads.ae.run()V">
+        <Add-Method index="0" signature="com.google.ads.a.r.b(Lcom/google/ads/z;)V"/>
+        <Add-Method index="0" signature="com.google.ads.ac.c(Lcom/google/ads/ac;)Lcom/google/ads/a/r;"/>
+        <Remove-Method index="0" signature="java.lang.ref.WeakReference.get()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.google.ads.internal.d.y()V"/>
+        <Remove-Method index="0" signature="com.google.ads.util.b.a(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="java.util.TimerThread.mainLoop()V"/>
+    <Method signature="com.umeng.common.net.DownloadingService.onStart(Landroid/content/Intent;I)V">
+        <Replace-Method original-index="0" original-signature="com.umeng.common.Log.c(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.umeng.common.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.FragmentActivity.onResume()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.FragmentManagerImpl.execPendingActions()Z" replace-index="0" replace-signature="android.support.v4.app.j.d()Z"/>
+    </Method>
+    <Method signature="com.Dimension4.livegold.MetalDetailActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CurrenciesData.getInstance()Lcom/Dimension4/livegold/CurrenciesData;" replace-index="0" replace-signature="com.Dimension4.livegold.e.a()Lcom/Dimension4/livegold/e;"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CustomMetalData.getInstance()Lcom/Dimension4/livegold/CustomMetalData;" replace-index="0" replace-signature="com.Dimension4.livegold.i.a()Lcom/Dimension4/livegold/i;"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CommonData.SetContent(Landroid/content/Context;)V" replace-index="0" replace-signature="com.Dimension4.livegold.b.a(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CustomMetalData.Load(Landroid/content/Context;)Z" replace-index="0" replace-signature="com.Dimension4.livegold.i.b(Landroid/content/Context;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.Dimension4.livegold.CurrenciesData.InitFlags(Landroid/content/Context;)V" replace-index="0" replace-signature="com.Dimension4.livegold.e.a(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.umeng.common.net.DownloadingService.onBind(Landroid/content/Intent;)Landroid/os/IBinder;">
+        <Replace-Method original-index="0" original-signature="com.umeng.common.Log.c(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.umeng.common.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+</Apk>

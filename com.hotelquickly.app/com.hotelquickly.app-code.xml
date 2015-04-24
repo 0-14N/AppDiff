@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.hotelquickly.app" pkg="com.hotelquickly.app">
+    <Method signature="com.hotelquickly.app.ui.db.onActivityCreated(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.google.android.gms.common.g.a(Landroid/content/Context;)I" replace-index="0" replace-signature="com.hotelquickly.app.e.x.a(Landroid/content/Context;)Z"/>
+    </Method>
+    <Method signature="com.hotelquickly.app.ui.phone.HotelDetailActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.hotelquickly.app.e.x.a(Landroid/content/Context;)Z"/>
+    </Method>
+    <Method signature="com.hotelquickly.app.ui.HotelListMapActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.hotelquickly.app.e.x.a(Landroid/content/Context;)Z"/>
+    </Method>
+    <Method signature="com.google.android.gcm.a.b(Landroid/content/Context;[Ljava/lang/String;)V">
+        <Add-Method index="0" signature="java.lang.IllegalArgumentException.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.android.gcm.a.a([Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+</Apk>

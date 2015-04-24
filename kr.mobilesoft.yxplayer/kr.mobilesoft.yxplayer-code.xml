@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="kr.mobilesoft.yxplayer" pkg="kr.mobilesoft.yxplayer">
+    <Method signature="kr.mobilesoft.yxplayer.MediaPlayerApi.isregistered()I">
+        <Remove-Method index="0" signature="kr.mobilesoft.yxplayer.MediaPlayerApi.mp_isregistered()I"/>
+    </Method>
+</Apk>

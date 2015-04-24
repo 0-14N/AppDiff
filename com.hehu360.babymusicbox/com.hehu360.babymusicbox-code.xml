@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.hehu360.babymusicbox" pkg="com.hehu360.babymusicbox">
+    <Method signature="com.hehu360.babymusicbox.activity.u.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.e()V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.g()V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.s.run()V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.a(Lcom/hehu360/babymusicbox/activity/MainActivity_;I)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.d(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V"/>
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.a(Lcom/hehu360/babymusicbox/activity/MainActivity_;I)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.d(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V"/>
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.a(Lcom/hehu360/babymusicbox/activity/MainActivity_;I)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.d(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V"/>
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.a(Lcom/hehu360/babymusicbox/activity/MainActivity_;I)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.d(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.w.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.k()V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.i()V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.p.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.i()V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.f()V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.MainActivity_.c()V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.z.&lt;init&gt;(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.aa.&lt;init&gt;(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.y.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.g()V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.e()V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.q.run()V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.c(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.b(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.MainActivity_.a(I)V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.s.&lt;init&gt;(Lcom/hehu360/babymusicbox/activity/MainActivity_;I)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.t.&lt;init&gt;(Lcom/hehu360/babymusicbox/activity/MainActivity_;I)V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.MainActivity_.m()V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.r.&lt;init&gt;(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.s.&lt;init&gt;(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.MainActivity_.n()V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.t.&lt;init&gt;(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.z.&lt;init&gt;(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.aa.run()V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.b(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.a(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V"/>
+    </Method>
+    <Method signature="com.hehu360.babymusicbox.activity.r.run()V">
+        <Replace-Method original-index="0" original-signature="com.hehu360.babymusicbox.activity.MainActivity_.d(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V" replace-index="0" replace-signature="com.hehu360.babymusicbox.activity.MainActivity_.c(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V"/>
+    </Method>
+</Apk>

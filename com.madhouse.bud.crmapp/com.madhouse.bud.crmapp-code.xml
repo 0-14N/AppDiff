@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.madhouse.bud.crmapp" pkg="com.madhouse.bud.crmapp">
+    <Method signature="com.adapps.context.PushMSGService$1.run()V">
+        <Replace-Method original-index="0" original-signature="java.lang.String.length()I" replace-index="0" replace-signature="java.util.ArrayList.size()I"/>
+        <Add-Method index="0" signature="java.util.ArrayList.get(I)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.madhouse.bud.crmapp.tools.Utils.log(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.madhouse.bud.crmapp.view.ContactList$2.run()V">
+        <Add-Method index="0" signature="java.lang.Exception.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.lang.Exception.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+</Apk>

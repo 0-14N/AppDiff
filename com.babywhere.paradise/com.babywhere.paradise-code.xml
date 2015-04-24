@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.babywhere.paradise" pkg="com.babywhere.paradise">
+    <Add-Class signature="Lcom/feiwo/banner/d/f" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/v" super-signatures="Landroid/support/v4/view/a/t#Landroid/support/v4/view/a/s#Landroid/support/v4/view/a/w#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/g/a" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/WebViewActivity$1" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/d/b" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/b" super-signatures="Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/d/e" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/h" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/RecevieAdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/AdReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/d/c" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/s" super-signatures="Landroid/support/v4/view/a/w#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/f/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/e/b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/WebViewActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/d/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/j" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/AdBanner" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwo/banner/c" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Landroid/support/v4/view/a/t" super-signatures="Landroid/support/v4/view/a/s#Landroid/support/v4/view/a/w#Ljava/lang/Object"/>
+    <Method signature="com.babywhere.demo.a.handleMessage(Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdView.getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" replace-index="0" replace-signature="com.feiwo.banner.AdBanner.getLayoutParams()Landroid/view/ViewGroup$LayoutParams;"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" replace-index="1" replace-signature="com.feiwo.banner.AdBanner.getLayoutParams()Landroid/view/ViewGroup$LayoutParams;"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.AdView.getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" replace-index="2" replace-signature="com.feiwo.banner.AdBanner.getLayoutParams()Landroid/view/ViewGroup$LayoutParams;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdView.setGravity(I)V" replace-index="0" replace-signature="com.feiwo.banner.AdBanner.setGravity(I)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.setGravity(I)V" replace-index="1" replace-signature="com.feiwo.banner.AdBanner.setGravity(I)V"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.AdView.setGravity(I)V" replace-index="2" replace-signature="com.feiwo.banner.AdBanner.setGravity(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdView.setGravity(I)V" replace-index="0" replace-signature="com.feiwo.banner.AdBanner.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.setGravity(I)V" replace-index="1" replace-signature="com.feiwo.banner.AdBanner.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.AdView.setGravity(I)V" replace-index="2" replace-signature="com.feiwo.banner.AdBanner.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdView.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V" replace-index="0" replace-signature="com.feiwo.banner.AdBanner.setGravity(I)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V" replace-index="1" replace-signature="com.feiwo.banner.AdBanner.setGravity(I)V"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.AdView.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V" replace-index="2" replace-signature="com.feiwo.banner.AdBanner.setGravity(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdView.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V" replace-index="0" replace-signature="com.feiwo.banner.AdBanner.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V" replace-index="1" replace-signature="com.feiwo.banner.AdBanner.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.AdView.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V" replace-index="2" replace-signature="com.feiwo.banner.AdBanner.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdView.setVisibility(I)V" replace-index="0" replace-signature="com.feiwo.banner.AdBanner.setVisibility(I)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdView.setVisibility(I)V" replace-index="1" replace-signature="com.feiwo.banner.AdBanner.setVisibility(I)V"/>
+        <Replace-Method original-index="2" original-signature="com.google.ads.AdView.setVisibility(I)V" replace-index="2" replace-signature="com.feiwo.banner.AdBanner.setVisibility(I)V"/>
+        <Replace-Method original-index="3" original-signature="com.google.ads.AdView.setVisibility(I)V" replace-index="3" replace-signature="com.feiwo.banner.AdBanner.setVisibility(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="0" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="1" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="1" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="2" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="2" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="3" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="3" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="4" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="4" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="5" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="5" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="6" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="6" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="7" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="7" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="8" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="8" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="9" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="9" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="10" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="10" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="11" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="11" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="12" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="12" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+        <Replace-Method original-index="13" original-signature="com.babywhere.demo.HelloLua.a()Lcom/google/ads/AdView;" replace-index="13" replace-signature="com.babywhere.demo.HelloLua.a()Lcom/feiwo/banner/AdBanner;"/>
+    </Method>
+</Apk>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="net.clem_digital.ThreeMonthCalendar" pkg="net.clem_digital.ThreeMonthCalendar">
+    <Method signature="net.clem_digital.ThreeMonthCalendar.ThreeMonthCalendar.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="net.clem_digital.ThreeMonthCalendar.ThreeMonthCalendar.requestWindowFeature(I)Z"/>
+    </Method>
+</Apk>

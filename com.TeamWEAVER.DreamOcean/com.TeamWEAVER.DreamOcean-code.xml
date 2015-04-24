@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.TeamWEAVER.DreamOcean" pkg="com.TeamWEAVER.DreamOcean">
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/j/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/e/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/CoverAdComponent" super-signatures="Lcom/adfeiwo/ad/coverscreen/AdComponent#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/Main" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/LMA" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/g/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/SA" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/i" super-signatures="Lcom/adfeiwo/ad/coverscreen/x#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/E" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/AdComponent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/j" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/D" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/d/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/B" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/anzhiload$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/LMR" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/e/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/e/f" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/a" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/t" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/j/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/d/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/e" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/SR" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/anzhiload" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/j/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/WA" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/j/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/i/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/LMS" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/e/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/e/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/LMSK" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/j/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/i/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/i/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/f/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/SaveFile" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/h/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/F" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/A" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/e/b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/x" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/e/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/v" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/C" super-signatures="Lcom/adfeiwo/ad/coverscreen/x#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/ExitListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/e/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/j/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elm/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/adfeiwo/ad/coverscreen/c/f/a" super-signatures="Ljava/lang/Object"/>
+    <Method signature="java.util.HashMap$FrontCache.get(Ljava/lang/Object;)Ljava/lang/Object;">
+        <Remove-Method index="0" signature="java.lang.Integer.intValue()I"/>
+    </Method>
+    <Method signature="java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.Object.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayerProxyActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.adfeiwo.ad.coverscreen.anzhiload.AnzInt(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.elm.LMA.setAppkey(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.elm.LMA.initSDK(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.elm.LMA.showAD1(Landroid/content/Context;I)V"/>
+    </Method>
+    <Method signature="java.util.HashMap.get(Ljava/lang/Object;)Ljava/lang/Object;">
+        <Remove-Method index="0" signature="java.lang.Object.hashCode()I"/>
+        <Remove-Method index="0" signature="java.lang.Object.equals(Ljava/lang/Object;)Z"/>
+    </Method>
+</Apk>

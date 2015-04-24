@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.msshan.spyeye" pkg="com.msshan.spyeye">
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlTargeting$RunMode" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlAdRegistry" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/h" super-signatures="Lcom/kyview/interstitial/adapters/AdInstlAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/d" super-signatures="Lcom/kyview/interstitial/adapters/AdInstlAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlManager$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlTargeting$Location" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/b" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlManager$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlTargeting$AdArea" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/c" super-signatures="Lcom/kyview/interstitial/adapters/AdInstlAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlManager$e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/k" super-signatures="Lcom/kyview/interstitial/adapters/AdInstlAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/MobiSageActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/f" super-signatures="Lcom/kyview/interstitial/adapters/AdInstlAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlTargeting$Channel" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/e" super-signatures="Lcom/kyview/interstitial/adapters/AdInstlAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlReportManager$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/AdInstlAdapter" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/a" super-signatures="Lcom/kyview/interstitial/adapters/AdInstlAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlReportManager$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlInterface" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/i" super-signatures="Lcom/kyview/interstitial/adapters/AdInstlAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlManager$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlReportManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlManager$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlTargeting" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlTargeting$Gender" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlTargeting$UpdateMode" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlConfigManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/AdInstlManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kyview/interstitial/adapters/AdInstlActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Method signature="com.msshan.spyeye.CityVideoList.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.kyview.interstitial.AdInstlManager.&lt;init&gt;(Landroid/app/Activity;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.kyview.interstitial.AdInstlManager.setAdViewInterface(Lcom/kyview/interstitial/AdInstlInterface;)V"/>
+        <Add-Method index="0" signature="com.kyview.interstitial.AdInstlManager.requestad()V"/>
+        <Remove-Method index="0" signature="com.msshan.spyeye.util.IntegratedUtil.InitAndPushAD(Ljava/lang/String;Landroid/content/Context;)V"/>
+    </Method>
+</Apk>

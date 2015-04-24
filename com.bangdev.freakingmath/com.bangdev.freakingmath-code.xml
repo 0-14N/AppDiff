@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.bangdev.freakingmath" pkg="com.bangdev.freakingmath">
+    <Method signature="com.rastergrid.AdMobHelper$1.handleMessage(Landroid/os/Message;)V">
+        <Remove-Method index="0" signature="com.rastergrid.AdMobHelper.loadAd()V"/>
+    </Method>
+    <Method signature="com.bangdev.freakingmath.FreakingMath.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.google.android.gms.ads.InterstitialAd.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+    </Method>
+</Apk>

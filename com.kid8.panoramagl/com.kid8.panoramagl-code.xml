@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.kid8.panoramagl" pkg="com.kid8.panoramagl">
+    <Add-Class signature="Lcom/kid8/panoramagl/InfoDialog$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/R$attr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$13" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$15" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$3" super-signatures="Lcom/panoramagl/PLViewEventListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$11" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/R$drawable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/R$string" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/R$style" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/R$dimen" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/R" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/R$array" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/panoramagl/R$layout" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$ImageAdapter" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/ZoomButton$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$14" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/ZoomButton$1$1" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/panoramagl/R$id" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/R$id" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/R$layout" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/ToggleButton$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$10" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/panoramagl/R$attr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/R$raw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$12" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kid8/panoramagl/MainActivity$2" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/panoramagl/R$array" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/panoramagl/R$dimen" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.kid8.panoramagl.MainActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.kid8.panoramagl.MainActivity.a(I)V" replace-index="0" replace-signature="com.kid8.panoramagl.MainActivity.loadPanorama(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.kid8.panoramagl.j.&lt;init&gt;(Lcom/kid8/panoramagl/MainActivity;)V" replace-index="0" replace-signature="com.kid8.panoramagl.MainActivity$3.&lt;init&gt;(Lcom/kid8/panoramagl/MainActivity;)V"/>
+        <Remove-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.kid8.panoramagl.MainActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="com.kid8.panoramagl.MainActivity.c()V" replace-index="0" replace-signature="com.kid8.panoramagl.MainActivity.clearMemory()V"/>
+    </Method>
+</Apk>

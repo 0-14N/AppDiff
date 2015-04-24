@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="org.xinhua.xnews_sports" pkg="org.xinhua.xnews_sports">
+    <Add-Class signature="Lorg/xinhua/xnews_sports/activity/DetailPage$1$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/xinhua/xnews_sports/activity/DetailPage$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/xinhua/xnews_sports/activity/DetailPage$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/xinhua/xnews_sports/activity/DetailPage$MyGalleryAdapter" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Method signature="org.xinhua.xnews_sports.activity.DetailPage$4.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.setResult(I)V"/>
+        <Remove-Method index="0" signature="android.os.Bundle.getLong(Ljava/lang/String;)J"/>
+        <Remove-Method index="0" signature="android.os.Bundle.getInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="android.os.Bundle.getInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="2" signature="android.os.Bundle.getInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="3" signature="android.os.Bundle.getInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="2" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="3" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="4" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.widget.ImageButton.setImageResource(I)V"/>
+        <Remove-Method index="1" signature="android.widget.ImageButton.setImageResource(I)V"/>
+        <Remove-Method index="1" signature="android.widget.Toast.show()V"/>
+        <Remove-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.finish()V"/>
+        <Remove-Method index="0" signature="java.lang.Boolean.valueOf(Z)Ljava/lang/Boolean;"/>
+        <Remove-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;II)Landroid/widget/Toast;"/>
+        <Remove-Method index="1" signature="android.widget.Toast.makeText(Landroid/content/Context;II)Landroid/widget/Toast;"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.db.DBUtils.isFavorite(Landroid/database/sqlite/SQLiteDatabase;JI)Z"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.db.DBUtils.insertDataToCollectListTable(Landroid/database/sqlite/SQLiteDatabase;JILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;IZ)J"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.db.DBUtils.deleteDataFromCollectListTable(Landroid/database/sqlite/SQLiteDatabase;J)V"/>
+    </Method>
+    <Method signature="org.xinhua.xnews_sports.activity.PhotoDetailPage$3.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="java.lang.String.lastIndexOf(Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.lang.String.substring(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.util.PicUtil.isLocalPicExisted(Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.util.PicUtil.getTempJPEGFile(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.net.Uri.fromFile(Ljava/io/File;)Landroid/net/Uri;"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="org.xinhua.xnews_sports.activity.DetailPage$7.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.cancel(Z)Z" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.&lt;init&gt;(Lorg/xinhua/xnews_sports/activity/DetailPage;Landroid/os/Bundle;)V" replace-index="0" replace-signature="android.content.Intent.createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="java.lang.String.lastIndexOf(Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.lang.String.substring(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.setType(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.util.PicUtil.isLocalPicExisted(Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.util.PicUtil.getTempJPEGFile(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.net.Uri.fromFile(Ljava/io/File;)Landroid/net/Uri;"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;"/>
+    </Method>
+    <Method signature="org.xinhua.xnews_sports.activity.DetailPage.setListeners()V">
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage$8.&lt;init&gt;(Lorg/xinhua/xnews_sports/activity/DetailPage;)V"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage$9.&lt;init&gt;(Lorg/xinhua/xnews_sports/activity/DetailPage;)V"/>
+    </Method>
+    <Method signature="org.xinhua.xnews_sports.activity.DetailPage$6.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.cancel(Z)Z" replace-index="0" replace-signature="android.os.Bundle.getLong(Ljava/lang/String;)J"/>
+        <Replace-Method original-index="0" original-signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.cancel(Z)Z" replace-index="1" replace-signature="android.os.Bundle.getInt(Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.cancel(Z)Z" replace-index="0" replace-signature="android.widget.ImageButton.setImageResource(I)V"/>
+        <Replace-Method original-index="0" original-signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.cancel(Z)Z" replace-index="1" replace-signature="android.widget.Toast.show()V"/>
+        <Replace-Method original-index="0" original-signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.cancel(Z)Z" replace-index="0" replace-signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Replace-Method original-index="0" original-signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.cancel(Z)Z" replace-index="0" replace-signature="org.xinhua.xnews_sports.db.DBUtils.insertDataToCollectListTable(Landroid/database/sqlite/SQLiteDatabase;JILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;IZ)J"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.setResult(I)V"/>
+        <Add-Method index="0" signature="android.os.Bundle.getInt(Ljava/lang/String;)I"/>
+        <Add-Method index="2" signature="android.os.Bundle.getInt(Ljava/lang/String;)I"/>
+        <Add-Method index="3" signature="android.os.Bundle.getInt(Ljava/lang/String;)I"/>
+        <Add-Method index="1" signature="android.widget.ImageButton.setImageResource(I)V"/>
+        <Add-Method index="0" signature="android.widget.Toast.show()V"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.finish()V"/>
+        <Add-Method index="0" signature="java.lang.Boolean.valueOf(Z)Ljava/lang/Boolean;"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.db.DBUtils.deleteDataFromCollectListTable(Landroid/database/sqlite/SQLiteDatabase;J)V"/>
+        <Add-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;II)Landroid/widget/Toast;"/>
+        <Add-Method index="1" signature="android.widget.Toast.makeText(Landroid/content/Context;II)Landroid/widget/Toast;"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.db.DBUtils.isFavorite(Landroid/database/sqlite/SQLiteDatabase;JI)Z"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage$GetContentTask.&lt;init&gt;(Lorg/xinhua/xnews_sports/activity/DetailPage;Landroid/os/Bundle;)V"/>
+    </Method>
+    <Method signature="org.xinhua.xnews_sports.activity.DetailPage.onCreate(Landroid/os/Bundle;)V"/>
+    <Method signature="org.xinhua.xnews_sports.activity.DetailPage$3.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;" replace-index="0" replace-signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences$Editor.commit()Z" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.getText(I)Ljava/lang/CharSequence;"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.setType(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="java.lang.Boolean.booleanValue()Z"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.setResult(I)V"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.finish()V"/>
+    </Method>
+    <Method signature="org.xinhua.xnews_sports.activity.DetailPage$5.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;"/>
+        <Replace-Method original-index="1" original-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" replace-index="0" replace-signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="java.lang.Boolean.booleanValue()Z"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.setResult(I)V"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.finish()V"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.getText(I)Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.setType(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.Intent.createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="org.xinhua.xnews_sports.activity.DetailPage$1.handleMessage(Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.Gallery.setVisibility(I)V" replace-index="0" replace-signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Replace-Method original-index="0" original-signature="org.xinhua.xnews_sports.activity.DetailPage$MyInternetGalleryAdapter.&lt;init&gt;(Lorg/xinhua/xnews_sports/activity/DetailPage;Landroid/content/Context;)V" replace-index="0" replace-signature="org.xinhua.xnews_sports.activity.DetailPage$MyGalleryAdapter.&lt;init&gt;(Lorg/xinhua/xnews_sports/activity/DetailPage;Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.widget.Gallery.setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V"/>
+        <Add-Method index="0" signature="org.xinhua.xnews_sports.activity.DetailPage$1$1.&lt;init&gt;(Lorg/xinhua/xnews_sports/activity/DetailPage$1;)V"/>
+    </Method>
+</Apk>

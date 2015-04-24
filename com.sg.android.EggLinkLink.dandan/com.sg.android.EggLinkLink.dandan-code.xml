@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.sg.android.EggLinkLink.dandan" pkg="com.sg.android.EggLinkLink.dandan">
+    <Add-Class signature="Lcom/umeng/message/b/j" super-signatures="Lcom/umeng/message/b/a$b#Lcom/umeng/message/b/a$f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/a/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/DService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/b/b" super-signatures="Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/message/a/c" super-signatures="Lcom/umeng/common/message/a/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/d/b/a" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/f/a" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/aj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/g/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b" super-signatures="Lorg/apache/http/impl/client/DefaultHttpClient#Lorg/apache/http/impl/client/AbstractHttpClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/d" super-signatures="Lorg/android/agoo/net/mtop/MtopResponseHandler#Lorg/android/agoo/net/a/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/b" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/message/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/DsReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/EventID" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/al" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/i" super-signatures="Lcom/umeng/message/b/a$b#Lcom/umeng/message/b/a$f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/UTrack$2$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/e$b" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/a/d$a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/c" super-signatures="Lorg/android/agoo/e/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/h" super-signatures="Lorg/android/agoo/net/a/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/d/c/a$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/o" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/message/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/EgameFileUtils$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/EgameFileUtils$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/Arg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/m" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/p" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/a" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/f/b" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/ak" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/NDKUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/codec/MD5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/EgameFileUtils$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/d/a$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/codec/Base64$Coder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/b$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/device/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/jni/ProtocolMessage" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/Base64$b" super-signatures="Ljava/io/FilterOutputStream#Ljava/io/OutputStream#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/EgamePay$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b/h" super-signatures="Lorg/android/agoo/net/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/message/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/d/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b/e" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/EgamePayInterface" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/UT" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/e" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/IBuild" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/NotificationMessageHandler$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/codec/Base64$Encoder" super-signatures="Lcn/egame/terminal/paysdk/codec/Base64$Coder#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/d/c/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/device/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/a$a" super-signatures="Lorg/apache/http/entity/HttpEntityWrapper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/a/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/g" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/n" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/a/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/UT$CrashHandler$OnDaemonThreadCrashCaughtListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/c/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/codec/Base64" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/d/b/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/k$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/e" super-signatures="Lorg/android/agoo/e/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/EgamePayListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/l" super-signatures="Lorg/android/agoo/net/a/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b/f" super-signatures="Lorg/android/agoo/net/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/sg/android/game/SGBaseActivity$4$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/Base64" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/device/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/k" super-signatures="Lcom/umeng/message/b/a$b#Lcom/umeng/message/b/a$f#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/am" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/EgamePayActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/a/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/UT$CrashHandler$OnCrashCaughtListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/CheckTool" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/codec/Base64$Decoder" super-signatures="Lcn/egame/terminal/paysdk/codec/Base64$Coder#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/ai" super-signatures="Lcn/egame/terminal/sdk/log/r#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/UT$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/a/b$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/client/ElectionHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/c$a" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/d/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/NotificationMessageHandler" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/a$g" super-signatures="Ljava/io/BufferedOutputStream#Ljava/io/FilterOutputStream#Ljava/io/OutputStream#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/a/d$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/f" super-signatures="Lorg/apache/http/conn/ssl/SSLSocketFactory#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/EgameAgent" super-signatures="Lcn/egame/terminal/sdk/log/s#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/UT$Adv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/DServ" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/q" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/JSON" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/sg/android/game/SGBaseActivity$4$2$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/device/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/a/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/message/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/sg/android/game/SGBaseActivity$4$1$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/message/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/message/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/EmpActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/ExitCallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/sg/android/game/SGBaseActivity$4$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/a/c/a" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/e$a" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/a$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/a/b$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/a$b" super-signatures="Lcom/umeng/message/b/a$f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/PLTask" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/UT$CrashHandler" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/a/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/g" super-signatures="Lcom/umeng/message/b/a$b#Lcom/umeng/message/b/a$f#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/a$d" super-signatures="Lcom/umeng/message/b/a$f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/f/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/ag" super-signatures="Lcn/egame/terminal/sdk/log/ae#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/StringUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/sg/android/game/SGBaseActivity$4$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/m" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/a$e" super-signatures="Ljava/lang/RuntimeException#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/af" super-signatures="Lcn/egame/terminal/sdk/log/ae#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/jni/EgamePayProtocol" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/d/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/l" super-signatures="Ljava/lang/ThreadGroup#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/ExitInterface" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/d/a/a" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/EmView" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/e/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/UTrack$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/FailedCode" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/l" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/message/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/sdk/log/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/i$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/utils/b$a" super-signatures="Ljava/io/FilterOutputStream#Ljava/io/OutputStream#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/a$f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/message/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/h" super-signatures="Lcom/umeng/message/b/a$b#Lcom/umeng/message/b/a$f#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/l$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/play/dserv/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/c" super-signatures="Lcom/umeng/message/b/a$d#Lcom/umeng/message/b/a$f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/EgameFileUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/d/a$a" super-signatures="Ljava/util/logging/Formatter#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/n" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/d/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/DefaultNotificationClickHandler" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/message/b/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/a/a/a$a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcn/egame/terminal/paysdk/EgamePay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/d/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/a/d" super-signatures="Lorg/android/agoo/net/a/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/util/Base64$a" super-signatures="Ljava/io/FilterInputStream#Ljava/io/InputStream#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/a/h" super-signatures="Lorg/agoo/ut/b/b#Lorg/agoo/ut/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/android/agoo/net/b/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lorg/agoo/ut/android/a/c/c" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.sg.android.google.BillingService.checkResponseCode(JLcom/sg/android/google/Consts$ResponseCode;)V"/>
+    <Method signature="com.sg.android.google.BillingService$BillingRequest.runRequest()Z"/>
+    <Method signature="com.sg.android.game.SGBaseActivity$2.run()V">
+        <Add-Method index="0" signature="java.lang.String.length()I"/>
+        <Add-Method index="0" signature="java.lang.String.split(Ljava/lang/String;)[Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.sg.android.game.SGBaseActivity.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getConfiguration()Landroid/content/res/Configuration;"/>
+        <Add-Method index="0" signature="java.util.Locale.getCountry()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="1" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="com.sg.android.util.Connection.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Float.valueOf(Ljava/lang/String;)Ljava/lang/Float;"/>
+        <Add-Method index="1" signature="java.lang.Float.valueOf(Ljava/lang/String;)Ljava/lang/Float;"/>
+        <Add-Method index="0" signature="java.lang.Float.floatValue()F"/>
+        <Add-Method index="1" signature="java.lang.Float.floatValue()F"/>
+        <Add-Method index="0" signature="android.app.Activity.runOnUiThread(Ljava/lang/Runnable;)V"/>
+        <Remove-Method index="0" signature="com.sg.android.game.SGBaseActivity.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.sg.android.game.SGBaseActivity.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.sg.android.util.MessageDialog.showDialog(Ljava/lang/String;Ljava/lang/String;I)V"/>
+    </Method>
+    <Method signature="com.unicom.dcLoader.Utils.initSDK(Landroid/content/Context;I)V">
+        <Add-Method index="0" signature="android.widget.Toast.show()V"/>
+        <Add-Method index="0" signature="java.lang.Object.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+        <Add-Method index="0" signature="java.lang.System.loadLibrary(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="com.unicom.dcLoader.Utils._$1(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;"/>
+    </Method>
+    <Method signature="com.umeng.message.PushAgent.&lt;init&gt;(Landroid/content/Context;)V">
+        <Replace-Method original-index="0" original-signature="com.umeng.message.UmengMessageHandler.&lt;init&gt;()V" replace-index="0" replace-signature="com.umeng.message.NotificationMessageHandler.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.message.UmengMessageHandler.&lt;init&gt;()V" replace-index="0" replace-signature="com.umeng.message.DefaultNotificationClickHandler.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.message.UmengNotificationClickHandler.&lt;init&gt;()V" replace-index="0" replace-signature="com.umeng.message.NotificationMessageHandler.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.message.UmengNotificationClickHandler.&lt;init&gt;()V" replace-index="0" replace-signature="com.umeng.message.DefaultNotificationClickHandler.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;"/>
+    </Method>
+    <Method signature="com.sg.android.google.Consts$ResponseCode.values()[Lcom/sg/android/google/Consts$ResponseCode;">
+        <Add-Method index="0" signature="Lcom.sg.android.google.Consts$ResponseCode.clone()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="java.lang.System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V"/>
+    </Method>
+    <Method signature="com.sg.android.game.SGBaseActivity$9.run()V">
+        <Add-Method index="0" signature="android.widget.Toast.show()V"/>
+        <Add-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+        <Remove-Method index="0" signature="com.sg.android.util.Connection.getOutTradeNo()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.sg.android.util.Connection.insertNewOrderInfo(Ljava/lang/String;IFLjava/lang/String;II)V"/>
+        <Remove-Method index="0" signature="com.sg.android.util.Connection.commitCoinInformation(I)V"/>
+    </Method>
+    <Method signature="com.umeng.message.UTrack$3.run()V">
+        <Add-Method index="0" signature="com.umeng.message.UmengRegistrar.getRegistrationId(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.json.JSONObject.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="org.json.JSONObject.put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"/>
+        <Add-Method index="1" signature="org.json.JSONObject.put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"/>
+        <Add-Method index="2" signature="org.json.JSONObject.put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"/>
+        <Add-Method index="0" signature="com.umeng.common.message.DeviceConfig.getUtdid(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.umeng.message.UTrack.b(Z)V"/>
+        <Remove-Method index="1" signature="com.umeng.message.UTrack.b(Z)V"/>
+        <Remove-Method index="2" signature="com.umeng.message.UTrack.b(Z)V"/>
+    </Method>
+    <Method signature="com.sg.android.google.BillingService$BillingRequest.runIfConnected()Z"/>
+    <Method signature="com.unicom.dcLoader.MainActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="java.io.PrintStream.println(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.sg.android.alipay.AliHandel.handleMessage(Landroid/os/Message;)V"/>
+    <Method signature="com.umeng.message.UTrack$2.run()V">
+        <Add-Method index="0" signature="android.content.Context.getCacheDir()Ljava/io/File;"/>
+        <Add-Method index="0" signature="java.io.File.listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;"/>
+        <Add-Method index="0" signature="java.io.File.delete()Z"/>
+        <Add-Method index="0" signature="com.umeng.message.UTrack$2$1.&lt;init&gt;(Lcom/umeng/message/UTrack$2;)V"/>
+        <Add-Method index="0" signature="com.umeng.message.UTrack$2$2.&lt;init&gt;(Lcom/umeng/message/UTrack$2;)V"/>
+        <Add-Method index="0" signature="java.util.Arrays.sort([Ljava/lang/Object;Ljava/util/Comparator;)V"/>
+        <Add-Method index="0" signature="com.umeng.message.UTrack.a(Lcom/umeng/message/UTrack;Ljava/io/File;)V"/>
+        <Remove-Method index="0" signature="com.umeng.message.UTrack.a()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.umeng.message.UTrack.a()Ljava/lang/String;"/>
+        <Remove-Method index="2" signature="com.umeng.message.UTrack.a()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.umeng.common.message.Log.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="com.umeng.common.message.Log.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="2" signature="com.umeng.common.message.Log.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.lang.Throwable.printStackTrace()V"/>
+        <Remove-Method index="0" signature="com.umeng.message.MsgLogStore.getInstance(Landroid/content/Context;)Lcom/umeng/message/MsgLogStore;"/>
+        <Remove-Method index="1" signature="com.umeng.message.MsgLogStore.getInstance(Landroid/content/Context;)Lcom/umeng/message/MsgLogStore;"/>
+        <Remove-Method index="0" signature="com.umeng.message.UTrack.a(Z)V"/>
+        <Remove-Method index="1" signature="com.umeng.message.UTrack.a(Z)V"/>
+        <Remove-Method index="2" signature="com.umeng.message.UTrack.a(Z)V"/>
+        <Remove-Method index="0" signature="com.umeng.message.UTrack.a(Lcom/umeng/message/UTrack;Ljava/lang/String;IJ)V"/>
+        <Remove-Method index="0" signature="java.util.ArrayList.size()I"/>
+        <Remove-Method index="0" signature="java.util.ArrayList.get(I)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.umeng.message.MsgLogStore.getMsgLogs(I)Ljava/util/ArrayList;"/>
+        <Remove-Method index="1" signature="com.umeng.message.MsgLogStore.getMsgLogs(I)Ljava/util/ArrayList;"/>
+    </Method>
+    <Method signature="com.sg.android.game.SGBaseActivity$5.run()V">
+        <Replace-Method original-index="0" original-signature="com.unicom.dcLoader.Utils.pay(Landroid/content/Context;Ljava/lang/String;Lcom/unicom/dcLoader/Utils$UnipayPayResultListener;)V" replace-index="0" replace-signature="com.sg.android.alipay.MobileSecurePayer.pay(Ljava/lang/String;Landroid/os/Handler;ILandroid/app/Activity;)Z"/>
+        <Replace-Method original-index="0" original-signature="java.util.Locale.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.sg.android.alipay.Constant.getOrderInfo(I)Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="java.util.Locale.toString()Ljava/lang/String;" replace-index="1" replace-signature="com.sg.android.alipay.Constant.getSignType()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="java.util.Locale.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.sg.android.alipay.Constant.sign(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.sg.android.alipay.AliHandel.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="com.sg.android.alipay.MobileSecurePayHelper.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.sg.android.alipay.MobileSecurePayHelper.detectMobile_sp()Z"/>
+        <Add-Method index="0" signature="com.sg.android.alipay.Constant.getSignType()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.net.URLEncoder.encode(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.sg.android.alipay.MobileSecurePayer.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="2" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="3" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="4" signature="android.os.Bundle.putString(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.os.Bundle.putInt(Ljava/lang/String;I)V"/>
+        <Remove-Method index="0" signature="java.lang.String.equalsIgnoreCase(Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="com.sg.android.game.SGBaseActivity.googleCheckOut(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.sg.android.game.SGBaseActivity.aliPay()V"/>
+        <Remove-Method index="0" signature="android.app.Activity.startActivityForResult(Landroid/content/Intent;I)V"/>
+        <Remove-Method index="1" signature="android.app.Activity.startActivityForResult(Landroid/content/Intent;I)V"/>
+        <Remove-Method index="0" signature="mm.sms.purchasesdk.SMSPurchase.smsOrder(Landroid/content/Context;Ljava/lang/String;Lmm/sms/purchasesdk/OnSMSPurchaseListener;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.os.Bundle.&lt;init&gt;()V"/>
+        <Remove-Method index="1" signature="android.os.Bundle.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="android.content.Intent.setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="android.os.Bundle.putBoolean(Ljava/lang/String;Z)V"/>
+        <Remove-Method index="0" signature="com.unicom.dcLoader.Utils.getInstances()Lcom/unicom/dcLoader/Utils;"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Remove-Method index="0" signature="com.sg.android.util.FirstTimeLoad.getTodayCost()I"/>
+        <Remove-Method index="0" signature="com.sg.android.util.ContextConfigure.getActivity()Landroid/app/Activity;"/>
+        <Remove-Method index="1" signature="com.sg.android.util.ContextConfigure.getActivity()Landroid/app/Activity;"/>
+        <Remove-Method index="2" signature="com.sg.android.util.ContextConfigure.getActivity()Landroid/app/Activity;"/>
+        <Remove-Method index="3" signature="com.sg.android.util.ContextConfigure.getActivity()Landroid/app/Activity;"/>
+        <Remove-Method index="4" signature="com.sg.android.util.ContextConfigure.getActivity()Landroid/app/Activity;"/>
+        <Remove-Method index="5" signature="com.sg.android.util.ContextConfigure.getActivity()Landroid/app/Activity;"/>
+        <Remove-Method index="6" signature="com.sg.android.util.ContextConfigure.getActivity()Landroid/app/Activity;"/>
+        <Remove-Method index="7" signature="com.sg.android.util.ContextConfigure.getActivity()Landroid/app/Activity;"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtras(Landroid/os/Bundle;)Landroid/content/Intent;"/>
+        <Remove-Method index="1" signature="android.content.Intent.putExtras(Landroid/os/Bundle;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="com.sg.android.game.SGBaseActivity$5$1.&lt;init&gt;(Lcom/sg/android/game/SGBaseActivity$5;)V"/>
+        <Remove-Method index="0" signature="android.os.Bundle.putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="1" signature="android.os.Bundle.putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="2" signature="android.os.Bundle.putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="3" signature="android.os.Bundle.putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="4" signature="android.os.Bundle.putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="5" signature="android.os.Bundle.putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="6" signature="android.os.Bundle.putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="7" signature="android.os.Bundle.putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="8" signature="android.os.Bundle.putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="0" signature="java.util.Locale.getDefault()Ljava/util/Locale;"/>
+    </Method>
+    <Method signature="org.android.agoo.client.AgooSettings.getMode(Landroid/content/Context;)Lorg/android/agoo/client/AgooSettings$Mode;">
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="org.android.agoo.client.AgooSettings$Mode.getValue()I"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.getInt(Ljava/lang/String;I)I"/>
+        <Add-Method index="0" signature="org.android.agoo.g.a.c(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="0" signature="com.umeng.message.proguard.E.g(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="0" signature="android.text.TextUtils.indexOf(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)I"/>
+        <Remove-Method index="1" signature="android.text.TextUtils.indexOf(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)I"/>
+    </Method>
+    <Method signature="com.umeng.message.UTrack.b(Lcom/umeng/message/UTrack;)Lorg/json/JSONObject;">
+        <Remove-Method index="0" signature="com.umeng.message.UTrack.e()Lorg/json/JSONObject;"/>
+    </Method>
+    <Method signature="com.unicom.dcLoader.Utils._$1(I)I"/>
+    <Method signature="com.unicom.dcLoader.lllIIIIlIlIIIllI.handleMessage(Landroid/os/Message;)V">
+        <Add-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="1" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.lang.Class.getSimpleName()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.Class.getSimpleName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.umeng.message.UTrack$4.run()V">
+        <Add-Method index="0" signature="com.umeng.message.UmengRegistrar.getRegistrationId(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.umeng.message.b.a$e.printStackTrace()V"/>
+        <Add-Method index="0" signature="org.json.JSONObject.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="org.json.JSONObject.put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"/>
+        <Add-Method index="1" signature="org.json.JSONObject.put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"/>
+        <Add-Method index="2" signature="org.json.JSONObject.put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"/>
+        <Add-Method index="0" signature="com.umeng.common.message.DeviceConfig.getUtdid(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.json.JSONObject.put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"/>
+        <Remove-Method index="0" signature="com.umeng.message.proguard.C$e.printStackTrace()V"/>
+        <Remove-Method index="0" signature="com.umeng.message.UTrack.c(Lcom/umeng/message/UTrack;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.umeng.message.proguard.y.d(Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="com.umeng.message.UTrack.a()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.umeng.common.message.Log.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.umeng.message.UTrack.c(Z)V"/>
+        <Remove-Method index="1" signature="com.umeng.message.UTrack.c(Z)V"/>
+        <Remove-Method index="2" signature="com.umeng.message.UTrack.c(Z)V"/>
+        <Remove-Method index="3" signature="com.umeng.message.UTrack.c(Z)V"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="org.android.agoo.helper.a$a.run()V">
+        <Replace-Method original-index="0" original-signature="org.android.agoo.helper.a.a(Landroid/content/Context;)Ljava/lang/String;" replace-index="0" replace-signature="org.android.agoo.net.a.i.a(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.message.proguard.Z.get(Landroid/content/Context;Ljava/lang/String;Lcom/umeng/message/proguard/X;)Lcom/umeng/message/proguard/Z$a;" replace-index="0" replace-signature="org.android.agoo.net.a.l.get(Landroid/content/Context;Ljava/lang/String;Lorg/android/agoo/net/a/i;)Lorg/android/agoo/net/a/l$a;"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.message.proguard.Z.get(Landroid/content/Context;Lorg/apache/http/HttpHost;Ljava/lang/String;Lcom/umeng/message/proguard/X;)Lcom/umeng/message/proguard/Z$a;" replace-index="0" replace-signature="org.android.agoo.net.a.l.get(Landroid/content/Context;Lorg/apache/http/HttpHost;Ljava/lang/String;Lorg/android/agoo/net/a/i;)Lorg/android/agoo/net/a/l$a;"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.message.proguard.X.&lt;init&gt;()V" replace-index="0" replace-signature="org.android.agoo.net.a.i.&lt;init&gt;()V"/>
+        <Replace-Method original-index="1" original-signature="com.umeng.message.proguard.X.a(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="org.android.agoo.d.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="2" original-signature="com.umeng.message.proguard.X.a(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="org.android.agoo.d.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.message.proguard.al.b(Landroid/content/Context;)I" replace-index="0" replace-signature="org.android.agoo.net.a.i.a(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.android.agoo.client.AgooSettings.getAgooReleaseTime()J" replace-index="0" replace-signature="org.android.agoo.client.AgooSettings$Mode.getPushApollHost()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.message.proguard.Q.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="org.android.agoo.net.a.i.a(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.android.agoo.client.AgooSettings.getApollUrl(Landroid/content/Context;)Ljava/lang/String;" replace-index="0" replace-signature="org.android.agoo.net.a.i.a(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="org.android.agoo.helper.a.a(Lorg/android/agoo/helper/a;)Lcom/umeng/message/proguard/Z;" replace-index="1" replace-signature="org.android.agoo.helper.a.b(Lorg/android/agoo/helper/a;)Lorg/android/agoo/net/a/l;"/>
+        <Replace-Method original-index="2" original-signature="org.android.agoo.helper.a.a(Lorg/android/agoo/helper/a;)Lcom/umeng/message/proguard/Z;" replace-index="1" replace-signature="org.android.agoo.helper.a.b(Lorg/android/agoo/helper/a;)Lorg/android/agoo/net/a/l;"/>
+        <Replace-Method original-index="0" original-signature="org.android.agoo.helper.a.a(Lorg/android/agoo/helper/a;Lcom/umeng/message/proguard/Z$a;Lorg/android/agoo/helper/a$b;Lorg/android/agoo/client/AgooSettings$Mode;)V" replace-index="0" replace-signature="org.android.agoo.helper.a.a(Lorg/android/agoo/helper/a;Lorg/android/agoo/net/a/l$a;Lorg/android/agoo/helper/a$b;Lorg/android/agoo/client/AgooSettings$Mode;)V"/>
+        <Replace-Method original-index="0" original-signature="com.umeng.message.proguard.F.c(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="org.android.agoo.d.a.c(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.android.agoo.helper.a.a(Lorg/android/agoo/helper/a;)I"/>
+        <Add-Method index="0" signature="org.android.agoo.helper.a.b(Lorg/android/agoo/helper/a;)Lorg/android/agoo/net/a/l;"/>
+        <Add-Method index="0" signature="org.android.agoo.d.a.e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Remove-Method index="0" signature="com.umeng.message.proguard.X.a(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="3" signature="com.umeng.message.proguard.X.a(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="4" signature="com.umeng.message.proguard.X.a(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="5" signature="com.umeng.message.proguard.X.a(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.umeng.message.proguard.Q.c()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Remove-Method index="1" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Remove-Method index="2" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Remove-Method index="0" signature="com.umeng.message.proguard.Q.b()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.android.agoo.helper.a.a(Lorg/android/agoo/helper/a;)Lcom/umeng/message/proguard/Z;"/>
+        <Remove-Method index="0" signature="com.umeng.message.proguard.Z.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="org.android.agoo.helper.a.a(Lorg/android/agoo/helper/a;Lcom/umeng/message/proguard/Z;)Lcom/umeng/message/proguard/Z;"/>
+        <Remove-Method index="0" signature="com.umeng.message.proguard.F.d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="com.sg.android.util.Connection.postIapInfoToServer(I)I"/>
+    <Method signature="com.umeng.message.PushAgent.enable()V">
+        <Replace-Method original-index="0" original-signature="com.umeng.message.MessageSharedPrefs.e()V" replace-index="0" replace-signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="com.umeng.message.MessageSharedPrefs.getInstance(Landroid/content/Context;)Lcom/umeng/message/MessageSharedPrefs;"/>
+    </Method>
+    <Method signature="com.umeng.message.UmengRegistrar.register(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V">
+        <Remove-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="org.android.agoo.client.AgooSettings.setUTVersion(Landroid/content/Context;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.sg.android.google.Consts$PurchaseState.values()[Lcom/sg/android/google/Consts$PurchaseState;">
+        <Add-Method index="0" signature="Lcom.sg.android.google.Consts$PurchaseState.clone()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="java.lang.System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V"/>
+    </Method>
+    <Method signature="org.android.agoo.client.BaseRegistrar.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V">
+        <Add-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Add-Method index="0" signature="org.android.agoo.client.AgooSettings.setAgooSecurityMode(Landroid/content/Context;Z)V"/>
+        <Add-Method index="0" signature="org.android.agoo.util.k.a(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="org.android.agoo.d.b.a(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="org.android.agoo.g.a.e(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="org.android.agoo.g.a.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.android.agoo.client.BaseRegistrar.b(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="org.android.agoo.client.BaseRegistrar.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"/>
+    </Method>
+    <Method signature="com.sg.android.game.SGBaseActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.sg.android.game.SGBaseActivity$4.&lt;init&gt;(Lcom/sg/android/game/SGBaseActivity;)V" replace-index="0" replace-signature="com.sg.android.game.SGBaseActivity$1.&lt;init&gt;(Lcom/sg/android/game/SGBaseActivity;)V"/>
+        <Add-Method index="0" signature="cn.egame.terminal.paysdk.EgamePay.init(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.sg.android.game.SGBaseActivity.LoadChannelID(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.chinaMobile.MobileAgent.init(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.sg.android.EggLinkLink.LeNorm.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.sg.android.EggLinkLink.LeNorm$5.&lt;init&gt;(Lcom/sg/android/EggLinkLink/LeNorm;)V" replace-index="0" replace-signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.sg.android.EggLinkLink.LeNorm.sendBroadcast(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="com.sg.android.EggLinkLink.LeNorm.bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Remove-Method index="0" signature="com.sg.android.google.util.IabHelper.&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.sg.android.google.util.IabHelper.enableDebugLogging(Z)V"/>
+        <Remove-Method index="0" signature="com.sg.android.google.util.IabHelper.startSetup(Lcom/sg/android/google/util/IabHelper$OnIabSetupFinishedListener;)V"/>
+        <Remove-Method index="0" signature="java.io.PrintStream.println(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="org.android.agoo.client.BaseRegistrar.getRegistrationId(Landroid/content/Context;)Ljava/lang/String;">
+        <Add-Method index="0" signature="org.android.agoo.g.a.j(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.umeng.message.proguard.E.q(Landroid/content/Context;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.sg.android.game.SGBaseActivity.onResume()V">
+        <Add-Method index="0" signature="cn.egame.terminal.sdk.log.EgameAgent.onResume(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.umeng.message.UTrack$1.run()V">
+        <Replace-Method original-index="0" original-signature="com.umeng.message.UTrack.a(Lcom/umeng/message/UTrack;Ljava/lang/String;IJ)V" replace-index="0" replace-signature="com.umeng.message.UTrack.a(Lcom/umeng/message/UTrack;Ljava/lang/String;I)V"/>
+    </Method>
+    <Method signature="com.umeng.message.PushAgent.setNoDisturbMode(IIII)V">
+        <Replace-Method original-index="0" original-signature="com.umeng.message.MessageSharedPrefs.a(IIII)V" replace-index="0" replace-signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="1" signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="2" signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="3" signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="com.umeng.message.MessageSharedPrefs.getInstance(Landroid/content/Context;)Lcom/umeng/message/MessageSharedPrefs;"/>
+    </Method>
+    <Method signature="org.android.agoo.client.AgooSettings.isAgooTestMode(Landroid/content/Context;)Z">
+        <Add-Method index="0" signature="android.content.SharedPreferences.getInt(Ljava/lang/String;I)I"/>
+        <Add-Method index="0" signature="org.android.agoo.g.a.c(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="0" signature="org.android.agoo.client.AgooSettings$Mode.getValue()I"/>
+        <Add-Method index="1" signature="org.android.agoo.client.AgooSettings$Mode.getValue()I"/>
+        <Remove-Method index="0" signature="org.android.agoo.client.AgooSettings.getMode(Landroid/content/Context;)Lorg/android/agoo/client/AgooSettings$Mode;"/>
+    </Method>
+</Apk>

@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.weathernews.sunnycomb" pkg="com.weathernews.sunnycomb">
+    <Add-Class signature="Lcom/amap/api/a/bz" super-signatures="Lcom/amap/api/a/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushSettings$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/f$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bi" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/a0$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/FrontiaError" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$37" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bw" super-signatures="Lcom/amap/api/a/h#Lcom/amap/api/a/bc#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/b$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener$DescribeMessageResult" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/TileOverlayOptionsCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$16" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/CameraPosition" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/c" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/br" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bx" super-signatures="Lcom/amap/api/a/bn#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushService" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/f$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/silentupdate/SilentManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/b/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ad$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/az" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/au$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ab$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/av$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/m$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$OnMarkerClickListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bf$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/LocationSource$OnLocationChangedListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/autonavi/amap/mapcore2d/DPoint" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ai$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$27" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/FrontiaApplication" super-signatures="Landroid/app/Application#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/LatLngBounds$Builder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/au$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/VisibleRegionCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$4" super-signatures="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub#Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/s$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/AMapGLOverlay" super-signatures="Lcom/amap/api/a/aa#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/BasicPushNotificationBuilder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/LoadExecutor" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$26" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$4" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$35" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaDeepLink" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ad$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/av$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/au$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/cg$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/w" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/cg$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ar$a" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/b$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/TileOverlay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/CameraUpdate" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/BitmapDescriptorFactory" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$39" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/aw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgeBasicPushNotificationBuilder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/Polygon" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bp$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/b/a/d$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$5" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$OnMapLoadedListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ar$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMapNativeRenderer" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/j$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ay$a" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$13" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$24" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/LocationClientOption$LocationMode" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ad$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ak" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/au$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/au" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$28" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/be$a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/overlay/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/VisibleRegion" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$d$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/b$b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/Polyline" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/aj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/s$3" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/LatLng" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ah$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/by" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$b$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$8" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weathernews/sunnycomb/Sunnycomb$NotifyLister" super-signatures="Lcom/baidu/location/BDNotifyListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ag$a" super-signatures="Lcom/baidu/location/s#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/TileOverlayOptions" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/overlay/PoiOverlay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weathernews/sunnycomb/BaiduPushReceiver" super-signatures="Lcom/baidu/frontia/api/FrontiaPushMessageReceiver#Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/aq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/silentupdate/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$IOSContent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/au" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/TileProvider" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgeCustomPushNotificationBuilder" super-signatures="Lcom/baidu/android/pushservice/apiproxy/BridgePushNotificationBuilder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub" super-signatures="Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$17" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/w$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushService$Stub" super-signatures="Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/b/a/b$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener$DescribeMessageListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/x$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/f$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$14" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/b/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$40" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$18" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushSettings" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$CancelableCallback" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ay$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/l$c" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/cg$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/LLSInterface" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/LocationClientOption$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/t$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/b$d" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$AndroidContent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/cb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/b" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bf$a$1" super-signatures="Lcom/amap/api/a/cd#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/at" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/a0$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/Frontia" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$OnInfoWindowClickListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$NotificationContent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/x$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bf$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/b$b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgePushManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$4" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weathernews/sunnycomb/Sunnycomb$GpsLocationListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/MyLocationStyleCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ar" super-signatures="Lcom/amap/api/a/bq#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/as" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/Circle" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/LatLngCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bo" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/b/a/b$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/b$1" super-signatures="Lcom/amap/api/a/a/b$e#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/a/b$b" super-signatures="Lcom/a/a/a/a/b$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/framework/IModule" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$OnMarkerDragListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMapOptionsCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/FrontiaQuery$SortOrder" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/PolylineOptions" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$Trigger" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ad$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ag$b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/an" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/z$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bg$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$33" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$7" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/c/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ch" super-signatures="Lcom/amap/api/a/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$10" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/at" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bt" super-signatures="Lcom/amap/api/a/br#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bg$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$23" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$6" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ba" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$8" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$OnMyLocationChangeListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/GroundOverlay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMapOptions" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/av" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/PolygonOptionsCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/r$a" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/av" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/a0" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$15" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$11" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/Projection" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/as" super-signatures="Lcom/amap/api/a/at#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgePushSettings" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ba$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/LatLngBounds" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/b$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/b$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$OnMapScreenShotListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgeInternal" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$3" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/cc" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/a/b$c" super-signatures="Lcom/a/a/a/a/b$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/Marker" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$34" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$21" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/overlay/BusRouteOverlay" super-signatures="Lcom/amap/api/maps2d/overlay/RouteOverlay#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$22" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$InfoWindowAdapter" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/IPushLightappListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/b/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$FrontiaPushBasicNotificationBuilder" super-signatures="Lcom/baidu/frontia/api/FrontiaPushUtil$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bg$a" super-signatures="Lcom/amap/api/a/bg#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bb" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/q$b" super-signatures="Lcom/baidu/location/s#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$FrontiaPushCustomNotificationBuilder" super-signatures="Lcom/baidu/frontia/api/FrontiaPushUtil$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/b$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/b/a/d$a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/BitmapDescriptor" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/lightapp/LightAppPush$a" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/b$3" super-signatures="Lcom/amap/api/a/cd#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/d" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/p$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/autonavi/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/overlay/BusLineOverlay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/am" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$36" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/SupportMapFragment" super-signatures="Landroid/support/v4/app/Fragment#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$a$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$OnMapLongClickListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/b$c$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$9" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/overlay/DrivingRouteOverlay" super-signatures="Lcom/amap/api/maps2d/overlay/RouteOverlay#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/c/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$31" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/k" super-signatures="Lcom/amap/api/a/a/l#Lcom/amap/api/a/a/m#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/au$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/l$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bv" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/MarkerOptions" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgePushNotificationBuilder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/UrlTileProvider" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/b/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ax" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPush$c$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/j$1" super-signatures="Lcom/amap/api/a/a/o#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/az$a" super-signatures="Landroid/view/ViewGroup$LayoutParams#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener$PushMessageListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$3" super-signatures="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub#Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bv$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/m$b" super-signatures="Lcom/amap/api/a/a/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ar$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMapUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ay$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/LatLngBoundsCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/MapFragment" super-signatures="Landroid/app/Fragment#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$5" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$30" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/au$a" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bf$e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/cf" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weathernews/sunnycomb/report/AMapConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/RuntimeRemoteException" super-signatures="Ljava/lang/RuntimeException#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/m$a" super-signatures="Lcom/amap/api/a/a/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/overlay/WalkRouteOverlay" super-signatures="Lcom/amap/api/maps2d/overlay/RouteOverlay#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/b$e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ax" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/h" super-signatures="Lcom/amap/api/a/bc#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/UiSettings" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/aw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/v$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/be" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weathernews/sunnycomb/report/AMapToastUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/s$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/MarkerOptionsCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/a/b$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$43" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/lightapp/LightAppPush" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/MyLocationStyle" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$29" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/CircleOptionsCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/l$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/b/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bf$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/a0$a" super-signatures="Lcom/baidu/location/s#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/u$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/autonavi/amap/mapcore2d/FPoint" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/au$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/PolylineOptionsCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/am$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$32" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/MyTrafficStyle" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushService$Stub$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/b$2" super-signatures="Lcom/amap/api/a/cd#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$20" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/CameraPosition$Builder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener$ListMessageListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bs" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/GroundOverlayOptions" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$25" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/silentupdate/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/CommonEncrypt" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/au$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ay" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/CameraUpdateFactory" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$38" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/d$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/f$a$a" super-signatures="Ljava/io/FilterOutputStream#Ljava/io/OutputStream#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$3" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ay$b" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bu$b" super-signatures="Lcom/amap/api/a/a/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/cg$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/aw$a" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/Tile" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushNotificationBuilder$7" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bk" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/LocationSource" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weathernews/sunnycomb/util/UtilBaiduPush$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ah$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weathernews/sunnycomb/util/UtilBaiduPush" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/az" super-signatures="Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/aj$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/aj$2" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$6" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMapException" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$MessageContent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$OnCameraChangeListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/a0$c" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushMessageReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/BitmapDescriptorCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/MapView" super-signatures="Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushLightapp$5" super-signatures="Lcom/baidu/android/pushservice/aidl/IPushServiceListener$Stub#Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/AMap$OnMapClickListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/al" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/weathernews/sunnycomb/Sunnycomb$ScLocationListenner" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/GroundOverlayOptionsCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/ay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$19" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$41" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/b$2" super-signatures="Ljava/util/concurrent/FutureTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/FrontiaQuery" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/CameraPositionCreator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/d$3" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/overlay/RouteOverlay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/a0$b" super-signatures="Lcom/baidu/location/ag#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ao$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushListener$CommonMessageListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/apiproxy/BridgePushConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$DeployStatus" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/m$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/l" super-signatures="Lcom/amap/api/a/a/m#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/o$a" super-signatures="Lcom/baidu/location/s#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/w$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ca" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$12" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/frontia/api/FrontiaPushUtil$DefaultNotificationStyle" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/cg" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/MapsInitializer" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/cd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/t$b" super-signatures="Landroid/telephony/PhoneStateListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder" super-signatures="Lcom/baidu/android/pushservice/PushNotificationBuilder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bf$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/au$b" super-signatures="Lcom/baidu/location/s#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/autonavi/amap/mapcore2d/IPoint" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/location/k$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/LoadExecutor$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/bu$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/Internal$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/ce" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/silentupdate/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/aidl/IPushServiceListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/CustomPushNotificationBuilder$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/c/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/CircleOptions" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/BasicPushNotificationBuilder$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/p$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/a/a/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$42" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/baidu/android/pushservice/PushManager$44" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/amap/api/maps2d/model/PolygonOptions" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.weathernews.sunnycomb.webview.WebViewActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.stop()V" replace-index="0" replace-signature="com.baidu.location.LocationClient.stop()V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.loader.BlockingHttpLoader.count(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.util.UtilProf.getAccountMD5(Landroid/content/Context;)Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.util.UtilProf.getAccount(Landroid/content/Context;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.report.ReportMapViewActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.report.ReportMapViewActivity.requestWindowFeature(I)Z" replace-index="0" replace-signature="com.weathernews.sunnycomb.SunnycombActivityBase.onCreate(Landroid/os/Bundle;)V"/>
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.common.LogCountTag.countLog(Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;)V" replace-index="0" replace-signature="com.weathernews.sunnycomb.report.ReportMapViewActivity.init()V"/>
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.report.ReportMapViewActivity.findViewById(I)Landroid/view/View;"/>
+        <Add-Method index="0" signature="com.amap.api.maps2d.MapView.onCreate(Landroid/os/Bundle;)V"/>
+        <Add-Method index="0" signature="android.app.ActionBar.setDisplayHomeAsUpEnabled(Z)V"/>
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.report.ReportMapViewActivity.finishActivity()V"/>
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.report.ReportViewUtil.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.weathernews.sunnycomb.report.ReportMapViewActivity.finish()V"/>
+        <Remove-Method index="0" signature="android.app.ActionBar.show()V"/>
+        <Remove-Method index="0" signature="android.support.v4.app.FragmentActivity.onCreate(Landroid/os/Bundle;)V"/>
+        <Remove-Method index="0" signature="com.weathernews.sunnycomb.common.LogCountTag.&lt;init&gt;(Landroid/content/Context;Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="com.weathernews.sunnycomb.report.ReportMapViewActivity.initMap()V"/>
+    </Method>
+    <Method signature="com.baidu.location.f.onStartCommand(Landroid/content/Intent;II)I">
+        <Add-Method index="0" signature="com.baidu.location.LLSInterface.onStartCommand(Landroid/content/Intent;II)I"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.webview.WebViewActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.webview.WebViewActivity.getApplication()Landroid/app/Application;"/>
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.Sunnycomb.setLocationOption(Z)Lcom/baidu/location/LocationClientOption;"/>
+        <Add-Method index="0" signature="com.baidu.location.LocationClient.setLocOption(Lcom/baidu/location/LocationClientOption;)V"/>
+        <Add-Method index="0" signature="com.baidu.location.LocationClient.start()V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.SplashActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.SplashActivity.findViewById(I)Landroid/view/View;"/>
+        <Add-Method index="0" signature="android.view.View.setVisibility(I)V"/>
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.SplashActivity.changeLogo()V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.hex.HexActivity.onDestroy()V">
+        <Add-Method index="0" signature="com.baidu.location.LocationClient.stop()V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.SchemeActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.weathernews.sunnycomb.gps.GpsLocation.getInstance()Lcom/weathernews/sunnycomb/gps/GpsLocation;"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.login.EditProfileActivity.initToggle()V">
+        <Remove-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.k(Landroid/os/Message;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.o(Landroid/os/Message;)V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.view.LoginPopupView$4.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.view.LoginPopupView.hide()V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.hex.HexProgress$1.run()V">
+        <Remove-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.baidu.location.GeofenceClient$a.handleMessage(Landroid/os/Message;)V">
+        <Add-Method index="0" signature="com.baidu.location.GeofenceClient.do(Lcom/baidu/location/GeofenceClient;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.n(Landroid/os/Message;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.s(Landroid/os/Message;)V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.login.SettingUnitsActivity.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.SplashActivity.access$0(Lcom/weathernews/sunnycomb/SplashActivity;)V">
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.SplashActivity.getRegistrationKey()V" replace-index="0" replace-signature="com.weathernews.sunnycomb.SplashActivity.checkLoginStatus()V"/>
+    </Method>
+    <Method signature="com.baidu.location.GeofenceClient.do(Lcom/baidu/location/GeofenceClient;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.GeofenceClient.byte()V" replace-index="0" replace-signature="com.baidu.location.GeofenceClient.void()V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.hex.HexActivity.access$38(Lcom/weathernews/sunnycomb/hex/HexActivity;)V">
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.hex.HexActivity.updateHexMenuBadge()V" replace-index="0" replace-signature="com.weathernews.sunnycomb.hex.HexActivity.capture()V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.camera.CameraActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.camera.CameraActivity.getApplication()Landroid/app/Application;"/>
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.Sunnycomb.setLocationOption(Z)Lcom/baidu/location/LocationClientOption;"/>
+        <Add-Method index="0" signature="com.baidu.location.LocationClient.setLocOption(Lcom/baidu/location/LocationClientOption;)V"/>
+        <Add-Method index="0" signature="com.baidu.location.LocationClient.start()V"/>
+        <Remove-Method index="0" signature="com.weathernews.sunnycomb.gps.GpsLocation.getInstance()Lcom/weathernews/sunnycomb/gps/GpsLocation;"/>
+    </Method>
+    <Method signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.bJ()V" replace-index="0" replace-signature="com.baidu.location.LocationClient.cB()V"/>
+    </Method>
+    <Method signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.o(Landroid/os/Message;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.n(Landroid/os/Message;)V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.webview.WebViewActivity.getParams(Landroid/content/Intent;)V">
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.Sunnycomb.startGps(Lcom/weathernews/sunnycomb/Sunnycomb$GpsLocationListener;)V"/>
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.webview.WebViewActivity$2.&lt;init&gt;(Lcom/weathernews/sunnycomb/webview/WebViewActivity;)V"/>
+        <Remove-Method index="0" signature="com.weathernews.sunnycomb.gps.GpsLocation.start(Landroid/app/Activity;Lcom/weathernews/sunnycomb/gps/GpsLocation$GpsLocationListener;)V"/>
+        <Remove-Method index="0" signature="com.weathernews.sunnycomb.gps.GpsLocation.setReload(Z)V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.localweather.adjective.AdjectiveView.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getLat()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getStrLat()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getLat()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getStrLon()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getLat()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getCity()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getLon()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getStrLat()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getLon()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getStrLon()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getLon()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getCity()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getCity()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getStrLat()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getCity()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getStrLon()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getCity()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getCity()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.m(Landroid/os/Message;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.p(Landroid/os/Message;)V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.webview.WebViewActivity.startLoad()V"/>
+    <Method signature="com.baidu.location.LocationClient$b.run()V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;)Ljava/lang/Object;" replace-index="0" replace-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;)Ljava/lang/Object;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.if(Lcom/baidu/location/LocationClient;Z)Z" replace-index="0" replace-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.else(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;" replace-index="0" replace-signature="com.baidu.location.LocationClient.char(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.else(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;" replace-index="0" replace-signature="com.baidu.location.LocationClient.new(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.else(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;" replace-index="0" replace-signature="com.baidu.location.LocationClient.goto(Lcom/baidu/location/LocationClient;)Ljava/util/ArrayList;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;" replace-index="0" replace-signature="com.baidu.location.LocationClient.char(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;" replace-index="0" replace-signature="com.baidu.location.LocationClient.new(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;" replace-index="0" replace-signature="com.baidu.location.LocationClient.goto(Lcom/baidu/location/LocationClient;)Ljava/util/ArrayList;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.long(Lcom/baidu/location/LocationClient;)Ljava/util/ArrayList;" replace-index="0" replace-signature="com.baidu.location.LocationClient.char(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.long(Lcom/baidu/location/LocationClient;)Ljava/util/ArrayList;" replace-index="0" replace-signature="com.baidu.location.LocationClient.new(Lcom/baidu/location/LocationClient;)Landroid/os/Messenger;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.long(Lcom/baidu/location/LocationClient;)Ljava/util/ArrayList;" replace-index="0" replace-signature="com.baidu.location.LocationClient.goto(Lcom/baidu/location/LocationClient;)Ljava/util/ArrayList;"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.long(Lcom/baidu/location/LocationClient;)Ljava/util/ArrayList;" replace-index="1" replace-signature="com.baidu.location.LocationClient.goto(Lcom/baidu/location/LocationClient;)Ljava/util/ArrayList;"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.long(Lcom/baidu/location/LocationClient;)Ljava/util/ArrayList;" replace-index="0" replace-signature="com.baidu.location.LocationClient.byte(Lcom/baidu/location/LocationClient;)Lcom/baidu/location/LocationClient$a;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;)Lcom/baidu/location/LocationClient$a;" replace-index="1" replace-signature="com.baidu.location.LocationClient.goto(Lcom/baidu/location/LocationClient;)Ljava/util/ArrayList;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;)Lcom/baidu/location/LocationClient$a;" replace-index="0" replace-signature="com.baidu.location.LocationClient.byte(Lcom/baidu/location/LocationClient;)Lcom/baidu/location/LocationClient$a;"/>
+    </Method>
+    <Method signature="com.baidu.location.LocationClient.new(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.l(Landroid/os/Message;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.q(Landroid/os/Message;)V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.SunnycombActivityBase.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.SunnycombActivityBase.startBaidu()V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.mood.MoodActivity.StartLoad()V">
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getLon()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getStrLon()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.getLat()Ljava/lang/String;" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.getStrLat()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.hex.HexActivity.startGps()V">
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.gps.GpsLocation.start(Landroid/app/Activity;Lcom/weathernews/sunnycomb/gps/GpsLocation$GpsLocationListener;)V" replace-index="0" replace-signature="com.weathernews.sunnycomb.Sunnycomb.startGps(Lcom/weathernews/sunnycomb/Sunnycomb$GpsLocationListener;)V"/>
+        <Remove-Method index="0" signature="com.weathernews.sunnycomb.gps.GpsLocation.setAutoRevGeo(Z)V"/>
+        <Remove-Method index="0" signature="com.weathernews.sunnycomb.gps.GpsLocation.setReload(Z)V"/>
+    </Method>
+    <Method signature="com.baidu.location.f.onBind(Landroid/content/Intent;)Landroid/os/IBinder;">
+        <Replace-Method original-index="0" original-signature="android.os.Messenger.getBinder()Landroid/os/IBinder;" replace-index="0" replace-signature="com.baidu.location.LLSInterface.onBind(Landroid/content/Intent;)Landroid/os/IBinder;"/>
+        <Remove-Method index="0" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.content.Intent.getExtras()Landroid/os/Bundle;"/>
+        <Remove-Method index="0" signature="com.baidu.location.ap.bD()Lcom/baidu/location/ap;"/>
+        <Remove-Method index="1" signature="com.baidu.location.ap.bD()Lcom/baidu/location/ap;"/>
+    </Method>
+    <Method signature="com.baidu.location.LocationClient.if(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.j(Landroid/os/Message;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.r(Landroid/os/Message;)V"/>
+    </Method>
+    <Method signature="com.baidu.location.f.onDestroy()V">
+        <Add-Method index="0" signature="com.baidu.location.LLSInterface.onDestroy()V"/>
+        <Remove-Method index="0" signature="com.baidu.location.f$a.sendEmptyMessage(I)Z"/>
+        <Remove-Method index="0" signature="com.baidu.location.ai.bb()Lcom/baidu/location/ai;"/>
+        <Remove-Method index="0" signature="com.baidu.location.d.new()Lcom/baidu/location/d;"/>
+        <Remove-Method index="0" signature="com.baidu.location.m.D()Lcom/baidu/location/m;"/>
+        <Remove-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.baidu.location.m.C()V"/>
+        <Remove-Method index="0" signature="com.baidu.location.d.int()V"/>
+        <Remove-Method index="0" signature="com.baidu.location.ai.bg()V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.hex.HexActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.hex.HexActivity.getApplication()Landroid/app/Application;"/>
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.Sunnycomb.setLocationOption(Z)Lcom/baidu/location/LocationClientOption;"/>
+        <Add-Method index="0" signature="com.baidu.location.LocationClient.setLocOption(Lcom/baidu/location/LocationClientOption;)V"/>
+        <Add-Method index="0" signature="com.baidu.location.LocationClient.start()V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.hex.HexActivity.access$39(Lcom/weathernews/sunnycomb/hex/HexActivity;)V">
+        <Replace-Method original-index="0" original-signature="com.weathernews.sunnycomb.hex.HexActivity.capture()V" replace-index="0" replace-signature="com.weathernews.sunnycomb.hex.HexActivity.initAndShowTutorialView()V"/>
+    </Method>
+    <Method signature="com.baidu.location.GeofenceClient.if(Lcom/baidu/location/GeofenceClient;Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.GeofenceClient.for(Ljava/lang/String;)V" replace-index="0" replace-signature="com.baidu.location.GeofenceClient.int(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.weathernews.sunnycomb.mood.MoodActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.mood.MoodActivity.getApplication()Landroid/app/Application;"/>
+        <Add-Method index="0" signature="com.weathernews.sunnycomb.Sunnycomb.setLocationOption(Z)Lcom/baidu/location/LocationClientOption;"/>
+        <Add-Method index="0" signature="com.baidu.location.LocationClient.setLocOption(Lcom/baidu/location/LocationClientOption;)V"/>
+        <Add-Method index="0" signature="com.baidu.location.LocationClient.start()V"/>
+    </Method>
+    <Method signature="com.baidu.location.LocationClient.byte(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.i(Landroid/os/Message;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.l(Landroid/os/Message;)V"/>
+    </Method>
+    <Method signature="com.baidu.location.LocationClient$a.handleMessage(Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.char(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.case(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.char(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.char(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.char(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)Z"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.char(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.byte(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.case(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.byte(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.byte(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.byte(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)Z"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.byte(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.if(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.case(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.if(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.if(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.if(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)Z"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.if(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.new(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.case(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.new(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.new(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.new(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)Z"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.new(Lcom/baidu/location/LocationClient;)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.goto(Lcom/baidu/location/LocationClient;)Lcom/baidu/location/LocationClientOption;" replace-index="0" replace-signature="com.baidu.location.LocationClient.else(Lcom/baidu/location/LocationClient;)Lcom/baidu/location/LocationClientOption;"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.goto(Lcom/baidu/location/LocationClient;)Lcom/baidu/location/LocationClientOption;" replace-index="1" replace-signature="com.baidu.location.LocationClient.else(Lcom/baidu/location/LocationClient;)Lcom/baidu/location/LocationClientOption;"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z" replace-index="0" replace-signature="com.baidu.location.LocationClient.case(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z" replace-index="0" replace-signature="com.baidu.location.LocationClient.case(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z" replace-index="0" replace-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z" replace-index="0" replace-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z" replace-index="0" replace-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)Z"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z" replace-index="1" replace-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)Z"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.int(Lcom/baidu/location/LocationClient;Z)Z" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.case(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.case(Lcom/baidu/location/LocationClient;Landroid/os/Message;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)V" replace-index="0" replace-signature="com.baidu.location.LocationClient.try(Lcom/baidu/location/LocationClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)V" replace-index="1" replace-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)Z"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)V" replace-index="1" replace-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)Z"/>
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)V" replace-index="1" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.baidu.location.LocationClient.for(Lcom/baidu/location/LocationClient;Z)V" replace-index="1" replace-signature="com.baidu.location.LocationClient.do(Lcom/baidu/location/LocationClient;Z)V"/>
+    </Method>
+    <Method signature="com.baidu.location.f.onCreate()V">
+        <Add-Method index="0" signature="com.baidu.location.f.getApplicationContext()Landroid/content/Context;"/>
+        <Add-Method index="0" signature="com.baidu.location.f.getClassLoader()Ljava/lang/ClassLoader;"/>
+        <Add-Method index="0" signature="dalvik.system.DexClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;"/>
+        <Add-Method index="0" signature="com.baidu.location.LLSInterface.getVersion()D"/>
+        <Add-Method index="1" signature="com.baidu.location.LLSInterface.getVersion()D"/>
+        <Add-Method index="0" signature="com.baidu.location.LLSInterface.onCreate(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="java.lang.System.currentTimeMillis()J"/>
+        <Add-Method index="0" signature="com.baidu.location.ab.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="com.baidu.location.c.goto()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.baidu.location.c.goto()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="com.baidu.location.c.goto()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="com.baidu.location.c.goto()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="1" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.io.File.exists()Z"/>
+        <Add-Method index="1" signature="java.io.File.exists()Z"/>
+        <Add-Method index="0" signature="java.io.File.delete()Z"/>
+        <Add-Method index="0" signature="java.io.File.renameTo(Ljava/io/File;)Z"/>
+        <Add-Method index="0" signature="dalvik.system.DexClassLoader.&lt;init&gt;(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V"/>
+        <Add-Method index="0" signature="java.lang.Class.newInstance()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.baidu.location.f$a.sendEmptyMessage(I)Z"/>
+        <Remove-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.baidu.location.af.a()Landroid/os/HandlerThread;"/>
+        <Remove-Method index="0" signature="com.baidu.location.f$a.&lt;init&gt;(Lcom/baidu/location/f;Landroid/os/Looper;)V"/>
+        <Remove-Method index="0" signature="android.os.Messenger.&lt;init&gt;(Landroid/os/Handler;)V"/>
+        <Remove-Method index="0" signature="android.os.Process.myPid()I"/>
+        <Remove-Method index="0" signature="android.os.HandlerThread.getLooper()Landroid/os/Looper;"/>
+    </Method>
+    <Method signature="com.baidu.location.LocationClient.case(Lcom/baidu/location/LocationClient;)V">
+        <Replace-Method original-index="0" original-signature="com.baidu.location.LocationClient.bM()V" replace-index="0" replace-signature="com.baidu.location.LocationClient.cA()V"/>
+    </Method>
+</Apk>

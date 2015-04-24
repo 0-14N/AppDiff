@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="hk.cloudtech.cloudcall" pkg="hk.cloudtech.cloudcall">
+    <Add-Class signature="Lcom/fw/bn/P" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lhk/cloudcall/adv/feiwo/R$id" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/M" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/G" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/AdReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/aj" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lhk/cloudcall/adv/feiwo/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/D" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/I" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/B" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/AdBanner" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/K" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/F" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/E" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/R" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/W" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/S" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/H" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/z" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/af" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/h" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/RecevieAdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/L" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/ae" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/ai" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lhk/cloudcall/adv/feiwo/FeiwoAdvFactory" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/X" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/Y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/T" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/A" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/WebViewActivity$1" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lhk/cloudcall/adv/feiwo/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/O" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lhk/cloudcall/adv/feiwo/R" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/C" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/U" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/V" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/J" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/Z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/j" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/N" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/ad" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/a/a/a" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/Q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/b" super-signatures="Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/WebViewActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La/a/a/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/fw/bn/c" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Method signature="org.linphone.core.LinphoneCoreFactoryImpl.createLinphoneCore(Lorg/linphone/core/LinphoneCoreListener;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Lorg/linphone/core/LinphoneCore;">
+        <Remove-Method index="0" signature="org.linphone.core.LinphoneCoreException.&lt;init&gt;(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="com.c.a.a.a.a.a.h.a(Ljava/io/File;Ljava/io/File;JI)V">
+        <Remove-Method index="0" signature="com.c.a.c.e.a(Ljava/lang/Throwable;)V"/>
+        <Remove-Method index="0" signature="com.c.a.a.a.a.a.h.a(Ljava/io/File;Ljava/io/File;JI)V"/>
+    </Method>
+    <Method signature="com.c.a.b.p.d()Landroid/graphics/Bitmap;"/>
+    <Method signature="hk.cloudtech.cloudcall.ui.BalanceActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.i.h()Z" replace-index="0" replace-signature="hk.cloudcall.adv.i.b()Z"/>
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.i.i()[Ljava/lang/String;" replace-index="0" replace-signature="hk.cloudcall.adv.i.c()[Ljava/lang/String;"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.xmpp.bf.a(Ljava/lang/String;I)V">
+        <Remove-Method index="0" signature="org.b.a.aq.printStackTrace()V"/>
+    </Method>
+    <Method signature="org.linphone.LinphoneManager.newOutgoingCall(Lorg/linphone/LinphoneManager$AddressType;)V">
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager$ListenerDispatcher.tryingNewOutgoingCallButWrongDestinationAddress()V"/>
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager$ListenerDispatcher.tryingNewOutgoingCallButCannotGetCallParameters()V"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.ui.ShakeActivity.b([Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.i.i()[Ljava/lang/String;" replace-index="0" replace-signature="hk.cloudcall.adv.i.c()[Ljava/lang/String;"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.RegisterCodeService.onCreateLinphoneManager(Lhk/cloudcall/sipstack/b/a;)V">
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager$LinphoneConfigException.printStackTrace()V"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.tab.MoreTabActivity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.h.f()Z" replace-index="0" replace-signature="hk.cloudcall.adv.h.a()Z"/>
+        <Replace-Method original-index="1" original-signature="hk.cloudcall.adv.h.f()Z" replace-index="1" replace-signature="hk.cloudcall.adv.h.a()Z"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.ui.ShakeActivity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.h.f()Z" replace-index="0" replace-signature="hk.cloudcall.adv.h.a()Z"/>
+        <Replace-Method original-index="1" original-signature="hk.cloudcall.adv.h.f()Z" replace-index="1" replace-signature="hk.cloudcall.adv.h.a()Z"/>
+    </Method>
+    <Method signature="com.taobao.newxp.view.handler.umwall.AlimamaWall.staticBackEvent()V">
+        <Remove-Method index="0" signature="java.lang.CloneNotSupportedException.printStackTrace()V"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.ui.BalanceActivity.b([Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.i.i()[Ljava/lang/String;" replace-index="0" replace-signature="hk.cloudcall.adv.i.c()[Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.taobao.munion.base.volley.g.run()V">
+        <Remove-Method index="0" signature="com.taobao.munion.base.volley.g.a(Lcom/taobao/munion/base/volley/l;Lcom/taobao/munion/base/volley/s;)V"/>
+        <Remove-Method index="0" signature="com.taobao.munion.base.volley.g.a(Lcom/taobao/munion/base/volley/l;Lcom/taobao/munion/base/volley/s;)V"/>
+    </Method>
+    <Method signature="org.linphone.LinphoneManager.startLibLinphone(Landroid/content/Context;Lhk/cloudcall/sipstack/b/a;Lhk/cloudcall/sipstack/a;ZZ)V"/>
+    <Method signature="hk.cloudtech.cloudcall.n.r.a(Landroid/content/Context;Lhk/cloudtech/cloudcall/bo/v;)Ljava/lang/Object;"/>
+    <Method signature="hk.cloudtech.cloudcall.ah.run()V">
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager$LinphoneConfigException.printStackTrace()V"/>
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager$LinphoneConfigException.printStackTrace()V"/>
+    </Method>
+    <Method signature="org.b.a.ap.B()V">
+        <Remove-Method index="0" signature="java.io.Reader.close()V"/>
+        <Remove-Method index="0" signature="java.io.Writer.close()V"/>
+        <Remove-Method index="0" signature="org.b.a.w.c()V"/>
+        <Remove-Method index="0" signature="org.b.a.s.c()V"/>
+        <Remove-Method index="0" signature="java.net.Socket.close()V"/>
+        <Remove-Method index="0" signature="org.b.a.ap.b(Z)V"/>
+    </Method>
+    <Method signature="org.linphone.SipStackService$RegisterHandler.handleMessage(Landroid/os/Message;)V">
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager$LinphoneConfigException.printStackTrace()V"/>
+    </Method>
+    <Method signature="com.taobao.newxp.controller.e.a()Ljava/util/List;">
+        <Remove-Method index="0" signature="com.taobao.newxp.common.Log.b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.xmpp.bf.a(Lhk/cloudtech/cloudcall/e/a;)Lorg/b/a/ap;">
+        <Remove-Method index="0" signature="org.b.a.aq.printStackTrace()V"/>
+    </Method>
+    <Method signature="com.taobao.munion.base.volley.a.a.a(Ljava/lang/String;Lcom/taobao/munion/base/volley/l;Lcom/taobao/munion/base/volley/s;)V"/>
+    <Method signature="org.linphone.SipStackService$8.run()V">
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager$LinphoneConfigException.printStackTrace()V"/>
+    </Method>
+    <Method signature="com.taobao.munion.base.caches.g.a(Lcom/taobao/munion/base/caches/i;Ljava/nio/ByteBuffer;)Z">
+        <Remove-Method index="0" signature="com.taobao.munion.base.caches.p.printStackTrace()V"/>
+        <Remove-Method index="0" signature="com.taobao.munion.base.caches.g.e()Z"/>
+    </Method>
+    <Method signature="org.linphone.LinphoneManager.initFromConf(Landroid/content/Context;Lhk/cloudcall/sipstack/b/a;ZLjava/lang/String;)V">
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager$LinphoneConfigException.&lt;init&gt;(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Remove-Method index="1" signature="org.linphone.LinphoneManager$LinphoneConfigException.&lt;init&gt;(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.n.r.a(Landroid/content/Context;Lhk/cloudtech/cloudcall/bo/v;Z)Ljava/lang/Object;"/>
+    <Method signature="org.linphone.RegisterCodeService$RegisterHandler.handleMessage(Landroid/os/Message;)V">
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager$LinphoneConfigException.printStackTrace()V"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.ui.BalanceActivity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.h.f()Z" replace-index="0" replace-signature="hk.cloudcall.adv.h.a()Z"/>
+        <Replace-Method original-index="1" original-signature="hk.cloudcall.adv.h.f()Z" replace-index="1" replace-signature="hk.cloudcall.adv.h.a()Z"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.data.ae.a(Landroid/content/Context;Lhk/cloudtech/cloudcall/bo/ag;Z)Z">
+        <Remove-Method index="0" signature="org.json.JSONException.printStackTrace()V"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.tab.MoreTabActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.i.h()Z" replace-index="0" replace-signature="hk.cloudcall.adv.i.b()Z"/>
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.i.i()[Ljava/lang/String;" replace-index="0" replace-signature="hk.cloudcall.adv.i.c()[Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.c.a.a.a.a.a.h.a(Ljava/lang/String;)Ljava/io/File;">
+        <Remove-Method index="0" signature="com.c.a.c.e.a(Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.tab.MoreTabActivity.a([Ljava/lang/String;Z)V">
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.i.g()Z" replace-index="0" replace-signature="hk.cloudcall.adv.i.a()Z"/>
+        <Replace-Method original-index="1" original-signature="hk.cloudcall.adv.i.g()Z" replace-index="1" replace-signature="hk.cloudcall.adv.i.a()Z"/>
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.i.i()[Ljava/lang/String;" replace-index="0" replace-signature="hk.cloudcall.adv.i.c()[Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.taobao.munion.base.utdid.b.a.d.a(Ljava/lang/String;I)Lcom/taobao/munion/base/utdid/b/a/b;">
+        <Remove-Method index="0" signature="java.io.FileNotFoundException.printStackTrace()V"/>
+        <Remove-Method index="0" signature="java.io.IOException.printStackTrace()V"/>
+        <Remove-Method index="0" signature="java.lang.String.&lt;init&gt;([BIILjava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.io.FileInputStream.read([B)I"/>
+        <Remove-Method index="0" signature="java.io.FileInputStream.available()I"/>
+    </Method>
+    <Method signature="com.taobao.newxp.controller.e.a(Ljava/util/List;ZI)V">
+        <Remove-Method index="0" signature="com.taobao.newxp.common.Log.b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V"/>
+    </Method>
+    <Method signature="com.c.a.b.p.e()Z">
+        <Remove-Method index="0" signature="com.c.a.c.e.a(Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="org.linphone.LinphoneManager.acceptCallWithParams(Lorg/linphone/core/LinphoneCall;Lorg/linphone/core/LinphoneCallParams;)Z">
+        <Remove-Method index="0" signature="hk.cloudcall.common.log.a.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.ui.view.CallButton.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="hk.cloudtech.cloudcall.ui.view.CallButton.a()V"/>
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager.terminateCall()V"/>
+    </Method>
+    <Method signature="hk.cloudtech.cloudcall.ui.ShakeActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.i.h()Z" replace-index="0" replace-signature="hk.cloudcall.adv.i.b()Z"/>
+        <Replace-Method original-index="0" original-signature="hk.cloudcall.adv.i.i()[Ljava/lang/String;" replace-index="0" replace-signature="hk.cloudcall.adv.i.c()[Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.c.a.a.a.a.a.a.c()V">
+        <Remove-Method index="0" signature="java.util.LinkedHashMap.size()I"/>
+    </Method>
+    <Method signature="com.c.a.b.p.run()V">
+        <Remove-Method index="0" signature="com.c.a.b.p.g()V"/>
+        <Remove-Method index="0" signature="com.c.a.b.p.g()V"/>
+    </Method>
+    <Method signature="org.linphone.SipStackService.createLinphoneManager(Lhk/cloudcall/sipstack/b/a;Lhk/cloudcall/sipstack/a;ZZ)V">
+        <Remove-Method index="0" signature="org.linphone.LinphoneManager$LinphoneConfigException.printStackTrace()V"/>
+    </Method>
+</Apk>

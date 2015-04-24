@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="cn.bluesky.sudoku" pkg="cn.bluesky.sudoku">
+    <Add-Class signature="Lcom/feiwoone/banner/f/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/CoverAdComponent" super-signatures="Lcom/feiwothree/coverscreen/AdComponent#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/J" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/WA" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/l" super-signatures="Lcom/feiwothree/coverscreen/a/m#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/i" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/E" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/h" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/f" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/G" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/WebViewActivity$1" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/I" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/AdBanner" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/RecevieAdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/phonegap/DroidGap$5$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/p" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/h" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/A" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/C" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/E" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/B" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/D" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/AdReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/b" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/A" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/b" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/j" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/g/a" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/c" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/r" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/e" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/e" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/D" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/WebViewActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/B" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/x" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/u" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/F" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/H" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/b" super-signatures="Landroid/widget/FrameLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/SA" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/AdComponent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/z" super-signatures="Lcom/feiwothree/coverscreen/r#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/phonegap/DroidGap$11$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/e/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/SR" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/n" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/d/c" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/a/C" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwothree/coverscreen/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/f/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/feiwoone/banner/o" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.phonegap.DroidGap$4.run()V">
+        <Replace-Method original-index="0" original-signature="com.adsmogo.interstitial.AdsMogoInterstitial.showInterstitialAD()V" replace-index="0" replace-signature="com.feiwothree.coverscreen.CoverAdComponent.showAd(Landroid/content/Context;)I"/>
+        <Remove-Method index="0" signature="com.adsmogo.interstitial.AdsMogoInterstitial.getInterstitialAdStart()Z"/>
+        <Remove-Method index="0" signature="android.util.Log.v(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$6.run()V">
+        <Remove-Method index="0" signature="java.util.Stack.push(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.clearHistory()V"/>
+        <Remove-Method index="0" signature="com.phonegap.CallbackServer.init(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.util.Stack.size()I"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap.getStringProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.phonegap.DroidGap.getStringProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.length()I"/>
+        <Remove-Method index="0" signature="java.lang.String.indexOf(I)I"/>
+        <Remove-Method index="0" signature="java.lang.String.substring(II)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.substring(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap.spinnerStart(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.loadUrl(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.phonegap.CallbackServer.reinit(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.phonegap.api.PluginManager.reinit()V"/>
+        <Remove-Method index="0" signature="com.phonegap.CallbackServer.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.phonegap.api.PluginManager.&lt;init&gt;(Landroid/webkit/WebView;Lcom/phonegap/api/PhonegapActivity;)V"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap$6$1.&lt;init&gt;(Lcom/phonegap/DroidGap$6;Lcom/phonegap/DroidGap;ILjava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.lang.Thread.&lt;init&gt;(Ljava/lang/Runnable;)V"/>
+        <Remove-Method index="0" signature="java.lang.Thread.start()V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap.onDestroy()V">
+        <Add-Method index="0" signature="com.feiwothree.coverscreen.CoverAdComponent.destory(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$5.run()V">
+        <Replace-Method original-index="0" original-signature="com.phonegap.DroidGap.setFullScreen()V" replace-index="0" replace-signature="android.webkit.WebView.loadUrl(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap.init()V"/>
+        <Add-Method index="0" signature="java.util.Stack.push(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="android.webkit.WebView.clearHistory()V"/>
+        <Add-Method index="0" signature="com.phonegap.CallbackServer.init(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.util.Stack.size()I"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap.getStringProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.phonegap.DroidGap.getStringProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.length()I"/>
+        <Add-Method index="0" signature="java.lang.String.indexOf(I)I"/>
+        <Add-Method index="0" signature="java.lang.String.substring(II)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.substring(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap.spinnerStart(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.phonegap.CallbackServer.reinit(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.phonegap.api.PluginManager.reinit()V"/>
+        <Add-Method index="0" signature="com.phonegap.CallbackServer.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="com.phonegap.api.PluginManager.&lt;init&gt;(Landroid/webkit/WebView;Lcom/phonegap/api/PhonegapActivity;)V"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap$5$1.&lt;init&gt;(Lcom/phonegap/DroidGap$5;Lcom/phonegap/DroidGap;ILjava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.Thread.&lt;init&gt;(Ljava/lang/Runnable;)V"/>
+        <Add-Method index="0" signature="java.lang.Thread.start()V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$10.run()V">
+        <Add-Method index="0" signature="android.webkit.WebView.setVisibility(I)V"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap.displayError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap.showWebPage(Ljava/lang/String;ZZLjava/util/HashMap;)V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap.loadUrlIntoView(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.phonegap.DroidGap$6.&lt;init&gt;(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V" replace-index="0" replace-signature="com.phonegap.DroidGap$5.&lt;init&gt;(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$7.run()V">
+        <Add-Method index="0" signature="java.lang.InterruptedException.printStackTrace()V"/>
+        <Add-Method index="0" signature="java.lang.Object.wait(J)V"/>
+        <Add-Method index="0" signature="com.phonegap.api.LOG.d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V"/>
+        <Remove-Method index="0" signature="com.phonegap.DroidGap.init()V"/>
+    </Method>
+    <Method signature="com.phonegap.DroidGap$11.run()V">
+        <Replace-Method original-index="0" original-signature="android.webkit.WebView.setVisibility(I)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="android.webkit.WebView.setVisibility(I)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="0" original-signature="com.phonegap.DroidGap.displayError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setCancelable(Z)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="com.phonegap.DroidGap$11$1.&lt;init&gt;(Lcom/phonegap/DroidGap$11;ZLcom/phonegap/DroidGap;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.create()Landroid/app/AlertDialog;"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+</Apk>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.xnview.XnGif" pkg="com.xnview.XnGif">
+    <Method signature="com.xnview.XnGifBase.ShareActivity.initAds()V">
+        <Remove-Method index="0" signature="com.google.android.gms.ads.AdView.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+        <Remove-Method index="0" signature="com.google.android.gms.ads.InterstitialAd.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+    </Method>
+</Apk>

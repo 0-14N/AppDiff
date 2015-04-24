@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.nexstreaming.app.bach" pkg="com.nexstreaming.app.bach">
+    <Method signature="com.nexstreaming.app.bach.widget.e.run()V">
+        <Replace-Method original-index="0" original-signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)V" replace-index="0" replace-signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;I)V"/>
+        <Replace-Method original-index="0" original-signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)V" replace-index="0" replace-signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;I)V"/>
+        <Replace-Method original-index="0" original-signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)V" replace-index="0" replace-signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;I)V"/>
+        <Replace-Method original-index="0" original-signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)V" replace-index="0" replace-signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;I)V"/>
+        <Add-Method index="0" signature="com.nexstreaming.app.bach.widget.e.sleep(J)V"/>
+        <Add-Method index="0" signature="com.nexstreaming.app.bach.widget.e.isInterrupted()Z"/>
+        <Add-Method index="1" signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;I)V"/>
+        <Add-Method index="0" signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)I"/>
+        <Add-Method index="1" signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)I"/>
+        <Add-Method index="0" signature="com.nexstreaming.app.bach.widget.e.sleep(J)V"/>
+        <Add-Method index="0" signature="com.nexstreaming.app.bach.widget.e.isInterrupted()Z"/>
+        <Add-Method index="1" signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;I)V"/>
+        <Add-Method index="0" signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)I"/>
+        <Add-Method index="1" signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)I"/>
+    </Method>
+    <Method signature="com.nexstreaming.app.bach.widget.f.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.nexstreaming.app.bach.widget.NexAdImageView.b(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)I" replace-index="0" replace-signature="com.nexstreaming.app.bach.widget.NexAdImageView.a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)I"/>
+    </Method>
+</Apk>

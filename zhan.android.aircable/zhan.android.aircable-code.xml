@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="zhan.android.aircable" pkg="zhan.android.aircable">
+    <Method signature="zhan.android.aircable.fragment.WebViewSupport.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="cn.waps.b.a(Landroid/content/Context;)Lcn/waps/b;"/>
+    </Method>
+    <Method signature="zhan.android.aircable.BaseActivity.onResume()V">
+        <Add-Method index="0" signature="zhan.android.aircable.BaseActivity.b()V"/>
+        <Remove-Method index="0" signature="zhan.android.aircable.BaseActivity.d()V"/>
+    </Method>
+    <Method signature="zhan.android.aircable.MainTabs.a(Ljava/lang/String;IILjava/lang/Class;)V">
+        <Replace-Method original-index="0" original-signature="zhan.android.aircable.am.a(Landroid/widget/TabHost$TabSpec;Ljava/lang/Class;)V" replace-index="0" replace-signature="zhan.android.aircable.ai.a(Landroid/widget/TabHost$TabSpec;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="zhan.android.aircable.MainTabs.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="zhan.android.aircable.am.&lt;init&gt;(Landroid/support/v4/app/FragmentActivity;Landroid/widget/TabHost;)V" replace-index="0" replace-signature="zhan.android.aircable.ai.&lt;init&gt;(Landroid/support/v4/app/FragmentActivity;Landroid/widget/TabHost;)V"/>
+        <Remove-Method index="0" signature="cn.waps.b.a(Landroid/content/Context;)Lcn/waps/b;"/>
+        <Remove-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="java.lang.String.trim()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="cn.waps.b.b(Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="zhan.android.aircable.BaseActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="cn.waps.b.a(Landroid/content/Context;)Lcn/waps/b;"/>
+        <Remove-Method index="0" signature="cn.waps.b.a(Landroid/content/Context;)Lcn/waps/b;"/>
+    </Method>
+    <Method signature="zhan.android.aircable.BaseActivity.c()V">
+        <Replace-Method original-index="0" original-signature="zhan.android.aircable.fragment.i.a()V" replace-index="0" replace-signature="zhan.android.aircable.fragment.i.b()V"/>
+        <Replace-Method original-index="0" original-signature="zhan.android.aircable.BaseActivity.startService(Landroid/content/Intent;)Landroid/content/ComponentName;" replace-index="1" replace-signature="zhan.android.aircable.BaseActivity.stopService(Landroid/content/Intent;)Z"/>
+        <Replace-Method original-index="1" original-signature="zhan.android.aircable.BaseActivity.startService(Landroid/content/Intent;)Landroid/content/ComponentName;" replace-index="1" replace-signature="zhan.android.aircable.BaseActivity.stopService(Landroid/content/Intent;)Z"/>
+        <Replace-Method original-index="1" original-signature="zhan.android.aircable.BaseActivity.bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z" replace-index="1" replace-signature="zhan.android.aircable.BaseActivity.unbindService(Landroid/content/ServiceConnection;)V"/>
+        <Add-Method index="0" signature="zhan.android.aircable.BaseActivity.stopService(Landroid/content/Intent;)Z"/>
+        <Add-Method index="0" signature="android.util.Log.v(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="zhan.android.aircable.BaseActivity.unbindService(Landroid/content/ServiceConnection;)V"/>
+        <Remove-Method index="0" signature="zhan.android.aircable.BaseActivity.bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z"/>
+        <Remove-Method index="0" signature="zhan.android.aircable.BaseActivity.a()V"/>
+    </Method>
+    <Method signature="zhan.android.aircable.MainTabs.onResume()V">
+        <Replace-Method original-index="0" original-signature="zhan.android.aircable.al.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;" replace-index="0" replace-signature="zhan.android.aircable.ah.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;"/>
+        <Replace-Method original-index="0" original-signature="zhan.android.aircable.al.&lt;init&gt;(Lzhan/android/aircable/MainTabs;B)V" replace-index="0" replace-signature="zhan.android.aircable.ah.&lt;init&gt;(Lzhan/android/aircable/MainTabs;B)V"/>
+        <Add-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getConfiguration()Landroid/content/res/Configuration;"/>
+        <Add-Method index="0" signature="java.util.Locale.getCountry()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="1" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="2" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="zhan.android.common.a.h(Landroid/content/Context;)Z"/>
+    </Method>
+    <Method signature="zhan.android.common.a.a(Landroid/content/Context;)Ljava/lang/String;">
+        <Replace-Method original-index="0" original-signature="zhan.android.common.a.j(Landroid/content/Context;)Ljava/lang/String;" replace-index="0" replace-signature="zhan.android.common.a.i(Landroid/content/Context;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="zhan.android.common.a.b(Landroid/content/Context;)Z">
+        <Replace-Method original-index="0" original-signature="zhan.android.common.a.l(Landroid/content/Context;)I" replace-index="0" replace-signature="zhan.android.common.a.k(Landroid/content/Context;)I"/>
+    </Method>
+    <Method signature="zhan.android.aircable.fragment.WebViewSupport.onDestroy()V">
+        <Remove-Method index="0" signature="cn.waps.b.a(Landroid/content/Context;)Lcn/waps/b;"/>
+        <Remove-Method index="0" signature="cn.waps.b.d()V"/>
+    </Method>
+    <Method signature="zhan.android.aircable.BaseActivity.onDestroy()V">
+        <Remove-Method index="0" signature="cn.waps.b.a(Landroid/content/Context;)Lcn/waps/b;"/>
+        <Remove-Method index="0" signature="cn.waps.b.d()V"/>
+        <Remove-Method index="0" signature="cn.waps.b.a(Landroid/content/Context;)Lcn/waps/b;"/>
+        <Remove-Method index="0" signature="cn.waps.b.d()V"/>
+    </Method>
+    <Method signature="zhan.android.aircable.af.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="cn.waps.b.a(Landroid/content/Context;)Lcn/waps/b;"/>
+        <Remove-Method index="0" signature="zhan.android.common.a.h(Landroid/content/Context;)Z"/>
+        <Remove-Method index="0" signature="zhan.android.aircable.MainTabs.b(Lzhan/android/aircable/MainTabs;)I"/>
+        <Remove-Method index="0" signature="cn.waps.b.a(ILcn/waps/e;)V"/>
+    </Method>
+</Apk>

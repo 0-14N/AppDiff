@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="app.diaryfree" pkg="app.diaryfree">
+    <Method signature="app.diary.db.record_collection.GetRecordsArray(JJ)Ljava/util/ArrayList;">
+        <Replace-Method original-index="0" original-signature="app.diary.db.record.&lt;init&gt;(Lapp/diary/db/dbinterface;ILjava/lang/Boolean;)V" replace-index="0" replace-signature="app.diary.db.record.&lt;init&gt;(Lapp/diary/db/dbinterface;I)V"/>
+        <Remove-Method index="0" signature="java.lang.Boolean.valueOf(Z)Ljava/lang/Boolean;"/>
+    </Method>
+    <Method signature="app.diaryfree.showrecord.onResume()V">
+        <Replace-Method original-index="0" original-signature="java.lang.Boolean.valueOf(Z)Ljava/lang/Boolean;" replace-index="0" replace-signature="app.diary.db.record.getTitle()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="app.diary.db.dbinterface.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="app.diary.db.record.&lt;init&gt;(Lapp/diary/db/dbinterface;I)V"/>
+        <Remove-Method index="0" signature="java.lang.String.length()I"/>
+        <Remove-Method index="0" signature="android.widget.TextView.setVisibility(I)V"/>
+        <Remove-Method index="1" signature="android.widget.TextView.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="app.diary.db.record.&lt;init&gt;(Lapp/diary/db/dbinterface;ILjava/lang/Boolean;)V"/>
+    </Method>
+    <Method signature="app.diaryfree.main.ShowList()V">
+        <Remove-Method index="0" signature="app.diary.db.record_collection.GetTotalRecordCount()I"/>
+    </Method>
+    <Method signature="app.diaryfree.newrecord.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="app.diary.db.record.&lt;init&gt;(Lapp/diary/db/dbinterface;I)V"/>
+        <Remove-Method index="0" signature="java.lang.Boolean.valueOf(Z)Ljava/lang/Boolean;"/>
+        <Remove-Method index="0" signature="app.diary.db.record.&lt;init&gt;(Lapp/diary/db/dbinterface;ILjava/lang/Boolean;)V"/>
+    </Method>
+    <Method signature="app.diaryfree.showrecord.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="java.lang.String.length()I"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.setVisibility(I)V"/>
+        <Remove-Method index="1" signature="android.widget.LinearLayout.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.addView(Landroid/view/View;)V"/>
+        <Remove-Method index="0" signature="java.lang.Boolean.valueOf(Z)Ljava/lang/Boolean;"/>
+        <Remove-Method index="0" signature="app.diary.db.dbinterface.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="app.diary.db.record.&lt;init&gt;(Lapp/diary/db/dbinterface;ILjava/lang/Boolean;)V"/>
+        <Remove-Method index="0" signature="app.diary.db.record.getNote()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdRequest.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.loadAd(Lcom/google/ads/AdRequest;)V"/>
+    </Method>
+</Apk>

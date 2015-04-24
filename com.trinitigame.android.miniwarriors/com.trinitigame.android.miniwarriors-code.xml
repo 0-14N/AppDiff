@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.trinitigame.android.miniwarriors" pkg="com.trinitigame.android.miniwarriors">
+    <Add-Class signature="Lcom/tencent/utils/Util" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/PKDialog$FbWebViewClient" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/Util$TBufferedOutputStream" super-signatures="Ljava/io/BufferedOutputStream#Ljava/io/FilterOutputStream#Ljava/io/OutputStream#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/a/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/o" super-signatures="Ljava/io/IOException#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager$DownLoadImp$3" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatService$StatTask" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatService$StatTask$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/IUploadFileCallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/DataConvert" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/RecordManager$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/HttpUtils$NetworkProxy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatDispatcher$1" super-signatures="Lorg/apache/http/impl/client/DefaultConnectionKeepAliveStrategy#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/RecordManager$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/QQAuth" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/OpenConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/QQAvatar" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/f$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/f$c" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/StatCommonHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/IUnipayServiceCallBack$Stub" super-signatures="Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/common/BaseApi$ApiTask" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/RecordManager$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plug/IUnipayService" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/Env$BasicEnv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/c$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/PKDialog$JsListener" super-signatures="Lcom/tencent/open/a$b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/event/PageView" super-signatures="Lcom/tencent/stat/event/Event#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthDialog$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/UnipayPlugTools$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/PKDialog" super-signatures="Lcom/tencent/open/b#Landroid/app/Dialog#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/a/b$a" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/b$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/LocationApi" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/dataprovider/DataType" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/event/AdditionEvent" super-signatures="Lcom/tencent/stat/event/Event#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/SocialApiIml$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/g$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/StatBase64$Coder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/UnipayPlugTools$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/c" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/StatConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/SocialApiIml$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/a/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener$1" super-signatures="Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener$ButtonListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/qzone/Albums" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/k$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatService$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/EasyListActivity" super-signatures="Landroid/app/ListActivity#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/a$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/IUnipayServiceCallBack$Stub$Proxy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/d$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatConfig$OnlineConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/Env" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/PKDialog$OnTimeListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/OpenConfig$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/SocialApiIml" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager$DownLoadImp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthAgent$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/event/CustomEvent$Key" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/event/EventType" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/RC4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthDialog" super-signatures="Landroid/app/Dialog#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/dataprovider/DataType$TextOnly$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager$WeiyunFileType" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/b/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/HttpUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/HttpUtils$MyX509TrustManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/Util$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatService" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TDialog$OnTimeListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/a/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TDialog$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/MtaSDkException" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/event/Event" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/b/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/common/BaseApi$TempRequestListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/UnipayPlugAPI$2" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/f$b" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthAgent$RequestListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/share/QzoneShare" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/SdkProtection" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/AsynLoadImg$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$d" super-signatures="Lcom/tencent/open/TaskGuide$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/Env$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/UnipayPlugTools" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity$a" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plug/IUnipayService$Stub$Proxy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/b$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatAppMonitor" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/StatCommonHelper$RootCmd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/share/QQShare$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/RecordManager" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatDispatcher$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatService$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatReportStrategy" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/LocationApi$TaskRequestListener" super-signatures="Lcom/tencent/tauth/LocationApi$BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TDialog$FbWebViewClient" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/c$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener$ButtonListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TDialog$JsListener" super-signatures="Lcom/tencent/open/a$b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/p" super-signatures="Ljava/io/IOException#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TDialog" super-signatures="Lcom/tencent/open/b#Landroid/app/Dialog#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/c$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthMap$Auth" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/SystemUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$d$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/EasyActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/AsynLoadImgBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/IUiListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/AsynLoadImg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthMap" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/wpa/WPA" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/dataprovider/DataType$TextAndMediaPath$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthDialog$OnTimeListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/User" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/share/QQShare$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/LocationApi$BaseRequestListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/event/SessionEnv" super-signatures="Lcom/tencent/stat/event/Event#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/HttpUtils$CustomSSLSocketFactory" super-signatures="Lorg/apache/http/conn/ssl/SSLSocketFactory#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/b$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/share/a$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatService$StatTask$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/RecordManager$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/IGetFileListListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore$7$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$e" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/IDownLoadFileCallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/dataprovider/ErrorCode" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager$DownLoadImp$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthDialog$THandler" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/SosoLocationListener" super-signatures="Lcom/tencent/a/a/a/b#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/AsynLoadImg$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/b" super-signatures="Landroid/app/Dialog#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/dataprovider/Constants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TDialog$THandler" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/g$a" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/HttpUtils$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/share/QQShare" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/StatBase64" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/e$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/e$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/t/Weibo" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/trinitigame/android/az" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plug/IUnipayService$Stub" super-signatures="Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/common/BaseApi$TempRequestListener$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/UiError" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/a/c$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/common/Constants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager$UploadFileImp$3" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/StatLogger" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/event/CustomEvent" super-signatures="Lcom/tencent/stat/event/Event#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/share/a$3" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/PKDialog$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/qzone/Albums$AlbumSecurity" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/a" super-signatures="Lcom/tencent/b/a/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/a/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/LocationApi$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/QQToken" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/d$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/Util$Statistic" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/SocialApiIml$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/UnipayPlugAPI" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/g" super-signatures="Lcom/tencent/b/a/h#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore$StoredEvent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthAgent$2" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/HttpUtils$HttpStatusException" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/share/QzoneShare$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/d$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/share/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/c$1$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$i" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/TemporaryStorage" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/trinitigame/android/ay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/r" super-signatures="Ljava/io/IOException#Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/c" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/LbsAgent$OnGetLocationListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager$UploadFileImp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/share/a$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatDispatchCallback" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener$2" super-signatures="Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener$ButtonListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/Tencent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/LocationApi$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/RecordManager$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/StatPreferences" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/g$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthDialog$LoginWebViewClient" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/b" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/g$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/dataprovider/DataType$TextOnly" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/e$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/StatBase64$Decoder" super-signatures="Lcom/tencent/stat/common/StatBase64$Coder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$j$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/PKDialog$THandler" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/dataprovider/DataType$TextAndMediaPath" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/IUnipayServiceCallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/LocationApi$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/c$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/UserInfo" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/c" super-signatures="Lcom/tencent/b/a/f#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/event/ErrorEvent" super-signatures="Lcom/tencent/stat/event/Event#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager$DownLoadImp$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/event/MonitorStatEvent" super-signatures="Lcom/tencent/stat/event/Event#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity$QQAvatarImp" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/f$2" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/d$a" super-signatures="Landroid/telephony/PhoneStateListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/LbsAgent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/SocialApi" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$j" super-signatures="Lcom/tencent/open/TaskGuide$a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/UnipayPlugTools$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/a$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/AuthActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/b$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager$GetFileListListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/HttpUtils$NetworkUnavailableException" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/UnipayPlugTools$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager$UploadFileImp$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/common/StatBase64$Encoder" super-signatures="Lcom/tencent/stat/common/StatBase64$Coder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatDispatcher" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/share/a$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore$StatStoreHelper" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/unipay/plugsdk/UnipayPlugAPI$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthAgent$TokenListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/stat/StatStore$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/FileManager$UploadFileImp$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/b$1" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/utils/ServerSetting" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/SocialConstants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/TaskGuide$k" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/f$a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/b/a" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity$6$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/b/c/c$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/RecordManager$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/IRequestListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/b$b" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/common/AssistActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthDialog$JsListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/avatar/ImageActivity$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/open/SocialApiIml$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/common/BaseApi" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/a/b/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/dataprovider/DataType$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/trinitigame/android/ba" super-signatures="Lcom/trinitigame/android/aj#Landroid/view/SurfaceView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/auth/AuthAgent" super-signatures="Lcom/tencent/connect/common/BaseApi#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/weiyun/WeiyunFile" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/connect/dataprovider/CallbackManager" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.trinitigame.android.Triniti2DActivity.onStop()V">
+        <Remove-Method index="0" signature="com.chartboost.sdk.Chartboost.onStop(Landroid/app/Activity;)V"/>
+    </Method>
+    <Method signature="com.trinitigame.android.m.run()V">
+        <Add-Method index="0" signature="com.tencent.unipay.plugsdk.UnipayPlugAPI.setOfferId(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.tencent.unipay.plugsdk.UnipayPlugAPI.SaveGameCoinsWithoutNum(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[B)V"/>
+        <Add-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="1" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="2" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="3" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="4" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="5" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="6" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="7" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="8" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="1" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="2" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="3" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="4" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="5" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="6" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="7" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="8" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="9" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="10" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="11" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="12" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="13" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="14" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="15" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="16" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="17" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="18" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="19" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="20" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="4" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="5" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="6" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="7" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.trinitigame.android.Triniti2DActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.d()V" replace-index="0" replace-signature="com.tencent.unipay.plugsdk.UnipayPlugAPI.unbindUnipayService()V"/>
+        <Add-Method index="0" signature="com.trinitigame.android.ba.d()V"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.Chartboost.onDestroy(Landroid/app/Activity;)V"/>
+    </Method>
+    <Method signature="com.trinitigame.android.Triniti2DActivity.setPackageName(Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.a(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.trinitigame.android.ba.a(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.trinitigame.android.g.I(Ljava/lang/String;)Ljava/lang/String;">
+        <Remove-Method index="0" signature="com.google.android.gms.common.GooglePlayServicesUtil.isGooglePlayServicesAvailable(Landroid/content/Context;)I"/>
+    </Method>
+    <Method signature="com.trinitigame.android.ad.run()V">
+        <Add-Method index="0" signature="com.trinitigame.android.ae.&lt;init&gt;(Lcom/trinitigame/android/ad;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.trinitigame.android.ae.&lt;init&gt;(Lcom/trinitigame/android/ad;)V"/>
+    </Method>
+    <Method signature="com.trinitigame.android.c.d.a(Lcom/trinitigame/android/c/n;)V">
+        <Remove-Method index="0" signature="android.content.Intent.setPackage(Ljava/lang/String;)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="com.trinitigame.android.Triniti2DActivity.onResume()V">
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.b()V" replace-index="0" replace-signature="com.trinitigame.android.ba.b()V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.b()V" replace-index="0" replace-signature="com.trinitigame.android.ba.b()V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.f()V" replace-index="0" replace-signature="com.trinitigame.android.ba.b()V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.f()V" replace-index="0" replace-signature="com.trinitigame.android.ba.b()V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.b()V" replace-index="0" replace-signature="com.trinitigame.android.ba.b()V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.b()V" replace-index="0" replace-signature="com.trinitigame.android.ba.b()V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.f()V" replace-index="0" replace-signature="com.trinitigame.android.ba.b()V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.f()V" replace-index="0" replace-signature="com.trinitigame.android.ba.b()V"/>
+        <Add-Method index="0" signature="com.trinitigame.android.ba.f()V"/>
+        <Add-Method index="0" signature="com.trinitigame.android.av.c()V"/>
+        <Add-Method index="0" signature="com.trinitigame.android.ba.f()V"/>
+        <Add-Method index="0" signature="com.trinitigame.android.av.c()V"/>
+        <Remove-Method index="0" signature="com.tapjoy.TapjoyConnect.appResume()V"/>
+        <Remove-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.Chartboost.onResume(Landroid/app/Activity;)V"/>
+        <Remove-Method index="0" signature="com.trinitigame.android.as.c()V"/>
+        <Remove-Method index="0" signature="com.tapjoy.TapjoyConnect.getTapjoyConnectInstance()Lcom/tapjoy/TapjoyConnect;"/>
+        <Remove-Method index="0" signature="com.tapjoy.TapjoyConnect.appResume()V"/>
+        <Remove-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.Chartboost.onResume(Landroid/app/Activity;)V"/>
+        <Remove-Method index="0" signature="com.trinitigame.android.as.c()V"/>
+        <Remove-Method index="0" signature="com.tapjoy.TapjoyConnect.getTapjoyConnectInstance()Lcom/tapjoy/TapjoyConnect;"/>
+    </Method>
+    <Method signature="com.trinitigame.android.j.run()V">
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.g.a(Lcom/trinitigame/android/g;Ljava/lang/String;)V" replace-index="0" replace-signature="com.trinitigame.android.Triniti2DActivity.AndroidQuit()V"/>
+        <Add-Method index="0" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Remove-Method index="0" signature="com.trinitigame.android.a.b()I"/>
+        <Remove-Method index="0" signature="com.trinitigame.android.a.a()I"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.trinitigame.android.k.run()V">
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;" replace-index="0" replace-signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Replace-Method original-index="1" original-signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;" replace-index="1" replace-signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;" replace-index="0" replace-signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Replace-Method original-index="1" original-signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;" replace-index="1" replace-signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;" replace-index="0" replace-signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Replace-Method original-index="1" original-signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;" replace-index="1" replace-signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;" replace-index="0" replace-signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Replace-Method original-index="1" original-signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;" replace-index="1" replace-signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+    </Method>
+    <Method signature="com.trinitigame.android.Triniti2DActivity.onStart()V">
+        <Replace-Method original-index="0" original-signature="java.lang.String.equals(Ljava/lang/Object;)Z" replace-index="0" replace-signature="com.tencent.unipay.plugsdk.UnipayPlugAPI.bindUnipayService()V"/>
+        <Add-Method index="0" signature="com.tencent.unipay.plugsdk.UnipayPlugAPI.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.tencent.unipay.plugsdk.UnipayPlugAPI.setCallBack(Lcom/tencent/unipay/plugsdk/IUnipayServiceCallBack;)V"/>
+        <Remove-Method index="0" signature="com.chartboost.sdk.Chartboost.onStart(Landroid/app/Activity;)V"/>
+    </Method>
+    <Method signature="com.trinitigame.android.Triniti2DActivity.InitBilling(Ljava/lang/String;Ljava/util/ArrayList;)V">
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.x.&lt;init&gt;(Lcom/trinitigame/android/Triniti2DActivity;Ljava/util/ArrayList;)V" replace-index="0" replace-signature="com.trinitigame.android.ac.&lt;init&gt;(Lcom/trinitigame/android/Triniti2DActivity;Ljava/util/ArrayList;)V"/>
+    </Method>
+    <Method signature="android.support.v4.app.b.run()V">
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;Z)V" replace-index="0" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;Z)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;Z)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;Z)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;Z)V" replace-index="0" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;Z)V" replace-index="0" replace-signature="android.support.v4.app.n.b(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;Z)V" replace-index="0" replace-signature="android.support.v4.app.n.c(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;Z)V" replace-index="0" replace-signature="android.support.v4.app.n.d(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;Z)V" replace-index="0" replace-signature="android.support.v4.app.n.e(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;Z)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;Z)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.b(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.b(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.c(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.c(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.d(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.d(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.e(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="1" original-signature="android.support.v4.app.q.a(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.e(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.b(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;Z)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.b(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.b(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.b(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.b(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.c(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.b(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.d(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.b(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.e(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.c(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;Z)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.c(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.c(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.b(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.c(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.c(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.c(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.d(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.c(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.e(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.d(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;Z)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.d(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.d(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.b(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.d(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.c(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.d(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.d(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.d(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.e(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.e(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;Z)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.e(Landroid/support/v4/app/Fragment;II)V" replace-index="1" replace-signature="android.support.v4.app.n.a(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.e(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.b(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.e(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.c(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.e(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.d(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.e(Landroid/support/v4/app/Fragment;II)V" replace-index="0" replace-signature="android.support.v4.app.n.e(Landroid/support/v4/app/Fragment;II)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.a(IIIZ)V" replace-index="0" replace-signature="android.support.v4.app.n.a(IIIZ)V"/>
+        <Replace-Method original-index="0" original-signature="android.support.v4.app.q.b(Landroid/support/v4/app/b;)V" replace-index="0" replace-signature="android.support.v4.app.n.b(Landroid/support/v4/app/b;)V"/>
+    </Method>
+    <Method signature="com.trinitigame.android.l.run()V">
+        <Add-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="1" signature="com.trinitigame.android.g.c()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Add-Method index="0" signature="com.trinitigame.android.Triniti2DActivity.onClickLogin()V"/>
+        <Remove-Method index="0" signature="android.app.NotificationManager.cancelAll()V"/>
+    </Method>
+    <Method signature="com.trinitigame.android.miniwarriors.MiniWarriorsActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="1" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="com.trinitigame.android.Triniti2DActivity.InitChartboost(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="com.trinitigame.android.Triniti2DActivity.InitChartboost(Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.trinitigame.android.ae.run()V">
+        <Replace-Method original-index="0" original-signature="android.app.ProgressDialog.setCancelable(Z)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="android.app.ProgressDialog.setCancelable(Z)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="0" original-signature="android.app.ProgressDialog.show()V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Replace-Method original-index="0" original-signature="android.app.ProgressDialog.setMessage(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="android.app.ProgressDialog.setMessage(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="0" original-signature="android.app.ProgressDialog.setIndeterminate(Z)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="android.app.ProgressDialog.setIndeterminate(Z)V" replace-index="0" replace-signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.Triniti2DActivity.access$1()Landroid/content/Context;" replace-index="0" replace-signature="com.trinitigame.android.af.&lt;init&gt;(Lcom/trinitigame/android/ae;Landroid/widget/EditText;)V"/>
+        <Add-Method index="0" signature="android.widget.EditText.setInputType(I)V"/>
+        <Add-Method index="1" signature="android.widget.EditText.setInputType(I)V"/>
+        <Add-Method index="2" signature="android.widget.EditText.setInputType(I)V"/>
+        <Add-Method index="0" signature="android.widget.EditText.setText(Ljava/lang/CharSequence;)V"/>
+        <Add-Method index="0" signature="android.widget.EditText.setOnKeyListener(Landroid/view/View$OnKeyListener;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setCancelable(Z)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.widget.EditText.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="com.trinitigame.android.ag.&lt;init&gt;(Lcom/trinitigame/android/ae;Landroid/widget/EditText;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="com.trinitigame.android.ah.&lt;init&gt;(Lcom/trinitigame/android/ae;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Remove-Method index="0" signature="android.app.ProgressDialog.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.trinitigame.android.Triniti2DActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.setId(I)V" replace-index="0" replace-signature="com.trinitigame.android.ba.setId(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.setId(I)V" replace-index="0" replace-signature="com.trinitigame.android.ba.setId(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.w.&lt;init&gt;(Lcom/trinitigame/android/Triniti2DActivity;)V" replace-index="0" replace-signature="com.trinitigame.android.aa.&lt;init&gt;(Lcom/trinitigame/android/Triniti2DActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.w.&lt;init&gt;(Lcom/trinitigame/android/Triniti2DActivity;)V" replace-index="0" replace-signature="com.trinitigame.android.aa.&lt;init&gt;(Lcom/trinitigame/android/Triniti2DActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.at.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.aw.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.at.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.av.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.at.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.aw.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.at.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.av.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.as.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.aw.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.as.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.av.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.as.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.aw.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.as.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.av.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.ba.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.ba.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.setId(I)V" replace-index="0" replace-signature="com.trinitigame.android.ba.setId(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.setId(I)V" replace-index="0" replace-signature="com.trinitigame.android.ba.setId(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.w.&lt;init&gt;(Lcom/trinitigame/android/Triniti2DActivity;)V" replace-index="0" replace-signature="com.trinitigame.android.aa.&lt;init&gt;(Lcom/trinitigame/android/Triniti2DActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.w.&lt;init&gt;(Lcom/trinitigame/android/Triniti2DActivity;)V" replace-index="0" replace-signature="com.trinitigame.android.aa.&lt;init&gt;(Lcom/trinitigame/android/Triniti2DActivity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.at.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.aw.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.at.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.av.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.at.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.aw.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.at.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.av.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.as.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.aw.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.as.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.av.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.as.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.aw.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.as.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.av.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.ba.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.trinitigame.android.ax.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.trinitigame.android.ba.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.trinitigame.android.Triniti2DActivity.getApplicationContext()Landroid/content/Context;"/>
+        <Add-Method index="0" signature="com.tencent.connect.auth.QQAuth.createInstance(Ljava/lang/String;Landroid/content/Context;)Lcom/tencent/connect/auth/QQAuth;"/>
+        <Add-Method index="0" signature="com.tencent.tauth.Tencent.createInstance(Ljava/lang/String;Landroid/content/Context;)Lcom/tencent/tauth/Tencent;"/>
+        <Add-Method index="0" signature="com.trinitigame.android.Triniti2DActivity.getApplicationContext()Landroid/content/Context;"/>
+        <Add-Method index="0" signature="com.tencent.connect.auth.QQAuth.createInstance(Ljava/lang/String;Landroid/content/Context;)Lcom/tencent/connect/auth/QQAuth;"/>
+        <Add-Method index="0" signature="com.tencent.tauth.Tencent.createInstance(Ljava/lang/String;Landroid/content/Context;)Lcom/tencent/tauth/Tencent;"/>
+        <Remove-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+    </Method>
+    <Method signature="com.trinitigame.android.i.run()V">
+        <Replace-Method original-index="0" original-signature="android.widget.RelativeLayout.removeView(Landroid/view/View;)V" replace-index="0" replace-signature="com.trinitigame.android.a.a()I"/>
+        <Replace-Method original-index="0" original-signature="android.widget.ImageView.setEnabled(Z)V" replace-index="0" replace-signature="com.trinitigame.android.a.a()I"/>
+        <Replace-Method original-index="0" original-signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="com.trinitigame.android.g.a(Lcom/trinitigame/android/g;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;" replace-index="0" replace-signature="com.trinitigame.android.a.b()I"/>
+        <Replace-Method original-index="0" original-signature="android.widget.ImageView.setVisibility(I)V" replace-index="0" replace-signature="com.trinitigame.android.a.a()I"/>
+        <Remove-Method index="0" signature="java.lang.System.currentTimeMillis()J"/>
+        <Remove-Method index="0" signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Remove-Method index="2" signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;"/>
+        <Remove-Method index="3" signature="com.trinitigame.android.g.d()Lcom/trinitigame/android/Triniti2DActivity;"/>
+    </Method>
+</Apk>

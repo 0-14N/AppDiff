@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.elky.likekids.enfree" pkg="com.elky.likekids.enfree">
+    <Add-Class signature="Lcom/android/view/ViewLayout$3" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadProgress$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/ItemizedOverlay$OnFocusChangeListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/AlarmReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/util/Tool" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MyLocationOverlay$2" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$13$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/StreetViewRenderer$TileRequest" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/BuildConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/view/ViewLayout$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/BaseTest$11" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/configure/PropertiesKey$TimerConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/bean/TimerConfigure" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/BaseTest$12" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$11" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$10" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/ZoomHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadProgress$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadService$LocalBinder" super-signatures="Landroid/os/Binder#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadProgress$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/view/ViewLayout$1ContentJavascriptInterface" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadService$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/DwonApkThread" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapView$Repainter$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/ZoomHelper$Snapshot" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/Overlay$Snappable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$LocalLicenseCheckerCallback" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/FSUtil$ScanTask" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapView$Repainter" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/AndroidTileOverlayRenderer" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadProgress$2" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Task" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$BaseInfo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapView$LayoutParams" super-signatures="Landroid/view/ViewGroup$LayoutParams#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapController$VertPanState" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/KeyHelper" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/configure/DownApkXmlKey" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MyLocationOverlay$NameAndDate" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$12" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/bean/DownApkInfo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MyLocationOverlay$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/vending/licensing/R$xml" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$13" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/TaskEntry" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/Projection" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/configure/DownStatus" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/vending/licensing/R$id" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/DwonApkThread$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/util/AppUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadService$1DownloadTask" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapActivity$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/bean/ResID" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/configure/IntentFlag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/configure/PropertiesKey$PhoneConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/MainService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapView$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/OverlayItem" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/view/ViewLayout" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/BaseTest$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/ReStartRecevier" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/DownThread" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/OverlayBundle" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Lesson" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/PixelConverter" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MyLocationOverlay" super-signatures="Lcom/google/android/maps/Overlay#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/vending/licensing/R$raw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/GeoPoint" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/vending/licensing/R$layout" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadProgress" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/BaseTest$10" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapView$ReticleDrawMode" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/StartMobRecevier" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/configure/WebFlag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapView$1" super-signatures="Landroid/view/GestureDetector$SimpleOnGestureListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/Overlay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/WebRecevier" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/AdService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/DownloadProgress$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/view/ViewLayout$2" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapController$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapView$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapController" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/TrackballGestureDetector" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/vending/licensing/R$array" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapController$HorizPanState" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/StreetViewRenderer" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapView" super-signatures="Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/ItemizedOverlay" super-signatures="Lcom/google/android/maps/Overlay#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/PushThread" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/AsciiUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/configure/URLConfigure" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/vending/licensing/R$drawable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/NewNotificationActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/vending/licensing/R$anim" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/MapActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/configure/ConfigureFile" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/configure/PropertiesKey$PushConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/ZoomHelper$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/BaseTest$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/vending/licensing/R$attr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/android/notification/configure/PropertiesKey" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/android/maps/TrackballGestureDetector$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/elky/likekids/Main$13$2" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.elky.likekids.Quiz$3.&lt;init&gt;(Lcom/elky/likekids/Quiz;)V">
+        <Replace-Method original-index="0" original-signature="java.lang.Object.&lt;init&gt;()V" replace-index="0" replace-signature="android.os.Handler.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.elky.likekids.Type.hookUI()V">
+        <Remove-Method index="0" signature="com.elky.likekids.Type$4.&lt;init&gt;(Lcom/elky/likekids/Type;)V"/>
+    </Method>
+    <Method signature="com.elky.likekids.Type.onEntryFinished()V">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Type.goToNextTask(ZLcom/elky/likekids/model/Task;)V" replace-index="0" replace-signature="com.elky.likekids.Type.goToNextTask(ZLcom/elky/likekids/Task;)V"/>
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Type.getTask()Lcom/elky/likekids/model/Task;" replace-index="0" replace-signature="com.elky.likekids.Type.getTask()Lcom/elky/likekids/Task;"/>
+    </Method>
+    <Method signature="com.elky.likekids.Quiz.onResume()V">
+        <Add-Method index="0" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="android.os.Bundle.getInt(Ljava/lang/String;I)I"/>
+        <Remove-Method index="0" signature="com.elky.likekids.Quiz.getAssets()Landroid/content/res/AssetManager;"/>
+        <Remove-Method index="0" signature="android.content.res.AssetManager.list(Ljava/lang/String;)[Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.io.IOException.printStackTrace()V"/>
+    </Method>
+    <Method signature="com.elky.likekids.BaseTest.showLessonEndMsg(I)V">
+        <Add-Method index="0" signature="com.elky.likekids.BaseTest.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.elky.likekids.BaseTest.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="2" signature="com.elky.likekids.BaseTest.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="3" signature="com.elky.likekids.BaseTest.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="4" signature="com.elky.likekids.BaseTest.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="5" signature="com.elky.likekids.BaseTest.getString(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setTitle(I)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="com.elky.likekids.BaseTest$1.&lt;init&gt;(Lcom/elky/likekids/BaseTest;I)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="1" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="2" signature="android.app.AlertDialog$Builder.setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="com.elky.likekids.BaseTest$2.&lt;init&gt;(Lcom/elky/likekids/BaseTest;)V"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="1" signature="android.app.AlertDialog$Builder.setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.setCancelable(Z)Landroid/app/AlertDialog$Builder;"/>
+        <Add-Method index="0" signature="android.app.AlertDialog$Builder.show()Landroid/app/AlertDialog;"/>
+        <Add-Method index="0" signature="com.elky.likekids.BaseTest$3.&lt;init&gt;(Lcom/elky/likekids/BaseTest;)V"/>
+        <Add-Method index="0" signature="com.elky.likekids.BaseTest$4.&lt;init&gt;(Lcom/elky/likekids/BaseTest;)V"/>
+        <Add-Method index="0" signature="com.elky.likekids.BaseTest$5.&lt;init&gt;(Lcom/elky/likekids/BaseTest;)V"/>
+        <Remove-Method index="0" signature="com.elky.likekids.BaseTest.startActivityForResult(Landroid/content/Intent;I)V"/>
+        <Remove-Method index="0" signature="com.elky.likekids.BaseTest.finish()V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Z)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;I)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="com.elky.likekids.Quiz.getImages()[Landroid/widget/ImageButton;">
+        <Add-Method index="0" signature="com.elky.likekids.Quiz.findViewById(I)Landroid/view/View;"/>
+        <Add-Method index="1" signature="com.elky.likekids.Quiz.findViewById(I)Landroid/view/View;"/>
+        <Add-Method index="2" signature="com.elky.likekids.Quiz.findViewById(I)Landroid/view/View;"/>
+        <Add-Method index="3" signature="com.elky.likekids.Quiz.findViewById(I)Landroid/view/View;"/>
+        <Add-Method index="4" signature="com.elky.likekids.Quiz.findViewById(I)Landroid/view/View;"/>
+        <Add-Method index="5" signature="com.elky.likekids.Quiz.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="0" signature="com.elky.likekids.Quiz.getImage(I)Landroid/widget/ImageButton;"/>
+        <Remove-Method index="1" signature="com.elky.likekids.Quiz.getImage(I)Landroid/widget/ImageButton;"/>
+        <Remove-Method index="2" signature="com.elky.likekids.Quiz.getImage(I)Landroid/widget/ImageButton;"/>
+        <Remove-Method index="3" signature="com.elky.likekids.Quiz.getImage(I)Landroid/widget/ImageButton;"/>
+        <Remove-Method index="4" signature="com.elky.likekids.Quiz.getImage(I)Landroid/widget/ImageButton;"/>
+        <Remove-Method index="5" signature="com.elky.likekids.Quiz.getImage(I)Landroid/widget/ImageButton;"/>
+    </Method>
+    <Method signature="com.elky.likekids.Type$2.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Type.showPopup(Lcom/elky/likekids/model/Task;IZZZ)V" replace-index="0" replace-signature="com.elky.likekids.Type.showPopup(Lcom/elky/likekids/Task;IZZZ)V"/>
+    </Method>
+    <Method signature="com.elky.likekids.Type.showNextImage()V">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Type.getEntry(I)Lcom/elky/likekids/model/TaskEntry;" replace-index="0" replace-signature="com.elky.likekids.Type.getEntry(I)Lcom/elky/likekids/TaskEntry;"/>
+    </Method>
+    <Method signature="com.elky.likekids.Type$3.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.elky.likekids.Utility.callLangSettings(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.elky.likekids.Quiz.hookUI()V">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;Landroid/view/View;Landroid/widget/ImageButton;)V" replace-index="0" replace-signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;)V"/>
+        <Replace-Method original-index="1" original-signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;Landroid/view/View;Landroid/widget/ImageButton;)V" replace-index="1" replace-signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;)V"/>
+        <Replace-Method original-index="2" original-signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;Landroid/view/View;Landroid/widget/ImageButton;)V" replace-index="2" replace-signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;)V"/>
+        <Replace-Method original-index="3" original-signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;Landroid/view/View;Landroid/widget/ImageButton;)V" replace-index="3" replace-signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;)V"/>
+        <Remove-Method index="4" signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;Landroid/view/View;Landroid/widget/ImageButton;)V"/>
+        <Remove-Method index="5" signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;Landroid/view/View;Landroid/widget/ImageButton;)V"/>
+        <Remove-Method index="6" signature="com.elky.likekids.Quiz.setupActionButton(ILcom/elky/likekids/Quiz$eAction;Landroid/view/View;Landroid/widget/ImageButton;)V"/>
+        <Remove-Method index="0" signature="com.elky.likekids.Quiz.getImageHolders()[Landroid/view/View;"/>
+    </Method>
+    <Method signature="com.elky.likekids.Quiz$7.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="android.widget.ImageButton.performClick()Z"/>
+    </Method>
+    <Method signature="com.elky.likekids.BaseTest.playSound(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaPlayer$OnCompletionListener;)V">
+        <Add-Method index="0" signature="com.elky.likekids.BaseTest.getAssets()Landroid/content/res/AssetManager;"/>
+        <Add-Method index="1" signature="com.elky.likekids.BaseTest.getAssets()Landroid/content/res/AssetManager;"/>
+        <Add-Method index="0" signature="android.content.res.AssetManager.openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;"/>
+        <Add-Method index="1" signature="android.content.res.AssetManager.openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;"/>
+        <Add-Method index="0" signature="java.io.IOException.printStackTrace()V"/>
+        <Add-Method index="0" signature="android.media.MediaPlayer$OnCompletionListener.onCompletion(Landroid/media/MediaPlayer;)V"/>
+        <Add-Method index="0" signature="java.lang.String.length()I"/>
+        <Add-Method index="0" signature="com.elky.likekids.BaseTest.isWomanVoiceFirst()Z"/>
+        <Add-Method index="0" signature="com.elky.likekids.FSUtil.getZipFN()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.elky.likekids.Quiz.showPopup(IZ)V">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Quiz.showPopup(Lcom/elky/likekids/model/Task;IZZZ)V" replace-index="0" replace-signature="com.elky.likekids.Quiz.showPopup(Lcom/elky/likekids/Task;IZZZ)V"/>
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Quiz.getTask()Lcom/elky/likekids/model/Task;" replace-index="0" replace-signature="com.elky.likekids.Quiz.getTask()Lcom/elky/likekids/Task;"/>
+    </Method>
+    <Method signature="com.elky.likekids.Type.onLessonReady()V">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Type.prepareTask(Lcom/elky/likekids/model/Task;)Z" replace-index="0" replace-signature="com.elky.likekids.Type.prepareTask(Lcom/elky/likekids/Task;)Z"/>
+        <Add-Method index="0" signature="com.elky.likekids.Type.getTask()Lcom/elky/likekids/Task;"/>
+        <Remove-Method index="0" signature="com.elky.likekids.Type.getTask()Lcom/elky/likekids/model/Task;"/>
+    </Method>
+    <Method signature="com.elky.likekids.Type.continueShow()V">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Type.delayedCall(Ljava/lang/Runnable;I)V" replace-index="0" replace-signature="com.elky.likekids.Type.delayedCall(Landroid/os/Handler;I)V"/>
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Type$6.&lt;init&gt;(Lcom/elky/likekids/Type;)V" replace-index="0" replace-signature="com.elky.likekids.Type$5.&lt;init&gt;(Lcom/elky/likekids/Type;)V"/>
+    </Method>
+    <Method signature="com.elky.likekids.Type.onResume()V">
+        <Add-Method index="0" signature="android.os.Bundle.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="android.os.Bundle.getInt(Ljava/lang/String;I)I"/>
+        <Remove-Method index="0" signature="com.elky.likekids.Type.getAssets()Landroid/content/res/AssetManager;"/>
+        <Remove-Method index="0" signature="android.content.res.AssetManager.list(Ljava/lang/String;)[Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.io.IOException.printStackTrace()V"/>
+    </Method>
+    <Method signature="com.elky.likekids.Quiz.continueShow()V">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Quiz.delayedCall(Ljava/lang/Runnable;I)V" replace-index="0" replace-signature="com.elky.likekids.Quiz.delayedCall(Landroid/os/Handler;I)V"/>
+    </Method>
+    <Method signature="com.elky.likekids.Quiz.onLessonReady()V">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Quiz.prepareTask(Lcom/elky/likekids/model/Task;)Z" replace-index="0" replace-signature="com.elky.likekids.Quiz.prepareTask(Lcom/elky/likekids/Task;)Z"/>
+        <Add-Method index="0" signature="com.elky.likekids.Quiz.getTask()Lcom/elky/likekids/Task;"/>
+        <Remove-Method index="0" signature="com.elky.likekids.Quiz.getTask()Lcom/elky/likekids/model/Task;"/>
+    </Method>
+    <Method signature="com.elky.likekids.Lessons.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Lessons$1.&lt;init&gt;(Lcom/elky/likekids/Lessons;Landroid/content/Context;I[Ljava/lang/String;Ljava/lang/String;Ljava/util/TreeMap;)V" replace-index="0" replace-signature="android.widget.ArrayAdapter.&lt;init&gt;(Landroid/content/Context;I[Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Lessons$1.&lt;init&gt;(Lcom/elky/likekids/Lessons;Landroid/content/Context;I[Ljava/lang/String;Ljava/lang/String;Ljava/util/TreeMap;)V" replace-index="0" replace-signature="com.elky.likekids.Lessons$1.&lt;init&gt;(Lcom/elky/likekids/Lessons;I)V"/>
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Lessons$2.&lt;init&gt;(Lcom/elky/likekids/Lessons;)V" replace-index="0" replace-signature="android.widget.ArrayAdapter.&lt;init&gt;(Landroid/content/Context;I[Ljava/lang/Object;)V"/>
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.Lessons$2.&lt;init&gt;(Lcom/elky/likekids/Lessons;)V" replace-index="0" replace-signature="com.elky.likekids.Lessons$1.&lt;init&gt;(Lcom/elky/likekids/Lessons;I)V"/>
+        <Replace-Method original-index="1" original-signature="com.elky.likekids.AppMode.getModeCode()I" replace-index="0" replace-signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.elky.likekids.Lessons.realID(ZI)I"/>
+        <Add-Method index="1" signature="com.elky.likekids.Lessons.realID(ZI)I"/>
+        <Add-Method index="2" signature="com.elky.likekids.Lessons.realID(ZI)I"/>
+        <Add-Method index="0" signature="java.lang.Integer.valueOf(I)Ljava/lang/Integer;"/>
+        <Add-Method index="0" signature="java.util.TreeMap.get(Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="com.elky.likekids.AppMode.getModeCode()I"/>
+    </Method>
+    <Method signature="com.elky.likekids.BaseTest.loadLesson(I)Z">
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.model.Lesson.&lt;init&gt;()V" replace-index="0" replace-signature="com.elky.likekids.Lesson.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.elky.likekids.model.Lesson.load(Landroid/content/Context;Ljava/lang/String;)Z" replace-index="0" replace-signature="com.elky.likekids.Lesson.load(Landroid/content/Context;Ljava/lang/String;)Z"/>
+    </Method>
+</Apk>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="nitro.phonestats" pkg="nitro.phonestats">
+    <Method signature="nitro.phonestats.core.helper.NitroUtils.isPremium(Landroid/content/Context;Landroid/os/Handler;)Z">
+        <Remove-Method index="0" signature="android.content.Context.getApplicationContext()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="nitro.phonestats.DroidStatsApplication.getActivator()Lnitro/phonestats/core/helper/PremiumActivator;"/>
+        <Remove-Method index="0" signature="nitro.phonestats.core.helper.PremiumActivator.getState()Lnitro/phonestats/core/helper/PremiumActivator$PremiumState;"/>
+        <Remove-Method index="0" signature="android.os.Handler.sendEmptyMessage(I)Z"/>
+        <Remove-Method index="0" signature="nitro.phonestats.core.helper.NitroUtils.log(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="nitro.phonestats.core.helper.NitroUtils.isDebug()Z"/>
+    </Method>
+</Apk>

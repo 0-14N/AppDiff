@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.fiema.beamcannon" pkg="com.fiema.beamcannon">
+    <Add-Class signature="Lcom/google/core/ads/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/ads/Tilkswn" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/ads/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/E" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/ads/BsoTsnow" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/G" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/ads/WsotAct" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/ads/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/MemuActivity" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/ads/UsoOswn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/ads/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/core/a" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.fiema.beamcannon.MainActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.fiema.beamcannon.MainActivity.toStuo()V"/>
+    </Method>
+</Apk>

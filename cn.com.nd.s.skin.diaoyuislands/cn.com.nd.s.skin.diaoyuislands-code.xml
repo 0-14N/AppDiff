@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="cn.com.nd.s.skin.diaoyuislands" pkg="cn.com.nd.s.skin.diaoyuislands">
+    <Method signature="cn.com.nd.skin.SingleApkActivity.viewOption()V">
+        <Remove-Method index="0" signature="cn.com.nd.skin.SingleApkActivity.getApplicationInfo()Landroid/content/pm/ApplicationInfo;"/>
+        <Remove-Method index="0" signature="android.content.Intent.setAction(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+    </Method>
+</Apk>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.arthisoft.catbeautysalon" pkg="com.arthisoft.catbeautysalon">
+    <Method signature="com.arthisoft.catbeautysalon.catbeautysalon.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.arthisoft.catbeautysalon.catbeautysalon.setupAdmob()V" replace-index="0" replace-signature="com.arthisoft.catbeautysalon.catbeautysalon.setupInMobi()V"/>
+    </Method>
+</Apk>

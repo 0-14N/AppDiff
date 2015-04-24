@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.AndPhone.game.CrossRoad" pkg="com.AndPhone.game.CrossRoad">
+    <Add-Class signature="Lcom/a/a/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/dd" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/ggggg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/____" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/ff" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/ccc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/aaa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/eee" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/AdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="LI/I" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lp" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/ggg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Ll" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lr" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/gg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/google/ads/InstallReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lf$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/_" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/eeeee" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/aaaaa" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/o" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lf$b" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/_____" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/$$$$$" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lk" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lf$d" super-signatures="Ljava/lang/Exception#Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/$$$$" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Li" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Ln" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/$$$" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lf$c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/fff" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/g/e" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lt" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/aaaa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/b/c$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Ld" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/bbb" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/AdManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/bbbbb" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/f" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/AdListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Ls" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/ee" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lf$e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/bb" super-signatures="Landroid/widget/TextView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/c" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="La" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/Resource_zh_CN" super-signatures="Ljava/util/ListResourceBundle#Ljava/util/ResourceBundle#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/cccc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/fffff" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/gggg" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/ccccc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/$" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/e" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Le" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/___" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/ddddd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/cc" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/ffff" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/$$" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lb" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/dddd" super-signatures="Landroid/widget/ImageButton#Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/a/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/ddd" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lm" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/d/a$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/Resource_en_US" super-signatures="Ljava/util/ListResourceBundle#Ljava/util/ResourceBundle#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/AndPhone/game/basic/d$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/bbbb" super-signatures="Landroid/webkit/WebView#Landroid/widget/AbsoluteLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/eeee" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/Resource_zh_TW" super-signatures="Ljava/util/ListResourceBundle#Ljava/util/ResourceBundle#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/__" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/madhouse/android/ads/b" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/a/a/e/i" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.AndPhone.game.CrossRoad.CoverActivity.onResume()V">
+        <Replace-Method original-index="0" original-signature="com.a.a.i.a.b(Landroid/content/Context;)V" replace-index="0" replace-signature="com.a.a.e.c.b(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.feedback.ui.FeedbackConversation.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.a.a.g.c.b(Landroid/content/Context;Ljava/lang/String;)Lcom/a/a/f/d;" replace-index="0" replace-signature="com.a.a.f.a.b(Landroid/content/Context;Ljava/lang/String;)Lcom/a/a/g/b;"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.c.b(Landroid/content/Context;Ljava/lang/String;)Lcom/a/a/f/d;" replace-index="0" replace-signature="com.a.a.f.a.b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/a/a/g/b;"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="1" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="1" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="2" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="2" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="3" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="3" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="4" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="4" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="5" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="5" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.c.&lt;init&gt;(Landroid/content/Context;Lcom/a/a/f/d;)V" replace-index="0" replace-signature="com.feedback.ui.h.&lt;init&gt;(Landroid/content/Context;Lcom/a/a/g/b;)V"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.c.getCount()I" replace-index="0" replace-signature="com.feedback.ui.h.getCount()I"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.a.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversation;)V" replace-index="0" replace-signature="com.feedback.ui.f.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversation;)V"/>
+        <Remove-Method index="0" signature="android.widget.EditText.setEnabled(Z)V"/>
+        <Remove-Method index="0" signature="android.widget.Button.setEnabled(Z)V"/>
+    </Method>
+    <Method signature="com.google.ads.AdActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.d.s()V" replace-index="0" replace-signature="c.s()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.d.f()Lcom/google/ads/Ad;" replace-index="0" replace-signature="c.f()Lcom/google/ads/Ad;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.d.u()V" replace-index="0" replace-signature="c.u()V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Intent.getExtras()Landroid/os/Bundle;" replace-index="0" replace-signature="d.c()Ljava/util/HashMap;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.setWebViewClient(Landroid/webkit/WebViewClient;)V" replace-index="0" replace-signature="b.setWebViewClient(Landroid/webkit/WebViewClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.setWebViewClient(Landroid/webkit/WebViewClient;)V" replace-index="0" replace-signature="b.loadUrl(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.d.m()I" replace-index="0" replace-signature="c.m()I"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.d.m()I" replace-index="1" replace-signature="c.m()I"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.d.i()Lcom/google/ads/h;" replace-index="0" replace-signature="c.i()Lb;"/>
+        <Replace-Method original-index="0" original-signature="android.widget.RelativeLayout.setGravity(I)V" replace-index="0" replace-signature="b.setWebViewClient(Landroid/webkit/WebViewClient;)V"/>
+        <Replace-Method original-index="0" original-signature="android.widget.RelativeLayout.setGravity(I)V" replace-index="0" replace-signature="b.loadUrl(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.&lt;init&gt;(Landroid/content/Context;Lcom/google/ads/AdSize;)V" replace-index="0" replace-signature="b.&lt;init&gt;(Landroid/content/Context;Lcom/google/ads/AdSize;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.i.&lt;init&gt;(Lcom/google/ads/d;Ljava/util/Map;ZZ)V" replace-index="0" replace-signature="n.&lt;init&gt;(Lc;Ljava/util/Map;ZZ)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.i.c()V" replace-index="0" replace-signature="n.b()V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.loadUrl(Ljava/lang/String;)V" replace-index="0" replace-signature="b.setWebViewClient(Landroid/webkit/WebViewClient;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.loadUrl(Ljava/lang/String;)V" replace-index="0" replace-signature="b.loadUrl(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdActivity.a(Lcom/google/ads/h;ZI)V" replace-index="0" replace-signature="com.google.ads.AdActivity.a(Lb;ZI)V"/>
+        <Replace-Method original-index="1" original-signature="com.google.ads.AdActivity.a(Lcom/google/ads/h;ZI)V" replace-index="1" replace-signature="com.google.ads.AdActivity.a(Lb;ZI)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="b.loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.e.&lt;init&gt;(Landroid/os/Bundle;)V" replace-index="0" replace-signature="d.&lt;init&gt;(Landroid/os/Bundle;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.e.b()Ljava/lang/String;" replace-index="0" replace-signature="d.b()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.e.c()Ljava/util/HashMap;" replace-index="0" replace-signature="d.c()Ljava/util/HashMap;"/>
+        <Replace-Method original-index="0" original-signature="android.content.ComponentName.&lt;init&gt;(Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="d.&lt;init&gt;(Landroid/os/Bundle;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Intent.setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;" replace-index="0" replace-signature="d.b()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="android.content.Intent.addCategory(Ljava/lang/String;)Landroid/content/Intent;" replace-index="0" replace-signature="d.c()Ljava/util/HashMap;"/>
+        <Replace-Method original-index="0" original-signature="android.content.Intent.putExtras(Landroid/os/Bundle;)Landroid/content/Intent;" replace-index="0" replace-signature="d.c()Ljava/util/HashMap;"/>
+        <Add-Method index="0" signature="c.t()V"/>
+        <Add-Method index="0" signature="com.google.ads.AdActivity.finish()V"/>
+        <Add-Method index="0" signature="android.os.SystemClock.elapsedRealtime()J"/>
+        <Add-Method index="0" signature="com.google.ads.util.a.a(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.setData(Landroid/net/Uri;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="com.google.ads.util.a.e(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdActivity.startActivityForResult(Landroid/content/Intent;I)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="1" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="2" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdActivity.a(Lcom/google/ads/d;)V"/>
+        <Remove-Method index="1" signature="com.google.ads.AdActivity.a(Lcom/google/ads/d;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdActivity.a(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+        <Remove-Method index="1" signature="com.google.ads.AdActivity.a(Ljava/lang/String;Ljava/lang/Throwable;)V"/>
+    </Method>
+    <Method signature="com.feedback.ui.FeedbackConversation.onStart()V">
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.b.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversation;)V" replace-index="0" replace-signature="com.feedback.ui.e.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversation;)V"/>
+    </Method>
+    <Method signature="com.google.ads.AdView.a(Landroid/content/Context;Lcom/google/ads/AdSize;Landroid/util/AttributeSet;)Z">
+        <Replace-Method original-index="0" original-signature="com.google.ads.util.AdUtil.c(Landroid/content/Context;)Z" replace-index="0" replace-signature="com.google.ads.util.AdUtil.b(Landroid/content/Context;)Z"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.GameActivity$3.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.RelativeLayout.setVisibility(I)V" replace-index="0" replace-signature="android.widget.LinearLayout.setVisibility(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.CrossRoad.GameActivity.m(Lcom/AndPhone/game/CrossRoad/GameActivity;)Landroid/widget/RelativeLayout;" replace-index="0" replace-signature="com.AndPhone.game.CrossRoad.GameActivity.m(Lcom/AndPhone/game/CrossRoad/GameActivity;)Landroid/widget/LinearLayout;"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.GameActivity$4.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="com.AndPhone.game.CrossRoad.GameActivity.getTitle()Ljava/lang/CharSequence;"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.setType(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.content.Intent.createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.GameActivity.onStop()V">
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.CrossRoad.a.d()V" replace-index="0" replace-signature="com.AndPhone.game.CrossRoad.c.i()V"/>
+    </Method>
+    <Method signature="com.google.ads.AdView.isRefreshing()Z">
+        <Replace-Method original-index="0" original-signature="com.google.ads.d.p()Z" replace-index="0" replace-signature="c.p()Z"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.CoverActivity$2.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.widget.ImageButton.setImageResource(I)V"/>
+        <Add-Method index="1" signature="android.widget.ImageButton.setImageResource(I)V"/>
+        <Add-Method index="0" signature="com.AndPhone.game.CrossRoad.CoverActivity.a(Lcom/AndPhone/game/CrossRoad/CoverActivity;)Z"/>
+        <Add-Method index="0" signature="com.AndPhone.game.CrossRoad.CoverActivity.b(Lcom/AndPhone/game/CrossRoad/CoverActivity;)Landroid/widget/ImageButton;"/>
+        <Add-Method index="1" signature="com.AndPhone.game.CrossRoad.CoverActivity.b(Lcom/AndPhone/game/CrossRoad/CoverActivity;)Landroid/widget/ImageButton;"/>
+        <Add-Method index="0" signature="com.a.a.c.b.a(Landroid/content/Context;Z)V"/>
+        <Add-Method index="1" signature="com.a.a.c.b.a(Landroid/content/Context;Z)V"/>
+        <Add-Method index="0" signature="com.AndPhone.game.CrossRoad.CoverActivity.a(Lcom/AndPhone/game/CrossRoad/CoverActivity;Z)V"/>
+        <Add-Method index="1" signature="com.AndPhone.game.CrossRoad.CoverActivity.a(Lcom/AndPhone/game/CrossRoad/CoverActivity;Z)V"/>
+        <Remove-Method index="0" signature="com.openfeint.api.ui.Dashboard.open()V"/>
+    </Method>
+    <Method signature="com.google.ads.AdActivity.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.stopLoading()V" replace-index="0" replace-signature="g.b(Landroid/webkit/WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.h.destroy()V" replace-index="0" replace-signature="android.widget.VideoView.stopPlayback()V"/>
+        <Add-Method index="0" signature="b.a(Lcom/google/ads/AdActivity;)V"/>
+        <Add-Method index="0" signature="c.i()Lb;"/>
+        <Add-Method index="0" signature="c.a()V"/>
+        <Add-Method index="0" signature="b.stopLoading()V"/>
+        <Add-Method index="0" signature="b.destroy()V"/>
+        <Add-Method index="0" signature="c.r()V"/>
+        <Add-Method index="0" signature="com.google.ads.util.a.a(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.google.ads.util.a.e(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdActivity.a()V"/>
+    </Method>
+    <Method signature="com.a.a.h.b.run()V">
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.a(Ljava/lang/String;)Z" replace-index="0" replace-signature="org.apache.http.StatusLine.getStatusCode()I"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.a(Ljava/lang/String;)Z" replace-index="0" replace-signature="org.apache.http.StatusLine.getStatusCode()I"/>
+        <Replace-Method original-index="1" original-signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="org.apache.http.client.ClientProtocolException.getMessage()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="java.io.IOException.getMessage()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="org.apache.http.client.ClientProtocolException.getMessage()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="java.io.IOException.getMessage()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.b(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.b(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="org.apache.http.client.methods.HttpGet.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.b(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.b(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="org.apache.http.client.methods.HttpGet.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.a(Ljava/lang/String;)Z" replace-index="0" replace-signature="org.apache.http.StatusLine.getStatusCode()I"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.a(Ljava/lang/String;)Z" replace-index="0" replace-signature="org.apache.http.StatusLine.getStatusCode()I"/>
+        <Replace-Method original-index="1" original-signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="org.apache.http.client.ClientProtocolException.getMessage()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="java.io.IOException.getMessage()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="org.apache.http.client.ClientProtocolException.getMessage()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="java.io.IOException.getMessage()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.b(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.b(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="org.apache.http.client.methods.HttpGet.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.b(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.b(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="org.apache.http.client.methods.HttpGet.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.apache.http.impl.client.DefaultHttpClient.execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;"/>
+        <Add-Method index="0" signature="org.apache.http.HttpResponse.getStatusLine()Lorg/apache/http/StatusLine;"/>
+        <Add-Method index="0" signature="org.apache.http.HttpResponse.getEntity()Lorg/apache/http/HttpEntity;"/>
+        <Add-Method index="0" signature="org.apache.http.HttpEntity.getContent()Ljava/io/InputStream;"/>
+        <Add-Method index="0" signature="java.io.InputStream.read([B)I"/>
+        <Add-Method index="1" signature="java.io.IOException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.IllegalStateException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.json.JSONException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.g.a.a()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.f.a.b(Landroid/content/Context;Ljava/lang/String;)Lcom/a/a/g/b;"/>
+        <Add-Method index="1" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="2" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="org.apache.http.impl.client.DefaultHttpClient.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.lang.StringBuffer.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.lang.StringBuffer.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.f.a.a(Landroid/content/Context;Lorg/json/JSONArray;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="1" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="2" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="3" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="4" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.lang.String.&lt;init&gt;([BIILjava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer;"/>
+        <Add-Method index="0" signature="org.apache.http.impl.client.DefaultHttpClient.execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;"/>
+        <Add-Method index="0" signature="org.apache.http.HttpResponse.getStatusLine()Lorg/apache/http/StatusLine;"/>
+        <Add-Method index="0" signature="org.apache.http.HttpResponse.getEntity()Lorg/apache/http/HttpEntity;"/>
+        <Add-Method index="0" signature="org.apache.http.HttpEntity.getContent()Ljava/io/InputStream;"/>
+        <Add-Method index="0" signature="java.io.InputStream.read([B)I"/>
+        <Add-Method index="1" signature="java.io.IOException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.IllegalStateException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.json.JSONException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.g.a.a()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.f.a.b(Landroid/content/Context;Ljava/lang/String;)Lcom/a/a/g/b;"/>
+        <Add-Method index="1" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="2" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="org.apache.http.impl.client.DefaultHttpClient.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.lang.StringBuffer.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="java.lang.StringBuffer.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.f.a.a(Landroid/content/Context;Lorg/json/JSONArray;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="1" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="2" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="3" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="4" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.lang.String.&lt;init&gt;([BIILjava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer;"/>
+        <Remove-Method index="0" signature="org.json.JSONException.printStackTrace()V"/>
+        <Remove-Method index="0" signature="com.a.a.f.a.a()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.a.a.g.c.a(Landroid/content/Context;Lorg/json/JSONArray;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.a.a.g.c.b(Landroid/content/Context;Ljava/lang/String;)Lcom/a/a/f/d;"/>
+        <Remove-Method index="0" signature="org.json.JSONException.printStackTrace()V"/>
+        <Remove-Method index="0" signature="com.a.a.f.a.a()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.a.a.g.c.a(Landroid/content/Context;Lorg/json/JSONArray;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.a.a.g.c.b(Landroid/content/Context;Ljava/lang/String;)Lcom/a/a/f/d;"/>
+    </Method>
+    <Method signature="com.google.ads.AdView.a(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.d.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/Ad;Lcom/google/ads/AdSize;Ljava/lang/String;Z)V" replace-index="0" replace-signature="c.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/Ad;Lcom/google/ads/AdSize;Ljava/lang/String;Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.d.i()Lcom/google/ads/h;" replace-index="0" replace-signature="c.i()Lb;"/>
+    </Method>
+    <Method signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V">
+        <Remove-Method index="0" signature="com.google.ads.AdView.b(Landroid/content/Context;Lcom/google/ads/AdSize;Landroid/util/AttributeSet;)Z"/>
+    </Method>
+    <Method signature="com.google.ads.AdView.loadAd(Lcom/google/ads/AdRequest;)V">
+        <Replace-Method original-index="0" original-signature="com.google.ads.d.a(Lcom/google/ads/AdRequest;)V" replace-index="0" replace-signature="c.a(Lcom/google/ads/AdRequest;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.d.c()V" replace-index="0" replace-signature="c.c()V"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.GameActivity$8.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.widget.RelativeLayout.setVisibility(I)V"/>
+        <Add-Method index="0" signature="com.AndPhone.game.CrossRoad.GameActivity.l(Lcom/AndPhone/game/CrossRoad/GameActivity;)Landroid/widget/RelativeLayout;"/>
+        <Remove-Method index="0" signature="com.AndPhone.game.CrossRoad.GameActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.GameActivity$6.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.AndPhone.game.CrossRoad.GameActivity.startActivity(Landroid/content/Intent;)V"/>
+        <Add-Method index="0" signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+        <Remove-Method index="0" signature="android.widget.LinearLayout.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="com.AndPhone.game.CrossRoad.GameActivity.n(Lcom/AndPhone/game/CrossRoad/GameActivity;)Landroid/widget/LinearLayout;"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.GameActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.basic.BasicGameView.a(Lcom/AndPhone/game/basic/e;)V" replace-index="0" replace-signature="com.AndPhone.game.basic.BasicGameView.a(Lcom/AndPhone/game/basic/c;)V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.basic.BasicGameView.a(Lcom/AndPhone/game/basic/e;)V" replace-index="0" replace-signature="com.AndPhone.game.CrossRoad.c.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.basic.BasicGameView.a(Lcom/AndPhone/game/basic/e;)V" replace-index="0" replace-signature="com.AndPhone.game.CrossRoad.c.h()V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.a.b.a(Landroid/app/Activity;)V" replace-index="0" replace-signature="com.a.a.c.a.a(Landroid/app/Activity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.CrossRoad.a.&lt;init&gt;(Lcom/AndPhone/game/CrossRoad/GameActivity;Landroid/os/Handler;)V" replace-index="0" replace-signature="com.AndPhone.game.CrossRoad.c.&lt;init&gt;(Lcom/AndPhone/game/CrossRoad/GameActivity;Landroid/os/Handler;)V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.CrossRoad.a.a()V" replace-index="0" replace-signature="com.AndPhone.game.basic.BasicGameView.a(Lcom/AndPhone/game/basic/c;)V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.CrossRoad.a.a()V" replace-index="0" replace-signature="com.AndPhone.game.CrossRoad.c.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.CrossRoad.a.a()V" replace-index="0" replace-signature="com.AndPhone.game.CrossRoad.c.h()V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.CrossRoad.a.c()V" replace-index="0" replace-signature="com.AndPhone.game.basic.BasicGameView.a(Lcom/AndPhone/game/basic/c;)V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.CrossRoad.a.c()V" replace-index="0" replace-signature="com.AndPhone.game.CrossRoad.c.c()V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.CrossRoad.a.c()V" replace-index="0" replace-signature="com.AndPhone.game.CrossRoad.c.h()V"/>
+        <Replace-Method original-index="0" original-signature="com.AndPhone.game.CrossRoad.a.a(II)Z" replace-index="0" replace-signature="com.AndPhone.game.CrossRoad.c.a(II)Z"/>
+    </Method>
+    <Method signature="com.a.a.h.a.run()V">
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Lorg/json/JSONObject;)Z"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.c(Landroid/content/Context;Lorg/json/JSONObject;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Lorg/json/JSONObject;)Z"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.c(Landroid/content/Context;Lorg/json/JSONObject;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences.getAll()Ljava/util/Map;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences.getAll()Ljava/util/Map;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="java.util.Map.keySet()Ljava/util/Set;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="java.util.Map.keySet()Ljava/util/Set;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="java.util.Set.iterator()Ljava/util/Iterator;" replace-index="2" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="java.util.Set.iterator()Ljava/util/Iterator;" replace-index="2" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences$Editor.putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences$Editor.putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Lorg/json/JSONObject;)Z"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.c(Landroid/content/Context;Lorg/json/JSONObject;)V"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Lorg/json/JSONObject;)Z"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.c(Landroid/content/Context;Lorg/json/JSONObject;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Lorg/json/JSONObject;)Z"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.c(Landroid/content/Context;Lorg/json/JSONObject;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Lorg/json/JSONObject;)Z"/>
+        <Replace-Method original-index="0" original-signature="android.content.Context.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="com.a.a.f.a.c(Landroid/content/Context;Lorg/json/JSONObject;)V"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences.getAll()Ljava/util/Map;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences.getAll()Ljava/util/Map;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="java.util.Map.keySet()Ljava/util/Set;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="java.util.Map.keySet()Ljava/util/Set;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="java.util.Set.iterator()Ljava/util/Iterator;" replace-index="2" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="java.util.Set.iterator()Ljava/util/Iterator;" replace-index="2" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences$Editor.putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="android.content.SharedPreferences$Editor.putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" replace-index="1" replace-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Lorg/json/JSONObject;)Z"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.c(Landroid/content/Context;Lorg/json/JSONObject;)V"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;Lorg/json/JSONObject;)Z"/>
+        <Replace-Method original-index="0" original-signature="org.json.JSONArray.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.f.a.c(Landroid/content/Context;Lorg/json/JSONObject;)V"/>
+        <Add-Method index="0" signature="org.json.JSONObject.optString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="3" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="4" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="org.json.JSONObject.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="com.a.a.f.b.a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.f.d.a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.a.a.f.d.a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.f.d.a(Lorg/json/JSONObject;)Z"/>
+        <Add-Method index="0" signature="com.a.a.f.d.e(Lorg/json/JSONObject;)Z"/>
+        <Add-Method index="0" signature="com.a.a.f.d.a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="com.a.a.f.d.c(Lorg/json/JSONObject;)Z"/>
+        <Add-Method index="0" signature="org.json.JSONObject.optString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="3" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="4" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="org.json.JSONObject.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="com.a.a.f.b.a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.f.d.a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.a.a.f.d.a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.f.d.a(Lorg/json/JSONObject;)Z"/>
+        <Add-Method index="0" signature="com.a.a.f.d.e(Lorg/json/JSONObject;)Z"/>
+        <Add-Method index="0" signature="com.a.a.f.d.a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="com.a.a.f.d.c(Lorg/json/JSONObject;)Z"/>
+        <Remove-Method index="0" signature="java.util.Iterator.hasNext()Z"/>
+        <Remove-Method index="1" signature="java.util.Iterator.hasNext()Z"/>
+        <Remove-Method index="2" signature="java.util.Iterator.hasNext()Z"/>
+        <Remove-Method index="0" signature="java.util.List.iterator()Ljava/util/Iterator;"/>
+        <Remove-Method index="1" signature="java.util.List.iterator()Ljava/util/Iterator;"/>
+        <Remove-Method index="0" signature="java.util.Iterator.next()Ljava/lang/Object;"/>
+        <Remove-Method index="1" signature="java.util.Iterator.next()Ljava/lang/Object;"/>
+        <Remove-Method index="2" signature="java.util.Iterator.next()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.indexOf(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="org.json.JSONObject.put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Remove-Method index="0" signature="java.util.concurrent.ExecutorService.submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;"/>
+        <Remove-Method index="0" signature="com.a.a.g.d.a(Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="org.json.JSONArray.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="org.json.JSONArray.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.util.ArrayList.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.a.a.f.d.&lt;init&gt;(Lorg/json/JSONArray;)V"/>
+        <Remove-Method index="0" signature="org.json.JSONArray.put(ILjava/lang/Object;)Lorg/json/JSONArray;"/>
+        <Remove-Method index="0" signature="com.a.a.h.c.&lt;init&gt;(Lorg/json/JSONObject;Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="java.util.Iterator.hasNext()Z"/>
+        <Remove-Method index="1" signature="java.util.Iterator.hasNext()Z"/>
+        <Remove-Method index="2" signature="java.util.Iterator.hasNext()Z"/>
+        <Remove-Method index="0" signature="java.util.List.iterator()Ljava/util/Iterator;"/>
+        <Remove-Method index="1" signature="java.util.List.iterator()Ljava/util/Iterator;"/>
+        <Remove-Method index="0" signature="java.util.Iterator.next()Ljava/lang/Object;"/>
+        <Remove-Method index="1" signature="java.util.Iterator.next()Ljava/lang/Object;"/>
+        <Remove-Method index="2" signature="java.util.Iterator.next()Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.indexOf(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="java.util.List.add(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="org.json.JSONObject.put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Remove-Method index="0" signature="java.util.concurrent.ExecutorService.submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;"/>
+        <Remove-Method index="0" signature="com.a.a.g.d.a(Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="org.json.JSONArray.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="org.json.JSONArray.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.util.ArrayList.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.a.a.f.d.&lt;init&gt;(Lorg/json/JSONArray;)V"/>
+        <Remove-Method index="0" signature="org.json.JSONArray.put(ILjava/lang/Object;)Lorg/json/JSONArray;"/>
+        <Remove-Method index="0" signature="com.a.a.h.c.&lt;init&gt;(Lorg/json/JSONObject;Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.feedback.ui.FeedbackConversations.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="1" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="1" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="2" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="2" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="3" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="3" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="com.feedback.ui.b.&lt;init&gt;(Landroid/content/Context;Ljava/util/List;)V"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.e.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversations;)V" replace-index="0" replace-signature="com.feedback.ui.j.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversations;)V"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.e.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversations;)V" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;)Ljava/util/List;"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.e.a.a()Z" replace-index="0" replace-signature="com.a.a.i.a.a()Z"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.h.a.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.feedback.ui.j.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversations;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.h.a.&lt;init&gt;(Landroid/content/Context;)V" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;)Ljava/util/List;"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.c.a(Landroid/content/Context;)Ljava/util/List;" replace-index="0" replace-signature="com.feedback.ui.j.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversations;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.c.a(Landroid/content/Context;)Ljava/util/List;" replace-index="0" replace-signature="com.a.a.f.a.a(Landroid/content/Context;)Ljava/util/List;"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.g.&lt;init&gt;(Landroid/content/Context;Ljava/util/List;)V" replace-index="0" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.g.&lt;init&gt;(Landroid/content/Context;Ljava/util/List;)V" replace-index="0" replace-signature="com.feedback.ui.b.&lt;init&gt;(Landroid/content/Context;Ljava/util/List;)V"/>
+    </Method>
+    <Method signature="com.feedback.ui.j.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="android.content.Context.startActivity(Landroid/content/Intent;)V"/>
+        <Replace-Method original-index="1" original-signature="android.widget.Toast.show()V" replace-index="0" replace-signature="android.content.Context.startActivity(Landroid/content/Intent;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.g.c.d(Landroid/content/Context;Lorg/json/JSONObject;)V" replace-index="0" replace-signature="android.content.Context.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.widget.EditText.getText()Landroid/text/Editable;"/>
+        <Remove-Method index="0" signature="android.text.Editable.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.feedback.ui.SendFeedback.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.feedback.ui.SendFeedback.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.length()I"/>
+        <Remove-Method index="0" signature="android.widget.Spinner.getSelectedItemPosition()I"/>
+        <Remove-Method index="1" signature="android.widget.Spinner.getSelectedItemPosition()I"/>
+        <Remove-Method index="0" signature="com.feedback.ui.SendFeedback.getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="1" signature="android.content.SharedPreferences$Editor.putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Remove-Method index="0" signature="java.util.concurrent.ExecutorService.submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;"/>
+        <Remove-Method index="0" signature="com.feedback.ui.SendFeedback.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="com.feedback.ui.SendFeedback.getSystemService(Ljava/lang/String;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="android.widget.EditText.getWindowToken()Landroid/os/IBinder;"/>
+        <Remove-Method index="0" signature="android.view.inputmethod.InputMethodManager.hideSoftInputFromWindow(Landroid/os/IBinder;I)Z"/>
+        <Remove-Method index="0" signature="com.feedback.ui.SendFeedback.finish()V"/>
+        <Remove-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Remove-Method index="0" signature="com.a.a.g.d.a(Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.a.a.h.c.&lt;init&gt;(Lorg/json/JSONObject;Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.feedback.ui.SendFeedback.a(Lcom/feedback/ui/SendFeedback;)Landroid/widget/EditText;"/>
+        <Remove-Method index="1" signature="com.feedback.ui.SendFeedback.a(Lcom/feedback/ui/SendFeedback;)Landroid/widget/EditText;"/>
+        <Remove-Method index="2" signature="com.feedback.ui.SendFeedback.a(Lcom/feedback/ui/SendFeedback;)Landroid/widget/EditText;"/>
+        <Remove-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+        <Remove-Method index="1" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+        <Remove-Method index="0" signature="com.feedback.ui.SendFeedback.b(Lcom/feedback/ui/SendFeedback;)Landroid/widget/Spinner;"/>
+        <Remove-Method index="1" signature="com.feedback.ui.SendFeedback.b(Lcom/feedback/ui/SendFeedback;)Landroid/widget/Spinner;"/>
+        <Remove-Method index="0" signature="com.feedback.ui.SendFeedback.c(Lcom/feedback/ui/SendFeedback;)Landroid/widget/Spinner;"/>
+        <Remove-Method index="1" signature="com.feedback.ui.SendFeedback.c(Lcom/feedback/ui/SendFeedback;)Landroid/widget/Spinner;"/>
+        <Remove-Method index="0" signature="com.a.a.g.b.a(Landroid/content/Context;Ljava/lang/String;II)Lorg/json/JSONObject;"/>
+        <Remove-Method index="0" signature="com.feedback.ui.SendFeedback.a(Lcom/feedback/ui/SendFeedback;Lorg/json/JSONObject;)V"/>
+        <Remove-Method index="0" signature="com.feedback.ui.SendFeedback.d(Lcom/feedback/ui/SendFeedback;)Lorg/json/JSONObject;"/>
+        <Remove-Method index="1" signature="com.feedback.ui.SendFeedback.d(Lcom/feedback/ui/SendFeedback;)Lorg/json/JSONObject;"/>
+        <Remove-Method index="2" signature="com.feedback.ui.SendFeedback.d(Lcom/feedback/ui/SendFeedback;)Lorg/json/JSONObject;"/>
+        <Remove-Method index="0" signature="com.a.a.g.c.c(Landroid/content/Context;Lorg/json/JSONObject;)V"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.GameActivity.onResume()V">
+        <Replace-Method original-index="0" original-signature="com.a.a.i.a.b(Landroid/content/Context;)V" replace-index="0" replace-signature="com.a.a.e.c.b(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.CoverActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.a.a.a.b.a(Landroid/app/Activity;)V" replace-index="0" replace-signature="com.a.a.c.a.a(Landroid/app/Activity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.d.a.a(Landroid/view/View;)V" replace-index="0" replace-signature="com.a.a.b.e.a(Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.d.d.a(Landroid/app/Activity;ILjava/lang/Class;)V" replace-index="0" replace-signature="com.a.a.b.c.a(Landroid/app/Activity;ILjava/lang/Class;)V"/>
+        <Replace-Method original-index="1" original-signature="com.a.a.d.d.a(Landroid/app/Activity;ILjava/lang/Class;)V" replace-index="1" replace-signature="com.a.a.b.c.a(Landroid/app/Activity;ILjava/lang/Class;)V"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.a.a.b(Landroid/content/Context;)Z" replace-index="0" replace-signature="com.a.a.c.b.b(Landroid/content/Context;)Z"/>
+        <Add-Method index="0" signature="com.AndPhone.game.CrossRoad.b.a()V"/>
+        <Remove-Method index="0" signature="com.AndPhone.game.CrossRoad.e.a()V"/>
+        <Remove-Method index="0" signature="com.a.a.i.a.e(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.feedback.ui.SendFeedback.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.a.a.g.d.a(Ljava/lang/String;)Z" replace-index="0" replace-signature="com.a.a.f.b.a(Ljava/lang/String;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="1" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="1" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="2" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="2" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="3" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="3" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="4" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="4" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="5" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="5" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="6" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="6" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="7" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="7" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="8" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="8" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="9" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="9" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="10" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="10" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="11" original-signature="com.a.a.i.r.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" replace-index="11" replace-signature="com.a.a.e.m.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.i.&lt;init&gt;(Lcom/feedback/ui/SendFeedback;)V" replace-index="0" replace-signature="com.feedback.ui.d.&lt;init&gt;(Lcom/feedback/ui/SendFeedback;)V"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.i.&lt;init&gt;(Lcom/feedback/ui/SendFeedback;)V" replace-index="0" replace-signature="com.feedback.ui.c.&lt;init&gt;(Lcom/feedback/ui/SendFeedback;)V"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.j.&lt;init&gt;(Lcom/feedback/ui/SendFeedback;)V" replace-index="0" replace-signature="com.feedback.ui.d.&lt;init&gt;(Lcom/feedback/ui/SendFeedback;)V"/>
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.j.&lt;init&gt;(Lcom/feedback/ui/SendFeedback;)V" replace-index="0" replace-signature="com.feedback.ui.c.&lt;init&gt;(Lcom/feedback/ui/SendFeedback;)V"/>
+        <Add-Method index="0" signature="org.json.JSONObject.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.a.a.g.a.&lt;init&gt;(Lorg/json/JSONObject;)V"/>
+        <Add-Method index="0" signature="com.a.a.g.a.a()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.a.a.f.a.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="org.json.JSONArray.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="org.json.JSONArray.getJSONObject(I)Lorg/json/JSONObject;"/>
+        <Remove-Method index="0" signature="com.a.a.f.a.&lt;init&gt;(Lorg/json/JSONObject;)V"/>
+        <Remove-Method index="0" signature="com.a.a.f.a.a()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.a.a.g.c.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.MoreActivity.onResume()V">
+        <Replace-Method original-index="0" original-signature="com.a.a.i.a.b(Landroid/content/Context;)V" replace-index="0" replace-signature="com.a.a.e.c.b(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.feedback.ui.FeedbackConversations.onStart()V">
+        <Replace-Method original-index="0" original-signature="com.feedback.ui.f.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversations;Lcom/feedback/ui/g;)V" replace-index="0" replace-signature="com.feedback.ui.i.&lt;init&gt;(Lcom/feedback/ui/FeedbackConversations;Lcom/feedback/ui/b;)V"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.CoverActivity$3.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.openfeint.api.ui.Dashboard.open()V"/>
+        <Remove-Method index="0" signature="android.widget.ImageButton.setImageResource(I)V"/>
+        <Remove-Method index="1" signature="android.widget.ImageButton.setImageResource(I)V"/>
+        <Remove-Method index="0" signature="com.AndPhone.game.CrossRoad.CoverActivity.a(Lcom/AndPhone/game/CrossRoad/CoverActivity;)Z"/>
+        <Remove-Method index="0" signature="com.AndPhone.game.CrossRoad.CoverActivity.b(Lcom/AndPhone/game/CrossRoad/CoverActivity;)Landroid/widget/ImageButton;"/>
+        <Remove-Method index="1" signature="com.AndPhone.game.CrossRoad.CoverActivity.b(Lcom/AndPhone/game/CrossRoad/CoverActivity;)Landroid/widget/ImageButton;"/>
+        <Remove-Method index="0" signature="com.a.a.a.a.a(Landroid/content/Context;Z)V"/>
+        <Remove-Method index="1" signature="com.a.a.a.a.a(Landroid/content/Context;Z)V"/>
+        <Remove-Method index="0" signature="com.AndPhone.game.CrossRoad.CoverActivity.a(Lcom/AndPhone/game/CrossRoad/CoverActivity;Z)V"/>
+        <Remove-Method index="1" signature="com.AndPhone.game.CrossRoad.CoverActivity.a(Lcom/AndPhone/game/CrossRoad/CoverActivity;Z)V"/>
+    </Method>
+    <Method signature="com.a.a.h.b.&lt;init&gt;(Landroid/content/Context;)V">
+        <Replace-Method original-index="0" original-signature="com.a.a.i.r.b(Landroid/content/Context;)Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.e.m.a(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.i.r.b(Landroid/content/Context;)Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.e.m.b(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.i.r.c(Landroid/content/Context;)Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.e.m.a(Landroid/content/Context;)Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.a.a.i.r.c(Landroid/content/Context;)Ljava/lang/String;" replace-index="0" replace-signature="com.a.a.e.m.b(Landroid/content/Context;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.AndPhone.game.CrossRoad.GameActivity$5.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V"/>
+        <Remove-Method index="0" signature="com.AndPhone.game.CrossRoad.GameActivity.getTitle()Ljava/lang/CharSequence;"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.setType(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="1" signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.Intent.createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;"/>
+    </Method>
+</Apk>

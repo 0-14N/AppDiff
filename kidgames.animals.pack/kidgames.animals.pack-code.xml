@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="kidgames.animals.pack" pkg="kidgames.animals.pack">
+    <Method signature="com.google.gson.internal.bind.TypeAdapters$28.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="com.google.gson.internal.$Gson$Types.typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.google.gson.internal.$Gson$Types.typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.util.Formatter$FormatSpecifier.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.Object.getClass()Ljava/lang/Class;"/>
+        <Remove-Method index="0" signature="java.lang.Class.getSimpleName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.bind.TypeAdapters$29.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.$Gson$Types$GenericArrayTypeImpl.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.text.AttributedCharacterIterator$Attribute.toString()Ljava/lang/String;"/>
+    <Method signature="com.google.gson.internal.bind.TypeAdapters$31.toString()Ljava/lang/String;"/>
+    <Method signature="com.google.ads.util.i$c.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="com.google.ads.util.i$a.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.gson.internal.$Gson$Types$WildcardTypeImpl.toString()Ljava/lang/String;"/>
+    <Method signature="com.millennialmedia.android.AdCacheThreadPool$AdCacheTask.compareTo(Ljava/lang/Object;)I">
+        <Add-Method index="0" signature="com.millennialmedia.android.AdCacheThreadPool$AdCacheTask.compareTo(Lcom/millennialmedia/android/AdCacheThreadPool$AdCacheTask;)I"/>
+    </Method>
+    <Method signature="java.lang.Enum.compareTo(Ljava/lang/Object;)I">
+        <Remove-Method index="0" signature="com.millennialmedia.android.AdCacheThreadPool$AdCacheTask.compareTo(Lcom/millennialmedia/android/AdCacheThreadPool$AdCacheTask;)I"/>
+    </Method>
+    <Method signature="com.google.gson.internal.LazilyParsedNumber.longValue()J">
+        <Add-Method index="0" signature="java.lang.Long.parseLong(Ljava/lang/String;)J"/>
+        <Add-Method index="0" signature="java.math.BigInteger.longValue()J"/>
+        <Add-Method index="0" signature="java.math.BigInteger.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="kidgames.animals.pack.Open.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.appbrain.AppBrain.init(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="java.lang.Integer.longValue()J">
+        <Remove-Method index="0" signature="java.lang.Long.parseLong(Ljava/lang/String;)J"/>
+        <Remove-Method index="0" signature="java.math.BigInteger.longValue()J"/>
+        <Remove-Method index="0" signature="java.math.BigInteger.&lt;init&gt;(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.bind.TypeAdapters$28.toString()Ljava/lang/String;"/>
+    <Method signature="com.millennialmedia.google.gson.internal.bind.TypeAdapters$30.toString()Ljava/lang/String;"/>
+    <Method signature="com.sec.android.ad.AdException.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.LinkedHashTreeMap$EntrySet$1.next()Ljava/lang/Object;">
+        <Remove-Method index="0" signature="com.google.gson.internal.StringMap.getEntry(Ljava/lang/String;)Lcom/google/gson/internal/StringMap$LinkedEntry;"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.$Gson$Types$WildcardTypeImpl.toString()Ljava/lang/String;"/>
+    <Method signature="java.lang.Integer.&lt;init&gt;(I)V">
+        <Remove-Method index="0" signature="java.text.CharacterIterator.getEndIndex()I"/>
+        <Remove-Method index="1" signature="java.text.CharacterIterator.getEndIndex()I"/>
+    </Method>
+    <Method signature="java.lang.StackTraceElement.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="com.millennialmedia.google.gson.internal.$Gson$Types.typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="com.millennialmedia.google.gson.internal.$Gson$Types.typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="kidgames.animals.pack.Start.onResume()V">
+        <Remove-Method index="0" signature="com.mopub.mobileads.MoPubInterstitial.load()V"/>
+    </Method>
+    <Method signature="android.support.v4.app.LoaderManagerImpl.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.gson.internal.bind.TypeAdapters$28.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.toString()Ljava/lang/String;"/>
+    <Method signature="java.util.AbstractMap$SimpleImmutableEntry.getValue()Ljava/lang/Object;">
+        <Remove-Method index="0" signature="java.lang.Object.equals(Ljava/lang/Object;)Z"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.toString()Ljava/lang/String;"/>
+    <Method signature="java.math.BigDecimal.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="javax.crypto.SunJCE_f.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.Class.getName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.google.gson.internal.StringMap.get(Ljava/lang/Object;)Ljava/lang/Object;">
+        <Add-Method index="0" signature="com.google.gson.internal.StringMap.getEntry(Ljava/lang/String;)Lcom/google/gson/internal/StringMap$LinkedEntry;"/>
+    </Method>
+    <Method signature="java.util.Vector.equals(Ljava/lang/Object;)Z">
+        <Remove-Method index="0" signature="com.millennialmedia.google.gson.internal.LinkedHashTreeMap.findByObject(Ljava/lang/Object;)Lcom/millennialmedia/google/gson/internal/LinkedHashTreeMap$Node;"/>
+    </Method>
+    <Method signature="kidgames.animals.pack.Start.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.mopub.mobileads.MoPubInterstitial.&lt;init&gt;(Landroid/app/Activity;Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="com.mopub.mobileads.MoPubInterstitial.&lt;init&gt;(Landroid/app/Activity;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="kidgames.animals.pack.Start.showInterstitialAd()V"/>
+    </Method>
+    <Method signature="com.millennialmedia.google.gson.internal.LinkedHashTreeMap.get(Ljava/lang/Object;)Ljava/lang/Object;">
+        <Add-Method index="0" signature="com.millennialmedia.google.gson.internal.LinkedHashTreeMap.findByObject(Ljava/lang/Object;)Lcom/millennialmedia/google/gson/internal/LinkedHashTreeMap$Node;"/>
+    </Method>
+    <Method signature="kidgames.animals.pack.Start.onDestroy()V">
+        <Remove-Method index="0" signature="com.mopub.mobileads.MoPubInterstitial.destroy()V"/>
+    </Method>
+    <Method signature="com.google.gson.internal.bind.TypeAdapters$29.toString()Ljava/lang/String;"/>
+    <Method signature="com.google.ads.util.i.toString()Ljava/lang/String;">
+        <Add-Method index="0" signature="java.lang.Object.getClass()Ljava/lang/Class;"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Class.getSimpleName()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="java.util.Formatter$FixedString.toString()Ljava/lang/String;">
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.ads.util.i$a.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="kidgames.animals.pack.Open.onResume()V">
+        <Remove-Method index="0" signature="com.appbrain.AdService.maybeShowInterstitial(Landroid/app/Activity;)Z"/>
+        <Remove-Method index="0" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="com.appbrain.AppBrain.getAds()Lcom/appbrain/AdService;"/>
+    </Method>
+</Apk>

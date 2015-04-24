@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.zxcx.blst.act" pkg="com.zxcx.blst.act">
+    <Add-Class signature="Lcom/zxcx/blst/adapter/MedicalAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/Medicine2LvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyDynamicAct$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/BusinessCircleAdapterR$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/ExpertPilotAct$6" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleSelectAct$ContentAdapter" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/BusinessCircleAdapterL$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyDynamicAct$4" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$7" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/Medicine1LvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/InformationAct$7" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnExplainListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/ZhiWeiClassfyAct$2" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/viewmodel/BusinessCirclePersonView" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyAttentionAct$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleReplyAct$1" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyDynamicAct$MListViewListener$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/viewmodel/BusinessCircleView" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleDetailAct" super-signatures="Lcom/zxcx/blst/act/BaseAct#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleAct$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyDynamicAct$5" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyDynamicAct$MListViewListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/HisBusinessCircleAct$4" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/NearDrugsLvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyWidget" super-signatures="Landroid/appwidget/AppWidgetProvider#Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/InformationActMoreLvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleSelectAct" super-signatures="Lcom/zxcx/blst/act/BaseAct#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleAct" super-signatures="Lcom/zxcx/blst/act/BaseAct#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/BusinessCircleAdapterL$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleSelectAct$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleSelectAct$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/HisBusinessCircleAct$SelectAdapter" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/custom/widget/RefreshableListView_Info" super-signatures="Landroid/widget/ListView#Landroid/widget/AbsListView#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/custom/dialog/ImageCustomDialog" super-signatures="Landroid/app/Dialog#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/util/PinyinComparator_BusinessCircleView" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/ZhiWeiClassfyAct$mAdapter" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleDetailAct$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/BusinessCirclePersonAdapterR" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleAct$MyOnRefreshListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/R$xml" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnRefreshListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleAct$MyOnPageChangeListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleDetailAct$MyOnRefreshListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/ZhiWeiClassfyAct$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/BusinessCirclePersonAdapterR$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleAct$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleDetailAct$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/Medicine4LvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/ExpertPilotActLvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleReplyAct" super-signatures="Lcom/zxcx/blst/act/BaseAct#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/custom/widget/MyGallery_Info" super-signatures="Landroid/widget/Gallery#Landroid/widget/AbsSpinner#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/custom/dialog/ImageCustomDialog$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleDetailAct$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleSelectAct$4" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleDetailAct$NewDataTask" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/viewmodel/BusinessCircleMyGroupView" super-signatures="Lcom/zxcx/blst/viewmodel/BusinessCircleView#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/HisBusinessCircleAct$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/MedicineCommonLvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/CreateHotsportAct$1" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/HisBusinessCircleAct" super-signatures="Lcom/zxcx/blst/act/BaseAct#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/MoreAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyDynamicAct" super-signatures="Lcom/zxcx/blst/act/BaseAct#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyDynamicAct$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/HisBusinessCircleAct$MListViewListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/HisBusinessCircleAct$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/MyMessageActLvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/BusinessCircleAdapterR" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleSelectAct$SelectAdapter" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleDetailAct$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/DrugOneClassfyAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/Medicine3LvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/viewmodel/BusinessCircleZhiWeiView" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/MyAttentionPeopleActAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/BusinessCircleAdapterL" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/IndexLay3Adapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/CreateHotsportAct" super-signatures="Lcom/zxcx/blst/act/BaseAct#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleSelectAct$3" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleAct$NewDataTask" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleDetailAct$MyOnPageChangeListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleDetailAct$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/SquareActGridAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/custom/widget/MyImageView" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/ZhiWeiClassfyAct" super-signatures="Lcom/zxcx/blst/act/BaseAct#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleSettingAct" super-signatures="Lcom/zxcx/blst/act/BaseAct#Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/MyFansActLvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleAct$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleAct$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyDynamicAct$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyAttention2Act$5" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/adapter/IndexLay4Adapter$ViewHolder" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$4$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/HisBusinessCircleAct$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleDetailAct$MyTabOnClickListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zxcx/blst/act/BusinessCircleAct$MyTabOnClickListener" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.zxcx.blst.act.VoteThemeSelectAct.setupView()V">
+        <Remove-Method index="0" signature="android.app.ProgressDialog.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.InformationMoreAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.InformationMoreAct.getDateForInformation()V" replace-index="0" replace-signature="com.zxcx.blst.act.InformationMoreAct.getDateForInformation(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyIndexAct.setupView()V"/>
+    <Method signature="com.zxcx.blst.act.MyAttentionAct.setupView()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyAttentionAct.getData()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyAttentionAct.getData(Z)V"/>
+        <Remove-Method index="0" signature="com.zxcx.blst.custom.widget.RefreshableListView.setCanPullRefresh(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.SubjectAct$1.handleMessage(Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setAdapter(Landroid/widget/ListAdapter;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setAdapter(Landroid/widget/ListAdapter;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.adapter.SubjectCommonActLvAdapter.&lt;init&gt;(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V" replace-index="0" replace-signature="com.zxcx.blst.adapter.SubjectCommonActLvAdapter.&lt;init&gt;(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.JoinDetailAct$1.handleMessage(Landroid/os/Message;)V"/>
+    <Method signature="com.zxcx.blst.act.MyInvestmentOrAgencyAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyInvestmentOrAgencyAct.getDataList()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyInvestmentOrAgencyAct.getDataList(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.IndexAct.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="java.util.List.clear()V"/>
+        <Add-Method index="1" signature="java.util.List.clear()V"/>
+        <Add-Method index="2" signature="java.util.List.clear()V"/>
+        <Add-Method index="3" signature="java.util.List.clear()V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyIndexAct$1.handleMessage(Landroid/os/Message;)V">
+        <Add-Method index="0" signature="com.zxcx.blst.viewmodel.AttentionMessageView.getHotspotcount()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.zxcx.blst.viewmodel.AttentionMessageView.getHotspotcount()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.service.MyNotificationService.getMessage()V">
+        <Add-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.edit()Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences$Editor.commit()Z"/>
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="1" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.alibaba.fastjson.JSON.parseObject(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="org.json.JSONObject.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="org.json.JSONObject.getString(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.Integer.toString(I)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.zxcx.blst.util.NetUtil.getRequest(Ljava/lang/String;Ljava/util/HashMap;Landroid/content/Context;)[Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.zxcx.blst.viewmodel.AndroidmessageView.getCommid()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.zxcx.blst.viewmodel.AndroidmessageView.getCommid()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.zxcx.blst.act.service.MyNotificationService.sendBroadCast()V"/>
+        <Remove-Method index="0" signature="com.zxcx.blst.act.service.MyNotificationService$2.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;"/>
+        <Remove-Method index="0" signature="java.io.PrintStream.println(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.zxcx.blst.act.service.MyNotificationService$2.&lt;init&gt;(Lcom/zxcx/blst/act/service/MyNotificationService;)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyMessageAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyMessageAct.getPeopleList()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyMessageAct.getPeopleList(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.ExpertPilotAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.ExpertPilotAct.getData()V" replace-index="0" replace-signature="com.zxcx.blst.act.ExpertPilotAct.getData(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyCollectAct.setupView()V">
+        <Remove-Method index="0" signature="com.zxcx.blst.custom.widget.RefreshableListView.setCanPullRefresh(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.SubjectAct.setupView()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.addHeaderView(Landroid/view/View;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.addHeaderView(Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setCanPullRefresh(Z)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.addHeaderView(Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnExplainListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnExplainListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnExplainListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnExplainListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnRefreshListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnRefreshListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setAdapter(Landroid/widget/ListAdapter;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setAdapter(Landroid/widget/ListAdapter;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.adapter.SubjectCommonActLvAdapter.&lt;init&gt;(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V" replace-index="0" replace-signature="com.zxcx.blst.adapter.SubjectCommonActLvAdapter.&lt;init&gt;(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyCollectAct.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyCollectAct.getDateList()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyCollectAct.getDateList(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyIndexAct.onClick(Landroid/view/View;)V"/>
+    <Method signature="com.zxcx.blst.act.MyCollectAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyCollectAct.getDateList()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyCollectAct.getDateList(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyAttentionPeopleAct.setupView()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList(Z)V"/>
+        <Remove-Method index="0" signature="com.zxcx.blst.custom.widget.RefreshableListView.setCanPullRefresh(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyAttention2Act.setupView()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyAttention2Act.getData()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyAttention2Act.getData(Z)V"/>
+        <Add-Method index="0" signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnRefreshListener;)V"/>
+        <Add-Method index="0" signature="com.zxcx.blst.act.MyAttention2Act$4.&lt;init&gt;(Lcom/zxcx/blst/act/MyAttention2Act;)V"/>
+        <Remove-Method index="0" signature="com.zxcx.blst.custom.widget.RefreshableListView.setCanPullRefresh(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.InformationAct.setupView()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.addHeaderView(Landroid/view/View;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.addHeaderView(Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setCanPullRefresh(Z)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.addHeaderView(Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnExplainListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnExplainListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnExplainListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnRefreshListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setAdapter(Landroid/widget/ListAdapter;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setAdapter(Landroid/widget/ListAdapter;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.adapter.InformationCommonActLvAdapter.&lt;init&gt;(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V" replace-index="0" replace-signature="com.zxcx.blst.adapter.InformationCommonActLvAdapter.&lt;init&gt;(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V"/>
+        <Add-Method index="0" signature="com.zxcx.blst.act.InformationAct$4.&lt;init&gt;(Lcom/zxcx/blst/act/InformationAct;)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.SomeBodyIndexAct.onClick(Landroid/view/View;)V"/>
+    <Method signature="com.zxcx.blst.act.MyFansAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyFansAct.getPeopleList()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyFansAct.getPeopleList(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.ListByClassfyAct.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.ListByClassfyAct.getData()V" replace-index="0" replace-signature="com.zxcx.blst.act.ListByClassfyAct.getData(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyMessageAct.setupView()V">
+        <Remove-Method index="0" signature="com.zxcx.blst.custom.widget.RefreshableListView.setCanPullRefresh(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyAttention2Act$1.handleMessage(Landroid/os/Message;)V">
+        <Add-Method index="0" signature="com.zxcx.blst.adapter.IndexLay3Adapter.notifyDataSetChanged()V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.IndexAct$7.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="java.util.List.clear()V"/>
+        <Add-Method index="1" signature="java.util.List.clear()V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.InformationMoreAct.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.InformationMoreAct.getDateForInformation()V" replace-index="0" replace-signature="com.zxcx.blst.act.InformationMoreAct.getDateForInformation(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.SubjectAct.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.SubjectAct.getData()V" replace-index="0" replace-signature="com.zxcx.blst.act.SubjectAct.getData(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyAttention2Act.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyAttention2Act.getData()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyAttention2Act.getData(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.SomeBodyIndexAct$1.handleMessage(Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="1" replace-signature="com.zxcx.blst.viewmodel.PersonalView.getGroupcount()Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="1" replace-signature="com.zxcx.blst.viewmodel.PersonalView.getHotspotcount()Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.util.SysTool.notEmptyOrNull(Ljava/lang/String;)Z" replace-index="0" replace-signature="java.lang.String.endsWith(Ljava/lang/String;)Z"/>
+        <Replace-Method original-index="1" original-signature="com.zxcx.blst.util.SysTool.notEmptyOrNull(Ljava/lang/String;)Z" replace-index="1" replace-signature="java.lang.String.endsWith(Ljava/lang/String;)Z"/>
+        <Replace-Method original-index="2" original-signature="com.zxcx.blst.util.SysTool.notEmptyOrNull(Ljava/lang/String;)Z" replace-index="2" replace-signature="java.lang.String.endsWith(Ljava/lang/String;)Z"/>
+        <Replace-Method original-index="3" original-signature="com.zxcx.blst.util.SysTool.notEmptyOrNull(Ljava/lang/String;)Z" replace-index="3" replace-signature="java.lang.String.endsWith(Ljava/lang/String;)Z"/>
+        <Replace-Method original-index="4" original-signature="com.zxcx.blst.util.SysTool.notEmptyOrNull(Ljava/lang/String;)Z" replace-index="4" replace-signature="java.lang.String.endsWith(Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="com.zxcx.blst.viewmodel.PersonalView.getType()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="com.zxcx.blst.viewmodel.PersonalView.getType()Ljava/lang/String;"/>
+        <Add-Method index="2" signature="com.zxcx.blst.viewmodel.PersonalView.getType()Ljava/lang/String;"/>
+        <Add-Method index="3" signature="com.zxcx.blst.viewmodel.PersonalView.getType()Ljava/lang/String;"/>
+        <Add-Method index="4" signature="com.zxcx.blst.viewmodel.PersonalView.getType()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.zxcx.blst.viewmodel.PersonalView.getGroupcount()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.zxcx.blst.viewmodel.PersonalView.getHotspotcount()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.ExpertPilotAct.setupView()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.addHeaderView(Landroid/view/View;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.addHeaderView(Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setCanPullRefresh(Z)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.addHeaderView(Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnExplainListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnExplainListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnExplainListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnRefreshListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.custom.widget.RefreshableListView.setAdapter(Landroid/widget/ListAdapter;)V" replace-index="0" replace-signature="com.zxcx.blst.custom.widget.RefreshableListView_Info.setAdapter(Landroid/widget/ListAdapter;)V"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.adapter.ExpertPilotActLvAdapter.&lt;init&gt;(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V" replace-index="0" replace-signature="com.zxcx.blst.adapter.ExpertPilotActLvAdapter.&lt;init&gt;(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V"/>
+        <Add-Method index="0" signature="com.zxcx.blst.act.ExpertPilotAct$4.&lt;init&gt;(Lcom/zxcx/blst/act/ExpertPilotAct;)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.SearchAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.SearchAct.getData(Ljava/lang/String;)V" replace-index="0" replace-signature="com.zxcx.blst.act.SearchAct.getData(Ljava/lang/String;Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.zxcx.blst.act.SearchAct.getData(Ljava/lang/String;)V" replace-index="1" replace-signature="com.zxcx.blst.act.SearchAct.getData(Ljava/lang/String;Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyMessageAct.onResume()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyMessageAct.getPeopleList()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyMessageAct.getPeopleList(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyAttentionAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyAttentionAct.getData()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyAttentionAct.getData(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.InformationAct.getInfoSortData()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.InformationAct$4.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;" replace-index="0" replace-signature="com.zxcx.blst.act.InformationAct$5.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;"/>
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.InformationAct$4.&lt;init&gt;(Lcom/zxcx/blst/act/InformationAct;)V" replace-index="0" replace-signature="com.zxcx.blst.act.InformationAct$5.&lt;init&gt;(Lcom/zxcx/blst/act/InformationAct;)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.SomeBodyIndexAct.setupView()V">
+        <Remove-Method index="0" signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.SubjectAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.SubjectAct.getData()V" replace-index="0" replace-signature="com.zxcx.blst.act.SubjectAct.getData(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyAttentionPeopleAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList()V" replace-index="1" replace-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList()V" replace-index="2" replace-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList(Z)V"/>
+        <Replace-Method original-index="2" original-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList()V" replace-index="3" replace-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList(Z)V"/>
+        <Replace-Method original-index="3" original-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList()V" replace-index="4" replace-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList(Z)V"/>
+        <Replace-Method original-index="4" original-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList()V" replace-index="4" replace-signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList(Z)V"/>
+        <Add-Method index="0" signature="com.zxcx.blst.act.MyAttentionPeopleAct.ListClear()V"/>
+        <Add-Method index="1" signature="com.zxcx.blst.act.MyAttentionPeopleAct.ListClear()V"/>
+        <Add-Method index="2" signature="com.zxcx.blst.act.MyAttentionPeopleAct.ListClear()V"/>
+        <Add-Method index="3" signature="com.zxcx.blst.act.MyAttentionPeopleAct.ListClear()V"/>
+        <Add-Method index="4" signature="com.zxcx.blst.act.MyAttentionPeopleAct.ListClear()V"/>
+        <Add-Method index="0" signature="com.zxcx.blst.act.MyAttentionPeopleAct.getPeopleList(Z)V"/>
+        <Remove-Method index="0" signature="java.util.List.clear()V"/>
+        <Remove-Method index="1" signature="java.util.List.clear()V"/>
+        <Remove-Method index="2" signature="java.util.List.clear()V"/>
+        <Remove-Method index="3" signature="java.util.List.clear()V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyInvestmentOrAgencyAct.setupView()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyInvestmentOrAgencyAct.getDataList()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyInvestmentOrAgencyAct.getDataList(Z)V"/>
+        <Add-Method index="0" signature="com.zxcx.blst.custom.widget.RefreshableListView.setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnRefreshListener;)V"/>
+        <Add-Method index="0" signature="com.zxcx.blst.act.MyInvestmentOrAgencyAct$5.&lt;init&gt;(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;)V"/>
+        <Remove-Method index="0" signature="com.zxcx.blst.custom.widget.RefreshableListView.setCanPullRefresh(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.IndexAct$1.handleMessage(Landroid/os/Message;)V">
+        <Add-Method index="0" signature="java.util.List.size()I"/>
+        <Add-Method index="0" signature="com.zxcx.blst.custom.widget.RefreshableListView.setSelection(I)V"/>
+        <Add-Method index="0" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+        <Add-Method index="1" signature="java.lang.Integer.parseInt(Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.AgencyDetailAct$1.handleMessage(Landroid/os/Message;)V"/>
+    <Method signature="com.zxcx.blst.act.InformationAct.refresh()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.InformationAct.getDateForInformation()V" replace-index="0" replace-signature="com.zxcx.blst.act.InformationAct.getDateForInformation(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MyFansAct.setupView()V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.MyFansAct.getPeopleList()V" replace-index="0" replace-signature="com.zxcx.blst.act.MyFansAct.getPeopleList(Z)V"/>
+        <Remove-Method index="0" signature="com.zxcx.blst.custom.widget.RefreshableListView.setCanPullRefresh(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MedicineBookAct1.setupView()V">
+        <Remove-Method index="0" signature="android.app.ProgressDialog.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.ListByClassfyAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.ListByClassfyAct.getData()V" replace-index="0" replace-signature="com.zxcx.blst.act.ListByClassfyAct.getData(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.ExpertPilotAct.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.ExpertPilotAct.getData()V" replace-index="0" replace-signature="com.zxcx.blst.act.ExpertPilotAct.getData(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.InformationAct.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.zxcx.blst.act.InformationAct.getDateForInformation()V" replace-index="0" replace-signature="com.zxcx.blst.act.InformationAct.getDateForInformation(Z)V"/>
+        <Replace-Method original-index="1" original-signature="com.zxcx.blst.act.InformationAct.getDateForInformation()V" replace-index="1" replace-signature="com.zxcx.blst.act.InformationAct.getDateForInformation(Z)V"/>
+        <Replace-Method original-index="2" original-signature="com.zxcx.blst.act.InformationAct.getDateForInformation()V" replace-index="2" replace-signature="com.zxcx.blst.act.InformationAct.getDateForInformation(Z)V"/>
+        <Replace-Method original-index="3" original-signature="com.zxcx.blst.act.InformationAct.getDateForInformation()V" replace-index="3" replace-signature="com.zxcx.blst.act.InformationAct.getDateForInformation(Z)V"/>
+        <Replace-Method original-index="4" original-signature="com.zxcx.blst.act.InformationAct.getDateForInformation()V" replace-index="4" replace-signature="com.zxcx.blst.act.InformationAct.getDateForInformation(Z)V"/>
+        <Replace-Method original-index="5" original-signature="com.zxcx.blst.act.InformationAct.getDateForInformation()V" replace-index="5" replace-signature="com.zxcx.blst.act.InformationAct.getDateForInformation(Z)V"/>
+    </Method>
+    <Method signature="com.zxcx.blst.act.MedicineBookAct1.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="android.app.Activity.onCreate(Landroid/os/Bundle;)V" replace-index="0" replace-signature="com.zxcx.blst.act.BaseAct.onCreate(Landroid/os/Bundle;)V"/>
+    </Method>
+</Apk>

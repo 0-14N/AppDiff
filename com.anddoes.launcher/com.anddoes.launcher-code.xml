@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.anddoes.launcher" pkg="com.anddoes.launcher">
+    <Method signature="com.anddoes.launcher.c.e.c()Z">
+        <Remove-Method index="0" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Remove-Method index="1" signature="android.text.TextUtils.isEmpty(Ljava/lang/CharSequence;)Z"/>
+        <Remove-Method index="0" signature="com.anddoes.launcher.preference.f.a()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.anddoes.launcher.preference.f.b()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.anddoes.launcher.c.e.h()Z"/>
+        <Remove-Method index="1" signature="com.anddoes.launcher.c.e.h()Z"/>
+        <Remove-Method index="0" signature="com.anddoes.launcher.preference.f.c()I"/>
+        <Remove-Method index="0" signature="com.anddoes.launcher.c.e.c(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.anddoes.launcher.c.e.a(Ljava/lang/String;Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="com.anddoes.launcher.c.e.b(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+</Apk>

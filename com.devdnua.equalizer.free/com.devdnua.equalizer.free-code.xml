@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.devdnua.equalizer.free" pkg="com.devdnua.equalizer.free">
+    <Method signature="com.google.android.gms.internal.oh.y()Z">
+        <Remove-Method index="0" signature="com.google.android.gms.internal.hi.a(Landroid/view/ViewGroup;Lcom/google/android/gms/internal/am;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="com.google.android.gms.internal.hi.a(Landroid/view/ViewGroup;Lcom/google/android/gms/internal/am;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+</Apk>

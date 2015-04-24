@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.chillingo.tinytroopersfree.android.aja" pkg="com.chillingo.tinytroopersfree.android.aja">
+    <Add-Class signature="Lnet/crazymedia/iad/d/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadFileData" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ShowWifiView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CustomProgressDialog$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/UnSupportedDeviceView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/l" super-signatures="Lnet/crazymedia/iad/b/h#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/Device" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bs" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/Logging" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/IDeviceData" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/SpaceUnavailableView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/KuguoAdsManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadMsgView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DeviceData$TextureType" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CheckingHostIpView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/NetworkUnavailableView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CustomView" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/h" super-signatures="Lcom/umeng/common/net/l#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bz" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/IProgressDialog" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CustomProgressDialog$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/SpaceUnavailableView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/k" super-signatures="Lnet/crazymedia/iad/b/h#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/w" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/cd" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/ReportPolicy" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/unity3d/player/q$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadActivityInternal$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/UpdatesFoundView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadProgress" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DeviceData" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bm" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/RemoteZipExtractorEvent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ShowWifiView$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ce" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/q" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aa" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bv" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CheckUpdatesView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadMsgView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/am" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/cb" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/q" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/au" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ca" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/MainActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadActivityInternal" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/NetworkUnavailableView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/NetworkUnavailableView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/br" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/UpdatesFoundView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/f$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ContactingServerView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/h$a" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ShowWifiView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/az" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/JsonEntity" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ServerErrorView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/Constants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CustomProgressDialog$2$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/InvalidAssetVersionView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CheckUpdatesView$3" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bd" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/b$a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/Show3GView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/UpdatesFoundView$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ak" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/d" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/r" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/Show3GView$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/be" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadProgressView$2" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ShowWifiView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/af" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/b" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/d" super-signatures="Ljava/util/concurrent/ConcurrentLinkedQueue#Ljava/util/AbstractQueue#Ljava/util/AbstractCollection#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/x" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chillingo/tinytroopersfree/android/aja/AdcActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ag" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bx" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/UpdatesFoundView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/u" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bo" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/ImageGallery" super-signatures="Landroid/widget/Gallery#Landroid/widget/AbsSpinner#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadProgressView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ChecksumValidator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/o" super-signatures="Lnet/crazymedia/iad/b/h#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a/c" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadFailedView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$a" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ad" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DefaultProgressDialog$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgentJSInterface$a" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ShowBGView$1" super-signatures="Landroid/os/CountDownTimer#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/JavaScriptCallBack" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/cc" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bl" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/by" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i$b" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/IDownloadView" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CustomProgressDialog" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/InvalidAssetVersionView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/chillingo/tinytroopersfree/android/aja/SampleRenderer" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/AssetManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ba" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ZipExtractor" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CustomProgressDialog$2$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CheckUpdatesView$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ab" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadMsgView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadMsgView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bt" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/c" super-signatures="Lcom/umeng/common/b/d#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/UnSupportedDeviceView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/c/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bh" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CheckUpdatesView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/c" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ax" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ContactingServerView$3" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/as" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadProgress$FileProgress" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ac" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadFailedView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadActivityInternal$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/f" super-signatures="Lcom/kuguo/b/a#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/f$b" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ai" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CustomProgressDialog$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ar" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/MemoryStatus" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/g" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadActivityInternal$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CustomView$BackGround" super-signatures="Landroid/graphics/drawable/Drawable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadActivity" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/LocalZipExtractorEvent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ah" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ServerErrorView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/Show3GView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/t" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/InvalidAssetVersionView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DeletingAssetsView$3" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bn" super-signatures="Landroid/widget/ImageView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bw" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/WifiReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/LockManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/IDownloadActivity" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DeletingAssetsView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/devgame/InitConfig" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadProgressView$RetryTimerTask" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/unity3d/player/p$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/SpeedCalculator" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ContactingServerView$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/l" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/at" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ServerErrorView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ap" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ao" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/Gender" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aj" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/y" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/v" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/p" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/m" super-signatures="Lnet/crazymedia/iad/b/h#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bp" super-signatures="Landroid/widget/ListView#Landroid/widget/AbsListView#Landroid/widget/AdapterView#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ContactingServerView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bk" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bi" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/r" super-signatures="Lnet/crazymedia/iad/b/p#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i$c" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/e" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/Language" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/RandomAccessFileReadThread" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/z" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadProgressView$1$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/av" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/j" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DefaultProgressDialog" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/cf" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/g" super-signatures="Lcom/umeng/common/net/k#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DeletingAssetsView$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ay" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/c" super-signatures="Landroid/widget/BaseAdapter#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/u" super-signatures="Lnet/crazymedia/iad/b/p#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/b$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/a$b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/unity3d/player/p$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService$b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bu" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdsPush" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/c$a" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bg" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ShowBGView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/SpaceUnavailableView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/unity3d/player/q$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/InvalidAssetVersionView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushManager" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/j" super-signatures="Lnet/crazymedia/iad/b/h#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadFailedView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/DownloadingService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/i" super-signatures="Lnet/crazymedia/iad/b/h#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bj" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadActivityInternal$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/a" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/Log" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/IZipExtractorEvent" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/MobclickAgentJSInterface" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/f" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/SpaceUnavailableView$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/d" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/t" super-signatures="Lnet/crazymedia/iad/b/p#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/an" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ServerErrorView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bb" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/m" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/net/f" super-signatures="Lcom/umeng/common/net/j#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/Show3GView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/n" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/u" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ShowWifiView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/UnSupportedDeviceView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/ae" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ReadThread" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/analytics/UmengOnlineConfigureListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadProgressView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/n" super-signatures="Lnet/crazymedia/iad/b/h#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/UnSupportedDeviceView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/Show3GView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/BoutiqueActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/AdPushActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bq" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/aw" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/UpdatesFoundView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/c/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/bc" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/umeng/common/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DeletingAssetsView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/d/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/ShowWifiView$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/NetworkUnavailableView$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lnet/crazymedia/iad/b/s" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DefaultProgressDialog$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/al" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/NetworkUnavailableView$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/a" super-signatures="Landroid/graphics/drawable/Drawable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ui/FoldView" super-signatures="Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/DownloadFailedView" super-signatures="Lcom/eamobile/download/CustomView#Landroid/widget/LinearLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/SpaceUnavailableView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/unity3d/player/p$2" super-signatures="Landroid/widget/EditText#Landroid/widget/TextView#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/kuguo/ad/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/eamobile/download/CustomProgressBar" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Method signature="com.unity3d.player.UnityPlayer$23.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.i(Lcom/unity3d/player/UnityPlayer;)Z" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.h(Lcom/unity3d/player/UnityPlayer;)Z"/>
+    </Method>
+    <Method signature="org.fmod.FMODAudioDevice.stop()V">
+        <Remove-Method index="0" signature="org.fmod.a.c()V"/>
+    </Method>
+    <Method signature="org.fmod.FMODAudioDevice.start()V">
+        <Remove-Method index="0" signature="org.fmod.a.b()V"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$17.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;Landroid/content/Context;IZZLandroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.z.&lt;init&gt;(Landroid/content/Context;IZZ)V" replace-index="0" replace-signature="com.unity3d.player.q.&lt;init&gt;(Landroid/content/Context;IZZ)V"/>
+    </Method>
+    <Method signature="org.fmod.FMODAudioDevice.run()V">
+        <Replace-Method original-index="2" original-signature="org.fmod.FMODAudioDevice.releaseAudioTrack()V" replace-index="0" replace-signature="org.fmod.FMODAudioDevice.sleep(I)V"/>
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="java.lang.IllegalStateException.getMessage()Ljava/lang/String;"/>
+        <Replace-Method original-index="2" original-signature="org.fmod.FMODAudioDevice.releaseAudioTrack()V" replace-index="1" replace-signature="org.fmod.FMODAudioDevice.sleep(I)V"/>
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="1" replace-signature="java.lang.IllegalStateException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.&lt;init&gt;(IIIII)V"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.getState()I"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.startRecording()V"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.stop()V"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.release()V"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.getRecordingState()I"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.read(Ljava/nio/ByteBuffer;I)I"/>
+        <Add-Method index="0" signature="org.fmod.FMODAudioDevice.fmodProcessMicData(Ljava/nio/ByteBuffer;I)I"/>
+        <Add-Method index="0" signature="java.lang.IllegalStateException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.IllegalStateException.getMessage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="org.fmod.FMODAudioDevice.sleep(I)V"/>
+        <Add-Method index="1" signature="org.fmod.FMODAudioDevice.sleep(I)V"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.&lt;init&gt;(IIIII)V"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.getState()I"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.startRecording()V"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.stop()V"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.release()V"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.getRecordingState()I"/>
+        <Add-Method index="0" signature="android.media.AudioRecord.read(Ljava/nio/ByteBuffer;I)I"/>
+        <Add-Method index="0" signature="org.fmod.FMODAudioDevice.fmodProcessMicData(Ljava/nio/ByteBuffer;I)I"/>
+        <Remove-Method index="0" signature="org.fmod.FMODAudioDevice.isInitialized()Z"/>
+        <Remove-Method index="0" signature="java.lang.Thread.sleep(J)V"/>
+        <Remove-Method index="0" signature="java.lang.Math.round(F)I"/>
+        <Remove-Method index="0" signature="org.fmod.FMODAudioDevice.isInitialized()Z"/>
+        <Remove-Method index="0" signature="java.lang.Thread.sleep(J)V"/>
+        <Remove-Method index="0" signature="java.lang.Math.round(F)I"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer.resume()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.l.Log(ILjava/lang/String;)V" replace-index="0" replace-signature="java.util.Map.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.p.e()V" replace-index="0" replace-signature="com.unity3d.player.h.e()V"/>
+        <Add-Method index="0" signature="java.util.Map.entrySet()Ljava/util/Set;"/>
+        <Add-Method index="0" signature="java.util.Set.iterator()Ljava/util/Iterator;"/>
+        <Add-Method index="0" signature="java.util.Map$Entry.getValue()Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="com.unity3d.player.a.b(Landroid/hardware/Camera$PreviewCallback;)V"/>
+        <Add-Method index="0" signature="com.unity3d.player.a.a()Landroid/hardware/Camera;"/>
+        <Add-Method index="0" signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="java.util.List.iterator()Ljava/util/Iterator;"/>
+        <Remove-Method index="0" signature="com.unity3d.player.a.a(Lcom/unity3d/player/a$a;)V"/>
+        <Remove-Method index="0" signature="java.lang.Exception.getMessage()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$9.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.x.dismiss()V" replace-index="0" replace-signature="com.unity3d.player.p.dismiss()V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.n(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.m(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.r(Lcom/unity3d/player/UnityPlayer;)Z" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.q(Lcom/unity3d/player/UnityPlayer;)Z"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$8.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.x.show()V" replace-index="0" replace-signature="com.unity3d.player.p.show()V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.n(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.m(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;"/>
+        <Replace-Method original-index="1" original-signature="com.unity3d.player.UnityPlayer.n(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;" replace-index="1" replace-signature="com.unity3d.player.UnityPlayer.m(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.q(Lcom/unity3d/player/UnityPlayer;)Z" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.p(Lcom/unity3d/player/UnityPlayer;)Z"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.x.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;Ljava/lang/String;IZZZLjava/lang/String;)V" replace-index="0" replace-signature="com.unity3d.player.p.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;Ljava/lang/String;IZZZLjava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.unity3d.player.t.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.nativeLinearAcc(FFFJ)V" replace-index="0" replace-signature="android.widget.ProgressBar.setVisibility(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.p.q(Lcom/unity3d/player/p;)J" replace-index="1" replace-signature="com.unity3d.player.UnityPlayer.l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;"/>
+        <Add-Method index="0" signature="com.unity3d.player.UnityPlayer.l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.e(Lcom/unity3d/player/p;)Lcom/unity3d/player/UnityPlayer;"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.n(Lcom/unity3d/player/p;)F"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.o(Lcom/unity3d/player/p;)F"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.p(Lcom/unity3d/player/p;)F"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$21.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.g(Lcom/unity3d/player/UnityPlayer;)Z" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.f(Lcom/unity3d/player/UnityPlayer;)Z"/>
+        <Remove-Method index="0" signature="com.unity3d.player.UnityPlayer.f(Lcom/unity3d/player/UnityPlayer;)V"/>
+    </Method>
+    <Method signature="com.unity3d.player.r.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.p.i(Lcom/unity3d/player/p;)J" replace-index="2" replace-signature="com.unity3d.player.UnityPlayer.i(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/UnityGL;"/>
+        <Add-Method index="0" signature="com.unity3d.player.q.setPreserveEGLContextOnPause(Z)V"/>
+        <Add-Method index="1" signature="com.unity3d.player.q.setPreserveEGLContextOnPause(Z)V"/>
+        <Add-Method index="0" signature="com.unity3d.player.UnityGL.onPause()V"/>
+        <Add-Method index="0" signature="com.unity3d.player.UnityGL.onResume()V"/>
+        <Add-Method index="0" signature="com.unity3d.player.UnityPlayer.i(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/UnityGL;"/>
+        <Add-Method index="1" signature="com.unity3d.player.UnityPlayer.i(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/UnityGL;"/>
+        <Add-Method index="3" signature="com.unity3d.player.UnityPlayer.i(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/UnityGL;"/>
+        <Remove-Method index="0" signature="com.unity3d.player.UnityPlayer.nativeGyro(FFFJ)V"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.e(Lcom/unity3d/player/p;)Lcom/unity3d/player/UnityPlayer;"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.f(Lcom/unity3d/player/p;)F"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.g(Lcom/unity3d/player/p;)F"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.h(Lcom/unity3d/player/p;)F"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer.d()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.y.d(Landroid/view/View;)V" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.addView(Landroid/view/View;)V"/>
+        <Remove-Method index="0" signature="org.fmod.FMODAudioDevice.isRunning()Z"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer.a(IZ)V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.z.setFocusableInTouchMode(Z)V" replace-index="0" replace-signature="com.unity3d.player.q.setFocusableInTouchMode(Z)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.h.b()Landroid/graphics/RectF;" replace-index="0" replace-signature="com.unity3d.player.e.b()Landroid/graphics/RectF;"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.m.&lt;init&gt;(Landroid/app/Activity;)V" replace-index="0" replace-signature="com.unity3d.player.g.&lt;init&gt;(Landroid/app/Activity;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.m.a()Z" replace-index="0" replace-signature="com.unity3d.player.g.a()Z"/>
+        <Add-Method index="0" signature="com.unity3d.player.q.setPreserveEGLContextOnPause(Z)V"/>
+        <Add-Method index="0" signature="com.unity3d.player.q.setFocusable(Z)V"/>
+        <Remove-Method index="0" signature="com.unity3d.player.z.setFocusable(Z)V"/>
+        <Remove-Method index="0" signature="java.lang.String.compareToIgnoreCase(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="java.lang.String.toLowerCase()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.startsWith(Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="com.unity3d.player.o.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.unity3d.player.y.a(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer.b()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.l.Log(ILjava/lang/String;)V" replace-index="0" replace-signature="com.unity3d.player.f.Log(ILjava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$11.run()V">
+        <Remove-Method index="0" signature="com.unity3d.player.a.a([B)V"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$6.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.p(Lcom/unity3d/player/UnityPlayer;)Ljava/lang/reflect/Method;" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.o(Lcom/unity3d/player/UnityPlayer;)Ljava/lang/reflect/Method;"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$22.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.h(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.g(Lcom/unity3d/player/UnityPlayer;)V"/>
+    </Method>
+    <Method signature="com.unity3d.player.VideoPlayer.onDestroy()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.VideoPlayer.b()V" replace-index="0" replace-signature="com.unity3d.player.VideoPlayer.a()V"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$15.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.isFinishing()Z" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.s(Lcom/unity3d/player/UnityPlayer;)Z"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$12.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.n(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.m(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer.windowFocusChanged(Z)V">
+        <Remove-Method index="0" signature="com.unity3d.player.x.a()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.unity3d.player.UnityPlayer.reportSoftInputStr(Ljava/lang/String;I)V"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayerActivity.onDestroy()V">
+        <Add-Method index="0" signature="com.devgame.InitConfig.destroy(Landroid/content/Context;)V"/>
+        <Add-Method index="0" signature="com.devgame.InitConfig.destroy(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.unity3d.player.VideoPlayer.onResume()V">
+        <Add-Method index="0" signature="com.unity3d.player.VideoPlayer.start()V"/>
+        <Remove-Method index="0" signature="com.unity3d.player.VideoPlayer.a()V"/>
+    </Method>
+    <Method signature="com.unity3d.player.VideoPlayer.onCreate(Landroid/os/Bundle;)V"/>
+    <Method signature="com.unity3d.player.UnityPlayer.&lt;init&gt;(Landroid/content/ContextWrapper;)V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.p.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.h.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.p.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.p.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.r.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.p.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.s.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.p.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.t.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="java.util.ArrayList.&lt;init&gt;()V" replace-index="0" replace-signature="com.unity3d.player.h.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="java.util.ArrayList.&lt;init&gt;()V" replace-index="0" replace-signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="java.util.ArrayList.&lt;init&gt;()V" replace-index="0" replace-signature="com.unity3d.player.r.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="java.util.ArrayList.&lt;init&gt;()V" replace-index="0" replace-signature="com.unity3d.player.s.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="java.util.ArrayList.&lt;init&gt;()V" replace-index="0" replace-signature="com.unity3d.player.t.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.aa.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.h.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.aa.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.aa.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.r.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.aa.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.s.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.aa.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.t.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.ab.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.h.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.ab.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.ab.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.r.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.ab.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.s.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.ab.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.t.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.ac.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.h.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.ac.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.ac.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.r.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.ac.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.s.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.ac.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.t.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.y.&lt;init&gt;(Landroid/widget/FrameLayout;)V" replace-index="0" replace-signature="com.unity3d.player.h.&lt;init&gt;(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.y.&lt;init&gt;(Landroid/widget/FrameLayout;)V" replace-index="0" replace-signature="java.util.HashMap.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.y.&lt;init&gt;(Landroid/widget/FrameLayout;)V" replace-index="0" replace-signature="com.unity3d.player.r.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.y.&lt;init&gt;(Landroid/widget/FrameLayout;)V" replace-index="0" replace-signature="com.unity3d.player.s.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.y.&lt;init&gt;(Landroid/widget/FrameLayout;)V" replace-index="0" replace-signature="com.unity3d.player.t.&lt;init&gt;(Lcom/unity3d/player/UnityPlayer;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.l.Log(ILjava/lang/String;)V" replace-index="0" replace-signature="com.unity3d.player.f.Log(ILjava/lang/String;)V"/>
+        <Replace-Method original-index="1" original-signature="com.unity3d.player.l.Log(ILjava/lang/String;)V" replace-index="1" replace-signature="com.unity3d.player.f.Log(ILjava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.String.compareToIgnoreCase(Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.lang.String.toLowerCase()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.startsWith(Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="java.lang.System.setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.unity3d.player.s.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.nativeGravity(FFFJ)V" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.bringChildToFront(Landroid/view/View;)V"/>
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.p.m(Lcom/unity3d/player/p;)J" replace-index="1" replace-signature="com.unity3d.player.UnityPlayer.l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;"/>
+        <Add-Method index="0" signature="android.widget.ProgressBar.setIndeterminate(Z)V"/>
+        <Add-Method index="0" signature="android.widget.ProgressBar.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Add-Method index="0" signature="com.unity3d.player.UnityPlayer.addView(Landroid/view/View;)V"/>
+        <Add-Method index="0" signature="android.widget.ProgressBar.setVisibility(I)V"/>
+        <Add-Method index="0" signature="com.unity3d.player.UnityPlayer.m(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;"/>
+        <Add-Method index="0" signature="com.unity3d.player.UnityPlayer.l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;"/>
+        <Add-Method index="2" signature="com.unity3d.player.UnityPlayer.l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;"/>
+        <Add-Method index="3" signature="com.unity3d.player.UnityPlayer.l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;"/>
+        <Add-Method index="4" signature="com.unity3d.player.UnityPlayer.l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;"/>
+        <Add-Method index="5" signature="com.unity3d.player.UnityPlayer.l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;"/>
+        <Add-Method index="0" signature="com.unity3d.player.UnityPlayer.k(Lcom/unity3d/player/UnityPlayer;)I"/>
+        <Add-Method index="0" signature="android.widget.ProgressBar.&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V"/>
+        <Add-Method index="0" signature="com.unity3d.player.UnityPlayer.a(Lcom/unity3d/player/UnityPlayer;Landroid/widget/ProgressBar;)Landroid/widget/ProgressBar;"/>
+        <Add-Method index="0" signature="android.widget.FrameLayout$LayoutParams.&lt;init&gt;(III)V"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.e(Lcom/unity3d/player/p;)Lcom/unity3d/player/UnityPlayer;"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.j(Lcom/unity3d/player/p;)F"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.k(Lcom/unity3d/player/p;)F"/>
+        <Remove-Method index="0" signature="com.unity3d.player.p.l(Lcom/unity3d/player/p;)F"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$5.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.o(Lcom/unity3d/player/UnityPlayer;)I" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.n(Lcom/unity3d/player/UnityPlayer;)I"/>
+    </Method>
+    <Method signature="com.unity3d.player.UnityPlayer$10.run()V">
+        <Replace-Method original-index="0" original-signature="com.unity3d.player.UnityPlayer.s(Lcom/unity3d/player/UnityPlayer;)V" replace-index="0" replace-signature="com.unity3d.player.UnityPlayer.r(Lcom/unity3d/player/UnityPlayer;)V"/>
+    </Method>
+</Apk>

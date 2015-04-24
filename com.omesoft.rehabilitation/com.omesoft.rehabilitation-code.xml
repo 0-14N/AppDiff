@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.omesoft.rehabilitation" pkg="com.omesoft.rehabilitation">
+    <Add-Class signature="Lcom/wooboo/adlib_android/ImpressionAdView$3" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/WoobooAdView$b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/b" super-signatures="Landroid/view/animation/Animation#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/f" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/a$3" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/WoobooAdView" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/WoobooAdView$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/ImpressionAdView$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/i" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/a" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/WoobooAdView$b$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/d$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/a$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/a$2" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/ImpressionAdView$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/WoobooAdView$1" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/WoobooAdView$3$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/g$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/ImpressionAdView" super-signatures="Landroid/widget/PopupWindow#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/WoobooAdView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/c$a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/c$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/ImpressionAdView$2$1$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/ImpressionAdView$2$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wooboo/adlib_android/WoobooAdView$3" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Method signature="com.omesoft.rehabilitation.ActivityMain$7.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.wooboo.adlib_android.WoobooAdView.RequstAdOnce()V"/>
+    </Method>
+    <Method signature="com.omesoft.rehabilitation.ActivityMain$5.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.wooboo.adlib_android.WoobooAdView.RequstAdOnce()V"/>
+    </Method>
+    <Method signature="com.omesoft.rehabilitation.ActivityMain$6.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.wooboo.adlib_android.WoobooAdView.RequstAdOnce()V"/>
+    </Method>
+    <Method signature="com.omesoft.rehabilitation.ActivityMain$4.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.wooboo.adlib_android.WoobooAdView.RequstAdOnce()V"/>
+    </Method>
+    <Method signature="com.omesoft.rehabilitation.ActivityMain$8.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.wooboo.adlib_android.WoobooAdView.RequstAdOnce()V"/>
+    </Method>
+    <Method signature="com.omesoft.rehabilitation.ActivityMain$9.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.wooboo.adlib_android.WoobooAdView.RequstAdOnce()V"/>
+    </Method>
+    <Method signature="com.omesoft.rehabilitation.ActivityMain$10.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.wooboo.adlib_android.WoobooAdView.RequstAdOnce()V"/>
+    </Method>
+    <Method signature="com.omesoft.rehabilitation.ActivityMain.loadButton()V"/>
+</Apk>

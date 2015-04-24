@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.arthisoft.anjenahairspa_new" pkg="com.arthisoft.anjenahairspa_new">
+    <Method signature="com.arthisoft.anjenahairspa.anjenahairspa.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="com.arthisoft.anjenahairspa.anjenahairspa.setupAdmob()V" replace-index="0" replace-signature="com.arthisoft.anjenahairspa.anjenahairspa.setupInMobi()V"/>
+    </Method>
+</Apk>

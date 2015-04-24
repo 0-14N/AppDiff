@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.nemodream.fashionista" pkg="com.nemodream.fashionista">
+    <Add-Class signature="Lcom/tencent/tauth/http/Callback" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/RequestListenerImpl/OpenIDListener" super-signatures="Lcom/tencent/tauth/http/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu_Order$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/packsystems/common/Installation" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zibox/common/HttpConn" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu_Order$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/ParseResoneJson" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/CommonException" super-signatures="Ljava/lang/Throwable#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu_Order" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/bean/Album" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/bean/OpenId" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/RequestListenerImpl/UserInfoListener" super-signatures="Lcom/tencent/tauth/http/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/OrderActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/RequestListenerImpl/UploadPicListener" super-signatures="Lcom/tencent/tauth/http/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/TDebug" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/ResponseData" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/TencentOpenRes" super-signatures="Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/AsyncHttpPostRunner$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/TAuthView" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/TencentOpenHost" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu_Order$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zibox/embedsender/ClickType" super-signatures="Ljava/lang/Enum#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/AsyncHttpRequestRunner$1" super-signatures="Ljava/lang/Thread#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zibox/embedsender/EmbedSender" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/TAuthView$1" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/AsyncHttpPostRunner" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu_Order$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/TencentOpenAPI" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/TAuthView$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/IRequestListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu_Order$5$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/AsyncHttpRequestRunner" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/RequestListenerImpl/ListAlbumListener" super-signatures="Lcom/tencent/tauth/http/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/bean/Pic" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/TAuthView$MyWebChromeClient" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/RequestListenerImpl/AddShareListener" super-signatures="Lcom/tencent/tauth/http/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/BaseRequestListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/RequestListenerImpl/AddWeiBoListener" super-signatures="Lcom/tencent/tauth/http/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/OrderActivity$BtnClickListener" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu_Order$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/RequestListenerImpl/AddAlbumListener" super-signatures="Lcom/tencent/tauth/http/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/bean/UserInfo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/ClientHttpRequest" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/task/OrderTask" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/zibox/embedsender/Shared" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu$5$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/RequestListenerImpl/AddTopicListener" super-signatures="Lcom/tencent/tauth/http/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/TAuthView$MyWebViewClient" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/bean/TopicRichInfo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/jsonParse/OrderParse" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu_Order$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/ClientHttpRequest$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/http/RequestListenerImpl/UserProfileListener" super-signatures="Lcom/tencent/tauth/http/BaseRequestListener#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/tencent/tauth/bean/UserProfile" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/nemodream/fashionista/customUi/DetailMenu_Order$7" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.nemodream.fashionista.MemberJoinActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.nemodream.fashionista.MemberJoinActivity.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getConfiguration()Landroid/content/res/Configuration;"/>
+        <Add-Method index="0" signature="java.util.Locale.getLanguage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.EventListActivity.showList()V">
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.nemodream.fashionista.EventListActivity.getlanguage()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.WebViewActivity.init()V"/>
+    <Method signature="com.nemodream.fashionista.customUi.TitleBar$3.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.widget.ImageButton.isSelected()Z"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.WebViewActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="1" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Add-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="nd.adLink.adDialog$2.onClick(Landroid/view/View;)V"/>
+    <Method signature="com.nemodream.fashionista.NoticeListActivity.showList()V">
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.nemodream.fashionista.NoticeListActivity.getlanguage()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.customUi.DetailMenu$5.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;" replace-index="0" replace-signature="android.app.Dialog.&lt;init&gt;(Landroid/content/Context;I)V"/>
+        <Add-Method index="0" signature="android.view.Window.setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V"/>
+        <Add-Method index="0" signature="android.app.Activity.getSystemService(Ljava/lang/String;)Ljava/lang/Object;"/>
+        <Add-Method index="0" signature="android.view.LayoutInflater.inflate(ILandroid/view/ViewGroup;)Landroid/view/View;"/>
+        <Add-Method index="0" signature="android.view.View.findViewById(I)Landroid/view/View;"/>
+        <Add-Method index="0" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Add-Method index="0" signature="android.app.Dialog.getWindow()Landroid/view/Window;"/>
+        <Add-Method index="0" signature="android.graphics.drawable.ColorDrawable.&lt;init&gt;(I)V"/>
+        <Add-Method index="0" signature="com.nemodream.fashionista.customUi.DetailMenu$5$1.&lt;init&gt;(Lcom/nemodream/fashionista/customUi/DetailMenu$5;Landroid/app/Dialog;)V"/>
+        <Add-Method index="0" signature="android.widget.LinearLayout$LayoutParams.&lt;init&gt;(II)V"/>
+        <Add-Method index="0" signature="android.app.Dialog.addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Add-Method index="0" signature="android.app.Dialog.show()V"/>
+        <Remove-Method index="0" signature="android.content.SharedPreferences.getBoolean(Ljava/lang/String;Z)Z"/>
+        <Remove-Method index="0" signature="android.app.Activity.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="android.widget.RatingBar.getRating()F"/>
+        <Remove-Method index="0" signature="com.nemodream.fashionista.ProductDetailActivity.setProductStarPoint(I)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.MemberJoinActivity$5.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.nemodream.fashionista.MemberJoinActivity.getlanguage()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.customUi.TitleBar$2.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="android.widget.ImageButton.isSelected()Z"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.BottomPopUpMenuActivity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.nemodream.fashionista.BottomPopUpMenuActivity.getString(I)Ljava/lang/String;"/>
+        <Replace-Method original-index="1" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="1" replace-signature="com.nemodream.fashionista.BottomPopUpMenuActivity.getString(I)Ljava/lang/String;"/>
+        <Replace-Method original-index="2" original-signature="android.content.Intent.putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" replace-index="0" replace-signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Add-Method index="0" signature="com.nemodream.fashionista.bean.AppInfoBean.getWeiboPlea()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.nemodream.fashionista.bean.AppInfoBean.getRenrenwangPlea()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.nemodream.fashionista.bean.AppInfoBean.getQqPlea()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.BottomPopUpMenuActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.nemodream.fashionista.bean.AppInfoBean.setWeiboPlea(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.nemodream.fashionista.bean.AppInfoBean.setRenrenwangPlea(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="com.nemodream.fashionista.bean.AppInfoBean.setQqPlea(Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.StarPointListActivity.showList()V">
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.nemodream.fashionista.StarPointListActivity.getlanguage()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="nd.adLink.adDialog$DialogButtonClickHandler$1.run()V">
+        <Add-Method index="0" signature="nd.adLink.adDialog$DialogButtonClickHandler$1$1.&lt;init&gt;(Lnd/adLink/adDialog$DialogButtonClickHandler$1;I)V"/>
+        <Remove-Method index="0" signature="nd.adLink.adDialog$DialogButtonClickHandler$1$1.&lt;init&gt;(Lnd/adLink/adDialog$DialogButtonClickHandler$1;ILjava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.ProductDetailActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="1" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.nemodream.fashionista.ProductDetailActivity.getlanguage()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.customUi.DetailMenu$1.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.nemodream.fashionista.customUi.DetailMenu.access$2(Lcom/nemodream/fashionista/customUi/DetailMenu;)Landroid/app/Activity;" replace-index="0" replace-signature="com.nemodream.fashionista.customUi.DetailMenu.getlanguage()Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Add-Method index="0" signature="android.util.Log.d(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.SmSPopupActivity.onClick(Landroid/view/View;)V">
+        <Add-Method index="0" signature="com.nemodream.fashionista.SmSPopupActivity.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.SmSPopupActivity.showTelList()V">
+        <Add-Method index="0" signature="com.nemodream.fashionista.SmSPopupActivity.getString(I)Ljava/lang/String;"/>
+    </Method>
+    <Method signature="com.nemodream.fashionista.ZzimListActivity.showList()V">
+        <Replace-Method original-index="0" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.nemodream.fashionista.ZzimListActivity.getlanguage()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="nd.adLink.adDialog$DialogButtonClickHandler$1$1.run()V">
+        <Add-Method index="0" signature="nd.adLink.beans.CpiBean.getLogType()I"/>
+        <Add-Method index="0" signature="nd.adLink.utils.shortCutUtils.adLinkIntent(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)Z"/>
+        <Remove-Method index="0" signature="nd.adLink.utils.shortCutUtils.adLinkIntent(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.io.PrintStream.println(Ljava/lang/String;)V"/>
+    </Method>
+</Apk>

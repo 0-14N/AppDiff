@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.vandaveer.bunnyblaster" pkg="com.vandaveer.bunnyblaster">
+    <Method signature="com.vandaveer.bunnyblaster.BBPanel.setUpImages()V">
+        <Remove-Method index="0" signature="android.graphics.Bitmap.getHeight()I"/>
+        <Remove-Method index="1" signature="android.graphics.Bitmap.getHeight()I"/>
+    </Method>
+    <Method signature="com.vandaveer.bunnyblaster.BBPanel.UpdatePhysics()V">
+        <Add-Method index="0" signature="android.graphics.Bitmap.getWidth()I"/>
+        <Add-Method index="0" signature="android.graphics.Bitmap.getHeight()I"/>
+        <Add-Method index="1" signature="android.graphics.Bitmap.getHeight()I"/>
+        <Add-Method index="2" signature="android.graphics.Bitmap.getHeight()I"/>
+        <Add-Method index="0" signature="com.vandaveer.bunnyblaster.Graphic.getBitmap()Landroid/graphics/Bitmap;"/>
+        <Add-Method index="1" signature="com.vandaveer.bunnyblaster.Graphic.getBitmap()Landroid/graphics/Bitmap;"/>
+        <Add-Method index="2" signature="com.vandaveer.bunnyblaster.Graphic.getBitmap()Landroid/graphics/Bitmap;"/>
+        <Add-Method index="3" signature="com.vandaveer.bunnyblaster.Graphic.getBitmap()Landroid/graphics/Bitmap;"/>
+    </Method>
+    <Method signature="com.vandaveer.bunnyblaster.BBPanel.ejectShell()V">
+        <Add-Method index="0" signature="android.graphics.Bitmap.getWidth()I"/>
+        <Add-Method index="0" signature="com.vandaveer.bunnyblaster.Graphic.getBitmap()Landroid/graphics/Bitmap;"/>
+    </Method>
+</Apk>

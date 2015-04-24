@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.wytl.android.cosbuyer" pkg="com.wytl.android.cosbuyer">
+    <Method signature="com.wytl.android.cosbuyer.util.ActivityUtils.getNowMainView()Landroid/view/View;">
+        <Add-Method index="0" signature="android.app.LocalActivityManager.startActivity(Ljava/lang/String;Landroid/content/Intent;)Landroid/view/Window;"/>
+        <Add-Method index="0" signature="android.view.Window.getDecorView()Landroid/view/View;"/>
+        <Add-Method index="0" signature="android.content.Intent.&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V"/>
+        <Add-Method index="0" signature="android.content.Intent.addFlags(I)Landroid/content/Intent;"/>
+        <Add-Method index="0" signature="android.app.ActivityGroup.getLocalActivityManager()Landroid/app/LocalActivityManager;"/>
+    </Method>
+    <Method signature="com.wytl.android.cosbuyer.activity.SearchActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+    </Method>
+    <Method signature="com.wytl.android.cosbuyer.activity.SearchActivity.onResume()V">
+        <Add-Method index="0" signature="com.wytl.android.cosbuyer.myviews.PullList.setPosBefore()V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+</Apk>

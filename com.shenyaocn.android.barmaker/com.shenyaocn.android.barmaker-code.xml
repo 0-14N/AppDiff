@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.shenyaocn.android.barmaker" pkg="com.shenyaocn.android.barmaker">
+    <Method signature="com.five.adwoad.e.run()V">
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.t.b(Landroid/content/Context;)V" replace-index="0" replace-signature="com.five.adwoad.t.a(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.t.e(Landroid/content/Context;)V" replace-index="0" replace-signature="com.five.adwoad.t.d(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.five.adwoad.g.handleMessage(Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.df.a()Lcom/five/adwoad/du;" replace-index="0" replace-signature="com.five.adwoad.cc.a()Lcom/five/adwoad/cr;"/>
+        <Replace-Method original-index="1" original-signature="com.five.adwoad.df.a()Lcom/five/adwoad/du;" replace-index="1" replace-signature="com.five.adwoad.cc.a()Lcom/five/adwoad/cr;"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;)Lcom/five/adwoad/df;" replace-index="0" replace-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;)Lcom/five/adwoad/cc;"/>
+        <Replace-Method original-index="1" original-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;)Lcom/five/adwoad/df;" replace-index="1" replace-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;)Lcom/five/adwoad/cc;"/>
+        <Replace-Method original-index="2" original-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;)Lcom/five/adwoad/df;" replace-index="2" replace-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;)Lcom/five/adwoad/cc;"/>
+    </Method>
+    <Method signature="com.five.adwoad.l.run()V">
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.t.e(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="com.five.adwoad.t.d(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.t.e(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="com.five.adwoad.t.d(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.m.&lt;init&gt;(Lcom/five/adwoad/l;Lcom/five/adwoad/du;Ljava/lang/String;)V" replace-index="0" replace-signature="com.five.adwoad.m.&lt;init&gt;(Lcom/five/adwoad/l;Lcom/five/adwoad/cr;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.m.&lt;init&gt;(Lcom/five/adwoad/l;Lcom/five/adwoad/du;Ljava/lang/String;)V" replace-index="0" replace-signature="com.five.adwoad.m.&lt;init&gt;(Lcom/five/adwoad/l;Lcom/five/adwoad/cr;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.t.e(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="com.five.adwoad.t.d(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.t.e(Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="com.five.adwoad.t.d(Ljava/lang/String;)Ljava/lang/String;"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.m.&lt;init&gt;(Lcom/five/adwoad/l;Lcom/five/adwoad/du;Ljava/lang/String;)V" replace-index="0" replace-signature="com.five.adwoad.m.&lt;init&gt;(Lcom/five/adwoad/l;Lcom/five/adwoad/cr;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.m.&lt;init&gt;(Lcom/five/adwoad/l;Lcom/five/adwoad/du;Ljava/lang/String;)V" replace-index="0" replace-signature="com.five.adwoad.m.&lt;init&gt;(Lcom/five/adwoad/l;Lcom/five/adwoad/cr;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.five.adwoad.bd.run()V">
+        <Replace-Method original-index="0" original-signature="android.content.Context.getPackageManager()Landroid/content/pm/PackageManager;" replace-index="0" replace-signature="com.five.adwoad.an.a(Lcom/five/adwoad/an;)Lcom/five/adwoad/al;"/>
+        <Add-Method index="0" signature="android.webkit.WebView.loadUrl(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.content.pm.PackageManager.getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.Context.startActivity(Landroid/content/Intent;)V"/>
+    </Method>
+    <Method signature="com.five.adwoad.by.run()V">
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="android.media.MediaPlayer.&lt;init&gt;()V"/>
+        <Add-Method index="0" signature="android.media.MediaPlayer.setAudioStreamType(I)V"/>
+        <Add-Method index="0" signature="com.five.adwoad.bz.&lt;init&gt;(Lcom/five/adwoad/by;)V"/>
+        <Add-Method index="0" signature="android.media.MediaPlayer.setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V"/>
+        <Add-Method index="0" signature="com.five.adwoad.bh.b()Landroid/content/Context;"/>
+        <Add-Method index="0" signature="android.net.Uri.parse(Ljava/lang/String;)Landroid/net/Uri;"/>
+        <Add-Method index="0" signature="android.media.MediaPlayer.setDataSource(Landroid/content/Context;Landroid/net/Uri;)V"/>
+        <Add-Method index="0" signature="android.media.MediaPlayer.prepare()V"/>
+        <Add-Method index="0" signature="android.media.MediaPlayer.start()V"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.loadUrl(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.five.adwoad.cu.a(Lcom/five/adwoad/cu;)Lcom/five/adwoad/cf;"/>
+        <Remove-Method index="0" signature="com.five.adwoad.cf.b(Lcom/five/adwoad/cf;)Landroid/webkit/WebView;"/>
+    </Method>
+    <Method signature="com.five.adwoad.d.run()V">
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.dw.g(Landroid/content/Context;)V" replace-index="0" replace-signature="com.five.adwoad.ct.g(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.five.adwoad.k.run()V">
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.df.setVisibility(I)V" replace-index="0" replace-signature="com.five.adwoad.cc.setVisibility(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.df.setVisibility(I)V" replace-index="0" replace-signature="com.five.adwoad.cc.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.df.setVisibility(I)V" replace-index="0" replace-signature="com.five.adwoad.cc.&lt;init&gt;(Lcom/five/adwoad/cr;Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.df.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V" replace-index="0" replace-signature="com.five.adwoad.cc.setVisibility(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.df.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V" replace-index="0" replace-signature="com.five.adwoad.cc.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.df.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V" replace-index="0" replace-signature="com.five.adwoad.cc.&lt;init&gt;(Lcom/five/adwoad/cr;Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;)Lcom/five/adwoad/df;" replace-index="0" replace-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;)Lcom/five/adwoad/cc;"/>
+        <Replace-Method original-index="1" original-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;)Lcom/five/adwoad/df;" replace-index="1" replace-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;)Lcom/five/adwoad/cc;"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.df.&lt;init&gt;(Lcom/five/adwoad/du;Landroid/content/Context;)V" replace-index="0" replace-signature="com.five.adwoad.cc.setVisibility(I)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.df.&lt;init&gt;(Lcom/five/adwoad/du;Landroid/content/Context;)V" replace-index="0" replace-signature="com.five.adwoad.cc.setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.df.&lt;init&gt;(Lcom/five/adwoad/du;Landroid/content/Context;)V" replace-index="0" replace-signature="com.five.adwoad.cc.&lt;init&gt;(Lcom/five/adwoad/cr;Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;Lcom/five/adwoad/df;)V" replace-index="0" replace-signature="com.five.adwoad.AdwoAdView.a(Lcom/five/adwoad/AdwoAdView;Lcom/five/adwoad/cc;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.o.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.o.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.o.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.r.&lt;init&gt;(Landroid/content/Context;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.o.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.l.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.o.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.p.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;Landroid/webkit/WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.r.&lt;init&gt;(Landroid/content/Context;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.o.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.r.&lt;init&gt;(Landroid/content/Context;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.r.&lt;init&gt;(Landroid/content/Context;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.r.&lt;init&gt;(Landroid/content/Context;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.l.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.r.&lt;init&gt;(Landroid/content/Context;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.p.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;Landroid/webkit/WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.l.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.o.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.l.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.r.&lt;init&gt;(Landroid/content/Context;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.l.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.l.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.l.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;)V" replace-index="0" replace-signature="com.five.adwoad.p.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;Landroid/webkit/WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.p.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;Landroid/webkit/WebView;)V" replace-index="0" replace-signature="com.five.adwoad.o.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.p.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;Landroid/webkit/WebView;)V" replace-index="0" replace-signature="com.five.adwoad.r.&lt;init&gt;(Landroid/content/Context;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.p.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;Landroid/webkit/WebView;)V" replace-index="0" replace-signature="com.five.adwoad.l.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.p.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/du;Landroid/webkit/WebView;)V" replace-index="0" replace-signature="com.five.adwoad.p.&lt;init&gt;(Lcom/five/adwoad/k;Lcom/five/adwoad/cr;Landroid/webkit/WebView;)V"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.t.k(Landroid/content/Context;Ljava/lang/String;)Z" replace-index="0" replace-signature="com.five.adwoad.t.j(Landroid/content/Context;Ljava/lang/String;)Z"/>
+    </Method>
+    <Method signature="com.five.adwoad.ba.run()V">
+        <Replace-Method original-index="11" original-signature="java.lang.StringBuilder.toString()Ljava/lang/String;" replace-index="0" replace-signature="com.five.adwoad.bh.b(Lcom/five/adwoad/bh;)Landroid/webkit/WebView;"/>
+        <Replace-Method original-index="0" original-signature="java.lang.System.currentTimeMillis()J" replace-index="0" replace-signature="com.five.adwoad.bh.b(Lcom/five/adwoad/bh;)Landroid/webkit/WebView;"/>
+        <Replace-Method original-index="3" original-signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="android.webkit.WebView.loadUrl(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="10" original-signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="android.webkit.WebView.loadUrl(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="7" original-signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I" replace-index="0" replace-signature="com.five.adwoad.bh.b(Lcom/five/adwoad/bh;)Landroid/webkit/WebView;"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.t.b(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V" replace-index="0" replace-signature="com.five.adwoad.bw.a(Lcom/five/adwoad/bw;)Lcom/five/adwoad/bh;"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.bb.&lt;init&gt;(Lcom/five/adwoad/ba;Landroid/content/Context;)V" replace-index="0" replace-signature="com.five.adwoad.bw.a(Lcom/five/adwoad/bw;)Lcom/five/adwoad/bh;"/>
+        <Replace-Method original-index="0" original-signature="org.apache.http.client.methods.HttpGet.&lt;init&gt;(Ljava/lang/String;)V" replace-index="0" replace-signature="com.five.adwoad.bw.a(Lcom/five/adwoad/bw;)Lcom/five/adwoad/bh;"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.bc.&lt;init&gt;(Lcom/five/adwoad/ba;Landroid/content/Context;Ljava/lang/String;)V" replace-index="0" replace-signature="com.five.adwoad.bw.a(Lcom/five/adwoad/bw;)Lcom/five/adwoad/bh;"/>
+        <Replace-Method original-index="0" original-signature="android.widget.RemoteViews.&lt;init&gt;(Ljava/lang/String;I)V" replace-index="0" replace-signature="com.five.adwoad.bh.b(Lcom/five/adwoad/bh;)Landroid/webkit/WebView;"/>
+        <Replace-Method original-index="0" original-signature="com.five.adwoad.be.&lt;init&gt;(Lcom/five/adwoad/ba;Landroid/content/Context;Ljava/lang/String;)V" replace-index="0" replace-signature="com.five.adwoad.bw.a(Lcom/five/adwoad/bw;)Lcom/five/adwoad/bh;"/>
+        <Remove-Method index="0" signature="java.lang.String.lastIndexOf(Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="java.lang.String.substring(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="org.apache.http.client.HttpClient.execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;"/>
+        <Remove-Method index="0" signature="org.apache.http.HttpResponse.getStatusLine()Lorg/apache/http/StatusLine;"/>
+        <Remove-Method index="0" signature="org.apache.http.StatusLine.getStatusCode()I"/>
+        <Remove-Method index="0" signature="org.apache.http.client.HttpClient.getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;"/>
+        <Remove-Method index="1" signature="org.apache.http.client.HttpClient.getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;"/>
+        <Remove-Method index="0" signature="org.apache.http.conn.ClientConnectionManager.closeExpiredConnections()V"/>
+        <Remove-Method index="0" signature="org.apache.http.conn.ClientConnectionManager.shutdown()V"/>
+        <Remove-Method index="0" signature="org.apache.http.HttpResponse.getEntity()Lorg/apache/http/HttpEntity;"/>
+        <Remove-Method index="0" signature="org.apache.http.HttpEntity.getContentLength()J"/>
+        <Remove-Method index="0" signature="org.apache.http.client.ClientProtocolException.printStackTrace()V"/>
+        <Remove-Method index="0" signature="java.io.IOException.printStackTrace()V"/>
+        <Remove-Method index="1" signature="java.io.IOException.printStackTrace()V"/>
+        <Remove-Method index="2" signature="java.io.IOException.printStackTrace()V"/>
+        <Remove-Method index="0" signature="android.content.Context.getSystemService(Ljava/lang/String;)Ljava/lang/Object;"/>
+        <Remove-Method index="0" signature="android.content.Context.getPackageName()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="java.nio.channels.FileChannel.lock(JJZ)Ljava/nio/channels/FileLock;"/>
+        <Remove-Method index="0" signature="java.net.HttpURLConnection.setConnectTimeout(I)V"/>
+        <Remove-Method index="0" signature="java.net.HttpURLConnection.setReadTimeout(I)V"/>
+        <Remove-Method index="0" signature="java.net.HttpURLConnection.setAllowUserInteraction(Z)V"/>
+        <Remove-Method index="0" signature="java.net.HttpURLConnection.setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.net.HttpURLConnection.getResponseCode()I"/>
+        <Remove-Method index="0" signature="java.net.HttpURLConnection.getInputStream()Ljava/io/InputStream;"/>
+        <Remove-Method index="0" signature="java.io.BufferedInputStream.read([B)I"/>
+        <Remove-Method index="0" signature="java.nio.channels.FileLock.isValid()Z"/>
+        <Remove-Method index="1" signature="java.nio.channels.FileLock.isValid()Z"/>
+        <Remove-Method index="0" signature="java.nio.channels.FileLock.release()V"/>
+        <Remove-Method index="1" signature="java.nio.channels.FileLock.release()V"/>
+        <Remove-Method index="0" signature="android.app.NotificationManager.notify(ILandroid/app/Notification;)V"/>
+        <Remove-Method index="1" signature="android.app.NotificationManager.notify(ILandroid/app/Notification;)V"/>
+        <Remove-Method index="2" signature="android.app.NotificationManager.notify(ILandroid/app/Notification;)V"/>
+        <Remove-Method index="0" signature="android.content.Context.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="1" signature="android.content.Context.startActivity(Landroid/content/Intent;)V"/>
+        <Remove-Method index="0" signature="java.net.HttpURLConnection.disconnect()V"/>
+        <Remove-Method index="0" signature="java.net.SocketTimeoutException.printStackTrace()V"/>
+        <Remove-Method index="0" signature="java.net.MalformedURLException.printStackTrace()V"/>
+        <Remove-Method index="0" signature="android.os.Handler.postDelayed(Ljava/lang/Runnable;J)Z"/>
+        <Remove-Method index="0" signature="java.io.RandomAccessFile.close()V"/>
+        <Remove-Method index="1" signature="java.io.RandomAccessFile.close()V"/>
+        <Remove-Method index="0" signature="android.content.Intent.setFlags(I)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="java.io.RandomAccessFile.write([BII)V"/>
+        <Remove-Method index="0" signature="java.lang.Thread.currentThread()Ljava/lang/Thread;"/>
+        <Remove-Method index="0" signature="android.widget.RemoteViews.setTextViewText(ILjava/lang/CharSequence;)V"/>
+        <Remove-Method index="1" signature="android.widget.RemoteViews.setTextViewText(ILjava/lang/CharSequence;)V"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="3" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="4" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="5" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="6" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="7" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="8" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="9" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="10" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="12" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="13" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="14" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="15" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="16" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="17" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="18" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Remove-Method index="1" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Remove-Method index="2" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Remove-Method index="0" signature="java.util.LinkedList.remove(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="1" signature="java.util.LinkedList.remove(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="2" signature="java.util.LinkedList.remove(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="3" signature="java.util.LinkedList.remove(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="java.util.LinkedList.contains(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="1" signature="java.util.LinkedList.contains(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="2" signature="java.util.LinkedList.contains(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="3" signature="java.util.LinkedList.contains(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="4" signature="java.util.LinkedList.contains(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="java.util.LinkedList.add(Ljava/lang/Object;)Z"/>
+        <Remove-Method index="0" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="1" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="2" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="3" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="4" signature="java.io.File.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.content.Intent.&lt;init&gt;()V"/>
+        <Remove-Method index="1" signature="android.content.Intent.&lt;init&gt;()V"/>
+        <Remove-Method index="2" signature="android.content.Intent.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="2" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="4" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="5" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="6" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="8" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="9" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="11" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="12" signature="android.util.Log.i(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="android.os.Environment.getExternalStorageState()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="1" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="2" signature="java.io.File.exists()Z"/>
+        <Remove-Method index="0" signature="java.io.File.mkdirs()Z"/>
+        <Remove-Method index="0" signature="org.apache.http.impl.client.DefaultHttpClient.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="java.io.File.length()J"/>
+        <Remove-Method index="1" signature="java.io.File.length()J"/>
+        <Remove-Method index="0" signature="java.io.File.renameTo(Ljava/io/File;)Z"/>
+        <Remove-Method index="1" signature="java.io.File.renameTo(Ljava/io/File;)Z"/>
+        <Remove-Method index="0" signature="android.app.Notification.&lt;init&gt;(ILjava/lang/CharSequence;J)V"/>
+        <Remove-Method index="0" signature="android.widget.RemoteViews.setImageViewResource(II)V"/>
+        <Remove-Method index="0" signature="android.app.PendingIntent.getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;"/>
+        <Remove-Method index="1" signature="android.app.PendingIntent.getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;"/>
+        <Remove-Method index="0" signature="java.io.RandomAccessFile.&lt;init&gt;(Ljava/io/File;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.io.RandomAccessFile.getChannel()Ljava/nio/channels/FileChannel;"/>
+        <Remove-Method index="0" signature="java.net.URL.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="java.net.URL.openConnection()Ljava/net/URLConnection;"/>
+        <Remove-Method index="0" signature="java.io.RandomAccessFile.seek(J)V"/>
+        <Remove-Method index="1" signature="java.io.RandomAccessFile.seek(J)V"/>
+        <Remove-Method index="0" signature="java.io.BufferedInputStream.&lt;init&gt;(Ljava/io/InputStream;)V"/>
+        <Remove-Method index="0" signature="android.net.Uri.fromFile(Ljava/io/File;)Landroid/net/Uri;"/>
+        <Remove-Method index="1" signature="android.net.Uri.fromFile(Ljava/io/File;)Landroid/net/Uri;"/>
+        <Remove-Method index="0" signature="android.content.Intent.setAction(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="1" signature="android.content.Intent.setAction(Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="android.content.Intent.setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="1" signature="android.content.Intent.setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;"/>
+        <Remove-Method index="0" signature="java.io.File.getAbsolutePath()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.io.File.getAbsolutePath()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.five.adwoad.bd.&lt;init&gt;(Lcom/five/adwoad/ba;Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.five.adwoad.t.a(Landroid/content/Context;I)V"/>
+        <Remove-Method index="0" signature="com.five.adwoad.t.j(Landroid/content/Context;Ljava/lang/String;)Z"/>
+        <Remove-Method index="1" signature="com.five.adwoad.t.j(Landroid/content/Context;Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="java.io.BufferedInputStream.close()V"/>
+        <Remove-Method index="1" signature="java.io.BufferedInputStream.close()V"/>
+    </Method>
+    <Method signature="com.five.adwoad.bx.run()V">
+        <Add-Method index="0" signature="android.os.Vibrator.cancel()V"/>
+        <Remove-Method index="0" signature="android.webkit.WebView.post(Ljava/lang/Runnable;)Z"/>
+        <Remove-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Remove-Method index="0" signature="com.five.adwoad.cf.b()Landroid/content/Context;"/>
+        <Remove-Method index="0" signature="com.five.adwoad.t.a(Ljava/lang/String;Landroid/app/Activity;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.five.adwoad.cu.a(Lcom/five/adwoad/cu;)Lcom/five/adwoad/cf;"/>
+        <Remove-Method index="0" signature="com.five.adwoad.cf.b(Lcom/five/adwoad/cf;)Landroid/webkit/WebView;"/>
+        <Remove-Method index="0" signature="com.five.adwoad.by.&lt;init&gt;(Lcom/five/adwoad/bx;)V"/>
+    </Method>
+    <Method signature="com.five.adwoad.bc.run()V">
+        <Add-Method index="0" signature="android.webkit.WebView.post(Ljava/lang/Runnable;)Z"/>
+        <Add-Method index="0" signature="java.lang.Exception.printStackTrace()V"/>
+        <Add-Method index="0" signature="com.five.adwoad.an.a(Lcom/five/adwoad/an;)Lcom/five/adwoad/al;"/>
+        <Add-Method index="1" signature="com.five.adwoad.an.a(Lcom/five/adwoad/an;)Lcom/five/adwoad/al;"/>
+        <Add-Method index="2" signature="com.five.adwoad.an.a(Lcom/five/adwoad/an;)Lcom/five/adwoad/al;"/>
+        <Add-Method index="3" signature="com.five.adwoad.an.a(Lcom/five/adwoad/an;)Lcom/five/adwoad/al;"/>
+        <Add-Method index="4" signature="com.five.adwoad.an.a(Lcom/five/adwoad/an;)Lcom/five/adwoad/al;"/>
+        <Add-Method index="0" signature="java.lang.String.&lt;init&gt;([B)V"/>
+        <Add-Method index="0" signature="com.five.adwoad.t.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="com.five.adwoad.bd.&lt;init&gt;(Lcom/five/adwoad/bc;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="android.widget.Toast.show()V"/>
+        <Remove-Method index="0" signature="android.widget.Toast.makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;"/>
+    </Method>
+</Apk>

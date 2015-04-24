@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="disa.disascanner" pkg="disa.disascanner">
+    <Method signature="disa.disascanner.ResultActivity.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="android.content.Intent.getBooleanExtra(Ljava/lang/String;Z)Z"/>
+        <Remove-Method index="0" signature="java.lang.String.length()I"/>
+        <Remove-Method index="1" signature="java.lang.String.length()I"/>
+        <Remove-Method index="2" signature="java.lang.String.length()I"/>
+        <Remove-Method index="0" signature="java.lang.String.trim()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.String.trim()Ljava/lang/String;"/>
+        <Remove-Method index="2" signature="java.lang.String.trim()Ljava/lang/String;"/>
+    </Method>
+</Apk>

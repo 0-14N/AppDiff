@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.mendhak.gpslogger" pkg="com.mendhak.gpslogger">
+    <Add-Class signature="Lcom/mendhak/gpslogger/GpsLoggerApplication" super-signatures="Landroid/app/Application#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Method signature="com.mendhak.gpslogger.GpsMainActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.mendhak.gpslogger.GpsMainActivity.getBaseContext()Landroid/content/Context;"/>
+        <Add-Method index="1" signature="com.mendhak.gpslogger.GpsMainActivity.getBaseContext()Landroid/content/Context;"/>
+        <Add-Method index="2" signature="com.mendhak.gpslogger.GpsMainActivity.getBaseContext()Landroid/content/Context;"/>
+        <Add-Method index="0" signature="android.content.SharedPreferences.getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"/>
+        <Add-Method index="0" signature="java.lang.String.equalsIgnoreCase(Ljava/lang/String;)Z"/>
+        <Add-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="1" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.getDisplayMetrics()Landroid/util/DisplayMetrics;"/>
+        <Add-Method index="0" signature="android.content.res.Resources.updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V"/>
+        <Add-Method index="0" signature="android.preference.PreferenceManager.getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;"/>
+        <Add-Method index="0" signature="java.util.Locale.&lt;init&gt;(Ljava/lang/String;)V"/>
+        <Add-Method index="0" signature="java.util.Locale.setDefault(Ljava/util/Locale;)V"/>
+        <Add-Method index="0" signature="android.content.res.Configuration.&lt;init&gt;()V"/>
+    </Method>
+</Apk>

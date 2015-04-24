@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.sosc.wizard" pkg="com.sosc.wizard">
+    <Method signature="com.sosc.wizard.WizardVsMonster$17.run()V">
+        <Remove-Method index="0" signature="com.google.android.gms.ads.InterstitialAd.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+        <Remove-Method index="0" signature="com.google.android.gms.ads.AdView.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+    </Method>
+    <Method signature="com.sosc.wizard.WizardVsMonster$18.run()V">
+        <Remove-Method index="0" signature="com.google.android.gms.ads.InterstitialAd.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+        <Remove-Method index="0" signature="com.google.android.gms.ads.AdView.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+    </Method>
+    <Method signature="com.sosc.wizard.WizardVsMonster$19.run()V">
+        <Remove-Method index="0" signature="com.google.android.gms.ads.AdView.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+    </Method>
+</Apk>

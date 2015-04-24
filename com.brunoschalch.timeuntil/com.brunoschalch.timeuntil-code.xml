@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.brunoschalch.timeuntil" pkg="com.brunoschalch.timeuntil">
+    <Method signature="com.brunoschalch.timeuntil.Activitymain.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.google.android.gms.ads.AdView.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+    </Method>
+    <Method signature="com.brunoschalch.timeuntil.Timer.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.google.android.gms.ads.AdView.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+    </Method>
+    <Method signature="com.brunoschalch.timeuntil.WidgetConfiguration.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.google.android.gms.ads.AdView.loadAd(Lcom/google/android/gms/ads/AdRequest;)V"/>
+    </Method>
+</Apk>

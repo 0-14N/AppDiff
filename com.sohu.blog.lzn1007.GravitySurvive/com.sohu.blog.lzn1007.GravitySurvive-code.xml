@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.sohu.blog.lzn1007.GravitySurvive" pkg="com.sohu.blog.lzn1007.GravitySurvive">
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/d" super-signatures="Lcom/anzhi/anzhipostersdk/d/n#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/a/h" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/a/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/c" super-signatures="Ljava/util/TimerTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/a/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/k" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/inter/AdViewInterface" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/b/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/n" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/BaseRelativeLayout" super-signatures="Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/a" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/a/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/c" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/a/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/c/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/receiver/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/j" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/a/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/h" super-signatures="Landroid/webkit/WebChromeClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/b/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/WebActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/e" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/f" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/a/d" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/a/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/MainActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/f" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/AdViewLayout" super-signatures="Lcom/anzhi/anzhipostersdk/BaseRelativeLayout#Landroid/widget/RelativeLayout#Landroid/view/ViewGroup#Landroid/view/View#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/l" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/inter/b" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/inter/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/b" super-signatures="Landroid/database/sqlite/SQLiteOpenHelper#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/g" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/c/b" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/receiver/a" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/i" super-signatures="Landroid/webkit/WebViewClient#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/o" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/receiver/ProcessAlarmReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/anzhi/anzhipostersdk/d/h" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.sohu.blog.lzn1007.GravitySurvive.TiltSurvive.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.sohu.blog.lzn1007.GravitySurvive.Ad.f_ini(Landroid/app/Activity;)V"/>
+    </Method>
+    <Method signature="com.sohu.blog.lzn1007.GravitySurvive.Ad.f_get_layout(Landroid/app/Activity;Landroid/widget/RelativeLayout;)Landroid/widget/RelativeLayout;">
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdRequest.&lt;init&gt;()V" replace-index="0" replace-signature="com.anzhi.anzhipostersdk.AdViewLayout.&lt;init&gt;(Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.google.ads.AdView.loadAd(Lcom/google/ads/AdRequest;)V" replace-index="0" replace-signature="com.anzhi.anzhipostersdk.AdViewLayout.setAdViewConfig(Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.AdView.&lt;init&gt;(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V"/>
+    </Method>
+</Apk>

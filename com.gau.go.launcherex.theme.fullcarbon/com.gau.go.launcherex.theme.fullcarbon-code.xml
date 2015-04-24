@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.gau.go.launcherex.theme.fullcarbon" pkg="com.gau.go.launcherex.theme.fullcarbon">
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/GoDownloadService$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity$10" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/GoDownloadService$DownloadHandler" super-signatures="Landroid/os/Handler#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/ComponentUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/ComponentControlReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/MergeUtil" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/GoLauncherUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity$4" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/ThemeUtils" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/HttpMachine" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity$5" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/classic$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity$6" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity$8" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity$9" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/Constants" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity$7" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity" super-signatures="Landroid/app/Activity#Landroid/view/ContextThemeWrapper#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/GoDownloadService" super-signatures="Landroid/app/Service#Landroid/content/ContextWrapper#Landroid/content/Context#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/GoDownloadService$DownloadRunnable" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/MergeUtil$MergeFileTask" super-signatures="Landroid/os/AsyncTask#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/ThemeControlReceiver" super-signatures="Landroid/content/BroadcastReceiver#Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/AttachInfo" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/NotificationActivity$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/gau/go/launcherex/theme/fullcarbon/Result" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.gau.go.launcherex.theme.fullcarbon.classic.onDestroy()V">
+        <Remove-Method index="0" signature="android.os.Process.myPid()I"/>
+        <Remove-Method index="0" signature="android.os.Process.killProcess(I)V"/>
+    </Method>
+    <Method signature="com.gau.go.launcherex.theme.fullcarbon.classic.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic.setContentView(I)V"/>
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic.finish()V"/>
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic$CustomAlertDialog.setTitle(I)V"/>
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="1" signature="com.gau.go.launcherex.theme.fullcarbon.classic.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="android.content.res.Resources.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic$CustomAlertDialog.setMessage(Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic$CustomAlertDialog.setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic$CustomAlertDialog.show()V"/>
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic.isExistSkin(Ljava/lang/String;)Z"/>
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic.startGOLauncher(Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic$CustomAlertDialog.&lt;init&gt;(Lcom/gau/go/launcherex/theme/fullcarbon/classic;Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.gau.go.launcherex.theme.fullcarbon.classic$1.&lt;init&gt;(Lcom/gau/go/launcherex/theme/fullcarbon/classic;)V"/>
+    </Method>
+</Apk>

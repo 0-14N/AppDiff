@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.omesoft.strokefaq" pkg="com.omesoft.strokefaq">
+    <Method signature="net.youmi.android.AdActivity.onCreate(Landroid/os/Bundle;)V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ca.a(Landroid/app/Activity;)Lnet/youmi/android/ca;" replace-index="0" replace-signature="net.youmi.android.bz.a(Landroid/app/Activity;)Lnet/youmi/android/bz;"/>
+    </Method>
+    <Method signature="net.youmi.android.AdManager.init(Ljava/lang/String;Ljava/lang/String;IZ)V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.er.a(Z)V" replace-index="0" replace-signature="net.youmi.android.eo.a(Z)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.er.a(Ljava/lang/String;)V" replace-index="0" replace-signature="net.youmi.android.eo.a(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.er.a(Ljava/lang/String;)V" replace-index="0" replace-signature="net.youmi.android.eo.b(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.er.b(Ljava/lang/String;)V" replace-index="0" replace-signature="net.youmi.android.eo.a(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.er.b(Ljava/lang/String;)V" replace-index="0" replace-signature="net.youmi.android.eo.b(Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.er.a(I)V" replace-index="0" replace-signature="net.youmi.android.eo.a(I)V"/>
+    </Method>
+    <Method signature="com.omesoft.strokefaq.TempList.init()V">
+        <Replace-Method original-index="0" original-signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V" replace-index="0" replace-signature="com.omesoft.strokefaq.TempList.setTitle(Ljava/lang/CharSequence;)V"/>
+    </Method>
+    <Method signature="com.omesoft.strokefaq.TempList.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.TempList.requestWindowFeature(I)Z"/>
+        <Remove-Method index="0" signature="android.view.Window.setFeatureInt(II)V"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.TempList.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="1" signature="com.omesoft.strokefaq.TempList.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="2" signature="com.omesoft.strokefaq.TempList.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="3" signature="com.omesoft.strokefaq.TempList.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="0" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="android.widget.Button.setOnTouchListener(Landroid/view/View$OnTouchListener;)V"/>
+        <Remove-Method index="0" signature="net.youmi.android.appoffers.AppOffersManager.getPoints(Landroid/content/Context;)I"/>
+        <Remove-Method index="0" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.TempList$2.&lt;init&gt;(Lcom/omesoft/strokefaq/TempList;)V"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.TempList$3.&lt;init&gt;(Lcom/omesoft/strokefaq/TempList;)V"/>
+    </Method>
+    <Method signature="net.youmi.android.bh.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.bp.d()V" replace-index="0" replace-signature="net.youmi.android.bo.e()V"/>
+    </Method>
+    <Method signature="net.youmi.android.eq.run()V">
+        <Add-Method index="0" signature="net.youmi.android.cr.u()Z"/>
+        <Add-Method index="0" signature="net.youmi.android.as.setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V"/>
+        <Add-Method index="0" signature="net.youmi.android.as.setBackgroundColor(I)V"/>
+        <Add-Method index="0" signature="net.youmi.android.as.a(Lnet/youmi/android/as;)Lnet/youmi/android/cr;"/>
+        <Remove-Method index="0" signature="net.youmi.android.c.execute([Ljava/lang/Object;)Landroid/os/AsyncTask;"/>
+        <Remove-Method index="0" signature="net.youmi.android.c.&lt;init&gt;(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="net.youmi.android.AdView.a(Landroid/app/Activity;Landroid/util/AttributeSet;IIII)V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ca.a(Landroid/app/Activity;)Lnet/youmi/android/ca;" replace-index="0" replace-signature="net.youmi.android.bz.a(Landroid/app/Activity;)Lnet/youmi/android/bz;"/>
+    </Method>
+    <Method signature="com.omesoft.strokefaq.ShowInfo.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.omesoft.strokefaq.ShowInfo.setTitle(Ljava/lang/CharSequence;)V"/>
+        <Add-Method index="1" signature="com.omesoft.strokefaq.ShowInfo.setTitle(Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.ShowInfo.requestWindowFeature(I)Z"/>
+        <Remove-Method index="0" signature="android.view.Window.setFeatureInt(II)V"/>
+        <Remove-Method index="0" signature="net.youmi.android.appoffers.AppOffersManager.getPoints(Landroid/content/Context;)I"/>
+        <Remove-Method index="0" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+    </Method>
+    <Method signature="com.omesoft.strokefaq.AdControl.addAD(Landroid/app/Activity;)V">
+        <Remove-Method index="0" signature="net.youmi.android.appoffers.AppOffersManager.getPoints(Landroid/content/Context;)I"/>
+    </Method>
+    <Method signature="com.omesoft.strokefaq.Favoriten.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.omesoft.strokefaq.Favoriten.setTitle(Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.Favoriten.requestWindowFeature(I)Z"/>
+        <Remove-Method index="0" signature="android.view.Window.setFeatureInt(II)V"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.Favoriten.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="1" signature="com.omesoft.strokefaq.Favoriten.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="2" signature="com.omesoft.strokefaq.Favoriten.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="3" signature="com.omesoft.strokefaq.Favoriten.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="0" signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="0" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="android.widget.Button.setOnTouchListener(Landroid/view/View$OnTouchListener;)V"/>
+        <Remove-Method index="0" signature="net.youmi.android.appoffers.AppOffersManager.getPoints(Landroid/content/Context;)I"/>
+        <Remove-Method index="0" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.Favoriten$2.&lt;init&gt;(Lcom/omesoft/strokefaq/Favoriten;)V"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.Favoriten$3.&lt;init&gt;(Lcom/omesoft/strokefaq/Favoriten;)V"/>
+    </Method>
+    <Method signature="net.youmi.android.AdActivity.b()V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ff.b()Landroid/view/View;" replace-index="0" replace-signature="net.youmi.android.fd.b()Landroid/view/View;"/>
+        <Replace-Method original-index="1" original-signature="net.youmi.android.ff.b()Landroid/view/View;" replace-index="1" replace-signature="net.youmi.android.fd.b()Landroid/view/View;"/>
+        <Replace-Method original-index="2" original-signature="net.youmi.android.ff.b()Landroid/view/View;" replace-index="2" replace-signature="net.youmi.android.fd.b()Landroid/view/View;"/>
+        <Replace-Method original-index="3" original-signature="net.youmi.android.ff.b()Landroid/view/View;" replace-index="3" replace-signature="net.youmi.android.fd.b()Landroid/view/View;"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.cu.a()I" replace-index="0" replace-signature="net.youmi.android.cr.a()I"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.cu.i()Lnet/youmi/android/em;" replace-index="0" replace-signature="net.youmi.android.cr.i()Lnet/youmi/android/ej;"/>
+        <Replace-Method original-index="1" original-signature="net.youmi.android.cu.i()Lnet/youmi/android/em;" replace-index="1" replace-signature="net.youmi.android.cr.i()Lnet/youmi/android/ej;"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ex.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/ca;)V" replace-index="0" replace-signature="net.youmi.android.eu.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/bz;)V"/>
+        <Replace-Method original-index="1" original-signature="net.youmi.android.ex.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/ca;)V" replace-index="1" replace-signature="net.youmi.android.eu.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/bz;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ex.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/ca;)V" replace-index="0" replace-signature="net.youmi.android.fe.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/bz;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ex.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/ca;)V" replace-index="0" replace-signature="net.youmi.android.cf.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/bz;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.fg.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/ca;)V" replace-index="0" replace-signature="net.youmi.android.eu.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/bz;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.fg.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/ca;)V" replace-index="0" replace-signature="net.youmi.android.fe.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/bz;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.fg.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/ca;)V" replace-index="0" replace-signature="net.youmi.android.cf.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/bz;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ex.a(Lnet/youmi/android/em;)V" replace-index="0" replace-signature="net.youmi.android.eu.a(Lnet/youmi/android/ej;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.cf.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/ca;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="net.youmi.android.eu.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/bz;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.cf.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/ca;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="net.youmi.android.fe.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/bz;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.cf.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/ca;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="net.youmi.android.cf.&lt;init&gt;(Lnet/youmi/android/AdActivity;Lnet/youmi/android/bz;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="net.youmi.android.ep.run()V">
+        <Add-Method index="0" signature="net.youmi.android.k.b(Landroid/content/Context;Lnet/youmi/android/bv;I)V"/>
+        <Remove-Method index="0" signature="android.location.LocationManager.requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V"/>
+        <Remove-Method index="0" signature="net.youmi.android.ei.a()Lnet/youmi/android/ew;"/>
+    </Method>
+    <Method signature="net.youmi.android.q.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/as;" replace-index="0" replace-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/aq;"/>
+        <Replace-Method original-index="1" original-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/as;" replace-index="1" replace-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/aq;"/>
+        <Replace-Method original-index="2" original-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/as;" replace-index="2" replace-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/aq;"/>
+        <Replace-Method original-index="3" original-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/as;" replace-index="3" replace-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/aq;"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/as;" replace-index="0" replace-signature="net.youmi.android.ax.a(Landroid/content/Context;)Z"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.az.a(Landroid/content/Context;)Z" replace-index="0" replace-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/aq;"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.az.a(Landroid/content/Context;)Z" replace-index="0" replace-signature="net.youmi.android.ax.a(Landroid/content/Context;)Z"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ay.a(Landroid/content/Context;Ljava/lang/String;)V" replace-index="0" replace-signature="net.youmi.android.aw.a(Landroid/content/Context;Ljava/lang/String;)V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ej.a(Ljava/io/File;Ljava/io/File;)Z" replace-index="0" replace-signature="net.youmi.android.eg.a(Ljava/io/File;Ljava/io/File;)Z"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ay.b(Landroid/content/Context;Ljava/lang/String;)V" replace-index="0" replace-signature="net.youmi.android.aw.b(Landroid/content/Context;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.omesoft.strokefaq.Favoriten.ShowLists()V">
+        <Replace-Method original-index="0" original-signature="com.omesoft.strokefaq.Favoriten$4.&lt;init&gt;(Lcom/omesoft/strokefaq/Favoriten;)V" replace-index="0" replace-signature="com.omesoft.strokefaq.Favoriten$1.&lt;init&gt;(Lcom/omesoft/strokefaq/Favoriten;)V"/>
+    </Method>
+    <Method signature="com.omesoft.strokefaq.ShowInfo.loadListener()V">
+        <Replace-Method original-index="0" original-signature="com.omesoft.strokefaq.ShowInfo$4.&lt;init&gt;(Lcom/omesoft/strokefaq/ShowInfo;)V" replace-index="0" replace-signature="com.omesoft.strokefaq.ShowInfo$1.&lt;init&gt;(Lcom/omesoft/strokefaq/ShowInfo;)V"/>
+        <Replace-Method original-index="0" original-signature="com.omesoft.strokefaq.ShowInfo$5.&lt;init&gt;(Lcom/omesoft/strokefaq/ShowInfo;)V" replace-index="0" replace-signature="com.omesoft.strokefaq.ShowInfo$1.&lt;init&gt;(Lcom/omesoft/strokefaq/ShowInfo;)V"/>
+        <Replace-Method original-index="0" original-signature="com.omesoft.strokefaq.ShowInfo$6.&lt;init&gt;(Lcom/omesoft/strokefaq/ShowInfo;)V" replace-index="0" replace-signature="com.omesoft.strokefaq.ShowInfo$1.&lt;init&gt;(Lcom/omesoft/strokefaq/ShowInfo;)V"/>
+        <Remove-Method index="0" signature="android.widget.Button.setOnTouchListener(Landroid/view/View$OnTouchListener;)V"/>
+    </Method>
+    <Method signature="net.youmi.android.bg.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.bp.a_()V" replace-index="0" replace-signature="net.youmi.android.bo.d()V"/>
+    </Method>
+    <Method signature="net.youmi.android.t.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/as;" replace-index="0" replace-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/aq;"/>
+        <Replace-Method original-index="1" original-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/as;" replace-index="1" replace-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/aq;"/>
+        <Replace-Method original-index="2" original-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/as;" replace-index="2" replace-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/aq;"/>
+        <Replace-Method original-index="3" original-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/as;" replace-index="3" replace-signature="net.youmi.android.cf.b(Lnet/youmi/android/cf;)Lnet/youmi/android/aq;"/>
+    </Method>
+    <Method signature="net.youmi.android.bf.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.bp.c()V" replace-index="0" replace-signature="net.youmi.android.bo.a_()V"/>
+    </Method>
+    <Method signature="net.youmi.android.k.a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ct.&lt;init&gt;()V" replace-index="0" replace-signature="net.youmi.android.cq.&lt;init&gt;()V"/>
+        <Replace-Method original-index="0" original-signature="net.youmi.android.k.a(Landroid/content/Context;Lnet/youmi/android/bw;I)V" replace-index="0" replace-signature="net.youmi.android.k.a(Landroid/content/Context;Lnet/youmi/android/bv;I)V"/>
+        <Add-Method index="0" signature="android.content.Intent.addFlags(I)Landroid/content/Intent;"/>
+    </Method>
+    <Method signature="com.omesoft.strokefaq.ShowList.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.ShowList.requestWindowFeature(I)Z"/>
+        <Remove-Method index="0" signature="android.view.Window.setFeatureInt(II)V"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.ShowList.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="1" signature="com.omesoft.strokefaq.ShowList.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="2" signature="com.omesoft.strokefaq.ShowList.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="3" signature="com.omesoft.strokefaq.ShowList.findViewById(I)Landroid/view/View;"/>
+        <Remove-Method index="0" signature="android.widget.TextView.setText(Ljava/lang/CharSequence;)V"/>
+        <Remove-Method index="0" signature="android.widget.Button.setOnClickListener(Landroid/view/View$OnClickListener;)V"/>
+        <Remove-Method index="0" signature="android.widget.Button.setOnTouchListener(Landroid/view/View$OnTouchListener;)V"/>
+        <Remove-Method index="0" signature="net.youmi.android.appoffers.AppOffersManager.getPoints(Landroid/content/Context;)I"/>
+        <Remove-Method index="0" signature="android.os.Handler.post(Ljava/lang/Runnable;)Z"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.ShowList$2.&lt;init&gt;(Lcom/omesoft/strokefaq/ShowList;)V"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.ShowList$3.&lt;init&gt;(Lcom/omesoft/strokefaq/ShowList;)V"/>
+    </Method>
+    <Method signature="com.omesoft.strokefaq.ShowInfo$3.onClick(Landroid/view/View;)V">
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.DBHelper.find(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;"/>
+        <Remove-Method index="0" signature="android.database.Cursor.getCount()I"/>
+        <Remove-Method index="0" signature="com.omesoft.strokefaq.ShowInfo.showDialog(I)V"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+    </Method>
+    <Method signature="net.youmi.android.AdView.&lt;init&gt;(Landroid/app/Activity;)V">
+        <Replace-Method original-index="0" original-signature="net.youmi.android.ce.&lt;init&gt;(Lnet/youmi/android/AdView;)V" replace-index="0" replace-signature="android.os.Handler.&lt;init&gt;()V"/>
+    </Method>
+</Apk>

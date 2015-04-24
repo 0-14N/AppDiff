@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.cheney.compass" pkg="com.cheney.compass">
+    <Method signature="com.cheney.compass.Main.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="net.youmi.android.appoffers.AppOffersManager.init(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Z)V"/>
+    </Method>
+    <Method signature="com.cheney.compass.utils.LocationProvider.getLocationByGsmCell()Lcom/cheney/domain/LocationInfo;">
+        <Add-Method index="0" signature="java.lang.String.equals(Ljava/lang/Object;)Z"/>
+    </Method>
+    <Method signature="com.cheney.compass.Main.onResume()V">
+        <Remove-Method index="0" signature="net.youmi.android.AdView.setVisibility(I)V"/>
+        <Remove-Method index="0" signature="com.cheney.compass.Main.haveScore()Z"/>
+    </Method>
+</Apk>

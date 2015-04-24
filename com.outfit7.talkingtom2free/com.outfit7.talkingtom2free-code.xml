@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.outfit7.talkingtom2free" pkg="com.outfit7.talkingtom2free">
+    <Add-Class signature="Lcom/outfit7/talkingfriends/ad/DoMobAdProvider$1" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.outfit7.talkingfriends.ad.DoMobInterstitial.loadAd(I)V">
+        <Add-Method index="0" signature="java.util.concurrent.locks.ReentrantLock.lock()V"/>
+        <Add-Method index="0" signature="java.util.concurrent.locks.ReentrantLock.unlock()V"/>
+        <Add-Method index="1" signature="java.util.concurrent.locks.ReentrantLock.unlock()V"/>
+        <Add-Method index="0" signature="com.outfit7.talkingfriends.ad.Interstitial$BaseAd.loadAd(I)V"/>
+    </Method>
+    <Method signature="com.outfit7.talkingfriends.ad.DoMobInterstitial.&lt;init&gt;(Lcom/outfit7/talkingfriends/ad/Interstitial;)V">
+        <Add-Method index="0" signature="java.util.concurrent.locks.Lock.newCondition()Ljava/util/concurrent/locks/Condition;"/>
+        <Add-Method index="0" signature="java.util.concurrent.locks.ReentrantLock.&lt;init&gt;()V"/>
+        <Remove-Method index="0" signature="com.outfit7.talkingfriends.ad.DoMobInterstitial.disable()V"/>
+    </Method>
+</Apk>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="tuba.tools" pkg="tuba.tools">
+    <Method signature="com.google.android.gms.common.g.a(Landroid/content/Context;)I">
+        <Remove-Method index="0" signature="android.content.Context.getPackageManager()Landroid/content/pm/PackageManager;"/>
+        <Remove-Method index="0" signature="android.content.Context.getResources()Landroid/content/res/Resources;"/>
+        <Remove-Method index="0" signature="android.content.res.Resources.getString(I)Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.content.pm.PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"/>
+        <Remove-Method index="1" signature="android.content.pm.PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"/>
+        <Remove-Method index="2" signature="android.content.pm.PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;"/>
+        <Remove-Method index="0" signature="android.content.Context.getPackageName()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="android.content.pm.PackageManager.getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;"/>
+        <Remove-Method index="0" signature="android.content.pm.PackageManager$NameNotFoundException.printStackTrace()V"/>
+        <Remove-Method index="0" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="1" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="2" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="3" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="4" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="5" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="6" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="7" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="8" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="9" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="10" signature="android.util.Log.w(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="android.util.Log.wtf(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="java.lang.System.currentTimeMillis()J"/>
+        <Remove-Method index="0" signature="android.util.Log.e(Ljava/lang/String;Ljava/lang/String;)I"/>
+        <Remove-Method index="0" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="1" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="2" signature="java.lang.StringBuilder.toString()Ljava/lang/String;"/>
+        <Remove-Method index="0" signature="com.google.android.gms.common.g.d(Landroid/content/Context;)V"/>
+        <Remove-Method index="0" signature="com.google.android.gms.internal.me.c(I)Z"/>
+        <Remove-Method index="0" signature="com.google.android.gms.common.g.a()Z"/>
+        <Remove-Method index="0" signature="com.google.android.gms.common.g.a(Landroid/content/pm/PackageInfo;[[B)[B"/>
+        <Remove-Method index="1" signature="com.google.android.gms.common.g.a(Landroid/content/pm/PackageInfo;[[B)[B"/>
+        <Remove-Method index="2" signature="com.google.android.gms.common.g.a(Landroid/content/pm/PackageInfo;[[B)[B"/>
+        <Remove-Method index="3" signature="com.google.android.gms.common.g.a(Landroid/content/pm/PackageInfo;[[B)[B"/>
+        <Remove-Method index="4" signature="com.google.android.gms.common.g.a(Landroid/content/pm/PackageInfo;[[B)[B"/>
+        <Remove-Method index="5" signature="com.google.android.gms.common.g.a(Landroid/content/pm/PackageInfo;[[B)[B"/>
+        <Remove-Method index="6" signature="com.google.android.gms.common.g.a(Landroid/content/pm/PackageInfo;[[B)[B"/>
+        <Remove-Method index="0" signature="com.google.android.gms.internal.me.a(Landroid/content/Context;)Z"/>
+        <Remove-Method index="0" signature="com.google.android.gms.internal.me.a(I)I"/>
+        <Remove-Method index="1" signature="com.google.android.gms.internal.me.a(I)I"/>
+    </Method>
+</Apk>

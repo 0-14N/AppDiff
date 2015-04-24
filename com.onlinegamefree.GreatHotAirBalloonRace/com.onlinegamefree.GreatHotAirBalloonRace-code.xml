@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.onlinegamefree.GreatHotAirBalloonRace" pkg="com.onlinegamefree.GreatHotAirBalloonRace">
+    <Method signature="com.onlinegamefree.GreatHotAirBalloonRace.BalloonDefense.onCreate(Landroid/os/Bundle;)V">
+        <Remove-Method index="0" signature="com.google.ads.InterstitialAd.&lt;init&gt;(Landroid/app/Activity;Ljava/lang/String;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.InterstitialAd.loadAd(Lcom/google/ads/AdRequest;)V"/>
+        <Remove-Method index="0" signature="com.google.ads.InterstitialAd.setAdListener(Lcom/google/ads/AdListener;)V"/>
+    </Method>
+</Apk>

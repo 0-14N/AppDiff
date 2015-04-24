@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.lego.juniors.quest" pkg="com.lego.juniors.quest">
+    <Add-Class signature="Lcom/doudou/network/Network" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/downloadfuhao/huangkaixiang/GetPackage" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/downloadfuhao/huangkaixiang/Index$1" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/downloadfuhao/huangkaixiang/Index" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/downloadfuhao/huangkaixiang/Install" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/downloadfuhao/huangkaixiang/Index$3" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/downloadfuhao/huangkaixiang/Index$2" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/downloadfuhao/huangkaixiang/TimeUtil" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.prime31.UnityPlayerActivity.onCreate(Landroid/os/Bundle;)V">
+        <Add-Method index="0" signature="com.doudou.network.Network.init(Landroid/app/Activity;)V"/>
+    </Method>
+</Apk>

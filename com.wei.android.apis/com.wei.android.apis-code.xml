@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.wei.android.apis" pkg="com.wei.android.apis">
+    <Add-Class signature="Lcom/wei/android/apis/a$m" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wei/android/apis/c/i" super-signatures="Ljava/lang/Object"/>
+    <Add-Class signature="Lcom/wei/android/apis/b/h" super-signatures="Ljava/lang/Object"/>
+    <Method signature="com.wei.android.apis.ui.SpeedDialsActivity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.e.a(Landroid/content/Context;)V" replace-index="0" replace-signature="com.wei.android.apis.c.f.a(Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.wei.android.apis.a.x.handleMessage(Landroid/os/Message;)V">
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.f.c(Ljava/lang/String;Landroid/content/Context;)V" replace-index="0" replace-signature="com.wei.android.apis.c.g.c(Ljava/lang/String;Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.wei.android.apis.ui.DialupActivity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.e.a(Ljava/lang/String;Landroid/content/Context;)V" replace-index="0" replace-signature="com.wei.android.apis.c.f.a(Ljava/lang/String;Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.wei.android.apis.ui.cs.run()V">
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.e.c(Landroid/content/Context;)I" replace-index="0" replace-signature="com.wei.android.apis.c.f.c(Landroid/content/Context;)I"/>
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.e.c(Landroid/content/Context;)I" replace-index="0" replace-signature="com.wei.android.apis.c.f.c(Landroid/content/Context;)I"/>
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.e.c(Landroid/content/Context;)I" replace-index="0" replace-signature="com.wei.android.apis.c.f.c(Landroid/content/Context;)I"/>
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.e.c(Landroid/content/Context;)I" replace-index="0" replace-signature="com.wei.android.apis.c.f.c(Landroid/content/Context;)I"/>
+    </Method>
+    <Method signature="com.wei.android.apis.c.a.b(Landroid/content/Context;Landroid/app/Dialog;)V">
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.h.&lt;init&gt;(Landroid/widget/EditText;Landroid/content/Context;Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.wei.android.apis.c.i.&lt;init&gt;(Landroid/widget/EditText;Landroid/content/Context;Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.h.&lt;init&gt;(Landroid/widget/EditText;Landroid/content/Context;Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.wei.android.apis.c.h.&lt;init&gt;(Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.g.&lt;init&gt;(Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.wei.android.apis.c.i.&lt;init&gt;(Landroid/widget/EditText;Landroid/content/Context;Landroid/app/Dialog;)V"/>
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.g.&lt;init&gt;(Landroid/app/Dialog;)V" replace-index="0" replace-signature="com.wei.android.apis.c.h.&lt;init&gt;(Landroid/app/Dialog;)V"/>
+    </Method>
+    <Method signature="com.wei.android.apis.c.b.b(Ljava/lang/String;Landroid/content/Context;)Ljava/util/ArrayList;">
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.f.d(Ljava/lang/String;Landroid/content/Context;)J" replace-index="0" replace-signature="com.wei.android.apis.c.g.d(Ljava/lang/String;Landroid/content/Context;)J"/>
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.d.&lt;init&gt;()V" replace-index="0" replace-signature="com.wei.android.apis.c.e.&lt;init&gt;()V"/>
+    </Method>
+    <Method signature="com.wei.android.apis.ui.FunctionActivity.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.e.a(Ljava/lang/String;Landroid/content/Context;)V" replace-index="0" replace-signature="com.wei.android.apis.c.f.a(Ljava/lang/String;Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.e.a(Ljava/lang/String;Landroid/content/Context;)V" replace-index="0" replace-signature="com.wei.android.apis.c.g.b(Ljava/lang/String;Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.f.b(Ljava/lang/String;Landroid/content/Context;)V" replace-index="0" replace-signature="com.wei.android.apis.c.f.a(Ljava/lang/String;Landroid/content/Context;)V"/>
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.f.b(Ljava/lang/String;Landroid/content/Context;)V" replace-index="0" replace-signature="com.wei.android.apis.c.g.b(Ljava/lang/String;Landroid/content/Context;)V"/>
+    </Method>
+    <Method signature="com.wei.android.apis.ui.SpeedDialsActivity.b(Landroid/widget/Button;)Ljava/lang/String;">
+        <Replace-Method original-index="0" original-signature="com.wei.android.apis.c.e.a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;" replace-index="0" replace-signature="com.wei.android.apis.c.f.a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;"/>
+    </Method>
+</Apk>

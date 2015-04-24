@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Apk original-pkg="com.cungu.callrecorder.ui" pkg="com.cungu.callrecorder.ui">
+    <Method signature="com.cungo.callrecorder.ui.rr.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSendLog_.M()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSendLog_.N()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ek.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityFragmentShell_.b(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityFragmentShell_.c(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.qh.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentModifyPwd_.a(Lcom/cungo/callrecorder/ui/FragmentModifyPwd_;Lcom/cungu/lib/a/b;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentModifyPwd_.a(Lcom/cungo/callrecorder/ui/FragmentModifyPwd_;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.lo.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityShell_.d(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityShell_.c(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityPrivileageDesc_.b(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.so.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSyncRecordList_.a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordList_;Lcom/cungu/lib/a/b;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSyncRecordList_.a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordList_;Lcom/cungo/callrecorder/ui/adapter/ItemRecrodInfo;ILjava/lang/Exception;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecordPlayer_.b(Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ik.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordList_.d(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordList_.b(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityUsage_.b(Lcom/cungo/callrecorder/ui/ActivityUsage_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.FragmentSynSessions_.b(Lcom/cungo/callrecorder/ui/FragmentSynSessions_;I)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSessions.e(I)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSessions.f(I)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.pa.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentCoinExchange_.a(Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;ZLjava/util/List;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentCoinExchange_.a(Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;Ljava/lang/Exception;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.kd.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordingSetting_.k()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordingSetting_.l()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ht.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRechargeHotLine_.a(Lcom/cungo/callrecorder/ui/ActivityRechargeHotLine_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRechargeHotLine_.a(Lcom/cungo/callrecorder/ui/ActivityRechargeHotLine_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityDialPad_.b(Lcom/cungo/callrecorder/ui/ActivityDialPad_;Ljava/util/List;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityDialPad.b(Ljava/util/List;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityDialPad.a(Ljava/util/List;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityContactUs_.a(Lcom/cungo/callrecorder/ui/ActivityContactUs_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.rp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSendLog_.L()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSendLog_.O()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecordType_.b(Lcom/cungo/callrecorder/ui/ActivityRecordType_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.qi.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentModifyPwd_.a(Lcom/cungo/callrecorder/ui/FragmentModifyPwd_;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentModifyPwd_.a(Lcom/cungo/callrecorder/ui/FragmentModifyPwd_;Lcom/cungu/lib/a/b;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.sk.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSyncRecordListInSafe_.a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Lcom/cungo/callrecorder/ui/adapter/ItemRecrodInfo;ILjava/lang/Exception;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSyncRecordListInSafe_.a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Lcom/cungu/lib/a/b;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRegister_.c(Lcom/cungo/callrecorder/ui/ActivityRegister_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.bj.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBaseWithActionBar_.b(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBaseWithActionBar_.c(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.x.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.j()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.k()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.py.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentLiveRecording_.a(Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;Lcom/cungu/lib/callrecorder/p;J)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentLiveRecording_.a(Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;Lcom/cungu/lib/callrecorder/p;I)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecordingSetting.f()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordingSetting.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordingSetting.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.lp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityShell_.c(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityShell_.d(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.u.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.g()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.h()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.y.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.l()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.g()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecordPlayer_.a(Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ke.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordingSetting_.j()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordingSetting_.k()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.b(Lcom/cungo/callrecorder/ui/ActivityAccountDetail_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityLoading_.e()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ff.&lt;init&gt;(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.fe.&lt;init&gt;(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.sd.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSynSessions_.a(Lcom/cungo/callrecorder/ui/FragmentSynSessions_;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSynSessions_.a(Lcom/cungo/callrecorder/ui/FragmentSynSessions_;Ljava/util/List;Z)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.of.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.CGSessionListView_.a(Lcom/cungo/callrecorder/ui/CGSessionListView_;Ljava/lang/String;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.CGSessionListView_.a(Lcom/cungo/callrecorder/ui/CGSessionListView_;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.lq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityShell_.b(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityShell_.a(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.as.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAutomaticDetection_.a(Lcom/cungo/callrecorder/ui/ActivityAutomaticDetection_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAutomaticDetection_.a(Lcom/cungo/callrecorder/ui/ActivityAutomaticDetection_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.hp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityPromptNote_.b()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityPromptNote_.c()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ew.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityListManage_.g()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityListManage_.h()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.bs.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase_.a(Lcom/cungo/callrecorder/ui/ActivityBase_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase_.a(Lcom/cungo/callrecorder/ui/ActivityBase_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ls.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityShell_.a(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityShell_.e(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.jk.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordType_.a(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordType_.e(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ad.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAlipayChooser_.a()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAlipayChooser_.b()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ej.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityFragmentShell_.e(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityFragmentShell_.d(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.sa.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSessions_.a(Lcom/cungo/callrecorder/ui/FragmentSessions_;Ljava/util/List;Z)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSessions_.a(Lcom/cungo/callrecorder/ui/FragmentSessions_;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.hm.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityPrivileageDesc_.a(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityPrivileageDesc_.a(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.fs.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityLogin_.a(Lcom/cungo/callrecorder/ui/ActivityLogin_;Ljava/lang/String;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityLogin_.a(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/a;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.hd.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityPages_.a(Lcom/cungo/callrecorder/ui/ActivityPages_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityPages_.a(Lcom/cungo/callrecorder/ui/ActivityPages_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.kv.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRegister_.a(Lcom/cungo/callrecorder/ui/ActivityRegister_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRegister_.a(Lcom/cungo/callrecorder/ui/ActivityRegister_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ks.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRegister_.a(Lcom/cungo/callrecorder/ui/ActivityRegister_;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRegister_.a(Lcom/cungo/callrecorder/ui/ActivityRegister_;Lcom/cungu/lib/a/b;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityLogin_.b(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/b;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityLogin.b(Lcom/cungu/lib/a/b;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityLogin.a(Lcom/cungu/lib/a/b;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ro.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSendLog_.O()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSendLog_.M()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ih.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordList_.b(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordList_.e(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.BaseWebViewActivity_.a(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.gv.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityPages_.d(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityPages_.b(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.bt.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase_.a(Lcom/cungo/callrecorder/ui/ActivityBase_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase_.a(Lcom/cungo/callrecorder/ui/ActivityBase_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.f.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAbout_.j()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAbout_.k()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.BaseWebViewActivity_.b(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.dp.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityDialPad_.b(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityDialPad_.c(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ln.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivitySearch_.d()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivitySearch_.g()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.jg.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordType_.b(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordType_.c(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.dt.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Lcom/cungo/callrecorder/ui/ActivityDialPad_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Lcom/cungo/callrecorder/ui/ActivityDialPad_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.lm.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivitySearch_.g()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivitySearch_.d()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ex.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityListManage_.i()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityListManage_.g()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.dh.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Lcom/cungo/callrecorder/ui/ActivityDialPad_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Lcom/cungo/callrecorder/ui/ActivityDialPad_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.dm.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityDialPad_.c(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityDialPad_.d(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecordList_.b(Lcom/cungo/callrecorder/ui/ActivityRecordList_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ar.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAutomaticDetection_.a(Lcom/cungo/callrecorder/ui/ActivityAutomaticDetection_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAutomaticDetection_.a(Lcom/cungo/callrecorder/ui/ActivityAutomaticDetection_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityUsage_.a(Ljava/lang/String;Ljava/lang/String;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.mn.&lt;init&gt;(Lcom/cungo/callrecorder/ui/ActivityUsage_;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.mm.&lt;init&gt;(Lcom/cungo/callrecorder/ui/ActivityUsage_;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.kt.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRegister_.a(Lcom/cungo/callrecorder/ui/ActivityRegister_;Lcom/cungu/lib/a/b;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRegister_.a(Lcom/cungo/callrecorder/ui/ActivityRegister_;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.fw.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityLogin_.h()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityLogin_.i()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.gd.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityMessageCenter_.a(Lcom/cungo/callrecorder/ui/ActivityMessageCenter_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityMessageCenter_.a(Lcom/cungo/callrecorder/ui/ActivityMessageCenter_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.CGApplication_.a(Lcom/cungo/callrecorder/CGApplication_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.CGApplication.c()V" replace-index="0" replace-signature="com.cungo.callrecorder.CGApplication.d()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.qv.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentPersonCenter_.N()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentPersonCenter_.P()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityAutomaticDetection_.c(Lcom/cungo/callrecorder/ui/ActivityAutomaticDetection_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.se.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSynSessions_.a(Lcom/cungo/callrecorder/ui/FragmentSynSessions_;Ljava/util/List;Z)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSynSessions_.a(Lcom/cungo/callrecorder/ui/FragmentSynSessions_;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ae.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAlipayChooser_.c()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAlipayChooser_.a()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.fv.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityLogin_.g()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityLogin_.h()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ib.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordList_.J()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordList_.K()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.kf.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordingSetting_.l()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordingSetting_.j()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityAutomaticDetection_.b(Lcom/cungo/callrecorder/ui/ActivityAutomaticDetection_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.lr.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityShell_.e(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityShell_.b(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.dv.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityFindPwd_.a(Lcom/cungo/callrecorder/ui/ActivityFindPwd_;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityFindPwd_.a(Lcom/cungo/callrecorder/ui/ActivityFindPwd_;Lcom/cungu/lib/a/b;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.CGApplication_.b(Lcom/cungo/callrecorder/CGApplication_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.CGApplication.d()V" replace-index="0" replace-signature="com.cungo.callrecorder.CGApplication.c()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivitySyncRecordList_.b(Lcom/cungo/callrecorder/ui/ActivitySyncRecordList_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.FragmentSessions_.a(Lcom/cungo/callrecorder/ui/FragmentSessions_;I)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSessions.f(I)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSessions.e(I)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ku.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRegister_.a(Lcom/cungo/callrecorder/ui/ActivityRegister_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRegister_.a(Lcom/cungo/callrecorder/ui/ActivityRegister_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.d.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAbout_.h()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAbout_.i()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.hq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityPromptNote_.c()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityPromptNote_.b()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.kq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRegister_.h()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRegister_.i()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.qx.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentPersonCenter_.P()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentPersonCenter_.N()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.fr.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityLogin_.a(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/a;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityLogin_.a(Lcom/cungo/callrecorder/ui/ActivityLogin_;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.di.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Lcom/cungo/callrecorder/ui/ActivityDialPad_;Ljava/lang/String;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Lcom/cungo/callrecorder/ui/ActivityDialPad_;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.qu.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentPersonCenter_.O()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentPersonCenter_.M()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityVipFunction_.a(Lcom/cungo/callrecorder/ui/ActivityVipFunction_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.og.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.CGSessionListView_.a(Lcom/cungo/callrecorder/ui/CGSessionListView_;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.CGSessionListView_.a(Lcom/cungo/callrecorder/ui/CGSessionListView_;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityUsage_.c(Lcom/cungo/callrecorder/ui/ActivityUsage_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.bn.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBaseWithActionBar_.d(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBaseWithActionBar_.a(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ij.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordList_.e(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordList_.d(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.lb.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivitySafe_.d(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivitySafe_.e(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.a(Lcom/cungo/callrecorder/ui/ActivityAccountDetail_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityVipFunction_.b(Lcom/cungo/callrecorder/ui/ActivityVipFunction_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityShell_.a(Lcom/cungo/callrecorder/ui/ActivityShell_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityLogin_.a(Lcom/cungu/lib/a/a;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.fr.&lt;init&gt;(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/a;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.fs.&lt;init&gt;(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/a;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ni.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.BaseWebViewActivity_.a(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.BaseWebViewActivity_.a(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ck.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBecomeVip_.a(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/lang/String;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBecomeVip_.a(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/util/List;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecordList_.a(Lcom/cungo/callrecorder/ui/ActivityRecordList_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.bm.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBaseWithActionBar_.a(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBaseWithActionBar_.e(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.qw.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentPersonCenter_.M()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentPersonCenter_.O()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.px.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentLiveRecording_.a(Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;Lcom/cungu/lib/callrecorder/p;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentLiveRecording_.a(Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;Lcom/cungu/lib/callrecorder/p;J)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.rz.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSessions_.a(Lcom/cungo/callrecorder/ui/FragmentSessions_;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSessions_.a(Lcom/cungo/callrecorder/ui/FragmentSessions_;Ljava/util/List;Z)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.mp.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityUsage_.a(Lcom/cungo/callrecorder/ui/ActivityUsage_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityUsage_.a(Lcom/cungo/callrecorder/ui/ActivityUsage_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.sj.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSyncRecordListInSafe_.a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Ljava/util/List;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSyncRecordListInSafe_.a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Lcom/cungo/callrecorder/ui/adapter/ItemRecrodInfo;ILjava/lang/Exception;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.oy.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentCoinExchange_.O()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentCoinExchange_.N()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityContactUs_.b(Lcom/cungo/callrecorder/ui/ActivityContactUs_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.fx.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityLogin_.a(Lcom/cungo/callrecorder/ui/ActivityLogin_;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityLogin_.a(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/b;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityLoading_.d()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.fe.&lt;init&gt;(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ff.&lt;init&gt;(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.FragmentSynSessions_.a(Lcom/cungo/callrecorder/ui/FragmentSynSessions_;I)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSessions.f(I)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSessions.e(I)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecordModeSelect_.a(Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ox.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentCoinExchange_.N()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentCoinExchange_.O()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityPages_.c(Lcom/cungo/callrecorder/ui/ActivityPages_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.sl.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSyncRecordListInSafe_.a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Lcom/cungu/lib/a/b;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSyncRecordListInSafe_.a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Ljava/util/List;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRegister_.b(Lcom/cungo/callrecorder/ui/ActivityRegister_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecommendDevices_.b(Lcom/cungo/callrecorder/ui/ActivityRecommendDevices_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.mn.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityUsage_.a(Lcom/cungo/callrecorder/ui/ActivityUsage_;Ljava/lang/String;Ljava/lang/String;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityUsage_.a(Lcom/cungo/callrecorder/ui/ActivityUsage_;I)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.il.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordList_.a(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordList_.c(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ii.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordList_.c(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordList_.a(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityBase.onResume()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.hc.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityPages_.a(Lcom/cungo/callrecorder/ui/ActivityPages_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityPages_.a(Lcom/cungo/callrecorder/ui/ActivityPages_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.bk.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBaseWithActionBar_.c(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBaseWithActionBar_.d(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.bl.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBaseWithActionBar_.e(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBaseWithActionBar_.b(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.w.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.i()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.j()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityFragmentShell_.b(Lcom/cungo/callrecorder/ui/ActivityFragmentShell_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.do.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityDialPad_.b(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.fy.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityLogin_.a(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/b;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityLogin_.a(Lcom/cungo/callrecorder/ui/ActivityLogin_;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecommendDevices_.a(Lcom/cungo/callrecorder/ui/ActivityRecommendDevices_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityPages_.b(Lcom/cungo/callrecorder/ui/ActivityPages_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityFragmentShell_.a(Lcom/cungo/callrecorder/ui/ActivityFragmentShell_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.dn.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityDialPad_.d(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.gy.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityPages_.b(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityPages_.e(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.hl.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityPrivileageDesc_.a(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityPrivileageDesc_.a(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityBecomeVip_.a(Ljava/util/List;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.cj.&lt;init&gt;(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/util/List;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ck.&lt;init&gt;(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/util/List;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.jh.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordType_.e(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordType_.d(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivitySyncRecordList_.a(Lcom/cungo/callrecorder/ui/ActivitySyncRecordList_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ld.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivitySafe_.b(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivitySafe_.d(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.FragmentSessions_.b(Lcom/cungo/callrecorder/ui/FragmentSessions_;I)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSessions.e(I)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSessions.f(I)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.kz.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivitySafe_.c(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivitySafe_.b(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.g.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAbout_.m()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAbout_.n()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.pz.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentLiveRecording_.a(Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;Lcom/cungu/lib/callrecorder/p;I)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentLiveRecording_.a(Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;Lcom/cungu/lib/callrecorder/p;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.dj.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Lcom/cungo/callrecorder/ui/ActivityDialPad_;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Lcom/cungo/callrecorder/ui/ActivityDialPad_;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ig.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordList_.L()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordList_.J()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ac.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAlipayChooser_.b()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAlipayChooser_.c()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityLoading_.a(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityLoading.d()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityLoading.e()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.jj.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordType_.c(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordType_.b(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.fq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityLogin_.i()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityLogin_.g()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.i.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAbout_.n()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAbout_.h()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.rq.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSendLog_.N()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSendLog_.L()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.e.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAbout_.i()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAbout_.j()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityLoading_.b(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityLoading.e()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityLoading.d()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecordType_.a(Lcom/cungo/callrecorder/ui/ActivityRecordType_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.v.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.h()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.i()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.nh.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.BaseWebViewActivity_.a(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.BaseWebViewActivity_.a(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.mm.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityUsage_.a(Lcom/cungo/callrecorder/ui/ActivityUsage_;I)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityUsage_.a(Lcom/cungo/callrecorder/ui/ActivityUsage_;Ljava/lang/String;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityFunctionIntroduction_.a(Lcom/cungo/callrecorder/ui/ActivityFunctionIntroduction_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ei.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityFragmentShell_.c(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityFragmentShell_.b(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.la.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivitySafe_.e(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivitySafe_.c(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.h.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAbout_.k()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAbout_.l()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.a.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAbout_.l()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAbout_.m()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityDialPad_.a(Lcom/cungo/callrecorder/ui/ActivityDialPad_;Ljava/util/List;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityDialPad.a(Ljava/util/List;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityDialPad.b(Ljava/util/List;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.gz.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityPages_.e(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityPages_.d(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ko.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRegister_.i()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRegister_.g()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ci.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBecomeVip_.a(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/lang/Exception;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBecomeVip_.a(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/lang/String;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.cj.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBecomeVip_.a(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/util/List;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBecomeVip_.a(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/lang/Exception;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ey.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityListManage_.h()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityListManage_.i()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityFunctionIntroduction_.b(Lcom/cungo/callrecorder/ui/ActivityFunctionIntroduction_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.eh.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityFragmentShell_.d(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityFragmentShell_.e(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityRecordModeSelect_.b(Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.if.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordList_.K()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordList_.L()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.sp.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentSyncRecordList_.a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordList_;Lcom/cungo/callrecorder/ui/adapter/ItemRecrodInfo;ILjava/lang/Exception;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentSyncRecordList_.a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordList_;Lcom/cungu/lib/a/b;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.oz.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.FragmentCoinExchange_.a(Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;Ljava/lang/Exception;Ljava/lang/String;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.FragmentCoinExchange_.a(Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;ZLjava/util/List;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.mo.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityUsage_.a(Lcom/cungo/callrecorder/ui/ActivityUsage_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityUsage_.a(Lcom/cungo/callrecorder/ui/ActivityUsage_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityShell_.b(Lcom/cungo/callrecorder/ui/ActivityShell_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.p()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.o()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ActivityPrivileageDesc_.a(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityBase.o()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityBase.p()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.kr.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRegister_.g()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRegister_.h()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.hs.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRechargeHotLine_.a(Lcom/cungo/callrecorder/ui/ActivityRechargeHotLine_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRechargeHotLine_.a(Lcom/cungo/callrecorder/ui/ActivityRechargeHotLine_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ji.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityRecordType_.d(Landroid/view/View;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityRecordType_.a(Landroid/view/View;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.r.onClick(Landroid/view/View;)V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.k()V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityAccountDetail_.l()V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.ge.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityMessageCenter_.a(Lcom/cungo/callrecorder/ui/ActivityMessageCenter_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityMessageCenter_.a(Lcom/cungo/callrecorder/ui/ActivityMessageCenter_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V"/>
+    </Method>
+    <Method signature="com.cungo.callrecorder.ui.dw.run()V">
+        <Replace-Method original-index="0" original-signature="com.cungo.callrecorder.ui.ActivityFindPwd_.a(Lcom/cungo/callrecorder/ui/ActivityFindPwd_;Lcom/cungu/lib/a/b;)V" replace-index="0" replace-signature="com.cungo.callrecorder.ui.ActivityFindPwd_.a(Lcom/cungo/callrecorder/ui/ActivityFindPwd_;)V"/>
+    </Method>
+</Apk>
