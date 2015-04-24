@@ -24,6 +24,8 @@
     .line 17
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     .line 18
     const v2, 0x7f030017
 

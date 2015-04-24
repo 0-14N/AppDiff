@@ -45,9 +45,9 @@
     iput v0, p0, Lcom/quvideo/xiaoying/videoeditor/ui/SimpleEditSecondUiManager;->i:I
 
     .line 180
-    new-instance v0, Lbcs;
+    new-instance v0, Lavy;
 
-    invoke-direct {v0, p0}, Lbcs;-><init>(Lcom/quvideo/xiaoying/videoeditor/ui/SimpleEditSecondUiManager;)V
+    invoke-direct {v0, p0}, Lavy;-><init>(Lcom/quvideo/xiaoying/videoeditor/ui/SimpleEditSecondUiManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/ui/SimpleEditSecondUiManager;->a:Landroid/view/View$OnClickListener;
 

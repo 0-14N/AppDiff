@@ -148,7 +148,7 @@
     iput v0, p0, Lcom/quvideo/xiaoying/videoeditor/util/EffectMgr;->j:I
 
     .line 34
-    new-instance v0, Lbdh;
+    new-instance v0, Lawn;
 
     const/16 v1, 0x14
 
@@ -156,7 +156,7 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lbdh;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/EffectMgr;IFZ)V
+    invoke-direct {v0, p0, v1, v2, v3}, Lawn;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/EffectMgr;IFZ)V
 
     invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 

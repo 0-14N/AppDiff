@@ -39,7 +39,7 @@
     .registers 1
 
     .prologue
-    .line 55
+    .line 56
     invoke-direct {p0}, Lcom/hotelquickly/app/ui/BaseFragmentActivity;-><init>()V
 
     return-void
@@ -49,7 +49,7 @@
     .registers 4
 
     .prologue
-    .line 55
+    .line 56
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v0
@@ -538,15 +538,15 @@
 
     const/4 v5, 0x1
 
-    .line 73
+    .line 74
     invoke-super {p0, p1}, Lcom/hotelquickly/app/ui/BaseFragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 74
+    .line 75
     const v0, 0x7f030040
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->setContentView(I)V
 
-    .line 76
+    .line 77
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -555,24 +555,24 @@
 
     move-result-object v0
 
-    .line 77
+    .line 78
     invoke-static {v0}, Lcom/hotelquickly/app/ui/intent/HotelDetailIntent;->a(Landroid/os/Bundle;)Lcom/hotelquickly/app/crate/offer/OfferCrate;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->d:Lcom/hotelquickly/app/crate/offer/OfferCrate;
 
-    .line 78
-    if-nez p1, :cond_1a1
-
     .line 79
+    if-nez p1, :cond_1a7
+
+    .line 80
     invoke-static {v0}, Lcom/hotelquickly/app/ui/intent/HotelDetailIntent;->b(Landroid/os/Bundle;)Lcom/hotelquickly/app/crate/MultinightConfigurationCrate;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->g:Lcom/hotelquickly/app/crate/MultinightConfigurationCrate;
 
-    .line 81
+    .line 82
     iget-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->g:Lcom/hotelquickly/app/crate/MultinightConfigurationCrate;
 
     iget v1, v0, Lcom/hotelquickly/app/crate/MultinightConfigurationCrate;->checkinDateRel:I
@@ -624,7 +624,7 @@
 
     iput v1, v0, Lcom/hotelquickly/app/crate/MultinightConfigurationCrate;->nightCnt:I
 
-    .line 87
+    .line 88
     :cond_56
     :goto_56
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
@@ -633,21 +633,21 @@
 
     invoke-virtual {v0, v5}, Lcom/actionbarsherlock/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 88
+    .line 89
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
 
     move-result-object v0
 
     invoke-virtual {v0, v5}, Lcom/actionbarsherlock/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    .line 89
+    .line 90
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
 
     move-result-object v0
 
     invoke-virtual {v0, v5}, Lcom/actionbarsherlock/app/ActionBar;->setDisplayShowCustomEnabled(Z)V
 
-    .line 90
+    .line 91
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
 
     move-result-object v0
@@ -656,7 +656,7 @@
 
     invoke-virtual {v0, v1}, Lcom/actionbarsherlock/app/ActionBar;->setCustomView(I)V
 
-    .line 91
+    .line 92
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
 
     move-result-object v0
@@ -665,7 +665,7 @@
 
     move-result-object v1
 
-    .line 93
+    .line 94
     const v0, 0x7f08003e
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -676,7 +676,7 @@
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->h:Landroid/widget/TextView;
 
-    .line 96
+    .line 97
     const v0, 0x7f08003f
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -687,27 +687,27 @@
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->i:Landroid/widget/TextView;
 
-    .line 97
+    .line 98
     const v0, 0x7f080063
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 98
+    .line 99
     const v0, 0x7f080060
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 100
+    .line 101
     iget-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->h:Landroid/widget/TextView;
 
-    .line 101
+    .line 102
     iget-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->i:Landroid/widget/TextView;
 
-    .line 102
+    .line 103
     const v0, 0x7f080061
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -718,7 +718,7 @@
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->j:Landroid/widget/TextView;
 
-    .line 106
+    .line 107
     const v0, 0x7f080062
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -729,13 +729,13 @@
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->k:Landroid/widget/TextView;
 
-    .line 108
+    .line 109
     iget-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->j:Landroid/widget/TextView;
 
-    .line 109
+    .line 110
     iget-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->k:Landroid/widget/TextView;
 
-    .line 111
+    .line 112
     iget-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->d:Lcom/hotelquickly/app/crate/offer/OfferCrate;
 
     iget-object v0, v0, Lcom/hotelquickly/app/crate/offer/OfferCrate;->hotel:Lcom/hotelquickly/app/crate/offer/HotelCrate;
@@ -744,7 +744,7 @@
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->a_(Ljava/lang/String;)V
 
-    .line 112
+    .line 113
     iget-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->d:Lcom/hotelquickly/app/crate/offer/OfferCrate;
 
     iget-object v0, v0, Lcom/hotelquickly/app/crate/offer/OfferCrate;->city:Lcom/hotelquickly/app/crate/offer/CityCrate;
@@ -753,33 +753,33 @@
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->b(Ljava/lang/String;)V
 
-    .line 114
+    .line 115
     new-instance v0, Lcom/hotelquickly/app/ui/phone/a;
 
     invoke-direct {v0, p0}, Lcom/hotelquickly/app/ui/phone/a;-><init>(Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;)V
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 121
+    .line 122
     new-instance v0, Lcom/hotelquickly/app/ui/phone/b;
 
     invoke-direct {v0, p0}, Lcom/hotelquickly/app/ui/phone/b;-><init>(Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;)V
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 128
+    .line 129
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 129
+    .line 130
     const-string/jumbo v0, "offer"
 
     iget-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->d:Lcom/hotelquickly/app/crate/offer/OfferCrate;
 
     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 131
+    .line 132
     const v0, 0x7f0800e6
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->findViewById(I)Landroid/view/View;
@@ -790,7 +790,7 @@
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->a:Landroid/widget/TabHost;
 
-    .line 132
+    .line 133
     const v0, 0x7f0800e8
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->findViewById(I)Landroid/view/View;
@@ -801,7 +801,7 @@
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->b:Lcom/hotelquickly/app/ui/NestedViewPager;
 
-    .line 133
+    .line 134
     const v0, 0x7f0800e9
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->findViewById(I)Landroid/view/View;
@@ -812,7 +812,7 @@
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->e:Landroid/widget/Button;
 
-    .line 134
+    .line 135
     const v0, 0x7f0800e7
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->findViewById(I)Landroid/view/View;
@@ -821,21 +821,21 @@
 
     check-cast v0, Lcom/astuetz/PagerSlidingTabStrip;
 
-    .line 136
+    .line 137
     iget-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->a:Landroid/widget/TabHost;
 
-    .line 137
+    .line 138
     iget-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->b:Lcom/hotelquickly/app/ui/NestedViewPager;
 
-    .line 138
+    .line 139
     iget-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->e:Landroid/widget/Button;
 
-    .line 139
+    .line 140
     iget-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->a:Landroid/widget/TabHost;
 
     invoke-virtual {v2}, Landroid/widget/TabHost;->setup()V
 
-    .line 143
+    .line 144
     new-instance v2, Lcom/hotelquickly/app/ui/a/g;
 
     iget-object v3, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->a:Landroid/widget/TabHost;
@@ -846,7 +846,7 @@
 
     iput-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->c:Lcom/hotelquickly/app/ui/a/g;
 
-    .line 144
+    .line 145
     iget-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->c:Lcom/hotelquickly/app/ui/a/g;
 
     const v3, 0x7f0b01b2
@@ -855,7 +855,7 @@
 
     invoke-virtual {v2, v3, v4, v6}, Lcom/hotelquickly/app/ui/a/g;->a(ILjava/lang/Class;Landroid/os/Bundle;)V
 
-    .line 148
+    .line 149
     iget-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->c:Lcom/hotelquickly/app/ui/a/g;
 
     const v3, 0x7f0b0172
@@ -864,7 +864,7 @@
 
     invoke-virtual {v2, v3, v4, v6}, Lcom/hotelquickly/app/ui/a/g;->a(ILjava/lang/Class;Landroid/os/Bundle;)V
 
-    .line 152
+    .line 153
     iget-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->d:Lcom/hotelquickly/app/crate/offer/OfferCrate;
 
     iget-object v2, v2, Lcom/hotelquickly/app/crate/offer/OfferCrate;->points_of_interest:Lcom/hotelquickly/app/crate/offer/PointsOfInterestCrate;
@@ -875,7 +875,7 @@
 
     if-eqz v2, :cond_156
 
-    .line 153
+    .line 154
     iget-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->c:Lcom/hotelquickly/app/ui/a/g;
 
     const v3, 0x7f0b01ba
@@ -884,8 +884,15 @@
 
     invoke-virtual {v2, v3, v4, v6}, Lcom/hotelquickly/app/ui/a/g;->a(ILjava/lang/Class;Landroid/os/Bundle;)V
 
-    .line 158
+    .line 159
     :cond_156
+    invoke-static {p0}, Lcom/hotelquickly/app/e/x;->a(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_166
+
+    .line 160
     iget-object v2, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->c:Lcom/hotelquickly/app/ui/a/g;
 
     const v3, 0x7f0b0066
@@ -895,6 +902,7 @@
     invoke-virtual {v2, v3, v4, v1}, Lcom/hotelquickly/app/ui/a/g;->a(ILjava/lang/Class;Landroid/os/Bundle;)V
 
     .line 162
+    :cond_166
     iget-object v1, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->c:Lcom/hotelquickly/app/ui/a/g;
 
     invoke-virtual {v1, v5}, Lcom/hotelquickly/app/ui/a/g;->c(I)V
@@ -904,7 +912,7 @@
 
     const/16 v2, 0xb
 
-    if-ge v1, v2, :cond_171
+    if-ge v1, v2, :cond_177
 
     .line 165
     iget-object v1, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->b:Lcom/hotelquickly/app/ui/NestedViewPager;
@@ -914,8 +922,8 @@
     invoke-virtual {v1, v5, v2}, Lcom/hotelquickly/app/ui/NestedViewPager;->a(ZZ)V
 
     .line 168
-    :cond_171
-    if-eqz p1, :cond_17f
+    :cond_177
+    if-eqz p1, :cond_185
 
     .line 169
     iget-object v1, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->a:Landroid/widget/TabHost;
@@ -929,7 +937,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/TabHost;->setCurrentTabByTag(Ljava/lang/String;)V
 
     .line 172
-    :cond_17f
+    :cond_185
     iget-object v1, p0, Lcom/hotelquickly/app/ui/phone/HotelDetailActivity;->b:Lcom/hotelquickly/app/ui/NestedViewPager;
 
     invoke-virtual {v0, v1}, Lcom/astuetz/PagerSlidingTabStrip;->setViewPager(Landroid/support/v4/view/ViewPager;)V
@@ -962,8 +970,8 @@
     .line 197
     return-void
 
-    .line 83
-    :cond_1a1
+    .line 84
+    :cond_1a7
     const-string/jumbo v0, "multinightConfigurationCrateState"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;

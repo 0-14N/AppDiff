@@ -31,9 +31,9 @@
 
     iput-boolean v0, p0, Lcn/dxy/idxyer/activity/SearchActivity;->h:Z
 
-    new-instance v0, Lcn/dxy/idxyer/activity/O;
+    new-instance v0, Lcn/dxy/idxyer/activity/N;
 
-    invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/O;-><init>(Lcn/dxy/idxyer/activity/SearchActivity;)V
+    invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/N;-><init>(Lcn/dxy/idxyer/activity/SearchActivity;)V
 
     iput-object v0, p0, Lcn/dxy/idxyer/activity/SearchActivity;->k:Landroid/widget/AdapterView$OnItemSelectedListener;
 
@@ -137,25 +137,25 @@
 
     iget-object v0, p0, Lcn/dxy/idxyer/activity/SearchActivity;->e:Lcn/dxy/sso/v2/widget/MutableEditText;
 
+    new-instance v1, Lcn/dxy/idxyer/activity/O;
+
+    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/O;-><init>(Lcn/dxy/idxyer/activity/SearchActivity;)V
+
+    invoke-virtual {v0, v1}, Lcn/dxy/sso/v2/widget/MutableEditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
+
+    iget-object v0, p0, Lcn/dxy/idxyer/activity/SearchActivity;->e:Lcn/dxy/sso/v2/widget/MutableEditText;
+
     new-instance v1, Lcn/dxy/idxyer/activity/P;
 
     invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/P;-><init>(Lcn/dxy/idxyer/activity/SearchActivity;)V
 
-    invoke-virtual {v0, v1}, Lcn/dxy/sso/v2/widget/MutableEditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
+    invoke-virtual {v0, v1}, Lcn/dxy/sso/v2/widget/MutableEditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     iget-object v0, p0, Lcn/dxy/idxyer/activity/SearchActivity;->e:Lcn/dxy/sso/v2/widget/MutableEditText;
 
     new-instance v1, Lcn/dxy/idxyer/activity/Q;
 
     invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/Q;-><init>(Lcn/dxy/idxyer/activity/SearchActivity;)V
-
-    invoke-virtual {v0, v1}, Lcn/dxy/sso/v2/widget/MutableEditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
-
-    iget-object v0, p0, Lcn/dxy/idxyer/activity/SearchActivity;->e:Lcn/dxy/sso/v2/widget/MutableEditText;
-
-    new-instance v1, Lcn/dxy/idxyer/activity/R;
-
-    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/R;-><init>(Lcn/dxy/idxyer/activity/SearchActivity;)V
 
     invoke-virtual {v0, v1}, Lcn/dxy/sso/v2/widget/MutableEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -254,9 +254,9 @@
 
     iget-object v1, p0, Lcn/dxy/idxyer/activity/SearchActivity;->e:Lcn/dxy/sso/v2/widget/MutableEditText;
 
-    new-instance v2, Lcn/dxy/idxyer/activity/S;
+    new-instance v2, Lcn/dxy/idxyer/activity/R;
 
-    invoke-direct {v2, p0}, Lcn/dxy/idxyer/activity/S;-><init>(Lcn/dxy/idxyer/activity/SearchActivity;)V
+    invoke-direct {v2, p0}, Lcn/dxy/idxyer/activity/R;-><init>(Lcn/dxy/idxyer/activity/SearchActivity;)V
 
     invoke-virtual {v1, v2}, Lcn/dxy/sso/v2/widget/MutableEditText;->a(Lcn/dxy/sso/v2/widget/d;)V
 

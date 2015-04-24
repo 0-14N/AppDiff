@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/soft/filemanager/activities/MainActivity;->n()V
+    invoke-virtual {v0}, Lcom/soft/filemanager/activities/MainActivity;->m()V
 
     return-void
 .end method

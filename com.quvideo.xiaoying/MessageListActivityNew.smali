@@ -175,16 +175,16 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->w:Lcom/quvideo/xiaoying/app/message/MessageListActivityNew$a;
 
     .line 348
-    new-instance v0, Lwe;
+    new-instance v0, Lpl;
 
-    invoke-direct {v0, p0}, Lwe;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;)V
+    invoke-direct {v0, p0}, Lpl;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->x:Landroid/widget/AbsListView$OnScrollListener;
 
     .line 464
-    new-instance v0, Lwf;
+    new-instance v0, Lpm;
 
-    invoke-direct {v0, p0}, Lwf;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;)V
+    invoke-direct {v0, p0}, Lpm;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->y:Lcom/quvideo/xiaoying/app/v3/ui/common/CustomRelativeLayout$IOnKeyboardStateChangedListener;
 
@@ -373,7 +373,7 @@
     const-string/jumbo v1, "messagecenter.message.list"
 
     .line 286
-    new-instance v2, Lwh;
+    new-instance v2, Lpo;
 
     invoke-virtual {p0}, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->getApplicationContext()Landroid/content/Context;
 
@@ -386,7 +386,7 @@
     const/16 v7, 0x2710
 
     .line 286
-    invoke-direct {v2, p0, v3, v4, v7}, Lwh;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-direct {v2, p0, v3, v4, v7}, Lpo;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;Landroid/content/Context;Ljava/lang/String;I)V
 
     .line 284
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -493,7 +493,7 @@
 
     .prologue
     .line 486
-    const v0, 0x7f0a0360
+    const v0, 0x7f0a033d
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->getString(I)Ljava/lang/String;
 
@@ -642,7 +642,7 @@
     .line 269
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->e:Landroid/widget/TextView;
 
-    const v1, 0x7f0a0363
+    const v1, 0x7f0a0340
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -662,7 +662,7 @@
     .line 271
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->e:Landroid/widget/TextView;
 
-    const v1, 0x7f0a03b6
+    const v1, 0x7f0a0393
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -679,7 +679,7 @@
     .line 273
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->e:Landroid/widget/TextView;
 
-    const v1, 0x7f0a03b7
+    const v1, 0x7f0a0394
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -696,7 +696,7 @@
     .line 275
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->e:Landroid/widget/TextView;
 
-    const v1, 0x7f0a03b8
+    const v1, 0x7f0a0395
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -711,7 +711,7 @@
     .line 277
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->e:Landroid/widget/TextView;
 
-    const v1, 0x7f0a03c2
+    const v1, 0x7f0a039f
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -1156,7 +1156,7 @@
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->setContentView(I)V
 
     .line 181
-    const v0, 0x7f060585
+    const v0, 0x7f060570
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -1190,7 +1190,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 186
-    const v0, 0x7f060445
+    const v0, 0x7f060430
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -1203,7 +1203,7 @@
     .line 188
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->c:Lcom/quvideo/xiaoying/app/v3/ui/common/CustomRelativeLayout;
 
-    const v1, 0x7f060586
+    const v1, 0x7f060571
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/v3/ui/common/CustomRelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -1217,7 +1217,7 @@
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 191
-    const v0, 0x7f06056e
+    const v0, 0x7f060559
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -1293,14 +1293,14 @@
     .line 203
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->g:Landroid/widget/ListView;
 
-    new-instance v1, Lwg;
+    new-instance v1, Lpn;
 
-    invoke-direct {v1, p0}, Lwg;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;)V
+    invoke-direct {v1, p0}, Lpn;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 213
-    const v0, 0x7f060453
+    const v0, 0x7f06043e
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -1309,7 +1309,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->j:Landroid/view/View;
 
     .line 214
-    const v0, 0x7f060455
+    const v0, 0x7f060440
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -1320,7 +1320,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->k:Landroid/widget/EditText;
 
     .line 215
-    const v0, 0x7f060454
+    const v0, 0x7f06043f
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -1590,9 +1590,9 @@
     const-string/jumbo v1, "comment.reply"
 
     .line 498
-    new-instance v2, Lwi;
+    new-instance v2, Lpp;
 
-    invoke-direct {v2, p0, p1}, Lwi;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;Lcom/quvideo/xiaoying/app/message/MessageListActivityNew$b;)V
+    invoke-direct {v2, p0, p1}, Lpp;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListActivityNew;Lcom/quvideo/xiaoying/app/message/MessageListActivityNew$b;)V
 
     .line 496
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V

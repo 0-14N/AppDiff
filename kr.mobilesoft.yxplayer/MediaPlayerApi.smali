@@ -762,15 +762,12 @@
 .end method
 
 .method public isregistered()I
-    .registers 2
+    .registers 7
 
     .prologue
-    .line 342
-    invoke-virtual {p0}, Lkr/mobilesoft/yxplayer/MediaPlayerApi;->mp_isregistered()I
+    const/4 v4, 0x1
 
-    move-result v0
-
-    return v0
+    return v4
 .end method
 
 .method public native mp_SetAudioSize(I)I

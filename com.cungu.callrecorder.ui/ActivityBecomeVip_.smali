@@ -136,14 +136,6 @@
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->n:Landroid/widget/ListView;
 
-    invoke-virtual {p0, v1}, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->q:Landroid/widget/Button;
-
     const v0, 0x7f0e0044
 
     invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->findViewById(I)Landroid/view/View;
@@ -161,6 +153,14 @@
     check-cast v0, Landroid/widget/ListView;
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->p:Landroid/widget/ListView;
+
+    invoke-virtual {p0, v1}, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->q:Landroid/widget/Button;
 
     invoke-virtual {p0, v1}, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->findViewById(I)Landroid/view/View;
 
@@ -296,9 +296,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->t:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/ci;
+    new-instance v1, Lcom/cungo/callrecorder/ui/cj;
 
-    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/ci;-><init>(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/lang/Exception;)V
+    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/cj;-><init>(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/lang/Exception;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -310,9 +310,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->t:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/cj;
+    new-instance v1, Lcom/cungo/callrecorder/ui/ck;
 
-    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/cj;-><init>(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/util/List;)V
+    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/ck;-><init>(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/util/List;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -324,9 +324,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->t:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/ck;
+    new-instance v1, Lcom/cungo/callrecorder/ui/ci;
 
-    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/ck;-><init>(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/ci;-><init>(Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -373,12 +373,12 @@
     goto :goto_6
 
     :sswitch_b
-    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->f(I)V
+    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->a(I)V
 
     goto :goto_6
 
     :sswitch_f
-    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->a(I)V
+    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityBecomeVip_;->f(I)V
 
     goto :goto_6
 
@@ -391,8 +391,8 @@
 
     :sswitch_data_18
     .sparse-switch
-        0x1 -> :sswitch_f
-        0x2 -> :sswitch_b
+        0x1 -> :sswitch_b
+        0x2 -> :sswitch_f
         0x64 -> :sswitch_7
         0x2766 -> :sswitch_13
     .end sparse-switch

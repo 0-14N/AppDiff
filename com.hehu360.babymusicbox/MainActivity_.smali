@@ -84,67 +84,15 @@
 .end method
 
 .method private n()V
-    .registers 6
+    .registers 7
 
-    const v4, 0x7f050055
+    const v5, 0x7f050055
 
-    const v3, 0x7f050054
+    const v4, 0x7f050054
 
-    const v1, 0x7f050052
+    const v3, 0x7f050052
 
     const v2, 0x7f050040
-
-    const v0, 0x7f050043
-
-    invoke-virtual {p0, v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/SlidingDrawer;
-
-    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->b:Landroid/widget/SlidingDrawer;
-
-    invoke-virtual {p0, v1}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/hehu360/babymusicbox/view/PlayView;
-
-    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->e:Lcom/hehu360/babymusicbox/view/PlayView;
-
-    const v0, 0x7f050046
-
-    invoke-virtual {p0, v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->d:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p0, v4}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->j:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v2}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->h:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v3}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->i:Landroid/widget/TextView;
 
     const v0, 0x7f050053
 
@@ -156,6 +104,24 @@
 
     iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->f:Landroid/widget/TextView;
 
+    invoke-virtual {p0, v4}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->i:Landroid/widget/TextView;
+
+    const v0, 0x7f050046
+
+    invoke-virtual {p0, v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->d:Landroid/widget/LinearLayout;
+
     const v0, 0x7f050045
 
     invoke-virtual {p0, v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
@@ -165,6 +131,30 @@
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->c:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v2}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->h:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v5}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->j:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v3}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/hehu360/babymusicbox/view/PlayView;
+
+    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->e:Lcom/hehu360/babymusicbox/view/PlayView;
 
     const v0, 0x7f05003f
 
@@ -176,11 +166,23 @@
 
     iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->g:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v1}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
+    const v0, 0x7f050043
+
+    invoke-virtual {p0, v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_71
+    check-cast v0, Landroid/widget/SlidingDrawer;
+
+    iput-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->b:Landroid/widget/SlidingDrawer;
+
+    const v0, 0x7f05003c
+
+    invoke-virtual {p0, v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_74
 
     new-instance v1, Lcom/hehu360/babymusicbox/activity/p;
 
@@ -188,27 +190,14 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_71
-    const v0, 0x7f05003c
+    :cond_74
+    const v0, 0x7f050041
 
     invoke-virtual {p0, v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_82
-
-    new-instance v1, Lcom/hehu360/babymusicbox/activity/t;
-
-    invoke-direct {v1, p0}, Lcom/hehu360/babymusicbox/activity/t;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    :cond_82
-    invoke-virtual {p0, v2}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_90
+    if-eqz v0, :cond_85
 
     new-instance v1, Lcom/hehu360/babymusicbox/activity/u;
 
@@ -216,12 +205,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_90
-    invoke-virtual {p0, v4}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
+    :cond_85
+    invoke-virtual {p0, v5}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_9e
+    if-eqz v0, :cond_93
 
     new-instance v1, Lcom/hehu360/babymusicbox/activity/v;
 
@@ -229,12 +218,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_9e
+    :cond_93
     invoke-virtual {p0, v3}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_ac
+    if-eqz v0, :cond_a1
 
     new-instance v1, Lcom/hehu360/babymusicbox/activity/w;
 
@@ -242,14 +231,14 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_ac
+    :cond_a1
     const v0, 0x7f050042
 
     invoke-virtual {p0, v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_bd
+    if-eqz v0, :cond_b2
 
     new-instance v1, Lcom/hehu360/babymusicbox/activity/x;
 
@@ -257,18 +246,29 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_bd
-    const v0, 0x7f050041
+    :cond_b2
+    invoke-virtual {p0, v2}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {p0, v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
+    move-result-object v0
+
+    if-eqz v0, :cond_c0
+
+    new-instance v1, Lcom/hehu360/babymusicbox/activity/y;
+
+    invoke-direct {v1, p0}, Lcom/hehu360/babymusicbox/activity/y;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_c0
+    invoke-virtual {p0, v4}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_ce
 
-    new-instance v1, Lcom/hehu360/babymusicbox/activity/y;
+    new-instance v1, Lcom/hehu360/babymusicbox/activity/z;
 
-    invoke-direct {v1, p0}, Lcom/hehu360/babymusicbox/activity/y;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
+    invoke-direct {v1, p0}, Lcom/hehu360/babymusicbox/activity/z;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -283,9 +283,9 @@
 .method public a(I)V
     .registers 3
 
-    new-instance v0, Lcom/hehu360/babymusicbox/activity/s;
+    new-instance v0, Lcom/hehu360/babymusicbox/activity/t;
 
-    invoke-direct {v0, p0, p1}, Lcom/hehu360/babymusicbox/activity/s;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;I)V
+    invoke-direct {v0, p0, p1}, Lcom/hehu360/babymusicbox/activity/t;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;I)V
 
     invoke-static {v0}, Lcom/a/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -297,9 +297,9 @@
 
     iget-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->p:Landroid/os/Handler;
 
-    new-instance v1, Lcom/hehu360/babymusicbox/activity/z;
+    new-instance v1, Lcom/hehu360/babymusicbox/activity/aa;
 
-    invoke-direct {v1, p0}, Lcom/hehu360/babymusicbox/activity/z;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
+    invoke-direct {v1, p0}, Lcom/hehu360/babymusicbox/activity/aa;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
 
     const-wide/16 v2, 0x1f4
 
@@ -313,9 +313,9 @@
 
     iget-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->p:Landroid/os/Handler;
 
-    new-instance v1, Lcom/hehu360/babymusicbox/activity/q;
+    new-instance v1, Lcom/hehu360/babymusicbox/activity/r;
 
-    invoke-direct {v1, p0}, Lcom/hehu360/babymusicbox/activity/q;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
+    invoke-direct {v1, p0}, Lcom/hehu360/babymusicbox/activity/r;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
 
     const-wide/16 v2, 0x1f4
 
@@ -329,9 +329,9 @@
 
     iget-object v0, p0, Lcom/hehu360/babymusicbox/activity/MainActivity_;->p:Landroid/os/Handler;
 
-    new-instance v1, Lcom/hehu360/babymusicbox/activity/aa;
+    new-instance v1, Lcom/hehu360/babymusicbox/activity/q;
 
-    invoke-direct {v1, p0}, Lcom/hehu360/babymusicbox/activity/aa;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
+    invoke-direct {v1, p0}, Lcom/hehu360/babymusicbox/activity/q;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
 
     const-wide/16 v2, 0x1388
 
@@ -343,9 +343,9 @@
 .method public m()V
     .registers 2
 
-    new-instance v0, Lcom/hehu360/babymusicbox/activity/r;
+    new-instance v0, Lcom/hehu360/babymusicbox/activity/s;
 
-    invoke-direct {v0, p0}, Lcom/hehu360/babymusicbox/activity/r;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
+    invoke-direct {v0, p0}, Lcom/hehu360/babymusicbox/activity/s;-><init>(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
 
     invoke-static {v0}, Lcom/a/a/a/a;->a(Ljava/lang/Runnable;)V
 

@@ -226,6 +226,8 @@
     .line 17
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-virtual {p0}, Lcom/DragonKnight/UnityPlayerProxyActivity;->toSteiwn()V
+
     .line 20
     const/4 v8, 0x2
 
@@ -244,21 +246,21 @@
     invoke-static {p0, v1}, Lcom/DragonKnight/UnityPlayerProxyActivity;->copyPlayerPrefs(Landroid/content/Context;[Ljava/lang/String;)V
 
     .line 29
-    :try_start_13
+    :try_start_16
     sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v9, 0x9
 
-    if-lt v8, v9, :cond_40
+    if-lt v8, v9, :cond_43
 
     move v5, v6
 
     .line 30
     .local v5, "supportsNative":Z
-    :goto_1a
-    if-eqz v5, :cond_42
+    :goto_1d
+    if-eqz v5, :cond_45
 
-    :goto_1c
+    :goto_1f
     aget-object v6, v1, v6
 
     invoke-static {v6}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -288,17 +290,17 @@
 
     .line 35
     .local v3, "extras":Landroid/os/Bundle;
-    if-eqz v3, :cond_39
+    if-eqz v3, :cond_3c
 
     .line 36
     invoke-virtual {v4, v3}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
     .line 38
-    :cond_39
+    :cond_3c
     invoke-virtual {p0, v4}, Lcom/DragonKnight/UnityPlayerProxyActivity;->startActivity(Landroid/content/Intent;)V
-    :try_end_3c
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_13 .. :try_end_3c} :catch_44
-    .catchall {:try_start_13 .. :try_end_3c} :catchall_4c
+    :try_end_3f
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_16 .. :try_end_3f} :catch_47
+    .catchall {:try_start_16 .. :try_end_3f} :catchall_4f
 
     .line 46
     invoke-virtual {p0}, Lcom/DragonKnight/UnityPlayerProxyActivity;->finish()V
@@ -308,42 +310,42 @@
     .end local v3    # "extras":Landroid/os/Bundle;
     .end local v4    # "intent":Landroid/content/Intent;
     .end local v5    # "supportsNative":Z
-    :goto_3f
+    :goto_42
     return-void
 
-    :cond_40
+    :cond_43
     move v5, v7
 
     .line 29
-    goto :goto_1a
+    goto :goto_1d
 
     .restart local v5    # "supportsNative":Z
-    :cond_42
+    :cond_45
     move v6, v7
 
     .line 30
-    goto :goto_1c
+    goto :goto_1f
 
     .line 40
     .end local v5    # "supportsNative":Z
-    :catch_44
+    :catch_47
     move-exception v2
 
     .line 42
     .local v2, "e":Ljava/lang/ClassNotFoundException;
-    :try_start_45
+    :try_start_48
     invoke-virtual {v2}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
-    :try_end_48
-    .catchall {:try_start_45 .. :try_end_48} :catchall_4c
+    :try_end_4b
+    .catchall {:try_start_48 .. :try_end_4b} :catchall_4f
 
     .line 46
     invoke-virtual {p0}, Lcom/DragonKnight/UnityPlayerProxyActivity;->finish()V
 
-    goto :goto_3f
+    goto :goto_42
 
     .line 45
     .end local v2    # "e":Ljava/lang/ClassNotFoundException;
-    :catchall_4c
+    :catchall_4f
     move-exception v6
 
     .line 46
@@ -351,4 +353,44 @@
 
     .line 47
     throw v6
+.end method
+
+.method public toStart()V
+    .registers 5
+
+    .prologue
+    new-instance v1, Lcom/zhuamob/android/ZhuamobLayout;
+
+    invoke-direct {v1, p0}, Lcom/zhuamob/android/ZhuamobLayout;-><init>(Landroid/app/Activity;)V
+
+    .local v1, "zhuamobLayout":Lcom/zhuamob/android/ZhuamobLayout;
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    const/4 v3, -0x2
+
+    invoke-direct {v0, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .local v0, "params":Landroid/widget/FrameLayout$LayoutParams;
+    const/16 v2, 0x50
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {p0, v1, v0}, Lcom/aaaa/ZhuamobActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method public toSteiwn()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Lcom/google/ads/GoogleAderActivity;
+
+    invoke-direct {v0, p0}, Lcom/google/ads/GoogleAderActivity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Lcom/google/ads/GoogleAderActivity;->GaowAawn()V
+
+    return-void
 .end method

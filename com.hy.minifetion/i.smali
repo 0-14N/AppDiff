@@ -37,9 +37,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/a/g;
+    check-cast v0, Lcom/a/d;
 
-    invoke-virtual {v0}, Lcom/a/g;->i()I
+    invoke-virtual {v0}, Lcom/a/d;->i()I
 
     move-result v1
 
@@ -69,11 +69,11 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setAdjustViewBounds(Z)V
 
-    invoke-direct {p0, v0, v1}, Lcom/hy/minifetion/ui/i;->a(Lcom/a/g;Landroid/widget/ImageView;)V
+    invoke-direct {p0, v0, v1}, Lcom/hy/minifetion/ui/i;->a(Lcom/a/d;Landroid/widget/ImageView;)V
 
     new-instance v2, Lcom/hy/minifetion/ui/k;
 
-    invoke-direct {v2, p0, v0}, Lcom/hy/minifetion/ui/k;-><init>(Lcom/hy/minifetion/ui/i;Lcom/a/g;)V
+    invoke-direct {v2, p0, v0}, Lcom/hy/minifetion/ui/k;-><init>(Lcom/hy/minifetion/ui/i;Lcom/a/d;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -134,13 +134,13 @@
 
     check-cast v5, Landroid/widget/ScrollView;
 
-    invoke-virtual {v0}, Lcom/a/g;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/a/d;->a()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {v1, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0}, Lcom/a/g;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/a/d;->d()Ljava/lang/String;
 
     move-result-object v1
 
@@ -150,11 +150,11 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-direct {p0, v0, v4}, Lcom/hy/minifetion/ui/i;->a(Lcom/a/g;Landroid/widget/ImageView;)V
+    invoke-direct {p0, v0, v4}, Lcom/hy/minifetion/ui/i;->a(Lcom/a/d;Landroid/widget/ImageView;)V
 
     const-string v1, ""
 
-    invoke-virtual {v0}, Lcom/a/g;->g()J
+    invoke-virtual {v0}, Lcom/a/d;->g()J
 
     move-result-wide v8
 
@@ -176,7 +176,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Lcom/a/g;->g()J
+    invoke-virtual {v0}, Lcom/a/d;->g()J
 
     move-result-wide v8
 
@@ -230,7 +230,7 @@
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0}, Lcom/a/g;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/a/d;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -246,7 +246,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/a/g;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/a/d;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -270,13 +270,13 @@
 
     check-cast v1, Landroid/widget/Button;
 
-    invoke-virtual {v0}, Lcom/a/g;->i()I
+    invoke-virtual {v0}, Lcom/a/d;->i()I
 
     move-result v3
 
     if-nez v3, :cond_19c
 
-    invoke-virtual {v0}, Lcom/a/g;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/a/d;->e()Ljava/lang/String;
 
     move-result-object v2
 
@@ -347,7 +347,7 @@
     :goto_15b
     new-instance v2, Lcom/hy/minifetion/ui/j;
 
-    invoke-direct {v2, p0, v3, v0}, Lcom/hy/minifetion/ui/j;-><init>(Lcom/hy/minifetion/ui/i;ILcom/a/g;)V
+    invoke-direct {v2, p0, v3, v0}, Lcom/hy/minifetion/ui/j;-><init>(Lcom/hy/minifetion/ui/i;ILcom/a/d;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -358,7 +358,7 @@
     goto/16 :goto_10
 
     :cond_16a
-    invoke-virtual {v0}, Lcom/a/g;->g()J
+    invoke-virtual {v0}, Lcom/a/d;->g()J
 
     move-result-wide v8
 
@@ -372,7 +372,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Lcom/a/g;->g()J
+    invoke-virtual {v0}, Lcom/a/d;->g()J
 
     move-result-wide v8
 
@@ -397,7 +397,7 @@
     goto/16 :goto_ce
 
     :cond_190
-    invoke-virtual {v0}, Lcom/a/g;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/a/d;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -411,7 +411,7 @@
     goto :goto_158
 
     :cond_19c
-    invoke-virtual {v0}, Lcom/a/g;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/a/d;->e()Ljava/lang/String;
 
     move-result-object v2
 
@@ -457,12 +457,12 @@
     return-void
 .end method
 
-.method private a(Lcom/a/g;Landroid/widget/ImageView;)V
+.method private a(Lcom/a/d;Landroid/widget/ImageView;)V
     .registers 5
 
     new-instance v0, Lcom/hy/minifetion/ui/l;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/hy/minifetion/ui/l;-><init>(Lcom/hy/minifetion/ui/i;Lcom/a/g;Landroid/widget/ImageView;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/hy/minifetion/ui/l;-><init>(Lcom/hy/minifetion/ui/i;Lcom/a/d;Landroid/widget/ImageView;)V
 
     const/4 v1, 0x0
 

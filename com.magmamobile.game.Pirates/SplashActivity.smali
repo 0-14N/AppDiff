@@ -414,6 +414,8 @@
     .line 62
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     .line 69
     new-instance v1, Lcom/magmamobile/game/engine/SplashActivity$1;
 

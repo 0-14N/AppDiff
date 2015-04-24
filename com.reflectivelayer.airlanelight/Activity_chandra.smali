@@ -726,6 +726,8 @@
     .line 44
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     .line 45
     invoke-static {}, Lcom/reflectivelayer/airlanelight/RandomGen;->init()V
 

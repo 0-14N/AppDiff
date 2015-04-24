@@ -58,9 +58,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/SpeedAdjustManager;->f:Lcom/quvideo/xiaoying/videoeditor2/ui/SpeedAdjustManager$OnFocusItemChangeListener;
 
     .line 52
-    new-instance v0, Lbfu;
+    new-instance v0, Laza;
 
-    invoke-direct {v0, p0}, Lbfu;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/SpeedAdjustManager;)V
+    invoke-direct {v0, p0}, Laza;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/SpeedAdjustManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/SpeedAdjustManager;->g:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
@@ -98,9 +98,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/SpeedAdjustManager;->f:Lcom/quvideo/xiaoying/videoeditor2/ui/SpeedAdjustManager$OnFocusItemChangeListener;
 
     .line 52
-    new-instance v0, Lbfu;
+    new-instance v0, Laza;
 
-    invoke-direct {v0, p0}, Lbfu;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/SpeedAdjustManager;)V
+    invoke-direct {v0, p0}, Laza;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/SpeedAdjustManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/SpeedAdjustManager;->g:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 

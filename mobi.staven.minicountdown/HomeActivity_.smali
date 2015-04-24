@@ -295,18 +295,7 @@
     const/high16 v3, 0x7f0c0000
 
     .line 98
-    const v2, 0x7f0c0019
-
-    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/TextView;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->txt_day_date:Landroid/widget/TextView;
-
-    .line 99
-    const v2, 0x7f0c0017
+    const v2, 0x7f0c0014
 
     invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
@@ -314,7 +303,18 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_delete:Landroid/widget/Button;
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_search:Landroid/widget/Button;
+
+    .line 99
+    const v2, 0x7f0c0016
+
+    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/Button;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_modify:Landroid/widget/Button;
 
     .line 100
     invoke-interface {p1, v4}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
@@ -326,108 +326,6 @@
     iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_add:Landroid/widget/Button;
 
     .line 101
-    const v2, 0x7f0c0015
-
-    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/Button;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_calendar:Landroid/widget/Button;
-
-    .line 102
-    const v2, 0x7f0c0013
-
-    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/Button;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_widget:Landroid/widget/Button;
-
-    .line 103
-    invoke-interface {p1, v5}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/Button;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_import:Landroid/widget/Button;
-
-    .line 104
-    invoke-interface {p1, v3}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/ListView;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->list_days:Landroid/widget/ListView;
-
-    .line 105
-    const v2, 0x7f0c0018
-
-    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/TextView;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->txt_day_title:Landroid/widget/TextView;
-
-    .line 106
-    invoke-interface {p1, v7}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/TextView;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->txt_days:Landroid/widget/TextView;
-
-    .line 107
-    const v2, 0x7f0c0014
-
-    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/Button;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_search:Landroid/widget/Button;
-
-    .line 108
-    const v2, 0x7f0c0016
-
-    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/Button;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_modify:Landroid/widget/Button;
-
-    .line 109
-    invoke-interface {p1, v6}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/ImageButton;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_onoff:Landroid/widget/ImageButton;
-
-    .line 110
-    const v2, 0x7f0c0007
-
-    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/support/v4/widget/SlidingPaneLayout;
-
-    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->sliding_pane_layout:Landroid/support/v4/widget/SlidingPaneLayout;
-
-    .line 111
     const v2, 0x7f0c0009
 
     invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
@@ -438,16 +336,116 @@
 
     iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->relative_all:Landroid/widget/RelativeLayout;
 
-    .line 113
+    .line 102
+    const v2, 0x7f0c0007
+
+    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/support/v4/widget/SlidingPaneLayout;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->sliding_pane_layout:Landroid/support/v4/widget/SlidingPaneLayout;
+
+    .line 103
+    const v2, 0x7f0c0018
+
+    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->txt_day_title:Landroid/widget/TextView;
+
+    .line 104
+    invoke-interface {p1, v6}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/ImageButton;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_onoff:Landroid/widget/ImageButton;
+
+    .line 105
+    invoke-interface {p1, v5}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/Button;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_import:Landroid/widget/Button;
+
+    .line 106
+    const v2, 0x7f0c0017
+
+    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/Button;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_delete:Landroid/widget/Button;
+
+    .line 107
+    const v2, 0x7f0c0019
+
+    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->txt_day_date:Landroid/widget/TextView;
+
+    .line 108
+    invoke-interface {p1, v3}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/ListView;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->list_days:Landroid/widget/ListView;
+
+    .line 109
+    const v2, 0x7f0c0013
+
+    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/Button;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_widget:Landroid/widget/Button;
+
+    .line 110
+    invoke-interface {p1, v7}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->txt_days:Landroid/widget/TextView;
+
+    .line 111
     const v2, 0x7f0c0015
 
     invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/Button;
+
+    iput-object v2, p0, Lmobi/staven/minicountdown/activity/HomeActivity_;->btn_calendar:Landroid/widget/Button;
+
+    .line 113
+    invoke-interface {p1, v5}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     .line 114
     .local v0, "view":Landroid/view/View;
-    if-eqz v0, :cond_aa
+    if-eqz v0, :cond_a7
 
     .line 115
     new-instance v2, Lmobi/staven/minicountdown/activity/HomeActivity_$1;
@@ -457,8 +455,10 @@
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 128
-    :cond_aa
-    invoke-interface {p1, v6}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+    :cond_a7
+    const v2, 0x7f0c0013
+
+    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -474,14 +474,12 @@
 
     .line 143
     :cond_b8
-    const v2, 0x7f0c0014
-
-    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+    invoke-interface {p1, v6}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     .line 144
-    if-eqz v0, :cond_c9
+    if-eqz v0, :cond_c6
 
     .line 145
     new-instance v2, Lmobi/staven/minicountdown/activity/HomeActivity_$3;
@@ -491,15 +489,15 @@
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 158
-    :cond_c9
-    const v2, 0x7f0c0016
+    :cond_c6
+    const v2, 0x7f0c0017
 
     invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     .line 159
-    if-eqz v0, :cond_da
+    if-eqz v0, :cond_d7
 
     .line 160
     new-instance v2, Lmobi/staven/minicountdown/activity/HomeActivity_$4;
@@ -509,8 +507,10 @@
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 173
-    :cond_da
-    invoke-interface {p1, v4}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+    :cond_d7
+    const v2, 0x7f0c0015
+
+    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -526,14 +526,12 @@
 
     .line 188
     :cond_e8
-    const v2, 0x7f0c0017
-
-    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+    invoke-interface {p1, v4}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     .line 189
-    if-eqz v0, :cond_f9
+    if-eqz v0, :cond_f6
 
     .line 190
     new-instance v2, Lmobi/staven/minicountdown/activity/HomeActivity_$6;
@@ -543,13 +541,13 @@
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 203
-    :cond_f9
+    :cond_f6
     invoke-interface {p1, v7}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     .line 204
-    if-eqz v0, :cond_107
+    if-eqz v0, :cond_104
 
     .line 205
     new-instance v2, Lmobi/staven/minicountdown/activity/HomeActivity_$7;
@@ -559,15 +557,15 @@
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 218
-    :cond_107
-    const v2, 0x7f0c0013
+    :cond_104
+    const v2, 0x7f0c0014
 
     invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     .line 219
-    if-eqz v0, :cond_118
+    if-eqz v0, :cond_115
 
     .line 220
     new-instance v2, Lmobi/staven/minicountdown/activity/HomeActivity_$8;
@@ -577,8 +575,10 @@
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 233
-    :cond_118
-    invoke-interface {p1, v5}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+    :cond_115
+    const v2, 0x7f0c0016
+
+    invoke-interface {p1, v2}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 

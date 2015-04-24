@@ -835,6 +835,8 @@
     .line 76
     invoke-super {p0, p1}, Lorg/andengine/ui/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 78
     const/4 v0, 0x1
 
@@ -1002,19 +1004,21 @@
     .line 278
     invoke-super {p0}, Lorg/andengine/ui/activity/BaseActivity;->onDestroy()V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+
     .line 280
     iget-object v1, p0, Lorg/andengine/ui/activity/BaseGameActivity;->mEngine:Lorg/andengine/engine/Engine;
 
     invoke-virtual {v1}, Lorg/andengine/engine/Engine;->onDestroy()V
 
     .line 283
-    :try_start_8
+    :try_start_b
     invoke-virtual {p0}, Lorg/andengine/ui/activity/BaseGameActivity;->onDestroyResources()V
-    :try_end_b
-    .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_b} :catch_12
+    :try_end_e
+    .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_e} :catch_15
 
     .line 288
-    :goto_b
+    :goto_e
     invoke-virtual {p0}, Lorg/andengine/ui/activity/BaseGameActivity;->onGameDestroyed()V
 
     .line 290
@@ -1026,7 +1030,7 @@
     return-void
 
     .line 284
-    :catch_12
+    :catch_15
     move-exception v0
 
     .line 285
@@ -1083,7 +1087,7 @@
 
     invoke-static {v1, v0}, Lorg/andengine/util/debug/Debug;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_b
+    goto :goto_e
 .end method
 
 .method public onDestroyResources()V

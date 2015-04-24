@@ -32,7 +32,7 @@
     .line 118
     iget-object v0, p0, Lcom/guangjieba/share/ui/user/bk;->a:Lcom/guangjieba/share/ui/user/RegisterActivity_;
 
-    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/RegisterActivity_;->e()V
+    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/RegisterActivity_;->d()V
 
     .line 119
     return-void

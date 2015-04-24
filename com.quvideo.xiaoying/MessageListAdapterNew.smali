@@ -74,23 +74,23 @@
     iput v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;->f:I
 
     .line 232
-    new-instance v0, Lwj;
+    new-instance v0, Lpq;
 
-    invoke-direct {v0, p0}, Lwj;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;)V
+    invoke-direct {v0, p0}, Lpq;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;->h:Landroid/view/View$OnClickListener;
 
     .line 247
-    new-instance v0, Lwk;
+    new-instance v0, Lpr;
 
-    invoke-direct {v0, p0}, Lwk;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;)V
+    invoke-direct {v0, p0}, Lpr;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;->i:Landroid/view/View$OnClickListener;
 
     .line 278
-    new-instance v0, Lwl;
+    new-instance v0, Lps;
 
-    invoke-direct {v0, p0}, Lwl;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;)V
+    invoke-direct {v0, p0}, Lps;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;->j:Landroid/view/View$OnClickListener;
 
@@ -499,7 +499,7 @@
     invoke-direct {v1, p0, v2}, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;-><init>(Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew;Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;)V
 
     .line 93
-    const v0, 0x7f06049c
+    const v0, 0x7f060487
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -510,7 +510,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->a:Lcom/quvideo/xiaoying/common/ui/custom/RoundImageView;
 
     .line 94
-    const v0, 0x7f06057f
+    const v0, 0x7f06056a
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -521,7 +521,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->b:Landroid/widget/ImageView;
 
     .line 95
-    const v0, 0x7f06049f
+    const v0, 0x7f06048a
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -532,7 +532,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->c:Landroid/widget/ImageView;
 
     .line 96
-    const v0, 0x7f060580
+    const v0, 0x7f06056b
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -543,7 +543,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->d:Landroid/widget/ImageView;
 
     .line 97
-    const v0, 0x7f060488
+    const v0, 0x7f060473
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -554,7 +554,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->e:Landroid/widget/TextView;
 
     .line 98
-    const v0, 0x7f060582
+    const v0, 0x7f06056d
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -565,7 +565,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->f:Landroid/widget/TextView;
 
     .line 99
-    const v0, 0x7f06045d
+    const v0, 0x7f060448
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -576,7 +576,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->g:Landroid/widget/TextView;
 
     .line 100
-    const v0, 0x7f060583
+    const v0, 0x7f06056e
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -587,7 +587,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->h:Landroid/widget/TextView;
 
     .line 101
-    const v0, 0x7f060581
+    const v0, 0x7f06056c
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -598,7 +598,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->i:Landroid/widget/RelativeLayout;
 
     .line 102
-    const v0, 0x7f0604a1
+    const v0, 0x7f06048c
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -609,7 +609,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->j:Landroid/widget/ImageView;
 
     .line 103
-    const v0, 0x7f060584
+    const v0, 0x7f06056f
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -646,7 +646,7 @@
     if-nez v3, :cond_139
 
     .line 113
-    const v3, 0x7f0205c5
+    const v3, 0x7f0205a7
 
     invoke-virtual {p2, v3}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -851,7 +851,7 @@
     .line 139
     iget-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->k:Landroid/widget/TextView;
 
-    const v2, 0x7f0a03ca
+    const v2, 0x7f0a03a7
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -877,7 +877,7 @@
     .line 143
     iget-object v0, v1, Lcom/quvideo/xiaoying/app/message/MessageListAdapterNew$a;->k:Landroid/widget/TextView;
 
-    const v2, 0x7f0a0360
+    const v2, 0x7f0a033d
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 

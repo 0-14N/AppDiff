@@ -116,23 +116,23 @@
     iput v1, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;->p:I
 
     .line 166
-    new-instance v0, Lbfn;
+    new-instance v0, Layt;
 
-    invoke-direct {v0, p0}, Lbfn;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
+    invoke-direct {v0, p0}, Layt;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;->q:Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator$OnGalleryMoveListener;
 
     .line 254
-    new-instance v0, Lbfo;
+    new-instance v0, Layu;
 
-    invoke-direct {v0, p0}, Lbfo;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
+    invoke-direct {v0, p0}, Layu;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;->r:Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator$OnGalleryMoveListener;
 
     .line 339
-    new-instance v0, Lbfp;
+    new-instance v0, Layv;
 
-    invoke-direct {v0, p0}, Lbfp;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
+    invoke-direct {v0, p0}, Layv;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;->s:Lcom/quvideo/xiaoying/videoeditor/ui/TrimMaskView$OnOperationListener;
 
@@ -203,23 +203,23 @@
     iput v5, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;->p:I
 
     .line 166
-    new-instance v0, Lbfn;
+    new-instance v0, Layt;
 
-    invoke-direct {v0, p0}, Lbfn;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
+    invoke-direct {v0, p0}, Layt;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;->q:Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator$OnGalleryMoveListener;
 
     .line 254
-    new-instance v0, Lbfo;
+    new-instance v0, Layu;
 
-    invoke-direct {v0, p0}, Lbfo;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
+    invoke-direct {v0, p0}, Layu;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;->r:Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator$OnGalleryMoveListener;
 
     .line 339
-    new-instance v0, Lbfp;
+    new-instance v0, Layv;
 
-    invoke-direct {v0, p0}, Lbfp;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
+    invoke-direct {v0, p0}, Layv;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvancePIPMultiTrimPanel;->s:Lcom/quvideo/xiaoying/videoeditor/ui/TrimMaskView$OnOperationListener;
 

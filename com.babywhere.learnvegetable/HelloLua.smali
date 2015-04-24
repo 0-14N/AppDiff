@@ -3,14 +3,22 @@
 .source "HelloLua.java"
 
 
-# static fields
-.field private static adsMgr:Lcom/babywhere/adsdemo/AdsMgr;
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "NewApi"
+    }
+.end annotation
 
-.field public static bannerView:Landroid/widget/RelativeLayout;
+
+# static fields
+.field private static adView:Landroid/widget/RelativeLayout;
 
 .field static mContext:Landroid/content/Context;
 
 .field private static ml:Lcom/umeng/analytics/MobclickAgent;
+
+.field public static parentLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
 
 
 # instance fields
@@ -26,21 +34,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 62
+    .line 69
     sput-object v0, Lcom/babywhere/demo/HelloLua;->ml:Lcom/umeng/analytics/MobclickAgent;
 
-    .line 66
-    sput-object v0, Lcom/babywhere/demo/HelloLua;->adsMgr:Lcom/babywhere/adsdemo/AdsMgr;
-
-    .line 69
+    .line 72
     sput-object v0, Lcom/babywhere/demo/HelloLua;->mContext:Landroid/content/Context;
 
-    .line 296
+    .line 315
     const-string v0, "cocos2dlua"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 297
+    .line 316
     return-void
 .end method
 
@@ -48,10 +53,10 @@
     .registers 3
 
     .prologue
-    .line 60
+    .line 64
     invoke-direct {p0}, Lorg/cocos2dx/lib/Cocos2dxActivity;-><init>()V
 
-    .line 68
+    .line 71
     const-string v0, "com.umeng.share"
 
     sget-object v1, Lcom/umeng/socialize/controller/RequestType;->SOCIAL:Lcom/umeng/socialize/controller/RequestType;
@@ -62,18 +67,118 @@
 
     iput-object v0, p0, Lcom/babywhere/demo/HelloLua;->mController:Lcom/umeng/socialize/controller/UMSocialService;
 
-    .line 60
+    .line 64
     return-void
 .end method
 
-.method static synthetic access$0()Lcom/babywhere/adsdemo/AdsMgr;
+.method static synthetic access$0()Landroid/widget/RelativeLayout;
     .registers 1
 
     .prologue
     .line 66
-    sget-object v0, Lcom/babywhere/demo/HelloLua;->adsMgr:Lcom/babywhere/adsdemo/AdsMgr;
+    sget-object v0, Lcom/babywhere/demo/HelloLua;->adView:Landroid/widget/RelativeLayout;
 
     return-object v0
+.end method
+
+.method private initAd()V
+    .registers 7
+
+    .prologue
+    const/4 v3, -0x1
+
+    const/4 v5, 0x0
+
+    .line 295
+    const-string v0, "e51c1eef0ce4c35af9069dabda7086ac"
+
+    .line 296
+    .local v0, "adStr":Ljava/lang/String;
+    new-instance v2, Landroid/widget/RelativeLayout;
+
+    invoke-direct {v2, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+
+    sput-object v2, Lcom/babywhere/demo/HelloLua;->adView:Landroid/widget/RelativeLayout;
+
+    .line 297
+    new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
+
+    invoke-direct {v2, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    sput-object v2, Lcom/babywhere/demo/HelloLua;->parentLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+
+    .line 300
+    sget-object v2, Lcom/babywhere/demo/HelloLua;->adView:Landroid/widget/RelativeLayout;
+
+    const/16 v3, 0x51
+
+    invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout;->setGravity(I)V
+
+    .line 301
+    invoke-virtual {p0}, Lcom/babywhere/demo/HelloLua;->getWindowManager()Landroid/view/WindowManager;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/Display;->getHeight()I
+
+    move-result v1
+
+    .line 303
+    .local v1, "tempHeight":I
+    sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "height    "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v4, Lcom/babywhere/demo/HelloLua;->adView:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v4}, Landroid/widget/RelativeLayout;->getHeight()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 304
+    sget-object v2, Lcom/babywhere/demo/HelloLua;->adView:Landroid/widget/RelativeLayout;
+
+    div-int/lit8 v3, v1, 0x8
+
+    sub-int v3, v1, v3
+
+    invoke-virtual {v2, v5, v3, v5, v5}, Landroid/widget/RelativeLayout;->setPadding(IIII)V
+
+    .line 308
+    invoke-static {p0, v0}, Lcom/feiwo/view/FwBannerManager;->init(Landroid/content/Context;Ljava/lang/String;)I
+
+    .line 309
+    sget-object v2, Lcom/babywhere/demo/HelloLua;->adView:Landroid/widget/RelativeLayout;
+
+    invoke-static {v2}, Lcom/feiwo/view/FwBannerManager;->setParentView(Landroid/view/ViewGroup;)V
+
+    .line 310
+    sget-object v2, Lcom/babywhere/demo/HelloLua;->adView:Landroid/widget/RelativeLayout;
+
+    sget-object v3, Lcom/babywhere/demo/HelloLua;->parentLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+
+    invoke-virtual {p0, v2, v3}, Lcom/babywhere/demo/HelloLua;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 312
+    return-void
 .end method
 
 
@@ -85,41 +190,20 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 72
+    .line 76
     invoke-super {p0, p1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 73
+    .line 77
     new-instance v4, Lcom/umeng/analytics/MobclickAgent;
 
     invoke-direct {v4}, Lcom/umeng/analytics/MobclickAgent;-><init>()V
 
     sput-object v4, Lcom/babywhere/demo/HelloLua;->ml:Lcom/umeng/analytics/MobclickAgent;
 
-    .line 74
+    .line 78
     sget-object v4, Lcom/babywhere/demo/HelloLua;->ml:Lcom/umeng/analytics/MobclickAgent;
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 76
-    invoke-static {p0}, Lcom/babywhere/adsdemo/AdsMgr;->getInstance(Landroid/app/Activity;)Lcom/babywhere/adsdemo/AdsMgr;
-
-    move-result-object v4
-
-    sput-object v4, Lcom/babywhere/demo/HelloLua;->adsMgr:Lcom/babywhere/adsdemo/AdsMgr;
-
-    .line 77
-    sget-object v4, Lcom/babywhere/demo/HelloLua;->adsMgr:Lcom/babywhere/adsdemo/AdsMgr;
-
-    invoke-virtual {v4}, Lcom/babywhere/adsdemo/AdsMgr;->initPercent()V
-
-    .line 78
-    sget-object v4, Lcom/babywhere/demo/HelloLua;->adsMgr:Lcom/babywhere/adsdemo/AdsMgr;
-
-    invoke-virtual {v4}, Lcom/babywhere/adsdemo/AdsMgr;->randomBannerAd()Lcom/babywhere/adsdemo/AdViewLayout;
-
-    move-result-object v4
-
-    sput-object v4, Lcom/babywhere/demo/HelloLua;->bannerView:Landroid/widget/RelativeLayout;
 
     .line 80
     invoke-virtual {p0}, Lcom/babywhere/demo/HelloLua;->getResources()Landroid/content/res/Resources;
@@ -150,7 +234,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_be
+    if-eqz v4, :cond_ae
 
     .line 84
     new-instance v4, Ljava/lang/StringBuilder;
@@ -172,7 +256,7 @@
     move-result-object v3
 
     .line 88
-    :goto_4e
+    :goto_3b
     new-instance v2, Lcom/umeng/socialize/controller/UMFacebookHandler;
 
     sget-object v4, Lcom/umeng/socialize/controller/UMFacebookHandler$PostType;->PHOTO:Lcom/umeng/socialize/controller/UMFacebookHandler$PostType;
@@ -269,31 +353,34 @@
 
     invoke-virtual {v4, v5}, Lcom/umeng/socialize/bean/SocializeConfig;->setPlatforms([Lcom/umeng/socialize/bean/SHARE_MEDIA;)V
 
-    .line 96
+    .line 95
+    invoke-direct {p0}, Lcom/babywhere/demo/HelloLua;->initAd()V
+
+    .line 97
     new-instance v4, Lcom/babywhere/demo/HelloLua$1;
 
     invoke-direct {v4, p0}, Lcom/babywhere/demo/HelloLua$1;-><init>(Lcom/babywhere/demo/HelloLua;)V
 
     iput-object v4, p0, Lcom/babywhere/demo/HelloLua;->mHandler:Landroid/os/Handler;
 
-    .line 275
+    .line 273
     iget-object v4, p0, Lcom/babywhere/demo/HelloLua;->mHandler:Landroid/os/Handler;
 
     invoke-static {v4}, Lcom/babywhere/demo/HelloHelper;->init(Landroid/os/Handler;)V
 
-    .line 276
+    .line 274
     invoke-virtual {p0}, Lcom/babywhere/demo/HelloLua;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-static {v4}, Lcom/babywhere/demo/HelloHelper;->setPackageName(Ljava/lang/String;)V
 
-    .line 277
+    .line 275
     return-void
 
     .line 86
     .end local v2    # "mFacebookHandler":Lcom/umeng/socialize/controller/UMFacebookHandler;
-    :cond_be
+    :cond_ae
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -312,14 +399,14 @@
 
     move-result-object v3
 
-    goto/16 :goto_4e
+    goto/16 :goto_3b
 .end method
 
 .method public onCreateGLSurfaceView()Lorg/cocos2dx/lib/Cocos2dxGLSurfaceView;
     .registers 2
 
     .prologue
-    .line 292
+    .line 290
     new-instance v0, Lcom/babywhere/demo/LuaGLSurfaceView;
 
     invoke-direct {v0, p0}, Lcom/babywhere/demo/LuaGLSurfaceView;-><init>(Landroid/content/Context;)V
@@ -331,13 +418,13 @@
     .registers 1
 
     .prologue
-    .line 287
+    .line 285
     invoke-super {p0}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onPause()V
 
-    .line 288
+    .line 286
     invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onPause(Landroid/content/Context;)V
 
-    .line 289
+    .line 287
     return-void
 .end method
 
@@ -345,12 +432,12 @@
     .registers 1
 
     .prologue
-    .line 281
+    .line 279
     invoke-super {p0}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onResume()V
 
-    .line 282
+    .line 280
     invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onResume(Landroid/content/Context;)V
 
-    .line 283
+    .line 281
     return-void
 .end method

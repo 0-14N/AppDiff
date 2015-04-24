@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field private final synthetic a:Landroid/content/Context;
+.field private synthetic a:Lcom/five/adwoad/bc;
 
 .field private final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/five/adwoad/ba;Landroid/content/Context;Ljava/lang/String;)V
-    .registers 4
+.method constructor <init>(Lcom/five/adwoad/bc;Ljava/lang/String;)V
+    .registers 3
 
-    iput-object p2, p0, Lcom/five/adwoad/bd;->a:Landroid/content/Context;
+    iput-object p1, p0, Lcom/five/adwoad/bd;->a:Lcom/five/adwoad/bc;
 
-    iput-object p3, p0, Lcom/five/adwoad/bd;->b:Ljava/lang/String;
+    iput-object p2, p0, Lcom/five/adwoad/bd;->b:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,30 +27,41 @@
 
 # virtual methods
 .method public final run()V
-    .registers 3
+    .registers 4
 
-    iget-object v0, p0, Lcom/five/adwoad/bd;->a:Landroid/content/Context;
+    iget-object v0, p0, Lcom/five/adwoad/bd;->a:Lcom/five/adwoad/bc;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    iget-object v0, v0, Lcom/five/adwoad/bc;->a:Lcom/five/adwoad/an;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/five/adwoad/bd;->b:Ljava/lang/String;
-
-    if-eqz v1, :cond_17
-
-    iget-object v1, p0, Lcom/five/adwoad/bd;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {v0}, Lcom/five/adwoad/an;->a(Lcom/five/adwoad/an;)Lcom/five/adwoad/al;
 
     move-result-object v0
 
-    if-eqz v0, :cond_17
+    iget-object v0, v0, Lcom/five/adwoad/al;->c:Landroid/webkit/WebView;
 
-    iget-object v1, p0, Lcom/five/adwoad/bd;->a:Landroid/content/Context;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    const-string v2, "javascript:adwoVoiceRecordComplete("
 
-    :cond_17
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/five/adwoad/bd;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ");"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
     return-void
 .end method

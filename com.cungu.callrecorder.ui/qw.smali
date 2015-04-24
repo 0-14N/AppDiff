@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/qw;->a:Lcom/cungo/callrecorder/ui/FragmentPersonCenter_;
 
-    invoke-virtual {v0}, Lcom/cungo/callrecorder/ui/FragmentPersonCenter_;->M()V
+    invoke-virtual {v0}, Lcom/cungo/callrecorder/ui/FragmentPersonCenter_;->O()V
 
     return-void
 .end method

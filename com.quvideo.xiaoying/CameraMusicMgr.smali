@@ -67,23 +67,23 @@
     iput v1, p0, Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr;->m:I
 
     .line 251
-    new-instance v0, Laeh;
+    new-instance v0, Lxn;
 
-    invoke-direct {v0, p0}, Laeh;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr;)V
+    invoke-direct {v0, p0}, Lxn;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr;->a:Landroid/media/MediaPlayer$OnCompletionListener;
 
     .line 263
-    new-instance v0, Laei;
+    new-instance v0, Lxo;
 
-    invoke-direct {v0, p0}, Laei;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr;)V
+    invoke-direct {v0, p0}, Lxo;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr;->b:Landroid/media/MediaPlayer$OnErrorListener;
 
     .line 274
-    new-instance v0, Laej;
+    new-instance v0, Lxp;
 
-    invoke-direct {v0, p0}, Laej;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr;)V
+    invoke-direct {v0, p0}, Lxp;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr;->c:Landroid/media/MediaPlayer$OnPreparedListener;
 

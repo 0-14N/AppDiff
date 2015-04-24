@@ -81,9 +81,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->s:Landroid/widget/RelativeLayout;
 
     .line 227
-    new-instance v0, Lon;
+    new-instance v0, Lhu;
 
-    invoke-direct {v0, p0}, Lon;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;)V
+    invoke-direct {v0, p0}, Lhu;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->a:Landroid/view/View$OnClickListener;
 
@@ -117,9 +117,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->s:Landroid/widget/RelativeLayout;
 
     .line 227
-    new-instance v0, Lon;
+    new-instance v0, Lhu;
 
-    invoke-direct {v0, p0}, Lon;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;)V
+    invoke-direct {v0, p0}, Lhu;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->a:Landroid/view/View$OnClickListener;
 
@@ -153,9 +153,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->s:Landroid/widget/RelativeLayout;
 
     .line 227
-    new-instance v0, Lon;
+    new-instance v0, Lhu;
 
-    invoke-direct {v0, p0}, Lon;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;)V
+    invoke-direct {v0, p0}, Lhu;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->a:Landroid/view/View$OnClickListener;
 
@@ -189,9 +189,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->s:Landroid/widget/RelativeLayout;
 
     .line 227
-    new-instance v0, Lon;
+    new-instance v0, Lhu;
 
-    invoke-direct {v0, p0}, Lon;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;)V
+    invoke-direct {v0, p0}, Lhu;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->a:Landroid/view/View$OnClickListener;
 
@@ -312,7 +312,7 @@
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 135
-    const v0, 0x7f060437
+    const v0, 0x7f060422
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -323,7 +323,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->e:Landroid/widget/ImageView;
 
     .line 136
-    const v0, 0x7f060469
+    const v0, 0x7f060454
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -334,7 +334,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->k:Landroid/widget/Button;
 
     .line 137
-    const v0, 0x7f06046c
+    const v0, 0x7f060457
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -345,7 +345,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->c:Landroid/widget/Button;
 
     .line 138
-    const v0, 0x7f06046e
+    const v0, 0x7f060459
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -356,7 +356,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->d:Landroid/widget/Button;
 
     .line 139
-    const v0, 0x7f060467
+    const v0, 0x7f060452
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -367,7 +367,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->l:Landroid/widget/TextView;
 
     .line 140
-    const v0, 0x7f060468
+    const v0, 0x7f060453
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -378,7 +378,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->m:Landroid/widget/TextView;
 
     .line 142
-    const v0, 0x7f06046f
+    const v0, 0x7f06045a
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -389,7 +389,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->q:Landroid/widget/Button;
 
     .line 143
-    const v0, 0x7f060470
+    const v0, 0x7f06045b
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -507,7 +507,7 @@
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->c:Landroid/widget/Button;
 
     .line 189
-    const v1, 0x7f0206a1
+    const v1, 0x7f020681
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -515,7 +515,7 @@
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->d:Landroid/widget/Button;
 
     .line 191
-    const v1, 0x7f0206a2
+    const v1, 0x7f020682
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -565,7 +565,7 @@
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->c:Landroid/widget/Button;
 
     .line 200
-    const v1, 0x7f0206a0
+    const v1, 0x7f020680
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -573,7 +573,7 @@
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->d:Landroid/widget/Button;
 
     .line 202
-    const v1, 0x7f0206a3
+    const v1, 0x7f020683
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -636,7 +636,7 @@
     .prologue
     const-wide/16 v5, -0x1
 
-    const v4, 0x7f0a0321
+    const v4, 0x7f0a02fe
 
     .line 284
     const-string/jumbo v0, "yyyyMMddHHmmss"
@@ -657,7 +657,7 @@
     .line 287
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->b:Landroid/content/Context;
 
-    const v1, 0x7f0a0320
+    const v1, 0x7f0a02fd
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -680,7 +680,7 @@
     .line 289
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->b:Landroid/content/Context;
 
-    const v1, 0x7f0a0323
+    const v1, 0x7f0a0300
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -732,7 +732,7 @@
     :cond_50
     iget-object v2, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->b:Landroid/content/Context;
 
-    const v3, 0x7f0a0322
+    const v3, 0x7f0a02ff
 
     const/4 v4, 0x1
 
@@ -779,7 +779,7 @@
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->q:Landroid/widget/Button;
 
     .line 215
-    const v1, 0x7f02058c
+    const v1, 0x7f020572
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -787,7 +787,7 @@
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->r:Landroid/widget/Button;
 
     .line 217
-    const v1, 0x7f0205b6
+    const v1, 0x7f020598
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -805,7 +805,7 @@
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->q:Landroid/widget/Button;
 
     .line 221
-    const v1, 0x7f02058b
+    const v1, 0x7f020571
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -813,7 +813,7 @@
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->r:Landroid/widget/Button;
 
     .line 223
-    const v1, 0x7f0205b7
+    const v1, 0x7f020599
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -1124,9 +1124,9 @@
     .registers 10
 
     .prologue
-    const v7, 0x7f0a0319
+    const v7, 0x7f0a02f6
 
-    const v6, 0x7f0a0318
+    const v6, 0x7f0a02f5
 
     .line 93
     iget-object v0, p1, Lcom/quvideo/xiaoying/app/activity/XYActivityInfoMgr$XYActivityInfo;->strBannerURL:Ljava/lang/String;
@@ -1206,7 +1206,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a032a
+    const v1, 0x7f0a0307
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1226,14 +1226,14 @@
     .line 118
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->c:Landroid/widget/Button;
 
-    const v1, 0x7f0a0348
+    const v1, 0x7f0a0325
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
     .line 119
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoListHeaderView;->d:Landroid/widget/Button;
 
-    const v1, 0x7f0a0349
+    const v1, 0x7f0a0326
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
@@ -1285,7 +1285,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a031a
+    const v1, 0x7f0a02f7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

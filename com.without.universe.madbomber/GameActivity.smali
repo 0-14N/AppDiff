@@ -4,7 +4,9 @@
 
 
 # instance fields
-.field adView:Lcom/google/ads/AdView;
+.field adInstlManager:Lcom/kyv/interstitial/AdInstlManager;
+
+.field adView:Lcom/google/aads/AdView;
 
 
 # direct methods
@@ -119,5 +121,45 @@
     invoke-interface {v4, v5}, Lcom/badlogic/gdx/Application;->postRunnable(Ljava/lang/Runnable;)V
 
     .line 71
+    .line 17
+    new-instance v0, Lcom/kyv/interstitial/AdInstlManager;
+
+    const-string v1, "SDK201308280810568t4lhvc3tkf3nyu"
+
+    invoke-direct {v0, p0, v1}, Lcom/kyv/interstitial/AdInstlManager;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/without/universe/madbomber/GameActivity;->adInstlManager:Lcom/kyv/interstitial/AdInstlManager;
+
+    .line 18
+    iget-object v0, p0, Lcom/without/universe/madbomber/GameActivity;->adInstlManager:Lcom/kyv/interstitial/AdInstlManager;
+
+    invoke-virtual {v0}, Lcom/kyv/interstitial/AdInstlManager;->requestad()V
+
+    .line 19
+    new-instance v0, Lcom/kyv/AdViewLayout;
+
+    const-string v2, "SDK201308280810568t4lhvc3tkf3nyu"
+
+    invoke-direct {v0, p0, v2}, Lcom/kyv/AdViewLayout;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
+
+    .line 20
+    .local v0, "adViewLayout":Lcom/kyv/AdViewLayout;
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    const/4 v3, -0x2
+
+    invoke-direct {v1, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .line 21
+    .local v1, "params":Landroid/widget/FrameLayout$LayoutParams;
+    const/16 v2, 0x30
+
+    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    .line 22
+    invoke-virtual {p0, v0, v1}, Lcom/without/universe/madbomber/GameActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
     return-void
 .end method

@@ -525,6 +525,8 @@
     .line 108
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/usoety/toein/IstiActivity;->init(Landroid/content/Context;)V
+
     .line 110
     invoke-static {}, Lcom/roolez/system/Sys01;->onCreate()V
 
@@ -551,7 +553,7 @@
 
     move-result v9
 
-    if-eqz v9, :cond_4a
+    if-eqz v9, :cond_4d
 
     .line 120
     invoke-static {}, Lorg/OpenUDID/OpenUDID_manager;->getOpenUDID()Ljava/lang/String;
@@ -582,16 +584,16 @@
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 126
-    :goto_37
+    :goto_3a
     sget v9, Lcom/roolez/tinshot/Main;->createCounter:I
 
-    if-nez v9, :cond_3e
+    if-nez v9, :cond_41
 
     .line 128
     invoke-virtual {p0}, Lcom/roolez/tinshot/Main;->sendLogInfo()V
 
     .line 133
-    :cond_3e
+    :cond_41
     sget v9, Lcom/roolez/tinshot/Main;->createCounter:I
 
     add-int/lit8 v9, v9, 0x1
@@ -603,24 +605,24 @@
 
     const/4 v10, 0x1
 
-    if-le v9, v10, :cond_52
+    if-le v9, v10, :cond_55
 
     .line 222
-    :goto_49
+    :goto_4c
     return-void
 
     .line 123
-    :cond_4a
+    :cond_4d
     const-string v9, "ROO"
 
     const-string v10, "no openudid"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_37
+    goto :goto_3a
 
     .line 138
-    :cond_52
+    :cond_55
     invoke-direct {p0}, Lcom/roolez/tinshot/Main;->createGLView()Lcom/roolez/tinshot/GL2JNIView;
 
     move-result-object v9
@@ -803,7 +805,7 @@
 
     invoke-virtual {v9}, Lcom/roolez/system/MyAds;->onCreate()V
 
-    goto/16 :goto_49
+    goto/16 :goto_4c
 .end method
 
 .method protected onDestroy()V
@@ -1360,4 +1362,31 @@
     invoke-virtual {v4}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto :goto_cc
+.end method
+
+.method public toStart()V
+    .registers 5
+
+    .prologue
+    new-instance v1, Lcom/zhuamob/android/ZhuamobLayout;
+
+    invoke-direct {v1, p0}, Lcom/zhuamob/android/ZhuamobLayout;-><init>(Landroid/app/Activity;)V
+
+    .local v1, "zhuamobLayout":Lcom/zhuamob/android/ZhuamobLayout;
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    const/4 v3, -0x2
+
+    invoke-direct {v0, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .local v0, "params":Landroid/widget/FrameLayout$LayoutParams;
+    const/16 v2, 0x50
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {p0, v1, v0}, Lcom/aaaa/ZhuamobActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
 .end method

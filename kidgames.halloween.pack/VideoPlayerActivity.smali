@@ -8,6 +8,15 @@
 .implements Landroid/media/MediaPlayer$OnPreparedListener;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;,
+        Lcom/millennialmedia/android/VideoPlayerActivity$VideoRedirectionListener;
+    }
+.end annotation
+
+
 # static fields
 .field private static final CONTROLS_ID:I = 0x4fe0613
 
@@ -57,7 +66,7 @@
 
 .field private shouldSetUri:Z
 
-.field transparentHandler:Landroid/os/Handler;
+.field transparentHandler:Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;
 
 .field videoLayout:Landroid/widget/RelativeLayout;
 
@@ -71,26 +80,26 @@
 
     const/4 v1, 0x0
 
-    .line 36
+    .line 37
     invoke-direct {p0}, Lcom/millennialmedia/android/MMBaseActivity;-><init>()V
 
-    .line 48
+    .line 49
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->shouldSetUri:Z
 
-    .line 49
+    .line 50
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->hasBottomBar:Z
 
-    .line 50
+    .line 51
     iput v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->currentVideoPosition:I
 
-    .line 433
-    new-instance v0, Lcom/millennialmedia/android/VideoPlayerActivity$6;
+    .line 453
+    new-instance v0, Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;
 
-    invoke-direct {v0, p0}, Lcom/millennialmedia/android/VideoPlayerActivity$6;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;)V
+    invoke-direct {v0, p0}, Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;)V
 
-    iput-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->transparentHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->transparentHandler:Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;
 
-    .line 503
+    .line 540
     iput-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isUserPausing:Z
 
     return-void
@@ -102,7 +111,7 @@
     .param p1, "x1"    # Landroid/net/Uri;
 
     .prologue
-    .line 36
+    .line 37
     invoke-direct {p0, p1}, Lcom/millennialmedia/android/VideoPlayerActivity;->isActionable(Landroid/net/Uri;)Z
 
     move-result v0
@@ -116,7 +125,7 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 36
+    .line 37
     iput-boolean p1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->shouldSetUri:Z
 
     return p1
@@ -129,48 +138,48 @@
     .prologue
     const/4 v9, -0x2
 
-    .line 216
+    .line 236
     new-instance v0, Landroid/widget/RelativeLayout;
 
     iget-object v7, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->activity:Lcom/millennialmedia/android/MMActivity;
 
     invoke-direct {v0, v7}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 217
+    .line 237
     .local v0, "controlsLayout":Landroid/widget/RelativeLayout;
     const v7, 0x4fe0613
 
     invoke-virtual {v0, v7}, Landroid/widget/RelativeLayout;->setId(I)V
 
-    .line 218
+    .line 238
     const/high16 v7, -0x1000000
 
     invoke-virtual {v0, v7}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
-    .line 219
+    .line 239
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/4 v7, -0x1
 
     invoke-direct {v1, v7, v9}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 220
+    .line 240
     .local v1, "controlsLp":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 221
+    .line 241
     const/16 v7, 0xc
 
     invoke-virtual {v1, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 223
+    .line 243
     new-instance v2, Landroid/widget/Button;
 
     iget-object v7, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->activity:Lcom/millennialmedia/android/MMActivity;
 
     invoke-direct {v2, v7}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
 
-    .line 224
+    .line 244
     .local v2, "mRewind":Landroid/widget/Button;
     new-instance v7, Landroid/widget/Button;
 
@@ -180,20 +189,20 @@
 
     iput-object v7, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->pausePlay:Landroid/widget/Button;
 
-    .line 225
+    .line 245
     new-instance v3, Landroid/widget/Button;
 
     iget-object v7, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->activity:Lcom/millennialmedia/android/MMActivity;
 
     invoke-direct {v3, v7}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
 
-    .line 227
+    .line 247
     .local v3, "mStop":Landroid/widget/Button;
     const v7, 0x1080025
 
     invoke-virtual {v2, v7}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 228
+    .line 248
     iget-object v7, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v7}, Landroid/widget/VideoView;->isPlaying()Z
@@ -202,48 +211,48 @@
 
     if-eqz v7, :cond_a0
 
-    .line 229
+    .line 249
     iget-object v7, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->pausePlay:Landroid/widget/Button;
 
     const v8, 0x1080023
 
     invoke-virtual {v7, v8}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 232
+    .line 252
     :goto_4e
     const v7, 0x1080038
 
     invoke-virtual {v3, v7}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 234
+    .line 254
     new-instance v4, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v4, v9, v9}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 235
+    .line 255
     .local v4, "pauseLp":Landroid/widget/RelativeLayout$LayoutParams;
     new-instance v6, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v6, v9, v9}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 236
+    .line 256
     .local v6, "stopLp":Landroid/widget/RelativeLayout$LayoutParams;
     new-instance v5, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v5, v9, v9}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 238
+    .line 258
     .local v5, "rewindLp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v7, 0xe
 
     invoke-virtual {v4, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 239
+    .line 259
     iget-object v7, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->pausePlay:Landroid/widget/Button;
 
     invoke-virtual {v0, v7, v4}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 241
+    .line 261
     const/4 v7, 0x0
 
     iget-object v8, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->pausePlay:Landroid/widget/Button;
@@ -254,47 +263,47 @@
 
     invoke-virtual {v5, v7, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 242
+    .line 262
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 244
+    .line 264
     const/16 v7, 0xb
 
     invoke-virtual {v6, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 245
+    .line 265
     invoke-virtual {v0, v3, v6}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 247
-    new-instance v7, Lcom/millennialmedia/android/VideoPlayerActivity$3;
+    .line 267
+    new-instance v7, Lcom/millennialmedia/android/VideoPlayerActivity$2;
 
-    invoke-direct {v7, p0}, Lcom/millennialmedia/android/VideoPlayerActivity$3;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;)V
+    invoke-direct {v7, p0}, Lcom/millennialmedia/android/VideoPlayerActivity$2;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;)V
 
     invoke-virtual {v2, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 256
+    .line 276
     iget-object v7, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->pausePlay:Landroid/widget/Button;
 
-    new-instance v8, Lcom/millennialmedia/android/VideoPlayerActivity$4;
+    new-instance v8, Lcom/millennialmedia/android/VideoPlayerActivity$3;
 
-    invoke-direct {v8, p0}, Lcom/millennialmedia/android/VideoPlayerActivity$4;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;)V
+    invoke-direct {v8, p0}, Lcom/millennialmedia/android/VideoPlayerActivity$3;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;)V
 
     invoke-virtual {v7, v8}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 283
-    new-instance v7, Lcom/millennialmedia/android/VideoPlayerActivity$5;
+    .line 303
+    new-instance v7, Lcom/millennialmedia/android/VideoPlayerActivity$4;
 
-    invoke-direct {v7, p0}, Lcom/millennialmedia/android/VideoPlayerActivity$5;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;)V
+    invoke-direct {v7, p0}, Lcom/millennialmedia/android/VideoPlayerActivity$4;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;)V
 
     invoke-virtual {v3, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 295
+    .line 315
     invoke-virtual {p1, v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 296
+    .line 316
     return-void
 
-    .line 231
+    .line 251
     .end local v4    # "pauseLp":Landroid/widget/RelativeLayout$LayoutParams;
     .end local v5    # "rewindLp":Landroid/widget/RelativeLayout$LayoutParams;
     .end local v6    # "stopLp":Landroid/widget/RelativeLayout$LayoutParams;
@@ -309,26 +318,17 @@
 .end method
 
 .method private initRedirectListener()V
-    .registers 4
+    .registers 2
 
     .prologue
-    .line 104
-    new-instance v0, Lcom/millennialmedia/android/VideoPlayerActivity$1;
+    .line 166
+    new-instance v0, Lcom/millennialmedia/android/VideoPlayerActivity$VideoRedirectionListener;
 
-    invoke-direct {v0, p0}, Lcom/millennialmedia/android/VideoPlayerActivity$1;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;)V
+    invoke-direct {v0, p0}, Lcom/millennialmedia/android/VideoPlayerActivity$VideoRedirectionListener;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;)V
 
     iput-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->redirectListenerImpl:Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;
 
-    .line 146
-    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->redirectListenerImpl:Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;
-
-    iget-object v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->activity:Lcom/millennialmedia/android/MMActivity;
-
-    iget-wide v1, v1, Lcom/millennialmedia/android/MMActivity;->creatorAdImplInternalId:J
-
-    iput-wide v1, v0, Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;->creatorAdImplInternalId:J
-
-    .line 147
+    .line 167
     return-void
 .end method
 
@@ -336,22 +336,22 @@
     .registers 2
 
     .prologue
-    .line 473
+    .line 510
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0, p0}, Landroid/widget/VideoView;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    .line 474
+    .line 511
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0, p0}, Landroid/widget/VideoView;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
-    .line 475
+    .line 512
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0, p0}, Landroid/widget/VideoView;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
-    .line 477
+    .line 514
     return-void
 .end method
 
@@ -359,12 +359,12 @@
     .registers 3
 
     .prologue
-    .line 85
+    .line 86
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/VideoPlayerActivity;->requestWindowFeature(I)Z
 
-    .line 86
+    .line 87
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -373,7 +373,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->clearFlags(I)V
 
-    .line 87
+    .line 88
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -382,7 +382,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    .line 88
+    .line 89
     return-void
 .end method
 
@@ -391,7 +391,7 @@
     .param p1, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 172
+    .line 192
     if-eqz p1, :cond_14
 
     const-string v0, "restartVideo"
@@ -431,7 +431,7 @@
 
     const/4 v1, 0x0
 
-    .line 156
+    .line 176
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v2
@@ -444,7 +444,7 @@
 
     if-eqz v2, :cond_22
 
-    .line 158
+    .line 178
     invoke-virtual {p1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v2
@@ -455,11 +455,11 @@
 
     if-eqz v2, :cond_19
 
-    .line 167
+    .line 187
     :goto_18
     return v0
 
-    .line 164
+    .line 184
     :cond_19
     const-string v2, "Unrecognized mmsdk:// URI %s."
 
@@ -472,7 +472,7 @@
     :cond_22
     move v0, v1
 
-    .line 167
+    .line 187
     goto :goto_18
 .end method
 
@@ -482,21 +482,21 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 464
-    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->transparentHandler:Landroid/os/Handler;
+    .line 501
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->transparentHandler:Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->hasMessages(I)Z
+    invoke-virtual {v0, v1}, Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;->hasMessages(I)Z
 
     move-result v0
 
     if-nez v0, :cond_e
 
-    .line 466
-    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->transparentHandler:Landroid/os/Handler;
+    .line 503
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->transparentHandler:Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;->sendEmptyMessage(I)Z
 
-    .line 468
+    .line 505
     :cond_e
     return-void
 .end method
@@ -506,17 +506,17 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 416
+    .line 436
     iget-object v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v1}, Landroid/widget/VideoView;->requestFocus()Z
 
-    .line 417
+    .line 437
     iget-object v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v1, p1}, Landroid/widget/VideoView;->seekTo(I)V
 
-    .line 418
+    .line 438
     const-string v1, "power"
 
     invoke-virtual {p0, v1}, Lcom/millennialmedia/android/VideoPlayerActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -525,7 +525,7 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 419
+    .line 439
     .local v0, "pm":Landroid/os/PowerManager;
     invoke-virtual {v0}, Landroid/os/PowerManager;->isScreenOn()Z
 
@@ -533,46 +533,46 @@
 
     if-eqz v1, :cond_3b
 
-    .line 421
+    .line 441
     iget-object v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->progBar:Landroid/widget/ProgressBar;
 
     if-eqz v1, :cond_27
 
-    .line 423
+    .line 443
     iget-object v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->progBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1}, Landroid/widget/ProgressBar;->bringToFront()V
 
-    .line 424
+    .line 444
     iget-object v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->progBar:Landroid/widget/ProgressBar;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 426
+    .line 446
     :cond_27
     iget-object v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->pausePlay:Landroid/widget/Button;
 
     if-eqz v1, :cond_33
 
-    .line 427
+    .line 447
     iget-object v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->pausePlay:Landroid/widget/Button;
 
     const v2, 0x1080023
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 428
+    .line 448
     :cond_33
     iget-object v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v1}, Landroid/widget/VideoView;->start()V
 
-    .line 429
+    .line 449
     invoke-direct {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->makeTransparent()V
 
-    .line 431
+    .line 451
     :cond_3b
     return-void
 .end method
@@ -583,7 +583,7 @@
     .registers 2
 
     .prologue
-    .line 346
+    .line 366
     iget-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isVideoCompleted:Z
 
     if-nez v0, :cond_6
@@ -603,17 +603,17 @@
     .registers 2
 
     .prologue
-    .line 554
+    .line 591
     const-string v0, "Video ad player closed"
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 555
+    .line 592
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     if-eqz v0, :cond_19
 
-    .line 557
+    .line 594
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->isPlaying()Z
@@ -622,22 +622,22 @@
 
     if-eqz v0, :cond_16
 
-    .line 558
+    .line 595
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->stopPlayback()V
 
-    .line 559
+    .line 596
     :cond_16
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
-    .line 561
+    .line 598
     :cond_19
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->finish()V
 
-    .line 562
+    .line 599
     return-void
 .end method
 
@@ -646,15 +646,15 @@
     .param p1, "urlString"    # Ljava/lang/String;
 
     .prologue
-    .line 632
+    .line 669
     if-nez p1, :cond_3
 
-    .line 641
+    .line 678
     :cond_2
     :goto_2
     return-void
 
-    .line 635
+    .line 672
     :cond_3
     const-string v0, "Button Click with URL: %s"
 
@@ -668,12 +668,12 @@
 
     invoke-static {v0, v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 636
+    .line 673
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->redirectListenerImpl:Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;
 
     iput-object p1, v0, Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;->url:Ljava/lang/String;
 
-    .line 637
+    .line 674
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->redirectListenerImpl:Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -684,7 +684,7 @@
 
     iput-object v1, v0, Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;->weakContext:Ljava/lang/ref/WeakReference;
 
-    .line 639
+    .line 676
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->redirectListenerImpl:Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -697,7 +697,7 @@
 
     if-nez v0, :cond_2
 
-    .line 640
+    .line 677
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->redirectListenerImpl:Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;
 
     invoke-static {v0}, Lcom/millennialmedia/android/HttpRedirection;->startActivityFromUri(Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;)V
@@ -709,7 +709,7 @@
     .registers 1
 
     .prologue
-    .line 152
+    .line 172
     return-void
 .end method
 
@@ -717,25 +717,25 @@
     .registers 2
 
     .prologue
-    .line 204
+    .line 224
     const-string v0, "End Video."
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 205
+    .line 225
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     if-eqz v0, :cond_f
 
-    .line 207
+    .line 227
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->shouldSetUri:Z
 
-    .line 208
+    .line 228
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->dismiss()V
 
-    .line 210
+    .line 230
     :cond_f
     return-void
 .end method
@@ -745,7 +745,7 @@
     .param p1, "error"    # Ljava/lang/String;
 
     .prologue
-    .line 408
+    .line 428
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->activity:Lcom/millennialmedia/android/MMActivity;
 
     const-string v1, "Sorry. There was a problem playing the video"
@@ -758,19 +758,130 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 409
+    .line 429
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     if-eqz v0, :cond_15
 
-    .line 410
+    .line 430
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->stopPlayback()V
 
-    .line 411
+    .line 431
     :cond_15
     return-void
+.end method
+
+.method handleTransparentMessage(Landroid/os/Message;)V
+    .registers 6
+    .param p1, "msg"    # Landroid/os/Message;
+
+    .prologue
+    const/4 v3, 0x4
+
+    .line 476
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    packed-switch v0, :pswitch_data_52
+
+    .line 497
+    :cond_6
+    :goto_6
+    return-void
+
+    .line 479
+    :pswitch_7
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
+
+    if-eqz v0, :cond_2a
+
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
+
+    invoke-virtual {v0}, Landroid/widget/VideoView;->isPlaying()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2a
+
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
+
+    invoke-virtual {v0}, Landroid/widget/VideoView;->getCurrentPosition()I
+
+    move-result v0
+
+    if-lez v0, :cond_2a
+
+    .line 481
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/VideoView;->setBackgroundColor(I)V
+
+    .line 482
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->transparentHandler:Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;
+
+    const/4 v1, 0x5
+
+    const-wide/16 v2, 0x64
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;->sendEmptyMessageDelayed(IJ)Z
+
+    goto :goto_6
+
+    .line 486
+    :cond_2a
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->transparentHandler:Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;
+
+    const-wide/16 v1, 0x32
+
+    invoke-virtual {v0, v3, v1, v2}, Lcom/millennialmedia/android/VideoPlayerActivity$TransparentHandler;->sendEmptyMessageDelayed(IJ)Z
+
+    goto :goto_6
+
+    .line 490
+    :pswitch_32
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
+
+    invoke-virtual {v0}, Landroid/widget/VideoView;->isPlaying()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
+
+    invoke-virtual {v0}, Landroid/widget/VideoView;->getCurrentPosition()I
+
+    move-result v0
+
+    if-lez v0, :cond_6
+
+    .line 492
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->blackView:Landroid/view/View;
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    .line 493
+    iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->progBar:Landroid/widget/ProgressBar;
+
+    invoke-virtual {v0, v3}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    goto :goto_6
+
+    .line 476
+    nop
+
+    :pswitch_data_52
+    .packed-switch 0x4
+        :pswitch_7
+        :pswitch_32
+    .end packed-switch
 .end method
 
 .method protected initLayout()Landroid/widget/RelativeLayout;
@@ -785,30 +896,30 @@
 
     const/4 v7, -0x1
 
-    .line 302
+    .line 322
     new-instance v1, Landroid/widget/RelativeLayout;
 
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->activity:Lcom/millennialmedia/android/MMActivity;
 
     invoke-direct {v1, v5}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 303
+    .line 323
     .local v1, "parent":Landroid/widget/RelativeLayout;
     const/16 v5, 0x190
 
     invoke-virtual {v1, v5}, Landroid/widget/RelativeLayout;->setId(I)V
 
-    .line 304
+    .line 324
     new-instance v5, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {v5, v7, v7}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     invoke-virtual {v1, v5}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 305
+    .line 325
     invoke-virtual {v1, v8}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
-    .line 307
+    .line 327
     new-instance v5, Landroid/widget/RelativeLayout;
 
     iget-object v6, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->activity:Lcom/millennialmedia/android/MMActivity;
@@ -817,37 +928,37 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->videoLayout:Landroid/widget/RelativeLayout;
 
-    .line 308
+    .line 328
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->videoLayout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v5, v8}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
-    .line 309
+    .line 329
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->videoLayout:Landroid/widget/RelativeLayout;
 
     const/16 v6, 0x19a
 
     invoke-virtual {v5, v6}, Landroid/widget/RelativeLayout;->setId(I)V
 
-    .line 310
+    .line 330
     new-instance v3, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v3, v7, v9}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 311
+    .line 331
     .local v3, "videoContainerLp":Landroid/widget/RelativeLayout$LayoutParams;
     new-instance v4, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v4, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 312
+    .line 332
     .local v4, "videoLp":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v4, v10}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 313
+    .line 333
     invoke-virtual {v3, v10}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 314
+    .line 334
     new-instance v5, Landroid/widget/VideoView;
 
     iget-object v6, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->activity:Lcom/millennialmedia/android/MMActivity;
@@ -856,14 +967,14 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
-    .line 315
+    .line 335
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     const/16 v6, 0x19b
 
     invoke-virtual {v5, v6}, Landroid/widget/VideoView;->setId(I)V
 
-    .line 316
+    .line 336
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v5}, Landroid/widget/VideoView;->getHolder()Landroid/view/SurfaceHolder;
@@ -872,22 +983,22 @@
 
     invoke-interface {v5, v9}, Landroid/view/SurfaceHolder;->setFormat(I)V
 
-    .line 317
+    .line 337
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v5, v8}, Landroid/widget/VideoView;->setBackgroundColor(I)V
 
-    .line 318
+    .line 338
     invoke-direct {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->initVideoListeners()V
 
-    .line 319
+    .line 339
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->videoLayout:Landroid/widget/RelativeLayout;
 
     iget-object v6, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v5, v6, v4}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 321
+    .line 341
     new-instance v5, Landroid/view/View;
 
     iget-object v6, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->activity:Lcom/millennialmedia/android/MMActivity;
@@ -896,49 +1007,49 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->blackView:Landroid/view/View;
 
-    .line 322
+    .line 342
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->blackView:Landroid/view/View;
 
     invoke-virtual {v5, v8}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 323
+    .line 343
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v0, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 325
+    .line 345
     .local v0, "blackViewParams":Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->videoLayout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v1, v5, v3}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 327
+    .line 347
     iget-boolean v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->hasBottomBar:Z
 
     if-eqz v5, :cond_90
 
-    .line 329
+    .line 349
     const/4 v5, 0x2
 
     const v6, 0x4fe0613
 
     invoke-virtual {v0, v5, v6}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 330
+    .line 350
     invoke-direct {p0, v1}, Lcom/millennialmedia/android/VideoPlayerActivity;->initBottomBar(Landroid/widget/RelativeLayout;)V
 
-    .line 332
+    .line 352
     :cond_90
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->blackView:Landroid/view/View;
 
     invoke-virtual {v5, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 333
+    .line 353
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->blackView:Landroid/view/View;
 
     invoke-virtual {v1, v5}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 334
+    .line 354
     new-instance v5, Landroid/widget/ProgressBar;
 
     iget-object v6, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->activity:Lcom/millennialmedia/android/MMActivity;
@@ -947,40 +1058,40 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->progBar:Landroid/widget/ProgressBar;
 
-    .line 335
+    .line 355
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->progBar:Landroid/widget/ProgressBar;
 
     const/4 v6, 0x1
 
     invoke-virtual {v5, v6}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
-    .line 336
+    .line 356
     new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v2, v9, v9}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 337
+    .line 357
     .local v2, "progParams":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v2, v10}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 338
+    .line 358
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->progBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v5, v2}, Landroid/widget/ProgressBar;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 339
+    .line 359
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->progBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1, v5}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 340
+    .line 360
     iget-object v5, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->progBar:Landroid/widget/ProgressBar;
 
     const/4 v6, 0x4
 
     invoke-virtual {v5, v6}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 341
+    .line 361
     return-object v1
 .end method
 
@@ -989,10 +1100,10 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 92
+    .line 93
     if-eqz p1, :cond_2a
 
-    .line 94
+    .line 95
     const-string v0, "videoCompleted"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1001,7 +1112,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isVideoCompleted:Z
 
-    .line 95
+    .line 96
     const-string v0, "videoCompletedOnce"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1010,7 +1121,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isVideoCompletedOnce:Z
 
-    .line 96
+    .line 97
     const-string v0, "videoPosition"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -1019,7 +1130,7 @@
 
     iput v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->currentVideoPosition:I
 
-    .line 97
+    .line 98
     const-string v0, "hasBottomBar"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1028,7 +1139,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->hasBottomBar:Z
 
-    .line 98
+    .line 99
     const-string v0, "shouldSetUri"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1037,7 +1148,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->shouldSetUri:Z
 
-    .line 100
+    .line 101
     :cond_2a
     return-void
 .end method
@@ -1046,7 +1157,7 @@
     .registers 2
 
     .prologue
-    .line 620
+    .line 657
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     if-eqz v0, :cond_12
@@ -1079,12 +1190,12 @@
     .param p1, "button"    # Lcom/millennialmedia/android/VideoImage;
 
     .prologue
-    .line 365
+    .line 385
     const-string v1, "Cached video button event logged"
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 366
+    .line 386
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1095,19 +1206,19 @@
 
     if-ge v0, v1, :cond_15
 
-    .line 367
+    .line 387
     iget-object v1, p1, Lcom/millennialmedia/android/VideoImage;->eventLoggingUrls:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Event;->logEvent(Ljava/lang/String;)V
 
-    .line 366
+    .line 386
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
-    .line 368
+    .line 388
     :cond_15
     return-void
 .end method
@@ -1117,14 +1228,14 @@
     .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 482
+    .line 519
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isVideoCompletedOnce:Z
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isVideoCompleted:Z
 
-    .line 483
+    .line 520
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->pausePlay:Landroid/widget/Button;
 
     if-eqz v0, :cond_19
@@ -1137,20 +1248,20 @@
 
     if-nez v0, :cond_19
 
-    .line 484
+    .line 521
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->pausePlay:Landroid/widget/Button;
 
     const v1, 0x1080024
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 486
+    .line 523
     :cond_19
     const-string v0, "Video player on complete"
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;)V
 
-    .line 487
+    .line 524
     return-void
 .end method
 
@@ -1159,38 +1270,38 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 69
+    .line 70
     const v1, 0x1030005
 
     invoke-virtual {p0, v1}, Lcom/millennialmedia/android/VideoPlayerActivity;->setTheme(I)V
 
-    .line 70
+    .line 71
     invoke-super {p0, p1}, Lcom/millennialmedia/android/MMBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 72
+    .line 73
     const-string v1, "Setting up the video player"
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 74
+    .line 75
     invoke-direct {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->initWindow()V
 
-    .line 75
+    .line 76
     invoke-virtual {p0, p1}, Lcom/millennialmedia/android/VideoPlayerActivity;->initSavedInstance(Landroid/os/Bundle;)V
 
-    .line 76
+    .line 77
     invoke-direct {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->initRedirectListener()V
 
-    .line 78
+    .line 79
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->initLayout()Landroid/widget/RelativeLayout;
 
     move-result-object v0
 
-    .line 80
+    .line 81
     .local v0, "parent":Landroid/widget/RelativeLayout;
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/VideoPlayerActivity;->setContentView(Landroid/view/View;)V
 
-    .line 81
+    .line 82
     return-void
 .end method
 
@@ -1198,10 +1309,10 @@
     .registers 1
 
     .prologue
-    .line 568
+    .line 605
     invoke-super {p0}, Lcom/millennialmedia/android/MMBaseActivity;->onDestroy()V
 
-    .line 569
+    .line 606
     return-void
 .end method
 
@@ -1212,7 +1323,7 @@
     .param p3, "extra"    # I
 
     .prologue
-    .line 499
+    .line 536
     const/4 v0, 0x0
 
     return v0
@@ -1224,7 +1335,7 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 544
+    .line 581
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_f
@@ -1239,10 +1350,10 @@
 
     if-nez v0, :cond_f
 
-    .line 546
+    .line 583
     const/4 v0, 0x1
 
-    .line 548
+    .line 585
     :goto_e
     return v0
 
@@ -1258,23 +1369,23 @@
     .registers 2
 
     .prologue
-    .line 522
+    .line 559
     invoke-super {p0}, Lcom/millennialmedia/android/MMBaseActivity;->onPause()V
 
-    .line 523
+    .line 560
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isPaused:Z
 
-    .line 524
+    .line 561
     const-string v0, "VideoPlayer - onPause"
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;)V
 
-    .line 525
+    .line 562
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->pauseVideo()V
 
-    .line 526
+    .line 563
     return-void
 .end method
 
@@ -1283,12 +1394,12 @@
     .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 493
+    .line 530
     const-string v0, "Video Prepared"
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 494
+    .line 531
     return-void
 .end method
 
@@ -1297,7 +1408,7 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 588
+    .line 625
     const-string v0, "currentVideoPosition"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -1306,7 +1417,7 @@
 
     iput v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->currentVideoPosition:I
 
-    .line 589
+    .line 626
     const-string v0, "isVideoCompleted"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1315,7 +1426,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isVideoCompleted:Z
 
-    .line 590
+    .line 627
     const-string v0, "isVideoCompletedOnce"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1324,7 +1435,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isVideoCompletedOnce:Z
 
-    .line 591
+    .line 628
     const-string v0, "hasBottomBar"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->hasBottomBar:Z
@@ -1335,7 +1446,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->hasBottomBar:Z
 
-    .line 592
+    .line 629
     const-string v0, "shouldSetUri"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->shouldSetUri:Z
@@ -1346,7 +1457,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->shouldSetUri:Z
 
-    .line 593
+    .line 630
     const-string v0, "isUserPausing"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isUserPausing:Z
@@ -1357,7 +1468,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isUserPausing:Z
 
-    .line 594
+    .line 631
     const-string v0, "isPaused"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isPaused:Z
@@ -1368,10 +1479,10 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isPaused:Z
 
-    .line 595
+    .line 632
     invoke-super {p0, p1}, Lcom/millennialmedia/android/MMBaseActivity;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
-    .line 596
+    .line 633
     return-void
 .end method
 
@@ -1381,28 +1492,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 509
+    .line 546
     invoke-super {p0}, Lcom/millennialmedia/android/MMBaseActivity;->onResume()V
 
-    .line 510
+    .line 547
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->blackView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->bringToFront()V
 
-    .line 511
+    .line 548
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->blackView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 512
+    .line 549
     iput-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isPaused:Z
 
-    .line 513
+    .line 550
     const-string v0, "VideoPlayer - onResume"
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;)V
 
-    .line 514
+    .line 551
     iget-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->hasFocus:Z
 
     if-eqz v0, :cond_20
@@ -1411,10 +1522,10 @@
 
     if-nez v0, :cond_20
 
-    .line 515
+    .line 552
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->resumeVideo()V
 
-    .line 516
+    .line 553
     :cond_20
     return-void
 .end method
@@ -1424,59 +1535,59 @@
     .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 575
+    .line 612
     const-string v0, "currentVideoPosition"
 
     iget v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->currentVideoPosition:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 576
+    .line 613
     const-string v0, "isVideoCompleted"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isVideoCompleted:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 577
+    .line 614
     const-string v0, "isVideoCompletedOnce"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isVideoCompletedOnce:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 578
+    .line 615
     const-string v0, "hasBottomBar"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->hasBottomBar:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 579
+    .line 616
     const-string v0, "shouldSetUri"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->shouldSetUri:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 580
+    .line 617
     const-string v0, "isUserPausing"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isUserPausing:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 581
+    .line 618
     const-string v0, "isPaused"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isPaused:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 582
+    .line 619
     invoke-super {p0, p1}, Lcom/millennialmedia/android/MMBaseActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 583
+    .line 620
     return-void
 .end method
 
@@ -1485,13 +1596,13 @@
     .param p1, "hasWindowFocus"    # Z
 
     .prologue
-    .line 531
+    .line 568
     invoke-super {p0, p1}, Lcom/millennialmedia/android/MMBaseActivity;->onWindowFocusChanged(Z)V
 
-    .line 532
+    .line 569
     iput-boolean p1, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->hasFocus:Z
 
-    .line 533
+    .line 570
     iget-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isPaused:Z
 
     if-nez v0, :cond_12
@@ -1502,10 +1613,10 @@
 
     if-nez v0, :cond_12
 
-    .line 535
+    .line 572
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->resumeVideo()V
 
-    .line 537
+    .line 574
     :cond_12
     return-void
 .end method
@@ -1514,12 +1625,12 @@
     .registers 2
 
     .prologue
-    .line 607
+    .line 644
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     if-eqz v0, :cond_1e
 
-    .line 609
+    .line 646
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->isPlaying()Z
@@ -1528,7 +1639,7 @@
 
     if-eqz v0, :cond_1e
 
-    .line 611
+    .line 648
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->getCurrentPosition()I
@@ -1537,17 +1648,17 @@
 
     iput v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->currentVideoPosition:I
 
-    .line 612
+    .line 649
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->pause()V
 
-    .line 613
+    .line 650
     const-string v0, "Video paused"
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;)V
 
-    .line 616
+    .line 653
     :cond_1e
     return-void
 .end method
@@ -1556,15 +1667,15 @@
     .registers 2
 
     .prologue
-    .line 600
+    .line 637
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isUserPausing:Z
 
-    .line 601
+    .line 638
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->pauseVideo()V
 
-    .line 602
+    .line 639
     return-void
 .end method
 
@@ -1577,13 +1688,13 @@
 
     const/4 v6, 0x0
 
-    .line 379
+    .line 399
     const/4 v3, 0x0
 
     :try_start_3
     iput-boolean v3, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isUserPausing:Z
 
-    .line 380
+    .line 400
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
@@ -1592,13 +1703,13 @@
 
     move-result-object v2
 
-    .line 381
+    .line 401
     .local v2, "uri":Landroid/net/Uri;
     invoke-virtual {v2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 383
+    .line 403
     .local v1, "fullPath":Ljava/lang/String;
     const-string v3, "playVideo path: %s"
 
@@ -1612,7 +1723,7 @@
 
     invoke-static {v3, v4}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 384
+    .line 404
     if-eqz v1, :cond_28
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -1625,19 +1736,19 @@
 
     if-nez v3, :cond_2e
 
-    .line 386
+    .line 406
     :cond_28
     const-string v3, "no name or null videoview"
 
     invoke-virtual {p0, v3}, Lcom/millennialmedia/android/VideoPlayerActivity;->errorPlayVideo(Ljava/lang/String;)V
 
-    .line 404
+    .line 424
     .end local v1    # "fullPath":Ljava/lang/String;
     .end local v2    # "uri":Landroid/net/Uri;
     :goto_2d
     return-void
 
-    .line 390
+    .line 410
     .restart local v1    # "fullPath":Ljava/lang/String;
     .restart local v2    # "uri":Landroid/net/Uri;
     :cond_2e
@@ -1645,7 +1756,7 @@
 
     iput-boolean v3, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->isVideoCompleted:Z
 
-    .line 391
+    .line 411
     iget-boolean v3, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->shouldSetUri:Z
 
     if-eqz v3, :cond_42
@@ -1654,7 +1765,7 @@
 
     if-eqz v3, :cond_42
 
-    .line 393
+    .line 413
     iget-object v3, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -1663,7 +1774,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/VideoView;->setVideoURI(Landroid/net/Uri;)V
 
-    .line 396
+    .line 416
     :cond_42
     invoke-direct {p0, p1}, Lcom/millennialmedia/android/VideoPlayerActivity;->startVideo(I)V
     :try_end_45
@@ -1671,13 +1782,13 @@
 
     goto :goto_2d
 
-    .line 399
+    .line 419
     .end local v1    # "fullPath":Ljava/lang/String;
     .end local v2    # "uri":Landroid/net/Uri;
     :catch_46
     move-exception v0
 
-    .line 401
+    .line 421
     .local v0, "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1707,7 +1818,7 @@
 
     invoke-static {v3, v4}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 402
+    .line 422
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1740,14 +1851,14 @@
     .param p1, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 177
-    new-instance v0, Lcom/millennialmedia/android/VideoPlayerActivity$2;
+    .line 197
+    new-instance v0, Lcom/millennialmedia/android/VideoPlayerActivity$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/millennialmedia/android/VideoPlayerActivity$2;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/millennialmedia/android/VideoPlayerActivity$1;-><init>(Lcom/millennialmedia/android/VideoPlayerActivity;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/VideoPlayerActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 192
+    .line 212
     return-void
 .end method
 
@@ -1755,22 +1866,22 @@
     .registers 2
 
     .prologue
-    .line 196
+    .line 216
     const-string v0, "Restart Video."
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 198
+    .line 218
     iget-object v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
 
     if-eqz v0, :cond_d
 
-    .line 199
+    .line 219
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/VideoPlayerActivity;->playVideo(I)V
 
-    .line 200
+    .line 220
     :cond_d
     return-void
 .end method
@@ -1779,19 +1890,19 @@
     .registers 2
 
     .prologue
-    .line 626
+    .line 663
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoPlayerActivity;->isPlayable()Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 627
+    .line 664
     iget v0, p0, Lcom/millennialmedia/android/VideoPlayerActivity;->currentVideoPosition:I
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/VideoPlayerActivity;->playVideo(I)V
 
-    .line 628
+    .line 665
     :cond_b
     return-void
 .end method
@@ -1804,29 +1915,29 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 351
+    .line 371
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     invoke-direct {v0, p2, p2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 352
+    .line 372
     .local v0, "animation":Landroid/view/animation/AlphaAnimation;
     const-wide/16 v1, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 353
+    .line 373
     invoke-virtual {v0, v3}, Landroid/view/animation/AlphaAnimation;->setFillEnabled(Z)V
 
-    .line 354
+    .line 374
     invoke-virtual {v0, v3}, Landroid/view/animation/AlphaAnimation;->setFillBefore(Z)V
 
-    .line 355
+    .line 375
     invoke-virtual {v0, v3}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    .line 356
+    .line 376
     invoke-virtual {p1, v0}, Landroid/widget/ImageButton;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 357
+    .line 377
     return-void
 .end method

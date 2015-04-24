@@ -7,7 +7,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/unity3d/player/p;
+    value = Lcom/unity3d/player/UnityPlayer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,14 +17,14 @@
 
 
 # instance fields
-.field private synthetic a:Lcom/unity3d/player/p;
+.field private synthetic a:Lcom/unity3d/player/UnityPlayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/unity3d/player/p;)V
+.method constructor <init>(Lcom/unity3d/player/UnityPlayer;)V
     .registers 2
 
-    iput-object p1, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/p;
+    iput-object p1, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,39 +34,115 @@
 
 # virtual methods
 .method public final run()V
-    .registers 7
+    .registers 8
 
-    iget-object v0, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/p;
+    const/4 v6, -0x2
 
-    invoke-static {v0}, Lcom/unity3d/player/p;->e(Lcom/unity3d/player/p;)Lcom/unity3d/player/UnityPlayer;
+    iget-object v0, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-static {v0}, Lcom/unity3d/player/UnityPlayer;->k(Lcom/unity3d/player/UnityPlayer;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_64
+
+    iget-object v1, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-static {v1}, Lcom/unity3d/player/UnityPlayer;->l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;
+
+    move-result-object v1
+
+    if-nez v1, :cond_4f
+
+    const/4 v1, 0x4
+
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_66
+
+    iget-object v2, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
+
+    new-instance v3, Landroid/widget/ProgressBar;
+
+    iget-object v4, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-static {v4}, Lcom/unity3d/player/UnityPlayer;->m(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    aget v0, v1, v0
+
+    invoke-direct {v3, v4, v5, v0}, Landroid/widget/ProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    invoke-static {v2, v3}, Lcom/unity3d/player/UnityPlayer;->a(Lcom/unity3d/player/UnityPlayer;Landroid/widget/ProgressBar;)Landroid/widget/ProgressBar;
+
+    iget-object v0, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-static {v0}, Lcom/unity3d/player/UnityPlayer;->l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/p;
+    const/4 v1, 0x1
 
-    invoke-static {v1}, Lcom/unity3d/player/p;->j(Lcom/unity3d/player/p;)F
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
-    move-result v1
+    iget-object v0, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
 
-    iget-object v2, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/p;
+    invoke-static {v0}, Lcom/unity3d/player/UnityPlayer;->l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;
 
-    invoke-static {v2}, Lcom/unity3d/player/p;->k(Lcom/unity3d/player/p;)F
+    move-result-object v0
 
-    move-result v2
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    iget-object v3, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/p;
+    const/16 v2, 0x33
 
-    invoke-static {v3}, Lcom/unity3d/player/p;->l(Lcom/unity3d/player/p;)F
+    invoke-direct {v1, v6, v6, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    move-result v3
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v4, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/p;
+    iget-object v0, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
 
-    invoke-static {v4}, Lcom/unity3d/player/p;->m(Lcom/unity3d/player/p;)J
+    iget-object v1, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
 
-    move-result-wide v4
+    invoke-static {v1}, Lcom/unity3d/player/UnityPlayer;->l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;
 
-    invoke-virtual/range {v0 .. v5}, Lcom/unity3d/player/UnityPlayer;->nativeGravity(FFFJ)V
+    move-result-object v1
 
+    invoke-virtual {v0, v1}, Lcom/unity3d/player/UnityPlayer;->addView(Landroid/view/View;)V
+
+    :cond_4f
+    iget-object v0, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-static {v0}, Lcom/unity3d/player/UnityPlayer;->l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
+
+    iget-object v1, p0, Lcom/unity3d/player/s;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-static {v1}, Lcom/unity3d/player/UnityPlayer;->l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/unity3d/player/UnityPlayer;->bringChildToFront(Landroid/view/View;)V
+
+    :cond_64
     return-void
+
+    nop
+
+    :array_66
+    .array-data 4
+        0x101007a
+        0x1010289
+        0x1010079
+        0x1010288
+    .end array-data
 .end method

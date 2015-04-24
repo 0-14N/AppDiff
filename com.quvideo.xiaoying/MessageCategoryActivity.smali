@@ -78,30 +78,30 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;->s:Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;
 
     .line 118
-    new-instance v0, Lvs;
+    new-instance v0, Loz;
 
-    invoke-direct {v0, p0}, Lvs;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;)V
+    invoke-direct {v0, p0}, Loz;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;->v:Lcom/quvideo/xiaoying/app/im/IMContactMgr$ChatContactUpdateListener;
 
     .line 126
-    new-instance v0, Lvt;
+    new-instance v0, Lpa;
 
-    invoke-direct {v0, p0}, Lvt;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;)V
+    invoke-direct {v0, p0}, Lpa;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;->w:Lcom/quvideo/xiaoying/im/IMListener;
 
     .line 223
-    new-instance v0, Lvv;
+    new-instance v0, Lpc;
 
-    invoke-direct {v0, p0}, Lvv;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;)V
+    invoke-direct {v0, p0}, Lpc;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;->x:Lcom/quvideo/xiaoying/app/message/MessageCategoryHeadView$MessageHeaderViewClickListener;
 
     .line 232
-    new-instance v0, Lvw;
+    new-instance v0, Lpd;
 
-    invoke-direct {v0, p0}, Lvw;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;)V
+    invoke-direct {v0, p0}, Lpd;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;->y:Landroid/widget/AdapterView$OnItemLongClickListener;
 
@@ -130,16 +130,16 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0a036c
+    const v2, 0x7f0a0349
 
     aput v2, v0, v1
 
     .line 250
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
-    new-instance v2, Lvx;
+    new-instance v2, Lpe;
 
-    invoke-direct {v2, p0, p1}, Lvx;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;I)V
+    invoke-direct {v2, p0, p1}, Lpe;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;I)V
 
     invoke-direct {v1, p0, v0, v2}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
 
@@ -226,9 +226,9 @@
 
     .prologue
     .line 293
-    new-instance v0, Lvy;
+    new-instance v0, Lpf;
 
-    invoke-direct {v0, p0}, Lvy;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;)V
+    invoke-direct {v0, p0}, Lpf;-><init>(Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;)V
 
     invoke-static {p1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -241,7 +241,7 @@
 
     .prologue
     .line 208
-    const v0, 0x7f0604e9
+    const v0, 0x7f0604d4
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageCategoryActivity;->findViewById(I)Landroid/view/View;
 

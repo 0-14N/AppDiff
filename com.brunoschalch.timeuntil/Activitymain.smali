@@ -713,14 +713,14 @@
 
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_95
-    .catch Ljava/io/FileNotFoundException; {:try_start_80 .. :try_end_95} :catch_bc
-    .catch Ljava/io/IOException; {:try_start_80 .. :try_end_95} :catch_c1
+    .catch Ljava/io/FileNotFoundException; {:try_start_80 .. :try_end_95} :catch_b9
+    .catch Ljava/io/IOException; {:try_start_80 .. :try_end_95} :catch_be
 
     .line 141
     :goto_95
     iget-object v4, p0, Lcom/brunoschalch/timeuntil/Activitymain;->abrir:Landroid/graphics/Bitmap;
 
-    if-eqz v4, :cond_c6
+    if-eqz v4, :cond_c3
 
     .line 142
     iget-object v4, p0, Lcom/brunoschalch/timeuntil/Activitymain;->selectimage2:Landroid/widget/ImageButton;
@@ -758,16 +758,14 @@
     move-result-object v0
 
     .line 152
-    .local v0, "adRequest":Lcom/google/android/gms/ads/AdRequest;
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/ads/AdView;->loadAd(Lcom/google/android/gms/ads/AdRequest;)V
-
     .line 153
+    .local v0, "adRequest":Lcom/google/android/gms/ads/AdRequest;
     return-void
 
     .line 134
     .end local v0    # "adRequest":Lcom/google/android/gms/ads/AdRequest;
     .end local v1    # "adView":Lcom/google/android/gms/ads/AdView;
-    :catch_bc
+    :catch_b9
     move-exception v2
 
     .line 136
@@ -778,7 +776,7 @@
 
     .line 137
     .end local v2    # "e":Ljava/io/FileNotFoundException;
-    :catch_c1
+    :catch_be
     move-exception v2
 
     .line 139
@@ -789,7 +787,7 @@
 
     .line 144
     .end local v2    # "e":Ljava/io/IOException;
-    :cond_c6
+    :cond_c3
     iget-object v4, p0, Lcom/brunoschalch/timeuntil/Activitymain;->selectimage2:Landroid/widget/ImageButton;
 
     const v5, 0x7f020027

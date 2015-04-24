@@ -34,13 +34,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 50
+    .line 52
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 52
+    .line 54
     iput-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->customScroolView:Lcom/nemodream/fashionista/customUi/CustomScroolView;
 
-    .line 53
+    .line 55
     iput-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->idET:Landroid/widget/EditText;
 
     iput-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->pwET:Landroid/widget/EditText;
@@ -51,15 +51,15 @@
 
     iput-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->phoneNumET:Landroid/widget/EditText;
 
-    .line 54
+    .line 56
     iput-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->provisionCB:Landroid/widget/CheckBox;
 
-    .line 55
+    .line 57
     iput-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->provisionTV:Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->birthdayTV:Landroid/widget/TextView;
 
-    .line 56
+    .line 58
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->iSex:I
@@ -68,7 +68,7 @@
 
     iput v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->iSingle:I
 
-    .line 50
+    .line 52
     return-void
 .end method
 
@@ -76,7 +76,7 @@
     .registers 2
 
     .prologue
-    .line 52
+    .line 54
     iget-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->customScroolView:Lcom/nemodream/fashionista/customUi/CustomScroolView;
 
     return-object v0
@@ -86,7 +86,7 @@
     .registers 2
 
     .prologue
-    .line 56
+    .line 58
     iput p1, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->iSex:I
 
     return-void
@@ -96,7 +96,7 @@
     .registers 2
 
     .prologue
-    .line 56
+    .line 58
     iget v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->iSex:I
 
     return v0
@@ -106,7 +106,7 @@
     .registers 2
 
     .prologue
-    .line 56
+    .line 58
     iget v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->iSingle:I
 
     return v0
@@ -116,7 +116,7 @@
     .registers 2
 
     .prologue
-    .line 56
+    .line 58
     iput p1, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->iSingle:I
 
     return-void
@@ -126,7 +126,7 @@
     .registers 1
 
     .prologue
-    .line 272
+    .line 282
     invoke-direct {p0}, Lcom/nemodream/fashionista/MemberJoinActivity;->showYearDialog()V
 
     return-void
@@ -136,7 +136,7 @@
     .registers 2
 
     .prologue
-    .line 53
+    .line 55
     iget-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->idET:Landroid/widget/EditText;
 
     return-object v0
@@ -146,7 +146,7 @@
     .registers 2
 
     .prologue
-    .line 53
+    .line 55
     iget-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->pwET:Landroid/widget/EditText;
 
     return-object v0
@@ -156,7 +156,7 @@
     .registers 2
 
     .prologue
-    .line 53
+    .line 55
     iget-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->rePwET:Landroid/widget/EditText;
 
     return-object v0
@@ -166,7 +166,7 @@
     .registers 2
 
     .prologue
-    .line 53
+    .line 55
     iget-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->nameET:Landroid/widget/EditText;
 
     return-object v0
@@ -176,7 +176,7 @@
     .registers 2
 
     .prologue
-    .line 53
+    .line 55
     iget-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->phoneNumET:Landroid/widget/EditText;
 
     return-object v0
@@ -186,7 +186,7 @@
     .registers 2
 
     .prologue
-    .line 54
+    .line 56
     iget-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->provisionCB:Landroid/widget/CheckBox;
 
     return-object v0
@@ -196,8 +196,8 @@
     .registers 8
 
     .prologue
-    .line 83
-    const v5, 0x7f080046
+    .line 92
+    const v5, 0x7f08004c
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -207,8 +207,8 @@
 
     iput-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->customScroolView:Lcom/nemodream/fashionista/customUi/CustomScroolView;
 
-    .line 84
-    const v5, 0x7f080047
+    .line 93
+    const v5, 0x7f08004d
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -218,8 +218,8 @@
 
     iput-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->idET:Landroid/widget/EditText;
 
-    .line 85
-    const v5, 0x7f080048
+    .line 94
+    const v5, 0x7f08004e
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -229,8 +229,8 @@
 
     iput-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->pwET:Landroid/widget/EditText;
 
-    .line 86
-    const v5, 0x7f080049
+    .line 95
+    const v5, 0x7f08004f
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -240,8 +240,8 @@
 
     iput-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->rePwET:Landroid/widget/EditText;
 
-    .line 87
-    const v5, 0x7f08004a
+    .line 96
+    const v5, 0x7f080050
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -251,8 +251,8 @@
 
     iput-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->nameET:Landroid/widget/EditText;
 
-    .line 88
-    const v5, 0x7f08004b
+    .line 97
+    const v5, 0x7f080051
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -262,8 +262,8 @@
 
     iput-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->phoneNumET:Landroid/widget/EditText;
 
-    .line 90
-    const v5, 0x7f08004c
+    .line 99
+    const v5, 0x7f080052
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -273,7 +273,7 @@
 
     iput-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->provisionTV:Landroid/widget/TextView;
 
-    .line 91
+    .line 100
     iget-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->provisionTV:Landroid/widget/TextView;
 
     new-instance v6, Landroid/text/method/ScrollingMovementMethod;
@@ -282,7 +282,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    .line 92
+    .line 101
     iget-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->provisionTV:Landroid/widget/TextView;
 
     new-instance v6, Lcom/nemodream/fashionista/MemberJoinActivity$1;
@@ -291,8 +291,8 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 100
-    const v5, 0x7f08004d
+    .line 109
+    const v5, 0x7f080053
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -302,8 +302,8 @@
 
     iput-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->provisionCB:Landroid/widget/CheckBox;
 
-    .line 102
-    const v5, 0x7f08004e
+    .line 111
+    const v5, 0x7f080054
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -311,7 +311,7 @@
 
     check-cast v2, Landroid/widget/RadioGroup;
 
-    .line 103
+    .line 112
     .local v2, "sex":Landroid/widget/RadioGroup;
     new-instance v5, Lcom/nemodream/fashionista/MemberJoinActivity$2;
 
@@ -319,8 +319,8 @@
 
     invoke-virtual {v2, v5}, Landroid/widget/RadioGroup;->setOnCheckedChangeListener(Landroid/widget/RadioGroup$OnCheckedChangeListener;)V
 
-    .line 111
-    const v5, 0x7f080051
+    .line 120
+    const v5, 0x7f080057
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -328,7 +328,7 @@
 
     check-cast v3, Landroid/widget/RadioGroup;
 
-    .line 112
+    .line 121
     .local v3, "single":Landroid/widget/RadioGroup;
     new-instance v5, Lcom/nemodream/fashionista/MemberJoinActivity$3;
 
@@ -336,8 +336,8 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/RadioGroup;->setOnCheckedChangeListener(Landroid/widget/RadioGroup$OnCheckedChangeListener;)V
 
-    .line 120
-    const v5, 0x7f080054
+    .line 129
+    const v5, 0x7f08005a
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -347,12 +347,12 @@
 
     iput-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->birthdayTV:Landroid/widget/TextView;
 
-    .line 121
+    .line 130
     new-instance v1, Ljava/util/Date;
 
     invoke-direct {v1}, Ljava/util/Date;-><init>()V
 
-    .line 122
+    .line 131
     .local v1, "date":Ljava/util/Date;
     invoke-virtual {v1}, Ljava/util/Date;->getYear()I
 
@@ -362,7 +362,7 @@
 
     add-int/lit8 v4, v5, -0x13
 
-    .line 123
+    .line 132
     .local v4, "year":I
     iget-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->birthdayTV:Landroid/widget/TextView;
 
@@ -372,7 +372,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 124
+    .line 133
     iget-object v5, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->birthdayTV:Landroid/widget/TextView;
 
     new-instance v6, Lcom/nemodream/fashionista/MemberJoinActivity$4;
@@ -381,8 +381,8 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 131
-    const v5, 0x7f080055
+    .line 140
+    const v5, 0x7f08005b
 
     invoke-virtual {p0, v5}, Lcom/nemodream/fashionista/MemberJoinActivity;->findViewById(I)Landroid/view/View;
 
@@ -390,7 +390,7 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 132
+    .line 141
     .local v0, "btn":Landroid/widget/Button;
     new-instance v5, Lcom/nemodream/fashionista/MemberJoinActivity$5;
 
@@ -398,7 +398,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 270
+    .line 280
     return-void
 .end method
 
@@ -406,12 +406,12 @@
     .registers 11
 
     .prologue
-    .line 273
+    .line 283
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2}, Ljava/util/Date;-><init>()V
 
-    .line 274
+    .line 284
     .local v2, "date":Ljava/util/Date;
     iget-object v7, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->birthdayTV:Landroid/widget/TextView;
 
@@ -427,7 +427,7 @@
 
     move-result v5
 
-    .line 275
+    .line 285
     .local v5, "nowYear":I
     invoke-virtual {v2}, Ljava/util/Date;->getYear()I
 
@@ -437,7 +437,7 @@
 
     add-int/lit8 v3, v7, -0xa
 
-    .line 276
+    .line 286
     .local v3, "maxYear":I
     invoke-virtual {v2}, Ljava/util/Date;->getYear()I
 
@@ -447,48 +447,48 @@
 
     add-int/lit8 v4, v7, -0x3c
 
-    .line 278
+    .line 288
     .local v4, "minYear":I
     new-instance v6, Lcom/nemodream/fashionista/customUi/NumberPicker;
 
     invoke-direct {v6, p0}, Lcom/nemodream/fashionista/customUi/NumberPicker;-><init>(Landroid/content/Context;)V
 
-    .line 279
+    .line 289
     .local v6, "numnerPicker":Lcom/nemodream/fashionista/customUi/NumberPicker;
     invoke-virtual {v6, v4, v3}, Lcom/nemodream/fashionista/customUi/NumberPicker;->setRange(II)V
 
-    .line 280
+    .line 290
     invoke-virtual {v6, v5}, Lcom/nemodream/fashionista/customUi/NumberPicker;->setCurrent(I)V
 
-    .line 281
+    .line 291
     const-wide/16 v7, 0x12c
 
     invoke-virtual {v6, v7, v8}, Lcom/nemodream/fashionista/customUi/NumberPicker;->setSpeed(J)V
 
-    .line 282
+    .line 292
     const/4 v7, 0x0
 
     invoke-virtual {v6, v7}, Lcom/nemodream/fashionista/customUi/NumberPicker;->setEnabledEditText(Z)V
 
-    .line 284
+    .line 294
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 285
+    .line 295
     .local v1, "builder":Landroid/app/AlertDialog$Builder;
-    const v7, 0x7f060047
+    const v7, 0x7f06004b
 
     invoke-virtual {v1, v7}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v7
 
-    .line 286
+    .line 296
     invoke-virtual {v7, v6}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v7
 
-    .line 287
+    .line 297
     const v8, 0x7f060008
 
     new-instance v9, Lcom/nemodream/fashionista/MemberJoinActivity$6;
@@ -499,7 +499,7 @@
 
     move-result-object v7
 
-    .line 294
+    .line 304
     const v8, 0x7f060009
 
     new-instance v9, Lcom/nemodream/fashionista/MemberJoinActivity$7;
@@ -508,125 +508,211 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 298
+    .line 308
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v0
 
-    .line 299
+    .line 309
     .local v0, "alert":Landroid/app/AlertDialog;
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 300
+    .line 310
     return-void
 .end method
 
 
 # virtual methods
+.method public getlanguage()Ljava/lang/String;
+    .registers 4
+
+    .prologue
+    .line 313
+    invoke-virtual {p0}, Lcom/nemodream/fashionista/MemberJoinActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v2
+
+    iget-object v1, v2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    .line 314
+    .local v1, "systemLocale":Ljava/util/Locale;
+    invoke-virtual {v1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 315
+    .local v0, "strLanguage":Ljava/lang/String;
+    return-object v0
+.end method
+
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 6
+    .registers 9
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 60
+    .line 62
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 61
-    const v2, 0x7f030011
-
-    invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/MemberJoinActivity;->setContentView(I)V
-
     .line 63
+    const v4, 0x7f030011
+
+    invoke-virtual {p0, v4}, Lcom/nemodream/fashionista/MemberJoinActivity;->setContentView(I)V
+
+    .line 65
     invoke-direct {p0}, Lcom/nemodream/fashionista/MemberJoinActivity;->initRes()V
 
-    .line 66
-    new-instance v0, Lcom/nemodream/fashionista/customUi/TitleBar;
-
-    invoke-direct {v0, p0}, Lcom/nemodream/fashionista/customUi/TitleBar;-><init>(Landroid/app/Activity;)V
-
-    .line 67
-    .local v0, "tb":Lcom/nemodream/fashionista/customUi/TitleBar;
-    const v2, 0x7f060026
-
-    invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/MemberJoinActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/nemodream/fashionista/customUi/TitleBar;->setTitle(Ljava/lang/String;)V
-
     .line 68
-    invoke-virtual {v0}, Lcom/nemodream/fashionista/customUi/TitleBar;->showBackBtn()V
+    new-instance v2, Lcom/nemodream/fashionista/customUi/TitleBar;
 
-    .line 71
-    const-string v1, "http://fashionista.widepics.co.kr/fapi2/getServicePhrase.action?apiKey=2bcf61709f6511e1a8b00800200c9a66"
+    invoke-direct {v2, p0}, Lcom/nemodream/fashionista/customUi/TitleBar;-><init>(Landroid/app/Activity;)V
 
-    .line 72
-    .local v1, "url":Ljava/lang/String;
-    new-instance v2, Ljava/lang/StringBuilder;
+    .line 69
+    .local v2, "tb":Lcom/nemodream/fashionista/customUi/TitleBar;
+    const v4, 0x7f060027
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/nemodream/fashionista/MemberJoinActivity;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v4}, Lcom/nemodream/fashionista/customUi/TitleBar;->setTitle(Ljava/lang/String;)V
 
-    const-string v3, "&phraseId=SERVICE_AGREEMENT"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
+    .line 70
+    invoke-virtual {v2}, Lcom/nemodream/fashionista/customUi/TitleBar;->showBackBtn()V
 
     .line 73
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lcom/nemodream/fashionista/MemberJoinActivity;->getResources()Landroid/content/res/Resources;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    move-result-object v4
 
-    move-result-object v3
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v4
 
-    const-string v3, "&deviceId="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v2, "phone"
-
-    invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/MemberJoinActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/telephony/TelephonyManager;
-
-    invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v4, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     .line 74
-    new-instance v2, Lcom/nemodream/fashionista/task/ProvisionTask;
+    .local v1, "systemLocale":Ljava/util/Locale;
+    invoke-virtual {v1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
-    invoke-direct {v2, v1, p0}, Lcom/nemodream/fashionista/task/ProvisionTask;-><init>(Ljava/lang/String;Landroid/app/Activity;)V
+    move-result-object v0
 
-    const/4 v3, 0x0
+    .line 76
+    .local v0, "strLanguage":Ljava/lang/String;
+    const-string v4, "lgh"
 
-    new-array v3, v3, [Ljava/lang/Void;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Lcom/nemodream/fashionista/task/ProvisionTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    const-string v6, "strLanguage >>>>>> "
 
-    .line 75
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 79
+    const-string v3, "http://fashionista.widepics.co.kr/fapi2/getServicePhrase.action?apiKey=2bcf61709f6511e1a8b00800200c9a66"
+
+    .line 80
+    .local v3, "url":Ljava/lang/String;
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v5, "&phraseId=SERVICE_AGREEMENT"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 81
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v5, "&language="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 82
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v5, "&deviceId="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v4, "phone"
+
+    invoke-virtual {p0, v4}, Lcom/nemodream/fashionista/MemberJoinActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v4}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 83
+    new-instance v4, Lcom/nemodream/fashionista/task/ProvisionTask;
+
+    invoke-direct {v4, v3, p0}, Lcom/nemodream/fashionista/task/ProvisionTask;-><init>(Ljava/lang/String;Landroid/app/Activity;)V
+
+    const/4 v5, 0x0
+
+    new-array v5, v5, [Ljava/lang/Void;
+
+    invoke-virtual {v4, v5}, Lcom/nemodream/fashionista/task/ProvisionTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    .line 84
     return-void
 .end method
 
@@ -635,11 +721,11 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 78
+    .line 87
     iget-object v0, p0, Lcom/nemodream/fashionista/MemberJoinActivity;->provisionTV:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 79
+    .line 88
     return-void
 .end method

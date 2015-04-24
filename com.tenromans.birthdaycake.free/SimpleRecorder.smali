@@ -57,17 +57,17 @@
     .registers 1
 
     .prologue
-    .line 33
+    .line 34
     const/4 v0, 0x0
 
     sput v0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->MEASURER:I
 
-    .line 34
+    .line 35
     const/4 v0, 0x1
 
     sput v0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->LISTENER:I
 
-    .line 14
+    .line 15
     return-void
 .end method
 
@@ -77,42 +77,42 @@
     .param p2, "listener"    # Lcom/tenromans/birthdaycake/SoundLevelListener;
 
     .prologue
-    .line 38
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
+    .line 37
     sget v0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->LISTENER:I
 
     iput v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->mode:I
 
-    .line 83
+    .line 84
     new-instance v0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$1;
 
     invoke-direct {v0, p0}, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$1;-><init>(Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;)V
 
     iput-object v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->recorderHandler:Landroid/os/Handler;
 
-    .line 39
+    .line 40
     iput-object p1, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->context:Landroid/content/Context;
 
-    .line 40
+    .line 41
     invoke-static {p1}, Lcom/tenromans/birthdaycake/micdroid/PreferenceHelper;->getSampleRate(Landroid/content/Context;)I
 
     move-result v0
 
     iput v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->sampleRate:I
 
-    .line 41
+    .line 42
     invoke-static {p1}, Lcom/tenromans/birthdaycake/micdroid/PreferenceHelper;->getHighestVolume(Landroid/content/Context;)I
 
     move-result v0
 
     iput v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->mMaxAmplitude:I
 
-    .line 42
+    .line 43
     iput-object p2, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->mListener:Lcom/tenromans/birthdaycake/SoundLevelListener;
 
-    .line 43
+    .line 44
     return-void
 .end method
 
@@ -120,7 +120,7 @@
     .registers 2
 
     .prologue
-    .line 26
+    .line 27
     iget-object v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->context:Landroid/content/Context;
 
     return-object v0
@@ -130,7 +130,7 @@
     .registers 2
 
     .prologue
-    .line 31
+    .line 32
     iget-object v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->mListener:Lcom/tenromans/birthdaycake/SoundLevelListener;
 
     return-object v0
@@ -140,7 +140,7 @@
     .registers 2
 
     .prologue
-    .line 83
+    .line 84
     iget-object v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->recorderHandler:Landroid/os/Handler;
 
     return-object v0
@@ -150,7 +150,7 @@
     .registers 2
 
     .prologue
-    .line 30
+    .line 31
     iget v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->mMaxAmplitude:I
 
     return v0
@@ -162,10 +162,10 @@
     .registers 1
 
     .prologue
-    .line 73
+    .line 74
     invoke-virtual {p0}, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->stop()V
 
-    .line 74
+    .line 75
     return-void
 .end method
 
@@ -173,12 +173,12 @@
     .registers 3
 
     .prologue
-    .line 78
+    .line 79
     iget-object v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->writerThread:Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;
 
     if-eqz v0, :cond_1a
 
-    .line 79
+    .line 80
     iget-object v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->writerThread:Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;
 
     invoke-virtual {v0}, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;->getState()Ljava/lang/Thread$State;
@@ -191,7 +191,7 @@
 
     iget-object v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->writerThread:Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;
 
-    .line 80
+    .line 81
     invoke-virtual {v0}, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;->getState()Ljava/lang/Thread$State;
 
     move-result-object v0
@@ -208,7 +208,7 @@
     :cond_1a
     const/4 v0, 0x0
 
-    .line 78
+    .line 79
     goto :goto_19
 .end method
 
@@ -216,14 +216,14 @@
     .registers 5
 
     .prologue
-    .line 47
+    .line 48
     const-string v1, "SimpleRecorder"
 
     const-string v2, "Starting MicWriter"
 
-    invoke-static {v1, v2}, Lcom/tenromans/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tenromans/birthdaycake/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 49
+    .line 50
     :try_start_7
     new-instance v1, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;
 
@@ -233,34 +233,34 @@
 
     iput-object v1, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->writerThread:Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;
 
-    .line 50
+    .line 51
     iget-object v1, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->writerThread:Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;
 
     invoke-virtual {v1}, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;->start()V
     :try_end_15
     .catch Ljava/lang/IllegalArgumentException; {:try_start_7 .. :try_end_15} :catch_16
 
-    .line 56
+    .line 57
     :goto_15
     return-void
 
-    .line 51
+    .line 52
     :catch_16
     move-exception v1
 
     move-object v0, v1
 
-    .line 52
+    .line 53
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     iget-object v1, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->context:Landroid/content/Context;
 
-    .line 53
-    const v2, 0x7f0a0032
-
     .line 54
-    const v3, 0x7f0a0033
+    const v2, 0x7f0a0037
 
-    .line 52
+    .line 55
+    const v3, 0x7f0a0038
+
+    .line 53
     invoke-static {v1, v2, v3}, Lcom/tenromans/birthdaycake/micdroid/DialogHelper;->showWarning(Landroid/content/Context;II)V
 
     goto :goto_15
@@ -270,26 +270,26 @@
     .registers 3
 
     .prologue
-    .line 60
+    .line 61
     const-string v0, "SimpleRecorder"
 
     const-string v1, "Stopping recorder"
 
-    invoke-static {v0, v1}, Lcom/tenromans/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tenromans/birthdaycake/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 61
+    .line 62
     invoke-virtual {p0}, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->isRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_1a
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->writerThread:Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;
 
     invoke-virtual {v0}, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;->close()V
 
-    .line 64
+    .line 65
     :try_start_12
     iget-object v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->writerThread:Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;
 
@@ -297,24 +297,24 @@
     :try_end_17
     .catch Ljava/lang/InterruptedException; {:try_start_12 .. :try_end_17} :catch_22
 
-    .line 66
+    .line 67
     :goto_17
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder;->writerThread:Lcom/tenromans/birthdaycake/micdroid/SimpleRecorder$MicListener;
 
-    .line 68
+    .line 69
     :cond_1a
     const-string v0, "SimpleRecorder"
 
     const-string v1, "Recorder stopped"
 
-    invoke-static {v0, v1}, Lcom/tenromans/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tenromans/birthdaycake/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
+    .line 70
     return-void
 
-    .line 65
+    .line 66
     :catch_22
     move-exception v0
 

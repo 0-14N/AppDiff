@@ -8,16 +8,12 @@
 # instance fields
 .field final synthetic a:Lcom/trinitigame/android/g;
 
-.field private final synthetic b:Lcom/trinitigame/android/a;
-
 
 # direct methods
-.method constructor <init>(Lcom/trinitigame/android/g;Lcom/trinitigame/android/a;)V
-    .registers 3
+.method constructor <init>(Lcom/trinitigame/android/g;)V
+    .registers 2
 
     iput-object p1, p0, Lcom/trinitigame/android/j;->a:Lcom/trinitigame/android/g;
-
-    iput-object p2, p0, Lcom/trinitigame/android/j;->b:Lcom/trinitigame/android/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,33 +23,13 @@
 
 # virtual methods
 .method public run()V
-    .registers 4
+    .registers 2
 
-    iget-object v0, p0, Lcom/trinitigame/android/j;->b:Lcom/trinitigame/android/a;
+    invoke-static {}, Lcom/trinitigame/android/g;->c()Lcom/trinitigame/android/Triniti2DActivity;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/a;->b()I
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/trinitigame/android/j;->a:Lcom/trinitigame/android/g;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/trinitigame/android/j;->b:Lcom/trinitigame/android/a;
-
-    invoke-virtual {v2}, Lcom/trinitigame/android/a;->a()I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/trinitigame/android/g;->a(Lcom/trinitigame/android/g;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcom/trinitigame/android/Triniti2DActivity;->AndroidQuit()V
 
     return-void
 .end method

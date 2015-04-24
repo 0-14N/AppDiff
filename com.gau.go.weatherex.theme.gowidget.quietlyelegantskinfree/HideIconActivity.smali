@@ -18,6 +18,7 @@
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
     .registers 4
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 11
@@ -28,13 +29,15 @@
 
     move-result-object v0
 
+    .line 13
     const-class v1, Lcom/gau/go/weatherex/framework/RecommendWeatherEx;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p0, v0, v1}, Lcom/gau/go/weatherex/framework/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    .line 12
+    invoke-static {p0, v0, v1}, Lcom/gau/go/weatherex/framework/ComponentUtils;->disableComponent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 14
     invoke-virtual {p0}, Lcom/gau/go/weatherex/framework/HideIconActivity;->finish()V

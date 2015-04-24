@@ -151,9 +151,9 @@
 
     .line 92
     :cond_4b
-    new-instance v3, Lbby;
+    new-instance v3, Lave;
 
-    invoke-direct {v3, p0, v2, v0}, Lbby;-><init>(Lcom/quvideo/xiaoying/videoeditor/ui/AdvanceToolsUIManager;ILandroid/widget/ImageView;)V
+    invoke-direct {v3, p0, v2, v0}, Lave;-><init>(Lcom/quvideo/xiaoying/videoeditor/ui/AdvanceToolsUIManager;ILandroid/widget/ImageView;)V
 
     .line 107
     invoke-virtual {v1, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V

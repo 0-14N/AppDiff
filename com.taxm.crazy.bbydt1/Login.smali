@@ -36,9 +36,7 @@
 
 .field p:Landroid/widget/TextView;
 
-.field q:Lcom/baidu/mobads/InterstitialAd;
-
-.field r:Landroid/os/Handler;
+.field q:Landroid/os/Handler;
 
 
 # direct methods
@@ -55,7 +53,7 @@
 
     invoke-direct {v0, p0}, Lcom/taxm/crazy/bbydt1/ui/l;-><init>(Lcom/taxm/crazy/bbydt1/ui/Login;)V
 
-    iput-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->r:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Landroid/os/Handler;
 
     return-void
 .end method
@@ -113,7 +111,7 @@
 .method private a(Lcom/taxm/crazy/bbydt1/a;)V
     .registers 4
 
-    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->r:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
@@ -137,7 +135,7 @@
 .method private b()V
     .registers 3
 
-    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->r:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
@@ -215,7 +213,7 @@
     return-void
 
     :sswitch_10
-    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->r:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
@@ -237,7 +235,7 @@
     :sswitch_24
     sget-object v0, Lcom/taxm/crazy/bbydt1/a;->c:Lcom/taxm/crazy/bbydt1/a;
 
-    iget-object v2, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->r:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Landroid/os/Handler;
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->removeMessages(I)V
 
@@ -805,7 +803,7 @@
 
     iput v5, v0, Landroid/os/Message;->what:I
 
-    iget-object v1, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->r:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Landroid/os/Handler;
 
     const-wide/16 v2, 0x1f4
 
@@ -820,7 +818,7 @@
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    iget-object v1, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->r:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Landroid/os/Handler;
 
     const-wide/16 v2, 0x3e8
 
@@ -836,7 +834,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1b8
+    if-eqz v0, :cond_1b3
 
     iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->k:Landroid/widget/LinearLayout;
 
@@ -845,25 +843,21 @@
     goto/16 :goto_e0
 
     :cond_1a5
-    new-instance v0, Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-direct {v0, p0}, Lcom/baidu/mobads/InterstitialAd;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Lcom/baidu/mobads/InterstitialAd;
-
-    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0}, Lcom/baidu/mobads/InterstitialAd;->loadAd()V
-
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
     iput v4, v0, Landroid/os/Message;->what:I
 
+    iget-object v1, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Landroid/os/Handler;
+
+    const-wide/16 v2, 0x7d0
+
+    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
     goto :goto_183
 
-    :cond_1b8
+    :cond_1b3
     invoke-virtual {p0}, Lcom/taxm/crazy/bbydt1/ui/Login;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -874,7 +868,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1d1
+    if-nez v0, :cond_1cc
 
     const v0, 0x7f0a003a
 
@@ -886,7 +880,7 @@
 
     goto/16 :goto_e0
 
-    :cond_1d1
+    :cond_1cc
     iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/Login;->l:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V

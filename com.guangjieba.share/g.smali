@@ -109,7 +109,7 @@
 
     .prologue
     .line 25
-    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->a()V
+    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->c()V
 
     return-void
 .end method
@@ -129,7 +129,7 @@
 
     .prologue
     .line 25
-    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->c()V
+    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->b()V
 
     return-void
 .end method
@@ -139,7 +139,7 @@
 
     .prologue
     .line 25
-    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->b()V
+    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->a()V
 
     return-void
 .end method
@@ -147,6 +147,59 @@
 
 # virtual methods
 .method public final a()V
+    .registers 3
+
+    .prologue
+    .line 121
+    iget-object v0, p0, Lcom/guangjieba/share/model/d/g;->l:Landroid/os/Handler;
+
+    new-instance v1, Lcom/guangjieba/share/model/d/j;
+
+    invoke-direct {v1, p0}, Lcom/guangjieba/share/model/d/j;-><init>(Lcom/guangjieba/share/model/d/g;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 131
+    return-void
+.end method
+
+.method public final a([Lcom/guangjieba/share/model/bean/CategoryModel;)V
+    .registers 4
+
+    .prologue
+    .line 163
+    iget-object v0, p0, Lcom/guangjieba/share/model/d/g;->l:Landroid/os/Handler;
+
+    new-instance v1, Lcom/guangjieba/share/model/d/k;
+
+    invoke-direct {v1, p0, p1}, Lcom/guangjieba/share/model/d/k;-><init>(Lcom/guangjieba/share/model/d/g;[Lcom/guangjieba/share/model/bean/CategoryModel;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 173
+    return-void
+.end method
+
+.method public final b()V
+    .registers 5
+
+    .prologue
+    .line 107
+    iget-object v0, p0, Lcom/guangjieba/share/model/d/g;->l:Landroid/os/Handler;
+
+    new-instance v1, Lcom/guangjieba/share/model/d/i;
+
+    invoke-direct {v1, p0}, Lcom/guangjieba/share/model/d/i;-><init>(Lcom/guangjieba/share/model/d/g;)V
+
+    const-wide/16 v2, 0x3e8
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 117
+    return-void
+.end method
+
+.method public final c()V
     .registers 3
 
     .prologue
@@ -160,59 +213,6 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 103
-    return-void
-.end method
-
-.method public final a([Lcom/guangjieba/share/model/bean/CategoryModel;)V
-    .registers 4
-
-    .prologue
-    .line 135
-    iget-object v0, p0, Lcom/guangjieba/share/model/d/g;->l:Landroid/os/Handler;
-
-    new-instance v1, Lcom/guangjieba/share/model/d/k;
-
-    invoke-direct {v1, p0, p1}, Lcom/guangjieba/share/model/d/k;-><init>(Lcom/guangjieba/share/model/d/g;[Lcom/guangjieba/share/model/bean/CategoryModel;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 145
-    return-void
-.end method
-
-.method public final b()V
-    .registers 5
-
-    .prologue
-    .line 121
-    iget-object v0, p0, Lcom/guangjieba/share/model/d/g;->l:Landroid/os/Handler;
-
-    new-instance v1, Lcom/guangjieba/share/model/d/j;
-
-    invoke-direct {v1, p0}, Lcom/guangjieba/share/model/d/j;-><init>(Lcom/guangjieba/share/model/d/g;)V
-
-    const-wide/16 v2, 0x3e8
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 131
-    return-void
-.end method
-
-.method public final c()V
-    .registers 3
-
-    .prologue
-    .line 107
-    iget-object v0, p0, Lcom/guangjieba/share/model/d/g;->l:Landroid/os/Handler;
-
-    new-instance v1, Lcom/guangjieba/share/model/d/i;
-
-    invoke-direct {v1, p0}, Lcom/guangjieba/share/model/d/i;-><init>(Lcom/guangjieba/share/model/d/g;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 117
     return-void
 .end method
 
@@ -236,7 +236,7 @@
     .end annotation
 
     .prologue
-    .line 88
+    .line 76
     invoke-super {p0}, Lcom/guangjieba/share/model/d/a;->produceGetCategoriesSuccessEvent()Lcom/guangjieba/share/model/d/a/a;
 
     move-result-object v0
@@ -250,7 +250,7 @@
     .end annotation
 
     .prologue
-    .line 76
+    .line 82
     invoke-super {p0}, Lcom/guangjieba/share/model/d/a;->produceGetRecommendSuccessEvent()Lcom/guangjieba/share/model/d/a/c;
 
     move-result-object v0
@@ -264,7 +264,7 @@
     .end annotation
 
     .prologue
-    .line 82
+    .line 88
     invoke-super {p0}, Lcom/guangjieba/share/model/d/a;->produceGetSuccessEvent()Lcom/guangjieba/share/model/d/a/b;
 
     move-result-object v0

@@ -1100,6 +1100,8 @@
     .line 139
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 140
     const/4 v3, 0x3
 
@@ -1120,7 +1122,7 @@
     .line 145
     iget-boolean v3, p0, Lcom/raysoft/hellocrayon/HelloCrayon;->__APP_FOR_GOOGLE_MARKET:Z
 
-    if-eqz v3, :cond_6a
+    if-eqz v3, :cond_6d
 
     .line 147
     new-instance v3, Landroid/os/Handler;
@@ -1162,7 +1164,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_7a
+    if-nez v3, :cond_7d
 
     .line 157
     const-string v3, "GM"
@@ -1177,10 +1179,10 @@
     sput-boolean v3, Lcom/raysoft/hellocrayon/HelloCrayon;->mIAPEnabled:Z
 
     .line 165
-    :goto_4a
+    :goto_4d
     sget-boolean v3, Lcom/raysoft/hellocrayon/HelloCrayon;->mIAPEnabled:Z
 
-    if-eqz v3, :cond_6a
+    if-eqz v3, :cond_6d
 
     .line 167
     invoke-static {}, Lcom/raysoft/hellocrayon/PropertyUtil;->getInstance()Lcom/raysoft/hellocrayon/PropertyUtil;
@@ -1197,7 +1199,7 @@
     .local v1, "rtProp":Ljava/lang/String;
     const-string v3, "YES"
 
-    if-eq v1, v3, :cond_6a
+    if-eq v1, v3, :cond_6d
 
     .line 170
     invoke-static {}, Lcom/raysoft/hellocrayon/PropertyUtil;->getInstance()Lcom/raysoft/hellocrayon/PropertyUtil;
@@ -1215,7 +1217,7 @@
 
     .line 179
     .end local v1    # "rtProp":Ljava/lang/String;
-    :cond_6a
+    :cond_6d
     new-instance v0, Lcom/raysoft/hellocrayon/HelloCrayon$1;
 
     invoke-direct {v0, p0}, Lcom/raysoft/hellocrayon/HelloCrayon$1;-><init>(Lcom/raysoft/hellocrayon/HelloCrayon;)V
@@ -1238,12 +1240,12 @@
     .line 162
     .end local v0    # "myTask":Ljava/util/TimerTask;
     .end local v2    # "timer":Ljava/util/Timer;
-    :cond_7a
+    :cond_7d
     const/4 v3, 0x1
 
     sput-boolean v3, Lcom/raysoft/hellocrayon/HelloCrayon;->mIAPEnabled:Z
 
-    goto :goto_4a
+    goto :goto_4d
 .end method
 
 .method protected onDestroy()V
@@ -1253,21 +1255,23 @@
     .line 295
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+
     .line 297
     invoke-static {}, Lcom/raysoft/hellocrayon/HelloCrayon;->isVFInit()Z
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_f
 
     .line 298
     invoke-static {}, Lcom/raysoft/hellocrayon/actFrameVfJni;->onDestroy()V
 
     .line 300
-    :cond_c
+    :cond_f
     iget-boolean v0, p0, Lcom/raysoft/hellocrayon/HelloCrayon;->__APP_FOR_GOOGLE_MARKET:Z
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_18
 
     .line 301
     iget-object v0, p0, Lcom/raysoft/hellocrayon/HelloCrayon;->mBillingService:Lcom/raysoft/hellocrayon/BillingService;
@@ -1275,7 +1279,7 @@
     invoke-virtual {v0}, Lcom/raysoft/hellocrayon/BillingService;->unbind()V
 
     .line 302
-    :cond_15
+    :cond_18
     return-void
 .end method
 

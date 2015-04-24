@@ -32,6 +32,16 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .registers 5
 
+    const/4 v0, 0x1
+
+    const-string v1, "ARMv7+ARMv6 by NitroOxid"
+
+    invoke-static {p0, v1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
     const/16 v1, 0x400
 
     const/4 v2, 0x1

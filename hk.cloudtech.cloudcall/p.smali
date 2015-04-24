@@ -127,11 +127,6 @@
 
 .method private a(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .registers 10
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     iget-object v0, p0, Lcom/c/a/b/p;->b:Lcom/c/a/b/e/a;
 
@@ -358,11 +353,6 @@
 
 .method private b(II)Z
     .registers 13
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/4 v9, 0x1
 
@@ -632,11 +622,6 @@
 
 .method private d()Landroid/graphics/Bitmap;
     .registers 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/c/a/b/t;
-        }
-    .end annotation
 
     const/4 v1, 0x0
 
@@ -909,11 +894,6 @@
 
 .method private e()Z
     .registers 9
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/c/a/b/t;
-        }
-    .end annotation
 
     const/4 v2, 0x1
 
@@ -983,11 +963,6 @@
 
 .method private f()Z
     .registers 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-direct {p0}, Lcom/c/a/b/p;->h()Lcom/c/a/b/d/e;
 
@@ -1088,11 +1063,6 @@
 
 .method private i()V
     .registers 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/c/a/b/t;
-        }
-    .end annotation
 
     invoke-direct {p0}, Lcom/c/a/b/p;->k()V
 
@@ -1130,11 +1100,6 @@
 
 .method private k()V
     .registers 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/c/a/b/t;
-        }
-    .end annotation
 
     invoke-direct {p0}, Lcom/c/a/b/p;->l()Z
 
@@ -1188,11 +1153,6 @@
 
 .method private m()V
     .registers 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/c/a/b/t;
-        }
-    .end annotation
 
     invoke-direct {p0}, Lcom/c/a/b/p;->n()Z
 
@@ -1264,11 +1224,6 @@
 
 .method private o()V
     .registers 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/c/a/b/t;
-        }
-    .end annotation
 
     invoke-direct {p0}, Lcom/c/a/b/p;->p()Z
 

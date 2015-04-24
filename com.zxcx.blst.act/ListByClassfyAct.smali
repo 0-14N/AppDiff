@@ -139,12 +139,12 @@
     return-void
 .end method
 
-.method static synthetic access$3(Lcom/zxcx/blst/act/ListByClassfyAct;)V
-    .registers 1
+.method static synthetic access$3(Lcom/zxcx/blst/act/ListByClassfyAct;Z)V
+    .registers 2
 
     .prologue
     .line 147
-    invoke-direct {p0}, Lcom/zxcx/blst/act/ListByClassfyAct;->getData()V
+    invoke-direct {p0, p1}, Lcom/zxcx/blst/act/ListByClassfyAct;->getData(Z)V
 
     return-void
 .end method
@@ -209,23 +209,24 @@
     return-void
 .end method
 
-.method private getData()V
-    .registers 3
+.method private getData(Z)V
+    .registers 4
+    .param p1, "isPull"    # Z
 
     .prologue
     .line 150
     new-instance v0, Lcom/zxcx/blst/act/ListByClassfyAct$5;
 
-    invoke-direct {v0, p0}, Lcom/zxcx/blst/act/ListByClassfyAct$5;-><init>(Lcom/zxcx/blst/act/ListByClassfyAct;)V
+    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/ListByClassfyAct$5;-><init>(Lcom/zxcx/blst/act/ListByClassfyAct;Z)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 225
+    .line 226
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/ListByClassfyAct$5;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 226
+    .line 227
     return-void
 .end method
 
@@ -299,7 +300,7 @@
     iput-object v0, p0, Lcom/zxcx/blst/act/ListByClassfyAct;->countyid:Ljava/lang/String;
 
     .line 86
-    const v0, 0x7f080168
+    const v0, 0x7f090181
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/ListByClassfyAct;->findViewById(I)Landroid/view/View;
 
@@ -313,12 +314,12 @@
     .line 87
     iget-object v0, p0, Lcom/zxcx/blst/act/ListByClassfyAct;->iv_title_bar_left:Landroid/widget/ImageView;
 
-    const v1, 0x7f020005
+    const v1, 0x7f020006
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     .line 89
-    const v0, 0x7f080166
+    const v0, 0x7f09017f
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/ListByClassfyAct;->findViewById(I)Landroid/view/View;
 
@@ -355,7 +356,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 92
-    const v0, 0x7f080167
+    const v0, 0x7f090180
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/ListByClassfyAct;->findViewById(I)Landroid/view/View;
 
@@ -384,7 +385,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 97
-    const v0, 0x7f0800d4
+    const v0, 0x7f0900e4
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/ListByClassfyAct;->findViewById(I)Landroid/view/View;
 
@@ -448,32 +449,36 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 231
+    .line 232
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_10
+    packed-switch v0, :pswitch_data_12
 
-    .line 241
+    .line 242
     :goto_7
     return-void
 
-    .line 233
+    .line 234
     :pswitch_8
     invoke-virtual {p0}, Lcom/zxcx/blst/act/ListByClassfyAct;->finish()V
 
     goto :goto_7
 
-    .line 236
+    .line 237
     :pswitch_c
-    invoke-direct {p0}, Lcom/zxcx/blst/act/ListByClassfyAct;->getData()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/zxcx/blst/act/ListByClassfyAct;->getData(Z)V
 
     goto :goto_7
 
-    .line 231
-    :pswitch_data_10
-    .packed-switch 0x7f080167
+    .line 232
+    nop
+
+    :pswitch_data_12
+    .packed-switch 0x7f090180
         :pswitch_c
         :pswitch_8
     .end packed-switch
@@ -488,7 +493,7 @@
     invoke-super {p0, p1}, Lcom/zxcx/blst/act/BaseAct;->onCreate(Landroid/os/Bundle;)V
 
     .line 72
-    const v0, 0x7f030036
+    const v0, 0x7f03003c
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/ListByClassfyAct;->setContentView(I)V
 
@@ -496,7 +501,9 @@
     invoke-direct {p0}, Lcom/zxcx/blst/act/ListByClassfyAct;->setupView()V
 
     .line 74
-    invoke-direct {p0}, Lcom/zxcx/blst/act/ListByClassfyAct;->getData()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/zxcx/blst/act/ListByClassfyAct;->getData(Z)V
 
     .line 75
     return-void

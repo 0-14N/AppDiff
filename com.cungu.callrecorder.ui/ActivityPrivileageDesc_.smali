@@ -40,7 +40,7 @@
 .method static synthetic a(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
 
     return-void
 .end method
@@ -72,7 +72,7 @@
 .method static synthetic b(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
 
     return-void
 .end method
@@ -81,16 +81,6 @@
     .registers 3
 
     const v1, 0x7f0e002b
-
-    const v0, 0x7f0e0076
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/GridView;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;->n:Landroid/widget/GridView;
 
     const v0, 0x7f0e0075
 
@@ -101,6 +91,16 @@
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;->o:Landroid/widget/TextView;
+
+    const v0, 0x7f0e0076
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/GridView;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;->n:Landroid/widget/GridView;
 
     invoke-virtual {p0, v1}, Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;->findViewById(I)Landroid/view/View;
 
@@ -135,9 +135,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;->r:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/hm;
+    new-instance v1, Lcom/cungo/callrecorder/ui/hl;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/cungo/callrecorder/ui/hm;-><init>(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/cungo/callrecorder/ui/hl;-><init>(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -149,9 +149,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;->r:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/hl;
+    new-instance v1, Lcom/cungo/callrecorder/ui/hm;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/cungo/callrecorder/ui/hl;-><init>(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/cungo/callrecorder/ui/hm;-><init>(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -161,9 +161,9 @@
 .method public o()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/hn;
+    new-instance v0, Lcom/cungo/callrecorder/ui/ho;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/hn;-><init>(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/ho;-><init>(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -247,9 +247,9 @@
 .method public p()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/ho;
+    new-instance v0, Lcom/cungo/callrecorder/ui/hn;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/ho;-><init>(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/hn;-><init>(Lcom/cungo/callrecorder/ui/ActivityPrivileageDesc_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 

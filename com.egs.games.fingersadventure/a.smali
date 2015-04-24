@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+.field private RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -28,9 +28,9 @@
     .end annotation
 .end field
 
-.field private lW:Landroid/os/Bundle;
+.field private RQ:Landroid/os/Bundle;
 
-.field private lX:Ljava/util/LinkedList;
+.field private RR:Ljava/util/LinkedList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedList",
@@ -41,10 +41,10 @@
     .end annotation
 .end field
 
-.field private final lY:Lcom/google/android/gms/dynamic/d;
+.field private final RS:Lcom/google/android/gms/dynamic/f;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/google/android/gms/dynamic/d",
+            "Lcom/google/android/gms/dynamic/f",
             "<TT;>;"
         }
     .end annotation
@@ -61,51 +61,15 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/dynamic/a$1;-><init>(Lcom/google/android/gms/dynamic/a;)V
 
-    iput-object v0, p0, Lcom/google/android/gms/dynamic/a;->lY:Lcom/google/android/gms/dynamic/d;
+    iput-object v0, p0, Lcom/google/android/gms/dynamic/a;->RS:Lcom/google/android/gms/dynamic/f;
 
-    return-void
-.end method
-
-.method private J(I)V
-    .registers 3
-
-    :goto_0
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lX:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1c
-
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lX:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/dynamic/a$a;
-
-    invoke-interface {v0}, Lcom/google/android/gms/dynamic/a$a;->getState()I
-
-    move-result v0
-
-    if-lt v0, p1, :cond_1c
-
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lX:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_1c
     return-void
 .end method
 
 .method static synthetic a(Lcom/google/android/gms/dynamic/a;Landroid/os/Bundle;)Landroid/os/Bundle;
     .registers 2
 
-    iput-object p1, p0, Lcom/google/android/gms/dynamic/a;->lW:Landroid/os/Bundle;
+    iput-object p1, p0, Lcom/google/android/gms/dynamic/a;->RQ:Landroid/os/Bundle;
 
     return-object p1
 .end method
@@ -113,7 +77,7 @@
 .method static synthetic a(Lcom/google/android/gms/dynamic/a;Lcom/google/android/gms/dynamic/LifecycleDelegate;)Lcom/google/android/gms/dynamic/LifecycleDelegate;
     .registers 2
 
-    iput-object p1, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iput-object p1, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     return-object p1
 .end method
@@ -121,7 +85,7 @@
 .method static synthetic a(Lcom/google/android/gms/dynamic/a;)Ljava/util/LinkedList;
     .registers 2
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lX:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RR:Ljava/util/LinkedList;
 
     return-object v0
 .end method
@@ -129,11 +93,11 @@
 .method private a(Landroid/os/Bundle;Lcom/google/android/gms/dynamic/a$a;)V
     .registers 4
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     invoke-interface {p2, v0}, Lcom/google/android/gms/dynamic/a$a;->b(Lcom/google/android/gms/dynamic/LifecycleDelegate;)V
 
@@ -141,7 +105,7 @@
     return-void
 
     :cond_a
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lX:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RR:Ljava/util/LinkedList;
 
     if-nez v0, :cond_15
 
@@ -149,16 +113,16 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/dynamic/a;->lX:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/google/android/gms/dynamic/a;->RR:Ljava/util/LinkedList;
 
     :cond_15
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lX:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RR:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     if-eqz p1, :cond_28
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lW:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RQ:Landroid/os/Bundle;
 
     if-nez v0, :cond_2e
 
@@ -168,18 +132,18 @@
 
     check-cast v0, Landroid/os/Bundle;
 
-    iput-object v0, p0, Lcom/google/android/gms/dynamic/a;->lW:Landroid/os/Bundle;
+    iput-object v0, p0, Lcom/google/android/gms/dynamic/a;->RQ:Landroid/os/Bundle;
 
     :cond_28
     :goto_28
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lY:Lcom/google/android/gms/dynamic/d;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RS:Lcom/google/android/gms/dynamic/f;
 
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/dynamic/a;->a(Lcom/google/android/gms/dynamic/d;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/dynamic/a;->a(Lcom/google/android/gms/dynamic/f;)V
 
     goto :goto_9
 
     :cond_2e
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lW:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RQ:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
@@ -189,19 +153,17 @@
 .method static synthetic b(Lcom/google/android/gms/dynamic/a;)Lcom/google/android/gms/dynamic/LifecycleDelegate;
     .registers 2
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     return-object v0
 .end method
 
-
-# virtual methods
-.method public a(Landroid/widget/FrameLayout;)V
-    .registers 10
+.method public static b(Landroid/widget/FrameLayout;)V
+    .registers 9
 
     const/4 v7, -0x2
 
-    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -209,19 +171,17 @@
 
     move-result v1
 
-    const/4 v2, -0x1
-
-    invoke-static {v0, v1, v2}, Lcom/google/android/gms/common/GooglePlayServicesUtil;->b(Landroid/content/Context;II)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/google/android/gms/common/GooglePlayServicesUtil;->d(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/GooglePlayServicesUtil;->b(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/google/android/gms/common/GooglePlayServicesUtil;->e(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v3
 
     new-instance v4, Landroid/widget/LinearLayout;
 
-    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
@@ -237,11 +197,11 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p1, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     new-instance v5, Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -257,7 +217,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    if-eqz v3, :cond_5e
+    if-eqz v3, :cond_5d
 
     new-instance v2, Landroid/widget/Button;
 
@@ -275,25 +235,71 @@
 
     new-instance v3, Lcom/google/android/gms/dynamic/a$5;
 
-    invoke-direct {v3, p0, v0, v1}, Lcom/google/android/gms/dynamic/a$5;-><init>(Lcom/google/android/gms/dynamic/a;Landroid/content/Context;I)V
+    invoke-direct {v3, v0, v1}, Lcom/google/android/gms/dynamic/a$5;-><init>(Landroid/content/Context;I)V
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_5e
+    :cond_5d
     return-void
 .end method
 
-.method protected abstract a(Lcom/google/android/gms/dynamic/d;)V
+.method private cv(I)V
+    .registers 3
+
+    :goto_0
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RR:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1c
+
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RR:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/dynamic/a$a;
+
+    invoke-interface {v0}, Lcom/google/android/gms/dynamic/a$a;->getState()I
+
+    move-result v0
+
+    if-lt v0, p1, :cond_1c
+
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RR:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_1c
+    return-void
+.end method
+
+
+# virtual methods
+.method protected a(Landroid/widget/FrameLayout;)V
+    .registers 2
+
+    invoke-static {p1}, Lcom/google/android/gms/dynamic/a;->b(Landroid/widget/FrameLayout;)V
+
+    return-void
+.end method
+
+.method protected abstract a(Lcom/google/android/gms/dynamic/f;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/android/gms/dynamic/d",
+            "Lcom/google/android/gms/dynamic/f",
             "<TT;>;)V"
         }
     .end annotation
 .end method
 
-.method public bP()Lcom/google/android/gms/dynamic/LifecycleDelegate;
+.method public it()Lcom/google/android/gms/dynamic/LifecycleDelegate;
     .registers 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -301,7 +307,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     return-object v0
 .end method
@@ -351,7 +357,7 @@
 
     invoke-direct {p0, p3, v0}, Lcom/google/android/gms/dynamic/a;->a(Landroid/os/Bundle;Lcom/google/android/gms/dynamic/a$a;)V
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     if-nez v0, :cond_1c
 
@@ -364,11 +370,11 @@
 .method public onDestroy()V
     .registers 2
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     invoke-interface {v0}, Lcom/google/android/gms/dynamic/LifecycleDelegate;->onDestroy()V
 
@@ -378,7 +384,7 @@
     :cond_a
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/google/android/gms/dynamic/a;->J(I)V
+    invoke-direct {p0, v0}, Lcom/google/android/gms/dynamic/a;->cv(I)V
 
     goto :goto_9
 .end method
@@ -386,11 +392,11 @@
 .method public onDestroyView()V
     .registers 2
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     invoke-interface {v0}, Lcom/google/android/gms/dynamic/LifecycleDelegate;->onDestroyView()V
 
@@ -400,7 +406,7 @@
     :cond_a
     const/4 v0, 0x2
 
-    invoke-direct {p0, v0}, Lcom/google/android/gms/dynamic/a;->J(I)V
+    invoke-direct {p0, v0}, Lcom/google/android/gms/dynamic/a;->cv(I)V
 
     goto :goto_9
 .end method
@@ -425,11 +431,11 @@
 .method public onLowMemory()V
     .registers 2
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     if-eqz v0, :cond_9
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     invoke-interface {v0}, Lcom/google/android/gms/dynamic/LifecycleDelegate;->onLowMemory()V
 
@@ -440,11 +446,11 @@
 .method public onPause()V
     .registers 2
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     invoke-interface {v0}, Lcom/google/android/gms/dynamic/LifecycleDelegate;->onPause()V
 
@@ -452,14 +458,58 @@
     return-void
 
     :cond_a
-    const/4 v0, 0x3
+    const/4 v0, 0x5
 
-    invoke-direct {p0, v0}, Lcom/google/android/gms/dynamic/a;->J(I)V
+    invoke-direct {p0, v0}, Lcom/google/android/gms/dynamic/a;->cv(I)V
 
     goto :goto_9
 .end method
 
 .method public onResume()V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    new-instance v1, Lcom/google/android/gms/dynamic/a$7;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/dynamic/a$7;-><init>(Lcom/google/android/gms/dynamic/a;)V
+
+    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/dynamic/a;->a(Landroid/os/Bundle;Lcom/google/android/gms/dynamic/a$a;)V
+
+    return-void
+.end method
+
+.method public onSaveInstanceState(Landroid/os/Bundle;)V
+    .registers 3
+    .param p1, "outState"    # Landroid/os/Bundle;
+
+    .prologue
+    .local p0, "this":Lcom/google/android/gms/dynamic/a;, "Lcom/google/android/gms/dynamic/a<TT;>;"
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+
+    if-eqz v0, :cond_a
+
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/dynamic/LifecycleDelegate;->onSaveInstanceState(Landroid/os/Bundle;)V
+
+    :cond_9
+    :goto_9
+    return-void
+
+    :cond_a
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RQ:Landroid/os/Bundle;
+
+    if-eqz v0, :cond_9
+
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RQ:Landroid/os/Bundle;
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
+
+    goto :goto_9
+.end method
+
+.method public onStart()V
     .registers 3
 
     const/4 v0, 0x0
@@ -473,32 +523,24 @@
     return-void
 .end method
 
-.method public onSaveInstanceState(Landroid/os/Bundle;)V
-    .registers 3
-    .param p1, "outState"    # Landroid/os/Bundle;
+.method public onStop()V
+    .registers 2
 
-    .prologue
-    .local p0, "this":Lcom/google/android/gms/dynamic/a;, "Lcom/google/android/gms/dynamic/a<TT;>;"
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lV:Lcom/google/android/gms/dynamic/LifecycleDelegate;
+    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->RP:Lcom/google/android/gms/dynamic/LifecycleDelegate;
 
-    invoke-interface {v0, p1}, Lcom/google/android/gms/dynamic/LifecycleDelegate;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-interface {v0}, Lcom/google/android/gms/dynamic/LifecycleDelegate;->onStop()V
 
-    :cond_9
     :goto_9
     return-void
 
     :cond_a
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lW:Landroid/os/Bundle;
+    const/4 v0, 0x4
 
-    if-eqz v0, :cond_9
-
-    iget-object v0, p0, Lcom/google/android/gms/dynamic/a;->lW:Landroid/os/Bundle;
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
+    invoke-direct {p0, v0}, Lcom/google/android/gms/dynamic/a;->cv(I)V
 
     goto :goto_9
 .end method

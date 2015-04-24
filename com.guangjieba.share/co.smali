@@ -36,17 +36,19 @@
 
     move-result-object v1
 
-    const-string v2, "my_login"
+    const-string v2, "my_set"
 
     invoke-static {v1, v2}, Lcom/umeng/a/a;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/cm;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/cm;->getSherlockActivity()Lcom/actionbarsherlock/app/SherlockFragmentActivity;
 
     move-result-object v0
 
-    const-class v1, Lcom/guangjieba/share/ui/user/LoginActivity_;
+    invoke-static {v0}, Lcom/guangjieba/share/ui/user/SettingsActivity_;->a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/SettingsActivity_$IntentBuilder_;
 
-    invoke-static {v0, v1}, Lcom/guangjieba/share/ui/user/LoginActivity;->a(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/SettingsActivity_$IntentBuilder_;->a()V
 
     .line 95
     return-void

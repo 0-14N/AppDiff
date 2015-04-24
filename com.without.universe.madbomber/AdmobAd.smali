@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field private ad:Lcom/google/ads/AdView;
+.field private ad:Lcom/google/aads/AdView;
 
 .field private admobListener:Lcom/without/universe/ad/providers/AdmobAd$AdmobListener;
 
@@ -110,9 +110,9 @@
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 43
-    new-instance v1, Lcom/google/ads/AdView;
+    new-instance v1, Lcom/google/aads/AdView;
 
-    sget-object v2, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
+    sget-object v2, Lcom/google/aads/AdSize;->BANNER:Lcom/google/aads/AdSize;
 
     const-string v3, "sdfdgsht534dfgsdfgntrwet4"
 
@@ -120,14 +120,14 @@
 
     move-result-object v3
 
-    invoke-direct {v1, p1, v2, v3}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+    invoke-direct {v1, p1, v2, v3}, Lcom/google/aads/AdView;-><init>(Landroid/app/Activity;Lcom/google/aads/AdSize;Ljava/lang/String;)V
 
-    iput-object v1, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/ads/AdView;
+    iput-object v1, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/aads/AdView;
 
     .line 44
     iget-object v1, p0, Lcom/without/universe/ad/providers/AdmobAd;->layout:Landroid/widget/RelativeLayout;
 
-    iget-object v2, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/ads/AdView;
+    iget-object v2, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/aads/AdView;
 
     invoke-virtual {v1, v2, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -162,11 +162,11 @@
 
     .prologue
     .line 66
-    iget-object v0, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/ads/AdView;
+    iget-object v0, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/aads/AdView;
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Lcom/google/ads/AdView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/google/aads/AdView;->setVisibility(I)V
 
     .line 67
     return-void
@@ -182,12 +182,12 @@
     iput-object p2, p0, Lcom/without/universe/ad/providers/AdmobAd;->listener:Lcom/without/universe/ad/AdHolder$AdListener;
 
     .line 50
-    new-instance v0, Lcom/google/ads/AdRequest;
+    new-instance v0, Lcom/google/aads/AdRequest;
 
-    invoke-direct {v0}, Lcom/google/ads/AdRequest;-><init>()V
+    invoke-direct {v0}, Lcom/google/aads/AdRequest;-><init>()V
 
     .line 52
-    .local v0, "adRequest":Lcom/google/ads/AdRequest;
+    .local v0, "adRequest":Lcom/google/aads/AdRequest;
     iget-object v3, p0, Lcom/without/universe/ad/providers/AdmobAd;->testDevices:[Ljava/lang/String;
 
     array-length v4, v3
@@ -198,16 +198,16 @@
     if-lt v2, v4, :cond_1a
 
     .line 55
-    iget-object v2, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/ads/AdView;
+    iget-object v2, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/aads/AdView;
 
     iget-object v3, p0, Lcom/without/universe/ad/providers/AdmobAd;->admobListener:Lcom/without/universe/ad/providers/AdmobAd$AdmobListener;
 
-    invoke-virtual {v2, v3}, Lcom/google/ads/AdView;->setAdListener(Lcom/google/ads/AdListener;)V
+    invoke-virtual {v2, v3}, Lcom/google/aads/AdView;->setAdListener(Lcom/google/aads/AdListener;)V
 
     .line 56
-    iget-object v2, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/ads/AdView;
+    iget-object v2, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/aads/AdView;
 
-    invoke-virtual {v2, v0}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
+    invoke-virtual {v2, v0}, Lcom/google/aads/AdView;->loadAd(Lcom/google/aads/AdRequest;)V
 
     .line 57
     return-void
@@ -218,7 +218,7 @@
 
     .line 53
     .local v1, "testId":Ljava/lang/String;
-    invoke-virtual {v0, v1}, Lcom/google/ads/AdRequest;->addTestDevice(Ljava/lang/String;)Lcom/google/ads/AdRequest;
+    invoke-virtual {v0, v1}, Lcom/google/aads/AdRequest;->addTestDevice(Ljava/lang/String;)Lcom/google/aads/AdRequest;
 
     .line 52
     add-int/lit8 v2, v2, 0x1
@@ -231,11 +231,11 @@
 
     .prologue
     .line 61
-    iget-object v0, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/ads/AdView;
+    iget-object v0, p0, Lcom/without/universe/ad/providers/AdmobAd;->ad:Lcom/google/aads/AdView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/google/ads/AdView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/google/aads/AdView;->setVisibility(I)V
 
     .line 62
     return-void

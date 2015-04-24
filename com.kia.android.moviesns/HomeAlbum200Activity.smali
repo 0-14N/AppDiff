@@ -314,7 +314,7 @@
     .registers 1
 
     .prologue
-    .line 1862
+    .line 1863
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->postComment()V
 
     return-void
@@ -354,7 +354,7 @@
     .registers 2
 
     .prologue
-    .line 1960
+    .line 1961
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->async_paramsMap:Ljava/util/Map;
 
     return-object v0
@@ -968,10 +968,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1793
+    .line 1794
     const-string v0, ""
 
-    .line 1794
+    .line 1795
     .local v0, "newUrl":Ljava/lang/String;
     iget-object v3, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->mediaUriString:Ljava/lang/String;
 
@@ -981,13 +981,13 @@
 
     move-result-object v1
 
-    .line 1795
+    .line 1796
     .local v1, "stringArray":[Ljava/lang/String;
     array-length v3, v1
 
     if-eqz v3, :cond_30
 
-    .line 1798
+    .line 1799
     iget-object v3, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->mediaUuid:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
@@ -996,14 +996,14 @@
 
     if-nez v3, :cond_30
 
-    .line 1799
+    .line 1800
     array-length v3, v1
 
     add-int/lit8 v3, v3, -0x1
 
     aget-object v2, v1, v3
 
-    .line 1800
+    .line 1801
     .local v2, "temp":Ljava/lang/String;
     const-string v3, "http://www.kiamotion.com/?mediaUrl=%s"
 
@@ -1027,7 +1027,7 @@
 
     move-result-object v0
 
-    .line 1803
+    .line 1804
     .end local v2    # "temp":Ljava/lang/String;
     :cond_30
     return-object v0
@@ -1695,19 +1695,19 @@
     .registers 2
 
     .prologue
-    .line 1807
+    .line 1808
     iget v0, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->pageNo:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->pageNo:I
 
-    .line 1808
+    .line 1809
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->getCommentData(Z)V
 
-    .line 1809
+    .line 1810
     return-void
 .end method
 
@@ -1717,7 +1717,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1863
+    .line 1864
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     invoke-virtual {v4}, Lcom/kia/android/moviesns/ApplicationImpl;->getUserManager()Lcom/kia/android/moviesns/UserManager;
@@ -1730,12 +1730,12 @@
 
     if-eqz v4, :cond_e
 
-    .line 1911
+    .line 1912
     :cond_d
     :goto_d
     return-void
 
-    .line 1866
+    .line 1867
     :cond_e
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->editComment:Landroid/widget/EditText;
 
@@ -1749,7 +1749,7 @@
 
     if-lez v4, :cond_d
 
-    .line 1869
+    .line 1870
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->editComment:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -1776,7 +1776,7 @@
 
     if-eqz v4, :cond_40
 
-    .line 1870
+    .line 1871
     const v4, 0x7f080044
 
     new-instance v5, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$41;
@@ -1787,7 +1787,7 @@
 
     goto :goto_d
 
-    .line 1882
+    .line 1883
     :cond_40
     const-string v4, "input_method"
 
@@ -1797,7 +1797,7 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 1883
+    .line 1884
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->editComment:Landroid/widget/EditText;
 
@@ -1807,12 +1807,12 @@
 
     invoke-virtual {v0, v4, v6}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 1885
+    .line 1886
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 1886
+    .line 1887
     .local v2, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v4, ":mediaId"
 
@@ -1820,21 +1820,21 @@
 
     invoke-interface {v2, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1887
+    .line 1888
     const-string v4, "UUID"
 
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->myUuid:Ljava/lang/String;
 
     invoke-interface {v2, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1888
+    .line 1889
     const-string v4, "NICKNAME"
 
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->myName:Ljava/lang/String;
 
     invoke-interface {v2, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1889
+    .line 1890
     const-string v4, "COMMENT"
 
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->editComment:Landroid/widget/EditText;
@@ -1849,7 +1849,7 @@
 
     invoke-interface {v2, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1890
+    .line 1891
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     invoke-virtual {v4}, Lcom/kia/android/moviesns/ApplicationImpl;->getUserManager()Lcom/kia/android/moviesns/UserManager;
@@ -1862,7 +1862,7 @@
 
     if-eqz v4, :cond_b0
 
-    .line 1891
+    .line 1892
     const-string v4, "PROFILE_IMAGE_URL"
 
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
@@ -1881,14 +1881,14 @@
 
     invoke-interface {v2, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1907
+    .line 1908
     :cond_99
     :goto_99
     invoke-static {v2}, Lcom/kia/android/moviesns/util/Utils;->getJsonObjectFromMap(Ljava/util/Map;)Lorg/json/JSONObject;
 
     move-result-object v1
 
-    .line 1908
+    .line 1909
     .local v1, "params":Lorg/json/JSONObject;
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->mediaId:Ljava/lang/String;
 
@@ -1898,7 +1898,7 @@
 
     invoke-static {v4, p0, v1, v5}, Lcom/kia/android/moviesns/net/api/ApiClient;->getDetailMovieCommentReg(Ljava/lang/String;Landroid/content/Context;Lorg/json/JSONObject;Lcom/kia/android/moviesns/net/api/ApiResponseHandler;)V
 
-    .line 1910
+    .line 1911
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->editComment:Landroid/widget/EditText;
 
     const-string v5, ""
@@ -1907,7 +1907,7 @@
 
     goto/16 :goto_d
 
-    .line 1892
+    .line 1893
     .end local v1    # "params":Lorg/json/JSONObject;
     :cond_b0
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
@@ -1922,10 +1922,10 @@
 
     if-eqz v4, :cond_c8
 
-    .line 1893
+    .line 1894
     invoke-direct {p0, v2}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->postCommentImageFromTwitter(Ljava/util/Map;)V
 
-    .line 1894
+    .line 1895
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->editComment:Landroid/widget/EditText;
 
     const-string v5, ""
@@ -1934,7 +1934,7 @@
 
     goto/16 :goto_d
 
-    .line 1896
+    .line 1897
     :cond_c8
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
@@ -1948,10 +1948,10 @@
 
     if-eqz v4, :cond_e0
 
-    .line 1897
+    .line 1898
     invoke-direct {p0, v2}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->postCommentImageFromWeibo(Ljava/util/Map;)V
 
-    .line 1898
+    .line 1899
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->editComment:Landroid/widget/EditText;
 
     const-string v5, ""
@@ -1960,7 +1960,7 @@
 
     goto/16 :goto_d
 
-    .line 1900
+    .line 1901
     :cond_e0
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
@@ -1974,10 +1974,10 @@
 
     if-eqz v4, :cond_99
 
-    .line 1901
+    .line 1902
     const-string v3, "http://graph.facebook.com/"
 
-    .line 1902
+    .line 1903
     .local v3, "profileURL":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2005,7 +2005,7 @@
 
     move-result-object v3
 
-    .line 1903
+    .line 1904
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -2024,7 +2024,7 @@
 
     move-result-object v3
 
-    .line 1904
+    .line 1905
     const-string v4, "PROFILE_IMAGE_URL"
 
     invoke-interface {v2, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -2046,29 +2046,29 @@
     .end annotation
 
     .prologue
-    .line 1914
+    .line 1915
     .local p1, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     new-instance v3, Ltwitter4j/conf/ConfigurationBuilder;
 
     invoke-direct {v3}, Ltwitter4j/conf/ConfigurationBuilder;-><init>()V
 
-    .line 1915
+    .line 1916
     .local v3, "cb":Ltwitter4j/conf/ConfigurationBuilder;
     const/4 v9, 0x1
 
     invoke-virtual {v3, v9}, Ltwitter4j/conf/ConfigurationBuilder;->setDebugEnabled(Z)Ltwitter4j/conf/ConfigurationBuilder;
 
-    .line 1916
+    .line 1917
     const-string v9, "JKLvcXctibycpBsqwyE8Q"
 
     invoke-virtual {v3, v9}, Ltwitter4j/conf/ConfigurationBuilder;->setOAuthConsumerKey(Ljava/lang/String;)Ltwitter4j/conf/ConfigurationBuilder;
 
-    .line 1917
+    .line 1918
     const-string v9, "1yNzTH8LRVJ1bprJCNm9kZnnnWYWZCv21o9t3vDaM"
 
     invoke-virtual {v3, v9}, Ltwitter4j/conf/ConfigurationBuilder;->setOAuthConsumerSecret(Ljava/lang/String;)Ltwitter4j/conf/ConfigurationBuilder;
 
-    .line 1918
+    .line 1919
     new-instance v4, Ltwitter4j/AsyncTwitterFactory;
 
     invoke-virtual {v3}, Ltwitter4j/conf/ConfigurationBuilder;->build()Ltwitter4j/conf/Configuration;
@@ -2077,7 +2077,7 @@
 
     invoke-direct {v4, v9}, Ltwitter4j/AsyncTwitterFactory;-><init>(Ltwitter4j/conf/Configuration;)V
 
-    .line 1919
+    .line 1920
     .local v4, "factory":Ltwitter4j/AsyncTwitterFactory;
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
@@ -2089,7 +2089,7 @@
 
     move-result-object v1
 
-    .line 1920
+    .line 1921
     .local v1, "accessToken":Ljava/lang/String;
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
@@ -2101,7 +2101,7 @@
 
     move-result-object v0
 
-    .line 1921
+    .line 1922
     .local v0, "accessSecretToken":Ljava/lang/String;
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
@@ -2117,32 +2117,32 @@
 
     move-result-wide v7
 
-    .line 1922
+    .line 1923
     .local v7, "userID":J
     new-instance v6, Ltwitter4j/auth/AccessToken;
 
     invoke-direct {v6, v1, v0, v7, v8}, Ltwitter4j/auth/AccessToken;-><init>(Ljava/lang/String;Ljava/lang/String;J)V
 
-    .line 1923
+    .line 1924
     .local v6, "token":Ltwitter4j/auth/AccessToken;
     invoke-virtual {v4, v6}, Ltwitter4j/AsyncTwitterFactory;->getInstance(Ltwitter4j/auth/AccessToken;)Ltwitter4j/AsyncTwitter;
 
     move-result-object v2
 
-    .line 1924
+    .line 1925
     .local v2, "asyncTwitter":Ltwitter4j/AsyncTwitter;
     new-instance v5, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$42;
 
     invoke-direct {v5, p0, p1}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$42;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;Ljava/util/Map;)V
 
-    .line 1956
+    .line 1957
     .local v5, "listener":Ltwitter4j/TwitterListener;
     invoke-interface {v2, v5}, Ltwitter4j/AsyncTwitter;->addListener(Ltwitter4j/TwitterListener;)V
 
-    .line 1957
+    .line 1958
     invoke-interface {v2, v7, v8}, Ltwitter4j/AsyncTwitter;->showUser(J)V
 
-    .line 1958
+    .line 1959
     return-void
 .end method
 
@@ -2160,11 +2160,11 @@
     .end annotation
 
     .prologue
-    .line 1967
+    .line 1968
     .local p1, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     iput-object p1, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->async_paramsMap:Ljava/util/Map;
 
-    .line 1968
+    .line 1969
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$43;
@@ -2173,10 +2173,10 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 1974
+    .line 1975
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 1975
+    .line 1976
     return-void
 .end method
 
@@ -2185,7 +2185,7 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1729
+    .line 1730
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -2212,7 +2212,7 @@
 
     move-result-object p1
 
-    .line 1732
+    .line 1733
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -2221,7 +2221,7 @@
 
     move-result-object v0
 
-    .line 1735
+    .line 1736
     .local v0, "kakaoLink":Lcom/kia/android/moviesns/util/KakaoLink;
     invoke-virtual {v0}, Lcom/kia/android/moviesns/util/KakaoLink;->isAvailableIntent()Z
 
@@ -2229,20 +2229,20 @@
 
     if-nez v1, :cond_42
 
-    .line 1736
+    .line 1737
     new-instance v9, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
 
     invoke-direct {v9, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1737
+    .line 1738
     .local v9, "intent":Landroid/content/Intent;
     const-string v1, "android.intent.category.DEFAULT"
 
     invoke-virtual {v9, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1738
+    .line 1739
     const-string v1, "market://details?id=com.kakao.talk"
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -2251,25 +2251,25 @@
 
     invoke-virtual {v9, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 1739
+    .line 1740
     invoke-virtual {p0, v9}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1763
+    .line 1764
     .end local v9    # "intent":Landroid/content/Intent;
     :goto_41
     return-void
 
-    .line 1754
+    .line 1755
     :cond_42
     :try_start_42
     const-string v2, "http://kiamotion.com"
 
-    .line 1756
+    .line 1757
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1757
+    .line 1758
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -2286,28 +2286,28 @@
 
     iget-object v5, v1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
-    .line 1758
+    .line 1759
     const-string v6, "KIAMotion"
 
-    .line 1759
+    .line 1760
     const-string v7, "UTF-8"
 
     move-object v1, p0
 
     move-object v3, p1
 
-    .line 1753
+    .line 1754
     invoke-virtual/range {v0 .. v7}, Lcom/kia/android/moviesns/util/KakaoLink;->openKakaoLink(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_60
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_42 .. :try_end_60} :catch_61
 
     goto :goto_41
 
-    .line 1760
+    .line 1761
     :catch_61
     move-exception v8
 
-    .line 1761
+    .line 1762
     .local v8, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v8}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
@@ -2319,7 +2319,7 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1766
+    .line 1767
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -2346,7 +2346,7 @@
 
     move-result-object p1
 
-    .line 1768
+    .line 1769
     :try_start_1b
     const-string v2, "UTF-8"
 
@@ -2356,7 +2356,7 @@
 
     move-result-object p1
 
-    .line 1775
+    .line 1776
     :goto_21
     :try_start_21
     new-instance v1, Landroid/content/Intent;
@@ -2383,33 +2383,33 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 1776
+    .line 1777
     .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {p0, v1}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->startActivity(Landroid/content/Intent;)V
     :try_end_3e
     .catch Landroid/content/ActivityNotFoundException; {:try_start_21 .. :try_end_3e} :catch_44
 
-    .line 1782
+    .line 1783
     :goto_3e
     return-void
 
-    .line 1769
+    .line 1770
     .end local v1    # "intent":Landroid/content/Intent;
     :catch_3f
     move-exception v0
 
-    .line 1770
+    .line 1771
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
     goto :goto_21
 
-    .line 1777
+    .line 1778
     .end local v0    # "e":Ljava/io/UnsupportedEncodingException;
     :catch_44
     move-exception v0
 
-    .line 1778
+    .line 1779
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     new-instance v1, Landroid/content/Intent;
 
@@ -2435,11 +2435,11 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 1779
+    .line 1780
     .restart local v1    # "intent":Landroid/content/Intent;
     invoke-virtual {p0, v1}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1780
+    .line 1781
     invoke-virtual {v0}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
 
     goto :goto_3e
@@ -2450,7 +2450,7 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1785
+    .line 1786
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -2477,28 +2477,28 @@
 
     move-result-object p1
 
-    .line 1786
+    .line 1787
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1787
+    .line 1788
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "sms_body"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1788
+    .line 1789
     const-string v1, "vnd.android-dir/mms-sms"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1789
+    .line 1790
     invoke-virtual {p0, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1790
+    .line 1791
     return-void
 .end method
 
@@ -3485,17 +3485,17 @@
 
     const/4 v4, 0x0
 
-    .line 1818
+    .line 1819
     if-eqz p1, :cond_42
 
     move v3, v4
 
-    .line 1820
+    .line 1821
     .local v3, "visibility":I
     :goto_7
     iput-boolean p1, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->isSelectedKiaComment:Z
 
-    .line 1822
+    .line 1823
     const-string v6, "input_method"
 
     invoke-virtual {p0, v6}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3504,7 +3504,7 @@
 
     check-cast v2, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 1823
+    .line 1824
     .local v2, "imm":Landroid/view/inputmethod/InputMethodManager;
     iget-object v6, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->editComment:Landroid/widget/EditText;
 
@@ -3514,33 +3514,33 @@
 
     invoke-virtual {v2, v6, v4}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 1825
+    .line 1826
     if-eqz p1, :cond_44
 
-    .line 1826
+    .line 1827
     iput-boolean v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->waitResultFB:Z
 
-    .line 1827
+    .line 1828
     iput-boolean v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->waitResultTW:Z
 
-    .line 1828
+    .line 1829
     iput-boolean v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->waitResultWB:Z
 
-    .line 1830
+    .line 1831
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->layoutComment:Landroid/view/View;
 
     invoke-virtual {v5, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1845
+    .line 1846
     :goto_27
     if-eqz p1, :cond_4a
 
-    .line 1846
+    .line 1847
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1847
+    .line 1848
     .local v0, "commentList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/HomeAlbum200CommentDto;>;"
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->dataMap:Ljava/util/HashMap;
 
@@ -3550,20 +3550,20 @@
 
     invoke-virtual {v5, v6, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1848
+    .line 1849
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->adapter:Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$DetailAdapter;
 
     invoke-virtual {v5}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$DetailAdapter;->notifyDataSetChanged()V
 
-    .line 1855
+    .line 1856
     .end local v0    # "commentList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/HomeAlbum200CommentDto;>;"
     :goto_3c
     iput v4, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->pageNo:I
 
-    .line 1856
+    .line 1857
     invoke-direct {p0, v4}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->getCommentData(Z)V
 
-    .line 1857
+    .line 1858
     return-void
 
     .end local v2    # "imm":Landroid/view/inputmethod/InputMethodManager;
@@ -3571,10 +3571,10 @@
     :cond_42
     move v3, v5
 
-    .line 1818
+    .line 1819
     goto :goto_7
 
-    .line 1837
+    .line 1838
     .restart local v2    # "imm":Landroid/view/inputmethod/InputMethodManager;
     .restart local v3    # "visibility":I
     :cond_44
@@ -3584,13 +3584,13 @@
 
     goto :goto_27
 
-    .line 1850
+    .line 1851
     :cond_4a
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1851
+    .line 1852
     .local v1, "commentList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/HomeAlbum200SNSCommentDto;>;"
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->dataMap:Ljava/util/HashMap;
 
@@ -3600,7 +3600,7 @@
 
     invoke-virtual {v5, v6, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1852
+    .line 1853
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->adapter:Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$DetailAdapter;
 
     invoke-virtual {v5}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$DetailAdapter;->notifyDataSetChanged()V
@@ -3736,7 +3736,7 @@
 
     sparse-switch v2, :sswitch_data_504
 
-    .line 1726
+    .line 1727
     .end local v16    # "movieData":Lcom/kia/android/moviesns/dto/HomeAlbum200MovieDto;
     :cond_1d
     :goto_1d
@@ -3782,7 +3782,7 @@
 
     goto :goto_1d
 
-    .line 1722
+    .line 1723
     .end local v16    # "movieData":Lcom/kia/android/moviesns/dto/HomeAlbum200MovieDto;
     :catch_43
     move-exception v2
@@ -4523,9 +4523,9 @@
 
     goto/16 :goto_1d
 
-    .line 1481
+    .line 1482
     :cond_2eb
-    const-string v2, "\uc2e0\uace0\ud558\uae30"
+    const v2, 0x7f080093
 
     new-instance v4, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$28;
 
@@ -4535,12 +4535,12 @@
 
     move-object/from16 v0, p0
 
-    invoke-static {v0, v2, v4}, Lcom/kia/android/moviesns/util/Utils;->showReportDialog(Landroid/content/Context;Ljava/lang/String;Lcom/kia/android/moviesns/ui/dialog/CustomReportDialog$OnCustomReportDialogListener;)V
+    invoke-static {v0, v2, v4}, Lcom/kia/android/moviesns/util/Utils;->showReportDialog(Landroid/content/Context;ILcom/kia/android/moviesns/ui/dialog/CustomReportDialog$OnCustomReportDialogListener;)V
 
     goto/16 :goto_1d
 
-    .line 1522
-    :sswitch_2fb
+    .line 1523
+    :sswitch_2fc
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
@@ -4553,9 +4553,9 @@
 
     move-result v2
 
-    if-eqz v2, :cond_321
+    if-eqz v2, :cond_322
 
-    .line 1523
+    .line 1524
     const v2, 0x7f080058
 
     new-instance v4, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$29;
@@ -4564,29 +4564,29 @@
 
     invoke-direct {v4, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$29;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
 
-    .line 1531
+    .line 1532
     new-instance v5, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$30;
 
     move-object/from16 v0, p0
 
     invoke-direct {v5, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$30;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
 
-    .line 1523
+    .line 1524
     move-object/from16 v0, p0
 
     invoke-static {v0, v2, v4, v5}, Lcom/kia/android/moviesns/util/Utils;->sysAlertWithAsk(Landroid/content/Context;ILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_1d
 
-    .line 1538
-    :cond_321
+    .line 1539
+    :cond_322
     invoke-direct/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->isMyMovie()Z
 
     move-result v2
 
-    if-nez v2, :cond_35f
+    if-nez v2, :cond_360
 
-    .line 1539
+    .line 1540
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->btnLike:Landroid/widget/Button;
@@ -4595,9 +4595,9 @@
 
     move-result v2
 
-    if-nez v2, :cond_347
+    if-nez v2, :cond_348
 
-    .line 1540
+    .line 1541
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->myUuid:Ljava/lang/String;
@@ -4618,8 +4618,8 @@
 
     goto/16 :goto_1d
 
-    .line 1542
-    :cond_347
+    .line 1543
+    :cond_348
     const v2, 0x7f080047
 
     new-instance v4, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$31;
@@ -4628,22 +4628,22 @@
 
     invoke-direct {v4, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$31;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
 
-    .line 1548
+    .line 1549
     new-instance v5, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$32;
 
     move-object/from16 v0, p0
 
     invoke-direct {v5, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$32;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
 
-    .line 1542
+    .line 1543
     move-object/from16 v0, p0
 
     invoke-static {v0, v2, v4, v5}, Lcom/kia/android/moviesns/util/Utils;->sysAlertWithAsk(Landroid/content/Context;ILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_1d
 
-    .line 1556
-    :cond_35f
+    .line 1557
+    :cond_360
     const v2, 0x7f08004a
 
     new-instance v4, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$33;
@@ -4658,8 +4658,8 @@
 
     goto/16 :goto_1d
 
-    .line 1570
-    :sswitch_370
+    .line 1571
+    :sswitch_371
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->mediaUriString:Ljava/lang/String;
@@ -4670,7 +4670,7 @@
 
     move-result-object v23
 
-    .line 1571
+    .line 1572
     .local v23, "stringArray":[Ljava/lang/String;
     move-object/from16 v0, v23
 
@@ -4678,7 +4678,7 @@
 
     if-eqz v2, :cond_1d
 
-    .line 1574
+    .line 1575
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->mediaUuid:Ljava/lang/String;
@@ -4687,9 +4687,9 @@
 
     move-result v2
 
-    if-nez v2, :cond_3e1
+    if-nez v2, :cond_3e2
 
-    .line 1575
+    .line 1576
     move-object/from16 v0, v23
 
     array-length v2, v0
@@ -4698,7 +4698,7 @@
 
     aget-object v24, v23, v2
 
-    .line 1576
+    .line 1577
     .local v24, "temp":Ljava/lang/String;
     const-string v2, "http://www.kiamotion.com/?mediaUrl=%s"
 
@@ -4728,19 +4728,19 @@
 
     move-result-object v17
 
-    .line 1577
+    .line 1578
     .local v17, "newUrl":Ljava/lang/String;
     sget v22, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 1578
+    .line 1579
     .local v22, "sdk":I
     const/16 v2, 0xb
 
     move/from16 v0, v22
 
-    if-ge v0, v2, :cond_3cb
+    if-ge v0, v2, :cond_3cc
 
-    .line 1580
+    .line 1581
     new-instance v2, Lcom/kia/android/moviesns/util/NexusOneClipBoardManager;
 
     move-object/from16 v0, p0
@@ -4749,8 +4749,8 @@
 
     invoke-direct {v2, v0, v1}, Lcom/kia/android/moviesns/util/NexusOneClipBoardManager;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 1587
-    :goto_3ba
+    .line 1588
+    :goto_3bb
     const v2, 0x7f080048
 
     new-instance v4, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$34;
@@ -4765,8 +4765,8 @@
 
     goto/16 :goto_1d
 
-    .line 1582
-    :cond_3cb
+    .line 1583
+    :cond_3cc
     const-string v2, "clipboard"
 
     move-object/from16 v0, p0
@@ -4777,7 +4777,7 @@
 
     check-cast v12, Landroid/content/ClipboardManager;
 
-    .line 1583
+    .line 1584
     .local v12, "clipboard":Landroid/content/ClipboardManager;
     const-string v2, "KIA Motion"
 
@@ -4787,19 +4787,19 @@
 
     move-result-object v11
 
-    .line 1584
+    .line 1585
     .local v11, "clip":Landroid/content/ClipData;
     invoke-virtual {v12, v11}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
-    goto :goto_3ba
+    goto :goto_3bb
 
-    .line 1595
+    .line 1596
     .end local v11    # "clip":Landroid/content/ClipData;
     .end local v12    # "clipboard":Landroid/content/ClipboardManager;
     .end local v17    # "newUrl":Ljava/lang/String;
     .end local v22    # "sdk":I
     .end local v24    # "temp":Ljava/lang/String;
-    :cond_3e1
+    :cond_3e2
     const v2, 0x7f080058
 
     new-instance v4, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$35;
@@ -4808,23 +4808,23 @@
 
     invoke-direct {v4, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$35;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
 
-    .line 1602
+    .line 1603
     new-instance v5, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$36;
 
     move-object/from16 v0, p0
 
     invoke-direct {v5, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$36;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
 
-    .line 1595
+    .line 1596
     move-object/from16 v0, p0
 
     invoke-static {v0, v2, v4, v5}, Lcom/kia/android/moviesns/util/Utils;->sysAlertWithAsk(Landroid/content/Context;ILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_1d
 
-    .line 1619
+    .line 1620
     .end local v23    # "stringArray":[Ljava/lang/String;
-    :sswitch_3f9
+    :sswitch_3fa
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
@@ -4837,9 +4837,9 @@
 
     move-result v2
 
-    if-eqz v2, :cond_41f
+    if-eqz v2, :cond_420
 
-    .line 1620
+    .line 1621
     const v2, 0x7f080058
 
     new-instance v4, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$37;
@@ -4848,42 +4848,42 @@
 
     invoke-direct {v4, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$37;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
 
-    .line 1628
+    .line 1629
     new-instance v5, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$38;
 
     move-object/from16 v0, p0
 
     invoke-direct {v5, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$38;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
 
-    .line 1620
+    .line 1621
     move-object/from16 v0, p0
 
     invoke-static {v0, v2, v4, v5}, Lcom/kia/android/moviesns/util/Utils;->sysAlertWithAsk(Landroid/content/Context;ILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_1d
 
-    .line 1636
-    :cond_41f
+    .line 1637
+    :cond_420
     invoke-direct/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->isMyMovie()Z
 
     move-result v2
 
-    if-eqz v2, :cond_4cd
+    if-eqz v2, :cond_4ce
 
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->downloadMedia:Z
 
-    if-nez v2, :cond_4cd
+    if-nez v2, :cond_4ce
 
-    .line 1638
+    .line 1639
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->downloadMedia:Z
 
-    .line 1641
+    .line 1642
     const-string v2, "download"
 
     move-object/from16 v0, p0
@@ -4894,11 +4894,11 @@
 
     check-cast v14, Landroid/app/DownloadManager;
 
-    .line 1642
+    .line 1643
     .local v14, "downloadManager":Landroid/app/DownloadManager;
     if-eqz v14, :cond_1d
 
-    .line 1644
+    .line 1645
     new-instance v21, Landroid/app/DownloadManager$Request;
 
     move-object/from16 v0, p0
@@ -4909,7 +4909,7 @@
 
     invoke-direct {v0, v2}, Landroid/app/DownloadManager$Request;-><init>(Landroid/net/Uri;)V
 
-    .line 1645
+    .line 1646
     .local v21, "request":Landroid/app/DownloadManager$Request;
     const-string v2, "Kia Download"
 
@@ -4917,25 +4917,25 @@
 
     invoke-virtual {v0, v2}, Landroid/app/DownloadManager$Request;->setDescription(Ljava/lang/CharSequence;)Landroid/app/DownloadManager$Request;
 
-    .line 1646
+    .line 1647
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0xb
 
-    if-lt v2, v4, :cond_4c6
+    if-lt v2, v4, :cond_4c7
 
-    .line 1647
+    .line 1648
     const/4 v2, 0x1
 
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v2}, Landroid/app/DownloadManager$Request;->setNotificationVisibility(I)Landroid/app/DownloadManager$Request;
 
-    .line 1648
+    .line 1649
     invoke-virtual/range {v21 .. v21}, Landroid/app/DownloadManager$Request;->allowScanningByMediaScanner()V
 
-    .line 1653
-    :goto_45d
+    .line 1654
+    :goto_45e
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->mediaUri:Landroid/net/Uri;
@@ -4944,22 +4944,22 @@
 
     move-result-object v19
 
-    .line 1654
+    .line 1655
     .local v19, "pathList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface/range {v19 .. v19}, Ljava/util/List;->size()I
 
     move-result v2
 
-    if-eqz v2, :cond_493
+    if-eqz v2, :cond_494
 
-    .line 1655
+    .line 1656
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     invoke-virtual {v2}, Lcom/kia/android/moviesns/ApplicationImpl;->getStorePath()Ljava/lang/String;
 
-    .line 1656
+    .line 1657
     const-string v2, "/%s"
 
     const/4 v4, 0x1
@@ -4986,7 +4986,7 @@
 
     move-result-object v18
 
-    .line 1657
+    .line 1658
     .local v18, "path":Ljava/lang/String;
     const-string v2, "KIAMotion"
 
@@ -4996,16 +4996,16 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/app/DownloadManager$Request;->setDestinationInExternalPublicDir(Ljava/lang/String;Ljava/lang/String;)Landroid/app/DownloadManager$Request;
 
-    .line 1660
+    .line 1661
     .end local v18    # "path":Ljava/lang/String;
-    :cond_493
+    :cond_494
     const/4 v2, 0x1
 
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v2}, Landroid/app/DownloadManager$Request;->setVisibleInDownloadsUi(Z)Landroid/app/DownloadManager$Request;
 
-    .line 1661
+    .line 1662
     const-string v2, "Start Download..."
 
     const/4 v4, 0x0
@@ -5018,12 +5018,12 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
-    .line 1662
+    .line 1663
     move-object/from16 v0, v21
 
     invoke-virtual {v14, v0}, Landroid/app/DownloadManager;->enqueue(Landroid/app/DownloadManager$Request;)J
 
-    .line 1663
+    .line 1664
     invoke-virtual/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v2
@@ -5032,7 +5032,7 @@
 
     invoke-virtual {v2, v4}, Landroid/view/Window;->clearFlags(I)V
 
-    .line 1664
+    .line 1665
     new-instance v2, Ljava/util/Timer;
 
     invoke-direct {v2}, Ljava/util/Timer;-><init>()V
@@ -5043,36 +5043,36 @@
 
     invoke-direct {v4, v0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$39;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
 
-    .line 1674
+    .line 1675
     const-wide/16 v5, 0x3e8
 
-    .line 1664
+    .line 1665
     invoke-virtual {v2, v4, v5, v6}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
     goto/16 :goto_1d
 
-    .line 1650
+    .line 1651
     .end local v19    # "pathList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    :cond_4c6
+    :cond_4c7
     const/4 v2, 0x1
 
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v2}, Landroid/app/DownloadManager$Request;->setShowRunningNotification(Z)Landroid/app/DownloadManager$Request;
 
-    goto :goto_45d
+    goto :goto_45e
 
-    .line 1690
+    .line 1691
     .end local v14    # "downloadManager":Landroid/app/DownloadManager;
     .end local v21    # "request":Landroid/app/DownloadManager$Request;
-    :cond_4cd
+    :cond_4ce
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->downloadMedia:Z
 
     if-nez v2, :cond_1d
 
-    .line 1691
+    .line 1692
     const v2, 0x7f08004c
 
     new-instance v4, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$40;
@@ -5087,14 +5087,14 @@
 
     goto/16 :goto_1d
 
-    .line 1702
-    :sswitch_4e4
+    .line 1703
+    :sswitch_4e5
     invoke-virtual/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->onBackPressed()V
 
     goto/16 :goto_1d
 
-    .line 1706
-    :sswitch_4e9
+    .line 1707
+    :sswitch_4ea
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
@@ -5103,8 +5103,8 @@
 
     goto/16 :goto_1d
 
-    .line 1710
-    :sswitch_4f1
+    .line 1711
+    :sswitch_4f2
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -5113,29 +5113,27 @@
 
     goto/16 :goto_1d
 
-    .line 1714
-    :sswitch_4f9
+    .line 1715
+    :sswitch_4fa
     invoke-direct/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->postComment()V
 
     goto/16 :goto_1d
 
-    .line 1718
-    :sswitch_4fe
+    .line 1719
+    :sswitch_4ff
     invoke-direct/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->moreComment()V
-    :try_end_501
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_501} :catch_43
+    :try_end_502
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_502} :catch_43
 
     goto/16 :goto_1d
 
     .line 1178
-    nop
-
     :sswitch_data_504
     .sparse-switch
-        0x7f05001b -> :sswitch_4f9
+        0x7f05001b -> :sswitch_4fa
         0x7f05003d -> :sswitch_242
-        0x7f0500bc -> :sswitch_2fb
-        0x7f0500f6 -> :sswitch_4fe
+        0x7f0500bc -> :sswitch_2fc
+        0x7f0500f6 -> :sswitch_4ff
         0x7f050112 -> :sswitch_2c5
         0x7f050113 -> :sswitch_270
         0x7f050115 -> :sswitch_237
@@ -5144,11 +5142,11 @@
         0x7f050118 -> :sswitch_1ce
         0x7f050119 -> :sswitch_1e
         0x7f05011a -> :sswitch_f4
-        0x7f05011b -> :sswitch_370
-        0x7f05011c -> :sswitch_3f9
-        0x7f05011f -> :sswitch_4e9
-        0x7f050120 -> :sswitch_4f1
-        0x7f05015f -> :sswitch_4e4
+        0x7f05011b -> :sswitch_371
+        0x7f05011c -> :sswitch_3fa
+        0x7f05011f -> :sswitch_4ea
+        0x7f050120 -> :sswitch_4f2
+        0x7f05015f -> :sswitch_4e5
     .end sparse-switch
 .end method
 
@@ -6846,13 +6844,13 @@
     .registers 7
 
     .prologue
-    .line 1984
+    .line 1985
     :try_start_0
     new-instance v2, Lweibo4j/Users;
 
     invoke-direct {v2}, Lweibo4j/Users;-><init>()V
 
-    .line 1985
+    .line 1986
     .local v2, "users":Lweibo4j/Users;
     iget-object v3, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
@@ -6866,7 +6864,7 @@
 
     invoke-virtual {v2, v3}, Lweibo4j/Users;->setToken(Ljava/lang/String;)V
 
-    .line 1986
+    .line 1987
     iget-object v3, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     invoke-virtual {v3}, Lcom/kia/android/moviesns/ApplicationImpl;->getSharedPreferencesManager()Lcom/kia/android/moviesns/SharedPreferencesManager;
@@ -6881,7 +6879,7 @@
 
     move-result-object v1
 
-    .line 1988
+    .line 1989
     .local v1, "user":Lweibo4j/User;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -6907,7 +6905,7 @@
 
     invoke-static {v3, v4}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 1989
+    .line 1990
     iget-object v3, p0, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->async_paramsMap:Ljava/util/Map;
 
     const-string v4, "PROFILE_IMAGE_URL"
@@ -6918,7 +6916,7 @@
 
     invoke-interface {v3, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1990
+    .line 1991
     new-instance v3, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$44;
 
     invoke-direct {v3, p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$44;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
@@ -6927,17 +6925,17 @@
     :try_end_4d
     .catch Lweibo4j/WeiboException; {:try_start_0 .. :try_end_4d} :catch_4e
 
-    .line 2012
+    .line 2013
     .end local v1    # "user":Lweibo4j/User;
     .end local v2    # "users":Lweibo4j/Users;
     :goto_4d
     return-void
 
-    .line 1999
+    .line 2000
     :catch_4e
     move-exception v0
 
-    .line 2000
+    .line 2001
     .local v0, "e":Lweibo4j/WeiboException;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -6959,14 +6957,14 @@
 
     invoke-static {v3, v4}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 2001
+    .line 2002
     new-instance v3, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$45;
 
     invoke-direct {v3, p0}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity$45;-><init>(Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;)V
 
     invoke-virtual {p0, v3}, Lcom/kia/android/moviesns/ui/activity/HomeAlbum200Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2010
+    .line 2011
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3

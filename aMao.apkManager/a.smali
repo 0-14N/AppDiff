@@ -5,36 +5,38 @@
 # static fields
 .field public static a:Z
 
-.field private static b:Z
+.field public static b:Z
 
 .field private static c:Z
 
-.field private static d:Landroid/app/Activity;
+.field private static d:Z
 
-.field private static final e:[Ljava/lang/String;
+.field private static e:Landroid/app/Activity;
 
-.field private static f:Landroid/os/Handler;
+.field private static final f:[Ljava/lang/String;
 
-.field private static g:Z
+.field private static g:Landroid/os/Handler;
+
+.field private static h:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .registers 4
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    const/4 v2, 0x0
+    sput-boolean v3, LaMao/a/a;->c:Z
 
-    sput-boolean v2, LaMao/a/a;->b:Z
-
-    sput-boolean v2, LaMao/a/a;->c:Z
+    sput-boolean v3, LaMao/a/a;->d:Z
 
     sput-boolean v3, LaMao/a/a;->a:Z
 
+    sput-boolean v3, LaMao/a/a;->b:Z
+
     const/4 v0, 0x0
 
-    sput-object v0, LaMao/a/a;->d:Landroid/app/Activity;
+    sput-object v0, LaMao/a/a;->e:Landroid/app/Activity;
 
     const/4 v0, 0x2
 
@@ -42,21 +44,23 @@
 
     const-string v1, "vip"
 
-    aput-object v1, v0, v2
-
-    const-string v1, "gfan_vip"
-
     aput-object v1, v0, v3
 
-    sput-object v0, LaMao/a/a;->e:[Ljava/lang/String;
+    const/4 v1, 0x1
+
+    const-string v2, "gfan_vip"
+
+    aput-object v2, v0, v1
+
+    sput-object v0, LaMao/a/a;->f:[Ljava/lang/String;
 
     new-instance v0, LaMao/a/b;
 
     invoke-direct {v0}, LaMao/a/b;-><init>()V
 
-    sput-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sput-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
-    sput-boolean v2, LaMao/a/a;->g:Z
+    sput-boolean v3, LaMao/a/a;->h:Z
 
     return-void
 .end method
@@ -66,7 +70,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object p1, LaMao/a/a;->d:Landroid/app/Activity;
+    sput-object p1, LaMao/a/a;->e:Landroid/app/Activity;
 
     sget-object v0, LaMao/manager/a;->a:Ljava/lang/Boolean;
 
@@ -127,7 +131,7 @@
 .method public static a()V
     .registers 3
 
-    sget-object v0, LaMao/a/a;->d:Landroid/app/Activity;
+    sget-object v0, LaMao/a/a;->e:Landroid/app/Activity;
 
     const-string v1, "appwall"
 
@@ -141,7 +145,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/umeng/a/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sget-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
     const/4 v1, 0x5
 
@@ -178,37 +182,10 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Landroid/widget/LinearLayout;)V
-    .registers 4
-
-    sget-boolean v0, LaMao/a/a;->c:Z
-
-    if-eqz v0, :cond_18
-
-    invoke-static {p0}, Lcom/waps/AppConnect;->getInstance(Landroid/content/Context;)Lcom/waps/AppConnect;
-
-    move-result-object v0
-
-    const v1, 0x7f080056
-
-    invoke-virtual {v0, v1}, Lcom/waps/AppConnect;->setAdForeColor(I)V
-
-    new-instance v0, Lcom/waps/MiniAdView;
-
-    invoke-direct {v0, p0, p1}, Lcom/waps/MiniAdView;-><init>(Landroid/content/Context;Landroid/widget/LinearLayout;)V
-
-    const/16 v1, 0xa
-
-    invoke-virtual {v0, v1}, Lcom/waps/MiniAdView;->DisplayAd(I)V
-
-    :cond_18
-    return-void
-.end method
-
 .method public static b()V
     .registers 2
 
-    sget-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sget-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
     const/16 v1, 0x8
 
@@ -226,7 +203,7 @@
 
     move-result-object v2
 
-    sget-object v1, LaMao/a/a;->e:[Ljava/lang/String;
+    sget-object v1, LaMao/a/a;->f:[Ljava/lang/String;
 
     array-length v3, v1
 
@@ -235,7 +212,7 @@
     :goto_9
     if-ge v1, v3, :cond_16
 
-    sget-object v4, LaMao/a/a;->e:[Ljava/lang/String;
+    sget-object v4, LaMao/a/a;->f:[Ljava/lang/String;
 
     aget-object v4, v4, v1
 
@@ -263,7 +240,7 @@
 
     const/4 v1, 0x1
 
-    sget-boolean v0, LaMao/a/a;->b:Z
+    sget-boolean v0, LaMao/a/a;->c:Z
 
     if-eqz v0, :cond_7
 
@@ -271,9 +248,9 @@
     return-void
 
     :cond_7
-    sput-boolean v1, LaMao/a/a;->b:Z
+    sput-boolean v1, LaMao/a/a;->c:Z
 
-    sget-object v3, LaMao/a/a;->d:Landroid/app/Activity;
+    sget-object v3, LaMao/a/a;->e:Landroid/app/Activity;
 
     const-string v0, "connectivity"
 
@@ -287,13 +264,13 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_e3
+    if-eqz v0, :cond_e7
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
 
     move-result v0
 
-    if-eqz v0, :cond_e3
+    if-eqz v0, :cond_e7
 
     const-string v0, "network is available"
 
@@ -304,7 +281,7 @@
     :goto_25
     if-eqz v0, :cond_c8
 
-    sget-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sget-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
     const/4 v3, 0x4
 
@@ -312,7 +289,7 @@
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    sget-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sget-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
     const/4 v3, 0x2
 
@@ -320,7 +297,7 @@
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    sget-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sget-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
     const/4 v3, 0x3
 
@@ -328,7 +305,7 @@
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    sget-object v0, LaMao/a/a;->d:Landroid/app/Activity;
+    sget-object v0, LaMao/a/a;->e:Landroid/app/Activity;
 
     invoke-static {v0}, LaMao/a/a;->b(Landroid/content/Context;)Z
 
@@ -336,7 +313,7 @@
 
     if-nez v0, :cond_c8
 
-    sget-object v3, LaMao/a/a;->d:Landroid/app/Activity;
+    sget-object v3, LaMao/a/a;->e:Landroid/app/Activity;
 
     const-string v0, "connectivity"
 
@@ -350,13 +327,13 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_107
+    if-eqz v0, :cond_10b
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
 
     move-result v4
 
-    if-eqz v4, :cond_107
+    if-eqz v4, :cond_10b
 
     const-string v0, "wifi is available"
 
@@ -393,7 +370,7 @@
     :goto_7f
     if-nez v0, :cond_99
 
-    sget-object v0, LaMao/a/a;->d:Landroid/app/Activity;
+    sget-object v0, LaMao/a/a;->e:Landroid/app/Activity;
 
     const-string v3, "wifi_only"
 
@@ -409,9 +386,9 @@
 
     if-eqz v0, :cond_99
 
-    sget-object v0, LaMao/a/a;->d:Landroid/app/Activity;
+    sget-object v0, LaMao/a/a;->e:Landroid/app/Activity;
 
-    invoke-static {}, LaMao/a/a;->h()Z
+    invoke-static {}, LaMao/a/a;->i()Z
 
     move-result v0
 
@@ -422,7 +399,7 @@
 
     invoke-static {v0}, LaMao/manager/a;->a(Ljava/lang/String;)V
 
-    sget-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sget-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
     const/4 v3, 0x6
 
@@ -430,13 +407,13 @@
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    sget-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sget-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
     const-wide/16 v3, 0x12c
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    sget-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sget-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
     const-wide/16 v3, 0x7d0
 
@@ -446,15 +423,15 @@
 
     if-eqz v0, :cond_c8
 
-    sget-object v0, LaMao/a/a;->d:Landroid/app/Activity;
+    sget-object v0, LaMao/a/a;->e:Landroid/app/Activity;
 
-    invoke-static {}, LaMao/a/a;->g()Z
+    invoke-static {}, LaMao/a/a;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_c8
 
-    sget-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sget-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
     const/4 v3, 0x7
 
@@ -463,15 +440,15 @@
     invoke-virtual {v0, v3, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     :cond_c8
-    sget-object v0, LaMao/a/a;->d:Landroid/app/Activity;
+    sget-object v0, LaMao/a/a;->e:Landroid/app/Activity;
 
-    invoke-static {}, LaMao/a/a;->g()Z
+    invoke-static {}, LaMao/a/a;->h()Z
 
     move-result v0
 
-    if-eqz v0, :cond_13c
+    if-eqz v0, :cond_140
 
-    sget-object v0, LaMao/a/a;->d:Landroid/app/Activity;
+    sget-object v0, LaMao/a/a;->e:Landroid/app/Activity;
 
     invoke-static {v0}, LaMao/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
 
@@ -483,16 +460,20 @@
 
     move-result v0
 
-    if-nez v0, :cond_13c
+    if-nez v0, :cond_140
+
+    sget-boolean v0, LaMao/a/a;->b:Z
+
+    if-eqz v0, :cond_140
 
     move v0, v1
 
-    :goto_df
+    :goto_e3
     sput-boolean v0, LaMao/a/a;->a:Z
 
     goto/16 :goto_6
 
-    :cond_e3
+    :cond_e7
     const-string v0, "network isn\'t available"
 
     invoke-static {v0}, LaMao/manager/a;->a(Ljava/lang/String;)V
@@ -527,7 +508,7 @@
 
     goto/16 :goto_25
 
-    :cond_107
+    :cond_10b
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "wifi is available:"
@@ -578,42 +559,50 @@
 
     goto/16 :goto_7f
 
-    :cond_13c
+    :cond_140
     move v0, v2
 
-    goto :goto_df
+    goto :goto_e3
 .end method
 
-.method static synthetic d()Landroid/app/Activity;
+.method public static d()V
     .registers 1
 
-    sget-object v0, LaMao/a/a;->d:Landroid/app/Activity;
+    sget-boolean v0, LaMao/a/a;->d:Z
+
+    return-void
+.end method
+
+.method static synthetic e()Landroid/app/Activity;
+    .registers 1
+
+    sget-object v0, LaMao/a/a;->e:Landroid/app/Activity;
 
     return-object v0
 .end method
 
-.method static synthetic e()Landroid/os/Handler;
+.method static synthetic f()Landroid/os/Handler;
     .registers 1
 
-    sget-object v0, LaMao/a/a;->f:Landroid/os/Handler;
+    sget-object v0, LaMao/a/a;->g:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic f()Z
+.method static synthetic g()Z
     .registers 1
 
     const/4 v0, 0x1
 
-    sput-boolean v0, LaMao/a/a;->g:Z
+    sput-boolean v0, LaMao/a/a;->h:Z
 
     return v0
 .end method
 
-.method private static g()Z
+.method private static h()Z
     .registers 1
 
-    invoke-static {}, LaMao/a/a;->h()Z
+    invoke-static {}, LaMao/a/a;->i()Z
 
     move-result v0
 
@@ -630,7 +619,7 @@
     goto :goto_7
 .end method
 
-.method private static h()Z
+.method private static i()Z
     .registers 3
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;

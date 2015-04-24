@@ -351,7 +351,7 @@
 .end method
 
 .method public static a(Landroid/content/Context;I)Ljava/lang/String;
-    .registers 8
+    .registers 6
 
     .prologue
     .line 1708
@@ -369,90 +369,35 @@
 
     div-float/2addr v0, v1
 
-    .line 1713
+    .line 1717
     :cond_a
-    const-wide v1, 0x3ffccccccccccccdL    # 1.8
+    :try_start_a
+    const-string v1, "%.1f \u00b0C"
 
-    float-to-double v3, v0
+    const/4 v2, 0x1
 
-    mul-double/2addr v1, v3
+    new-array v2, v2, [Ljava/lang/Object;
 
-    const-wide/high16 v3, 0x4040000000000000L    # 32.0
-
-    add-double/2addr v1, v3
-
-    double-to-float v1, v1
-
-    .line 1714
-    :try_start_15
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "%.1f \u00b0C"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
-    aput-object v0, v4, v5
+    aput-object v0, v2, v3
 
-    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "/"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    .line 1715
-    const-string v2, "%.1f \u00b0F"
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    aput-object v1, v3, v4
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    .line 1714
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-    :try_end_4b
-    .catch Ljava/lang/Exception; {:try_start_15 .. :try_end_4b} :catch_4d
+    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    :try_end_19
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_19} :catch_1b
 
     move-result-object v0
 
     .line 1720
-    :goto_4c
+    :goto_1a
     return-object v0
 
     .line 1719
-    :catch_4d
+    :catch_1b
     move-exception v0
 
     .line 1720
@@ -462,7 +407,7 @@
 
     move-result-object v0
 
-    goto :goto_4c
+    goto :goto_1a
 .end method
 
 .method private static a(Ljava/io/File;)Ljava/lang/String;

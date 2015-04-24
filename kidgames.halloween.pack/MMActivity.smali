@@ -86,7 +86,11 @@
     :cond_a
     iget-wide v0, p0, Lcom/millennialmedia/android/MMActivity;->creatorAdImplInternalId:J
 
-    invoke-static {p0, v0, v1}, Lcom/millennialmedia/android/MMSDK$Event;->overlayClosed(Landroid/content/Context;J)V
+    invoke-static {v0, v1}, Lcom/millennialmedia/android/MMAdImplController;->getAdImplWithId(J)Lcom/millennialmedia/android/MMAdImpl;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Event;->overlayClosed(Lcom/millennialmedia/android/MMAdImpl;)V
 
     .line 245
     invoke-super {p0}, Landroid/app/Activity;->finish()V
@@ -101,7 +105,11 @@
     .line 251
     iget-wide v0, p0, Lcom/millennialmedia/android/MMActivity;->creatorAdImplInternalId:J
 
-    invoke-static {p0, v0, v1}, Lcom/millennialmedia/android/MMSDK$Event;->overlayClosed(Landroid/content/Context;J)V
+    invoke-static {v0, v1}, Lcom/millennialmedia/android/MMAdImplController;->getAdImplWithId(J)Lcom/millennialmedia/android/MMAdImpl;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Event;->overlayClosed(Lcom/millennialmedia/android/MMAdImpl;)V
 
     .line 252
     invoke-super {p0}, Landroid/app/Activity;->finish()V

@@ -66,16 +66,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 172
-    new-instance v0, Lux;
+    new-instance v0, Loe;
 
-    invoke-direct {v0, p0}, Lux;-><init>(Lcom/quvideo/xiaoying/app/im/IMLoginMgr;)V
+    invoke-direct {v0, p0}, Loe;-><init>(Lcom/quvideo/xiaoying/app/im/IMLoginMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/IMLoginMgr;->i:Lcom/quvideo/xiaoying/im/IMListener;
 
     .line 318
-    new-instance v0, Luy;
+    new-instance v0, Lof;
 
-    invoke-direct {v0, p0}, Luy;-><init>(Lcom/quvideo/xiaoying/app/im/IMLoginMgr;)V
+    invoke-direct {v0, p0}, Lof;-><init>(Lcom/quvideo/xiaoying/app/im/IMLoginMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/IMLoginMgr;->j:Lcom/quvideo/xiaoying/im/IMCallback;
 
@@ -165,9 +165,9 @@
     .line 207
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/im/IMLoginMgr;->f:Landroid/app/ProgressDialog;
 
-    new-instance v1, Luz;
+    new-instance v1, Log;
 
-    invoke-direct {v1, p0}, Luz;-><init>(Lcom/quvideo/xiaoying/app/im/IMLoginMgr;)V
+    invoke-direct {v1, p0}, Log;-><init>(Lcom/quvideo/xiaoying/app/im/IMLoginMgr;)V
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
     :try_end_3f

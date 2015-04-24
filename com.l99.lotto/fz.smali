@@ -889,8 +889,13 @@
 
     invoke-direct {v4, v7, v8}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .line 226
+    .line 225
     .local v4, "jsonString":Ljava/lang/String;
+    const-string v7, "roi_l99"
+
+    invoke-static {v7, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 226
     const/4 v1, 0x0
 
     .line 227
@@ -915,7 +920,7 @@
     .local v0, "code":I
     const/16 v7, 0xc8
 
-    if-ne v0, v7, :cond_31
+    if-ne v0, v7, :cond_36
 
     .line 231
     const-string v7, "data"
@@ -947,7 +952,7 @@
     .end local v4    # "jsonString":Ljava/lang/String;
     .end local v5    # "msg":Ljava/lang/String;
     .end local v6    # "object":Lorg/json/JSONObject;
-    :goto_30
+    :goto_35
     return-object v7
 
     .line 233
@@ -956,10 +961,10 @@
     .restart local v4    # "jsonString":Ljava/lang/String;
     .restart local v5    # "msg":Ljava/lang/String;
     .restart local v6    # "object":Lorg/json/JSONObject;
-    :cond_31
+    :cond_36
     const/16 v7, 0x2719
 
-    if-ne v0, v7, :cond_65
+    if-ne v0, v7, :cond_6a
 
     .line 234
     invoke-static {}, Lcom/l99/lotto/b;->getInstance()Lcom/l99/lotto/b;
@@ -969,28 +974,28 @@
     const/4 v8, 0x1
 
     invoke-virtual {v7, v8}, Lcom/l99/lotto/b;->logout(I)V
-    :try_end_3d
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_3d} :catch_72
-    .catch Lbf; {:try_start_0 .. :try_end_3d} :catch_82
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_3d} :catch_8d
+    :try_end_42
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_42} :catch_77
+    .catch Lbf; {:try_start_0 .. :try_end_42} :catch_87
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_42} :catch_92
 
     .line 239
-    :cond_3d
-    :goto_3d
-    :try_start_3d
+    :cond_42
+    :goto_42
+    :try_start_42
     const-string v7, "msg"
 
     invoke-virtual {v6, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-    :try_end_42
-    .catch Lorg/json/JSONException; {:try_start_3d .. :try_end_42} :catch_7d
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_3d .. :try_end_42} :catch_72
-    .catch Lbf; {:try_start_3d .. :try_end_42} :catch_82
+    :try_end_47
+    .catch Lorg/json/JSONException; {:try_start_42 .. :try_end_47} :catch_82
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_42 .. :try_end_47} :catch_77
+    .catch Lbf; {:try_start_42 .. :try_end_47} :catch_87
 
     move-result-object v5
 
     .line 243
-    :goto_43
-    :try_start_43
+    :goto_48
+    :try_start_48
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
@@ -1023,14 +1028,14 @@
 
     move-result-object v7
 
-    goto :goto_30
+    goto :goto_35
 
     .line 235
     .end local v3    # "errorObject":Lorg/json/JSONObject;
-    :cond_65
+    :cond_6a
     const/16 v7, 0x2720
 
-    if-ne v0, v7, :cond_3d
+    if-ne v0, v7, :cond_42
 
     .line 236
     invoke-static {}, Lcom/l99/lotto/b;->getInstance()Lcom/l99/lotto/b;
@@ -1040,12 +1045,12 @@
     const/4 v8, 0x2
 
     invoke-virtual {v7, v8}, Lcom/l99/lotto/b;->logout(I)V
-    :try_end_71
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_43 .. :try_end_71} :catch_72
-    .catch Lbf; {:try_start_43 .. :try_end_71} :catch_82
-    .catch Lorg/json/JSONException; {:try_start_43 .. :try_end_71} :catch_8d
+    :try_end_76
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_48 .. :try_end_76} :catch_77
+    .catch Lbf; {:try_start_48 .. :try_end_76} :catch_87
+    .catch Lorg/json/JSONException; {:try_start_48 .. :try_end_76} :catch_92
 
-    goto :goto_3d
+    goto :goto_42
 
     .line 249
     .end local v0    # "code":I
@@ -1053,7 +1058,7 @@
     .end local v4    # "jsonString":Ljava/lang/String;
     .end local v5    # "msg":Ljava/lang/String;
     .end local v6    # "object":Lorg/json/JSONObject;
-    :catch_72
+    :catch_77
     move-exception v2
 
     .line 250
@@ -1066,7 +1071,7 @@
 
     move-result-object v7
 
-    goto :goto_30
+    goto :goto_35
 
     .line 240
     .end local v2    # "e":Ljava/io/UnsupportedEncodingException;
@@ -1075,19 +1080,19 @@
     .restart local v4    # "jsonString":Ljava/lang/String;
     .restart local v5    # "msg":Ljava/lang/String;
     .restart local v6    # "object":Lorg/json/JSONObject;
-    :catch_7d
+    :catch_82
     move-exception v2
 
     .line 241
     .local v2, "e":Lorg/json/JSONException;
-    :try_start_7e
+    :try_start_83
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
-    :try_end_81
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_7e .. :try_end_81} :catch_72
-    .catch Lbf; {:try_start_7e .. :try_end_81} :catch_82
-    .catch Lorg/json/JSONException; {:try_start_7e .. :try_end_81} :catch_8d
+    :try_end_86
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_83 .. :try_end_86} :catch_77
+    .catch Lbf; {:try_start_83 .. :try_end_86} :catch_87
+    .catch Lorg/json/JSONException; {:try_start_83 .. :try_end_86} :catch_92
 
-    goto :goto_43
+    goto :goto_48
 
     .line 251
     .end local v0    # "code":I
@@ -1096,7 +1101,7 @@
     .end local v4    # "jsonString":Ljava/lang/String;
     .end local v5    # "msg":Ljava/lang/String;
     .end local v6    # "object":Lorg/json/JSONObject;
-    :catch_82
+    :catch_87
     move-exception v2
 
     .line 252
@@ -1109,11 +1114,11 @@
 
     move-result-object v7
 
-    goto :goto_30
+    goto :goto_35
 
     .line 253
     .end local v2    # "e":Lbf;
-    :catch_8d
+    :catch_92
     move-exception v2
 
     .line 254
@@ -1126,7 +1131,7 @@
 
     move-result-object v7
 
-    goto :goto_30
+    goto :goto_35
 .end method
 
 .method protected a(Ljava/lang/Object;)V
@@ -1651,6 +1656,13 @@
 
     invoke-interface {v1, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 197
+    const-string v7, "l99"
+
+    sget-object v8, Lfx;->a:Ljava/lang/String;
+
+    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 198
     const-string v7, "api-version"
 
@@ -1668,17 +1680,17 @@
     .line 201
     iget-byte v7, p0, Lfz;->aH:B
 
-    if-eq v7, v10, :cond_32
+    if-eq v7, v10, :cond_39
 
     .line 218
     .end local v1    # "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    :cond_31
-    :goto_31
+    :cond_38
+    :goto_38
     return-object v1
 
     .line 204
     .restart local v1    # "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    :cond_32
+    :cond_39
     new-instance v2, Lcom/l99/common/utils/d;
 
     const-string v7, "@P13ncryptK3Y!+"
@@ -1705,7 +1717,7 @@
 
     .line 208
     .local v3, "password":Ljava/lang/String;
-    if-eqz v4, :cond_9b
+    if-eqz v4, :cond_a2
 
     .line 209
     iget-wide v7, v4, Lft;->long_no:J
@@ -1748,8 +1760,8 @@
     move-result-object v3
 
     .line 215
-    :cond_6c
-    :goto_6c
+    :cond_73
+    :goto_73
     const-string v7, "%s:%s"
 
     new-array v8, v11, [Ljava/lang/Object;
@@ -1793,19 +1805,19 @@
     invoke-interface {v1, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 218
-    if-nez v1, :cond_31
+    if-nez v1, :cond_38
 
     invoke-super {p0}, Ley;->getHeaders()Ljava/util/Map;
 
     move-result-object v1
 
-    goto :goto_31
+    goto :goto_38
 
     .line 211
     .end local v0    # "auth":Ljava/lang/String;
     .end local v6    # "usernamePassword":Ljava/lang/String;
-    :cond_9b
-    if-nez v4, :cond_6c
+    :cond_a2
+    if-nez v4, :cond_73
 
     iget-object v7, p0, Lfz;->aI:Ljava/lang/String;
 
@@ -1813,7 +1825,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_6c
+    if-nez v7, :cond_73
 
     iget-object v7, p0, Lfz;->aJ:Ljava/lang/String;
 
@@ -1821,7 +1833,7 @@
 
     move-result v7
 
-    if-eqz v7, :cond_6c
+    if-eqz v7, :cond_73
 
     .line 212
     iget-object v7, p0, Lfz;->aI:Ljava/lang/String;
@@ -1861,7 +1873,7 @@
 
     move-result-object v3
 
-    goto :goto_6c
+    goto :goto_73
 .end method
 
 .method public getMethod()I
@@ -2180,7 +2192,7 @@
     .local v0, "url":Ljava/lang/StringBuilder;
     iget v1, p0, Lfz;->b:I
 
-    sparse-switch v1, :sswitch_data_3ca
+    sparse-switch v1, :sswitch_data_3d2
 
     .line 639
     :goto_15
@@ -2190,13 +2202,20 @@
 
     iput-object v1, p0, Lfz;->aG:Ljava/lang/String;
 
+    .line 640
+    const-string v1, "roi_l99"
+
+    iget-object v2, p0, Lfz;->aG:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 641
     iget-object v1, p0, Lfz;->aG:Ljava/lang/String;
 
     goto :goto_a
 
     .line 419
-    :sswitch_1e
+    :sswitch_25
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2210,7 +2229,7 @@
     goto :goto_15
 
     .line 422
-    :sswitch_2a
+    :sswitch_31
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2224,7 +2243,7 @@
     goto :goto_15
 
     .line 425
-    :sswitch_36
+    :sswitch_3d
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2238,7 +2257,7 @@
     goto :goto_15
 
     .line 428
-    :sswitch_42
+    :sswitch_49
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2252,7 +2271,7 @@
     goto :goto_15
 
     .line 431
-    :sswitch_4e
+    :sswitch_55
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2266,7 +2285,7 @@
     goto :goto_15
 
     .line 434
-    :sswitch_5a
+    :sswitch_61
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2280,7 +2299,7 @@
     goto :goto_15
 
     .line 437
-    :sswitch_66
+    :sswitch_6d
     sget-object v1, Lfz;->az:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2294,7 +2313,7 @@
     goto :goto_15
 
     .line 440
-    :sswitch_72
+    :sswitch_79
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2308,7 +2327,7 @@
     goto :goto_15
 
     .line 443
-    :sswitch_7e
+    :sswitch_85
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2322,7 +2341,7 @@
     goto :goto_15
 
     .line 446
-    :sswitch_8a
+    :sswitch_91
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2333,10 +2352,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_15
+    goto/16 :goto_15
 
     .line 449
-    :sswitch_96
+    :sswitch_9e
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2350,7 +2369,7 @@
     goto/16 :goto_15
 
     .line 452
-    :sswitch_a3
+    :sswitch_ab
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2364,7 +2383,7 @@
     goto/16 :goto_15
 
     .line 455
-    :sswitch_b0
+    :sswitch_b8
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2378,7 +2397,7 @@
     goto/16 :goto_15
 
     .line 458
-    :sswitch_bd
+    :sswitch_c5
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2392,7 +2411,7 @@
     goto/16 :goto_15
 
     .line 461
-    :sswitch_ca
+    :sswitch_d2
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2406,7 +2425,7 @@
     goto/16 :goto_15
 
     .line 464
-    :sswitch_d7
+    :sswitch_df
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2420,7 +2439,7 @@
     goto/16 :goto_15
 
     .line 467
-    :sswitch_e4
+    :sswitch_ec
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2434,7 +2453,7 @@
     goto/16 :goto_15
 
     .line 470
-    :sswitch_f1
+    :sswitch_f9
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2448,7 +2467,7 @@
     goto/16 :goto_15
 
     .line 473
-    :sswitch_fe
+    :sswitch_106
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2462,7 +2481,7 @@
     goto/16 :goto_15
 
     .line 476
-    :sswitch_10b
+    :sswitch_113
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2476,7 +2495,7 @@
     goto/16 :goto_15
 
     .line 479
-    :sswitch_118
+    :sswitch_120
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2490,7 +2509,7 @@
     goto/16 :goto_15
 
     .line 482
-    :sswitch_125
+    :sswitch_12d
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2504,7 +2523,7 @@
     goto/16 :goto_15
 
     .line 485
-    :sswitch_132
+    :sswitch_13a
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2518,7 +2537,7 @@
     goto/16 :goto_15
 
     .line 488
-    :sswitch_13f
+    :sswitch_147
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2532,7 +2551,7 @@
     goto/16 :goto_15
 
     .line 491
-    :sswitch_14c
+    :sswitch_154
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2546,7 +2565,7 @@
     goto/16 :goto_15
 
     .line 494
-    :sswitch_159
+    :sswitch_161
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2560,7 +2579,7 @@
     goto/16 :goto_15
 
     .line 497
-    :sswitch_166
+    :sswitch_16e
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2574,7 +2593,7 @@
     goto/16 :goto_15
 
     .line 500
-    :sswitch_173
+    :sswitch_17b
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2588,7 +2607,7 @@
     goto/16 :goto_15
 
     .line 503
-    :sswitch_180
+    :sswitch_188
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2602,7 +2621,7 @@
     goto/16 :goto_15
 
     .line 506
-    :sswitch_18d
+    :sswitch_195
     const-string v1, "http://dbapi.xy.l99.com/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2616,7 +2635,7 @@
     goto/16 :goto_15
 
     .line 509
-    :sswitch_19a
+    :sswitch_1a2
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2630,7 +2649,7 @@
     goto/16 :goto_15
 
     .line 512
-    :sswitch_1a7
+    :sswitch_1af
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2644,7 +2663,7 @@
     goto/16 :goto_15
 
     .line 515
-    :sswitch_1b4
+    :sswitch_1bc
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2658,7 +2677,7 @@
     goto/16 :goto_15
 
     .line 518
-    :sswitch_1c1
+    :sswitch_1c9
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2672,7 +2691,7 @@
     goto/16 :goto_15
 
     .line 521
-    :sswitch_1ce
+    :sswitch_1d6
     const-string v1, "http://api.nyx.l99.com/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2686,7 +2705,7 @@
     goto/16 :goto_15
 
     .line 524
-    :sswitch_1db
+    :sswitch_1e3
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2700,7 +2719,7 @@
     goto/16 :goto_15
 
     .line 527
-    :sswitch_1e8
+    :sswitch_1f0
     sget-object v1, Lfz;->az:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2714,7 +2733,7 @@
     goto/16 :goto_15
 
     .line 530
-    :sswitch_1f5
+    :sswitch_1fd
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2728,7 +2747,7 @@
     goto/16 :goto_15
 
     .line 533
-    :sswitch_202
+    :sswitch_20a
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2742,7 +2761,7 @@
     goto/16 :goto_15
 
     .line 536
-    :sswitch_20f
+    :sswitch_217
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2756,7 +2775,7 @@
     goto/16 :goto_15
 
     .line 539
-    :sswitch_21c
+    :sswitch_224
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2770,7 +2789,7 @@
     goto/16 :goto_15
 
     .line 542
-    :sswitch_229
+    :sswitch_231
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2784,7 +2803,7 @@
     goto/16 :goto_15
 
     .line 545
-    :sswitch_236
+    :sswitch_23e
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2798,7 +2817,7 @@
     goto/16 :goto_15
 
     .line 548
-    :sswitch_243
+    :sswitch_24b
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2812,7 +2831,7 @@
     goto/16 :goto_15
 
     .line 551
-    :sswitch_250
+    :sswitch_258
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2826,7 +2845,7 @@
     goto/16 :goto_15
 
     .line 554
-    :sswitch_25d
+    :sswitch_265
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2840,7 +2859,7 @@
     goto/16 :goto_15
 
     .line 557
-    :sswitch_26a
+    :sswitch_272
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2854,7 +2873,7 @@
     goto/16 :goto_15
 
     .line 560
-    :sswitch_277
+    :sswitch_27f
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2868,7 +2887,7 @@
     goto/16 :goto_15
 
     .line 563
-    :sswitch_284
+    :sswitch_28c
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2882,7 +2901,7 @@
     goto/16 :goto_15
 
     .line 566
-    :sswitch_291
+    :sswitch_299
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2896,7 +2915,7 @@
     goto/16 :goto_15
 
     .line 569
-    :sswitch_29e
+    :sswitch_2a6
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2910,7 +2929,7 @@
     goto/16 :goto_15
 
     .line 572
-    :sswitch_2ab
+    :sswitch_2b3
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2924,7 +2943,7 @@
     goto/16 :goto_15
 
     .line 575
-    :sswitch_2b8
+    :sswitch_2c0
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2938,7 +2957,7 @@
     goto/16 :goto_15
 
     .line 578
-    :sswitch_2c5
+    :sswitch_2cd
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2952,7 +2971,7 @@
     goto/16 :goto_15
 
     .line 581
-    :sswitch_2d2
+    :sswitch_2da
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2966,7 +2985,7 @@
     goto/16 :goto_15
 
     .line 584
-    :sswitch_2df
+    :sswitch_2e7
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2980,7 +2999,7 @@
     goto/16 :goto_15
 
     .line 587
-    :sswitch_2ec
+    :sswitch_2f4
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2994,7 +3013,7 @@
     goto/16 :goto_15
 
     .line 590
-    :sswitch_2f9
+    :sswitch_301
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3008,7 +3027,7 @@
     goto/16 :goto_15
 
     .line 593
-    :sswitch_306
+    :sswitch_30e
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3022,7 +3041,7 @@
     goto/16 :goto_15
 
     .line 596
-    :sswitch_313
+    :sswitch_31b
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3036,7 +3055,7 @@
     goto/16 :goto_15
 
     .line 599
-    :sswitch_320
+    :sswitch_328
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3050,7 +3069,7 @@
     goto/16 :goto_15
 
     .line 602
-    :sswitch_32d
+    :sswitch_335
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3064,7 +3083,7 @@
     goto/16 :goto_15
 
     .line 605
-    :sswitch_33a
+    :sswitch_342
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3078,7 +3097,7 @@
     goto/16 :goto_15
 
     .line 608
-    :sswitch_347
+    :sswitch_34f
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3092,7 +3111,7 @@
     goto/16 :goto_15
 
     .line 611
-    :sswitch_354
+    :sswitch_35c
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3106,7 +3125,7 @@
     goto/16 :goto_15
 
     .line 614
-    :sswitch_361
+    :sswitch_369
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3120,7 +3139,7 @@
     goto/16 :goto_15
 
     .line 617
-    :sswitch_36e
+    :sswitch_376
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3134,7 +3153,7 @@
     goto/16 :goto_15
 
     .line 620
-    :sswitch_37b
+    :sswitch_383
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3148,7 +3167,7 @@
     goto/16 :goto_15
 
     .line 623
-    :sswitch_388
+    :sswitch_390
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3162,7 +3181,7 @@
     goto/16 :goto_15
 
     .line 626
-    :sswitch_395
+    :sswitch_39d
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3176,7 +3195,7 @@
     goto/16 :goto_15
 
     .line 629
-    :sswitch_3a2
+    :sswitch_3aa
     sget-object v1, Lfz;->aA:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3190,7 +3209,7 @@
     goto/16 :goto_15
 
     .line 632
-    :sswitch_3af
+    :sswitch_3b7
     sget-object v1, Lfz;->aB:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3204,7 +3223,7 @@
     goto/16 :goto_15
 
     .line 635
-    :sswitch_3bc
+    :sswitch_3c4
     sget-object v1, Lfz;->aB:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3220,81 +3239,81 @@
     .line 417
     nop
 
-    :sswitch_data_3ca
+    :sswitch_data_3d2
     .sparse-switch
-        0x0 -> :sswitch_1e
-        0x1 -> :sswitch_2a
-        0x2 -> :sswitch_36
-        0x4 -> :sswitch_42
-        0x5 -> :sswitch_4e
-        0x14 -> :sswitch_72
-        0x15 -> :sswitch_7e
-        0x16 -> :sswitch_8a
-        0x17 -> :sswitch_96
-        0x18 -> :sswitch_a3
-        0x19 -> :sswitch_b0
-        0x1a -> :sswitch_bd
-        0x1b -> :sswitch_ca
-        0x1c -> :sswitch_d7
-        0x28 -> :sswitch_e4
-        0x29 -> :sswitch_f1
-        0x2a -> :sswitch_fe
-        0x2b -> :sswitch_10b
-        0x2c -> :sswitch_118
-        0x2d -> :sswitch_125
-        0x2e -> :sswitch_13f
-        0x2f -> :sswitch_14c
-        0x30 -> :sswitch_159
-        0x31 -> :sswitch_166
-        0x32 -> :sswitch_173
-        0x33 -> :sswitch_180
-        0x34 -> :sswitch_20f
-        0x35 -> :sswitch_21c
-        0x46 -> :sswitch_18d
-        0x50 -> :sswitch_19a
-        0x51 -> :sswitch_1a7
-        0x55 -> :sswitch_229
-        0x56 -> :sswitch_236
-        0x5a -> :sswitch_1b4
-        0x5b -> :sswitch_243
-        0x64 -> :sswitch_1c1
-        0x6e -> :sswitch_1ce
-        0x78 -> :sswitch_1db
-        0x79 -> :sswitch_66
-        0x7a -> :sswitch_1e8
-        0x82 -> :sswitch_1f5
-        0x83 -> :sswitch_202
-        0x8c -> :sswitch_250
-        0x8d -> :sswitch_25d
-        0x96 -> :sswitch_26a
-        0x97 -> :sswitch_277
-        0x98 -> :sswitch_284
-        0x99 -> :sswitch_291
-        0x9a -> :sswitch_29e
-        0x9b -> :sswitch_2ab
-        0x9c -> :sswitch_2b8
-        0x9d -> :sswitch_2c5
-        0xa0 -> :sswitch_2d2
-        0xa1 -> :sswitch_2df
-        0xa2 -> :sswitch_2ec
-        0xa3 -> :sswitch_2f9
-        0xa4 -> :sswitch_3a2
-        0xaa -> :sswitch_3af
-        0xab -> :sswitch_3bc
-        0xb4 -> :sswitch_306
-        0xb5 -> :sswitch_313
-        0xb6 -> :sswitch_320
-        0xbe -> :sswitch_32d
-        0xbf -> :sswitch_33a
-        0xc0 -> :sswitch_37b
-        0xc1 -> :sswitch_395
-        0xc2 -> :sswitch_388
-        0xc8 -> :sswitch_5a
-        0xd2 -> :sswitch_347
-        0xd3 -> :sswitch_354
-        0xfa -> :sswitch_361
-        0xfb -> :sswitch_36e
-        0x1c4 -> :sswitch_132
+        0x0 -> :sswitch_25
+        0x1 -> :sswitch_31
+        0x2 -> :sswitch_3d
+        0x4 -> :sswitch_49
+        0x5 -> :sswitch_55
+        0x14 -> :sswitch_79
+        0x15 -> :sswitch_85
+        0x16 -> :sswitch_91
+        0x17 -> :sswitch_9e
+        0x18 -> :sswitch_ab
+        0x19 -> :sswitch_b8
+        0x1a -> :sswitch_c5
+        0x1b -> :sswitch_d2
+        0x1c -> :sswitch_df
+        0x28 -> :sswitch_ec
+        0x29 -> :sswitch_f9
+        0x2a -> :sswitch_106
+        0x2b -> :sswitch_113
+        0x2c -> :sswitch_120
+        0x2d -> :sswitch_12d
+        0x2e -> :sswitch_147
+        0x2f -> :sswitch_154
+        0x30 -> :sswitch_161
+        0x31 -> :sswitch_16e
+        0x32 -> :sswitch_17b
+        0x33 -> :sswitch_188
+        0x34 -> :sswitch_217
+        0x35 -> :sswitch_224
+        0x46 -> :sswitch_195
+        0x50 -> :sswitch_1a2
+        0x51 -> :sswitch_1af
+        0x55 -> :sswitch_231
+        0x56 -> :sswitch_23e
+        0x5a -> :sswitch_1bc
+        0x5b -> :sswitch_24b
+        0x64 -> :sswitch_1c9
+        0x6e -> :sswitch_1d6
+        0x78 -> :sswitch_1e3
+        0x79 -> :sswitch_6d
+        0x7a -> :sswitch_1f0
+        0x82 -> :sswitch_1fd
+        0x83 -> :sswitch_20a
+        0x8c -> :sswitch_258
+        0x8d -> :sswitch_265
+        0x96 -> :sswitch_272
+        0x97 -> :sswitch_27f
+        0x98 -> :sswitch_28c
+        0x99 -> :sswitch_299
+        0x9a -> :sswitch_2a6
+        0x9b -> :sswitch_2b3
+        0x9c -> :sswitch_2c0
+        0x9d -> :sswitch_2cd
+        0xa0 -> :sswitch_2da
+        0xa1 -> :sswitch_2e7
+        0xa2 -> :sswitch_2f4
+        0xa3 -> :sswitch_301
+        0xa4 -> :sswitch_3aa
+        0xaa -> :sswitch_3b7
+        0xab -> :sswitch_3c4
+        0xb4 -> :sswitch_30e
+        0xb5 -> :sswitch_31b
+        0xb6 -> :sswitch_328
+        0xbe -> :sswitch_335
+        0xbf -> :sswitch_342
+        0xc0 -> :sswitch_383
+        0xc1 -> :sswitch_39d
+        0xc2 -> :sswitch_390
+        0xc8 -> :sswitch_61
+        0xd2 -> :sswitch_34f
+        0xd3 -> :sswitch_35c
+        0xfa -> :sswitch_369
+        0xfb -> :sswitch_376
+        0x1c4 -> :sswitch_13a
     .end sparse-switch
 .end method
 

@@ -270,23 +270,23 @@
     iput-boolean v1, p0, Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;->o:Z
 
     .line 1096
-    new-instance v0, Lahx;
+    new-instance v0, Labd;
 
-    invoke-direct {v0, p0}, Lahx;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
+    invoke-direct {v0, p0}, Labd;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;->ak:Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;
 
     .line 1626
-    new-instance v0, Lahy;
+    new-instance v0, Labe;
 
-    invoke-direct {v0, p0}, Lahy;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
+    invoke-direct {v0, p0}, Labe;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;->p:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 1649
-    new-instance v0, Lahz;
+    new-instance v0, Labf;
 
-    invoke-direct {v0, p0}, Lahz;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
+    invoke-direct {v0, p0}, Labf;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;->am:Lcom/quvideo/xiaoying/storyboard/widget/DragListener;
 
@@ -748,9 +748,9 @@
     invoke-direct {p0}, Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;->e()V
 
     .line 768
-    new-instance v2, Laic;
+    new-instance v2, Labi;
 
-    invoke-direct {v2, p0, v0, v1, p1}, Laic;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;JLcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$MediaGroupItem;)V
+    invoke-direct {v2, p0, v0, v1, p1}, Labi;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;JLcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$MediaGroupItem;)V
 
     new-array v0, v5, [Ljava/lang/Object;
 
@@ -763,7 +763,7 @@
 
     aput-object v1, v0, v6
 
-    invoke-virtual {v2, v0}, Laic;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v2, v0}, Labi;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     move-result-object v0
 
@@ -1739,9 +1739,9 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/GalleryFooterView;->setButtonText(I)V
 
     .line 595
-    new-instance v1, Laia;
+    new-instance v1, Labg;
 
-    invoke-direct {v1, p0}, Laia;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
+    invoke-direct {v1, p0}, Labg;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/GalleryFooterView;->setOnButtonClickListener(Lcom/quvideo/xiaoying/common/ui/GalleryFooterView$OnButtonClickListener;)V
 
@@ -1829,9 +1829,9 @@
     invoke-virtual {v2}, Lcom/quvideo/xiaoying/clip/adapter/SystemFolerListAdapter;->notifyDataSetChanged()V
 
     .line 621
-    new-instance v2, Laib;
+    new-instance v2, Labh;
 
-    invoke-direct {v2, p0, v0, v1}, Laib;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;J)V
+    invoke-direct {v2, p0, v0, v1}, Labh;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;J)V
 
     const/4 v0, 0x1
 
@@ -1848,7 +1848,7 @@
 
     aput-object v3, v0, v1
 
-    invoke-virtual {v2, v0}, Laib;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v2, v0}, Labh;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     move-result-object v0
 
@@ -2702,16 +2702,16 @@
 
     .line 1721
     :cond_5
-    new-instance v0, Laif;
+    new-instance v0, Labl;
 
-    invoke-direct {v0, p0}, Laif;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
+    invoke-direct {v0, p0}, Labl;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
 
     .line 1735
-    invoke-virtual {v0, v1}, Laif;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Labl;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     move-result-object v0
 
@@ -3426,9 +3426,9 @@
 
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_com_dialog_cancel_ask:I
 
-    new-instance v2, Laid;
+    new-instance v2, Labj;
 
-    invoke-direct {v2, p0}, Laid;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
+    invoke-direct {v2, p0}, Labj;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
 
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -3451,9 +3451,9 @@
     .line 1054
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_com_msg_save_draft_ask:I
 
-    new-instance v2, Laie;
+    new-instance v2, Labk;
 
-    invoke-direct {v2, p0}, Laie;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
+    invoke-direct {v2, p0}, Labk;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddPhotoActivity;)V
 
     .line 1053
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V

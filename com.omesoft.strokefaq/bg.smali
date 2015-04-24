@@ -27,15 +27,15 @@
 
     iget-object v0, p0, Lnet/youmi/android/bg;->a:Lnet/youmi/android/cd;
 
-    iget-object v0, v0, Lnet/youmi/android/cd;->g:Lnet/youmi/android/bp;
+    iget-object v0, v0, Lnet/youmi/android/cd;->g:Lnet/youmi/android/bo;
 
     if-eqz v0, :cond_d
 
     iget-object v0, p0, Lnet/youmi/android/bg;->a:Lnet/youmi/android/cd;
 
-    iget-object v0, v0, Lnet/youmi/android/cd;->g:Lnet/youmi/android/bp;
+    iget-object v0, v0, Lnet/youmi/android/cd;->g:Lnet/youmi/android/bo;
 
-    invoke-interface {v0}, Lnet/youmi/android/bp;->a_()V
+    invoke-interface {v0}, Lnet/youmi/android/bo;->d()V
 
     :cond_d
     return-void

@@ -158,6 +158,8 @@
     .line 31
     invoke-super {p0, p1}, Lcom/badlogic/gdx/backends/android/AndroidApplication;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 33
     new-instance v8, Lcom/whiture/apps/classic/snakes/main/NokiaHandset;
 
@@ -257,7 +259,7 @@
 
     sget-object v8, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
 
-    const-string v9, "a14ef2917ed4a7b"
+    const-string v9, "a1503a1490e48b0"
 
     invoke-direct {v1, p0, v8, v9}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
 
@@ -348,6 +350,17 @@
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method protected onDestroy()V
+    .registers 1
+
+    .prologue
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+
+    return-void
 .end method
 
 .method public playBgMusic()V

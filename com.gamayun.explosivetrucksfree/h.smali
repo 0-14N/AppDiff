@@ -12,11 +12,9 @@
 
 .field private d:Z
 
-.field private e:Lcom/google/ads/g$a;
+.field private final e:Lcom/google/ads/e;
 
-.field private final f:Lcom/google/ads/e;
-
-.field private g:Lcom/google/ads/mediation/MediationAdapter;
+.field private f:Lcom/google/ads/mediation/MediationAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/ads/mediation/MediationAdapter",
@@ -25,19 +23,19 @@
     .end annotation
 .end field
 
+.field private g:Z
+
 .field private h:Z
 
-.field private i:Z
+.field private i:Landroid/view/View;
 
-.field private j:Landroid/view/View;
+.field private final j:Landroid/os/Handler;
 
-.field private final k:Landroid/os/Handler;
+.field private final k:Ljava/lang/String;
 
-.field private final l:Ljava/lang/String;
+.field private final l:Lcom/google/ads/AdRequest;
 
-.field private final m:Lcom/google/ads/AdRequest;
-
-.field private final n:Ljava/util/HashMap;
+.field private final m:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap",
@@ -74,56 +72,53 @@
 
     const/4 v1, 0x0
 
-    .line 101
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
+    .line 98
     invoke-static {p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/google/ads/util/a;->b(Z)V
 
-    .line 103
-    iput-object p1, p0, Lcom/google/ads/h;->f:Lcom/google/ads/e;
+    .line 99
+    iput-object p1, p0, Lcom/google/ads/h;->e:Lcom/google/ads/e;
 
-    .line 104
+    .line 100
     iput-object p2, p0, Lcom/google/ads/h;->a:Lcom/google/ads/internal/h;
 
-    .line 105
+    .line 101
     iput-object p3, p0, Lcom/google/ads/h;->b:Lcom/google/ads/f;
 
-    .line 106
-    iput-object p4, p0, Lcom/google/ads/h;->l:Ljava/lang/String;
+    .line 102
+    iput-object p4, p0, Lcom/google/ads/h;->k:Ljava/lang/String;
 
-    .line 107
-    iput-object p5, p0, Lcom/google/ads/h;->m:Lcom/google/ads/AdRequest;
+    .line 103
+    iput-object p5, p0, Lcom/google/ads/h;->l:Lcom/google/ads/AdRequest;
 
-    .line 108
-    iput-object p6, p0, Lcom/google/ads/h;->n:Ljava/util/HashMap;
+    .line 104
+    iput-object p6, p0, Lcom/google/ads/h;->m:Ljava/util/HashMap;
 
-    .line 109
+    .line 105
     iput-boolean v1, p0, Lcom/google/ads/h;->c:Z
 
-    .line 110
+    .line 106
     iput-boolean v1, p0, Lcom/google/ads/h;->d:Z
 
-    .line 111
-    iput-object v2, p0, Lcom/google/ads/h;->e:Lcom/google/ads/g$a;
+    .line 107
+    iput-object v2, p0, Lcom/google/ads/h;->f:Lcom/google/ads/mediation/MediationAdapter;
 
-    .line 112
-    iput-object v2, p0, Lcom/google/ads/h;->g:Lcom/google/ads/mediation/MediationAdapter;
+    .line 108
+    iput-boolean v1, p0, Lcom/google/ads/h;->g:Z
 
-    .line 113
+    .line 109
     iput-boolean v1, p0, Lcom/google/ads/h;->h:Z
 
-    .line 114
-    iput-boolean v1, p0, Lcom/google/ads/h;->i:Z
+    .line 110
+    iput-object v2, p0, Lcom/google/ads/h;->i:Landroid/view/View;
 
-    .line 115
-    iput-object v2, p0, Lcom/google/ads/h;->j:Landroid/view/View;
-
-    .line 116
+    .line 111
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -132,9 +127,9 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/google/ads/h;->k:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/google/ads/h;->j:Landroid/os/Handler;
 
-    .line 117
+    .line 112
     return-void
 .end method
 
@@ -142,8 +137,8 @@
     .registers 2
 
     .prologue
-    .line 43
-    iget-object v0, p0, Lcom/google/ads/h;->g:Lcom/google/ads/mediation/MediationAdapter;
+    .line 42
+    iget-object v0, p0, Lcom/google/ads/h;->f:Lcom/google/ads/mediation/MediationAdapter;
 
     return-object v0
 .end method
@@ -154,7 +149,7 @@
     .registers 2
 
     .prologue
-    .line 123
+    .line 118
     iget-object v0, p0, Lcom/google/ads/h;->b:Lcom/google/ads/f;
 
     return-object v0
@@ -164,31 +159,31 @@
     .registers 9
 
     .prologue
-    .line 137
+    .line 132
     monitor-enter p0
 
     :try_start_1
-    iget-boolean v0, p0, Lcom/google/ads/h;->h:Z
+    iget-boolean v0, p0, Lcom/google/ads/h;->g:Z
 
     const-string v1, "startLoadAdTask has already been called."
 
     invoke-static {v0, v1}, Lcom/google/ads/util/a;->b(ZLjava/lang/String;)V
 
-    .line 139
+    .line 134
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/google/ads/h;->h:Z
+    iput-boolean v0, p0, Lcom/google/ads/h;->g:Z
 
-    .line 143
-    iget-object v6, p0, Lcom/google/ads/h;->k:Landroid/os/Handler;
+    .line 138
+    iget-object v6, p0, Lcom/google/ads/h;->j:Landroid/os/Handler;
 
     new-instance v0, Lcom/google/ads/i;
 
-    iget-object v3, p0, Lcom/google/ads/h;->l:Ljava/lang/String;
+    iget-object v3, p0, Lcom/google/ads/h;->k:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/google/ads/h;->m:Lcom/google/ads/AdRequest;
+    iget-object v4, p0, Lcom/google/ads/h;->l:Lcom/google/ads/AdRequest;
 
-    iget-object v5, p0, Lcom/google/ads/h;->n:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/google/ads/h;->m:Ljava/util/HashMap;
 
     move-object v1, p0
 
@@ -200,12 +195,12 @@
     :try_end_1d
     .catchall {:try_start_1 .. :try_end_1d} :catchall_1f
 
-    .line 146
+    .line 141
     monitor-exit p0
 
     return-void
 
-    .line 137
+    .line 132
     :catchall_1f
     move-exception v0
 
@@ -218,20 +213,20 @@
     .registers 3
 
     .prologue
-    .line 284
+    .line 266
     monitor-enter p0
 
     :try_start_1
-    iput-object p1, p0, Lcom/google/ads/h;->j:Landroid/view/View;
+    iput-object p1, p0, Lcom/google/ads/h;->i:Landroid/view/View;
     :try_end_3
     .catchall {:try_start_1 .. :try_end_3} :catchall_5
 
-    .line 285
+    .line 267
     monitor-exit p0
 
     return-void
 
-    .line 284
+    .line 266
     :catchall_5
     move-exception v0
 
@@ -251,20 +246,20 @@
     .end annotation
 
     .prologue
-    .line 269
+    .line 251
     monitor-enter p0
 
     :try_start_1
-    iput-object p1, p0, Lcom/google/ads/h;->g:Lcom/google/ads/mediation/MediationAdapter;
+    iput-object p1, p0, Lcom/google/ads/h;->f:Lcom/google/ads/mediation/MediationAdapter;
     :try_end_3
     .catchall {:try_start_1 .. :try_end_3} :catchall_5
 
-    .line 270
+    .line 252
     monitor-exit p0
 
     return-void
 
-    .line 269
+    .line 251
     :catchall_5
     move-exception v0
 
@@ -273,36 +268,33 @@
     throw v0
 .end method
 
-.method declared-synchronized a(ZLcom/google/ads/g$a;)V
-    .registers 4
+.method declared-synchronized a(Z)V
+    .registers 3
 
     .prologue
-    .line 261
+    .line 244
     monitor-enter p0
 
     :try_start_1
     iput-boolean p1, p0, Lcom/google/ads/h;->d:Z
 
-    .line 262
+    .line 245
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/ads/h;->c:Z
 
-    .line 263
-    iput-object p2, p0, Lcom/google/ads/h;->e:Lcom/google/ads/g$a;
-
-    .line 264
+    .line 246
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
-    :try_end_b
-    .catchall {:try_start_1 .. :try_end_b} :catchall_d
+    :try_end_9
+    .catchall {:try_start_1 .. :try_end_9} :catchall_b
 
-    .line 265
+    .line 247
     monitor-exit p0
 
     return-void
 
-    .line 261
-    :catchall_d
+    .line 244
+    :catchall_b
     move-exception v0
 
     monitor-exit p0
@@ -314,18 +306,18 @@
     .registers 3
 
     .prologue
-    .line 149
+    .line 144
     monitor-enter p0
 
     :try_start_1
-    iget-boolean v0, p0, Lcom/google/ads/h;->h:Z
+    iget-boolean v0, p0, Lcom/google/ads/h;->g:Z
 
     const-string v1, "destroy() called but startLoadAdTask has not been called."
 
     invoke-static {v0, v1}, Lcom/google/ads/util/a;->a(ZLjava/lang/String;)V
 
-    .line 157
-    iget-object v0, p0, Lcom/google/ads/h;->k:Landroid/os/Handler;
+    .line 152
+    iget-object v0, p0, Lcom/google/ads/h;->j:Landroid/os/Handler;
 
     new-instance v1, Lcom/google/ads/h$1;
 
@@ -335,12 +327,12 @@
     :try_end_12
     .catchall {:try_start_1 .. :try_end_12} :catchall_14
 
-    .line 179
+    .line 174
     monitor-exit p0
 
     return-void
 
-    .line 149
+    .line 144
     :catchall_14
     move-exception v0
 
@@ -353,7 +345,7 @@
     .registers 2
 
     .prologue
-    .line 186
+    .line 181
     monitor-enter p0
 
     :try_start_1
@@ -377,27 +369,29 @@
     .registers 3
 
     .prologue
-    .line 195
+    .line 190
     monitor-enter p0
 
     :try_start_1
-    iget-boolean v0, p0, Lcom/google/ads/h;->c:Z
+    invoke-virtual {p0}, Lcom/google/ads/h;->c()Z
+
+    move-result v0
 
     const-string v1, "isLoadAdTaskSuccessful() called when isLoadAdTaskDone() is false."
 
     invoke-static {v0, v1}, Lcom/google/ads/util/a;->a(ZLjava/lang/String;)V
 
-    .line 197
+    .line 192
     iget-boolean v0, p0, Lcom/google/ads/h;->d:Z
-    :try_end_a
-    .catchall {:try_start_1 .. :try_end_a} :catchall_c
+    :try_end_c
+    .catchall {:try_start_1 .. :try_end_c} :catchall_e
 
     monitor-exit p0
 
     return v0
 
-    .line 195
-    :catchall_c
+    .line 190
+    :catchall_e
     move-exception v0
 
     monitor-exit p0
@@ -405,71 +399,33 @@
     throw v0
 .end method
 
-.method public declared-synchronized e()Lcom/google/ads/g$a;
-    .registers 2
-
-    .prologue
-    .line 204
-    monitor-enter p0
-
-    :try_start_1
-    iget-object v0, p0, Lcom/google/ads/h;->e:Lcom/google/ads/g$a;
-
-    if-nez v0, :cond_9
-
-    .line 206
-    sget-object v0, Lcom/google/ads/g$a;->d:Lcom/google/ads/g$a;
-    :try_end_7
-    .catchall {:try_start_1 .. :try_end_7} :catchall_c
-
-    .line 208
-    :goto_7
-    monitor-exit p0
-
-    return-object v0
-
-    :cond_9
-    :try_start_9
-    iget-object v0, p0, Lcom/google/ads/h;->e:Lcom/google/ads/g$a;
-    :try_end_b
-    .catchall {:try_start_9 .. :try_end_b} :catchall_c
-
-    goto :goto_7
-
-    .line 204
-    :catchall_c
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized f()Landroid/view/View;
+.method public declared-synchronized e()Landroid/view/View;
     .registers 3
 
     .prologue
-    .line 213
+    .line 196
     monitor-enter p0
 
     :try_start_1
-    iget-boolean v0, p0, Lcom/google/ads/h;->c:Z
+    invoke-virtual {p0}, Lcom/google/ads/h;->c()Z
+
+    move-result v0
 
     const-string v1, "getAdView() called when isLoadAdTaskDone() is false."
 
     invoke-static {v0, v1}, Lcom/google/ads/util/a;->a(ZLjava/lang/String;)V
 
-    .line 215
-    iget-object v0, p0, Lcom/google/ads/h;->j:Landroid/view/View;
-    :try_end_a
-    .catchall {:try_start_1 .. :try_end_a} :catchall_c
+    .line 198
+    iget-object v0, p0, Lcom/google/ads/h;->i:Landroid/view/View;
+    :try_end_c
+    .catchall {:try_start_1 .. :try_end_c} :catchall_e
 
     monitor-exit p0
 
     return-object v0
 
-    .line 213
-    :catchall_c
+    .line 196
+    :catchall_e
     move-exception v0
 
     monitor-exit p0
@@ -477,11 +433,11 @@
     throw v0
 .end method
 
-.method public declared-synchronized g()V
+.method public declared-synchronized f()V
     .registers 4
 
     .prologue
-    .line 219
+    .line 202
     monitor-enter p0
 
     :try_start_1
@@ -495,14 +451,14 @@
     :try_end_a
     .catchall {:try_start_1 .. :try_end_a} :catchall_21
 
-    .line 223
+    .line 206
     :try_start_a
-    iget-object v0, p0, Lcom/google/ads/h;->g:Lcom/google/ads/mediation/MediationAdapter;
+    iget-object v0, p0, Lcom/google/ads/h;->f:Lcom/google/ads/mediation/MediationAdapter;
 
     check-cast v0, Lcom/google/ads/mediation/MediationInterstitialAdapter;
 
-    .line 225
-    iget-object v1, p0, Lcom/google/ads/h;->k:Landroid/os/Handler;
+    .line 208
+    iget-object v1, p0, Lcom/google/ads/h;->j:Landroid/os/Handler;
 
     new-instance v2, Lcom/google/ads/h$2;
 
@@ -513,17 +469,17 @@
     .catch Ljava/lang/ClassCastException; {:try_start_a .. :try_end_18} :catch_1a
     .catchall {:try_start_a .. :try_end_18} :catchall_21
 
-    .line 245
+    .line 228
     :goto_18
     monitor-exit p0
 
     return-void
 
-    .line 241
+    .line 224
     :catch_1a
     move-exception v0
 
-    .line 242
+    .line 225
     :try_start_1b
     const-string v1, "In Ambassador.show(): ambassador.adapter does not implement the MediationInterstitialAdapter interface."
 
@@ -533,7 +489,7 @@
 
     goto :goto_18
 
-    .line 219
+    .line 202
     :catchall_21
     move-exception v0
 
@@ -542,19 +498,19 @@
     throw v0
 .end method
 
-.method public declared-synchronized h()Ljava/lang/String;
+.method public declared-synchronized g()Ljava/lang/String;
     .registers 2
 
     .prologue
-    .line 255
+    .line 238
     monitor-enter p0
 
     :try_start_1
-    iget-object v0, p0, Lcom/google/ads/h;->g:Lcom/google/ads/mediation/MediationAdapter;
+    iget-object v0, p0, Lcom/google/ads/h;->f:Lcom/google/ads/mediation/MediationAdapter;
 
     if-eqz v0, :cond_11
 
-    iget-object v0, p0, Lcom/google/ads/h;->g:Lcom/google/ads/mediation/MediationAdapter;
+    iget-object v0, p0, Lcom/google/ads/h;->f:Lcom/google/ads/mediation/MediationAdapter;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -587,7 +543,7 @@
     throw v0
 .end method
 
-.method declared-synchronized i()Lcom/google/ads/mediation/MediationAdapter;
+.method declared-synchronized h()Lcom/google/ads/mediation/MediationAdapter;
     .registers 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -598,11 +554,11 @@
     .end annotation
 
     .prologue
-    .line 273
+    .line 255
     monitor-enter p0
 
     :try_start_1
-    iget-object v0, p0, Lcom/google/ads/h;->g:Lcom/google/ads/mediation/MediationAdapter;
+    iget-object v0, p0, Lcom/google/ads/h;->f:Lcom/google/ads/mediation/MediationAdapter;
     :try_end_3
     .catchall {:try_start_1 .. :try_end_3} :catchall_5
 
@@ -618,36 +574,36 @@
     throw v0
 .end method
 
-.method j()Lcom/google/ads/e;
+.method i()Lcom/google/ads/e;
     .registers 2
 
     .prologue
-    .line 280
-    iget-object v0, p0, Lcom/google/ads/h;->f:Lcom/google/ads/e;
+    .line 262
+    iget-object v0, p0, Lcom/google/ads/h;->e:Lcom/google/ads/e;
 
     return-object v0
 .end method
 
-.method declared-synchronized k()V
+.method declared-synchronized j()V
     .registers 2
 
     .prologue
-    .line 288
+    .line 270
     monitor-enter p0
 
     const/4 v0, 0x1
 
     :try_start_2
-    iput-boolean v0, p0, Lcom/google/ads/h;->i:Z
+    iput-boolean v0, p0, Lcom/google/ads/h;->h:Z
     :try_end_4
     .catchall {:try_start_2 .. :try_end_4} :catchall_6
 
-    .line 289
+    .line 271
     monitor-exit p0
 
     return-void
 
-    .line 288
+    .line 270
     :catchall_6
     move-exception v0
 
@@ -656,15 +612,15 @@
     throw v0
 .end method
 
-.method declared-synchronized l()Z
+.method declared-synchronized k()Z
     .registers 2
 
     .prologue
-    .line 292
+    .line 274
     monitor-enter p0
 
     :try_start_1
-    iget-boolean v0, p0, Lcom/google/ads/h;->i:Z
+    iget-boolean v0, p0, Lcom/google/ads/h;->h:Z
     :try_end_3
     .catchall {:try_start_1 .. :try_end_3} :catchall_5
 

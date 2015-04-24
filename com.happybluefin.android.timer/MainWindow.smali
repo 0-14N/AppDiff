@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/happybluefin/android/timer/window/MainWindow$ListViewBinder;,
         Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
     }
 .end annotation
@@ -19,36 +18,12 @@
 
 .field private static final STATE_STOP:I = 0x0
 
+.field private static final TAG:Ljava/lang/String;
+
 .field private static final UPDATE_INTERVAL:I = 0x64
-
-.field private static final UPDATE_TYPE_SHOW_FINISH:I = 0x1
-
-.field private static final UPDATE_TYPE_UPDATE_TIME:I
 
 
 # instance fields
-.field private mAdapterDataList:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Object;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
-.field private mAdvertisementData:Lcom/happybluefin/android/advertisement/api/AdvertisementData;
-
-.field private mAdvertisementParam:Ljava/lang/String;
-
-.field private mAlertDialog:Landroid/app/AlertDialog;
-
-.field private mBitmapCacheAsync:Lcom/happybluefin/android/advertisement/cache/BitmapCacheAsync;
-
 .field private mBtnHourMinus:Landroid/widget/Button;
 
 .field private mBtnHourPlus:Landroid/widget/Button;
@@ -83,11 +58,7 @@
 
 .field private mHundredMillisecond:I
 
-.field private mListViewAd:Landroid/widget/ListView;
-
-.field private mListViewAdListAdapter:Landroid/widget/SimpleAdapter;
-
-.field private mMediaPlayer:Landroid/media/MediaPlayer;
+.field private mLayoutBackground:Landroid/widget/LinearLayout;
 
 .field private mMinute:I
 
@@ -103,35 +74,43 @@
     .registers 2
 
     .prologue
-    .line 580
+    .line 396
     :try_start_0
     const-string v1, "CoreJni"
 
     invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_5
-    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_5} :catch_6
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_5} :catch_b
+    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_5} :catch_e
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_5} :catch_13
 
-    .line 912
+    .line 542
     :goto_5
+    const-class v1, Lcom/happybluefin/android/timer/window/MainWindow;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    sput-object v1, Lcom/happybluefin/android/timer/window/MainWindow;->TAG:Ljava/lang/String;
+
     return-void
 
-    .line 582
-    :catch_6
+    .line 398
+    :catch_e
     move-exception v0
 
-    .line 583
+    .line 399
     .local v0, "e":Ljava/lang/UnsatisfiedLinkError;
     invoke-virtual {v0}, Ljava/lang/UnsatisfiedLinkError;->printStackTrace()V
 
     goto :goto_5
 
-    .line 585
+    .line 401
     .end local v0    # "e":Ljava/lang/UnsatisfiedLinkError;
-    :catch_b
+    :catch_13
     move-exception v0
 
-    .line 586
+    .line 402
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -139,696 +118,195 @@
 .end method
 
 .method public constructor <init>()V
-    .registers 4
+    .registers 3
 
     .prologue
-    const/4 v2, 0x0
-
     const/4 v1, 0x0
 
-    .line 64
+    const/4 v0, 0x0
+
+    .line 26
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 704
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditHour:Landroid/widget/EditText;
+    .line 468
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mLayoutBackground:Landroid/widget/LinearLayout;
 
-    .line 709
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMinute:Landroid/widget/EditText;
+    .line 470
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditHour:Landroid/widget/EditText;
 
-    .line 714
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditSecond:Landroid/widget/EditText;
+    .line 471
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMinute:Landroid/widget/EditText;
 
-    .line 719
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMillisecond:Landroid/widget/EditText;
+    .line 472
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditSecond:Landroid/widget/EditText;
 
-    .line 724
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnHourPlus:Landroid/widget/Button;
+    .line 473
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMillisecond:Landroid/widget/EditText;
 
-    .line 729
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnHourMinus:Landroid/widget/Button;
+    .line 475
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnHourPlus:Landroid/widget/Button;
 
-    .line 734
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMinutePlus:Landroid/widget/Button;
+    .line 476
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnHourMinus:Landroid/widget/Button;
 
-    .line 739
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMinuteMinus:Landroid/widget/Button;
+    .line 478
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMinutePlus:Landroid/widget/Button;
 
-    .line 744
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnSecondPlus:Landroid/widget/Button;
+    .line 479
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMinuteMinus:Landroid/widget/Button;
 
-    .line 749
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnSecondMinus:Landroid/widget/Button;
+    .line 481
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnSecondPlus:Landroid/widget/Button;
 
-    .line 754
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMillisecondPlus:Landroid/widget/Button;
+    .line 482
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnSecondMinus:Landroid/widget/Button;
 
-    .line 759
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMillisecondMinus:Landroid/widget/Button;
+    .line 484
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMillisecondPlus:Landroid/widget/Button;
 
-    .line 764
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnStart:Landroid/widget/Button;
+    .line 485
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMillisecondMinus:Landroid/widget/Button;
 
-    .line 769
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnReset:Landroid/widget/Button;
+    .line 487
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnStart:Landroid/widget/Button;
 
-    .line 774
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mUpdateThread:Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
+    .line 488
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnReset:Landroid/widget/Button;
 
-    .line 779
+    .line 490
+    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mUpdateThread:Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
+
+    .line 491
     new-instance v0, Lcom/happybluefin/android/timer/window/MainWindow$1;
 
     invoke-direct {v0, p0}, Lcom/happybluefin/android/timer/window/MainWindow$1;-><init>(Lcom/happybluefin/android/timer/window/MainWindow;)V
 
     iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHandler:Landroid/os/Handler;
 
-    .line 822
-    new-instance v0, Landroid/media/MediaPlayer;
+    .line 530
+    iput v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHour:I
 
-    invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
+    .line 531
+    iput v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mMinute:I
 
-    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mMediaPlayer:Landroid/media/MediaPlayer;
+    .line 532
+    iput v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mSecond:I
 
-    .line 827
-    iput v2, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHour:I
+    .line 533
+    iput v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHundredMillisecond:I
 
-    .line 832
-    iput v2, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mMinute:I
+    .line 535
+    iput v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mState:I
 
-    .line 837
-    iput v2, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mSecond:I
-
-    .line 842
-    iput v2, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHundredMillisecond:I
-
-    .line 847
-    iput v2, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mState:I
-
-    .line 852
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementParam:Ljava/lang/String;
-
-    .line 857
-    new-instance v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData;
-
-    invoke-direct {v0}, Lcom/happybluefin/android/advertisement/api/AdvertisementData;-><init>()V
-
-    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementData:Lcom/happybluefin/android/advertisement/api/AdvertisementData;
-
-    .line 862
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBitmapCacheAsync:Lcom/happybluefin/android/advertisement/cache/BitmapCacheAsync;
-
-    .line 867
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mListViewAdListAdapter:Landroid/widget/SimpleAdapter;
-
-    .line 872
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mListViewAd:Landroid/widget/ListView;
-
-    .line 877
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAlertDialog:Landroid/app/AlertDialog;
-
-    .line 882
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdapterDataList:Ljava/util/List;
-
-    .line 64
+    .line 26
     return-void
 .end method
 
 .method private _exit()V
-    .registers 15
+    .registers 8
 
     .prologue
-    const/4 v13, 0x0
-
-    const/4 v12, 0x2
-
-    .line 500
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAlertDialog:Landroid/app/AlertDialog;
-
-    if-nez v0, :cond_a8
-
-    .line 501
-    const-string v0, "layout_inflater"
-
-    invoke-virtual {p0, v0}, Lcom/happybluefin/android/timer/window/MainWindow;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/view/LayoutInflater;
-
-    .line 502
-    .local v9, "layoutInflater":Landroid/view/LayoutInflater;
-    const v0, 0x7f030001
-
-    invoke-virtual {v9, v0, v13}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v11
-
-    .line 504
-    .local v11, "view":Landroid/view/View;
-    const v0, 0x7f060002
-
-    invoke-virtual {v11, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ListView;
-
-    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mListViewAd:Landroid/widget/ListView;
-
-    .line 505
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mListViewAd:Landroid/widget/ListView;
-
-    new-instance v1, Lcom/happybluefin/android/timer/window/MainWindow$12;
-
-    invoke-direct {v1, p0}, Lcom/happybluefin/android/timer/window/MainWindow$12;-><init>(Lcom/happybluefin/android/timer/window/MainWindow;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    .line 513
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdapterDataList:Ljava/util/List;
-
-    .line 514
-    const/4 v8, 0x0
-
-    .local v8, "i":I
-    :goto_32
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementData:Lcom/happybluefin/android/advertisement/api/AdvertisementData;
-
-    iget-object v0, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData;->mAdDataList:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lt v8, v0, :cond_b6
-
-    .line 524
-    new-instance v0, Landroid/widget/SimpleAdapter;
-
-    .line 525
-    iget-object v2, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdapterDataList:Ljava/util/List;
-
-    .line 526
-    const/high16 v3, 0x7f030000
-
-    .line 527
-    new-array v4, v12, [Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    const-string v5, "image"
-
-    aput-object v5, v4, v1
-
-    const/4 v1, 0x1
-
-    const-string v5, "name"
-
-    aput-object v5, v4, v1
-
-    .line 528
-    new-array v5, v12, [I
-
-    fill-array-data v5, :array_126
-
-    move-object v1, p0
-
-    invoke-direct/range {v0 .. v5}, Landroid/widget/SimpleAdapter;-><init>(Landroid/content/Context;Ljava/util/List;I[Ljava/lang/String;[I)V
-
-    .line 524
-    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mListViewAdListAdapter:Landroid/widget/SimpleAdapter;
-
-    .line 529
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mListViewAdListAdapter:Landroid/widget/SimpleAdapter;
-
-    new-instance v1, Lcom/happybluefin/android/timer/window/MainWindow$ListViewBinder;
-
-    invoke-direct {v1, p0, v13}, Lcom/happybluefin/android/timer/window/MainWindow$ListViewBinder;-><init>(Lcom/happybluefin/android/timer/window/MainWindow;Lcom/happybluefin/android/timer/window/MainWindow$ListViewBinder;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/SimpleAdapter;->setViewBinder(Landroid/widget/SimpleAdapter$ViewBinder;)V
-
-    .line 530
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mListViewAd:Landroid/widget/ListView;
-
-    iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mListViewAdListAdapter:Landroid/widget/SimpleAdapter;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
-
-    .line 532
-    new-instance v6, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v6, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    .line 533
-    .local v6, "alertDialogBuilder":Landroid/app/AlertDialog$Builder;
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdapterDataList:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_ff
-
-    .line 534
-    const v0, 0x7f05000e
+    .line 371
+    .line 372
+    const v0, 0x7f040008
 
     invoke-virtual {p0, v0}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v6, v0}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    .line 535
-    invoke-virtual {v6, v11}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
-
-    .line 536
-    const v0, 0x7f05000f
+    .line 373
+    const v0, 0x7f040007
 
     invoke-virtual {p0, v0}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    new-instance v1, Lcom/happybluefin/android/timer/window/MainWindow$13;
+    .line 374
+    new-instance v3, Lcom/happybluefin/android/timer/window/MainWindow$12;
 
-    invoke-direct {v1, p0}, Lcom/happybluefin/android/timer/window/MainWindow$13;-><init>(Lcom/happybluefin/android/timer/window/MainWindow;)V
+    invoke-direct {v3, p0}, Lcom/happybluefin/android/timer/window/MainWindow$12;-><init>(Lcom/happybluefin/android/timer/window/MainWindow;)V
 
-    invoke-virtual {v6, v0, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 558
-    :goto_93
-    const v0, 0x7f05000d
+    .line 382
+    const v0, 0x7f040009
 
     invoke-virtual {p0, v0}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v4
 
-    new-instance v1, Lcom/happybluefin/android/timer/window/MainWindow$15;
+    .line 383
+    new-instance v5, Lcom/happybluefin/android/timer/window/MainWindow$13;
 
-    invoke-direct {v1, p0}, Lcom/happybluefin/android/timer/window/MainWindow$15;-><init>(Lcom/happybluefin/android/timer/window/MainWindow;)V
+    invoke-direct {v5, p0}, Lcom/happybluefin/android/timer/window/MainWindow$13;-><init>(Lcom/happybluefin/android/timer/window/MainWindow;)V
 
-    invoke-virtual {v6, v0, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    .line 389
+    const v0, 0x7f04000a
 
-    .line 565
-    invoke-virtual {v6}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+    invoke-virtual {p0, v0}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v6
 
-    iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAlertDialog:Landroid/app/AlertDialog;
+    move-object v0, p0
 
-    .line 568
-    .end local v6    # "alertDialogBuilder":Landroid/app/AlertDialog$Builder;
-    .end local v8    # "i":I
-    .end local v9    # "layoutInflater":Landroid/view/LayoutInflater;
-    .end local v11    # "view":Landroid/view/View;
-    :cond_a8
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAlertDialog:Landroid/app/AlertDialog;
+    .line 371
+    invoke-static/range {v0 .. v6}, Lcom/happybluefin/android/framework/dialog/MessageDialog;->show(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Ljava/lang/String;)Z
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_120
-
-    .line 569
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAlertDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
-
-    .line 576
-    :goto_b5
+    .line 392
     return-void
-
-    .line 515
-    .restart local v8    # "i":I
-    .restart local v9    # "layoutInflater":Landroid/view/LayoutInflater;
-    .restart local v11    # "view":Landroid/view/View;
-    :cond_b6
-    new-instance v10, Ljava/util/HashMap;
-
-    invoke-direct {v10}, Ljava/util/HashMap;-><init>()V
-
-    .line 516
-    .local v10, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBitmapCacheAsync:Lcom/happybluefin/android/advertisement/cache/BitmapCacheAsync;
-
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementData:Lcom/happybluefin/android/advertisement/api/AdvertisementData;
-
-    iget-object v0, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData;->mAdDataList:Ljava/util/List;
-
-    invoke-interface {v0, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;
-
-    iget-object v0, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;->name:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Lcom/happybluefin/android/advertisement/cache/BitmapCacheAsync;->loadImageFromCache(Ljava/lang/String;)Landroid/graphics/Bitmap;
-
-    move-result-object v7
-
-    .line 517
-    .local v7, "bitmap":Landroid/graphics/Bitmap;
-    if-eqz v7, :cond_fb
-
-    .line 518
-    const-string v0, "image"
-
-    invoke-interface {v10, v0, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 519
-    const-string v1, "name"
-
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementData:Lcom/happybluefin/android/advertisement/api/AdvertisementData;
-
-    iget-object v0, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData;->mAdDataList:Ljava/util/List;
-
-    invoke-interface {v0, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;
-
-    iget-object v0, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;->name:Ljava/lang/String;
-
-    invoke-interface {v10, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 520
-    const-string v1, "link"
-
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementData:Lcom/happybluefin/android/advertisement/api/AdvertisementData;
-
-    iget-object v0, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData;->mAdDataList:Ljava/util/List;
-
-    invoke-interface {v0, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;
-
-    iget-object v0, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;->link:Ljava/lang/String;
-
-    invoke-interface {v10, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 521
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdapterDataList:Ljava/util/List;
-
-    invoke-interface {v0, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 514
-    :cond_fb
-    add-int/lit8 v8, v8, 0x1
-
-    goto/16 :goto_32
-
-    .line 546
-    .end local v7    # "bitmap":Landroid/graphics/Bitmap;
-    .end local v10    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .restart local v6    # "alertDialogBuilder":Landroid/app/AlertDialog$Builder;
-    :cond_ff
-    const v0, 0x7f050009
-
-    invoke-virtual {p0, v0}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v6, v0}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    .line 547
-    const v0, 0x7f050008
-
-    invoke-virtual {v6, v0}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
-
-    .line 548
-    const v0, 0x7f05000c
-
-    invoke-virtual {p0, v0}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/happybluefin/android/timer/window/MainWindow$14;
-
-    invoke-direct {v1, p0}, Lcom/happybluefin/android/timer/window/MainWindow$14;-><init>(Lcom/happybluefin/android/timer/window/MainWindow;)V
-
-    invoke-virtual {v6, v0, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    goto/16 :goto_93
-
-    .line 572
-    .end local v6    # "alertDialogBuilder":Landroid/app/AlertDialog$Builder;
-    .end local v8    # "i":I
-    .end local v9    # "layoutInflater":Landroid/view/LayoutInflater;
-    .end local v11    # "view":Landroid/view/View;
-    :cond_120
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAlertDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
-
-    goto :goto_b5
-
-    .line 528
-    :array_126
-    .array-data 4
-        0x7f060000
-        0x7f060001
-    .end array-data
 .end method
 
 .method private _initBanner()V
     .registers 4
 
     .prologue
-    .line 373
+    .line 301
     :try_start_0
     invoke-static {}, Lcom/happybluefin/android/jni/JniInterface;->getAdmobUnitID()Ljava/lang/String;
 
     move-result-object v1
 
-    const/16 v2, 0x51
+    const/16 v2, 0x50
 
     invoke-static {p0, v1, v2}, Lcom/happybluefin/android/framework/utility/thirdpart/advertisement/Banner/GoogleAdmobSDK;->createBanner(Landroid/app/Activity;Ljava/lang/String;I)Z
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_9} :catch_a
 
-    .line 380
+    .line 308
     :goto_9
     return-void
 
-    .line 375
+    .line 303
     :catch_a
     move-exception v0
 
-    .line 376
+    .line 304
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_9
 .end method
 
-.method private _initOnlineParam()V
-    .registers 12
-
-    .prologue
-    const/4 v10, 0x0
-
-    .line 390
-    :try_start_1
-    invoke-static {p0}, Lcom/happybluefin/android/framework/utility/thirdpart/statistics/UmengSDK;->updateOnlineConfig(Landroid/content/Context;)V
-
-    .line 391
-    const-string v5, "AdvertisementParam"
-
-    const/4 v6, 0x0
-
-    invoke-static {p0, v5, v6}, Lcom/happybluefin/android/framework/utility/thirdpart/statistics/UmengSDK;->getConfigStringParams(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementParam:Ljava/lang/String;
-
-    .line 392
-    new-instance v5, Lcom/happybluefin/android/advertisement/cache/BitmapCacheAsync;
-
-    invoke-direct {v5, p0}, Lcom/happybluefin/android/advertisement/cache/BitmapCacheAsync;-><init>(Landroid/content/Context;)V
-
-    iput-object v5, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBitmapCacheAsync:Lcom/happybluefin/android/advertisement/cache/BitmapCacheAsync;
-
-    .line 394
-    new-instance v5, Lorg/json/JSONObject;
-
-    iget-object v6, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementParam:Ljava/lang/String;
-
-    invoke-direct {v5, v6}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string v6, "list"
-
-    invoke-virtual {v5, v6}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v4
-
-    .line 395
-    .local v4, "jsonArray":Lorg/json/JSONArray;
-    const/4 v2, 0x0
-
-    .local v2, "i":I
-    :goto_22
-    invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
-
-    move-result v5
-
-    if-lt v2, v5, :cond_29
-
-    .line 420
-    .end local v2    # "i":I
-    .end local v4    # "jsonArray":Lorg/json/JSONArray;
-    :goto_28
-    return-void
-
-    .line 396
-    .restart local v2    # "i":I
-    .restart local v4    # "jsonArray":Lorg/json/JSONArray;
-    :cond_29
-    new-instance v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;
-
-    invoke-direct {v0}, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;-><init>()V
-
-    .line 397
-    .local v0, "data":Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;
-    invoke-virtual {v4, v2}, Lorg/json/JSONArray;->opt(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lorg/json/JSONObject;
-
-    .line 398
-    .local v3, "json":Lorg/json/JSONObject;
-    const-string v5, "id"
-
-    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v5
-
-    iput v5, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;->id:I
-
-    .line 399
-    const-string v5, "name"
-
-    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;->name:Ljava/lang/String;
-
-    .line 400
-    const-string v5, "image"
-
-    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;->image:Ljava/lang/String;
-
-    .line 401
-    const-string v5, "link"
-
-    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;->link:Ljava/lang/String;
-
-    .line 403
-    iget-object v5, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementData:Lcom/happybluefin/android/advertisement/api/AdvertisementData;
-
-    iget-object v5, v5, Lcom/happybluefin/android/advertisement/api/AdvertisementData;->mAdDataList:Ljava/util/List;
-
-    invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 405
-    iget-object v5, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBitmapCacheAsync:Lcom/happybluefin/android/advertisement/cache/BitmapCacheAsync;
-
-    iget v6, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;->id:I
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    iget-object v7, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;->image:Ljava/lang/String;
-
-    iget-object v8, v0, Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;->name:Ljava/lang/String;
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v5, v6, v7, v8, v9}, Lcom/happybluefin/android/advertisement/cache/BitmapCacheAsync;->loadImage(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Lcom/happybluefin/android/advertisement/cache/BitmapCacheAsyncCallback;)Z
-    :try_end_6b
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_6b} :catch_6e
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_6b} :catch_7c
-
-    .line 395
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_22
-
-    .line 408
-    .end local v0    # "data":Lcom/happybluefin/android/advertisement/api/AdvertisementData$AdData;
-    .end local v2    # "i":I
-    .end local v3    # "json":Lorg/json/JSONObject;
-    .end local v4    # "jsonArray":Lorg/json/JSONArray;
-    :catch_6e
-    move-exception v1
-
-    .line 409
-    .local v1, "e":Lorg/json/JSONException;
-    invoke-virtual {v1}, Lorg/json/JSONException;->printStackTrace()V
-
-    .line 410
-    iput-object v10, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementParam:Ljava/lang/String;
-
-    .line 411
-    iget-object v5, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementData:Lcom/happybluefin/android/advertisement/api/AdvertisementData;
-
-    iget-object v5, v5, Lcom/happybluefin/android/advertisement/api/AdvertisementData;->mAdDataList:Ljava/util/List;
-
-    invoke-interface {v5}, Ljava/util/List;->clear()V
-
-    goto :goto_28
-
-    .line 413
-    .end local v1    # "e":Lorg/json/JSONException;
-    :catch_7c
-    move-exception v1
-
-    .line 414
-    .local v1, "e":Ljava/lang/Exception;
-    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
-
-    .line 415
-    iput-object v10, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementParam:Ljava/lang/String;
-
-    .line 416
-    iget-object v5, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdvertisementData:Lcom/happybluefin/android/advertisement/api/AdvertisementData;
-
-    iget-object v5, v5, Lcom/happybluefin/android/advertisement/api/AdvertisementData;->mAdDataList:Ljava/util/List;
-
-    invoke-interface {v5}, Ljava/util/List;->clear()V
-
-    goto :goto_28
-.end method
-
 .method private _initView()V
     .registers 4
 
     .prologue
-    .line 161
-    const v1, 0x7f030002
+    .line 93
+    const/high16 v1, 0x7f030000
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->setContentView(I)V
 
-    .line 163
-    const v1, 0x7f060005
+    .line 95
+    const/high16 v1, 0x7f050000
+
+    invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/LinearLayout;
+
+    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mLayoutBackground:Landroid/widget/LinearLayout;
+
+    .line 97
+    const v1, 0x7f050002
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -838,8 +316,8 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditHour:Landroid/widget/EditText;
 
-    .line 164
-    const v1, 0x7f060008
+    .line 98
+    const v1, 0x7f050005
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -849,8 +327,8 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMinute:Landroid/widget/EditText;
 
-    .line 165
-    const v1, 0x7f06000b
+    .line 99
+    const v1, 0x7f050008
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -860,8 +338,8 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditSecond:Landroid/widget/EditText;
 
-    .line 166
-    const v1, 0x7f06000e
+    .line 100
+    const v1, 0x7f05000b
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -871,7 +349,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMillisecond:Landroid/widget/EditText;
 
-    .line 168
+    .line 102
     invoke-virtual {p0}, Lcom/happybluefin/android/timer/window/MainWindow;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v1
@@ -882,33 +360,33 @@
 
     move-result-object v0
 
-    .line 169
+    .line 103
     .local v0, "tf":Landroid/graphics/Typeface;
-    if-eqz v0, :cond_52
+    if-eqz v0, :cond_5b
 
-    .line 170
+    .line 104
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditHour:Landroid/widget/EditText;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 171
+    .line 105
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMinute:Landroid/widget/EditText;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 172
+    .line 106
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditSecond:Landroid/widget/EditText;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 173
+    .line 107
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMillisecond:Landroid/widget/EditText;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 176
-    :cond_52
-    const v1, 0x7f060004
+    .line 110
+    :cond_5b
+    const v1, 0x7f050001
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -918,7 +396,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnHourPlus:Landroid/widget/Button;
 
-    .line 177
+    .line 111
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnHourPlus:Landroid/widget/Button;
 
     new-instance v2, Lcom/happybluefin/android/timer/window/MainWindow$2;
@@ -927,8 +405,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 196
-    const v1, 0x7f060006
+    .line 130
+    const v1, 0x7f050003
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -938,7 +416,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnHourMinus:Landroid/widget/Button;
 
-    .line 197
+    .line 131
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnHourMinus:Landroid/widget/Button;
 
     new-instance v2, Lcom/happybluefin/android/timer/window/MainWindow$3;
@@ -947,8 +425,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 216
-    const v1, 0x7f060007
+    .line 150
+    const v1, 0x7f050004
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -958,7 +436,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMinutePlus:Landroid/widget/Button;
 
-    .line 217
+    .line 151
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMinutePlus:Landroid/widget/Button;
 
     new-instance v2, Lcom/happybluefin/android/timer/window/MainWindow$4;
@@ -967,8 +445,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 235
-    const v1, 0x7f060009
+    .line 169
+    const v1, 0x7f050006
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -978,7 +456,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMinuteMinus:Landroid/widget/Button;
 
-    .line 236
+    .line 170
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMinuteMinus:Landroid/widget/Button;
 
     new-instance v2, Lcom/happybluefin/android/timer/window/MainWindow$5;
@@ -987,8 +465,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 255
-    const v1, 0x7f06000a
+    .line 189
+    const v1, 0x7f050007
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -998,7 +476,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnSecondPlus:Landroid/widget/Button;
 
-    .line 256
+    .line 190
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnSecondPlus:Landroid/widget/Button;
 
     new-instance v2, Lcom/happybluefin/android/timer/window/MainWindow$6;
@@ -1007,8 +485,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 274
-    const v1, 0x7f06000c
+    .line 208
+    const v1, 0x7f050009
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -1018,7 +496,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnSecondMinus:Landroid/widget/Button;
 
-    .line 275
+    .line 209
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnSecondMinus:Landroid/widget/Button;
 
     new-instance v2, Lcom/happybluefin/android/timer/window/MainWindow$7;
@@ -1027,8 +505,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 294
-    const v1, 0x7f06000d
+    .line 228
+    const v1, 0x7f05000a
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -1038,7 +516,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMillisecondPlus:Landroid/widget/Button;
 
-    .line 295
+    .line 229
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMillisecondPlus:Landroid/widget/Button;
 
     new-instance v2, Lcom/happybluefin/android/timer/window/MainWindow$8;
@@ -1047,8 +525,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 313
-    const v1, 0x7f06000f
+    .line 247
+    const v1, 0x7f05000c
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -1058,7 +536,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMillisecondMinus:Landroid/widget/Button;
 
-    .line 314
+    .line 248
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnMillisecondMinus:Landroid/widget/Button;
 
     new-instance v2, Lcom/happybluefin/android/timer/window/MainWindow$9;
@@ -1067,8 +545,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 334
-    const v1, 0x7f060010
+    .line 268
+    const v1, 0x7f05000d
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -1078,7 +556,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnStart:Landroid/widget/Button;
 
-    .line 335
+    .line 269
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnStart:Landroid/widget/Button;
 
     new-instance v2, Lcom/happybluefin/android/timer/window/MainWindow$10;
@@ -1087,8 +565,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 347
-    const v1, 0x7f060011
+    .line 281
+    const v1, 0x7f05000e
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->findViewById(I)Landroid/view/View;
 
@@ -1098,7 +576,7 @@
 
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnReset:Landroid/widget/Button;
 
-    .line 348
+    .line 282
     iget-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnReset:Landroid/widget/Button;
 
     new-instance v2, Lcom/happybluefin/android/timer/window/MainWindow$11;
@@ -1107,16 +585,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 360
-    const/high16 v1, 0x7f040000
-
-    invoke-static {p0, v1}, Landroid/media/MediaPlayer;->create(Landroid/content/Context;I)Landroid/media/MediaPlayer;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mMediaPlayer:Landroid/media/MediaPlayer;
-
-    .line 363
+    .line 295
     return-void
 .end method
 
@@ -1128,22 +597,22 @@
 
     const/4 v4, 0x0
 
-    .line 476
+    .line 351
     iput v4, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHour:I
 
-    .line 477
+    .line 352
     iput v4, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mMinute:I
 
-    .line 478
+    .line 353
     iput v4, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mSecond:I
 
-    .line 479
+    .line 354
     iput v4, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHundredMillisecond:I
 
-    .line 481
+    .line 356
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnStart:Landroid/widget/Button;
 
-    const v1, 0x7f050001
+    const v1, 0x7f040001
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
 
@@ -1151,7 +620,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 483
+    .line 358
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditHour:Landroid/widget/EditText;
 
     const-string v1, "%02d"
@@ -1172,7 +641,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 484
+    .line 359
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMinute:Landroid/widget/EditText;
 
     const-string v1, "%02d"
@@ -1193,7 +662,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 485
+    .line 360
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditSecond:Landroid/widget/EditText;
 
     const-string v1, "%02d"
@@ -1214,7 +683,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 486
+    .line 361
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMillisecond:Landroid/widget/EditText;
 
     const-string v1, "%01d"
@@ -1235,10 +704,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 488
+    .line 363
     iput v4, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mState:I
 
-    .line 491
+    .line 366
     return-void
 .end method
 
@@ -1248,73 +717,54 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 429
+    .line 313
     iget v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHour:I
 
-    if-nez v0, :cond_21
+    if-nez v0, :cond_11
 
     iget v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mMinute:I
 
-    if-nez v0, :cond_21
+    if-nez v0, :cond_11
 
     iget v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mSecond:I
 
-    if-nez v0, :cond_21
+    if-nez v0, :cond_11
 
     iget v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHundredMillisecond:I
 
-    if-nez v0, :cond_21
+    if-eqz v0, :cond_37
 
-    .line 431
-    const v0, 0x7f050007
-
-    invoke-virtual {p0, v0}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    .line 448
-    :goto_20
-    return-void
-
-    .line 434
-    :cond_21
+    .line 317
+    :cond_11
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mUpdateThread:Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
 
-    if-eqz v0, :cond_2c
+    if-eqz v0, :cond_1c
 
-    .line 435
+    .line 318
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mUpdateThread:Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
 
     invoke-virtual {v0}, Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;->stopThread()V
 
-    .line 436
+    .line 319
     iput-object v1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mUpdateThread:Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
 
-    .line 439
-    :cond_2c
+    .line 322
+    :cond_1c
     new-instance v0, Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
 
     invoke-direct {v0, p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;-><init>(Lcom/happybluefin/android/timer/window/MainWindow;Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;)V
 
     iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mUpdateThread:Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
 
-    .line 440
+    .line 323
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mUpdateThread:Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
 
     invoke-virtual {v0}, Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;->startThread()V
 
-    .line 442
+    .line 325
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnStart:Landroid/widget/Button;
 
-    const v1, 0x7f050003
+    const v1, 0x7f040003
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
 
@@ -1322,38 +772,40 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 444
+    .line 327
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mState:I
 
-    goto :goto_20
+    .line 331
+    :cond_37
+    return-void
 .end method
 
 .method private _stop()V
     .registers 3
 
     .prologue
-    .line 457
+    .line 336
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mUpdateThread:Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
 
     if-eqz v0, :cond_c
 
-    .line 458
+    .line 337
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mUpdateThread:Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
 
     invoke-virtual {v0}, Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;->stopThread()V
 
-    .line 459
+    .line 338
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mUpdateThread:Lcom/happybluefin/android/timer/window/MainWindow$UpdateThread;
 
-    .line 462
+    .line 341
     :cond_c
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnStart:Landroid/widget/Button;
 
-    const v1, 0x7f050002
+    const v1, 0x7f040002
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
 
@@ -1361,10 +813,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 463
+    .line 342
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mBtnReset:Landroid/widget/Button;
 
-    const v1, 0x7f050004
+    const v1, 0x7f040004
 
     invoke-virtual {p0, v1}, Lcom/happybluefin/android/timer/window/MainWindow;->getString(I)Ljava/lang/String;
 
@@ -1372,12 +824,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 464
+    .line 343
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mState:I
 
-    .line 467
+    .line 346
     return-void
 .end method
 
@@ -1385,7 +837,7 @@
     .registers 2
 
     .prologue
-    .line 832
+    .line 531
     iget v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mMinute:I
 
     return v0
@@ -1395,38 +847,38 @@
     .registers 2
 
     .prologue
-    .line 832
+    .line 531
     iput p1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mMinute:I
 
     return-void
 .end method
 
-.method static synthetic access$10(Lcom/happybluefin/android/timer/window/MainWindow;)V
-    .registers 1
-
-    .prologue
-    .line 473
-    invoke-direct {p0}, Lcom/happybluefin/android/timer/window/MainWindow;->_reset()V
-
-    return-void
-.end method
-
-.method static synthetic access$11(Lcom/happybluefin/android/timer/window/MainWindow;)Landroid/os/Handler;
+.method static synthetic access$10(Lcom/happybluefin/android/timer/window/MainWindow;)Landroid/os/Handler;
     .registers 2
 
     .prologue
-    .line 779
+    .line 491
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHandler:Landroid/os/Handler;
 
     return-object v0
+.end method
+
+.method static synthetic access$11(Lcom/happybluefin/android/timer/window/MainWindow;I)V
+    .registers 2
+
+    .prologue
+    .line 533
+    iput p1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHundredMillisecond:I
+
+    return-void
 .end method
 
 .method static synthetic access$12(Lcom/happybluefin/android/timer/window/MainWindow;I)V
     .registers 2
 
     .prologue
-    .line 842
-    iput p1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHundredMillisecond:I
+    .line 532
+    iput p1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mSecond:I
 
     return-void
 .end method
@@ -1435,77 +887,47 @@
     .registers 2
 
     .prologue
-    .line 837
-    iput p1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mSecond:I
-
-    return-void
-.end method
-
-.method static synthetic access$14(Lcom/happybluefin/android/timer/window/MainWindow;I)V
-    .registers 2
-
-    .prologue
-    .line 827
+    .line 530
     iput p1, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHour:I
 
     return-void
 .end method
 
-.method static synthetic access$15(Lcom/happybluefin/android/timer/window/MainWindow;)I
+.method static synthetic access$14(Lcom/happybluefin/android/timer/window/MainWindow;)I
     .registers 2
 
     .prologue
-    .line 847
+    .line 535
     iget v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mState:I
 
     return v0
+.end method
+
+.method static synthetic access$15(Lcom/happybluefin/android/timer/window/MainWindow;)V
+    .registers 1
+
+    .prologue
+    .line 310
+    invoke-direct {p0}, Lcom/happybluefin/android/timer/window/MainWindow;->_start()V
+
+    return-void
 .end method
 
 .method static synthetic access$16(Lcom/happybluefin/android/timer/window/MainWindow;)V
     .registers 1
 
     .prologue
-    .line 426
-    invoke-direct {p0}, Lcom/happybluefin/android/timer/window/MainWindow;->_start()V
-
-    return-void
-.end method
-
-.method static synthetic access$17(Lcom/happybluefin/android/timer/window/MainWindow;)V
-    .registers 1
-
-    .prologue
-    .line 454
+    .line 333
     invoke-direct {p0}, Lcom/happybluefin/android/timer/window/MainWindow;->_stop()V
 
     return-void
-.end method
-
-.method static synthetic access$18(Lcom/happybluefin/android/timer/window/MainWindow;)Ljava/util/List;
-    .registers 2
-
-    .prologue
-    .line 882
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAdapterDataList:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method static synthetic access$19(Lcom/happybluefin/android/timer/window/MainWindow;)Landroid/app/AlertDialog;
-    .registers 2
-
-    .prologue
-    .line 877
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mAlertDialog:Landroid/app/AlertDialog;
-
-    return-object v0
 .end method
 
 .method static synthetic access$2(Lcom/happybluefin/android/timer/window/MainWindow;)Landroid/widget/EditText;
     .registers 2
 
     .prologue
-    .line 704
+    .line 470
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditHour:Landroid/widget/EditText;
 
     return-object v0
@@ -1515,7 +937,7 @@
     .registers 2
 
     .prologue
-    .line 827
+    .line 530
     iget v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHour:I
 
     return v0
@@ -1525,7 +947,7 @@
     .registers 2
 
     .prologue
-    .line 709
+    .line 471
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMinute:Landroid/widget/EditText;
 
     return-object v0
@@ -1535,7 +957,7 @@
     .registers 2
 
     .prologue
-    .line 714
+    .line 472
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditSecond:Landroid/widget/EditText;
 
     return-object v0
@@ -1545,7 +967,7 @@
     .registers 2
 
     .prologue
-    .line 837
+    .line 532
     iget v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mSecond:I
 
     return v0
@@ -1555,7 +977,7 @@
     .registers 2
 
     .prologue
-    .line 719
+    .line 473
     iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mEditMillisecond:Landroid/widget/EditText;
 
     return-object v0
@@ -1565,20 +987,20 @@
     .registers 2
 
     .prologue
-    .line 842
+    .line 533
     iget v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mHundredMillisecond:I
 
     return v0
 .end method
 
-.method static synthetic access$9(Lcom/happybluefin/android/timer/window/MainWindow;)Landroid/media/MediaPlayer;
-    .registers 2
+.method static synthetic access$9(Lcom/happybluefin/android/timer/window/MainWindow;)V
+    .registers 1
 
     .prologue
-    .line 822
-    iget-object v0, p0, Lcom/happybluefin/android/timer/window/MainWindow;->mMediaPlayer:Landroid/media/MediaPlayer;
+    .line 348
+    invoke-direct {p0}, Lcom/happybluefin/android/timer/window/MainWindow;->_reset()V
 
-    return-object v0
+    return-void
 .end method
 
 
@@ -1588,19 +1010,16 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 72
+    .line 29
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 75
+    .line 32
     invoke-direct {p0}, Lcom/happybluefin/android/timer/window/MainWindow;->_initView()V
 
-    .line 76
+    .line 33
     invoke-direct {p0}, Lcom/happybluefin/android/timer/window/MainWindow;->_initBanner()V
 
-    .line 77
-    invoke-direct {p0}, Lcom/happybluefin/android/timer/window/MainWindow;->_initOnlineParam()V
-
-    .line 80
+    .line 36
     return-void
 .end method
 
@@ -1608,13 +1027,13 @@
     .registers 1
 
     .prologue
-    .line 88
+    .line 40
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 91
+    .line 43
     invoke-static {}, Lcom/happybluefin/android/framework/utility/thirdpart/advertisement/Banner/GoogleAdmobSDK;->destoryBanner()V
 
-    .line 94
+    .line 46
     return-void
 .end method
 
@@ -1624,33 +1043,33 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 136
+    .line 72
     const/4 v0, 0x0
 
-    .line 138
+    .line 74
     .local v0, "result":Z
     packed-switch p1, :pswitch_data_e
 
-    .line 145
+    .line 81
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
-    .line 151
+    .line 87
     :goto_8
     return v0
 
-    .line 140
+    .line 76
     :pswitch_9
     invoke-direct {p0}, Lcom/happybluefin/android/timer/window/MainWindow;->_exit()V
 
-    .line 141
+    .line 77
     const/4 v0, 0x1
 
-    .line 142
+    .line 78
     goto :goto_8
 
-    .line 138
+    .line 74
     :pswitch_data_e
     .packed-switch 0x4
         :pswitch_9
@@ -1661,13 +1080,13 @@
     .registers 1
 
     .prologue
-    .line 116
+    .line 60
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 119
+    .line 63
     invoke-static {p0}, Lcom/happybluefin/android/framework/utility/thirdpart/statistics/UmengSDK;->onPause(Landroid/content/Context;)V
 
-    .line 122
+    .line 66
     return-void
 .end method
 
@@ -1675,12 +1094,12 @@
     .registers 1
 
     .prologue
-    .line 102
+    .line 50
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 105
+    .line 53
     invoke-static {p0}, Lcom/happybluefin/android/framework/utility/thirdpart/statistics/UmengSDK;->onResume(Landroid/content/Context;)V
 
-    .line 108
+    .line 56
     return-void
 .end method

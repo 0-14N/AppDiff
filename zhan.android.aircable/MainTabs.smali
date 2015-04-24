@@ -1,14 +1,11 @@
 .class public Lzhan/android/aircable/MainTabs;
 .super Lzhan/android/aircable/BaseActivity;
 
-# interfaces
-.implements Lcn/waps/e;
-
 
 # instance fields
 .field d:Landroid/widget/TabHost;
 
-.field e:Lzhan/android/aircable/am;
+.field e:Lzhan/android/aircable/ai;
 
 .field f:Landroid/widget/ImageView;
 
@@ -118,69 +115,15 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TabHost$TabSpec;->setIndicator(Landroid/view/View;)Landroid/widget/TabHost$TabSpec;
 
-    iget-object v0, p0, Lzhan/android/aircable/MainTabs;->e:Lzhan/android/aircable/am;
+    iget-object v0, p0, Lzhan/android/aircable/MainTabs;->e:Lzhan/android/aircable/ai;
 
-    invoke-virtual {v0, v1, p4}, Lzhan/android/aircable/am;->a(Landroid/widget/TabHost$TabSpec;Ljava/lang/Class;)V
+    invoke-virtual {v0, v1, p4}, Lzhan/android/aircable/ai;->a(Landroid/widget/TabHost$TabSpec;Ljava/lang/Class;)V
 
     return-void
-.end method
-
-.method static synthetic b(Lzhan/android/aircable/MainTabs;)I
-    .registers 2
-
-    iget v0, p0, Lzhan/android/aircable/MainTabs;->j:I
-
-    return v0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .registers 4
-
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string v1, "_adRemoved"
-
-    const/4 v2, 0x1
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    iget-object v0, p0, Lzhan/android/aircable/MainTabs;->i:Landroid/os/Handler;
-
-    new-instance v1, Lzhan/android/aircable/ah;
-
-    invoke-direct {v1, p0}, Lzhan/android/aircable/ah;-><init>(Lzhan/android/aircable/MainTabs;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final a(Ljava/lang/String;)V
-    .registers 4
-
-    iget-object v0, p0, Lzhan/android/aircable/MainTabs;->i:Landroid/os/Handler;
-
-    new-instance v1, Lzhan/android/aircable/ai;
-
-    invoke-direct {v1, p0, p1}, Lzhan/android/aircable/ai;-><init>(Lzhan/android/aircable/MainTabs;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
 .method protected onCreate(Landroid/os/Bundle;)V
     .registers 6
 
@@ -292,19 +235,19 @@
     :cond_73
     iget-object v0, p0, Lzhan/android/aircable/MainTabs;->d:Landroid/widget/TabHost;
 
-    if-eqz v0, :cond_133
+    if-eqz v0, :cond_116
 
     iget-object v0, p0, Lzhan/android/aircable/MainTabs;->d:Landroid/widget/TabHost;
 
     invoke-virtual {v0}, Landroid/widget/TabHost;->setup()V
 
-    new-instance v0, Lzhan/android/aircable/am;
+    new-instance v0, Lzhan/android/aircable/ai;
 
     iget-object v1, p0, Lzhan/android/aircable/MainTabs;->d:Landroid/widget/TabHost;
 
-    invoke-direct {v0, p0, v1}, Lzhan/android/aircable/am;-><init>(Landroid/support/v4/app/FragmentActivity;Landroid/widget/TabHost;)V
+    invoke-direct {v0, p0, v1}, Lzhan/android/aircable/ai;-><init>(Landroid/support/v4/app/FragmentActivity;Landroid/widget/TabHost;)V
 
-    iput-object v0, p0, Lzhan/android/aircable/MainTabs;->e:Lzhan/android/aircable/am;
+    iput-object v0, p0, Lzhan/android/aircable/MainTabs;->e:Lzhan/android/aircable/ai;
 
     const-string v0, "home"
 
@@ -430,38 +373,9 @@
 
     iput-object v0, p0, Lzhan/android/aircable/MainTabs;->h:Landroid/widget/LinearLayout;
 
-    invoke-static {p0}, Lcn/waps/b;->a(Landroid/content/Context;)Lcn/waps/b;
-
-    const-string v0, "spendPoints"
-
-    invoke-static {v0}, Lcn/waps/b;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_132
-
-    const-string v1, ""
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_132
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    iput v0, p0, Lzhan/android/aircable/MainTabs;->j:I
-
-    :cond_132
     return-void
 
-    :cond_133
+    :cond_116
     invoke-virtual {p0}, Lzhan/android/aircable/MainTabs;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v0
@@ -474,7 +388,7 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_177
+    if-nez v0, :cond_15a
 
     const-class v0, Lzhan/android/aircable/fragment/i;
 
@@ -490,7 +404,7 @@
 
     invoke-virtual {v1, v3, v0, v2}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    :goto_150
+    :goto_133
     invoke-virtual {p0}, Lzhan/android/aircable/MainTabs;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v0
@@ -501,7 +415,7 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_187
+    if-nez v0, :cond_16a
 
     const v0, 0x7f060043
 
@@ -519,8 +433,8 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    :cond_16e
-    :goto_16e
+    :cond_151
+    :goto_151
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentTransaction;->disallowAddToBackStack()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v0
@@ -529,7 +443,7 @@
 
     goto/16 :goto_d1
 
-    :cond_177
+    :cond_15a
     const-class v0, Lzhan/android/aircable/fragment/i;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -544,18 +458,18 @@
 
     invoke-virtual {v1, v3, v0, v2}, Landroid/support/v4/app/FragmentTransaction;->replace(ILandroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    goto :goto_150
+    goto :goto_133
 
-    :cond_187
+    :cond_16a
     invoke-virtual {v0}, Landroid/support/v4/app/Fragment;->isDetached()Z
 
     move-result v2
 
-    if-eqz v2, :cond_16e
+    if-eqz v2, :cond_151
 
     invoke-virtual {v1, v0}, Landroid/support/v4/app/FragmentTransaction;->attach(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    goto :goto_16e
+    goto :goto_151
 .end method
 
 .method public onCreateOptionsMenu(Lcom/actionbarsherlock/view/Menu;)Z
@@ -648,280 +562,322 @@
 .method protected onResume()V
     .registers 11
 
-    const/4 v9, 0x1
+    const/4 v2, 0x1
 
-    const/4 v8, 0x0
+    const/4 v1, 0x0
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    move-result-object v0
+    move-result-object v3
 
     invoke-virtual {p0}, Lzhan/android/aircable/MainTabs;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "key_nav_item_pos"
+    const-string v4, "key_nav_item_pos"
 
-    invoke-interface {v0, v2, v8}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v3, v4, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    move-result v2
+    move-result v4
 
-    invoke-virtual {v1, v2}, Lcom/actionbarsherlock/app/ActionBar;->setSelectedNavigationItem(I)V
+    invoke-virtual {v0, v4}, Lcom/actionbarsherlock/app/ActionBar;->setSelectedNavigationItem(I)V
 
-    invoke-virtual {p0, v8}, Lzhan/android/aircable/MainTabs;->setSupportProgressBarIndeterminateVisibility(Z)V
+    invoke-virtual {p0, v1}, Lzhan/android/aircable/MainTabs;->setSupportProgressBarIndeterminateVisibility(Z)V
 
-    invoke-static {p0}, Lzhan/android/common/a;->h(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_24
-
-    const-string v1, "_adRemoved"
-
-    invoke-interface {v0, v1, v8}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    if-nez v1, :cond_57
-
-    :cond_24
-    iget-object v1, p0, Lzhan/android/aircable/MainTabs;->h:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
-
-    move-result v1
-
-    if-lez v1, :cond_ee
-
-    invoke-static {p0}, Lzhan/android/common/a;->c(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_57
-
-    new-instance v1, Lzhan/android/aircable/al;
-
-    invoke-direct {v1, p0, v8}, Lzhan/android/aircable/al;-><init>(Lzhan/android/aircable/MainTabs;B)V
-
-    new-array v2, v9, [Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "http://qrweibo.sinaapp.com/"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lzhan/android/aircable/MainTabs;->getPackageName()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, "/update.json"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v2, v8
-
-    invoke-virtual {v1, v2}, Lzhan/android/aircable/al;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
-
-    :cond_57
-    :goto_57
-    const-string v1, "key_file_count"
-
-    const-wide/16 v2, 0x0
-
-    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v1
-
-    const-string v3, "key_alert_rate_count"
-
-    invoke-interface {v0, v3, v9}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v3
-
-    mul-int/lit8 v4, v3, 0x64
-
-    int-to-long v4, v4
-
-    div-long v4, v1, v4
-
-    long-to-int v4, v4
-
-    const-string v5, "MAIN"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "fileCount:"
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, " alertCount:"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, " preCount:"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-lt v4, v3, :cond_ea
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v3
-
-    const-string v5, "key_alert_rate_count"
-
-    add-int/lit8 v4, v4, 0x1
-
-    invoke-interface {v3, v5, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    new-instance v3, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v3, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    const v4, 0x7f0b0050
-
-    invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v3
-
-    const v4, 0x7f0b00aa
-
-    new-array v5, v9, [Ljava/lang/Object;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    aput-object v1, v5, v8
-
-    invoke-virtual {p0, v4, v5}, Lzhan/android/aircable/MainTabs;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v1
-
-    const v2, 0x7f0b00ab
-
-    new-instance v3, Lzhan/android/aircable/ag;
-
-    invoke-direct {v3, p0}, Lzhan/android/aircable/ag;-><init>(Lzhan/android/aircable/MainTabs;)V
-
-    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v1
-
-    const/high16 v2, 0x1040000
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const-string v1, "_asu"
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    invoke-interface {v0, v1, v9}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    move-result-object v0
+
+    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v4, "CN"
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_111
+
+    const-string v4, "TW"
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_111
+
+    const-string v4, "HK"
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_111
+
+    move v0, v1
+
+    :goto_3d
+    if-eqz v0, :cond_47
+
+    const-string v0, "_adRemoved"
+
+    invoke-interface {v3, v0, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7a
+
+    :cond_47
+    iget-object v0, p0, Lzhan/android/aircable/MainTabs;->h:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v0
+
+    if-lez v0, :cond_114
+
+    invoke-static {p0}, Lzhan/android/common/a;->c(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7a
+
+    new-instance v0, Lzhan/android/aircable/ah;
+
+    invoke-direct {v0, p0, v1}, Lzhan/android/aircable/ah;-><init>(Lzhan/android/aircable/MainTabs;B)V
+
+    new-array v4, v2, [Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "http://qrweibo.sinaapp.com/"
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lzhan/android/aircable/MainTabs;->getPackageName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, "/update.json"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    invoke-virtual {v0, v4}, Lzhan/android/aircable/ah;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    :cond_7a
+    :goto_7a
+    const-string v0, "key_file_count"
+
+    const-wide/16 v4, 0x0
+
+    invoke-interface {v3, v0, v4, v5}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v4
+
+    const-string v0, "key_alert_rate_count"
+
+    invoke-interface {v3, v0, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    mul-int/lit8 v6, v0, 0x64
+
+    int-to-long v6, v6
+
+    div-long v6, v4, v6
+
+    long-to-int v6, v6
+
+    const-string v7, "MAIN"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    const-string v9, "fileCount:"
+
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, " alertCount:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, " preCount:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-lt v6, v0, :cond_10d
+
+    invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v7, "key_alert_rate_count"
+
+    add-int/lit8 v6, v6, 0x1
+
+    invoke-interface {v0, v7, v6}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    :cond_ea
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const v6, 0x7f0b0050
+
+    invoke-virtual {v0, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const v6, 0x7f0b00aa
+
+    new-array v7, v2, [Ljava/lang/Object;
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v7, v1
+
+    invoke-virtual {p0, v6, v7}, Lzhan/android/aircable/MainTabs;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const v1, 0x7f0b00ab
+
+    new-instance v4, Lzhan/android/aircable/ag;
+
+    invoke-direct {v4, p0}, Lzhan/android/aircable/ag;-><init>(Lzhan/android/aircable/MainTabs;)V
+
+    invoke-virtual {v0, v1, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const/high16 v1, 0x1040000
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v0, v1, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
+
+    invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "_asu"
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    :cond_10d
     invoke-super {p0}, Lzhan/android/aircable/BaseActivity;->onResume()V
 
     return-void
 
-    :cond_ee
-    new-instance v1, Lcom/google/ads/AdView;
+    :cond_111
+    move v0, v2
 
-    sget-object v2, Lcom/google/ads/g;->b:Lcom/google/ads/g;
+    goto/16 :goto_3d
 
-    const-string v3, "a1529364a714ea9"
+    :cond_114
+    new-instance v0, Lcom/google/ads/AdView;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/g;Ljava/lang/String;)V
+    sget-object v4, Lcom/google/ads/g;->b:Lcom/google/ads/g;
 
-    iput-object v1, p0, Lzhan/android/aircable/MainTabs;->g:Lcom/google/ads/AdView;
+    const-string v5, "a1529364a714ea9"
 
-    iget-object v1, p0, Lzhan/android/aircable/MainTabs;->h:Landroid/widget/LinearLayout;
+    invoke-direct {v0, p0, v4, v5}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/g;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lzhan/android/aircable/MainTabs;->g:Lcom/google/ads/AdView;
+    iput-object v0, p0, Lzhan/android/aircable/MainTabs;->g:Lcom/google/ads/AdView;
 
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    iget-object v0, p0, Lzhan/android/aircable/MainTabs;->h:Landroid/widget/LinearLayout;
 
-    iget-object v1, p0, Lzhan/android/aircable/MainTabs;->g:Lcom/google/ads/AdView;
+    iget-object v4, p0, Lzhan/android/aircable/MainTabs;->g:Lcom/google/ads/AdView;
 
-    new-instance v2, Lcom/google/ads/d;
+    invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    invoke-direct {v2}, Lcom/google/ads/d;-><init>()V
+    iget-object v0, p0, Lzhan/android/aircable/MainTabs;->g:Lcom/google/ads/AdView;
 
-    invoke-virtual {v1, v2}, Lcom/google/ads/AdView;->a(Lcom/google/ads/d;)V
+    new-instance v4, Lcom/google/ads/d;
 
-    iget-object v1, p0, Lzhan/android/aircable/MainTabs;->g:Lcom/google/ads/AdView;
+    invoke-direct {v4}, Lcom/google/ads/d;-><init>()V
 
-    new-instance v2, Lzhan/android/aircable/ae;
+    invoke-virtual {v0, v4}, Lcom/google/ads/AdView;->a(Lcom/google/ads/d;)V
 
-    invoke-direct {v2, p0}, Lzhan/android/aircable/ae;-><init>(Lzhan/android/aircable/MainTabs;)V
+    iget-object v0, p0, Lzhan/android/aircable/MainTabs;->g:Lcom/google/ads/AdView;
 
-    invoke-virtual {v1, v2}, Lcom/google/ads/AdView;->a(Lcom/google/ads/c;)V
+    new-instance v4, Lzhan/android/aircable/ae;
 
-    iget-object v1, p0, Lzhan/android/aircable/MainTabs;->f:Landroid/widget/ImageView;
+    invoke-direct {v4, p0}, Lzhan/android/aircable/ae;-><init>(Lzhan/android/aircable/MainTabs;)V
 
-    new-instance v2, Lzhan/android/aircable/af;
+    invoke-virtual {v0, v4}, Lcom/google/ads/AdView;->a(Lcom/google/ads/c;)V
 
-    invoke-direct {v2, p0}, Lzhan/android/aircable/af;-><init>(Lzhan/android/aircable/MainTabs;)V
+    iget-object v0, p0, Lzhan/android/aircable/MainTabs;->f:Landroid/widget/ImageView;
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    new-instance v4, Lzhan/android/aircable/af;
 
-    goto/16 :goto_57
+    invoke-direct {v4, p0}, Lzhan/android/aircable/af;-><init>(Lzhan/android/aircable/MainTabs;)V
+
+    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    goto/16 :goto_7a
 .end method
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V

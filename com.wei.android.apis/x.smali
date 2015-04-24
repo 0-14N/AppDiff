@@ -58,7 +58,7 @@
 
     .line 334
     .local v1, "toast":Lcom/wei/android/apis/ui/d/e;
-    const v2, 0x7f08004c
+    const v2, 0x7f09004c
 
     invoke-virtual {v1, v2}, Lcom/wei/android/apis/ui/d/e;->a(I)V
 
@@ -79,7 +79,7 @@
     :cond_20
     iget-object v2, p0, Lcom/wei/android/apis/a/x;->b:Landroid/content/Context;
 
-    invoke-static {v0, v2}, Lcom/wei/android/apis/c/f;->c(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v0, v2}, Lcom/wei/android/apis/c/g;->c(Ljava/lang/String;Landroid/content/Context;)V
 
     goto :goto_1a
 .end method

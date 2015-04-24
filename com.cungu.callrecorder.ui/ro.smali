@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ro;->a:Lcom/cungo/callrecorder/ui/FragmentSendLog_;
 
-    invoke-virtual {v0}, Lcom/cungo/callrecorder/ui/FragmentSendLog_;->O()V
+    invoke-virtual {v0}, Lcom/cungo/callrecorder/ui/FragmentSendLog_;->M()V
 
     return-void
 .end method

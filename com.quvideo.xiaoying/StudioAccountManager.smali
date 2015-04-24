@@ -442,9 +442,9 @@
 
     .prologue
     .line 563
-    new-instance v0, Laaf;
+    new-instance v0, Ltm;
 
-    invoke-direct {v0, p0}, Laaf;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;)V
+    invoke-direct {v0, p0}, Ltm;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;)V
 
     const/4 v1, 0x1
 
@@ -455,7 +455,7 @@
     .line 579
     aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1}, Laaf;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Ltm;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     .line 580
     return-void
@@ -777,9 +777,9 @@
     const-string/jumbo v2, "user.info"
 
     .line 406
-    new-instance v3, Laac;
+    new-instance v3, Ltj;
 
-    invoke-direct {v3, p0}, Laac;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;)V
+    invoke-direct {v3, p0}, Ltj;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;)V
 
     .line 404
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -803,9 +803,9 @@
     .prologue
     .line 585
     :try_start_0
-    new-instance v0, Laag;
+    new-instance v0, Ltn;
 
-    invoke-direct {v0, p0}, Laag;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;)V
+    invoke-direct {v0, p0}, Ltn;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;)V
 
     const/4 v1, 0x1
 
@@ -816,7 +816,7 @@
     .line 601
     aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1}, Laag;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Ltn;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
     :try_end_e
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_e} :catch_f
 
@@ -1036,9 +1036,9 @@
     const v2, 0x7f0a0256
 
     .line 450
-    new-instance v3, Laae;
+    new-instance v3, Ltl;
 
-    invoke-direct {v3, p0}, Laae;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;)V
+    invoke-direct {v3, p0}, Ltl;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;)V
 
     .line 448
     invoke-direct {v1, v0, v2, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -1185,9 +1185,9 @@
     const-string/jumbo v3, "studio.profileUp"
 
     .line 649
-    new-instance v4, Laah;
+    new-instance v4, Lto;
 
-    invoke-direct {v4, p0, v1}, Laah;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;Ljava/lang/String;)V
+    invoke-direct {v4, p0, v1}, Lto;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;Ljava/lang/String;)V
 
     .line 647
     invoke-virtual {v2, v3, v4}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1275,9 +1275,9 @@
     const-string/jumbo v3, "studio.profileUp"
 
     .line 706
-    new-instance v4, Laai;
+    new-instance v4, Ltp;
 
-    invoke-direct {v4, p0, v1}, Laai;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;Ljava/lang/String;)V
+    invoke-direct {v4, p0, v1}, Ltp;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;Ljava/lang/String;)V
 
     .line 704
     invoke-virtual {v2, v3, v4}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1410,9 +1410,9 @@
     new-instance v2, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
     .line 826
-    new-instance v3, Laaj;
+    new-instance v3, Ltq;
 
-    invoke-direct {v3, p0, v0}, Laaj;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;Landroid/app/Activity;)V
+    invoke-direct {v3, p0, v0}, Ltq;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;Landroid/app/Activity;)V
 
     .line 825
     invoke-direct {v2, v0, v1, v3}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
@@ -1608,9 +1608,9 @@
     new-instance v2, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
     .line 1008
-    new-instance v3, Laad;
+    new-instance v3, Ltk;
 
-    invoke-direct {v3, p0, v0}, Laad;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;Landroid/app/Activity;)V
+    invoke-direct {v3, p0, v0}, Ltk;-><init>(Lcom/quvideo/xiaoying/app/studio/StudioAccountManager;Landroid/app/Activity;)V
 
     .line 1007
     invoke-direct {v2, v0, v1, v3}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V

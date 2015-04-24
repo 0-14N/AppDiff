@@ -10,7 +10,6 @@
         Lcom/facebook/widget/LoginButton$LoginButtonProperties;,
         Lcom/facebook/widget/LoginButton$LoginClickListener;,
         Lcom/facebook/widget/LoginButton$OnErrorListener;,
-        Lcom/facebook/widget/LoginButton$ToolTipMode;,
         Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
     }
 .end annotation
@@ -27,23 +26,11 @@
 
 .field private fetchUserInfo:Z
 
-.field private listenerCallback:Landroid/view/View$OnClickListener;
-
 .field private loginLogoutEventName:Ljava/lang/String;
 
 .field private loginText:Ljava/lang/String;
 
 .field private logoutText:Ljava/lang/String;
-
-.field private nuxChecked:Z
-
-.field private nuxDisplayTime:J
-
-.field private nuxMode:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-.field private nuxPopup:Lcom/facebook/widget/ToolTipPopup;
-
-.field private nuxStyle:Lcom/facebook/widget/ToolTipPopup$Style;
 
 .field private parentFragment:Landroid/support/v4/app/Fragment;
 
@@ -63,7 +50,7 @@
     .registers 1
 
     .prologue
-    .line 80
+    .line 59
     const-class v0, Lcom/facebook/widget/LoginButton;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -76,128 +63,104 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
-    .registers 4
+    .registers 3
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v0, 0x0
 
-    .line 218
+    .line 191
     invoke-direct {p0, p1}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
 
-    .line 81
+    .line 60
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->applicationId:Ljava/lang/String;
 
-    .line 83
+    .line 62
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
 
-    .line 84
+    .line 63
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->userInfoSession:Lcom/facebook/Session;
 
-    .line 91
+    .line 70
     new-instance v0, Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-direct {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
-    .line 92
+    .line 71
     const-string v0, "fb_login_view_usage"
 
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->loginLogoutEventName:Ljava/lang/String;
 
-    .line 95
-    sget-object v0, Lcom/facebook/widget/ToolTipPopup$Style;->BLUE:Lcom/facebook/widget/ToolTipPopup$Style;
-
-    iput-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxStyle:Lcom/facebook/widget/ToolTipPopup$Style;
-
-    .line 96
-    sget-object v0, Lcom/facebook/widget/LoginButton$ToolTipMode;->DEFAULT:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    iput-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxMode:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    .line 97
-    const-wide/16 v0, 0x1770
-
-    iput-wide v0, p0, Lcom/facebook/widget/LoginButton;->nuxDisplayTime:J
-
-    .line 219
+    .line 192
     invoke-direct {p0, p1}, Lcom/facebook/widget/LoginButton;->initializeActiveSessionWithCachedToken(Landroid/content/Context;)Z
 
-    .line 221
+    .line 194
     invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->finishInit()V
 
-    .line 222
+    .line 195
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .registers 8
+    .registers 9
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    .line 230
+    .line 203
     invoke-direct {p0, p1, p2}, Landroid/widget/Button;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 81
+    .line 60
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->applicationId:Ljava/lang/String;
 
-    .line 83
+    .line 62
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
 
-    .line 84
+    .line 63
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->userInfoSession:Lcom/facebook/Session;
 
-    .line 91
+    .line 70
     new-instance v0, Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-direct {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
-    .line 92
+    .line 71
     const-string v0, "fb_login_view_usage"
 
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->loginLogoutEventName:Ljava/lang/String;
 
-    .line 95
-    sget-object v0, Lcom/facebook/widget/ToolTipPopup$Style;->BLUE:Lcom/facebook/widget/ToolTipPopup$Style;
-
-    iput-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxStyle:Lcom/facebook/widget/ToolTipPopup$Style;
-
-    .line 96
-    sget-object v0, Lcom/facebook/widget/LoginButton$ToolTipMode;->DEFAULT:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    iput-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxMode:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    .line 97
-    const-wide/16 v0, 0x1770
-
-    iput-wide v0, p0, Lcom/facebook/widget/LoginButton;->nuxDisplayTime:J
-
-    .line 232
+    .line 205
     invoke-interface {p2}, Landroid/util/AttributeSet;->getStyleAttribute()I
 
     move-result v0
 
-    if-nez v0, :cond_63
+    if-nez v0, :cond_69
 
-    .line 236
+    .line 209
     const/16 v0, 0x11
 
     invoke-virtual {p0, v0}, Lcom/facebook/widget/LoginButton;->setGravity(I)V
 
-    .line 237
+    .line 210
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/android/R$color;->com_facebook_loginview_text_color:I
+    const-string v1, "com_facebook_loginview_text_color"
+
+    const-string v2, "color"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -205,38 +168,50 @@
 
     invoke-virtual {p0, v0}, Lcom/facebook/widget/LoginButton;->setTextColor(I)V
 
-    .line 239
+    .line 212
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/android/R$dimen;->com_facebook_loginview_text_size:I
+    const-string v1, "com_facebook_loginview_text_size"
+
+    const-string v2, "dimen"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    .line 238
-    invoke-virtual {p0, v2, v0}, Lcom/facebook/widget/LoginButton;->setTextSize(IF)V
+    .line 211
+    invoke-virtual {p0, v3, v0}, Lcom/facebook/widget/LoginButton;->setTextSize(IF)V
 
-    .line 240
+    .line 213
     sget-object v0, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
     invoke-virtual {p0, v0}, Lcom/facebook/widget/LoginButton;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 241
+    .line 214
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->isInEditMode()Z
 
     move-result v0
 
-    if-eqz v0, :cond_70
+    if-eqz v0, :cond_76
 
-    .line 244
+    .line 217
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/android/R$color;->com_facebook_blue:I
+    const-string v1, "com_facebook_blue"
+
+    const-string v2, "color"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -244,107 +219,149 @@
 
     invoke-virtual {p0, v0}, Lcom/facebook/widget/LoginButton;->setBackgroundColor(I)V
 
-    .line 246
+    .line 219
     const-string v0, "Log in with Facebook"
 
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->loginText:Ljava/lang/String;
 
-    .line 258
-    :cond_63
-    :goto_63
+    .line 231
+    :cond_69
+    :goto_69
     invoke-direct {p0, p2}, Lcom/facebook/widget/LoginButton;->parseAttributes(Landroid/util/AttributeSet;)V
 
-    .line 259
+    .line 232
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->isInEditMode()Z
 
     move-result v0
 
-    if-nez v0, :cond_6f
+    if-nez v0, :cond_75
 
-    .line 260
+    .line 233
     invoke-direct {p0, p1}, Lcom/facebook/widget/LoginButton;->initializeActiveSessionWithCachedToken(Landroid/content/Context;)Z
 
-    .line 262
-    :cond_6f
+    .line 235
+    :cond_75
     return-void
 
-    .line 248
-    :cond_70
-    sget v0, Lcom/facebook/android/R$drawable;->com_facebook_button_blue:I
+    .line 221
+    :cond_76
+    const-string v0, "com_facebook_button_blue"
+
+    const-string v1, "drawable"
+
+    invoke-static {v0, v1}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
 
     invoke-virtual {p0, v0}, Lcom/facebook/widget/LoginButton;->setBackgroundResource(I)V
 
-    .line 249
-    sget v0, Lcom/facebook/android/R$drawable;->com_facebook_inverse_icon:I
+    .line 222
+    const-string v0, "com_facebook_inverse_icon"
 
-    invoke-virtual {p0, v0, v2, v2, v2}, Lcom/facebook/widget/LoginButton;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
+    const-string v1, "drawable"
 
-    .line 251
+    invoke-static {v0, v1}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0, v3, v3, v3}, Lcom/facebook/widget/LoginButton;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
+
+    .line 224
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/android/R$dimen;->com_facebook_loginview_compound_drawable_padding:I
+    const-string v1, "com_facebook_loginview_compound_drawable_padding"
+
+    const-string v2, "dimen"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    .line 250
+    .line 223
     invoke-virtual {p0, v0}, Lcom/facebook/widget/LoginButton;->setCompoundDrawablePadding(I)V
 
-    .line 252
+    .line 225
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/android/R$dimen;->com_facebook_loginview_padding_left:I
+    const-string v1, "com_facebook_loginview_padding_left"
+
+    const-string v2, "dimen"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    .line 253
+    .line 226
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/facebook/android/R$dimen;->com_facebook_loginview_padding_top:I
+    const-string v2, "com_facebook_loginview_padding_top"
+
+    const-string v3, "dimen"
+
+    invoke-static {v2, v3}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    .line 254
+    .line 227
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    sget v3, Lcom/facebook/android/R$dimen;->com_facebook_loginview_padding_right:I
+    const-string v3, "com_facebook_loginview_padding_right"
+
+    const-string v4, "dimen"
+
+    invoke-static {v3, v4}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
 
-    .line 255
+    .line 228
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    sget v4, Lcom/facebook/android/R$dimen;->com_facebook_loginview_padding_bottom:I
+    const-string v4, "com_facebook_loginview_padding_bottom"
+
+    const-string v5, "dimen"
+
+    invoke-static {v4, v5}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v4
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
-    .line 252
+    .line 225
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/facebook/widget/LoginButton;->setPadding(IIII)V
 
-    goto :goto_63
+    goto :goto_69
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .registers 6
+    .registers 5
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "attrs"    # Landroid/util/AttributeSet;
     .param p3, "defStyle"    # I
@@ -352,52 +369,37 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 270
+    .line 243
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/Button;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 81
+    .line 60
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->applicationId:Ljava/lang/String;
 
-    .line 83
+    .line 62
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
 
-    .line 84
+    .line 63
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->userInfoSession:Lcom/facebook/Session;
 
-    .line 91
+    .line 70
     new-instance v0, Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-direct {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
-    .line 92
+    .line 71
     const-string v0, "fb_login_view_usage"
 
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->loginLogoutEventName:Ljava/lang/String;
 
-    .line 95
-    sget-object v0, Lcom/facebook/widget/ToolTipPopup$Style;->BLUE:Lcom/facebook/widget/ToolTipPopup$Style;
-
-    iput-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxStyle:Lcom/facebook/widget/ToolTipPopup$Style;
-
-    .line 96
-    sget-object v0, Lcom/facebook/widget/LoginButton$ToolTipMode;->DEFAULT:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    iput-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxMode:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    .line 97
-    const-wide/16 v0, 0x1770
-
-    iput-wide v0, p0, Lcom/facebook/widget/LoginButton;->nuxDisplayTime:J
-
-    .line 271
+    .line 244
     invoke-direct {p0, p2}, Lcom/facebook/widget/LoginButton;->parseAttributes(Landroid/util/AttributeSet;)V
 
-    .line 272
+    .line 245
     invoke-direct {p0, p1}, Lcom/facebook/widget/LoginButton;->initializeActiveSessionWithCachedToken(Landroid/content/Context;)Z
 
-    .line 273
+    .line 246
     return-void
 .end method
 
@@ -405,7 +407,7 @@
     .registers 1
 
     .prologue
-    .line 80
+    .line 59
     sget-object v0, Lcom/facebook/widget/LoginButton;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -415,47 +417,27 @@
     .registers 2
 
     .prologue
-    .line 82
+    .line 61
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
     return-object v0
 .end method
 
-.method static synthetic access$10(Lcom/facebook/widget/LoginButton;)V
-    .registers 1
-
-    .prologue
-    .line 731
-    invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->setButtonText()V
-
-    return-void
-.end method
-
-.method static synthetic access$11(Lcom/facebook/widget/LoginButton;Lcom/facebook/internal/Utility$FetchedAppSettings;)V
+.method static synthetic access$10(Lcom/facebook/widget/LoginButton;Lcom/facebook/model/GraphUser;)V
     .registers 2
 
     .prologue
-    .line 653
-    invoke-direct {p0, p1}, Lcom/facebook/widget/LoginButton;->showNuxPerSettings(Lcom/facebook/internal/Utility$FetchedAppSettings;)V
-
-    return-void
-.end method
-
-.method static synthetic access$12(Lcom/facebook/widget/LoginButton;Lcom/facebook/model/GraphUser;)V
-    .registers 2
-
-    .prologue
-    .line 83
+    .line 62
     iput-object p1, p0, Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
 
     return-void
 .end method
 
-.method static synthetic access$13(Lcom/facebook/widget/LoginButton;)Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
+.method static synthetic access$11(Lcom/facebook/widget/LoginButton;)Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
     .registers 2
 
     .prologue
-    .line 89
+    .line 68
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->userInfoChangedCallback:Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
 
     return-object v0
@@ -465,7 +447,7 @@
     .registers 2
 
     .prologue
-    .line 85
+    .line 64
     iget-boolean v0, p0, Lcom/facebook/widget/LoginButton;->confirmLogout:Z
 
     return v0
@@ -475,7 +457,7 @@
     .registers 2
 
     .prologue
-    .line 83
+    .line 62
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
 
     return-object v0
@@ -485,7 +467,7 @@
     .registers 2
 
     .prologue
-    .line 81
+    .line 60
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->applicationId:Ljava/lang/String;
 
     return-object v0
@@ -495,7 +477,7 @@
     .registers 2
 
     .prologue
-    .line 90
+    .line 69
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->parentFragment:Landroid/support/v4/app/Fragment;
 
     return-object v0
@@ -505,7 +487,7 @@
     .registers 2
 
     .prologue
-    .line 91
+    .line 70
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     return-object v0
@@ -515,120 +497,29 @@
     .registers 2
 
     .prologue
-    .line 92
+    .line 71
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->loginLogoutEventName:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$8(Lcom/facebook/widget/LoginButton;)Landroid/view/View$OnClickListener;
-    .registers 2
+.method static synthetic access$8(Lcom/facebook/widget/LoginButton;)V
+    .registers 1
 
     .prologue
-    .line 93
-    iget-object v0, p0, Lcom/facebook/widget/LoginButton;->listenerCallback:Landroid/view/View$OnClickListener;
+    .line 618
+    invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->fetchUserInfo()V
 
-    return-object v0
+    return-void
 .end method
 
 .method static synthetic access$9(Lcom/facebook/widget/LoginButton;)V
     .registers 1
 
     .prologue
-    .line 759
-    invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->fetchUserInfo()V
+    .line 590
+    invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->setButtonText()V
 
-    return-void
-.end method
-
-.method private checkNuxSettings()V
-    .registers 6
-
-    .prologue
-    .line 668
-    iget-object v3, p0, Lcom/facebook/widget/LoginButton;->nuxMode:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    sget-object v4, Lcom/facebook/widget/LoginButton$ToolTipMode;->DISPLAY_ALWAYS:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    if-ne v3, v4, :cond_14
-
-    .line 669
-    invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    sget v4, Lcom/facebook/android/R$string;->com_facebook_tooltip_default:I
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 670
-    .local v1, "nuxString":Ljava/lang/String;
-    invoke-direct {p0, v1}, Lcom/facebook/widget/LoginButton;->displayNux(Ljava/lang/String;)V
-
-    .line 689
-    .end local v1    # "nuxString":Ljava/lang/String;
-    :goto_13
-    return-void
-
-    .line 673
-    :cond_14
-    invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcom/facebook/internal/Utility;->getMetadataApplicationId(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 674
-    .local v0, "appId":Ljava/lang/String;
-    new-instance v2, Lcom/facebook/widget/LoginButton$1;
-
-    invoke-direct {v2, p0, v0}, Lcom/facebook/widget/LoginButton$1;-><init>(Lcom/facebook/widget/LoginButton;Ljava/lang/String;)V
-
-    .line 686
-    .local v2, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Void;Ljava/lang/Void;Lcom/facebook/internal/Utility$FetchedAppSettings;>;"
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
-
-    goto :goto_13
-.end method
-
-.method private displayNux(Ljava/lang/String;)V
-    .registers 6
-    .param p1, "nuxString"    # Ljava/lang/String;
-
-    .prologue
-    .line 661
-    new-instance v0, Lcom/facebook/widget/ToolTipPopup;
-
-    invoke-direct {v0, p1, p0}, Lcom/facebook/widget/ToolTipPopup;-><init>(Ljava/lang/String;Landroid/view/View;)V
-
-    iput-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxPopup:Lcom/facebook/widget/ToolTipPopup;
-
-    .line 662
-    iget-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxPopup:Lcom/facebook/widget/ToolTipPopup;
-
-    iget-object v1, p0, Lcom/facebook/widget/LoginButton;->nuxStyle:Lcom/facebook/widget/ToolTipPopup$Style;
-
-    invoke-virtual {v0, v1}, Lcom/facebook/widget/ToolTipPopup;->setStyle(Lcom/facebook/widget/ToolTipPopup$Style;)V
-
-    .line 663
-    iget-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxPopup:Lcom/facebook/widget/ToolTipPopup;
-
-    iget-wide v2, p0, Lcom/facebook/widget/LoginButton;->nuxDisplayTime:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/facebook/widget/ToolTipPopup;->setNuxDisplayTime(J)V
-
-    .line 664
-    iget-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxPopup:Lcom/facebook/widget/ToolTipPopup;
-
-    invoke-virtual {v0}, Lcom/facebook/widget/ToolTipPopup;->show()V
-
-    .line 665
     return-void
 .end method
 
@@ -636,31 +527,31 @@
     .registers 5
 
     .prologue
-    .line 760
+    .line 619
     iget-boolean v2, p0, Lcom/facebook/widget/LoginButton;->fetchUserInfo:Z
 
     if-eqz v2, :cond_24
 
-    .line 761
+    .line 620
     iget-object v2, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
     invoke-virtual {v2}, Lcom/facebook/internal/SessionTracker;->getOpenSession()Lcom/facebook/Session;
 
     move-result-object v0
 
-    .line 762
+    .line 621
     .local v0, "currentSession":Lcom/facebook/Session;
     if-eqz v0, :cond_25
 
-    .line 763
+    .line 622
     iget-object v2, p0, Lcom/facebook/widget/LoginButton;->userInfoSession:Lcom/facebook/Session;
 
     if-eq v0, v2, :cond_24
 
-    .line 764
-    new-instance v2, Lcom/facebook/widget/LoginButton$2;
+    .line 623
+    new-instance v2, Lcom/facebook/widget/LoginButton$1;
 
-    invoke-direct {v2, p0, v0}, Lcom/facebook/widget/LoginButton$2;-><init>(Lcom/facebook/widget/LoginButton;Lcom/facebook/Session;)V
+    invoke-direct {v2, p0, v0}, Lcom/facebook/widget/LoginButton$1;-><init>(Lcom/facebook/widget/LoginButton;Lcom/facebook/Session;)V
 
     invoke-static {v0, v2}, Lcom/facebook/Request;->newMeRequest(Lcom/facebook/Session;Lcom/facebook/Request$GraphUserCallback;)Lcom/facebook/Request;
 
@@ -673,34 +564,34 @@
 
     const/4 v3, 0x0
 
-    .line 778
+    .line 637
     aput-object v1, v2, v3
 
     invoke-static {v2}, Lcom/facebook/Request;->executeBatchAsync([Lcom/facebook/Request;)Lcom/facebook/RequestAsyncTask;
 
-    .line 779
+    .line 638
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->userInfoSession:Lcom/facebook/Session;
 
-    .line 788
+    .line 647
     .end local v0    # "currentSession":Lcom/facebook/Session;
     .end local v1    # "request":Lcom/facebook/Request;
     :cond_24
     :goto_24
     return-void
 
-    .line 782
+    .line 641
     .restart local v0    # "currentSession":Lcom/facebook/Session;
     :cond_25
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
 
-    .line 783
+    .line 642
     iget-object v2, p0, Lcom/facebook/widget/LoginButton;->userInfoChangedCallback:Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
 
     if-eqz v2, :cond_24
 
-    .line 784
+    .line 643
     iget-object v2, p0, Lcom/facebook/widget/LoginButton;->userInfoChangedCallback:Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
 
     iget-object v3, p0, Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
@@ -716,24 +607,24 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 613
+    .line 530
     new-instance v0, Lcom/facebook/widget/LoginButton$LoginClickListener;
 
     invoke-direct {v0, p0, v4}, Lcom/facebook/widget/LoginButton$LoginClickListener;-><init>(Lcom/facebook/widget/LoginButton;Lcom/facebook/widget/LoginButton$LoginClickListener;)V
 
-    invoke-super {p0, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/facebook/widget/LoginButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 614
+    .line 531
     invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->setButtonText()V
 
-    .line 615
+    .line 532
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->isInEditMode()Z
 
     move-result v0
 
     if-nez v0, :cond_26
 
-    .line 616
+    .line 533
     new-instance v0, Lcom/facebook/internal/SessionTracker;
 
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getContext()Landroid/content/Context;
@@ -750,10 +641,10 @@
 
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
-    .line 617
+    .line 534
     invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->fetchUserInfo()V
 
-    .line 619
+    .line 536
     :cond_26
     return-void
 .end method
@@ -765,42 +656,42 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 742
+    .line 601
     if-nez p1, :cond_4
 
-    .line 756
+    .line 615
     :cond_3
     :goto_3
     return v2
 
-    .line 746
+    .line 605
     :cond_4
     invoke-static {}, Lcom/facebook/Session;->getActiveSession()Lcom/facebook/Session;
 
     move-result-object v1
 
-    .line 747
+    .line 606
     .local v1, "session":Lcom/facebook/Session;
     if-eqz v1, :cond_f
 
-    .line 748
+    .line 607
     invoke-virtual {v1}, Lcom/facebook/Session;->isOpened()Z
 
     move-result v2
 
     goto :goto_3
 
-    .line 751
+    .line 610
     :cond_f
     invoke-static {p1}, Lcom/facebook/internal/Utility;->getMetadataApplicationId(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 752
+    .line 611
     .local v0, "applicationId":Ljava/lang/String;
     if-eqz v0, :cond_3
 
-    .line 756
+    .line 615
     invoke-static {p1}, Lcom/facebook/Session;->openActiveSessionFromCache(Landroid/content/Context;)Lcom/facebook/Session;
 
     move-result-object v3
@@ -813,42 +704,68 @@
 .end method
 
 .method private parseAttributes(Landroid/util/AttributeSet;)V
-    .registers 6
+    .registers 7
     .param p1, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    .line 723
+    .line 582
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget-object v2, Lcom/facebook/android/R$styleable;->com_facebook_login_view:[I
+    const-string v2, "com_facebook_login_view"
+
+    const-string v3, "styleable"
+
+    invoke-static {v2, v3}, Lcom/prime31/FacebookPluginBase;->idArrayForResource(Ljava/lang/String;Ljava/lang/String;)[I
+
+    move-result-object v2
 
     invoke-virtual {v1, p1, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 724
+    .line 583
     .local v0, "a":Landroid/content/res/TypedArray;
-    const/4 v1, 0x0
+    const-string v1, "com_facebook_login_view_confirm_logout"
 
-    invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    const-string v2, "styleable"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/facebook/widget/LoginButton;->confirmLogout:Z
 
-    .line 725
-    invoke-virtual {v0, v3, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    .line 584
+    const-string v1, "com_facebook_login_view_fetch_user_info"
+
+    const-string v2, "styleable"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/facebook/widget/LoginButton;->fetchUserInfo:Z
 
-    .line 726
-    const/4 v1, 0x2
+    .line 585
+    const-string v1, "com_facebook_login_view_login_text"
+
+    const-string v2, "styleable"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -856,8 +773,14 @@
 
     iput-object v1, p0, Lcom/facebook/widget/LoginButton;->loginText:Ljava/lang/String;
 
-    .line 727
-    const/4 v1, 0x3
+    .line 586
+    const-string v1, "com_facebook_login_view_logout_text"
+
+    const-string v2, "styleable"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -865,21 +788,21 @@
 
     iput-object v1, p0, Lcom/facebook/widget/LoginButton;->logoutText:Ljava/lang/String;
 
-    .line 728
+    .line 587
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 729
+    .line 588
     return-void
 .end method
 
 .method private setButtonText()V
-    .registers 3
+    .registers 4
 
     .prologue
-    .line 732
+    .line 591
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
-    if-eqz v0, :cond_21
+    if-eqz v0, :cond_27
 
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
@@ -887,9 +810,9 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_21
+    if-eqz v0, :cond_27
 
-    .line 733
+    .line 592
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->logoutText:Ljava/lang/String;
 
     if-eqz v0, :cond_16
@@ -899,17 +822,23 @@
     :goto_12
     invoke-virtual {p0, v0}, Lcom/facebook/widget/LoginButton;->setText(Ljava/lang/CharSequence;)V
 
-    .line 739
+    .line 598
     :goto_15
     return-void
 
-    .line 734
+    .line 593
     :cond_16
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/android/R$string;->com_facebook_loginview_log_out_button:I
+    const-string v1, "com_facebook_loginview_log_out_button"
+
+    const-string v2, "string"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -917,67 +846,38 @@
 
     goto :goto_12
 
-    .line 736
-    :cond_21
+    .line 595
+    :cond_27
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->loginText:Ljava/lang/String;
 
-    if-eqz v0, :cond_2b
+    if-eqz v0, :cond_31
 
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->loginText:Ljava/lang/String;
 
-    :goto_27
+    :goto_2d
     invoke-virtual {p0, v0}, Lcom/facebook/widget/LoginButton;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_15
 
-    .line 737
-    :cond_2b
+    .line 596
+    :cond_31
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/facebook/android/R$string;->com_facebook_loginview_log_in_button:I
+    const-string v1, "com_facebook_loginview_log_in_button"
+
+    const-string v2, "string"
+
+    invoke-static {v1, v2}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_27
-.end method
-
-.method private showNuxPerSettings(Lcom/facebook/internal/Utility$FetchedAppSettings;)V
-    .registers 4
-    .param p1, "settings"    # Lcom/facebook/internal/Utility$FetchedAppSettings;
-
-    .prologue
-    .line 654
-    if-eqz p1, :cond_15
-
-    invoke-virtual {p1}, Lcom/facebook/internal/Utility$FetchedAppSettings;->getNuxEnabled()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_15
-
-    invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getVisibility()I
-
-    move-result v1
-
-    if-nez v1, :cond_15
-
-    .line 655
-    invoke-virtual {p1}, Lcom/facebook/internal/Utility$FetchedAppSettings;->getNuxContent()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 656
-    .local v0, "nuxString":Ljava/lang/String;
-    invoke-direct {p0, v0}, Lcom/facebook/widget/LoginButton;->displayNux(Ljava/lang/String;)V
-
-    .line 658
-    .end local v0    # "nuxString":Ljava/lang/String;
-    :cond_15
-    return-void
+    goto :goto_2d
 .end method
 
 
@@ -986,36 +886,12 @@
     .registers 2
 
     .prologue
-    .line 424
+    .line 397
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->clearPermissions()V
 
-    .line 425
-    return-void
-.end method
-
-.method public dismissToolTip()V
-    .registers 2
-
-    .prologue
-    .line 550
-    iget-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxPopup:Lcom/facebook/widget/ToolTipPopup;
-
-    if-eqz v0, :cond_c
-
-    .line 551
-    iget-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxPopup:Lcom/facebook/widget/ToolTipPopup;
-
-    invoke-virtual {v0}, Lcom/facebook/widget/ToolTipPopup;->dismiss()V
-
-    .line 552
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxPopup:Lcom/facebook/widget/ToolTipPopup;
-
-    .line 554
-    :cond_c
+    .line 398
     return-void
 .end method
 
@@ -1023,7 +899,7 @@
     .registers 2
 
     .prologue
-    .line 313
+    .line 286
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->getDefaultAudience()Lcom/facebook/SessionDefaultAudience;
@@ -1037,7 +913,7 @@
     .registers 2
 
     .prologue
-    .line 450
+    .line 423
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->getLoginBehavior()Lcom/facebook/SessionLoginBehavior;
@@ -1051,7 +927,7 @@
     .registers 2
 
     .prologue
-    .line 291
+    .line 264
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->getOnErrorListener()Lcom/facebook/widget/LoginButton$OnErrorListener;
@@ -1074,7 +950,7 @@
     .end annotation
 
     .prologue
-    .line 711
+    .line 570
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->getPermissions()Ljava/util/List;
@@ -1088,7 +964,7 @@
     .registers 2
 
     .prologue
-    .line 497
+    .line 470
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->getSessionStatusCallback()Lcom/facebook/Session$StatusCallback;
@@ -1098,31 +974,11 @@
     return-object v0
 .end method
 
-.method public getToolTipDisplayTime()J
-    .registers 3
-
-    .prologue
-    .line 543
-    iget-wide v0, p0, Lcom/facebook/widget/LoginButton;->nuxDisplayTime:J
-
-    return-wide v0
-.end method
-
-.method public getToolTipMode()Lcom/facebook/widget/LoginButton$ToolTipMode;
-    .registers 2
-
-    .prologue
-    .line 524
-    iget-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxMode:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    return-object v0
-.end method
-
 .method public getUserInfoChangedCallback()Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
     .registers 2
 
     .prologue
-    .line 467
+    .line 440
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->userInfoChangedCallback:Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
 
     return-object v0
@@ -1133,7 +989,7 @@
     .param p1, "exception"    # Ljava/lang/Exception;
 
     .prologue
-    .line 893
+    .line 738
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->onErrorListener:Lcom/facebook/widget/LoginButton$OnErrorListener;
@@ -1143,12 +999,12 @@
 
     if-eqz v0, :cond_17
 
-    .line 894
+    .line 739
     instance-of v0, p1, Lcom/facebook/FacebookException;
 
     if-eqz v0, :cond_18
 
-    .line 895
+    .line 740
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->onErrorListener:Lcom/facebook/widget/LoginButton$OnErrorListener;
@@ -1161,12 +1017,12 @@
     .end local p1    # "exception":Ljava/lang/Exception;
     invoke-interface {v0, p1}, Lcom/facebook/widget/LoginButton$OnErrorListener;->onError(Lcom/facebook/FacebookException;)V
 
-    .line 900
+    .line 745
     :cond_17
     :goto_17
     return-void
 
-    .line 897
+    .line 742
     .restart local p1    # "exception":Ljava/lang/Exception;
     :cond_18
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
@@ -1192,18 +1048,18 @@
     .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
-    .line 580
+    .line 497
     iget-object v1, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
     invoke-virtual {v1}, Lcom/facebook/internal/SessionTracker;->getSession()Lcom/facebook/Session;
 
     move-result-object v0
 
-    .line 581
+    .line 498
     .local v0, "session":Lcom/facebook/Session;
     if-eqz v0, :cond_13
 
-    .line 582
+    .line 499
     invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1214,7 +1070,7 @@
 
     move-result v1
 
-    .line 585
+    .line 502
     :goto_12
     return v1
 
@@ -1228,10 +1084,10 @@
     .registers 2
 
     .prologue
-    .line 635
+    .line 552
     invoke-super {p0}, Landroid/widget/Button;->onAttachedToWindow()V
 
-    .line 636
+    .line 553
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
     if-eqz v0, :cond_1a
@@ -1244,18 +1100,18 @@
 
     if-nez v0, :cond_1a
 
-    .line 637
+    .line 554
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
     invoke-virtual {v0}, Lcom/facebook/internal/SessionTracker;->startTracking()V
 
-    .line 638
+    .line 555
     invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->fetchUserInfo()V
 
-    .line 639
+    .line 556
     invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->setButtonText()V
 
-    .line 641
+    .line 558
     :cond_1a
     return-void
 .end method
@@ -1264,62 +1120,21 @@
     .registers 2
 
     .prologue
-    .line 693
+    .line 562
     invoke-super {p0}, Landroid/widget/Button;->onDetachedFromWindow()V
 
-    .line 694
+    .line 563
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
     if-eqz v0, :cond_c
 
-    .line 695
+    .line 564
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
     invoke-virtual {v0}, Lcom/facebook/internal/SessionTracker;->stopTracking()V
 
-    .line 697
+    .line 566
     :cond_c
-    invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->dismissToolTip()V
-
-    .line 698
-    return-void
-.end method
-
-.method protected onDraw(Landroid/graphics/Canvas;)V
-    .registers 4
-    .param p1, "canvas"    # Landroid/graphics/Canvas;
-
-    .prologue
-    .line 645
-    invoke-super {p0, p1}, Landroid/widget/Button;->onDraw(Landroid/graphics/Canvas;)V
-
-    .line 647
-    iget-boolean v0, p0, Lcom/facebook/widget/LoginButton;->nuxChecked:Z
-
-    if-nez v0, :cond_19
-
-    iget-object v0, p0, Lcom/facebook/widget/LoginButton;->nuxMode:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    sget-object v1, Lcom/facebook/widget/LoginButton$ToolTipMode;->NEVER_DISPLAY:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    if-eq v0, v1, :cond_19
-
-    invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->isInEditMode()Z
-
-    move-result v0
-
-    if-nez v0, :cond_19
-
-    .line 648
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/facebook/widget/LoginButton;->nuxChecked:Z
-
-    .line 649
-    invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->checkNuxSettings()V
-
-    .line 651
-    :cond_19
     return-void
 .end method
 
@@ -1327,33 +1142,13 @@
     .registers 1
 
     .prologue
-    .line 608
+    .line 525
     invoke-super {p0}, Landroid/widget/Button;->onFinishInflate()V
 
-    .line 609
+    .line 526
     invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->finishInit()V
 
-    .line 610
-    return-void
-.end method
-
-.method protected onVisibilityChanged(Landroid/view/View;I)V
-    .registers 3
-    .param p1, "changedView"    # Landroid/view/View;
-    .param p2, "visibility"    # I
-
-    .prologue
-    .line 702
-    invoke-super {p0, p1, p2}, Landroid/widget/Button;->onVisibilityChanged(Landroid/view/View;I)V
-
-    .line 704
-    if-eqz p2, :cond_8
-
-    .line 705
-    invoke-virtual {p0}, Lcom/facebook/widget/LoginButton;->dismissToolTip()V
-
-    .line 707
-    :cond_8
+    .line 527
     return-void
 .end method
 
@@ -1362,10 +1157,10 @@
     .param p1, "applicationId"    # Ljava/lang/String;
 
     .prologue
-    .line 459
+    .line 432
     iput-object p1, p0, Lcom/facebook/widget/LoginButton;->applicationId:Ljava/lang/String;
 
-    .line 460
+    .line 433
     return-void
 .end method
 
@@ -1374,12 +1169,12 @@
     .param p1, "defaultAudience"    # Lcom/facebook/SessionDefaultAudience;
 
     .prologue
-    .line 302
+    .line 275
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {v0, p1}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->setDefaultAudience(Lcom/facebook/SessionDefaultAudience;)V
 
-    .line 303
+    .line 276
     return-void
 .end method
 
@@ -1388,10 +1183,10 @@
     .param p1, "fragment"    # Landroid/support/v4/app/Fragment;
 
     .prologue
-    .line 630
+    .line 547
     iput-object p1, p0, Lcom/facebook/widget/LoginButton;->parentFragment:Landroid/support/v4/app/Fragment;
 
-    .line 631
+    .line 548
     return-void
 .end method
 
@@ -1400,12 +1195,12 @@
     .param p1, "loginBehavior"    # Lcom/facebook/SessionLoginBehavior;
 
     .prologue
-    .line 437
+    .line 410
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {v0, p1}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->setLoginBehavior(Lcom/facebook/SessionLoginBehavior;)V
 
-    .line 438
+    .line 411
     return-void
 .end method
 
@@ -1414,22 +1209,10 @@
     .param p1, "eventName"    # Ljava/lang/String;
 
     .prologue
-    .line 719
+    .line 578
     iput-object p1, p0, Lcom/facebook/widget/LoginButton;->loginLogoutEventName:Ljava/lang/String;
 
-    .line 720
-    return-void
-.end method
-
-.method public setOnClickListener(Landroid/view/View$OnClickListener;)V
-    .registers 2
-    .param p1, "clickListener"    # Landroid/view/View$OnClickListener;
-
-    .prologue
-    .line 797
-    iput-object p1, p0, Lcom/facebook/widget/LoginButton;->listenerCallback:Landroid/view/View$OnClickListener;
-
-    .line 798
+    .line 579
     return-void
 .end method
 
@@ -1438,12 +1221,12 @@
     .param p1, "onErrorListener"    # Lcom/facebook/widget/LoginButton$OnErrorListener;
 
     .prologue
-    .line 282
+    .line 255
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {v0, p1}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->setOnErrorListener(Lcom/facebook/widget/LoginButton$OnErrorListener;)V
 
-    .line 283
+    .line 256
     return-void
 .end method
 
@@ -1452,10 +1235,10 @@
     .param p1, "properties"    # Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     .prologue
-    .line 715
+    .line 574
     iput-object p1, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
-    .line 716
+    .line 575
     return-void
 .end method
 
@@ -1472,7 +1255,7 @@
     .end annotation
 
     .prologue
-    .line 390
+    .line 363
     .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
@@ -1484,7 +1267,7 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->setPublishPermissions(Ljava/util/List;Lcom/facebook/Session;)V
 
-    .line 391
+    .line 364
     return-void
 .end method
 
@@ -1493,7 +1276,7 @@
     .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
-    .line 416
+    .line 389
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -1508,7 +1291,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->setPublishPermissions(Ljava/util/List;Lcom/facebook/Session;)V
 
-    .line 417
+    .line 390
     return-void
 .end method
 
@@ -1525,7 +1308,7 @@
     .end annotation
 
     .prologue
-    .line 338
+    .line 311
     .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
@@ -1537,7 +1320,7 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->setReadPermissions(Ljava/util/List;Lcom/facebook/Session;)V
 
-    .line 339
+    .line 312
     return-void
 .end method
 
@@ -1546,7 +1329,7 @@
     .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
-    .line 363
+    .line 336
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -1561,7 +1344,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->setReadPermissions(Ljava/util/List;Lcom/facebook/Session;)V
 
-    .line 364
+    .line 337
     return-void
 .end method
 
@@ -1570,18 +1353,18 @@
     .param p1, "newSession"    # Lcom/facebook/Session;
 
     .prologue
-    .line 601
+    .line 518
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
 
     invoke-virtual {v0, p1}, Lcom/facebook/internal/SessionTracker;->setSession(Lcom/facebook/Session;)V
 
-    .line 602
+    .line 519
     invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->fetchUserInfo()V
 
-    .line 603
+    .line 520
     invoke-direct {p0}, Lcom/facebook/widget/LoginButton;->setButtonText()V
 
-    .line 604
+    .line 521
     return-void
 .end method
 
@@ -1590,48 +1373,12 @@
     .param p1, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
-    .line 487
+    .line 460
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {v0, p1}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->setSessionStatusCallback(Lcom/facebook/Session$StatusCallback;)V
 
-    .line 488
-    return-void
-.end method
-
-.method public setToolTipDisplayTime(J)V
-    .registers 4
-    .param p1, "displayTime"    # J
-
-    .prologue
-    .line 535
-    iput-wide p1, p0, Lcom/facebook/widget/LoginButton;->nuxDisplayTime:J
-
-    .line 536
-    return-void
-.end method
-
-.method public setToolTipMode(Lcom/facebook/widget/LoginButton$ToolTipMode;)V
-    .registers 2
-    .param p1, "nuxMode"    # Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    .prologue
-    .line 516
-    iput-object p1, p0, Lcom/facebook/widget/LoginButton;->nuxMode:Lcom/facebook/widget/LoginButton$ToolTipMode;
-
-    .line 517
-    return-void
-.end method
-
-.method public setToolTipStyle(Lcom/facebook/widget/ToolTipPopup$Style;)V
-    .registers 2
-    .param p1, "nuxStyle"    # Lcom/facebook/widget/ToolTipPopup$Style;
-
-    .prologue
-    .line 506
-    iput-object p1, p0, Lcom/facebook/widget/LoginButton;->nuxStyle:Lcom/facebook/widget/ToolTipPopup$Style;
-
-    .line 507
+    .line 461
     return-void
 .end method
 
@@ -1640,9 +1387,9 @@
     .param p1, "userInfoChangedCallback"    # Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
 
     .prologue
-    .line 476
+    .line 449
     iput-object p1, p0, Lcom/facebook/widget/LoginButton;->userInfoChangedCallback:Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
 
-    .line 477
+    .line 450
     return-void
 .end method

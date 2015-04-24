@@ -14,7 +14,7 @@
 .method public static disableUpdateApp()V
     .registers 0
 
-    invoke-static {}, Lnet/youmi/android/er;->j()V
+    invoke-static {}, Lnet/youmi/android/eo;->f()V
 
     return-void
 .end method
@@ -22,13 +22,13 @@
 .method public static init(Ljava/lang/String;Ljava/lang/String;IZ)V
     .registers 4
 
-    invoke-static {p3}, Lnet/youmi/android/er;->a(Z)V
+    invoke-static {p3}, Lnet/youmi/android/eo;->a(Z)V
 
-    invoke-static {p0}, Lnet/youmi/android/er;->a(Ljava/lang/String;)V
+    invoke-static {p0}, Lnet/youmi/android/eo;->a(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lnet/youmi/android/er;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lnet/youmi/android/eo;->b(Ljava/lang/String;)V
 
-    invoke-static {p2}, Lnet/youmi/android/er;->a(I)V
+    invoke-static {p2}, Lnet/youmi/android/eo;->a(I)V
 
     return-void
 .end method
@@ -36,7 +36,7 @@
 .method public static setDonotClearWebViewCache()V
     .registers 0
 
-    invoke-static {}, Lnet/youmi/android/er;->k()V
+    invoke-static {}, Lnet/youmi/android/eo;->g()V
 
     return-void
 .end method

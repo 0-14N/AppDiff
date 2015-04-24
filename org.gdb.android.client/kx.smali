@@ -18,7 +18,7 @@
     .line 1
     iput-object p1, p0, Lorg/gdb/android/client/kx;->a:Lorg/gdb/android/client/ShopDetailActivity;
 
-    .line 395
+    .line 446
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,36 +27,54 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .registers 5
+    .registers 7
 
     .prologue
-    .line 399
-    new-instance v0, Landroid/content/Intent;
+    .line 450
+    iget-object v0, p0, Lorg/gdb/android/client/kx;->a:Lorg/gdb/android/client/ShopDetailActivity;
+
+    invoke-static {v0}, Lorg/gdb/android/client/ShopDetailActivity;->d(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/lx;
+
+    move-result-object v0
 
     iget-object v1, p0, Lorg/gdb/android/client/kx;->a:Lorg/gdb/android/client/ShopDetailActivity;
 
-    .line 400
-    const-class v2, Lorg/gdb/android/client/SendErrorReportActivity;
+    const/4 v2, 0x3
 
-    .line 399
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    new-array v2, v2, [Ljava/lang/String;
 
-    .line 401
-    const-string v1, "shop"
+    const/4 v3, 0x0
 
-    iget-object v2, p0, Lorg/gdb/android/client/kx;->a:Lorg/gdb/android/client/ShopDetailActivity;
+    invoke-static {}, Lorg/gdb/android/client/vo/UserVO;->getCurrentId()Ljava/lang/String;
 
-    invoke-static {v2}, Lorg/gdb/android/client/ShopDetailActivity;->c(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/ShopVO;
+    move-result-object v4
 
-    move-result-object v2
+    aput-object v4, v2, v3
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
+    const/4 v3, 0x1
 
-    .line 402
-    iget-object v1, p0, Lorg/gdb/android/client/kx;->a:Lorg/gdb/android/client/ShopDetailActivity;
+    iget-object v4, p0, Lorg/gdb/android/client/kx;->a:Lorg/gdb/android/client/ShopDetailActivity;
 
-    invoke-virtual {v1, v0}, Lorg/gdb/android/client/ShopDetailActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-static {v4}, Lorg/gdb/android/client/ShopDetailActivity;->c(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/ShopVO;
 
-    .line 403
+    move-result-object v4
+
+    .line 451
+    invoke-virtual {v4}, Lorg/gdb/android/client/vo/ShopVO;->getId()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    const-string v4, "3"
+
+    aput-object v4, v2, v3
+
+    .line 450
+    invoke-virtual {v0, v1, v2}, Lorg/gdb/android/client/lx;->e(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V
+
+    .line 452
     return-void
 .end method

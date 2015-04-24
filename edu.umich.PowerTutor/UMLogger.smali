@@ -502,7 +502,7 @@
     .line 86
     iget-object v4, p0, Ledu/umich/PowerTutor/ui/UMLogger;->counterService:Ledu/umich/PowerTutor/service/ICounterService;
 
-    if-eqz v4, :cond_79
+    if-eqz v4, :cond_7a
 
     .line 87
     iget-object v4, p0, Ledu/umich/PowerTutor/ui/UMLogger;->serviceStartButton:Landroid/widget/Button;
@@ -514,21 +514,21 @@
     .line 89
     iget-object v4, p0, Ledu/umich/PowerTutor/ui/UMLogger;->serviceStartButton:Landroid/widget/Button;
 
-    const-string v5, "Stop Power Profiler"
+    const v5, 0x7f060006
 
-    invoke-virtual {v4, v5}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v5}, Landroid/widget/Button;->setText(I)V
 
     .line 95
-    :goto_78
+    :goto_79
     return-void
 
     .line 91
-    :cond_79
+    :cond_7a
     iget-object v4, p0, Ledu/umich/PowerTutor/ui/UMLogger;->serviceStartButton:Landroid/widget/Button;
 
-    const-string v5, "Start Power Profiler"
+    const v5, 0x7f060007
 
-    invoke-virtual {v4, v5}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v5}, Landroid/widget/Button;->setText(I)V
 
     .line 92
     iget-object v4, p0, Ledu/umich/PowerTutor/ui/UMLogger;->serviceStartButton:Landroid/widget/Button;
@@ -537,7 +537,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    goto :goto_78
+    goto :goto_79
 .end method
 
 .method protected onCreateDialog(I)Landroid/app/Dialog;
@@ -545,13 +545,13 @@
     .param p1, "id"    # I
 
     .prologue
+    const v6, 0x7f060011
+
     const/4 v5, 0x0
 
     const/4 v3, 0x0
 
     const/4 v2, 0x1
-
-    const-string v6, "Cancel"
 
     const-string v4, "Ok"
 
@@ -567,12 +567,12 @@
     move-object v1, v3
 
     .line 277
-    :goto_10
+    :goto_11
     return-object v1
 
     .line 209
-    :pswitch_11
-    const v1, 0x7f060006
+    :pswitch_12
+    const v1, 0x7f06002d
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -582,33 +582,33 @@
 
     move-result-object v1
 
-    const-string v2, "Agree"
+    const v2, 0x7f06000e
 
     new-instance v3, Ledu/umich/PowerTutor/ui/UMLogger$3;
 
     invoke-direct {v3, p0}, Ledu/umich/PowerTutor/ui/UMLogger$3;-><init>(Ledu/umich/PowerTutor/ui/UMLogger;)V
 
-    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v1
 
-    const-string v2, "Do not agree"
+    const v2, 0x7f06000f
 
     new-instance v3, Ledu/umich/PowerTutor/ui/UMLogger$2;
 
     invoke-direct {v3, p0}, Ledu/umich/PowerTutor/ui/UMLogger$2;-><init>(Ledu/umich/PowerTutor/ui/UMLogger;)V
 
-    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 224
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
-    goto :goto_10
+    goto :goto_11
 
     .line 226
-    :pswitch_36
+    :pswitch_39
     const v1, 0x7f060003
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
@@ -619,33 +619,31 @@
 
     move-result-object v1
 
-    const-string v2, "Stop"
+    const v2, 0x7f060010
 
     new-instance v3, Ledu/umich/PowerTutor/ui/UMLogger$5;
 
     invoke-direct {v3, p0}, Ledu/umich/PowerTutor/ui/UMLogger$5;-><init>(Ledu/umich/PowerTutor/ui/UMLogger;)V
 
-    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v1
-
-    const-string v2, "Cancel"
 
     new-instance v2, Ledu/umich/PowerTutor/ui/UMLogger$4;
 
     invoke-direct {v2, p0}, Ledu/umich/PowerTutor/ui/UMLogger$4;-><init>(Ledu/umich/PowerTutor/ui/UMLogger;)V
 
-    invoke-virtual {v1, v6, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v1, v6, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 239
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
-    goto :goto_10
+    goto :goto_11
 
     .line 241
-    :pswitch_5b
+    :pswitch_5d
     const v1, 0x7f060004
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
@@ -656,33 +654,31 @@
 
     move-result-object v1
 
-    const-string v2, "Start"
+    const v2, 0x7f060012
 
     new-instance v3, Ledu/umich/PowerTutor/ui/UMLogger$7;
 
     invoke-direct {v3, p0}, Ledu/umich/PowerTutor/ui/UMLogger$7;-><init>(Ledu/umich/PowerTutor/ui/UMLogger;)V
 
-    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v1
-
-    const-string v2, "Cancel"
 
     new-instance v2, Ledu/umich/PowerTutor/ui/UMLogger$6;
 
     invoke-direct {v2, p0}, Ledu/umich/PowerTutor/ui/UMLogger$6;-><init>(Ledu/umich/PowerTutor/ui/UMLogger;)V
 
-    invoke-virtual {v1, v6, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v1, v6, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 254
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
-    goto :goto_10
+    goto :goto_11
 
     .line 256
-    :pswitch_80
+    :pswitch_81
     const v1, 0x7f060001
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
@@ -702,10 +698,10 @@
 
     move-result-object v1
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
     .line 261
-    :pswitch_96
+    :pswitch_97
     const v1, 0x7f060002
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
@@ -725,10 +721,10 @@
 
     move-result-object v1
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
     .line 266
-    :pswitch_ac
+    :pswitch_ad
     const v1, 0x7f060005
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
@@ -752,19 +748,17 @@
 
     move-result-object v1
 
-    goto/16 :goto_10
+    goto/16 :goto_11
 
     .line 207
-    nop
-
     :pswitch_data_c8
     .packed-switch 0x0
-        :pswitch_5b
-        :pswitch_36
-        :pswitch_11
-        :pswitch_80
-        :pswitch_96
-        :pswitch_ac
+        :pswitch_5d
+        :pswitch_39
+        :pswitch_12
+        :pswitch_81
+        :pswitch_97
+        :pswitch_ad
     .end packed-switch
 .end method
 
@@ -792,9 +786,9 @@
     .line 141
     const/4 v0, 0x2
 
-    const-string v1, "Save log"
+    const v1, 0x7f060030
 
-    invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
     .line 142
     return v3
@@ -959,12 +953,12 @@
 
     iget-boolean v1, v1, Ledu/umich/PowerTutor/ui/State;->sendPermission:Z
 
-    if-eqz v1, :cond_21
+    if-eqz v1, :cond_23
 
-    const-string v1, "Stop sending data"
+    const v1, 0x7f06000a
 
-    :goto_e
-    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setTitle(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+    :goto_f
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setTitle(I)Landroid/view/MenuItem;
 
     .line 149
     invoke-interface {p1, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
@@ -975,27 +969,27 @@
 
     iget-boolean v1, v1, Ledu/umich/PowerTutor/ui/State;->runOnStartup:Z
 
-    if-eqz v1, :cond_24
+    if-eqz v1, :cond_27
 
-    const-string v1, "Don\'t run on startup"
+    const v1, 0x7f060009
 
-    :goto_1d
-    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setTitle(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+    :goto_1f
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setTitle(I)Landroid/view/MenuItem;
 
     .line 151
     return v2
 
     .line 147
-    :cond_21
-    const-string v1, "Start sending data"
+    :cond_23
+    const v1, 0x7f06000b
 
-    goto :goto_e
+    goto :goto_f
 
     .line 149
-    :cond_24
-    const-string v1, "Run on startup"
+    :cond_27
+    const v1, 0x7f060008
 
-    goto :goto_1d
+    goto :goto_1f
 .end method
 
 .method public onResume()V

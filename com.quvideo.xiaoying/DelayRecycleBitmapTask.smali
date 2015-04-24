@@ -217,7 +217,7 @@
 
     if-nez v0, :cond_27
 
-    new-instance v0, Lajy;
+    new-instance v0, Lade;
 
     sget-object v2, Lcom/quvideo/xiaoying/common/bitmapfun/util/DelayRecycleBitmapTask;->b:Landroid/os/HandlerThread;
 
@@ -225,7 +225,7 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lajy;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v2}, Lade;-><init>(Landroid/os/Looper;)V
 
     sput-object v0, Lcom/quvideo/xiaoying/common/bitmapfun/util/DelayRecycleBitmapTask;->a:Landroid/os/Handler;
     :try_end_27

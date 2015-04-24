@@ -6,26 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/cungo/callrecorder/ui/adapter/ItemRecrodInfo;
+.field final synthetic a:Lcom/cungu/lib/a/b;
 
-.field final synthetic b:I
-
-.field final synthetic c:Ljava/lang/Exception;
-
-.field final synthetic d:Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;
+.field final synthetic b:Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;
 
 
 # direct methods
-.method constructor <init>(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Lcom/cungo/callrecorder/ui/adapter/ItemRecrodInfo;ILjava/lang/Exception;)V
-    .registers 5
+.method constructor <init>(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Lcom/cungu/lib/a/b;)V
+    .registers 3
 
-    iput-object p1, p0, Lcom/cungo/callrecorder/ui/sk;->d:Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;
+    iput-object p1, p0, Lcom/cungo/callrecorder/ui/sk;->b:Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;
 
-    iput-object p2, p0, Lcom/cungo/callrecorder/ui/sk;->a:Lcom/cungo/callrecorder/ui/adapter/ItemRecrodInfo;
-
-    iput p3, p0, Lcom/cungo/callrecorder/ui/sk;->b:I
-
-    iput-object p4, p0, Lcom/cungo/callrecorder/ui/sk;->c:Ljava/lang/Exception;
+    iput-object p2, p0, Lcom/cungo/callrecorder/ui/sk;->a:Lcom/cungu/lib/a/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,25 +27,21 @@
 
 # virtual methods
 .method public run()V
-    .registers 5
+    .registers 4
 
     :try_start_0
-    iget-object v0, p0, Lcom/cungo/callrecorder/ui/sk;->d:Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;
+    iget-object v0, p0, Lcom/cungo/callrecorder/ui/sk;->b:Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;
 
-    iget-object v1, p0, Lcom/cungo/callrecorder/ui/sk;->a:Lcom/cungo/callrecorder/ui/adapter/ItemRecrodInfo;
+    iget-object v1, p0, Lcom/cungo/callrecorder/ui/sk;->a:Lcom/cungu/lib/a/b;
 
-    iget v2, p0, Lcom/cungo/callrecorder/ui/sk;->b:I
+    invoke-static {v0, v1}, Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;->a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Lcom/cungu/lib/a/b;)V
+    :try_end_7
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_7} :catch_8
 
-    iget-object v3, p0, Lcom/cungo/callrecorder/ui/sk;->c:Ljava/lang/Exception;
-
-    invoke-static {v0, v1, v2, v3}, Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;->a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Lcom/cungo/callrecorder/ui/adapter/ItemRecrodInfo;ILjava/lang/Exception;)V
-    :try_end_b
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_b} :catch_c
-
-    :goto_b
+    :goto_7
     return-void
 
-    :catch_c
+    :catch_8
     move-exception v0
 
     const-string v1, "FragmentSyncRecordListInSafe_"
@@ -62,5 +50,5 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_b
+    goto :goto_7
 .end method

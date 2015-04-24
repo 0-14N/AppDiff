@@ -116,6 +116,10 @@
 
     invoke-virtual {p0, v0}, Lorg/krchuang/eventcounter/activity/EventCounterActivity;->setContentView(I)V
 
+    new-instance v0, Lnet/lezzd/ad/poster/LezzdPosterManager;
+
+    invoke-direct {v0, p0}, Lnet/lezzd/ad/poster/LezzdPosterManager;-><init>(Landroid/content/Context;)V
+
     .line 53
     new-instance v0, Lorg/krchuang/eventcounter/dao/EventCounterData;
 
@@ -208,7 +212,7 @@
     .line 70
     new-array v5, v9, [I
 
-    fill-array-data v5, :array_b4
+    fill-array-data v5, :array_ba
 
     move-object v1, p0
 
@@ -256,7 +260,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_9d
+    if-nez v0, :cond_a2
 
     .line 88
     new-instance v0, Landroid/content/Intent;
@@ -268,7 +272,7 @@
     invoke-virtual {p0, v0}, Lorg/krchuang/eventcounter/activity/EventCounterActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     .line 91
-    :cond_9d
+    :cond_a2
     iget-object v0, p0, Lorg/krchuang/eventcounter/activity/EventCounterActivity;->addButton:Landroid/widget/Button;
 
     new-instance v1, Lorg/krchuang/eventcounter/activity/EventCounterActivity$3;
@@ -292,7 +296,9 @@
     return-void
 
     .line 70
-    :array_b4
+    nop
+
+    :array_ba
     .array-data 4
         0x7f0a0029
         0x7f0a002a

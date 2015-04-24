@@ -56,9 +56,9 @@
     iput-boolean v0, p0, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->v:Z
 
     .line 60
-    new-instance v0, Lwa;
+    new-instance v0, Lph;
 
-    invoke-direct {v0, p0}, Lwa;-><init>(Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;)V
+    invoke-direct {v0, p0}, Lph;-><init>(Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->o:Landroid/os/Handler;
 
@@ -126,9 +126,9 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 186
-    new-instance v0, Lwd;
+    new-instance v0, Lpk;
 
-    invoke-direct {v0, p0, p1, p2}, Lwd;-><init>(Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;Landroid/webkit/WebView;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, p2}, Lpk;-><init>(Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;Landroid/webkit/WebView;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroid/webkit/WebView;->post(Ljava/lang/Runnable;)Z
 
@@ -238,9 +238,9 @@
     .line 167
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->n:Landroid/webkit/WebView;
 
-    new-instance v1, Lwc;
+    new-instance v1, Lpj;
 
-    invoke-direct {v1, p0}, Lwc;-><init>(Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;)V
+    invoke-direct {v1, p0}, Lpj;-><init>(Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
@@ -411,7 +411,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->z:Landroid/widget/TextView;
 
     .line 100
-    const v0, 0x7f060570
+    const v0, 0x7f06055b
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -438,7 +438,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 105
-    const v0, 0x7f06051b
+    const v0, 0x7f060506
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -449,7 +449,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->p:Landroid/widget/TextView;
 
     .line 106
-    const v0, 0x7f06051c
+    const v0, 0x7f060507
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -460,7 +460,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->q:Landroid/widget/TextView;
 
     .line 107
-    const v0, 0x7f06051d
+    const v0, 0x7f060508
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -471,7 +471,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->r:Landroid/widget/TextView;
 
     .line 109
-    const v0, 0x7f060571
+    const v0, 0x7f06055c
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -527,7 +527,7 @@
     .line 116
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->z:Landroid/widget/TextView;
 
-    const v1, 0x7f0a02cf
+    const v1, 0x7f0a02ac
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -581,9 +581,9 @@
     .line 130
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->n:Landroid/webkit/WebView;
 
-    new-instance v2, Lwb;
+    new-instance v2, Lpi;
 
-    invoke-direct {v2, p0}, Lwb;-><init>(Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;)V
+    invoke-direct {v2, p0}, Lpi;-><init>(Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;)V
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
@@ -633,7 +633,7 @@
     :cond_f5
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/message/MessageDetailActivity;->z:Landroid/widget/TextView;
 
-    const v1, 0x7f0a02ef
+    const v1, 0x7f0a02cc
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

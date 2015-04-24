@@ -11,50 +11,554 @@
 .method public constructor <init>()V
     .registers 2
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Landroid/support/v4/app/FragmentActivity;-><init>()V
 
-    .line 21
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/mb/intents/ContentProvider;->debug:Z
 
-    .line 18
     return-void
+.end method
+
+.method private static IntentActions(Ljava/lang/String;)Ljava/lang/String;
+    .registers 30
+
+    const/4 v13, 0x0
+
+    const/16 v16, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v19, 0x0
+
+    const/4 v3, 0x0
+
+    const/16 v18, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/16 v26, 0x13
+
+    move/from16 v0, v26
+
+    new-array v8, v0, [B
+
+    fill-array-data v8, :array_1bc
+
+    const/16 v26, 0x0
+
+    const/16 v27, 0x2
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, v26
+
+    move/from16 v2, v27
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v21
+
+    invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->length()I
+
+    move-result v26
+
+    add-int/lit8 v26, v26, -0x2
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, v26
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v22
+
+    new-instance v26, Ljava/lang/StringBuilder;
+
+    invoke-static/range {v22 .. v22}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-direct/range {v26 .. v27}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/16 v27, 0x2
+
+    invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->length()I
+
+    move-result v28
+
+    add-int/lit8 v28, v28, -0x2
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, v27
+
+    move/from16 v2, v28
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v26
+
+    move-object/from16 v0, v26
+
+    move-object/from16 v1, v21
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v26
+
+    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v20
+
+    const/4 v13, 0x0
+
+    :goto_5c
+    const/16 v26, 0x13
+
+    move/from16 v0, v26
+
+    if-lt v13, v0, :cond_17c
+
+    new-instance v19, Ljava/lang/String;
+
+    move-object/from16 v0, v19
+
+    invoke-direct {v0, v8}, Ljava/lang/String;-><init>([B)V
+
+    const/4 v15, 0x2
+
+    const/16 v26, 0x3
+
+    move-object/from16 v0, v19
+
+    move/from16 v1, v26
+
+    invoke-virtual {v0, v15, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v18
+
+    const/16 v15, 0x10
+
+    new-instance v26, Ljava/lang/StringBuilder;
+
+    invoke-static/range {v18 .. v18}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-direct/range {v26 .. v27}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/16 v27, 0x11
+
+    move-object/from16 v0, v19
+
+    move/from16 v1, v27
+
+    invoke-virtual {v0, v15, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v26
+
+    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v18
+
+    new-instance v26, Ljava/lang/StringBuilder;
+
+    invoke-static/range {v18 .. v18}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-direct/range {v26 .. v27}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v27, "c"
+
+    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v26
+
+    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v15, 0x4
+
+    new-instance v26, Ljava/lang/StringBuilder;
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-direct/range {v26 .. v27}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/16 v27, 0x5
+
+    move-object/from16 v0, v19
+
+    move/from16 v1, v27
+
+    invoke-virtual {v0, v15, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v26
+
+    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v26, Ljava/lang/StringBuilder;
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-direct/range {v26 .. v27}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    move-object/from16 v0, v26
+
+    move-object/from16 v1, v18
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v26
+
+    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    :try_start_d5
+    invoke-static/range {v19 .. v19}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v11
+
+    const/16 v26, 0x2
+
+    move/from16 v0, v26
+
+    new-array v4, v0, [Ljava/lang/Class;
+
+    const/16 v26, 0x0
+
+    const-class v27, Ljava/lang/String;
+
+    aput-object v27, v4, v26
+
+    const/16 v26, 0x1
+
+    sget-object v27, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v27, v4, v26
+
+    invoke-virtual {v11, v3, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v14
+
+    const/16 v26, 0x2
+
+    move/from16 v0, v26
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    move-object/from16 v26, v0
+
+    const/16 v27, 0x0
+
+    aput-object v20, v26, v27
+
+    const/16 v27, 0x1
+
+    const/16 v28, 0x0
+
+    invoke-static/range {v28 .. v28}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v28
+
+    aput-object v28, v26, v27
+
+    move-object/from16 v0, v26
+
+    invoke-virtual {v14, v11, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v26
+
+    move-object/from16 v0, v26
+
+    check-cast v0, [B
+
+    move-object v5, v0
+    :try_end_110
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_d5 .. :try_end_110} :catch_18b
+    .catch Ljava/lang/IllegalAccessException; {:try_start_d5 .. :try_end_110} :catch_190
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_d5 .. :try_end_110} :catch_196
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_d5 .. :try_end_110} :catch_19c
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_d5 .. :try_end_110} :catch_1a2
+
+    :goto_110
+    array-length v0, v5
+
+    move/from16 v17, v0
+
+    add-int/lit8 v26, v17, -0x1
+
+    aget-byte v26, v5, v26
+
+    move/from16 v0, v26
+
+    int-to-char v0, v0
+
+    move/from16 v26, v0
+
+    invoke-static/range {v26 .. v26}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
+
+    move-result-object v26
+
+    invoke-static/range {v26 .. v26}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v16
+
+    add-int/lit8 v17, v17, -0x1
+
+    sub-int v17, v17, v16
+
+    add-int/lit8 v26, v17, -0x2
+
+    aget-byte v26, v5, v26
+
+    move/from16 v0, v26
+
+    int-to-char v9, v0
+
+    add-int/lit8 v26, v17, -0x1
+
+    aget-byte v26, v5, v26
+
+    move/from16 v0, v26
+
+    int-to-char v10, v0
+
+    new-instance v26, Ljava/lang/StringBuilder;
+
+    invoke-static {v9}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-static/range {v27 .. v27}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-direct/range {v26 .. v27}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v10}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
+
+    move-result-object v27
+
+    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v26
+
+    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v23
+
+    const/16 v26, 0x10
+
+    move-object/from16 v0, v23
+
+    move/from16 v1, v26
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+
+    move-result v26
+
+    move/from16 v0, v26
+
+    int-to-byte v7, v0
+
+    add-int/lit8 v26, v7, 0x69
+
+    move/from16 v0, v26
+
+    int-to-byte v7, v0
+
+    add-int/lit8 v17, v17, -0x2
+
+    const-string v24, ""
+
+    move/from16 v0, v17
+
+    new-array v6, v0, [B
+
+    const/4 v13, 0x0
+
+    :goto_16a
+    move/from16 v0, v17
+
+    if-lt v13, v0, :cond_1a8
+
+    :try_start_16e
+    new-instance v25, Ljava/lang/String;
+
+    const-string v26, "UTF-8"
+
+    move-object/from16 v0, v25
+
+    move-object/from16 v1, v26
+
+    invoke-direct {v0, v6, v1}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+    :try_end_179
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_16e .. :try_end_179} :catch_1b6
+
+    move-object/from16 v24, v25
+
+    :goto_17b
+    return-object v24
+
+    :cond_17c
+    aget-byte v26, v8, v13
+
+    xor-int/lit8 v26, v26, -0x7f
+
+    move/from16 v0, v26
+
+    int-to-byte v0, v0
+
+    move/from16 v26, v0
+
+    aput-byte v26, v8, v13
+
+    add-int/lit8 v13, v13, 0x1
+
+    goto/16 :goto_5c
+
+    :catch_18b
+    move-exception v12
+
+    invoke-virtual {v12}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
+
+    goto :goto_110
+
+    :catch_190
+    move-exception v12
+
+    invoke-virtual {v12}, Ljava/lang/IllegalAccessException;->printStackTrace()V
+
+    goto/16 :goto_110
+
+    :catch_196
+    move-exception v12
+
+    invoke-virtual {v12}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
+
+    goto/16 :goto_110
+
+    :catch_19c
+    move-exception v12
+
+    invoke-virtual {v12}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+
+    goto/16 :goto_110
+
+    :catch_1a2
+    move-exception v12
+
+    invoke-virtual {v12}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
+
+    goto/16 :goto_110
+
+    :cond_1a8
+    aget-byte v26, v5, v13
+
+    xor-int v26, v26, v7
+
+    move/from16 v0, v26
+
+    int-to-byte v0, v0
+
+    move/from16 v26, v0
+
+    aput-byte v26, v6, v13
+
+    add-int/lit8 v13, v13, 0x1
+
+    goto :goto_16a
+
+    :catch_1b6
+    move-exception v12
+
+    invoke-virtual {v12}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
+
+    goto :goto_17b
+
+    nop
+
+    :array_1bc
+    .array-data 1
+        -0x20t
+        -0x11t
+        -0x1bt
+        -0xdt
+        -0x12t
+        -0x18t
+        -0x1bt
+        -0x51t
+        -0xct
+        -0xbt
+        -0x18t
+        -0x13t
+        -0x51t
+        -0x3dt
+        -0x20t
+        -0xet
+        -0x1ct
+        -0x49t
+        -0x4bt
+    .end array-data
 .end method
 
 .method private IntentActions()V
     .registers 18
 
-    .prologue
-    .line 42
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 43
-    .local v8, "packageName":Ljava/lang/String;
-    const-string v14, "donate"
+    const-string v14, "U=BhbntqQTZBViRhRDa2"
 
-    invoke-virtual {v8, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-virtual {v14, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v14
 
-    if-eqz v14, :cond_1cf
+    if-eqz v14, :cond_203
 
-    .line 45
     const/4 v13, 0x0
 
-    .line 47
-    .local v13, "used":Z
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Lcom/mb/intents/ContentProvider;->debug:Z
 
-    if-eqz v14, :cond_27
+    if-eqz v14, :cond_2f
 
-    const-string v14, "ViewpagerStyleActivity"
+    const-string v14, "A1Vpe3xta2l+X3h1YGlNb3hlemV4dUEzaoNBYjWm"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
 
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -72,15 +576,18 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
-    :cond_27
+    :cond_2f
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Lcom/mb/intents/ContentProvider;->debug:Z
 
-    if-eqz v14, :cond_49
+    if-eqz v14, :cond_55
 
-    const-string v14, "ViewpagerStyleActivity"
+    const-string v14, "Q=TYys3c2tjP7snE0dj83snUy9TJxDU033fc0z69"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
 
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -106,15 +613,18 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
-    :cond_49
+    :cond_55
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Lcom/mb/intents/ContentProvider;->debug:Z
 
-    if-eqz v14, :cond_6b
+    if-eqz v14, :cond_7b
 
-    const-string v14, "ViewpagerStyleActivity"
+    const-string v14, "Q=ygsrWkoqC3lrG8qaCEprGss6yxvDVDrGKG1zk6"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
 
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -140,15 +650,18 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
-    :cond_6b
+    :cond_7b
     move-object/from16 v0, p0
 
     iget-boolean v14, v0, Lcom/mb/intents/ContentProvider;->debug:Z
 
-    if-eqz v14, :cond_8d
+    if-eqz v14, :cond_a1
 
-    const-string v14, "ViewpagerStyleActivity"
+    const-string v14, "Q=LezMva3N7J6M/C19762M/SzdLPwjUyvZzAZD7d"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
 
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -174,11 +687,9 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
-    :cond_8d
-    if-nez v13, :cond_112
+    :cond_a1
+    if-nez v13, :cond_136
 
-    .line 54
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getIntent()Landroid/content/Intent;
 
     move-result-object v14
@@ -187,8 +698,6 @@
 
     move-result-object v2
 
-    .line 55
-    .local v2, "action":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getIntent()Landroid/content/Intent;
 
     move-result-object v14
@@ -197,26 +706,31 @@
 
     move-result-object v11
 
-    .line 57
-    .local v11, "type":Ljava/lang/String;
-    const-string v14, "android.intent.action.DIAL"
+    const-string v14, "M=jC1MnPwojPyNLDyNKIx8XSz8nIiOLv5+ozREuaoTx8"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
 
     invoke-virtual {v14, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v14
 
-    if-nez v14, :cond_af
+    if-nez v14, :cond_cb
 
-    const-string v14, "android.intent.action.VIEW"
+    const-string v14, "M0eNm4aAjceAh52Mh53HiIqdgIaHx7+grL44MExGQdiI"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
 
     invoke-virtual {v14, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v14
 
-    if-eqz v14, :cond_112
+    if-eqz v14, :cond_136
 
-    .line 59
-    :cond_af
+    :cond_cb
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getIntent()Landroid/content/Intent;
 
     move-result-object v14
@@ -225,12 +739,9 @@
 
     move-result-object v12
 
-    .line 60
-    .local v12, "uri":Landroid/net/Uri;
-    if-eqz v12, :cond_112
+    if-eqz v12, :cond_136
 
-    .line 64
-    :try_start_b9
+    :try_start_d5
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getIntent()Landroid/content/Intent;
 
     move-result-object v14
@@ -239,8 +750,6 @@
 
     move-result-object v4
 
-    .line 65
-    .local v4, "data":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getIntent()Landroid/content/Intent;
 
     move-result-object v14
@@ -249,18 +758,23 @@
 
     move-result-object v9
 
-    .line 67
-    .local v9, "scheme":Ljava/lang/String;
-    const-string v14, "file://"
+    const-string v14, "==ZzeiUwMEI2XthCMweX"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
 
     invoke-virtual {v4, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v14
 
-    if-eqz v14, :cond_165
+    if-eqz v14, :cond_189
 
-    .line 69
-    const-string v14, "ViewpagerStyleActivity"
+    const-string v14, "Q12xo6S1s7Gmh6CtuLGVt6C9or2grTZCitekv9gr"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
 
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -278,26 +792,20 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     invoke-virtual {v12}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 71
-    .local v6, "filepathString":Ljava/lang/String;
     new-instance v10, Ljava/io/File;
 
     invoke-direct {v10, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 73
-    .local v10, "themeFile":Ljava/io/File;
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
 
     move-result v14
 
-    if-eqz v14, :cond_12f
+    if-eqz v14, :cond_153
 
-    .line 75
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getResources()Landroid/content/res/Resources;
 
     move-result-object v14
@@ -318,7 +826,6 @@
 
     invoke-virtual {v14}, Landroid/widget/Toast;->show()V
 
-    .line 76
     invoke-virtual {v10}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v14
@@ -326,20 +833,11 @@
     move-object/from16 v0, p0
 
     invoke-static {v10, v0, v14}, Lcom/mb/theme/ThemeManager;->loadSharedThemePreferencesFromFile(Ljava/io/File;Landroid/content/Context;Ljava/lang/String;)Z
-    :try_end_112
-    .catch Ljava/lang/Exception; {:try_start_b9 .. :try_end_112} :catch_160
+    :try_end_136
+    .catch Ljava/lang/Exception; {:try_start_d5 .. :try_end_136} :catch_184
 
-    .line 105
-    .end local v2    # "action":Ljava/lang/String;
-    .end local v4    # "data":Ljava/lang/String;
-    .end local v6    # "filepathString":Ljava/lang/String;
-    .end local v9    # "scheme":Ljava/lang/String;
-    .end local v10    # "themeFile":Ljava/io/File;
-    .end local v11    # "type":Ljava/lang/String;
-    .end local v12    # "uri":Landroid/net/Uri;
-    .end local v13    # "used":Z
-    :cond_112
-    :goto_112
+    :cond_136
+    :goto_136
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getIntent()Landroid/content/Intent;
 
     move-result-object v14
@@ -350,7 +848,6 @@
 
     invoke-virtual/range {v14 .. v16}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 106
     new-instance v7, Landroid/content/Intent;
 
     const-class v14, Lcom/mb/viewpager/ViewPagerStyle1Activity;
@@ -359,30 +856,16 @@
 
     invoke-direct {v7, v0, v14}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 107
-    .local v7, "intent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v7}, Lcom/mb/intents/ContentProvider;->startActivity(Landroid/content/Intent;)V
 
-    .line 108
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->finish()V
 
-    .line 109
     return-void
 
-    .line 79
-    .end local v7    # "intent":Landroid/content/Intent;
-    .restart local v2    # "action":Ljava/lang/String;
-    .restart local v4    # "data":Ljava/lang/String;
-    .restart local v6    # "filepathString":Ljava/lang/String;
-    .restart local v9    # "scheme":Ljava/lang/String;
-    .restart local v10    # "themeFile":Ljava/io/File;
-    .restart local v11    # "type":Ljava/lang/String;
-    .restart local v12    # "uri":Landroid/net/Uri;
-    .restart local v13    # "used":Z
-    :cond_12f
-    :try_start_12f
+    :cond_153
+    :try_start_153
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getResources()Landroid/content/res/Resources;
@@ -428,57 +911,57 @@
     move-result-object v14
 
     invoke-virtual {v14}, Landroid/widget/Toast;->show()V
-    :try_end_15f
-    .catch Ljava/lang/Exception; {:try_start_12f .. :try_end_15f} :catch_160
+    :try_end_183
+    .catch Ljava/lang/Exception; {:try_start_153 .. :try_end_183} :catch_184
 
-    goto :goto_112
+    goto :goto_136
 
-    .line 94
-    .end local v4    # "data":Ljava/lang/String;
-    .end local v6    # "filepathString":Ljava/lang/String;
-    .end local v9    # "scheme":Ljava/lang/String;
-    .end local v10    # "themeFile":Ljava/io/File;
-    :catch_160
+    :catch_184
     move-exception v5
 
-    .line 96
-    .local v5, "e":Ljava/lang/Exception;
     invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_112
+    goto :goto_136
 
-    .line 81
-    .end local v5    # "e":Ljava/lang/Exception;
-    .restart local v4    # "data":Ljava/lang/String;
-    .restart local v9    # "scheme":Ljava/lang/String;
-    :cond_165
-    :try_start_165
-    const-string v14, "content://com.android.email.attachmentprovider"
+    :cond_189
+    :try_start_189
+    const-string v14, "Q=VEXk9EXhAFBUlFRwRLRE5YRUNOBE9HS0NGBEteXktJQkdPRF5aWEVcQ05PWEMxN11/yzSU"
 
-    invoke-virtual {v4, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v14
-
-    if-nez v14, :cond_17d
-
-    const-string v14, "content://downloads"
+    move-result-object v14
 
     invoke-virtual {v4, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v14
 
-    if-nez v14, :cond_17d
+    if-nez v14, :cond_1ad
 
-    const-string v14, "content://gmail-ls"
+    const-string v14, "==R1b351byE0NH90bHV3dHp/aEIycVU9MweH"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
 
     invoke-virtual {v4, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v14
 
-    if-eqz v14, :cond_112
+    if-nez v14, :cond_1ad
 
-    .line 84
-    :cond_17d
+    const-string v14, "IzBBW0pBWxUAAEhCTkZDAkNcQzZbM2TE"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-virtual {v4, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_136
+
+    :cond_1ad
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v14
@@ -495,21 +978,16 @@
 
     move-result-object v3
 
-    .line 85
-    .local v3, "attachment":Ljava/io/InputStream;
     invoke-static {v3}, Lcom/mb/theme/ThemeManager;->stream2file(Ljava/io/InputStream;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 86
-    .local v1, "ThemeFile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v14
 
-    if-eqz v14, :cond_112
+    if-eqz v14, :cond_136
 
-    .line 88
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getResources()Landroid/content/res/Resources;
 
     move-result-object v14
@@ -530,8 +1008,11 @@
 
     invoke-virtual {v14}, Landroid/widget/Toast;->show()V
 
-    .line 89
-    const-string v14, "Theme"
+    const-string v14, "I0SZkZk5Mz+xr0qJ"
+
+    invoke-static {v14}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
 
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -553,7 +1034,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v14
@@ -561,21 +1041,12 @@
     move-object/from16 v0, p0
 
     invoke-static {v1, v0, v14}, Lcom/mb/theme/ThemeManager;->loadSharedThemePreferencesFromFile(Ljava/io/File;Landroid/content/Context;Ljava/lang/String;)Z
-    :try_end_1cd
-    .catch Ljava/lang/Exception; {:try_start_165 .. :try_end_1cd} :catch_160
+    :try_end_201
+    .catch Ljava/lang/Exception; {:try_start_189 .. :try_end_201} :catch_184
 
-    goto/16 :goto_112
+    goto/16 :goto_136
 
-    .line 103
-    .end local v1    # "ThemeFile":Ljava/io/File;
-    .end local v2    # "action":Ljava/lang/String;
-    .end local v3    # "attachment":Ljava/io/InputStream;
-    .end local v4    # "data":Ljava/lang/String;
-    .end local v9    # "scheme":Ljava/lang/String;
-    .end local v11    # "type":Ljava/lang/String;
-    .end local v12    # "uri":Landroid/net/Uri;
-    .end local v13    # "used":Z
-    :cond_1cf
+    :cond_203
     invoke-virtual/range {p0 .. p0}, Lcom/mb/intents/ContentProvider;->getResources()Landroid/content/res/Resources;
 
     move-result-object v14
@@ -596,20 +1067,16 @@
 
     invoke-virtual {v14}, Landroid/widget/Toast;->show()V
 
-    goto/16 :goto_112
+    goto/16 :goto_136
 .end method
 
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
     .registers 4
-    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
-    .prologue
-    .line 27
     invoke-super {p0, p1}, Landroid/support/v4/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 28
     iget-boolean v0, p0, Lcom/mb/intents/ContentProvider;->debug:Z
 
     if-eqz v0, :cond_e
@@ -620,40 +1087,39 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     :cond_e
     invoke-direct {p0}, Lcom/mb/intents/ContentProvider;->IntentActions()V
 
-    .line 30
     return-void
 .end method
 
 .method protected onNewIntent(Landroid/content/Intent;)V
     .registers 4
-    .param p1, "intent"    # Landroid/content/Intent;
 
-    .prologue
-    .line 34
     invoke-super {p0, p1}, Landroid/support/v4/app/FragmentActivity;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 35
     iget-boolean v0, p0, Lcom/mb/intents/ContentProvider;->debug:Z
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_16
 
-    const-string v0, "Intents"
+    const-string v0, "Q=gyIygyNUREMILOIzDy"
 
-    const-string v1, "newIntent"
+    invoke-static {v0}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "==68gqW/rqW/NjLLbMZPNApa"
+
+    invoke-static {v1}, Lcom/mb/intents/ContentProvider;->IntentActions(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
-    :cond_e
+    :cond_16
     invoke-virtual {p0, p1}, Lcom/mb/intents/ContentProvider;->setIntent(Landroid/content/Intent;)V
 
-    .line 37
     invoke-direct {p0}, Lcom/mb/intents/ContentProvider;->IntentActions()V
 
-    .line 38
     return-void
 .end method

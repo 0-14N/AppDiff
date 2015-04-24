@@ -801,39 +801,26 @@
     return-void
 .end method
 
-.method protected o()V
+.method o()V
     .registers 3
 
-    invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->getApplication()Landroid/app/Application;
+    invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Lcom/cungo/callrecorder/CGApplication;
-
-    invoke-virtual {v0}, Lcom/cungo/callrecorder/CGApplication;->a()Lcom/cungo/callrecorder/CGRecordingMonitor;
+    invoke-static {v0}, Lcom/cungu/lib/callrecorder/k;->a(Landroid/content/Context;)Lcom/cungu/lib/callrecorder/k;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/cungo/callrecorder/ui/ActivityBase;->s:Lcom/cungo/callrecorder/CGRecordingMonitor$IResultCallback;
-
-    if-nez v1, :cond_1c
-
-    invoke-virtual {v0}, Lcom/cungo/callrecorder/CGRecordingMonitor;->b()Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;
+    invoke-virtual {v0}, Lcom/cungu/lib/callrecorder/k;->b()Lcom/cungu/lib/callrecorder/w;
 
     move-result-object v1
 
-    invoke-virtual {p0, v0, v1}, Lcom/cungo/callrecorder/ui/ActivityBase;->a(Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V
+    invoke-virtual {v0}, Lcom/cungu/lib/callrecorder/k;->c()Lcom/cungu/lib/callrecorder/w;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/bf;
+    move-result-object v0
 
-    invoke-direct {v1, p0, v0}, Lcom/cungo/callrecorder/ui/bf;-><init>(Lcom/cungo/callrecorder/ui/ActivityBase;Lcom/cungo/callrecorder/CGRecordingMonitor;)V
-
-    iput-object v1, p0, Lcom/cungo/callrecorder/ui/ActivityBase;->s:Lcom/cungo/callrecorder/CGRecordingMonitor$IResultCallback;
-
-    :cond_1c
-    iget-object v1, p0, Lcom/cungo/callrecorder/ui/ActivityBase;->s:Lcom/cungo/callrecorder/CGRecordingMonitor$IResultCallback;
-
-    invoke-virtual {v0, v1}, Lcom/cungo/callrecorder/CGRecordingMonitor;->a(Lcom/cungo/callrecorder/CGRecordingMonitor$IResultCallback;)V
+    invoke-virtual {p0, v1, v0}, Lcom/cungo/callrecorder/ui/ActivityBase;->a(Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V
 
     return-void
 .end method
@@ -966,7 +953,7 @@
 
     if-nez v0, :cond_2a
 
-    invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
+    invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
 
     :cond_2a
     invoke-static {}, Lcom/cungo/callrecorder/AppDelegate;->b()Lcom/cungo/callrecorder/AppDelegate;
@@ -1002,26 +989,39 @@
     return v0
 .end method
 
-.method p()V
+.method protected p()V
     .registers 3
 
-    invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->getApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/cungu/lib/callrecorder/k;->a(Landroid/content/Context;)Lcom/cungu/lib/callrecorder/k;
+    check-cast v0, Lcom/cungo/callrecorder/CGApplication;
+
+    invoke-virtual {v0}, Lcom/cungo/callrecorder/CGApplication;->a()Lcom/cungo/callrecorder/CGRecordingMonitor;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/cungu/lib/callrecorder/k;->b()Lcom/cungu/lib/callrecorder/w;
+    iget-object v1, p0, Lcom/cungo/callrecorder/ui/ActivityBase;->s:Lcom/cungo/callrecorder/CGRecordingMonitor$IResultCallback;
+
+    if-nez v1, :cond_1c
+
+    invoke-virtual {v0}, Lcom/cungo/callrecorder/CGRecordingMonitor;->b()Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/cungu/lib/callrecorder/k;->c()Lcom/cungu/lib/callrecorder/w;
+    invoke-virtual {p0, v0, v1}, Lcom/cungo/callrecorder/ui/ActivityBase;->a(Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V
 
-    move-result-object v0
+    new-instance v1, Lcom/cungo/callrecorder/ui/bf;
 
-    invoke-virtual {p0, v1, v0}, Lcom/cungo/callrecorder/ui/ActivityBase;->a(Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V
+    invoke-direct {v1, p0, v0}, Lcom/cungo/callrecorder/ui/bf;-><init>(Lcom/cungo/callrecorder/ui/ActivityBase;Lcom/cungo/callrecorder/CGRecordingMonitor;)V
+
+    iput-object v1, p0, Lcom/cungo/callrecorder/ui/ActivityBase;->s:Lcom/cungo/callrecorder/CGRecordingMonitor$IResultCallback;
+
+    :cond_1c
+    iget-object v1, p0, Lcom/cungo/callrecorder/ui/ActivityBase;->s:Lcom/cungo/callrecorder/CGRecordingMonitor$IResultCallback;
+
+    invoke-virtual {v0, v1}, Lcom/cungo/callrecorder/CGRecordingMonitor;->a(Lcom/cungo/callrecorder/CGRecordingMonitor$IResultCallback;)V
 
     return-void
 .end method

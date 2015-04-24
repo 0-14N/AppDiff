@@ -5791,7 +5791,7 @@
 
     move-result-object v3
 
-    const-string v4, "You don\'t have enough tickets!\nPlay more to get it!"
+    const-string v4, "\u60a8\u7684\u7968\u5238\u4f59\u989d\u4e0d\u8db3!"
 
     invoke-static {v3, v4, v8}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
@@ -5868,7 +5868,7 @@
 
     move-result-object v3
 
-    const-string v4, "You don\'t have enough tickets!\nPlay more to get it!"
+    const-string v4, "\u60a8\u7684\u7968\u5238\u4f59\u989d\u4e0d\u8db3!"
 
     invoke-static {v3, v4, v8}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 

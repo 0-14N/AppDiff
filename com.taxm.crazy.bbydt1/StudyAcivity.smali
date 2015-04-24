@@ -776,6 +776,16 @@
 
     invoke-static {}, Lcom/taxm/crazy/bbydt1/b/c;->d()V
 
+    const v0, 0x7f0a002b
+
+    invoke-virtual {p0, v0}, Lcom/taxm/crazy/bbydt1/ui/StudyAcivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    invoke-static {v0}, Lcom/feiwo/view/FwBannerManager;->setParentView(Landroid/view/ViewGroup;)V
+
     return-void
 .end method
 

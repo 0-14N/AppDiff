@@ -28,7 +28,7 @@
 
     new-instance v0, Lcom/alipay/android/app/sdk/AliPay;
 
-    invoke-static {}, Lcom/trinitigame/android/g;->d()Lcom/trinitigame/android/Triniti2DActivity;
+    invoke-static {}, Lcom/trinitigame/android/g;->c()Lcom/trinitigame/android/Triniti2DActivity;
 
     move-result-object v1
 
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    invoke-static {}, Lcom/trinitigame/android/g;->d()Lcom/trinitigame/android/Triniti2DActivity;
+    invoke-static {}, Lcom/trinitigame/android/g;->c()Lcom/trinitigame/android/Triniti2DActivity;
 
     move-result-object v0
 

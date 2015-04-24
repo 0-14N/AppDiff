@@ -22,7 +22,7 @@
 
     iput-object p2, p0, Lorg/gdb/android/client/ni;->b:Lorg/gdb/android/client/widget/ConfirmDialog;
 
-    .line 152
+    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,24 +34,30 @@
     .registers 4
 
     .prologue
-    .line 156
+    .line 131
     iget-object v0, p0, Lorg/gdb/android/client/ni;->b:Lorg/gdb/android/client/widget/ConfirmDialog;
 
     invoke-virtual {v0}, Lorg/gdb/android/client/widget/ConfirmDialog;->dismiss()V
 
-    .line 157
+    .line 132
     iget-object v0, p0, Lorg/gdb/android/client/ni;->a:Lorg/gdb/android/client/nh;
 
-    iget-object v0, v0, Lorg/gdb/android/client/nh;->a:Lorg/gdb/android/client/UseCouponActivity;
+    iget-object v0, v0, Lorg/gdb/android/client/nh;->a:Lorg/gdb/android/client/UsePrizeActivity;
 
     iget-object v1, p0, Lorg/gdb/android/client/ni;->a:Lorg/gdb/android/client/nh;
 
-    invoke-static {v1}, Lorg/gdb/android/client/nh;->a(Lorg/gdb/android/client/nh;)Lorg/gdb/android/client/vo/CouponVO;
+    iget-object v1, v1, Lorg/gdb/android/client/nh;->a:Lorg/gdb/android/client/UsePrizeActivity;
+
+    invoke-static {v1}, Lorg/gdb/android/client/UsePrizeActivity;->a(Lorg/gdb/android/client/UsePrizeActivity;)Lorg/gdb/android/client/vo/AwardVO;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lorg/gdb/android/client/UseCouponActivity;->a(Lorg/gdb/android/client/UseCouponActivity;Lorg/gdb/android/client/vo/CouponVO;)V
+    invoke-virtual {v1}, Lorg/gdb/android/client/vo/AwardVO;->getId()Ljava/lang/String;
 
-    .line 158
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lorg/gdb/android/client/UsePrizeActivity;->a(Lorg/gdb/android/client/UsePrizeActivity;Ljava/lang/String;)V
+
+    .line 133
     return-void
 .end method

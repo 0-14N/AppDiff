@@ -29,19 +29,13 @@
 
     iget-object v1, p0, Lcom/wuchun/house/compass/e;->a:Lcom/wuchun/house/compass/MainActivity;
 
-    const-class v2, Lcom/wuchun/house/compass/Compass;
+    const-class v2, Lcom/wuchun/house/compass/loancalculator;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     iget-object v1, p0, Lcom/wuchun/house/compass/e;->a:Lcom/wuchun/house/compass/MainActivity;
 
-    invoke-static {v1}, Lcom/wuchun/house/compass/MainActivity;->a(Lcom/wuchun/house/compass/MainActivity;)Lcom/baidu/mobads/d;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/wuchun/house/compass/e;->a:Lcom/wuchun/house/compass/MainActivity;
-
-    invoke-virtual {v1, v2}, Lcom/baidu/mobads/d;->a(Landroid/app/Activity;)V
+    invoke-static {v1}, Lcom/feiwo/appwall/AppWallManager;->showAppWall(Landroid/content/Context;)V
 
     iget-object v1, p0, Lcom/wuchun/house/compass/e;->a:Lcom/wuchun/house/compass/MainActivity;
 

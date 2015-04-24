@@ -48,7 +48,7 @@
     .end annotation
 .end field
 
-.field private tobackBtn:Landroid/widget/ImageButton;
+.field private tobackBtn:Landroid/widget/Button;
 
 
 # direct methods
@@ -56,20 +56,20 @@
     .registers 2
 
     .prologue
-    .line 40
+    .line 37
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;-><init>()V
 
-    .line 49
+    .line 46
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
 
-    .line 95
+    .line 89
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->isExitLogin:Z
 
-    .line 40
+    .line 37
     return-void
 .end method
 
@@ -77,7 +77,7 @@
     .registers 1
 
     .prologue
-    .line 53
+    .line 50
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->initcontent()V
 
     return-void
@@ -87,7 +87,7 @@
     .registers 2
 
     .prologue
-    .line 42
+    .line 39
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->item_list:Lcom/massage/utils/frame/RoundedRectListView;
 
     return-object v0
@@ -97,7 +97,7 @@
     .registers 2
 
     .prologue
-    .line 95
+    .line 89
     iput-boolean p1, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->isExitLogin:Z
 
     return-void
@@ -111,11 +111,11 @@
 
     const/4 v2, 0x0
 
-    .line 139
+    .line 137
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->initcontent()V
 
-    .line 140
-    const v0, 0x7f070262
+    .line 138
+    const v0, 0x7f0800f3
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->findViewById(I)Landroid/view/View;
 
@@ -123,44 +123,32 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0d009c
+    const v1, 0x7f090072
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 141
-    const v0, 0x7f070263
+    .line 139
+    const v0, 0x7f0800f4
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageButton;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->tobackBtn:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->tobackBtn:Landroid/widget/Button;
 
-    .line 142
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->tobackBtn:Landroid/widget/ImageButton;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
-
-    .line 143
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->tobackBtn:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setClickable(Z)V
-
-    .line 144
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->tobackBtn:Landroid/widget/ImageButton;
+    .line 141
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->tobackBtn:Landroid/widget/Button;
 
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/SystemSetting$3;
 
     invoke-direct {v1, p0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting$3;-><init>(Lcom/jiuzhansoft/massage/subActivity/SystemSetting;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 169
-    const v0, 0x7f07024d
+    .line 165
+    const v0, 0x7f0800f2
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->findViewById(I)Landroid/view/View;
 
@@ -170,22 +158,22 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->item_list:Lcom/massage/utils/frame/RoundedRectListView;
 
-    .line 171
+    .line 167
     new-array v5, v3, [Ljava/lang/String;
 
     const-string v0, "name"
 
     aput-object v0, v5, v2
 
-    .line 172
+    .line 168
     .local v5, "as":[Ljava/lang/String;
     new-array v6, v3, [I
 
-    const v0, 0x7f0701a7
+    const v0, 0x7f0800b9
 
     aput v0, v6, v2
 
-    .line 173
+    .line 169
     .local v6, "ai":[I
     iget-object v7, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->item_list:Lcom/massage/utils/frame/RoundedRectListView;
 
@@ -193,7 +181,7 @@
 
     iget-object v3, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->listcontent:Ljava/util/List;
 
-    const v4, 0x7f03006c
+    const v4, 0x7f030034
 
     move-object v1, p0
 
@@ -203,7 +191,7 @@
 
     invoke-virtual {v7, v0}, Lcom/massage/utils/frame/RoundedRectListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 188
+    .line 184
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->item_list:Lcom/massage/utils/frame/RoundedRectListView;
 
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/SystemSetting$5;
@@ -212,7 +200,7 @@
 
     invoke-virtual {v0, v1}, Lcom/massage/utils/frame/RoundedRectListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 311
+    .line 320
     return-void
 .end method
 
@@ -220,30 +208,55 @@
     .registers 4
 
     .prologue
-    const v2, 0x7f0d0079
+    const v2, 0x7f09004f
 
-    .line 54
+    .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->listcontent:Ljava/util/List;
 
-    .line 55
+    .line 52
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->sublistcontent:Ljava/util/List;
 
-    .line 57
+    .line 54
     invoke-static {}, Lcom/jiuzhansoft/massage/user/UserLogin;->hasLogin()Z
 
     move-result v0
 
-    if-eqz v0, :cond_bd
+    if-eqz v0, :cond_a1
+
+    .line 55
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
+
+    .line 57
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
+
+    const-string v1, "name"
+
+    invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 58
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->listcontent:Ljava/util/List;
+
+    iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 59
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -254,6 +267,8 @@
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
 
     const-string v1, "name"
+
+    const v2, 0x7f090051
 
     invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
 
@@ -268,34 +283,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 62
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    .line 63
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    const-string v1, "name"
-
-    const v2, 0x7f0d007b
-
-    invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 64
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->listcontent:Ljava/util/List;
-
-    iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 77
+    .line 74
     :goto_4c
     new-instance v0, Ljava/util/HashMap;
 
@@ -303,12 +291,12 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
 
-    .line 78
+    .line 75
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
 
     const-string v1, "name"
 
-    const v2, 0x7f0d0099
+    const v2, 0x7f09006f
 
     invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
 
@@ -316,26 +304,26 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
+    .line 76
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->listcontent:Ljava/util/List;
 
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 80
+    .line 81
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
 
-    .line 81
+    .line 82
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
 
     const-string v1, "name"
 
-    const v2, 0x7f0d0131
+    const v2, 0x7f0900b5
 
     invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
 
@@ -343,72 +331,70 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 82
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->listcontent:Ljava/util/List;
+    .line 83
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->sublistcontent:Ljava/util/List;
+
+    iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 84
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
+
+    .line 85
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
+
+    const-string v1, "name"
+
+    const v2, 0x7f0900b6
+
+    invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 86
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->sublistcontent:Ljava/util/List;
 
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 87
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    .line 88
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    const-string v1, "name"
-
-    const v2, 0x7f0d00d6
-
-    invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 89
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->sublistcontent:Ljava/util/List;
-
-    iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 90
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    .line 91
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    const-string v1, "name"
-
-    const v2, 0x7f0d00d7
-
-    invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 92
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->sublistcontent:Ljava/util/List;
-
-    iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 93
     return-void
 
+    .line 63
+    :cond_a1
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
+
+    .line 64
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
+
+    const-string v1, "name"
+
+    invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 65
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->listcontent:Ljava/util/List;
+
+    iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
     .line 66
-    :cond_bd
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -419,6 +405,8 @@
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
 
     const-string v1, "name"
+
+    const v2, 0x7f090060
 
     invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
 
@@ -433,41 +421,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 69
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    .line 70
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    const-string v1, "name"
-
-    const v2, 0x7f0d008a
-
-    invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 71
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->listcontent:Ljava/util/List;
-
-    iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->menuitem:Ljava/util/Map;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
     goto/16 :goto_4c
 .end method
 
 .method private toLogin()V
-    .registers 7
+    .registers 6
 
     .prologue
-    .line 112
+    .line 110
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v3, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
@@ -476,44 +437,44 @@
 
     move-result-object v1
 
-    .line 113
+    .line 111
     .local v1, "dialog":Landroid/app/AlertDialog;
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 114
+    .line 112
     invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 
-    .line 115
+    .line 113
     .local v2, "window":Landroid/view/Window;
-    const v3, 0x7f030052
+    const v3, 0x7f03002d
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->setContentView(I)V
 
-    .line 116
-    const v3, 0x7f0701e6
+    .line 114
+    const v3, 0x7f0800cf
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
-    move-result-object v3
+    move-result-object v0
 
-    check-cast v3, Landroid/widget/TextView;
+    check-cast v0, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v4
+    move-result-object v3
 
-    const v5, 0x7f0d008c
+    const v4, 0x7f090062
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 117
-    const v3, 0x7f07014a
+    .line 115
+    const v3, 0x7f080081
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -521,13 +482,13 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 118
+    .line 116
     .local v0, "btn":Landroid/widget/Button;
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0d002f
+    const v4, 0x7f090007
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -535,21 +496,21 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 119
+    .line 117
     new-instance v3, Lcom/jiuzhansoft/massage/subActivity/SystemSetting$1;
 
     invoke-direct {v3, p0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting$1;-><init>(Lcom/jiuzhansoft/massage/subActivity/SystemSetting;)V
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 128
+    .line 126
     new-instance v3, Lcom/jiuzhansoft/massage/subActivity/SystemSetting$2;
 
     invoke-direct {v3, p0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting$2;-><init>(Lcom/jiuzhansoft/massage/subActivity/SystemSetting;)V
 
     invoke-virtual {v1, v3}, Landroid/app/AlertDialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
 
-    .line 136
+    .line 134
     return-void
 .end method
 
@@ -560,84 +521,133 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 316
+    .line 324
     invoke-super {p0, p1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 317
-    const v0, 0x7f030068
+    .line 325
+    const v0, 0x7f030033
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->setContentView(I)V
 
-    .line 320
+    .line 327
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->initView()V
 
-    .line 321
+    .line 328
     return-void
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .registers 5
+    .registers 6
     .param p1, "keyCode"    # I
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 335
-    sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
+    .line 342
+    sget-boolean v1, Lcom/massage/utils/log/Log;->D:Z
 
-    if-eqz v0, :cond_b
+    if-eqz v1, :cond_b
 
-    .line 336
-    const-string v0, "HomeActivity"
+    .line 343
+    const-string v1, "HomeActivity"
 
-    const-string v1, "onKeyDown"
+    const-string v2, "onKeyDown"
 
-    invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 339
+    .line 346
     :cond_b
-    const/4 v0, 0x4
+    const/4 v1, 0x4
 
-    if-ne p1, v0, :cond_1e
+    if-ne p1, v1, :cond_46
 
-    .line 352
-    const/4 v0, 0x0
+    .line 348
+    const-string v1, "com.jiuzhansoft.massage.service.MusicService"
 
-    sput v0, Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;->reportIndex:I
+    invoke-static {p0, v1}, Lcom/jiuzhansoft/massage/service/MusicService;->isServiceRunning(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_37
+
+    .line 349
+    sget-object v1, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
+
+    if-eqz v1, :cond_23
+
+    .line 350
+    sget-object v1, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/media/audiofx/Visualizer;->setEnabled(Z)I
+
+    .line 351
+    const/4 v1, 0x0
+
+    sput-object v1, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
     .line 353
-    invoke-static {}, Lcom/jiuzhansoft/massage/application/JiuZhanApplication;->getInstance()Lcom/jiuzhansoft/massage/application/JiuZhanApplication;
+    :cond_23
+    new-instance v0, Landroid/content/Intent;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    invoke-virtual {v0}, Lcom/jiuzhansoft/massage/application/JiuZhanApplication;->getMainActivity()Lcom/jiuzhansoft/massage/activity/MainActivity;
+    .line 354
+    .local v0, "intent":Landroid/content/Intent;
+    const-class v1, Lcom/jiuzhansoft/massage/service/MusicService;
 
-    move-result-object v0
+    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lcom/jiuzhansoft/massage/activity/MainActivity;->setToIndexHomeActivity()V
+    .line 355
+    sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string v2, "******\u670d\u52a1\u505c\u6b62\u4e862***"
+
+    invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 356
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->stopService(Landroid/content/Intent;)Z
+
+    .line 358
+    .end local v0    # "intent":Landroid/content/Intent;
+    :cond_37
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/jiuzhansoft/massage/subActivity/MainMenuActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 360
+    .restart local v0    # "intent":Landroid/content/Intent;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->startActivity(Landroid/content/Intent;)V
 
     .line 361
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->finish()V
 
-    .line 363
-    :goto_1d
-    return v0
+    .line 365
+    const/4 v1, 0x1
 
-    :cond_1e
+    .line 367
+    .end local v0    # "intent":Landroid/content/Intent;
+    :goto_45
+    return v1
+
+    :cond_46
     invoke-super {p0, p1, p2}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
-    move-result v0
+    move-result v1
 
-    goto :goto_1d
+    goto :goto_45
 .end method
 
 .method protected onResume()V
     .registers 4
 
     .prologue
-    .line 326
+    .line 333
     invoke-super {p0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onResume()V
 
-    .line 327
+    .line 334
     const-string v2, "input_method"
 
     invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -646,7 +656,7 @@
 
     check-cast v1, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 328
+    .line 335
     .local v1, "inputmethodmanager":Landroid/view/inputmethod/InputMethodManager;
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/SystemSetting;->getWindow()Landroid/view/Window;
 
@@ -660,12 +670,12 @@
 
     move-result-object v0
 
-    .line 329
+    .line 336
     .local v0, "ibinder":Landroid/os/IBinder;
     const/4 v2, 0x0
 
     invoke-virtual {v1, v0, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 330
+    .line 337
     return-void
 .end method

@@ -85,9 +85,9 @@
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/social/ServiceObserverBridge;->mExternalNotifyParamMap:Ljava/util/Map;
 
-    new-instance v0, Lapb;
+    new-instance v0, Laih;
 
-    invoke-direct {v0, p0}, Lapb;-><init>(Lcom/quvideo/xiaoying/social/ServiceObserverBridge;)V
+    invoke-direct {v0, p0}, Laih;-><init>(Lcom/quvideo/xiaoying/social/ServiceObserverBridge;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/social/ServiceObserverBridge;->b:Lcom/quvideo/xiaoying/datacenter/IServiceCallback$Stub;
 
@@ -95,9 +95,9 @@
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/social/ServiceObserverBridge;->c:Lcom/quvideo/xiaoying/datacenter/IService;
 
-    new-instance v0, Lapc;
+    new-instance v0, Laii;
 
-    invoke-direct {v0, p0}, Lapc;-><init>(Lcom/quvideo/xiaoying/social/ServiceObserverBridge;)V
+    invoke-direct {v0, p0}, Laii;-><init>(Lcom/quvideo/xiaoying/social/ServiceObserverBridge;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/social/ServiceObserverBridge;->d:Landroid/content/ServiceConnection;
 
@@ -115,15 +115,15 @@
 
     if-nez v0, :cond_39
 
-    new-instance v0, Lapd;
+    new-instance v0, Laij;
 
-    invoke-direct {v0, p0, p2}, Lapd;-><init>(Lcom/quvideo/xiaoying/social/ServiceObserverBridge;Ljava/lang/Class;)V
+    invoke-direct {v0, p0, p2}, Laij;-><init>(Lcom/quvideo/xiaoying/social/ServiceObserverBridge;Ljava/lang/Class;)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lapd;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Laij;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     :cond_39
     return-void

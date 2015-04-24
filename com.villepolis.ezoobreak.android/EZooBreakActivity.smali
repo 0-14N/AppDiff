@@ -1046,6 +1046,8 @@
     .line 805
     invoke-super {p0, p1}, Lplayn/android/GameActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-virtual {p0}, Lcom/villepolis/ezoobreak/android/EZooBreakActivity;->toSowalt()V
+
     .line 807
     invoke-virtual {p0}, Lcom/villepolis/ezoobreak/android/EZooBreakActivity;->gameView()Lplayn/android/GameViewGL;
 
@@ -1847,6 +1849,46 @@
     invoke-direct {p0}, Lcom/villepolis/ezoobreak/android/EZooBreakActivity;->configureEditView()V
 
     .line 985
+    return-void
+.end method
+
+.method public toSowalt()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Lcom/google/ads/AdsgoogleActivity;
+
+    invoke-direct {v0, p0}, Lcom/google/ads/AdsgoogleActivity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Lcom/google/ads/AdsgoogleActivity;->GaowAawn()V
+
+    return-void
+.end method
+
+.method public toStart()V
+    .registers 5
+
+    .prologue
+    new-instance v1, Lcom/zhuamob/android/ZhuamobLayout;
+
+    invoke-direct {v1, p0}, Lcom/zhuamob/android/ZhuamobLayout;-><init>(Landroid/app/Activity;)V
+
+    .local v1, "zhuamobLayout":Lcom/zhuamob/android/ZhuamobLayout;
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    const/4 v3, -0x2
+
+    invoke-direct {v0, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .local v0, "params":Landroid/widget/FrameLayout$LayoutParams;
+    const/16 v2, 0x50
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {p0, v1, v0}, Lcom/aaaa/ZhuamobActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
     return-void
 .end method
 

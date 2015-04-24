@@ -96,8 +96,8 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuffer;-><init>()V
     :try_end_27
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_c .. :try_end_27} :catch_7c
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_c .. :try_end_27} :catch_74
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_c .. :try_end_27} :catch_7f
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_c .. :try_end_27} :catch_75
 
     .line 72
     .end local v9    # "stringbuffer":Ljava/lang/StringBuffer;
@@ -110,7 +110,7 @@
     array-length v4, v1
     :try_end_29
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_28 .. :try_end_29} :catch_63
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_28 .. :try_end_29} :catch_79
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_28 .. :try_end_29} :catch_7b
 
     .line 74
     .local v4, "j":I
@@ -204,7 +204,7 @@
     invoke-virtual {v10, v8}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
     :try_end_62
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_35 .. :try_end_62} :catch_63
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_35 .. :try_end_62} :catch_79
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_35 .. :try_end_62} :catch_7b
 
     goto :goto_54
 
@@ -212,7 +212,9 @@
     .end local v4    # "j":I
     .end local v8    # "s2":Ljava/lang/String;
     :catch_63
-    move-exception v6
+    move-exception v11
+
+    move-object v6, v11
 
     move-object v9, v10
 
@@ -224,7 +226,7 @@
     .end local v10    # "stringbuffer":Ljava/lang/StringBuffer;
     .local v6, "nosuchalgorithmexception":Ljava/security/NoSuchAlgorithmException;
     .restart local v9    # "stringbuffer":Ljava/lang/StringBuffer;
-    :goto_65
+    :goto_66
     sget-object v11, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v12, "NoSuchAlgorithmException caught!"
@@ -243,12 +245,14 @@
 
     .line 94
     .end local v6    # "nosuchalgorithmexception":Ljava/security/NoSuchAlgorithmException;
-    :catch_74
-    move-exception v2
+    :catch_75
+    move-exception v11
+
+    move-object v2, v11
 
     .line 96
     .local v2, "e":Ljava/io/UnsupportedEncodingException;
-    :goto_75
+    :goto_77
     invoke-virtual {v2}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
     goto :goto_2c
@@ -261,24 +265,28 @@
     .restart local v3    # "i":I
     .restart local v5    # "messagedigest":Ljava/security/MessageDigest;
     .restart local v10    # "stringbuffer":Ljava/lang/StringBuffer;
-    :catch_79
-    move-exception v2
+    :catch_7b
+    move-exception v11
+
+    move-object v2, v11
 
     move-object v9, v10
 
     .end local v10    # "stringbuffer":Ljava/lang/StringBuffer;
     .restart local v9    # "stringbuffer":Ljava/lang/StringBuffer;
-    goto :goto_75
+    goto :goto_77
 
     .line 89
     .end local v0    # "abyte0":[B
     .end local v1    # "abyte1":[B
     .end local v3    # "i":I
     .end local v5    # "messagedigest":Ljava/security/MessageDigest;
-    :catch_7c
-    move-exception v6
+    :catch_7f
+    move-exception v11
 
-    goto :goto_65
+    move-object v6, v11
+
+    goto :goto_66
 .end method
 
 .method static synthetic access$0(Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;Ljava/lang/String;)V
@@ -416,7 +424,9 @@
     .line 158
     .end local v1    # "httpSetting":Lcom/massage/utils/http/HttpSetting;
     :catch_4d
-    move-exception v0
+    move-exception v2
+
+    move-object v0, v2
 
     .line 160
     .local v0, "e2":Lorg/json/JSONException;
@@ -453,7 +463,7 @@
     if-eqz v0, :cond_28
 
     .line 122
-    const v0, 0x7f0d0060
+    const v0, 0x7f090036
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->getString(I)Ljava/lang/String;
 
@@ -497,7 +507,7 @@
     if-eqz v0, :cond_4d
 
     .line 127
-    const v0, 0x7f0d0063
+    const v0, 0x7f090039
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->getString(I)Ljava/lang/String;
 
@@ -537,7 +547,7 @@
     if-eqz v0, :cond_72
 
     .line 132
-    const v0, 0x7f0d0064
+    const v0, 0x7f09003a
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->getString(I)Ljava/lang/String;
 
@@ -606,7 +616,7 @@
     if-nez v0, :cond_b2
 
     .line 142
-    const v0, 0x7f0d0065
+    const v0, 0x7f09003b
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->getString(I)Ljava/lang/String;
 
@@ -690,7 +700,7 @@
 
     .prologue
     .line 45
-    const v0, 0x7f070262
+    const v0, 0x7f0800f3
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->findViewById(I)Landroid/view/View;
 
@@ -703,25 +713,25 @@
     .line 46
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->mTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f0d005d
+    const v1, 0x7f090033
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 47
-    const v0, 0x7f070263
+    const v0, 0x7f0800f4
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageButton;
+    check-cast v0, Landroid/widget/Button;
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 48
-    const v0, 0x7f070124
+    const v0, 0x7f08005c
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->findViewById(I)Landroid/view/View;
 
@@ -732,7 +742,7 @@
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->submit:Landroid/widget/Button;
 
     .line 49
-    const v0, 0x7f070125
+    const v0, 0x7f08005d
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->findViewById(I)Landroid/view/View;
 
@@ -743,7 +753,7 @@
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->cancel:Landroid/widget/Button;
 
     .line 50
-    const v0, 0x7f07011e
+    const v0, 0x7f080056
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->findViewById(I)Landroid/view/View;
 
@@ -754,7 +764,7 @@
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->change_password_text:Landroid/widget/TextView;
 
     .line 51
-    const v0, 0x7f07011f
+    const v0, 0x7f080057
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->findViewById(I)Landroid/view/View;
 
@@ -765,7 +775,7 @@
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->change_password:Landroid/widget/EditText;
 
     .line 52
-    const v0, 0x7f070121
+    const v0, 0x7f080059
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->findViewById(I)Landroid/view/View;
 
@@ -776,7 +786,7 @@
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->change_first_password:Landroid/widget/EditText;
 
     .line 53
-    const v0, 0x7f070123
+    const v0, 0x7f08005b
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->findViewById(I)Landroid/view/View;
 
@@ -817,7 +827,7 @@
     invoke-super {p0, p1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 263
-    const v0, 0x7f03001f
+    const v0, 0x7f030009
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/ChangePasswordActivity;->setContentView(I)V
 

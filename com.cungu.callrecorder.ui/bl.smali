@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/bl;->a:Lcom/cungo/callrecorder/ui/ActivityBaseWithActionBar_;
 
-    invoke-virtual {v0, p1}, Lcom/cungo/callrecorder/ui/ActivityBaseWithActionBar_;->e(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/cungo/callrecorder/ui/ActivityBaseWithActionBar_;->b(Landroid/view/View;)V
 
     return-void
 .end method

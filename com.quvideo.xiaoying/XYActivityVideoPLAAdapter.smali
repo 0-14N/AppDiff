@@ -130,16 +130,16 @@
     iput-boolean v1, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter;->m:Z
 
     .line 306
-    new-instance v0, Lpt;
+    new-instance v0, Lja;
 
-    invoke-direct {v0, p0}, Lpt;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter;)V
+    invoke-direct {v0, p0}, Lja;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter;->n:Landroid/view/View$OnClickListener;
 
     .line 317
-    new-instance v0, Lpu;
+    new-instance v0, Ljb;
 
-    invoke-direct {v0, p0}, Lpu;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter;)V
+    invoke-direct {v0, p0}, Ljb;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter;->o:Landroid/view/View$OnClickListener;
 
@@ -562,7 +562,7 @@
     invoke-direct {v5, p0, v6}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter;Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;)V
 
     .line 155
-    const v1, 0x7f06045b
+    const v1, 0x7f060446
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -573,7 +573,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->a:Lcom/quvideo/xiaoying/common/ui/custom/RoundImageView;
 
     .line 156
-    const v1, 0x7f06045c
+    const v1, 0x7f060447
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -584,7 +584,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->b:Landroid/widget/TextView;
 
     .line 157
-    const v1, 0x7f0605fa
+    const v1, 0x7f0605e5
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -595,7 +595,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->c:Landroid/widget/TextView;
 
     .line 158
-    const v1, 0x7f06045a
+    const v1, 0x7f060445
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -606,7 +606,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->d:Landroid/widget/ImageView;
 
     .line 159
-    const v1, 0x7f060462
+    const v1, 0x7f06044d
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -617,7 +617,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->e:Landroid/widget/TextView;
 
     .line 160
-    const v1, 0x7f060461
+    const v1, 0x7f06044c
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -628,7 +628,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->f:Landroid/widget/TextView;
 
     .line 161
-    const v1, 0x7f060460
+    const v1, 0x7f06044b
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -639,7 +639,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->g:Landroid/widget/TextView;
 
     .line 162
-    const v1, 0x7f0605ff
+    const v1, 0x7f0605ea
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -650,7 +650,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->h:Landroid/widget/RelativeLayout;
 
     .line 163
-    const v1, 0x7f06045e
+    const v1, 0x7f060449
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -672,7 +672,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->j:Landroid/widget/RelativeLayout;
 
     .line 165
-    const v1, 0x7f060600
+    const v1, 0x7f0605eb
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -683,7 +683,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->n:Landroid/widget/TextView;
 
     .line 166
-    const v1, 0x7f060601
+    const v1, 0x7f0605ec
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -694,7 +694,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->o:Landroid/widget/TextView;
 
     .line 167
-    const v1, 0x7f0605fe
+    const v1, 0x7f0605e9
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -705,7 +705,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->p:Landroid/widget/ImageView;
 
     .line 169
-    const v1, 0x7f0605fd
+    const v1, 0x7f0605e8
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -716,7 +716,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->k:Landroid/widget/ImageView;
 
     .line 170
-    const v1, 0x7f0605fb
+    const v1, 0x7f0605e6
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -727,7 +727,7 @@
     iput-object v1, v5, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoPLAAdapter$a;->l:Landroid/widget/ImageView;
 
     .line 171
-    const v1, 0x7f0605fc
+    const v1, 0x7f0605e7
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

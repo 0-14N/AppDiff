@@ -385,8 +385,6 @@
     .local v0, "adRequest":Lcom/google/android/gms/ads/AdRequest;
     sget-object v1, Lcom/bangdev/freakingmath/FreakingMath;->interstitial:Lcom/google/android/gms/ads/InterstitialAd;
 
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/ads/InterstitialAd;->loadAd(Lcom/google/android/gms/ads/AdRequest;)V
-
     .line 74
     return-void
 .end method

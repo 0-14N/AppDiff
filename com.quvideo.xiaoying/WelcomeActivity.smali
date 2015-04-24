@@ -338,7 +338,7 @@
     const/4 v3, 0x0
 
     .line 151
-    const v0, 0x7f060615
+    const v0, 0x7f060600
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/welcomepage/WelcomeActivity;->findViewById(I)Landroid/view/View;
 
@@ -503,9 +503,9 @@
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 232
-    new-instance v2, Ladj;
+    new-instance v2, Lwp;
 
-    invoke-direct {v2, p0}, Ladj;-><init>(Lcom/quvideo/xiaoying/app/welcomepage/WelcomeActivity;)V
+    invoke-direct {v2, p0}, Lwp;-><init>(Lcom/quvideo/xiaoying/app/welcomepage/WelcomeActivity;)V
 
     .line 231
     invoke-direct {v1, p0, v0, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -833,7 +833,7 @@
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/welcomepage/WelcomeActivity;->setContentView(I)V
 
     .line 118
-    const v0, 0x7f060614
+    const v0, 0x7f0605ff
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/welcomepage/WelcomeActivity;->findViewById(I)Landroid/view/View;
 

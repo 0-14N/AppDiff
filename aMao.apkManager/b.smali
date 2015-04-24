@@ -18,7 +18,7 @@
 
     iget v0, p1, Landroid/os/Message;->what:I
 
-    packed-switch v0, :pswitch_data_6c
+    packed-switch v0, :pswitch_data_5e
 
     :cond_5
     :goto_5
@@ -26,7 +26,7 @@
     return-void
 
     :pswitch_6
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
+    invoke-static {}, LaMao/a/a;->e()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -37,19 +37,19 @@
     :pswitch_e
     new-instance v1, Lcom/adwhirl/AdWhirlLayout;
 
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
+    invoke-static {}, LaMao/a/a;->e()Landroid/app/Activity;
 
     move-result-object v0
 
     const-string v2, "b6c5c7e77af64501ad4508f6a862f8b0"
 
-    invoke-static {}, LaMao/a/a;->e()Landroid/os/Handler;
+    invoke-static {}, LaMao/a/a;->f()Landroid/os/Handler;
 
     move-result-object v3
 
     invoke-direct {v1, v0, v2, v3}, Lcom/adwhirl/AdWhirlLayout;-><init>(Landroid/app/Activity;Ljava/lang/String;Landroid/os/Handler;)V
 
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
+    invoke-static {}, LaMao/a/a;->e()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
     :pswitch_2e
     invoke-static {}, Lcom/umeng/b/b;->a()V
 
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
+    invoke-static {}, LaMao/a/a;->e()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
     goto :goto_5
 
     :pswitch_39
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
+    invoke-static {}, LaMao/a/a;->e()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -88,7 +88,7 @@
     goto :goto_5
 
     :pswitch_43
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
+    invoke-static {}, LaMao/a/a;->e()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -97,32 +97,18 @@
     goto :goto_5
 
     :pswitch_4b
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
+    invoke-static {}, LaMao/a/a;->e()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/waps/AppConnect;->getInstance(Landroid/content/Context;)Lcom/waps/AppConnect;
-
-    move-result-object v0
-
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/waps/AppConnect;->showOffers(Landroid/content/Context;)V
-
     goto :goto_5
 
-    :pswitch_61
+    :pswitch_52
     invoke-static {}, Lcom/umeng/fb/b;->b()V
 
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
+    invoke-static {}, LaMao/a/a;->e()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -130,7 +116,9 @@
 
     goto :goto_5
 
-    :pswitch_data_6c
+    nop
+
+    :pswitch_data_5e
     .packed-switch 0x0
         :pswitch_e
         :pswitch_5
@@ -140,6 +128,6 @@
         :pswitch_4b
         :pswitch_6
         :pswitch_5
-        :pswitch_61
+        :pswitch_52
     .end packed-switch
 .end method

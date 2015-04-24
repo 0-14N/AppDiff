@@ -22,8 +22,6 @@
 
 .field public static final Floor:I = 0x2
 
-.field public static MAX_POINT:I = 0x0
-
 .field public static final Man:I = 0x6
 
 .field public static final ManBall:I = 0x7
@@ -67,21 +65,16 @@
 
     .prologue
     .line 22
-    const/16 v0, 0x14
+    const/16 v0, 0x10
 
     sput v0, Lcom/lml/porter/PorterView;->mXMapCount:I
 
     .line 23
-    const/16 v0, 0xe
+    const/16 v0, 0x8
 
     sput v0, Lcom/lml/porter/PorterView;->mYMapCount:I
 
-    .line 24
-    const/16 v0, 0x3c
-
-    sput v0, Lcom/lml/porter/PorterView;->MAX_POINT:I
-
-    .line 36
+    .line 19
     return-void
 .end method
 
@@ -93,29 +86,29 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 54
+    .line 55
     invoke-direct {p0, p1, p2}, Lcom/lml/porter/TileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 38
+    .line 37
     new-instance v0, Lcom/lml/porter/PorterView$RefreshHandler;
 
     invoke-direct {v0, p0}, Lcom/lml/porter/PorterView$RefreshHandler;-><init>(Lcom/lml/porter/PorterView;)V
 
     iput-object v0, p0, Lcom/lml/porter/PorterView;->mRedrawHandler:Lcom/lml/porter/PorterView$RefreshHandler;
 
-    .line 39
+    .line 38
     iput-boolean v1, p0, Lcom/lml/porter/PorterView;->wait:Z
 
-    .line 40
+    .line 39
     iput-boolean v1, p0, Lcom/lml/porter/PorterView;->start:Z
 
-    .line 42
+    .line 41
     iput-boolean v1, p0, Lcom/lml/porter/PorterView;->changNext:Z
 
-    .line 55
+    .line 56
     invoke-direct {p0}, Lcom/lml/porter/PorterView;->initPorterView()V
 
-    .line 56
+    .line 57
     return-void
 .end method
 
@@ -128,37 +121,47 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 59
+    .line 60
     invoke-direct {p0, p1, p2, p3}, Lcom/lml/porter/TileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 38
+    .line 37
     new-instance v0, Lcom/lml/porter/PorterView$RefreshHandler;
 
     invoke-direct {v0, p0}, Lcom/lml/porter/PorterView$RefreshHandler;-><init>(Lcom/lml/porter/PorterView;)V
 
     iput-object v0, p0, Lcom/lml/porter/PorterView;->mRedrawHandler:Lcom/lml/porter/PorterView$RefreshHandler;
 
-    .line 39
+    .line 38
     iput-boolean v1, p0, Lcom/lml/porter/PorterView;->wait:Z
 
-    .line 40
+    .line 39
     iput-boolean v1, p0, Lcom/lml/porter/PorterView;->start:Z
 
-    .line 42
+    .line 41
     iput-boolean v1, p0, Lcom/lml/porter/PorterView;->changNext:Z
 
-    .line 60
+    .line 61
     invoke-direct {p0}, Lcom/lml/porter/PorterView;->initPorterView()V
 
-    .line 61
+    .line 62
     return-void
 .end method
 
-.method static synthetic access$0(Lcom/lml/porter/PorterView;Z)V
+.method static synthetic access$0(Lcom/lml/porter/PorterView;)Z
     .registers 2
 
     .prologue
-    .line 39
+    .line 38
+    iget-boolean v0, p0, Lcom/lml/porter/PorterView;->wait:Z
+
+    return v0
+.end method
+
+.method static synthetic access$1(Lcom/lml/porter/PorterView;Z)V
+    .registers 2
+
+    .prologue
+    .line 38
     iput-boolean p1, p0, Lcom/lml/porter/PorterView;->wait:Z
 
     return-void
@@ -168,7 +171,7 @@
     .registers 6
 
     .prologue
-    .line 198
+    .line 200
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -177,13 +180,13 @@
 
     if-lt v0, v2, :cond_9
 
-    .line 203
+    .line 205
     invoke-virtual {p0}, Lcom/lml/porter/PorterView;->invalidate()V
 
-    .line 204
+    .line 206
     return-void
 
-    .line 199
+    .line 201
     :cond_9
     const/4 v1, 0x0
 
@@ -193,12 +196,12 @@
 
     if-lt v1, v2, :cond_11
 
-    .line 198
+    .line 200
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 200
+    .line 202
     :cond_11
     iget-object v2, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -218,7 +221,7 @@
 
     invoke-virtual {p0, v2, v3, v4}, Lcom/lml/porter/PorterView;->setTile(III)V
 
-    .line 199
+    .line 201
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_a
@@ -228,12 +231,12 @@
     .registers 6
 
     .prologue
-    .line 259
+    .line 261
     new-instance v2, Landroid/graphics/Point;
 
     invoke-direct {v2}, Landroid/graphics/Point;-><init>()V
 
-    .line 260
+    .line 262
     .local v2, "point":Landroid/graphics/Point;
     const/4 v0, 0x0
 
@@ -243,10 +246,10 @@
 
     if-lt v0, v3, :cond_b
 
-    .line 269
+    .line 271
     return-object v2
 
-    .line 261
+    .line 263
     :cond_b
     const/4 v1, 0x0
 
@@ -256,13 +259,13 @@
 
     if-lt v1, v3, :cond_13
 
-    .line 260
+    .line 262
     :goto_10
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
-    .line 262
+    .line 264
     :cond_13
     const/16 v3, 0x36
 
@@ -284,16 +287,16 @@
 
     if-ne v3, v4, :cond_2c
 
-    .line 263
+    .line 265
     :cond_27
     iput v1, v2, Landroid/graphics/Point;->x:I
 
-    .line 264
+    .line 266
     iput v0, v2, Landroid/graphics/Point;->y:I
 
     goto :goto_10
 
-    .line 261
+    .line 263
     :cond_2c
     add-int/lit8 v1, v1, 0x1
 
@@ -308,10 +311,10 @@
 
     const/4 v3, 0x0
 
-    .line 64
+    .line 65
     invoke-virtual {p0, v2}, Lcom/lml/porter/PorterView;->setFocusable(Z)V
 
-    .line 66
+    .line 67
     invoke-virtual {p0}, Lcom/lml/porter/PorterView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -322,12 +325,12 @@
 
     iput-object v0, p0, Lcom/lml/porter/PorterView;->res:Landroid/content/res/Resources;
 
-    .line 68
+    .line 69
     const/4 v0, 0x7
 
     invoke-virtual {p0, v0}, Lcom/lml/porter/PorterView;->resetTiles(I)V
 
-    .line 69
+    .line 70
     iget-object v0, p0, Lcom/lml/porter/PorterView;->res:Landroid/content/res/Resources;
 
     const v1, 0x7f020002
@@ -338,10 +341,10 @@
 
     invoke-virtual {p0, v3, v0}, Lcom/lml/porter/PorterView;->loadTile(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 70
+    .line 71
     iget-object v0, p0, Lcom/lml/porter/PorterView;->res:Landroid/content/res/Resources;
 
-    const v1, 0x7f020012
+    const v1, 0x7f02001b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -349,12 +352,12 @@
 
     invoke-virtual {p0, v2, v0}, Lcom/lml/porter/PorterView;->loadTile(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 71
+    .line 72
     const/4 v0, 0x2
 
     iget-object v1, p0, Lcom/lml/porter/PorterView;->res:Landroid/content/res/Resources;
 
-    const v2, 0x7f02000b
+    const v2, 0x7f020010
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -362,7 +365,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/lml/porter/PorterView;->loadTile(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 72
+    .line 73
     const/4 v0, 0x3
 
     iget-object v1, p0, Lcom/lml/porter/PorterView;->res:Landroid/content/res/Resources;
@@ -375,7 +378,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/lml/porter/PorterView;->loadTile(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 73
+    .line 74
     const/4 v0, 0x4
 
     iget-object v1, p0, Lcom/lml/porter/PorterView;->res:Landroid/content/res/Resources;
@@ -388,7 +391,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/lml/porter/PorterView;->loadTile(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 74
+    .line 75
     const/4 v0, 0x5
 
     iget-object v1, p0, Lcom/lml/porter/PorterView;->res:Landroid/content/res/Resources;
@@ -401,7 +404,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/lml/porter/PorterView;->loadTile(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 75
+    .line 76
     const/4 v0, 0x6
 
     iget-object v1, p0, Lcom/lml/porter/PorterView;->res:Landroid/content/res/Resources;
@@ -414,17 +417,17 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/lml/porter/PorterView;->loadTile(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 77
+    .line 78
     sget v0, Lcom/lml/porter/PorterView;->mYMapCount:I
 
     new-array v0, v0, [[C
 
     iput-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
-    .line 79
+    .line 80
     iput v3, p0, Lcom/lml/porter/PorterView;->mission:I
 
-    .line 80
+    .line 81
     return-void
 .end method
 
@@ -432,7 +435,7 @@
     .registers 5
 
     .prologue
-    .line 273
+    .line 275
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -441,13 +444,13 @@
 
     if-lt v0, v2, :cond_7
 
-    .line 280
+    .line 282
     const/4 v2, 0x1
 
     :goto_6
     return v2
 
-    .line 274
+    .line 276
     :cond_7
     const/4 v1, 0x0
 
@@ -457,12 +460,12 @@
 
     if-lt v1, v2, :cond_f
 
-    .line 273
+    .line 275
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 275
+    .line 277
     :cond_f
     const/16 v2, 0x33
 
@@ -484,13 +487,13 @@
 
     if-ne v2, v3, :cond_25
 
-    .line 276
+    .line 278
     :cond_23
     const/4 v2, 0x0
 
     goto :goto_6
 
-    .line 274
+    .line 276
     :cond_25
     add-int/lit8 v1, v1, 0x1
 
@@ -507,31 +510,12 @@
     .end annotation
 
     .prologue
-    .line 183
-    sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "m = "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    .line 184
+    .line 185
     new-instance v0, Ljava/io/BufferedReader;
 
     new-instance v2, Ljava/io/InputStreamReader;
 
-    .line 185
+    .line 186
     iget-object v3, p0, Lcom/lml/porter/PorterView;->res:Landroid/content/res/Resources;
 
     const v4, 0x7f040002
@@ -542,51 +526,51 @@
 
     invoke-direct {v2, v3}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
-    .line 184
+    .line 185
     invoke-direct {v0, v2}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 186
+    .line 187
     .local v0, "br":Ljava/io/BufferedReader;
     const/4 v1, 0x0
 
     .local v1, "i":I
-    :goto_28
+    :goto_14
     sget v2, Lcom/lml/porter/PorterView;->mYMapCount:I
 
     add-int/lit8 v2, v2, 0x1
 
     mul-int/2addr v2, p1
 
-    if-le v1, v2, :cond_3b
-
-    .line 189
-    const/4 v1, 0x0
-
-    :goto_30
-    sget v2, Lcom/lml/porter/PorterView;->mYMapCount:I
-
-    if-lt v1, v2, :cond_41
-
-    .line 192
-    invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
-
-    .line 194
-    invoke-direct {p0}, Lcom/lml/porter/PorterView;->drawMap()V
-
-    .line 195
-    return-void
-
-    .line 187
-    :cond_3b
-    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
-
-    .line 186
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_28
+    if-le v1, v2, :cond_27
 
     .line 190
-    :cond_41
+    const/4 v1, 0x0
+
+    :goto_1c
+    sget v2, Lcom/lml/porter/PorterView;->mYMapCount:I
+
+    if-lt v1, v2, :cond_2d
+
+    .line 194
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
+
+    .line 196
+    invoke-direct {p0}, Lcom/lml/porter/PorterView;->drawMap()V
+
+    .line 197
+    return-void
+
+    .line 188
+    :cond_27
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    .line 187
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_14
+
+    .line 191
+    :cond_2d
     iget-object v2, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -599,10 +583,10 @@
 
     aput-object v3, v2, v1
 
-    .line 189
+    .line 190
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_30
+    goto :goto_1c
 .end method
 
 .method private updateMap(IIIIII)V
@@ -625,7 +609,7 @@
 
     const/16 v2, 0x32
 
-    .line 207
+    .line 209
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p4
@@ -634,16 +618,16 @@
 
     packed-switch v0, :pswitch_data_d8
 
-    .line 255
+    .line 257
     :cond_13
     :goto_13
     :pswitch_13
     invoke-direct {p0}, Lcom/lml/porter/PorterView;->drawMap()V
 
-    .line 256
+    .line 258
     return-void
 
-    .line 212
+    .line 214
     :pswitch_17
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -651,7 +635,7 @@
 
     aput-char v4, v0, p3
 
-    .line 213
+    .line 215
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p2
@@ -660,7 +644,7 @@
 
     if-ne v4, v0, :cond_2c
 
-    .line 214
+    .line 216
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p2
@@ -669,7 +653,7 @@
 
     goto :goto_13
 
-    .line 216
+    .line 218
     :cond_2c
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -679,7 +663,7 @@
 
     goto :goto_13
 
-    .line 220
+    .line 222
     :pswitch_33
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -689,7 +673,7 @@
 
     aput-char v1, v0, p3
 
-    .line 221
+    .line 223
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p2
@@ -698,7 +682,7 @@
 
     if-ne v4, v0, :cond_4a
 
-    .line 222
+    .line 224
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p2
@@ -707,7 +691,7 @@
 
     goto :goto_13
 
-    .line 224
+    .line 226
     :cond_4a
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -717,7 +701,7 @@
 
     goto :goto_13
 
-    .line 228
+    .line 230
     :pswitch_51
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -735,7 +719,7 @@
 
     if-ne v3, v0, :cond_13
 
-    .line 229
+    .line 231
     :cond_61
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -743,7 +727,7 @@
 
     aput-char v4, v0, p3
 
-    .line 230
+    .line 232
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p6
@@ -752,14 +736,14 @@
 
     if-ne v2, v0, :cond_84
 
-    .line 231
+    .line 233
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p6
 
     aput-char v5, v0, p5
 
-    .line 234
+    .line 236
     :goto_75
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -769,7 +753,7 @@
 
     if-ne v4, v0, :cond_8b
 
-    .line 235
+    .line 237
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p2
@@ -778,7 +762,7 @@
 
     goto :goto_13
 
-    .line 233
+    .line 235
     :cond_84
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -788,7 +772,7 @@
 
     goto :goto_75
 
-    .line 237
+    .line 239
     :cond_8b
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -798,7 +782,7 @@
 
     goto :goto_13
 
-    .line 242
+    .line 244
     :pswitch_92
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -816,7 +800,7 @@
 
     if-ne v3, v0, :cond_13
 
-    .line 243
+    .line 245
     :cond_a2
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -826,7 +810,7 @@
 
     aput-char v1, v0, p3
 
-    .line 244
+    .line 246
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p6
@@ -835,14 +819,14 @@
 
     if-ne v2, v0, :cond_c8
 
-    .line 245
+    .line 247
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p6
 
     aput-char v5, v0, p5
 
-    .line 248
+    .line 250
     :goto_b8
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -852,7 +836,7 @@
 
     if-ne v4, v0, :cond_cf
 
-    .line 249
+    .line 251
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
     aget-object v0, v0, p2
@@ -861,7 +845,7 @@
 
     goto/16 :goto_13
 
-    .line 247
+    .line 249
     :cond_c8
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -871,7 +855,7 @@
 
     goto :goto_b8
 
-    .line 251
+    .line 253
     :cond_cf
     iget-object v0, p0, Lcom/lml/porter/PorterView;->map:[[C
 
@@ -881,7 +865,7 @@
 
     goto/16 :goto_13
 
-    .line 207
+    .line 209
     nop
 
     :pswitch_data_d8
@@ -900,61 +884,61 @@
     .registers 3
 
     .prologue
-    .line 284
+    .line 286
     iget v0, p0, Lcom/lml/porter/PorterView;->mission:I
 
-    sget v1, Lcom/lml/porter/PorterView;->MAX_POINT:I
+    const/16 v1, 0xb
 
-    add-int/lit8 v1, v1, -0x1
+    if-lt v0, v1, :cond_7
 
-    if-lt v0, v1, :cond_9
-
-    .line 289
-    :goto_8
+    .line 291
+    :goto_6
     return-void
 
-    .line 287
-    :cond_9
+    .line 289
+    :cond_7
     iget v0, p0, Lcom/lml/porter/PorterView;->mission:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/lml/porter/PorterView;->mission:I
 
-    .line 288
+    .line 290
     invoke-virtual {p0}, Lcom/lml/porter/PorterView;->startGame()V
 
-    goto :goto_8
+    goto :goto_6
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .registers 12
+    .registers 13
     .param p1, "keyCode"    # I
     .param p2, "msg"    # Landroid/view/KeyEvent;
 
     .prologue
-    const/4 v8, 0x1
+    const/4 v9, 0x1
 
-    .line 93
+    const/4 v8, 0x0
+
+    .line 94
     invoke-direct {p0}, Lcom/lml/porter/PorterView;->getPosition()Landroid/graphics/Point;
 
     move-result-object v7
 
-    .line 94
+    .line 95
     .local v7, "point":Landroid/graphics/Point;
     iget v1, v7, Landroid/graphics/Point;->x:I
 
-    .line 95
+    .line 96
     .local v1, "x":I
     iget v2, v7, Landroid/graphics/Point;->y:I
 
-    .line 97
+    .line 98
     .local v2, "y":I
     const/16 v0, 0x13
 
-    if-ne p1, v0, :cond_4a
+    if-ne p1, v0, :cond_48
 
-    .line 98
+    .line 99
     add-int/lit8 v4, v2, -0x1
 
     add-int/lit8 v6, v2, -0x2
@@ -967,74 +951,70 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/lml/porter/PorterView;->updateMap(IIIIII)V
 
-    .line 110
-    :cond_17
-    :goto_17
+    .line 111
+    :cond_18
+    :goto_18
     invoke-direct {p0}, Lcom/lml/porter/PorterView;->isCompleted()Z
 
     move-result v0
 
-    if-eqz v0, :cond_45
+    if-eqz v0, :cond_43
 
     iget-boolean v0, p0, Lcom/lml/porter/PorterView;->wait:Z
 
-    if-nez v0, :cond_45
-
-    .line 111
-    iput-boolean v8, p0, Lcom/lml/porter/PorterView;->wait:Z
+    if-nez v0, :cond_43
 
     .line 112
-    iget v0, p0, Lcom/lml/porter/PorterView;->mission:I
-
-    sget v3, Lcom/lml/porter/PorterView;->MAX_POINT:I
-
-    add-int/lit8 v3, v3, -0x1
-
-    if-ne v0, v3, :cond_39
+    iput-boolean v9, p0, Lcom/lml/porter/PorterView;->wait:Z
 
     .line 113
+    iget v0, p0, Lcom/lml/porter/PorterView;->mission:I
+
+    const/16 v3, 0xb
+
+    if-ne v0, v3, :cond_75
+
+    .line 114
     invoke-virtual {p0}, Lcom/lml/porter/PorterView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const v3, 0x7f050002
 
-    invoke-static {v0, v3, v8}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+    invoke-static {v0, v3, v9}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v0
 
-    .line 114
+    .line 115
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 119
-    :cond_39
+    .line 120
+    :goto_38
     iget-object v0, p0, Lcom/lml/porter/PorterView;->mRedrawHandler:Lcom/lml/porter/PorterView$RefreshHandler;
 
     iget-object v3, p0, Lcom/lml/porter/PorterView;->mRedrawHandler:Lcom/lml/porter/PorterView$RefreshHandler;
 
-    const/4 v4, 0x0
-
-    invoke-virtual {v3, v4}, Lcom/lml/porter/PorterView$RefreshHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v8}, Lcom/lml/porter/PorterView$RefreshHandler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Lcom/lml/porter/PorterView$RefreshHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 122
-    :cond_45
+    .line 123
+    :cond_43
     invoke-super {p0, p1, p2}, Lcom/lml/porter/TileView;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
     return v0
 
-    .line 100
-    :cond_4a
+    .line 101
+    :cond_48
     const/16 v0, 0x14
 
-    if-ne p1, v0, :cond_59
+    if-ne p1, v0, :cond_57
 
-    .line 101
+    .line 102
     add-int/lit8 v4, v2, 0x1
 
     add-int/lit8 v6, v2, 0x2
@@ -1047,15 +1027,15 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/lml/porter/PorterView;->updateMap(IIIIII)V
 
-    goto :goto_17
-
-    .line 103
-    :cond_59
-    const/16 v0, 0x15
-
-    if-ne p1, v0, :cond_68
+    goto :goto_18
 
     .line 104
+    :cond_57
+    const/16 v0, 0x15
+
+    if-ne p1, v0, :cond_66
+
+    .line 105
     add-int/lit8 v3, v1, -0x1
 
     add-int/lit8 v5, v1, -0x2
@@ -1068,15 +1048,15 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/lml/porter/PorterView;->updateMap(IIIIII)V
 
-    goto :goto_17
-
-    .line 106
-    :cond_68
-    const/16 v0, 0x16
-
-    if-ne p1, v0, :cond_17
+    goto :goto_18
 
     .line 107
+    :cond_66
+    const/16 v0, 0x16
+
+    if-ne p1, v0, :cond_18
+
+    .line 108
     add-int/lit8 v3, v1, 0x1
 
     add-int/lit8 v5, v1, 0x2
@@ -1089,7 +1069,24 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/lml/porter/PorterView;->updateMap(IIIIII)V
 
-    goto :goto_17
+    goto :goto_18
+
+    .line 117
+    :cond_75
+    invoke-virtual {p0}, Lcom/lml/porter/PorterView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v3, 0x7f050001
+
+    invoke-static {v0, v3, v8}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    .line 118
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_38
 .end method
 
 .method protected onSizeChanged(IIII)V
@@ -1100,15 +1097,15 @@
     .param p4, "oldh"    # I
 
     .prologue
-    .line 301
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/lml/porter/TileView;->onSizeChanged(IIII)V
-
-    .line 302
+    .line 303
     iget-boolean v0, p0, Lcom/lml/porter/PorterView;->start:Z
 
-    if-nez v0, :cond_21
+    if-nez v0, :cond_1f
 
-    .line 303
+    .line 304
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/lml/porter/TileView;->onSizeChanged(IIII)V
+
+    .line 305
     sget v0, Lcom/lml/porter/PorterView;->mXTileCount:I
 
     sget v1, Lcom/lml/porter/PorterView;->mXMapCount:I
@@ -1119,42 +1116,42 @@
 
     iput v0, p0, Lcom/lml/porter/PorterView;->xOff:I
 
-    .line 304
+    .line 306
     sget v0, Lcom/lml/porter/PorterView;->mYTileCount:I
 
     sget v1, Lcom/lml/porter/PorterView;->mYMapCount:I
 
     sub-int/2addr v0, v1
 
-    div-int/lit8 v0, v0, 0x3
-
-    mul-int/lit8 v0, v0, 0x1
+    div-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/lml/porter/PorterView;->yOff:I
 
-    .line 305
+    .line 307
     invoke-virtual {p0}, Lcom/lml/porter/PorterView;->startGame()V
 
-    .line 306
+    .line 308
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/lml/porter/PorterView;->start:Z
 
-    .line 308
-    :cond_21
+    .line 310
+    :cond_1f
     return-void
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .registers 13
+    .registers 14
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
+    const/4 v11, 0x0
+
     const/high16 v5, 0x41000000    # 8.0f
 
     const/4 v10, 0x1
 
-    .line 126
+    .line 127
     const-string v0, "aa"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1175,87 +1172,87 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
+    .line 128
     sget-object v0, Lcom/lml/porter/Porter;->isPause:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    if-nez v0, :cond_10d
+    if-nez v0, :cond_11a
 
-    .line 128
+    .line 129
     invoke-direct {p0}, Lcom/lml/porter/PorterView;->getPosition()Landroid/graphics/Point;
 
     move-result-object v7
 
-    .line 129
+    .line 130
     .local v7, "point":Landroid/graphics/Point;
     iget v1, v7, Landroid/graphics/Point;->x:I
 
-    .line 130
+    .line 131
     .local v1, "x":I
     iget v2, v7, Landroid/graphics/Point;->y:I
 
-    .line 132
+    .line 133
     .local v2, "y":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v8
 
-    .line 133
+    .line 134
     .local v8, "x_now":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v9
 
-    .line 135
+    .line 136
     .local v9, "y_now":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_110
+    packed-switch v0, :pswitch_data_11e
 
-    .line 177
+    .line 178
     invoke-super {p0, p1}, Lcom/lml/porter/TileView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 179
+    .line 180
     .end local v1    # "x":I
     .end local v2    # "y":I
     .end local v7    # "point":Landroid/graphics/Point;
     .end local v8    # "x_now":F
     .end local v9    # "y_now":F
-    :goto_3c
+    :goto_3d
     return v0
 
-    .line 137
+    .line 138
     .restart local v1    # "x":I
     .restart local v2    # "y":I
     .restart local v7    # "point":Landroid/graphics/Point;
     .restart local v8    # "x_now":F
     .restart local v9    # "y_now":F
-    :pswitch_3d
+    :pswitch_3e
     iput v8, p0, Lcom/lml/porter/PorterView;->x_begin:F
 
-    .line 138
+    .line 139
     iput v9, p0, Lcom/lml/porter/PorterView;->y_begin:F
 
     move v0, v10
 
-    .line 139
-    goto :goto_3c
-
-    .line 142
-    :pswitch_43
-    iput v8, p0, Lcom/lml/porter/PorterView;->x_end:F
+    .line 140
+    goto :goto_3d
 
     .line 143
+    :pswitch_44
+    iput v8, p0, Lcom/lml/porter/PorterView;->x_end:F
+
+    .line 144
     iput v9, p0, Lcom/lml/porter/PorterView;->y_end:F
 
-    .line 145
+    .line 146
     iget v0, p0, Lcom/lml/porter/PorterView;->x_begin:F
 
     iget v3, p0, Lcom/lml/porter/PorterView;->x_end:F
@@ -1278,9 +1275,9 @@
 
     cmpl-float v0, v0, v3
 
-    if-lez v0, :cond_e3
+    if-lez v0, :cond_e1
 
-    .line 146
+    .line 147
     iget v0, p0, Lcom/lml/porter/PorterView;->x_begin:F
 
     iget v3, p0, Lcom/lml/porter/PorterView;->x_end:F
@@ -1289,9 +1286,9 @@
 
     cmpl-float v0, v0, v3
 
-    if-lez v0, :cond_cf
+    if-lez v0, :cond_cd
 
-    .line 147
+    .line 148
     add-int/lit8 v3, v1, -0x1
 
     add-int/lit8 v5, v1, -0x2
@@ -1304,9 +1301,9 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/lml/porter/PorterView;->updateMap(IIIIII)V
 
-    .line 158
-    :cond_70
-    :goto_70
+    .line 159
+    :cond_71
+    :goto_71
     const-string v0, "aa"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1329,7 +1326,7 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
+    .line 160
     const-string v0, "aa"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1350,30 +1347,28 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
+    .line 161
     invoke-direct {p0}, Lcom/lml/porter/PorterView;->isCompleted()Z
 
     move-result v0
 
-    if-eqz v0, :cond_cc
+    if-eqz v0, :cond_ca
 
     iget-boolean v0, p0, Lcom/lml/porter/PorterView;->wait:Z
 
-    if-nez v0, :cond_cc
-
-    .line 161
-    iput-boolean v10, p0, Lcom/lml/porter/PorterView;->wait:Z
+    if-nez v0, :cond_ca
 
     .line 162
-    iget v0, p0, Lcom/lml/porter/PorterView;->mission:I
-
-    sget v3, Lcom/lml/porter/PorterView;->MAX_POINT:I
-
-    add-int/lit8 v3, v3, -0x1
-
-    if-ne v0, v3, :cond_c0
+    iput-boolean v10, p0, Lcom/lml/porter/PorterView;->wait:Z
 
     .line 163
+    iget v0, p0, Lcom/lml/porter/PorterView;->mission:I
+
+    const/16 v3, 0xb
+
+    if-ne v0, v3, :cond_10b
+
+    .line 164
     invoke-virtual {p0}, Lcom/lml/porter/PorterView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1384,31 +1379,29 @@
 
     move-result-object v0
 
-    .line 164
+    .line 165
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 169
-    :cond_c0
+    .line 170
+    :goto_bf
     iget-object v0, p0, Lcom/lml/porter/PorterView;->mRedrawHandler:Lcom/lml/porter/PorterView$RefreshHandler;
 
     iget-object v3, p0, Lcom/lml/porter/PorterView;->mRedrawHandler:Lcom/lml/porter/PorterView$RefreshHandler;
 
-    const/4 v4, 0x0
-
-    invoke-virtual {v3, v4}, Lcom/lml/porter/PorterView$RefreshHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v3, v11}, Lcom/lml/porter/PorterView$RefreshHandler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Lcom/lml/porter/PorterView$RefreshHandler;->sendMessage(Landroid/os/Message;)Z
 
-    :cond_cc
+    :cond_ca
     move v0, v10
 
-    .line 171
-    goto/16 :goto_3c
+    .line 172
+    goto/16 :goto_3d
 
-    .line 148
-    :cond_cf
+    .line 149
+    :cond_cd
     iget v0, p0, Lcom/lml/porter/PorterView;->x_begin:F
 
     add-float/2addr v0, v5
@@ -1417,9 +1410,9 @@
 
     cmpg-float v0, v0, v3
 
-    if-gez v0, :cond_70
+    if-gez v0, :cond_71
 
-    .line 149
+    .line 150
     add-int/lit8 v3, v1, 0x1
 
     add-int/lit8 v5, v1, 0x2
@@ -1432,10 +1425,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/lml/porter/PorterView;->updateMap(IIIIII)V
 
-    goto :goto_70
+    goto :goto_71
 
-    .line 152
-    :cond_e3
+    .line 153
+    :cond_e1
     iget v0, p0, Lcom/lml/porter/PorterView;->y_begin:F
 
     iget v3, p0, Lcom/lml/porter/PorterView;->y_end:F
@@ -1444,9 +1437,9 @@
 
     cmpl-float v0, v0, v3
 
-    if-lez v0, :cond_f8
+    if-lez v0, :cond_f6
 
-    .line 153
+    .line 154
     add-int/lit8 v4, v2, -0x1
 
     add-int/lit8 v6, v2, -0x2
@@ -1459,10 +1452,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/lml/porter/PorterView;->updateMap(IIIIII)V
 
-    goto/16 :goto_70
+    goto/16 :goto_71
 
-    .line 154
-    :cond_f8
+    .line 155
+    :cond_f6
     iget v0, p0, Lcom/lml/porter/PorterView;->y_begin:F
 
     add-float/2addr v0, v5
@@ -1471,9 +1464,9 @@
 
     cmpg-float v0, v0, v3
 
-    if-gez v0, :cond_70
+    if-gez v0, :cond_71
 
-    .line 155
+    .line 156
     add-int/lit8 v4, v2, 0x1
 
     add-int/lit8 v6, v2, 0x2
@@ -1486,24 +1479,43 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/lml/porter/PorterView;->updateMap(IIIIII)V
 
-    goto/16 :goto_70
+    goto/16 :goto_71
+
+    .line 167
+    :cond_10b
+    invoke-virtual {p0}, Lcom/lml/porter/PorterView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v3, 0x7f050001
+
+    invoke-static {v0, v3, v11}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    .line 168
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_bf
 
     .end local v1    # "x":I
     .end local v2    # "y":I
     .end local v7    # "point":Landroid/graphics/Point;
     .end local v8    # "x_now":F
     .end local v9    # "y_now":F
-    :cond_10d
+    :cond_11a
     move v0, v10
 
-    .line 179
-    goto/16 :goto_3c
+    .line 180
+    goto/16 :goto_3d
 
-    .line 135
-    :pswitch_data_110
+    .line 136
+    nop
+
+    :pswitch_data_11e
     .packed-switch 0x0
-        :pswitch_3d
-        :pswitch_43
+        :pswitch_3e
+        :pswitch_44
     .end packed-switch
 .end method
 
@@ -1511,16 +1523,16 @@
     .registers 2
 
     .prologue
-    .line 292
+    .line 294
     iget v0, p0, Lcom/lml/porter/PorterView;->mission:I
 
     if-gtz v0, :cond_5
 
-    .line 297
+    .line 299
     :goto_4
     return-void
 
-    .line 295
+    .line 297
     :cond_5
     iget v0, p0, Lcom/lml/porter/PorterView;->mission:I
 
@@ -1528,7 +1540,7 @@
 
     iput v0, p0, Lcom/lml/porter/PorterView;->mission:I
 
-    .line 296
+    .line 298
     invoke-virtual {p0}, Lcom/lml/porter/PorterView;->startGame()V
 
     goto :goto_4
@@ -1538,7 +1550,7 @@
     .registers 3
 
     .prologue
-    .line 84
+    .line 85
     :try_start_0
     iget v1, p0, Lcom/lml/porter/PorterView;->mission:I
 
@@ -1546,21 +1558,21 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_5} :catch_6
 
-    .line 89
+    .line 90
     :goto_5
     return-void
 
-    .line 85
+    .line 86
     :catch_6
     move-exception v0
 
-    .line 86
+    .line 87
     .local v0, "e":Ljava/io/IOException;
     const/4 v1, 0x1
 
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
-    .line 87
+    .line 88
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_5

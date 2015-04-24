@@ -3496,6 +3496,8 @@
     .line 281
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 282
     invoke-static {p0}, Lcom/yoyogames/runner/RunnerJNILib;->Init(Landroid/content/Context;)V
 
@@ -3514,7 +3516,7 @@
     sput-object v2, Lcom/Dyad_Games/Shuriken_Showdown/RunnerActivity;->DownloadTask:Lcom/Dyad_Games/Shuriken_Showdown/RunnerDownloadTask;
 
     .line 291
-    :try_start_1c
+    :try_start_1f
     invoke-virtual {p0}, Lcom/Dyad_Games/Shuriken_Showdown/RunnerActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
@@ -3532,11 +3534,11 @@
     iget-object v2, v2, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
     sput-object v2, Lcom/Dyad_Games/Shuriken_Showdown/RunnerActivity;->m_versionName:Ljava/lang/String;
-    :try_end_2d
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1c .. :try_end_2d} :catch_71
+    :try_end_30
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1f .. :try_end_30} :catch_74
 
     .line 300
-    :goto_2d
+    :goto_30
     invoke-virtual {p0}, Lcom/Dyad_Games/Shuriken_Showdown/RunnerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -3547,13 +3549,13 @@
 
     iget v2, v2, Landroid/content/res/Configuration;->orientation:I
 
-    packed-switch v2, :pswitch_data_84
+    packed-switch v2, :pswitch_data_88
 
     .line 304
     sput v6, Lcom/Dyad_Games/Shuriken_Showdown/RunnerActivity;->Orientation:I
 
     .line 312
-    :goto_3c
+    :goto_3f
     sput-object p0, Lcom/Dyad_Games/Shuriken_Showdown/RunnerActivity;->CurrentActivity:Lcom/Dyad_Games/Shuriken_Showdown/RunnerActivity;
 
     .line 315
@@ -3617,7 +3619,7 @@
 
     .line 293
     .end local v0    # "display":Landroid/view/Display;
-    :catch_71
+    :catch_74
     move-exception v1
 
     .line 295
@@ -3635,21 +3637,23 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_2d
+    goto :goto_30
 
     .line 307
     .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
-    :pswitch_80
+    :pswitch_83
     sput v5, Lcom/Dyad_Games/Shuriken_Showdown/RunnerActivity;->Orientation:I
 
-    goto :goto_3c
+    goto :goto_3f
 
     .line 300
     nop
 
-    :pswitch_data_84
+    nop
+
+    :pswitch_data_88
     .packed-switch 0x1
-        :pswitch_80
+        :pswitch_83
     .end packed-switch
 .end method
 
@@ -3760,10 +3764,12 @@
     .line 418
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+
     .line 419
     iget-object v0, p0, Lcom/Dyad_Games/Shuriken_Showdown/RunnerActivity;->mBillingService:Lcom/Dyad_Games/Shuriken_Showdown/RunnerBillingService;
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_16
 
     .line 420
     iget-object v0, p0, Lcom/Dyad_Games/Shuriken_Showdown/RunnerActivity;->mBillingService:Lcom/Dyad_Games/Shuriken_Showdown/RunnerBillingService;
@@ -3771,7 +3777,7 @@
     invoke-virtual {v0}, Lcom/Dyad_Games/Shuriken_Showdown/RunnerBillingService;->unbind()V
 
     .line 424
-    :cond_13
+    :cond_16
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/System;->exit(I)V

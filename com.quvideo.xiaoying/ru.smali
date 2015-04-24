@@ -7,18 +7,22 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;
+.field final synthetic a:Lcom/quvideo/xiaoying/app/setting/sns/SettingBindSNSActivity$a;
+
+.field private final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;)V
-    .registers 2
+.method public constructor <init>(Lcom/quvideo/xiaoying/app/setting/sns/SettingBindSNSActivity$a;I)V
+    .registers 3
 
     .prologue
     .line 1
-    iput-object p1, p0, Lru;->a:Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;
+    iput-object p1, p0, Lru;->a:Lcom/quvideo/xiaoying/app/setting/sns/SettingBindSNSActivity$a;
 
-    .line 206
+    iput p2, p0, Lru;->b:I
+
+    .line 246
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,14 +34,10 @@
     .registers 5
 
     .prologue
-    .line 211
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    .line 250
+    invoke-static {}, Lcom/quvideo/xiaoying/common/DialogueUtils;->cancelComDialog()V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_39
-
-    .line 212
+    .line 251
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -48,50 +48,31 @@
 
     move-result v0
 
-    .line 213
-    iget-object v1, p0, Lru;->a:Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;
+    if-nez v0, :cond_25
 
-    invoke-static {v1}, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;->a(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_39
-
-    iget-object v1, p0, Lru;->a:Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;
-
-    invoke-static {v1}, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;->b(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;)Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$OnAvatarClickListener;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_39
-
-    .line 214
-    iget-object v1, p0, Lru;->a:Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;
-
-    invoke-static {v1}, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;->a(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 252
+    invoke-static {}, Lcom/quvideo/xiaoying/XiaoYingApp;->getInstance()Lcom/quvideo/xiaoying/XiaoYingApp;
 
     move-result-object v0
 
-    check-cast v0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsInfoMgr$RecommendFollowsInfo;
+    invoke-virtual {v0}, Lcom/quvideo/xiaoying/XiaoYingApp;->getAppMiscListener()Lcom/quvideo/xiaoying/AppMiscListener;
 
-    .line 215
-    iget-object v1, p0, Lru;->a:Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;->b(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;)Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$OnAvatarClickListener;
+    .line 253
+    invoke-interface {v0}, Lcom/quvideo/xiaoying/AppMiscListener;->getSNSMgr()Lcom/quvideo/xiaoying/sns/AbstractSNSMgr;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, v0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsInfoMgr$RecommendFollowsInfo;->auid:Ljava/lang/String;
+    iget v1, p0, Lru;->b:I
 
-    iget-object v0, v0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsInfoMgr$RecommendFollowsInfo;->nickname:Ljava/lang/String;
+    new-instance v2, Lrv;
 
-    invoke-interface {v1, v2, v0}, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$OnAvatarClickListener;->onAvatarClick(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, p0}, Lrv;-><init>(Lru;)V
 
-    .line 218
-    :cond_39
+    invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/sns/AbstractSNSMgr;->createFriendShip(ILcom/quvideo/xiaoying/sns/SnsFriendsListener;)V
+
+    .line 275
+    :cond_25
     return-void
 .end method

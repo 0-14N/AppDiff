@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field private synthetic a:Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;
+.field private synthetic a:Lcom/adsmogo/adapters/api/PublicCustomAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;)V
+.method constructor <init>(Lcom/adsmogo/adapters/api/PublicCustomAdapter;)V
     .registers 2
 
-    iput-object p1, p0, Lcom/adsmogo/adapters/api/A;->a:Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;
+    iput-object p1, p0, Lcom/adsmogo/adapters/api/A;->a:Lcom/adsmogo/adapters/api/PublicCustomAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,56 +23,19 @@
 
 # virtual methods
 .method public final run()V
-    .registers 5
+    .registers 4
 
-    iget-object v0, p0, Lcom/adsmogo/adapters/api/A;->a:Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;
+    iget-object v0, p0, Lcom/adsmogo/adapters/api/A;->a:Lcom/adsmogo/adapters/api/PublicCustomAdapter;
 
-    invoke-static {v0}, Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;->a(Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;)Ljava/lang/ref/WeakReference;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/adsmogo/adapters/api/A;->a:Lcom/adsmogo/adapters/api/PublicCustomAdapter;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/adsmogo/adview/AdsMogoLayout;
-
-    if-eqz v0, :cond_32
-
-    iget-object v0, v0, Lcom/adsmogo/adview/AdsMogoLayout;->activityReference:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/Activity;
-
-    if-eqz v0, :cond_32
-
-    new-instance v1, Lcom/adsmogo/adview/ShowFullDialog;
-
-    invoke-direct {v1, v0}, Lcom/adsmogo/adview/ShowFullDialog;-><init>(Landroid/app/Activity;)V
-
-    iget-object v0, p0, Lcom/adsmogo/adapters/api/A;->a:Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;
-
-    iget-object v0, v0, Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;->b:Lcom/adsmogo/model/obj/Ftad;
-
-    invoke-virtual {v0}, Lcom/adsmogo/model/obj/Ftad;->getAdviewurl1()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/adsmogo/adapters/api/A;->a:Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;
-
-    iget-object v2, v2, Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;->b:Lcom/adsmogo/model/obj/Ftad;
-
-    invoke-virtual {v2}, Lcom/adsmogo/model/obj/Ftad;->getAdviewparam2()Ljava/lang/String;
+    invoke-static {v2}, Lcom/adsmogo/adapters/api/PublicCustomAdapter;->c(Lcom/adsmogo/adapters/api/PublicCustomAdapter;)Landroid/webkit/WebView;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/adsmogo/adapters/api/A;->a:Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;
+    invoke-virtual {v0, v1, v2}, Lcom/adsmogo/adapters/api/PublicCustomAdapter;->a(ZLandroid/view/ViewGroup;)V
 
-    invoke-virtual {v1, v0, v2, v3}, Lcom/adsmogo/adview/ShowFullDialog;->showFullAdDialog(Ljava/lang/String;Ljava/lang/String;Lcom/adsmogo/adapters/api/FXrXaXcXtXaXlAdapter;)V
-
-    :cond_32
     return-void
 .end method

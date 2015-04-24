@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/wacai365/bank/ak;->a:Lcom/wacai365/bank/NbkLoginActivity_;
 
-    invoke-virtual {v0}, Lcom/wacai365/bank/NbkLoginActivity_;->b()V
+    invoke-virtual {v0}, Lcom/wacai365/bank/NbkLoginActivity_;->d()V
 
     return-void
 .end method

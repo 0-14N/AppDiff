@@ -86,7 +86,7 @@
 .method private b(Z)V
     .registers 5
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->i()Lcom/soft/filemanager/activities/AbstractBaseActivity;
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->h()Lcom/soft/filemanager/activities/AbstractBaseActivity;
 
     move-result-object v0
 
@@ -139,7 +139,7 @@
     return-object v0
 .end method
 
-.method private o()V
+.method private n()V
     .registers 4
 
     const v0, 0x7f0a000d
@@ -232,7 +232,7 @@
 
     new-instance v0, Lcom/soft/filemanager/b/q;
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->i()Lcom/soft/filemanager/activities/AbstractBaseActivity;
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->h()Lcom/soft/filemanager/activities/AbstractBaseActivity;
 
     move-result-object v1
 
@@ -287,7 +287,7 @@
     move-result-object v0
 
     :cond_1b
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->k()Lcom/soft/filemanager/FileManagerApplication;
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->j()Lcom/soft/filemanager/FileManagerApplication;
 
     move-result-object v1
 
@@ -430,7 +430,7 @@
 
     if-ne p1, v2, :cond_61
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->j()V
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->i()V
 
     iget-object v2, p0, Lcom/soft/filemanager/activities/MainActivity;->m:Lcom/soft/filemanager/a/e;
 
@@ -526,7 +526,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->j()V
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->i()V
 
     new-instance v2, Lcom/soft/filemanager/e/a;
 
@@ -547,7 +547,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->j()V
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->i()V
 
     new-instance v2, Lcom/soft/filemanager/e/ap;
 
@@ -666,7 +666,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->j()V
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->i()V
 
     new-instance v2, Lcom/soft/filemanager/e/ap;
 
@@ -696,7 +696,7 @@
 
     iput-object p1, p0, Lcom/soft/filemanager/activities/MainActivity;->D:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->m()V
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->l()V
 
     const/4 v0, 0x2
 
@@ -712,7 +712,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/soft/filemanager/activities/MainActivity;->a(I[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->k()Lcom/soft/filemanager/FileManagerApplication;
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->j()Lcom/soft/filemanager/FileManagerApplication;
 
     move-result-object v0
 
@@ -726,7 +726,7 @@
     return-void
 .end method
 
-.method public j()V
+.method public i()V
     .registers 8
 
     iget-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->m:Lcom/soft/filemanager/a/e;
@@ -1183,7 +1183,7 @@
     goto/16 :goto_fe
 .end method
 
-.method public l()Ljava/lang/String;
+.method public k()Ljava/lang/String;
     .registers 2
 
     iget-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->D:Ljava/lang/String;
@@ -1191,7 +1191,7 @@
     return-object v0
 .end method
 
-.method public m()V
+.method public l()V
     .registers 16
 
     const/16 v14, 0x13
@@ -1411,10 +1411,10 @@
     goto :goto_7a
 .end method
 
-.method public n()V
+.method public m()V
     .registers 3
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->k()Lcom/soft/filemanager/FileManagerApplication;
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->j()Lcom/soft/filemanager/FileManagerApplication;
 
     move-result-object v0
 
@@ -1616,7 +1616,7 @@
 
     if-eqz v1, :cond_b0
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->i()Lcom/soft/filemanager/activities/AbstractBaseActivity;
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->h()Lcom/soft/filemanager/activities/AbstractBaseActivity;
 
     move-result-object v1
 
@@ -1665,7 +1665,7 @@
 
     if-eqz v1, :cond_b0
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->i()Lcom/soft/filemanager/activities/AbstractBaseActivity;
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->h()Lcom/soft/filemanager/activities/AbstractBaseActivity;
 
     move-result-object v1
 
@@ -1748,9 +1748,9 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 6
+    .registers 7
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
     invoke-super {p0, p1}, Lcom/soft/filemanager/activities/AbstractBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
@@ -1774,7 +1774,7 @@
 
     iput v1, v0, Lcom/soft/filemanager/a/e;->d:I
 
-    iput-boolean v3, p0, Lcom/soft/filemanager/activities/MainActivity;->o:Z
+    iput-boolean v4, p0, Lcom/soft/filemanager/activities/MainActivity;->o:Z
 
     const v0, 0x7f0a0006
 
@@ -1806,7 +1806,7 @@
 
     iput-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->E:Landroid/widget/LinearLayout;
 
-    invoke-direct {p0}, Lcom/soft/filemanager/activities/MainActivity;->o()V
+    invoke-direct {p0}, Lcom/soft/filemanager/activities/MainActivity;->n()V
 
     const v0, 0x7f0a000a
 
@@ -1836,7 +1836,7 @@
 
     iput-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->s:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->j()V
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->i()V
 
     iget-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->m:Lcom/soft/filemanager/a/e;
 
@@ -1856,7 +1856,7 @@
 
     iget-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->v:Lcom/soft/filemanager/fragments/ListViewFragment;
 
-    if-nez v0, :cond_117
+    if-nez v0, :cond_fe
 
     new-instance v0, Lcom/soft/filemanager/fragments/ListViewFragment;
 
@@ -1865,7 +1865,7 @@
     iput-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->v:Lcom/soft/filemanager/fragments/ListViewFragment;
 
     :goto_83
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->k()Lcom/soft/filemanager/FileManagerApplication;
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->j()Lcom/soft/filemanager/FileManagerApplication;
 
     move-result-object v2
 
@@ -1877,11 +1877,11 @@
 
     move-result v2
 
-    if-ne v2, v3, :cond_9c
+    if-ne v2, v4, :cond_9c
 
     iget-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->w:Lcom/soft/filemanager/fragments/GridViewFragment;
 
-    if-nez v0, :cond_11b
+    if-nez v0, :cond_101
 
     new-instance v0, Lcom/soft/filemanager/fragments/GridViewFragment;
 
@@ -1897,7 +1897,7 @@
 
     iput-object v1, p0, Lcom/soft/filemanager/activities/MainActivity;->D:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->m()V
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->l()V
 
     iget-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->y:Ljava/util/Stack;
 
@@ -1919,42 +1919,9 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0, p0, v0}, Lcom/soft/filemanager/activities/MainActivity;->a(Landroid/app/Activity;Landroid/widget/LinearLayout;)Lcom/google/ads/AdView;
+    invoke-virtual {p0, p0, v0}, Lcom/soft/filemanager/activities/MainActivity;->a(Landroid/app/Activity;Landroid/widget/LinearLayout;)Lcn/domob/android/ads/DomobAdView;
 
     :cond_c0
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e0
-
-    :try_start_c6
-    new-instance v0, Lcom/wIwzugDT/REXxAgdQ105357/a;
-
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/wIwzugDT/REXxAgdQ105357/a;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0}, Lcom/wIwzugDT/REXxAgdQ105357/a;->b()V
-
-    new-instance v0, Lcom/pad/android/xappad/AdController;
-
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/MainActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-string v2, "776671459"
-
-    invoke-direct {v0, v1, v2}, Lcom/pad/android/xappad/AdController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lcom/pad/android/xappad/AdController;->loadIcon()V
-    :try_end_e0
-    .catch Ljava/lang/Exception; {:try_start_c6 .. :try_end_e0} :catch_11f
-
-    :cond_e0
-    :goto_e0
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v0
@@ -1965,7 +1932,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_116
+    if-nez v0, :cond_f6
 
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
@@ -2003,23 +1970,24 @@
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    :cond_116
+    :cond_f6
+    invoke-static {}, Lcom/kuguo/ad/a;->a()Lcom/kuguo/ad/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0, v4}, Lcom/kuguo/ad/a;->a(Landroid/content/Context;Z)V
+
     return-void
 
-    :cond_117
+    :cond_fe
     iget-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->v:Lcom/soft/filemanager/fragments/ListViewFragment;
 
-    goto/16 :goto_83
+    goto :goto_83
 
-    :cond_11b
+    :cond_101
     iget-object v0, p0, Lcom/soft/filemanager/activities/MainActivity;->w:Lcom/soft/filemanager/fragments/GridViewFragment;
 
-    goto/16 :goto_9c
-
-    :catch_11f
-    move-exception v0
-
-    goto :goto_e0
+    goto :goto_9c
 .end method
 
 .method public onDestroy()V

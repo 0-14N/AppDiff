@@ -20,33 +20,33 @@
 
     invoke-direct {p0}, Landroid/preference/PreferenceActivity;-><init>()V
 
+    new-instance v0, Lcn/dxy/idxyer/activity/z;
+
+    invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/z;-><init>(Lcn/dxy/idxyer/activity/PrefsActivity;)V
+
+    iput-object v0, p0, Lcn/dxy/idxyer/activity/PrefsActivity;->a:Landroid/preference/Preference$OnPreferenceClickListener;
+
     new-instance v0, Lcn/dxy/idxyer/activity/A;
 
     invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/A;-><init>(Lcn/dxy/idxyer/activity/PrefsActivity;)V
 
-    iput-object v0, p0, Lcn/dxy/idxyer/activity/PrefsActivity;->a:Landroid/preference/Preference$OnPreferenceClickListener;
+    iput-object v0, p0, Lcn/dxy/idxyer/activity/PrefsActivity;->b:Landroid/preference/Preference$OnPreferenceClickListener;
 
     new-instance v0, Lcn/dxy/idxyer/activity/B;
 
     invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/B;-><init>(Lcn/dxy/idxyer/activity/PrefsActivity;)V
 
-    iput-object v0, p0, Lcn/dxy/idxyer/activity/PrefsActivity;->b:Landroid/preference/Preference$OnPreferenceClickListener;
+    iput-object v0, p0, Lcn/dxy/idxyer/activity/PrefsActivity;->c:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     new-instance v0, Lcn/dxy/idxyer/activity/C;
 
     invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/C;-><init>(Lcn/dxy/idxyer/activity/PrefsActivity;)V
 
-    iput-object v0, p0, Lcn/dxy/idxyer/activity/PrefsActivity;->c:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iput-object v0, p0, Lcn/dxy/idxyer/activity/PrefsActivity;->d:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     new-instance v0, Lcn/dxy/idxyer/activity/D;
 
     invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/D;-><init>(Lcn/dxy/idxyer/activity/PrefsActivity;)V
-
-    iput-object v0, p0, Lcn/dxy/idxyer/activity/PrefsActivity;->d:Landroid/preference/Preference$OnPreferenceChangeListener;
-
-    new-instance v0, Lcn/dxy/idxyer/activity/E;
-
-    invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/E;-><init>(Lcn/dxy/idxyer/activity/PrefsActivity;)V
 
     iput-object v0, p0, Lcn/dxy/idxyer/activity/PrefsActivity;->e:Landroid/preference/Preference$OnPreferenceChangeListener;
 
@@ -132,9 +132,9 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
 
-    new-instance v0, Lcn/dxy/idxyer/activity/y;
+    new-instance v0, Lcn/dxy/idxyer/activity/x;
 
-    invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/y;-><init>(Lcn/dxy/idxyer/activity/PrefsActivity;)V
+    invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/x;-><init>(Lcn/dxy/idxyer/activity/PrefsActivity;)V
 
     invoke-virtual {v1, v0}, Landroid/support/v7/widget/Toolbar;->a(Landroid/view/View$OnClickListener;)V
 
@@ -198,9 +198,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/dxy/idxyer/activity/z;
+    new-instance v1, Lcn/dxy/idxyer/activity/y;
 
-    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/z;-><init>(Lcn/dxy/idxyer/activity/PrefsActivity;)V
+    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/y;-><init>(Lcn/dxy/idxyer/activity/PrefsActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 

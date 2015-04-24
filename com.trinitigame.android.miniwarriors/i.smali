@@ -8,12 +8,16 @@
 # instance fields
 .field final synthetic a:Lcom/trinitigame/android/g;
 
+.field private final synthetic b:Lcom/trinitigame/android/a;
+
 
 # direct methods
-.method constructor <init>(Lcom/trinitigame/android/g;)V
-    .registers 2
+.method constructor <init>(Lcom/trinitigame/android/g;Lcom/trinitigame/android/a;)V
+    .registers 3
 
     iput-object p1, p0, Lcom/trinitigame/android/i;->a:Lcom/trinitigame/android/g;
+
+    iput-object p2, p0, Lcom/trinitigame/android/i;->b:Lcom/trinitigame/android/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,63 +27,33 @@
 
 # virtual methods
 .method public run()V
-    .registers 6
+    .registers 4
 
-    invoke-static {}, Lcom/trinitigame/android/g;->d()Lcom/trinitigame/android/Triniti2DActivity;
+    iget-object v0, p0, Lcom/trinitigame/android/i;->b:Lcom/trinitigame/android/a;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/trinitigame/android/a;->b()I
 
-    iget-object v0, v0, Lcom/trinitigame/android/Triniti2DActivity;->relativeLayout:Landroid/widget/RelativeLayout;
+    iget-object v0, p0, Lcom/trinitigame/android/i;->a:Lcom/trinitigame/android/g;
 
-    invoke-static {}, Lcom/trinitigame/android/g;->d()Lcom/trinitigame/android/Triniti2DActivity;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/trinitigame/android/i;->b:Lcom/trinitigame/android/a;
+
+    invoke-virtual {v2}, Lcom/trinitigame/android/a;->a()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/trinitigame/android/Triniti2DActivity;->splashView:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
-
-    invoke-static {}, Lcom/trinitigame/android/g;->d()Lcom/trinitigame/android/Triniti2DActivity;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/trinitigame/android/Triniti2DActivity;->splashView:Landroid/widget/ImageView;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    invoke-static {}, Lcom/trinitigame/android/g;->d()Lcom/trinitigame/android/Triniti2DActivity;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/trinitigame/android/Triniti2DActivity;->splashView:Landroid/widget/ImageView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setEnabled(Z)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    const-string v2, ""
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "when ---------- "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/trinitigame/android/g;->a(Lcom/trinitigame/android/g;Ljava/lang/String;)V
 
     return-void
 .end method

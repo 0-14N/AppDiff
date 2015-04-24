@@ -1114,9 +1114,9 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Lajx;
+    new-instance v1, Ladd;
 
-    invoke-direct {v1}, Lajx;-><init>()V
+    invoke-direct {v1}, Ladd;-><init>()V
 
     invoke-virtual {v0, v1}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
 

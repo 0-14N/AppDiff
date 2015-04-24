@@ -18,9 +18,9 @@
 
 
 # static fields
-.field private static final Ar:Ljava/lang/Object;
+.field private static final aq:Ljava/lang/Object;
 
-.field private static As:Ljava/util/HashSet;
+.field private static ar:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashSet",
@@ -31,17 +31,17 @@
     .end annotation
 .end field
 
-.field private static At:Lcom/google/android/gms/common/images/ImageManager;
+.field private static as:Lcom/google/android/gms/common/images/ImageManager;
 
-.field private static Au:Lcom/google/android/gms/common/images/ImageManager;
+.field private static at:Lcom/google/android/gms/common/images/ImageManager;
 
 
 # instance fields
-.field private final Av:Ljava/util/concurrent/ExecutorService;
+.field private final au:Ljava/util/concurrent/ExecutorService;
 
-.field private final Aw:Lcom/google/android/gms/common/images/ImageManager$b;
+.field private final av:Lcom/google/android/gms/common/images/ImageManager$b;
 
-.field private final Ax:Ljava/util/Map;
+.field private final aw:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -53,7 +53,7 @@
     .end annotation
 .end field
 
-.field private final Ay:Ljava/util/Map;
+.field private final ax:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -78,13 +78,13 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/common/images/ImageManager;->Ar:Ljava/lang/Object;
+    sput-object v0, Lcom/google/android/gms/common/images/ImageManager;->aq:Ljava/lang/Object;
 
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/common/images/ImageManager;->As:Ljava/util/HashSet;
+    sput-object v0, Lcom/google/android/gms/common/images/ImageManager;->ar:Ljava/util/HashSet;
 
     return-void
 .end method
@@ -119,7 +119,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Av:Ljava/util/concurrent/ExecutorService;
+    iput-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->au:Ljava/util/concurrent/ExecutorService;
 
     if-eqz p2, :cond_3e
 
@@ -129,15 +129,15 @@
 
     invoke-direct {v0, v1}, Lcom/google/android/gms/common/images/ImageManager$b;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Aw:Lcom/google/android/gms/common/images/ImageManager$b;
+    iput-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->av:Lcom/google/android/gms/common/images/ImageManager$b;
 
-    invoke-static {}, Lcom/google/android/gms/internal/fr;->eM()Z
+    invoke-static {}, Lcom/google/android/gms/internal/as;->aq()Z
 
     move-result v0
 
     if-eqz v0, :cond_2f
 
-    invoke-direct {p0}, Lcom/google/android/gms/common/images/ImageManager;->dL()V
+    invoke-direct {p0}, Lcom/google/android/gms/common/images/ImageManager;->n()V
 
     :cond_2f
     :goto_2f
@@ -145,20 +145,20 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Ax:Ljava/util/Map;
+    iput-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->aw:Ljava/util/Map;
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Ay:Ljava/util/Map;
+    iput-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->ax:Ljava/util/Map;
 
     return-void
 
     :cond_3e
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Aw:Lcom/google/android/gms/common/images/ImageManager$b;
+    iput-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->av:Lcom/google/android/gms/common/images/ImageManager$b;
 
     goto :goto_2f
 .end method
@@ -184,7 +184,7 @@
 .method private a(Lcom/google/android/gms/common/images/a$a;)Landroid/graphics/Bitmap;
     .registers 3
 
-    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Aw:Lcom/google/android/gms/common/images/ImageManager$b;
+    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->av:Lcom/google/android/gms/common/images/ImageManager$b;
 
     if-nez v0, :cond_6
 
@@ -194,7 +194,7 @@
     return-object v0
 
     :cond_6
-    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Aw:Lcom/google/android/gms/common/images/ImageManager$b;
+    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->av:Lcom/google/android/gms/common/images/ImageManager$b;
 
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/images/ImageManager$b;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -210,7 +210,7 @@
 
     if-eqz p1, :cond_11
 
-    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->Au:Lcom/google/android/gms/common/images/ImageManager;
+    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->at:Lcom/google/android/gms/common/images/ImageManager;
 
     if-nez v0, :cond_e
 
@@ -220,16 +220,16 @@
 
     invoke-direct {v0, p0, v1}, Lcom/google/android/gms/common/images/ImageManager;-><init>(Landroid/content/Context;Z)V
 
-    sput-object v0, Lcom/google/android/gms/common/images/ImageManager;->Au:Lcom/google/android/gms/common/images/ImageManager;
+    sput-object v0, Lcom/google/android/gms/common/images/ImageManager;->at:Lcom/google/android/gms/common/images/ImageManager;
 
     :cond_e
-    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->Au:Lcom/google/android/gms/common/images/ImageManager;
+    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->at:Lcom/google/android/gms/common/images/ImageManager;
 
     :goto_10
     return-object v0
 
     :cond_11
-    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->At:Lcom/google/android/gms/common/images/ImageManager;
+    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->as:Lcom/google/android/gms/common/images/ImageManager;
 
     if-nez v0, :cond_1d
 
@@ -239,10 +239,10 @@
 
     invoke-direct {v0, p0, v1}, Lcom/google/android/gms/common/images/ImageManager;-><init>(Landroid/content/Context;Z)V
 
-    sput-object v0, Lcom/google/android/gms/common/images/ImageManager;->At:Lcom/google/android/gms/common/images/ImageManager;
+    sput-object v0, Lcom/google/android/gms/common/images/ImageManager;->as:Lcom/google/android/gms/common/images/ImageManager;
 
     :cond_1d
-    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->At:Lcom/google/android/gms/common/images/ImageManager;
+    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->as:Lcom/google/android/gms/common/images/ImageManager;
 
     goto :goto_10
 .end method
@@ -260,7 +260,7 @@
 .method static synthetic b(Lcom/google/android/gms/common/images/ImageManager;)Ljava/util/Map;
     .registers 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Ay:Ljava/util/Map;
+    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->ax:Ljava/util/Map;
 
     return-object v0
 .end method
@@ -272,9 +272,9 @@
 
     const-string v0, "ImageManager.cleanupHashMaps() must be called in the main thread"
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/ed;->ac(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/google/android/gms/internal/h;->f(Ljava/lang/String;)V
 
-    iget v0, p1, Lcom/google/android/gms/common/images/a;->AI:I
+    iget v0, p1, Lcom/google/android/gms/common/images/a;->aJ:I
 
     if-ne v0, v1, :cond_c
 
@@ -284,7 +284,7 @@
     return v0
 
     :cond_c
-    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Ax:Ljava/util/Map;
+    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->aw:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -299,7 +299,7 @@
     goto :goto_b
 
     :cond_18
-    iget-boolean v2, v0, Lcom/google/android/gms/common/images/ImageManager$ImageReceiver;->AA:Z
+    iget-boolean v2, v0, Lcom/google/android/gms/common/images/ImageManager$ImageReceiver;->az:Z
 
     if-eqz v2, :cond_1e
 
@@ -308,7 +308,7 @@
     goto :goto_b
 
     :cond_1e
-    iget-object v2, p0, Lcom/google/android/gms/common/images/ImageManager;->Ax:Ljava/util/Map;
+    iget-object v2, p0, Lcom/google/android/gms/common/images/ImageManager;->aw:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -322,7 +322,7 @@
 .method static synthetic c(Lcom/google/android/gms/common/images/ImageManager;)Ljava/util/Map;
     .registers 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Ax:Ljava/util/Map;
+    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->aw:Ljava/util/Map;
 
     return-object v0
 .end method
@@ -344,39 +344,7 @@
 .method static synthetic d(Lcom/google/android/gms/common/images/ImageManager;)Ljava/util/concurrent/ExecutorService;
     .registers 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Av:Ljava/util/concurrent/ExecutorService;
-
-    return-object v0
-.end method
-
-.method private dL()V
-    .registers 4
-
-    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->mContext:Landroid/content/Context;
-
-    new-instance v1, Lcom/google/android/gms/common/images/ImageManager$e;
-
-    iget-object v2, p0, Lcom/google/android/gms/common/images/ImageManager;->Aw:Lcom/google/android/gms/common/images/ImageManager$b;
-
-    invoke-direct {v1, v2}, Lcom/google/android/gms/common/images/ImageManager$e;-><init>(Lcom/google/android/gms/common/images/ImageManager$b;)V
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
-
-    return-void
-.end method
-
-.method static synthetic dM()Ljava/util/HashSet;
-    .registers 1
-
-    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->As:Ljava/util/HashSet;
-
-    return-object v0
-.end method
-
-.method static synthetic dd()Ljava/lang/Object;
-    .registers 1
-
-    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->Ar:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->au:Ljava/util/concurrent/ExecutorService;
 
     return-object v0
 .end method
@@ -392,7 +360,39 @@
 .method static synthetic f(Lcom/google/android/gms/common/images/ImageManager;)Lcom/google/android/gms/common/images/ImageManager$b;
     .registers 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->Aw:Lcom/google/android/gms/common/images/ImageManager$b;
+    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->av:Lcom/google/android/gms/common/images/ImageManager$b;
+
+    return-object v0
+.end method
+
+.method private n()V
+    .registers 4
+
+    iget-object v0, p0, Lcom/google/android/gms/common/images/ImageManager;->mContext:Landroid/content/Context;
+
+    new-instance v1, Lcom/google/android/gms/common/images/ImageManager$e;
+
+    iget-object v2, p0, Lcom/google/android/gms/common/images/ImageManager;->av:Lcom/google/android/gms/common/images/ImageManager$b;
+
+    invoke-direct {v1, v2}, Lcom/google/android/gms/common/images/ImageManager$e;-><init>(Lcom/google/android/gms/common/images/ImageManager$b;)V
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
+
+    return-void
+.end method
+
+.method static synthetic o()Ljava/lang/Object;
+    .registers 1
+
+    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->aq:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method static synthetic p()Ljava/util/HashSet;
+    .registers 1
+
+    sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->ar:Ljava/util/HashSet;
 
     return-object v0
 .end method
@@ -404,7 +404,7 @@
 
     const-string v0, "ImageManager.loadImage() must be called in the main thread"
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/ed;->ac(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/google/android/gms/internal/h;->f(Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/images/ImageManager;->b(Lcom/google/android/gms/common/images/a;)Z
 
@@ -474,7 +474,7 @@
 
     invoke-direct {v0, p2}, Lcom/google/android/gms/common/images/a;-><init>(Landroid/net/Uri;)V
 
-    invoke-virtual {v0, p3}, Lcom/google/android/gms/common/images/a;->L(I)V
+    invoke-virtual {v0, p3}, Lcom/google/android/gms/common/images/a;->j(I)V
 
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/images/a;->a(Landroid/widget/ImageView;)V
 
@@ -511,7 +511,7 @@
 
     invoke-direct {v0, p2}, Lcom/google/android/gms/common/images/a;-><init>(Landroid/net/Uri;)V
 
-    invoke-virtual {v0, p3}, Lcom/google/android/gms/common/images/a;->L(I)V
+    invoke-virtual {v0, p3}, Lcom/google/android/gms/common/images/a;->j(I)V
 
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/images/a;->a(Lcom/google/android/gms/common/images/ImageManager$OnImageLoadedListener;)V
 

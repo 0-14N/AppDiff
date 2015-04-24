@@ -37,7 +37,7 @@
     .line 551
     iget-object v0, p0, Lcom/guangjieba/share/model/h/n;->a:Lcom/guangjieba/share/model/h/l;
 
-    invoke-virtual {v0}, Lcom/guangjieba/share/model/h/l;->a()V
+    invoke-virtual {v0}, Lcom/guangjieba/share/model/h/l;->c()V
 
     .line 552
     return-void

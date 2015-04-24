@@ -89,9 +89,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;->j:Lcom/quvideo/xiaoying/app/im/OnAvatarClickListener;
 
     .line 436
-    new-instance v0, Lve;
+    new-instance v0, Lol;
 
-    invoke-direct {v0, p0}, Lve;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;)V
+    invoke-direct {v0, p0}, Lol;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;->k:Landroid/view/View$OnClickListener;
 
@@ -249,9 +249,9 @@
     .line 419
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;->c:Landroid/app/Activity;
 
-    new-instance v1, Lvi;
+    new-instance v1, Lop;
 
-    invoke-direct {v1, p0, p1, p2}, Lvi;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;Lcom/quvideo/xiaoying/im/IMMessage;Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;)V
+    invoke-direct {v1, p0, p1, p2}, Lop;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;Lcom/quvideo/xiaoying/im/IMMessage;Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;)V
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -315,9 +315,9 @@
     .line 298
     iget-object v0, p2, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;->b:Landroid/widget/TextView;
 
-    new-instance v1, Lvg;
+    new-instance v1, Lon;
 
-    invoke-direct {v1, p0, p3, p1}, Lvg;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;ILcom/quvideo/xiaoying/im/IMMessage;)V
+    invoke-direct {v1, p0, p3, p1}, Lon;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;ILcom/quvideo/xiaoying/im/IMMessage;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
@@ -637,7 +637,7 @@
     .end annotation
 
     .prologue
-    const v9, 0x7f0604f0
+    const v9, 0x7f0604db
 
     const/4 v8, 0x2
 
@@ -671,7 +671,7 @@
     move-result-object p2
 
     .line 148
-    const v0, 0x7f0604f3
+    const v0, 0x7f0604de
 
     :try_start_1d
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -683,7 +683,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;->c:Landroid/widget/ProgressBar;
 
     .line 149
-    const v0, 0x7f0604f0
+    const v0, 0x7f0604db
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -694,7 +694,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;->d:Landroid/widget/ImageView;
 
     .line 150
-    const v0, 0x7f0604ed
+    const v0, 0x7f0604d8
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -705,7 +705,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;->e:Landroid/widget/ImageView;
 
     .line 152
-    const v0, 0x7f0604ee
+    const v0, 0x7f0604d9
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -716,7 +716,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;->b:Landroid/widget/TextView;
 
     .line 153
-    const v0, 0x7f0604ef
+    const v0, 0x7f0604da
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -727,7 +727,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;->f:Landroid/widget/TextView;
 
     .line 154
-    const v0, 0x7f0604e1
+    const v0, 0x7f0604cc
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -773,7 +773,7 @@
     if-eq v3, v8, :cond_104
 
     .line 170
-    const v0, 0x7f0604f1
+    const v0, 0x7f0604dc
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -784,7 +784,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;->g:Landroid/widget/TextView;
 
     .line 171
-    const v0, 0x7f0604f2
+    const v0, 0x7f0604dd
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -845,15 +845,15 @@
     move-result-object v0
 
     .line 225
-    new-instance v1, Lvf;
+    new-instance v1, Lom;
 
-    invoke-direct {v1, p0, p1}, Lvf;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;I)V
+    invoke-direct {v1, p0, p1}, Lom;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;I)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 258
     :cond_bf
-    const v0, 0x7f0604ec
+    const v0, 0x7f0604d7
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1100,9 +1100,9 @@
     move-result-object v0
 
     .line 366
-    new-instance v1, Lvh;
+    new-instance v1, Loo;
 
-    invoke-direct {v1, p0, p1, p2}, Lvh;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;Lcom/quvideo/xiaoying/im/IMMessage;Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;)V
+    invoke-direct {v1, p0, p1, p2}, Loo;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;Lcom/quvideo/xiaoying/im/IMMessage;Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter$ViewHolder;)V
 
     invoke-virtual {v0, p1, v1}, Lcom/quvideo/xiaoying/im/IMConversationInfo;->sendMessage(Lcom/quvideo/xiaoying/im/IMMessage;Lcom/quvideo/xiaoying/im/IMCallback;)V
 

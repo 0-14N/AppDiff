@@ -26,21 +26,13 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .registers 4
+    .registers 3
 
     .prologue
     .line 107
     iget-object v0, p0, Lcom/guangjieba/share/ui/user/bq;->a:Lcom/guangjieba/share/ui/user/SettingsActivity_;
 
-    const-string v1, "my_update"
-
-    invoke-static {v0, v1}, Lcom/umeng/a/a;->a(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-static {v0}, Lcom/guangjieba/share/ui/user/UpdataActivity_;->a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/UpdataActivity_$IntentBuilder_;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/UpdataActivity_$IntentBuilder_;->a()V
+    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/SettingsActivity_;->d()V
 
     .line 108
     return-void

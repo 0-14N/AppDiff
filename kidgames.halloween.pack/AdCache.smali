@@ -93,7 +93,7 @@
     .registers 1
 
     .prologue
-    .line 953
+    .line 966
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/millennialmedia/android/AdCache;->isExternalEnabled:Z
@@ -235,14 +235,14 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 426
+    .line 429
     new-instance v0, Lcom/millennialmedia/android/AdCache$3;
 
     invoke-direct {v0, p0}, Lcom/millennialmedia/android/AdCache$3;-><init>(Landroid/content/Context;)V
 
     invoke-static {v0}, Lcom/millennialmedia/android/Utils$ThreadUtils;->execute(Ljava/lang/Runnable;)V
 
-    .line 436
+    .line 439
     return-void
 .end method
 
@@ -251,7 +251,7 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 441
+    .line 444
     const/4 v0, 0x1
 
     new-instance v1, Lcom/millennialmedia/android/AdCache$4;
@@ -260,7 +260,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/millennialmedia/android/AdCache;->iterateCachedAds(Landroid/content/Context;ILcom/millennialmedia/android/AdCache$Iterator;)V
 
-    .line 465
+    .line 468
     return-void
 .end method
 
@@ -269,20 +269,20 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 469
+    .line 472
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->cleanupInternalCache(Landroid/content/Context;)V
 
-    .line 470
+    .line 473
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->isExternalStorageAvailable(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    .line 472
+    .line 475
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->cleanupExternalCache(Landroid/content/Context;)V
 
-    .line 474
+    .line 477
     :cond_c
     return-void
 .end method
@@ -293,12 +293,12 @@
     .param p1, "timeout"    # J
 
     .prologue
-    .line 503
+    .line 506
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v1
 
-    .line 505
+    .line 508
     .local v1, "entries":[Ljava/io/File;
     move-object v0, v1
 
@@ -314,7 +314,7 @@
 
     aget-object v2, v0, v3
 
-    .line 507
+    .line 510
     .local v2, "entry":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
@@ -322,7 +322,7 @@
 
     if-eqz v5, :cond_24
 
-    .line 509
+    .line 512
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
@@ -337,17 +337,17 @@
 
     if-lez v5, :cond_21
 
-    .line 510
+    .line 513
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 505
+    .line 508
     :cond_21
     :goto_21
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_7
 
-    .line 512
+    .line 515
     :cond_24
     invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
 
@@ -355,11 +355,11 @@
 
     if-eqz v5, :cond_21
 
-    .line 516
+    .line 519
     :try_start_2a
     invoke-static {v2, p1, p2}, Lcom/millennialmedia/android/AdCache;->cleanupDirectory(Ljava/io/File;J)V
 
-    .line 517
+    .line 520
     invoke-virtual {v2}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v5
@@ -368,20 +368,20 @@
 
     if-nez v5, :cond_21
 
-    .line 518
+    .line 521
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
     :try_end_37
     .catch Ljava/lang/SecurityException; {:try_start_2a .. :try_end_37} :catch_38
 
     goto :goto_21
 
-    .line 520
+    .line 523
     :catch_38
     move-exception v5
 
     goto :goto_21
 
-    .line 525
+    .line 528
     .end local v2    # "entry":Ljava/io/File;
     :cond_3a
     return-void
@@ -392,21 +392,21 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 490
+    .line 493
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->getExternalCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 491
+    .line 494
     .local v0, "externalCacheDir":Ljava/io/File;
     if-nez v0, :cond_7
 
-    .line 498
+    .line 501
     :cond_6
     :goto_6
     return-void
 
-    .line 493
+    .line 496
     :cond_7
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -420,12 +420,12 @@
 
     if-eqz v2, :cond_6
 
-    .line 495
+    .line 498
     invoke-static {p0}, Lcom/millennialmedia/android/HandShake;->sharedHandShake(Landroid/content/Context;)Lcom/millennialmedia/android/HandShake;
 
     move-result-object v1
 
-    .line 496
+    .line 499
     .local v1, "handShake":Lcom/millennialmedia/android/HandShake;
     iget-wide v2, v1, Lcom/millennialmedia/android/HandShake;->creativeCacheTimeout:J
 
@@ -439,21 +439,21 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 478
+    .line 481
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->getInternalCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 479
+    .line 482
     .local v1, "internalCacheDir":Ljava/io/File;
     if-nez v1, :cond_7
 
-    .line 486
+    .line 489
     :cond_6
     :goto_6
     return-void
 
-    .line 481
+    .line 484
     :cond_7
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -467,12 +467,12 @@
 
     if-eqz v2, :cond_6
 
-    .line 483
+    .line 486
     invoke-static {p0}, Lcom/millennialmedia/android/HandShake;->sharedHandShake(Landroid/content/Context;)Lcom/millennialmedia/android/HandShake;
 
     move-result-object v0
 
-    .line 484
+    .line 487
     .local v0, "handShake":Lcom/millennialmedia/android/HandShake;
     iget-wide v2, v0, Lcom/millennialmedia/android/HandShake;->creativeCacheTimeout:J
 
@@ -487,21 +487,21 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 932
+    .line 937
     invoke-static {p0, p1}, Lcom/millennialmedia/android/AdCache;->getCachedAdFile(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 933
+    .line 938
     .local v0, "deleteFile":Ljava/io/File;
     if-eqz v0, :cond_b
 
-    .line 935
+    .line 940
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v1
 
-    .line 937
+    .line 942
     :goto_a
     return v1
 
@@ -519,27 +519,27 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 717
+    .line 722
     invoke-static/range {p0 .. p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v15
 
     if-eqz v15, :cond_d
 
-    .line 719
+    .line 724
     const-string v15, "No Url ..."
 
     invoke-static {v15}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 720
+    .line 725
     const/4 v15, 0x0
 
-    .line 804
+    .line 809
     :cond_c
     :goto_c
     return v15
 
-    .line 722
+    .line 727
     :cond_d
     new-instance v9, Ljava/io/File;
 
@@ -549,7 +549,7 @@
 
     invoke-direct {v9, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 724
+    .line 729
     .local v9, "file":Ljava/io/File;
     const-string v15, "Downloading Component: %s from %s"
 
@@ -571,7 +571,7 @@
 
     invoke-static/range {v15 .. v16}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 726
+    .line 731
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
     move-result v15
@@ -588,7 +588,7 @@
 
     if-lez v15, :cond_55
 
-    .line 728
+    .line 733
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -611,24 +611,24 @@
 
     invoke-static {v15}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;)V
 
-    .line 729
+    .line 734
     const/4 v15, 0x1
 
     goto :goto_c
 
-    .line 732
+    .line 737
     :cond_55
     const/4 v10, 0x0
 
-    .line 733
+    .line 738
     .local v10, "inStream":Ljava/io/InputStream;
     const/4 v12, 0x0
 
-    .line 734
+    .line 739
     .local v12, "out":Ljava/io/FileOutputStream;
     const-wide/16 v5, -0x1
 
-    .line 737
+    .line 742
     .local v5, "contentLength":J
     :try_start_59
     new-instance v4, Ljava/net/URL;
@@ -637,59 +637,59 @@
 
     invoke-direct {v4, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 738
+    .line 743
     .local v4, "connectURL":Ljava/net/URL;
     const/4 v15, 0x1
 
     invoke-static {v15}, Ljava/net/HttpURLConnection;->setFollowRedirects(Z)V
 
-    .line 739
+    .line 744
     invoke-virtual {v4}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v3
 
     check-cast v3, Ljava/net/HttpURLConnection;
 
-    .line 740
+    .line 745
     .local v3, "conn":Ljava/net/HttpURLConnection;
     const/16 v15, 0x7530
 
     invoke-virtual {v3, v15}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 741
+    .line 746
     const-string v15, "GET"
 
     invoke-virtual {v3, v15}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 742
+    .line 747
     invoke-virtual {v3}, Ljava/net/HttpURLConnection;->connect()V
 
-    .line 743
+    .line 748
     invoke-virtual {v3}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v10
 
-    .line 744
+    .line 749
     const-string v15, "Content-Length"
 
     invoke-virtual {v3, v15}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 745
+    .line 750
     .local v14, "temp":Ljava/lang/String;
     if-eqz v14, :cond_87
 
-    .line 746
+    .line 751
     invoke-static {v14}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v5
 
-    .line 747
+    .line 752
     :cond_87
     if-nez v10, :cond_c5
 
-    .line 749
+    .line 754
     const-string v15, "Connection stream is null downloading %s."
 
     const/16 v16, 0x1
@@ -709,32 +709,32 @@
     .catch Ljava/lang/Exception; {:try_start_59 .. :try_end_9a} :catch_ee
     .catchall {:try_start_59 .. :try_end_9a} :catchall_1a5
 
-    .line 750
+    .line 755
     const/4 v15, 0x0
 
-    .line 789
+    .line 794
     if-eqz v10, :cond_a0
 
-    .line 790
+    .line 795
     :try_start_9d
     invoke-virtual {v10}, Ljava/io/InputStream;->close()V
 
-    .line 791
+    .line 796
     :cond_a0
     if-eqz v12, :cond_c
 
-    .line 792
+    .line 797
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->close()V
     :try_end_a5
     .catch Ljava/io/IOException; {:try_start_9d .. :try_end_a5} :catch_a7
 
     goto/16 :goto_c
 
-    .line 794
+    .line 799
     :catch_a7
     move-exception v8
 
-    .line 796
+    .line 801
     .local v8, "ex":Ljava/io/IOException;
     const-string v15, "Content caching error: %s"
 
@@ -756,19 +756,19 @@
 
     invoke-static/range {v15 .. v16}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 797
+    .line 802
     if-eqz v9, :cond_c2
 
-    .line 798
+    .line 803
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
-    .line 799
+    .line 804
     :cond_c2
     const/4 v15, 0x0
 
     goto/16 :goto_c
 
-    .line 754
+    .line 759
     .end local v8    # "ex":Ljava/io/IOException;
     :cond_c5
     :try_start_c5
@@ -784,7 +784,7 @@
 
     if-eqz v15, :cond_11a
 
-    .line 756
+    .line 761
     invoke-virtual {v9}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v15
@@ -799,13 +799,13 @@
 
     move-result-object v12
 
-    .line 760
+    .line 765
     :goto_df
     const/16 v15, 0x1000
 
     new-array v2, v15, [B
 
-    .line 762
+    .line 767
     .local v2, "buf":[B
     :goto_e3
     invoke-virtual {v10, v2}, Ljava/io/InputStream;->read([B)I
@@ -815,7 +815,7 @@
     .local v11, "numread":I
     if-lez v11, :cond_121
 
-    .line 763
+    .line 768
     const/4 v15, 0x0
 
     invoke-virtual {v12, v2, v15, v11}, Ljava/io/FileOutputStream;->write([BII)V
@@ -825,7 +825,7 @@
 
     goto :goto_e3
 
-    .line 781
+    .line 786
     .end local v2    # "buf":[B
     .end local v3    # "conn":Ljava/net/HttpURLConnection;
     .end local v4    # "connectURL":Ljava/net/URL;
@@ -834,7 +834,7 @@
     :catch_ee
     move-exception v7
 
-    .line 783
+    .line 788
     .local v7, "e":Ljava/lang/Exception;
     :try_start_ef
     const-string v15, "Exception downloading component %s: %s"
@@ -863,38 +863,38 @@
     :try_end_108
     .catchall {:try_start_ef .. :try_end_108} :catchall_1a5
 
-    .line 789
+    .line 794
     if-eqz v10, :cond_10d
 
-    .line 790
+    .line 795
     :try_start_10a
     invoke-virtual {v10}, Ljava/io/InputStream;->close()V
 
-    .line 791
+    .line 796
     :cond_10d
     if-eqz v12, :cond_112
 
-    .line 792
+    .line 797
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->close()V
     :try_end_112
     .catch Ljava/io/IOException; {:try_start_10a .. :try_end_112} :catch_1b1
 
-    .line 802
+    .line 807
     .end local v7    # "e":Ljava/lang/Exception;
     :cond_112
     :goto_112
     if-eqz v9, :cond_117
 
-    .line 803
+    .line 808
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
-    .line 804
+    .line 809
     :cond_117
     const/4 v15, 0x0
 
     goto/16 :goto_c
 
-    .line 759
+    .line 764
     .restart local v3    # "conn":Ljava/net/HttpURLConnection;
     .restart local v4    # "connectURL":Ljava/net/URL;
     .restart local v14    # "temp":Ljava/lang/String;
@@ -915,13 +915,13 @@
     .restart local v12    # "out":Ljava/io/FileOutputStream;
     goto :goto_df
 
-    .line 765
+    .line 770
     .restart local v2    # "buf":[B
     .restart local v11    # "numread":I
     :cond_121
     if-eqz v9, :cond_161
 
-    .line 770
+    .line 775
     :try_start_123
     invoke-virtual {v9}, Ljava/io/File;->length()J
     :try_end_126
@@ -941,33 +941,33 @@
 
     if-nez v15, :cond_15c
 
-    .line 771
+    .line 776
     :cond_131
     const/4 v15, 0x1
 
-    .line 789
+    .line 794
     if-eqz v10, :cond_137
 
-    .line 790
+    .line 795
     :try_start_134
     invoke-virtual {v10}, Ljava/io/InputStream;->close()V
 
-    .line 791
+    .line 796
     :cond_137
     if-eqz v12, :cond_c
 
-    .line 792
+    .line 797
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->close()V
     :try_end_13c
     .catch Ljava/io/IOException; {:try_start_134 .. :try_end_13c} :catch_13e
 
     goto/16 :goto_c
 
-    .line 794
+    .line 799
     :catch_13e
     move-exception v8
 
-    .line 796
+    .line 801
     .restart local v8    # "ex":Ljava/io/IOException;
     const-string v15, "Content caching error: %s"
 
@@ -989,19 +989,19 @@
 
     invoke-static/range {v15 .. v16}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 797
+    .line 802
     if-eqz v9, :cond_159
 
-    .line 798
+    .line 803
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
-    .line 799
+    .line 804
     :cond_159
     const/4 v15, 0x0
 
     goto/16 :goto_c
 
-    .line 773
+    .line 778
     .end local v8    # "ex":Ljava/io/IOException;
     :cond_15c
     :try_start_15c
@@ -1013,31 +1013,31 @@
     .catch Ljava/lang/Exception; {:try_start_15c .. :try_end_161} :catch_ee
     .catchall {:try_start_15c .. :try_end_161} :catchall_1a5
 
-    .line 789
+    .line 794
     :cond_161
     :goto_161
     if-eqz v10, :cond_166
 
-    .line 790
+    .line 795
     :try_start_163
     invoke-virtual {v10}, Ljava/io/InputStream;->close()V
 
-    .line 791
+    .line 796
     :cond_166
     if-eqz v12, :cond_112
 
-    .line 792
+    .line 797
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->close()V
     :try_end_16b
     .catch Ljava/io/IOException; {:try_start_163 .. :try_end_16b} :catch_16c
 
     goto :goto_112
 
-    .line 794
+    .line 799
     :catch_16c
     move-exception v8
 
-    .line 796
+    .line 801
     .restart local v8    # "ex":Ljava/io/IOException;
     const-string v15, "Content caching error: %s"
 
@@ -1059,24 +1059,24 @@
 
     invoke-static/range {v15 .. v16}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 797
+    .line 802
     if-eqz v9, :cond_187
 
-    .line 798
+    .line 803
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
-    .line 799
+    .line 804
     :cond_187
     const/4 v15, 0x0
 
     goto/16 :goto_c
 
-    .line 775
+    .line 780
     .end local v8    # "ex":Ljava/io/IOException;
     :catch_18a
     move-exception v7
 
-    .line 777
+    .line 782
     .local v7, "e":Ljava/lang/SecurityException;
     :try_start_18b
     const-string v15, "Exception downloading component %s: %s"
@@ -1108,7 +1108,7 @@
 
     goto :goto_161
 
-    .line 787
+    .line 792
     .end local v2    # "buf":[B
     .end local v3    # "conn":Ljava/net/HttpURLConnection;
     .end local v4    # "connectURL":Ljava/net/URL;
@@ -1118,32 +1118,32 @@
     :catchall_1a5
     move-exception v15
 
-    .line 789
+    .line 794
     if-eqz v10, :cond_1ab
 
-    .line 790
+    .line 795
     :try_start_1a8
     invoke-virtual {v10}, Ljava/io/InputStream;->close()V
 
-    .line 791
+    .line 796
     :cond_1ab
     if-eqz v12, :cond_1b0
 
-    .line 792
+    .line 797
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->close()V
     :try_end_1b0
     .catch Ljava/io/IOException; {:try_start_1a8 .. :try_end_1b0} :catch_1cf
 
-    .line 799
+    .line 804
     :cond_1b0
     throw v15
 
-    .line 794
+    .line 799
     .local v7, "e":Ljava/lang/Exception;
     :catch_1b1
     move-exception v8
 
-    .line 796
+    .line 801
     .restart local v8    # "ex":Ljava/io/IOException;
     const-string v15, "Content caching error: %s"
 
@@ -1165,25 +1165,25 @@
 
     invoke-static/range {v15 .. v16}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 797
+    .line 802
     if-eqz v9, :cond_1cc
 
-    .line 798
+    .line 803
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
-    .line 799
+    .line 804
     :cond_1cc
     const/4 v15, 0x0
 
     goto/16 :goto_c
 
-    .line 794
+    .line 799
     .end local v7    # "e":Ljava/lang/Exception;
     .end local v8    # "ex":Ljava/io/IOException;
     :catch_1cf
     move-exception v8
 
-    .line 796
+    .line 801
     .restart local v8    # "ex":Ljava/io/IOException;
     const-string v15, "Content caching error: %s"
 
@@ -1205,13 +1205,13 @@
 
     invoke-static/range {v15 .. v16}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 797
+    .line 802
     if-eqz v9, :cond_1ea
 
-    .line 798
+    .line 803
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
-    .line 799
+    .line 804
     :cond_1ea
     const/4 v15, 0x0
 
@@ -1225,7 +1225,7 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 704
+    .line 709
     invoke-static {p2}, Lcom/millennialmedia/android/AdCache;->getCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
@@ -1242,19 +1242,19 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 591
+    .line 594
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->isExternalStorageAvailable(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 593
+    .line 596
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->getExternalCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 595
+    .line 598
     :goto_a
     return-object v0
 
@@ -1272,7 +1272,7 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 636
+    .line 641
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1291,23 +1291,23 @@
 
     move-result-object v4
 
-    .line 637
+    .line 642
     .local v4, "fileName":Ljava/lang/String;
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->isExternalStorageAvailable(Landroid/content/Context;)Z
 
     move-result v7
 
-    .line 638
+    .line 643
     .local v7, "isExternalStateMounted":Z
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->getCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v2
 
-    .line 639
+    .line 644
     .local v2, "cacheDir":Ljava/io/File;
     const/4 v0, 0x0
 
-    .line 643
+    .line 648
     .local v0, "adFile":Ljava/io/File;
     if-eqz v2, :cond_2a
 
@@ -1318,7 +1318,7 @@
 
     if-eqz v8, :cond_2a
 
-    .line 645
+    .line 650
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v2, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -1327,7 +1327,7 @@
     .local v1, "adFile":Ljava/io/File;
     move-object v0, v1
 
-    .line 647
+    .line 652
     .end local v1    # "adFile":Ljava/io/File;
     .restart local v0    # "adFile":Ljava/io/File;
     :cond_2a
@@ -1339,20 +1339,20 @@
 
     if-nez v8, :cond_6b
 
-    .line 650
+    .line 655
     :cond_32
     if-nez v7, :cond_6b
 
-    .line 652
+    .line 657
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
     move-result-object v5
 
-    .line 654
+    .line 659
     .local v5, "internalCacheDir":Ljava/io/File;
     if-eqz v5, :cond_6b
 
-    .line 656
+    .line 661
     new-instance v6, Ljava/io/File;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1381,7 +1381,7 @@
 
     invoke-direct {v6, v5, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 657
+    .line 662
     .local v6, "internalFile":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
@@ -1397,21 +1397,21 @@
 
     if-eqz v8, :cond_6b
 
-    .line 670
+    .line 675
     .end local v5    # "internalCacheDir":Ljava/io/File;
     .end local v6    # "internalFile":Ljava/io/File;
     :goto_64
     return-object v6
 
-    .line 665
+    .line 670
     :catch_65
     move-exception v3
 
-    .line 667
+    .line 672
     .local v3, "e":Ljava/lang/Exception;
     invoke-static {v3}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/Throwable;)V
 
-    .line 668
+    .line 673
     const/4 v6, 0x0
 
     goto :goto_64
@@ -1420,7 +1420,7 @@
     :cond_6b
     move-object v6, v0
 
-    .line 670
+    .line 675
     goto :goto_64
 .end method
 
@@ -1595,26 +1595,26 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 574
+    .line 577
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->getCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 575
+    .line 578
     .local v0, "dir":Ljava/io/File;
     const/4 v1, 0x0
 
-    .line 576
+    .line 579
     .local v1, "file":Ljava/io/File;
     if-eqz v0, :cond_c
 
-    .line 578
+    .line 581
     new-instance v1, Ljava/io/File;
 
     .end local v1    # "file":Ljava/io/File;
     invoke-direct {v1, v0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 580
+    .line 583
     .restart local v1    # "file":Ljava/io/File;
     :cond_c
     return-object v1
@@ -1625,20 +1625,20 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 600
+    .line 603
     const/4 v0, 0x0
 
-    .line 601
+    .line 604
     .local v0, "extCacheDir":Ljava/io/File;
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v1
 
-    .line 602
+    .line 605
     .local v1, "externalStorageDir":Ljava/io/File;
     if-eqz v1, :cond_1b
 
-    .line 604
+    .line 607
     new-instance v0, Ljava/io/File;
 
     .end local v0    # "extCacheDir":Ljava/io/File;
@@ -1646,7 +1646,7 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 605
+    .line 608
     .restart local v0    # "extCacheDir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1654,17 +1654,17 @@
 
     if-nez v2, :cond_1b
 
-    .line 607
+    .line 610
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result v2
 
     if-nez v2, :cond_1b
 
-    .line 608
+    .line 611
     const/4 v0, 0x0
 
-    .line 611
+    .line 614
     :cond_1b
     return-object v0
 .end method
@@ -1724,38 +1724,54 @@
     throw v0
 .end method
 
-.method private static getInternalCacheDirectory(Landroid/content/Context;)Ljava/io/File;
-    .registers 3
+.method static getInternalCacheDirectory(Landroid/content/Context;)Ljava/io/File;
+    .registers 4
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 616
+    .line 619
+    if-nez p0, :cond_4
+
+    .line 620
+    const/4 v0, 0x0
+
+    .line 627
+    :cond_3
+    :goto_3
+    return-object v0
+
+    .line 621
+    :cond_4
+    new-instance v0, Ljava/io/File;
+
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 617
+    const-string v2, ".mmsyscache"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    .line 622
     .local v0, "cacheDir":Ljava/io/File;
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
-    if-nez v1, :cond_13
+    if-nez v1, :cond_3
 
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result v1
 
-    if-nez v1, :cond_13
+    if-nez v1, :cond_3
 
-    .line 619
+    .line 624
     const/4 v0, 0x0
 
-    .line 622
-    :cond_13
-    return-object v0
+    goto :goto_3
 .end method
 
 .method static declared-synchronized getNextCachedAd(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
@@ -1819,12 +1835,12 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 585
+    .line 588
     invoke-static {p0, p1}, Lcom/millennialmedia/android/AdCache;->getDownloadFile(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 586
+    .line 589
     .local v0, "file":Ljava/io/File;
     if-eqz v0, :cond_e
 
@@ -1845,20 +1861,11 @@
     goto :goto_d
 .end method
 
-.method static isExternalStorageAvailable(Landroid/content/Context;)Z
-    .registers 3
-    .param p0, "context"    # Landroid/content/Context;
+.method static isExternalMounted()Z
+    .registers 2
 
     .prologue
-    .line 949
-    const-string v0, "android.permission.WRITE_EXTERNAL_STORAGE"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-nez v0, :cond_1a
-
+    .line 963
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v0
@@ -1869,21 +1876,61 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1a
-
-    sget-boolean v0, Lcom/millennialmedia/android/AdCache;->isExternalEnabled:Z
-
-    if-eqz v0, :cond_1a
-
-    const/4 v0, 0x1
-
-    :goto_19
     return v0
+.end method
 
-    :cond_1a
-    const/4 v0, 0x0
+.method static isExternalStorageAvailable(Landroid/content/Context;)Z
+    .registers 4
+    .param p0, "context"    # Landroid/content/Context;
 
-    goto :goto_19
+    .prologue
+    const/4 v1, 0x0
+
+    .line 954
+    if-nez p0, :cond_4
+
+    .line 957
+    :cond_3
+    :goto_3
+    return v1
+
+    .line 956
+    :cond_4
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 957
+    .local v0, "storageState":Ljava/lang/String;
+    const-string v2, "android.permission.WRITE_EXTERNAL_STORAGE"
+
+    invoke-virtual {p0, v2}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    const-string v2, "mounted"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    sget-boolean v2, Lcom/millennialmedia/android/AdCache;->isExternalEnabled:Z
+
+    if-eqz v2, :cond_3
+
+    const/4 v1, 0x1
+
+    goto :goto_3
 .end method
 
 .method static isInternalDir(Landroid/content/Context;Ljava/io/File;)Z
@@ -1892,12 +1939,12 @@
     .param p1, "dir"    # Ljava/io/File;
 
     .prologue
-    .line 943
+    .line 948
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->getInternalCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 944
+    .line 949
     .local v0, "internalDir":Ljava/io/File;
     if-eqz v0, :cond_e
 
@@ -1940,7 +1987,7 @@
 
     .line 350
     .local v9, "ad":Lcom/millennialmedia/android/CachedAd;
-    if-eqz v13, :cond_49
+    if-eqz v13, :cond_4b
 
     .line 352
     new-instance v1, Lcom/millennialmedia/android/AdCache$2;
@@ -1953,6 +2000,9 @@
 
     .line 360
     .local v11, "adFiles":[Ljava/io/File;
+    if-eqz v11, :cond_4b
+
+    .line 362
     move-object v12, v11
 
     .local v12, "arr$":[Ljava/io/File;
@@ -1968,72 +2018,72 @@
 
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .local v17, "objectInputStream":Ljava/io/ObjectInputStream;
-    :goto_18
+    :goto_1a
     move/from16 v0, v16
 
-    if-ge v15, v0, :cond_f7
+    if-ge v15, v0, :cond_f9
 
     aget-object v10, v12, v15
 
-    .line 364
+    .line 366
     .local v10, "adFile":Ljava/io/File;
-    if-eqz v10, :cond_26
+    if-eqz v10, :cond_28
 
-    :try_start_20
+    :try_start_22
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
-    :try_end_23
-    .catch Ljava/lang/Exception; {:try_start_20 .. :try_end_23} :catch_b9
-    .catchall {:try_start_20 .. :try_end_23} :catchall_d7
+    :try_end_25
+    .catch Ljava/lang/Exception; {:try_start_22 .. :try_end_25} :catch_bb
+    .catchall {:try_start_22 .. :try_end_25} :catchall_d9
 
     move-result v1
 
-    if-nez v1, :cond_35
-
-    .line 409
-    :cond_26
-    if-eqz v17, :cond_f3
+    if-nez v1, :cond_37
 
     .line 411
-    :try_start_28
-    invoke-virtual/range {v17 .. v17}, Ljava/io/ObjectInputStream;->close()V
-    :try_end_2b
-    .catch Ljava/io/IOException; {:try_start_28 .. :try_end_2b} :catch_31
+    :cond_28
+    if-eqz v17, :cond_f5
 
-    .line 412
+    .line 413
+    :try_start_2a
+    invoke-virtual/range {v17 .. v17}, Ljava/io/ObjectInputStream;->close()V
+    :try_end_2d
+    .catch Ljava/io/IOException; {:try_start_2a .. :try_end_2d} :catch_33
+
+    .line 414
     const/4 v8, 0x0
 
-    .line 360
+    .line 362
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :cond_2c
-    :goto_2c
+    :cond_2e
+    :goto_2e
     add-int/lit8 v15, v15, 0x1
 
     move-object/from16 v17, v8
 
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
-    goto :goto_18
+    goto :goto_1a
 
-    .line 415
-    :catch_31
+    .line 417
+    :catch_33
     move-exception v1
 
     move-object/from16 v8, v17
 
-    .line 417
+    .line 419
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    goto :goto_2c
-
-    .line 366
-    .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :cond_35
-    if-nez p1, :cond_5c
+    goto :goto_2e
 
     .line 368
-    :try_start_37
+    .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
+    .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
+    :cond_37
+    if-nez p1, :cond_5e
+
+    .line 370
+    :try_start_39
     invoke-virtual {v10}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -2041,27 +2091,27 @@
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v1}, Lcom/millennialmedia/android/AdCache$Iterator;->callback(Ljava/lang/String;)Z
-    :try_end_40
-    .catch Ljava/lang/Exception; {:try_start_37 .. :try_end_40} :catch_b9
-    .catchall {:try_start_37 .. :try_end_40} :catchall_d7
+    :try_end_42
+    .catch Ljava/lang/Exception; {:try_start_39 .. :try_end_42} :catch_bb
+    .catchall {:try_start_39 .. :try_end_42} :catchall_d9
 
     move-result v1
 
-    if-nez v1, :cond_51
-
-    .line 409
-    if-eqz v17, :cond_f7
+    if-nez v1, :cond_53
 
     .line 411
-    :try_start_45
-    invoke-virtual/range {v17 .. v17}, Ljava/io/ObjectInputStream;->close()V
-    :try_end_48
-    .catch Ljava/io/IOException; {:try_start_45 .. :try_end_48} :catch_4d
+    if-eqz v17, :cond_f9
 
-    .line 412
+    .line 413
+    :try_start_47
+    invoke-virtual/range {v17 .. v17}, Ljava/io/ObjectInputStream;->close()V
+    :try_end_4a
+    .catch Ljava/io/IOException; {:try_start_47 .. :try_end_4a} :catch_4f
+
+    .line 414
     const/4 v8, 0x0
 
-    .line 421
+    .line 424
     .end local v10    # "adFile":Ljava/io/File;
     .end local v11    # "adFiles":[Ljava/io/File;
     .end local v12    # "arr$":[Ljava/io/File;
@@ -2069,14 +2119,14 @@
     .end local v16    # "len$":I
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :cond_49
-    :goto_49
+    :cond_4b
+    :goto_4b
     invoke-virtual/range {p2 .. p2}, Lcom/millennialmedia/android/AdCache$Iterator;->done()V
 
-    .line 422
+    .line 425
     return-void
 
-    .line 415
+    .line 417
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v10    # "adFile":Ljava/io/File;
     .restart local v11    # "adFiles":[Ljava/io/File;
@@ -2084,53 +2134,53 @@
     .restart local v15    # "i$":I
     .restart local v16    # "len$":I
     .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :catch_4d
+    :catch_4f
     move-exception v1
 
     move-object/from16 v8, v17
 
-    .line 417
+    .line 419
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    goto :goto_49
-
-    .line 409
-    .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :cond_51
-    if-eqz v17, :cond_f3
+    goto :goto_4b
 
     .line 411
-    :try_start_53
-    invoke-virtual/range {v17 .. v17}, Ljava/io/ObjectInputStream;->close()V
-    :try_end_56
-    .catch Ljava/io/IOException; {:try_start_53 .. :try_end_56} :catch_58
+    .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
+    .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
+    :cond_53
+    if-eqz v17, :cond_f5
 
-    .line 412
+    .line 413
+    :try_start_55
+    invoke-virtual/range {v17 .. v17}, Ljava/io/ObjectInputStream;->close()V
+    :try_end_58
+    .catch Ljava/io/IOException; {:try_start_55 .. :try_end_58} :catch_5a
+
+    .line 414
     const/4 v8, 0x0
 
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    goto :goto_2c
+    goto :goto_2e
 
-    .line 415
+    .line 417
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :catch_58
+    :catch_5a
     move-exception v1
 
     move-object/from16 v8, v17
 
-    .line 417
+    .line 419
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    goto :goto_2c
+    goto :goto_2e
 
-    .line 373
+    .line 375
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :cond_5c
-    :try_start_5c
+    :cond_5e
+    :try_start_5e
     new-instance v8, Ljava/io/ObjectInputStream;
 
     new-instance v1, Ljava/io/FileInputStream;
@@ -2138,19 +2188,19 @@
     invoke-direct {v1, v10}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
     invoke-direct {v8, v1}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
-    :try_end_66
-    .catch Ljava/lang/Exception; {:try_start_5c .. :try_end_66} :catch_b9
-    .catchall {:try_start_5c .. :try_end_66} :catchall_d7
+    :try_end_68
+    .catch Ljava/lang/Exception; {:try_start_5e .. :try_end_68} :catch_bb
+    .catchall {:try_start_5e .. :try_end_68} :catchall_d9
 
-    .line 375
+    .line 377
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :try_start_66
+    :try_start_68
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->readInt()I
 
     move-result v3
 
-    .line 376
+    .line 378
     .local v3, "type":I
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
@@ -2158,7 +2208,7 @@
 
     check-cast v4, Ljava/util/Date;
 
-    .line 377
+    .line 379
     .local v4, "expiration":Ljava/util/Date;
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
@@ -2166,21 +2216,21 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 378
+    .line 380
     .local v5, "acid":Ljava/lang/String;
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->readLong()J
 
     move-result-wide v6
 
-    .line 379
+    .line 381
     .local v6, "deferredViewStart":J
     const/4 v1, 0x1
 
     move/from16 v0, p1
 
-    if-ne v0, v1, :cond_96
+    if-ne v0, v1, :cond_98
 
-    .line 381
+    .line 383
     invoke-virtual {v10}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -2191,34 +2241,34 @@
 
     move-result v1
 
-    if-nez v1, :cond_b1
+    if-nez v1, :cond_b3
 
-    .line 383
+    .line 385
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
-    :try_end_8e
-    .catch Ljava/lang/Exception; {:try_start_66 .. :try_end_8e} :catch_f1
-    .catchall {:try_start_66 .. :try_end_8e} :catchall_ef
+    :try_end_90
+    .catch Ljava/lang/Exception; {:try_start_68 .. :try_end_90} :catch_f3
+    .catchall {:try_start_68 .. :try_end_90} :catchall_f1
 
-    .line 384
+    .line 386
     const/4 v8, 0x0
-
-    .line 409
-    if-eqz v8, :cond_49
 
     .line 411
-    :try_start_91
-    invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
-    :try_end_94
-    .catch Ljava/io/IOException; {:try_start_91 .. :try_end_94} :catch_e1
+    if-eqz v8, :cond_4b
 
-    .line 412
+    .line 413
+    :try_start_93
+    invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
+    :try_end_96
+    .catch Ljava/io/IOException; {:try_start_93 .. :try_end_96} :catch_e3
+
+    .line 414
     const/4 v8, 0x0
 
-    goto :goto_49
+    goto :goto_4b
 
-    .line 391
-    :cond_96
-    :try_start_96
+    .line 393
+    :cond_98
+    :try_start_98
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v1
@@ -2229,71 +2279,71 @@
 
     move-object v9, v0
 
-    .line 392
+    .line 394
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v9}, Lcom/millennialmedia/android/AdCache$Iterator;->callback(Lcom/millennialmedia/android/CachedAd;)Z
 
     move-result v1
 
-    if-nez v1, :cond_b1
+    if-nez v1, :cond_b3
 
-    .line 394
+    .line 396
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
-    :try_end_a9
-    .catch Ljava/lang/Exception; {:try_start_96 .. :try_end_a9} :catch_f1
-    .catchall {:try_start_96 .. :try_end_a9} :catchall_ef
+    :try_end_ab
+    .catch Ljava/lang/Exception; {:try_start_98 .. :try_end_ab} :catch_f3
+    .catchall {:try_start_98 .. :try_end_ab} :catchall_f1
 
-    .line 395
+    .line 397
     const/4 v8, 0x0
-
-    .line 409
-    if-eqz v8, :cond_49
 
     .line 411
-    :try_start_ac
-    invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
-    :try_end_af
-    .catch Ljava/io/IOException; {:try_start_ac .. :try_end_af} :catch_e4
+    if-eqz v8, :cond_4b
 
-    .line 412
+    .line 413
+    :try_start_ae
+    invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
+    :try_end_b1
+    .catch Ljava/io/IOException; {:try_start_ae .. :try_end_b1} :catch_e6
+
+    .line 414
     const/4 v8, 0x0
 
-    goto :goto_49
-
-    .line 409
-    :cond_b1
-    if-eqz v8, :cond_2c
+    goto :goto_4b
 
     .line 411
-    :try_start_b3
-    invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
-    :try_end_b6
-    .catch Ljava/io/IOException; {:try_start_b3 .. :try_end_b6} :catch_e7
+    :cond_b3
+    if-eqz v8, :cond_2e
 
-    .line 412
+    .line 413
+    :try_start_b5
+    invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
+    :try_end_b8
+    .catch Ljava/io/IOException; {:try_start_b5 .. :try_end_b8} :catch_e9
+
+    .line 414
     const/4 v8, 0x0
 
-    goto/16 :goto_2c
+    goto/16 :goto_2e
 
-    .line 400
+    .line 402
     .end local v3    # "type":I
     .end local v4    # "expiration":Ljava/util/Date;
     .end local v5    # "acid":Ljava/lang/String;
     .end local v6    # "deferredViewStart":J
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :catch_b9
+    :catch_bb
     move-exception v14
 
     move-object/from16 v8, v17
 
-    .line 402
+    .line 404
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .local v14, "e":Ljava/lang/Exception;
-    :goto_bc
-    :try_start_bc
+    :goto_be
+    :try_start_be
     const-string v1, "There was a problem reading the cached ad %s."
 
     const/4 v2, 0x1
@@ -2310,120 +2360,120 @@
 
     invoke-static {v1, v2}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 403
+    .line 405
     invoke-static {v14}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/Throwable;)V
-    :try_end_cf
-    .catchall {:try_start_bc .. :try_end_cf} :catchall_ef
-
-    .line 409
-    if-eqz v8, :cond_2c
+    :try_end_d1
+    .catchall {:try_start_be .. :try_end_d1} :catchall_f1
 
     .line 411
-    :try_start_d1
-    invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
-    :try_end_d4
-    .catch Ljava/io/IOException; {:try_start_d1 .. :try_end_d4} :catch_ea
+    if-eqz v8, :cond_2e
 
-    .line 412
+    .line 413
+    :try_start_d3
+    invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
+    :try_end_d6
+    .catch Ljava/io/IOException; {:try_start_d3 .. :try_end_d6} :catch_ec
+
+    .line 414
     const/4 v8, 0x0
 
-    goto/16 :goto_2c
+    goto/16 :goto_2e
 
-    .line 407
+    .line 409
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .end local v14    # "e":Ljava/lang/Exception;
     .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :catchall_d7
+    :catchall_d9
     move-exception v1
 
     move-object/from16 v8, v17
 
-    .line 409
+    .line 411
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :goto_da
-    if-eqz v8, :cond_e0
+    :goto_dc
+    if-eqz v8, :cond_e2
 
-    .line 411
-    :try_start_dc
+    .line 413
+    :try_start_de
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
-    :try_end_df
-    .catch Ljava/io/IOException; {:try_start_dc .. :try_end_df} :catch_ed
+    :try_end_e1
+    .catch Ljava/io/IOException; {:try_start_de .. :try_end_e1} :catch_ef
 
-    .line 412
+    .line 414
     const/4 v8, 0x0
 
-    .line 417
-    :cond_e0
-    :goto_e0
+    .line 419
+    :cond_e2
+    :goto_e2
     throw v1
 
-    .line 415
+    .line 417
     .restart local v3    # "type":I
     .restart local v4    # "expiration":Ljava/util/Date;
     .restart local v5    # "acid":Ljava/lang/String;
     .restart local v6    # "deferredViewStart":J
-    :catch_e1
+    :catch_e3
     move-exception v1
 
-    goto/16 :goto_49
+    goto/16 :goto_4b
 
-    :catch_e4
+    :catch_e6
     move-exception v1
 
-    goto/16 :goto_49
+    goto/16 :goto_4b
 
-    :catch_e7
+    :catch_e9
     move-exception v1
 
-    goto/16 :goto_2c
+    goto/16 :goto_2e
 
     .end local v3    # "type":I
     .end local v4    # "expiration":Ljava/util/Date;
     .end local v5    # "acid":Ljava/lang/String;
     .end local v6    # "deferredViewStart":J
     .restart local v14    # "e":Ljava/lang/Exception;
-    :catch_ea
+    :catch_ec
     move-exception v1
 
-    goto/16 :goto_2c
+    goto/16 :goto_2e
 
     .end local v14    # "e":Ljava/lang/Exception;
-    :catch_ed
+    :catch_ef
     move-exception v2
 
-    goto :goto_e0
+    goto :goto_e2
 
-    .line 407
-    :catchall_ef
+    .line 409
+    :catchall_f1
     move-exception v1
 
-    goto :goto_da
+    goto :goto_dc
 
-    .line 400
-    :catch_f1
+    .line 402
+    :catch_f3
     move-exception v14
 
-    goto :goto_bc
+    goto :goto_be
 
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :cond_f3
+    :cond_f5
     move-object/from16 v8, v17
 
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    goto/16 :goto_2c
+    goto/16 :goto_2e
 
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .end local v10    # "adFile":Ljava/io/File;
     .restart local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
-    :cond_f7
+    :cond_f9
     move-object/from16 v8, v17
 
     .end local v17    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
-    goto/16 :goto_49
+    goto/16 :goto_4b
 .end method
 
 .method static load(Landroid/content/Context;Ljava/lang/String;)Lcom/millennialmedia/android/CachedAd;
@@ -2434,7 +2484,7 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 814
+    .line 819
     if-eqz p1, :cond_b
 
     const-string v11, ""
@@ -2448,38 +2498,38 @@
     :cond_b
     move-object v1, v10
 
-    .line 860
+    .line 865
     :cond_c
     :goto_c
     return-object v1
 
-    .line 817
+    .line 822
     :cond_d
     const/4 v2, 0x0
 
-    .line 818
+    .line 823
     .local v2, "cachedAdFile":Ljava/io/File;
     const/4 v8, 0x0
 
-    .line 821
+    .line 826
     .local v8, "objectInputStream":Ljava/io/ObjectInputStream;
     const/4 v1, 0x0
 
-    .line 823
+    .line 828
     .local v1, "ad":Lcom/millennialmedia/android/CachedAd;
     invoke-static {p0, p1}, Lcom/millennialmedia/android/AdCache;->getCachedAdFile(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v2
 
-    .line 824
+    .line 829
     if-nez v2, :cond_18
 
     move-object v1, v10
 
-    .line 825
+    .line 830
     goto :goto_c
 
-    .line 829
+    .line 834
     :cond_18
     :try_start_18
     new-instance v9, Ljava/io/ObjectInputStream;
@@ -2494,29 +2544,29 @@
     .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_22} :catch_58
     .catchall {:try_start_18 .. :try_end_22} :catchall_76
 
-    .line 831
+    .line 836
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .local v9, "objectInputStream":Ljava/io/ObjectInputStream;
     :try_start_22
     invoke-virtual {v9}, Ljava/io/ObjectInputStream;->readInt()I
 
-    .line 832
+    .line 837
     invoke-virtual {v9}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Ljava/util/Date;
 
-    .line 833
+    .line 838
     .local v6, "expiration":Ljava/util/Date;
     invoke-virtual {v9}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
-    .line 834
+    .line 839
     invoke-virtual {v9}, Ljava/io/ObjectInputStream;->readLong()J
 
     move-result-wide v3
 
-    .line 836
+    .line 841
     .local v3, "deferredViewStart":J
     invoke-virtual {v9}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
@@ -2532,10 +2582,10 @@
     .catch Ljava/lang/Exception; {:try_start_22 .. :try_end_3a} :catch_82
     .catchall {:try_start_22 .. :try_end_3a} :catchall_7f
 
-    .line 852
+    .line 857
     if-eqz v9, :cond_3f
 
-    .line 853
+    .line 858
     :try_start_3c
     invoke-virtual {v9}, Ljava/io/ObjectInputStream;->close()V
     :try_end_3f
@@ -2544,12 +2594,12 @@
     :cond_3f
     move-object v8, v9
 
-    .line 857
+    .line 862
     .end local v9    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     goto :goto_c
 
-    .line 855
+    .line 860
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v9    # "objectInputStream":Ljava/io/ObjectInputStream;
     :catch_41
@@ -2557,18 +2607,18 @@
 
     move-object v8, v9
 
-    .line 858
+    .line 863
     .end local v9    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     goto :goto_c
 
-    .line 838
+    .line 843
     .end local v3    # "deferredViewStart":J
     .end local v6    # "expiration":Ljava/util/Date;
     :catch_44
     move-exception v7
 
-    .line 840
+    .line 845
     .local v7, "fe":Ljava/io/FileNotFoundException;
     :goto_45
     :try_start_45
@@ -2586,10 +2636,10 @@
     :try_end_50
     .catchall {:try_start_45 .. :try_end_50} :catchall_76
 
-    .line 852
+    .line 857
     if-eqz v8, :cond_c
 
-    .line 853
+    .line 858
     :try_start_52
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
     :try_end_55
@@ -2597,18 +2647,18 @@
 
     goto :goto_c
 
-    .line 855
+    .line 860
     :catch_56
     move-exception v10
 
     goto :goto_c
 
-    .line 842
+    .line 847
     .end local v7    # "fe":Ljava/io/FileNotFoundException;
     :catch_58
     move-exception v5
 
-    .line 844
+    .line 849
     .local v5, "e":Ljava/lang/Exception;
     :goto_59
     :try_start_59
@@ -2624,22 +2674,22 @@
 
     invoke-static {v10, v11}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 845
+    .line 850
     invoke-virtual {v5}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v10
 
     invoke-static {v10}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 846
+    .line 851
     invoke-static {v5}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/Throwable;)V
     :try_end_6e
     .catchall {:try_start_59 .. :try_end_6e} :catchall_76
 
-    .line 852
+    .line 857
     if-eqz v8, :cond_c
 
-    .line 853
+    .line 858
     :try_start_70
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
     :try_end_73
@@ -2647,39 +2697,39 @@
 
     goto :goto_c
 
-    .line 855
+    .line 860
     :catch_74
     move-exception v10
 
     goto :goto_c
 
-    .line 850
+    .line 855
     .end local v5    # "e":Ljava/lang/Exception;
     :catchall_76
     move-exception v10
 
-    .line 852
+    .line 857
     :goto_77
     if-eqz v8, :cond_7c
 
-    .line 853
+    .line 858
     :try_start_79
     invoke-virtual {v8}, Ljava/io/ObjectInputStream;->close()V
     :try_end_7c
     .catch Ljava/io/IOException; {:try_start_79 .. :try_end_7c} :catch_7d
 
-    .line 857
+    .line 862
     :cond_7c
     :goto_7c
     throw v10
 
-    .line 855
+    .line 860
     :catch_7d
     move-exception v11
 
     goto :goto_7c
 
-    .line 850
+    .line 855
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v9    # "objectInputStream":Ljava/io/ObjectInputStream;
     :catchall_7f
@@ -2691,7 +2741,7 @@
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     goto :goto_77
 
-    .line 842
+    .line 847
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v9    # "objectInputStream":Ljava/io/ObjectInputStream;
     :catch_82
@@ -2703,7 +2753,7 @@
     .restart local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     goto :goto_59
 
-    .line 838
+    .line 843
     .end local v8    # "objectInputStream":Ljava/io/ObjectInputStream;
     .restart local v9    # "objectInputStream":Ljava/io/ObjectInputStream;
     :catch_85
@@ -3176,7 +3226,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 533
+    .line 536
     const/4 v2, 0x2
 
     new-instance v3, Lcom/millennialmedia/android/AdCache$5;
@@ -3185,23 +3235,23 @@
 
     invoke-static {p0, v2, v3}, Lcom/millennialmedia/android/AdCache;->iterateCachedAds(Landroid/content/Context;ILcom/millennialmedia/android/AdCache$Iterator;)V
 
-    .line 546
+    .line 549
     sput-object v4, Lcom/millennialmedia/android/AdCache;->cachedVideoSet:Ljava/util/Set;
 
-    .line 547
+    .line 550
     sput-object v4, Lcom/millennialmedia/android/AdCache;->cachedVideoList:Ljava/lang/String;
 
-    .line 548
+    .line 551
     const/4 v2, 0x0
 
     sput-boolean v2, Lcom/millennialmedia/android/AdCache;->cachedVideoListLoaded:Z
 
-    .line 550
+    .line 553
     sget-object v2, Lcom/millennialmedia/android/AdCache;->nextCachedAdHashMap:Ljava/util/Map;
 
     if-eqz v2, :cond_2f
 
-    .line 552
+    .line 555
     sget-object v2, Lcom/millennialmedia/android/AdCache;->nextCachedAdHashMap:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -3226,13 +3276,13 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 553
+    .line 556
     .local v1, "key":Ljava/lang/String;
     invoke-static {p0, v1, v4}, Lcom/millennialmedia/android/AdCache;->setNextCachedAd(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1f
 
-    .line 556
+    .line 559
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "key":Ljava/lang/String;
     :cond_2f
@@ -3240,7 +3290,7 @@
 
     if-eqz v2, :cond_4d
 
-    .line 558
+    .line 561
     sget-object v2, Lcom/millennialmedia/android/AdCache;->incompleteDownloadHashMap:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -3265,13 +3315,13 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 559
+    .line 562
     .restart local v1    # "key":Ljava/lang/String;
     invoke-static {p0, v1, v4}, Lcom/millennialmedia/android/AdCache;->setIncompleteDownload(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3d
 
-    .line 561
+    .line 564
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "key":Ljava/lang/String;
     :cond_4d
@@ -3288,27 +3338,27 @@
 
     const/4 v6, 0x0
 
-    .line 868
+    .line 873
     const/4 v0, 0x0
 
-    .line 869
+    .line 874
     .local v0, "cachedAdFile":Ljava/io/File;
     const/4 v2, 0x0
 
-    .line 870
+    .line 875
     .local v2, "lockFile":Ljava/io/File;
     const/4 v4, 0x0
 
-    .line 872
+    .line 877
     .local v4, "objectOutputStream":Ljava/io/ObjectOutputStream;
     if-nez p1, :cond_8
 
-    .line 927
+    .line 932
     :cond_7
     :goto_7
     return v6
 
-    .line 875
+    .line 880
     :cond_8
     invoke-virtual {p1}, Lcom/millennialmedia/android/CachedAd;->getId()Ljava/lang/String;
 
@@ -3318,10 +3368,10 @@
 
     move-result-object v0
 
-    .line 876
+    .line 881
     if-eqz v0, :cond_7
 
-    .line 879
+    .line 884
     const-string v8, "Saving CachedAd %s to %s"
 
     const/4 v9, 0x2
@@ -3338,7 +3388,7 @@
 
     invoke-static {v8, v9}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 884
+    .line 889
     :try_start_22
     new-instance v3, Ljava/io/File;
 
@@ -3373,7 +3423,7 @@
     .catch Ljava/lang/Exception; {:try_start_22 .. :try_end_42} :catch_99
     .catchall {:try_start_22 .. :try_end_42} :catchall_c0
 
-    .line 885
+    .line 890
     .end local v2    # "lockFile":Ljava/io/File;
     .local v3, "lockFile":Ljava/io/File;
     :try_start_42
@@ -3383,7 +3433,7 @@
 
     if-nez v8, :cond_61
 
-    .line 887
+    .line 892
     const-string v7, "Could not save the cached ad %s. Ad was locked."
 
     const/4 v8, 0x1
@@ -3403,14 +3453,14 @@
     .catch Ljava/lang/Exception; {:try_start_42 .. :try_end_57} :catch_d8
     .catchall {:try_start_42 .. :try_end_57} :catchall_d1
 
-    .line 911
+    .line 916
     :try_start_57
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 912
+    .line 917
     if-eqz v4, :cond_5f
 
-    .line 913
+    .line 918
     invoke-virtual {v4}, Ljava/io/ObjectOutputStream;->close()V
     :try_end_5f
     .catch Ljava/io/IOException; {:try_start_57 .. :try_end_5f} :catch_e1
@@ -3419,12 +3469,12 @@
     :goto_5f
     move-object v2, v3
 
-    .line 917
+    .line 922
     .end local v3    # "lockFile":Ljava/io/File;
     .restart local v2    # "lockFile":Ljava/io/File;
     goto :goto_7
 
-    .line 891
+    .line 896
     .end local v2    # "lockFile":Ljava/io/File;
     .restart local v3    # "lockFile":Ljava/io/File;
     :cond_61
@@ -3440,7 +3490,7 @@
     .catch Ljava/lang/Exception; {:try_start_61 .. :try_end_6b} :catch_d8
     .catchall {:try_start_61 .. :try_end_6b} :catchall_d1
 
-    .line 893
+    .line 898
     .end local v4    # "objectOutputStream":Ljava/io/ObjectOutputStream;
     .local v5, "objectOutputStream":Ljava/io/ObjectOutputStream;
     :try_start_6b
@@ -3450,40 +3500,40 @@
 
     invoke-virtual {v5, v8}, Ljava/io/ObjectOutputStream;->writeInt(I)V
 
-    .line 894
+    .line 899
     iget-object v8, p1, Lcom/millennialmedia/android/CachedAd;->expiration:Ljava/util/Date;
 
     invoke-virtual {v5, v8}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
-    .line 895
+    .line 900
     iget-object v8, p1, Lcom/millennialmedia/android/CachedAd;->acid:Ljava/lang/String;
 
     invoke-virtual {v5, v8}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
-    .line 896
+    .line 901
     iget-wide v8, p1, Lcom/millennialmedia/android/CachedAd;->deferredViewStart:J
 
     invoke-virtual {v5, v8, v9}, Ljava/io/ObjectOutputStream;->writeLong(J)V
 
-    .line 898
+    .line 903
     invoke-virtual {v5, p1}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
     :try_end_84
     .catch Ljava/lang/Exception; {:try_start_6b .. :try_end_84} :catch_db
     .catchall {:try_start_6b .. :try_end_84} :catchall_d4
 
-    .line 911
+    .line 916
     :try_start_84
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 912
+    .line 917
     if-eqz v5, :cond_8c
 
-    .line 913
+    .line 918
     invoke-virtual {v5}, Ljava/io/ObjectOutputStream;->close()V
     :try_end_8c
     .catch Ljava/io/IOException; {:try_start_84 .. :try_end_8c} :catch_df
 
-    .line 921
+    .line 926
     :cond_8c
     :goto_8c
     invoke-virtual {p1, p0}, Lcom/millennialmedia/android/CachedAd;->saveAssets(Landroid/content/Context;)Z
@@ -3492,7 +3542,7 @@
 
     if-nez v8, :cond_ca
 
-    .line 923
+    .line 928
     invoke-virtual {p1, p0}, Lcom/millennialmedia/android/CachedAd;->delete(Landroid/content/Context;)V
 
     move-object v4, v5
@@ -3501,16 +3551,16 @@
     .restart local v4    # "objectOutputStream":Ljava/io/ObjectOutputStream;
     move-object v2, v3
 
-    .line 924
+    .line 929
     .end local v3    # "lockFile":Ljava/io/File;
     .restart local v2    # "lockFile":Ljava/io/File;
     goto/16 :goto_7
 
-    .line 900
+    .line 905
     :catch_99
     move-exception v1
 
-    .line 902
+    .line 907
     .local v1, "e":Ljava/lang/Exception;
     :goto_9a
     :try_start_9a
@@ -3530,57 +3580,57 @@
 
     invoke-static {v7, v8}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 903
+    .line 908
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v7
 
     invoke-static {v7}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 904
+    .line 909
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/Throwable;)V
     :try_end_b3
     .catchall {:try_start_9a .. :try_end_b3} :catchall_c0
 
-    .line 911
+    .line 916
     :try_start_b3
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 912
+    .line 917
     if-eqz v4, :cond_7
 
-    .line 913
+    .line 918
     invoke-virtual {v4}, Ljava/io/ObjectOutputStream;->close()V
     :try_end_bb
     .catch Ljava/io/IOException; {:try_start_b3 .. :try_end_bb} :catch_bd
 
     goto/16 :goto_7
 
-    .line 915
+    .line 920
     :catch_bd
     move-exception v7
 
     goto/16 :goto_7
 
-    .line 909
+    .line 914
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_c0
     move-exception v6
 
-    .line 911
+    .line 916
     :goto_c1
     :try_start_c1
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 912
+    .line 917
     if-eqz v4, :cond_c9
 
-    .line 913
+    .line 918
     invoke-virtual {v4}, Ljava/io/ObjectOutputStream;->close()V
     :try_end_c9
     .catch Ljava/io/IOException; {:try_start_c1 .. :try_end_c9} :catch_cf
 
-    .line 917
+    .line 922
     :cond_c9
     :goto_c9
     throw v6
@@ -3600,16 +3650,16 @@
     .restart local v2    # "lockFile":Ljava/io/File;
     move v6, v7
 
-    .line 927
+    .line 932
     goto/16 :goto_7
 
-    .line 915
+    .line 920
     :catch_cf
     move-exception v7
 
     goto :goto_c9
 
-    .line 909
+    .line 914
     .end local v2    # "lockFile":Ljava/io/File;
     .restart local v3    # "lockFile":Ljava/io/File;
     :catchall_d1
@@ -3638,7 +3688,7 @@
     .restart local v2    # "lockFile":Ljava/io/File;
     goto :goto_c1
 
-    .line 900
+    .line 905
     .end local v2    # "lockFile":Ljava/io/File;
     .restart local v3    # "lockFile":Ljava/io/File;
     :catch_d8
@@ -3667,7 +3717,7 @@
     .restart local v2    # "lockFile":Ljava/io/File;
     goto :goto_9a
 
-    .line 915
+    .line 920
     .end local v2    # "lockFile":Ljava/io/File;
     .end local v4    # "objectOutputStream":Ljava/io/ObjectOutputStream;
     .restart local v3    # "lockFile":Ljava/io/File;
@@ -3982,10 +4032,10 @@
     .param p0, "on"    # Z
 
     .prologue
-    .line 956
+    .line 970
     sput-boolean p0, Lcom/millennialmedia/android/AdCache;->isExternalEnabled:Z
 
-    .line 957
+    .line 971
     return-void
 .end method
 

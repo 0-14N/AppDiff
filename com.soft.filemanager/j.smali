@@ -60,7 +60,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/soft/filemanager/activities/AbstractBaseActivity;->k()Lcom/soft/filemanager/FileManagerApplication;
+    invoke-virtual {v0}, Lcom/soft/filemanager/activities/AbstractBaseActivity;->j()Lcom/soft/filemanager/FileManagerApplication;
 
     move-result-object v0
 
@@ -157,7 +157,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/soft/filemanager/activities/AbstractBaseActivity;->k()Lcom/soft/filemanager/FileManagerApplication;
+    invoke-virtual {v2}, Lcom/soft/filemanager/activities/AbstractBaseActivity;->j()Lcom/soft/filemanager/FileManagerApplication;
 
     move-result-object v2
 

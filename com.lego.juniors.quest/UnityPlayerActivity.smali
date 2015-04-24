@@ -80,8 +80,10 @@
     .line 17
     invoke-super {p0, p1}, Lcom/unity3d/player/UnityPlayerActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/doudou/network/Network;->init(Landroid/app/Activity;)V
+
     .line 21
-    :try_start_3
+    :try_start_6
     new-instance v1, Lcom/prime31/ActivityProxyObjectHelper;
 
     invoke-direct {v1, p0}, Lcom/prime31/ActivityProxyObjectHelper;-><init>(Landroid/app/Activity;)V
@@ -92,15 +94,15 @@
     iget-object v1, p0, Lcom/prime31/UnityPlayerActivity;->_proxyHelper:Lcom/prime31/ActivityProxyObjectHelper;
 
     invoke-virtual {v1, p1}, Lcom/prime31/ActivityProxyObjectHelper;->onCreate(Landroid/os/Bundle;)V
-    :try_end_f
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_f} :catch_10
+    :try_end_12
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_12} :catch_13
 
     .line 28
-    :goto_f
+    :goto_12
     return-void
 
     .line 24
-    :catch_10
+    :catch_13
     move-exception v0
 
     .line 26
@@ -127,7 +129,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_f
+    goto :goto_12
 .end method
 
 .method protected onDestroy()V

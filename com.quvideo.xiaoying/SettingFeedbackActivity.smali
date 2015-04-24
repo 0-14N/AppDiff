@@ -105,7 +105,7 @@
     .registers 8
 
     .prologue
-    const v5, 0x7f0a02d4
+    const v5, 0x7f0a02b1
 
     const/4 v1, 0x1
 
@@ -203,7 +203,7 @@
     if-eqz v4, :cond_5a
 
     .line 136
-    const v1, 0x7f0a02d6
+    const v1, 0x7f0a02b3
 
     invoke-static {p0, v1, v0}, Lcom/quvideo/xiaoying/videoeditor/util/ToastUtils;->show(Landroid/content/Context;II)V
 
@@ -250,9 +250,9 @@
 
     const-string/jumbo v4, "user.feedback"
 
-    new-instance v5, Lye;
+    new-instance v5, Lrl;
 
-    invoke-direct {v5, p0}, Lye;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingFeedbackActivity;)V
+    invoke-direct {v5, p0}, Lrl;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingFeedbackActivity;)V
 
     invoke-virtual {v0, v4, v5}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -311,7 +311,7 @@
     if-nez v4, :cond_b3
 
     .line 153
-    const v4, 0x7f0a02d5
+    const v4, 0x7f0a02b2
 
     invoke-static {p0, v4, v0}, Lcom/quvideo/xiaoying/videoeditor/util/ToastUtils;->show(Landroid/content/Context;II)V
 
@@ -362,7 +362,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 55
-    const v0, 0x7f060567
+    const v0, 0x7f060552
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingFeedbackActivity;->findViewById(I)Landroid/view/View;
 
@@ -378,7 +378,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 57
-    const v0, 0x7f060564
+    const v0, 0x7f06054f
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingFeedbackActivity;->findViewById(I)Landroid/view/View;
 
@@ -389,7 +389,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingFeedbackActivity;->o:Landroid/widget/EditText;
 
     .line 58
-    const v0, 0x7f060566
+    const v0, 0x7f060551
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingFeedbackActivity;->findViewById(I)Landroid/view/View;
 
@@ -402,9 +402,9 @@
     .line 59
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingFeedbackActivity;->o:Landroid/widget/EditText;
 
-    new-instance v1, Lyd;
+    new-instance v1, Lrk;
 
-    invoke-direct {v1, p0}, Lyd;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingFeedbackActivity;)V
+    invoke-direct {v1, p0}, Lrk;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingFeedbackActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 

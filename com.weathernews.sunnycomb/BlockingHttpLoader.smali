@@ -438,7 +438,7 @@
     .line 321
     const-string v4, "gmail"
 
-    invoke-virtual {v2, p0}, Lcom/weathernews/sunnycomb/util/UtilProf;->getAccountMD5(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {v2, p0}, Lcom/weathernews/sunnycomb/util/UtilProf;->getAccount(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -656,7 +656,7 @@
     .line 366
     const-string v5, "gmail"
 
-    invoke-virtual {v3, p0}, Lcom/weathernews/sunnycomb/util/UtilProf;->getAccountMD5(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {v3, p0}, Lcom/weathernews/sunnycomb/util/UtilProf;->getAccount(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -672,17 +672,17 @@
     :goto_7b
     invoke-virtual {v4, v7, v5}, Lcom/weathernews/libwniutil/UtilUrl;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/weathernews/libwniutil/UtilUrl;
 
-    .line 368
+    .line 369
     const-string v5, "total_size"
 
     invoke-virtual {v4, v5, p2}, Lcom/weathernews/libwniutil/UtilUrl;->addParam(Ljava/lang/String;I)Lcom/weathernews/libwniutil/UtilUrl;
 
-    .line 369
+    .line 370
     const-string v5, "sent_size"
 
     invoke-virtual {v4, v5, p3}, Lcom/weathernews/libwniutil/UtilUrl;->addParam(Ljava/lang/String;I)Lcom/weathernews/libwniutil/UtilUrl;
 
-    .line 370
+    .line 371
     const-string v5, "sent_time"
 
     const-wide v7, 0x408f400000000000L    # 1000.0
@@ -691,28 +691,28 @@
 
     invoke-virtual {v4, v5, v7, v8}, Lcom/weathernews/libwniutil/UtilUrl;->addParam(Ljava/lang/String;D)Lcom/weathernews/libwniutil/UtilUrl;
 
-    .line 371
+    .line 372
     const-string v5, "lat"
 
     move-object/from16 v0, p6
 
     invoke-virtual {v4, v5, v0}, Lcom/weathernews/libwniutil/UtilUrl;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/weathernews/libwniutil/UtilUrl;
 
-    .line 372
+    .line 373
     const-string v5, "lon"
 
     move-object/from16 v0, p7
 
     invoke-virtual {v4, v5, v0}, Lcom/weathernews/libwniutil/UtilUrl;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/weathernews/libwniutil/UtilUrl;
 
-    .line 374
+    .line 375
     const-string v5, "device"
 
     sget-object v7, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     invoke-virtual {v4, v5, v7}, Lcom/weathernews/libwniutil/UtilUrl;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/weathernews/libwniutil/UtilUrl;
 
-    .line 376
+    .line 377
     const-string v5, "network"
 
     invoke-static {p0}, Lcom/weathernews/sunnycomb/loader/BlockingHttpLoader;->getNetworkName(Landroid/content/Context;)Ljava/lang/String;
@@ -721,7 +721,7 @@
 
     invoke-virtual {v4, v5, v7}, Lcom/weathernews/libwniutil/UtilUrl;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/weathernews/libwniutil/UtilUrl;
 
-    .line 378
+    .line 379
     const-string v5, "locale"
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -734,7 +734,7 @@
 
     invoke-virtual {v4, v5, v7}, Lcom/weathernews/libwniutil/UtilUrl;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/weathernews/libwniutil/UtilUrl;
 
-    .line 379
+    .line 380
     const-string v5, "tz"
 
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
@@ -750,7 +750,7 @@
     .catch Ljava/lang/Exception; {:try_start_3a .. :try_end_cc} :catch_e3
     .catchall {:try_start_3a .. :try_end_cc} :catchall_e0
 
-    .line 385
+    .line 386
     :goto_cc
     :try_start_cc
     new-instance v1, Lcom/weathernews/sunnycomb/loader/data/BlockingHttpLoaderData;
@@ -763,7 +763,7 @@
 
     invoke-direct {v1, v5, v7}, Lcom/weathernews/sunnycomb/loader/data/BlockingHttpLoaderData;-><init>(Ljava/lang/String;Lcom/weathernews/sunnycomb/loader/BlockingHttpLoader$BlockingHttpLoaderListener;)V
 
-    .line 386
+    .line 387
     .local v1, "item":Lcom/weathernews/sunnycomb/loader/data/BlockingHttpLoaderData;
     sget-object v5, Lcom/weathernews/sunnycomb/loader/BlockingHttpLoader;->blockingDeque:Ljava/util/concurrent/LinkedBlockingDeque;
 
@@ -771,7 +771,7 @@
     :try_end_db
     .catchall {:try_start_cc .. :try_end_db} :catchall_e0
 
-    .line 388
+    .line 389
     monitor-exit v6
 
     return-void
@@ -798,7 +798,7 @@
 
     throw v5
 
-    .line 382
+    .line 383
     .restart local v2    # "utilDevice":Lcom/weathernews/libwniutil/UtilDevice;
     .restart local v3    # "utilProf":Lcom/weathernews/sunnycomb/util/UtilProf;
     .restart local v4    # "utilUrl":Lcom/weathernews/libwniutil/UtilUrl;
@@ -1239,7 +1239,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 391
+    .line 392
     const-string v5, "connectivity"
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1248,31 +1248,31 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 392
+    .line 393
     .local v0, "connectivity":Landroid/net/ConnectivityManager;
     if-nez v0, :cond_c
 
-    .line 409
+    .line 410
     :cond_b
     :goto_b
     return-object v4
 
-    .line 395
+    .line 396
     :cond_c
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
-    .line 396
+    .line 397
     .local v1, "networkInfo":Landroid/net/NetworkInfo;
     if-eqz v1, :cond_b
 
-    .line 399
+    .line 400
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 400
+    .line 401
     .local v3, "typeName":Ljava/lang/String;
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
 
@@ -1280,7 +1280,7 @@
 
     if-nez v5, :cond_b
 
-    .line 403
+    .line 404
     const-string v5, "WIFI"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1289,12 +1289,12 @@
 
     if-eqz v5, :cond_27
 
-    .line 404
+    .line 405
     const-string v4, "WiFi"
 
     goto :goto_b
 
-    .line 405
+    .line 406
     :cond_27
     const-string v5, "mobile"
 
@@ -1304,7 +1304,7 @@
 
     if-eqz v5, :cond_b
 
-    .line 406
+    .line 407
     const-string v4, "phone"
 
     invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1313,7 +1313,7 @@
 
     check-cast v2, Landroid/telephony/TelephonyManager;
 
-    .line 407
+    .line 408
     .local v2, "telephonyManager":Landroid/telephony/TelephonyManager;
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getSimOperatorName()Ljava/lang/String;
 

@@ -28,15 +28,15 @@
     .registers 2
 
     .prologue
-    .line 46
+    .line 47
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 53
+    .line 54
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->STATUS:I
 
-    .line 46
+    .line 47
     return-void
 .end method
 
@@ -44,7 +44,7 @@
     .registers 1
 
     .prologue
-    .line 226
+    .line 230
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->checkNetworkStatus()V
 
     return-void
@@ -54,7 +54,7 @@
     .registers 4
 
     .prologue
-    .line 205
+    .line 209
     invoke-direct {p0, p1, p2}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->checkVersion(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -66,7 +66,7 @@
     .registers 1
 
     .prologue
-    .line 285
+    .line 292
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->moveToMain()V
 
     return-void
@@ -76,28 +76,28 @@
     .registers 3
 
     .prologue
-    .line 227
+    .line 231
     iget v0, p0, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->STATUS:I
 
     packed-switch v0, :pswitch_data_1a
 
-    .line 246
+    .line 250
     :goto_5
     return-void
 
-    .line 230
+    .line 234
     :pswitch_6
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->showUsePaidNetworkDialog()V
 
     goto :goto_5
 
-    .line 233
+    .line 237
     :pswitch_a
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->moveToMain()V
 
     goto :goto_5
 
-    .line 236
+    .line 240
     :pswitch_e
     const v0, 0x7f08003f
 
@@ -109,7 +109,7 @@
 
     goto :goto_5
 
-    .line 227
+    .line 231
     :pswitch_data_1a
     .packed-switch 0x0
         :pswitch_e
@@ -129,14 +129,14 @@
 
     const/4 v5, 0x0
 
-    .line 207
+    .line 211
     const-string v7, "\\."
 
     invoke-virtual {p1, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 208
+    .line 212
     .local v4, "oldVer":[Ljava/lang/String;
     const-string v7, "\\."
 
@@ -144,7 +144,7 @@
 
     move-result-object v3
 
-    .line 209
+    .line 213
     .local v3, "newVer":[Ljava/lang/String;
     array-length v7, v4
 
@@ -154,7 +154,7 @@
 
     array-length v2, v3
 
-    .line 210
+    .line 214
     .local v2, "minCount":I
     :goto_13
     array-length v7, v4
@@ -165,7 +165,7 @@
 
     array-length v1, v4
 
-    .line 211
+    .line 215
     .local v1, "maxCount":I
     :goto_18
     const/4 v0, 0x0
@@ -174,7 +174,7 @@
     :goto_19
     if-lt v0, v2, :cond_2f
 
-    .line 219
+    .line 223
     if-eq v1, v2, :cond_50
 
     array-length v7, v3
@@ -191,12 +191,12 @@
 
     if-lez v7, :cond_50
 
-    .line 223
+    .line 227
     :cond_2a
     :goto_2a
     return v5
 
-    .line 209
+    .line 213
     .end local v0    # "i":I
     .end local v1    # "maxCount":I
     .end local v2    # "minCount":I
@@ -205,14 +205,14 @@
 
     goto :goto_13
 
-    .line 210
+    .line 214
     .restart local v2    # "minCount":I
     :cond_2d
     array-length v1, v3
 
     goto :goto_18
 
-    .line 213
+    .line 217
     .restart local v0    # "i":I
     .restart local v1    # "maxCount":I
     :cond_2f
@@ -230,7 +230,7 @@
 
     if-gt v7, v8, :cond_2a
 
-    .line 215
+    .line 219
     aget-object v7, v3, v0
 
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -247,10 +247,10 @@
 
     move v5, v6
 
-    .line 216
+    .line 220
     goto :goto_2a
 
-    .line 211
+    .line 215
     :cond_4d
     add-int/lit8 v0, v0, 0x1
 
@@ -259,7 +259,7 @@
     :cond_50
     move v5, v6
 
-    .line 223
+    .line 227
     goto :goto_2a
 .end method
 
@@ -268,10 +268,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 303
+    .line 310
     const/4 v3, 0x0
 
-    .line 304
+    .line 311
     .local v3, "status":I
     const-string v4, "connectivity"
 
@@ -281,13 +281,13 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 305
+    .line 312
     .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;
 
     move-result-object v1
 
-    .line 306
+    .line 313
     .local v1, "netInfo":[Landroid/net/NetworkInfo;
     array-length v5, v1
 
@@ -296,14 +296,14 @@
     :goto_f
     if-lt v4, v5, :cond_12
 
-    .line 314
+    .line 321
     return v3
 
-    .line 306
+    .line 313
     :cond_12
     aget-object v2, v1, v4
 
-    .line 307
+    .line 314
     .local v2, "ni":Landroid/net/NetworkInfo;
     invoke-virtual {v2}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
 
@@ -323,17 +323,17 @@
 
     if-eqz v6, :cond_2a
 
-    .line 308
+    .line 315
     const/4 v3, 0x2
 
-    .line 306
+    .line 313
     :cond_27
     :goto_27
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_f
 
-    .line 309
+    .line 316
     :cond_2a
     invoke-virtual {v2}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
 
@@ -353,7 +353,7 @@
 
     if-eqz v6, :cond_27
 
-    .line 310
+    .line 317
     const/4 v3, 0x1
 
     goto :goto_27
@@ -366,14 +366,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 324
+    .line 331
     const/4 v2, 0x0
 
-    .line 325
+    .line 332
     .local v2, "haveConnectedWifi":Z
     const/4 v1, 0x0
 
-    .line 327
+    .line 334
     .local v1, "haveConnectedMobile":Z
     const-string v6, "connectivity"
 
@@ -383,13 +383,13 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 328
+    .line 335
     .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;
 
     move-result-object v3
 
-    .line 329
+    .line 336
     .local v3, "netInfo":[Landroid/net/NetworkInfo;
     array-length v7, v3
 
@@ -398,7 +398,7 @@
     :goto_11
     if-lt v6, v7, :cond_18
 
-    .line 337
+    .line 344
     if-nez v2, :cond_43
 
     if-nez v1, :cond_43
@@ -406,11 +406,11 @@
     :goto_17
     return v5
 
-    .line 329
+    .line 336
     :cond_18
     aget-object v4, v3, v6
 
-    .line 330
+    .line 337
     .local v4, "ni":Landroid/net/NetworkInfo;
     invoke-virtual {v4}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
 
@@ -424,17 +424,17 @@
 
     if-eqz v8, :cond_2d
 
-    .line 331
+    .line 338
     invoke-virtual {v4}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v8
 
     if-eqz v8, :cond_2d
 
-    .line 332
+    .line 339
     const/4 v2, 0x1
 
-    .line 333
+    .line 340
     :cond_2d
     invoke-virtual {v4}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
 
@@ -448,23 +448,23 @@
 
     if-eqz v8, :cond_40
 
-    .line 334
+    .line 341
     invoke-virtual {v4}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v8
 
     if-eqz v8, :cond_40
 
-    .line 335
+    .line 342
     const/4 v1, 0x1
 
-    .line 329
+    .line 336
     :cond_40
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_11
 
-    .line 337
+    .line 344
     .end local v4    # "ni":Landroid/net/NetworkInfo;
     :cond_43
     const/4 v5, 0x1
@@ -476,20 +476,20 @@
     .registers 5
 
     .prologue
-    .line 286
+    .line 293
     sget-object v0, Lcom/kia/android/moviesns/ApplicationImpl;->mainLoopHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/activity/IntroActivity$6;
 
     invoke-direct {v1, p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity$6;-><init>(Lcom/kia/android/moviesns/ui/activity/IntroActivity;)V
 
-    .line 293
+    .line 300
     const-wide/16 v2, 0x3e8
 
-    .line 286
+    .line 293
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 294
+    .line 301
     return-void
 .end method
 
@@ -497,7 +497,7 @@
     .registers 4
 
     .prologue
-    .line 260
+    .line 267
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -508,7 +508,7 @@
 
     move-result-object v0
 
-    .line 261
+    .line 268
     .local v0, "homewifi":Ljava/lang/String;
     if-eqz v0, :cond_13
 
@@ -518,25 +518,25 @@
 
     if-gtz v1, :cond_15
 
-    .line 262
+    .line 269
     :cond_13
     const-string v0, "Wi-Fi is not connected.\nDo you want to connect to 3G/LTE network?\nWhen you are connected to a 3G/LTE network, access can be delayed or additional metered data plan"
 
-    .line 265
+    .line 272
     :cond_15
     new-instance v1, Lcom/kia/android/moviesns/ui/activity/IntroActivity$4;
 
     invoke-direct {v1, p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity$4;-><init>(Lcom/kia/android/moviesns/ui/activity/IntroActivity;)V
 
-    .line 272
+    .line 279
     new-instance v2, Lcom/kia/android/moviesns/ui/activity/IntroActivity$5;
 
     invoke-direct {v2, p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity$5;-><init>(Lcom/kia/android/moviesns/ui/activity/IntroActivity;)V
 
-    .line 265
+    .line 272
     invoke-static {p0, v0, v1, v2}, Lcom/kia/android/moviesns/util/Utils;->sysAlertWithAsk(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 280
+    .line 287
     return-void
 .end method
 
@@ -546,17 +546,20 @@
     .registers 3
 
     .prologue
-    .line 249
+    .line 253
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 252
+    .line 256
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->locationManager:Landroid/location/LocationManager;
 
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->locationListener:Landroid/location/LocationListener;
 
     invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
-    .line 253
+    .line 259
+    invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onPause(Landroid/content/Context;)V
+
+    .line 260
     return-void
 .end method
 
@@ -565,10 +568,10 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 62
+    .line 63
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 72
+    .line 73
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->getBaseContext()Landroid/content/Context;
 
     move-result-object v4
@@ -577,13 +580,13 @@
 
     move-result-object v2
 
-    .line 73
+    .line 74
     .local v2, "res":Landroid/content/res/Resources;
     invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0
 
-    .line 74
+    .line 75
     .local v0, "conf":Landroid/content/res/Configuration;
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->getResources()Landroid/content/res/Resources;
 
@@ -597,29 +600,29 @@
 
     iput-object v4, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 75
+    .line 76
     invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v4
 
     invoke-virtual {v2, v0, v4}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V
 
-    .line 77
+    .line 78
     invoke-static {}, Lcom/kia/android/moviesns/util/Utils;->CheckGoogleMapSupport()V
 
-    .line 79
+    .line 80
     const v4, 0x7f030001
 
     invoke-virtual {p0, v4}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->setContentView(I)V
 
-    .line 81
+    .line 82
     invoke-static {p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->getNetworkStatus(Landroid/content/Context;)I
 
     move-result v4
 
     iput v4, p0, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->STATUS:I
 
-    .line 83
+    .line 84
     const-string v4, "power"
 
     invoke-virtual {p0, v4}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -628,7 +631,7 @@
 
     check-cast v1, Landroid/os/PowerManager;
 
-    .line 84
+    .line 85
     .local v1, "pm":Landroid/os/PowerManager;
     const v4, 0x1000001a
 
@@ -638,22 +641,22 @@
 
     move-result-object v3
 
-    .line 85
+    .line 86
     .local v3, "wl":Landroid/os/PowerManager$WakeLock;
     invoke-virtual {v3}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 87
+    .line 88
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v4
 
-    .line 88
+    .line 89
     const v5, 0x680080
 
-    .line 87
+    .line 88
     invoke-virtual {v4, v5}, Landroid/view/Window;->addFlags(I)V
 
-    .line 94
+    .line 95
     const-string v4, "location"
 
     invoke-virtual {p0, v4}, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -664,7 +667,7 @@
 
     iput-object v4, p0, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->locationManager:Landroid/location/LocationManager;
 
-    .line 95
+    .line 96
     return-void
 .end method
 
@@ -674,28 +677,28 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 98
+    .line 99
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 101
+    .line 102
     new-instance v0, Lcom/kia/android/moviesns/ui/activity/IntroActivity$1;
 
     invoke-direct {v0, p0}, Lcom/kia/android/moviesns/ui/activity/IntroActivity$1;-><init>(Lcom/kia/android/moviesns/ui/activity/IntroActivity;)V
 
     iput-object v0, p0, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->locationListener:Landroid/location/LocationListener;
 
-    .line 122
+    .line 123
     new-instance v6, Landroid/location/Criteria;
 
     invoke-direct {v6}, Landroid/location/Criteria;-><init>()V
 
-    .line 123
+    .line 124
     .local v6, "criteria":Landroid/location/Criteria;
     const/4 v0, 0x2
 
     invoke-virtual {v6, v0}, Landroid/location/Criteria;->setAccuracy(I)V
 
-    .line 124
+    .line 125
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->locationManager:Landroid/location/LocationManager;
 
     const/4 v2, 0x1
@@ -704,11 +707,11 @@
 
     move-result-object v1
 
-    .line 126
+    .line 127
     .local v1, "provider":Ljava/lang/String;
     if-eqz v1, :cond_2c
 
-    .line 127
+    .line 128
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->locationManager:Landroid/location/LocationManager;
 
     const-wide/16 v2, 0x4e20
@@ -719,12 +722,12 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
-    .line 128
+    .line 129
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/IntroActivity;->locationManager:Landroid/location/LocationManager;
 
     invoke-virtual {v0, v1}, Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
 
-    .line 137
+    .line 138
     :cond_2c
     const-string v0, "http://www.kiamotion.com/kia-app/help/version"
 
@@ -738,6 +741,9 @@
 
     invoke-static {v0, v7, v7, v2}, Lcom/kia/android/moviesns/net/api/ApiClient;->get(Ljava/lang/String;Ljava/lang/String;Lcom/loopj/android/http/RequestParams;Lcom/kia/android/moviesns/net/api/ApiResponseHandler;)V
 
-    .line 203
+    .line 206
+    invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onResume(Landroid/content/Context;)V
+
+    .line 207
     return-void
 .end method

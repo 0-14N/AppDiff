@@ -409,13 +409,13 @@
     :try_start_1
     invoke-super {p0}, Landroid/os/HandlerThread;->start()V
 
-    new-instance v0, Lkf;
+    new-instance v0, Ldf;
 
     invoke-virtual {p0}, Lcom/mediarecorder/utils/WorkThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lkf;-><init>(Lcom/mediarecorder/utils/WorkThread;Landroid/os/Looper;)V
+    invoke-direct {v0, p0, v1}, Ldf;-><init>(Lcom/mediarecorder/utils/WorkThread;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/mediarecorder/utils/WorkThread;->b:Landroid/os/Handler;
     :try_end_f

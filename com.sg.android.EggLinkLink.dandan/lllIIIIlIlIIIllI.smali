@@ -81,7 +81,17 @@
 
     const v3, 0x186b5
 
-    if-ne v2, v3, :cond_44
+    if-ne v2, v3, :cond_4f
+
+    const-class v0, Lcom/unicom/dcLoader/Utils;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "------------------>100021"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/unicom/dcLoader/lllIIIIlIlIIIllI;->_$1:Lcom/unicom/dcLoader/Utils;
 
@@ -99,15 +109,25 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/unicom/dcLoader/Utils;->initSDK(Landroid/content/Context;I)V
 
-    :goto_43
+    :goto_4e
     return-void
 
-    :cond_44
+    :cond_4f
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     const v3, 0x186b6
 
-    if-ne v2, v3, :cond_72
+    if-ne v2, v3, :cond_88
+
+    const-class v0, Lcom/unicom/dcLoader/Utils;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "------------------>100022"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/unicom/dcLoader/lllIIIIlIlIIIllI;->_$1:Lcom/unicom/dcLoader/Utils;
 
@@ -145,14 +165,14 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/unicom/dcLoader/Utils;->pay(Landroid/content/Context;Ljava/lang/String;Lcom/unicom/dcLoader/Utils$UnipayPayResultListener;)V
 
-    goto :goto_43
+    goto :goto_4e
 
-    :cond_72
+    :cond_88
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     const v3, 0x186b7
 
-    if-ne v2, v3, :cond_8f
+    if-ne v2, v3, :cond_a5
 
     iget-object v0, p0, Lcom/unicom/dcLoader/lllIIIIlIlIIIllI;->_$1:Lcom/unicom/dcLoader/Utils;
 
@@ -174,9 +194,9 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/unicom/dcLoader/Utils;->pay(Landroid/content/Context;Ljava/lang/String;Lcom/unicom/dcLoader/Utils$UnipayPayResultListener;)V
 
-    goto :goto_43
+    goto :goto_4e
 
-    :cond_8f
+    :cond_a5
     invoke-static {}, Lcom/unicom/dcLoader/Utils;->_$1()Lcom/unicom/dcLoader/Utils$UnipayPayResultListener;
 
     move-result-object v2
@@ -185,5 +205,5 @@
 
     invoke-interface {v2, v0, v3, v1}, Lcom/unicom/dcLoader/Utils$UnipayPayResultListener;->PayResult(Ljava/lang/String;ILjava/lang/String;)V
 
-    goto :goto_43
+    goto :goto_4e
 .end method

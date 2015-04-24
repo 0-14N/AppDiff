@@ -29,17 +29,15 @@
 
 .field private static final LOG_TAG:Ljava/lang/String; = "FacebookSDK.WebDialog"
 
-.field private static final MAX_PADDING_SCREEN_HEIGHT:I = 0x500
+.field private static final MAX_BUFFER_SCREEN_WIDTH:I = 0x400
 
-.field private static final MAX_PADDING_SCREEN_WIDTH:I = 0x320
+.field private static final MIN_SCALE_FACTOR:D = 0.6
 
-.field private static final MIN_SCALE_FACTOR:D = 0.5
-
-.field private static final NO_PADDING_SCREEN_HEIGHT:I = 0x320
-
-.field private static final NO_PADDING_SCREEN_WIDTH:I = 0x1e0
+.field private static final NO_BUFFER_SCREEN_WIDTH:I = 0x200
 
 .field static final REDIRECT_URI:Ljava/lang/String; = "fbconnect://success"
+
+.field private static final USER_AGENT:Ljava/lang/String; = "user_agent"
 
 
 # instance fields
@@ -67,12 +65,12 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 107
+    .line 103
     const v0, 0x1030010
 
     invoke-direct {p0, p1, p2, v0}, Lcom/facebook/widget/WebDialog;-><init>(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 108
+    .line 104
     return-void
 .end method
 
@@ -85,19 +83,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 119
+    .line 115
     invoke-direct {p0, p1, p3}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    .line 81
+    .line 77
     iput-boolean v0, p0, Lcom/facebook/widget/WebDialog;->listenerCalled:Z
 
-    .line 82
+    .line 78
     iput-boolean v0, p0, Lcom/facebook/widget/WebDialog;->isDetached:Z
 
-    .line 120
+    .line 116
     iput-object p2, p0, Lcom/facebook/widget/WebDialog;->url:Ljava/lang/String;
 
-    .line 121
+    .line 117
     return-void
 .end method
 
@@ -112,69 +110,50 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 133
+    .line 129
     invoke-direct {p0, p1, p4}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    .line 81
+    .line 77
     iput-boolean v1, p0, Lcom/facebook/widget/WebDialog;->listenerCalled:Z
 
-    .line 82
+    .line 78
     iput-boolean v1, p0, Lcom/facebook/widget/WebDialog;->isDetached:Z
 
-    .line 135
+    .line 131
     if-nez p3, :cond_f
 
-    .line 136
+    .line 132
     new-instance p3, Landroid/os/Bundle;
 
     .end local p3    # "parameters":Landroid/os/Bundle;
     invoke-direct {p3}, Landroid/os/Bundle;-><init>()V
 
-    .line 140
+    .line 134
     .restart local p3    # "parameters":Landroid/os/Bundle;
     :cond_f
-    const-string v1, "redirect_uri"
-
-    const-string v2, "fbconnect://success"
-
-    invoke-virtual {p3, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 142
     const-string v1, "display"
 
     const-string v2, "touch"
 
     invoke-virtual {p3, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
+    .line 135
+    const-string v1, "type"
+
+    const-string v2, "user_agent"
+
+    invoke-virtual {p3, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 137
     invoke-static {}, Lcom/facebook/internal/ServerProtocol;->getDialogAuthority()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 146
     new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/facebook/internal/ServerProtocol;->getAPIVersion()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v3, "/"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
 
     const-string v3, "dialog/"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -184,12 +163,11 @@
 
     move-result-object v2
 
-    .line 144
     invoke-static {v1, v2, p3}, Lcom/facebook/internal/Utility;->buildUri(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 148
+    .line 139
     .local v0, "uri":Landroid/net/Uri;
     invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -197,10 +175,10 @@
 
     iput-object v1, p0, Lcom/facebook/widget/WebDialog;->url:Ljava/lang/String;
 
-    .line 149
+    .line 140
     iput-object p5, p0, Lcom/facebook/widget/WebDialog;->onCompleteListener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
-    .line 150
+    .line 141
     return-void
 .end method
 
@@ -208,7 +186,7 @@
     .registers 2
 
     .prologue
-    .line 295
+    .line 266
     invoke-direct {p0, p1}, Lcom/facebook/widget/WebDialog;->sendSuccessToListener(Landroid/os/Bundle;)V
 
     return-void
@@ -218,7 +196,7 @@
     .registers 1
 
     .prologue
-    .line 315
+    .line 286
     invoke-direct {p0}, Lcom/facebook/widget/WebDialog;->sendCancelToListener()V
 
     return-void
@@ -228,7 +206,7 @@
     .registers 2
 
     .prologue
-    .line 302
+    .line 273
     invoke-direct {p0, p1}, Lcom/facebook/widget/WebDialog;->sendErrorToListener(Ljava/lang/Throwable;)V
 
     return-void
@@ -238,7 +216,7 @@
     .registers 2
 
     .prologue
-    .line 82
+    .line 78
     iget-boolean v0, p0, Lcom/facebook/widget/WebDialog;->isDetached:Z
 
     return v0
@@ -248,7 +226,7 @@
     .registers 2
 
     .prologue
-    .line 78
+    .line 74
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
 
     return-object v0
@@ -258,7 +236,7 @@
     .registers 2
 
     .prologue
-    .line 80
+    .line 76
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -268,7 +246,7 @@
     .registers 2
 
     .prologue
-    .line 77
+    .line 73
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     return-object v0
@@ -278,138 +256,17 @@
     .registers 2
 
     .prologue
-    .line 79
+    .line 75
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method private calculateSize()V
-    .registers 11
-
-    .prologue
-    const/16 v9, 0x320
-
-    .line 250
-    invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getContext()Landroid/content/Context;
-
-    move-result-object v7
-
-    const-string v8, "window"
-
-    invoke-virtual {v7, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Landroid/view/WindowManager;
-
-    .line 251
-    .local v6, "wm":Landroid/view/WindowManager;
-    invoke-interface {v6}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
-    move-result-object v2
-
-    .line 252
-    .local v2, "display":Landroid/view/Display;
-    new-instance v4, Landroid/util/DisplayMetrics;
-
-    invoke-direct {v4}, Landroid/util/DisplayMetrics;-><init>()V
-
-    .line 253
-    .local v4, "metrics":Landroid/util/DisplayMetrics;
-    invoke-virtual {v2, v4}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
-
-    .line 256
-    iget v7, v4, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    iget v8, v4, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    if-ge v7, v8, :cond_4e
-
-    iget v5, v4, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    .line 257
-    .local v5, "width":I
-    :goto_22
-    iget v7, v4, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    iget v8, v4, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    if-ge v7, v8, :cond_51
-
-    iget v3, v4, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    .line 260
-    .local v3, "height":I
-    :goto_2a
-    iget v7, v4, Landroid/util/DisplayMetrics;->density:F
-
-    const/16 v8, 0x1e0
-
-    invoke-direct {p0, v5, v7, v8, v9}, Lcom/facebook/widget/WebDialog;->getScaledSize(IFII)I
-
-    move-result v7
-
-    .line 261
-    iget v8, v4, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    .line 259
-    invoke-static {v7, v8}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    .line 263
-    .local v1, "dialogWidth":I
-    iget v7, v4, Landroid/util/DisplayMetrics;->density:F
-
-    const/16 v8, 0x500
-
-    invoke-direct {p0, v3, v7, v9, v8}, Lcom/facebook/widget/WebDialog;->getScaledSize(IFII)I
-
-    move-result v7
-
-    .line 264
-    iget v8, v4, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    .line 262
-    invoke-static {v7, v8}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    .line 266
-    .local v0, "dialogHeight":I
-    invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v1, v0}, Landroid/view/Window;->setLayout(II)V
-
-    .line 267
-    return-void
-
-    .line 256
-    .end local v0    # "dialogHeight":I
-    .end local v1    # "dialogWidth":I
-    .end local v3    # "height":I
-    .end local v5    # "width":I
-    :cond_4e
-    iget v5, v4, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    goto :goto_22
-
-    .line 257
-    .restart local v5    # "width":I
-    :cond_51
-    iget v3, v4, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    goto :goto_2a
-.end method
-
 .method private createCrossImage()V
-    .registers 4
+    .registers 5
 
     .prologue
-    .line 320
+    .line 291
     new-instance v1, Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getContext()Landroid/content/Context;
@@ -420,7 +277,7 @@
 
     iput-object v1, p0, Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
 
-    .line 322
+    .line 293
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
 
     new-instance v2, Lcom/facebook/widget/WebDialog$3;
@@ -429,7 +286,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 329
+    .line 300
     invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -438,112 +295,210 @@
 
     move-result-object v1
 
-    sget v2, Lcom/facebook/android/R$drawable;->com_facebook_close:I
+    const-string v2, "com_facebook_close"
+
+    const-string v3, "drawable"
+
+    invoke-static {v2, v3}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 330
+    .line 301
     .local v0, "crossDrawable":Landroid/graphics/drawable/Drawable;
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 334
+    .line 305
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 335
+    .line 306
     return-void
 .end method
 
-.method private getScaledSize(IFII)I
-    .registers 15
-    .param p1, "screenSize"    # I
-    .param p2, "density"    # F
-    .param p3, "noPaddingSize"    # I
-    .param p4, "maxPaddingSize"    # I
+.method private getMargins()Landroid/util/Pair;
+    .registers 17
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroid/util/Pair",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    const-wide/high16 v8, 0x3fe0000000000000L    # 0.5
+    .line 238
+    invoke-virtual/range {p0 .. p0}, Lcom/facebook/widget/WebDialog;->getContext()Landroid/content/Context;
 
-    .line 278
-    int-to-float v3, p1
+    move-result-object v10
 
-    div-float/2addr v3, p2
+    const-string v11, "window"
 
-    float-to-int v2, v3
+    invoke-virtual {v10, v11}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 280
-    .local v2, "scaledSize":I
-    if-gt v2, p3, :cond_d
+    move-result-object v9
 
-    .line 281
-    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
+    check-cast v9, Landroid/view/WindowManager;
 
-    .line 292
-    .local v0, "scaleFactor":D
-    :goto_9
-    int-to-double v4, p1
+    .line 239
+    .local v9, "wm":Landroid/view/WindowManager;
+    invoke-interface {v9}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    mul-double/2addr v4, v0
+    move-result-object v0
 
-    double-to-int v3, v4
+    .line 240
+    .local v0, "display":Landroid/view/Display;
+    new-instance v3, Landroid/util/DisplayMetrics;
 
-    return v3
+    invoke-direct {v3}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 282
-    .end local v0    # "scaleFactor":D
-    :cond_d
-    if-lt v2, p4, :cond_12
+    .line 241
+    .local v3, "metrics":Landroid/util/DisplayMetrics;
+    invoke-virtual {v0, v3}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 283
-    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
+    .line 242
+    iget v8, v3, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 284
-    .restart local v0    # "scaleFactor":D
-    goto :goto_9
+    .line 243
+    .local v8, "width":I
+    iget v1, v3, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 288
-    .end local v0    # "scaleFactor":D
-    :cond_12
-    sub-int v3, p4, v2
+    .line 246
+    .local v1, "height":I
+    int-to-float v10, v8
 
-    int-to-double v4, v3
+    iget v11, v3, Landroid/util/DisplayMetrics;->density:F
 
-    .line 289
-    sub-int v3, p4, p3
+    div-float/2addr v10, v11
 
-    int-to-double v6, v3
+    float-to-int v6, v10
 
-    .line 288
-    div-double/2addr v4, v6
+    .line 247
+    .local v6, "scaledWidth":I
+    const/16 v10, 0x200
 
-    mul-double/2addr v4, v8
+    if-gt v6, v10, :cond_47
 
-    .line 287
-    add-double v0, v8, v4
+    .line 248
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-    .restart local v0    # "scaleFactor":D
-    goto :goto_9
+    .line 260
+    .local v4, "scaleFactor":D
+    :goto_27
+    int-to-double v10, v8
+
+    const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
+
+    sub-double/2addr v12, v4
+
+    mul-double/2addr v10, v12
+
+    const-wide/high16 v12, 0x4000000000000000L    # 2.0
+
+    div-double/2addr v10, v12
+
+    double-to-int v2, v10
+
+    .line 261
+    .local v2, "leftRightMargin":I
+    int-to-double v10, v1
+
+    const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
+
+    sub-double/2addr v12, v4
+
+    mul-double/2addr v10, v12
+
+    const-wide/high16 v12, 0x4000000000000000L    # 2.0
+
+    div-double/2addr v10, v12
+
+    double-to-int v7, v10
+
+    .line 263
+    .local v7, "topBottomMargin":I
+    new-instance v10, Landroid/util/Pair;
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v12
+
+    invoke-direct {v10, v11, v12}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v10
+
+    .line 249
+    .end local v2    # "leftRightMargin":I
+    .end local v4    # "scaleFactor":D
+    .end local v7    # "topBottomMargin":I
+    :cond_47
+    const/16 v10, 0x400
+
+    if-lt v6, v10, :cond_51
+
+    .line 250
+    const-wide v4, 0x3fe3333333333333L    # 0.6
+
+    .line 251
+    .restart local v4    # "scaleFactor":D
+    goto :goto_27
+
+    .line 254
+    .end local v4    # "scaleFactor":D
+    :cond_51
+    const-wide v10, 0x3fe3333333333333L    # 0.6
+
+    .line 255
+    rsub-int v12, v6, 0x400
+
+    int-to-double v12, v12
+
+    .line 256
+    const-wide/high16 v14, 0x4080000000000000L    # 512.0
+
+    .line 255
+    div-double/2addr v12, v14
+
+    .line 257
+    const-wide v14, 0x3fd999999999999aL    # 0.4
+
+    .line 255
+    mul-double/2addr v12, v14
+
+    .line 254
+    add-double v4, v10, v12
+
+    .restart local v4    # "scaleFactor":D
+    goto :goto_27
 .end method
 
 .method private sendCancelToListener()V
     .registers 2
 
     .prologue
-    .line 316
+    .line 287
     new-instance v0, Lcom/facebook/FacebookOperationCanceledException;
 
     invoke-direct {v0}, Lcom/facebook/FacebookOperationCanceledException;-><init>()V
 
     invoke-direct {p0, v0}, Lcom/facebook/widget/WebDialog;->sendErrorToListener(Ljava/lang/Throwable;)V
 
-    .line 317
+    .line 288
     return-void
 .end method
 
@@ -552,7 +507,7 @@
     .param p1, "error"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 303
+    .line 274
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->onCompleteListener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
     if-eqz v1, :cond_19
@@ -561,15 +516,15 @@
 
     if-nez v1, :cond_19
 
-    .line 304
+    .line 275
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/facebook/widget/WebDialog;->listenerCalled:Z
 
-    .line 305
+    .line 276
     const/4 v0, 0x0
 
-    .line 306
+    .line 277
     .local v0, "facebookException":Lcom/facebook/FacebookException;
     instance-of v1, p1, Lcom/facebook/FacebookException;
 
@@ -577,10 +532,10 @@
 
     move-object v0, p1
 
-    .line 307
+    .line 278
     check-cast v0, Lcom/facebook/FacebookException;
 
-    .line 311
+    .line 282
     :goto_13
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->onCompleteListener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
@@ -588,12 +543,12 @@
 
     invoke-interface {v1, v2, v0}, Lcom/facebook/widget/WebDialog$OnCompleteListener;->onComplete(Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
 
-    .line 313
+    .line 284
     .end local v0    # "facebookException":Lcom/facebook/FacebookException;
     :cond_19
     return-void
 
-    .line 309
+    .line 280
     .restart local v0    # "facebookException":Lcom/facebook/FacebookException;
     :cond_1a
     new-instance v0, Lcom/facebook/FacebookException;
@@ -610,7 +565,7 @@
     .param p1, "values"    # Landroid/os/Bundle;
 
     .prologue
-    .line 296
+    .line 267
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->onCompleteListener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
     if-eqz v0, :cond_11
@@ -619,19 +574,19 @@
 
     if-nez v0, :cond_11
 
-    .line 297
+    .line 268
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/facebook/widget/WebDialog;->listenerCalled:Z
 
-    .line 298
+    .line 269
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->onCompleteListener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p1, v1}, Lcom/facebook/widget/WebDialog$OnCompleteListener;->onComplete(Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
 
-    .line 300
+    .line 271
     :cond_11
     return-void
 .end method
@@ -650,7 +605,7 @@
 
     const/4 v4, 0x0
 
-    .line 339
+    .line 310
     new-instance v0, Landroid/widget/LinearLayout;
 
     invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getContext()Landroid/content/Context;
@@ -659,7 +614,7 @@
 
     invoke-direct {v0, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 340
+    .line 311
     .local v0, "webViewContainer":Landroid/widget/LinearLayout;
     new-instance v1, Landroid/webkit/WebView;
 
@@ -671,17 +626,17 @@
 
     iput-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
-    .line 341
+    .line 312
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v1, v4}, Landroid/webkit/WebView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 342
+    .line 313
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v1, v4}, Landroid/webkit/WebView;->setHorizontalScrollBarEnabled(Z)V
 
-    .line 343
+    .line 314
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     new-instance v2, Lcom/facebook/widget/WebDialog$DialogWebViewClient;
@@ -692,7 +647,7 @@
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 344
+    .line 315
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -703,32 +658,32 @@
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 345
+    .line 316
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     iget-object v2, p0, Lcom/facebook/widget/WebDialog;->url:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 346
+    .line 317
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 347
+    .line 318
     invoke-direct {v2, v5, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 346
+    .line 317
     invoke-virtual {v1, v2}, Landroid/webkit/WebView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 348
+    .line 319
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebView;->setVisibility(I)V
 
-    .line 349
+    .line 320
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -737,34 +692,25 @@
 
     invoke-virtual {v1, v4}, Landroid/webkit/WebSettings;->setSavePassword(Z)V
 
-    .line 350
-    iget-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
-
-    invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/webkit/WebSettings;->setSaveFormData(Z)V
-
-    .line 352
+    .line 322
     invoke-virtual {v0, p1, p1, p1, p1}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 353
+    .line 323
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 354
+    .line 324
     const/high16 v1, -0x34000000    # -3.3554432E7f
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 355
+    .line 325
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 356
+    .line 326
     return-void
 .end method
 
@@ -774,23 +720,23 @@
     .registers 2
 
     .prologue
-    .line 172
+    .line 163
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_9
 
-    .line 173
+    .line 164
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->stopLoading()V
 
-    .line 175
+    .line 166
     :cond_9
     iget-boolean v0, p0, Lcom/facebook/widget/WebDialog;->isDetached:Z
 
     if-nez v0, :cond_1d
 
-    .line 176
+    .line 167
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
@@ -799,16 +745,16 @@
 
     if-eqz v0, :cond_1a
 
-    .line 177
+    .line 168
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 179
+    .line 170
     :cond_1a
     invoke-super {p0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 181
+    .line 172
     :cond_1d
     return-void
 .end method
@@ -817,7 +763,7 @@
     .registers 2
 
     .prologue
-    .line 167
+    .line 158
     iget-object v0, p0, Lcom/facebook/widget/WebDialog;->onCompleteListener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
     return-object v0
@@ -827,153 +773,189 @@
     .registers 2
 
     .prologue
-    .line 191
+    .line 182
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/facebook/widget/WebDialog;->isDetached:Z
 
-    .line 192
+    .line 183
     invoke-super {p0}, Landroid/app/Dialog;->onAttachedToWindow()V
 
-    .line 193
+    .line 184
     return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 8
+    .registers 11
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    const/4 v4, -0x2
+    const/4 v8, -0x1
 
-    .line 197
+    const/4 v7, -0x2
+
+    .line 188
     invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
 
-    .line 199
-    new-instance v1, Lcom/facebook/widget/WebDialog$1;
+    .line 190
+    new-instance v2, Lcom/facebook/widget/WebDialog$1;
 
-    invoke-direct {v1, p0}, Lcom/facebook/widget/WebDialog$1;-><init>(Lcom/facebook/widget/WebDialog;)V
+    invoke-direct {v2, p0}, Lcom/facebook/widget/WebDialog$1;-><init>(Lcom/facebook/widget/WebDialog;)V
 
-    invoke-virtual {p0, v1}, Lcom/facebook/widget/WebDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+    invoke-virtual {p0, v2}, Lcom/facebook/widget/WebDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 206
-    new-instance v1, Landroid/app/ProgressDialog;
+    .line 197
+    new-instance v2, Landroid/app/ProgressDialog;
 
     invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-direct {v1, v2}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
+    iput-object v2, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
 
-    .line 207
-    iget-object v1, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
+    .line 198
+    iget-object v2, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
 
-    invoke-virtual {v1, v5}, Landroid/app/ProgressDialog;->requestWindowFeature(I)Z
+    invoke-virtual {v2, v6}, Landroid/app/ProgressDialog;->requestWindowFeature(I)Z
+
+    .line 199
+    iget-object v2, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
+
+    invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    const-string v4, "com_facebook_loading"
+
+    const-string v5, "string"
+
+    invoke-static {v4, v5}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+
+    .line 200
+    iget-object v2, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
+
+    new-instance v3, Lcom/facebook/widget/WebDialog$2;
+
+    invoke-direct {v3, p0}, Lcom/facebook/widget/WebDialog$2;-><init>(Lcom/facebook/widget/WebDialog;)V
+
+    invoke-virtual {v2, v3}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 208
-    iget-object v1, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
-
-    invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    sget v3, Lcom/facebook/android/R$string;->com_facebook_loading:I
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v6}, Lcom/facebook/widget/WebDialog;->requestWindowFeature(I)Z
 
     .line 209
-    iget-object v1, p0, Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
-
-    new-instance v2, Lcom/facebook/widget/WebDialog$2;
-
-    invoke-direct {v2, p0}, Lcom/facebook/widget/WebDialog$2;-><init>(Lcom/facebook/widget/WebDialog;)V
-
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
-
-    .line 217
-    invoke-virtual {p0, v5}, Lcom/facebook/widget/WebDialog;->requestWindowFeature(I)Z
-
-    .line 218
-    new-instance v1, Landroid/widget/FrameLayout;
+    new-instance v2, Landroid/widget/FrameLayout;
 
     invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-direct {v1, v2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
+    iput-object v2, p0, Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
 
-    .line 221
-    invoke-direct {p0}, Lcom/facebook/widget/WebDialog;->calculateSize()V
-
-    .line 222
-    invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getWindow()Landroid/view/Window;
+    .line 212
+    invoke-direct {p0}, Lcom/facebook/widget/WebDialog;->getMargins()Landroid/util/Pair;
 
     move-result-object v1
 
-    const/16 v2, 0x11
+    .line 213
+    .local v1, "margins":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
+    iget-object v3, p0, Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v1, v2}, Landroid/view/Window;->setGravity(I)V
+    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    .line 225
-    invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getWindow()Landroid/view/Window;
+    check-cast v2, Ljava/lang/Integer;
 
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    const/16 v2, 0x10
+    move-result v4
 
-    invoke-virtual {v1, v2}, Landroid/view/Window;->setSoftInputMode(I)V
+    iget-object v2, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    .line 231
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v6
+
+    iget-object v2, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    invoke-virtual {v3, v4, v5, v6, v2}, Landroid/widget/FrameLayout;->setPadding(IIII)V
+
+    .line 219
     invoke-direct {p0}, Lcom/facebook/widget/WebDialog;->createCrossImage()V
 
-    .line 236
-    iget-object v1, p0, Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
+    .line 224
+    iget-object v2, p0, Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
 
-    invoke-virtual {v1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
 
-    .line 238
+    .line 226
     .local v0, "crossWidth":I
-    div-int/lit8 v1, v0, 0x2
+    div-int/lit8 v2, v0, 0x2
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-direct {p0, v1}, Lcom/facebook/widget/WebDialog;->setUpWebView(I)V
+    invoke-direct {p0, v2}, Lcom/facebook/widget/WebDialog;->setUpWebView(I)V
 
-    .line 243
-    iget-object v1, p0, Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
+    .line 231
+    iget-object v2, p0, Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
 
-    iget-object v2, p0, Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
+    iget-object v3, p0, Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
 
+    new-instance v4, Landroid/view/ViewGroup$LayoutParams;
+
+    .line 232
+    invoke-direct {v4, v7, v7}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    .line 231
+    invoke-virtual {v2, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 233
+    iget-object v2, p0, Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
+
+    .line 234
     new-instance v3, Landroid/view/ViewGroup$LayoutParams;
 
-    .line 244
-    invoke-direct {v3, v4, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    invoke-direct {v3, v8, v8}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 243
-    invoke-virtual {v1, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .line 233
+    invoke-virtual {p0, v2, v3}, Lcom/facebook/widget/WebDialog;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 246
-    iget-object v1, p0, Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
-
-    invoke-virtual {p0, v1}, Lcom/facebook/widget/WebDialog;->setContentView(Landroid/view/View;)V
-
-    .line 247
+    .line 235
     return-void
 .end method
 
@@ -981,15 +963,15 @@
     .registers 2
 
     .prologue
-    .line 185
+    .line 176
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/facebook/widget/WebDialog;->isDetached:Z
 
-    .line 186
+    .line 177
     invoke-super {p0}, Landroid/app/Dialog;->onDetachedFromWindow()V
 
-    .line 187
+    .line 178
     return-void
 .end method
 
@@ -998,9 +980,9 @@
     .param p1, "listener"    # Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
     .prologue
-    .line 158
+    .line 149
     iput-object p1, p0, Lcom/facebook/widget/WebDialog;->onCompleteListener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
-    .line 159
+    .line 150
     return-void
 .end method

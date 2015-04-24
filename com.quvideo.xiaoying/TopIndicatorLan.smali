@@ -619,16 +619,16 @@
     invoke-virtual/range {v0 .. v5}, Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenuLan;->add(IIIZZ)Lcom/quvideo/xiaoying/camera/ui/CameraPopupMenuBase$MenuItem;
 
     .line 126
-    new-instance v1, Lagg;
+    new-instance v1, Lzm;
 
-    invoke-direct {v1, p0}, Lagg;-><init>(Lcom/quvideo/xiaoying/camera/ui/TopIndicatorLan;)V
+    invoke-direct {v1, p0}, Lzm;-><init>(Lcom/quvideo/xiaoying/camera/ui/TopIndicatorLan;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenuLan;->setOnItemSelectedListener(Lcom/quvideo/xiaoying/camera/ui/CameraPopupMenuBase$OnItemSelectedListener;)V
 
     .line 136
-    new-instance v1, Lagh;
+    new-instance v1, Lzn;
 
-    invoke-direct {v1, p0}, Lagh;-><init>(Lcom/quvideo/xiaoying/camera/ui/TopIndicatorLan;)V
+    invoke-direct {v1, p0}, Lzn;-><init>(Lcom/quvideo/xiaoying/camera/ui/TopIndicatorLan;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenuLan;->setOnMenuDismissListener(Lcom/quvideo/xiaoying/camera/ui/CameraPopupMenuBase$OnMenuDismissListener;)V
 

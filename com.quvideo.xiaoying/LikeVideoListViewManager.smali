@@ -113,9 +113,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/LikeVideoListViewManager;->q:Lcom/quvideo/xiaoying/app/studio/LikeVideoListViewManager$VideoListManagerCallback;
 
     .line 342
-    new-instance v0, Lzw;
+    new-instance v0, Ltd;
 
-    invoke-direct {v0, p0}, Lzw;-><init>(Lcom/quvideo/xiaoying/app/studio/LikeVideoListViewManager;)V
+    invoke-direct {v0, p0}, Ltd;-><init>(Lcom/quvideo/xiaoying/app/studio/LikeVideoListViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/LikeVideoListViewManager;->r:Landroid/widget/AbsListView$OnScrollListener;
 
@@ -574,7 +574,7 @@
     invoke-virtual {v1}, Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshCustomScrollView;->onRefreshComplete()V
 
     .line 97
-    const v1, 0x7f0605d1
+    const v1, 0x7f0605bc
 
     invoke-virtual {p5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -585,7 +585,7 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/LikeVideoListViewManager;->a:Landroid/widget/ListView;
 
     .line 98
-    const v1, 0x7f0605d0
+    const v1, 0x7f0605bb
 
     invoke-virtual {p5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -167,9 +167,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;->s:Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage$a;
 
     .line 409
-    new-instance v0, Lry;
+    new-instance v0, Llf;
 
-    invoke-direct {v0, p0}, Lry;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;)V
+    invoke-direct {v0, p0}, Llf;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;->t:Landroid/widget/AbsListView$OnScrollListener;
 
@@ -233,9 +233,9 @@
     const-string/jumbo v1, "user.recommend"
 
     .line 263
-    new-instance v2, Lrz;
+    new-instance v2, Llg;
 
-    invoke-direct {v2, p0}, Lrz;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;)V
+    invoke-direct {v2, p0}, Llg;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;)V
 
     .line 261
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -311,9 +311,9 @@
     .line 297
     const-string/jumbo v1, "follow.add"
 
-    new-instance v2, Lsa;
+    new-instance v2, Llh;
 
-    invoke-direct {v2, p0}, Lsa;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;)V
+    invoke-direct {v2, p0}, Llh;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;)V
 
     .line 296
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -326,9 +326,9 @@
     .line 333
     const-string/jumbo v1, "follow.remove"
 
-    new-instance v2, Lsb;
+    new-instance v2, Lli;
 
-    invoke-direct {v2, p0}, Lsb;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;)V
+    invoke-direct {v2, p0}, Lli;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;)V
 
     .line 332
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -678,7 +678,7 @@
     iput v0, p0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;->i:I
 
     .line 189
-    const v0, 0x7f0604a7
+    const v0, 0x7f060492
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;->findViewById(I)Landroid/view/View;
 
@@ -732,7 +732,7 @@
 
     .line 200
     :cond_83
-    const v0, 0x7f060445
+    const v0, 0x7f060430
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;->findViewById(I)Landroid/view/View;
 
@@ -743,7 +743,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;->h:Landroid/widget/LinearLayout;
 
     .line 202
-    const v0, 0x7f0604a2
+    const v0, 0x7f06048d
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsPage;->findViewById(I)Landroid/view/View;
 

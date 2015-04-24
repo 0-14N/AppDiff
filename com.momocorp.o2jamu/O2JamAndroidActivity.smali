@@ -343,6 +343,8 @@
     .line 30
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 31
     const v0, 0x1030007
 

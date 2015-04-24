@@ -129,15 +129,15 @@
 
     .prologue
     .line 45
-    const v1, 0x7f070262
+    const v1, 0x7f0800f3
 
     invoke-virtual {p0, v1}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Landroid/widget/TextView;
+    check-cast v0, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity;->searchCateText:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity;->searchCateText:Landroid/widget/TextView;
 
     .line 47
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity;->getIntent()Landroid/content/Intent;
@@ -167,7 +167,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0d010e
+    const v4, 0x7f0900ed
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -189,7 +189,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0d010f
+    const v4, 0x7f0900ee
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -206,19 +206,20 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 50
-    const v1, 0x7f070263
+    const v1, 0x7f0800f4
 
     invoke-virtual {p0, v1}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Landroid/widget/ImageButton;
+    .end local v0    # "intent":Landroid/content/Intent;
+    check-cast v0, Landroid/widget/Button;
 
-    new-instance v2, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity$1;
+    new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity$1;
 
-    invoke-direct {v2, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity$1;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity;)V
+    invoke-direct {v1, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity$1;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity;)V
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 66
     return-void
@@ -235,7 +236,7 @@
     invoke-super {p0, p1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 175
-    const v0, 0x7f030041
+    const v0, 0x7f030023
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity;->setContentView(I)V
 

@@ -80,16 +80,16 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;->g:Landroid/util/SparseBooleanArray;
 
     .line 206
-    new-instance v0, Lru;
+    new-instance v0, Llb;
 
-    invoke-direct {v0, p0}, Lru;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;)V
+    invoke-direct {v0, p0}, Llb;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;->h:Landroid/view/View$OnClickListener;
 
     .line 221
-    new-instance v0, Lrv;
+    new-instance v0, Llc;
 
-    invoke-direct {v0, p0}, Lrv;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;)V
+    invoke-direct {v0, p0}, Llc;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;->i:Landroid/view/View$OnClickListener;
 
@@ -122,11 +122,11 @@
 
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;->a:Landroid/content/Context;
 
-    const v2, 0x7f0a0378
+    const v2, 0x7f0a0355
 
-    new-instance v3, Lrx;
+    new-instance v3, Lle;
 
-    invoke-direct {v3, p0, p1, p2}, Lrx;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;Landroid/view/View;Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsInfoMgr$RecommendFollowsInfo;)V
+    invoke-direct {v3, p0, p1, p2}, Lle;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;Landroid/view/View;Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsInfoMgr$RecommendFollowsInfo;)V
 
     invoke-direct {v0, v1, v2, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -274,14 +274,14 @@
     iget-object v0, p1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->g:Landroid/widget/TextView;
 
     .line 173
-    const v1, 0x7f0a034d
+    const v1, 0x7f0a032a
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 174
     iget-object v0, p1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->f:Landroid/widget/ImageView;
 
-    const v1, 0x7f020689
+    const v1, 0x7f020669
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -297,7 +297,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07005a
+    const v1, 0x7f070043
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -314,7 +314,7 @@
     iget-object v0, p1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->e:Landroid/widget/RelativeLayout;
 
     .line 186
-    const v1, 0x7f02068a
+    const v1, 0x7f02066a
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
@@ -333,7 +333,7 @@
     iget-object v0, p1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->g:Landroid/widget/TextView;
 
     .line 180
-    const v1, 0x7f0a034e
+    const v1, 0x7f0a032b
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -351,7 +351,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07005c
+    const v1, 0x7f070045
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -539,7 +539,7 @@
     invoke-direct {v1, p0, v2}, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;)V
 
     .line 109
-    const v0, 0x7f06049c
+    const v0, 0x7f060487
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -550,7 +550,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->a:Lcom/quvideo/xiaoying/common/ui/custom/RoundImageView;
 
     .line 111
-    const v0, 0x7f06049e
+    const v0, 0x7f060489
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -561,7 +561,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->b:Landroid/widget/TextView;
 
     .line 112
-    const v0, 0x7f06049f
+    const v0, 0x7f06048a
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -572,7 +572,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->c:Landroid/widget/ImageView;
 
     .line 113
-    const v0, 0x7f0604a0
+    const v0, 0x7f06048b
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -583,7 +583,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->d:Landroid/widget/TextView;
 
     .line 114
-    const v0, 0x7f06049d
+    const v0, 0x7f060488
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -594,7 +594,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->e:Landroid/widget/RelativeLayout;
 
     .line 115
-    const v0, 0x7f0604a4
+    const v0, 0x7f06048f
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -605,7 +605,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->f:Landroid/widget/ImageView;
 
     .line 116
-    const v0, 0x7f0604a5
+    const v0, 0x7f060490
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -616,7 +616,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->g:Landroid/widget/TextView;
 
     .line 117
-    const v0, 0x7f0604a1
+    const v0, 0x7f06048c
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -627,7 +627,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter$a;->h:Landroid/widget/ImageView;
 
     .line 118
-    const v0, 0x7f0604a6
+    const v0, 0x7f060491
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -696,9 +696,9 @@
     invoke-virtual {p2, v2}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 134
-    new-instance v2, Lrw;
+    new-instance v2, Lld;
 
-    invoke-direct {v2, p0, v0}, Lrw;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsInfoMgr$RecommendFollowsInfo;)V
+    invoke-direct {v2, p0, v0}, Lld;-><init>(Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsAdapter;Lcom/quvideo/xiaoying/app/community/user/RecommendFollowsInfoMgr$RecommendFollowsInfo;)V
 
     invoke-virtual {p2, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -829,7 +829,7 @@
 
     .line 317
     :pswitch_5
-    const v0, 0x7f020657
+    const v0, 0x7f020637
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -840,7 +840,7 @@
 
     .line 321
     :pswitch_f
-    const v0, 0x7f020656
+    const v0, 0x7f020636
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 

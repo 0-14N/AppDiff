@@ -35,14 +35,14 @@
     .registers 4
 
     .prologue
-    .line 126
+    .line 122
     new-instance v0, Lcom/google/ads/internal/f$1;
 
     invoke-direct {v0}, Lcom/google/ads/internal/f$1;-><init>()V
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/ads/internal/f;-><init>(Lcom/google/ads/internal/c;Lcom/google/ads/internal/d;Lcom/google/ads/internal/f$a;)V
 
-    .line 132
+    .line 128
     return-void
 .end method
 
@@ -50,24 +50,24 @@
     .registers 5
 
     .prologue
-    .line 145
+    .line 141
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 117
+    .line 113
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/ads/internal/f;->g:Ljava/lang/Thread;
 
-    .line 146
+    .line 142
     iput-object p1, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
-    .line 147
+    .line 143
     iput-object p2, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
-    .line 148
+    .line 144
     iput-object p3, p0, Lcom/google/ads/internal/f;->c:Lcom/google/ads/internal/f$a;
 
-    .line 149
+    .line 145
     return-void
 .end method
 
@@ -75,12 +75,12 @@
     .registers 6
 
     .prologue
-    .line 474
+    .line 443
     invoke-static {p1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 475
+    .line 444
     const-string v1, "drt"
 
     const-string v2, ""
@@ -89,7 +89,7 @@
 
     move-result-object v0
 
-    .line 476
+    .line 445
     iget-boolean v1, p0, Lcom/google/ads/internal/f;->e:Z
 
     if-eqz v1, :cond_21
@@ -100,24 +100,24 @@
 
     if-nez v1, :cond_21
 
-    .line 477
+    .line 446
     sget v1, Lcom/google/ads/util/AdUtil;->a:I
 
     const/16 v2, 0x8
 
     if-ne v1, v2, :cond_22
 
-    .line 481
+    .line 450
     const-string v1, "X-Afma-drt-Cookie"
 
     invoke-virtual {p2, v1, v0}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 486
+    .line 455
     :cond_21
     :goto_21
     return-void
 
-    .line 483
+    .line 452
     :cond_22
     const-string v1, "Cookie"
 
@@ -130,40 +130,37 @@
     .registers 2
 
     .prologue
-    .line 165
+    .line 161
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->b(Ljava/net/HttpURLConnection;)V
 
-    .line 166
+    .line 162
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->f(Ljava/net/HttpURLConnection;)V
 
-    .line 167
+    .line 163
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->g(Ljava/net/HttpURLConnection;)V
 
-    .line 168
+    .line 164
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->h(Ljava/net/HttpURLConnection;)V
 
-    .line 169
+    .line 165
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->e(Ljava/net/HttpURLConnection;)V
 
-    .line 170
+    .line 166
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->i(Ljava/net/HttpURLConnection;)V
 
-    .line 171
+    .line 167
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->j(Ljava/net/HttpURLConnection;)V
 
-    .line 172
+    .line 168
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->k(Ljava/net/HttpURLConnection;)V
 
-    .line 173
+    .line 169
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->d(Ljava/net/HttpURLConnection;)V
 
-    .line 174
+    .line 170
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->c(Ljava/net/HttpURLConnection;)V
 
-    .line 175
-    invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->l(Ljava/net/HttpURLConnection;)V
-
-    .line 176
+    .line 171
     return-void
 .end method
 
@@ -178,24 +175,24 @@
     .prologue
     const/16 v1, 0x190
 
-    .line 383
+    .line 352
     const/16 v0, 0x12c
 
     if-gt v0, p2, :cond_3d
 
     if-ge p2, v1, :cond_3d
 
-    .line 385
+    .line 354
     const-string v0, "Location"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 386
+    .line 355
     if-nez v0, :cond_37
 
-    .line 387
+    .line 356
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -222,39 +219,39 @@
 
     invoke-static {v0}, Lcom/google/ads/util/b;->c(Ljava/lang/String;)V
 
-    .line 388
+    .line 357
     iget-object v0, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     sget-object v1, Lcom/google/ads/AdRequest$ErrorCode;->INTERNAL_ERROR:Lcom/google/ads/AdRequest$ErrorCode;
 
     invoke-virtual {v0, v1}, Lcom/google/ads/internal/c;->a(Lcom/google/ads/AdRequest$ErrorCode;)V
 
-    .line 389
+    .line 358
     invoke-virtual {p0}, Lcom/google/ads/internal/f;->a()V
 
-    .line 424
+    .line 393
     :goto_36
     return-void
 
-    .line 393
+    .line 362
     :cond_37
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->a(Ljava/net/HttpURLConnection;)V
 
-    .line 396
+    .line 365
     iput-object v0, p0, Lcom/google/ads/internal/f;->f:Ljava/lang/String;
 
     goto :goto_36
 
-    .line 397
+    .line 366
     :cond_3d
     const/16 v0, 0xc8
 
     if-ne p2, v0, :cond_9d
 
-    .line 399
+    .line 368
     invoke-direct {p0, p1}, Lcom/google/ads/internal/f;->a(Ljava/net/HttpURLConnection;)V
 
-    .line 400
+    .line 369
     new-instance v0, Ljava/io/InputStreamReader;
 
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
@@ -271,7 +268,7 @@
 
     move-result-object v0
 
-    .line 404
+    .line 373
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,14 +289,14 @@
 
     invoke-static {v1}, Lcom/google/ads/util/b;->a(Ljava/lang/String;)V
 
-    .line 405
+    .line 374
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_92
 
-    .line 406
+    .line 375
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -320,19 +317,19 @@
 
     invoke-static {v0}, Lcom/google/ads/util/b;->a(Ljava/lang/String;)V
 
-    .line 407
+    .line 376
     iget-object v0, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     sget-object v1, Lcom/google/ads/AdRequest$ErrorCode;->NO_FILL:Lcom/google/ads/AdRequest$ErrorCode;
 
     invoke-virtual {v0, v1}, Lcom/google/ads/internal/c;->a(Lcom/google/ads/AdRequest$ErrorCode;)V
 
-    .line 408
+    .line 377
     invoke-virtual {p0}, Lcom/google/ads/internal/f;->a()V
 
     goto :goto_36
 
-    .line 413
+    .line 382
     :cond_92
     iget-object v1, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
@@ -340,33 +337,33 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/google/ads/internal/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 414
+    .line 383
     invoke-virtual {p0}, Lcom/google/ads/internal/f;->a()V
 
     goto :goto_36
 
-    .line 415
+    .line 384
     :cond_9d
     if-ne p2, v1, :cond_af
 
-    .line 416
+    .line 385
     const-string v0, "Bad request"
 
     invoke-static {v0}, Lcom/google/ads/util/b;->c(Ljava/lang/String;)V
 
-    .line 417
+    .line 386
     iget-object v0, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     sget-object v1, Lcom/google/ads/AdRequest$ErrorCode;->INVALID_REQUEST:Lcom/google/ads/AdRequest$ErrorCode;
 
     invoke-virtual {v0, v1}, Lcom/google/ads/internal/c;->a(Lcom/google/ads/AdRequest$ErrorCode;)V
 
-    .line 418
+    .line 387
     invoke-virtual {p0}, Lcom/google/ads/internal/f;->a()V
 
     goto :goto_36
 
-    .line 420
+    .line 389
     :cond_af
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -388,14 +385,14 @@
 
     invoke-static {v0}, Lcom/google/ads/util/b;->c(Ljava/lang/String;)V
 
-    .line 421
+    .line 390
     iget-object v0, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     sget-object v1, Lcom/google/ads/AdRequest$ErrorCode;->INTERNAL_ERROR:Lcom/google/ads/AdRequest$ErrorCode;
 
     invoke-virtual {v0, v1}, Lcom/google/ads/internal/c;->a(Lcom/google/ads/AdRequest$ErrorCode;)V
 
-    .line 422
+    .line 391
     invoke-virtual {p0}, Lcom/google/ads/internal/f;->a()V
 
     goto/16 :goto_36
@@ -411,35 +408,35 @@
     .end annotation
 
     .prologue
-    .line 451
+    .line 420
     :goto_0
     iget-boolean v0, p0, Lcom/google/ads/internal/f;->d:Z
 
     if-nez v0, :cond_4a
 
-    .line 452
+    .line 421
     new-instance v0, Ljava/net/URL;
 
     iget-object v1, p0, Lcom/google/ads/internal/f;->f:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 453
+    .line 422
     iget-object v1, p0, Lcom/google/ads/internal/f;->c:Lcom/google/ads/internal/f$a;
 
     invoke-interface {v1, v0}, Lcom/google/ads/internal/f$a;->a(Ljava/net/URL;)Ljava/net/HttpURLConnection;
 
     move-result-object v1
 
-    .line 456
+    .line 425
     :try_start_11
     iget-object v0, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
-    invoke-virtual {v0}, Lcom/google/ads/internal/d;->h()Lcom/google/ads/m;
+    invoke-virtual {v0}, Lcom/google/ads/internal/d;->g()Lcom/google/ads/m;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/m;->f:Lcom/google/ads/util/i$b;
+    iget-object v0, v0, Lcom/google/ads/m;->d:Lcom/google/ads/util/i$b;
 
     invoke-virtual {v0}, Lcom/google/ads/util/i$b;->a()Ljava/lang/Object;
 
@@ -449,14 +446,14 @@
 
     invoke-direct {p0, v0, v1}, Lcom/google/ads/internal/f;->a(Landroid/content/Context;Ljava/net/HttpURLConnection;)V
 
-    .line 457
+    .line 426
     iget-object v0, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
-    invoke-virtual {v0}, Lcom/google/ads/internal/d;->h()Lcom/google/ads/m;
+    invoke-virtual {v0}, Lcom/google/ads/internal/d;->g()Lcom/google/ads/m;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/google/ads/m;->f:Lcom/google/ads/util/i$b;
+    iget-object v0, v0, Lcom/google/ads/m;->d:Lcom/google/ads/util/i$b;
 
     invoke-virtual {v0}, Lcom/google/ads/util/i$b;->a()Ljava/lang/Object;
 
@@ -466,25 +463,25 @@
 
     invoke-static {v1, v0}, Lcom/google/ads/util/AdUtil;->a(Ljava/net/HttpURLConnection;Landroid/content/Context;)V
 
-    .line 458
+    .line 427
     const/4 v0, 0x0
 
     invoke-virtual {v1, v0}, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
 
-    .line 459
+    .line 428
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->connect()V
 
-    .line 460
+    .line 429
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v0
 
-    .line 461
+    .line 430
     invoke-direct {p0, v1, v0}, Lcom/google/ads/internal/f;->a(Ljava/net/HttpURLConnection;I)V
     :try_end_41
     .catchall {:try_start_11 .. :try_end_41} :catchall_45
 
-    .line 463
+    .line 432
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     goto :goto_0
@@ -496,7 +493,7 @@
 
     throw v0
 
-    .line 466
+    .line 435
     :cond_4a
     return-void
 .end method
@@ -505,26 +502,26 @@
     .registers 4
 
     .prologue
-    .line 182
+    .line 177
     const-string v0, "X-Afma-Debug-Dialog"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 183
+    .line 178
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_11
 
-    .line 184
+    .line 179
     iget-object v1, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     invoke-virtual {v1, v0}, Lcom/google/ads/internal/c;->e(Ljava/lang/String;)V
 
-    .line 186
+    .line 181
     :cond_11
     return-void
 .end method
@@ -533,26 +530,26 @@
     .registers 4
 
     .prologue
-    .line 193
+    .line 188
     const-string v0, "Content-Type"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 194
+    .line 189
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_11
 
-    .line 195
+    .line 190
     iget-object v1, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     invoke-virtual {v1, v0}, Lcom/google/ads/internal/c;->b(Ljava/lang/String;)V
 
-    .line 197
+    .line 192
     :cond_11
     return-void
 .end method
@@ -561,21 +558,21 @@
     .registers 4
 
     .prologue
-    .line 205
+    .line 200
     const-string v0, "X-Afma-Mediation"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 206
+    .line 201
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_19
 
-    .line 207
+    .line 202
     iget-object v1, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
@@ -588,7 +585,7 @@
 
     invoke-virtual {v1, v0}, Lcom/google/ads/internal/c;->a(Z)V
 
-    .line 209
+    .line 204
     :cond_19
     return-void
 .end method
@@ -597,27 +594,27 @@
     .registers 7
 
     .prologue
-    .line 215
+    .line 210
     const-string v0, "X-Afma-Interstitial-Timeout"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 216
+    .line 211
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_19
 
-    .line 218
+    .line 213
     :try_start_c
     invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v0
 
-    .line 219
+    .line 214
     iget-object v2, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
     const/high16 v3, 0x447a0000    # 1000.0f
@@ -630,16 +627,16 @@
     :try_end_19
     .catch Ljava/lang/NumberFormatException; {:try_start_c .. :try_end_19} :catch_1a
 
-    .line 225
+    .line 220
     :cond_19
     :goto_19
     return-void
 
-    .line 221
+    .line 216
     :catch_1a
     move-exception v0
 
-    .line 222
+    .line 217
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -667,21 +664,21 @@
     .registers 7
 
     .prologue
-    .line 232
+    .line 227
     const-string v0, "X-Afma-Tracking-Urls"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 233
+    .line 228
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_24
 
-    .line 234
+    .line 229
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -692,7 +689,7 @@
 
     move-result-object v1
 
-    .line 235
+    .line 230
     array-length v2, v1
 
     const/4 v0, 0x0
@@ -702,17 +699,17 @@
 
     aget-object v3, v1, v0
 
-    .line 236
+    .line 231
     iget-object v4, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
     invoke-virtual {v4, v3}, Lcom/google/ads/internal/d;->b(Ljava/lang/String;)V
 
-    .line 235
+    .line 230
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_18
 
-    .line 239
+    .line 234
     :cond_24
     return-void
 .end method
@@ -721,21 +718,21 @@
     .registers 7
 
     .prologue
-    .line 245
+    .line 240
     const-string v0, "X-Afma-Click-Tracking-Urls"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 246
+    .line 241
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_24
 
-    .line 247
+    .line 242
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -746,7 +743,7 @@
 
     move-result-object v1
 
-    .line 248
+    .line 243
     array-length v2, v1
 
     const/4 v0, 0x0
@@ -756,17 +753,17 @@
 
     aget-object v3, v1, v0
 
-    .line 249
+    .line 244
     iget-object v4, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     invoke-virtual {v4, v3}, Lcom/google/ads/internal/c;->a(Ljava/lang/String;)V
 
-    .line 248
+    .line 243
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_18
 
-    .line 252
+    .line 247
     :cond_24
     return-void
 .end method
@@ -775,21 +772,21 @@
     .registers 6
 
     .prologue
-    .line 260
+    .line 254
     const-string v0, "X-Afma-Refresh-Rate"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 261
+    .line 255
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_27
 
-    .line 264
+    .line 258
     :try_start_c
     invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
     :try_end_f
@@ -797,42 +794,42 @@
 
     move-result v0
 
-    .line 269
+    .line 263
     const/4 v1, 0x0
 
     cmpl-float v1, v0, v1
 
     if-lez v1, :cond_40
 
-    .line 271
+    .line 264
     iget-object v1, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
     invoke-virtual {v1, v0}, Lcom/google/ads/internal/d;->a(F)V
 
-    .line 272
+    .line 265
     iget-object v0, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
-    invoke-virtual {v0}, Lcom/google/ads/internal/d;->s()Z
+    invoke-virtual {v0}, Lcom/google/ads/internal/d;->r()Z
 
     move-result v0
 
     if-nez v0, :cond_27
 
-    .line 273
+    .line 266
     iget-object v0, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
     invoke-virtual {v0}, Lcom/google/ads/internal/d;->f()V
 
-    .line 279
+    .line 272
     :cond_27
     :goto_27
     return-void
 
-    .line 265
+    .line 259
     :catch_28
     move-exception v1
 
-    .line 266
+    .line 260
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -855,17 +852,17 @@
 
     goto :goto_27
 
-    .line 275
+    .line 268
     :cond_40
     iget-object v0, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
-    invoke-virtual {v0}, Lcom/google/ads/internal/d;->s()Z
+    invoke-virtual {v0}, Lcom/google/ads/internal/d;->r()Z
 
     move-result v0
 
     if-eqz v0, :cond_27
 
-    .line 276
+    .line 269
     iget-object v0, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
     invoke-virtual {v0}, Lcom/google/ads/internal/d;->e()V
@@ -877,21 +874,21 @@
     .registers 4
 
     .prologue
-    .line 286
+    .line 279
     const-string v0, "X-Afma-Orientation"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 287
+    .line 280
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_1d
 
-    .line 288
+    .line 281
     const-string v1, "portrait"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -900,7 +897,7 @@
 
     if-eqz v1, :cond_1e
 
-    .line 289
+    .line 282
     iget-object v0, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     invoke-static {}, Lcom/google/ads/util/AdUtil;->b()I
@@ -909,12 +906,12 @@
 
     invoke-virtual {v0, v1}, Lcom/google/ads/internal/c;->a(I)V
 
-    .line 294
+    .line 287
     :cond_1d
     :goto_1d
     return-void
 
-    .line 290
+    .line 283
     :cond_1e
     const-string v1, "landscape"
 
@@ -924,7 +921,7 @@
 
     if-eqz v0, :cond_1d
 
-    .line 291
+    .line 284
     iget-object v0, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     invoke-static {}, Lcom/google/ads/util/AdUtil;->a()I
@@ -940,7 +937,7 @@
     .registers 5
 
     .prologue
-    .line 301
+    .line 294
     const-string v0, "X-Afma-Doritos-Cache-Life"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
@@ -953,7 +950,7 @@
 
     if-nez v0, :cond_1b
 
-    .line 303
+    .line 296
     :try_start_c
     const-string v0, "X-Afma-Doritos-Cache-Life"
 
@@ -965,23 +962,23 @@
 
     move-result-wide v0
 
-    .line 305
+    .line 298
     iget-object v2, p0, Lcom/google/ads/internal/f;->b:Lcom/google/ads/internal/d;
 
     invoke-virtual {v2, v0, v1}, Lcom/google/ads/internal/d;->b(J)V
     :try_end_1b
     .catch Ljava/lang/NumberFormatException; {:try_start_c .. :try_end_1b} :catch_1c
 
-    .line 312
+    .line 305
     :cond_1b
     :goto_1b
     return-void
 
-    .line 306
+    .line 299
     :catch_1c
     move-exception v0
 
-    .line 307
+    .line 300
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1021,149 +1018,28 @@
     .registers 4
 
     .prologue
-    .line 329
+    .line 322
     const-string v0, "Cache-Control"
 
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 330
+    .line 323
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_11
 
-    .line 333
+    .line 326
     iget-object v1, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     invoke-virtual {v1, v0}, Lcom/google/ads/internal/c;->c(Ljava/lang/String;)V
 
-    .line 335
+    .line 328
     :cond_11
     return-void
-.end method
-
-.method private l(Ljava/net/HttpURLConnection;)V
-    .registers 6
-
-    .prologue
-    const/4 v3, 0x2
-
-    .line 341
-    const-string v0, "X-Afma-Ad-Size"
-
-    invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 342
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2d
-
-    .line 346
-    :try_start_d
-    const-string v1, "x"
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 347
-    array-length v2, v1
-
-    if-eq v2, v3, :cond_2e
-
-    .line 348
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Could not parse size header: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/ads/util/b;->e(Ljava/lang/String;)V
-
-    .line 359
-    :cond_2d
-    :goto_2d
-    return-void
-
-    .line 351
-    :cond_2e
-    const/4 v2, 0x0
-
-    aget-object v2, v1, v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    .line 352
-    const/4 v3, 0x1
-
-    aget-object v1, v1, v3
-
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-    :try_end_3b
-    .catch Ljava/lang/NumberFormatException; {:try_start_d .. :try_end_3b} :catch_47
-
-    move-result v0
-
-    .line 357
-    iget-object v1, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
-
-    new-instance v3, Lcom/google/ads/AdSize;
-
-    invoke-direct {v3, v2, v0}, Lcom/google/ads/AdSize;-><init>(II)V
-
-    invoke-virtual {v1, v3}, Lcom/google/ads/internal/c;->a(Lcom/google/ads/AdSize;)V
-
-    goto :goto_2d
-
-    .line 353
-    :catch_47
-    move-exception v1
-
-    .line 354
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Could not parse size header: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/ads/util/b;->e(Ljava/lang/String;)V
-
-    goto :goto_2d
 .end method
 
 
@@ -1172,12 +1048,12 @@
     .registers 2
 
     .prologue
-    .line 157
+    .line 153
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/ads/internal/f;->d:Z
 
-    .line 158
+    .line 154
     return-void
 .end method
 
@@ -1185,7 +1061,7 @@
     .registers 3
 
     .prologue
-    .line 366
+    .line 335
     monitor-enter p0
 
     :try_start_1
@@ -1193,35 +1069,35 @@
 
     if-nez v0, :cond_16
 
-    .line 367
+    .line 336
     iput-object p1, p0, Lcom/google/ads/internal/f;->f:Ljava/lang/String;
 
-    .line 368
+    .line 337
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/ads/internal/f;->d:Z
 
-    .line 369
+    .line 338
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     iput-object v0, p0, Lcom/google/ads/internal/f;->g:Ljava/lang/Thread;
 
-    .line 370
+    .line 339
     iget-object v0, p0, Lcom/google/ads/internal/f;->g:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
     :try_end_16
     .catchall {:try_start_1 .. :try_end_16} :catchall_18
 
-    .line 372
+    .line 341
     :cond_16
     monitor-exit p0
 
     return-void
 
-    .line 366
+    .line 335
     :catchall_18
     move-exception v0
 
@@ -1234,10 +1110,10 @@
     .registers 2
 
     .prologue
-    .line 321
+    .line 314
     iput-boolean p1, p0, Lcom/google/ads/internal/f;->e:Z
 
-    .line 322
+    .line 315
     return-void
 .end method
 
@@ -1245,7 +1121,7 @@
     .registers 3
 
     .prologue
-    .line 430
+    .line 399
     :try_start_0
     invoke-direct {p0}, Lcom/google/ads/internal/f;->b()V
     :try_end_3
@@ -1253,20 +1129,20 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_3} :catch_12
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_3} :catch_20
 
-    .line 444
+    .line 413
     :goto_3
     return-void
 
-    .line 431
+    .line 400
     :catch_4
     move-exception v0
 
-    .line 433
+    .line 402
     const-string v1, "Received malformed ad url from javascript."
 
     invoke-static {v1, v0}, Lcom/google/ads/util/b;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 434
+    .line 403
     iget-object v0, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     sget-object v1, Lcom/google/ads/AdRequest$ErrorCode;->INTERNAL_ERROR:Lcom/google/ads/AdRequest$ErrorCode;
@@ -1275,16 +1151,16 @@
 
     goto :goto_3
 
-    .line 435
+    .line 404
     :catch_12
     move-exception v0
 
-    .line 437
+    .line 406
     const-string v1, "IOException connecting to ad url."
 
     invoke-static {v1, v0}, Lcom/google/ads/util/b;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 438
+    .line 407
     iget-object v0, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     sget-object v1, Lcom/google/ads/AdRequest$ErrorCode;->NETWORK_ERROR:Lcom/google/ads/AdRequest$ErrorCode;
@@ -1293,16 +1169,16 @@
 
     goto :goto_3
 
-    .line 439
+    .line 408
     :catch_20
     move-exception v0
 
-    .line 441
+    .line 410
     const-string v1, "An unknown error occurred in AdResponseLoader."
 
     invoke-static {v1, v0}, Lcom/google/ads/util/b;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 442
+    .line 411
     iget-object v0, p0, Lcom/google/ads/internal/f;->a:Lcom/google/ads/internal/c;
 
     sget-object v1, Lcom/google/ads/AdRequest$ErrorCode;->INTERNAL_ERROR:Lcom/google/ads/AdRequest$ErrorCode;

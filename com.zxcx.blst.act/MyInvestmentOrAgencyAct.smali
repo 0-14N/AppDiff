@@ -60,41 +60,41 @@
     .registers 2
 
     .prologue
-    .line 37
+    .line 38
     invoke-direct {p0}, Lcom/zxcx/blst/act/BaseAct;-><init>()V
 
-    .line 47
+    .line 48
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->page:I
 
-    .line 48
+    .line 49
     const-string v0, "1"
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->type:Ljava/lang/String;
 
-    .line 54
+    .line 55
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->requestResult:[Ljava/lang/String;
 
-    .line 57
+    .line 58
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mItems3:Ljava/util/List;
 
-    .line 58
+    .line 59
     new-instance v0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$1;
 
     invoke-direct {v0, p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$1;-><init>(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;)V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->handler:Landroid/os/Handler;
 
-    .line 37
+    .line 38
     return-void
 .end method
 
@@ -102,18 +102,18 @@
     .registers 2
 
     .prologue
-    .line 55
+    .line 56
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->indexLay3Adapter:Lcom/zxcx/blst/adapter/IndexLay3Adapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$1(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;)V
-    .registers 1
+.method static synthetic access$1(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;Z)V
+    .registers 2
 
     .prologue
-    .line 199
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->getDataList()V
+    .line 214
+    invoke-direct {p0, p1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->getDataList(Z)V
 
     return-void
 .end method
@@ -122,7 +122,7 @@
     .registers 2
 
     .prologue
-    .line 57
+    .line 58
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mItems3:Ljava/util/List;
 
     return-object v0
@@ -132,7 +132,7 @@
     .registers 2
 
     .prologue
-    .line 297
+    .line 313
     invoke-direct {p0, p1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->delInvestmentOrAgency(Lcom/zxcx/blst/viewmodel/InvestmentListView;)V
 
     return-void
@@ -142,7 +142,7 @@
     .registers 2
 
     .prologue
-    .line 51
+    .line 52
     iput-object p1, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->delDialog:Lcom/zxcx/blst/custom/dialog/DelDialog;
 
     return-void
@@ -152,7 +152,7 @@
     .registers 2
 
     .prologue
-    .line 51
+    .line 52
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->delDialog:Lcom/zxcx/blst/custom/dialog/DelDialog;
 
     return-object v0
@@ -163,87 +163,88 @@
     .param p1, "investmentListView"    # Lcom/zxcx/blst/viewmodel/InvestmentListView;
 
     .prologue
-    .line 299
-    new-instance v0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$6;
+    .line 315
+    new-instance v0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$7;
 
-    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$6;-><init>(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;Lcom/zxcx/blst/viewmodel/InvestmentListView;)V
+    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$7;-><init>(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;Lcom/zxcx/blst/viewmodel/InvestmentListView;)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 375
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$6;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    .line 391
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$7;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 376
+    .line 392
     return-void
 .end method
 
-.method private getDataList()V
-    .registers 3
+.method private getDataList(Z)V
+    .registers 4
+    .param p1, "isPull"    # Z
 
     .prologue
-    .line 201
-    new-instance v0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$5;
+    .line 216
+    new-instance v0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$6;
 
-    invoke-direct {v0, p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$5;-><init>(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;)V
+    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$6;-><init>(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;Z)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 294
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$5;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    .line 310
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$6;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 295
+    .line 311
     return-void
 .end method
 
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .registers 3
+    .registers 4
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 183
+    const/4 v1, 0x0
+
+    .line 198
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_18
 
-    .line 196
-    :goto_7
+    .line 211
+    :goto_8
     return-void
 
-    .line 185
-    :pswitch_8
+    .line 200
+    :pswitch_9
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->finish()V
 
-    goto :goto_7
+    goto :goto_8
 
-    .line 188
-    :pswitch_c
-    const/4 v0, 0x0
+    .line 203
+    :pswitch_d
+    iput v1, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->page:I
 
-    iput v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->page:I
-
-    .line 189
+    .line 204
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mItems3:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 190
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->getDataList()V
+    .line 205
+    invoke-direct {p0, v1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->getDataList(Z)V
 
-    goto :goto_7
+    goto :goto_8
 
-    .line 183
+    .line 198
     :pswitch_data_18
-    .packed-switch 0x7f080167
-        :pswitch_c
-        :pswitch_8
+    .packed-switch 0x7f090180
+        :pswitch_d
+        :pswitch_9
     .end packed-switch
 .end method
 
@@ -252,23 +253,23 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 76
+    .line 77
     invoke-super {p0, p1}, Lcom/zxcx/blst/act/BaseAct;->onCreate(Landroid/os/Bundle;)V
 
-    .line 77
-    const v1, 0x7f03004b
+    .line 78
+    const v1, 0x7f030051
 
     invoke-virtual {p0, v1}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->setContentView(I)V
 
-    .line 78
+    .line 79
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->setupView()V
 
-    .line 79
+    .line 80
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 80
+    .line 81
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "myIconPath"
 
@@ -278,7 +279,7 @@
 
     iput-object v1, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->myIconPath:Ljava/lang/String;
 
-    .line 81
+    .line 82
     return-void
 .end method
 
@@ -288,14 +289,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 85
+    .line 86
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->inflater:Landroid/view/LayoutInflater;
 
-    .line 86
+    .line 87
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -308,7 +309,7 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->type:Ljava/lang/String;
 
-    .line 87
+    .line 88
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -321,8 +322,8 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->otheruserid:Ljava/lang/String;
 
-    .line 90
-    const v0, 0x7f080166
+    .line 91
+    const v0, 0x7f09017f
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->findViewById(I)Landroid/view/View;
 
@@ -330,18 +331,18 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 89
+    .line 90
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->tv_title_bar_center:Landroid/widget/TextView;
 
-    .line 91
+    .line 92
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->tv_title_bar_center:Landroid/widget/TextView;
 
     const-string v1, "\u62db\u5546\u4ee3\u7406\u4fe1\u606f"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 93
-    const v0, 0x7f080168
+    .line 94
+    const v0, 0x7f090181
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->findViewById(I)Landroid/view/View;
 
@@ -349,11 +350,11 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 92
+    .line 93
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->iv_title_bar_left:Landroid/widget/ImageButton;
 
-    .line 95
-    const v0, 0x7f080167
+    .line 96
+    const v0, 0x7f090180
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->findViewById(I)Landroid/view/View;
 
@@ -361,26 +362,26 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 94
+    .line 95
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->iv_title_bar_right:Landroid/widget/ImageButton;
 
-    .line 96
+    .line 97
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->iv_title_bar_right:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 97
+    .line 98
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->iv_title_bar_left:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 98
+    .line 99
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->iv_title_bar_right:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 100
-    const v0, 0x7f0800ef
+    .line 101
+    const v0, 0x7f0900fe
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->findViewById(I)Landroid/view/View;
 
@@ -390,8 +391,8 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->ll_content1:Landroid/widget/LinearLayout;
 
-    .line 103
-    const v0, 0x7f080115
+    .line 104
+    const v0, 0x7f090127
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->findViewById(I)Landroid/view/View;
 
@@ -401,7 +402,7 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
 
-    .line 104
+    .line 105
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
 
     new-instance v1, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$2;
@@ -410,11 +411,6 @@
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnExplainListener;)V
 
-    .line 112
-    iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
-
-    invoke-virtual {v0, v2}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setCanPullRefresh(Z)V
-
     .line 113
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
 
@@ -422,9 +418,18 @@
 
     invoke-direct {v1, p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$3;-><init>(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;)V
 
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnRefreshListener;)V
+
+    .line 124
+    iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+
+    new-instance v1, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$4;
+
+    invoke-direct {v1, p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$4;-><init>(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;)V
+
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
-    .line 145
+    .line 160
     new-instance v0, Lcom/zxcx/blst/adapter/IndexLay3Adapter;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mItems3:Ljava/util/List;
@@ -433,25 +438,25 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->indexLay3Adapter:Lcom/zxcx/blst/adapter/IndexLay3Adapter;
 
-    .line 146
+    .line 161
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->indexLay3Adapter:Lcom/zxcx/blst/adapter/IndexLay3Adapter;
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 148
+    .line 163
     iget-object v0, p0, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
 
-    new-instance v1, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$4;
+    new-instance v1, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$5;
 
-    invoke-direct {v1, p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$4;-><init>(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;)V
+    invoke-direct {v1, p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct$5;-><init>(Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;)V
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 176
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->getDataList()V
+    .line 191
+    invoke-direct {p0, v2}, Lcom/zxcx/blst/act/MyInvestmentOrAgencyAct;->getDataList(Z)V
 
-    .line 177
+    .line 192
     return-void
 .end method

@@ -256,28 +256,28 @@
     .line 130
     iput v2, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getVoiceStatus:I
 
-    .line 461
+    .line 460
     new-instance v0, Lcom/hschinese/hellowords/activity/WordPracticeActivity$1;
 
     invoke-direct {v0, p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity$1;-><init>(Lcom/hschinese/hellowords/activity/WordPracticeActivity;)V
 
     iput-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getLocalCheckPointListener:Lcom/hschinese/hellowords/task/TaskListener;
 
-    .line 648
+    .line 647
     new-instance v0, Lcom/hschinese/hellowords/activity/WordPracticeActivity$2;
 
     invoke-direct {v0, p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity$2;-><init>(Lcom/hschinese/hellowords/activity/WordPracticeActivity;)V
 
     iput-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getLocalWordListener:Lcom/hschinese/hellowords/task/TaskListener;
 
-    .line 788
+    .line 787
     new-instance v0, Lcom/hschinese/hellowords/activity/WordPracticeActivity$3;
 
     invoke-direct {v0, p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity$3;-><init>(Lcom/hschinese/hellowords/activity/WordPracticeActivity;)V
 
     iput-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mWordRefreshReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1261
+    .line 1260
     iput-boolean v2, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->isExit:Z
 
     .line 90
@@ -308,7 +308,7 @@
     .registers 1
 
     .prologue
-    .line 248
+    .line 247
     invoke-direct {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->sysWord()V
 
     return-void
@@ -318,7 +318,7 @@
     .registers 1
 
     .prologue
-    .line 297
+    .line 296
     invoke-direct {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getCheckPoint()V
 
     return-void
@@ -378,7 +378,7 @@
     .registers 2
 
     .prologue
-    .line 704
+    .line 703
     invoke-direct {p0, p1}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getWord(Ljava/lang/String;)V
 
     return-void
@@ -438,7 +438,7 @@
     .registers 2
 
     .prologue
-    .line 780
+    .line 779
     invoke-direct {p0, p1}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getSingleProgress(I)V
 
     return-void
@@ -488,7 +488,7 @@
     .registers 1
 
     .prologue
-    .line 439
+    .line 438
     invoke-direct {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getLocalCheck()V
 
     return-void
@@ -688,7 +688,7 @@
     .registers 2
 
     .prologue
-    .line 501
+    .line 500
     invoke-direct {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->changeCheckPoint()Z
 
     move-result v0
@@ -730,7 +730,7 @@
     .registers 4
 
     .prologue
-    .line 541
+    .line 540
     invoke-direct {p0, p1, p2}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->setCheckPointProgress(ILjava/util/List;)Z
 
     move-result v0
@@ -792,7 +792,7 @@
     .registers 2
 
     .prologue
-    .line 1261
+    .line 1260
     iput-boolean p1, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->isExit:Z
 
     return-void
@@ -832,7 +832,7 @@
     .registers 1
 
     .prologue
-    .line 347
+    .line 346
     invoke-direct {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->syscCheckPoint()V
 
     return-void
@@ -844,19 +844,19 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 502
+    .line 501
     sget-object v6, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->points:Ljava/util/List;
 
     if-eqz v6, :cond_8f
 
-    .line 503
+    .line 502
     sget-object v6, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->points:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
 
     move-result v3
 
-    .line 504
+    .line 503
     .local v3, "p1Size":I
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->tempPoints:Ljava/util/List;
 
@@ -864,14 +864,14 @@
 
     move-result v4
 
-    .line 505
+    .line 504
     .local v4, "p2Size":I
     if-eq v3, v4, :cond_8d
 
-    .line 506
+    .line 505
     if-le v3, v4, :cond_4a
 
-    .line 507
+    .line 506
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -881,14 +881,14 @@
     :cond_18
     move v6, v7
 
-    .line 537
+    .line 536
     .end local v1    # "i":I
     .end local v3    # "p1Size":I
     .end local v4    # "p2Size":I
     :goto_19
     return v6
 
-    .line 508
+    .line 507
     .restart local v1    # "i":I
     .restart local v3    # "p1Size":I
     .restart local v4    # "p2Size":I
@@ -905,11 +905,11 @@
 
     move-result-object v0
 
-    .line 509
+    .line 508
     .local v0, "cpid":Ljava/lang/String;
     const/4 v5, 0x1
 
-    .line 510
+    .line 509
     .local v5, "result":Z
     const/4 v2, 0x0
 
@@ -917,21 +917,21 @@
     :goto_28
     if-lt v2, v4, :cond_34
 
-    .line 515
+    .line 514
     if-eqz v5, :cond_31
 
-    .line 516
+    .line 515
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mHelpDb:Lcom/hschinese/hellowords/db/CourseDbManager;
 
     invoke-virtual {v6, v0}, Lcom/hschinese/hellowords/db/CourseDbManager;->deleteCheckPointByCpid(Ljava/lang/String;)V
 
-    .line 507
+    .line 506
     :cond_31
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_16
 
-    .line 511
+    .line 510
     :cond_34
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->tempPoints:Ljava/util/List;
 
@@ -951,16 +951,16 @@
 
     if-eqz v6, :cond_47
 
-    .line 512
+    .line 511
     const/4 v5, 0x0
 
-    .line 510
+    .line 509
     :cond_47
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_28
 
-    .line 520
+    .line 519
     .end local v0    # "cpid":Ljava/lang/String;
     .end local v1    # "i":I
     .end local v2    # "j":I
@@ -972,7 +972,7 @@
     :goto_4b
     if-ge v1, v4, :cond_18
 
-    .line 521
+    .line 520
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->tempPoints:Ljava/util/List;
 
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -985,11 +985,11 @@
 
     move-result-object v0
 
-    .line 522
+    .line 521
     .restart local v0    # "cpid":Ljava/lang/String;
     const/4 v5, 0x1
 
-    .line 523
+    .line 522
     .restart local v5    # "result":Z
     const/4 v2, 0x0
 
@@ -997,10 +997,10 @@
     :goto_5b
     if-lt v2, v3, :cond_77
 
-    .line 528
+    .line 527
     if-eqz v5, :cond_74
 
-    .line 529
+    .line 528
     iget-object v8, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mHelpDb:Lcom/hschinese/hellowords/db/CourseDbManager;
 
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->tempPoints:Ljava/util/List;
@@ -1021,13 +1021,13 @@
 
     invoke-virtual {v8, v6, v9}, Lcom/hschinese/hellowords/db/CourseDbManager;->insertSingleCheckPoint(Lcom/hschinese/hellowords/pojo/CheckPoint;Ljava/lang/String;)V
 
-    .line 520
+    .line 519
     :cond_74
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_4b
 
-    .line 524
+    .line 523
     :cond_77
     sget-object v6, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->points:Ljava/util/List;
 
@@ -1047,16 +1047,16 @@
 
     if-eqz v6, :cond_8a
 
-    .line 525
+    .line 524
     const/4 v5, 0x0
 
-    .line 523
+    .line 522
     :cond_8a
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_5b
 
-    .line 535
+    .line 534
     .end local v0    # "cpid":Ljava/lang/String;
     .end local v1    # "i":I
     .end local v2    # "j":I
@@ -1071,7 +1071,7 @@
     :cond_8f
     move v6, v7
 
-    .line 537
+    .line 536
     goto :goto_19
 .end method
 
@@ -1079,7 +1079,7 @@
     .registers 3
 
     .prologue
-    .line 298
+    .line 297
     invoke-static {}, Lcom/hschinese/hellowords/utils/ThreadPoolUtil;->getInstance()Lcom/hschinese/hellowords/utils/ThreadPoolUtil;
 
     move-result-object v0
@@ -1090,7 +1090,7 @@
 
     invoke-virtual {v0, v1}, Lcom/hschinese/hellowords/utils/ThreadPoolUtil;->execute(Ljava/lang/Runnable;)V
 
-    .line 345
+    .line 344
     return-void
 .end method
 
@@ -1098,7 +1098,7 @@
     .registers 10
 
     .prologue
-    .line 440
+    .line 439
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mHelpDb:Lcom/hschinese/hellowords/db/CourseDbManager;
 
     sget-object v7, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->bid:Ljava/lang/String;
@@ -1121,7 +1121,7 @@
 
     iput-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->tempPoints:Ljava/util/List;
 
-    .line 441
+    .line 440
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mHelpDb:Lcom/hschinese/hellowords/db/CourseDbManager;
 
     invoke-static {}, Lcom/hschinese/hellowords/activity/MyApplication;->getInstance()Lcom/hschinese/hellowords/activity/MyApplication;
@@ -1144,7 +1144,7 @@
 
     iput-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->pointPros:Ljava/util/List;
 
-    .line 442
+    .line 441
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mHelpDb:Lcom/hschinese/hellowords/db/CourseDbManager;
 
     sget-object v7, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->bid:Ljava/lang/String;
@@ -1157,7 +1157,7 @@
 
     iput v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->currentNum:I
 
-    .line 443
+    .line 442
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mHelpDb:Lcom/hschinese/hellowords/db/CourseDbManager;
 
     sget-object v7, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->bid:Ljava/lang/String;
@@ -1180,7 +1180,7 @@
 
     iput v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->conditionNum:I
 
-    .line 444
+    .line 443
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->tempPoints:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
@@ -1201,14 +1201,14 @@
 
     if-lez v6, :cond_71
 
-    .line 445
+    .line 444
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->tempPoints:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
 
     move-result v4
 
-    .line 446
+    .line 445
     .local v4, "pSize":I
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->pointPros:Ljava/util/List;
 
@@ -1216,7 +1216,7 @@
 
     move-result v5
 
-    .line 447
+    .line 446
     .local v5, "ppSize":I
     const/4 v1, 0x0
 
@@ -1224,14 +1224,14 @@
     :goto_6f
     if-lt v1, v5, :cond_72
 
-    .line 459
+    .line 458
     .end local v1    # "i":I
     .end local v4    # "pSize":I
     .end local v5    # "ppSize":I
     :cond_71
     return-void
 
-    .line 448
+    .line 447
     .restart local v1    # "i":I
     .restart local v4    # "pSize":I
     .restart local v5    # "ppSize":I
@@ -1248,7 +1248,7 @@
 
     move-result-object v3
 
-    .line 449
+    .line 448
     .local v3, "pCpid":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -1256,12 +1256,12 @@
     :goto_7f
     if-lt v2, v4, :cond_84
 
-    .line 447
+    .line 446
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_6f
 
-    .line 450
+    .line 449
     :cond_84
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->tempPoints:Ljava/util/List;
 
@@ -1271,7 +1271,7 @@
 
     check-cast v0, Lcom/hschinese/hellowords/pojo/CheckPoint;
 
-    .line 451
+    .line 450
     .local v0, "cp":Lcom/hschinese/hellowords/pojo/CheckPoint;
     invoke-virtual {v0}, Lcom/hschinese/hellowords/pojo/CheckPoint;->getCpid()Ljava/lang/String;
 
@@ -1283,7 +1283,7 @@
 
     if-eqz v6, :cond_c0
 
-    .line 452
+    .line 451
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->pointPros:Ljava/util/List;
 
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1306,12 +1306,12 @@
 
     invoke-virtual {v0, v6}, Lcom/hschinese/hellowords/pojo/CheckPoint;->setProgress(F)V
 
-    .line 453
+    .line 452
     const/4 v6, 0x1
 
     invoke-virtual {v0, v6}, Lcom/hschinese/hellowords/pojo/CheckPoint;->setStatus(I)V
 
-    .line 454
+    .line 453
     iget-object v6, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->pointPros:Ljava/util/List;
 
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1326,7 +1326,7 @@
 
     invoke-virtual {v0, v6}, Lcom/hschinese/hellowords/pojo/CheckPoint;->setIsChange(I)V
 
-    .line 449
+    .line 448
     :cond_c0
     add-int/lit8 v2, v2, 0x1
 
@@ -1345,9 +1345,9 @@
     .prologue
     const/4 v5, 0x0
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 236
     new-instance v1, Lcom/hschinese/hellowords/activity/WordPracticeActivity$GetLocalCheckPoint;
@@ -1384,7 +1384,7 @@
 
     move-result-object v1
 
-    invoke-static {p0, v1, v4, v3, v5}, Lcom/hschinese/hellowords/utils/LoadingDialogUtil;->getLoadingDialog(Landroid/content/Context;Ljava/lang/String;ZZLcom/hschinese/hellowords/task/GenericTask;)Lcom/hschinese/hellowords/view/HsDialog;
+    invoke-static {p0, v1, v3, v4, v5}, Lcom/hschinese/hellowords/utils/LoadingDialogUtil;->getLoadingDialog(Landroid/content/Context;Ljava/lang/String;ZZLcom/hschinese/hellowords/task/GenericTask;)Lcom/hschinese/hellowords/view/HsDialog;
 
     move-result-object v1
 
@@ -1407,16 +1407,18 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/hschinese/hellowords/task/TaskParams;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 245
+    .line 244
     iget-object v1, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getLocalCheckPointTask:Lcom/hschinese/hellowords/task/GenericTask;
 
-    new-array v2, v4, [Lcom/hschinese/hellowords/task/TaskParams;
+    sget-object v2, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    aput-object v0, v2, v3
+    new-array v3, v3, [Lcom/hschinese/hellowords/task/TaskParams;
 
-    invoke-virtual {v1, v2}, Lcom/hschinese/hellowords/task/GenericTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    aput-object v0, v3, v4
 
-    .line 246
+    invoke-virtual {v1, v2, v3}, Lcom/hschinese/hellowords/task/GenericTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    .line 245
     return-void
 .end method
 
@@ -1425,16 +1427,16 @@
     .param p1, "current"    # I
 
     .prologue
-    .line 781
+    .line 780
     iget-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getSingleProgressTask:Lcom/hschinese/hellowords/activity/WordPracticeActivity$getSinglePro;
 
     if-eqz v0, :cond_5
 
-    .line 786
+    .line 785
     :goto_4
     return-void
 
-    .line 784
+    .line 783
     :cond_5
     new-instance v0, Lcom/hschinese/hellowords/activity/WordPracticeActivity$getSinglePro;
 
@@ -1442,7 +1444,7 @@
 
     iput-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getSingleProgressTask:Lcom/hschinese/hellowords/activity/WordPracticeActivity$getSinglePro;
 
-    .line 785
+    .line 784
     iget-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getSingleProgressTask:Lcom/hschinese/hellowords/activity/WordPracticeActivity$getSinglePro;
 
     const/4 v1, 0x0
@@ -1459,7 +1461,7 @@
     .param p1, "cpid"    # Ljava/lang/String;
 
     .prologue
-    .line 705
+    .line 704
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/hschinese/hellowords/activity/WordPracticeActivity$8;
@@ -1468,10 +1470,10 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 730
+    .line 729
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 731
+    .line 730
     return-void
 .end method
 
@@ -1479,14 +1481,14 @@
     .registers 2
 
     .prologue
-    .line 1145
+    .line 1144
     new-instance v0, Lcom/hschinese/hellowords/activity/WordPracticeActivity$9;
 
     invoke-direct {v0, p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity$9;-><init>(Lcom/hschinese/hellowords/activity/WordPracticeActivity;)V
 
     iput-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mHandler:Landroid/os/Handler;
 
-    .line 1259
+    .line 1258
     return-void
 .end method
 
@@ -1504,7 +1506,7 @@
     .end annotation
 
     .prologue
-    .line 542
+    .line 541
     .local p2, "cps":Ljava/util/List;, "Ljava/util/List<Lcom/hschinese/hellowords/pojo/CheckPointProgress;>;"
     invoke-virtual {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getBaseContext()Landroid/content/Context;
 
@@ -1512,10 +1514,10 @@
 
     monitor-enter v13
 
-    .line 543
+    .line 542
     if-nez p1, :cond_63
 
-    .line 544
+    .line 543
     :try_start_7
     sget-object v12, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->points:Ljava/util/List;
 
@@ -1525,14 +1527,14 @@
 
     if-lez v12, :cond_1e
 
-    .line 545
+    .line 544
     iget-object v12, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->tempPoints:Ljava/util/List;
 
     invoke-interface {v12}, Ljava/util/List;->size()I
 
     move-result v9
 
-    .line 546
+    .line 545
     .local v9, "pSize":I
     sget-object v12, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->points:Ljava/util/List;
 
@@ -1540,7 +1542,7 @@
 
     move-result v10
 
-    .line 547
+    .line 546
     .local v10, "ppSize":I
     const/4 v5, 0x0
 
@@ -1548,7 +1550,7 @@
     :goto_1c
     if-lt v5, v10, :cond_21
 
-    .line 558
+    .line 557
     .end local v5    # "i":I
     .end local v9    # "pSize":I
     .end local v10    # "ppSize":I
@@ -1557,11 +1559,11 @@
 
     const/4 v6, 0x1
 
-    .line 583
+    .line 582
     :goto_20
     return v6
 
-    .line 548
+    .line 547
     .restart local v5    # "i":I
     .restart local v9    # "pSize":I
     .restart local v10    # "ppSize":I
@@ -1578,7 +1580,7 @@
 
     move-result-object v8
 
-    .line 549
+    .line 548
     .local v8, "pCpid":Ljava/lang/String;
     const/4 v7, 0x0
 
@@ -1586,12 +1588,12 @@
     :goto_2e
     if-lt v7, v9, :cond_33
 
-    .line 547
+    .line 546
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1c
 
-    .line 550
+    .line 549
     :cond_33
     iget-object v12, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->tempPoints:Ljava/util/List;
 
@@ -1601,7 +1603,7 @@
 
     check-cast v1, Lcom/hschinese/hellowords/pojo/CheckPoint;
 
-    .line 551
+    .line 550
     .local v1, "cp":Lcom/hschinese/hellowords/pojo/CheckPoint;
     invoke-virtual {v1}, Lcom/hschinese/hellowords/pojo/CheckPoint;->getCpid()Ljava/lang/String;
 
@@ -1613,7 +1615,7 @@
 
     if-eqz v12, :cond_60
 
-    .line 552
+    .line 551
     sget-object v12, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->points:Ljava/util/List;
 
     invoke-interface {v12, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1636,18 +1638,18 @@
 
     invoke-virtual {v1, v12}, Lcom/hschinese/hellowords/pojo/CheckPoint;->setProgress(F)V
 
-    .line 553
+    .line 552
     const/4 v12, 0x1
 
     invoke-virtual {v1, v12}, Lcom/hschinese/hellowords/pojo/CheckPoint;->setStatus(I)V
 
-    .line 549
+    .line 548
     :cond_60
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2e
 
-    .line 560
+    .line 559
     .end local v1    # "cp":Lcom/hschinese/hellowords/pojo/CheckPoint;
     .end local v5    # "i":I
     .end local v7    # "j":I
@@ -1657,13 +1659,13 @@
     :cond_63
     const/4 v6, 0x0
 
-    .line 561
+    .line 560
     .local v6, "isAlter":Z
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->size()I
 
     move-result v9
 
-    .line 562
+    .line 561
     .restart local v9    # "pSize":I
     iget-object v12, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->pointPros:Ljava/util/List;
 
@@ -1671,7 +1673,7 @@
 
     move-result v10
 
-    .line 563
+    .line 562
     .restart local v10    # "ppSize":I
     const/4 v5, 0x0
 
@@ -1679,17 +1681,17 @@
     :goto_6f
     if-lt v5, v9, :cond_79
 
-    .line 582
+    .line 581
     const/4 v12, 0x0
 
     iput-object v12, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->pointPros:Ljava/util/List;
 
-    .line 583
+    .line 582
     monitor-exit v13
 
     goto :goto_20
 
-    .line 542
+    .line 541
     .end local v5    # "i":I
     .end local v6    # "isAlter":Z
     .end local v9    # "pSize":I
@@ -1703,7 +1705,7 @@
 
     throw v12
 
-    .line 564
+    .line 563
     .restart local v5    # "i":I
     .restart local v6    # "isAlter":Z
     .restart local v9    # "pSize":I
@@ -1718,11 +1720,11 @@
 
     check-cast v3, Lcom/hschinese/hellowords/pojo/CheckPointProgress;
 
-    .line 565
+    .line 564
     .local v3, "cpp":Lcom/hschinese/hellowords/pojo/CheckPointProgress;
     const/4 v11, 0x1
 
-    .line 566
+    .line 565
     .local v11, "result":Z
     const/4 v7, 0x0
 
@@ -1730,15 +1732,15 @@
     :goto_83
     if-lt v7, v10, :cond_98
 
-    .line 577
+    .line 576
     :cond_85
     :goto_85
     if-eqz v11, :cond_95
 
-    .line 578
+    .line 577
     const/4 v6, 0x1
 
-    .line 579
+    .line 578
     iget-object v12, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mHelpDb:Lcom/hschinese/hellowords/db/CourseDbManager;
 
     invoke-static {}, Lcom/hschinese/hellowords/activity/MyApplication;->getInstance()Lcom/hschinese/hellowords/activity/MyApplication;
@@ -1751,13 +1753,13 @@
 
     invoke-virtual {v12, v3, v14}, Lcom/hschinese/hellowords/db/CourseDbManager;->updateOrInsertCheckPointProgress(Lcom/hschinese/hellowords/pojo/CheckPointProgress;Ljava/lang/String;)V
 
-    .line 563
+    .line 562
     :cond_95
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_6f
 
-    .line 567
+    .line 566
     :cond_98
     iget-object v12, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->pointPros:Ljava/util/List;
 
@@ -1767,7 +1769,7 @@
 
     check-cast v1, Lcom/hschinese/hellowords/pojo/CheckPointProgress;
 
-    .line 568
+    .line 567
     .local v1, "cp":Lcom/hschinese/hellowords/pojo/CheckPointProgress;
     invoke-virtual {v3}, Lcom/hschinese/hellowords/pojo/CheckPointProgress;->getCpid()Ljava/lang/String;
 
@@ -1783,7 +1785,7 @@
 
     if-eqz v12, :cond_cc
 
-    .line 569
+    .line 568
     invoke-virtual {v1}, Lcom/hschinese/hellowords/pojo/CheckPointProgress;->getProgress()Ljava/lang/String;
 
     move-result-object v12
@@ -1796,7 +1798,7 @@
 
     move-result v2
 
-    .line 570
+    .line 569
     .local v2, "cpFloat":F
     invoke-virtual {v3}, Lcom/hschinese/hellowords/pojo/CheckPointProgress;->getProgress()Ljava/lang/String;
 
@@ -1812,19 +1814,19 @@
 
     move-result v4
 
-    .line 571
+    .line 570
     .local v4, "cppFloat":F
     cmpl-float v12, v2, v4
 
     if-ltz v12, :cond_85
 
-    .line 572
+    .line 571
     const/4 v11, 0x0
 
-    .line 574
+    .line 573
     goto :goto_85
 
-    .line 566
+    .line 565
     .end local v2    # "cpFloat":F
     .end local v4    # "cppFloat":F
     :cond_cc
@@ -1837,7 +1839,7 @@
     .registers 3
 
     .prologue
-    .line 249
+    .line 248
     invoke-static {}, Lcom/hschinese/hellowords/utils/ThreadPoolUtil;->getInstance()Lcom/hschinese/hellowords/utils/ThreadPoolUtil;
 
     move-result-object v0
@@ -1848,7 +1850,7 @@
 
     invoke-virtual {v0, v1}, Lcom/hschinese/hellowords/utils/ThreadPoolUtil;->execute(Ljava/lang/Runnable;)V
 
-    .line 295
+    .line 294
     return-void
 .end method
 
@@ -1856,7 +1858,7 @@
     .registers 3
 
     .prologue
-    .line 348
+    .line 347
     invoke-static {}, Lcom/hschinese/hellowords/utils/ThreadPoolUtil;->getInstance()Lcom/hschinese/hellowords/utils/ThreadPoolUtil;
 
     move-result-object v0
@@ -1867,7 +1869,7 @@
 
     invoke-virtual {v0, v1}, Lcom/hschinese/hellowords/utils/ThreadPoolUtil;->execute(Ljava/lang/Runnable;)V
 
-    .line 397
+    .line 396
     return-void
 .end method
 
@@ -1877,17 +1879,17 @@
     .registers 7
 
     .prologue
-    .line 1263
+    .line 1262
     iget-boolean v2, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->isExit:Z
 
     if-nez v2, :cond_2a
 
-    .line 1264
+    .line 1263
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->isExit:Z
 
-    .line 1265
+    .line 1264
     invoke-virtual {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
@@ -1906,7 +1908,7 @@
 
     invoke-static {v2, v3, v4}, Lcom/hschinese/hellowords/utils/UIUtils;->showToast(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 1266
+    .line 1265
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
@@ -1915,17 +1917,17 @@
 
     invoke-direct {v3, p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity$10;-><init>(Lcom/hschinese/hellowords/activity/WordPracticeActivity;)V
 
-    .line 1270
+    .line 1269
     const-wide/16 v4, 0x7d0
 
-    .line 1266
+    .line 1265
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1279
+    .line 1278
     :goto_29
     return-void
 
-    .line 1272
+    .line 1271
     :cond_2a
     invoke-static {}, Lcom/hschinese/hellowords/utils/ThreadPoolUtil;->getInstance()Lcom/hschinese/hellowords/utils/ThreadPoolUtil;
 
@@ -1933,7 +1935,7 @@
 
     invoke-virtual {v2}, Lcom/hschinese/hellowords/utils/ThreadPoolUtil;->shutdownNow()V
 
-    .line 1273
+    .line 1272
     invoke-static {}, Lcom/hschinese/hellowords/activity/MyApplication;->getInstance()Lcom/hschinese/hellowords/activity/MyApplication;
 
     move-result-object v2
@@ -1942,7 +1944,7 @@
 
     move-result-object v1
 
-    .line 1274
+    .line 1273
     .local v1, "allAtys":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Landroid/app/Activity;>;"
     invoke-virtual {v1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -1955,7 +1957,7 @@
 
     if-nez v3, :cond_4b
 
-    .line 1277
+    .line 1276
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v2
@@ -1964,7 +1966,7 @@
 
     goto :goto_29
 
-    .line 1274
+    .line 1273
     :cond_4b
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1972,7 +1974,7 @@
 
     check-cast v0, Landroid/app/Activity;
 
-    .line 1275
+    .line 1274
     .local v0, "activity":Landroid/app/Activity;
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
@@ -1983,15 +1985,15 @@
     .registers 2
 
     .prologue
-    .line 882
+    .line 881
     invoke-super {p0}, Lcom/hschinese/hellowords/activity/BaseActivity;->finish()V
 
-    .line 883
+    .line 882
     const/4 v0, 0x0
 
     sput-object v0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->points:Ljava/util/List;
 
-    .line 884
+    .line 883
     return-void
 .end method
 
@@ -2517,15 +2519,15 @@
 
     const/4 v2, 0x0
 
-    .line 857
+    .line 856
     invoke-super {p0, p1, p2, p3}, Lcom/hschinese/hellowords/activity/BaseActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 858
+    .line 857
     const/4 v0, -0x1
 
     if-ne v0, p2, :cond_8e
 
-    .line 859
+    .line 858
     iget-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mDialog:Lcom/hschinese/hellowords/view/HsDialog;
 
     if-eqz v0, :cond_1c
@@ -2538,7 +2540,7 @@
 
     if-nez v0, :cond_2f
 
-    .line 860
+    .line 859
     :cond_1c
     const v0, 0x7f040025
 
@@ -2554,16 +2556,16 @@
 
     iput-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mDialog:Lcom/hschinese/hellowords/view/HsDialog;
 
-    .line 861
+    .line 860
     iget-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mDialog:Lcom/hschinese/hellowords/view/HsDialog;
 
     invoke-virtual {v0}, Lcom/hschinese/hellowords/view/HsDialog;->show()V
 
-    .line 863
+    .line 862
     :cond_2f
     if-nez p1, :cond_8e
 
-    .line 864
+    .line 863
     invoke-static {}, Lcom/hschinese/hellowords/activity/MyApplication;->getInstance()Lcom/hschinese/hellowords/activity/MyApplication;
 
     move-result-object v0
@@ -2574,21 +2576,21 @@
 
     if-ne v3, v0, :cond_8f
 
-    .line 865
+    .line 864
     invoke-virtual {p0, v5}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 866
+    .line 865
     invoke-virtual {p0, v6}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 871
+    .line 870
     :goto_49
     iget-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mTitle:Landroid/widget/TextView;
 
@@ -2604,7 +2606,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 872
+    .line 871
     iget-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mNickNameTxt:Landroid/widget/TextView;
 
     invoke-static {p0}, Lcom/hschinese/hellowords/utils/UserInfoUtil;->getInstance(Landroid/content/Context;)Lcom/hschinese/hellowords/utils/UserInfoUtil;
@@ -2617,7 +2619,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 873
+    .line 872
     invoke-static {}, Lcom/hschinese/hellowords/activity/MyApplication;->getInstance()Lcom/hschinese/hellowords/activity/MyApplication;
 
     move-result-object v0
@@ -2644,7 +2646,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/nostra13/universalimageloader/core/ImageLoader;->displayImage(Ljava/lang/String;Landroid/widget/ImageView;Lcom/nostra13/universalimageloader/core/DisplayImageOptions;)V
 
-    .line 874
+    .line 873
     invoke-virtual {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -2657,11 +2659,11 @@
 
     invoke-direct {p0, v0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getLocalCheckPoint(Ljava/lang/String;)V
 
-    .line 877
+    .line 876
     :cond_8e
     return-void
 
-    .line 868
+    .line 867
     :cond_8f
     invoke-virtual {p0, v5}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->findViewById(I)Landroid/view/View;
 
@@ -2669,7 +2671,7 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 869
+    .line 868
     invoke-virtual {p0, v6}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -2688,19 +2690,19 @@
 
     const/4 v7, 0x1
 
-    .line 818
+    .line 817
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v4
 
     sparse-switch v4, :sswitch_data_dc
 
-    .line 853
+    .line 852
     :cond_9
     :goto_9
     return-void
 
-    .line 820
+    .line 819
     :sswitch_a
     new-instance v4, Landroid/content/Intent;
 
@@ -2722,7 +2724,7 @@
 
     goto :goto_9
 
-    .line 823
+    .line 822
     :sswitch_1f
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2750,7 +2752,7 @@
 
     move-result-object v1
 
-    .line 824
+    .line 823
     .local v1, "folderd":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2788,18 +2790,18 @@
 
     move-result-object v0
 
-    .line 825
+    .line 824
     .local v0, "destination":Ljava/lang/String;
     iget-object v4, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->constants:Lcom/hschinese/hellowords/controller/WordTestConstants;
 
     invoke-virtual {v4, v0}, Lcom/hschinese/hellowords/controller/WordTestConstants;->setCurrentDestination(Ljava/lang/String;)V
 
-    .line 826
+    .line 825
     iget-object v4, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->constants:Lcom/hschinese/hellowords/controller/WordTestConstants;
 
     invoke-virtual {v4, v7}, Lcom/hschinese/hellowords/controller/WordTestConstants;->setCurrentCategory(I)V
 
-    .line 827
+    .line 826
     new-instance v4, Landroid/content/Intent;
 
     invoke-virtual {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getBaseContext()Landroid/content/Context;
@@ -2822,7 +2824,7 @@
 
     goto :goto_9
 
-    .line 830
+    .line 829
     .end local v0    # "destination":Ljava/lang/String;
     .end local v1    # "folderd":Ljava/lang/String;
     :sswitch_80
@@ -2832,7 +2834,7 @@
 
     move-result v3
 
-    .line 831
+    .line 830
     .local v3, "size":I
     const/4 v2, 0x0
 
@@ -2840,7 +2842,7 @@
     :goto_87
     if-ge v2, v3, :cond_9
 
-    .line 832
+    .line 831
     sget-object v4, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->points:Ljava/util/List;
 
     invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2861,21 +2863,21 @@
 
     if-eqz v4, :cond_a4
 
-    .line 833
+    .line 832
     iput v2, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->currentIndex:I
 
-    .line 834
+    .line 833
     invoke-virtual {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getLocalWordData()V
 
     goto/16 :goto_9
 
-    .line 831
+    .line 830
     :cond_a4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_87
 
-    .line 840
+    .line 839
     .end local v2    # "i":I
     .end local v3    # "size":I
     :sswitch_a7
@@ -2893,7 +2895,7 @@
 
     goto/16 :goto_9
 
-    .line 843
+    .line 842
     :sswitch_b7
     const v4, 0x7f040025
 
@@ -2909,17 +2911,17 @@
 
     iput-object v4, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mDialog:Lcom/hschinese/hellowords/view/HsDialog;
 
-    .line 844
+    .line 843
     iget-object v4, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mDialog:Lcom/hschinese/hellowords/view/HsDialog;
 
     invoke-virtual {v4}, Lcom/hschinese/hellowords/view/HsDialog;->show()V
 
-    .line 845
+    .line 844
     invoke-direct {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getCheckPoint()V
 
     goto/16 :goto_9
 
-    .line 848
+    .line 847
     :sswitch_cf
     new-instance v4, Landroid/content/Intent;
 
@@ -2931,7 +2933,7 @@
 
     goto/16 :goto_9
 
-    .line 818
+    .line 817
     nop
 
     :sswitch_data_dc
@@ -2988,15 +2990,15 @@
     .registers 2
 
     .prologue
-    .line 812
+    .line 811
     invoke-super {p0}, Lcom/hschinese/hellowords/activity/BaseActivity;->onDestroy()V
 
-    .line 813
+    .line 812
     iget-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mWordRefreshReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 814
+    .line 813
     return-void
 .end method
 
@@ -3006,18 +3008,18 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1136
+    .line 1135
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_8
 
-    .line 1137
+    .line 1136
     invoke-virtual {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->exit()V
 
-    .line 1138
+    .line 1137
     const/4 v0, 0x0
 
-    .line 1140
+    .line 1139
     :goto_7
     return v0
 
@@ -3033,15 +3035,15 @@
     .registers 2
 
     .prologue
-    .line 402
+    .line 401
     invoke-super {p0}, Lcom/hschinese/hellowords/activity/BaseActivity;->onResume()V
 
-    .line 403
+    .line 402
     iget-object v0, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->constants:Lcom/hschinese/hellowords/controller/WordTestConstants;
 
     invoke-virtual {v0}, Lcom/hschinese/hellowords/controller/WordTestConstants;->clear()V
 
-    .line 404
+    .line 403
     return-void
 .end method
 
@@ -3049,19 +3051,19 @@
     .registers 5
 
     .prologue
-    .line 693
+    .line 692
     iget-object v1, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->constants:Lcom/hschinese/hellowords/controller/WordTestConstants;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/hschinese/hellowords/controller/WordTestConstants;->setCurrentCategory(I)V
 
-    .line 694
+    .line 693
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 695
+    .line 694
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v2, "wordItems"
 
@@ -3071,7 +3073,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 696
+    .line 695
     const-string v2, "cpidName"
 
     sget-object v1, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->points:Ljava/util/List;
@@ -3090,21 +3092,21 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 697
+    .line 696
     const-string v1, "bcid"
 
     sget-object v2, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->bcid:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 698
+    .line 697
     iget-object v1, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->constants:Lcom/hschinese/hellowords/controller/WordTestConstants;
 
     iget v2, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->currentIndex:I
 
     invoke-virtual {v1, v2}, Lcom/hschinese/hellowords/controller/WordTestConstants;->setCurrentCheckPoint(I)V
 
-    .line 699
+    .line 698
     new-instance v1, Landroid/content/Intent;
 
     invoke-virtual {p0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getBaseContext()Landroid/content/Context;
@@ -3121,7 +3123,7 @@
 
     invoke-virtual {p0, v1}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 700
+    .line 699
     sget-object v1, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->points:Ljava/util/List;
 
     iget v2, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->currentIndex:I
@@ -3138,14 +3140,14 @@
 
     iput-object v1, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->currentCpid:Ljava/lang/String;
 
-    .line 701
+    .line 700
     iget-object v1, p0, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->mContinueStudy:Landroid/widget/Button;
 
     const v2, 0x7f040026
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
 
-    .line 702
+    .line 701
     return-void
 .end method
 
@@ -3154,10 +3156,10 @@
     .param p1, "result"    # J
 
     .prologue
-    .line 1127
+    .line 1126
     const v0, 0x7f04004a
 
-    .line 1128
+    .line 1127
     .local v0, "resid":I
     const-wide/16 v1, -0x1
 
@@ -3165,10 +3167,10 @@
 
     if-nez v1, :cond_c
 
-    .line 1129
+    .line 1128
     const v0, 0x7f04004b
 
-    .line 1131
+    .line 1130
     :cond_c
     invoke-virtual {p0, v0}, Lcom/hschinese/hellowords/activity/WordPracticeActivity;->getString(I)Ljava/lang/String;
 
@@ -3178,6 +3180,6 @@
 
     invoke-static {p0, v1, v2}, Lcom/hschinese/hellowords/utils/UIUtils;->showToast(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 1132
+    .line 1131
     return-void
 .end method

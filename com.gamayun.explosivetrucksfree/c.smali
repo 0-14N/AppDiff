@@ -119,42 +119,42 @@
     .end annotation
 
     .prologue
-    .line 256
+    .line 253
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 257
+    .line 254
     invoke-static {p1}, Lcom/google/ads/util/a;->a(Ljava/lang/String;)V
 
-    .line 258
+    .line 255
     iput-object p1, p0, Lcom/google/ads/c;->b:Ljava/lang/String;
 
-    .line 259
+    .line 256
     iput-object p2, p0, Lcom/google/ads/c;->c:Ljava/lang/String;
 
-    .line 260
+    .line 257
     iput-object p3, p0, Lcom/google/ads/c;->d:Ljava/util/List;
 
-    .line 261
+    .line 258
     iput-object p4, p0, Lcom/google/ads/c;->e:Ljava/lang/Integer;
 
-    .line 262
+    .line 259
     iput-object p5, p0, Lcom/google/ads/c;->f:Ljava/lang/Integer;
 
-    .line 263
+    .line 260
     iput-object p6, p0, Lcom/google/ads/c;->g:Ljava/util/List;
 
-    .line 264
+    .line 261
     iput-object p7, p0, Lcom/google/ads/c;->h:Ljava/util/List;
 
-    .line 265
+    .line 262
     iput-object p8, p0, Lcom/google/ads/c;->i:Ljava/util/List;
 
-    .line 266
+    .line 263
     return-void
 .end method
 
 .method private static a(Lorg/json/JSONObject;)Lcom/google/ads/a;
-    .registers 10
+    .registers 9
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -162,7 +162,7 @@
     .end annotation
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v1, 0x0
 
     .line 180
     const-string v0, "id"
@@ -174,11 +174,11 @@
     .line 181
     const-string v0, "allocation_id"
 
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
-    invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
     .line 184
     const-string v0, "adapters"
@@ -188,15 +188,15 @@
     move-result-object v4
 
     .line 185
-    new-instance v3, Ljava/util/ArrayList;
+    new-instance v5, Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
     move-result v0
 
-    invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v5, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    move v0, v5
+    move v0, v1
 
     .line 186
     :goto_1e
@@ -211,7 +211,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 186
     add-int/lit8 v0, v0, 0x1
@@ -220,75 +220,68 @@
 
     .line 191
     :cond_2e
-    const-string v0, "imp_urls"
-
-    invoke-static {p0, v0}, Lcom/google/ads/c;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v4
-
-    .line 194
     const-string v0, "data"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    move-result-object v6
+    move-result-object v4
 
-    .line 196
+    .line 193
     new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0, v5}, Ljava/util/HashMap;-><init>(I)V
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
+
+    .line 194
+    if-eqz v4, :cond_5d
+
+    .line 195
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-virtual {v4}, Lorg/json/JSONObject;->length()I
+
+    move-result v0
+
+    invoke-direct {v1, v0}, Ljava/util/HashMap;-><init>(I)V
+
+    .line 196
+    invoke-virtual {v4}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
+
+    move-result-object v6
 
     .line 197
-    if-eqz v6, :cond_62
+    :goto_48
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5c
 
     .line 198
-    new-instance v5, Ljava/util/HashMap;
-
-    invoke-virtual {v6}, Lorg/json/JSONObject;->length()I
-
-    move-result v0
-
-    invoke-direct {v5, v0}, Ljava/util/HashMap;-><init>(I)V
-
-    .line 199
-    invoke-virtual {v6}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
-
-    move-result-object v7
-
-    .line 200
-    :goto_4e
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_63
-
-    .line 201
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
+    .line 199
+    invoke-virtual {v4, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v1, v0, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_48
+
+    :cond_5c
+    move-object v0, v1
+
     .line 202
-    invoke-virtual {v6, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :cond_5d
+    new-instance v1, Lcom/google/ads/a;
 
-    move-result-object v8
+    invoke-direct {v1, v3, v2, v5, v0}, Lcom/google/ads/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/HashMap;)V
 
-    invoke-virtual {v5, v0, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_4e
-
-    :cond_62
-    move-object v5, v0
-
-    .line 205
-    :cond_63
-    new-instance v0, Lcom/google/ads/a;
-
-    invoke-direct/range {v0 .. v5}, Lcom/google/ads/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/HashMap;)V
-
-    return-object v0
+    return-object v1
 .end method
 
 .method public static a(Ljava/lang/String;)Lcom/google/ads/c;
@@ -503,15 +496,15 @@
     .end annotation
 
     .prologue
-    .line 237
+    .line 234
     invoke-virtual {p0, p1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v2
 
-    .line 238
+    .line 235
     if-eqz v2, :cond_22
 
-    .line 239
+    .line 236
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
@@ -520,7 +513,7 @@
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 240
+    .line 237
     const/4 v0, 0x0
 
     :goto_10
@@ -530,14 +523,14 @@
 
     if-ge v0, v3, :cond_20
 
-    .line 241
+    .line 238
     invoke-virtual {v2, v0}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 240
+    .line 237
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_10
@@ -545,7 +538,7 @@
     :cond_20
     move-object v0, v1
 
-    .line 246
+    .line 243
     :goto_21
     return-object v0
 
@@ -717,18 +710,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 214
+    .line 211
     iget-object v0, p0, Lcom/google/ads/c;->c:Ljava/lang/String;
 
     if-nez v0, :cond_7
 
     move-object v0, v1
 
-    .line 229
+    .line 226
     :goto_6
     return-object v0
 
-    .line 218
+    .line 215
     :cond_7
     const-string v0, "interstitial"
 
@@ -740,12 +733,12 @@
 
     if-eqz v0, :cond_14
 
-    .line 219
+    .line 216
     sget-object v0, Lcom/google/ads/internal/h;->a:Lcom/google/ads/internal/h;
 
     goto :goto_6
 
-    .line 224
+    .line 221
     :cond_14
     sget-object v0, Lcom/google/ads/c;->a:Ljava/util/Map;
 
@@ -757,10 +750,10 @@
 
     check-cast v0, Lcom/google/ads/AdSize;
 
-    .line 225
+    .line 222
     if-eqz v0, :cond_25
 
-    .line 226
+    .line 223
     invoke-static {v0}, Lcom/google/ads/internal/h;->a(Lcom/google/ads/AdSize;)Lcom/google/ads/internal/h;
 
     move-result-object v0
@@ -770,6 +763,6 @@
     :cond_25
     move-object v0, v1
 
-    .line 229
+    .line 226
     goto :goto_6
 .end method

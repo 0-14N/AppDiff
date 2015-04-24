@@ -3,8 +3,8 @@
 .source "GameHelper.java"
 
 # interfaces
-.implements Lcom/google/android/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
-.implements Lcom/google/android/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;
+.implements Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;
+.implements Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;
 
 
 # annotations
@@ -17,7 +17,7 @@
 
 
 # static fields
-.field public static final CLIENT_ALL:I = 0x7
+.field public static final CLIENT_ALL:I = 0xf
 
 .field public static final CLIENT_APPSTATE:I = 0x4
 
@@ -27,1441 +27,809 @@
 
 .field public static final CLIENT_PLUS:I = 0x2
 
+.field public static final CLIENT_SNAPSHOT:I = 0x8
+
+.field static final DEFAULT_MAX_SIGN_IN_ATTEMPTS:I = 0x3
+
 .field static final RC_RESOLVE:I = 0x2329
 
 .field static final RC_UNUSED:I = 0x232a
 
-.field public static final STATE_CONNECTED:I = 0x3
-
-.field public static final STATE_CONNECTING:I = 0x2
-
-.field public static final STATE_DISCONNECTED:I = 0x1
-
-.field public static final STATE_NAMES:[Ljava/lang/String;
-
-.field public static final STATE_UNCONFIGURED:I = 0x0
-
-.field private static final TYPE_DEVELOPER_ERROR:I = 0x3e9
-
-.field private static final TYPE_GAMEHELPER_BUG:I = 0x3ea
+.field static final TAG:Ljava/lang/String; = "GameHelper"
 
 
 # instance fields
+.field private final GAMEHELPER_SHARED_PREFS:Ljava/lang/String;
+
+.field private final KEY_SIGN_IN_CANCELLATIONS:Ljava/lang/String;
+
 .field mActivity:Landroid/app/Activity;
 
-.field mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
+.field mAppContext:Landroid/content/Context;
 
-.field mAutoSignIn:Z
+.field mAppStateApiOptions:Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;
 
-.field mClientCurrentlyConnecting:I
+.field mConnectOnStart:Z
 
-.field mConnectedClients:I
+.field private mConnecting:Z
 
 .field mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
 
 .field mDebugLog:Z
 
-.field mDebugTag:Ljava/lang/String;
-
 .field mExpectingResolution:Z
 
-.field mGamesClient:Lcom/google/android/gms/games/GamesClient;
+.field mGamesApiOptions:Lcom/google/android/gms/games/Games$GamesOptions;
 
-.field mInvitationId:Ljava/lang/String;
+.field mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+.field mGoogleApiClientBuilder:Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
+
+.field mHandler:Landroid/os/Handler;
+
+.field mInvitation:Lcom/google/android/gms/games/multiplayer/Invitation;
 
 .field mListener:Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
 
-.field mPlusClient:Lcom/google/android/gms/plus/PlusClient;
+.field mMaxAutoSignInAttempts:I
+
+.field mPlusApiOptions:Lcom/google/android/gms/plus/Plus$PlusOptions;
 
 .field mRequestedClients:I
 
-.field mScopes:[Ljava/lang/String;
+.field mRequests:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/google/android/gms/games/request/GameRequest;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mSetupDone:Z
+
+.field mShowErrorDialogs:Z
+
+.field mSignInCancelled:Z
 
 .field mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
-.field mState:I
+.field mTurnBasedMatch:Lcom/google/android/gms/games/multiplayer/turnbased/TurnBasedMatch;
 
 .field mUserInitiatedSignIn:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .registers 3
-
-    .prologue
-    .line 75
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    .line 76
-    const-string v2, "UNCONFIGURED"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    const-string v2, "DISCONNECTED"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x2
-
-    const-string v2, "CONNECTING"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x3
-
-    const-string v2, "CONNECTED"
-
-    aput-object v2, v0, v1
-
-    .line 75
-    sput-object v0, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
-
-    .line 163
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/app/Activity;)V
-    .registers 5
+.method public constructor <init>(Landroid/app/Activity;I)V
+    .registers 7
     .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "clientsToUse"    # I
 
     .prologue
+    const/4 v3, 0x1
+
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 158
+    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
+    .line 82
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSetupDone:Z
 
-    .line 83
-    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mExpectingResolution:Z
+    .line 85
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
 
-    .line 90
-    iput-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
+    .line 88
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mExpectingResolution:Z
 
-    .line 103
-    iput-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    .line 92
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInCancelled:Z
 
-    .line 104
-    iput-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
+    .line 99
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
 
-    .line 105
-    iput-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
+    .line 102
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppContext:Landroid/content/Context;
+
+    .line 112
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClientBuilder:Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
     .line 115
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
+    invoke-static {}, Lcom/google/android/gms/games/Games$GamesOptions;->builder()Lcom/google/android/gms/games/Games$GamesOptions$Builder;
 
-    .line 118
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
+    move-result-object v0
 
-    .line 121
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mClientCurrentlyConnecting:I
+    invoke-virtual {v0}, Lcom/google/android/gms/games/Games$GamesOptions$Builder;->build()Lcom/google/android/gms/games/Games$GamesOptions;
 
-    .line 124
-    const/4 v0, 0x1
+    move-result-object v0
 
-    iput-boolean v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAutoSignIn:Z
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesApiOptions:Lcom/google/android/gms/games/Games$GamesOptions;
+
+    .line 116
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusApiOptions:Lcom/google/android/gms/plus/Plus$PlusOptions;
+
+    .line 117
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateApiOptions:Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;
+
+    .line 120
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
     .line 132
-    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mUserInitiatedSignIn:Z
+    iput v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
 
-    .line 135
-    iput-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
+    .line 137
+    iput-boolean v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectOnStart:Z
 
-    .line 138
-    iput-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
+    .line 145
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mUserInitiatedSignIn:Z
 
-    .line 141
-    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mDebugLog:Z
-
-    .line 142
-    const-string v0, "GameHelper"
-
-    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mDebugTag:Ljava/lang/String;
+    .line 148
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
 
     .line 151
-    iput-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mListener:Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
-    .line 159
+    .line 154
+    iput-boolean v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mShowErrorDialogs:Z
+
+    .line 157
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mDebugLog:Z
+
+    .line 180
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mListener:Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
+
+    .line 186
+    const/4 v0, 0x3
+
+    iput v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mMaxAutoSignInAttempts:I
+
+    .line 757
+    const-string v0, "GAMEHELPER_SHARED_PREFS"
+
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->GAMEHELPER_SHARED_PREFS:Ljava/lang/String;
+
+    .line 758
+    const-string v0, "KEY_SIGN_IN_CANCELLATIONS"
+
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->KEY_SIGN_IN_CANCELLATIONS:Ljava/lang/String;
+
+    .line 198
     iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
 
-    .line 160
-    return-void
-.end method
-
-.method static activityResponseCodeToString(I)Ljava/lang/String;
-    .registers 2
-    .param p0, "respCode"    # I
-
-    .prologue
-    .line 524
-    sparse-switch p0, :sswitch_data_1e
-
-    .line 540
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_7
-    return-object v0
-
-    .line 526
-    :sswitch_8
-    const-string v0, "RESULT_OK"
-
-    goto :goto_7
-
-    .line 528
-    :sswitch_b
-    const-string v0, "RESULT_CANCELED"
-
-    goto :goto_7
-
-    .line 530
-    :sswitch_e
-    const-string v0, "RESULT_APP_MISCONFIGURED"
-
-    goto :goto_7
-
-    .line 532
-    :sswitch_11
-    const-string v0, "RESULT_LEFT_ROOM"
-
-    goto :goto_7
-
-    .line 534
-    :sswitch_14
-    const-string v0, "RESULT_LICENSE_FAILED"
-
-    goto :goto_7
-
-    .line 536
-    :sswitch_17
-    const-string v0, "RESULT_RECONNECT_REQUIRED"
-
-    goto :goto_7
-
-    .line 538
-    :sswitch_1a
-    const-string v0, "SIGN_IN_FAILED"
-
-    goto :goto_7
-
-    .line 524
-    nop
-
-    :sswitch_data_1e
-    .sparse-switch
-        -0x1 -> :sswitch_8
-        0x0 -> :sswitch_b
-        0x2711 -> :sswitch_17
-        0x2712 -> :sswitch_1a
-        0x2713 -> :sswitch_14
-        0x2714 -> :sswitch_e
-        0x2715 -> :sswitch_11
-    .end sparse-switch
-.end method
-
-.method static errorCodeToString(I)Ljava/lang/String;
-    .registers 3
-    .param p0, "errorCode"    # I
-
-    .prologue
-    .line 1012
-    packed-switch p0, :pswitch_data_122
-
-    .line 1038
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Unknown error code "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_12
-    return-object v0
-
-    .line 1014
-    :pswitch_13
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DEVELOPER_ERROR("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_12
-
-    .line 1016
-    :pswitch_29
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "INTERNAL_ERROR("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_12
-
-    .line 1018
-    :pswitch_3f
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "INVALID_ACCOUNT("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_12
-
-    .line 1020
-    :pswitch_55
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "LICENSE_CHECK_FAILED("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_12
-
-    .line 1022
-    :pswitch_6b
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "NETWORK_ERROR("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_12
-
-    .line 1024
-    :pswitch_81
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "RESOLUTION_REQUIRED("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_12
-
-    .line 1026
-    :pswitch_98
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SERVICE_DISABLED("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_12
-
-    .line 1028
-    :pswitch_af
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SERVICE_INVALID("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_12
-
-    .line 1030
-    :pswitch_c6
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SERVICE_MISSING("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_12
-
-    .line 1032
-    :pswitch_dd
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SERVICE_VERSION_UPDATE_REQUIRED("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_12
-
-    .line 1034
-    :pswitch_f4
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SIGN_IN_REQUIRED("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_12
-
-    .line 1036
-    :pswitch_10b
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SUCCESS("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_12
-
-    .line 1012
-    :pswitch_data_122
-    .packed-switch 0x0
-        :pswitch_10b
-        :pswitch_c6
-        :pswitch_dd
-        :pswitch_98
-        :pswitch_f4
-        :pswitch_3f
-        :pswitch_81
-        :pswitch_6b
-        :pswitch_29
-        :pswitch_af
-        :pswitch_13
-        :pswitch_55
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method addToScope(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-    .registers 4
-    .param p1, "scopeStringBuilder"    # Ljava/lang/StringBuilder;
-    .param p2, "scope"    # Ljava/lang/String;
-
-    .prologue
-    .line 667
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_f
-
-    .line 668
-    const-string v0, "oauth2:"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 672
-    :goto_b
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 673
-    return-void
-
-    .line 670
-    :cond_f
-    const-string v0, " "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_b
-.end method
-
-.method assertConfigured(Ljava/lang/String;)V
-    .registers 5
-    .param p1, "operation"    # Ljava/lang/String;
-
-    .prologue
-    .line 197
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    if-nez v1, :cond_22
-
-    .line 198
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "GameHelper error: Operation attempted without setup: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
     .line 199
-    const-string v2, ". The setup() method must be called before attempting any other operation."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    .line 198
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
+
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppContext:Landroid/content/Context;
 
     .line 200
+    iput p2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
+
+    .line 201
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mHandler:Landroid/os/Handler;
+
+    .line 202
+    return-void
+.end method
+
+.method private doApiOptionsPreCheck()V
+    .registers 3
+
+    .prologue
+    .line 229
+    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClientBuilder:Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
+
+    if-eqz v1, :cond_f
+
+    .line 230
+    const-string v0, "GameHelper: you cannot call set*ApiOptions after the client builder has been created. Call it before calling createApiClientBuilder() or setup()."
+
+    .line 233
     .local v0, "error":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logError(Ljava/lang/String;)V
 
-    .line 201
+    .line 234
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 203
+    .line 236
+    .end local v0    # "error":Ljava/lang/String;
+    :cond_f
+    return-void
+.end method
+
+.method static makeSimpleDialog(Landroid/app/Activity;Ljava/lang/String;)Landroid/app/Dialog;
+    .registers 5
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p1, "text"    # Ljava/lang/String;
+
+    .prologue
+    .line 982
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    .line 983
+    const v1, 0x104000a
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object v0
+
+    .line 982
+    return-object v0
+.end method
+
+.method static makeSimpleDialog(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)Landroid/app/Dialog;
+    .registers 6
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p1, "title"    # Ljava/lang/String;
+    .param p2, "text"    # Ljava/lang/String;
+
+    .prologue
+    .line 988
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0, p2}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    .line 989
+    invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const v1, 0x104000a
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    .line 990
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object v0
+
+    .line 988
+    return-object v0
+.end method
+
+.method public static showFailureDialog(Landroid/app/Activity;II)V
+    .registers 6
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p1, "actResp"    # I
+    .param p2, "errorCode"    # I
+
+    .prologue
+    .line 941
+    if-nez p0, :cond_a
+
+    .line 942
+    const-string v1, "GameHelper"
+
+    const-string v2, "*** No Activity. Can\'t show failure dialog!"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 979
+    :goto_9
+    return-void
+
+    .line 945
+    :cond_a
+    const/4 v0, 0x0
+
+    .line 947
+    .local v0, "errorDialog":Landroid/app/Dialog;
+    packed-switch p1, :pswitch_data_64
+
+    .line 964
+    const/16 v1, 0x232a
+
+    const/4 v2, 0x0
+
+    .line 963
+    invoke-static {p2, p0, v1, v2}, Lcom/google/android/gms/common/GooglePlayServicesUtil;->getErrorDialog(ILandroid/app/Activity;ILandroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;
+
+    move-result-object v0
+
+    .line 965
+    if-nez v0, :cond_42
+
+    .line 967
+    const-string v1, "GameHelper"
+
+    .line 968
+    const-string v2, "No standard error dialog available. Making fallback dialog."
+
+    .line 967
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 971
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 972
+    const/4 v2, 0x0
+
+    invoke-static {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelperUtils;->getString(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 973
+    const-string v2, " "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 974
+    invoke-static {p2}, Lcom/enjoygame/tool/gamecenter/GameHelperUtils;->errorCodeToString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 971
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 969
+    invoke-static {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->makeSimpleDialog(Landroid/app/Activity;Ljava/lang/String;)Landroid/app/Dialog;
+
+    move-result-object v0
+
+    .line 978
+    :cond_42
+    :goto_42
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
+
+    goto :goto_9
+
+    .line 950
+    :pswitch_46
+    const/4 v1, 0x2
+
+    .line 949
+    invoke-static {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelperUtils;->getString(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->makeSimpleDialog(Landroid/app/Activity;Ljava/lang/String;)Landroid/app/Dialog;
+
+    move-result-object v0
+
+    .line 951
+    goto :goto_42
+
+    .line 954
+    :pswitch_50
+    const/4 v1, 0x1
+
+    .line 953
+    invoke-static {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelperUtils;->getString(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->makeSimpleDialog(Landroid/app/Activity;Ljava/lang/String;)Landroid/app/Dialog;
+
+    move-result-object v0
+
+    .line 955
+    goto :goto_42
+
+    .line 958
+    :pswitch_5a
+    const/4 v1, 0x3
+
+    .line 957
+    invoke-static {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelperUtils;->getString(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->makeSimpleDialog(Landroid/app/Activity;Ljava/lang/String;)Landroid/app/Dialog;
+
+    move-result-object v0
+
+    .line 959
+    goto :goto_42
+
+    .line 947
+    :pswitch_data_64
+    .packed-switch 0x2712
+        :pswitch_50
+        :pswitch_5a
+        :pswitch_46
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method assertConfigured(Ljava/lang/String;)V
+    .registers 5
+    .param p1, "operation"    # Ljava/lang/String;
+
+    .prologue
+    .line 219
+    iget-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSetupDone:Z
+
+    if-nez v1, :cond_22
+
+    .line 220
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "GameHelper error: Operation attempted without setup: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 221
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 222
+    const-string v2, ". The setup() method must be called before attempting any other operation."
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 220
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 223
+    .local v0, "error":Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logError(Ljava/lang/String;)V
+
+    .line 224
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    .line 226
     .end local v0    # "error":Ljava/lang/String;
     :cond_22
     return-void
 .end method
 
 .method public beginUserInitiatedSignIn()V
-    .registers 7
+    .registers 3
 
     .prologue
-    const/4 v5, 0x2
+    const/4 v1, 0x1
 
-    const/4 v4, 0x0
+    .line 645
+    const-string v0, "beginUserInitiatedSignIn: resetting attempt count."
 
-    const/4 v3, 0x1
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 612
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
+    .line 646
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->resetSignInCancellations()V
 
-    const/4 v2, 0x3
+    .line 647
+    const/4 v0, 0x0
 
-    if-ne v1, v2, :cond_11
+    iput-boolean v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInCancelled:Z
 
-    .line 614
-    const-string v1, "beginUserInitiatedSignIn() called when already connected. Calling listener directly to notify of success."
+    .line 648
+    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectOnStart:Z
 
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logWarn(Ljava/lang/String;)V
+    .line 650
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    .line 616
-    invoke-virtual {p0, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
-
-    .line 660
-    :goto_10
-    return-void
-
-    .line 618
-    :cond_11
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    if-ne v1, v5, :cond_1b
-
-    .line 619
-    const-string v1, "beginUserInitiatedSignIn() called when already connecting. Be patient! You can only call this method after you get an onSignInSucceeded() or onSignInFailed() callback. Suggestion: disable the sign-in button on startup and also when it\'s clicked, and re-enable when you get the callback."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logWarn(Ljava/lang/String;)V
-
-    goto :goto_10
-
-    .line 628
-    :cond_1b
-    const-string v1, "Starting USER-INITIATED sign-in flow."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 631
-    iput-boolean v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAutoSignIn:Z
-
-    .line 634
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/android/gms/common/GooglePlayServicesUtil;->isGooglePlayServicesAvailable(Landroid/content/Context;)I
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
 
     move-result v0
 
-    .line 635
-    .local v0, "result":I
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "isGooglePlayServicesAvailable returned "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 636
-    if-eqz v0, :cond_51
-
-    .line 638
-    const-string v1, "Google Play services not available. Show error dialog."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 639
-    new-instance v1, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
-
-    invoke-direct {v1, v0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;-><init>(II)V
-
-    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
-
-    .line 640
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->showFailureDialog()V
-
-    .line 641
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
-
-    goto :goto_10
-
-    .line 647
-    :cond_51
-    iput-boolean v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mUserInitiatedSignIn:Z
-
-    .line 649
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
-
-    if-eqz v1, :cond_63
+    if-eqz v0, :cond_1f
 
     .line 652
-    const-string v1, "beginUserInitiatedSignIn: continuing pending sign-in flow."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 653
-    invoke-virtual {p0, v5}, Lcom/enjoygame/tool/gamecenter/GameHelper;->setState(I)V
-
-    .line 654
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->resolveConnectionResult()V
-
-    goto :goto_10
-
-    .line 657
-    :cond_63
-    const-string v1, "beginUserInitiatedSignIn: starting new sign-in flow."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 658
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->startConnections()V
-
-    goto :goto_10
-.end method
-
-.method byteToString(Ljava/lang/StringBuilder;B)V
-    .registers 8
-    .param p1, "sb"    # Ljava/lang/StringBuilder;
-    .param p2, "b"    # B
-
-    .prologue
-    .line 1143
-    if-gez p2, :cond_1f
-
-    add-int/lit16 v2, p2, 0x100
-
-    .line 1144
-    .local v2, "unsigned_byte":I
-    :goto_4
-    div-int/lit8 v0, v2, 0x10
-
-    .line 1145
-    .local v0, "hi":I
-    rem-int/lit8 v1, v2, 0x10
-
-    .line 1146
-    .local v1, "lo":I
-    const-string v3, "0123456789ABCDEF"
-
-    add-int/lit8 v4, v0, 0x1
-
-    invoke-virtual {v3, v0, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1147
-    const-string v3, "0123456789ABCDEF"
-
-    add-int/lit8 v4, v1, 0x1
-
-    invoke-virtual {v3, v1, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1148
-    return-void
-
-    .end local v0    # "hi":I
-    .end local v1    # "lo":I
-    .end local v2    # "unsigned_byte":I
-    :cond_1f
-    move v2, p2
-
-    .line 1143
-    goto :goto_4
-.end method
-
-.method varargs checkState(ILjava/lang/String;Ljava/lang/String;[I)Z
-    .registers 12
-    .param p1, "type"    # I
-    .param p2, "operation"    # Ljava/lang/String;
-    .param p3, "warning"    # Ljava/lang/String;
-    .param p4, "expectedStates"    # [I
-
-    .prologue
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    .line 165
-    array-length v5, p4
-
-    move v4, v3
-
-    :goto_4
-    if-lt v4, v5, :cond_62
-
-    .line 170
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 171
-    .local v1, "sb":Ljava/lang/StringBuilder;
-    const/16 v4, 0x3e9
-
-    if-ne p1, v4, :cond_6b
-
-    .line 172
-    const-string v4, "GameHelper: you attempted an operation at an invalid. "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 179
-    :goto_14
-    const-string v4, "Explanation: "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 180
-    const-string v4, "Operation: "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, ". "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 181
-    const-string v4, "State: "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    sget-object v5, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
-
-    iget v6, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, ". "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 182
-    array-length v4, p4
-
-    if-ne v4, v2, :cond_80
-
-    .line 183
-    const-string v2, "Expected state: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    sget-object v4, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
-
-    aget v5, p4, v3
-
-    aget-object v4, v4, v5
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v4, "."
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 192
-    :goto_59
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logWarn(Ljava/lang/String;)V
-
-    move v2, v3
-
-    .line 193
-    .end local v1    # "sb":Ljava/lang/StringBuilder;
-    :cond_61
-    return v2
-
-    .line 165
-    :cond_62
-    aget v0, p4, v4
-
-    .line 166
-    .local v0, "expectedState":I
-    iget v6, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    if-eq v6, v0, :cond_61
-
-    .line 165
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_4
-
-    .line 174
-    .end local v0    # "expectedState":I
-    .restart local v1    # "sb":Ljava/lang/StringBuilder;
-    :cond_6b
-    const-string v4, "GameHelper: bug detected. Please report it at our bug tracker "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 175
-    const-string v4, "https://github.com/playgameservices/android-samples/issues. "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 176
-    const-string v4, "Please include the last couple hundred lines of logcat output "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 177
-    const-string v4, "and describe the operation that caused this. "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_14
-
-    .line 185
-    :cond_80
-    const-string v2, "Expected states:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 186
-    array-length v4, p4
-
-    move v2, v3
-
-    :goto_87
-    if-lt v2, v4, :cond_8f
-
-    .line 189
-    const-string v2, "."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_59
-
-    .line 186
-    :cond_8f
-    aget v0, p4, v2
-
-    .line 187
-    .restart local v0    # "expectedState":I
-    const-string v5, " "
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    sget-object v6, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
-
-    aget-object v6, v6, v0
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 186
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_87
-.end method
-
-.method connectCurrentClient()V
-    .registers 7
-
-    .prologue
-    const/4 v3, 0x1
-
-    .line 737
-    iget v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    if-ne v0, v3, :cond_b
-
-    .line 739
-    const-string v0, "GameHelper got disconnected during connection process. Aborting."
+    const-string v0, "beginUserInitiatedSignIn() called when already connected. Calling listener directly to notify of success."
 
     invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logWarn(Ljava/lang/String;)V
 
-    .line 758
-    :cond_a
-    :goto_a
+    .line 654
+    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
+
+    .line 686
+    :goto_1e
     return-void
 
-    .line 742
-    :cond_b
-    const/16 v0, 0x3ea
+    .line 656
+    :cond_1f
+    iget-boolean v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
 
-    const-string v1, "connectCurrentClient"
+    if-eqz v0, :cond_29
 
-    const-string v2, "connectCurrentClient should only get called when connecting."
+    .line 657
+    const-string v0, "beginUserInitiatedSignIn() called when already connecting. Be patient! You can only call this method after you get an onSignInSucceeded() or onSignInFailed() callback. Suggestion: disable the sign-in button on startup and also when it\'s clicked, and re-enable when you get the callback."
 
-    new-array v3, v3, [I
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logWarn(Ljava/lang/String;)V
 
-    const/4 v4, 0x0
+    goto :goto_1e
 
-    .line 743
-    const/4 v5, 0x2
+    .line 667
+    :cond_29
+    const-string v0, "Starting USER-INITIATED sign-in flow."
 
-    aput v5, v3, v4
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 742
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->checkState(ILjava/lang/String;Ljava/lang/String;[I)Z
+    .line 672
+    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mUserInitiatedSignIn:Z
+
+    .line 674
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
+
+    if-eqz v0, :cond_3f
+
+    .line 677
+    const-string v0, "beginUserInitiatedSignIn: continuing pending sign-in flow."
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 678
+    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
+
+    .line 679
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->resolveConnectionResult()V
+
+    goto :goto_1e
+
+    .line 682
+    :cond_3f
+    const-string v0, "beginUserInitiatedSignIn: starting new sign-in flow."
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 683
+    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
+
+    .line 684
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connect()V
+
+    goto :goto_1e
+.end method
+
+.method public clearInvitation()V
+    .registers 2
+
+    .prologue
+    .line 472
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitation:Lcom/google/android/gms/games/multiplayer/Invitation;
+
+    .line 473
+    return-void
+.end method
+
+.method public clearRequests()V
+    .registers 2
+
+    .prologue
+    .line 480
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequests:Ljava/util/ArrayList;
+
+    .line 481
+    return-void
+.end method
+
+.method public clearTurnBasedMatch()V
+    .registers 2
+
+    .prologue
+    .line 476
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mTurnBasedMatch:Lcom/google/android/gms/games/multiplayer/turnbased/TurnBasedMatch;
+
+    .line 477
+    return-void
+.end method
+
+.method connect()V
+    .registers 3
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 689
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
 
     move-result v0
 
-    .line 743
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_f
 
-    .line 747
-    iget v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mClientCurrentlyConnecting:I
+    .line 690
+    const-string v0, "Already connected."
 
-    packed-switch v0, :pswitch_data_36
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    :pswitch_22
-    goto :goto_a
+    .line 698
+    :goto_e
+    return-void
 
-    .line 749
-    :pswitch_23
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    .line 693
+    :cond_f
+    const-string v0, "Starting connection."
 
-    invoke-virtual {v0}, Lcom/google/android/gms/games/GamesClient;->connect()V
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    goto :goto_a
+    .line 694
+    const/4 v0, 0x1
 
-    .line 752
-    :pswitch_29
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
+    iput-boolean v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
 
-    invoke-virtual {v0}, Lcom/google/android/gms/appstate/AppStateClient;->connect()V
+    .line 695
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitation:Lcom/google/android/gms/games/multiplayer/Invitation;
 
-    goto :goto_a
+    .line 696
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mTurnBasedMatch:Lcom/google/android/gms/games/multiplayer/turnbased/TurnBasedMatch;
 
-    .line 755
-    :pswitch_2f
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
+    .line 697
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/plus/PlusClient;->connect()V
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->connect()V
 
-    goto :goto_a
-
-    .line 747
-    nop
-
-    :pswitch_data_36
-    .packed-switch 0x1
-        :pswitch_23
-        :pswitch_2f
-        :pswitch_22
-        :pswitch_29
-    .end packed-switch
+    goto :goto_e
 .end method
 
-.method connectNextClient()V
+.method public createApiClientBuilder()Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
     .registers 5
 
     .prologue
-    .line 688
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 272
+    iget-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSetupDone:Z
 
-    const-string v2, "connectNextClient: requested clients: "
+    if-eqz v2, :cond_f
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 273
+    const-string v1, "GameHelper: you called GameHelper.createApiClientBuilder() after calling setup. You can only get a client builder BEFORE performing setup."
 
+    .line 275
+    .local v1, "error":Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logError(Ljava/lang/String;)V
+
+    .line 276
+    new-instance v2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v2, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    .line 279
+    .end local v1    # "error":Ljava/lang/String;
+    :cond_f
+    new-instance v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
+
+    .line 280
+    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
+
+    .line 279
+    invoke-direct {v0, v2, p0, p0}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;-><init>(Landroid/content/Context;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+
+    .line 282
+    .local v0, "builder":Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
     iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    and-int/lit8 v2, v2, 0x1
 
-    move-result-object v1
+    if-eqz v2, :cond_28
 
-    .line 689
-    const-string v2, ", connected clients: "
+    .line 283
+    sget-object v2, Lcom/google/android/gms/games/Games;->API:Lcom/google/android/gms/common/api/Api;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesApiOptions:Lcom/google/android/gms/games/Games$GamesOptions;
 
-    move-result-object v1
+    invoke-virtual {v0, v2, v3}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->addApi(Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions$HasOptions;)Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
-    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
+    .line 284
+    sget-object v2, Lcom/google/android/gms/games/Games;->SCOPE_GAMES:Lcom/google/android/gms/common/api/Scope;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->addScope(Lcom/google/android/gms/common/api/Scope;)Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
-    move-result-object v1
+    .line 287
+    :cond_28
+    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    and-int/lit8 v2, v2, 0x2
 
-    move-result-object v1
+    if-eqz v2, :cond_38
 
-    .line 688
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    .line 288
+    sget-object v2, Lcom/google/android/gms/plus/Plus;->API:Lcom/google/android/gms/common/api/Api;
 
-    .line 692
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    invoke-virtual {v0, v2}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->addApi(Lcom/google/android/gms/common/api/Api;)Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
-    if-eqz v1, :cond_3d
+    .line 289
+    sget-object v2, Lcom/google/android/gms/plus/Plus;->SCOPE_PLUS_LOGIN:Lcom/google/android/gms/common/api/Scope;
 
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    invoke-virtual {v0, v2}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->addScope(Lcom/google/android/gms/common/api/Scope;)Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
-    invoke-virtual {v1}, Lcom/google/android/gms/games/GamesClient;->isConnected()Z
+    .line 292
+    :cond_38
+    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
 
-    move-result v1
+    and-int/lit8 v2, v2, 0x4
 
-    if-eqz v1, :cond_3d
+    if-eqz v2, :cond_48
 
-    .line 693
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
+    .line 293
+    sget-object v2, Lcom/google/android/gms/appstate/AppStateManager;->API:Lcom/google/android/gms/common/api/Api;
 
-    and-int/lit8 v1, v1, 0x1
+    invoke-virtual {v0, v2}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->addApi(Lcom/google/android/gms/common/api/Api;)Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
-    if-nez v1, :cond_3d
+    .line 294
+    sget-object v2, Lcom/google/android/gms/appstate/AppStateManager;->SCOPE_APP_STATE:Lcom/google/android/gms/common/api/Scope;
 
-    .line 694
-    const-string v1, "GamesClient was already connected. Fixing."
+    invoke-virtual {v0, v2}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->addScope(Lcom/google/android/gms/common/api/Scope;)Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logWarn(Ljava/lang/String;)V
+    .line 297
+    :cond_48
+    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
 
-    .line 695
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
+    and-int/lit8 v2, v2, 0x8
 
-    or-int/lit8 v1, v1, 0x1
+    if-eqz v2, :cond_58
 
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
+    .line 298
+    sget-object v2, Lcom/google/android/gms/drive/Drive;->SCOPE_APPFOLDER:Lcom/google/android/gms/common/api/Scope;
 
-    .line 697
-    :cond_3d
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
+    invoke-virtual {v0, v2}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->addScope(Lcom/google/android/gms/common/api/Scope;)Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
-    if-eqz v1, :cond_5a
+    .line 299
+    sget-object v2, Lcom/google/android/gms/drive/Drive;->API:Lcom/google/android/gms/common/api/Api;
 
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
+    invoke-virtual {v0, v2}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->addApi(Lcom/google/android/gms/common/api/Api;)Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
-    invoke-virtual {v1}, Lcom/google/android/gms/plus/PlusClient;->isConnected()Z
+    .line 302
+    :cond_58
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClientBuilder:Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
-    move-result v1
-
-    if-eqz v1, :cond_5a
-
-    .line 698
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    and-int/lit8 v1, v1, 0x2
-
-    if-nez v1, :cond_5a
-
-    .line 699
-    const-string v1, "PlusClient was already connected. Fixing."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logWarn(Ljava/lang/String;)V
-
-    .line 700
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    or-int/lit8 v1, v1, 0x2
-
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    .line 702
-    :cond_5a
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
-
-    if-eqz v1, :cond_77
-
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/appstate/AppStateClient;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_77
-
-    .line 703
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    and-int/lit8 v1, v1, 0x4
-
-    if-nez v1, :cond_77
-
-    .line 704
-    const-string v1, "AppStateClient was already connected. Fixing"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logWarn(Ljava/lang/String;)V
-
-    .line 705
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    or-int/lit8 v1, v1, 0x4
-
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    .line 708
-    :cond_77
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
-
-    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    xor-int/lit8 v2, v2, -0x1
-
-    and-int v0, v1, v2
-
-    .line 709
-    .local v0, "pendingClients":I
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Pending clients: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 711
-    if-nez v0, :cond_9c
-
-    .line 712
-    const-string v1, "All clients now connected. Sign-in successful!"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 713
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->succeedSignIn()V
-
-    .line 734
-    :goto_9b
-    return-void
-
-    .line 718
-    :cond_9c
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
-
-    if-eqz v1, :cond_b0
-
-    and-int/lit8 v1, v0, 0x1
-
-    if-eqz v1, :cond_b0
-
-    .line 719
-    const-string v1, "Connecting GamesClient."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 720
-    const/4 v1, 0x1
-
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mClientCurrentlyConnecting:I
-
-    .line 733
-    :goto_ac
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connectCurrentClient()V
-
-    goto :goto_9b
-
-    .line 721
-    :cond_b0
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
-
-    if-eqz v1, :cond_c1
-
-    and-int/lit8 v1, v0, 0x2
-
-    if-eqz v1, :cond_c1
-
-    .line 722
-    const-string v1, "Connecting PlusClient."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 723
-    const/4 v1, 0x2
-
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mClientCurrentlyConnecting:I
-
-    goto :goto_ac
-
-    .line 724
-    :cond_c1
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
-
-    if-eqz v1, :cond_d2
-
-    and-int/lit8 v1, v0, 0x4
-
-    if-eqz v1, :cond_d2
-
-    .line 725
-    const-string v1, "Connecting AppStateClient."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 726
-    const/4 v1, 0x4
-
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mClientCurrentlyConnecting:I
-
-    goto :goto_ac
-
-    .line 729
-    :cond_d2
-    new-instance v1, Ljava/lang/AssertionError;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Not all clients connected, yet no one is next. R="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 730
-    iget v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ", C="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 729
-    invoke-direct {v1, v2}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v1
+    .line 303
+    return-object v0
 .end method
 
 .method debugLog(Ljava/lang/String;)V
@@ -1469,13 +837,13 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 998
+    .line 1010
     iget-boolean v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mDebugLog:Z
 
     if-eqz v0, :cond_18
 
-    .line 999
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mDebugTag:Ljava/lang/String;
+    .line 1011
+    const-string v0, "GameHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1493,8 +861,69 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1001
+    .line 1013
     :cond_18
+    return-void
+.end method
+
+.method public disconnect()V
+    .registers 3
+
+    .prologue
+    .line 882
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_13
+
+    .line 883
+    const-string v0, "Disconnecting client."
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 884
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->disconnect()V
+
+    .line 889
+    :goto_12
+    return-void
+
+    .line 886
+    :cond_13
+    const-string v0, "GameHelper"
+
+    .line 887
+    const-string v1, "disconnect() called when client was already disconnected."
+
+    .line 886
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_12
+.end method
+
+.method public enableDebugLog(Z)V
+    .registers 3
+    .param p1, "enabled"    # Z
+
+    .prologue
+    .line 520
+    iput-boolean p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mDebugLog:Z
+
+    .line 521
+    if-eqz p1, :cond_9
+
+    .line 522
+    const-string v0, "Debug log enabled."
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 524
+    :cond_9
     return-void
 .end method
 
@@ -1502,515 +931,313 @@
     .registers 5
     .param p1, "enabled"    # Z
     .param p2, "tag"    # Ljava/lang/String;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
-    .line 437
-    iput-boolean p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mDebugLog:Z
+    .line 528
+    const-string v0, "GameHelper"
 
-    .line 438
-    iput-object p2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mDebugTag:Ljava/lang/String;
+    const-string v1, "GameHelper.enableDebugLog(boolean,String) is deprecated. Use GameHelper.enableDebugLog(boolean)"
 
-    .line 439
-    if-eqz p1, :cond_18
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 530
+    invoke-virtual {p0, p1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->enableDebugLog(Z)V
 
-    const-string v1, "Debug log enabled, tag: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 442
-    :cond_18
+    .line 531
     return-void
 .end method
 
-.method getAppIdFromResource()Ljava/lang/String;
-    .registers 7
-
-    .prologue
-    .line 1104
-    :try_start_0
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    .line 1105
-    .local v2, "res":Landroid/content/res/Resources;
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 1106
-    .local v1, "pkgName":Ljava/lang/String;
-    const-string v4, "app_id"
-
-    const-string v5, "string"
-
-    invoke-virtual {v2, v4, v5, v1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v3
-
-    .line 1107
-    .local v3, "res_id":I
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-    :try_end_1b
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_1b} :catch_1d
-
-    move-result-object v4
-
-    .line 1110
-    .end local v1    # "pkgName":Ljava/lang/String;
-    .end local v2    # "res":Landroid/content/res/Resources;
-    .end local v3    # "res_id":I
-    :goto_1c
-    return-object v4
-
-    .line 1108
-    :catch_1d
-    move-exception v0
-
-    .line 1109
-    .local v0, "ex":Ljava/lang/Exception;
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    .line 1110
-    const-string v4, "??? (failed to retrieve APP ID)"
-
-    goto :goto_1c
-.end method
-
-.method public getAppStateClient()Lcom/google/android/gms/appstate/AppStateClient;
+.method public getApiClient()Lcom/google/android/gms/common/api/GoogleApiClient;
     .registers 3
 
     .prologue
-    .line 312
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
+    .line 339
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
     if-nez v0, :cond_c
 
-    .line 313
+    .line 340
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "No AppStateClient. Did you request it at setup?"
+    .line 341
+    const-string v1, "No GoogleApiClient. Did you call setup()?"
 
+    .line 340
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 315
+    .line 343
     :cond_c
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
     return-object v0
 .end method
 
-.method getContext()Landroid/content/Context;
-    .registers 2
-
-    .prologue
-    .line 663
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
-
-    return-object v0
-.end method
-
-.method public getGamesClient()Lcom/google/android/gms/games/GamesClient;
+.method public getInvitation()Lcom/google/android/gms/games/multiplayer/Invitation;
     .registers 3
 
     .prologue
-    .line 301
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    .line 451
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    if-nez v0, :cond_c
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
 
-    .line 302
-    new-instance v0, Ljava/lang/IllegalStateException;
+    move-result v0
 
-    const-string v1, "No GamesClient. Did you request it at setup?"
+    if-nez v0, :cond_f
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    .line 452
+    const-string v0, "GameHelper"
 
-    throw v0
+    .line 453
+    const-string v1, "Warning: getInvitation() should only be called when signed in, that is, after getting onSignInSuceeded()"
 
-    .line 304
-    :cond_c
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    .line 452
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 456
+    :cond_f
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitation:Lcom/google/android/gms/games/multiplayer/Invitation;
 
     return-object v0
 .end method
 
 .method public getInvitationId()Ljava/lang/String;
-    .registers 7
+    .registers 3
 
     .prologue
-    .line 427
-    const/16 v0, 0x3e9
+    .line 433
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    const-string v1, "getInvitationId"
-
-    .line 428
-    const-string v2, "Invitation ID is only available when connected (after getting the onSignInSucceeded callback)."
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [I
-
-    const/4 v4, 0x0
-
-    .line 429
-    const/4 v5, 0x3
-
-    aput v5, v3, v4
-
-    .line 427
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->checkState(ILjava/lang/String;Ljava/lang/String;[I)Z
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
 
     move-result v0
 
-    .line 429
+    if-nez v0, :cond_f
+
+    .line 434
+    const-string v0, "GameHelper"
+
+    .line 435
+    const-string v1, "Warning: getInvitationId() should only be called when signed in, that is, after getting onSignInSuceeded()"
+
+    .line 434
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 438
+    :cond_f
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitation:Lcom/google/android/gms/games/multiplayer/Invitation;
+
     if-nez v0, :cond_15
 
-    .line 430
     const/4 v0, 0x0
 
-    .line 432
     :goto_14
     return-object v0
 
     :cond_15
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitationId:Ljava/lang/String;
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitation:Lcom/google/android/gms/games/multiplayer/Invitation;
+
+    invoke-interface {v0}, Lcom/google/android/gms/games/multiplayer/Invitation;->getInvitationId()Ljava/lang/String;
+
+    move-result-object v0
 
     goto :goto_14
 .end method
 
-.method public getPlusClient()Lcom/google/android/gms/plus/PlusClient;
+.method public getRequests()Ljava/util/ArrayList;
     .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/google/android/gms/games/request/GameRequest;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 323
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
+    .line 510
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    if-nez v0, :cond_c
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
 
-    .line 324
-    new-instance v0, Ljava/lang/IllegalStateException;
+    move-result v0
 
-    const-string v1, "No PlusClient. Did you request it at setup?"
+    if-nez v0, :cond_f
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    .line 511
+    const-string v0, "GameHelper"
 
-    throw v0
+    const-string v1, "Warning: getRequests() should only be called when signed in, that is, after getting onSignInSuceeded()"
 
-    .line 326
-    :cond_c
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 515
+    :cond_f
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequests:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method getSHA1CertFingerprint()Ljava/lang/String;
-    .registers 9
+.method getSignInCancellations()I
+    .registers 5
 
     .prologue
-    .line 1116
-    :try_start_0
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
+    const/4 v3, 0x0
 
-    move-result-object v5
+    .line 763
+    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppContext:Landroid/content/Context;
 
-    invoke-virtual {v5}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    .line 764
+    const-string v2, "GAMEHELPER_SHARED_PREFS"
 
-    move-result-object v5
-
-    .line 1117
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v6
-
-    const/16 v7, 0x40
-
-    .line 1116
-    invoke-virtual {v5, v6, v7}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
-    move-result-object v5
-
-    .line 1117
-    iget-object v4, v5, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
-
-    .line 1118
-    .local v4, "sigs":[Landroid/content/pm/Signature;
-    array-length v5, v4
-    :try_end_19
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_19} :catch_53
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_19} :catch_5a
-
-    if-nez v5, :cond_1e
-
-    .line 1119
-    const-string v5, "ERROR: NO SIGNATURE."
-
-    .line 1138
-    .end local v4    # "sigs":[Landroid/content/pm/Signature;
-    :goto_1d
-    return-object v5
-
-    .line 1120
-    .restart local v4    # "sigs":[Landroid/content/pm/Signature;
-    :cond_1e
-    :try_start_1e
-    array-length v5, v4
-    :try_end_1f
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1e .. :try_end_1f} :catch_53
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_1e .. :try_end_1f} :catch_5a
-
-    const/4 v6, 0x1
-
-    if-le v5, v6, :cond_25
-
-    .line 1121
-    const-string v5, "ERROR: MULTIPLE SIGNATURES"
-
-    goto :goto_1d
-
-    .line 1123
-    :cond_25
-    :try_start_25
-    const-string v5, "SHA1"
-
-    invoke-static {v5}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
-
-    move-result-object v5
-
-    const/4 v6, 0x0
-
-    aget-object v6, v4, v6
-
-    invoke-virtual {v6}, Landroid/content/pm/Signature;->toByteArray()[B
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/security/MessageDigest;->digest([B)[B
+    .line 763
+    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 1124
-    .local v0, "digest":[B
-    new-instance v2, Ljava/lang/StringBuilder;
+    .line 765
+    .local v0, "sp":Landroid/content/SharedPreferences;
+    const-string v1, "KEY_SIGN_IN_CANCELLATIONS"
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    .line 1125
-    .local v2, "hexString":Ljava/lang/StringBuilder;
-    const/4 v3, 0x0
+    move-result v1
 
-    .local v3, "i":I
-    :goto_3c
-    array-length v5, v0
-
-    if-lt v3, v5, :cond_44
-
-    .line 1131
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    goto :goto_1d
-
-    .line 1126
-    :cond_44
-    if-lez v3, :cond_4b
-
-    .line 1127
-    const-string v5, ":"
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1129
-    :cond_4b
-    aget-byte v5, v0, v3
-
-    invoke-virtual {p0, v2, v5}, Lcom/enjoygame/tool/gamecenter/GameHelper;->byteToString(Ljava/lang/StringBuilder;B)V
-    :try_end_50
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_25 .. :try_end_50} :catch_53
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_25 .. :try_end_50} :catch_5a
-
-    .line 1125
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_3c
-
-    .line 1133
-    .end local v0    # "digest":[B
-    .end local v2    # "hexString":Ljava/lang/StringBuilder;
-    .end local v3    # "i":I
-    .end local v4    # "sigs":[Landroid/content/pm/Signature;
-    :catch_53
-    move-exception v1
-
-    .line 1134
-    .local v1, "ex":Landroid/content/pm/PackageManager$NameNotFoundException;
-    invoke-virtual {v1}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
-
-    .line 1135
-    const-string v5, "(ERROR: package not found)"
-
-    goto :goto_1d
-
-    .line 1136
-    .end local v1    # "ex":Landroid/content/pm/PackageManager$NameNotFoundException;
-    :catch_5a
-    move-exception v1
-
-    .line 1137
-    .local v1, "ex":Ljava/security/NoSuchAlgorithmException;
-    invoke-virtual {v1}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
-
-    .line 1138
-    const-string v5, "(ERROR: SHA1 algorithm not found)"
-
-    goto :goto_1d
-.end method
-
-.method public getScopes()Ljava/lang/String;
-    .registers 6
-
-    .prologue
-    .line 451
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 452
-    .local v1, "scopeStringBuilder":Ljava/lang/StringBuilder;
-    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mScopes:[Ljava/lang/String;
-
-    if-eqz v2, :cond_f
-
-    .line 453
-    iget-object v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mScopes:[Ljava/lang/String;
-
-    array-length v4, v3
-
-    const/4 v2, 0x0
-
-    :goto_d
-    if-lt v2, v4, :cond_14
-
-    .line 457
-    :cond_f
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    return-object v2
-
-    .line 453
-    :cond_14
-    aget-object v0, v3, v2
-
-    .line 454
-    .local v0, "scope":Ljava/lang/String;
-    invoke-virtual {p0, v1, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->addToScope(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    .line 453
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_d
-.end method
-
-.method public getScopesArray()[Ljava/lang/String;
-    .registers 2
-
-    .prologue
-    .line 467
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mScopes:[Ljava/lang/String;
-
-    return-object v0
+    return v1
 .end method
 
 .method public getSignInError()Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
     .registers 2
 
     .prologue
-    .line 347
+    .line 369
     iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
     return-object v0
 .end method
 
+.method public getTurnBasedMatch()Lcom/google/android/gms/games/multiplayer/turnbased/TurnBasedMatch;
+    .registers 3
+
+    .prologue
+    .line 492
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
+
+    move-result v0
+
+    if-nez v0, :cond_f
+
+    .line 493
+    const-string v0, "GameHelper"
+
+    .line 494
+    const-string v1, "Warning: getTurnBasedMatch() should only be called when signed in, that is, after getting onSignInSuceeded()"
+
+    .line 493
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 497
+    :cond_f
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mTurnBasedMatch:Lcom/google/android/gms/games/multiplayer/turnbased/TurnBasedMatch;
+
+    return-object v0
+.end method
+
 .method giveUp(Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;)V
-    .registers 8
+    .registers 5
     .param p1, "reason"    # Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
-    .line 918
-    const/16 v0, 0x3ea
+    .line 899
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectOnStart:Z
 
-    const-string v1, "giveUp"
+    .line 900
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->disconnect()V
 
-    const-string v2, "giveUp should only be called when connecting. Proceeding anyway."
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [I
-
-    .line 919
-    const/4 v4, 0x2
-
-    aput v4, v3, v5
-
-    .line 918
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->checkState(ILjava/lang/String;Ljava/lang/String;[I)Z
-
-    .line 920
-    iput-boolean v5, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAutoSignIn:Z
-
-    .line 921
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->killConnections()V
-
-    .line 922
+    .line 901
     iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
-    .line 923
+    .line 903
+    iget v0, p1, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;->mActivityResultCode:I
+
+    const/16 v1, 0x2714
+
+    if-ne v0, v1, :cond_13
+
+    .line 905
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/enjoygame/tool/gamecenter/GameHelperUtils;->printMisconfiguredDebugInfo(Landroid/content/Context;)V
+
+    .line 908
+    :cond_13
     invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->showFailureDialog()V
 
-    .line 924
-    invoke-virtual {p0, v5}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
+    .line 909
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
 
-    .line 925
+    .line 910
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
+
+    .line 911
     return-void
+.end method
+
+.method public hasInvitation()Z
+    .registers 2
+
+    .prologue
+    .line 460
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitation:Lcom/google/android/gms/games/multiplayer/Invitation;
+
+    if-eqz v0, :cond_6
+
+    const/4 v0, 0x1
+
+    :goto_5
+    return v0
+
+    :cond_6
+    const/4 v0, 0x0
+
+    goto :goto_5
+.end method
+
+.method public hasRequests()Z
+    .registers 2
+
+    .prologue
+    .line 468
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequests:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_6
+
+    const/4 v0, 0x1
+
+    :goto_5
+    return v0
+
+    :cond_6
+    const/4 v0, 0x0
+
+    goto :goto_5
 .end method
 
 .method public hasSignInError()Z
     .registers 2
 
     .prologue
-    .line 339
+    .line 361
     iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
     if-eqz v0, :cond_6
@@ -2026,165 +1253,107 @@
     goto :goto_5
 .end method
 
-.method public isSignedIn()Z
-    .registers 3
+.method public hasTurnBasedMatch()Z
+    .registers 2
 
     .prologue
-    .line 331
-    iget v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
+    .line 464
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mTurnBasedMatch:Lcom/google/android/gms/games/multiplayer/turnbased/TurnBasedMatch;
 
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_7
+    if-eqz v0, :cond_6
 
     const/4 v0, 0x1
 
-    :goto_6
+    :goto_5
     return v0
 
-    :cond_7
+    :cond_6
     const/4 v0, 0x0
 
-    goto :goto_6
+    goto :goto_5
 .end method
 
-.method killConnections()V
+.method incrementSignInCancellations()I
     .registers 6
 
     .prologue
+    .line 772
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getSignInCancellations()I
+
+    move-result v0
+
+    .line 773
+    .local v0, "cancellations":I
+    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppContext:Landroid/content/Context;
+
+    .line 774
+    const-string v3, "GAMEHELPER_SHARED_PREFS"
+
     const/4 v4, 0x0
 
-    .line 497
-    const/16 v0, 0x3ea
+    .line 773
+    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    const-string v1, "killConnections"
+    move-result-object v2
 
-    const-string v2, "killConnections() should only get called while connected or connecting."
+    .line 774
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    const/4 v3, 0x2
+    move-result-object v1
 
-    new-array v3, v3, [I
+    .line 775
+    .local v1, "editor":Landroid/content/SharedPreferences$Editor;
+    const-string v2, "KEY_SIGN_IN_CANCELLATIONS"
 
-    fill-array-data v3, :array_6c
+    add-int/lit8 v3, v0, 0x1
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->checkState(ILjava/lang/String;Ljava/lang/String;[I)Z
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    move-result v0
+    .line 776
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 498
-    if-nez v0, :cond_14
+    .line 777
+    add-int/lit8 v2, v0, 0x1
 
-    .line 521
-    :goto_13
-    return-void
+    return v2
+.end method
 
-    .line 501
-    :cond_14
-    const-string v0, "killConnections: killing connections."
+.method public isConnecting()Z
+    .registers 2
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    .prologue
+    .line 353
+    iget-boolean v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
 
-    .line 503
-    iput-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
+    return v0
+.end method
 
-    .line 504
-    iput-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
+.method public isSignedIn()Z
+    .registers 2
 
-    .line 506
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    .prologue
+    .line 348
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    if-eqz v0, :cond_33
+    if-eqz v0, :cond_e
 
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/games/GamesClient;->isConnected()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_33
-
-    .line 507
-    const-string v0, "Disconnecting GamesClient."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 508
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/games/GamesClient;->disconnect()V
-
-    .line 510
-    :cond_33
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
-
-    if-eqz v0, :cond_49
-
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/plus/PlusClient;->isConnected()Z
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
 
     move-result v0
 
-    if-eqz v0, :cond_49
+    if-eqz v0, :cond_e
 
-    .line 511
-    const-string v0, "Disconnecting PlusClient."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 512
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/plus/PlusClient;->disconnect()V
-
-    .line 514
-    :cond_49
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
-
-    if-eqz v0, :cond_5f
-
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/appstate/AppStateClient;->isConnected()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5f
-
-    .line 515
-    const-string v0, "Disconnecting AppStateClient."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 516
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/appstate/AppStateClient;->disconnect()V
-
-    .line 518
-    :cond_5f
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    .line 519
-    const-string v0, "killConnections: all clients disconnected."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 520
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->setState(I)V
+    :goto_d
+    return v0
 
-    goto :goto_13
+    :cond_e
+    const/4 v0, 0x0
 
-    .line 497
-    :array_6c
-    .array-data 4
-        0x3
-        0x2
-    .end array-data
+    goto :goto_d
 .end method
 
 .method logError(Ljava/lang/String;)V
@@ -2192,8 +1361,8 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1008
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mDebugTag:Ljava/lang/String;
+    .line 1020
+    const-string v0, "GameHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2211,7 +1380,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1009
+    .line 1021
     return-void
 .end method
 
@@ -2220,8 +1389,8 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 1004
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mDebugTag:Ljava/lang/String;
+    .line 1016
+    const-string v0, "GameHelper"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2239,43 +1408,73 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1005
+    .line 1017
     return-void
 .end method
 
-.method makeSimpleDialog(Ljava/lang/String;)Landroid/app/Dialog;
-    .registers 5
+.method public makeSimpleDialog(Ljava/lang/String;)Landroid/app/Dialog;
+    .registers 3
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 993
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
     .line 994
-    const v1, 0x104000a
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_b
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    .line 995
+    const-string v0, "*** makeSimpleDialog failed: no current Activity!"
 
-    move-result-object v0
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logError(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+    .line 996
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    .line 993
+    .line 998
+    :goto_a
     return-object v0
+
+    :cond_b
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
+
+    invoke-static {v0, p1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->makeSimpleDialog(Landroid/app/Activity;Ljava/lang/String;)Landroid/app/Dialog;
+
+    move-result-object v0
+
+    goto :goto_a
+.end method
+
+.method public makeSimpleDialog(Ljava/lang/String;Ljava/lang/String;)Landroid/app/Dialog;
+    .registers 4
+    .param p1, "title"    # Ljava/lang/String;
+    .param p2, "text"    # Ljava/lang/String;
+
+    .prologue
+    .line 1002
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
+
+    if-nez v0, :cond_b
+
+    .line 1003
+    const-string v0, "*** makeSimpleDialog failed: no current Activity!"
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logError(Ljava/lang/String;)V
+
+    .line 1004
+    const/4 v0, 0x0
+
+    .line 1006
+    :goto_a
+    return-object v0
+
+    :cond_b
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
+
+    invoke-static {v0, p1, p2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->makeSimpleDialog(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)Landroid/app/Dialog;
+
+    move-result-object v0
+
+    goto :goto_a
 .end method
 
 .method notifyListener(Z)V
@@ -2283,18 +1482,18 @@
     .param p1, "success"    # Z
 
     .prologue
-    .line 594
+    .line 625
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v0, "Notifying LISTENER of sign-in "
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 626
     if-eqz p1, :cond_22
 
     const-string v0, "SUCCESS"
 
-    .line 595
     :goto_b
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2304,28 +1503,28 @@
 
     move-result-object v0
 
-    .line 594
+    .line 625
     invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 596
+    .line 629
     iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mListener:Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
 
     if-eqz v0, :cond_21
 
-    .line 597
+    .line 630
     if-eqz p1, :cond_2c
 
-    .line 598
+    .line 631
     iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mListener:Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
 
     invoke-interface {v0}, Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;->onSignInSucceeded()V
 
-    .line 603
+    .line 636
     :cond_21
     :goto_21
     return-void
 
-    .line 595
+    .line 627
     :cond_22
     iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
@@ -2335,12 +1534,13 @@
 
     goto :goto_b
 
+    .line 628
     :cond_29
     const-string v0, "FAILURE (no error)"
 
     goto :goto_b
 
-    .line 600
+    .line 633
     :cond_2c
     iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mListener:Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
 
@@ -2350,221 +1550,263 @@
 .end method
 
 .method public onActivityResult(IILandroid/content/Intent;)V
-    .registers 8
+    .registers 10
     .param p1, "requestCode"    # I
     .param p2, "responseCode"    # I
     .param p3, "intent"    # Landroid/content/Intent;
 
     .prologue
-    const/16 v3, 0x2329
+    const/16 v5, 0x2329
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    .line 550
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 569
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v0, "onActivityResult: req="
+    const-string v2, "onActivityResult: req="
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-ne p1, v3, :cond_2f
+    .line 570
+    if-ne p1, v5, :cond_2f
 
-    const-string v0, "RC_RESOLVE"
+    const-string v2, "RC_RESOLVE"
 
-    .line 551
     :goto_e
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, ", resp="
+    .line 571
+    const-string v3, ", resp="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v2
 
-    .line 552
-    invoke-static {p2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->activityResponseCodeToString(I)Ljava/lang/String;
+    .line 572
+    invoke-static {p2}, Lcom/enjoygame/tool/gamecenter/GameHelperUtils;->activityResponseCodeToString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    .line 550
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    .line 569
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 553
-    if-eq p1, v3, :cond_34
+    .line 573
+    if-eq p1, v5, :cond_34
 
-    .line 554
-    const-string v0, "onActivityResult: request code not meant for us. Ignoring."
+    .line 574
+    const-string v2, "onActivityResult: request code not meant for us. Ignoring."
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 591
+    .line 622
     :goto_2e
     return-void
 
-    .line 551
+    .line 571
     :cond_2f
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
     goto :goto_e
 
-    .line 559
-    :cond_34
-    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mExpectingResolution:Z
-
-    .line 561
-    iget v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_5a
-
-    .line 562
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onActivityResult: ignoring because state isn\'t STATE_CONNECTING (it\'s "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 563
-    sget-object v1, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
-
-    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 562
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    goto :goto_2e
-
-    .line 569
-    :cond_5a
-    const/4 v0, -0x1
-
-    if-ne p2, v0, :cond_66
-
-    .line 571
-    const-string v0, "onAR: Resolution was RESULT_OK, so connecting current client again."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 572
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connectCurrentClient()V
-
-    goto :goto_2e
-
-    .line 573
-    :cond_66
-    const/16 v0, 0x2711
-
-    if-ne p2, v0, :cond_73
-
-    .line 574
-    const-string v0, "onAR: Resolution was RECONNECT_REQUIRED, so reconnecting."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 575
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connectCurrentClient()V
-
-    goto :goto_2e
-
-    .line 576
-    :cond_73
-    if-nez p2, :cond_88
-
-    .line 578
-    const-string v0, "onAR: Got a cancellation result, so disconnecting."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
     .line 579
-    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAutoSignIn:Z
-
-    .line 580
-    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mUserInitiatedSignIn:Z
+    :cond_34
+    iput-boolean v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mExpectingResolution:Z
 
     .line 581
-    const/4 v0, 0x0
+    iget-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
 
-    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
+    if-nez v2, :cond_40
 
     .line 582
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->killConnections()V
+    const-string v2, "onActivityResult: ignoring because we are not connecting."
 
-    .line 583
-    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
     goto :goto_2e
 
-    .line 587
-    :cond_88
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onAR: responseCode="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->activityResponseCodeToString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
     .line 588
-    const-string v1, ", so giving up."
+    :cond_40
+    const/4 v2, -0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne p2, v2, :cond_4c
 
-    move-result-object v0
+    .line 590
+    const-string v2, "onAR: Resolution was RESULT_OK, so connecting current client again."
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    move-result-object v0
+    .line 591
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connect()V
 
-    .line 587
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    goto :goto_2e
 
-    .line 589
-    new-instance v0, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
+    .line 592
+    :cond_4c
+    const/16 v2, 0x2711
 
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
+    if-ne p2, v2, :cond_59
 
-    invoke-virtual {v1}, Lcom/google/android/gms/common/ConnectionResult;->getErrorCode()I
+    .line 593
+    const-string v2, "onAR: Resolution was RECONNECT_REQUIRED, so reconnecting."
+
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 594
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connect()V
+
+    goto :goto_2e
+
+    .line 595
+    :cond_59
+    if-nez p2, :cond_a5
+
+    .line 597
+    const-string v2, "onAR: Got a cancellation result, so disconnecting."
+
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 598
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInCancelled:Z
+
+    .line 599
+    iput-boolean v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectOnStart:Z
+
+    .line 600
+    iput-boolean v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mUserInitiatedSignIn:Z
+
+    .line 601
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
+
+    .line 602
+    iput-boolean v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
+
+    .line 603
+    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-interface {v2}, Lcom/google/android/gms/common/api/GoogleApiClient;->disconnect()V
+
+    .line 606
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getSignInCancellations()I
 
     move-result v1
 
-    invoke-direct {v0, v1, p2}, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;-><init>(II)V
+    .line 607
+    .local v1, "prevCancellations":I
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->incrementSignInCancellations()I
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->giveUp(Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;)V
+    move-result v0
+
+    .line 608
+    .local v0, "newCancellations":I
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "onAR: # of cancellations "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " --> "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    .line 609
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ", max "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mMaxAutoSignInAttempts:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 608
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 611
+    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
+
+    goto :goto_2e
+
+    .line 615
+    .end local v0    # "newCancellations":I
+    .end local v1    # "prevCancellations":I
+    :cond_a5
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "onAR: responseCode="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 617
+    invoke-static {p2}, Lcom/enjoygame/tool/gamecenter/GameHelperUtils;->activityResponseCodeToString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 616
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    .line 618
+    const-string v3, ", so giving up."
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 615
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 619
+    new-instance v2, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
+
+    iget-object v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
+
+    invoke-virtual {v3}, Lcom/google/android/gms/common/ConnectionResult;->getErrorCode()I
+
+    move-result v3
+
+    .line 620
+    invoke-direct {v2, v3, p2}, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;-><init>(II)V
+
+    .line 619
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->giveUp(Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;)V
 
     goto/16 :goto_2e
 .end method
@@ -2574,68 +1816,20 @@
     .param p1, "connectionHint"    # Landroid/os/Bundle;
 
     .prologue
-    .line 803
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onConnected: connected! client="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mClientCurrentlyConnecting:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
+    .line 717
+    const-string v1, "onConnected: connected!"
 
     invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 806
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
+    .line 719
+    if-eqz p1, :cond_78
 
-    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mClientCurrentlyConnecting:I
-
-    or-int/2addr v1, v2
-
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    .line 807
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Connected clients updated to: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 811
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mClientCurrentlyConnecting:I
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_6a
-
-    if-eqz p1, :cond_6a
-
-    .line 812
+    .line 720
     const-string v1, "onConnected: connection hint provided. Checking for invite."
 
     invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 813
+    .line 722
     const-string v1, "invitation"
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -2644,36 +1838,36 @@
 
     check-cast v0, Lcom/google/android/gms/games/multiplayer/Invitation;
 
-    .line 814
+    .line 723
     .local v0, "inv":Lcom/google/android/gms/games/multiplayer/Invitation;
-    if-eqz v0, :cond_6a
+    if-eqz v0, :cond_3b
 
     invoke-interface {v0}, Lcom/google/android/gms/games/multiplayer/Invitation;->getInvitationId()Ljava/lang/String;
 
     move-result-object v1
 
-    if-eqz v1, :cond_6a
+    if-eqz v1, :cond_3b
 
-    .line 816
+    .line 725
     const-string v1, "onConnected: connection hint has a room invite!"
 
     invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 817
-    invoke-interface {v0}, Lcom/google/android/gms/games/multiplayer/Invitation;->getInvitationId()Ljava/lang/String;
+    .line 726
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitation:Lcom/google/android/gms/games/multiplayer/Invitation;
 
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitationId:Ljava/lang/String;
-
-    .line 818
+    .line 727
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Invitation ID: "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitationId:Ljava/lang/String;
+    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitation:Lcom/google/android/gms/games/multiplayer/Invitation;
+
+    invoke-interface {v2}, Lcom/google/android/gms/games/multiplayer/Invitation;->getInvitationId()Ljava/lang/String;
+
+    move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2685,195 +1879,384 @@
 
     invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 823
-    .end local v0    # "inv":Lcom/google/android/gms/games/multiplayer/Invitation;
-    :cond_6a
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connectNextClient()V
+    .line 731
+    :cond_3b
+    sget-object v1, Lcom/google/android/gms/games/Games;->Requests:Lcom/google/android/gms/games/request/Requests;
 
-    .line 824
+    .line 732
+    invoke-interface {v1, p1}, Lcom/google/android/gms/games/request/Requests;->getGameRequestsFromBundle(Landroid/os/Bundle;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    .line 731
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequests:Ljava/util/ArrayList;
+
+    .line 733
+    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequests:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_69
+
+    .line 735
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "onConnected: connection hint has "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequests:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 736
+    const-string v2, " request(s)"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 735
+    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 739
+    :cond_69
+    const-string v1, "onConnected: connection hint provided. Checking for TBMP game."
+
+    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 741
+    const-string v1, "turn_based_match"
+
+    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/google/android/gms/games/multiplayer/turnbased/TurnBasedMatch;
+
+    .line 740
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mTurnBasedMatch:Lcom/google/android/gms/games/multiplayer/turnbased/TurnBasedMatch;
+
+    .line 745
+    .end local v0    # "inv":Lcom/google/android/gms/games/multiplayer/Invitation;
+    :cond_78
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->succeedSignIn()V
+
+    .line 746
     return-void
 .end method
 
 .method public onConnectionFailed(Lcom/google/android/gms/common/ConnectionResult;)V
-    .registers 4
+    .registers 7
     .param p1, "result"    # Lcom/google/android/gms/common/ConnectionResult;
 
     .prologue
-    .line 842
-    const-string v0, "onConnectionFailed"
+    const/4 v4, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    .line 793
+    const-string v2, "onConnectionFailed"
 
-    .line 844
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 795
     iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 845
-    const-string v0, "Connection failure:"
+    .line 796
+    const-string v2, "Connection failure:"
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 846
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 797
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v1, "   - code: "
+    const-string v3, "   - code: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
+    .line 798
+    iget-object v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
 
-    invoke-virtual {v1}, Lcom/google/android/gms/common/ConnectionResult;->getErrorCode()I
+    .line 799
+    invoke-virtual {v3}, Lcom/google/android/gms/common/ConnectionResult;->getErrorCode()I
 
-    move-result v1
+    move-result v3
 
-    invoke-static {v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->errorCodeToString(I)Ljava/lang/String;
+    .line 798
+    invoke-static {v3}, Lcom/enjoygame/tool/gamecenter/GameHelperUtils;->errorCodeToString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    .line 797
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 847
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 800
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v1, "   - resolvable: "
+    const-string v3, "   - resolvable: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
+    iget-object v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
 
-    invoke-virtual {v1}, Lcom/google/android/gms/common/ConnectionResult;->hasResolution()Z
+    invoke-virtual {v3}, Lcom/google/android/gms/common/ConnectionResult;->hasResolution()Z
 
-    move-result v1
+    move-result v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 848
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 801
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v1, "   - details: "
+    const-string v3, "   - details: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
+    iget-object v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
 
-    invoke-virtual {v1}, Lcom/google/android/gms/common/ConnectionResult;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/google/android/gms/common/ConnectionResult;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 850
-    iget-boolean v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mUserInitiatedSignIn:Z
+    .line 803
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getSignInCancellations()I
 
-    if-nez v0, :cond_6c
+    move-result v0
 
-    .line 857
-    const-string v0, "onConnectionFailed: since user didn\'t initiate sign-in, failing now."
+    .line 804
+    .local v0, "cancellations":I
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    .line 806
+    .local v1, "shouldResolve":Z
+    iget-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mUserInitiatedSignIn:Z
 
-    .line 858
-    iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
+    if-eqz v2, :cond_77
 
-    .line 859
-    const/4 v0, 0x1
+    .line 807
+    const-string v2, "onConnectionFailed: WILL resolve because user initiated sign-in."
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->setState(I)V
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 860
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
-
-    .line 870
-    :goto_6b
-    return-void
-
-    .line 864
-    :cond_6c
-    const-string v0, "onConnectionFailed: since user initiated sign-in, resolving problem."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 869
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->resolveConnectionResult()V
-
-    goto :goto_6b
-.end method
-
-.method public onDisconnected()V
-    .registers 3
-
-    .prologue
-    .line 930
-    const-string v0, "onDisconnected."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 931
-    iget v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
+    .line 808
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_10
+    .line 828
+    :goto_68
+    if-nez v1, :cond_c6
 
-    .line 933
-    const-string v0, "onDisconnected is expected, so no action taken."
+    .line 830
+    const-string v2, "onConnectionFailed: since we won\'t resolve, failing now."
+
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 831
+    iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
+
+    .line 832
+    iput-boolean v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
+
+    .line 833
+    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
+
+    .line 843
+    :goto_76
+    return-void
+
+    .line 809
+    :cond_77
+    iget-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInCancelled:Z
+
+    if-eqz v2, :cond_82
+
+    .line 810
+    const-string v2, "onConnectionFailed WILL NOT resolve (user already cancelled once)."
+
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 811
+    const/4 v1, 0x0
+
+    .line 812
+    goto :goto_68
+
+    :cond_82
+    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mMaxAutoSignInAttempts:I
+
+    if-ge v0, v2, :cond_a6
+
+    .line 813
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "onConnectionFailed: WILL resolve because we have below the max# of attempts, "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 815
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    .line 816
+    const-string v3, " < "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    .line 817
+    iget v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mMaxAutoSignInAttempts:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 813
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 818
+    const/4 v1, 0x1
+
+    .line 819
+    goto :goto_68
+
+    .line 820
+    :cond_a6
+    const/4 v1, 0x0
+
+    .line 821
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "onConnectionFailed: Will NOT resolve; not user-initiated and max attempts reached: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 823
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    .line 824
+    const-string v3, " >= "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    .line 825
+    iget v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mMaxAutoSignInAttempts:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 821
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    goto :goto_68
+
+    .line 837
+    :cond_c6
+    const-string v2, "onConnectionFailed: resolving problem..."
+
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 842
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->resolveConnectionResult()V
+
+    goto :goto_76
+.end method
+
+.method public onConnectionSuspended(I)V
+    .registers 5
+    .param p1, "cause"    # I
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 916
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "onConnectionSuspended, cause="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 947
-    :goto_f
-    return-void
+    .line 917
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->disconnect()V
 
-    .line 938
-    :cond_10
-    const-string v0, "Unexpectedly disconnected. Severing remaining connections."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logWarn(Ljava/lang/String;)V
-
-    .line 941
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->killConnections()V
-
-    .line 942
+    .line 918
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
-    .line 945
+    .line 919
     const-string v0, "Making extraordinary call to onSignInFailed callback"
 
     invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 946
-    const/4 v0, 0x0
+    .line 920
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
+    .line 921
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
 
-    goto :goto_f
+    .line 922
+    return-void
 .end method
 
 .method public onStart(Landroid/app/Activity;)V
@@ -2881,630 +2264,260 @@
     .param p1, "act"    # Landroid/app/Activity;
 
     .prologue
-    .line 352
+    .line 379
     iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
 
-    .line 354
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onStart, state = "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v2, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
-
-    iget v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 355
-    const-string v1, "onStart"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->assertConfigured(Ljava/lang/String;)V
-
-    .line 357
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    packed-switch v1, :pswitch_data_62
-
-    .line 376
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onStart: BUG: unexpected state "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v2, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
-
-    iget v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 380
+    invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 377
-    .local v0, "msg":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logError(Ljava/lang/String;)V
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppContext:Landroid/content/Context;
 
-    .line 378
-    new-instance v1, Ljava/lang/IllegalStateException;
+    .line 382
+    const-string v0, "onStart"
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    throw v1
+    .line 383
+    const-string v0, "onStart"
 
-    .line 360
-    .end local v0    # "msg":Ljava/lang/String;
-    :pswitch_42
-    iget-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAutoSignIn:Z
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->assertConfigured(Ljava/lang/String;)V
 
-    if-eqz v1, :cond_4f
+    .line 385
+    iget-boolean v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectOnStart:Z
 
-    .line 361
-    const-string v1, "onStart: Now connecting clients."
+    if-eqz v0, :cond_34
 
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    .line 386
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    .line 362
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->startConnections()V
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
 
-    .line 380
-    :goto_4e
+    move-result v0
+
+    if-eqz v0, :cond_26
+
+    .line 387
+    const-string v0, "GameHelper"
+
+    .line 388
+    const-string v1, "GameHelper: client was already connected on onStart()"
+
+    .line 387
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 404
+    :goto_25
     return-void
 
-    .line 364
-    :cond_4f
-    const-string v1, "onStart: Not connecting (user specifically signed out)."
+    .line 390
+    :cond_26
+    const-string v0, "Connecting client."
 
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    goto :goto_4e
+    .line 391
+    const/4 v0, 0x1
 
-    .line 369
-    :pswitch_55
-    const-string v1, "onStart: connection process in progress, no action taken."
+    iput-boolean v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
 
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    .line 392
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    goto :goto_4e
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->connect()V
 
-    .line 373
-    :pswitch_5b
-    const-string v1, "onStart: already connected (unusual, but ok)."
+    goto :goto_25
 
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+    .line 395
+    :cond_34
+    const-string v0, "Not attempting to connect becase mConnectOnStart=false"
 
-    goto :goto_4e
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 357
-    nop
+    .line 396
+    const-string v0, "Instead, reporting a sign-in failure."
 
-    :pswitch_data_62
-    .packed-switch 0x1
-        :pswitch_42
-        :pswitch_55
-        :pswitch_5b
-    .end packed-switch
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 397
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mHandler:Landroid/os/Handler;
+
+    new-instance v1, Lcom/enjoygame/tool/gamecenter/GameHelper$1;
+
+    invoke-direct {v1, p0}, Lcom/enjoygame/tool/gamecenter/GameHelper$1;-><init>(Lcom/enjoygame/tool/gamecenter/GameHelper;)V
+
+    .line 402
+    const-wide/16 v2, 0x3e8
+
+    .line 397
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    goto :goto_25
 .end method
 
 .method public onStop()V
+    .registers 3
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 408
+    const-string v0, "onStop"
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 409
+    const-string v0, "onStop"
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->assertConfigured(Ljava/lang/String;)V
+
+    .line 410
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_25
+
+    .line 411
+    const-string v0, "Disconnecting client due to onStop"
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 412
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->disconnect()V
+
+    .line 416
+    :goto_1d
+    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
+
+    .line 417
+    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mExpectingResolution:Z
+
+    .line 420
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
+
+    .line 421
+    return-void
+
+    .line 414
+    :cond_25
+    const-string v0, "Client already disconnected when we got onStop."
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    goto :goto_1d
+.end method
+
+.method public reconnectClient()V
+    .registers 3
+
+    .prologue
+    .line 704
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
+
+    move-result v0
+
+    if-nez v0, :cond_13
+
+    .line 705
+    const-string v0, "GameHelper"
+
+    const-string v1, "reconnectClient() called when client is not connected."
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 707
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connect()V
+
+    .line 712
+    :goto_12
+    return-void
+
+    .line 709
+    :cond_13
+    const-string v0, "Reconnecting client."
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 710
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->reconnect()V
+
+    goto :goto_12
+.end method
+
+.method resetSignInCancellations()V
     .registers 5
 
     .prologue
-    .line 384
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onStop, state = "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v2, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
-
-    iget v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 385
-    const-string v1, "onStop"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->assertConfigured(Ljava/lang/String;)V
-
-    .line 386
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    packed-switch v1, :pswitch_data_52
-
-    .line 397
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onStop: BUG: unexpected state "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v2, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
-
-    iget v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 398
-    .local v0, "msg":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logError(Ljava/lang/String;)V
-
-    .line 399
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    .line 390
-    .end local v0    # "msg":Ljava/lang/String;
-    :pswitch_40
-    const-string v1, "onStop: Killing connections"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 391
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->killConnections()V
-
-    .line 403
-    :goto_48
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
-
-    .line 404
-    return-void
-
-    .line 394
-    :pswitch_4c
-    const-string v1, "onStop: not connected, so no action taken."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    goto :goto_48
-
-    .line 386
-    :pswitch_data_52
-    .packed-switch 0x1
-        :pswitch_4c
-        :pswitch_40
-        :pswitch_40
-    .end packed-switch
-.end method
-
-.method printMisconfiguredDebugInfo()V
-    .registers 4
-
-    .prologue
-    .line 1071
-    const-string v1, "****"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1072
-    const-string v1, "****"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1073
-    const-string v1, "**** APP NOT CORRECTLY CONFIGURED TO USE GOOGLE PLAY GAME SERVICES"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1074
-    const-string v1, "**** This is usually caused by one of these reasons:"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1075
-    const-string v1, "**** (1) Your package name and certificate fingerprint do not match"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1076
-    const-string v1, "****     the client ID you registered in Developer Console."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1077
-    const-string v1, "**** (2) Your App ID was incorrectly entered."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1078
-    const-string v1, "**** (3) Your game settings have not been published and you are "
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1079
-    const-string v1, "****     trying to log in with an account that is not listed as"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1080
-    const-string v1, "****     a test account."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1081
-    const-string v1, "****"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1082
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    .line 1083
-    .local v0, "ctx":Landroid/content/Context;
-    if-nez v0, :cond_43
-
-    .line 1084
-    const-string v1, "*** (no Context, so can\'t print more debug info)"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1100
-    :goto_42
-    return-void
-
-    .line 1088
-    :cond_43
-    const-string v1, "**** To help you debug, here is the information about this app"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1089
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "**** Package name         : "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1090
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "**** Cert SHA1 fingerprint: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getSHA1CertFingerprint()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1091
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "**** App ID from          : "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getAppIdFromResource()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1092
-    const-string v1, "****"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1093
-    const-string v1, "**** Check that the above information matches your setup in "
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1094
-    const-string v1, "**** Developer Console. Also, check that you\'re logging in with the"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1095
-    const-string v1, "**** right account (it should be listed in the Testers section if"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1096
-    const-string v1, "**** your project is not yet published)."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1097
-    const-string v1, "****"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1098
-    const-string v1, "**** For more information, refer to the troubleshooting guide:"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 1099
-    const-string v1, "****   http://developers.google.com/games/services/android/troubleshooting"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    goto :goto_42
-.end method
-
-.method public reconnectClients(I)V
-    .registers 10
-    .param p1, "whatClients"    # I
-
-    .prologue
-    const/4 v7, 0x1
-
-    .line 765
-    const/16 v1, 0x3e9
-
-    const-string v2, "reconnectClients"
-
-    const-string v3, "reconnectClients should only be called when connected. Proceeding anyway."
-
-    new-array v4, v7, [I
-
-    const/4 v5, 0x0
-
-    .line 766
-    const/4 v6, 0x3
-
-    aput v6, v4, v5
-
-    .line 765
-    invoke-virtual {p0, v1, v2, v3, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->checkState(ILjava/lang/String;Ljava/lang/String;[I)Z
-
-    .line 767
-    const/4 v0, 0x0
-
-    .line 769
-    .local v0, "actuallyReconnecting":Z
-    and-int/lit8 v1, p1, 0x1
-
-    if-eqz v1, :cond_32
-
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
-
-    if-eqz v1, :cond_32
-
-    .line 770
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/games/GamesClient;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_32
-
-    .line 771
-    const-string v1, "Reconnecting GamesClient."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 772
-    const/4 v0, 0x1
-
-    .line 773
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    and-int/lit8 v1, v1, -0x2
-
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    .line 774
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/games/GamesClient;->reconnect()V
-
-    .line 776
-    :cond_32
-    and-int/lit8 v1, p1, 0x4
-
-    if-eqz v1, :cond_53
-
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
-
-    if-eqz v1, :cond_53
-
-    .line 777
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/appstate/AppStateClient;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_53
-
-    .line 778
-    const-string v1, "Reconnecting AppStateClient."
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 779
-    const/4 v0, 0x1
-
-    .line 780
-    iget v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    and-int/lit8 v1, v1, -0x5
-
-    iput v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectedClients:I
-
-    .line 781
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/appstate/AppStateClient;->reconnect()V
+    const/4 v3, 0x0
 
     .line 783
-    :cond_53
-    and-int/lit8 v1, p1, 0x2
-
-    if-eqz v1, :cond_68
-
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
-
-    if-eqz v1, :cond_68
+    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppContext:Landroid/content/Context;
 
     .line 784
-    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
+    const-string v2, "GAMEHELPER_SHARED_PREFS"
 
-    invoke-virtual {v1}, Lcom/google/android/gms/plus/PlusClient;->isConnected()Z
+    .line 783
+    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    move-result v1
+    move-result-object v1
 
-    if-eqz v1, :cond_68
+    .line 784
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 785
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
+    const-string v1, "KEY_SIGN_IN_CANCELLATIONS"
+
+    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     .line 786
-    const-string v1, "GameHelper is ignoring your request to reconnect PlusClient because this is unnecessary."
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logWarn(Ljava/lang/String;)V
-
-    .line 790
-    :cond_68
-    if-eqz v0, :cond_6f
-
-    .line 791
-    const/4 v1, 0x2
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->setState(I)V
-
-    .line 798
-    :goto_6e
+    .line 787
     return-void
-
-    .line 795
-    :cond_6f
-    const-string v1, "No reconnections needed, so behaving as if sign in just succeeded"
-
-    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 796
-    invoke-virtual {p0, v7}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
-
-    goto :goto_6e
 .end method
 
 .method resolveConnectionResult()V
-    .registers 8
+    .registers 5
 
     .prologue
-    const/4 v4, 0x1
-
-    .line 879
-    const/16 v1, 0x3ea
-
-    const-string v2, "resolveConnectionResult"
-
-    .line 880
-    const-string v3, "resolveConnectionResult should only be called when connecting. Proceeding anyway."
-
-    new-array v4, v4, [I
-
-    const/4 v5, 0x0
-
-    .line 881
-    const/4 v6, 0x2
-
-    aput v6, v4, v5
-
-    .line 879
-    invoke-virtual {p0, v1, v2, v3, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->checkState(ILjava/lang/String;Ljava/lang/String;[I)Z
-
-    .line 883
+    .line 852
     iget-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mExpectingResolution:Z
 
-    if-eqz v1, :cond_1a
+    if-eqz v1, :cond_a
 
-    .line 884
+    .line 853
     const-string v1, "We\'re already expecting the result of a previous resolution."
 
     invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 908
-    :goto_19
+    .line 879
+    :goto_9
     return-void
 
-    .line 888
-    :cond_1a
+    .line 857
+    :cond_a
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "resolveConnectionResult: trying to resolve result: "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 858
     iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -3515,64 +2528,67 @@
 
     move-result-object v1
 
+    .line 857
     invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 889
+    .line 859
     iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
 
     invoke-virtual {v1}, Lcom/google/android/gms/common/ConnectionResult;->hasResolution()Z
 
     move-result v1
 
-    if-eqz v1, :cond_52
+    if-eqz v1, :cond_42
 
-    .line 891
+    .line 861
     const-string v1, "Result has resolution. Starting it."
 
     invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 895
+    .line 865
     const/4 v1, 0x1
 
-    :try_start_3c
+    :try_start_2c
     iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mExpectingResolution:Z
 
-    .line 896
+    .line 866
     iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
 
     iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
 
+    .line 867
     const/16 v3, 0x2329
 
+    .line 866
     invoke-virtual {v1, v2, v3}, Lcom/google/android/gms/common/ConnectionResult;->startResolutionForResult(Landroid/app/Activity;I)V
-    :try_end_47
-    .catch Landroid/content/IntentSender$SendIntentException; {:try_start_3c .. :try_end_47} :catch_48
+    :try_end_37
+    .catch Landroid/content/IntentSender$SendIntentException; {:try_start_2c .. :try_end_37} :catch_38
 
-    goto :goto_19
+    goto :goto_9
 
-    .line 897
-    :catch_48
+    .line 868
+    :catch_38
     move-exception v0
 
-    .line 899
+    .line 870
     .local v0, "e":Landroid/content/IntentSender$SendIntentException;
     const-string v1, "SendIntentException, so connecting again."
 
     invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 900
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connectCurrentClient()V
+    .line 871
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connect()V
 
-    goto :goto_19
+    goto :goto_9
 
-    .line 905
+    .line 876
     .end local v0    # "e":Landroid/content/IntentSender$SendIntentException;
-    :cond_52
+    :cond_42
     const-string v1, "resolveConnectionResult: result has no resolution. Giving up."
 
     invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 906
+    .line 877
     new-instance v1, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
     iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectionResult:Lcom/google/android/gms/common/ConnectionResult;
@@ -3585,49 +2601,243 @@
 
     invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->giveUp(Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;)V
 
-    goto :goto_19
+    goto :goto_9
 .end method
 
-.method setState(I)V
-    .registers 6
-    .param p1, "newState"    # I
+.method public setAppStateApiOptions(Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;)V
+    .registers 2
 
     .prologue
-    .line 290
-    sget-object v2, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
+    .line 252
+    .local p1, "options":Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;, "Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;"
+    invoke-direct {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->doApiOptionsPreCheck()V
 
-    iget v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
+    .line 253
+    iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateApiOptions:Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;
 
-    aget-object v1, v2, v3
+    .line 254
+    return-void
+.end method
 
-    .line 291
-    .local v1, "oldStateName":Ljava/lang/String;
-    sget-object v2, Lcom/enjoygame/tool/gamecenter/GameHelper;->STATE_NAMES:[Ljava/lang/String;
+.method public setConnectOnStart(Z)V
+    .registers 4
+    .param p1, "connectOnStart"    # Z
 
-    aget-object v0, v2, p1
+    .prologue
+    .line 1063
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 292
-    .local v0, "newStateName":Ljava/lang/String;
-    iput p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
+    const-string v1, "Forcing mConnectOnStart="
 
-    .line 293
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 1064
+    iput-boolean p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectOnStart:Z
+
+    .line 1065
+    return-void
+.end method
+
+.method public setGamesApiOptions(Lcom/google/android/gms/games/Games$GamesOptions;)V
+    .registers 2
+    .param p1, "options"    # Lcom/google/android/gms/games/Games$GamesOptions;
+
+    .prologue
+    .line 243
+    invoke-direct {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->doApiOptionsPreCheck()V
+
+    .line 244
+    iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesApiOptions:Lcom/google/android/gms/games/Games$GamesOptions;
+
+    .line 245
+    return-void
+.end method
+
+.method public setMaxAutoSignInAttempts(I)V
+    .registers 2
+    .param p1, "max"    # I
+
+    .prologue
+    .line 215
+    iput p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mMaxAutoSignInAttempts:I
+
+    .line 216
+    return-void
+.end method
+
+.method public setPlusApiOptions(Lcom/google/android/gms/plus/Plus$PlusOptions;)V
+    .registers 2
+    .param p1, "options"    # Lcom/google/android/gms/plus/Plus$PlusOptions;
+
+    .prologue
+    .line 261
+    invoke-direct {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->doApiOptionsPreCheck()V
+
+    .line 262
+    iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusApiOptions:Lcom/google/android/gms/plus/Plus$PlusOptions;
+
+    .line 263
+    return-void
+.end method
+
+.method public setShowErrorDialogs(Z)V
+    .registers 2
+    .param p1, "show"    # Z
+
+    .prologue
+    .line 374
+    iput-boolean p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mShowErrorDialogs:Z
+
+    .line 375
+    return-void
+.end method
+
+.method public setup(Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;)V
+    .registers 5
+    .param p1, "listener"    # Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
+
+    .prologue
+    .line 316
+    iget-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSetupDone:Z
+
+    if-eqz v1, :cond_f
+
+    .line 317
+    const-string v0, "GameHelper: you cannot call GameHelper.setup() more than once!"
+
+    .line 318
+    .local v0, "error":Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logError(Ljava/lang/String;)V
+
+    .line 319
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    .line 321
+    .end local v0    # "error":Ljava/lang/String;
+    :cond_f
+    iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mListener:Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
+
+    .line 322
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Setup: requested clients: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 324
+    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClientBuilder:Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
+
+    if-nez v1, :cond_2c
+
+    .line 326
+    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->createApiClientBuilder()Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
+
+    .line 329
+    :cond_2c
+    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClientBuilder:Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
+
+    invoke-virtual {v1}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->build()Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    .line 330
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClientBuilder:Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
+
+    .line 331
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSetupDone:Z
+
+    .line 332
+    return-void
+.end method
+
+.method public showFailureDialog()V
+    .registers 5
+
+    .prologue
+    .line 925
+    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
+
+    if-eqz v2, :cond_19
+
+    .line 926
+    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
+
+    invoke-virtual {v2}, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;->getServiceErrorCode()I
+
+    move-result v1
+
+    .line 927
+    .local v1, "errorCode":I
+    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
+
+    invoke-virtual {v2}, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;->getActivityResultCode()I
+
+    move-result v0
+
+    .line 929
+    .local v0, "actResp":I
+    iget-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mShowErrorDialogs:Z
+
+    if-eqz v2, :cond_1a
+
+    .line 930
+    iget-object v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
+
+    invoke-static {v2, v0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->showFailureDialog(Landroid/app/Activity;II)V
+
+    .line 936
+    .end local v0    # "actResp":I
+    .end local v1    # "errorCode":I
+    :cond_19
+    :goto_19
+    return-void
+
+    .line 932
+    .restart local v0    # "actResp":I
+    .restart local v1    # "errorCode":I
+    :cond_1a
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v3, "State change "
+    const-string v3, "Not showing error dialog because mShowErrorDialogs==false. Error was: "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 933
+    iget-object v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
-    move-result-object v2
-
-    const-string v3, " -> "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -3635,790 +2845,124 @@
 
     move-result-object v2
 
+    .line 932
     invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 294
-    return-void
-.end method
-
-.method public setup(Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;)V
-    .registers 4
-    .param p1, "listener"    # Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
-
-    .prologue
-    .line 210
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-virtual {p0, p1, v0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->setup(Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;I[Ljava/lang/String;)V
-
-    .line 211
-    return-void
-.end method
-
-.method public varargs setup(Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;I[Ljava/lang/String;)V
-    .registers 12
-    .param p1, "listener"    # Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
-    .param p2, "clientsToUse"    # I
-    .param p3, "additionalScopes"    # [Ljava/lang/String;
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 229
-    iget v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
-
-    if-eqz v4, :cond_10
-
-    .line 230
-    const-string v0, "GameHelper: you called GameHelper.setup() twice. You can only call it once."
-
-    .line 232
-    .local v0, "error":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->logError(Ljava/lang/String;)V
-
-    .line 233
-    new-instance v3, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v3, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v3
-
-    .line 235
-    .end local v0    # "error":Ljava/lang/String;
-    :cond_10
-    iput-object p1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mListener:Lcom/enjoygame/tool/gamecenter/GameHelper$GameHelperListener;
-
-    .line 236
-    iput p2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
-
-    .line 238
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Setup: requested clients: "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v5, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 240
-    new-instance v2, Ljava/util/Vector;
-
-    invoke-direct {v2}, Ljava/util/Vector;-><init>()V
-
-    .line 241
-    .local v2, "scopesVector":Ljava/util/Vector;, "Ljava/util/Vector<Ljava/lang/String;>;"
-    and-int/lit8 v4, p2, 0x1
-
-    if-eqz v4, :cond_36
-
-    .line 242
-    const-string v4, "https://www.googleapis.com/auth/games"
-
-    invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
-
-    .line 244
-    :cond_36
-    and-int/lit8 v4, p2, 0x2
-
-    if-eqz v4, :cond_3f
-
-    .line 245
-    const-string v4, "https://www.googleapis.com/auth/plus.login"
-
-    invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
-
-    .line 247
-    :cond_3f
-    and-int/lit8 v4, p2, 0x4
-
-    if-eqz v4, :cond_48
-
-    .line 248
-    const-string v4, "https://www.googleapis.com/auth/appstate"
-
-    invoke-virtual {v2, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
-
-    .line 251
-    :cond_48
-    if-eqz p3, :cond_4e
-
-    .line 252
-    array-length v5, p3
-
-    move v4, v3
-
-    :goto_4c
-    if-lt v4, v5, :cond_ca
-
-    .line 257
-    :cond_4e
-    invoke-virtual {v2}, Ljava/util/Vector;->size()I
-
-    move-result v4
-
-    new-array v4, v4, [Ljava/lang/String;
-
-    iput-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mScopes:[Ljava/lang/String;
-
-    .line 258
-    iget-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mScopes:[Ljava/lang/String;
-
-    invoke-virtual {v2, v4}, Ljava/util/Vector;->copyInto([Ljava/lang/Object;)V
-
-    .line 260
-    const-string v4, "setup: scopes:"
-
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 261
-    iget-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mScopes:[Ljava/lang/String;
-
-    array-length v5, v4
-
-    :goto_63
-    if-lt v3, v5, :cond_d3
-
-    .line 265
-    and-int/lit8 v3, p2, 0x1
-
-    if-eqz v3, :cond_89
-
-    .line 266
-    const-string v3, "setup: creating GamesClient"
-
-    invoke-virtual {p0, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 267
-    new-instance v3, Lcom/google/android/gms/games/GamesClient$Builder;
-
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4, p0, p0}, Lcom/google/android/gms/games/GamesClient$Builder;-><init>(Landroid/content/Context;Lcom/google/android/gms/common/GooglePlayServicesClient$ConnectionCallbacks;Lcom/google/android/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;)V
-
-    .line 268
-    const/16 v4, 0x31
-
-    invoke-virtual {v3, v4}, Lcom/google/android/gms/games/GamesClient$Builder;->setGravityForPopups(I)Lcom/google/android/gms/games/GamesClient$Builder;
-
-    move-result-object v3
-
-    .line 269
-    iget-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mScopes:[Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Lcom/google/android/gms/games/GamesClient$Builder;->setScopes([Ljava/lang/String;)Lcom/google/android/gms/games/GamesClient$Builder;
-
-    move-result-object v3
-
-    .line 270
-    invoke-virtual {v3}, Lcom/google/android/gms/games/GamesClient$Builder;->create()Lcom/google/android/gms/games/GamesClient;
-
-    move-result-object v3
-
-    .line 267
-    iput-object v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
-
-    .line 273
-    :cond_89
-    and-int/lit8 v3, p2, 0x2
-
-    if-eqz v3, :cond_a7
-
-    .line 274
-    const-string v3, "setup: creating GamesPlusClient"
-
-    invoke-virtual {p0, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 275
-    new-instance v3, Lcom/google/android/gms/plus/PlusClient$Builder;
-
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4, p0, p0}, Lcom/google/android/gms/plus/PlusClient$Builder;-><init>(Landroid/content/Context;Lcom/google/android/gms/common/GooglePlayServicesClient$ConnectionCallbacks;Lcom/google/android/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;)V
-
-    .line 276
-    iget-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mScopes:[Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Lcom/google/android/gms/plus/PlusClient$Builder;->setScopes([Ljava/lang/String;)Lcom/google/android/gms/plus/PlusClient$Builder;
-
-    move-result-object v3
-
-    .line 277
-    invoke-virtual {v3}, Lcom/google/android/gms/plus/PlusClient$Builder;->build()Lcom/google/android/gms/plus/PlusClient;
-
-    move-result-object v3
-
-    .line 275
-    iput-object v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
-
-    .line 280
-    :cond_a7
-    and-int/lit8 v3, p2, 0x4
-
-    if-eqz v3, :cond_c5
-
-    .line 281
-    const-string v3, "setup: creating AppStateClient"
-
-    invoke-virtual {p0, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 282
-    new-instance v3, Lcom/google/android/gms/appstate/AppStateClient$Builder;
-
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4, p0, p0}, Lcom/google/android/gms/appstate/AppStateClient$Builder;-><init>(Landroid/content/Context;Lcom/google/android/gms/common/GooglePlayServicesClient$ConnectionCallbacks;Lcom/google/android/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;)V
-
-    .line 283
-    iget-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mScopes:[Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Lcom/google/android/gms/appstate/AppStateClient$Builder;->setScopes([Ljava/lang/String;)Lcom/google/android/gms/appstate/AppStateClient$Builder;
-
-    move-result-object v3
-
-    .line 284
-    invoke-virtual {v3}, Lcom/google/android/gms/appstate/AppStateClient$Builder;->create()Lcom/google/android/gms/appstate/AppStateClient;
-
-    move-result-object v3
-
-    .line 282
-    iput-object v3, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAppStateClient:Lcom/google/android/gms/appstate/AppStateClient;
-
-    .line 286
-    :cond_c5
-    const/4 v3, 0x1
-
-    invoke-virtual {p0, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->setState(I)V
-
-    .line 287
-    return-void
-
-    .line 252
-    :cond_ca
-    aget-object v1, p3, v4
-
-    .line 253
-    .local v1, "scope":Ljava/lang/String;
-    invoke-virtual {v2, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
-
-    .line 252
-    add-int/lit8 v4, v4, 0x1
-
-    goto/16 :goto_4c
-
-    .line 261
-    .end local v1    # "scope":Ljava/lang/String;
-    :cond_d3
-    aget-object v1, v4, v3
-
-    .line 262
-    .restart local v1    # "scope":Ljava/lang/String;
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "  - "
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {p0, v6}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 261
-    add-int/lit8 v3, v3, 0x1
-
-    goto/16 :goto_63
-.end method
-
-.method public showAlert(Ljava/lang/String;)V
-    .registers 5
-    .param p1, "message"    # Ljava/lang/String;
-
-    .prologue
-    .line 414
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    .line 415
-    const v1, 0x104000a
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
-
-    .line 416
-    return-void
-.end method
-
-.method public showAlert(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 6
-    .param p1, "title"    # Ljava/lang/String;
-    .param p2, "message"    # Ljava/lang/String;
-
-    .prologue
-    .line 408
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    .line 409
-    const v1, 0x104000a
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
-
-    .line 410
-    return-void
-.end method
-
-.method showFailureDialog()V
-    .registers 8
-
-    .prologue
-    .line 951
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    .line 952
-    .local v1, "ctx":Landroid/content/Context;
-    if-nez v1, :cond_c
-
-    .line 953
-    const-string v4, "*** No context. Can\'t show failure dialog."
-
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 990
-    :goto_b
-    return-void
-
-    .line 956
-    :cond_c
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Making error dialog for failure: "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v5, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 957
-    const/4 v3, 0x0
-
-    .line 958
-    .local v3, "errorDialog":Landroid/app/Dialog;
-    iget-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
-
-    invoke-virtual {v4}, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;->getServiceErrorCode()I
-
-    move-result v2
-
-    .line 959
-    .local v2, "errorCode":I
-    iget-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
-
-    invoke-virtual {v4}, Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;->getActivityResultCode()I
-
-    move-result v0
-
-    .line 961
-    .local v0, "actResp":I
-    packed-switch v0, :pswitch_data_96
-
-    .line 978
-    iget-object v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mActivity:Landroid/app/Activity;
-
-    .line 979
-    const/16 v5, 0x232a
-
-    const/4 v6, 0x0
-
-    .line 978
-    invoke-static {v2, v4, v5, v6}, Lcom/google/android/gms/common/GooglePlayServicesUtil;->getErrorDialog(ILandroid/app/Activity;ILandroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;
-
-    move-result-object v3
-
-    .line 980
-    if-nez v3, :cond_66
-
-    .line 982
-    const-string v4, "No standard error dialog available. Making fallback dialog."
-
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 983
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const v5, 0x7f060036
-
-    invoke-virtual {v1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 984
-    const-string v5, " "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-static {v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->errorCodeToString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 983
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->makeSimpleDialog(Ljava/lang/String;)Landroid/app/Dialog;
-
-    move-result-object v3
-
-    .line 988
-    :cond_66
-    :goto_66
-    const-string v4, "Showing error dialog."
-
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 989
-    invoke-virtual {v3}, Landroid/app/Dialog;->show()V
-
-    goto :goto_b
-
-    .line 964
-    :pswitch_6f
-    const v4, 0x7f060034
-
-    .line 963
-    invoke-virtual {v1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->makeSimpleDialog(Ljava/lang/String;)Landroid/app/Dialog;
-
-    move-result-object v3
-
-    .line 965
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->printMisconfiguredDebugInfo()V
-
-    goto :goto_66
-
-    .line 969
-    :pswitch_7e
-    const v4, 0x7f060033
-
-    .line 968
-    invoke-virtual {v1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->makeSimpleDialog(Ljava/lang/String;)Landroid/app/Dialog;
-
-    move-result-object v3
-
-    .line 970
-    goto :goto_66
-
-    .line 973
-    :pswitch_8a
-    const v4, 0x7f060035
-
-    .line 972
-    invoke-virtual {v1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->makeSimpleDialog(Ljava/lang/String;)Landroid/app/Dialog;
-
-    move-result-object v3
-
-    .line 974
-    goto :goto_66
-
-    .line 961
-    :pswitch_data_96
-    .packed-switch 0x2712
-        :pswitch_7e
-        :pswitch_8a
-        :pswitch_6f
-    .end packed-switch
+    goto :goto_19
 .end method
 
 .method public signOut()V
-    .registers 3
+    .registers 4
 
     .prologue
-    .line 472
-    iget v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mState:I
+    const/4 v2, 0x0
 
-    const/4 v1, 0x1
+    .line 535
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    if-ne v0, v1, :cond_b
-
-    .line 474
-    const-string v0, "signOut: state was already DISCONNECTED, ignoring."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 494
-    :goto_a
-    return-void
-
-    .line 480
-    :cond_b
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
-
-    if-eqz v0, :cond_21
-
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/plus/PlusClient;->isConnected()Z
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
 
     move-result v0
 
+    if-nez v0, :cond_f
+
+    .line 537
+    const-string v0, "signOut: was already disconnected, ignoring."
+
+    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
+
+    .line 560
+    :goto_e
+    return-void
+
+    .line 543
+    :cond_f
+    iget v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
+
+    and-int/lit8 v0, v0, 0x2
+
     if-eqz v0, :cond_21
 
-    .line 481
+    .line 544
     const-string v0, "Clearing default account on PlusClient."
 
     invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 482
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mPlusClient:Lcom/google/android/gms/plus/PlusClient;
+    .line 545
+    sget-object v0, Lcom/google/android/gms/plus/Plus;->AccountApi:Lcom/google/android/gms/plus/Account;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/plus/PlusClient;->clearDefaultAccount()V
+    iget-object v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    .line 486
+    invoke-interface {v0, v1}, Lcom/google/android/gms/plus/Account;->clearDefaultAccount(Lcom/google/android/gms/common/api/GoogleApiClient;)V
+
+    .line 550
     :cond_21
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    iget v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mRequestedClients:I
 
-    if-eqz v0, :cond_37
+    and-int/lit8 v0, v0, 0x1
 
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    if-eqz v0, :cond_31
 
-    invoke-virtual {v0}, Lcom/google/android/gms/games/GamesClient;->isConnected()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_37
-
-    .line 487
-    const-string v0, "Signing out from GamesClient."
+    .line 551
+    const-string v0, "Signing out from the Google API Client."
 
     invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 488
-    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGamesClient:Lcom/google/android/gms/games/GamesClient;
+    .line 552
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/games/GamesClient;->signOut()V
+    invoke-static {v0}, Lcom/google/android/gms/games/Games;->signOut(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/common/api/PendingResult;
 
-    .line 492
-    :cond_37
-    const-string v0, "Proceeding with disconnection."
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
-
-    .line 493
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->killConnections()V
-
-    goto :goto_a
-.end method
-
-.method startConnections()V
-    .registers 7
-
-    .prologue
-    const/4 v5, 0x1
-
-    .line 676
-    const/16 v0, 0x3ea
-
-    const-string v1, "startConnections"
-
-    const-string v2, "startConnections should only get called when disconnected."
-
-    new-array v3, v5, [I
-
-    const/4 v4, 0x0
-
-    .line 677
-    aput v5, v3, v4
-
-    .line 676
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->checkState(ILjava/lang/String;Ljava/lang/String;[I)Z
-
-    move-result v0
-
-    .line 677
-    if-nez v0, :cond_13
-
-    .line 684
-    :goto_12
-    return-void
-
-    .line 680
-    :cond_13
-    const-string v0, "Starting connections."
+    .line 556
+    :cond_31
+    const-string v0, "Disconnecting client."
 
     invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 681
-    const/4 v0, 0x2
+    .line 557
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectOnStart:Z
 
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->setState(I)V
+    .line 558
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
 
-    .line 682
-    const/4 v0, 0x0
+    .line 559
+    iget-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mGoogleApiClient:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mInvitationId:Ljava/lang/String;
+    invoke-interface {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->disconnect()V
 
-    .line 683
-    invoke-virtual {p0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->connectNextClient()V
-
-    goto :goto_12
+    goto :goto_e
 .end method
 
 .method succeedSignIn()V
-    .registers 6
+    .registers 4
 
     .prologue
-    const/4 v4, 0x1
+    const/4 v2, 0x1
 
-    .line 827
-    const/16 v0, 0x3ea
+    const/4 v1, 0x0
 
-    const-string v1, "succeedSignIn"
-
-    const-string v2, "succeedSignIn should only get called in the connecting or connected state. Proceeding anyway."
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [I
-
-    fill-array-data v3, :array_26
-
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/enjoygame/tool/gamecenter/GameHelper;->checkState(ILjava/lang/String;Ljava/lang/String;[I)Z
-
-    .line 830
-    const-string v0, "All requested clients connected. Sign-in succeeded!"
+    .line 749
+    const-string v0, "succeedSignIn"
 
     invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->debugLog(Ljava/lang/String;)V
 
-    .line 831
-    const/4 v0, 0x3
-
-    invoke-virtual {p0, v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->setState(I)V
-
-    .line 832
+    .line 750
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mSignInFailureReason:Lcom/enjoygame/tool/gamecenter/GameHelper$SignInFailureReason;
 
-    .line 833
-    iput-boolean v4, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mAutoSignIn:Z
+    .line 751
+    iput-boolean v2, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnectOnStart:Z
 
-    .line 834
-    const/4 v0, 0x0
+    .line 752
+    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mUserInitiatedSignIn:Z
 
-    iput-boolean v0, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mUserInitiatedSignIn:Z
+    .line 753
+    iput-boolean v1, p0, Lcom/enjoygame/tool/gamecenter/GameHelper;->mConnecting:Z
 
-    .line 835
-    invoke-virtual {p0, v4}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
+    .line 754
+    invoke-virtual {p0, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->notifyListener(Z)V
 
-    .line 836
+    .line 755
     return-void
-
-    .line 827
-    nop
-
-    :array_26
-    .array-data 4
-        0x2
-        0x3
-    .end array-data
 .end method

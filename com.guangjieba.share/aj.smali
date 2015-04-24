@@ -7,20 +7,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/guangjieba/share/model/bean/UserModel$User;
-
-.field final synthetic b:Lcom/guangjieba/share/model/h/af;
+.field final synthetic a:Lcom/guangjieba/share/model/h/af;
 
 
 # direct methods
-.method constructor <init>(Lcom/guangjieba/share/model/h/af;Lcom/guangjieba/share/model/bean/UserModel$User;)V
-    .registers 3
+.method constructor <init>(Lcom/guangjieba/share/model/h/af;)V
+    .registers 2
 
     .prologue
-    .line 334
-    iput-object p1, p0, Lcom/guangjieba/share/model/h/aj;->b:Lcom/guangjieba/share/model/h/af;
-
-    iput-object p2, p0, Lcom/guangjieba/share/model/h/aj;->a:Lcom/guangjieba/share/model/bean/UserModel$User;
+    .line 166
+    iput-object p1, p0, Lcom/guangjieba/share/model/h/aj;->a:Lcom/guangjieba/share/model/h/af;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,16 +26,14 @@
 
 # virtual methods
 .method public final run()V
-    .registers 3
+    .registers 2
 
     .prologue
-    .line 339
-    iget-object v0, p0, Lcom/guangjieba/share/model/h/aj;->b:Lcom/guangjieba/share/model/h/af;
+    .line 171
+    iget-object v0, p0, Lcom/guangjieba/share/model/h/aj;->a:Lcom/guangjieba/share/model/h/af;
 
-    iget-object v1, p0, Lcom/guangjieba/share/model/h/aj;->a:Lcom/guangjieba/share/model/bean/UserModel$User;
+    invoke-static {v0}, Lcom/guangjieba/share/model/h/af;->b(Lcom/guangjieba/share/model/h/af;)V
 
-    invoke-static {v0, v1}, Lcom/guangjieba/share/model/h/af;->c(Lcom/guangjieba/share/model/h/af;Lcom/guangjieba/share/model/bean/UserModel$User;)V
-
-    .line 340
+    .line 172
     return-void
 .end method

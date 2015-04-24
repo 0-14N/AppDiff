@@ -305,10 +305,14 @@
 
     move-result v4
 
-    if-gez v4, :cond_2e
+    if-gez v4, :cond_33
 
     .line 165
-    const-string v4, "The date you selected is out of range"
+    const v4, 0x7f050007
+
+    invoke-virtual {p0, v4}, Lcom/ncsoftworks/myworkschedule/EditActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
 
     invoke-static {p0, v4, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
@@ -319,11 +323,11 @@
     move v4, v5
 
     .line 181
-    :goto_2d
+    :goto_32
     return v4
 
     .line 171
-    :cond_2e
+    :cond_33
     new-instance v2, Ljava/text/SimpleDateFormat;
 
     const-string v4, "yyyy-MM-dd"
@@ -344,13 +348,13 @@
 
     move-result v4
 
-    if-eqz v4, :cond_44
+    if-eqz v4, :cond_49
 
     .line 175
     invoke-direct {p0}, Lcom/ncsoftworks/myworkschedule/EditActivity;->setEditMode()V
 
     .line 178
-    :cond_44
+    :cond_49
     iput-object p1, p0, Lcom/ncsoftworks/myworkschedule/EditActivity;->mSelectedDate:Ljava/util/Date;
 
     .line 179
@@ -359,7 +363,7 @@
     .line 181
     const/4 v4, 0x1
 
-    goto :goto_2d
+    goto :goto_32
 .end method
 
 .method private setEditMode()V
@@ -382,7 +386,11 @@
 
     .line 292
     .local v0, "tv":Landroid/widget/TextView;
-    const-string v1, "Select your Time (Editing)"
+    const v1, 0x7f050001
+
+    invoke-virtual {p0, v1}, Lcom/ncsoftworks/myworkschedule/EditActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -392,7 +400,11 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 294
-    const-string v1, "You are currently editing an existing date"
+    const v1, 0x7f05000a
+
+    invoke-virtual {p0, v1}, Lcom/ncsoftworks/myworkschedule/EditActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
@@ -558,7 +570,15 @@
 
     .line 205
     .restart local v12    # "linearLayoutParams":Landroid/widget/LinearLayout$LayoutParams;
-    const-string v19, "Select your Time"
+    const v19, 0x7f050008
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, v19
+
+    invoke-virtual {v0, v1}, Lcom/ncsoftworks/myworkschedule/EditActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v19
 
     move-object/from16 v0, v16
 
@@ -713,8 +733,8 @@
     const/4 v10, 0x0
 
     .local v10, "i":I
-    :goto_c0
-    if-lt v10, v13, :cond_182
+    :goto_c9
+    if-lt v10, v13, :cond_18b
 
     .line 237
     new-instance v12, Landroid/widget/LinearLayout$LayoutParams;
@@ -834,7 +854,7 @@
 
     .line 253
     .local v9, "extras":Landroid/os/Bundle;
-    if-eqz v9, :cond_181
+    if-eqz v9, :cond_18a
 
     .line 257
     const-string v19, "_id"
@@ -935,13 +955,13 @@
     .end local v7    # "dateForTextView":Ljava/util/Date;
     .end local v8    # "dayToEdit":Landroid/database/Cursor;
     .end local v18    # "strDate":Ljava/lang/String;
-    :cond_181
+    :cond_18a
     return-void
 
     .line 228
     .end local v9    # "extras":Landroid/os/Bundle;
     .restart local p1    # "savedInstanceState":Landroid/os/Bundle;
-    :cond_182
+    :cond_18b
     new-instance v17, Landroid/widget/Button;
 
     move-object/from16 v0, v17
@@ -989,7 +1009,15 @@
 
     move-result-object v19
 
-    const-string v20, "You need to set up your presets!"
+    const v20, 0x7f050009
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, v20
+
+    invoke-virtual {v0, v1}, Lcom/ncsoftworks/myworkschedule/EditActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v20
 
     move-object v0, v14
 
@@ -1043,7 +1071,7 @@
     .line 226
     add-int/lit8 v10, v10, 0x1
 
-    goto/16 :goto_c0
+    goto/16 :goto_c9
 .end method
 
 .method protected onCreateDialog(I)Landroid/app/Dialog;
@@ -1052,7 +1080,7 @@
 
     .prologue
     .line 83
-    packed-switch p1, :pswitch_data_50
+    packed-switch p1, :pswitch_data_60
 
     .line 107
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreateDialog(I)Landroid/app/Dialog;
@@ -1116,17 +1144,29 @@
     invoke-virtual {v7, v8}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
     .line 96
-    const-string v0, "Enter Manual Time"
+    const v0, 0x7f050004
+
+    invoke-virtual {p0, v0}, Lcom/ncsoftworks/myworkschedule/EditActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
 
     invoke-virtual {v7, v0}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 97
-    const-string v0, "Or, hit back button to cancel"
+    const v0, 0x7f050005
+
+    invoke-virtual {p0, v0}, Lcom/ncsoftworks/myworkschedule/EditActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
 
     invoke-virtual {v7, v0}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 98
-    const-string v0, "Post"
+    const v0, 0x7f050006
+
+    invoke-virtual {p0, v0}, Lcom/ncsoftworks/myworkschedule/EditActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
 
     new-instance v1, Lcom/ncsoftworks/myworkschedule/EditActivity$3;
 
@@ -1146,7 +1186,9 @@
     goto :goto_7
 
     .line 83
-    :pswitch_data_50
+    nop
+
+    :pswitch_data_60
     .packed-switch 0x0
         :pswitch_8
         :pswitch_25
@@ -1163,14 +1205,22 @@
     .line 58
     const/4 v0, 0x1
 
-    const-string v1, "Change Date"
+    const v1, 0x7f050002
+
+    invoke-virtual {p0, v1}, Lcom/ncsoftworks/myworkschedule/EditActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     .line 59
     const/4 v0, 0x2
 
-    const-string v1, "Manual Time Entry"
+    const v1, 0x7f050003
+
+    invoke-virtual {p0, v1}, Lcom/ncsoftworks/myworkschedule/EditActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 

@@ -1,5 +1,5 @@
 .class public Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;
-.super Landroid/support/v4/app/Fragment;
+.super Lcom/jiuzhansoft/massage/activity/BaseActivity;
 .source "HumanAcupuncturePoints.java"
 
 
@@ -11,8 +11,6 @@
 .field private advertisementListView:Lcom/massage/utils/frame/RoundedRectListView;
 
 .field private commonDieaseListView:Landroid/widget/ListView;
-
-.field private handler:Landroid/os/Handler;
 
 .field private keyWord:Ljava/lang/String;
 
@@ -41,25 +39,23 @@
 
 .field private searchCleanButton:Landroid/widget/ImageButton;
 
-.field view:Landroid/view/View;
-
 
 # direct methods
 .method public constructor <init>()V
     .registers 2
 
     .prologue
-    .line 112
-    invoke-direct {p0}, Landroid/support/v4/app/Fragment;-><init>()V
+    .line 86
+    invoke-direct {p0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;-><init>()V
 
-    .line 113
+    .line 87
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/widget/AutoCompleteTextView;
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
-    .line 114
+    .line 88
     return-void
 .end method
 
@@ -67,7 +63,7 @@
     .registers 2
 
     .prologue
-    .line 78
+    .line 72
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->place_detaile_ContentLayout:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -77,7 +73,7 @@
     .registers 2
 
     .prologue
-    .line 77
+    .line 71
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->place_detaile_gallery:Landroid/widget/Gallery;
 
     return-object v0
@@ -87,7 +83,7 @@
     .registers 1
 
     .prologue
-    .line 531
+    .line 540
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->changeListViewVisable()V
 
     return-void
@@ -97,7 +93,7 @@
     .registers 2
 
     .prologue
-    .line 80
+    .line 74
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
     return-object v0
@@ -107,7 +103,7 @@
     .registers 2
 
     .prologue
-    .line 81
+    .line 75
     iget v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditViewIndex:I
 
     return v0
@@ -117,7 +113,7 @@
     .registers 2
 
     .prologue
-    .line 87
+    .line 81
     iput-object p1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->advertisementListView:Lcom/massage/utils/frame/RoundedRectListView;
 
     return-void
@@ -127,7 +123,7 @@
     .registers 2
 
     .prologue
-    .line 87
+    .line 81
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->advertisementListView:Lcom/massage/utils/frame/RoundedRectListView;
 
     return-object v0
@@ -137,7 +133,7 @@
     .registers 2
 
     .prologue
-    .line 88
+    .line 82
     iput-object p1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->commonDieaseListView:Landroid/widget/ListView;
 
     return-void
@@ -147,7 +143,7 @@
     .registers 2
 
     .prologue
-    .line 88
+    .line 82
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->commonDieaseListView:Landroid/widget/ListView;
 
     return-object v0
@@ -157,7 +153,7 @@
     .registers 2
 
     .prologue
-    .line 90
+    .line 84
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->preimg:Landroid/widget/ImageView;
 
     return-object v0
@@ -167,7 +163,7 @@
     .registers 2
 
     .prologue
-    .line 90
+    .line 84
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->nextimg:Landroid/widget/ImageView;
 
     return-object v0
@@ -177,7 +173,7 @@
     .registers 2
 
     .prologue
-    .line 576
+    .line 587
     invoke-direct {p0, p1}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->searchSubmit(Ljava/lang/String;)V
 
     return-void
@@ -187,7 +183,7 @@
     .registers 2
 
     .prologue
-    .line 85
+    .line 79
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->mRearchResulLayout:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -197,7 +193,7 @@
     .registers 1
 
     .prologue
-    .line 544
+    .line 554
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->changeScrollViewVisable()V
 
     return-void
@@ -207,7 +203,7 @@
     .registers 2
 
     .prologue
-    .line 86
+    .line 80
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->searchCleanButton:Landroid/widget/ImageButton;
 
     return-object v0
@@ -217,7 +213,7 @@
     .registers 2
 
     .prologue
-    .line 83
+    .line 77
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->keyWord:Ljava/lang/String;
 
     return-object v0
@@ -227,7 +223,7 @@
     .registers 2
 
     .prologue
-    .line 83
+    .line 77
     iput-object p1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->keyWord:Ljava/lang/String;
 
     return-void
@@ -237,19 +233,19 @@
     .registers 4
 
     .prologue
-    .line 558
+    .line 569
     sget-boolean v1, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v1, :cond_b
 
-    .line 559
+    .line 570
     const-string v1, "HomeActivity"
 
     const-string v2, "autoComplete"
 
     invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 562
+    .line 573
     :cond_b
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
@@ -261,7 +257,7 @@
 
     invoke-direct {p0, v1, v2}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->resolveAutoComplete(Landroid/widget/AutoCompleteTextView;Landroid/widget/ListView;)V
 
-    .line 563
+    .line 574
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
     const/4 v2, 0x1
@@ -272,26 +268,24 @@
 
     invoke-direct {p0, v1, v2}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->resolveAutoComplete(Landroid/widget/AutoCompleteTextView;Landroid/widget/ListView;)V
 
-    .line 564
-    iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->view:Landroid/view/View;
+    .line 575
+    const v1, 0x7f080096
 
-    const v2, 0x7f070170
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 565
+    .line 576
     .local v0, "button":Landroid/widget/Button;
-    new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$7;
+    new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$6;
 
-    invoke-direct {v1, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$7;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;)V
+    invoke-direct {v1, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$6;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 574
+    .line 585
     return-void
 .end method
 
@@ -299,19 +293,19 @@
     .registers 3
 
     .prologue
-    .line 532
+    .line 541
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 533
+    .line 542
     const-string v0, "HomeActivity"
 
     const-string v1, "changeListViewVisable"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 536
+    .line 545
     :cond_b
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->mRearchResulLayout:Landroid/widget/FrameLayout;
 
@@ -321,19 +315,21 @@
 
     if-eqz v0, :cond_24
 
-    .line 537
+    .line 546
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_1e
 
-    .line 538
+    .line 547
     const-string v0, "HomeActivity"
 
+    .line 548
     const-string v1, "changeListViewVisable, change to view gone"
 
+    .line 547
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 540
+    .line 550
     :cond_1e
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->mRearchResulLayout:Landroid/widget/FrameLayout;
 
@@ -341,7 +337,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 542
+    .line 552
     :cond_24
     return-void
 .end method
@@ -350,19 +346,19 @@
     .registers 3
 
     .prologue
-    .line 545
+    .line 555
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 546
+    .line 556
     const-string v0, "HomeActivity"
 
     const-string v1, "changeScrollViewVisable"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 549
+    .line 559
     :cond_b
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->mRearchResulLayout:Landroid/widget/FrameLayout;
 
@@ -372,19 +368,21 @@
 
     if-nez v0, :cond_25
 
-    .line 550
+    .line 560
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_1e
 
-    .line 551
+    .line 561
     const-string v0, "HomeActivity"
 
+    .line 562
     const-string v1, "changeListViewVisable, change to view visible"
 
+    .line 561
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 553
+    .line 564
     :cond_1e
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->mRearchResulLayout:Landroid/widget/FrameLayout;
 
@@ -392,7 +390,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 555
+    .line 566
     :cond_25
     return-void
 .end method
@@ -401,7 +399,7 @@
     .registers 1
 
     .prologue
-    .line 327
+    .line 313
     return-void
 .end method
 
@@ -411,30 +409,30 @@
     .prologue
     const/4 v3, 0x3
 
-    .line 138
+    .line 108
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->partPointsList:Ljava/util/List;
 
-    .line 141
+    .line 111
     new-instance v0, Lcom/jiuzhansoft/massage/entity/Image_Introduction;
 
     invoke-direct {v0}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;-><init>()V
 
-    .line 142
+    .line 112
     .local v0, "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
-    const v1, 0x7f0200f1
+    const v1, 0x7f020095
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setImageid(I)V
 
-    .line 143
+    .line 113
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0d00f9
+    const v2, 0x7f0900d8
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -442,42 +440,42 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDescription(Ljava/lang/String;)V
 
-    .line 144
+    .line 114
     invoke-static {}, Lcom/jiuzhansoft/massage/utils/LanguageUtil;->getLanguage()I
 
     move-result v1
 
     if-ne v1, v3, :cond_12f
 
-    .line 145
-    const v1, 0x7f0200ef
+    .line 115
+    const v1, 0x7f020094
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
-    .line 148
+    .line 118
     :goto_2d
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->partPointsList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 150
+    .line 120
     new-instance v0, Lcom/jiuzhansoft/massage/entity/Image_Introduction;
 
     .end local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
     invoke-direct {v0}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;-><init>()V
 
-    .line 151
+    .line 121
     .restart local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
-    const v1, 0x7f0200ec
+    const v1, 0x7f020093
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setImageid(I)V
 
-    .line 152
+    .line 122
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0d00fa
+    const v2, 0x7f0900d9
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -485,42 +483,42 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDescription(Ljava/lang/String;)V
 
-    .line 153
+    .line 123
     invoke-static {}, Lcom/jiuzhansoft/massage/utils/LanguageUtil;->getLanguage()I
 
     move-result v1
 
     if-ne v1, v3, :cond_137
 
-    .line 154
-    const v1, 0x7f0200eb
+    .line 124
+    const v1, 0x7f020092
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
-    .line 157
+    .line 127
     :goto_57
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->partPointsList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 159
+    .line 129
     new-instance v0, Lcom/jiuzhansoft/massage/entity/Image_Introduction;
 
     .end local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
     invoke-direct {v0}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;-><init>()V
 
-    .line 160
+    .line 130
     .restart local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
-    const v1, 0x7f020051
+    const v1, 0x7f02003b
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setImageid(I)V
 
-    .line 161
+    .line 131
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0d00fb
+    const v2, 0x7f0900da
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -528,42 +526,42 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDescription(Ljava/lang/String;)V
 
-    .line 162
+    .line 132
     invoke-static {}, Lcom/jiuzhansoft/massage/utils/LanguageUtil;->getLanguage()I
 
     move-result v1
 
     if-ne v1, v3, :cond_13f
 
-    .line 163
-    const v1, 0x7f020050
+    .line 133
+    const v1, 0x7f02003a
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
-    .line 166
+    .line 136
     :goto_81
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->partPointsList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 168
+    .line 138
     new-instance v0, Lcom/jiuzhansoft/massage/entity/Image_Introduction;
 
     .end local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
     invoke-direct {v0}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;-><init>()V
 
-    .line 169
+    .line 139
     .restart local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
-    const v1, 0x7f02004e
+    const v1, 0x7f020038
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setImageid(I)V
 
-    .line 170
+    .line 140
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0d00fc
+    const v2, 0x7f0900db
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -571,42 +569,42 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDescription(Ljava/lang/String;)V
 
-    .line 171
+    .line 141
     invoke-static {}, Lcom/jiuzhansoft/massage/utils/LanguageUtil;->getLanguage()I
 
     move-result v1
 
     if-ne v1, v3, :cond_147
 
-    .line 172
-    const v1, 0x7f02004d
+    .line 142
+    const v1, 0x7f020037
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
-    .line 175
+    .line 145
     :goto_ab
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->partPointsList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 177
+    .line 147
     new-instance v0, Lcom/jiuzhansoft/massage/entity/Image_Introduction;
 
     .end local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
     invoke-direct {v0}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;-><init>()V
 
-    .line 178
+    .line 148
     .restart local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
-    const v1, 0x7f0201ca
+    const v1, 0x7f0200eb
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setImageid(I)V
 
-    .line 179
+    .line 149
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0d00fd
+    const v2, 0x7f0900dc
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -614,42 +612,42 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDescription(Ljava/lang/String;)V
 
-    .line 180
+    .line 150
     invoke-static {}, Lcom/jiuzhansoft/massage/utils/LanguageUtil;->getLanguage()I
 
     move-result v1
 
     if-ne v1, v3, :cond_14f
 
-    .line 181
-    const v1, 0x7f0201c9
+    .line 151
+    const v1, 0x7f0200ea
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
-    .line 184
+    .line 154
     :goto_d5
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->partPointsList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 186
+    .line 156
     new-instance v0, Lcom/jiuzhansoft/massage/entity/Image_Introduction;
 
     .end local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
     invoke-direct {v0}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;-><init>()V
 
-    .line 187
+    .line 157
     .restart local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
-    const v1, 0x7f0201f8
+    const v1, 0x7f020103
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setImageid(I)V
 
-    .line 188
+    .line 158
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0d00fe
+    const v2, 0x7f0900dd
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -657,42 +655,42 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDescription(Ljava/lang/String;)V
 
-    .line 189
+    .line 159
     invoke-static {}, Lcom/jiuzhansoft/massage/utils/LanguageUtil;->getLanguage()I
 
     move-result v1
 
     if-ne v1, v3, :cond_156
 
-    .line 190
-    const v1, 0x7f0201f7
+    .line 160
+    const v1, 0x7f020102
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
-    .line 193
+    .line 163
     :goto_ff
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->partPointsList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 195
+    .line 165
     new-instance v0, Lcom/jiuzhansoft/massage/entity/Image_Introduction;
 
     .end local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
     invoke-direct {v0}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;-><init>()V
 
-    .line 196
+    .line 166
     .restart local v0    # "image_Introduction":Lcom/jiuzhansoft/massage/entity/Image_Introduction;
-    const v1, 0x7f0201f5
+    const v1, 0x7f020100
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setImageid(I)V
 
-    .line 197
+    .line 167
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0d00ff
+    const v2, 0x7f0900de
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -700,93 +698,92 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDescription(Ljava/lang/String;)V
 
-    .line 198
+    .line 168
     invoke-static {}, Lcom/jiuzhansoft/massage/utils/LanguageUtil;->getLanguage()I
 
     move-result v1
 
     if-ne v1, v3, :cond_15d
 
-    .line 199
-    const v1, 0x7f0201f4
+    .line 169
+    const v1, 0x7f0200ff
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
-    .line 202
+    .line 172
     :goto_129
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->partPointsList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 203
+    .line 173
     return-void
 
-    .line 147
+    .line 117
     :cond_12f
-    const v1, 0x7f0200e9
+    const v1, 0x7f020090
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
     goto/16 :goto_2d
 
-    .line 156
+    .line 126
     :cond_137
-    const v1, 0x7f0200ea
+    const v1, 0x7f020091
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
     goto/16 :goto_57
 
-    .line 165
+    .line 135
     :cond_13f
-    const v1, 0x7f02004f
+    const v1, 0x7f020039
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
     goto/16 :goto_81
 
-    .line 174
+    .line 144
     :cond_147
-    const v1, 0x7f02004c
+    const v1, 0x7f020036
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
     goto/16 :goto_ab
 
-    .line 183
+    .line 153
     :cond_14f
-    const v1, 0x7f0201c8
+    const v1, 0x7f0200e9
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
     goto :goto_d5
 
-    .line 192
+    .line 162
     :cond_156
-    const v1, 0x7f0201f6
+    const v1, 0x7f020101
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
     goto :goto_ff
 
-    .line 201
+    .line 171
     :cond_15d
-    const v1, 0x7f0201f3
+    const v1, 0x7f0200fe
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/entity/Image_Introduction;->setDetailed_imageid(I)V
 
     goto :goto_129
 .end method
 
-.method private initview(Landroid/view/View;)V
-    .registers 5
-    .param p1, "view"    # Landroid/view/View;
+.method private initview()V
+    .registers 4
 
     .prologue
-    .line 117
-    const v0, 0x7f070177
+    .line 91
+    const v0, 0x7f08009d
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -794,10 +791,10 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->preimg:Landroid/widget/ImageView;
 
-    .line 118
-    const v0, 0x7f070179
+    .line 92
+    const v0, 0x7f08009f
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -805,10 +802,10 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->nextimg:Landroid/widget/ImageView;
 
-    .line 120
-    const v0, 0x7f070178
+    .line 94
+    const v0, 0x7f08009e
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -816,10 +813,10 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->place_detaile_gallery:Landroid/widget/Gallery;
 
-    .line 121
-    const v0, 0x7f07017b
+    .line 95
+    const v0, 0x7f0800a1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -827,10 +824,10 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->place_detaile_ContentLayout:Landroid/widget/RelativeLayout;
 
-    .line 123
-    const v0, 0x7f070173
+    .line 97
+    const v0, 0x7f080099
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -838,10 +835,10 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->mRearchResulLayout:Landroid/widget/FrameLayout;
 
-    .line 124
-    const v0, 0x7f070174
+    .line 98
+    const v0, 0x7f08009a
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -849,10 +846,10 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->mSearchResultView:Landroid/widget/ListView;
 
-    .line 125
-    const v0, 0x7f070172
+    .line 99
+    const v0, 0x7f080098
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -860,21 +857,21 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->searchCleanButton:Landroid/widget/ImageButton;
 
-    .line 126
+    .line 100
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/widget/AutoCompleteTextView;
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
-    .line 127
+    .line 101
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
     const/4 v2, 0x0
 
-    const v0, 0x7f07016d
+    const v0, 0x7f080093
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -882,14 +879,14 @@
 
     aput-object v0, v1, v2
 
-    .line 128
+    .line 102
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
     const/4 v2, 0x1
 
-    const v0, 0x7f070171
+    const v0, 0x7f080097
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -897,20 +894,13 @@
 
     aput-object v0, v1, v2
 
-    .line 131
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->handler:Landroid/os/Handler;
-
-    .line 133
+    .line 103
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->initImageList()V
 
-    .line 134
+    .line 104
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->autoComplete()V
 
-    .line 135
+    .line 105
     return-void
 .end method
 
@@ -920,39 +910,39 @@
     .param p2, "mSearchResultView"    # Landroid/widget/ListView;
 
     .prologue
-    .line 330
+    .line 318
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 331
+    .line 319
     const-string v0, "HomeActivity"
 
     const-string v1, "resolveAutoComplete"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 334
+    .line 322
     :cond_b
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/widget/AutoCompleteTextView;->setThreshold(I)V
 
-    .line 335
-    new-instance v0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$5;
+    .line 323
+    new-instance v0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$4;
 
-    invoke-direct {v0, p0, p1}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$5;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;Landroid/widget/AutoCompleteTextView;)V
+    invoke-direct {v0, p0, p1}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$4;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;Landroid/widget/AutoCompleteTextView;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/AutoCompleteTextView;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
-    .line 363
-    new-instance v0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$6;
+    .line 352
+    new-instance v0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$5;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$6;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;Landroid/widget/AutoCompleteTextView;Landroid/widget/ListView;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$5;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;Landroid/widget/AutoCompleteTextView;Landroid/widget/ListView;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/AutoCompleteTextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 505
+    .line 538
     return-void
 .end method
 
@@ -961,7 +951,7 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 577
+    .line 588
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -976,23 +966,19 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3f
+    if-eqz v3, :cond_37
 
-    .line 578
+    .line 589
     :cond_10
-    invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    const-string v3, "input_method"
 
-    move-result-object v3
-
-    const-string v4, "input_method"
-
-    invoke-virtual {v3, v4}, Landroid/support/v4/app/FragmentActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 579
+    .line 590
     .local v1, "inputmethodmanager":Landroid/view/inputmethod/InputMethodManager;
     iget-object v3, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
@@ -1004,40 +990,38 @@
 
     move-result-object v0
 
-    .line 580
+    .line 591
     .local v0, "ibinder":Landroid/os/IBinder;
     const/4 v3, 0x0
 
     invoke-virtual {v1, v0, v3}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 581
+    .line 592
     new-instance v2, Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    .line 593
+    const-class v3, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity;
 
-    move-result-object v3
+    .line 592
+    invoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const-class v4, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePointsListActivity;
-
-    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 587
+    .line 599
     .local v2, "intent":Landroid/content/Intent;
     iput-object p1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->keyWord:Ljava/lang/String;
 
-    .line 588
+    .line 600
     const-string v3, "keyword"
 
     invoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 589
+    .line 601
     invoke-virtual {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->startActivity(Landroid/content/Intent;)V
 
-    .line 591
+    .line 603
     .end local v0    # "ibinder":Landroid/os/IBinder;
     .end local v1    # "inputmethodmanager":Landroid/view/inputmethod/InputMethodManager;
     .end local v2    # "intent":Landroid/content/Intent;
-    :cond_3f
+    :cond_37
     return-void
 .end method
 
@@ -1047,43 +1031,43 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 594
+    .line 606
     new-instance v0, Lcom/massage/utils/http/HttpSetting;
 
     invoke-direct {v0}, Lcom/massage/utils/http/HttpSetting;-><init>()V
 
-    .line 595
+    .line 607
     .local v0, "httpsetting":Lcom/massage/utils/http/HttpSetting;
     const-string v1, "advertisement.getAdvertisementInfos"
 
     invoke-virtual {v0, v1}, Lcom/massage/utils/http/HttpSetting;->setFunctionId(Ljava/lang/String;)V
 
-    .line 596
-    new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$8;
+    .line 608
+    new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$7;
 
-    invoke-direct {v1, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$8;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;)V
+    invoke-direct {v1, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$7;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;)V
 
     invoke-virtual {v0, v1}, Lcom/massage/utils/http/HttpSetting;->setListener(Lcom/massage/utils/http/HttpGroup$HttpTaskListener;)V
 
-    .line 681
+    .line 712
     invoke-virtual {v0, v3}, Lcom/massage/utils/http/HttpSetting;->setLocalFileCache(Z)V
 
-    .line 682
+    .line 713
     const-wide/32 v1, 0x36ee80
 
     invoke-virtual {v0, v1, v2}, Lcom/massage/utils/http/HttpSetting;->setLocalFileCacheTime(J)V
 
-    .line 683
+    .line 714
     invoke-virtual {v0, v3}, Lcom/massage/utils/http/HttpSetting;->setNotifyUser(Z)V
 
-    .line 684
+    .line 715
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getHttpGroupaAsynPool()Lcom/massage/utils/http/HttpGroup;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/massage/utils/http/HttpGroup;->add(Lcom/massage/utils/http/HttpSetting;)Lcom/massage/utils/http/HttpRequest;
 
-    .line 685
+    .line 716
     return-void
 .end method
 
@@ -1093,52 +1077,52 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 688
+    .line 719
     new-instance v1, Lcom/massage/utils/http/HttpSetting;
 
     invoke-direct {v1}, Lcom/massage/utils/http/HttpSetting;-><init>()V
 
-    .line 689
+    .line 720
     .local v1, "httpsetting":Lcom/massage/utils/http/HttpSetting;
     const-string v2, "getCommonDiseaseListByAgeRange"
 
     invoke-virtual {v1, v2}, Lcom/massage/utils/http/HttpSetting;->setFunctionId(Ljava/lang/String;)V
 
-    .line 690
+    .line 721
     const-string v0, "1,2,3"
 
-    .line 691
+    .line 722
     .local v0, "ageTag":Ljava/lang/String;
     const-string v2, "ageTag"
 
     invoke-virtual {v1, v2, v0}, Lcom/massage/utils/http/HttpSetting;->putJsonParam(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 692
-    new-instance v2, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$9;
+    .line 723
+    new-instance v2, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$8;
 
-    invoke-direct {v2, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$9;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;)V
+    invoke-direct {v2, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$8;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;)V
 
     invoke-virtual {v1, v2}, Lcom/massage/utils/http/HttpSetting;->setListener(Lcom/massage/utils/http/HttpGroup$HttpTaskListener;)V
 
-    .line 794
+    .line 841
     invoke-virtual {v1, v4}, Lcom/massage/utils/http/HttpSetting;->setLocalFileCache(Z)V
 
-    .line 795
+    .line 842
     const-wide/32 v2, 0x36ee80
 
     invoke-virtual {v1, v2, v3}, Lcom/massage/utils/http/HttpSetting;->setLocalFileCacheTime(J)V
 
-    .line 796
+    .line 843
     invoke-virtual {v1, v4}, Lcom/massage/utils/http/HttpSetting;->setNotifyUser(Z)V
 
-    .line 797
+    .line 844
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getHttpGroupaAsynPool()Lcom/massage/utils/http/HttpGroup;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Lcom/massage/utils/http/HttpGroup;->add(Lcom/massage/utils/http/HttpSetting;)Lcom/massage/utils/http/HttpRequest;
 
-    .line 798
+    .line 845
     return-void
 .end method
 
@@ -1150,213 +1134,210 @@
 
     const/4 v4, 0x0
 
-    .line 206
+    .line 176
     new-array v2, v5, [Ljava/lang/String;
 
     const-string v3, "imageid"
 
     aput-object v3, v2, v4
 
-    .line 207
+    .line 177
     .local v2, "as":[Ljava/lang/String;
     new-array v0, v5, [I
 
-    const v3, 0x7f07018c
+    const v3, 0x7f0800b2
 
     aput v3, v0, v4
 
-    .line 208
+    .line 178
     .local v0, "ai":[I
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->partPointsList:Ljava/util/List;
 
-    .line 209
+    .line 179
     .local v1, "arraylist":Ljava/util/List;, "Ljava/util/List<Lcom/jiuzhansoft/massage/entity/Image_Introduction;>;"
     iget-object v3, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->place_detaile_gallery:Landroid/widget/Gallery;
 
     invoke-virtual {v3, v4}, Landroid/widget/Gallery;->setCallbackDuringFling(Z)V
 
-    .line 210
+    .line 180
     iget-object v3, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->place_detaile_gallery:Landroid/widget/Gallery;
 
+    .line 181
+    new-instance v4, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$1;
+
+    invoke-direct {v4, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$1;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;)V
+
+    invoke-virtual {v3, v4}, Landroid/widget/Gallery;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    .line 203
+    iget-object v3, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->place_detaile_gallery:Landroid/widget/Gallery;
+
+    .line 204
     new-instance v4, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$2;
 
     invoke-direct {v4, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$2;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;)V
 
-    invoke-virtual {v3, v4}, Landroid/widget/Gallery;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    .line 224
-    iget-object v3, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->place_detaile_gallery:Landroid/widget/Gallery;
-
-    new-instance v4, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$3;
-
-    invoke-direct {v4, p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$3;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;)V
-
     invoke-virtual {v3, v4}, Landroid/widget/Gallery;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 241
-    new-instance v3, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$4;
+    .line 224
+    new-instance v3, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$3;
 
-    invoke-direct {v3, p0, v1, v2, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$4;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;Ljava/util/List;[Ljava/lang/String;[I)V
+    invoke-direct {v3, p0, v1, v2, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$3;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;Ljava/util/List;[Ljava/lang/String;[I)V
 
     invoke-virtual {p0, v3}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->post(Ljava/lang/Runnable;)V
 
-    .line 324
+    .line 310
     return-void
 .end method
 
 
 # virtual methods
-.method public getHttpGroupaAsynPool()Lcom/massage/utils/http/HttpGroup;
-    .registers 2
-
-    .prologue
-    .line 507
-    const/16 v0, 0x3e8
-
-    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getHttpGroupaAsynPool(I)Lcom/massage/utils/http/HttpGroup;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getHttpGroupaAsynPool(I)Lcom/massage/utils/http/HttpGroup;
-    .registers 5
-    .param p1, "paramInt"    # I
-
-    .prologue
-    .line 511
-    sget-boolean v1, Lcom/massage/utils/log/Log;->D:Z
-
-    if-eqz v1, :cond_b
-
-    .line 512
-    const-string v1, "MyActivity"
-
-    const-string v2, "getHttpGroupaAsynPool"
-
-    invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 515
-    :cond_b
-    new-instance v0, Lcom/massage/utils/http/HttpGroupSetting;
-
-    invoke-direct {v0}, Lcom/massage/utils/http/HttpGroupSetting;-><init>()V
-
-    .line 516
-    .local v0, "localHttpGroupSetting":Lcom/massage/utils/http/HttpGroupSetting;
-    invoke-static {}, Lcom/jiuzhansoft/massage/application/JiuZhanApplication;->getInstance()Lcom/jiuzhansoft/massage/application/JiuZhanApplication;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/jiuzhansoft/massage/application/JiuZhanApplication;->getCurrentMyActivity()Lcom/jiuzhansoft/massage/activity/BaseActivity;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/massage/utils/http/HttpGroupSetting;->setMyActivity(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V
-
-    .line 517
-    invoke-virtual {v0, p1}, Lcom/massage/utils/http/HttpGroupSetting;->setType(I)V
-
-    .line 518
-    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->getHttpGroupaAsynPool(Lcom/massage/utils/http/HttpGroupSetting;)Lcom/massage/utils/http/HttpGroup;
-
-    move-result-object v1
-
-    return-object v1
-.end method
-
-.method public getHttpGroupaAsynPool(Lcom/massage/utils/http/HttpGroupSetting;)Lcom/massage/utils/http/HttpGroup;
-    .registers 5
-    .param p1, "paramHttpGroupSetting"    # Lcom/massage/utils/http/HttpGroupSetting;
-
-    .prologue
-    .line 522
-    sget-boolean v1, Lcom/massage/utils/log/Log;->D:Z
-
-    if-eqz v1, :cond_b
-
-    .line 523
-    const-string v1, "MyActivity"
-
-    const-string v2, "getHttpGroupaAsynPool"
-
-    invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 526
-    :cond_b
-    new-instance v0, Lcom/massage/utils/http/HttpGroupaAsynPool;
-
-    invoke-direct {v0, p1}, Lcom/massage/utils/http/HttpGroupaAsynPool;-><init>(Lcom/massage/utils/http/HttpGroupSetting;)V
-
-    .line 528
-    .local v0, "localHttpGroupaAsynPool":Lcom/massage/utils/http/HttpGroupaAsynPool;
-    return-object v0
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .registers 2
+.method protected onCreate(Landroid/os/Bundle;)V
+    .registers 3
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 803
-    invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onCreate(Landroid/os/Bundle;)V
+    .line 850
+    invoke-super {p0, p1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 805
+    .line 851
+    const v0, 0x7f03001e
+
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->setContentView(I)V
+
+    .line 852
+    invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->initview()V
+
+    .line 853
+    invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->handleClickEvent()V
+
+    .line 854
+    invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->showpartgallery()V
+
+    .line 855
+    invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->showCommonDiease()V
+
+    .line 857
     return-void
 .end method
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+.method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .registers 6
-    .param p1, "inflater"    # Landroid/view/LayoutInflater;
-    .param p2, "container"    # Landroid/view/ViewGroup;
-    .param p3, "savedInstanceState"    # Landroid/os/Bundle;
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 810
-    const v0, 0x7f030039
+    .line 879
+    sget-boolean v1, Lcom/massage/utils/log/Log;->D:Z
 
+    if-eqz v1, :cond_b
+
+    .line 880
+    const-string v1, "HomeActivity"
+
+    const-string v2, "onKeyDown"
+
+    invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 883
+    :cond_b
+    const/4 v1, 0x4
+
+    if-ne p1, v1, :cond_46
+
+    .line 885
+    const-string v1, "com.jiuzhansoft.massage.service.MusicService"
+
+    invoke-static {p0, v1}, Lcom/jiuzhansoft/massage/service/MusicService;->isServiceRunning(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_37
+
+    .line 886
+    sget-object v1, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
+
+    if-eqz v1, :cond_23
+
+    .line 887
+    sget-object v1, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/media/audiofx/Visualizer;->setEnabled(Z)I
+
+    .line 888
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    sput-object v1, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
-    move-result-object v0
+    .line 890
+    :cond_23
+    new-instance v0, Landroid/content/Intent;
 
-    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->view:Landroid/view/View;
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 811
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->view:Landroid/view/View;
+    .line 891
+    .local v0, "intent":Landroid/content/Intent;
+    const-class v1, Lcom/jiuzhansoft/massage/service/MusicService;
 
-    invoke-direct {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->initview(Landroid/view/View;)V
+    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 812
-    invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->handleClickEvent()V
+    .line 892
+    sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    .line 813
-    invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->showpartgallery()V
+    const-string v2, "******\u670d\u52a1\u505c\u6b62\u4e862***"
 
-    .line 814
-    invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->showCommonDiease()V
+    invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 815
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->view:Landroid/view/View;
+    .line 893
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->stopService(Landroid/content/Intent;)Z
 
-    return-object v0
+    .line 895
+    .end local v0    # "intent":Landroid/content/Intent;
+    :cond_37
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/jiuzhansoft/massage/subActivity/MainMenuActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 897
+    .restart local v0    # "intent":Landroid/content/Intent;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->startActivity(Landroid/content/Intent;)V
+
+    .line 898
+    invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->finish()V
+
+    .line 900
+    const/4 v1, 0x1
+
+    .line 902
+    .end local v0    # "intent":Landroid/content/Intent;
+    :goto_45
+    return v1
+
+    :cond_46
+    invoke-super {p0, p1, p2}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+
+    move-result v1
+
+    goto :goto_45
 .end method
 
-.method public onResume()V
+.method protected onResume()V
     .registers 6
 
     .prologue
     const/4 v4, 0x0
 
-    .line 821
-    invoke-super {p0}, Landroid/support/v4/app/Fragment;->onResume()V
+    .line 862
+    invoke-super {p0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onResume()V
 
-    .line 822
+    .line 863
     iget v0, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditViewIndex:I
 
-    .line 823
+    .line 864
     .local v0, "backIndex":I
     iget v2, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditViewIndex:I
 
@@ -1364,7 +1345,7 @@
 
     iput v2, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditViewIndex:I
 
-    .line 825
+    .line 866
     iget v2, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditViewIndex:I
 
     iget-object v3, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
@@ -1373,10 +1354,10 @@
 
     if-lt v2, v3, :cond_15
 
-    .line 826
+    .line 867
     iput v4, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditViewIndex:I
 
-    .line 828
+    .line 869
     :cond_15
     iget-object v2, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
@@ -1386,7 +1367,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/AutoCompleteTextView;->setVisibility(I)V
 
-    .line 829
+    .line 870
     iget-object v2, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
     iget v3, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditViewIndex:I
@@ -1395,7 +1376,7 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/AutoCompleteTextView;->setVisibility(I)V
 
-    .line 830
+    .line 871
     iget-object v2, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
     aget-object v2, v2, v0
@@ -1404,7 +1385,7 @@
 
     move-result-object v1
 
-    .line 831
+    .line 872
     .local v1, "editable":Landroid/text/Editable;
     iget-object v2, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->acEditView:[Landroid/widget/AutoCompleteTextView;
 
@@ -1414,44 +1395,9 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/AutoCompleteTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 832
+    .line 873
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->changeScrollViewVisable()V
 
-    .line 833
-    return-void
-.end method
-
-.method public post(Ljava/lang/Runnable;)V
-    .registers 5
-    .param p1, "action"    # Ljava/lang/Runnable;
-
-    .prologue
-    .line 95
-    sget-boolean v1, Lcom/massage/utils/log/Log;->D:Z
-
-    if-eqz v1, :cond_b
-
-    .line 96
-    const-string v1, "MyActivity"
-
-    const-string v2, "post(runable)"
-
-    invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 99
-    :cond_b
-    move-object v0, p1
-
-    .line 101
-    .local v0, "ar":Ljava/lang/Runnable;
-    iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;->handler:Landroid/os/Handler;
-
-    new-instance v2, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$1;
-
-    invoke-direct {v2, p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints$1;-><init>(Lcom/jiuzhansoft/massage/subActivity/HumanAcupuncturePoints;Ljava/lang/Runnable;)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 110
+    .line 874
     return-void
 .end method

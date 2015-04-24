@@ -32,7 +32,7 @@
     .line 105
     iget-object v0, p0, Lcom/zarosun/zxht_saler/ui/info/retun/i;->a:Lcom/zarosun/zxht_saler/ui/info/retun/AddReceiveInfoActivity_;
 
-    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/info/retun/AddReceiveInfoActivity_;->g()V
+    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/info/retun/AddReceiveInfoActivity_;->k()V
 
     .line 106
     return-void

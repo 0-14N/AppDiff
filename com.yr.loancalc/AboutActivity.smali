@@ -3,7 +3,28 @@
 .source "AboutActivity.java"
 
 
+# static fields
+.field private static final LOG_TAG:Ljava/lang/String;
+
+
 # direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    .prologue
+    .line 30
+    const-class v0, Lcom/yr/loancalc/AboutActivity;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/yr/loancalc/AboutActivity;->LOG_TAG:Ljava/lang/String;
+
+    .line 29
+    return-void
+.end method
+
 .method public constructor <init>()V
     .registers 1
 
@@ -15,7 +36,7 @@
 .end method
 
 .method private getData()Ljava/util/List;
-    .registers 6
+    .registers 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -30,6 +51,10 @@
     .end annotation
 
     .prologue
+    const-string v5, "title"
+
+    const-string v4, "info"
+
     .line 48
     new-instance v0, Ljava/util/ArrayList;
 
@@ -47,32 +72,32 @@
 
     invoke-static {}, Lcom/yr/loancalc/G;->getAppName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 51
     const-string v2, "info"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v4, "v"
+    const-string v3, "v"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-static {}, Lcom/yr/loancalc/G;->getVersionName()Ljava/lang/String;
 
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 52
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -87,24 +112,16 @@
     .restart local v1    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v2, "title"
 
-    const v3, 0x7f040002
+    const-string v2, "YR STUDIO 2012"
 
-    invoke-static {v3}, Lcom/yr/loancalc/G;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 55
     const-string v2, "info"
 
-    const v3, 0x7f040014
+    const-string v2, "\u7248\u6743\u6240\u6709"
 
-    invoke-static {v3}, Lcom/yr/loancalc/G;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 56
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -119,24 +136,16 @@
     .restart local v1    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v2, "title"
 
-    const v3, 0x7f040015
+    const-string v2, "\u8054\u7cfb\u65b9\u5f0f"
 
-    invoke-static {v3}, Lcom/yr/loancalc/G;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 59
     const-string v2, "info"
 
-    const v3, 0x7f040001
+    const-string v2, "yuanlunch@126.com"
 
-    invoke-static {v3}, Lcom/yr/loancalc/G;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 60
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -156,6 +165,13 @@
 
     .line 34
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+
+    .line 36
+    sget-object v1, Lcom/yr/loancalc/AboutActivity;->LOG_TAG:Ljava/lang/String;
+
+    const-string v2, "onCreate"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 39
     new-instance v6, Landroid/widget/ListView;
@@ -190,7 +206,7 @@
     .line 42
     new-array v5, v7, [I
 
-    fill-array-data v5, :array_2e
+    fill-array-data v5, :array_36
 
     move-object v1, p0
 
@@ -208,10 +224,12 @@
     return-void
 
     .line 42
-    :array_2e
+    nop
+
+    :array_36
     .array-data 4
-        0x7f050010
-        0x7f050011
+        0x7f050012
+        0x7f050013
     .end array-data
 .end method
 
@@ -230,7 +248,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f040013
+    const v2, 0x7f04000e
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -248,9 +266,16 @@
 .end method
 
 .method protected onDestroy()V
-    .registers 1
+    .registers 3
 
     .prologue
+    .line 90
+    sget-object v0, Lcom/yr/loancalc/AboutActivity;->LOG_TAG:Ljava/lang/String;
+
+    const-string v1, "onDestroy"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 91
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
@@ -305,9 +330,16 @@
 .end method
 
 .method protected onPause()V
-    .registers 1
+    .registers 3
 
     .prologue
+    .line 97
+    sget-object v0, Lcom/yr/loancalc/AboutActivity;->LOG_TAG:Ljava/lang/String;
+
+    const-string v1, "onPause"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 98
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
@@ -316,9 +348,16 @@
 .end method
 
 .method protected onResume()V
-    .registers 1
+    .registers 3
 
     .prologue
+    .line 104
+    sget-object v0, Lcom/yr/loancalc/AboutActivity;->LOG_TAG:Ljava/lang/String;
+
+    const-string v1, "onResume"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 105
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
@@ -327,9 +366,16 @@
 .end method
 
 .method protected onStart()V
-    .registers 1
+    .registers 3
 
     .prologue
+    .line 111
+    sget-object v0, Lcom/yr/loancalc/AboutActivity;->LOG_TAG:Ljava/lang/String;
+
+    const-string v1, "onStart"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 112
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
@@ -338,9 +384,16 @@
 .end method
 
 .method protected onStop()V
-    .registers 1
+    .registers 3
 
     .prologue
+    .line 118
+    sget-object v0, Lcom/yr/loancalc/AboutActivity;->LOG_TAG:Ljava/lang/String;
+
+    const-string v1, "onStop"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 119
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 

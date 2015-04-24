@@ -54,9 +54,9 @@
 
     invoke-direct {v0, p0}, Lorg/gdb/android/client/remote/am;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Lorg/gdb/android/client/ng;
+    new-instance v1, Lorg/gdb/android/client/nd;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/ng;-><init>(Lorg/gdb/android/client/UseCouponActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/nd;-><init>(Lorg/gdb/android/client/UseCouponActivity;)V
 
     invoke-virtual {v0, v1}, Lorg/gdb/android/client/remote/am;->a(Lorg/gdb/android/client/remote/y;)V
 
@@ -372,11 +372,11 @@
     .line 87
     iget-object v0, p0, Lorg/gdb/android/client/UseCouponActivity;->d:Landroid/widget/Button;
 
-    new-instance v1, Lorg/gdb/android/client/nh;
+    new-instance v1, Lorg/gdb/android/client/ne;
 
     iget-object v2, p0, Lorg/gdb/android/client/UseCouponActivity;->b:Lorg/gdb/android/client/vo/CouponVO;
 
-    invoke-direct {v1, p0, v2}, Lorg/gdb/android/client/nh;-><init>(Lorg/gdb/android/client/UseCouponActivity;Lorg/gdb/android/client/vo/CouponVO;)V
+    invoke-direct {v1, p0, v2}, Lorg/gdb/android/client/ne;-><init>(Lorg/gdb/android/client/UseCouponActivity;Lorg/gdb/android/client/vo/CouponVO;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

@@ -6,18 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/cungo/callrecorder/ui/CGSessionListView_;
+.field final synthetic a:Lcom/cungo/callrecorder/ui/CGSessionListView_;
 
 
 # direct methods
-.method constructor <init>(Lcom/cungo/callrecorder/ui/CGSessionListView_;Ljava/lang/String;)V
-    .registers 3
+.method constructor <init>(Lcom/cungo/callrecorder/ui/CGSessionListView_;)V
+    .registers 2
 
-    iput-object p1, p0, Lcom/cungo/callrecorder/ui/of;->b:Lcom/cungo/callrecorder/ui/CGSessionListView_;
-
-    iput-object p2, p0, Lcom/cungo/callrecorder/ui/of;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/cungo/callrecorder/ui/of;->a:Lcom/cungo/callrecorder/ui/CGSessionListView_;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,18 +26,16 @@
     .registers 4
 
     :try_start_0
-    iget-object v0, p0, Lcom/cungo/callrecorder/ui/of;->b:Lcom/cungo/callrecorder/ui/CGSessionListView_;
+    iget-object v0, p0, Lcom/cungo/callrecorder/ui/of;->a:Lcom/cungo/callrecorder/ui/CGSessionListView_;
 
-    iget-object v1, p0, Lcom/cungo/callrecorder/ui/of;->a:Ljava/lang/String;
+    invoke-static {v0}, Lcom/cungo/callrecorder/ui/CGSessionListView_;->a(Lcom/cungo/callrecorder/ui/CGSessionListView_;)V
+    :try_end_5
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_5} :catch_6
 
-    invoke-static {v0, v1}, Lcom/cungo/callrecorder/ui/CGSessionListView_;->a(Lcom/cungo/callrecorder/ui/CGSessionListView_;Ljava/lang/String;)V
-    :try_end_7
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_7} :catch_8
-
-    :goto_7
+    :goto_5
     return-void
 
-    :catch_8
+    :catch_6
     move-exception v0
 
     const-string v1, "CGSessionListView_"
@@ -50,5 +44,5 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_7
+    goto :goto_5
 .end method

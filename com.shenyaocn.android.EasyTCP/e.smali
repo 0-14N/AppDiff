@@ -28,11 +28,11 @@
     :try_start_0
     iget-object v0, p0, Lcom/five/adwoad/e;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/five/adwoad/t;->b(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/five/adwoad/t;->a(Landroid/content/Context;)V
 
     iget-object v0, p0, Lcom/five/adwoad/e;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/five/adwoad/t;->e(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/five/adwoad/t;->d(Landroid/content/Context;)V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_a} :catch_b
 

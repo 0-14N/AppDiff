@@ -917,24 +917,19 @@
 
     move-result v0
 
-    if-nez v0, :cond_d
-
-    .line 230
-    const-string v0, "You must have AdActivity declared in AndroidManifest.xml with configChanges."
-
-    invoke-direct {p0, p1, v0, p2, p3}, Lcom/google/ads/AdView;->a(Landroid/content/Context;Ljava/lang/String;Lcom/google/ads/AdSize;Landroid/util/AttributeSet;)V
+    if-nez v0, :cond_8
 
     .line 235
     const/4 v0, 0x0
 
     .line 238
-    :goto_c
+    :goto_7
     return v0
 
-    :cond_d
+    :cond_8
     const/4 v0, 0x1
 
-    goto :goto_c
+    goto :goto_7
 .end method
 
 .method private a(Ljava/lang/String;Landroid/util/AttributeSet;)Z

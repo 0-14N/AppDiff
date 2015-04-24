@@ -29,23 +29,23 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/FXMusicMgr;->d:Landroid/media/MediaPlayer;
 
     .line 94
-    new-instance v0, Ladk;
+    new-instance v0, Lwq;
 
-    invoke-direct {v0, p0}, Ladk;-><init>(Lcom/quvideo/xiaoying/camera/FXMusicMgr;)V
+    invoke-direct {v0, p0}, Lwq;-><init>(Lcom/quvideo/xiaoying/camera/FXMusicMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/FXMusicMgr;->a:Landroid/media/MediaPlayer$OnCompletionListener;
 
     .line 101
-    new-instance v0, Ladl;
+    new-instance v0, Lwr;
 
-    invoke-direct {v0, p0}, Ladl;-><init>(Lcom/quvideo/xiaoying/camera/FXMusicMgr;)V
+    invoke-direct {v0, p0}, Lwr;-><init>(Lcom/quvideo/xiaoying/camera/FXMusicMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/FXMusicMgr;->b:Landroid/media/MediaPlayer$OnErrorListener;
 
     .line 109
-    new-instance v0, Ladm;
+    new-instance v0, Lws;
 
-    invoke-direct {v0, p0}, Ladm;-><init>(Lcom/quvideo/xiaoying/camera/FXMusicMgr;)V
+    invoke-direct {v0, p0}, Lws;-><init>(Lcom/quvideo/xiaoying/camera/FXMusicMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/FXMusicMgr;->c:Landroid/media/MediaPlayer$OnPreparedListener;
 

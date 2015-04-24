@@ -121,24 +121,6 @@
 
     iput-object v0, p0, Lcom/wacai365/bank/TaobaoLoginActivity_;->mTvErrTip:Landroid/widget/TextView;
 
-    const v0, 0x7f0b00a1
-
-    invoke-interface {p1, v0}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/wacai365/bank/TaobaoLoginActivity_;->mIvDataSyncing:Landroid/view/View;
-
-    const v0, 0x7f0b00a0
-
-    invoke-interface {p1, v0}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/webkit/WebView;
-
-    iput-object v0, p0, Lcom/wacai365/bank/TaobaoLoginActivity_;->mWebTaobao:Landroid/webkit/WebView;
-
     const v0, 0x7f0b00a6
 
     invoke-interface {p1, v0}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
@@ -146,6 +128,14 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/wacai365/bank/TaobaoLoginActivity_;->mLlTaobaoRefish:Landroid/view/View;
+
+    const v0, 0x7f0b00a1
+
+    invoke-interface {p1, v0}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/wacai365/bank/TaobaoLoginActivity_;->mIvDataSyncing:Landroid/view/View;
 
     const v0, 0x7f0b00a4
 
@@ -157,7 +147,17 @@
 
     iput-object v0, p0, Lcom/wacai365/bank/TaobaoLoginActivity_;->mTvTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0b009c
+    const v0, 0x7f0b00a0
+
+    invoke-interface {p1, v0}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/webkit/WebView;
+
+    iput-object v0, p0, Lcom/wacai365/bank/TaobaoLoginActivity_;->mWebTaobao:Landroid/webkit/WebView;
+
+    const v0, 0x7f0b00a7
 
     invoke-interface {p1, v0}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
@@ -172,7 +172,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_44
-    const v0, 0x7f0b009b
+    const v0, 0x7f0b009c
 
     invoke-interface {p1, v0}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 
@@ -202,7 +202,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_66
-    const v0, 0x7f0b00a7
+    const v0, 0x7f0b009b
 
     invoke-interface {p1, v0}, Lorg/androidannotations/api/view/HasViews;->findViewById(I)Landroid/view/View;
 

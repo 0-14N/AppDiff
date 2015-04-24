@@ -142,17 +142,6 @@
     const v1, 0x7f060085
 
     .line 110
-    const v0, 0x7f06005d
-
-    invoke-interface {p1, v0}, Lb/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->e:Landroid/widget/EditText;
-
-    .line 111
     const v0, 0x7f06005e
 
     invoke-interface {p1, v0}, Lb/a/a/b/a;->findViewById(I)Landroid/view/View;
@@ -163,29 +152,7 @@
 
     iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->f:Landroid/widget/EditText;
 
-    .line 112
-    const v0, 0x7f060084
-
-    invoke-interface {p1, v0}, Lb/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->g:Landroid/widget/LinearLayout;
-
-    .line 113
-    const v0, 0x7f06005b
-
-    invoke-interface {p1, v0}, Lb/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->c:Landroid/widget/EditText;
-
-    .line 114
+    .line 111
     const v0, 0x7f06005c
 
     invoke-interface {p1, v0}, Lb/a/a/b/a;->findViewById(I)Landroid/view/View;
@@ -196,7 +163,18 @@
 
     iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->d:Landroid/widget/EditText;
 
-    .line 115
+    .line 112
+    const v0, 0x7f06005b
+
+    invoke-interface {p1, v0}, Lb/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/EditText;
+
+    iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->c:Landroid/widget/EditText;
+
+    .line 113
     const v0, 0x7f060083
 
     invoke-interface {p1, v0}, Lb/a/a/b/a;->findViewById(I)Landroid/view/View;
@@ -206,6 +184,28 @@
     check-cast v0, Landroid/widget/ScrollView;
 
     iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->h:Landroid/widget/ScrollView;
+
+    .line 114
+    const v0, 0x7f060084
+
+    invoke-interface {p1, v0}, Lb/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->g:Landroid/widget/LinearLayout;
+
+    .line 115
+    const v0, 0x7f06005d
+
+    invoke-interface {p1, v0}, Lb/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/EditText;
+
+    iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->e:Landroid/widget/EditText;
 
     .line 116
     invoke-interface {p1, v1}, Lb/a/a/b/a;->findViewById(I)Landroid/view/View;
@@ -237,18 +237,18 @@
     .registers 5
 
     .prologue
-    .line 183
-    new-instance v0, Lcom/guangjieba/share/ui/order/aj;
+    .line 201
+    new-instance v0, Lcom/guangjieba/share/ui/order/ak;
 
     const-string v1, "post_order"
 
     const-string v2, ""
 
-    invoke-direct {v0, p0, v1, v2, p1}, Lcom/guangjieba/share/ui/order/aj;-><init>(Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;Ljava/lang/String;Ljava/lang/String;Lcom/guangjieba/share/model/bean/AddressModel;)V
+    invoke-direct {v0, p0, v1, v2, p1}, Lcom/guangjieba/share/ui/order/ak;-><init>(Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;Ljava/lang/String;Ljava/lang/String;Lcom/guangjieba/share/model/bean/AddressModel;)V
 
     invoke-static {v0}, Lb/a/a/a;->a(Lb/a/a/b;)V
 
-    .line 197
+    .line 215
     return-void
 .end method
 
@@ -256,8 +256,8 @@
     .registers 17
 
     .prologue
-    .line 165
-    new-instance v0, Lcom/guangjieba/share/ui/order/ai;
+    .line 183
+    new-instance v0, Lcom/guangjieba/share/ui/order/aj;
 
     const-string v2, "do_add_address"
 
@@ -275,11 +275,11 @@
 
     move-wide v8, p5
 
-    invoke-direct/range {v0 .. v9}, Lcom/guangjieba/share/ui/order/ai;-><init>(Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-direct/range {v0 .. v9}, Lcom/guangjieba/share/ui/order/aj;-><init>(Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
     invoke-static {v0}, Lb/a/a/a;->a(Lb/a/a/b;)V
 
-    .line 179
+    .line 197
     return-void
 .end method
 
@@ -287,18 +287,18 @@
     .registers 4
 
     .prologue
-    .line 201
-    new-instance v0, Lcom/guangjieba/share/ui/order/ak;
+    .line 165
+    new-instance v0, Lcom/guangjieba/share/ui/order/ai;
 
     const-string v1, ""
 
     const-string v2, ""
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/guangjieba/share/ui/order/ak;-><init>(Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/guangjieba/share/ui/order/ai;-><init>(Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v0}, Lb/a/a/a;->a(Lb/a/a/b;)V
 
-    .line 215
+    .line 179
     return-void
 .end method
 
@@ -394,11 +394,11 @@
     .catch Ljava/sql/SQLException; {:try_start_1c .. :try_end_26} :catch_45
 
     :goto_26
-    invoke-static {p0}, Lcom/guangjieba/share/model/a/b;->a(Landroid/content/Context;)Lcom/guangjieba/share/model/a/b;
+    invoke-static {p0}, Lcom/guangjieba/share/model/f/b;->a(Landroid/content/Context;)Lcom/guangjieba/share/model/f/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->j:Lcom/guangjieba/share/model/a/a;
+    iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->a:Lcom/guangjieba/share/model/f/a;
 
     invoke-static {p0}, Lcom/guangjieba/share/b/i;->e(Landroid/content/Context;)Lcom/guangjieba/share/b/i;
 
@@ -406,11 +406,11 @@
 
     iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->b:Lcom/guangjieba/share/b/h;
 
-    invoke-static {p0}, Lcom/guangjieba/share/model/f/b;->a(Landroid/content/Context;)Lcom/guangjieba/share/model/f/b;
+    invoke-static {p0}, Lcom/guangjieba/share/model/a/b;->a(Landroid/content/Context;)Lcom/guangjieba/share/model/a/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->a:Lcom/guangjieba/share/model/f/a;
+    iput-object v0, p0, Lcom/guangjieba/share/ui/order/NotifyOrderActivity_;->j:Lcom/guangjieba/share/model/a/a;
 
     .line 69
     invoke-super {p0, p1}, Lcom/guangjieba/share/ui/order/NotifyOrderActivity;->onCreate(Landroid/os/Bundle;)V

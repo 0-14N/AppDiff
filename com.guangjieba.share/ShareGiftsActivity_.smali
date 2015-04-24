@@ -47,7 +47,7 @@
 
     .prologue
     .line 28
-    invoke-super {p0}, Lcom/guangjieba/share/ui/user/ShareGiftsActivity;->e()V
+    invoke-super {p0}, Lcom/guangjieba/share/ui/user/ShareGiftsActivity;->d()V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     .prologue
     .line 28
-    invoke-super {p0}, Lcom/guangjieba/share/ui/user/ShareGiftsActivity;->d()V
+    invoke-super {p0}, Lcom/guangjieba/share/ui/user/ShareGiftsActivity;->e()V
 
     return-void
 .end method
@@ -141,25 +141,6 @@
     .registers 4
 
     .prologue
-    .line 135
-    new-instance v0, Lcom/guangjieba/share/ui/user/cc;
-
-    const-string v1, ""
-
-    const-string v2, ""
-
-    invoke-direct {v0, p0, v1, v2}, Lcom/guangjieba/share/ui/user/cc;-><init>(Lcom/guangjieba/share/ui/user/ShareGiftsActivity_;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v0}, Lb/a/a/a;->a(Lb/a/a/b;)V
-
-    .line 149
-    return-void
-.end method
-
-.method public final e()V
-    .registers 4
-
-    .prologue
     .line 117
     new-instance v0, Lcom/guangjieba/share/ui/user/cb;
 
@@ -172,6 +153,25 @@
     invoke-static {v0}, Lb/a/a/a;->a(Lb/a/a/b;)V
 
     .line 131
+    return-void
+.end method
+
+.method public final e()V
+    .registers 4
+
+    .prologue
+    .line 135
+    new-instance v0, Lcom/guangjieba/share/ui/user/cc;
+
+    const-string v1, ""
+
+    const-string v2, ""
+
+    invoke-direct {v0, p0, v1, v2}, Lcom/guangjieba/share/ui/user/cc;-><init>(Lcom/guangjieba/share/ui/user/ShareGiftsActivity_;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v0}, Lb/a/a/a;->a(Lb/a/a/b;)V
+
+    .line 149
     return-void
 .end method
 

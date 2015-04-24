@@ -378,9 +378,9 @@
     iput v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->aR:I
 
     .line 1613
-    new-instance v0, Lxb;
+    new-instance v0, Lqi;
 
-    invoke-direct {v0, p0}, Lxb;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
+    invoke-direct {v0, p0}, Lqi;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->n:Landroid/text/TextWatcher;
 
@@ -875,11 +875,11 @@
     .line 2146
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
-    const v1, 0x7f0a0339
+    const v1, 0x7f0a0316
 
-    new-instance v2, Lxk;
+    new-instance v2, Lqr;
 
-    invoke-direct {v2, p0}, Lxk;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
+    invoke-direct {v2, p0}, Lqr;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
 
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -1443,7 +1443,7 @@
     if-nez v0, :cond_17
 
     .line 2024
-    const v0, 0x7f0605a3
+    const v0, 0x7f06058e
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1460,7 +1460,7 @@
     if-nez v0, :cond_26
 
     .line 2027
-    const v0, 0x7f0605a4
+    const v0, 0x7f06058f
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1579,7 +1579,7 @@
 
     .prologue
     .line 424
-    const v0, 0x7f06058f
+    const v0, 0x7f06057a
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1590,7 +1590,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->r:Landroid/widget/ImageView;
 
     .line 425
-    const v0, 0x7f060592
+    const v0, 0x7f06057d
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1636,7 +1636,7 @@
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 431
-    const v0, 0x7f06058c
+    const v0, 0x7f060577
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1647,7 +1647,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->x:Landroid/widget/RelativeLayout;
 
     .line 432
-    const v0, 0x7f060504
+    const v0, 0x7f0604ef
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1658,7 +1658,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->y:Landroid/widget/RelativeLayout;
 
     .line 434
-    const v0, 0x7f060595
+    const v0, 0x7f060580
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1669,7 +1669,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->E:Landroid/widget/Button;
 
     .line 435
-    const v0, 0x7f0605a8
+    const v0, 0x7f060593
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1680,7 +1680,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->B:Landroid/widget/Button;
 
     .line 436
-    const v0, 0x7f060599
+    const v0, 0x7f060584
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1691,7 +1691,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->t:Landroid/widget/TextView;
 
     .line 437
-    const v0, 0x7f06059a
+    const v0, 0x7f060585
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1713,7 +1713,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->z:Landroid/widget/Button;
 
     .line 439
-    const v0, 0x7f060505
+    const v0, 0x7f0604f0
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1735,7 +1735,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->D:Landroid/widget/RelativeLayout;
 
     .line 441
-    const v0, 0x7f060598
+    const v0, 0x7f060583
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1746,7 +1746,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->F:Landroid/widget/Button;
 
     .line 442
-    const v0, 0x7f0605a0
+    const v0, 0x7f06058b
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1757,7 +1757,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->T:Landroid/widget/RelativeLayout;
 
     .line 443
-    const v0, 0x7f06058a
+    const v0, 0x7f060575
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1779,7 +1779,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->al:Landroid/widget/ImageButton;
 
     .line 445
-    const v0, 0x7f060597
+    const v0, 0x7f060582
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1790,7 +1790,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->v:Landroid/widget/RelativeLayout;
 
     .line 447
-    const v0, 0x7f06058b
+    const v0, 0x7f060576
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1801,7 +1801,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->av:Landroid/widget/RelativeLayout;
 
     .line 448
-    const v0, 0x7f0605a6
+    const v0, 0x7f060591
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1812,7 +1812,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->aw:Landroid/widget/RelativeLayout;
 
     .line 449
-    const v0, 0x7f06059b
+    const v0, 0x7f060586
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1823,7 +1823,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->ax:Landroid/widget/RelativeLayout;
 
     .line 451
-    const v0, 0x7f0605a7
+    const v0, 0x7f060592
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1834,7 +1834,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->C:Landroid/widget/Button;
 
     .line 452
-    const v0, 0x7f060502
+    const v0, 0x7f0604ed
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1856,7 +1856,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->aC:Landroid/widget/TextView;
 
     .line 454
-    const v0, 0x7f0605a9
+    const v0, 0x7f060594
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1867,7 +1867,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->aF:Landroid/widget/TextView;
 
     .line 455
-    const v0, 0x7f06059d
+    const v0, 0x7f060588
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1878,7 +1878,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->aG:Landroid/widget/TextView;
 
     .line 456
-    const v0, 0x7f06059f
+    const v0, 0x7f06058a
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -1889,7 +1889,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->aH:Landroid/widget/TextView;
 
     .line 457
-    const v0, 0x7f060591
+    const v0, 0x7f06057c
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -2027,7 +2027,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0340
+    const v1, 0x7f0a031d
 
     const/4 v2, 0x1
 
@@ -2044,9 +2044,9 @@
     .line 1352
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
-    new-instance v2, Lxi;
+    new-instance v2, Lqp;
 
-    invoke-direct {v2, p0}, Lxi;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
+    invoke-direct {v2, p0}, Lqp;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
 
     invoke-direct {v1, p0, v0, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -2324,7 +2324,7 @@
     :cond_2e
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->r:Landroid/widget/ImageView;
 
-    const v1, 0x7f0205ec
+    const v1, 0x7f0205cc
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2370,9 +2370,9 @@
     if-nez v1, :cond_36
 
     .line 571
-    new-instance v1, Lxd;
+    new-instance v1, Lqk;
 
-    invoke-direct {v1, p0}, Lxd;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
+    invoke-direct {v1, p0}, Lqk;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
 
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->aJ:Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
@@ -3331,7 +3331,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f02061e
+    const v2, 0x7f0205fe
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3346,7 +3346,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020626
+    const v2, 0x7f020606
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3357,7 +3357,7 @@
     .line 847
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->B:Landroid/widget/Button;
 
-    const v1, 0x7f0205eb
+    const v1, 0x7f0205cb
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -3690,7 +3690,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f02061f
+    const v2, 0x7f0205ff
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3705,7 +3705,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020625
+    const v2, 0x7f020605
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3716,7 +3716,7 @@
     .line 854
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->B:Landroid/widget/Button;
 
-    const v1, 0x7f020583
+    const v1, 0x7f020569
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -3785,7 +3785,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0347
+    const v2, 0x7f0a0324
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3843,7 +3843,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0346
+    const v2, 0x7f0a0323
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3895,9 +3895,9 @@
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
     .line 1127
-    new-instance v2, Lxe;
+    new-instance v2, Lql;
 
-    invoke-direct {v2, p0}, Lxe;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
+    invoke-direct {v2, p0}, Lql;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
 
     .line 1126
     invoke-direct {v1, p0, v0, v2}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
@@ -3911,8 +3911,8 @@
     .line 1125
     :array_14
     .array-data 4
-        0x7f0a0344
-        0x7f0a0345
+        0x7f0a0321
+        0x7f0a0322
     .end array-data
 .end method
 
@@ -3925,9 +3925,9 @@
 
     const v1, 0x7f0a0020
 
-    new-instance v2, Lxf;
+    new-instance v2, Lqm;
 
-    invoke-direct {v2, p0}, Lxf;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
+    invoke-direct {v2, p0}, Lqm;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
 
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -5580,9 +5580,9 @@
     invoke-static {v0, p0}, Lcom/quvideo/xiaoying/videoeditor/util/Utils;->controlBackLight(ZLandroid/app/Activity;)V
 
     .line 1946
-    new-instance v0, Lxj;
+    new-instance v0, Lqq;
 
-    invoke-direct {v0, p0}, Lxj;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
+    invoke-direct {v0, p0}, Lqq;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
 
     .line 1978
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->af:Lcom/quvideo/xiaoying/videoeditor/util/AppContext;
@@ -5824,7 +5824,7 @@
     .prologue
     const v8, 0x7f030132
 
-    const v7, 0x7f02063b
+    const v7, 0x7f02061b
 
     const v2, 0x7f02028f
 
@@ -5838,7 +5838,7 @@
     const/16 v0, 0xa
 
     .line 2104
-    const v1, 0x7f0a030e
+    const v1, 0x7f0a02eb
 
     .line 2103
     invoke-direct {v5, v0, v2, v2, v1}, Lcom/quvideo/xiaoying/util/SnsResItem;-><init>(IIII)V
@@ -6590,9 +6590,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lxc;
+    new-instance v1, Lqj;
 
-    invoke-direct {v1, p0}, Lxc;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
+    invoke-direct {v1, p0}, Lqj;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
 
     invoke-virtual {v0, p1, p0, v1}, Lcom/quvideo/xiaoying/sns/AbstractSNSMgr;->auth(ILandroid/app/Activity;Lcom/quvideo/xiaoying/sns/SnsListener;)V
 
@@ -6874,7 +6874,7 @@
     if-nez v0, :cond_ec
 
     .line 985
-    const v0, 0x7f0a031f
+    const v0, 0x7f0a02fc
 
     invoke-static {p0, v0, v1}, Lcom/quvideo/xiaoying/videoeditor/util/ToastUtils;->show(Landroid/content/Context;II)V
 
@@ -7222,7 +7222,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f02061f
+    const v3, 0x7f0205ff
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -7237,7 +7237,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f020625
+    const v3, 0x7f020605
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -7248,7 +7248,7 @@
     .line 1061
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->B:Landroid/widget/Button;
 
-    const v1, 0x7f020583
+    const v1, 0x7f020569
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -7314,7 +7314,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f02061e
+    const v3, 0x7f0205fe
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -7329,7 +7329,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f020626
+    const v3, 0x7f020606
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -7340,7 +7340,7 @@
     .line 1072
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/publish/PublishActivity;->B:Landroid/widget/Button;
 
-    const v2, 0x7f0205eb
+    const v2, 0x7f0205cb
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -7499,7 +7499,7 @@
     .registers 14
 
     .prologue
-    const v11, 0x7f020631
+    const v11, 0x7f020611
 
     const/4 v10, 0x0
 
@@ -7773,7 +7773,7 @@
     const/4 v0, -0x1
 
     .line 322
-    const v1, 0x7f0a02dd
+    const v1, 0x7f0a02ba
 
     .line 321
     invoke-direct {v5, v0, v11, v11, v1}, Lcom/quvideo/xiaoying/util/SnsResItem;-><init>(IIII)V
@@ -8983,9 +8983,9 @@
     .line 1206
     const v1, 0x7f0a0086
 
-    new-instance v2, Lxh;
+    new-instance v2, Lqo;
 
-    invoke-direct {v2, p0}, Lxh;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
+    invoke-direct {v2, p0}, Lqo;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;)V
 
     .line 1205
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -9131,9 +9131,9 @@
     if-nez v0, :cond_3f
 
     .line 1181
-    new-instance v0, Lxg;
+    new-instance v0, Lqn;
 
-    invoke-direct {v0, p0, p1}, Lxg;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;Landroid/app/Activity;)V
+    invoke-direct {v0, p0, p1}, Lqn;-><init>(Lcom/quvideo/xiaoying/app/publish/PublishActivity;Landroid/app/Activity;)V
 
     .line 1189
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;

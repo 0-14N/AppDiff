@@ -78,9 +78,9 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->F:Landroid/os/Handler;
 
-    new-instance v1, Lcom/youku/meidian/activity/du;
+    new-instance v1, Lcom/youku/meidian/activity/ed;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/youku/meidian/activity/du;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;Landroid/view/View;I)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/youku/meidian/activity/ed;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;Landroid/view/View;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -106,25 +106,13 @@
 .method public final a(Lorg/a/a/b/a;)V
     .registers 4
 
-    const v0, 0x7f090062
+    const v0, 0x7f0900ef
 
     invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->p:Landroid/widget/ImageView;
-
-    const v0, 0x7f0900f0
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->C:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->B:Landroid/view/View;
 
     const v0, 0x7f0900eb
 
@@ -136,24 +124,6 @@
 
     iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->s:Landroid/widget/ImageView;
 
-    const v0, 0x7f090061
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/SurfaceView;
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->o:Landroid/view/SurfaceView;
-
-    const v0, 0x7f0900e6
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->r:Landroid/view/View;
-
     const v0, 0x7f0900ec
 
     invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
@@ -164,32 +134,6 @@
 
     iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->v:Landroid/support/v7/widget/RecyclerView;
 
-    const v0, 0x7f0900f1
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->D:Landroid/view/View;
-
-    const v0, 0x7f0900e7
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->z:Landroid/view/View;
-
-    const v0, 0x7f0900ee
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/support/v7/widget/RecyclerView;
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->w:Landroid/support/v7/widget/RecyclerView;
-
     const v0, 0x7f090063
 
     invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
@@ -197,30 +141,6 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->x:Landroid/view/View;
-
-    const v0, 0x7f090065
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->n:Landroid/view/View;
-
-    const v0, 0x7f090067
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->y:Landroid/view/View;
-
-    const v0, 0x7f0900ef
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->B:Landroid/view/View;
 
     const v0, 0x7f0900ea
 
@@ -232,6 +152,42 @@
 
     iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->t:Landroid/widget/ImageView;
 
+    const v0, 0x7f0900e6
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->r:Landroid/view/View;
+
+    const v0, 0x7f090067
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->y:Landroid/view/View;
+
+    const v0, 0x7f0900ee
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/RecyclerView;
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->w:Landroid/support/v7/widget/RecyclerView;
+
+    const v0, 0x7f0900f0
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->C:Landroid/widget/ImageView;
+
     const v0, 0x7f0900ed
 
     invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
@@ -241,6 +197,14 @@
     check-cast v0, Landroid/widget/FrameLayout;
 
     iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->u:Landroid/widget/FrameLayout;
+
+    const v0, 0x7f0900e7
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->z:Landroid/view/View;
 
     const v0, 0x7f0900e8
 
@@ -258,6 +222,42 @@
 
     iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->A:Landroid/view/View;
 
+    const v0, 0x7f090065
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->n:Landroid/view/View;
+
+    const v0, 0x7f090061
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/SurfaceView;
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->o:Landroid/view/SurfaceView;
+
+    const v0, 0x7f0900f1
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->D:Landroid/view/View;
+
+    const v0, 0x7f090062
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->p:Landroid/widget/ImageView;
+
     iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->s:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_b7
@@ -271,30 +271,30 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_b7
+    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->B:Landroid/view/View;
+
+    if-eqz v0, :cond_c5
+
+    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->B:Landroid/view/View;
+
+    new-instance v1, Lcom/youku/meidian/activity/dw;
+
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/dw;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_c5
     const v0, 0x7f090068
 
     invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_c8
+    if-eqz v0, :cond_d6
 
     new-instance v1, Lcom/youku/meidian/activity/dx;
 
     invoke-direct {v1, p0}, Lcom/youku/meidian/activity/dx;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    :cond_c8
-    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->r:Landroid/view/View;
-
-    if-eqz v0, :cond_d6
-
-    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->r:Landroid/view/View;
-
-    new-instance v1, Lcom/youku/meidian/activity/dy;
-
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/dy;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -305,24 +305,24 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->q:Landroid/view/View;
 
-    new-instance v1, Lcom/youku/meidian/activity/dz;
+    new-instance v1, Lcom/youku/meidian/activity/dy;
 
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/dz;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/dy;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_e4
-    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->B:Landroid/view/View;
+    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->t:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_f2
 
-    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->B:Landroid/view/View;
+    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->t:Landroid/widget/ImageView;
 
-    new-instance v1, Lcom/youku/meidian/activity/ea;
+    new-instance v1, Lcom/youku/meidian/activity/dz;
 
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/ea;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/dz;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_f2
     iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->n:Landroid/view/View;
@@ -331,16 +331,29 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->n:Landroid/view/View;
 
+    new-instance v1, Lcom/youku/meidian/activity/ea;
+
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/ea;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_100
+    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->r:Landroid/view/View;
+
+    if-eqz v0, :cond_10e
+
+    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->r:Landroid/view/View;
+
     new-instance v1, Lcom/youku/meidian/activity/eb;
 
     invoke-direct {v1, p0}, Lcom/youku/meidian/activity/eb;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_100
+    :cond_10e
     iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->o:Landroid/view/SurfaceView;
 
-    if-eqz v0, :cond_10e
+    if-eqz v0, :cond_11c
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->o:Landroid/view/SurfaceView;
 
@@ -349,19 +362,6 @@
     invoke-direct {v1, p0}, Lcom/youku/meidian/activity/ec;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
 
     invoke-virtual {v0, v1}, Landroid/view/SurfaceView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    :cond_10e
-    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->t:Landroid/widget/ImageView;
-
-    if-eqz v0, :cond_11c
-
-    iget-object v0, p0, Lcom/youku/meidian/activity/MixVideoActivity_;->t:Landroid/widget/ImageView;
-
-    new-instance v1, Lcom/youku/meidian/activity/ed;
-
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/ed;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_11c
     invoke-virtual {p0}, Lcom/youku/meidian/activity/MixVideoActivity_;->c()V
@@ -372,13 +372,13 @@
 .method public final l()V
     .registers 4
 
-    new-instance v0, Lcom/youku/meidian/activity/dw;
+    new-instance v0, Lcom/youku/meidian/activity/du;
 
     const-string v1, ""
 
     const-string v2, ""
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/youku/meidian/activity/dw;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/youku/meidian/activity/du;-><init>(Lcom/youku/meidian/activity/MixVideoActivity_;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v0}, Lorg/a/a/a;->a(Lorg/a/a/c;)V
 

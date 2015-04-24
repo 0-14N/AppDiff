@@ -560,12 +560,12 @@
 
     .prologue
     .line 275
-    invoke-static {p0, p1}, Lcom/wei/android/apis/c/e;->b(Ljava/lang/String;Landroid/content/Context;)I
+    invoke-static {p0, p1}, Lcom/wei/android/apis/c/f;->b(Ljava/lang/String;Landroid/content/Context;)I
 
     move-result v0
 
     .line 276
-    invoke-static {p0, p1}, Lcom/wei/android/apis/c/f;->a(Ljava/lang/String;Landroid/content/Context;)I
+    invoke-static {p0, p1}, Lcom/wei/android/apis/c/g;->a(Ljava/lang/String;Landroid/content/Context;)I
 
     move-result v1
 
@@ -591,7 +591,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080050
+    const v1, 0x7f090050
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -718,7 +718,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080050
+    const v1, 0x7f090050
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -792,10 +792,10 @@
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
     .line 72
-    sget-object v2, Lcom/wei/android/apis/b/f;->e:[Ljava/lang/String;
+    sget-object v2, Lcom/wei/android/apis/b/g;->e:[Ljava/lang/String;
 
     .line 73
-    sget-object v5, Lcom/wei/android/apis/b/f;->f:Ljava/lang/String;
+    sget-object v5, Lcom/wei/android/apis/b/g;->f:Ljava/lang/String;
 
     move-object v4, v3
 
@@ -1412,7 +1412,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f08001c
+    const v1, 0x7f09001c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1644,7 +1644,7 @@
     move-result-object v0
 
     .line 303
-    sget-object v1, Lcom/wei/android/apis/c/f;->a:Landroid/net/Uri;
+    sget-object v1, Lcom/wei/android/apis/c/g;->a:Landroid/net/Uri;
 
     .line 304
     sget-object v2, Lcom/wei/android/apis/c/b;->e:[Ljava/lang/String;
@@ -1660,7 +1660,7 @@
     const/4 v5, 0x0
 
     .line 307
-    invoke-static {p0, p1}, Lcom/wei/android/apis/c/f;->d(Ljava/lang/String;Landroid/content/Context;)J
+    invoke-static {p0, p1}, Lcom/wei/android/apis/c/g;->d(Ljava/lang/String;Landroid/content/Context;)J
 
     move-result-wide p0
 
@@ -1761,9 +1761,9 @@
 
     .line 322
     :cond_d2
-    new-instance p0, Lcom/wei/android/apis/c/d;
+    new-instance p0, Lcom/wei/android/apis/c/e;
 
-    invoke-direct {p0}, Lcom/wei/android/apis/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/wei/android/apis/c/e;-><init>()V
 
     invoke-static {v6, p0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 

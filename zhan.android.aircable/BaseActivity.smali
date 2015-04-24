@@ -65,65 +65,10 @@
     return-void
 .end method
 
-.method private a()V
-    .registers 4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0}, Lzhan/android/common/a;->c(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    invoke-virtual {p0}, Lzhan/android/aircable/BaseActivity;->d()V
-
-    :goto_a
-    return-void
-
-    :cond_b
-    invoke-direct {p0}, Lzhan/android/aircable/BaseActivity;->e()Lzhan/android/aircable/fragment/i;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_29
-
-    invoke-virtual {v2}, Lzhan/android/aircable/fragment/i;->isDetached()Z
-
-    move-result v0
-
-    if-nez v0, :cond_29
-
-    const/4 v0, 0x1
-
-    :goto_18
-    if-eqz v0, :cond_1d
-
-    invoke-virtual {v2}, Lzhan/android/aircable/fragment/i;->c()V
-
-    :cond_1d
-    const-string v0, "notification"
-
-    invoke-virtual {p0, v0}, Lzhan/android/aircable/BaseActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/NotificationManager;
-
-    invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
-
-    goto :goto_a
-
-    :cond_29
-    move v0, v1
-
-    goto :goto_18
-.end method
-
 .method static synthetic a(Lzhan/android/aircable/BaseActivity;)V
     .registers 1
 
-    invoke-direct {p0}, Lzhan/android/aircable/BaseActivity;->a()V
+    invoke-direct {p0}, Lzhan/android/aircable/BaseActivity;->d()V
 
     return-void
 .end method
@@ -145,7 +90,7 @@
 
     if-nez v0, :cond_a
 
-    invoke-virtual {p0}, Lzhan/android/aircable/BaseActivity;->d()V
+    invoke-virtual {p0}, Lzhan/android/aircable/BaseActivity;->c()V
 
     :cond_9
     :goto_9
@@ -218,6 +163,61 @@
     return-object v0
 .end method
 
+.method private d()V
+    .registers 4
+
+    const/4 v1, 0x0
+
+    invoke-static {p0}, Lzhan/android/common/a;->c(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-virtual {p0}, Lzhan/android/aircable/BaseActivity;->c()V
+
+    :goto_a
+    return-void
+
+    :cond_b
+    invoke-direct {p0}, Lzhan/android/aircable/BaseActivity;->e()Lzhan/android/aircable/fragment/i;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_29
+
+    invoke-virtual {v2}, Lzhan/android/aircable/fragment/i;->isDetached()Z
+
+    move-result v0
+
+    if-nez v0, :cond_29
+
+    const/4 v0, 0x1
+
+    :goto_18
+    if-eqz v0, :cond_1d
+
+    invoke-virtual {v2}, Lzhan/android/aircable/fragment/i;->c()V
+
+    :cond_1d
+    const-string v0, "notification"
+
+    invoke-virtual {p0, v0}, Lzhan/android/aircable/BaseActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/NotificationManager;
+
+    invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
+
+    goto :goto_a
+
+    :cond_29
+    move v0, v1
+
+    goto :goto_18
+.end method
+
 .method static synthetic e(Lzhan/android/aircable/BaseActivity;)Landroid/app/ProgressDialog;
     .registers 2
 
@@ -272,7 +272,7 @@
 
 
 # virtual methods
-.method public final b()Lzhan/android/aircable/fragment/n;
+.method public final a()Lzhan/android/aircable/fragment/n;
     .registers 4
 
     invoke-virtual {p0}, Lzhan/android/aircable/BaseActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
@@ -316,51 +316,7 @@
     goto :goto_1a
 .end method
 
-.method public bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
-    .registers 8
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-super {p0, p1, p2, p3}, Lcom/actionbarsherlock/app/SherlockFragmentActivity;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_18
-
-    instance-of v0, p2, Lzhan/android/aircable/e;
-
-    if-eqz v0, :cond_18
-
-    move v0, v1
-
-    :goto_d
-    iput-boolean v0, p0, Lzhan/android/aircable/BaseActivity;->h:Z
-
-    if-eqz v3, :cond_1a
-
-    instance-of v0, p2, Lzhan/android/aircable/f;
-
-    if-eqz v0, :cond_1a
-
-    :goto_15
-    iput-boolean v1, p0, Lzhan/android/aircable/BaseActivity;->i:Z
-
-    return v3
-
-    :cond_18
-    move v0, v2
-
-    goto :goto_d
-
-    :cond_1a
-    move v1, v2
-
-    goto :goto_15
-.end method
-
-.method public final c()V
+.method public final b()V
     .registers 4
 
     const/4 v1, 0x1
@@ -436,7 +392,7 @@
     goto :goto_e
 
     :cond_42
-    invoke-direct {p0}, Lzhan/android/aircable/BaseActivity;->a()V
+    invoke-direct {p0}, Lzhan/android/aircable/BaseActivity;->d()V
 
     goto :goto_29
 
@@ -467,7 +423,51 @@
     goto :goto_3f
 .end method
 
-.method public final d()V
+.method public bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    .registers 8
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-super {p0, p1, p2, p3}, Lcom/actionbarsherlock/app/SherlockFragmentActivity;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_18
+
+    instance-of v0, p2, Lzhan/android/aircable/e;
+
+    if-eqz v0, :cond_18
+
+    move v0, v1
+
+    :goto_d
+    iput-boolean v0, p0, Lzhan/android/aircable/BaseActivity;->h:Z
+
+    if-eqz v3, :cond_1a
+
+    instance-of v0, p2, Lzhan/android/aircable/f;
+
+    if-eqz v0, :cond_1a
+
+    :goto_15
+    iput-boolean v1, p0, Lzhan/android/aircable/BaseActivity;->i:Z
+
+    return v3
+
+    :cond_18
+    move v0, v2
+
+    goto :goto_d
+
+    :cond_1a
+    move v1, v2
+
+    goto :goto_15
+.end method
+
+.method public final c()V
     .registers 4
 
     invoke-direct {p0}, Lzhan/android/aircable/BaseActivity;->e()Lzhan/android/aircable/fragment/i;
@@ -808,8 +808,6 @@
 
     invoke-virtual {v0, v3}, Lcom/actionbarsherlock/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    invoke-static {p0}, Lcn/waps/b;->a(Landroid/content/Context;)Lcn/waps/b;
-
     return-void
 .end method
 
@@ -1012,12 +1010,6 @@
     move-result-object v0
 
     invoke-virtual {v0}, Lzhan/android/aircable/a/a;->close()V
-
-    invoke-static {p0}, Lcn/waps/b;->a(Landroid/content/Context;)Lcn/waps/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/waps/b;->d()V
 
     invoke-super {p0}, Lcom/actionbarsherlock/app/SherlockFragmentActivity;->onDestroy()V
 
@@ -1311,7 +1303,7 @@
 
     if-eqz v0, :cond_8d
 
-    invoke-virtual {p0}, Lzhan/android/aircable/BaseActivity;->c()V
+    invoke-virtual {p0}, Lzhan/android/aircable/BaseActivity;->b()V
 
     :goto_61
     iget-object v0, p0, Lzhan/android/aircable/BaseActivity;->d:Landroid/os/PowerManager$WakeLock;
@@ -1358,7 +1350,7 @@
     return-void
 
     :cond_8d
-    invoke-virtual {p0}, Lzhan/android/aircable/BaseActivity;->d()V
+    invoke-virtual {p0}, Lzhan/android/aircable/BaseActivity;->c()V
 
     goto :goto_61
 .end method

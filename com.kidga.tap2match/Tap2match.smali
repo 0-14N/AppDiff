@@ -42,6 +42,8 @@
 
 .field private progressBar:Landroid/widget/ProgressBar;
 
+.field private removedCounter:I
+
 .field private resHandler:Lcom/kidga/tap2match/ResourceHandler;
 
 .field private rowNext:Landroid/widget/TableRow;
@@ -113,7 +115,7 @@
 
     iput-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
-    .line 964
+    .line 888
     iput-object v1, p0, Lcom/kidga/tap2match/Tap2match;->toTap:Lcom/kidga/common/ui/Cell;
 
     .line 31
@@ -134,7 +136,7 @@
     .registers 2
 
     .prologue
-    .line 283
+    .line 258
     invoke-direct {p0, p1}, Lcom/kidga/tap2match/Tap2match;->showInfoDialog(I)V
 
     return-void
@@ -150,7 +152,27 @@
     return-object v0
 .end method
 
-.method static synthetic access$3(Lcom/kidga/tap2match/Tap2match;)Lcom/kidga/common/ui/Board;
+.method static synthetic access$3(Lcom/kidga/tap2match/Tap2match;)I
+    .registers 2
+
+    .prologue
+    .line 56
+    iget v0, p0, Lcom/kidga/tap2match/Tap2match;->removedCounter:I
+
+    return v0
+.end method
+
+.method static synthetic access$4(Lcom/kidga/tap2match/Tap2match;I)V
+    .registers 2
+
+    .prologue
+    .line 56
+    iput p1, p0, Lcom/kidga/tap2match/Tap2match;->removedCounter:I
+
+    return-void
+.end method
+
+.method static synthetic access$5(Lcom/kidga/tap2match/Tap2match;)Lcom/kidga/common/ui/Board;
     .registers 2
 
     .prologue
@@ -160,18 +182,45 @@
     return-object v0
 .end method
 
-.method private animateCellAdding(Lcom/kidga/common/ui/Cell;)V
+.method static synthetic access$6(Lcom/kidga/tap2match/Tap2match;Lcom/kidga/common/ui/Cell;)V
     .registers 2
+
+    .prologue
+    .line 940
+    invoke-direct {p0, p1}, Lcom/kidga/tap2match/Tap2match;->endMove(Lcom/kidga/common/ui/Cell;)V
+
+    return-void
+.end method
+
+.method private animateCellAdding(Lcom/kidga/common/ui/Cell;)V
+    .registers 5
     .param p1, "c"    # Lcom/kidga/common/ui/Cell;
 
     .prologue
-    .line 1003
-    invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->notifyBoardAdater()V
+    .line 921
+    const/high16 v1, 0x10a0000
 
-    .line 1004
-    invoke-direct {p0, p1}, Lcom/kidga/tap2match/Tap2match;->endMove(Lcom/kidga/common/ui/Cell;)V
+    invoke-static {p0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
-    .line 1005
+    move-result-object v0
+
+    .line 923
+    .local v0, "a":Landroid/view/animation/Animation;
+    new-instance v1, Lcom/kidga/tap2match/Tap2match$5;
+
+    invoke-direct {v1, p0, p1}, Lcom/kidga/tap2match/Tap2match$5;-><init>(Lcom/kidga/tap2match/Tap2match;Lcom/kidga/common/ui/Cell;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    .line 934
+    const-wide/16 v1, 0xc8
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
+
+    .line 937
+    invoke-virtual {p1, v0}, Lcom/kidga/common/ui/Cell;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 938
     return-void
 .end method
 
@@ -189,71 +238,48 @@
     .end annotation
 
     .prologue
-    .line 617
+    .line 587
     .local p1, "solutions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     const/4 v10, 0x0
 
-    .line 618
+    .line 588
     .local v10, "score":I
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/kidga/tap2match/Tap2match;->removedCounter:I
+
+    .line 589
     invoke-static {}, Lcom/kidga/common/sound/SoundManager;->getInstance()Lcom/kidga/common/sound/SoundManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p2}, Lcom/kidga/common/sound/SoundManager;->playSound(I)V
 
-    .line 619
+    .line 590
     invoke-static {}, Lcom/kidga/common/vibro/VibroManager;->getInstance()Lcom/kidga/common/vibro/VibroManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/kidga/common/vibro/VibroManager;->vibrate()V
 
-    .line 622
-    const v0, 0x10a0001
-
-    invoke-static {p0, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
-
-    move-result-object v8
-
-    .line 624
-    .local v8, "a":Landroid/view/animation/Animation;
-    const-wide/16 v0, 0xc8
-
-    invoke-virtual {v8, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
-
-    .line 625
-    new-instance v0, Lcom/kidga/tap2match/Tap2match$4;
-
-    invoke-direct {v0, p0, p1}, Lcom/kidga/tap2match/Tap2match$4;-><init>(Lcom/kidga/tap2match/Tap2match;Ljava/util/ArrayList;)V
-
-    invoke-virtual {v8, v0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
-
-    .line 647
+    .line 592
     const/4 v9, 0x0
 
     .local v9, "i":I
-    :goto_24
+    :goto_13
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-lt v9, v0, :cond_5f
+    if-lt v9, v0, :cond_46
 
-    .line 655
-    invoke-virtual {v8}, Landroid/view/animation/Animation;->start()V
-
-    .line 656
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->invalidate()V
-
-    .line 692
+    .line 624
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v0, v10}, Lcom/kidga/common/Game;->addGameScore(I)V
 
-    .line 693
-    const v0, 0x7f090004
+    .line 625
+    const v0, 0x7f090002
 
     invoke-virtual {p0, v0}, Lcom/kidga/tap2match/Tap2match;->findViewById(I)Landroid/view/View;
 
@@ -287,25 +313,45 @@
 
     invoke-static/range {v0 .. v7}, Lcom/kidga/common/popup/PopupManager;->showPopupAt(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;IIILandroid/graphics/Typeface;I)V
 
-    .line 694
+    .line 626
     invoke-direct {p0}, Lcom/kidga/tap2match/Tap2match;->updateScore()V
 
-    .line 695
+    .line 627
     return-void
 
-    .line 648
-    :cond_5f
+    .line 593
+    :cond_46
     invoke-virtual {p1, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v11
 
     check-cast v11, Lcom/kidga/common/ui/Cell;
 
-    .line 651
+    .line 594
     .local v11, "toDelete":Lcom/kidga/common/ui/Cell;
-    invoke-virtual {v11, v8}, Lcom/kidga/common/ui/Cell;->setAnimation(Landroid/view/animation/Animation;)V
+    const v0, 0x10a0001
 
-    .line 652
+    invoke-static {p0, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+
+    move-result-object v8
+
+    .line 596
+    .local v8, "a":Landroid/view/animation/Animation;
+    const-wide/16 v0, 0xc8
+
+    invoke-virtual {v8, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
+
+    .line 597
+    new-instance v0, Lcom/kidga/tap2match/Tap2match$4;
+
+    invoke-direct {v0, p0, v11, p1}, Lcom/kidga/tap2match/Tap2match$4;-><init>(Lcom/kidga/tap2match/Tap2match;Lcom/kidga/common/ui/Cell;Ljava/util/ArrayList;)V
+
+    invoke-virtual {v8, v0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    .line 620
+    invoke-virtual {v11, v8}, Lcom/kidga/common/ui/Cell;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 621
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v0}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -316,10 +362,10 @@
 
     add-int/2addr v10, v0
 
-    .line 647
+    .line 592
     add-int/lit8 v9, v9, 0x1
 
-    goto :goto_24
+    goto :goto_13
 .end method
 
 .method private endMove(Lcom/kidga/common/ui/Cell;)V
@@ -327,7 +373,7 @@
     .param p1, "c"    # Lcom/kidga/common/ui/Cell;
 
     .prologue
-    .line 1031
+    .line 942
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v1
@@ -336,32 +382,32 @@
 
     if-ne v1, v2, :cond_18
 
-    .line 1032
+    .line 943
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lcom/kidga/common/Game;->setBusy(Z)V
 
-    .line 1033
+    .line 944
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v1}, Lcom/kidga/tap2match/Tap2match;->getBombSolutions(Lcom/kidga/common/ui/Cell;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 1034
+    .line 945
     .local v0, "solutions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     const/4 v1, 0x2
 
     invoke-direct {p0, v0, v1}, Lcom/kidga/tap2match/Tap2match;->destroySolutions(Ljava/util/ArrayList;I)V
 
-    .line 1036
+    .line 947
     .end local v0    # "solutions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     :goto_17
     return-void
 
-    .line 1035
+    .line 946
     :cond_18
     const/4 v1, 0x0
 
@@ -376,12 +422,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 608
+    .line 578
     invoke-direct {p0}, Lcom/kidga/tap2match/Tap2match;->getSolutions()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 609
+    .line 579
     .local v0, "solutions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     if-eqz v0, :cond_d
 
@@ -391,15 +437,15 @@
 
     if-nez v2, :cond_f
 
-    .line 610
+    .line 580
     :cond_d
     const/4 v1, 0x0
 
-    .line 613
+    .line 583
     :goto_e
     return v1
 
-    .line 612
+    .line 582
     :cond_f
     invoke-direct {p0, v0, v1}, Lcom/kidga/tap2match/Tap2match;->destroySolutions(Ljava/util/ArrayList;I)V
 
@@ -425,17 +471,17 @@
     .end annotation
 
     .prologue
-    .line 1059
+    .line 970
     .local p2, "sol":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     if-nez p2, :cond_7
 
-    .line 1060
+    .line 971
     new-instance p2, Ljava/util/ArrayList;
 
     .end local p2    # "sol":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1062
+    .line 973
     .restart local p2    # "sol":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     :cond_7
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -446,7 +492,7 @@
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1063
+    .line 974
     :cond_10
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
 
@@ -462,7 +508,7 @@
 
     if-ge v1, v2, :cond_9c
 
-    .line 1064
+    .line 975
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -479,7 +525,7 @@
 
     move-result-object v0
 
-    .line 1065
+    .line 976
     .local v0, "c":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -499,7 +545,7 @@
 
     move-result-object p2
 
-    .line 1067
+    .line 978
     :cond_40
     :goto_40
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getCol()I
@@ -516,7 +562,7 @@
 
     if-ge v1, v2, :cond_72
 
-    .line 1068
+    .line 979
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -535,7 +581,7 @@
 
     move-result-object v0
 
-    .line 1069
+    .line 980
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v1
@@ -554,7 +600,7 @@
 
     move-result-object p2
 
-    .line 1072
+    .line 983
     :cond_72
     :goto_72
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getCol()I
@@ -563,7 +609,7 @@
 
     if-lez v1, :cond_9c
 
-    .line 1073
+    .line 984
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -582,7 +628,7 @@
 
     move-result-object v0
 
-    .line 1074
+    .line 985
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v1
@@ -601,7 +647,7 @@
 
     move-result-object p2
 
-    .line 1078
+    .line 989
     .end local v0    # "c":Lcom/kidga/common/ui/Cell;
     :cond_9c
     :goto_9c
@@ -611,7 +657,7 @@
 
     if-lez v1, :cond_120
 
-    .line 1079
+    .line 990
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -628,7 +674,7 @@
 
     move-result-object v0
 
-    .line 1080
+    .line 991
     .restart local v0    # "c":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -648,7 +694,7 @@
 
     move-result-object p2
 
-    .line 1082
+    .line 993
     :cond_c4
     :goto_c4
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getCol()I
@@ -665,7 +711,7 @@
 
     if-ge v1, v2, :cond_f6
 
-    .line 1083
+    .line 994
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -684,7 +730,7 @@
 
     move-result-object v0
 
-    .line 1084
+    .line 995
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v1
@@ -703,7 +749,7 @@
 
     move-result-object p2
 
-    .line 1087
+    .line 998
     :cond_f6
     :goto_f6
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getCol()I
@@ -712,7 +758,7 @@
 
     if-lez v1, :cond_120
 
-    .line 1088
+    .line 999
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -731,7 +777,7 @@
 
     move-result-object v0
 
-    .line 1089
+    .line 1000
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v1
@@ -750,7 +796,7 @@
 
     move-result-object p2
 
-    .line 1093
+    .line 1004
     .end local v0    # "c":Lcom/kidga/common/ui/Cell;
     :cond_120
     :goto_120
@@ -768,7 +814,7 @@
 
     if-ge v1, v2, :cond_150
 
-    .line 1094
+    .line 1005
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -785,7 +831,7 @@
 
     move-result-object v0
 
-    .line 1095
+    .line 1006
     .restart local v0    # "c":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -805,7 +851,7 @@
 
     move-result-object p2
 
-    .line 1098
+    .line 1009
     .end local v0    # "c":Lcom/kidga/common/ui/Cell;
     :cond_150
     :goto_150
@@ -815,7 +861,7 @@
 
     if-lez v1, :cond_178
 
-    .line 1099
+    .line 1010
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -832,7 +878,7 @@
 
     move-result-object v0
 
-    .line 1100
+    .line 1011
     .restart local v0    # "c":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -852,13 +898,13 @@
 
     move-result-object p2
 
-    .line 1103
+    .line 1014
     .end local v0    # "c":Lcom/kidga/common/ui/Cell;
     :cond_178
     :goto_178
     return-object p2
 
-    .line 1066
+    .line 977
     .restart local v0    # "c":Lcom/kidga/common/ui/Cell;
     :cond_179
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -871,7 +917,7 @@
 
     goto/16 :goto_40
 
-    .line 1070
+    .line 981
     :cond_184
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -883,7 +929,7 @@
 
     goto/16 :goto_72
 
-    .line 1075
+    .line 986
     :cond_18f
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -895,7 +941,7 @@
 
     goto/16 :goto_9c
 
-    .line 1081
+    .line 992
     :cond_19a
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -907,7 +953,7 @@
 
     goto/16 :goto_c4
 
-    .line 1085
+    .line 996
     :cond_1a5
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -919,7 +965,7 @@
 
     goto/16 :goto_f6
 
-    .line 1090
+    .line 1001
     :cond_1b0
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -931,7 +977,7 @@
 
     goto/16 :goto_120
 
-    .line 1096
+    .line 1007
     :cond_1bb
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -943,7 +989,7 @@
 
     goto :goto_150
 
-    .line 1101
+    .line 1012
     :cond_1c5
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -971,7 +1017,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 698
+    .line 630
     invoke-direct {p0, v0, v0, v0}, Lcom/kidga/tap2match/Tap2match;->getSolutionsRange(IIZ)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -995,10 +1041,10 @@
     .end annotation
 
     .prologue
-    .line 702
+    .line 634
     const/4 v14, 0x0
 
-    .line 703
+    .line 635
     .local v14, "startRow":I
     move-object/from16 v0, p0
 
@@ -1008,11 +1054,11 @@
 
     move-result v4
 
-    .line 704
+    .line 636
     .local v4, "endRow":I
     const/4 v13, 0x0
 
-    .line 705
+    .line 637
     .local v13, "startCol":I
     move-object/from16 v0, p0
 
@@ -1022,29 +1068,29 @@
 
     move-result v3
 
-    .line 706
+    .line 638
     .local v3, "endCol":I
     if-eqz p3, :cond_1c
 
-    .line 707
+    .line 639
     move/from16 v14, p1
 
-    .line 708
+    .line 640
     move/from16 v13, p2
 
-    .line 709
+    .line 641
     add-int/lit8 v4, p1, 0x1
 
-    .line 710
+    .line 642
     add-int/lit8 v3, p2, 0x1
 
-    .line 713
+    .line 645
     :cond_1c
     new-instance v12, Ljava/util/ArrayList;
 
     invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
 
-    .line 715
+    .line 647
     .local v12, "res":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     move v11, v14
 
@@ -1052,42 +1098,42 @@
     :goto_22
     if-lt v11, v4, :cond_32
 
-    .line 768
+    .line 700
     move v2, v13
 
     .local v2, "c":I
     :goto_25
     if-lt v2, v3, :cond_189
 
-    .line 821
+    .line 753
     new-instance v7, Ljava/util/HashSet;
 
     invoke-direct {v7, v12}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 823
+    .line 755
     .local v7, "hashSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Lcom/kidga/common/ui/Cell;>;"
     new-instance v12, Ljava/util/ArrayList;
 
     .end local v12    # "res":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-direct {v12, v7}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 825
+    .line 757
     .restart local v12    # "res":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     return-object v12
 
-    .line 716
+    .line 648
     .end local v2    # "c":I
     .end local v7    # "hashSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Lcom/kidga/common/ui/Cell;>;"
     :cond_32
     sget-object v8, Lcom/kidga/common/ui/Type;->ROCK:Lcom/kidga/common/ui/Type;
 
-    .line 717
+    .line 649
     .local v8, "i":Lcom/kidga/common/ui/Type;
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 718
+    .line 650
     .local v6, "group":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     const/4 v2, 0x0
 
@@ -1103,12 +1149,12 @@
 
     if-lt v2, v15, :cond_47
 
-    .line 715
+    .line 647
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_22
 
-    .line 719
+    .line 651
     :cond_47
     move-object/from16 v0, p0
 
@@ -1120,10 +1166,10 @@
 
     if-eqz v15, :cond_176
 
-    .line 720
+    .line 652
     const/4 v1, 0x0
 
-    .line 721
+    .line 653
     .local v1, "added":Z
     move-object/from16 v0, p0
 
@@ -1133,7 +1179,7 @@
 
     move-result-object v5
 
-    .line 722
+    .line 654
     .local v5, "g":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v5}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -1141,7 +1187,7 @@
 
     if-eq v15, v8, :cond_75
 
-    .line 723
+    .line 655
     instance-of v15, v5, Lcom/kidga/common/ui/CellElem;
 
     if-eqz v15, :cond_71
@@ -1160,13 +1206,13 @@
 
     if-eq v15, v0, :cond_75
 
-    .line 724
+    .line 656
     :cond_71
     sget-object v15, Lcom/kidga/common/ui/Type;->ROCK:Lcom/kidga/common/ui/Type;
 
     if-ne v8, v15, :cond_81
 
-    .line 726
+    .line 658
     :cond_75
     sget-object v15, Lcom/kidga/common/ui/Type;->ROCK:Lcom/kidga/common/ui/Type;
 
@@ -1176,14 +1222,14 @@
 
     move-result-object v8
 
-    .line 727
+    .line 659
     :cond_7d
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 728
+    .line 660
     const/4 v1, 0x1
 
-    .line 731
+    .line 663
     :cond_81
     invoke-virtual {v5}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -1203,7 +1249,7 @@
 
     check-cast v15, Lcom/kidga/common/ui/CellElem;
 
-    .line 732
+    .line 664
     invoke-virtual {v15}, Lcom/kidga/common/ui/CellElem;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v15
@@ -1227,15 +1273,15 @@
 
     if-ne v2, v15, :cond_140
 
-    .line 733
+    .line 665
     :cond_a8
     const/4 v9, 0x0
 
-    .line 734
+    .line 666
     .local v9, "prevBonus":Lcom/kidga/common/ui/Cell;
     const/4 v10, 0x0
 
-    .line 735
+    .line 667
     .local v10, "prevBonus2":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -1247,10 +1293,10 @@
 
     if-lt v15, v0, :cond_14a
 
-    .line 736
+    .line 668
     invoke-virtual {v12, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 737
+    .line 669
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v15
@@ -1265,7 +1311,7 @@
 
     if-eqz v15, :cond_117
 
-    .line 738
+    .line 670
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v15
@@ -1288,7 +1334,7 @@
 
     if-ne v15, v0, :cond_117
 
-    .line 739
+    .line 671
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v15
@@ -1302,7 +1348,7 @@
     .end local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
     check-cast v9, Lcom/kidga/common/ui/Cell;
 
-    .line 740
+    .line 672
     .restart local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -1318,7 +1364,7 @@
 
     if-eqz v15, :cond_117
 
-    .line 741
+    .line 673
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v15
@@ -1341,7 +1387,7 @@
 
     if-ne v15, v0, :cond_117
 
-    .line 742
+    .line 674
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v15
@@ -1355,28 +1401,28 @@
     .end local v10    # "prevBonus2":Lcom/kidga/common/ui/Cell;
     check-cast v10, Lcom/kidga/common/ui/Cell;
 
-    .line 749
+    .line 681
     .restart local v10    # "prevBonus2":Lcom/kidga/common/ui/Cell;
     :cond_117
     :goto_117
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 750
+    .line 682
     if-eqz v9, :cond_11f
 
     invoke-virtual {v6, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 751
+    .line 683
     :cond_11f
     if-eqz v10, :cond_124
 
     invoke-virtual {v6, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 752
+    .line 684
     :cond_124
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 753
+    .line 685
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
@@ -1399,10 +1445,10 @@
 
     if-ne v15, v0, :cond_140
 
-    .line 754
+    .line 686
     invoke-virtual {v12, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 757
+    .line 689
     .end local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
     .end local v10    # "prevBonus2":Lcom/kidga/common/ui/Cell;
     :cond_140
@@ -1412,7 +1458,7 @@
 
     move-result-object v8
 
-    .line 718
+    .line 650
     .end local v1    # "added":Z
     .end local v5    # "g":Lcom/kidga/common/ui/Cell;
     :cond_146
@@ -1421,7 +1467,7 @@
 
     goto/16 :goto_3a
 
-    .line 745
+    .line 677
     .restart local v1    # "added":Z
     .restart local v5    # "g":Lcom/kidga/common/ui/Cell;
     .restart local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
@@ -1437,7 +1483,7 @@
 
     if-ne v15, v0, :cond_117
 
-    .line 746
+    .line 678
     const/4 v15, 0x1
 
     invoke-virtual {v6, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1466,7 +1512,7 @@
 
     if-ne v15, v0, :cond_117
 
-    .line 747
+    .line 679
     const/4 v15, 0x1
 
     invoke-virtual {v6, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1479,7 +1525,7 @@
     .restart local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
     goto :goto_117
 
-    .line 759
+    .line 691
     .end local v1    # "added":Z
     .end local v5    # "g":Lcom/kidga/common/ui/Cell;
     .end local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
@@ -1495,31 +1541,31 @@
 
     if-lt v15, v0, :cond_183
 
-    .line 760
+    .line 692
     invoke-virtual {v12, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 762
+    .line 694
     :cond_183
     sget-object v8, Lcom/kidga/common/ui/Type;->ROCK:Lcom/kidga/common/ui/Type;
 
-    .line 763
+    .line 695
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
     goto :goto_146
 
-    .line 769
+    .line 701
     .end local v6    # "group":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     .end local v8    # "i":Lcom/kidga/common/ui/Type;
     :cond_189
     sget-object v8, Lcom/kidga/common/ui/Type;->ROCK:Lcom/kidga/common/ui/Type;
 
-    .line 770
+    .line 702
     .restart local v8    # "i":Lcom/kidga/common/ui/Type;
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 771
+    .line 703
     .restart local v6    # "group":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     const/4 v11, 0x0
 
@@ -1534,12 +1580,12 @@
 
     if-lt v11, v15, :cond_19f
 
-    .line 768
+    .line 700
     add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_25
 
-    .line 772
+    .line 704
     :cond_19f
     move-object/from16 v0, p0
 
@@ -1551,7 +1597,7 @@
 
     if-eqz v15, :cond_2ce
 
-    .line 773
+    .line 705
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
@@ -1560,11 +1606,11 @@
 
     move-result-object v5
 
-    .line 774
+    .line 706
     .restart local v5    # "g":Lcom/kidga/common/ui/Cell;
     const/4 v1, 0x0
 
-    .line 775
+    .line 707
     .restart local v1    # "added":Z
     invoke-virtual {v5}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -1572,7 +1618,7 @@
 
     if-eq v15, v8, :cond_1cd
 
-    .line 776
+    .line 708
     instance-of v15, v5, Lcom/kidga/common/ui/CellElem;
 
     if-eqz v15, :cond_1c9
@@ -1591,13 +1637,13 @@
 
     if-eq v15, v0, :cond_1cd
 
-    .line 777
+    .line 709
     :cond_1c9
     sget-object v15, Lcom/kidga/common/ui/Type;->ROCK:Lcom/kidga/common/ui/Type;
 
     if-ne v8, v15, :cond_1d9
 
-    .line 779
+    .line 711
     :cond_1cd
     sget-object v15, Lcom/kidga/common/ui/Type;->ROCK:Lcom/kidga/common/ui/Type;
 
@@ -1607,14 +1653,14 @@
 
     move-result-object v8
 
-    .line 780
+    .line 712
     :cond_1d5
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 781
+    .line 713
     const/4 v1, 0x1
 
-    .line 783
+    .line 715
     :cond_1d9
     invoke-virtual {v5}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -1626,7 +1672,7 @@
 
     if-eq v8, v15, :cond_1f4
 
-    .line 784
+    .line 716
     instance-of v15, v5, Lcom/kidga/common/ui/CellElem;
 
     if-eqz v15, :cond_200
@@ -1645,7 +1691,7 @@
 
     if-ne v15, v0, :cond_200
 
-    .line 785
+    .line 717
     :cond_1f4
     move-object/from16 v0, p0
 
@@ -1659,15 +1705,15 @@
 
     if-ne v11, v15, :cond_298
 
-    .line 786
+    .line 718
     :cond_200
     const/4 v9, 0x0
 
-    .line 787
+    .line 719
     .restart local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
     const/4 v10, 0x0
 
-    .line 788
+    .line 720
     .restart local v10    # "prevBonus2":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -1679,10 +1725,10 @@
 
     if-lt v15, v0, :cond_2a2
 
-    .line 789
+    .line 721
     invoke-virtual {v12, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 790
+    .line 722
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v15
@@ -1697,7 +1743,7 @@
 
     if-eqz v15, :cond_26f
 
-    .line 791
+    .line 723
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v15
@@ -1720,7 +1766,7 @@
 
     if-ne v15, v0, :cond_26f
 
-    .line 792
+    .line 724
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v15
@@ -1734,7 +1780,7 @@
     .end local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
     check-cast v9, Lcom/kidga/common/ui/Cell;
 
-    .line 793
+    .line 725
     .restart local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -1750,7 +1796,7 @@
 
     if-eqz v15, :cond_26f
 
-    .line 794
+    .line 726
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v15
@@ -1773,7 +1819,7 @@
 
     if-ne v15, v0, :cond_26f
 
-    .line 795
+    .line 727
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v15
@@ -1787,28 +1833,28 @@
     .end local v10    # "prevBonus2":Lcom/kidga/common/ui/Cell;
     check-cast v10, Lcom/kidga/common/ui/Cell;
 
-    .line 802
+    .line 734
     .restart local v10    # "prevBonus2":Lcom/kidga/common/ui/Cell;
     :cond_26f
     :goto_26f
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 803
+    .line 735
     if-eqz v9, :cond_277
 
     invoke-virtual {v6, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 804
+    .line 736
     :cond_277
     if-eqz v10, :cond_27c
 
     invoke-virtual {v6, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 805
+    .line 737
     :cond_27c
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 806
+    .line 738
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
@@ -1831,10 +1877,10 @@
 
     if-ne v15, v0, :cond_298
 
-    .line 807
+    .line 739
     invoke-virtual {v12, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 810
+    .line 742
     .end local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
     .end local v10    # "prevBonus2":Lcom/kidga/common/ui/Cell;
     :cond_298
@@ -1844,7 +1890,7 @@
 
     move-result-object v8
 
-    .line 771
+    .line 703
     .end local v1    # "added":Z
     .end local v5    # "g":Lcom/kidga/common/ui/Cell;
     :cond_29e
@@ -1853,7 +1899,7 @@
 
     goto/16 :goto_191
 
-    .line 798
+    .line 730
     .restart local v1    # "added":Z
     .restart local v5    # "g":Lcom/kidga/common/ui/Cell;
     .restart local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
@@ -1869,7 +1915,7 @@
 
     if-ne v15, v0, :cond_26f
 
-    .line 799
+    .line 731
     const/4 v15, 0x1
 
     invoke-virtual {v6, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1898,7 +1944,7 @@
 
     if-ne v15, v0, :cond_26f
 
-    .line 800
+    .line 732
     const/4 v15, 0x1
 
     invoke-virtual {v6, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1911,7 +1957,7 @@
     .restart local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
     goto :goto_26f
 
-    .line 812
+    .line 744
     .end local v1    # "added":Z
     .end local v5    # "g":Lcom/kidga/common/ui/Cell;
     .end local v9    # "prevBonus":Lcom/kidga/common/ui/Cell;
@@ -1927,17 +1973,17 @@
 
     if-lt v15, v0, :cond_2db
 
-    .line 813
+    .line 745
     invoke-virtual {v12, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 815
+    .line 747
     :cond_2db
     new-instance v6, Ljava/util/ArrayList;
 
     .end local v6    # "group":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 816
+    .line 748
     .restart local v6    # "group":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     sget-object v8, Lcom/kidga/common/ui/Type;->ROCK:Lcom/kidga/common/ui/Type;
 
@@ -1948,33 +1994,33 @@
     .registers 3
 
     .prologue
-    .line 142
+    .line 140
     new-instance v0, Lcom/kidga/tap2match/ResourceHandler;
 
     invoke-direct {v0, p0}, Lcom/kidga/tap2match/ResourceHandler;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/kidga/tap2match/Tap2match;->resHandler:Lcom/kidga/tap2match/ResourceHandler;
 
-    .line 143
+    .line 141
     const-string v0, "tap2match"
 
     invoke-static {p0, v0}, Lcom/kidga/common/activity/DataProvider;->initInstance(Lcom/kidga/common/ICommonHandler;Ljava/lang/String;)V
 
-    .line 144
+    .line 142
     invoke-static {}, Lcom/kidga/common/sound/SoundManager;->getInstance()Lcom/kidga/common/sound/SoundManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/kidga/common/sound/SoundManager;->init(Lcom/kidga/common/IGameHandler;)V
 
-    .line 145
+    .line 143
     invoke-static {}, Lcom/kidga/common/vibro/VibroManager;->getInstance()Lcom/kidga/common/vibro/VibroManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/kidga/common/vibro/VibroManager;->init(Lcom/kidga/common/ICommonHandler;)V
 
-    .line 146
+    .line 144
     new-instance v0, Lcom/kidga/common/saves/SavesHandler;
 
     const-string v1, "tap2match"
@@ -1983,7 +2029,7 @@
 
     iput-object v0, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
-    .line 147
+    .line 145
     new-instance v0, Lcom/kidga/common/record/RecordHandler;
 
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
@@ -1992,7 +2038,7 @@
 
     iput-object v0, p0, Lcom/kidga/tap2match/Tap2match;->recordHandler:Lcom/kidga/common/record/RecordHandler;
 
-    .line 148
+    .line 146
     new-instance v0, Lcom/kidga/common/ad/AdHandler;
 
     const-string v1, "a14e03c0333e97b"
@@ -2001,114 +2047,60 @@
 
     iput-object v0, p0, Lcom/kidga/tap2match/Tap2match;->adHandler:Lcom/kidga/common/ad/AdHandler;
 
-    .line 149
+    .line 147
     new-instance v0, Lcom/kidga/common/score/ScorePlaceFlipper;
 
     invoke-direct {v0}, Lcom/kidga/common/score/ScorePlaceFlipper;-><init>()V
 
     iput-object v0, p0, Lcom/kidga/tap2match/Tap2match;->scoreFlipper:Lcom/kidga/common/score/ScorePlaceFlipper;
 
-    .line 150
+    .line 148
     return-void
 .end method
 
 .method private initGameField(I)V
-    .registers 7
+    .registers 8
     .param p1, "dimension"    # I
 
     .prologue
-    const/16 v2, 0x11
+    const/16 v5, 0x11
 
     const/4 v4, 0x0
 
     const/4 v3, 0x2
 
-    .line 199
+    .line 182
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 201
+    .line 184
     new-instance v0, Landroid/widget/GridView;
 
     invoke-direct {v0, p0}, Landroid/widget/GridView;-><init>(Landroid/content/Context;)V
 
-    .line 207
+    .line 186
     .local v0, "a":Landroid/widget/GridView;
-    new-instance v1, Landroid/widget/LinearLayout;
-
-    invoke-direct {v1, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    iput-object v1, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
-
-    .line 208
-    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setHorizontalGravity(I)V
-
-    .line 209
-    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v3, v3, v3, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
-
-    .line 210
-    invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->updateHeader()V
-
-    .line 212
-    new-instance v1, Landroid/widget/LinearLayout;
-
-    invoke-direct {v1, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    iput-object v1, p0, Lcom/kidga/tap2match/Tap2match;->nextLayout:Landroid/widget/LinearLayout;
-
-    .line 213
-    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->nextLayout:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setHorizontalGravity(I)V
-
-    .line 214
-    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->nextLayout:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v3, v3, v3, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
-
-    .line 215
-    invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->updateNexts()V
-
-    .line 220
-    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    .line 222
-    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/kidga/tap2match/Tap2match;->setupGrid(Landroid/widget/GridView;Landroid/widget/LinearLayout;Lcom/kidga/common/ui/Board;)V
-
-    .line 224
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v1, v4}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
-    .line 225
+    .line 187
     invoke-virtual {v0, p1}, Landroid/widget/GridView;->setNumColumns(I)V
 
-    .line 226
+    .line 188
     invoke-virtual {v0, v3}, Landroid/widget/GridView;->setStretchMode(I)V
 
-    .line 227
+    .line 189
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     iget-object v2, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {v1, v2}, Lcom/kidga/common/Game;->fillTotalEmpty(Lcom/kidga/common/ui/Board;)V
 
-    .line 232
+    .line 194
     new-instance v1, Lcom/kidga/tap2match/Tap2match$BoardAdapter;
 
     iget-object v2, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
@@ -2117,37 +2109,99 @@
 
     iput-object v1, p0, Lcom/kidga/tap2match/Tap2match;->adapter:Lcom/kidga/tap2match/Tap2match$BoardAdapter;
 
-    .line 233
+    .line 195
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->adapter:Lcom/kidga/tap2match/Tap2match$BoardAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 234
+    .line 196
+    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v1
+
+    if-lez v1, :cond_3e
+
+    .line 197
+    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v4}, Landroid/widget/LinearLayout;->removeViewAt(I)V
+
+    .line 199
+    :cond_3e
     invoke-direct {p0}, Lcom/kidga/tap2match/Tap2match;->selectPlace()Z
 
-    .line 236
+    .line 201
+    new-instance v1, Landroid/widget/LinearLayout;
+
+    invoke-direct {v1, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    iput-object v1, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
+
+    .line 202
+    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v5}, Landroid/widget/LinearLayout;->setHorizontalGravity(I)V
+
+    .line 203
+    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v3, v3, v3, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    .line 204
+    invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->updateHeader()V
+
+    .line 206
+    new-instance v1, Landroid/widget/LinearLayout;
+
+    invoke-direct {v1, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    iput-object v1, p0, Lcom/kidga/tap2match/Tap2match;->nextLayout:Landroid/widget/LinearLayout;
+
+    .line 207
+    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->nextLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v5}, Landroid/widget/LinearLayout;->setHorizontalGravity(I)V
+
+    .line 208
+    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->nextLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v3, v3, v3, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    .line 209
+    invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->updateNexts()V
+
+    .line 214
+    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
+
+    iget-object v2, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 215
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 237
+    .line 216
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
 
     iget-object v2, p0, Lcom/kidga/tap2match/Tap2match;->nextLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 242
+    .line 221
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->invalidate()V
 
-    .line 243
+    .line 222
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v1, v4}, Lcom/kidga/common/Game;->setBusy(Z)V
 
-    .line 247
+    .line 226
     return-void
 .end method
 
@@ -2155,10 +2209,10 @@
     .registers 9
 
     .prologue
-    .line 580
+    .line 550
     const/4 v2, 0x0
 
-    .line 581
+    .line 551
     .local v2, "numFree":I
     const/4 v0, 0x0
 
@@ -2172,7 +2226,7 @@
 
     if-lt v0, v4, :cond_1d
 
-    .line 588
+    .line 558
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v4
@@ -2183,11 +2237,11 @@
 
     double-to-int v3, v4
 
-    .line 589
+    .line 559
     .local v3, "pos":I
     const/4 v2, 0x0
 
-    .line 590
+    .line 560
     const/4 v0, 0x0
 
     :goto_13
@@ -2199,13 +2253,13 @@
 
     if-lt v0, v4, :cond_36
 
-    .line 604
+    .line 574
     const/4 v4, 0x0
 
     :goto_1c
     return v4
 
-    .line 582
+    .line 552
     .end local v3    # "pos":I
     :cond_1d
     const/4 v1, 0x0
@@ -2220,12 +2274,12 @@
 
     if-lt v1, v4, :cond_29
 
-    .line 581
+    .line 551
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 583
+    .line 553
     :cond_29
     iget-object v4, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
@@ -2235,16 +2289,16 @@
 
     if-eqz v4, :cond_33
 
-    .line 584
+    .line 554
     add-int/lit8 v2, v2, 0x1
 
-    .line 582
+    .line 552
     :cond_33
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1e
 
-    .line 591
+    .line 561
     .end local v1    # "j":I
     .restart local v3    # "pos":I
     :cond_36
@@ -2260,12 +2314,12 @@
 
     if-lt v1, v4, :cond_42
 
-    .line 590
+    .line 560
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_13
 
-    .line 592
+    .line 562
     :cond_42
     iget-object v4, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
@@ -2275,18 +2329,18 @@
 
     if-eqz v4, :cond_6c
 
-    .line 593
+    .line 563
     add-int/lit8 v2, v2, 0x1
 
-    .line 594
+    .line 564
     add-int/lit8 v4, v2, -0x1
 
     if-ne v3, v4, :cond_6c
 
-    .line 595
+    .line 565
     add-int/lit8 v3, v3, 0x1
 
-    .line 596
+    .line 566
     new-instance v4, Lcom/kidga/common/ui/CellShadow;
 
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
@@ -2295,7 +2349,7 @@
 
     iput-object v4, p0, Lcom/kidga/tap2match/Tap2match;->toTap:Lcom/kidga/common/ui/Cell;
 
-    .line 597
+    .line 567
     iget-object v4, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     new-instance v5, Lcom/kidga/common/ui/CellShadow;
@@ -2306,15 +2360,15 @@
 
     invoke-virtual {v4, v0, v1, v5}, Lcom/kidga/common/ui/Board;->insert(IILcom/kidga/common/ui/Cell;)V
 
-    .line 598
+    .line 568
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->notifyBoardAdater()V
 
-    .line 599
+    .line 569
     const/4 v4, 0x1
 
     goto :goto_1c
 
-    .line 591
+    .line 561
     :cond_6c
     add-int/lit8 v1, v1, 0x1
 
@@ -2334,46 +2388,46 @@
 
     const/4 v4, 0x3
 
-    .line 284
+    .line 259
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 286
+    .line 261
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
     if-ne p1, v4, :cond_3e
 
-    const v3, 0x7f070028
+    const v3, 0x7f070026
 
     :goto_e
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 288
+    .line 263
     if-nez p1, :cond_48
 
     sget-object v2, Lcom/kidga/common/ui/Type;->ROCK:Lcom/kidga/common/ui/Type;
 
-    .line 291
+    .line 266
     .local v2, "type":Lcom/kidga/common/ui/Type;
     :goto_15
     if-nez p1, :cond_5d
 
-    const v3, 0x7f07001c
+    const v3, 0x7f07001b
 
-    .line 290
+    .line 265
     :goto_1a
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v3
 
-    .line 292
+    .line 267
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     move-result-object v3
 
-    .line 293
+    .line 268
     invoke-virtual {p0, v2}, Lcom/kidga/tap2match/Tap2match;->getResource(Lcom/kidga/common/ui/Type;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
@@ -2382,8 +2436,8 @@
 
     move-result-object v3
 
-    .line 294
-    const v4, 0x7f070025
+    .line 269
+    const v4, 0x7f070024
 
     new-instance v5, Lcom/kidga/tap2match/Tap2match$2;
 
@@ -2391,34 +2445,34 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 298
+    .line 272
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
-    .line 299
+    .line 273
     .local v1, "dialog":Landroid/app/Dialog;
     invoke-virtual {v1}, Landroid/app/Dialog;->show()V
 
-    .line 300
+    .line 274
     return-void
 
-    .line 286
+    .line 261
     .end local v1    # "dialog":Landroid/app/Dialog;
     .end local v2    # "type":Lcom/kidga/common/ui/Type;
     :cond_3e
     if-ne p1, v7, :cond_44
 
-    const v3, 0x7f070049
+    const v3, 0x7f070046
 
     goto :goto_e
 
     :cond_44
-    const v3, 0x7f07002f
+    const v3, 0x7f07002d
 
     goto :goto_e
 
-    .line 288
+    .line 263
     :cond_48
     if-ne p1, v5, :cond_4d
 
@@ -2445,45 +2499,45 @@
 
     goto :goto_15
 
-    .line 289
+    .line 264
     :cond_5a
     sget-object v2, Lcom/kidga/common/ui/Type;->BONUS_4:Lcom/kidga/common/ui/Type;
 
     goto :goto_15
 
-    .line 291
+    .line 266
     .restart local v2    # "type":Lcom/kidga/common/ui/Type;
     :cond_5d
     if-ne p1, v5, :cond_63
 
-    const v3, 0x7f07001d
+    const v3, 0x7f07001c
 
     goto :goto_1a
 
     :cond_63
     if-ne p1, v6, :cond_69
 
-    const v3, 0x7f07001e
+    const v3, 0x7f07001d
 
     goto :goto_1a
 
     :cond_69
     if-ne p1, v4, :cond_6f
 
-    .line 292
-    const v3, 0x7f07001f
+    .line 267
+    const v3, 0x7f07001e
 
     goto :goto_1a
 
     :cond_6f
     if-ne p1, v7, :cond_75
 
-    const v3, 0x7f070020
+    const v3, 0x7f07001f
 
     goto :goto_1a
 
     :cond_75
-    const v3, 0x7f070053
+    const v3, 0x7f070047
 
     goto :goto_1a
 .end method
@@ -2494,17 +2548,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 833
+    .line 765
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1, v4}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 834
+    .line 766
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f07002c
+    const v2, 0x7f07002a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2532,13 +2586,13 @@
 
     move-result-object v0
 
-    .line 835
+    .line 767
     .local v0, "levelStr":Ljava/lang/String;
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->levelView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 836
+    .line 768
     return-void
 .end method
 
@@ -2546,7 +2600,7 @@
     .registers 3
 
     .prologue
-    .line 829
+    .line 761
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->scoreFlipper:Lcom/kidga/common/score/ScorePlaceFlipper;
 
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
@@ -2557,7 +2611,7 @@
 
     invoke-virtual {v0, v1}, Lcom/kidga/common/score/ScorePlaceFlipper;->updateScore(I)V
 
-    .line 830
+    .line 762
     return-void
 .end method
 
@@ -2568,7 +2622,7 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 952
+    .line 878
     return-void
 .end method
 
@@ -2577,7 +2631,7 @@
     .param p1, "addNew"    # Z
 
     .prologue
-    .line 563
+    .line 533
     invoke-direct {p0}, Lcom/kidga/tap2match/Tap2match;->findSolutions()Z
 
     move-result v0
@@ -2588,7 +2642,7 @@
 
     move-result v0
 
-    .line 564
+    .line 534
     :goto_a
     return v0
 
@@ -2608,17 +2662,17 @@
 
     const/4 v3, -0x1
 
-    .line 858
+    .line 790
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
 
-    .line 859
+    .line 791
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v0}, Lcom/kidga/common/Game;->clearCurLevelGems()V
 
-    .line 860
+    .line 792
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v0}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -2627,14 +2681,14 @@
 
     if-ne v0, v5, :cond_35
 
-    .line 861
+    .line 793
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TableRow;->removeViewAt(I)V
 
-    .line 862
+    .line 794
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->genRandomElem()Lcom/kidga/common/ui/Cell;
@@ -2643,7 +2697,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 864
+    .line 796
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v0}, Lcom/kidga/common/saves/SavesHandler;->isBonusOpen2()Z
@@ -2652,17 +2706,17 @@
 
     if-nez v0, :cond_35
 
-    .line 865
+    .line 797
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v0, v4}, Lcom/kidga/common/saves/SavesHandler;->setBonusOpen2(Z)V
 
-    .line 866
+    .line 798
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Lcom/kidga/tap2match/Tap2match;->showInfoDialog(I)V
 
-    .line 869
+    .line 801
     :cond_35
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
@@ -2674,7 +2728,7 @@
 
     if-ne v0, v1, :cond_64
 
-    .line 870
+    .line 802
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     new-instance v1, Lcom/kidga/common/ui/CellEmpty;
@@ -2685,7 +2739,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 871
+    .line 803
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->genRandomElem()Lcom/kidga/common/ui/Cell;
@@ -2694,7 +2748,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 873
+    .line 805
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v0}, Lcom/kidga/common/saves/SavesHandler;->isBonusOpen5()Z
@@ -2703,24 +2757,24 @@
 
     if-nez v0, :cond_64
 
-    .line 874
+    .line 806
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v0, v4}, Lcom/kidga/common/saves/SavesHandler;->setBonusOpen5(Z)V
 
-    .line 875
+    .line 807
     invoke-direct {p0, v5}, Lcom/kidga/tap2match/Tap2match;->showInfoDialog(I)V
 
-    .line 879
+    .line 811
     :cond_64
     invoke-direct {p0}, Lcom/kidga/tap2match/Tap2match;->updateLevel()V
 
-    .line 880
+    .line 812
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->adHandler:Lcom/kidga/common/ad/AdHandler;
 
     invoke-virtual {v0}, Lcom/kidga/common/ad/AdHandler;->reloadAd()V
 
-    .line 881
+    .line 813
     return-void
 .end method
 
@@ -2730,17 +2784,17 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 570
+    .line 540
     invoke-direct {p0}, Lcom/kidga/tap2match/Tap2match;->selectPlace()Z
 
     move-result v0
 
     if-nez v0, :cond_38
 
-    .line 572
+    .line 542
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->recordHandler:Lcom/kidga/common/record/RecordHandler;
 
-    const v2, 0x7f07000f
+    const v2, 0x7f07000e
 
     iget v3, p0, Lcom/kidga/tap2match/Tap2match;->gameMode:I
 
@@ -2781,17 +2835,17 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Lcom/kidga/common/record/RecordHandler;->finishGame(IILcom/kidga/common/Game;Ljava/lang/String;)V
 
-    .line 576
+    .line 546
     :goto_34
     return v6
 
-    .line 572
+    .line 542
     :cond_35
     const-string v0, ""
 
     goto :goto_29
 
-    .line 574
+    .line 544
     :cond_38
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
@@ -2808,7 +2862,7 @@
 
     const/4 v3, -0x1
 
-    .line 940
+    .line 867
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v0
@@ -2819,7 +2873,7 @@
 
     double-to-int v6, v0
 
-    .line 941
+    .line 868
     .local v6, "obstacle":I
     if-ne v6, v2, :cond_33
 
@@ -2833,7 +2887,7 @@
 
     if-lt v0, v1, :cond_33
 
-    .line 942
+    .line 869
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v0}, Lcom/kidga/common/saves/SavesHandler;->isBonusOpen3()Z
@@ -2842,17 +2896,17 @@
 
     if-nez v0, :cond_27
 
-    .line 943
+    .line 870
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v0, v2}, Lcom/kidga/common/saves/SavesHandler;->setBonusOpen3(Z)V
 
-    .line 944
+    .line 871
     const/4 v0, 0x3
 
     invoke-direct {p0, v0}, Lcom/kidga/tap2match/Tap2match;->showInfoDialog(I)V
 
-    .line 946
+    .line 873
     :cond_27
     new-instance v0, Lcom/kidga/common/ui/CellBonus;
 
@@ -2866,7 +2920,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/kidga/common/ui/CellBonus;-><init>(Landroid/content/Context;Lcom/kidga/common/Game;IILcom/kidga/common/ui/Type;)V
 
-    .line 948
+    .line 875
     :goto_32
     return-object v0
 
@@ -2898,7 +2952,7 @@
 
     const/4 v6, 0x1
 
-    .line 908
+    .line 835
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v5}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -2925,7 +2979,7 @@
     :goto_16
     add-int/2addr v8, v5
 
-    .line 909
+    .line 836
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v5}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -2938,11 +2992,11 @@
 
     move v5, v6
 
-    .line 908
+    .line 835
     :goto_21
     add-int/2addr v8, v5
 
-    .line 909
+    .line 836
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v5}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -2955,11 +3009,11 @@
 
     move v5, v6
 
-    .line 908
+    .line 835
     :goto_2d
     add-int/2addr v8, v5
 
-    .line 910
+    .line 837
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v5}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -2972,11 +3026,11 @@
 
     move v5, v6
 
-    .line 908
+    .line 835
     :goto_39
     add-int/2addr v8, v5
 
-    .line 910
+    .line 837
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v5}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -2989,11 +3043,11 @@
 
     move v5, v6
 
-    .line 908
+    .line 835
     :goto_45
     add-int/2addr v8, v5
 
-    .line 911
+    .line 838
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v5}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -3006,11 +3060,11 @@
 
     move v5, v6
 
-    .line 908
+    .line 835
     :goto_51
     add-int/2addr v8, v5
 
-    .line 911
+    .line 838
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v5}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -3023,11 +3077,11 @@
 
     move v5, v6
 
-    .line 908
+    .line 835
     :goto_5d
     add-int/2addr v8, v5
 
-    .line 912
+    .line 839
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v5}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -3040,11 +3094,11 @@
 
     move v5, v6
 
-    .line 908
+    .line 835
     :goto_69
     add-int v0, v8, v5
 
-    .line 913
+    .line 840
     .local v0, "addonBalls":I
     invoke-static {}, Ljava/lang/Math;->random()D
 
@@ -3060,7 +3114,7 @@
 
     double-to-int v4, v8
 
-    .line 918
+    .line 845
     .local v4, "type":I
     invoke-static {}, Ljava/lang/Math;->random()D
 
@@ -3080,7 +3134,7 @@
 
     double-to-int v3, v8
 
-    .line 920
+    .line 847
     .local v3, "bonusNum":I
     if-ne v3, v6, :cond_c8
 
@@ -3096,7 +3150,7 @@
 
     move v1, v6
 
-    .line 921
+    .line 848
     .local v1, "bonus1":Z
     :goto_90
     if-ne v3, v12, :cond_ca
@@ -3113,12 +3167,12 @@
 
     move v2, v6
 
-    .line 923
+    .line 850
     .local v2, "bonus2":Z
     :goto_9c
     if-eqz v1, :cond_cc
 
-    .line 924
+    .line 851
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v5}, Lcom/kidga/common/saves/SavesHandler;->isBonusOpen0()Z
@@ -3127,19 +3181,19 @@
 
     if-nez v5, :cond_ae
 
-    .line 925
+    .line 852
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v5, v6}, Lcom/kidga/common/saves/SavesHandler;->setBonusOpen0(Z)V
 
-    .line 926
+    .line 853
     invoke-direct {p0, v7}, Lcom/kidga/tap2match/Tap2match;->showInfoDialog(I)V
 
-    .line 928
+    .line 855
     :cond_ae
     sget-object v5, Lcom/kidga/common/ui/Type;->ROCK:Lcom/kidga/common/ui/Type;
 
-    .line 936
+    .line 863
     :goto_b0
     return-object v5
 
@@ -3151,7 +3205,7 @@
     :cond_b1
     move v5, v7
 
-    .line 908
+    .line 835
     goto/16 :goto_c
 
     :cond_b4
@@ -3162,7 +3216,7 @@
     :cond_b7
     move v5, v7
 
-    .line 909
+    .line 836
     goto/16 :goto_21
 
     :cond_ba
@@ -3173,7 +3227,7 @@
     :cond_bd
     move v5, v7
 
-    .line 910
+    .line 837
     goto/16 :goto_39
 
     :cond_c0
@@ -3184,7 +3238,7 @@
     :cond_c2
     move v5, v7
 
-    .line 911
+    .line 838
     goto :goto_51
 
     :cond_c4
@@ -3195,7 +3249,7 @@
     :cond_c6
     move v5, v7
 
-    .line 912
+    .line 839
     goto :goto_69
 
     .restart local v0    # "addonBalls":I
@@ -3204,22 +3258,22 @@
     :cond_c8
     move v1, v7
 
-    .line 920
+    .line 847
     goto :goto_90
 
     .restart local v1    # "bonus1":Z
     :cond_ca
     move v2, v7
 
-    .line 921
+    .line 848
     goto :goto_9c
 
-    .line 929
+    .line 856
     .restart local v2    # "bonus2":Z
     :cond_cc
     if-eqz v2, :cond_e1
 
-    .line 930
+    .line 857
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v5}, Lcom/kidga/common/saves/SavesHandler;->isBonusOpen1()Z
@@ -3228,21 +3282,21 @@
 
     if-nez v5, :cond_de
 
-    .line 931
+    .line 858
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v5, v6}, Lcom/kidga/common/saves/SavesHandler;->setBonusOpen1(Z)V
 
-    .line 932
+    .line 859
     invoke-direct {p0, v6}, Lcom/kidga/tap2match/Tap2match;->showInfoDialog(I)V
 
-    .line 934
+    .line 861
     :cond_de
     sget-object v5, Lcom/kidga/common/ui/Type;->BOMB:Lcom/kidga/common/ui/Type;
 
     goto :goto_b0
 
-    .line 936
+    .line 863
     :cond_e1
     invoke-static {v4}, Lcom/kidga/common/ui/TypeUtil;->getElemType(I)Lcom/kidga/common/ui/Type;
 
@@ -3255,7 +3309,7 @@
     .registers 1
 
     .prologue
-    .line 885
+    .line 816
     return-object p0
 .end method
 
@@ -3263,7 +3317,7 @@
     .registers 2
 
     .prologue
-    .line 1108
+    .line 1018
     const/4 v0, 0x0
 
     return-object v0
@@ -3273,7 +3327,7 @@
     .registers 2
 
     .prologue
-    .line 897
+    .line 826
     const/4 v0, 0x0
 
     return v0
@@ -3284,7 +3338,7 @@
     .param p1, "type"    # Lcom/kidga/common/ui/Type;
 
     .prologue
-    .line 549
+    .line 520
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->resHandler:Lcom/kidga/tap2match/ResourceHandler;
 
     if-nez v0, :cond_b
@@ -3295,7 +3349,7 @@
 
     iput-object v0, p0, Lcom/kidga/tap2match/Tap2match;->resHandler:Lcom/kidga/tap2match/ResourceHandler;
 
-    .line 550
+    .line 521
     :cond_b
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->resHandler:Lcom/kidga/tap2match/ResourceHandler;
 
@@ -3312,7 +3366,7 @@
     .param p2, "subType"    # I
 
     .prologue
-    .line 1119
+    .line 1026
     const/4 v0, 0x0
 
     return-object v0
@@ -3323,7 +3377,7 @@
     .param p1, "type"    # Lcom/kidga/common/sound/SoundType;
 
     .prologue
-    .line 890
+    .line 820
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->resHandler:Lcom/kidga/tap2match/ResourceHandler;
 
     if-nez v0, :cond_b
@@ -3334,7 +3388,7 @@
 
     iput-object v0, p0, Lcom/kidga/tap2match/Tap2match;->resHandler:Lcom/kidga/tap2match/ResourceHandler;
 
-    .line 891
+    .line 821
     :cond_b
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->resHandler:Lcom/kidga/tap2match/ResourceHandler;
 
@@ -3350,12 +3404,12 @@
     .param p1, "num"    # I
 
     .prologue
-    .line 839
+    .line 771
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v1, p1}, Lcom/kidga/common/Game;->addCurLevelGems(I)V
 
-    .line 845
+    .line 777
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v1}, Lcom/kidga/common/Game;->getCurLevelGems()I
@@ -3376,37 +3430,37 @@
 
     div-int v0, v1, v2
 
-    .line 847
+    .line 779
     .local v0, "newValue":I
     const/16 v1, 0x64
 
     if-lt v0, v1, :cond_29
 
-    .line 848
+    .line 780
     const/16 v0, 0x64
 
-    .line 849
+    .line 781
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 850
+    .line 782
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->endLevel()V
 
-    .line 851
+    .line 783
     const/4 v1, 0x1
 
-    .line 854
+    .line 786
     :goto_28
     return v1
 
-    .line 853
+    .line 785
     :cond_29
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 854
+    .line 786
     const/4 v1, 0x0
 
     goto :goto_28
@@ -3416,12 +3470,12 @@
     .registers 2
 
     .prologue
-    .line 194
+    .line 177
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->adapter:Lcom/kidga/tap2match/Tap2match$BoardAdapter;
 
     invoke-virtual {v0}, Lcom/kidga/tap2match/Tap2match$BoardAdapter;->notifyDataSetChanged()V
 
-    .line 195
+    .line 178
     return-void
 .end method
 
@@ -3430,10 +3484,10 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 1124
+    .line 1031
     invoke-super {p0, p1}, Lcom/kidga/common/KidgaActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 1125
+    .line 1032
     return-void
 .end method
 
@@ -3448,46 +3502,46 @@
 
     const/4 v7, -0x1
 
-    .line 68
+    .line 69
     invoke-super {p0, p1}, Lcom/kidga/common/KidgaActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 69
+    .line 70
     invoke-direct {p0}, Lcom/kidga/tap2match/Tap2match;->initCommonUtils()V
 
-    .line 71
+    .line 72
     invoke-static {}, Lcom/kidga/common/sound/SoundManager;->getInstance()Lcom/kidga/common/sound/SoundManager;
 
     move-result-object v5
 
     invoke-virtual {v5, p0}, Lcom/kidga/common/sound/SoundManager;->init(Lcom/kidga/common/IGameHandler;)V
 
-    .line 73
+    .line 74
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->getWindow()Landroid/view/Window;
 
     move-result-object v5
 
     invoke-virtual {v5, v8}, Landroid/view/Window;->requestFeature(I)Z
 
-    .line 75
+    .line 76
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->getWindow()Landroid/view/Window;
 
     move-result-object v5
 
     invoke-virtual {v5, v6, v6}, Landroid/view/Window;->setFlags(II)V
 
-    .line 76
-    const v5, 0x7f030003
+    .line 77
+    const v5, 0x7f030002
 
     invoke-virtual {p0, v5}, Lcom/kidga/tap2match/Tap2match;->setContentView(I)V
 
-    .line 87
+    .line 88
     new-instance v5, Landroid/util/DisplayMetrics;
 
     invoke-direct {v5}, Landroid/util/DisplayMetrics;-><init>()V
 
     iput-object v5, p0, Lcom/kidga/tap2match/Tap2match;->displayMetrics:Landroid/util/DisplayMetrics;
 
-    .line 88
+    .line 89
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v5
@@ -3500,8 +3554,8 @@
 
     invoke-virtual {v5, v6}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 90
-    const v5, 0x7f090004
+    .line 91
+    const v5, 0x7f090002
 
     invoke-virtual {p0, v5}, Lcom/kidga/tap2match/Tap2match;->findViewById(I)Landroid/view/View;
 
@@ -3511,19 +3565,19 @@
 
     iput-object v5, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
 
-    .line 91
+    .line 92
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
 
     invoke-virtual {v5, v8}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 92
+    .line 93
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->l:Landroid/widget/LinearLayout;
 
     const/16 v6, 0x70
 
     invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    .line 96
+    .line 97
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->displayMetrics:Landroid/util/DisplayMetrics;
 
     iget v5, v5, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -3532,8 +3586,8 @@
 
     if-lt v5, v6, :cond_66
 
-    .line 97
-    const v5, 0x7f090005
+    .line 98
+    const v5, 0x7f090003
 
     invoke-virtual {p0, v5}, Lcom/kidga/tap2match/Tap2match;->findViewById(I)Landroid/view/View;
 
@@ -3541,21 +3595,21 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    .line 98
+    .line 99
     .local v0, "adLayout":Landroid/widget/RelativeLayout;
     iget-object v5, p0, Lcom/kidga/tap2match/Tap2match;->adHandler:Lcom/kidga/common/ad/AdHandler;
 
     invoke-virtual {v5, v0}, Lcom/kidga/common/ad/AdHandler;->fillAdLayout(Landroid/widget/RelativeLayout;)V
 
-    .line 101
+    .line 102
     .end local v0    # "adLayout":Landroid/widget/RelativeLayout;
     :cond_66
     const/4 v5, 0x0
 
     invoke-virtual {p0, v5}, Lcom/kidga/tap2match/Tap2match;->start(Z)V
 
-    .line 103
-    const v5, 0x7f090006
+    .line 104
+    const v5, 0x7f090004
 
     invoke-virtual {p0, v5}, Lcom/kidga/tap2match/Tap2match;->findViewById(I)Landroid/view/View;
 
@@ -3563,19 +3617,19 @@
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    .line 104
+    .line 105
     .local v2, "l2":Landroid/widget/LinearLayout;
     new-instance v1, Landroid/widget/ImageView;
 
     invoke-direct {v1, p0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 105
+    .line 106
     .local v1, "im":Landroid/widget/ImageView;
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x7f020018
+    const v6, 0x7f020019
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3583,45 +3637,45 @@
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 106
+    .line 107
     const/high16 v5, -0x1000000
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setBackgroundColor(I)V
 
-    .line 108
+    .line 109
     new-instance v3, Landroid/widget/TableLayout$LayoutParams;
 
-    .line 107
+    .line 108
     invoke-direct {v3, v7, v7}, Landroid/widget/TableLayout$LayoutParams;-><init>(II)V
 
-    .line 110
+    .line 111
     .local v3, "lp":Landroid/widget/TableLayout$LayoutParams;
     invoke-virtual {v2, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 112
+    .line 113
     const v5, 0x10a0001
 
     invoke-static {p0, v5}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v4
 
-    .line 113
+    .line 114
     .local v4, "out":Landroid/view/animation/Animation;
     const-wide/16 v5, 0xbb8
 
     invoke-virtual {v4, v5, v6}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 114
+    .line 115
     new-instance v5, Lcom/kidga/tap2match/Tap2match$1;
 
     invoke-direct {v5, p0, v2}, Lcom/kidga/tap2match/Tap2match$1;-><init>(Lcom/kidga/tap2match/Tap2match;Landroid/widget/LinearLayout;)V
 
     invoke-virtual {v4, v5}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 130
+    .line 128
     invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 139
+    .line 137
     return-void
 .end method
 
@@ -3630,43 +3684,43 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 154
+    .line 152
     const/4 v0, 0x0
 
-    .line 155
+    .line 153
     .local v0, "dialog":Landroid/app/Dialog;
     packed-switch p1, :pswitch_data_1c
 
-    .line 163
+    .line 161
     :goto_4
     return-object v0
 
-    .line 157
+    .line 155
     :pswitch_5
     new-instance v0, Landroid/app/Dialog;
 
     .end local v0    # "dialog":Landroid/app/Dialog;
     invoke-direct {v0, p0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
-    .line 158
+    .line 156
     .restart local v0    # "dialog":Landroid/app/Dialog;
     const v1, 0x7f030001
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setContentView(I)V
 
-    .line 159
-    const v1, 0x7f070014
+    .line 157
+    const v1, 0x7f070013
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setTitle(I)V
 
-    .line 160
+    .line 158
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
     goto :goto_4
 
-    .line 155
+    .line 153
     nop
 
     :pswitch_data_1c
@@ -3681,7 +3735,7 @@
     .param p2, "current"    # Lcom/kidga/common/ui/Cell;
 
     .prologue
-    .line 902
+    .line 830
     const/4 v0, 0x0
 
     return v0
@@ -3691,35 +3745,18 @@
     .registers 2
 
     .prologue
-    .line 961
+    .line 885
     const/4 v0, 0x0
 
     return v0
 .end method
 
 .method public processSingleClickDown(Lcom/kidga/common/ui/Cell;)Z
-    .registers 4
+    .registers 3
     .param p1, "cell"    # Lcom/kidga/common/ui/Cell;
 
     .prologue
-    .line 968
-    invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
-
-    if-ne v0, v1, :cond_f
-
-    instance-of v0, p1, Lcom/kidga/common/ui/CellBonus;
-
-    if-eqz v0, :cond_f
-
-    .line 970
-    invoke-virtual {p0, p1}, Lcom/kidga/tap2match/Tap2match;->processSingleClickDown2(Lcom/kidga/common/ui/Cell;)Z
-
-    .line 983
-    :cond_f
+    .line 902
     const/4 v0, 0x1
 
     return v0
@@ -3732,20 +3769,20 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 987
+    .line 906
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
-    if-ne v1, v2, :cond_82
+    if-ne v1, v2, :cond_68
 
     instance-of v1, p1, Lcom/kidga/common/ui/CellEmpty;
 
-    if-nez v1, :cond_82
+    if-nez v1, :cond_68
 
-    .line 989
+    .line 908
     invoke-static {}, Lcom/kidga/common/vibro/VibroManager;->getInstance()Lcom/kidga/common/vibro/VibroManager;
 
     move-result-object v1
@@ -3754,45 +3791,20 @@
 
     invoke-virtual {v1, v2}, Lcom/kidga/common/vibro/VibroManager;->vibrate(I)V
 
-    .line 990
+    .line 909
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v1, v6}, Lcom/kidga/common/Game;->setBusy(Z)V
 
-    .line 991
+    .line 910
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     invoke-virtual {v1, p1}, Landroid/widget/TableRow;->indexOfChild(Landroid/view/View;)I
 
     move-result v0
 
-    .line 992
+    .line 911
     .local v0, "index":I
-    const-string v1, "TestGame"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "3game.isBusy()="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v3}, Lcom/kidga/common/Game;->isBusy()Z
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 993
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     iget-object v2, p0, Lcom/kidga/tap2match/Tap2match;->toTap:Lcom/kidga/common/ui/Cell;
@@ -3825,7 +3837,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/kidga/common/ui/Board;->insert(IILcom/kidga/common/ui/Cell;)V
 
-    .line 994
+    .line 912
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     iget-object v2, p0, Lcom/kidga/tap2match/Tap2match;->toTap:Lcom/kidga/common/ui/Cell;
@@ -3846,12 +3858,12 @@
 
     invoke-direct {p0, v1}, Lcom/kidga/tap2match/Tap2match;->animateCellAdding(Lcom/kidga/common/ui/Cell;)V
 
-    .line 995
+    .line 913
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     invoke-virtual {v1, p1}, Landroid/widget/TableRow;->removeView(Landroid/view/View;)V
 
-    .line 996
+    .line 914
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->genRandomElem()Lcom/kidga/common/ui/Cell;
@@ -3860,12 +3872,12 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/widget/TableRow;->addView(Landroid/view/View;I)V
 
-    .line 997
+    .line 915
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->notifyBoardAdater()V
 
-    .line 999
+    .line 917
     .end local v0    # "index":I
-    :cond_82
+    :cond_68
     return v6
 .end method
 
@@ -3873,7 +3885,7 @@
     .registers 2
 
     .prologue
-    .line 956
+    .line 881
     const/4 v0, 0x0
 
     return v0
@@ -3885,12 +3897,12 @@
     .param p2, "forResult"    # Z
 
     .prologue
-    .line 413
+    .line 386
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v0, p1}, Lcom/kidga/common/saves/SavesHandler;->setScoreTab(Ljava/lang/String;)V
 
-    .line 414
+    .line 387
     if-eqz p2, :cond_17
 
     new-instance v0, Landroid/content/Intent;
@@ -3907,11 +3919,11 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/kidga/tap2match/Tap2match;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 416
+    .line 389
     :goto_16
     return-void
 
-    .line 415
+    .line 388
     :cond_17
     new-instance v0, Landroid/content/Intent;
 
@@ -3932,7 +3944,7 @@
     .registers 1
 
     .prologue
-    .line 1112
+    .line 1021
     return-void
 .end method
 
@@ -3941,14 +3953,14 @@
     .param p1, "restart"    # Z
 
     .prologue
-    .line 169
+    .line 166
     if-eqz p1, :cond_7
 
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->adHandler:Lcom/kidga/common/ad/AdHandler;
 
     invoke-virtual {v0}, Lcom/kidga/common/ad/AdHandler;->reloadAd()V
 
-    .line 170
+    .line 167
     :cond_7
     new-instance v0, Lcom/kidga/common/Game;
 
@@ -3956,7 +3968,7 @@
 
     iput-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
-    .line 171
+    .line 168
     new-instance v0, Lcom/kidga/common/ui/Board;
 
     iget v1, p0, Lcom/kidga/tap2match/Tap2match;->size:I
@@ -3967,84 +3979,19 @@
 
     iput-object v0, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
-    .line 172
+    .line 169
     iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
 
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {v0, v1}, Lcom/kidga/common/Game;->initGame(Lcom/kidga/common/ui/Board;)V
 
-    .line 173
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 174
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 175
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 176
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 177
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 178
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 179
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 180
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 181
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 182
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 183
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 184
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 185
-    iget-object v0, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
-
-    invoke-virtual {v0}, Lcom/kidga/common/Game;->increaseTotalLevel()V
-
-    .line 186
+    .line 170
     iget v0, p0, Lcom/kidga/tap2match/Tap2match;->size:I
 
     invoke-direct {p0, v0}, Lcom/kidga/tap2match/Tap2match;->initGameField(I)V
 
-    .line 188
+    .line 172
     return-void
 .end method
 
@@ -4052,34 +3999,34 @@
     .registers 16
 
     .prologue
-    .line 419
+    .line 392
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v10}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 420
+    .line 393
     new-instance v9, Landroid/widget/TableLayout;
 
     invoke-direct {v9, p0}, Landroid/widget/TableLayout;-><init>(Landroid/content/Context;)V
 
-    .line 421
+    .line 394
     .local v9, "table":Landroid/widget/TableLayout;
     const/4 v10, 0x1
 
     invoke-virtual {v9, v10}, Landroid/widget/TableLayout;->setStretchAllColumns(Z)V
 
-    .line 422
+    .line 395
     new-instance v7, Landroid/widget/TableRow;
 
     invoke-direct {v7, p0}, Landroid/widget/TableRow;-><init>(Landroid/content/Context;)V
 
-    .line 427
+    .line 400
     .local v7, "r":Landroid/widget/TableRow;
     const/16 v10, 0x10
 
     invoke-virtual {v7, v10}, Landroid/widget/TableRow;->setGravity(I)V
 
-    .line 429
+    .line 402
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->scoreFlipper:Lcom/kidga/common/score/ScorePlaceFlipper;
 
     iget-object v11, p0, Lcom/kidga/tap2match/Tap2match;->game:Lcom/kidga/common/Game;
@@ -4090,7 +4037,7 @@
 
     invoke-virtual {v10, v7, v11}, Lcom/kidga/common/score/ScorePlaceFlipper;->initScoreHeader(Landroid/widget/TableRow;I)V
 
-    .line 431
+    .line 404
     new-instance v10, Landroid/widget/ProgressBar;
 
     const/4 v11, 0x0
@@ -4101,14 +4048,14 @@
 
     iput-object v10, p0, Lcom/kidga/tap2match/Tap2match;->progressBar:Landroid/widget/ProgressBar;
 
-    .line 432
+    .line 405
     const/16 v10, 0x8
 
     new-array v8, v10, [F
 
-    fill-array-data v8, :array_124
+    fill-array-data v8, :array_11c
 
-    .line 435
+    .line 408
     .local v8, "roundedCorners":[F
     new-instance v5, Landroid/graphics/drawable/ShapeDrawable;
 
@@ -4122,11 +4069,11 @@
 
     invoke-direct {v5, v10}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 437
+    .line 410
     .local v5, "pgDrawable":Landroid/graphics/drawable/ShapeDrawable;
     const-string v0, "yellow"
 
-    .line 438
+    .line 411
     .local v0, "MyColor":Ljava/lang/String;
     new-instance v10, Landroid/graphics/Rect;
 
@@ -4142,7 +4089,7 @@
 
     invoke-virtual {v5, v10}, Landroid/graphics/drawable/ShapeDrawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 440
+    .line 413
     new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
 
     new-instance v10, Landroid/graphics/drawable/shapes/RoundRectShape;
@@ -4155,7 +4102,7 @@
 
     invoke-direct {v1, v10}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 441
+    .line 414
     .local v1, "backDrawable":Landroid/graphics/drawable/ShapeDrawable;
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
@@ -4165,7 +4112,7 @@
 
     invoke-virtual {v10, v11}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 442
+    .line 415
     new-instance v10, Landroid/graphics/Rect;
 
     const/4 v11, 0x0
@@ -4180,7 +4127,7 @@
 
     invoke-virtual {v1, v10}, Landroid/graphics/drawable/ShapeDrawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 444
+    .line 417
     invoke-virtual {v5}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v10
@@ -4191,7 +4138,7 @@
 
     invoke-virtual {v10, v11}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 445
+    .line 418
     new-instance v6, Landroid/graphics/drawable/ClipDrawable;
 
     const/4 v10, 0x3
@@ -4200,7 +4147,7 @@
 
     invoke-direct {v6, v5, v10, v11}, Landroid/graphics/drawable/ClipDrawable;-><init>(Landroid/graphics/drawable/Drawable;II)V
 
-    .line 447
+    .line 420
     .local v6, "progress":Landroid/graphics/drawable/ClipDrawable;
     new-instance v2, Landroid/graphics/drawable/LayerDrawable;
 
@@ -4218,7 +4165,7 @@
 
     invoke-direct {v2, v10}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
-    .line 448
+    .line 421
     .local v2, "layerlist":Landroid/graphics/drawable/LayerDrawable;
     const/4 v10, 0x0
 
@@ -4226,14 +4173,14 @@
 
     invoke-virtual {v2, v10, v11}, Landroid/graphics/drawable/LayerDrawable;->setId(II)V
 
-    .line 449
+    .line 422
     const/4 v10, 0x1
 
     const v11, 0x102000d
 
     invoke-virtual {v2, v10, v11}, Landroid/graphics/drawable/LayerDrawable;->setId(II)V
 
-    .line 451
+    .line 424
     const/4 v10, 0x0
 
     const/16 v11, 0x1e
@@ -4244,35 +4191,35 @@
 
     invoke-virtual {v2, v10, v11, v12, v13}, Landroid/graphics/drawable/LayerDrawable;->setBounds(IIII)V
 
-    .line 452
+    .line 425
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v10, v2}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 469
+    .line 442
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->progressBar:Landroid/widget/ProgressBar;
 
     invoke-virtual {v10, v2}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 475
+    .line 448
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->progressBar:Landroid/widget/ProgressBar;
 
     const/4 v11, 0x0
 
     invoke-virtual {v10, v11}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 486
+    .line 459
     new-instance v4, Landroid/widget/TableLayout$LayoutParams;
 
     invoke-direct {v4}, Landroid/widget/TableLayout$LayoutParams;-><init>()V
 
-    .line 490
+    .line 463
     .local v4, "lp":Landroid/widget/TableLayout$LayoutParams;
     const/high16 v10, 0x3f800000    # 1.0f
 
     iput v10, v4, Landroid/widget/TableLayout$LayoutParams;->weight:F
 
-    .line 493
+    .line 466
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->progressBar:Landroid/widget/ProgressBar;
 
     const/16 v11, 0x50
@@ -4281,47 +4228,40 @@
 
     invoke-virtual {v7, v10, v11, v12}, Landroid/widget/TableRow;->addView(Landroid/view/View;II)V
 
-    .line 495
+    .line 468
     new-instance v10, Landroid/widget/TextView;
 
     invoke-direct {v10, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v10, p0, Lcom/kidga/tap2match/Tap2match;->levelView:Landroid/widget/TextView;
 
-    .line 497
+    .line 470
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->levelView:Landroid/widget/TextView;
 
     const/4 v11, 0x1
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 498
-    iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->levelView:Landroid/widget/TextView;
-
-    iget-object v11, p0, Lcom/kidga/tap2match/Tap2match;->GAME_FONT:Landroid/graphics/Typeface;
-
-    invoke-virtual {v10, v11}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
-
-    .line 499
+    .line 472
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->levelView:Landroid/widget/TextView;
 
     const/high16 v11, 0x41900000    # 18.0f
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 500
+    .line 473
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->levelView:Landroid/widget/TextView;
 
     iget v11, p0, Lcom/kidga/tap2match/Tap2match;->levelColor:I
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 502
+    .line 475
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
-    const v11, 0x7f07002c
+    const v11, 0x7f07002a
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4351,32 +4291,30 @@
 
     move-result-object v3
 
-    .line 503
+    .line 476
     .local v3, "levelStr":Ljava/lang/String;
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->levelView:Landroid/widget/TextView;
 
     invoke-virtual {v10, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 504
+    .line 477
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->levelView:Landroid/widget/TextView;
 
     invoke-virtual {v7, v10}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 506
+    .line 479
     invoke-virtual {v9, v7}, Landroid/widget/TableLayout;->addView(Landroid/view/View;)V
 
-    .line 507
+    .line 480
     iget-object v10, p0, Lcom/kidga/tap2match/Tap2match;->scoreLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v10, v9}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 509
+    .line 482
     return-void
 
-    .line 432
-    nop
-
-    :array_124
+    .line 405
+    :array_11c
     .array-data 4
         0x40a00000    # 5.0f
         0x40a00000    # 5.0f
@@ -4397,47 +4335,47 @@
 
     const/4 v4, -0x1
 
-    .line 512
+    .line 485
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->nextLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 513
+    .line 486
     new-instance v0, Landroid/widget/TableLayout;
 
     invoke-direct {v0, p0}, Landroid/widget/TableLayout;-><init>(Landroid/content/Context;)V
 
-    .line 514
+    .line 487
     .local v0, "table":Landroid/widget/TableLayout;
     invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/TableLayout;->setPadding(IIII)V
 
-    .line 516
+    .line 489
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/TableLayout;->setStretchAllColumns(Z)V
 
-    .line 517
+    .line 490
     new-instance v1, Lcom/kidga/tap2match/Tap2match$3;
 
     invoke-direct {v1, p0, p0}, Lcom/kidga/tap2match/Tap2match$3;-><init>(Lcom/kidga/tap2match/Tap2match;Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
-    .line 533
+    .line 505
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     const/16 v2, 0x10
 
     invoke-virtual {v1, v2}, Landroid/widget/TableRow;->setGravity(I)V
 
-    .line 534
+    .line 506
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     const/4 v2, 0x3
 
     invoke-virtual {v1, v2}, Landroid/widget/TableRow;->setHorizontalGravity(I)V
 
-    .line 535
+    .line 507
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     new-instance v2, Lcom/kidga/common/ui/CellEmpty;
@@ -4448,7 +4386,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 536
+    .line 508
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->genRandomElem()Lcom/kidga/common/ui/Cell;
@@ -4457,7 +4395,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 537
+    .line 509
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     new-instance v2, Lcom/kidga/common/ui/CellEmpty;
@@ -4468,7 +4406,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 538
+    .line 510
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->genRandomElem()Lcom/kidga/common/ui/Cell;
@@ -4477,7 +4415,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 539
+    .line 511
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     new-instance v2, Lcom/kidga/common/ui/CellEmpty;
@@ -4488,7 +4426,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 540
+    .line 512
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     invoke-virtual {p0}, Lcom/kidga/tap2match/Tap2match;->genRandomElem()Lcom/kidga/common/ui/Cell;
@@ -4497,7 +4435,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 541
+    .line 513
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     new-instance v2, Lcom/kidga/common/ui/CellEmpty;
@@ -4508,17 +4446,17 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TableRow;->addView(Landroid/view/View;)V
 
-    .line 543
+    .line 515
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->rowNext:Landroid/widget/TableRow;
 
     invoke-virtual {v0, v1}, Landroid/widget/TableLayout;->addView(Landroid/view/View;)V
 
-    .line 544
+    .line 516
     iget-object v1, p0, Lcom/kidga/tap2match/Tap2match;->nextLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 545
+    .line 517
     return-void
 .end method
 
@@ -4527,6 +4465,6 @@
     .param p1, "elementType"    # I
 
     .prologue
-    .line 1115
+    .line 1023
     return-void
 .end method

@@ -206,93 +206,93 @@
     iput-boolean v1, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->J:Z
 
     .line 144
-    new-instance v0, Lagi;
+    new-instance v0, Lzo;
 
-    invoke-direct {v0, p0}, Lagi;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzo;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->aa:Landroid/os/Handler;
 
     .line 326
-    new-instance v0, Lago;
+    new-instance v0, Lzu;
 
-    invoke-direct {v0, p0}, Lago;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzu;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->ab:Lcom/quvideo/xiaoying/camera/ui/listener/PipOnAddClipClickListener;
 
     .line 341
-    new-instance v0, Lagp;
+    new-instance v0, Lzv;
 
-    invoke-direct {v0, p0}, Lagp;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzv;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->ac:Lcom/quvideo/xiaoying/camera/ui/listener/ShutterLayoutEventListener;
 
     .line 469
-    new-instance v0, Lagq;
+    new-instance v0, Lzw;
 
-    invoke-direct {v0, p0}, Lagq;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzw;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->ad:Lcom/quvideo/xiaoying/camera/ui/listener/TopIndicatorClickListener;
 
     .line 524
-    new-instance v0, Lagr;
+    new-instance v0, Lzx;
 
-    invoke-direct {v0, p0}, Lagr;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzx;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->ae:Lcom/quvideo/xiaoying/camera/ui/listener/SpeedItemClickListener;
 
     .line 561
-    new-instance v0, Lags;
+    new-instance v0, Lzy;
 
-    invoke-direct {v0, p0}, Lags;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzy;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->af:Lcom/quvideo/xiaoying/camera/ui/listener/FBLevelItemClickListener;
 
     .line 583
-    new-instance v0, Lagt;
+    new-instance v0, Lzz;
 
-    invoke-direct {v0, p0}, Lagt;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzz;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->ag:Lcom/quvideo/xiaoying/camera/ui/listener/IndicatorItemClickListener;
 
     .line 1083
-    new-instance v0, Lagu;
+    new-instance v0, Laaa;
 
-    invoke-direct {v0, p0}, Lagu;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Laaa;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->ah:Landroid/view/View$OnClickListener;
 
     .line 1250
-    new-instance v0, Lagv;
+    new-instance v0, Laab;
 
-    invoke-direct {v0, p0}, Lagv;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Laab;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->ai:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 1280
-    new-instance v0, Lagj;
+    new-instance v0, Lzp;
 
-    invoke-direct {v0, p0}, Lagj;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzp;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->aj:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 1309
-    new-instance v0, Lagk;
+    new-instance v0, Lzq;
 
-    invoke-direct {v0, p0}, Lagk;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzq;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->ak:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 1394
-    new-instance v0, Lagl;
+    new-instance v0, Lzr;
 
-    invoke-direct {v0, p0}, Lagl;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzr;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->al:Lcom/quvideo/xiaoying/camera/ui/TimerView$TimerListener;
 
     .line 1790
-    new-instance v0, Lagm;
+    new-instance v0, Lzs;
 
-    invoke-direct {v0, p0}, Lagm;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
+    invoke-direct {v0, p0}, Lzs;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;->am:Lcom/quvideo/xiaoying/camera/ui/CamPipVideoRegionController$OnPIPControlListener;
 
@@ -2107,9 +2107,9 @@
     new-instance v2, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
     .line 1169
-    new-instance v3, Lagn;
+    new-instance v3, Lzt;
 
-    invoke-direct {v3, p0, v0}, Lagn;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;Landroid/app/Activity;)V
+    invoke-direct {v3, p0, v0}, Lzt;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewDefaultLan;Landroid/app/Activity;)V
 
     .line 1168
     invoke-direct {v2, v0, v1, v3}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V

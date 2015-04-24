@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field a:Lorg/gdb/android/client/nv;
+.field a:Lorg/gdb/android/client/ns;
 
 .field private c:Landroid/app/ProgressDialog;
 
@@ -40,7 +40,7 @@
 
 .field private q:Landroid/os/Handler;
 
-.field private r:Lorg/gdb/android/client/nw;
+.field private r:Lorg/gdb/android/client/nt;
 
 .field private s:I
 
@@ -104,21 +104,21 @@
     iput-boolean v1, p0, Lorg/gdb/android/client/WebMapActivity;->y:Z
 
     .line 198
-    new-instance v0, Lorg/gdb/android/client/nn;
+    new-instance v0, Lorg/gdb/android/client/nk;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/nn;-><init>(Lorg/gdb/android/client/WebMapActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/nk;-><init>(Lorg/gdb/android/client/WebMapActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->z:Lorg/gdb/android/client/remote/y;
 
     .line 212
-    new-instance v0, Lorg/gdb/android/client/nv;
+    new-instance v0, Lorg/gdb/android/client/ns;
 
     .line 213
     iget-object v1, p0, Lorg/gdb/android/client/WebMapActivity;->z:Lorg/gdb/android/client/remote/y;
 
-    invoke-direct {v0, p0, v1}, Lorg/gdb/android/client/nv;-><init>(Lorg/gdb/android/client/WebMapActivity;Lorg/gdb/android/client/remote/y;)V
+    invoke-direct {v0, p0, v1}, Lorg/gdb/android/client/ns;-><init>(Lorg/gdb/android/client/WebMapActivity;Lorg/gdb/android/client/remote/y;)V
 
-    iput-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->a:Lorg/gdb/android/client/nv;
+    iput-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->a:Lorg/gdb/android/client/ns;
 
     .line 45
     return-void
@@ -581,20 +581,20 @@
     .line 96
     new-instance v0, Landroid/os/Handler;
 
-    new-instance v1, Lorg/gdb/android/client/nt;
+    new-instance v1, Lorg/gdb/android/client/nq;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/nt;-><init>(Lorg/gdb/android/client/WebMapActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/nq;-><init>(Lorg/gdb/android/client/WebMapActivity;)V
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Handler$Callback;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->q:Landroid/os/Handler;
 
     .line 97
-    new-instance v0, Lorg/gdb/android/client/nw;
+    new-instance v0, Lorg/gdb/android/client/nt;
 
-    invoke-direct {v0, v3}, Lorg/gdb/android/client/nw;-><init>(B)V
+    invoke-direct {v0, v3}, Lorg/gdb/android/client/nt;-><init>(B)V
 
-    iput-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->r:Lorg/gdb/android/client/nw;
+    iput-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->r:Lorg/gdb/android/client/nt;
 
     .line 99
     const v0, 0x7f030042
@@ -796,9 +796,9 @@
     .line 130
     iget-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->g:Landroid/widget/Button;
 
-    new-instance v1, Lorg/gdb/android/client/no;
+    new-instance v1, Lorg/gdb/android/client/nl;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/no;-><init>(Lorg/gdb/android/client/WebMapActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/nl;-><init>(Lorg/gdb/android/client/WebMapActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -857,9 +857,9 @@
     .line 156
     iget-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->e:Lorg/gdb/android/client/widget/MapInfoView;
 
-    new-instance v1, Lorg/gdb/android/client/np;
+    new-instance v1, Lorg/gdb/android/client/nm;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/np;-><init>(Lorg/gdb/android/client/WebMapActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/nm;-><init>(Lorg/gdb/android/client/WebMapActivity;)V
 
     invoke-virtual {v0, v1}, Lorg/gdb/android/client/widget/MapInfoView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1015,17 +1015,17 @@
 
     iget-object v1, p0, Lorg/gdb/android/client/WebMapActivity;->d:Landroid/webkit/WebView;
 
-    new-instance v2, Lorg/gdb/android/client/nr;
+    new-instance v2, Lorg/gdb/android/client/no;
 
-    invoke-direct {v2, p0, v0}, Lorg/gdb/android/client/nr;-><init>(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V
+    invoke-direct {v2, p0, v0}, Lorg/gdb/android/client/no;-><init>(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
     iget-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->d:Landroid/webkit/WebView;
 
-    new-instance v1, Lorg/gdb/android/client/nu;
+    new-instance v1, Lorg/gdb/android/client/nr;
 
-    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/nu;-><init>(Lorg/gdb/android/client/WebMapActivity;B)V
+    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/nr;-><init>(Lorg/gdb/android/client/WebMapActivity;B)V
 
     const-string v2, "mapLatLng"
 
@@ -1101,9 +1101,9 @@
     .line 191
     iget-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->x:Ljava/util/Timer;
 
-    new-instance v1, Lorg/gdb/android/client/nq;
+    new-instance v1, Lorg/gdb/android/client/nn;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/nq;-><init>(Lorg/gdb/android/client/WebMapActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/nn;-><init>(Lorg/gdb/android/client/WebMapActivity;)V
 
     .line 196
     const-wide/16 v2, 0x2710
@@ -1214,17 +1214,17 @@
 
     iget-object v1, p0, Lorg/gdb/android/client/WebMapActivity;->d:Landroid/webkit/WebView;
 
-    new-instance v2, Lorg/gdb/android/client/ns;
+    new-instance v2, Lorg/gdb/android/client/np;
 
-    invoke-direct {v2, p0, v0}, Lorg/gdb/android/client/ns;-><init>(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V
+    invoke-direct {v2, p0, v0}, Lorg/gdb/android/client/np;-><init>(Lorg/gdb/android/client/WebMapActivity;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
     iget-object v0, p0, Lorg/gdb/android/client/WebMapActivity;->d:Landroid/webkit/WebView;
 
-    new-instance v1, Lorg/gdb/android/client/nu;
+    new-instance v1, Lorg/gdb/android/client/nr;
 
-    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/nu;-><init>(Lorg/gdb/android/client/WebMapActivity;B)V
+    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/nr;-><init>(Lorg/gdb/android/client/WebMapActivity;B)V
 
     const-string v2, "mapLatLng"
 

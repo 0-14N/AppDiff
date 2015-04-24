@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/dm;->a:Lcom/cungo/callrecorder/ui/ActivityDialPad_;
 
-    invoke-virtual {v0, p1}, Lcom/cungo/callrecorder/ui/ActivityDialPad_;->c(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/cungo/callrecorder/ui/ActivityDialPad_;->d(Landroid/view/View;)V
 
     return-void
 .end method

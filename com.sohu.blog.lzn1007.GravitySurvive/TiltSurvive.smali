@@ -20,12 +20,12 @@
     .registers 8
 
     .prologue
-    .line 61
+    .line 63
     invoke-virtual {p0}, Lcom/sohu/blog/lzn1007/GravitySurvive/TiltSurvive;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 64
+    .line 66
     .local v2, "res":Landroid/content/res/Resources;
     const v3, 0x7f020065
 
@@ -35,7 +35,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->game_surface:Landroid/graphics/Bitmap;
 
-    .line 65
+    .line 67
     const v3, 0x7f020064
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -44,7 +44,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->game_boss_bar_bk:Landroid/graphics/Bitmap;
 
-    .line 67
+    .line 69
     const v3, 0x7f020084
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -53,7 +53,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->title_time:Landroid/graphics/Bitmap;
 
-    .line 68
+    .line 70
     const v3, 0x7f020082
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -62,7 +62,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->title_score:Landroid/graphics/Bitmap;
 
-    .line 69
+    .line 71
     const v3, 0x7f020083
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -71,7 +71,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->title_stage:Landroid/graphics/Bitmap;
 
-    .line 70
+    .line 72
     const v3, 0x7f020072
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -80,7 +80,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->number_seperate:Landroid/graphics/Bitmap;
 
-    .line 72
+    .line 74
     const v3, 0x7f02000b
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -89,7 +89,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->dlg_game_success:Landroid/graphics/Bitmap;
 
-    .line 73
+    .line 75
     const v3, 0x7f02000a
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -98,7 +98,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->dlg_game_fail:Landroid/graphics/Bitmap;
 
-    .line 74
+    .line 76
     const v3, 0x7f02000c
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -107,7 +107,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->dlg_menu:Landroid/graphics/Bitmap;
 
-    .line 75
+    .line 77
     const v3, 0x7f020070
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -116,7 +116,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->dlg_menu_checked:Landroid/graphics/Bitmap;
 
-    .line 76
+    .line 78
     const v3, 0x7f020071
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -125,7 +125,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->dlg_menu_unchecked:Landroid/graphics/Bitmap;
 
-    .line 77
+    .line 79
     const v3, 0x7f02000d
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -134,7 +134,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->dlg_menu_pos_indicator:Landroid/graphics/Bitmap;
 
-    .line 78
+    .line 80
     const v3, 0x7f02004d
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -143,7 +143,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->dlg_survive_over:Landroid/graphics/Bitmap;
 
-    .line 80
+    .line 82
     const v3, 0x7f02000e
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -152,7 +152,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->dlg_start_bk:Landroid/graphics/Bitmap;
 
-    .line 87
+    .line 89
     const v3, 0x7f020074
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -161,7 +161,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->role:Landroid/graphics/Bitmap;
 
-    .line 88
+    .line 90
     const v3, 0x7f020075
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -170,7 +170,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->role_powerful:Landroid/graphics/Bitmap;
 
-    .line 89
+    .line 91
     const v3, 0x7f020076
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -179,7 +179,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->role_powerful_ending:Landroid/graphics/Bitmap;
 
-    .line 94
+    .line 96
     const v3, 0x7f02004f
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -188,7 +188,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->enemy_boss:Landroid/graphics/Bitmap;
 
-    .line 95
+    .line 97
     const v3, 0x7f020050
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -197,7 +197,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->enemy_boss_scatter:Landroid/graphics/Bitmap;
 
-    .line 96
+    .line 98
     const v3, 0x7f020009
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -206,7 +206,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->bullet:Landroid/graphics/Bitmap;
 
-    .line 98
+    .line 100
     const v3, 0x7f020052
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -215,7 +215,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->pos_mark_dark:Landroid/graphics/Bitmap;
 
-    .line 99
+    .line 101
     const v3, 0x7f020053
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -224,7 +224,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->pos_mark_light:Landroid/graphics/Bitmap;
 
-    .line 101
+    .line 103
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -235,7 +235,7 @@
 
     if-lt v0, v3, :cond_114
 
-    .line 107
+    .line 109
     const/4 v0, 0x0
 
     :goto_d1
@@ -245,7 +245,7 @@
 
     if-lt v0, v3, :cond_146
 
-    .line 114
+    .line 116
     sget-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->res:Landroid/content/res/Resources;
 
     const v4, 0x7f020077
@@ -256,7 +256,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->scene_locked:Landroid/graphics/Bitmap;
 
-    .line 115
+    .line 117
     const v3, 0x7f020078
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -265,7 +265,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->bk_select_mini_game:Landroid/graphics/Bitmap;
 
-    .line 118
+    .line 120
     const v3, 0x7f02007c
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -274,7 +274,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->select_stage_icon:Landroid/graphics/Bitmap;
 
-    .line 119
+    .line 121
     const v3, 0x7f02007d
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -283,7 +283,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->select_stage_locked:Landroid/graphics/Bitmap;
 
-    .line 120
+    .line 122
     const/4 v0, 0x0
 
     :goto_fd
@@ -293,7 +293,7 @@
 
     if-lt v0, v3, :cond_179
 
-    .line 126
+    .line 128
     const v3, 0x7f020073
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -302,7 +302,7 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->numbers_white:Landroid/graphics/Bitmap;
 
-    .line 127
+    .line 129
     const/high16 v3, 0x7f020000
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -311,10 +311,10 @@
 
     sput-object v3, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->alphabets:Landroid/graphics/Bitmap;
 
-    .line 128
+    .line 130
     return-void
 
-    .line 103
+    .line 105
     :cond_114
     invoke-virtual {p0}, Lcom/sohu/blog/lzn1007/GravitySurvive/TiltSurvive;->getResources()Landroid/content/res/Resources;
 
@@ -344,7 +344,7 @@
 
     move-result v1
 
-    .line 104
+    .line 106
     .local v1, "id":I
     sget-object v4, Lcom/sohu/blog/lzn1007/GravitySurvive/Bonus;->bmp_bonus:[Landroid/graphics/Bitmap;
 
@@ -364,12 +364,12 @@
 
     aput-object v3, v4, v0
 
-    .line 101
+    .line 103
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_cb
 
-    .line 109
+    .line 111
     .end local v1    # "id":I
     :cond_146
     invoke-virtual {p0}, Lcom/sohu/blog/lzn1007/GravitySurvive/TiltSurvive;->getResources()Landroid/content/res/Resources;
@@ -400,7 +400,7 @@
 
     move-result v1
 
-    .line 110
+    .line 112
     .restart local v1    # "id":I
     sget-object v4, Lcom/sohu/blog/lzn1007/GravitySurvive/Bonus;->bmp_bonus_effect:[Landroid/graphics/Bitmap;
 
@@ -420,12 +420,12 @@
 
     aput-object v3, v4, v0
 
-    .line 107
+    .line 109
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_d1
 
-    .line 122
+    .line 124
     .end local v1    # "id":I
     :cond_179
     invoke-virtual {p0}, Lcom/sohu/blog/lzn1007/GravitySurvive/TiltSurvive;->getResources()Landroid/content/res/Resources;
@@ -456,7 +456,7 @@
 
     move-result v1
 
-    .line 123
+    .line 125
     .restart local v1    # "id":I
     sget-object v4, Lcom/sohu/blog/lzn1007/GravitySurvive/Bmp;->select_stage_mark:[Landroid/graphics/Bitmap;
 
@@ -476,7 +476,7 @@
 
     aput-object v3, v4, v0
 
-    .line 120
+    .line 122
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_fd
@@ -605,37 +605,40 @@
 
     sput-object v2, Lcom/sohu/blog/lzn1007/GravitySurvive/Glb;->wakeLock:Landroid/os/PowerManager$WakeLock;
     :try_end_6e
-    .catch Ljava/lang/Exception; {:try_start_5b .. :try_end_6e} :catch_84
+    .catch Ljava/lang/Exception; {:try_start_5b .. :try_end_6e} :catch_87
 
     .line 51
     :goto_6e
+    invoke-static {p0}, Lcom/sohu/blog/lzn1007/GravitySurvive/Ad;->f_ini(Landroid/app/Activity;)V
+
+    .line 53
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 52
+    .line 54
     .local v1, "i":Landroid/content/Intent;
     const-class v2, Lcom/sohu/blog/lzn1007/GravitySurvive/SelectMode;
 
     invoke-virtual {v1, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 53
+    .line 55
     const/high16 v2, 0x4000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 54
+    .line 56
     invoke-virtual {p0, v1}, Lcom/sohu/blog/lzn1007/GravitySurvive/TiltSurvive;->startActivity(Landroid/content/Intent;)V
 
-    .line 56
+    .line 58
     invoke-virtual {p0}, Lcom/sohu/blog/lzn1007/GravitySurvive/TiltSurvive;->finish()V
 
-    .line 57
+    .line 59
     return-void
 
     .line 45
     .end local v1    # "i":Landroid/content/Intent;
-    :catch_84
+    :catch_87
     move-exception v0
 
     .line 47

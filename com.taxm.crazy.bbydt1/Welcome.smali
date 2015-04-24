@@ -2,19 +2,11 @@
 .super Landroid/app/Activity;
 
 
-# instance fields
-.field a:Z
-
-
 # direct methods
 .method public constructor <init>()V
-    .registers 2
+    .registers 1
 
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/taxm/crazy/bbydt1/ui/Welcome;->a:Z
 
     return-void
 .end method
@@ -68,14 +60,6 @@
 
     invoke-virtual {p0, v0}, Lcom/taxm/crazy/bbydt1/ui/Welcome;->setContentView(I)V
 
-    const-string v0, "1004546e"
-
-    invoke-static {p0, v0}, Lcom/baidu/mobads/AdView;->setAppSid(Landroid/content/Context;Ljava/lang/String;)V
-
-    const-string v0, "1004546e"
-
-    invoke-static {p0, v0}, Lcom/baidu/mobads/AdView;->setAppSec(Landroid/content/Context;Ljava/lang/String;)V
-
     invoke-static {p0}, Lcom/taxm/crazy/bbydt1/a/b;->a(Landroid/content/Context;)Lcom/taxm/crazy/bbydt1/a/b;
 
     move-result-object v0
@@ -86,9 +70,13 @@
 
     invoke-virtual {v0, v1}, Lcom/taxm/crazy/bbydt1/a/b;->a(Lcom/taxm/crazy/bbydt1/a/c;)V
 
-    const v0, 0x7f0a0067
+    const-string v0, "dd70b24049efc557de07e8e5264cb98c"
 
-    invoke-virtual {p0, v0}, Lcom/taxm/crazy/bbydt1/ui/Welcome;->findViewById(I)Landroid/view/View;
+    invoke-static {p0, v0}, Lcom/feiwo/view/FwInterstitialManager;->init(Landroid/content/Context;Ljava/lang/String;)I
+
+    const-string v0, "dd70b24049efc557de07e8e5264cb98c"
+
+    invoke-static {p0, v0}, Lcom/feiwo/view/FwBannerManager;->init(Landroid/content/Context;Ljava/lang/String;)I
 
     return-void
 .end method

@@ -394,7 +394,7 @@
     const/4 v3, 0x0
 
     :goto_12f
-    if-lt v3, v5, :cond_24f
+    if-lt v3, v5, :cond_24d
 
     .line 57
     new-instance v1, Lcom/celticspear/tokens/EditorGameScreen$1;
@@ -424,7 +424,7 @@
 
     check-cast v6, Lcom/celticspear/tokens/TokensActivity;
 
-    const v7, 0x7f04001b
+    const v7, 0x7f040001
 
     invoke-virtual {v6, v7}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -487,7 +487,7 @@
 
     check-cast v3, Lcom/celticspear/tokens/TokensActivity;
 
-    const v7, 0x7f04001d
+    const v7, 0x7f040003
 
     invoke-virtual {v3, v7}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -523,7 +523,7 @@
     invoke-virtual {v3, v2}, Lorg/andengine/entity/scene/Scene;->registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V
 
     .line 89
-    const v4, 0x7f040021
+    const v4, 0x7f040008
 
     sget v5, Lcom/celticspear/tokens/Coordinates;->DELETE_PUZZLE_X:F
 
@@ -608,37 +608,35 @@
 
     check-cast v3, Lcom/celticspear/tokens/TokensActivity;
 
-    iget-object v4, p0, Lcom/celticspear/tokens/EditorGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
+    const/4 v4, 0x3
 
-    const/4 v5, 0x3
+    new-array v4, v4, [Ljava/lang/String;
 
-    new-array v5, v5, [Ljava/lang/String;
+    const/4 v5, 0x0
 
-    const/4 v6, 0x0
+    const-string v6, "bgMaskPuzzleTop"
 
-    const-string v7, "bgMaskPuzzleTop"
+    aput-object v6, v4, v5
 
-    aput-object v7, v5, v6
+    const/4 v5, 0x1
 
-    const/4 v6, 0x1
+    const-string v6, "boardBg"
 
-    const-string v7, "boardBg"
+    aput-object v6, v4, v5
 
-    aput-object v7, v5, v6
+    const/4 v5, 0x2
 
-    const/4 v6, 0x2
+    const-string v6, "bgMaskBottom"
 
-    const-string v7, "bgMaskBottom"
+    aput-object v6, v4, v5
 
-    aput-object v7, v5, v6
+    const/4 v5, 0x2
 
-    const/4 v6, 0x2
+    new-array v5, v5, [I
 
-    new-array v6, v6, [I
+    fill-array-data v5, :array_262
 
-    fill-array-data v6, :array_264
-
-    invoke-virtual {p0, v3, v4, v5, v6}, Lcom/celticspear/tokens/EditorGameScreen;->setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/IEntity;[Ljava/lang/String;[I)V
+    invoke-virtual {p0, v3, v4, v5}, Lcom/celticspear/tokens/EditorGameScreen;->setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;[Ljava/lang/String;[I)V
 
     .line 104
     iget-object v3, p0, Lcom/celticspear/tokens/EditorGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -683,7 +681,7 @@
     invoke-virtual {v9, v3}, Lorg/andengine/entity/sprite/ButtonSprite;->setScale(F)V
 
     .line 115
-    if-eqz p3, :cond_24e
+    if-eqz p3, :cond_24c
 
     .line 116
     move-object/from16 v0, p3
@@ -698,13 +696,13 @@
     invoke-virtual {v3, v4}, Lorg/andengine/entity/text/Text;->setVisible(Z)V
 
     .line 119
-    :cond_24e
+    :cond_24c
     return-void
 
     .line 51
     .end local v1    # "saveButton":Lorg/andengine/entity/text/Text;
     .end local v2    # "listButton":Lorg/andengine/entity/text/Text;
-    :cond_24f
+    :cond_24d
     aget-object v10, v4, v3
 
     .line 52
@@ -729,7 +727,7 @@
     goto/16 :goto_12f
 
     .line 102
-    :array_264
+    :array_262
     .array-data 4
         0xa
         0xa

@@ -260,7 +260,7 @@
     .param p7, "level"    # Lcom/celticspear/tokens/MapScreen$Level;
 
     .prologue
-    .line 145
+    .line 143
     .local p3, "typeIn1Nest":Lcom/celticspear/tokens/bonus/BonusNest$BonusType;, "Lcom/celticspear/tokens/bonus/BonusNest$BonusType;"
     .local p4, "typeIn2Nest":Lcom/celticspear/tokens/bonus/BonusNest$BonusType;, "Lcom/celticspear/tokens/bonus/BonusNest$BonusType;"
     invoke-direct/range {p0 .. p2}, Lcom/celticspear/tokens/AbstractGameScreen;-><init>(Lcom/celticspear/tokens/TokensActivity;Lcom/celticspear/tokens/AbstractScreen;)V
@@ -295,14 +295,14 @@
 
     iput-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->artefacts:Ljava/util/List;
 
-    .line 146
+    .line 144
     move-object/from16 v0, p7
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->level:Lcom/celticspear/tokens/MapScreen$Level;
 
-    .line 148
+    .line 146
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
@@ -319,14 +319,14 @@
 
     invoke-virtual {v3, v4}, Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;->trackPageView(Ljava/lang/String;)V
 
-    .line 150
+    .line 148
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->isInteractiveMode:Z
 
-    .line 151
+    .line 149
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
@@ -337,10 +337,10 @@
 
     invoke-virtual {v3, v4}, Lcom/celticspear/tokens/TokensActivity;->setAnimationRunning(Z)V
 
-    .line 152
+    .line 150
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->fillUpWithTokens()V
 
-    .line 153
+    .line 151
     new-instance v3, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
     move-object/from16 v0, p0
@@ -351,50 +351,46 @@
 
     iput-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
-    .line 154
+    .line 152
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v3, Lcom/celticspear/tokens/TokensActivity;
 
-    move-object/from16 v0, p0
+    const/4 v4, 0x3
 
-    iget-object v4, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
+    new-array v4, v4, [Ljava/lang/String;
 
-    const/4 v5, 0x3
+    const/4 v5, 0x0
 
-    new-array v5, v5, [Ljava/lang/String;
+    const-string v6, "bgMaskTop"
 
-    const/4 v6, 0x0
+    aput-object v6, v4, v5
 
-    const-string v7, "bgMaskTop"
+    const/4 v5, 0x1
 
-    aput-object v7, v5, v6
+    const-string v6, "boardBg"
 
-    const/4 v6, 0x1
+    aput-object v6, v4, v5
 
-    const-string v7, "boardBg"
+    const/4 v5, 0x2
 
-    aput-object v7, v5, v6
+    const-string v6, "bgMaskBottom"
 
-    const/4 v6, 0x2
+    aput-object v6, v4, v5
 
-    const-string v7, "bgMaskBottom"
+    const/4 v5, 0x2
 
-    aput-object v7, v5, v6
+    new-array v5, v5, [I
 
-    const/4 v6, 0x2
-
-    new-array v6, v6, [I
-
-    fill-array-data v6, :array_40e
+    fill-array-data v5, :array_40a
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3, v4, v5, v6}, Lcom/celticspear/tokens/ArcadeGameScreen;->setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/IEntity;[Ljava/lang/String;[I)V
+    invoke-virtual {v0, v3, v4, v5}, Lcom/celticspear/tokens/ArcadeGameScreen;->setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;[Ljava/lang/String;[I)V
 
-    .line 155
+    .line 153
     new-instance v3, Lorg/andengine/entity/text/Text;
 
     sget v4, Lcom/celticspear/tokens/Coordinates;->SHIFTS_TEXT_X:F
@@ -415,19 +411,19 @@
 
     const-string v7, "   "
 
-    .line 156
+    .line 154
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;
 
     move-result-object v8
 
     invoke-direct/range {v3 .. v8}, Lorg/andengine/entity/text/Text;-><init>(FFLorg/andengine/opengl/font/IFont;Ljava/lang/CharSequence;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 155
+    .line 153
     move-object/from16 v0, p0
 
     iput-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mShiftsText:Lorg/andengine/entity/text/Text;
 
-    .line 157
+    .line 155
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mShiftsText:Lorg/andengine/entity/text/Text;
@@ -436,7 +432,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/text/Text;->setZIndex(I)V
 
-    .line 158
+    .line 156
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -447,18 +443,18 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 160
+    .line 158
     new-instance v8, Lorg/andengine/entity/text/TextOptions;
 
     invoke-direct {v8}, Lorg/andengine/entity/text/TextOptions;-><init>()V
 
-    .line 161
+    .line 159
     .local v8, "options":Lorg/andengine/entity/text/TextOptions;
     sget-object v3, Lorg/andengine/util/HorizontalAlign;->CENTER:Lorg/andengine/util/HorizontalAlign;
 
     invoke-virtual {v8, v3}, Lorg/andengine/entity/text/TextOptions;->setHorizontalAlign(Lorg/andengine/util/HorizontalAlign;)V
 
-    .line 162
+    .line 160
     new-instance v3, Lorg/andengine/entity/text/Text;
 
     sget v4, Lcom/celticspear/tokens/Coordinates;->SCORES_TEXT_GAME_X:F
@@ -491,19 +487,19 @@
 
     const-string v7, "00:00"
 
-    .line 163
+    .line 161
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;
 
     move-result-object v9
 
     invoke-direct/range {v3 .. v9}, Lorg/andengine/entity/text/Text;-><init>(FFLorg/andengine/opengl/font/IFont;Ljava/lang/CharSequence;Lorg/andengine/entity/text/TextOptions;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 162
+    .line 160
     move-object/from16 v0, p0
 
     iput-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeText:Lorg/andengine/entity/text/Text;
 
-    .line 164
+    .line 162
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeText:Lorg/andengine/entity/text/Text;
@@ -512,7 +508,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/text/Text;->setZIndex(I)V
 
-    .line 165
+    .line 163
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -523,7 +519,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 167
+    .line 165
     new-instance v9, Lorg/andengine/entity/text/Text;
 
     sget v3, Lcom/celticspear/tokens/TokensActivity;->CAMERA_WIDTH:F
@@ -556,26 +552,26 @@
 
     const/16 v14, 0x64
 
-    .line 168
+    .line 166
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;
 
     move-result-object v15
 
     invoke-direct/range {v9 .. v15}, Lorg/andengine/entity/text/Text;-><init>(FFLorg/andengine/opengl/font/IFont;Ljava/lang/CharSequence;ILorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 167
+    .line 165
     move-object/from16 v0, p0
 
     iput-object v9, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScoresText:Lorg/andengine/entity/text/Text;
 
-    .line 169
+    .line 167
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScoresText:Lorg/andengine/entity/text/Text;
 
-    invoke-static {v3}, Lcom/celticspear/tokens/ArcadeGameScreen;->centerX(Lorg/andengine/entity/shape/RectangularShape;)V
+    invoke-static {v3}, Lcom/celticspear/tokens/ArcadeGameScreen;->center(Lorg/andengine/entity/shape/RectangularShape;)V
 
-    .line 170
+    .line 168
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScoresText:Lorg/andengine/entity/text/Text;
@@ -584,7 +580,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/text/Text;->setZIndex(I)V
 
-    .line 171
+    .line 169
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -595,7 +591,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 173
+    .line 171
     new-instance v9, Lorg/andengine/entity/text/Text;
 
     sget v10, Lcom/celticspear/tokens/Coordinates;->SHIFTS_TEXT_X:F
@@ -622,7 +618,7 @@
 
     const-string v13, "         "
 
-    .line 174
+    .line 172
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
@@ -635,12 +631,12 @@
 
     invoke-direct/range {v9 .. v14}, Lorg/andengine/entity/text/Text;-><init>(FFLorg/andengine/opengl/font/IFont;Ljava/lang/CharSequence;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 173
+    .line 171
     move-object/from16 v0, p0
 
     iput-object v9, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
 
-    .line 175
+    .line 173
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
@@ -649,7 +645,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/text/Text;->setVisible(Z)V
 
-    .line 176
+    .line 174
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
@@ -658,7 +654,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/text/Text;->setZIndex(I)V
 
-    .line 177
+    .line 175
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -669,7 +665,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 179
+    .line 177
     new-instance v16, Lorg/andengine/entity/sprite/ButtonSprite;
 
     sget v4, Lcom/celticspear/tokens/Coordinates;->PAUSE_BUTTON_X:F
@@ -688,7 +684,7 @@
 
     add-float/2addr v3, v5
 
-    .line 180
+    .line 178
     move-object/from16 v0, p1
 
     iget-object v5, v0, Lcom/celticspear/tokens/TokensActivity;->mResourceManager:Lcom/celticspear/tokens/ResourceManager;
@@ -699,17 +695,17 @@
 
     move-result-object v5
 
-    .line 181
+    .line 179
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;
 
     move-result-object v6
 
-    .line 179
+    .line 177
     move-object/from16 v0, v16
 
     invoke-direct {v0, v4, v3, v5, v6}, Lorg/andengine/entity/sprite/ButtonSprite;-><init>(FFLorg/andengine/opengl/texture/region/ITiledTextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 182
+    .line 180
     .local v16, "pauseButton":Lorg/andengine/entity/sprite/ButtonSprite;
     const/16 v3, 0xb
 
@@ -717,7 +713,7 @@
 
     invoke-virtual {v0, v3}, Lorg/andengine/entity/sprite/ButtonSprite;->setZIndex(I)V
 
-    .line 183
+    .line 181
     new-instance v3, Lcom/celticspear/tokens/ArcadeGameScreen$1;
 
     move-object/from16 v0, p0
@@ -728,7 +724,7 @@
 
     invoke-virtual {v0, v3}, Lorg/andengine/entity/sprite/ButtonSprite;->setOnClickListener(Lorg/andengine/entity/sprite/ButtonSprite$OnClickListener;)V
 
-    .line 189
+    .line 187
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -737,7 +733,7 @@
 
     invoke-virtual {v3, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 191
+    .line 189
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -746,7 +742,7 @@
 
     invoke-virtual {v3, v0}, Lorg/andengine/entity/scene/Scene;->registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V
 
-    .line 193
+    .line 191
     new-instance v4, Lorg/andengine/entity/sprite/Sprite;
 
     sget v5, Lcom/celticspear/tokens/Coordinates;->TIME_BAR_X:F
@@ -771,19 +767,19 @@
 
     check-cast v3, Lorg/andengine/opengl/texture/region/ITextureRegion;
 
-    .line 194
+    .line 192
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;
 
     move-result-object v7
 
     invoke-direct {v4, v5, v6, v3, v7}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 193
+    .line 191
     move-object/from16 v0, p0
 
     iput-object v4, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeBar:Lorg/andengine/entity/sprite/Sprite;
 
-    .line 195
+    .line 193
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeBar:Lorg/andengine/entity/sprite/Sprite;
@@ -792,7 +788,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setZIndex(I)V
 
-    .line 196
+    .line 194
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -803,7 +799,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 197
+    .line 195
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeBar:Lorg/andengine/entity/sprite/Sprite;
@@ -812,7 +808,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setScaleCenterX(F)V
 
-    .line 198
+    .line 196
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeBar:Lorg/andengine/entity/sprite/Sprite;
@@ -821,7 +817,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setScaleX(F)V
 
-    .line 200
+    .line 198
     new-instance v18, Lorg/andengine/entity/sprite/Sprite;
 
     sget v4, Lcom/celticspear/tokens/Coordinates;->TIME_BAR_FG_X:F
@@ -834,7 +830,7 @@
 
     sub-float v5, v3, v5
 
-    .line 201
+    .line 199
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getTextures()Ljava/util/Map;
 
     move-result-object v3
@@ -847,17 +843,17 @@
 
     check-cast v3, Lorg/andengine/opengl/texture/region/ITextureRegion;
 
-    .line 202
+    .line 200
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;
 
     move-result-object v6
 
-    .line 200
+    .line 198
     move-object/from16 v0, v18
 
     invoke-direct {v0, v4, v5, v3, v6}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 203
+    .line 201
     .local v18, "timeBarFg":Lorg/andengine/entity/sprite/Sprite;
     const/16 v3, 0xc
 
@@ -865,7 +861,7 @@
 
     invoke-virtual {v0, v3}, Lorg/andengine/entity/sprite/Sprite;->setZIndex(I)V
 
-    .line 204
+    .line 202
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -874,7 +870,7 @@
 
     invoke-virtual {v3, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 205
+    .line 203
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -883,7 +879,7 @@
 
     invoke-virtual {v0, v3}, Lcom/celticspear/tokens/TokensActivity;->sortSceneChildren(Lorg/andengine/entity/scene/Scene;)V
 
-    .line 206
+    .line 204
     const-string v3, "BonusTNT1"
 
     const/16 v4, 0xa
@@ -892,7 +888,7 @@
 
     invoke-virtual {v0, v3, v4}, Lcom/celticspear/tokens/ArcadeGameScreen;->addSpritePool(Ljava/lang/String;I)V
 
-    .line 207
+    .line 205
     const-string v3, "BonusShuffle"
 
     const/16 v4, 0xa
@@ -901,7 +897,7 @@
 
     invoke-virtual {v0, v3, v4}, Lcom/celticspear/tokens/ArcadeGameScreen;->addSpritePool(Ljava/lang/String;I)V
 
-    .line 208
+    .line 206
     const-string v3, "BonusTime"
 
     const/16 v4, 0xa
@@ -910,7 +906,7 @@
 
     invoke-virtual {v0, v3, v4}, Lcom/celticspear/tokens/ArcadeGameScreen;->addSpritePool(Ljava/lang/String;I)V
 
-    .line 209
+    .line 207
     const-string v3, "BonusMagnet"
 
     const/16 v4, 0xa
@@ -919,7 +915,7 @@
 
     invoke-virtual {v0, v3, v4}, Lcom/celticspear/tokens/ArcadeGameScreen;->addSpritePool(Ljava/lang/String;I)V
 
-    .line 210
+    .line 208
     new-instance v3, Lcom/celticspear/tokens/bonus/BonusNest;
 
     move-object/from16 v0, p0
@@ -938,10 +934,10 @@
 
     iput-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mLeftBonusNest:Lcom/celticspear/tokens/bonus/BonusNest;
 
-    .line 211
-    if-eqz p3, :cond_290
+    .line 209
+    if-eqz p3, :cond_28c
 
-    .line 212
+    .line 210
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mLeftBonusNest:Lcom/celticspear/tokens/bonus/BonusNest;
@@ -954,8 +950,8 @@
 
     invoke-direct {v0, v3, v1, v2}, Lcom/celticspear/tokens/ArcadeGameScreen;->populateNest(Lcom/celticspear/tokens/bonus/BonusNest;Lcom/celticspear/tokens/bonus/BonusNest$BonusType;I)V
 
-    .line 214
-    :cond_290
+    .line 212
+    :cond_28c
     new-instance v3, Lcom/celticspear/tokens/bonus/BonusNest;
 
     move-object/from16 v0, p0
@@ -974,10 +970,10 @@
 
     iput-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mRightBonusNest:Lcom/celticspear/tokens/bonus/BonusNest;
 
-    .line 215
-    if-eqz p4, :cond_2b2
+    .line 213
+    if-eqz p4, :cond_2ae
 
-    .line 216
+    .line 214
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mRightBonusNest:Lcom/celticspear/tokens/bonus/BonusNest;
@@ -990,8 +986,8 @@
 
     invoke-direct {v0, v3, v1, v2}, Lcom/celticspear/tokens/ArcadeGameScreen;->populateNest(Lcom/celticspear/tokens/bonus/BonusNest;Lcom/celticspear/tokens/bonus/BonusNest$BonusType;I)V
 
-    .line 218
-    :cond_2b2
+    .line 216
+    :cond_2ae
     invoke-virtual/range {p7 .. p7}, Lcom/celticspear/tokens/MapScreen$Level;->getArtefact()Lcom/celticspear/tokens/artefact/Artefact;
 
     move-result-object v3
@@ -1000,7 +996,7 @@
 
     invoke-virtual {v0, v3}, Lcom/celticspear/tokens/ArcadeGameScreen;->addArtefactPool(Lcom/celticspear/tokens/artefact/Artefact;)V
 
-    .line 219
+    .line 217
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->artefacts:Ljava/util/List;
@@ -1015,7 +1011,7 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 221
+    .line 219
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -1028,7 +1024,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/scene/Scene;->registerUpdateHandler(Lorg/andengine/engine/handler/IUpdateHandler;)V
 
-    .line 245
+    .line 243
     sget-object v3, Lcom/celticspear/tokens/MapScreen$Level;->LEVEL_1:Lcom/celticspear/tokens/MapScreen$Level;
 
     move-object/from16 v0, p7
@@ -1037,9 +1033,9 @@
 
     move-result v3
 
-    if-eqz v3, :cond_2fa
+    if-eqz v3, :cond_2f6
 
-    .line 246
+    .line 244
     new-instance v4, Lcom/celticspear/tokens/tutorial/TokenTutorial;
 
     move-object/from16 v0, p0
@@ -1062,11 +1058,11 @@
 
     iput-object v4, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->tutorial:Lcom/celticspear/tokens/tutorial/TokenTutorial;
 
-    .line 249
-    :cond_2fa
+    .line 247
+    :cond_2f6
     const/high16 v17, 0x40400000    # 3.0f
 
-    .line 250
+    .line 248
     .local v17, "scaleQ":F
     new-instance v5, Lorg/andengine/entity/sprite/Sprite;
 
@@ -1108,7 +1104,7 @@
 
     iput-object v5, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->leftFx:Lorg/andengine/entity/sprite/Sprite;
 
-    .line 251
+    .line 249
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->leftFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1117,7 +1113,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setScaleCenterY(F)V
 
-    .line 252
+    .line 250
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->leftFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1126,7 +1122,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setScaleCenterX(F)V
 
-    .line 253
+    .line 251
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->leftFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1135,7 +1131,7 @@
 
     invoke-virtual {v3, v0}, Lorg/andengine/entity/sprite/Sprite;->setScale(F)V
 
-    .line 254
+    .line 252
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->leftFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1162,7 +1158,7 @@
 
     invoke-virtual {v4, v3}, Lorg/andengine/entity/sprite/Sprite;->setScaleY(F)V
 
-    .line 255
+    .line 253
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->leftFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1171,7 +1167,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setAlpha(F)V
 
-    .line 256
+    .line 254
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->leftFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1180,7 +1176,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setZIndex(I)V
 
-    .line 257
+    .line 255
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -1191,7 +1187,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 259
+    .line 257
     new-instance v5, Lorg/andengine/entity/sprite/Sprite;
 
     const/4 v6, 0x0
@@ -1232,7 +1228,7 @@
 
     iput-object v5, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->rightFx:Lorg/andengine/entity/sprite/Sprite;
 
-    .line 260
+    .line 258
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->leftFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1241,7 +1237,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setScaleCenterX(F)V
 
-    .line 261
+    .line 259
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->rightFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1250,7 +1246,7 @@
 
     invoke-virtual {v3, v0}, Lorg/andengine/entity/sprite/Sprite;->setScaleX(F)V
 
-    .line 262
+    .line 260
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->rightFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1281,7 +1277,7 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/andengine/entity/sprite/Sprite;->setPosition(FF)V
 
-    .line 263
+    .line 261
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->rightFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1292,7 +1288,7 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/andengine/entity/sprite/Sprite;->setFlipped(ZZ)V
 
-    .line 264
+    .line 262
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->rightFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1301,7 +1297,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setScaleCenterY(F)V
 
-    .line 265
+    .line 263
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->rightFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1328,7 +1324,7 @@
 
     invoke-virtual {v4, v3}, Lorg/andengine/entity/sprite/Sprite;->setScaleY(F)V
 
-    .line 266
+    .line 264
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->rightFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1337,7 +1333,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setAlpha(F)V
 
-    .line 267
+    .line 265
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->rightFx:Lorg/andengine/entity/sprite/Sprite;
@@ -1346,7 +1342,7 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/sprite/Sprite;->setZIndex(I)V
 
-    .line 268
+    .line 266
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -1357,11 +1353,11 @@
 
     invoke-virtual {v3, v4}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 269
+    .line 267
     return-void
 
-    .line 154
-    :array_40e
+    .line 152
+    :array_40a
     .array-data 4
         0xa
         0xa
@@ -1402,7 +1398,7 @@
     .registers 4
 
     .prologue
-    .line 587
+    .line 583
     invoke-direct {p0, p1, p2, p3}, Lcom/celticspear/tokens/ArcadeGameScreen;->removeTokenGroups(ILjava/util/Map;I)V
 
     return-void
@@ -1422,7 +1418,7 @@
     .registers 2
 
     .prologue
-    .line 857
+    .line 852
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->atLeastOneArtefactPartExists()Lcom/celticspear/tokens/artefact/ArtefactInstance;
 
     move-result-object v0
@@ -1444,7 +1440,7 @@
     .registers 1
 
     .prologue
-    .line 271
+    .line 269
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->createTimeAnimation()V
 
     return-void
@@ -1464,7 +1460,7 @@
     .registers 1
 
     .prologue
-    .line 303
+    .line 301
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->calculateMoney()V
 
     return-void
@@ -1474,7 +1470,7 @@
     .registers 1
 
     .prologue
-    .line 312
+    .line 310
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->updateTimeBar()V
 
     return-void
@@ -1504,7 +1500,7 @@
     .registers 4
 
     .prologue
-    .line 858
+    .line 853
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->artefacts:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1518,13 +1514,13 @@
 
     if-nez v2, :cond_e
 
-    .line 863
+    .line 858
     const/4 v0, 0x0
 
     :goto_d
     return-object v0
 
-    .line 858
+    .line 853
     :cond_e
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1532,7 +1528,7 @@
 
     check-cast v0, Lcom/celticspear/tokens/artefact/ArtefactInstance;
 
-    .line 859
+    .line 854
     .local v0, "artefactInstance":Lcom/celticspear/tokens/artefact/ArtefactInstance;
     invoke-virtual {v0}, Lcom/celticspear/tokens/artefact/ArtefactInstance;->getPartStack()Ljava/util/Stack;
 
@@ -1552,7 +1548,7 @@
     .param p1, "oneColorTokensSize"    # I
 
     .prologue
-    .line 583
+    .line 579
     const/16 v0, 0x8
 
     if-ge p1, v0, :cond_6
@@ -1562,7 +1558,7 @@
     :goto_5
     return v0
 
-    .line 584
+    .line 580
     :cond_6
     add-int/lit8 v0, p1, -0x7
 
@@ -1577,7 +1573,7 @@
     .prologue
     const/high16 v3, 0x40a00000    # 5.0f
 
-    .line 304
+    .line 302
     iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
@@ -1621,7 +1617,7 @@
 
     invoke-static {v0, v1}, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->access$5(Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;I)V
 
-    .line 305
+    .line 303
     return-void
 .end method
 
@@ -1634,20 +1630,20 @@
     .prologue
     const/16 v11, 0x8
 
-    .line 680
+    .line 675
     invoke-virtual {p3}, Lcom/celticspear/tokens/artefact/Artefact;->getPartsMatrix()[[I
 
     move-result-object v6
 
-    .line 681
+    .line 676
     .local v6, "pPartsMatrix":[[I
     array-length v5, v6
 
-    .line 682
+    .line 677
     .local v5, "matrixSide":I
     const/4 v2, 0x0
 
-    .line 683
+    .line 678
     .local v2, "found":I
     const/4 v3, 0x0
 
@@ -1655,7 +1651,7 @@
     :goto_9
     if-lt v3, v5, :cond_13
 
-    .line 702
+    .line 697
     invoke-virtual {p3}, Lcom/celticspear/tokens/artefact/Artefact;->getParts()I
 
     move-result v9
@@ -1667,7 +1663,7 @@
     :goto_12
     return v9
 
-    .line 684
+    .line 679
     :cond_13
     const/4 v4, 0x0
 
@@ -1675,16 +1671,16 @@
     :goto_14
     if-lt v4, v5, :cond_19
 
-    .line 683
+    .line 678
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_9
 
-    .line 685
+    .line 680
     :cond_19
     add-int v8, p1, v3
 
-    .line 686
+    .line 681
     .local v8, "tokenRow":I
     add-int v9, p2, v4
 
@@ -1694,44 +1690,44 @@
 
     sub-int v7, v9, v10
 
-    .line 687
+    .line 682
     .local v7, "tokenColumn":I
     if-ge v8, v11, :cond_52
 
-    .line 688
+    .line 683
     if-ge v7, v11, :cond_52
 
-    .line 689
+    .line 684
     if-ltz v8, :cond_52
 
-    .line 690
+    .line 685
     if-ltz v7, :cond_52
 
-    .line 691
+    .line 686
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
 
     aget-object v9, v9, v8
 
     aget-object v1, v9, v7
 
-    .line 692
+    .line 687
     .local v1, "currentToken":Lcom/celticspear/tokens/token/IToken;
     aget-object v9, v6, v3
 
     aget v0, v9, v4
 
-    .line 693
+    .line 688
     .local v0, "currentMatrixPart":I
     if-eqz v0, :cond_52
 
-    .line 694
+    .line 689
     instance-of v9, v1, Lcom/celticspear/tokens/token/ArtefactToken;
 
     if-eqz v9, :cond_52
 
     move-object v9, v1
 
-    .line 695
+    .line 690
     check-cast v9, Lcom/celticspear/tokens/token/ArtefactToken;
 
     invoke-virtual {v9}, Lcom/celticspear/tokens/token/ArtefactToken;->getArtefact()Lcom/celticspear/tokens/artefact/Artefact;
@@ -1744,7 +1740,7 @@
 
     if-eqz v9, :cond_52
 
-    .line 696
+    .line 691
     check-cast v1, Lcom/celticspear/tokens/token/ArtefactToken;
 
     .end local v1    # "currentToken":Lcom/celticspear/tokens/token/IToken;
@@ -1754,17 +1750,17 @@
 
     if-ne v9, v0, :cond_52
 
-    .line 697
+    .line 692
     add-int/lit8 v2, v2, 0x1
 
-    .line 684
+    .line 679
     .end local v0    # "currentMatrixPart":I
     :cond_52
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_14
 
-    .line 702
+    .line 697
     .end local v4    # "j":I
     .end local v7    # "tokenColumn":I
     .end local v8    # "tokenRow":I
@@ -1778,10 +1774,10 @@
     .registers 14
 
     .prologue
-    .line 272
+    .line 270
     const v0, 0x3f99999a    # 1.2f
 
-    .line 273
+    .line 271
     .local v0, "q":F
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeText:Lorg/andengine/entity/text/Text;
 
@@ -1797,7 +1793,7 @@
 
     const/4 v5, 0x0
 
-    .line 285
+    .line 283
     new-instance v6, Lorg/andengine/entity/modifier/ScaleModifier;
 
     const/high16 v7, 0x3f800000    # 1.0f
@@ -1808,7 +1804,7 @@
 
     const/4 v5, 0x1
 
-    .line 286
+    .line 284
     new-instance v6, Lorg/andengine/entity/modifier/SequenceEntityModifier;
 
     const/4 v7, 0x5
@@ -1817,7 +1813,7 @@
 
     const/4 v8, 0x0
 
-    .line 287
+    .line 285
     new-instance v9, Lorg/andengine/entity/modifier/ScaleModifier;
 
     const v10, 0x3ccccccd    # 0.025f
@@ -1836,7 +1832,7 @@
 
     const/4 v8, 0x1
 
-    .line 288
+    .line 286
     new-instance v9, Lorg/andengine/entity/modifier/ScaleModifier;
 
     const v10, 0x3cb43958    # 0.022f
@@ -1855,7 +1851,7 @@
 
     const/4 v8, 0x2
 
-    .line 289
+    .line 287
     new-instance v9, Lorg/andengine/entity/modifier/ScaleModifier;
 
     const v10, 0x3c75c28f    # 0.015f
@@ -1874,7 +1870,7 @@
 
     const/4 v8, 0x3
 
-    .line 290
+    .line 288
     new-instance v9, Lorg/andengine/entity/modifier/ScaleModifier;
 
     const v10, 0x3c75c28f    # 0.015f
@@ -1893,7 +1889,7 @@
 
     const/4 v8, 0x4
 
-    .line 291
+    .line 289
     new-instance v9, Lorg/andengine/entity/modifier/ScaleModifier;
 
     const v10, 0x3c75c28f    # 0.015f
@@ -1908,7 +1904,7 @@
 
     invoke-direct {v9, v10, v11, v12}, Lorg/andengine/entity/modifier/ScaleModifier;-><init>(FFF)V
 
-    .line 286
+    .line 284
     aput-object v9, v7, v8
 
     invoke-direct {v6, v7}, Lorg/andengine/entity/modifier/SequenceEntityModifier;-><init>([Lorg/andengine/entity/modifier/IEntityModifier;)V
@@ -1917,10 +1913,10 @@
 
     invoke-direct {v2, v3, v4}, Lorg/andengine/entity/modifier/SequenceEntityModifier;-><init>(Lorg/andengine/entity/modifier/IEntityModifier$IEntityModifierListener;[Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 273
+    .line 271
     invoke-virtual {v1, v2}, Lorg/andengine/entity/text/Text;->registerEntityModifier(Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 294
+    .line 292
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->leftFx:Lorg/andengine/entity/sprite/Sprite;
 
     new-instance v2, Lorg/andengine/entity/modifier/SequenceEntityModifier;
@@ -1931,7 +1927,7 @@
 
     const/4 v4, 0x0
 
-    .line 295
+    .line 293
     new-instance v5, Lorg/andengine/entity/modifier/AlphaModifier;
 
     const v6, 0x3ecccccd    # 0.4f
@@ -1946,7 +1942,7 @@
 
     const/4 v4, 0x1
 
-    .line 296
+    .line 294
     new-instance v5, Lorg/andengine/entity/modifier/AlphaModifier;
 
     const v6, 0x3ecccccd    # 0.4f
@@ -1961,10 +1957,10 @@
 
     invoke-direct {v2, v3}, Lorg/andengine/entity/modifier/SequenceEntityModifier;-><init>([Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 294
+    .line 292
     invoke-virtual {v1, v2}, Lorg/andengine/entity/sprite/Sprite;->registerEntityModifier(Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 298
+    .line 296
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->rightFx:Lorg/andengine/entity/sprite/Sprite;
 
     new-instance v2, Lorg/andengine/entity/modifier/SequenceEntityModifier;
@@ -1975,7 +1971,7 @@
 
     const/4 v4, 0x0
 
-    .line 299
+    .line 297
     new-instance v5, Lorg/andengine/entity/modifier/AlphaModifier;
 
     const v6, 0x3ecccccd    # 0.4f
@@ -1990,7 +1986,7 @@
 
     const/4 v4, 0x1
 
-    .line 300
+    .line 298
     new-instance v5, Lorg/andengine/entity/modifier/AlphaModifier;
 
     const v6, 0x3ecccccd    # 0.4f
@@ -2005,10 +2001,10 @@
 
     invoke-direct {v2, v3}, Lorg/andengine/entity/modifier/SequenceEntityModifier;-><init>([Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 298
+    .line 296
     invoke-virtual {v1, v2}, Lorg/andengine/entity/sprite/Sprite;->registerEntityModifier(Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 301
+    .line 299
     return-void
 .end method
 
@@ -2018,12 +2014,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 370
+    .line 366
     new-instance v0, Ljava/text/DecimalFormat;
 
     invoke-direct {v0, p0}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    .line 371
+    .line 367
     .local v0, "myFormatter":Ljava/text/DecimalFormat;
     invoke-virtual {v0, p1, p2}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
 
@@ -2055,13 +2051,13 @@
     .end annotation
 
     .prologue
-    .line 617
+    .line 613
     .local p1, "oneColorTokens":Ljava/util/Set;, "Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;"
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 618
+    .line 614
     .local v1, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;>;"
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -2074,10 +2070,10 @@
 
     if-nez v4, :cond_10
 
-    .line 625
+    .line 621
     return-object v1
 
-    .line 618
+    .line 614
     :cond_10
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2085,7 +2081,7 @@
 
     check-cast v2, Lcom/celticspear/tokens/token/IToken;
 
-    .line 619
+    .line 615
     .local v2, "token":Lcom/celticspear/tokens/token/IToken;
     invoke-interface {p2}, Lcom/celticspear/tokens/token/IToken;->getColumn()I
 
@@ -2101,7 +2097,7 @@
 
     move-result v4
 
-    .line 620
+    .line 616
     invoke-interface {p2}, Lcom/celticspear/tokens/token/IToken;->getRow()I
 
     move-result v6
@@ -2116,12 +2112,12 @@
 
     move-result v6
 
-    .line 619
+    .line 615
     invoke-static {v4, v6}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 621
+    .line 617
     .local v0, "distance":I
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2145,12 +2141,12 @@
 
     move-object v3, v4
 
-    .line 622
+    .line 618
     .local v3, "tokenGroup":Ljava/util/Set;, "Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;"
     :goto_49
     invoke-interface {v3, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 623
+    .line 619
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -2159,7 +2155,7 @@
 
     goto :goto_9
 
-    .line 621
+    .line 617
     .end local v3    # "tokenGroup":Ljava/util/Set;, "Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;"
     :cond_54
     new-instance v3, Ljava/util/HashSet;
@@ -2173,7 +2169,7 @@
     .registers 2
 
     .prologue
-    .line 575
+    .line 571
     iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->tutorial:Lcom/celticspear/tokens/tutorial/TokenTutorial;
 
     if-eqz v0, :cond_6
@@ -2193,7 +2189,7 @@
     .registers 3
 
     .prologue
-    .line 579
+    .line 575
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->isInTutorial()Z
 
     move-result v0
@@ -2237,7 +2233,7 @@
     .end annotation
 
     .prologue
-    .line 345
+    .line 341
     .local p1, "nest":Lcom/celticspear/tokens/bonus/BonusNest;, "Lcom/celticspear/tokens/bonus/BonusNest<Lcom/celticspear/tokens/bonus/AbstractBonus;>;"
     .local p2, "typeInNest":Lcom/celticspear/tokens/bonus/BonusNest$BonusType;, "Lcom/celticspear/tokens/bonus/BonusNest$BonusType;"
     invoke-static {}, Lcom/celticspear/tokens/ArcadeGameScreen;->$SWITCH_TABLE$com$celticspear$tokens$bonus$BonusNest$BonusType()[I
@@ -2252,11 +2248,11 @@
 
     packed-switch v1, :pswitch_data_46
 
-    .line 367
+    .line 363
     :cond_d
     return-void
 
-    .line 347
+    .line 343
     :pswitch_e
     const/4 v0, 0x0
 
@@ -2264,19 +2260,19 @@
     :goto_f
     if-ge v0, p3, :cond_d
 
-    .line 348
+    .line 344
     new-instance v1, Lcom/celticspear/tokens/bonus/TntBonus;
 
     invoke-direct {v1, p1, p0}, Lcom/celticspear/tokens/bonus/TntBonus;-><init>(Lcom/celticspear/tokens/bonus/BonusNest;Lcom/celticspear/tokens/ArcadeGameScreen;)V
 
     invoke-virtual {p1, v1}, Lcom/celticspear/tokens/bonus/BonusNest;->add(Lcom/celticspear/tokens/ISimpleBonusEntity;)Z
 
-    .line 347
+    .line 343
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_f
 
-    .line 352
+    .line 348
     .end local v0    # "i":I
     :pswitch_1c
     const/4 v0, 0x0
@@ -2285,19 +2281,19 @@
     :goto_1d
     if-ge v0, p3, :cond_d
 
-    .line 353
+    .line 349
     new-instance v1, Lcom/celticspear/tokens/bonus/ShuffleBonus;
 
     invoke-direct {v1, p1, p0}, Lcom/celticspear/tokens/bonus/ShuffleBonus;-><init>(Lcom/celticspear/tokens/bonus/BonusNest;Lcom/celticspear/tokens/ArcadeGameScreen;)V
 
     invoke-virtual {p1, v1}, Lcom/celticspear/tokens/bonus/BonusNest;->add(Lcom/celticspear/tokens/ISimpleBonusEntity;)Z
 
-    .line 352
+    .line 348
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1d
 
-    .line 357
+    .line 353
     .end local v0    # "i":I
     :pswitch_2a
     const/4 v0, 0x0
@@ -2306,19 +2302,19 @@
     :goto_2b
     if-ge v0, p3, :cond_d
 
-    .line 358
+    .line 354
     new-instance v1, Lcom/celticspear/tokens/bonus/TimeBonus;
 
     invoke-direct {v1, p1, p0}, Lcom/celticspear/tokens/bonus/TimeBonus;-><init>(Lcom/celticspear/tokens/bonus/BonusNest;Lcom/celticspear/tokens/ArcadeGameScreen;)V
 
     invoke-virtual {p1, v1}, Lcom/celticspear/tokens/bonus/BonusNest;->add(Lcom/celticspear/tokens/ISimpleBonusEntity;)Z
 
-    .line 357
+    .line 353
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2b
 
-    .line 362
+    .line 358
     .end local v0    # "i":I
     :pswitch_38
     const/4 v0, 0x0
@@ -2327,19 +2323,19 @@
     :goto_39
     if-ge v0, p3, :cond_d
 
-    .line 363
+    .line 359
     new-instance v1, Lcom/celticspear/tokens/bonus/MagnetBonus;
 
     invoke-direct {v1, p1, p0}, Lcom/celticspear/tokens/bonus/MagnetBonus;-><init>(Lcom/celticspear/tokens/bonus/BonusNest;Lcom/celticspear/tokens/ArcadeGameScreen;)V
 
     invoke-virtual {p1, v1}, Lcom/celticspear/tokens/bonus/BonusNest;->add(Lcom/celticspear/tokens/ISimpleBonusEntity;)Z
 
-    .line 362
+    .line 358
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_39
 
-    .line 345
+    .line 341
     :pswitch_data_46
     .packed-switch 0x1
         :pswitch_e
@@ -2367,7 +2363,7 @@
     .end annotation
 
     .prologue
-    .line 588
+    .line 584
     .local p2, "tokenGroups":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;>;"
     sget-object v1, Lcom/celticspear/tokens/ArcadeGameScreen;->TAG:Ljava/lang/String;
 
@@ -2426,7 +2422,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 589
+    .line 585
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -2443,7 +2439,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/celticspear/tokens/ArcadeGameScreen;->removeTokens(Ljava/util/Set;Ljava/lang/Runnable;)V
 
-    .line 606
+    .line 602
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
@@ -2452,16 +2448,16 @@
 
     invoke-direct {v1, p0, p2, p3, p1}, Lcom/celticspear/tokens/ArcadeGameScreen$6;-><init>(Lcom/celticspear/tokens/ArcadeGameScreen;Ljava/util/Map;II)V
 
-    .line 613
+    .line 609
     const-wide/16 v2, 0x78
 
-    .line 606
+    .line 602
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
-    .line 614
+    .line 610
     return-void
 
-    .line 588
+    .line 584
     :cond_5c
     const-string v0, "null"
 
@@ -2475,20 +2471,20 @@
     .prologue
     const/16 v3, 0x8
 
-    .line 667
+    .line 662
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_3
     if-lt v0, v3, :cond_7
 
-    .line 676
+    .line 671
     const/4 v2, 0x0
 
     :goto_6
     return v2
 
-    .line 668
+    .line 663
     :cond_7
     const/4 v1, 0x0
 
@@ -2496,12 +2492,12 @@
     :goto_8
     if-lt v1, v3, :cond_d
 
-    .line 667
+    .line 662
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 669
+    .line 664
     :cond_d
     iget-object v2, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
 
@@ -2513,19 +2509,19 @@
 
     if-eqz v2, :cond_1f
 
-    .line 670
+    .line 665
     invoke-direct {p0, v1, v0, p1}, Lcom/celticspear/tokens/ArcadeGameScreen;->checkArtefactMatrix(IILcom/celticspear/tokens/artefact/Artefact;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1f
 
-    .line 671
+    .line 666
     const/4 v2, 0x1
 
     goto :goto_6
 
-    .line 668
+    .line 663
     :cond_1f
     add-int/lit8 v1, v1, 0x1
 
@@ -2536,7 +2532,7 @@
     .registers 5
 
     .prologue
-    .line 854
+    .line 849
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -2552,7 +2548,7 @@
     .registers 9
 
     .prologue
-    .line 327
+    .line 325
     sget v0, Lcom/celticspear/tokens/ArcadeGameScreen;->BASE_SCALE:F
 
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
@@ -2574,20 +2570,20 @@
 
     mul-float v3, v0, v1
 
-    .line 328
+    .line 326
     .local v3, "newScaleX":F
     const/4 v0, 0x0
 
     cmpl-float v0, v3, v0
 
-    if-nez v0, :cond_74
+    if-nez v0, :cond_5f
 
-    .line 329
+    .line 327
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->atLeastOneArtefactPartExists()Lcom/celticspear/tokens/artefact/ArtefactInstance;
 
     move-result-object v6
 
-    .line 330
+    .line 328
     .local v6, "artefactInstance":Lcom/celticspear/tokens/artefact/ArtefactInstance;
     if-eqz v6, :cond_47
 
@@ -2603,7 +2599,7 @@
 
     if-le v0, v1, :cond_47
 
-    .line 331
+    .line 329
     iget-object v7, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeBar:Lorg/andengine/entity/sprite/Sprite;
 
     new-instance v0, Lorg/andengine/entity/modifier/ScaleModifier;
@@ -2616,7 +2612,7 @@
 
     move-result v2
 
-    .line 332
+    .line 330
     iget-object v4, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeBar:Lorg/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v4}, Lorg/andengine/entity/sprite/Sprite;->getScaleY()F
@@ -2631,15 +2627,15 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/andengine/entity/modifier/ScaleModifier;-><init>(FFFFF)V
 
-    .line 331
+    .line 329
     invoke-virtual {v7, v0}, Lorg/andengine/entity/sprite/Sprite;->registerEntityModifier(Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 342
+    .line 338
     .end local v6    # "artefactInstance":Lcom/celticspear/tokens/artefact/ArtefactInstance;
     :goto_46
     return-void
 
-    .line 334
+    .line 332
     .restart local v6    # "artefactInstance":Lcom/celticspear/tokens/artefact/ArtefactInstance;
     :cond_47
     iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeBar:Lorg/andengine/entity/sprite/Sprite;
@@ -2648,14 +2644,14 @@
 
     invoke-virtual {v0, v1}, Lorg/andengine/entity/sprite/Sprite;->setScaleX(F)V
 
-    .line 335
+    .line 333
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScoresText:Lorg/andengine/entity/text/Text;
 
     iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v0, Lcom/celticspear/tokens/TokensActivity;
 
-    const v2, 0x7f040019
+    const v2, 0x7f04002b
 
     invoke-virtual {v0, v2}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -2663,33 +2659,11 @@
 
     invoke-virtual {v1, v0}, Lorg/andengine/entity/text/Text;->setText(Ljava/lang/CharSequence;)V
 
-    .line 336
-    iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScoresText:Lorg/andengine/entity/text/Text;
-
-    sget v1, Lcom/celticspear/tokens/TokensActivity;->CAMERA_WIDTH:F
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    div-float/2addr v1, v2
-
-    iget-object v2, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScoresText:Lorg/andengine/entity/text/Text;
-
-    invoke-virtual {v2}, Lorg/andengine/entity/text/Text;->getY()F
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Lorg/andengine/entity/text/Text;->setPosition(FF)V
-
-    .line 337
-    iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScoresText:Lorg/andengine/entity/text/Text;
-
-    invoke-static {v0}, Lcom/celticspear/tokens/ArcadeGameScreen;->centerX(Lorg/andengine/entity/shape/RectangularShape;)V
-
     goto :goto_46
 
-    .line 340
+    .line 336
     .end local v6    # "artefactInstance":Lcom/celticspear/tokens/artefact/ArtefactInstance;
-    :cond_74
+    :cond_5f
     iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeBar:Lorg/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v0, v3}, Lorg/andengine/entity/sprite/Sprite;->setScaleX(F)V
@@ -2701,7 +2675,7 @@
     .registers 3
 
     .prologue
-    .line 319
+    .line 317
     iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
     # getter for: Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->score:I
@@ -2721,23 +2695,23 @@
 
     if-lez v0, :cond_1a
 
-    .line 320
+    .line 318
     iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->access$1(Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;I)V
 
-    .line 321
+    .line 319
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->isArtefactPartReady:Z
 
-    .line 323
+    .line 321
     :cond_1a
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->setPBScale()V
 
-    .line 324
+    .line 322
     return-void
 .end method
 
@@ -2746,17 +2720,17 @@
     .param p1, "oneColorTokensSize"    # I
 
     .prologue
-    .line 644
+    .line 640
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->atLeastOneArtefactPartExists()Lcom/celticspear/tokens/artefact/ArtefactInstance;
 
     move-result-object v1
 
     if-eqz v1, :cond_1b
 
-    .line 645
+    .line 641
     mul-int/lit8 v0, p1, 0x64
 
-    .line 646
+    .line 642
     .local v0, "scoresEarned":I
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
@@ -2775,10 +2749,10 @@
 
     invoke-static {v1, v2}, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->access$1(Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;I)V
 
-    .line 647
+    .line 643
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->updateProgressBar()V
 
-    .line 650
+    .line 646
     .end local v0    # "scoresEarned":I
     :goto_1a
     return v0
@@ -2794,35 +2768,35 @@
     .param p1, "oneColorTokensSize"    # I
 
     .prologue
-    .line 655
+    .line 650
     const/4 v0, 0x4
 
     if-le p1, v0, :cond_c
 
-    .line 656
+    .line 651
     const/4 v0, 0x7
 
     if-ge p1, v0, :cond_d
 
-    .line 657
+    .line 652
     iget v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mShifts:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mShifts:I
 
-    .line 664
+    .line 659
     :cond_c
     :goto_c
     return-void
 
-    .line 658
+    .line 653
     :cond_d
     const/16 v0, 0xc
 
     if-ge p1, v0, :cond_18
 
-    .line 659
+    .line 654
     iget v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mShifts:I
 
     add-int/lit8 v0, v0, 0x2
@@ -2831,7 +2805,7 @@
 
     goto :goto_c
 
-    .line 661
+    .line 656
     :cond_18
     iget v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mShifts:I
 
@@ -2848,7 +2822,7 @@
     .prologue
     const/high16 v3, 0x42700000    # 60.0f
 
-    .line 313
+    .line 311
     iget v2, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->secondsElapsed:F
 
     div-float/2addr v2, v3
@@ -2857,7 +2831,7 @@
 
     float-to-int v0, v2
 
-    .line 314
+    .line 312
     .local v0, "m":I
     iget v2, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->secondsElapsed:F
 
@@ -2865,7 +2839,7 @@
 
     float-to-int v1, v2
 
-    .line 315
+    .line 313
     .local v1, "s":I
     iget-object v2, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeText:Lorg/andengine/entity/text/Text;
 
@@ -2909,7 +2883,7 @@
 
     invoke-virtual {v2, v3}, Lorg/andengine/entity/text/Text;->setText(Ljava/lang/CharSequence;)V
 
-    .line 316
+    .line 314
     return-void
 .end method
 
@@ -2917,7 +2891,7 @@
     .registers 3
 
     .prologue
-    .line 706
+    .line 701
     iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v0, Lcom/celticspear/tokens/TokensActivity;
@@ -2928,7 +2902,7 @@
 
     invoke-virtual {v0, v1}, Lcom/celticspear/tokens/TokensActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 716
+    .line 711
     return-void
 .end method
 
@@ -2943,16 +2917,9 @@
     const/high16 v5, 0x44160000    # 600.0f
 
     .line 85
-    invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->atLeastOneArtefactPartExists()Lcom/celticspear/tokens/artefact/ArtefactInstance;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5b
-
-    .line 86
     move v0, p2
 
-    .line 87
+    .line 86
     .local v0, "eggCost":I
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
@@ -2965,10 +2932,10 @@
 
     invoke-static {v1, v2}, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->access$1(Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;I)V
 
-    .line 88
+    .line 87
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->updateProgressBar()V
 
-    .line 89
+    .line 88
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2985,7 +2952,7 @@
 
     invoke-virtual {v1, v2}, Lorg/andengine/entity/text/Text;->setText(Ljava/lang/CharSequence;)V
 
-    .line 90
+    .line 89
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
 
     invoke-interface {p1}, Lcom/celticspear/tokens/token/IToken;->getCenter()Landroid/graphics/Point;
@@ -3010,19 +2977,19 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/andengine/entity/text/Text;->setPosition(FF)V
 
-    .line 91
+    .line 90
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
 
-    invoke-static {v1}, Lcom/celticspear/tokens/ArcadeGameScreen;->centerX(Lorg/andengine/entity/shape/RectangularShape;)V
+    invoke-static {v1}, Lcom/celticspear/tokens/ArcadeGameScreen;->center(Lorg/andengine/entity/shape/RectangularShape;)V
 
-    .line 92
+    .line 91
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lorg/andengine/entity/text/Text;->setVisible(Z)V
 
-    .line 94
+    .line 93
     iget-object v2, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
 
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTimeBar:Lorg/andengine/entity/sprite/Sprite;
@@ -3035,26 +3002,23 @@
 
     cmpl-float v1, v1, v5
 
-    if-lez v1, :cond_5c
+    if-lez v1, :cond_56
 
     int-to-float v1, v0
 
     div-float/2addr v1, v5
 
-    :goto_58
+    :goto_52
     invoke-static {v2, v3, v1}, Lcom/celticspear/andengine/VisualUtils;->shakeBigTextAndMoveUp(Lorg/andengine/entity/IEntity;FF)V
 
-    .line 96
-    .end local v0    # "eggCost":I
-    :cond_5b
+    .line 94
     return-void
 
-    .line 94
-    .restart local v0    # "eggCost":I
-    :cond_5c
+    .line 93
+    :cond_56
     const/high16 v1, 0x3f800000    # 1.0f
 
-    goto :goto_58
+    goto :goto_52
 .end method
 
 .method public addSeconds(I)V
@@ -3062,7 +3026,7 @@
     .param p1, "timeBonusSeconds"    # I
 
     .prologue
-    .line 308
+    .line 306
     iget v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->secondsElapsed:F
 
     int-to-float v1, p1
@@ -3071,10 +3035,10 @@
 
     iput v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->secondsElapsed:F
 
-    .line 309
+    .line 307
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->updateTimeBar()V
 
-    .line 310
+    .line 308
     return-void
 .end method
 
@@ -3084,29 +3048,29 @@
     .prologue
     const/16 v4, 0x8
 
-    .line 810
+    .line 805
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_3
     if-lt v0, v4, :cond_12
 
-    .line 815
+    .line 810
     sget-object v2, Lcom/celticspear/tokens/ArcadeGameScreen;->TAG:Ljava/lang/String;
 
     const-string v3, "INITIAL:"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 816
+    .line 811
     iget-object v2, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
 
     invoke-static {v2}, Lcom/celticspear/tokens/MatrixUtils;->print([[Ljava/lang/Object;)V
 
-    .line 817
+    .line 812
     return-void
 
-    .line 811
+    .line 806
     :cond_12
     const/4 v1, 0x0
 
@@ -3114,12 +3078,12 @@
     :goto_13
     if-lt v1, v4, :cond_18
 
-    .line 810
+    .line 805
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 812
+    .line 807
     :cond_18
     iget-object v2, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
 
@@ -3131,7 +3095,7 @@
 
     aput-object v3, v2, v0
 
-    .line 811
+    .line 806
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_13
@@ -3143,7 +3107,7 @@
     .param p2, "pJ"    # I
 
     .prologue
-    .line 820
+    .line 815
     iget-object v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mRandom:Ljava/util/Random;
 
     const/4 v1, 0x5
@@ -3152,7 +3116,7 @@
 
     move-result v9
 
-    .line 823
+    .line 818
     .local v9, "randomInt":I
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->setCurrentTime()J
 
@@ -3170,7 +3134,7 @@
 
     if-lez v0, :cond_2b
 
-    .line 824
+    .line 819
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->setCurrentTime()J
 
     move-result-wide v0
@@ -3179,7 +3143,7 @@
 
     iput v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->stoneSeconds:F
 
-    .line 825
+    .line 820
     new-instance v0, Lcom/celticspear/tokens/token/StoneToken;
 
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
@@ -3196,17 +3160,17 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/celticspear/tokens/token/StoneToken;-><init>(Lcom/celticspear/tokens/TokensActivity;IILorg/andengine/entity/scene/Scene;Lcom/celticspear/tokens/AbstractGameScreen;)V
 
-    .line 846
+    .line 841
     :goto_2a
     return-object v0
 
-    .line 828
+    .line 823
     :cond_2b
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->atLeastOneArtefactPartExists()Lcom/celticspear/tokens/artefact/ArtefactInstance;
 
     move-result-object v8
 
-    .line 829
+    .line 824
     .local v8, "artefactInstance":Lcom/celticspear/tokens/artefact/ArtefactInstance;
     iget-boolean v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->isArtefactPartReady:Z
 
@@ -3214,12 +3178,12 @@
 
     if-eqz v8, :cond_59
 
-    .line 830
+    .line 825
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->isArtefactPartReady:Z
 
-    .line 831
+    .line 826
     new-instance v0, Lcom/celticspear/tokens/token/ArtefactToken;
 
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
@@ -3228,12 +3192,12 @@
 
     iget-object v4, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    .line 832
+    .line 827
     invoke-virtual {v8}, Lcom/celticspear/tokens/artefact/ArtefactInstance;->getType()Lcom/celticspear/tokens/artefact/Artefact;
 
     move-result-object v6
 
-    .line 833
+    .line 828
     invoke-virtual {v8}, Lcom/celticspear/tokens/artefact/ArtefactInstance;->getPartStack()Ljava/util/Stack;
 
     move-result-object v2
@@ -3254,16 +3218,16 @@
 
     move-object v5, p0
 
-    .line 831
+    .line 826
     invoke-direct/range {v0 .. v7}, Lcom/celticspear/tokens/token/ArtefactToken;-><init>(Lcom/celticspear/tokens/TokensActivity;IILorg/andengine/entity/scene/Scene;Lcom/celticspear/tokens/AbstractGameScreen;Lcom/celticspear/tokens/artefact/Artefact;I)V
 
     goto :goto_2a
 
-    .line 836
+    .line 831
     :cond_59
     packed-switch v9, :pswitch_data_b0
 
-    .line 848
+    .line 843
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "No switch case for this token index."
@@ -3272,7 +3236,7 @@
 
     throw v0
 
-    .line 838
+    .line 833
     :pswitch_64
     new-instance v0, Lcom/celticspear/tokens/token/BlueToken;
 
@@ -3292,7 +3256,7 @@
 
     goto :goto_2a
 
-    .line 840
+    .line 835
     :pswitch_73
     new-instance v0, Lcom/celticspear/tokens/token/RedToken;
 
@@ -3312,7 +3276,7 @@
 
     goto :goto_2a
 
-    .line 842
+    .line 837
     :pswitch_82
     new-instance v0, Lcom/celticspear/tokens/token/PurpleToken;
 
@@ -3332,7 +3296,7 @@
 
     goto :goto_2a
 
-    .line 844
+    .line 839
     :pswitch_91
     new-instance v0, Lcom/celticspear/tokens/token/GreenToken;
 
@@ -3352,7 +3316,7 @@
 
     goto :goto_2a
 
-    .line 846
+    .line 841
     :pswitch_a0
     new-instance v0, Lcom/celticspear/tokens/token/YellowToken;
 
@@ -3372,7 +3336,7 @@
 
     goto/16 :goto_2a
 
-    .line 836
+    .line 831
     :pswitch_data_b0
     .packed-switch 0x0
         :pswitch_64
@@ -3387,29 +3351,29 @@
     .registers 3
 
     .prologue
-    .line 723
+    .line 718
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
 
     invoke-static {v1}, Lcom/celticspear/tokens/MatrixUtils;->createFallMatrix([[Lcom/celticspear/tokens/token/IToken;)[[Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 724
+    .line 719
     .local v0, "matrix":[[Ljava/lang/Integer;
     invoke-virtual {p0, v0}, Lcom/celticspear/tokens/ArcadeGameScreen;->fallOldTokens([[Ljava/lang/Integer;)V
 
-    .line 725
+    .line 720
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
 
     invoke-static {v1}, Lcom/celticspear/tokens/MatrixUtils;->fall([[Lcom/celticspear/tokens/token/IToken;)V
 
-    .line 726
+    .line 721
     invoke-virtual {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->updateTokenModelPositions()V
 
-    .line 727
+    .line 722
     invoke-virtual {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->replaceNullsWithRandoms()V
 
-    .line 728
+    .line 723
     return-void
 .end method
 
@@ -3419,7 +3383,7 @@
     .param p2, "pSceneTouchEvent"    # Lorg/andengine/input/touch/TouchEvent;
 
     .prologue
-    .line 376
+    .line 372
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
@@ -3442,15 +3406,15 @@
 
     if-nez v17, :cond_19
 
-    .line 377
+    .line 373
     :cond_16
     const/16 v17, 0x0
 
-    .line 571
+    .line 567
     :goto_18
     return v17
 
-    .line 379
+    .line 375
     :cond_19
     invoke-virtual/range {p2 .. p2}, Lorg/andengine/input/touch/TouchEvent;->getAction()I
 
@@ -3458,14 +3422,14 @@
 
     packed-switch v17, :pswitch_data_56c
 
-    .line 571
+    .line 567
     :cond_20
     :goto_20
     const/16 v17, 0x0
 
     goto :goto_18
 
-    .line 381
+    .line 377
     :pswitch_23
     invoke-virtual/range {p2 .. p2}, Lorg/andengine/input/touch/TouchEvent;->getX()F
 
@@ -3477,7 +3441,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->prevX:F
 
-    .line 382
+    .line 378
     invoke-virtual/range {p2 .. p2}, Lorg/andengine/input/touch/TouchEvent;->getY()F
 
     move-result v17
@@ -3488,7 +3452,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->prevY:F
 
-    .line 383
+    .line 379
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->prevX:F
@@ -3501,7 +3465,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->initX:F
 
-    .line 384
+    .line 380
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->prevY:F
@@ -3514,7 +3478,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->initY:F
 
-    .line 385
+    .line 381
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->getColumn()I
 
     move-result v17
@@ -3525,7 +3489,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mStartSwipingColumn:I
 
-    .line 386
+    .line 382
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->getRow()I
 
     move-result v17
@@ -3536,7 +3500,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mStartSwipingRow:I
 
-    .line 387
+    .line 383
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -3547,7 +3511,7 @@
 
     if-eqz v17, :cond_f5
 
-    .line 388
+    .line 384
     const/16 v17, 0x0
 
     move-object/from16 v0, v17
@@ -3556,7 +3520,7 @@
 
     iput-object v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mCurrentBonus:Lcom/celticspear/tokens/bonus/AbstractBonus;
 
-    .line 389
+    .line 385
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mLeftBonusNest:Lcom/celticspear/tokens/bonus/BonusNest;
@@ -3585,7 +3549,7 @@
 
     if-eqz v17, :cond_a3
 
-    .line 390
+    .line 386
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mLeftBonusNest:Lcom/celticspear/tokens/bonus/BonusNest;
@@ -3604,7 +3568,7 @@
 
     iput-object v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mCurrentBonus:Lcom/celticspear/tokens/bonus/AbstractBonus;
 
-    .line 392
+    .line 388
     :cond_a3
     move-object/from16 v0, p0
 
@@ -3634,7 +3598,7 @@
 
     if-eqz v17, :cond_d1
 
-    .line 393
+    .line 389
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mRightBonusNest:Lcom/celticspear/tokens/bonus/BonusNest;
@@ -3653,7 +3617,7 @@
 
     iput-object v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mCurrentBonus:Lcom/celticspear/tokens/bonus/AbstractBonus;
 
-    .line 395
+    .line 391
     :cond_d1
     move-object/from16 v0, p0
 
@@ -3663,14 +3627,14 @@
 
     if-eqz v17, :cond_f1
 
-    .line 396
+    .line 392
     sget-object v17, Lcom/celticspear/tokens/ArcadeGameScreen;->TAG:Ljava/lang/String;
 
     const-string v18, "BONUS TOUCHED"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
+    .line 393
     const/16 v17, 0x1
 
     move/from16 v0, v17
@@ -3679,7 +3643,7 @@
 
     iput-boolean v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->isBonusDragged:Z
 
-    .line 398
+    .line 394
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mCurrentBonus:Lcom/celticspear/tokens/bonus/AbstractBonus;
@@ -3688,13 +3652,13 @@
 
     invoke-virtual/range {v17 .. v17}, Lcom/celticspear/tokens/bonus/AbstractBonus;->onDrag()V
 
-    .line 400
+    .line 396
     :cond_f1
     const/16 v17, 0x0
 
     goto/16 :goto_18
 
-    .line 402
+    .line 398
     :cond_f5
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -3708,7 +3672,7 @@
 
     goto/16 :goto_20
 
-    .line 406
+    .line 402
     :pswitch_101
     invoke-virtual/range {p2 .. p2}, Lorg/andengine/input/touch/TouchEvent;->getX()F
 
@@ -3720,7 +3684,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->prevX:F
 
-    .line 407
+    .line 403
     invoke-virtual/range {p2 .. p2}, Lorg/andengine/input/touch/TouchEvent;->getY()F
 
     move-result v17
@@ -3731,7 +3695,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->prevY:F
 
-    .line 408
+    .line 404
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->getColumn()I
 
     move-result v17
@@ -3742,7 +3706,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mEndSwipingColumn:I
 
-    .line 409
+    .line 405
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->getRow()I
 
     move-result v17
@@ -3753,7 +3717,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mEndSwipingRow:I
 
-    .line 410
+    .line 406
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v17
@@ -3766,7 +3730,7 @@
 
     sub-long v13, v17, v19
 
-    .line 411
+    .line 407
     .local v13, "timeDiff":J
     sget-object v17, Lcom/celticspear/tokens/ArcadeGameScreen;->TAG:Ljava/lang/String;
 
@@ -3788,7 +3752,7 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 413
+    .line 409
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->isBonusDragged:Z
@@ -3797,7 +3761,7 @@
 
     if-eqz v17, :cond_1af
 
-    .line 414
+    .line 410
     const/16 v17, 0x0
 
     move/from16 v0, v17
@@ -3806,7 +3770,7 @@
 
     iput-boolean v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->isBonusDragged:Z
 
-    .line 415
+    .line 411
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mCurrentBonus:Lcom/celticspear/tokens/bonus/AbstractBonus;
@@ -3815,7 +3779,7 @@
 
     invoke-virtual/range {v17 .. v17}, Lcom/celticspear/tokens/bonus/AbstractBonus;->onDrop()V
 
-    .line 416
+    .line 412
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mEndSwipingColumn:I
@@ -3848,7 +3812,7 @@
 
     if-eqz v17, :cond_18f
 
-    .line 417
+    .line 413
     :cond_184
     move-object/from16 v0, p0
 
@@ -3860,7 +3824,7 @@
 
     goto/16 :goto_20
 
-    .line 420
+    .line 416
     :cond_18f
     move-object/from16 v0, p0
 
@@ -3877,7 +3841,7 @@
 
     invoke-static/range {v17 .. v18}, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->access$7(Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;I)V
 
-    .line 421
+    .line 417
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mCurrentBonus:Lcom/celticspear/tokens/bonus/AbstractBonus;
@@ -3890,12 +3854,12 @@
 
     invoke-virtual {v0, v1}, Lcom/celticspear/tokens/bonus/AbstractBonus;->run(Lcom/celticspear/tokens/ArcadeGameScreen;)V
 
-    .line 422
+    .line 418
     const/16 v17, 0x0
 
     goto/16 :goto_18
 
-    .line 425
+    .line 421
     :cond_1af
     move-object/from16 v0, p0
 
@@ -3905,13 +3869,13 @@
 
     if-eqz v17, :cond_1d6
 
-    .line 426
+    .line 422
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->stickToCellsX()V
 
-    .line 427
+    .line 423
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->updateModelRow()V
 
-    .line 428
+    .line 424
     const/16 v17, 0x0
 
     move/from16 v0, v17
@@ -3920,14 +3884,14 @@
 
     iput-boolean v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->isSwipeHorizontal:Z
 
-    .line 429
+    .line 425
     invoke-direct/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->isInTutorial()Z
 
     move-result v17
 
     if-eqz v17, :cond_20
 
-    .line 430
+    .line 426
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->tutorial:Lcom/celticspear/tokens/tutorial/TokenTutorial;
@@ -3938,7 +3902,7 @@
 
     goto/16 :goto_20
 
-    .line 433
+    .line 429
     :cond_1d6
     move-object/from16 v0, p0
 
@@ -3948,13 +3912,13 @@
 
     if-eqz v17, :cond_1fd
 
-    .line 434
+    .line 430
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->stickToCellsY()V
 
-    .line 435
+    .line 431
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->updateModelColumn()V
 
-    .line 436
+    .line 432
     const/16 v17, 0x0
 
     move/from16 v0, v17
@@ -3963,14 +3927,14 @@
 
     iput-boolean v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->isSwipeVertical:Z
 
-    .line 437
+    .line 433
     invoke-direct/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->isInTutorial()Z
 
     move-result v17
 
     if-eqz v17, :cond_20
 
-    .line 438
+    .line 434
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->tutorial:Lcom/celticspear/tokens/tutorial/TokenTutorial;
@@ -3981,7 +3945,7 @@
 
     goto/16 :goto_20
 
-    .line 442
+    .line 438
     :cond_1fd
     const-wide/32 v17, 0x3c336468
 
@@ -3989,7 +3953,7 @@
 
     if-gez v17, :cond_20
 
-    .line 443
+    .line 439
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mEndSwipingColumn:I
@@ -4022,14 +3986,14 @@
 
     if-nez v17, :cond_20
 
-    .line 446
+    .line 442
     invoke-direct/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->isInTutorialAtSwipeState()Z
 
     move-result v17
 
     if-nez v17, :cond_20
 
-    .line 450
+    .line 446
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
@@ -4052,7 +4016,7 @@
 
     aget-object v16, v17, v18
 
-    .line 455
+    .line 451
     .local v16, "touchedToken":Lcom/celticspear/tokens/token/IToken;
     sget-object v17, Lcom/celticspear/tokens/ArcadeGameScreen;->TAG:Ljava/lang/String;
 
@@ -4076,12 +4040,12 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
+    .line 452
     invoke-interface/range {v16 .. v16}, Lcom/celticspear/tokens/token/IToken;->getColor()Lcom/celticspear/tokens/TokenColor;
 
     move-result-object v7
 
-    .line 457
+    .line 453
     .local v7, "color":Lcom/celticspear/tokens/TokenColor;
     sget-object v17, Lcom/celticspear/tokens/TokenColor;->STONE:Lcom/celticspear/tokens/TokenColor;
 
@@ -4095,7 +4059,7 @@
 
     if-eq v7, v0, :cond_20
 
-    .line 460
+    .line 456
     move-object/from16 v0, v16
 
     instance-of v0, v0, Lcom/celticspear/tokens/token/IFeatureObject;
@@ -4104,7 +4068,7 @@
 
     if-eqz v17, :cond_28a
 
-    .line 461
+    .line 457
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
@@ -4120,7 +4084,7 @@
 
     invoke-static/range {v17 .. v18}, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->access$7(Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;I)V
 
-    .line 462
+    .line 458
     check-cast v16, Lcom/celticspear/tokens/token/IFeatureObject;
 
     .end local v16    # "touchedToken":Lcom/celticspear/tokens/token/IToken;
@@ -4132,7 +4096,7 @@
 
     goto/16 :goto_20
 
-    .line 465
+    .line 461
     .restart local v16    # "touchedToken":Lcom/celticspear/tokens/token/IToken;
     :cond_28a
     sget-object v17, Lcom/celticspear/tokens/TokenColor;->ARTEFACT:Lcom/celticspear/tokens/TokenColor;
@@ -4143,16 +4107,16 @@
 
     move-object/from16 v5, v16
 
-    .line 466
+    .line 462
     check-cast v5, Lcom/celticspear/tokens/token/ArtefactToken;
 
-    .line 467
+    .line 463
     .local v5, "artefactToken":Lcom/celticspear/tokens/token/ArtefactToken;
     invoke-virtual {v5}, Lcom/celticspear/tokens/token/ArtefactToken;->getArtefact()Lcom/celticspear/tokens/artefact/Artefact;
 
     move-result-object v4
 
-    .line 468
+    .line 464
     .local v4, "artefact":Lcom/celticspear/tokens/artefact/Artefact;
     move-object/from16 v0, p0
 
@@ -4162,7 +4126,7 @@
 
     if-eqz v17, :cond_20
 
-    .line 469
+    .line 465
     new-instance v17, Lcom/celticspear/tokens/TokenFinder;
 
     move-object/from16 v0, p0
@@ -4179,7 +4143,7 @@
 
     move-result-object v6
 
-    .line 470
+    .line 466
     .local v6, "artefactTokens":Ljava/util/Set;, "Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;"
     new-instance v17, Lcom/celticspear/tokens/ArcadeGameScreen$4;
 
@@ -4197,7 +4161,7 @@
 
     goto/16 :goto_20
 
-    .line 490
+    .line 486
     .end local v4    # "artefact":Lcom/celticspear/tokens/artefact/Artefact;
     .end local v5    # "artefactToken":Lcom/celticspear/tokens/token/ArtefactToken;
     .end local v6    # "artefactTokens":Ljava/util/Set;, "Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;"
@@ -4228,13 +4192,13 @@
 
     move-result-object v10
 
-    .line 491
+    .line 487
     .local v10, "oneColorTokens":Ljava/util/Set;, "Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;"
     invoke-interface {v10}, Ljava/util/Set;->size()I
 
     move-result v11
 
-    .line 492
+    .line 488
     .local v11, "oneColorTokensSize":I
     const/16 v17, 0x3
 
@@ -4242,7 +4206,7 @@
 
     if-lt v11, v0, :cond_20
 
-    .line 493
+    .line 489
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
@@ -4255,14 +4219,14 @@
 
     invoke-virtual/range {v17 .. v18}, Lcom/celticspear/tokens/TokensActivity;->setAnimationRunning(Z)V
 
-    .line 494
+    .line 490
     invoke-direct/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->isInTutorial()Z
 
     move-result v17
 
     if-eqz v17, :cond_304
 
-    .line 495
+    .line 491
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->tutorial:Lcom/celticspear/tokens/tutorial/TokenTutorial;
@@ -4271,7 +4235,7 @@
 
     invoke-virtual/range {v17 .. v17}, Lcom/celticspear/tokens/tutorial/TokenTutorial;->onTokensTouched()V
 
-    .line 498
+    .line 494
     :cond_304
     move-object/from16 v0, p0
 
@@ -4288,7 +4252,7 @@
 
     invoke-static/range {v17 .. v18}, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->access$10(Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;I)V
 
-    .line 499
+    .line 495
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
@@ -4306,7 +4270,7 @@
 
     invoke-static/range {v17 .. v18}, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->access$5(Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;I)V
 
-    .line 500
+    .line 496
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
@@ -4337,28 +4301,28 @@
 
     invoke-static {v0, v1}, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->access$13(Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;I)V
 
-    .line 503
+    .line 499
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/celticspear/tokens/ArcadeGameScreen;->updateScore(I)I
 
     move-result v12
 
-    .line 504
+    .line 500
     .local v12, "scoresEarned":I
     invoke-direct/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->updateValues()V
 
-    .line 506
+    .line 502
     if-eqz v12, :cond_3f5
 
-    .line 507
+    .line 503
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/celticspear/tokens/ArcadeGameScreen;->caclulateAddititonalScore(I)I
 
     move-result v3
 
-    .line 508
+    .line 504
     .local v3, "additionalScore":I
     move-object/from16 v0, p0
 
@@ -4417,7 +4381,7 @@
 
     invoke-virtual {v0, v1}, Lorg/andengine/entity/text/Text;->setText(Ljava/lang/CharSequence;)V
 
-    .line 509
+    .line 505
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
@@ -4462,16 +4426,16 @@
 
     invoke-virtual/range {v17 .. v19}, Lorg/andengine/entity/text/Text;->setPosition(FF)V
 
-    .line 510
+    .line 506
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
 
     move-object/from16 v17, v0
 
-    invoke-static/range {v17 .. v17}, Lcom/celticspear/tokens/ArcadeGameScreen;->centerX(Lorg/andengine/entity/shape/RectangularShape;)V
+    invoke-static/range {v17 .. v17}, Lcom/celticspear/tokens/ArcadeGameScreen;->center(Lorg/andengine/entity/shape/RectangularShape;)V
 
-    .line 511
+    .line 507
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
@@ -4482,7 +4446,7 @@
 
     invoke-virtual/range {v17 .. v18}, Lorg/andengine/entity/text/Text;->setVisible(Z)V
 
-    .line 513
+    .line 509
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->scoresEarnedText:Lorg/andengine/entity/text/Text;
@@ -4526,7 +4490,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/celticspear/andengine/VisualUtils;->shakeBigTextAndMoveUp(Lorg/andengine/entity/IEntity;FF)V
 
-    .line 516
+    .line 512
     .end local v3    # "additionalScore":I
     :cond_3f5
     move-object/from16 v0, p0
@@ -4537,7 +4501,7 @@
 
     move-result-object v15
 
-    .line 517
+    .line 513
     .local v15, "tokenGroups":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;>;"
     new-instance v17, Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -4551,7 +4515,7 @@
 
     iput-object v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->tokenGroupsRemoved:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 518
+    .line 514
     const/16 v17, 0x0
 
     move-object/from16 v0, p0
@@ -4562,7 +4526,7 @@
 
     goto/16 :goto_20
 
-    .line 500
+    .line 496
     .end local v12    # "scoresEarned":I
     .end local v15    # "tokenGroups":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;>;"
     :cond_415
@@ -4579,7 +4543,7 @@
 
     goto/16 :goto_33a
 
-    .line 508
+    .line 504
     .restart local v3    # "additionalScore":I
     .restart local v12    # "scoresEarned":I
     :cond_421
@@ -4587,13 +4551,13 @@
 
     goto/16 :goto_37a
 
-    .line 513
+    .line 509
     :cond_425
     const/high16 v17, 0x3f800000    # 1.0f
 
     goto :goto_3ec
 
-    .line 525
+    .line 521
     .end local v3    # "additionalScore":I
     .end local v7    # "color":Lcom/celticspear/tokens/TokenColor;
     .end local v10    # "oneColorTokens":Ljava/util/Set;, "Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;"
@@ -4614,7 +4578,7 @@
 
     sub-float v8, v17, v18
 
-    .line 526
+    .line 522
     .local v8, "dXInit":F
     invoke-virtual/range {p2 .. p2}, Lorg/andengine/input/touch/TouchEvent;->getY()F
 
@@ -4628,7 +4592,7 @@
 
     sub-float v9, v17, v18
 
-    .line 527
+    .line 523
     .local v9, "dYInit":F
     invoke-virtual/range {p2 .. p2}, Lorg/andengine/input/touch/TouchEvent;->getX()F
 
@@ -4648,7 +4612,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mDX:F
 
-    .line 528
+    .line 524
     invoke-virtual/range {p2 .. p2}, Lorg/andengine/input/touch/TouchEvent;->getY()F
 
     move-result v17
@@ -4667,7 +4631,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mDY:F
 
-    .line 529
+    .line 525
     invoke-virtual/range {p2 .. p2}, Lorg/andengine/input/touch/TouchEvent;->getX()F
 
     move-result v17
@@ -4678,7 +4642,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->prevX:F
 
-    .line 530
+    .line 526
     invoke-virtual/range {p2 .. p2}, Lorg/andengine/input/touch/TouchEvent;->getY()F
 
     move-result v17
@@ -4689,7 +4653,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->prevY:F
 
-    .line 532
+    .line 528
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->isBonusDragged:Z
@@ -4698,7 +4662,7 @@
 
     if-eqz v17, :cond_491
 
-    .line 533
+    .line 529
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mCurrentBonus:Lcom/celticspear/tokens/bonus/AbstractBonus;
@@ -4711,12 +4675,12 @@
 
     invoke-virtual {v0, v1}, Lcom/celticspear/tokens/bonus/AbstractBonus;->setPosition(Lorg/andengine/input/touch/TouchEvent;)V
 
-    .line 534
+    .line 530
     const/16 v17, 0x0
 
     goto/16 :goto_18
 
-    .line 537
+    .line 533
     :cond_491
     move-object/from16 v0, p0
 
@@ -4734,7 +4698,7 @@
 
     if-eqz v17, :cond_4cd
 
-    .line 538
+    .line 534
     :cond_4a1
     move-object/from16 v0, p0
 
@@ -4744,7 +4708,7 @@
 
     if-eqz v17, :cond_4b6
 
-    .line 539
+    .line 535
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mDX:F
@@ -4757,7 +4721,7 @@
 
     invoke-virtual {v0, v1}, Lcom/celticspear/tokens/ArcadeGameScreen;->makeHorizontalSwipe(F)V
 
-    .line 541
+    .line 537
     :cond_4b6
     move-object/from16 v0, p0
 
@@ -4767,7 +4731,7 @@
 
     if-eqz v17, :cond_20
 
-    .line 542
+    .line 538
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mDY:F
@@ -4782,7 +4746,7 @@
 
     goto/16 :goto_20
 
-    .line 546
+    .line 542
     :cond_4cd
     move-object/from16 v0, p0
 
@@ -4794,12 +4758,12 @@
 
     if-eqz v17, :cond_4db
 
-    .line 547
+    .line 543
     const/16 v17, 0x0
 
     goto/16 :goto_18
 
-    .line 550
+    .line 546
     :cond_4db
     invoke-direct/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->isInTutorial()Z
 
@@ -4825,7 +4789,7 @@
 
     if-eq v0, v1, :cond_505
 
-    .line 551
+    .line 547
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->tutorial:Lcom/celticspear/tokens/tutorial/TokenTutorial;
@@ -4844,13 +4808,13 @@
 
     if-ne v0, v1, :cond_509
 
-    .line 552
+    .line 548
     :cond_505
     const/16 v17, 0x0
 
     goto/16 :goto_18
 
-    .line 555
+    .line 551
     :cond_509
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->getColumn()I
 
@@ -4862,7 +4826,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mStartSwipingColumn:I
 
-    .line 556
+    .line 552
     invoke-virtual/range {p0 .. p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->getRow()I
 
     move-result v17
@@ -4873,7 +4837,7 @@
 
     iput v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->mStartSwipingRow:I
 
-    .line 557
+    .line 553
     invoke-static {v8}, Ljava/lang/Math;->abs(F)F
 
     move-result v17
@@ -4886,7 +4850,7 @@
 
     if-lez v17, :cond_54a
 
-    .line 558
+    .line 554
     invoke-static {v8}, Ljava/lang/Math;->abs(F)F
 
     move-result v17
@@ -4897,7 +4861,7 @@
 
     if-lez v17, :cond_20
 
-    .line 559
+    .line 555
     const/16 v17, 0x1
 
     move/from16 v0, v17
@@ -4906,7 +4870,7 @@
 
     iput-boolean v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->isSwipeHorizontal:Z
 
-    .line 560
+    .line 556
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mDX:F
@@ -4921,7 +4885,7 @@
 
     goto/16 :goto_20
 
-    .line 563
+    .line 559
     :cond_54a
     invoke-static {v9}, Ljava/lang/Math;->abs(F)F
 
@@ -4933,7 +4897,7 @@
 
     if-lez v17, :cond_20
 
-    .line 564
+    .line 560
     const/16 v17, 0x1
 
     move/from16 v0, v17
@@ -4942,7 +4906,7 @@
 
     iput-boolean v0, v1, Lcom/celticspear/tokens/ArcadeGameScreen;->isSwipeVertical:Z
 
-    .line 565
+    .line 561
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/celticspear/tokens/ArcadeGameScreen;->mDY:F
@@ -4957,7 +4921,7 @@
 
     goto/16 :goto_20
 
-    .line 379
+    .line 375
     nop
 
     :pswitch_data_56c
@@ -4987,7 +4951,7 @@
     .local p1, "tokens":Ljava/util/Set;, "Ljava/util/Set<Lcom/celticspear/tokens/token/IToken;>;"
     const/4 v3, 0x0
 
-    .line 629
+    .line 625
     const/4 v2, 0x1
 
     new-array v0, v2, [Ljava/lang/Integer;
@@ -4998,7 +4962,7 @@
 
     aput-object v2, v0, v3
 
-    .line 630
+    .line 626
     .local v0, "removedTokens":[Ljava/lang/Integer;
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -5011,10 +4975,10 @@
 
     if-nez v3, :cond_15
 
-    .line 641
+    .line 637
     return-void
 
-    .line 630
+    .line 626
     :cond_15
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -5022,7 +4986,7 @@
 
     check-cast v1, Lcom/celticspear/tokens/token/IToken;
 
-    .line 631
+    .line 627
     .local v1, "token":Lcom/celticspear/tokens/token/IToken;
     iget-object v3, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
 
@@ -5045,14 +5009,14 @@
 
     const/4 v12, 0x0
 
-    .line 755
+    .line 750
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_5
     if-lt v2, v14, :cond_4a
 
-    .line 771
+    .line 766
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v9, Lcom/celticspear/tokens/TokensActivity;
@@ -5061,7 +5025,7 @@
 
     invoke-virtual {v9, v10}, Lcom/celticspear/tokens/TokensActivity;->sortSceneChildren(Lorg/andengine/entity/scene/Scene;)V
 
-    .line 774
+    .line 769
     new-array v6, v13, [Ljava/lang/Integer;
 
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5070,7 +5034,7 @@
 
     aput-object v9, v6, v12
 
-    .line 775
+    .line 770
     .local v6, "newTokensGenerated":[Ljava/lang/Integer;
     new-array v5, v13, [Ljava/lang/Integer;
 
@@ -5080,7 +5044,7 @@
 
     aput-object v9, v5, v12
 
-    .line 777
+    .line 772
     .local v5, "newTokensFelt":[Ljava/lang/Integer;
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->newTokens:Ljava/util/Map;
 
@@ -5090,17 +5054,17 @@
 
     if-eqz v9, :cond_32
 
-    .line 778
+    .line 773
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v9, Lcom/celticspear/tokens/TokensActivity;
 
     invoke-virtual {v9, v12}, Lcom/celticspear/tokens/TokensActivity;->setAnimationRunning(Z)V
 
-    .line 779
+    .line 774
     invoke-virtual {p0, v13}, Lcom/celticspear/tokens/ArcadeGameScreen;->setInteractiveMode(Z)V
 
-    .line 782
+    .line 777
     :cond_32
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->newTokens:Ljava/util/Map;
 
@@ -5119,17 +5083,17 @@
 
     if-nez v9, :cond_b2
 
-    .line 806
+    .line 801
     new-instance v9, Ljava/util/HashMap;
 
     invoke-direct {v9}, Ljava/util/HashMap;-><init>()V
 
     iput-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->newTokens:Ljava/util/Map;
 
-    .line 807
+    .line 802
     return-void
 
-    .line 756
+    .line 751
     .end local v5    # "newTokensFelt":[Ljava/lang/Integer;
     .end local v6    # "newTokensGenerated":[Ljava/lang/Integer;
     :cond_4a
@@ -5139,12 +5103,12 @@
     :goto_4b
     if-lt v3, v14, :cond_50
 
-    .line 755
+    .line 750
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_5
 
-    .line 757
+    .line 752
     :cond_50
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
 
@@ -5164,7 +5128,7 @@
 
     if-eqz v9, :cond_af
 
-    .line 758
+    .line 753
     :cond_62
     const/16 v9, -0xa
 
@@ -5172,7 +5136,7 @@
 
     move-result-object v8
 
-    .line 759
+    .line 754
     .local v8, "token":Lcom/celticspear/tokens/token/IToken;
     invoke-direct {p0}, Lcom/celticspear/tokens/ArcadeGameScreen;->isInTutorial()Z
 
@@ -5190,16 +5154,16 @@
 
     if-nez v9, :cond_7d
 
-    .line 760
+    .line 755
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->tutorial:Lcom/celticspear/tokens/tutorial/TokenTutorial;
 
     invoke-virtual {v9}, Lcom/celticspear/tokens/tutorial/TokenTutorial;->onAllPartsOfArtefactHere()V
 
-    .line 762
+    .line 757
     :cond_7d
     invoke-interface {v8, v2, v3}, Lcom/celticspear/tokens/token/IToken;->updateModelPosition(II)V
 
-    .line 763
+    .line 758
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->newTokens:Ljava/util/Map;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5212,7 +5176,7 @@
 
     if-nez v9, :cond_9a
 
-    .line 764
+    .line 759
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->newTokens:Ljava/util/Map;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5225,7 +5189,7 @@
 
     invoke-interface {v9, v10, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 766
+    .line 761
     :cond_9a
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->newTokens:Ljava/util/Map;
 
@@ -5241,21 +5205,21 @@
 
     invoke-interface {v9, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 767
+    .line 762
     iget-object v9, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
 
     aget-object v9, v9, v3
 
     aput-object v8, v9, v2
 
-    .line 756
+    .line 751
     .end local v8    # "token":Lcom/celticspear/tokens/token/IToken;
     :cond_af
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_4b
 
-    .line 782
+    .line 777
     .end local v3    # "j":I
     .restart local v5    # "newTokensFelt":[Ljava/lang/Integer;
     .restart local v6    # "newTokensGenerated":[Ljava/lang/Integer;
@@ -5266,7 +5230,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 783
+    .line 778
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/List<Lcom/celticspear/tokens/token/IToken;>;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -5274,13 +5238,13 @@
 
     check-cast v4, Ljava/util/List;
 
-    .line 784
+    .line 779
     .local v4, "newTokens":Ljava/util/List;, "Ljava/util/List<Lcom/celticspear/tokens/token/IToken;>;"
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 785
+    .line 780
     .local v1, "height":I
     aget-object v9, v6, v12
 
@@ -5296,7 +5260,7 @@
 
     aput-object v9, v6, v12
 
-    .line 786
+    .line 781
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v9
@@ -5305,17 +5269,17 @@
 
     invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
 
-    .line 787
+    .line 782
     if-lez v1, :cond_3c
 
-    .line 788
+    .line 783
     const/4 v7, 0x0
 
-    .line 789
+    .line 784
     .local v7, "order":I
     invoke-static {v4}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
-    .line 790
+    .line 785
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
@@ -5333,7 +5297,7 @@
 
     check-cast v8, Lcom/celticspear/tokens/token/IToken;
 
-    .line 791
+    .line 786
     .restart local v8    # "token":Lcom/celticspear/tokens/token/IToken;
     new-instance v11, Lcom/celticspear/tokens/ArcadeGameScreen$10;
 
@@ -5341,7 +5305,7 @@
 
     invoke-interface {v8, v7, v1, v11}, Lcom/celticspear/tokens/token/IToken;->fall(IILjava/lang/Runnable;)V
 
-    .line 801
+    .line 796
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_e2
@@ -5357,17 +5321,17 @@
     .prologue
     const/16 v3, -0xa
 
-    .line 732
+    .line 727
     packed-switch p1, :pswitch_data_38
 
-    .line 740
+    .line 735
     invoke-interface {p4}, Ljava/lang/Runnable;->run()V
 
-    .line 752
+    .line 747
     :goto_8
     return-void
 
-    .line 734
+    .line 729
     :pswitch_9
     new-instance v0, Lcom/celticspear/tokens/token/RainbowToken;
 
@@ -5383,19 +5347,19 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/celticspear/tokens/token/RainbowToken;-><init>(Lcom/celticspear/tokens/TokensActivity;IILorg/andengine/entity/scene/Scene;Lcom/celticspear/tokens/AbstractGameScreen;)V
 
-    .line 743
+    .line 738
     .local v0, "token":Lcom/celticspear/tokens/token/IToken;
     :goto_16
     invoke-interface {v0, p2, p3}, Lcom/celticspear/tokens/token/IToken;->updateModelPosition(II)V
 
-    .line 744
+    .line 739
     iget-object v1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->mTokens:[[Lcom/celticspear/tokens/token/IToken;
 
     aget-object v1, v1, p3
 
     aput-object v0, v1, p2
 
-    .line 745
+    .line 740
     const/4 v1, 0x0
 
     new-instance v2, Lcom/celticspear/tokens/ArcadeGameScreen$9;
@@ -5406,7 +5370,7 @@
 
     goto :goto_8
 
-    .line 737
+    .line 732
     .end local v0    # "token":Lcom/celticspear/tokens/token/IToken;
     :pswitch_29
     new-instance v0, Lcom/celticspear/tokens/token/EggToken;
@@ -5423,11 +5387,11 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/celticspear/tokens/token/EggToken;-><init>(Lcom/celticspear/tokens/TokensActivity;IILorg/andengine/entity/scene/Scene;Lcom/celticspear/tokens/AbstractGameScreen;)V
 
-    .line 738
+    .line 733
     .restart local v0    # "token":Lcom/celticspear/tokens/token/IToken;
     goto :goto_16
 
-    .line 732
+    .line 727
     nop
 
     :pswitch_data_38
@@ -5442,10 +5406,10 @@
     .param p1, "pInteractiveMode"    # Z
 
     .prologue
-    .line 719
+    .line 714
     iput-boolean p1, p0, Lcom/celticspear/tokens/ArcadeGameScreen;->isInteractiveMode:Z
 
-    .line 720
+    .line 715
     return-void
 .end method
 

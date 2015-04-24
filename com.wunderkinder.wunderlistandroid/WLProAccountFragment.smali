@@ -97,42 +97,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;)Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper;
-    .registers 2
-    .param p0, "x0"    # Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;
-
-    .prologue
-    .line 50
-    iget-object v0, p0, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->mGoogleHelper:Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper;
-
-    return-object v0
-.end method
-
-.method static synthetic access$102(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;Z)Z
-    .registers 2
-    .param p0, "x0"    # Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;
-    .param p1, "x1"    # Z
-
-    .prologue
-    .line 50
-    iput-boolean p1, p0, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->mGooglePlayInAppSupported:Z
-
-    return p1
-.end method
-
-.method static synthetic access$200(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;Ljava/lang/String;)V
-    .registers 2
-    .param p0, "x0"    # Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;
-    .param p1, "x1"    # Ljava/lang/String;
-
-    .prologue
-    .line 50
-    invoke-direct {p0, p1}, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->fetchProductsSubscriptions(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method static synthetic access$300(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;)Lcom/wunderlist/sdk/model/Subscription$Product;
+.method static synthetic access$000(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;)Lcom/wunderlist/sdk/model/Subscription$Product;
     .registers 2
     .param p0, "x0"    # Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;
 
@@ -143,7 +108,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;Ljava/lang/String;)V
+.method static synthetic access$100(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;Ljava/lang/String;)V
     .registers 2
     .param p0, "x0"    # Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;
     .param p1, "x1"    # Ljava/lang/String;
@@ -155,7 +120,7 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;)Lcom/wunderlist/sdk/model/Subscription$Product;
+.method static synthetic access$200(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;)Lcom/wunderlist/sdk/model/Subscription$Product;
     .registers 2
     .param p0, "x0"    # Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;
 
@@ -166,7 +131,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;)Lcom/wunderkinder/wunderlistandroid/activity/FakeLoadingFragmentDelegate$IDelegate;
+.method static synthetic access$300(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;)Lcom/wunderkinder/wunderlistandroid/activity/FakeLoadingFragmentDelegate$IDelegate;
     .registers 2
     .param p0, "x0"    # Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;
 
@@ -177,7 +142,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;Ljava/util/List;)V
+.method static synthetic access$400(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;Ljava/util/List;)V
     .registers 2
     .param p0, "x0"    # Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;
     .param p1, "x1"    # Ljava/util/List;
@@ -386,24 +351,22 @@
 
     .prologue
     .line 320
-    const/4 v0, 0x1
+    iget-boolean v0, p0, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->mGooglePlayInAppSupported:Z
 
-    iget-boolean v1, p0, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->mGooglePlayInAppSupported:Z
-
-    if-eq v0, v1, :cond_9
+    if-eqz v0, :cond_8
 
     .line 323
     invoke-direct {p0, p1}, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->inAppBillingNotSupported(Ljava/lang/String;)V
 
     .line 339
-    :goto_8
+    :goto_7
     return-void
 
     .line 325
-    :cond_9
+    :cond_8
     iget-boolean v0, p0, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->mGooglePlayInAppSupported:Z
 
-    if-eqz v0, :cond_4e
+    if-eqz v0, :cond_4d
 
     .line 327
     new-instance v0, Ljava/lang/StringBuilder;
@@ -471,15 +434,15 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper;->launchPurchaseFlow(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;ILcom/wunderkinder/wunderlistandroid/util/billing/IabHelper$OnIabPurchaseFinishedListener;Ljava/lang/String;)V
 
-    goto :goto_8
+    goto :goto_7
 
     .line 333
-    :cond_4e
+    :cond_4d
     sget-object v0, Lcom/wunderkinder/wlapi/util/BuildConstants;->K_WL_STORE_TYPE:Lcom/wunderkinder/wunderlistandroid/util/WLConstants$StoreType;
 
     sget-object v1, Lcom/wunderkinder/wunderlistandroid/util/WLConstants$StoreType;->AMAZON_APP_STORE:Lcom/wunderkinder/wunderlistandroid/util/WLConstants$StoreType;
 
-    if-ne v0, v1, :cond_5b
+    if-ne v0, v1, :cond_5a
 
     .line 334
     invoke-static {p1}, Lcom/amazon/inapp/purchasing/PurchasingManager;->initiatePurchaseRequest(Ljava/lang/String;)Ljava/lang/String;
@@ -488,13 +451,13 @@
 
     iput-object v0, p0, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->mCurrentPurchasingRequestId:Ljava/lang/String;
 
-    goto :goto_8
+    goto :goto_7
 
     .line 336
-    :cond_5b
+    :cond_5a
     invoke-direct {p0, p1}, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->inAppBillingNotSupported(Ljava/lang/String;)V
 
-    goto :goto_8
+    goto :goto_7
 .end method
 
 .method private fetchProductsSubscriptions(Ljava/lang/String;)V
@@ -1209,39 +1172,46 @@
     .line 96
     invoke-direct {p0}, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->init()V
 
-    .line 99
-    const-string v0, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxA/tO4IvuhL0Z40Syax2GKaHxOTLxmzoTUwofOFKEutH9V7yOEuNFlzqH2S7BLPJeznfXK1ZjIsMMJl/RTV16Tq2D8ooe5L4yZxxU+Q1K9nMhtsSCDyBahsxahndLUd2aJanDzIr9EdN0ArKhP8NwJty8mFkvW6uTvNccw1goCHaAzvkAlFbP8M393dtvRBgV3Unt0NYrOpJTd5vy1Z8Irhu0tl7fpEZkUwiXMH7/Q9KuJIgc+mLIkU+hLbDTmVPxYU4Yg/BmkP5ZzyCCWic6uw9BSSgR3ui5NXSomJrao8cKcsUbKxyttIbZQBL1TQhorTRBXsxnn05NGAdkHyj9QIDAQAB"
+    .line 123
+    sget-object v1, Lcom/wunderkinder/wlapi/util/BuildConstants;->K_WL_STORE_TYPE:Lcom/wunderkinder/wunderlistandroid/util/WLConstants$StoreType;
 
-    .line 104
-    .local v0, "base64EncodedPublicKey":Ljava/lang/String;
-    new-instance v1, Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper;
+    sget-object v2, Lcom/wunderkinder/wunderlistandroid/util/WLConstants$StoreType;->AMAZON_APP_STORE:Lcom/wunderkinder/wunderlistandroid/util/WLConstants$StoreType;
+
+    if-ne v1, v2, :cond_25
+
+    .line 124
+    new-instance v0, Lcom/wunderkinder/wunderlistandroid/observer/AmazonPurchasingObserver;
 
     invoke-virtual {p0}, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-direct {v1, v2, v0}, Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/wunderkinder/wunderlistandroid/observer/AmazonPurchasingObserver;-><init>(Landroid/app/Activity;)V
 
-    iput-object v1, p0, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->mGoogleHelper:Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper;
+    .line 125
+    .local v0, "amazonPurchasingObserver":Lcom/wunderkinder/wunderlistandroid/observer/AmazonPurchasingObserver;
+    invoke-virtual {v0, p0}, Lcom/wunderkinder/wunderlistandroid/observer/AmazonPurchasingObserver;->setListener(Lcom/wunderkinder/wunderlistandroid/interfaces/AmazonAppPurchasingObserverListener;)V
 
-    .line 105
-    iget-object v1, p0, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->mGoogleHelper:Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper;
+    .line 127
+    invoke-static {v0}, Lcom/amazon/inapp/purchasing/PurchasingManager;->registerObserver(Lcom/amazon/inapp/purchasing/PurchasingObserver;)V
 
-    const/4 v2, 0x0
+    .line 128
+    const-string v1, "amazon"
 
-    invoke-virtual {v1, v2}, Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper;->enableDebugLogging(Z)V
-
-    .line 108
-    iget-object v1, p0, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->mGoogleHelper:Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper;
-
-    new-instance v2, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment$1;
-
-    invoke-direct {v2, p0}, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment$1;-><init>(Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;)V
-
-    invoke-virtual {v1, v2}, Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper;->startSetup(Lcom/wunderkinder/wunderlistandroid/util/billing/IabHelper$OnIabSetupFinishedListener;)V
+    invoke-direct {p0, v1}, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->fetchProductsSubscriptions(Ljava/lang/String;)V
 
     .line 133
+    .end local v0    # "amazonPurchasingObserver":Lcom/wunderkinder/wunderlistandroid/observer/AmazonPurchasingObserver;
+    :goto_24
     return-void
+
+    .line 130
+    :cond_25
+    const-string v1, "adyen"
+
+    invoke-direct {p0, v1}, Lcom/wunderkinder/wunderlistandroid/activity/fragment/WLProAccountFragment;->fetchProductsSubscriptions(Ljava/lang/String;)V
+
+    goto :goto_24
 .end method
 
 .method public onAttach(Landroid/app/Activity;)V

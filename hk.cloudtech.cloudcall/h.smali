@@ -292,11 +292,6 @@
 
 .method public a(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
     .registers 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 
@@ -360,11 +355,6 @@
 
 .method public a(Ljava/lang/String;Ljava/io/InputStream;Lcom/c/a/c/d;)Z
     .registers 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 

@@ -38,9 +38,9 @@
 .method static constructor <clinit>()V
     .registers 1
 
-    new-instance v0, Lajz;
+    new-instance v0, Ladf;
 
-    invoke-direct {v0}, Lajz;-><init>()V
+    invoke-direct {v0}, Ladf;-><init>()V
 
     sput-object v0, Lcom/quvideo/xiaoying/common/bitmapfun/util/DiskLruCache;->g:Ljava/io/FilenameFilter;
 
@@ -237,9 +237,9 @@
     return-void
 
     :cond_3
-    new-instance v0, Laka;
+    new-instance v0, Ladg;
 
-    invoke-direct {v0}, Laka;-><init>()V
+    invoke-direct {v0}, Ladg;-><init>()V
 
     const/4 v1, 0x1
 
@@ -249,7 +249,7 @@
 
     aput-object p0, v1, v2
 
-    invoke-virtual {v0, v1}, Laka;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Ladg;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     goto :goto_2
 .end method

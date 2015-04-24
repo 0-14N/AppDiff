@@ -16,7 +16,7 @@
 
 .field private e:Lorg/gdb/android/client/remote/y;
 
-.field private f:Lorg/gdb/android/client/md;
+.field private f:Lorg/gdb/android/client/ma;
 
 
 # direct methods
@@ -45,21 +45,21 @@
     invoke-direct {p0}, Lorg/gdb/android/client/NullImageActivity;-><init>()V
 
     .line 37
-    new-instance v0, Lorg/gdb/android/client/mc;
+    new-instance v0, Lorg/gdb/android/client/lz;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/mc;-><init>(Lorg/gdb/android/client/ShowBrotherShopActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/lz;-><init>(Lorg/gdb/android/client/ShowBrotherShopActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->e:Lorg/gdb/android/client/remote/y;
 
     .line 59
-    new-instance v0, Lorg/gdb/android/client/md;
+    new-instance v0, Lorg/gdb/android/client/ma;
 
     .line 60
     iget-object v1, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->e:Lorg/gdb/android/client/remote/y;
 
-    invoke-direct {v0, p0, v1}, Lorg/gdb/android/client/md;-><init>(Lorg/gdb/android/client/ShowBrotherShopActivity;Lorg/gdb/android/client/remote/y;)V
+    invoke-direct {v0, p0, v1}, Lorg/gdb/android/client/ma;-><init>(Lorg/gdb/android/client/ShowBrotherShopActivity;Lorg/gdb/android/client/remote/y;)V
 
-    iput-object v0, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->f:Lorg/gdb/android/client/md;
+    iput-object v0, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->f:Lorg/gdb/android/client/ma;
 
     .line 29
     return-void
@@ -82,9 +82,9 @@
 
     .prologue
     .line 91
-    new-instance v0, Lorg/gdb/android/client/me;
+    new-instance v0, Lorg/gdb/android/client/mb;
 
-    invoke-direct {v0, p0, p1}, Lorg/gdb/android/client/me;-><init>(Lorg/gdb/android/client/ShowBrotherShopActivity;Ljava/util/List;)V
+    invoke-direct {v0, p0, p1}, Lorg/gdb/android/client/mb;-><init>(Lorg/gdb/android/client/ShowBrotherShopActivity;Ljava/util/List;)V
 
     iget-object v1, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->b:Landroid/widget/ListView;
 
@@ -143,9 +143,9 @@
     invoke-super {p0}, Lorg/gdb/android/client/NullImageActivity;->onPause()V
 
     .line 184
-    iget-object v0, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->f:Lorg/gdb/android/client/md;
+    iget-object v0, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->f:Lorg/gdb/android/client/ma;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/md;->b()V
+    invoke-virtual {v0}, Lorg/gdb/android/client/ma;->b()V
 
     .line 185
     return-void
@@ -175,20 +175,20 @@
     iget-object v0, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->c:Ljava/lang/String;
 
     :try_start_11
-    iget-object v1, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->f:Lorg/gdb/android/client/md;
+    iget-object v1, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->f:Lorg/gdb/android/client/ma;
 
-    invoke-virtual {v1}, Lorg/gdb/android/client/md;->a()Z
+    invoke-virtual {v1}, Lorg/gdb/android/client/ma;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_1e
 
-    iget-object v1, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->f:Lorg/gdb/android/client/md;
+    iget-object v1, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->f:Lorg/gdb/android/client/ma;
 
-    invoke-virtual {v1}, Lorg/gdb/android/client/md;->b()V
+    invoke-virtual {v1}, Lorg/gdb/android/client/ma;->b()V
 
     :cond_1e
-    iget-object v1, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->f:Lorg/gdb/android/client/md;
+    iget-object v1, p0, Lorg/gdb/android/client/ShowBrotherShopActivity;->f:Lorg/gdb/android/client/ma;
 
     const-wide/16 v2, 0x0
 
@@ -200,7 +200,7 @@
 
     aput-object v0, v4, v5
 
-    invoke-virtual {v1, p0, v2, v3, v4}, Lorg/gdb/android/client/md;->a(Landroid/app/Activity;J[Ljava/lang/String;)V
+    invoke-virtual {v1, p0, v2, v3, v4}, Lorg/gdb/android/client/ma;->a(Landroid/app/Activity;J[Ljava/lang/String;)V
     :try_end_2b
     .catch Ljava/lang/Throwable; {:try_start_11 .. :try_end_2b} :catch_2c
 

@@ -349,7 +349,7 @@
     :cond_54
     iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->ax:Landroid/widget/ListView;
 
-    invoke-static {v0}, Lcom/wuchun/house/compass/q;->a(Landroid/widget/ListView;)V
+    invoke-static {v0}, Lcom/wuchun/house/compass/p;->a(Landroid/widget/ListView;)V
 
     return-void
 
@@ -447,7 +447,7 @@
     :cond_4f
     iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->ax:Landroid/widget/ListView;
 
-    invoke-static {v0}, Lcom/wuchun/house/compass/q;->a(Landroid/widget/ListView;)V
+    invoke-static {v0}, Lcom/wuchun/house/compass/p;->a(Landroid/widget/ListView;)V
 
     return-void
 
@@ -913,13 +913,21 @@
 
     iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->a:Landroid/widget/Spinner;
 
-    new-instance v1, Lcom/wuchun/house/compass/g;
+    new-instance v1, Lcom/wuchun/house/compass/f;
 
-    invoke-direct {v1, p0}, Lcom/wuchun/house/compass/g;-><init>(Lcom/wuchun/house/compass/loancalculator;)V
+    invoke-direct {v1, p0}, Lcom/wuchun/house/compass/f;-><init>(Lcom/wuchun/house/compass/loancalculator;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
     iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->b:Landroid/widget/Spinner;
+
+    new-instance v1, Lcom/wuchun/house/compass/h;
+
+    invoke-direct {v1, p0}, Lcom/wuchun/house/compass/h;-><init>(Lcom/wuchun/house/compass/loancalculator;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
+
+    iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->c:Landroid/widget/Spinner;
 
     new-instance v1, Lcom/wuchun/house/compass/i;
 
@@ -927,7 +935,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->c:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->d:Landroid/widget/Spinner;
 
     new-instance v1, Lcom/wuchun/house/compass/j;
 
@@ -935,7 +943,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->d:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->e:Landroid/widget/Spinner;
 
     new-instance v1, Lcom/wuchun/house/compass/k;
 
@@ -943,7 +951,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->e:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->f:Landroid/widget/Spinner;
 
     new-instance v1, Lcom/wuchun/house/compass/l;
 
@@ -951,7 +959,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->f:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->g:Landroid/widget/Spinner;
 
     new-instance v1, Lcom/wuchun/house/compass/m;
 
@@ -959,35 +967,27 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->g:Landroid/widget/Spinner;
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     new-instance v1, Lcom/wuchun/house/compass/n;
 
     invoke-direct {v1, p0}, Lcom/wuchun/house/compass/n;-><init>(Lcom/wuchun/house/compass/loancalculator;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    new-instance v1, Lcom/wuchun/house/compass/o;
-
-    invoke-direct {v1, p0}, Lcom/wuchun/house/compass/o;-><init>(Lcom/wuchun/house/compass/loancalculator;)V
-
     iget-object v2, p0, Lcom/wuchun/house/compass/loancalculator;->aj:Landroid/widget/Button;
 
-    new-instance v3, Lcom/wuchun/house/compass/p;
+    new-instance v3, Lcom/wuchun/house/compass/o;
 
-    invoke-direct {v3, p0, v0, v1}, Lcom/wuchun/house/compass/p;-><init>(Lcom/wuchun/house/compass/loancalculator;Landroid/os/Handler;Ljava/lang/Runnable;)V
+    invoke-direct {v3, p0, v0, v1}, Lcom/wuchun/house/compass/o;-><init>(Lcom/wuchun/house/compass/loancalculator;Landroid/os/Handler;Ljava/lang/Runnable;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     iget-object v0, p0, Lcom/wuchun/house/compass/loancalculator;->ai:Landroid/widget/Button;
 
-    new-instance v1, Lcom/wuchun/house/compass/h;
+    new-instance v1, Lcom/wuchun/house/compass/g;
 
-    invoke-direct {v1, p0}, Lcom/wuchun/house/compass/h;-><init>(Lcom/wuchun/house/compass/loancalculator;)V
+    invoke-direct {v1, p0}, Lcom/wuchun/house/compass/g;-><init>(Lcom/wuchun/house/compass/loancalculator;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

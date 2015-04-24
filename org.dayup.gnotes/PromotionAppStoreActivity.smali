@@ -3,7 +3,7 @@
 .source "PromotionAppStoreActivity.java"
 
 # interfaces
-.implements Lorg/dayup/gnotes/d/g;
+.implements Lorg/dayup/gnotes/d/h;
 
 
 # static fields
@@ -29,7 +29,7 @@
 
 .field private s:Landroid/os/Handler;
 
-.field private t:Lorg/dayup/gnotes/d/f;
+.field private t:Lorg/dayup/gnotes/d/g;
 
 .field private u:Z
 
@@ -69,7 +69,7 @@
     .line 69
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/f;
+    iput-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/g;
 
     .line 70
     const/4 v0, 0x0
@@ -682,7 +682,7 @@
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
     .line 410
-    new-instance v0, Lorg/dayup/gnotes/d/f;
+    new-instance v0, Lorg/dayup/gnotes/d/g;
 
     iget-object v1, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->r:Landroid/widget/ProgressBar;
 
@@ -690,17 +690,17 @@
 
     iget-object v3, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->o:Landroid/widget/TextView;
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lorg/dayup/gnotes/d/f;-><init>(Landroid/app/Activity;Landroid/widget/ProgressBar;Landroid/widget/TextView;Landroid/widget/TextView;)V
+    invoke-direct {v0, p0, v1, v2, v3}, Lorg/dayup/gnotes/d/g;-><init>(Landroid/app/Activity;Landroid/widget/ProgressBar;Landroid/widget/TextView;Landroid/widget/TextView;)V
 
-    iput-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/f;
+    iput-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/g;
 
     .line 411
-    iget-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/f;
+    iget-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/g;
 
-    invoke-virtual {v0, p0}, Lorg/dayup/gnotes/d/f;->a(Lorg/dayup/gnotes/d/g;)V
+    invoke-virtual {v0, p0}, Lorg/dayup/gnotes/d/g;->a(Lorg/dayup/gnotes/d/h;)V
 
     .line 412
-    iget-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/f;
+    iget-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/g;
 
     const/4 v1, 0x1
 
@@ -708,7 +708,7 @@
 
     aput-object p1, v1, v4
 
-    invoke-virtual {v0, v1}, Lorg/dayup/gnotes/d/f;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lorg/dayup/gnotes/d/g;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 413
     return-void
@@ -808,12 +808,12 @@
     .end packed-switch
 .end method
 
-.method static synthetic f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;
+.method static synthetic f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;
     .registers 2
 
     .prologue
     .line 69
-    iget-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/f;
+    iget-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/g;
 
     return-object v0
 .end method
@@ -1142,16 +1142,16 @@
 
     .prologue
     .line 272
-    iget-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/f;
+    iget-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/g;
 
     if-eqz v0, :cond_a
 
     .line 273
-    iget-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/f;
+    iget-object v0, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/g;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lorg/dayup/gnotes/d/f;->cancel(Z)Z
+    invoke-virtual {v0, v1}, Lorg/dayup/gnotes/d/g;->cancel(Z)Z
 
     .line 275
     :cond_a
@@ -1188,14 +1188,14 @@
     if-nez v1, :cond_2e
 
     .line 282
-    iget-object v1, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/f;
+    iget-object v1, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/g;
 
     if-eqz v1, :cond_1b
 
     .line 283
-    iget-object v1, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/f;
+    iget-object v1, p0, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->t:Lorg/dayup/gnotes/d/g;
 
-    invoke-virtual {v1, v0}, Lorg/dayup/gnotes/d/f;->cancel(Z)Z
+    invoke-virtual {v1, v0}, Lorg/dayup/gnotes/d/g;->cancel(Z)Z
 
     .line 285
     :cond_1b

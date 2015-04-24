@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/fq;->a:Lcom/youku/meidian/activity/VideoShareActivity_;
 
-    invoke-virtual {v0}, Lcom/youku/meidian/activity/VideoShareActivity_;->g()V
+    invoke-static {v0}, Lcom/youku/meidian/util/z;->a(Landroid/app/Activity;)V
 
     return-void
 .end method

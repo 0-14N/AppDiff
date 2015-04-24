@@ -307,23 +307,23 @@
     iput v1, p0, Lcom/quvideo/xiaoying/videoeditor/framework/AdvanceTimeLineManager;->M:I
 
     .line 491
-    new-instance v0, Laza;
+    new-instance v0, Lasg;
 
-    invoke-direct {v0, p0}, Laza;-><init>(Lcom/quvideo/xiaoying/videoeditor/framework/AdvanceTimeLineManager;)V
+    invoke-direct {v0, p0}, Lasg;-><init>(Lcom/quvideo/xiaoying/videoeditor/framework/AdvanceTimeLineManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/framework/AdvanceTimeLineManager;->N:Lcom/quvideo/xiaoying/videoeditor/widget/VeGallery$OnGalleryOperationListener;
 
     .line 843
-    new-instance v0, Lazb;
+    new-instance v0, Lash;
 
-    invoke-direct {v0, p0}, Lazb;-><init>(Lcom/quvideo/xiaoying/videoeditor/framework/AdvanceTimeLineManager;)V
+    invoke-direct {v0, p0}, Lash;-><init>(Lcom/quvideo/xiaoying/videoeditor/framework/AdvanceTimeLineManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/framework/AdvanceTimeLineManager;->O:Lcom/quvideo/xiaoying/videoeditor/widget/VeGallery$OnGalleryDrawListener;
 
     .line 1054
-    new-instance v0, Lazc;
+    new-instance v0, Lasi;
 
-    invoke-direct {v0, p0}, Lazc;-><init>(Lcom/quvideo/xiaoying/videoeditor/framework/AdvanceTimeLineManager;)V
+    invoke-direct {v0, p0}, Lasi;-><init>(Lcom/quvideo/xiaoying/videoeditor/framework/AdvanceTimeLineManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/framework/AdvanceTimeLineManager;->P:Lcom/quvideo/xiaoying/videoeditor/widget/VeGallery$OnLayoutListener;
 

@@ -291,7 +291,7 @@
     .registers 2
 
     .prologue
-    .line 597
+    .line 596
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->burstNumArray:[Ljava/lang/String;
 
     return-object v0
@@ -301,7 +301,7 @@
     .registers 2
 
     .prologue
-    .line 901
+    .line 900
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->carnumStampArray:[Ljava/lang/String;
 
     return-object v0
@@ -311,21 +311,21 @@
     .registers 5
 
     .prologue
-    .line 989
+    .line 988
     const-string v2, "[Normal] -- UIDisplayResource: "
 
     const-string v3, "begin getCurrentBurstNum"
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 990
+    .line 989
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     invoke-virtual {v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getCurrentBurstNum()I
 
     move-result v0
 
-    .line 992
+    .line 991
     .local v0, "burstNum":I
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
 
@@ -335,7 +335,7 @@
 
     move-result-object v1
 
-    .line 993
+    .line 992
     .local v1, "uiInfo":Lcom/icatch/wificam/app/Data/SDKReflectToUI$UIInfo;
     const-string v2, "[Normal] -- UIDisplayResource: "
 
@@ -343,7 +343,7 @@
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 994
+    .line 993
     return-object v1
 .end method
 
@@ -351,21 +351,21 @@
     .registers 5
 
     .prologue
-    .line 998
+    .line 997
     const-string v2, "[Normal] -- UIDisplayResource: "
 
     const-string v3, "begin getCurrentCaptureDelay"
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 999
+    .line 998
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     invoke-virtual {v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getCurrentCaptureDelay()I
 
     move-result v0
 
-    .line 1000
+    .line 999
     .local v0, "captureDelay":I
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
 
@@ -375,7 +375,7 @@
 
     move-result-object v1
 
-    .line 1001
+    .line 1000
     .local v1, "uiInfo":Lcom/icatch/wificam/app/Data/SDKReflectToUI$UIInfo;
     const-string v2, "[Normal] -- UIDisplayResource: "
 
@@ -383,7 +383,7 @@
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1002
+    .line 1001
     return-object v1
 .end method
 
@@ -391,21 +391,21 @@
     .registers 5
 
     .prologue
-    .line 965
+    .line 964
     const-string v2, "[Normal] -- UIDisplayResource: "
 
     const-string v3, "begin initDelayTimeUIString"
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 966
+    .line 965
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     invoke-virtual {v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getCurrentImageSize()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 967
+    .line 966
     .local v0, "imageSize":Ljava/lang/String;
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
 
@@ -415,7 +415,7 @@
 
     move-result-object v1
 
-    .line 968
+    .line 967
     .local v1, "uiInfo":Lcom/icatch/wificam/app/Data/SDKReflectToUI$UIInfo;
     const-string v2, "[Normal] -- UIDisplayResource: "
 
@@ -423,7 +423,7 @@
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 969
+    .line 968
     return-object v1
 .end method
 
@@ -431,21 +431,21 @@
     .registers 5
 
     .prologue
-    .line 973
+    .line 972
     const-string v2, "[Normal] -- UIDisplayResource: "
 
     const-string v3, "begin getCurrentVideoSize"
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 974
+    .line 973
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     invoke-virtual {v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getCurrentVideoSize()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 975
+    .line 974
     .local v1, "videoSize":Ljava/lang/String;
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
 
@@ -455,7 +455,7 @@
 
     move-result-object v0
 
-    .line 976
+    .line 975
     .local v0, "uiInfo":Lcom/icatch/wificam/app/Data/SDKReflectToUI$UIInfo;
     const-string v2, "[Normal] -- UIDisplayResource: "
 
@@ -463,7 +463,7 @@
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 977
+    .line 976
     return-object v0
 .end method
 
@@ -471,21 +471,21 @@
     .registers 5
 
     .prologue
-    .line 981
+    .line 980
     const-string v2, "[Normal] -- UIDisplayResource: "
 
     const-string v3, "begin getCurrentWhiteBalance"
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 982
+    .line 981
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     invoke-virtual {v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getCurrentWhiteBalance()I
 
     move-result v1
 
-    .line 983
+    .line 982
     .local v1, "whiteBlance":I
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
 
@@ -495,7 +495,7 @@
 
     move-result-object v0
 
-    .line 984
+    .line 983
     .local v0, "uiInfo":Lcom/icatch/wificam/app/Data/SDKReflectToUI$UIInfo;
     const-string v2, "[Normal] -- UIDisplayResource: "
 
@@ -503,7 +503,7 @@
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 985
+    .line 984
     return-object v0
 .end method
 
@@ -511,7 +511,7 @@
     .registers 2
 
     .prologue
-    .line 793
+    .line 792
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstModeArray:[Ljava/lang/String;
 
     return-object v0
@@ -521,7 +521,7 @@
     .registers 2
 
     .prologue
-    .line 829
+    .line 828
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStartMonthArray:[Ljava/lang/String;
 
     return-object v0
@@ -531,7 +531,7 @@
     .registers 2
 
     .prologue
-    .line 811
+    .line 810
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStartSundayArray:[Ljava/lang/String;
 
     return-object v0
@@ -541,7 +541,7 @@
     .registers 2
 
     .prologue
-    .line 865
+    .line 864
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStopMonthArray:[Ljava/lang/String;
 
     return-object v0
@@ -551,7 +551,7 @@
     .registers 2
 
     .prologue
-    .line 847
+    .line 846
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStopSundayArray:[Ljava/lang/String;
 
     return-object v0
@@ -561,7 +561,7 @@
     .registers 2
 
     .prologue
-    .line 775
+    .line 774
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstArray:[Ljava/lang/String;
 
     return-object v0
@@ -571,7 +571,7 @@
     .registers 2
 
     .prologue
-    .line 579
+    .line 578
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dateStampArray:[Ljava/lang/String;
 
     return-object v0
@@ -581,7 +581,7 @@
     .registers 2
 
     .prologue
-    .line 957
+    .line 956
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->delayTimeArray:[Ljava/lang/String;
 
     return-object v0
@@ -591,7 +591,7 @@
     .registers 2
 
     .prologue
-    .line 561
+    .line 560
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->frequencyArray:[Ljava/lang/String;
 
     return-object v0
@@ -601,10 +601,10 @@
     .registers 3
 
     .prologue
-    .line 1029
+    .line 1028
     const/4 v0, 0x0
 
-    .line 1030
+    .line 1029
     .local v0, "height":I
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -612,7 +612,7 @@
 
     move-result v0
 
-    .line 1031
+    .line 1030
     return v0
 .end method
 
@@ -620,10 +620,10 @@
     .registers 3
 
     .prologue
-    .line 1023
+    .line 1022
     const/4 v0, 0x0
 
-    .line 1024
+    .line 1023
     .local v0, "width":I
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -631,7 +631,7 @@
 
     move-result v0
 
-    .line 1025
+    .line 1024
     return v0
 .end method
 
@@ -639,7 +639,7 @@
     .registers 2
 
     .prologue
-    .line 707
+    .line 706
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->gSensorXArray:[Ljava/lang/String;
 
     return-object v0
@@ -649,7 +649,7 @@
     .registers 2
 
     .prologue
-    .line 723
+    .line 722
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->gSensorYArray:[Ljava/lang/String;
 
     return-object v0
@@ -659,7 +659,7 @@
     .registers 2
 
     .prologue
-    .line 739
+    .line 738
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->gSensorZArray:[Ljava/lang/String;
 
     return-object v0
@@ -669,7 +669,7 @@
     .registers 2
 
     .prologue
-    .line 521
+    .line 520
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->imageSizeArray:[Ljava/lang/String;
 
     return-object v0
@@ -679,7 +679,7 @@
     .registers 2
 
     .prologue
-    .line 883
+    .line 882
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->logoStampArray:[Ljava/lang/String;
 
     return-object v0
@@ -689,7 +689,7 @@
     .registers 2
 
     .prologue
-    .line 690
+    .line 689
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->parkingModeArray:[Ljava/lang/String;
 
     return-object v0
@@ -699,7 +699,7 @@
     .registers 2
 
     .prologue
-    .line 673
+    .line 672
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->recordingModeArray:[Ljava/lang/String;
 
     return-object v0
@@ -709,17 +709,17 @@
     .registers 5
 
     .prologue
-    .line 1014
+    .line 1013
     const-string v1, "[Normal] -- UIDisplayResource: "
 
     const-string v2, "begin getRecordingRemainTime"
 
     invoke-static {v1, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1015
+    .line 1014
     const/4 v0, 0x0
 
-    .line 1016
+    .line 1015
     .local v0, "num":I
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -727,7 +727,7 @@
 
     move-result v0
 
-    .line 1017
+    .line 1016
     const-string v1, "[Normal] -- UIDisplayResource: "
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -750,7 +750,7 @@
 
     invoke-static {v1, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1018
+    .line 1017
     invoke-virtual {p0, v0}, Lcom/icatch/wificam/app/controller/UIDisplayResource;->secondsToHours(I)Ljava/lang/String;
 
     move-result-object v1
@@ -762,21 +762,21 @@
     .registers 5
 
     .prologue
-    .line 1006
+    .line 1005
     const-string v1, "[Normal] -- UIDisplayResource: "
 
     const-string v2, "begin getRemainImageNum"
 
     invoke-static {v1, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1007
+    .line 1006
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 1008
+    .line 1007
     .local v0, "num":Ljava/lang/Integer;
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -788,7 +788,7 @@
 
     move-result-object v0
 
-    .line 1009
+    .line 1008
     const-string v1, "[Normal] -- UIDisplayResource: "
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -807,7 +807,7 @@
 
     invoke-static {v1, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1010
+    .line 1009
     invoke-virtual {v0}, Ljava/lang/Integer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -819,7 +819,7 @@
     .registers 2
 
     .prologue
-    .line 622
+    .line 621
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->seamlessArray:[Ljava/lang/String;
 
     return-object v0
@@ -838,7 +838,7 @@
     .end annotation
 
     .prologue
-    .line 961
+    .line 960
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameCaptureMode:Ljava/util/ArrayList;
 
     return-object v0
@@ -857,7 +857,7 @@
     .end annotation
 
     .prologue
-    .line 517
+    .line 516
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
     return-object v0
@@ -1114,7 +1114,7 @@
 .end method
 
 .method public getSettingValueVideoMode()Ljava/util/ArrayList;
-    .registers 5
+    .registers 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1126,6 +1126,8 @@
     .end annotation
 
     .prologue
+    const/4 v4, 0x1
+
     .line 349
     const-string v1, "[Normal] -- UIDisplayResource: "
 
@@ -1155,7 +1157,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_24
+    if-eqz v1, :cond_25
 
     .line 355
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
@@ -1165,7 +1167,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 360
-    :cond_24
+    :cond_25
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1178,7 +1180,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_48
+    if-eqz v1, :cond_49
 
     .line 361
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1203,7 +1205,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 365
-    :cond_48
+    :cond_49
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1216,7 +1218,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_6d
+    if-eqz v1, :cond_6e
 
     .line 367
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1241,7 +1243,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 371
-    :cond_6d
+    :cond_6e
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1254,7 +1256,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_92
+    if-eqz v1, :cond_93
 
     .line 373
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1279,7 +1281,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 377
-    :cond_92
+    :cond_93
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1292,7 +1294,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_b7
+    if-eqz v1, :cond_b8
 
     .line 379
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1317,7 +1319,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 383
-    :cond_b7
+    :cond_b8
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1330,7 +1332,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_dc
+    if-eqz v1, :cond_dd
 
     .line 385
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1355,7 +1357,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 389
-    :cond_dc
+    :cond_dd
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1368,7 +1370,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_101
+    if-eqz v1, :cond_102
 
     .line 391
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1393,7 +1395,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 395
-    :cond_101
+    :cond_102
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1406,7 +1408,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_126
+    if-eqz v1, :cond_127
 
     .line 396
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1431,7 +1433,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 400
-    :cond_126
+    :cond_127
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1444,7 +1446,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_14b
+    if-eqz v1, :cond_14c
 
     .line 402
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1469,7 +1471,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 406
-    :cond_14b
+    :cond_14c
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1482,7 +1484,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_170
+    if-eqz v1, :cond_171
 
     .line 408
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1507,7 +1509,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 412
-    :cond_170
+    :cond_171
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1520,7 +1522,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_195
+    if-eqz v1, :cond_196
 
     .line 414
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1545,7 +1547,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 418
-    :cond_195
+    :cond_196
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1558,7 +1560,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1ba
+    if-eqz v1, :cond_1bb
 
     .line 420
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1583,7 +1585,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 424
-    :cond_1ba
+    :cond_1bb
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1596,7 +1598,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1df
+    if-eqz v1, :cond_1e0
 
     .line 425
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1621,7 +1623,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 428
-    :cond_1df
+    :cond_1e0
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1634,7 +1636,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_204
+    if-eqz v1, :cond_205
 
     .line 429
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1659,7 +1661,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 432
-    :cond_204
+    :cond_205
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1672,7 +1674,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_229
+    if-eqz v1, :cond_22a
 
     .line 433
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1697,7 +1699,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 436
-    :cond_229
+    :cond_22a
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1710,7 +1712,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_24e
+    if-eqz v1, :cond_24f
 
     .line 437
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1735,7 +1737,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 440
-    :cond_24e
+    :cond_24f
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1748,7 +1750,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_273
+    if-eqz v1, :cond_274
 
     .line 441
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1773,7 +1775,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 445
-    :cond_273
+    :cond_274
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1786,7 +1788,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_298
+    if-eqz v1, :cond_299
 
     .line 446
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1811,7 +1813,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 449
-    :cond_298
+    :cond_299
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1824,7 +1826,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2bd
+    if-eqz v1, :cond_2be
 
     .line 450
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1849,7 +1851,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 453
-    :cond_2bd
+    :cond_2be
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1862,7 +1864,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2e2
+    if-eqz v1, :cond_2e3
 
     .line 454
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1887,7 +1889,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 457
-    :cond_2e2
+    :cond_2e3
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1900,7 +1902,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_307
+    if-eqz v1, :cond_308
 
     .line 458
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -1925,7 +1927,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 461
-    :cond_307
+    :cond_308
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1938,7 +1940,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_33c
+    if-eqz v1, :cond_33d
 
     .line 462
     const-string v1, "UIDisplayResource"
@@ -1977,7 +1979,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 467
-    :cond_33c
+    :cond_33d
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -1990,7 +1992,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_357
+    if-eqz v1, :cond_358
 
     .line 469
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
@@ -2004,7 +2006,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 472
-    :cond_357
+    :cond_358
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2017,7 +2019,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_36e
+    if-eqz v1, :cond_36f
 
     .line 473
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
@@ -2026,8 +2028,15 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 478
+    :cond_36f
+    invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getProductId()I
+
+    move-result v1
+
+    if-ne v1, v4, :cond_3ba
+
     .line 479
-    :cond_36e
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2040,7 +2049,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_38e
+    if-nez v1, :cond_395
 
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -2054,10 +2063,10 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3b3
+    if-eqz v1, :cond_3ba
 
     .line 480
-    :cond_38e
+    :cond_395
     const-string v1, "UIDisplayResource"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2093,8 +2102,8 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 486
-    :cond_3b3
+    .line 485
+    :cond_3ba
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2107,17 +2116,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3ca
+    if-eqz v1, :cond_3d1
 
-    .line 487
+    .line 486
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
 
     const-string v2, "date"
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 489
-    :cond_3ca
+    .line 488
+    :cond_3d1
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2130,17 +2139,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3e1
+    if-eqz v1, :cond_3e8
 
-    .line 490
+    .line 489
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
 
     const-string v2, "time"
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 495
-    :cond_3e1
+    .line 494
+    :cond_3e8
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     const/16 v2, 0x5005
@@ -2149,32 +2158,30 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3ff
+    if-eqz v1, :cond_405
 
-    .line 496
+    .line 495
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
 
-    const/4 v2, 0x1
+    iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
-    iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
+    invoke-virtual {v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getCurrentWhiteBalance()I
 
-    invoke-virtual {v3}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getCurrentWhiteBalance()I
+    move-result v2
 
-    move-result v3
-
-    invoke-virtual {v1, v2, v3}, Lcom/icatch/wificam/app/Data/SDKReflectToUI;->getReflectUIInfo(II)Lcom/icatch/wificam/app/Data/SDKReflectToUI$UIInfo;
+    invoke-virtual {v1, v4, v2}, Lcom/icatch/wificam/app/Data/SDKReflectToUI;->getReflectUIInfo(II)Lcom/icatch/wificam/app/Data/SDKReflectToUI$UIInfo;
 
     move-result-object v0
 
-    .line 497
+    .line 496
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
 
     iget-object v2, v0, Lcom/icatch/wificam/app/Data/SDKReflectToUI$UIInfo;->uiStringInSetting:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 499
-    :cond_3ff
+    .line 498
+    :cond_405
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     const v2, 0xd606
@@ -2183,9 +2190,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_41e
+    if-eqz v1, :cond_424
 
-    .line 500
+    .line 499
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
 
     const/4 v2, 0x2
@@ -2200,22 +2207,22 @@
 
     move-result-object v0
 
-    .line 501
+    .line 500
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
 
     iget-object v2, v0, Lcom/icatch/wificam/app/Data/SDKReflectToUI$UIInfo;->uiStringInSetting:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 503
-    :cond_41e
+    .line 502
+    :cond_424
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
 
     const-string v2, ""
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 507
+    .line 506
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->baseResource:Lcom/icatch/wificam/app/Data/BaseResource;
@@ -2226,7 +2233,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 508
+    .line 507
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraFixedInfo:Lcom/icatch/wificam/app/controller/sdkApi/CameraFixedInfo;
@@ -2237,7 +2244,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 509
+    .line 508
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     const/16 v2, 0x501f
@@ -2246,9 +2253,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_450
+    if-eqz v1, :cond_456
 
-    .line 510
+    .line 509
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraFixedInfo:Lcom/icatch/wificam/app/controller/sdkApi/CameraFixedInfo;
@@ -2259,8 +2266,8 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 512
-    :cond_450
+    .line 511
+    :cond_456
     const-string v1, "[Normal] -- UIDisplayResource: "
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2285,7 +2292,7 @@
 
     invoke-static {v1, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 513
+    .line 512
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingValueVideoMode:Ljava/util/ArrayList;
 
     return-object v1
@@ -2295,7 +2302,7 @@
     .registers 2
 
     .prologue
-    .line 937
+    .line 936
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->speedLimitEventArray:[Ljava/lang/String;
 
     return-object v0
@@ -2305,7 +2312,7 @@
     .registers 2
 
     .prologue
-    .line 919
+    .line 918
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->speedStampArray:[Ljava/lang/String;
 
     return-object v0
@@ -2315,14 +2322,14 @@
     .registers 3
 
     .prologue
-    .line 604
+    .line 603
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->baseResource:Lcom/icatch/wificam/app/Data/BaseResource;
 
     invoke-virtual {v1}, Lcom/icatch/wificam/app/Data/BaseResource;->getSyncDateTimeUIString()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 605
+    .line 604
     .local v0, "syncdatetime":[Ljava/lang/String;
     return-object v0
 .end method
@@ -2331,7 +2338,7 @@
     .registers 2
 
     .prologue
-    .line 757
+    .line 756
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->timeZoneArray:[Ljava/lang/String;
 
     return-object v0
@@ -2341,7 +2348,7 @@
     .registers 2
 
     .prologue
-    .line 656
+    .line 655
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->videoMicArray:[Ljava/lang/String;
 
     return-object v0
@@ -2351,7 +2358,7 @@
     .registers 2
 
     .prologue
-    .line 525
+    .line 524
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->videoSizeArray:[Ljava/lang/String;
 
     return-object v0
@@ -2361,7 +2368,7 @@
     .registers 2
 
     .prologue
-    .line 639
+    .line 638
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->videoStampArray:[Ljava/lang/String;
 
     return-object v0
@@ -2371,7 +2378,7 @@
     .registers 2
 
     .prologue
-    .line 543
+    .line 542
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->whitebalanceArray:[Ljava/lang/String;
 
     return-object v0
@@ -2381,14 +2388,14 @@
     .registers 8
 
     .prologue
-    .line 583
+    .line 582
     const-string v3, "[Normal] -- UIDisplayResource: "
 
     const-string v4, "begin initBurstNumUIString"
 
     invoke-static {v3, v4}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 584
+    .line 583
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     const/16 v4, 0x5018
@@ -2399,11 +2406,11 @@
 
     if-nez v3, :cond_12
 
-    .line 594
+    .line 593
     :goto_11
     return-void
 
-    .line 587
+    .line 586
     :cond_12
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -2411,26 +2418,26 @@
 
     move-result-object v2
 
-    .line 588
+    .line 587
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 589
+    .line 588
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->burstNumArray:[Ljava/lang/String;
 
-    .line 590
+    .line 589
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_21
     if-lt v0, v1, :cond_3a
 
-    .line 593
+    .line 592
     const-string v3, "[Normal] -- UIDisplayResource: "
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2453,7 +2460,7 @@
 
     goto :goto_11
 
-    .line 591
+    .line 590
     :cond_3a
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->burstNumArray:[Ljava/lang/String;
 
@@ -2479,7 +2486,7 @@
 
     aput-object v3, v4, v0
 
-    .line 590
+    .line 589
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_21
@@ -2489,7 +2496,7 @@
     .registers 8
 
     .prologue
-    .line 888
+    .line 887
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2504,11 +2511,11 @@
 
     if-nez v3, :cond_11
 
-    .line 899
+    .line 898
     :cond_10
     return-void
 
-    .line 891
+    .line 890
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -2516,26 +2523,26 @@
 
     move-result-object v2
 
-    .line 892
+    .line 891
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 893
+    .line 892
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->carnumStampArray:[Ljava/lang/String;
 
-    .line 895
+    .line 894
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 897
+    .line 896
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->carnumStampArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -2560,7 +2567,7 @@
 
     aput-object v3, v4, v0
 
-    .line 895
+    .line 894
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -2570,7 +2577,7 @@
     .registers 8
 
     .prologue
-    .line 780
+    .line 779
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2585,11 +2592,11 @@
 
     if-nez v3, :cond_11
 
-    .line 791
+    .line 790
     :cond_10
     return-void
 
-    .line 783
+    .line 782
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -2597,26 +2604,26 @@
 
     move-result-object v2
 
-    .line 784
+    .line 783
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 785
+    .line 784
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstModeArray:[Ljava/lang/String;
 
-    .line 787
+    .line 786
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 789
+    .line 788
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstModeArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -2641,7 +2648,7 @@
 
     aput-object v3, v4, v0
 
-    .line 787
+    .line 786
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -2651,7 +2658,7 @@
     .registers 8
 
     .prologue
-    .line 816
+    .line 815
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2666,11 +2673,11 @@
 
     if-nez v3, :cond_11
 
-    .line 827
+    .line 826
     :cond_10
     return-void
 
-    .line 819
+    .line 818
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -2678,26 +2685,26 @@
 
     move-result-object v2
 
-    .line 820
+    .line 819
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 821
+    .line 820
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStartMonthArray:[Ljava/lang/String;
 
-    .line 823
+    .line 822
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 825
+    .line 824
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStartMonthArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -2722,7 +2729,7 @@
 
     aput-object v3, v4, v0
 
-    .line 823
+    .line 822
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -2732,7 +2739,7 @@
     .registers 8
 
     .prologue
-    .line 798
+    .line 797
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2747,11 +2754,11 @@
 
     if-nez v3, :cond_11
 
-    .line 809
+    .line 808
     :cond_10
     return-void
 
-    .line 801
+    .line 800
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -2759,26 +2766,26 @@
 
     move-result-object v2
 
-    .line 802
+    .line 801
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 803
+    .line 802
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStartSundayArray:[Ljava/lang/String;
 
-    .line 805
+    .line 804
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 807
+    .line 806
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStartSundayArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -2803,7 +2810,7 @@
 
     aput-object v3, v4, v0
 
-    .line 805
+    .line 804
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -2813,7 +2820,7 @@
     .registers 8
 
     .prologue
-    .line 852
+    .line 851
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2828,11 +2835,11 @@
 
     if-nez v3, :cond_11
 
-    .line 863
+    .line 862
     :cond_10
     return-void
 
-    .line 855
+    .line 854
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -2840,26 +2847,26 @@
 
     move-result-object v2
 
-    .line 856
+    .line 855
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 857
+    .line 856
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStopMonthArray:[Ljava/lang/String;
 
-    .line 859
+    .line 858
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 861
+    .line 860
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStopMonthArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -2884,7 +2891,7 @@
 
     aput-object v3, v4, v0
 
-    .line 859
+    .line 858
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -2894,7 +2901,7 @@
     .registers 8
 
     .prologue
-    .line 834
+    .line 833
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2909,11 +2916,11 @@
 
     if-nez v3, :cond_11
 
-    .line 845
+    .line 844
     :cond_10
     return-void
 
-    .line 837
+    .line 836
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -2921,26 +2928,26 @@
 
     move-result-object v2
 
-    .line 838
+    .line 837
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 839
+    .line 838
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStopSundayArray:[Ljava/lang/String;
 
-    .line 841
+    .line 840
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 843
+    .line 842
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstStopSundayArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -2965,7 +2972,7 @@
 
     aput-object v3, v4, v0
 
-    .line 841
+    .line 840
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -2975,7 +2982,7 @@
     .registers 8
 
     .prologue
-    .line 762
+    .line 761
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -2990,11 +2997,11 @@
 
     if-nez v3, :cond_11
 
-    .line 773
+    .line 772
     :cond_10
     return-void
 
-    .line 765
+    .line 764
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -3002,26 +3009,26 @@
 
     move-result-object v2
 
-    .line 766
+    .line 765
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 767
+    .line 766
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstArray:[Ljava/lang/String;
 
-    .line 769
+    .line 768
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 771
+    .line 770
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dstArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -3046,7 +3053,7 @@
 
     aput-object v3, v4, v0
 
-    .line 769
+    .line 768
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -3056,14 +3063,14 @@
     .registers 8
 
     .prologue
-    .line 565
+    .line 564
     const-string v3, "[Normal] -- UIDisplayResource: "
 
     const-string v4, "begin initDateStampUIString"
 
     invoke-static {v3, v4}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 566
+    .line 565
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     const v4, 0xd607
@@ -3074,11 +3081,11 @@
 
     if-nez v3, :cond_13
 
-    .line 576
+    .line 575
     :goto_12
     return-void
 
-    .line 569
+    .line 568
     :cond_13
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -3086,26 +3093,26 @@
 
     move-result-object v2
 
-    .line 570
+    .line 569
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 571
+    .line 570
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dateStampArray:[Ljava/lang/String;
 
-    .line 572
+    .line 571
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_22
     if-lt v0, v1, :cond_3c
 
-    .line 575
+    .line 574
     const-string v3, "[Normal] -- UIDisplayResource: "
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3130,7 +3137,7 @@
 
     goto :goto_12
 
-    .line 573
+    .line 572
     :cond_3c
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->dateStampArray:[Ljava/lang/String;
 
@@ -3156,7 +3163,7 @@
 
     aput-object v3, v4, v0
 
-    .line 572
+    .line 571
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_22
@@ -3166,14 +3173,14 @@
     .registers 8
 
     .prologue
-    .line 943
+    .line 942
     const-string v3, "[Normal] -- UIDisplayResource: "
 
     const-string v4, "begin initDelayTimeUIString"
 
     invoke-static {v3, v4}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 944
+    .line 943
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     const/16 v4, 0x5012
@@ -3184,11 +3191,11 @@
 
     if-nez v3, :cond_12
 
-    .line 954
+    .line 953
     :goto_11
     return-void
 
-    .line 947
+    .line 946
     :cond_12
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -3196,26 +3203,26 @@
 
     move-result-object v2
 
-    .line 948
+    .line 947
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 949
+    .line 948
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->delayTimeArray:[Ljava/lang/String;
 
-    .line 950
+    .line 949
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_21
     if-lt v0, v1, :cond_3b
 
-    .line 953
+    .line 952
     const-string v3, "[Normal] -- UIDisplayResource: "
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3240,7 +3247,7 @@
 
     goto :goto_11
 
-    .line 951
+    .line 950
     :cond_3b
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->delayTimeArray:[Ljava/lang/String;
 
@@ -3266,7 +3273,7 @@
 
     aput-object v3, v4, v0
 
-    .line 950
+    .line 949
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_21
@@ -3276,14 +3283,14 @@
     .registers 8
 
     .prologue
-    .line 547
+    .line 546
     const-string v3, "[Normal] -- UIDisplayResource: "
 
     const-string v4, "begin initEleFreUIString"
 
     invoke-static {v3, v4}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 548
+    .line 547
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     const v4, 0xd606
@@ -3294,11 +3301,11 @@
 
     if-nez v3, :cond_13
 
-    .line 558
+    .line 557
     :goto_12
     return-void
 
-    .line 551
+    .line 550
     :cond_13
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -3306,26 +3313,26 @@
 
     move-result-object v2
 
-    .line 552
+    .line 551
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 553
+    .line 552
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->frequencyArray:[Ljava/lang/String;
 
-    .line 554
+    .line 553
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_22
     if-lt v0, v1, :cond_3c
 
-    .line 557
+    .line 556
     const-string v3, "[Normal] -- UIDisplayResource: "
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3350,7 +3357,7 @@
 
     goto :goto_12
 
-    .line 555
+    .line 554
     :cond_3c
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->frequencyArray:[Ljava/lang/String;
 
@@ -3376,7 +3383,7 @@
 
     aput-object v3, v4, v0
 
-    .line 554
+    .line 553
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_22
@@ -3386,7 +3393,7 @@
     .registers 8
 
     .prologue
-    .line 695
+    .line 694
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -3401,11 +3408,11 @@
 
     if-nez v3, :cond_11
 
-    .line 705
+    .line 704
     :cond_10
     return-void
 
-    .line 698
+    .line 697
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -3413,26 +3420,26 @@
 
     move-result-object v2
 
-    .line 699
+    .line 698
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 700
+    .line 699
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->gSensorXArray:[Ljava/lang/String;
 
-    .line 701
+    .line 700
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 703
+    .line 702
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->gSensorXArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -3457,7 +3464,7 @@
 
     aput-object v3, v4, v0
 
-    .line 701
+    .line 700
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -3467,7 +3474,7 @@
     .registers 8
 
     .prologue
-    .line 711
+    .line 710
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -3482,11 +3489,11 @@
 
     if-nez v3, :cond_11
 
-    .line 721
+    .line 720
     :cond_10
     return-void
 
-    .line 714
+    .line 713
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -3494,26 +3501,26 @@
 
     move-result-object v2
 
-    .line 715
+    .line 714
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 716
+    .line 715
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->gSensorYArray:[Ljava/lang/String;
 
-    .line 717
+    .line 716
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 719
+    .line 718
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->gSensorYArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -3538,7 +3545,7 @@
 
     aput-object v3, v4, v0
 
-    .line 717
+    .line 716
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -3548,7 +3555,7 @@
     .registers 8
 
     .prologue
-    .line 727
+    .line 726
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -3563,11 +3570,11 @@
 
     if-nez v3, :cond_11
 
-    .line 737
+    .line 736
     :cond_10
     return-void
 
-    .line 730
+    .line 729
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -3575,26 +3582,26 @@
 
     move-result-object v2
 
-    .line 731
+    .line 730
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 732
+    .line 731
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->gSensorZArray:[Ljava/lang/String;
 
-    .line 733
+    .line 732
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 735
+    .line 734
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->gSensorZArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -3619,7 +3626,7 @@
 
     aput-object v3, v4, v0
 
-    .line 733
+    .line 732
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -3822,7 +3829,7 @@
     .registers 8
 
     .prologue
-    .line 870
+    .line 869
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -3837,38 +3844,38 @@
 
     if-nez v3, :cond_11
 
-    .line 881
+    .line 880
     :cond_10
     return-void
 
-    .line 873
+    .line 872
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
-    invoke-virtual {v3}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getsupportedLogoStamp()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getsupportedDSTMode()Ljava/util/List;
 
     move-result-object v2
 
-    .line 874
+    .line 873
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 875
+    .line 874
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->logoStampArray:[Ljava/lang/String;
 
-    .line 877
+    .line 876
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 879
+    .line 878
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->logoStampArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -3893,7 +3900,7 @@
 
     aput-object v3, v4, v0
 
-    .line 877
+    .line 876
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -3903,7 +3910,7 @@
     .registers 8
 
     .prologue
-    .line 678
+    .line 677
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -3918,11 +3925,11 @@
 
     if-nez v3, :cond_11
 
-    .line 688
+    .line 687
     :cond_10
     return-void
 
-    .line 681
+    .line 680
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -3930,26 +3937,26 @@
 
     move-result-object v2
 
-    .line 682
+    .line 681
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 683
+    .line 682
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->parkingModeArray:[Ljava/lang/String;
 
-    .line 684
+    .line 683
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 686
+    .line 685
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->parkingModeArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -3974,7 +3981,7 @@
 
     aput-object v3, v4, v0
 
-    .line 684
+    .line 683
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -3984,7 +3991,7 @@
     .registers 8
 
     .prologue
-    .line 661
+    .line 660
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -3999,11 +4006,11 @@
 
     if-nez v3, :cond_11
 
-    .line 671
+    .line 670
     :cond_10
     return-void
 
-    .line 664
+    .line 663
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -4011,26 +4018,26 @@
 
     move-result-object v2
 
-    .line 665
+    .line 664
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 666
+    .line 665
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->recordingModeArray:[Ljava/lang/String;
 
-    .line 667
+    .line 666
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 669
+    .line 668
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->recordingModeArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -4055,7 +4062,7 @@
 
     aput-object v3, v4, v0
 
-    .line 667
+    .line 666
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -4065,7 +4072,7 @@
     .registers 8
 
     .prologue
-    .line 610
+    .line 609
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -4080,11 +4087,11 @@
 
     if-nez v3, :cond_11
 
-    .line 620
+    .line 619
     :cond_10
     return-void
 
-    .line 613
+    .line 612
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -4092,26 +4099,26 @@
 
     move-result-object v2
 
-    .line 614
+    .line 613
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 615
+    .line 614
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->seamlessArray:[Ljava/lang/String;
 
-    .line 616
+    .line 615
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 618
+    .line 617
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->seamlessArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -4136,25 +4143,25 @@
 
     aput-object v3, v4, v0
 
-    .line 616
+    .line 615
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
 .end method
 
 .method public initSettingMenu()V
-    .registers 8
+    .registers 9
 
     .prologue
-    const v6, 0x7f090032
+    const v7, 0x7f090032
 
-    const v5, 0x7f090031
+    const v6, 0x7f090031
 
-    const v4, 0xd606
+    const v5, 0xd606
 
-    const/16 v3, 0x501f
+    const/16 v4, 0x501f
 
-    const/16 v2, 0x5005
+    const/16 v3, 0x5005
 
     .line 109
     const-string v0, "[Normal] -- UIDisplayResource: "
@@ -4199,7 +4206,7 @@
     :cond_34
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
-    invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
+    invoke-virtual {v0, v3}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
 
     move-result v0
 
@@ -4220,7 +4227,7 @@
     :cond_48
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
-    invoke-virtual {v0, v4}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
+    invoke-virtual {v0, v5}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
 
     move-result v0
 
@@ -4229,7 +4236,7 @@
     .line 119
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameCaptureMode:Ljava/util/ArrayList;
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -4262,7 +4269,7 @@
     :cond_70
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameCaptureMode:Ljava/util/ArrayList;
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -4293,7 +4300,7 @@
     .line 129
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
-    invoke-virtual {v0, v3}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
+    invoke-virtual {v0, v4}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
 
     move-result v0
 
@@ -4329,7 +4336,7 @@
     .line 135
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900b4
+    const v1, 0x7f0900b2
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4356,7 +4363,7 @@
     .line 138
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f09009f
+    const v1, 0x7f09009d
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4383,7 +4390,7 @@
     .line 141
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900a2
+    const v1, 0x7f0900a0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4410,7 +4417,7 @@
     .line 144
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900a3
+    const v1, 0x7f0900a1
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4437,7 +4444,7 @@
     .line 147
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900a4
+    const v1, 0x7f0900a2
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4464,7 +4471,7 @@
     .line 150
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900a5
+    const v1, 0x7f0900a3
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4491,7 +4498,7 @@
     .line 153
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900a6
+    const v1, 0x7f0900a4
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4518,7 +4525,7 @@
     .line 156
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900a1
+    const v1, 0x7f09009f
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4545,7 +4552,7 @@
     .line 159
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900a7
+    const v1, 0x7f0900a5
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4572,7 +4579,7 @@
     .line 162
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900a8
+    const v1, 0x7f0900a6
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4599,7 +4606,7 @@
     .line 165
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900a9
+    const v1, 0x7f0900a7
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4626,7 +4633,7 @@
     .line 168
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900aa
+    const v1, 0x7f0900a8
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4653,7 +4660,7 @@
     .line 171
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900ab
+    const v1, 0x7f0900a9
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4680,7 +4687,7 @@
     .line 174
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900ac
+    const v1, 0x7f0900aa
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4707,7 +4714,7 @@
     .line 177
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900ad
+    const v1, 0x7f0900ab
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4734,7 +4741,7 @@
     .line 180
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900a0
+    const v1, 0x7f09009e
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4761,7 +4768,7 @@
     .line 183
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900af
+    const v1, 0x7f0900ad
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4788,7 +4795,7 @@
     .line 186
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900b0
+    const v1, 0x7f0900ae
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4815,7 +4822,7 @@
     .line 189
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900ae
+    const v1, 0x7f0900ac
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4842,7 +4849,7 @@
     .line 192
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900b2
+    const v1, 0x7f0900b0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4869,7 +4876,7 @@
     .line 195
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900b3
+    const v1, 0x7f0900b1
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4896,7 +4903,7 @@
     .line 198
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900b1
+    const v1, 0x7f0900af
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4923,7 +4930,7 @@
     .line 201
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f09009b
+    const v1, 0x7f090099
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4950,7 +4957,7 @@
     .line 204
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f09009a
+    const v1, 0x7f090098
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4958,8 +4965,40 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 210
+    .line 208
     :cond_345
+    const-string v0, "uidisplay"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "getProductId="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getProductId()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 209
+    invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getProductId()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_390
+
+    .line 210
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -4972,7 +5011,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_365
+    if-nez v0, :cond_384
 
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -4986,13 +5025,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_371
+    if-eqz v0, :cond_390
 
     .line 211
-    :cond_365
+    :cond_384
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f09009c
+    const v1, 0x7f09009a
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5001,7 +5040,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 215
-    :cond_371
+    :cond_390
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -5014,12 +5053,12 @@
 
     move-result v0
 
-    if-eqz v0, :cond_38d
+    if-eqz v0, :cond_3ac
 
     .line 216
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900b5
+    const v1, 0x7f0900b3
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5028,7 +5067,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 218
-    :cond_38d
+    :cond_3ac
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -5041,12 +5080,12 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3a9
+    if-eqz v0, :cond_3c8
 
     .line 219
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    const v1, 0x7f0900b6
+    const v1, 0x7f0900b4
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5055,14 +5094,14 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 223
-    :cond_3a9
+    :cond_3c8
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
-    invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
+    invoke-virtual {v0, v3}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3bd
+    if-eqz v0, :cond_3dc
 
     .line 224
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
@@ -5076,29 +5115,29 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 226
-    :cond_3bd
+    :cond_3dc
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
-    invoke-virtual {v0, v4}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
+    invoke-virtual {v0, v5}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3ce
+    if-eqz v0, :cond_3ed
 
     .line 227
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 229
-    :cond_3ce
+    :cond_3ed
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -5129,11 +5168,11 @@
     .line 235
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
-    invoke-virtual {v0, v3}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
+    invoke-virtual {v0, v4}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_403
+    if-eqz v0, :cond_422
 
     .line 236
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->settingNameVideoMode:Ljava/util/ArrayList;
@@ -5147,7 +5186,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 238
-    :cond_403
+    :cond_422
     const-string v0, "[Normal] -- UIDisplayResource: "
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5205,7 +5244,7 @@
     .registers 8
 
     .prologue
-    .line 924
+    .line 923
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -5220,11 +5259,11 @@
 
     if-nez v3, :cond_11
 
-    .line 935
+    .line 934
     :cond_10
     return-void
 
-    .line 927
+    .line 926
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -5232,26 +5271,26 @@
 
     move-result-object v2
 
-    .line 928
+    .line 927
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 929
+    .line 928
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->speedLimitEventArray:[Ljava/lang/String;
 
-    .line 931
+    .line 930
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 933
+    .line 932
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->speedLimitEventArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -5276,7 +5315,7 @@
 
     aput-object v3, v4, v0
 
-    .line 931
+    .line 930
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -5286,7 +5325,7 @@
     .registers 8
 
     .prologue
-    .line 906
+    .line 905
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -5301,11 +5340,11 @@
 
     if-nez v3, :cond_11
 
-    .line 917
+    .line 916
     :cond_10
     return-void
 
-    .line 909
+    .line 908
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -5313,26 +5352,26 @@
 
     move-result-object v2
 
-    .line 910
+    .line 909
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 911
+    .line 910
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->speedStampArray:[Ljava/lang/String;
 
-    .line 913
+    .line 912
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 915
+    .line 914
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->speedStampArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -5357,7 +5396,7 @@
 
     aput-object v3, v4, v0
 
-    .line 913
+    .line 912
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -5367,7 +5406,7 @@
     .registers 8
 
     .prologue
-    .line 744
+    .line 743
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -5382,11 +5421,11 @@
 
     if-nez v3, :cond_11
 
-    .line 755
+    .line 754
     :cond_10
     return-void
 
-    .line 747
+    .line 746
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -5394,26 +5433,26 @@
 
     move-result-object v2
 
-    .line 748
+    .line 747
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 749
+    .line 748
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->timeZoneArray:[Ljava/lang/String;
 
-    .line 751
+    .line 750
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 753
+    .line 752
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->timeZoneArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -5438,7 +5477,7 @@
 
     aput-object v3, v4, v0
 
-    .line 751
+    .line 750
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -5448,7 +5487,7 @@
     .registers 8
 
     .prologue
-    .line 644
+    .line 643
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -5463,11 +5502,11 @@
 
     if-nez v3, :cond_11
 
-    .line 654
+    .line 653
     :cond_10
     return-void
 
-    .line 647
+    .line 646
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -5475,26 +5514,26 @@
 
     move-result-object v2
 
-    .line 648
+    .line 647
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 649
+    .line 648
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->videoMicArray:[Ljava/lang/String;
 
-    .line 650
+    .line 649
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 652
+    .line 651
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->videoMicArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -5519,7 +5558,7 @@
 
     aput-object v3, v4, v0
 
-    .line 650
+    .line 649
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -5856,7 +5895,7 @@
     .registers 8
 
     .prologue
-    .line 627
+    .line 626
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
@@ -5871,11 +5910,11 @@
 
     if-nez v3, :cond_11
 
-    .line 637
+    .line 636
     :cond_10
     return-void
 
-    .line 630
+    .line 629
     :cond_11
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -5883,26 +5922,26 @@
 
     move-result-object v2
 
-    .line 631
+    .line 630
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 632
+    .line 631
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->videoStampArray:[Ljava/lang/String;
 
-    .line 633
+    .line 632
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_20
     if-ge v0, v1, :cond_10
 
-    .line 635
+    .line 634
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->videoStampArray:[Ljava/lang/String;
 
     iget-object v5, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->sdkReflectToUI:Lcom/icatch/wificam/app/Data/SDKReflectToUI;
@@ -5927,7 +5966,7 @@
 
     aput-object v3, v4, v0
 
-    .line 633
+    .line 632
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_20
@@ -5937,14 +5976,14 @@
     .registers 8
 
     .prologue
-    .line 529
+    .line 528
     const-string v3, "[Normal] -- UIDisplayResource: "
 
     const-string v4, "begin initWhiteBalanceUIString"
 
     invoke-static {v3, v4}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 530
+    .line 529
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     const/16 v4, 0x5005
@@ -5955,11 +5994,11 @@
 
     if-nez v3, :cond_12
 
-    .line 540
+    .line 539
     :goto_11
     return-void
 
-    .line 533
+    .line 532
     :cond_12
     iget-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->cameraProperty:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -5967,26 +6006,26 @@
 
     move-result-object v2
 
-    .line 534
+    .line 533
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 535
+    .line 534
     .local v1, "length":I
     new-array v3, v1, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->whitebalanceArray:[Ljava/lang/String;
 
-    .line 536
+    .line 535
     const/4 v0, 0x0
 
     .local v0, "ii":I
     :goto_21
     if-lt v0, v1, :cond_3b
 
-    .line 539
+    .line 538
     const-string v3, "[Normal] -- UIDisplayResource: "
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -6011,7 +6050,7 @@
 
     goto :goto_11
 
-    .line 537
+    .line 536
     :cond_3b
     iget-object v4, p0, Lcom/icatch/wificam/app/controller/UIDisplayResource;->whitebalanceArray:[Ljava/lang/String;
 
@@ -6037,7 +6076,7 @@
 
     aput-object v3, v4, v0
 
-    .line 536
+    .line 535
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_21
@@ -6050,10 +6089,10 @@
     .prologue
     const/16 v6, 0xa
 
-    .line 1036
+    .line 1035
     const-string v3, ""
 
-    .line 1037
+    .line 1036
     .local v3, "time":Ljava/lang/String;
     div-int/lit16 v4, p1, 0xe10
 
@@ -6061,7 +6100,7 @@
 
     move-result-object v0
 
-    .line 1038
+    .line 1037
     .local v0, "h":Ljava/lang/Integer;
     rem-int/lit16 v4, p1, 0xe10
 
@@ -6071,7 +6110,7 @@
 
     move-result-object v1
 
-    .line 1039
+    .line 1038
     .local v1, "m":Ljava/lang/Integer;
     rem-int/lit8 v4, p1, 0x3c
 
@@ -6079,7 +6118,7 @@
 
     move-result-object v2
 
-    .line 1040
+    .line 1039
     .local v2, "s":Ljava/lang/Integer;
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -6087,7 +6126,7 @@
 
     if-ge v4, v6, :cond_9a
 
-    .line 1041
+    .line 1040
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "0"
@@ -6106,7 +6145,7 @@
 
     move-result-object v3
 
-    .line 1045
+    .line 1044
     :goto_31
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -6126,14 +6165,14 @@
 
     move-result-object v3
 
-    .line 1046
+    .line 1045
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
     if-ge v4, v6, :cond_9f
 
-    .line 1047
+    .line 1046
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -6160,7 +6199,7 @@
 
     move-result-object v3
 
-    .line 1051
+    .line 1050
     :goto_65
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -6180,14 +6219,14 @@
 
     move-result-object v3
 
-    .line 1052
+    .line 1051
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
     if-ge v4, v6, :cond_b5
 
-    .line 1053
+    .line 1052
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -6214,11 +6253,11 @@
 
     move-result-object v3
 
-    .line 1057
+    .line 1056
     :goto_99
     return-object v3
 
-    .line 1043
+    .line 1042
     :cond_9a
     invoke-virtual {v0}, Ljava/lang/Integer;->toString()Ljava/lang/String;
 
@@ -6226,7 +6265,7 @@
 
     goto :goto_31
 
-    .line 1049
+    .line 1048
     :cond_9f
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -6250,7 +6289,7 @@
 
     goto :goto_65
 
-    .line 1055
+    .line 1054
     :cond_b5
     new-instance v4, Ljava/lang/StringBuilder;
 

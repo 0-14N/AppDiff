@@ -779,6 +779,8 @@
     .line 44
     invoke-super {p0, p1}, Ljp/gr/shift/rollmeowout/UnityPankiaActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 46
     new-instance v0, Ljp/gr/shift/rollmeowout/GamePreInit;
 
@@ -825,6 +827,8 @@
     iget-object v0, p0, Ljp/gr/shift/rollmeowout/RollMeowOutActivity;->m_MessageManager:Ljp/gr/shift/rollmeowout/AlertMessageManager;
 
     invoke-virtual {v0}, Ljp/gr/shift/rollmeowout/AlertMessageManager;->onDestroy()V
+
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
 
     .line 124
     invoke-super {p0}, Ljp/gr/shift/rollmeowout/UnityPankiaActivity;->onDestroy()V

@@ -23,7 +23,7 @@
     .registers 1
 
     .prologue
-    .line 30
+    .line 31
     invoke-direct {p0}, Lcom/hotelquickly/app/ui/BaseFragmentActivity;-><init>()V
 
     return-void
@@ -37,22 +37,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 130
+    .line 133
     iput-object p1, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
 
-    .line 131
+    .line 134
     invoke-static {}, Lcom/hotelquickly/app/p;->a()Lcom/hotelquickly/app/p;
 
     move-result-object v0
 
-    .line 132
+    .line 135
     invoke-virtual {v0, p0}, Lcom/hotelquickly/app/p;->w(Landroid/content/Context;)Lcom/hotelquickly/app/crate/country/CountriesCrate;
 
     move-result-object v1
 
     iget-object v0, p1, Lcom/hotelquickly/app/crate/offer/OffersCrate;->items:Ljava/util/List;
 
-    .line 133
+    .line 136
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -69,17 +69,17 @@
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->e:Lcom/hotelquickly/app/crate/country/CityCrate;
 
-    .line 134
+    .line 137
     iput-object p2, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->c:Lcom/hotelquickly/app/i;
 
-    .line 136
+    .line 139
     iget-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->e:Lcom/hotelquickly/app/crate/country/CityCrate;
 
     iget-object v0, v0, Lcom/hotelquickly/app/crate/country/CityCrate;->city_name:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a_(Ljava/lang/String;)V
 
-    .line 137
+    .line 140
     iget-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
 
     iget-object v0, v0, Lcom/hotelquickly/app/crate/offer/OffersCrate;->items:Ljava/util/List;
@@ -96,7 +96,7 @@
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->b(Ljava/lang/String;)V
 
-    .line 138
+    .line 141
     return-void
 .end method
 
@@ -104,7 +104,7 @@
     .registers 2
 
     .prologue
-    .line 123
+    .line 126
     const-string/jumbo v0, "List of Hotels > Map"
 
     return-object v0
@@ -114,7 +114,7 @@
     .registers 8
 
     .prologue
-    .line 142
+    .line 145
     new-instance v0, Lcom/hotelquickly/app/ui/intent/HotelMapIntent;
 
     iget-object v2, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
@@ -131,15 +131,15 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/hotelquickly/app/ui/intent/HotelMapIntent;-><init>(Landroid/content/Context;Lcom/hotelquickly/app/crate/offer/OffersCrate;Lcom/hotelquickly/app/crate/MultinightConfigurationCrate;Lcom/hotelquickly/app/crate/country/CityCrate;Lcom/hotelquickly/app/i;Lcom/hotelquickly/app/m;)V
 
-    .line 148
+    .line 151
     const/4 v1, -0x1
 
     invoke-virtual {p0, v1, v0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 149
+    .line 152
     invoke-super {p0}, Lcom/hotelquickly/app/ui/BaseFragmentActivity;->b_()V
 
-    .line 150
+    .line 153
     return-void
 .end method
 
@@ -147,7 +147,7 @@
     .registers 8
 
     .prologue
-    .line 154
+    .line 157
     new-instance v0, Lcom/hotelquickly/app/ui/intent/HotelMapIntent;
 
     iget-object v2, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
@@ -164,15 +164,15 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/hotelquickly/app/ui/intent/HotelMapIntent;-><init>(Landroid/content/Context;Lcom/hotelquickly/app/crate/offer/OffersCrate;Lcom/hotelquickly/app/crate/MultinightConfigurationCrate;Lcom/hotelquickly/app/crate/country/CityCrate;Lcom/hotelquickly/app/i;Lcom/hotelquickly/app/m;)V
 
-    .line 160
+    .line 163
     const/4 v1, -0x1
 
     invoke-virtual {p0, v1, v0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 161
+    .line 164
     invoke-super {p0}, Lcom/hotelquickly/app/ui/BaseFragmentActivity;->onBackPressed()V
 
-    .line 162
+    .line 165
     return-void
 .end method
 
@@ -184,15 +184,15 @@
 
     const/4 v2, 0x0
 
-    .line 45
+    .line 46
     invoke-super {p0, p1}, Lcom/hotelquickly/app/ui/BaseFragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 46
+    .line 47
     const v0, 0x7f030050
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->setContentView(I)V
 
-    .line 48
+    .line 49
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -201,75 +201,75 @@
 
     move-result-object v0
 
-    .line 49
+    .line 50
     invoke-static {v0}, Lcom/hotelquickly/app/ui/intent/HotelMapIntent;->b(Landroid/os/Bundle;)Lcom/hotelquickly/app/crate/MultinightConfigurationCrate;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->b:Lcom/hotelquickly/app/crate/MultinightConfigurationCrate;
 
-    .line 50
+    .line 51
     invoke-static {v0}, Lcom/hotelquickly/app/ui/intent/HotelMapIntent;->d(Landroid/os/Bundle;)Lcom/hotelquickly/app/m;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->d:Lcom/hotelquickly/app/m;
 
-    .line 51
-    if-nez p1, :cond_a1
-
     .line 52
+    if-nez p1, :cond_a7
+
+    .line 53
     invoke-static {v0}, Lcom/hotelquickly/app/ui/intent/HotelMapIntent;->e(Landroid/os/Bundle;)Lcom/hotelquickly/app/crate/country/CityCrate;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->e:Lcom/hotelquickly/app/crate/country/CityCrate;
 
-    .line 53
+    .line 54
     invoke-static {v0}, Lcom/hotelquickly/app/ui/intent/HotelMapIntent;->a(Landroid/os/Bundle;)Lcom/hotelquickly/app/crate/offer/OffersCrate;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
 
-    .line 54
+    .line 55
     invoke-static {v0}, Lcom/hotelquickly/app/ui/intent/HotelMapIntent;->c(Landroid/os/Bundle;)Lcom/hotelquickly/app/i;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->c:Lcom/hotelquickly/app/i;
 
-    .line 62
+    .line 63
     :goto_33
     iget-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
 
-    .line 63
+    .line 64
     iget-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->b:Lcom/hotelquickly/app/crate/MultinightConfigurationCrate;
 
-    .line 64
+    .line 65
     iget-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->c:Lcom/hotelquickly/app/i;
 
-    .line 65
+    .line 66
     iget-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->d:Lcom/hotelquickly/app/m;
 
-    .line 66
+    .line 67
     iget-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->e:Lcom/hotelquickly/app/crate/country/CityCrate;
-
-    .line 68
-    invoke-virtual {p0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcom/actionbarsherlock/app/ActionBar;->setHomeButtonEnabled(Z)V
 
     .line 69
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcom/actionbarsherlock/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/actionbarsherlock/app/ActionBar;->setHomeButtonEnabled(Z)V
 
     .line 70
+    invoke-virtual {p0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Lcom/actionbarsherlock/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
+
+    .line 71
     iget-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
 
     iget-object v0, v0, Lcom/hotelquickly/app/crate/offer/OffersCrate;->items:Ljava/util/List;
@@ -286,7 +286,7 @@
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a_(Ljava/lang/String;)V
 
-    .line 71
+    .line 72
     iget-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
 
     iget-object v0, v0, Lcom/hotelquickly/app/crate/offer/OffersCrate;->items:Ljava/util/List;
@@ -303,7 +303,13 @@
 
     invoke-virtual {p0, v0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->b(Ljava/lang/String;)V
 
-    .line 72
+    .line 73
+    invoke-static {p0}, Lcom/hotelquickly/app/e/x;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a6
+
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
@@ -320,7 +326,7 @@
 
     check-cast v0, Lcom/hotelquickly/app/ui/cs;
 
-    if-nez v0, :cond_8d
+    if-nez v0, :cond_93
 
     iget-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
 
@@ -336,7 +342,7 @@
 
     move-result-object v0
 
-    :cond_8d
+    :cond_93
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v1
@@ -353,11 +359,12 @@
 
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentTransaction;->commit()I
 
-    .line 73
+    .line 74
+    :cond_a6
     return-void
 
-    .line 56
-    :cond_a1
+    .line 57
+    :cond_a7
     const-string/jumbo v0, "CITY_STATE"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -368,7 +375,7 @@
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->e:Lcom/hotelquickly/app/crate/country/CityCrate;
 
-    .line 57
+    .line 58
     const-string/jumbo v0, "OFFERS_STATE_LEET"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -379,7 +386,7 @@
 
     iput-object v0, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
 
-    .line 58
+    .line 59
     const-string/jumbo v0, "OFFERS_GROUP"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
@@ -397,7 +404,7 @@
     .registers 4
 
     .prologue
-    .line 102
+    .line 105
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/HotelListMapActivity;->getSupportMenuInflater()Lcom/actionbarsherlock/view/MenuInflater;
 
     move-result-object v0
@@ -406,7 +413,7 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/actionbarsherlock/view/MenuInflater;->inflate(ILcom/actionbarsherlock/view/Menu;)V
 
-    .line 103
+    .line 106
     invoke-super {p0, p1}, Lcom/hotelquickly/app/ui/BaseFragmentActivity;->onCreateOptionsMenu(Lcom/actionbarsherlock/view/Menu;)Z
 
     move-result v0
@@ -420,14 +427,14 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 108
+    .line 111
     invoke-interface {p1}, Lcom/actionbarsherlock/view/MenuItem;->getItemId()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_20
 
-    .line 118
+    .line 121
     invoke-super {p0, p1}, Lcom/hotelquickly/app/ui/BaseFragmentActivity;->onOptionsItemSelected(Lcom/actionbarsherlock/view/MenuItem;)Z
 
     move-result v0
@@ -435,29 +442,29 @@
     :goto_c
     return v0
 
-    .line 110
+    .line 113
     :pswitch_d
     new-instance v1, Lcom/hotelquickly/app/ui/intent/SupportIntent;
 
     invoke-direct {v1, p0}, Lcom/hotelquickly/app/ui/intent/SupportIntent;-><init>(Landroid/content/Context;)V
 
-    .line 111
+    .line 114
     invoke-virtual {v1, p0}, Lcom/hotelquickly/app/ui/intent/SupportIntent;->a(Landroid/app/Activity;)V
 
     goto :goto_c
 
-    .line 114
+    .line 117
     :pswitch_16
     new-instance v1, Lcom/hotelquickly/app/ui/intent/SettingIntent;
 
     invoke-direct {v1, p0}, Lcom/hotelquickly/app/ui/intent/SettingIntent;-><init>(Landroid/content/Context;)V
 
-    .line 115
+    .line 118
     invoke-virtual {v1}, Lcom/hotelquickly/app/ui/intent/SettingIntent;->a()V
 
     goto :goto_c
 
-    .line 108
+    .line 111
     nop
 
     :pswitch_data_20
@@ -471,31 +478,31 @@
     .registers 4
 
     .prologue
-    .line 166
+    .line 169
     invoke-super {p0, p1}, Lcom/hotelquickly/app/ui/BaseFragmentActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 167
+    .line 170
     const-string/jumbo v0, "OFFERS_STATE_LEET"
 
     iget-object v1, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->a:Lcom/hotelquickly/app/crate/offer/OffersCrate;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 168
+    .line 171
     const-string/jumbo v0, "CITY_STATE"
 
     iget-object v1, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->e:Lcom/hotelquickly/app/crate/country/CityCrate;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 169
+    .line 172
     const-string/jumbo v0, "OFFERS_GROUP"
 
     iget-object v1, p0, Lcom/hotelquickly/app/ui/HotelListMapActivity;->c:Lcom/hotelquickly/app/i;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 170
+    .line 173
     return-void
 .end method
 
@@ -503,10 +510,10 @@
     .registers 3
 
     .prologue
-    .line 96
+    .line 99
     invoke-super {p0}, Lcom/hotelquickly/app/ui/BaseFragmentActivity;->onStart()V
 
-    .line 97
+    .line 100
     invoke-static {p0}, Lcom/hotelquickly/app/e/ab;->a(Landroid/content/Context;)Lcom/hotelquickly/app/e/ab;
 
     move-result-object v0
@@ -515,6 +522,6 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/hotelquickly/app/e/ab;->a(Lcom/hotelquickly/app/ui/classes/l;Ljava/lang/String;)V
 
-    .line 98
+    .line 101
     return-void
 .end method

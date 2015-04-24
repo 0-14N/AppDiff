@@ -56,9 +56,9 @@
 
     iput-object v1, p0, Lcom/mediarecorder/engine/QCamEngineV3;->i:Landroid/hardware/Camera;
 
-    new-instance v0, Lkc;
+    new-instance v0, Ldc;
 
-    invoke-direct {v0, p0}, Lkc;-><init>(Lcom/mediarecorder/engine/QCamEngineV3;)V
+    invoke-direct {v0, p0}, Ldc;-><init>(Lcom/mediarecorder/engine/QCamEngineV3;)V
 
     iput-object v0, p0, Lcom/mediarecorder/engine/QCamEngineV3;->j:Lcom/mediarecorder/utils/WorkThread$WorkThreadCB;
 
@@ -207,9 +207,9 @@
 
     new-instance v0, Lcom/mediarecorder/utils/WorkThread;
 
-    new-instance v1, Lkd;
+    new-instance v1, Ldd;
 
-    invoke-direct {v1, p0}, Lkd;-><init>(Lcom/mediarecorder/engine/QCamEngineV3;)V
+    invoke-direct {v1, p0}, Ldd;-><init>(Lcom/mediarecorder/engine/QCamEngineV3;)V
 
     const-string/jumbo v2, "V3CameraThread"
 

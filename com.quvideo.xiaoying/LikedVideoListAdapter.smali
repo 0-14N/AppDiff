@@ -76,9 +76,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/LikedVideoListAdapter;->k:Ljava/lang/String;
 
     .line 142
-    new-instance v0, Lzy;
+    new-instance v0, Ltf;
 
-    invoke-direct {v0, p0}, Lzy;-><init>(Lcom/quvideo/xiaoying/app/studio/LikedVideoListAdapter;)V
+    invoke-direct {v0, p0}, Ltf;-><init>(Lcom/quvideo/xiaoying/app/studio/LikedVideoListAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/LikedVideoListAdapter;->l:Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView$VideoMgrCallback;
 
@@ -330,9 +330,9 @@
     invoke-virtual/range {v0 .. v6}, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView;->updateDetailInfo(ILcom/quvideo/xiaoying/common/VideoDetailInfo;ILcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;Z)V
 
     .line 116
-    new-instance v1, Lzz;
+    new-instance v1, Ltg;
 
-    invoke-direct {v1, p0}, Lzz;-><init>(Lcom/quvideo/xiaoying/app/studio/LikedVideoListAdapter;)V
+    invoke-direct {v1, p0}, Ltg;-><init>(Lcom/quvideo/xiaoying/app/studio/LikedVideoListAdapter;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView;->setDataChangeListener(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView$DataChangeListener;)V
 

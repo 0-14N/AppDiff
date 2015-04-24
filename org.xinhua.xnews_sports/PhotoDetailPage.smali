@@ -75,15 +75,15 @@
     .registers 2
 
     .prologue
-    .line 62
+    .line 64
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/BaseActivity;-><init>()V
 
-    .line 84
+    .line 86
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->favoriteChange:Z
 
-    .line 62
+    .line 64
     return-void
 .end method
 
@@ -91,7 +91,7 @@
     .registers 2
 
     .prologue
-    .line 477
+    .line 474
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->getPosition()I
 
     move-result v0
@@ -103,7 +103,7 @@
     .registers 2
 
     .prologue
-    .line 79
+    .line 81
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->loadingbar:Landroid/view/View;
 
     return-object v0
@@ -113,7 +113,7 @@
     .registers 2
 
     .prologue
-    .line 84
+    .line 86
     iget-boolean v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->favoriteChange:Z
 
     return v0
@@ -123,7 +123,7 @@
     .registers 2
 
     .prologue
-    .line 84
+    .line 86
     iput-boolean p1, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->favoriteChange:Z
 
     return-void
@@ -133,7 +133,7 @@
     .registers 2
 
     .prologue
-    .line 82
+    .line 84
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->metadata:Landroid/os/Bundle;
 
     return-object v0
@@ -143,7 +143,7 @@
     .registers 2
 
     .prologue
-    .line 68
+    .line 70
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageButton_favorite:Landroid/widget/ImageButton;
 
     return-object v0
@@ -153,7 +153,7 @@
     .registers 2
 
     .prologue
-    .line 81
+    .line 83
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->table:Ljava/lang/String;
 
     return-object v0
@@ -163,7 +163,7 @@
     .registers 2
 
     .prologue
-    .line 465
+    .line 462
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->getCount()I
 
     move-result v0
@@ -175,7 +175,7 @@
     .registers 3
 
     .prologue
-    .line 485
+    .line 482
     invoke-direct {p0, p1}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->getMetadata(I)Landroid/os/Bundle;
 
     move-result-object v0
@@ -187,7 +187,7 @@
     .registers 2
 
     .prologue
-    .line 82
+    .line 84
     iput-object p1, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->metadata:Landroid/os/Bundle;
 
     return-void
@@ -197,7 +197,7 @@
     .registers 2
 
     .prologue
-    .line 78
+    .line 80
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gallery_photo:Landroid/widget/Gallery;
 
     return-object v0
@@ -207,7 +207,7 @@
     .registers 3
 
     .prologue
-    .line 469
+    .line 466
     invoke-direct {p0, p1}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->toLoopablePostion(I)I
 
     move-result v0
@@ -219,7 +219,7 @@
     .registers 3
 
     .prologue
-    .line 371
+    .line 368
     invoke-direct {p0, p1}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->getGalleryChildAt(I)Lorg/xinhua/xnews_sports/adapter/GalleryAdapter$GalleryImageView;
 
     move-result-object v0
@@ -231,7 +231,7 @@
     .registers 2
 
     .prologue
-    .line 296
+    .line 293
     invoke-direct {p0, p1}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->displayInfo(Landroid/os/Bundle;)V
 
     return-void
@@ -241,7 +241,7 @@
     .registers 2
 
     .prologue
-    .line 72
+    .line 74
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageView_photobig:Landroid/widget/ImageView;
 
     return-object v0
@@ -251,7 +251,7 @@
     .registers 2
 
     .prologue
-    .line 90
+    .line 92
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->contentDownloaderTasks:Ljava/util/HashMap;
 
     return-object v0
@@ -261,7 +261,7 @@
     .registers 2
 
     .prologue
-    .line 77
+    .line 79
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->scrollView_photoinfo:Landroid/widget/ScrollView;
 
     return-object v0
@@ -271,7 +271,7 @@
     .registers 2
 
     .prologue
-    .line 73
+    .line 75
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_phototitle:Landroid/widget/TextView;
 
     return-object v0
@@ -281,7 +281,7 @@
     .registers 2
 
     .prologue
-    .line 74
+    .line 76
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_photodigest:Landroid/widget/TextView;
 
     return-object v0
@@ -291,7 +291,7 @@
     .registers 2
 
     .prologue
-    .line 88
+    .line 90
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->loadingStateListener:Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$LoadingStateListener;
 
     return-object v0
@@ -301,7 +301,7 @@
     .registers 2
 
     .prologue
-    .line 75
+    .line 77
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_phototime:Landroid/widget/TextView;
 
     return-object v0
@@ -311,7 +311,7 @@
     .registers 2
 
     .prologue
-    .line 76
+    .line 78
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_photoauthor:Landroid/widget/TextView;
 
     return-object v0
@@ -322,14 +322,14 @@
     .param p1, "metadata"    # Landroid/os/Bundle;
 
     .prologue
-    .line 297
+    .line 294
     const/4 v10, 0x0
 
     invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v5
 
-    .line 298
+    .line 295
     .local v5, "isInfoOK":Ljava/lang/Boolean;
     const-string v10, "thumburi"
 
@@ -337,7 +337,7 @@
 
     move-result-object v7
 
-    .line 301
+    .line 298
     .local v7, "thumburl":Ljava/lang/String;
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_pagination:Landroid/widget/TextView;
 
@@ -375,7 +375,7 @@
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 304
+    .line 301
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->db:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v11, "articleid"
@@ -396,14 +396,14 @@
 
     if-nez v10, :cond_102
 
-    .line 305
+    .line 302
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageButton_favorite:Landroid/widget/ImageButton;
 
     const v11, 0x7f020012
 
     invoke-virtual {v10, v11}, Landroid/widget/ImageButton;->setImageResource(I)V
 
-    .line 311
+    .line 308
     :goto_4d
     const-string v10, "/"
 
@@ -417,7 +417,7 @@
 
     move-result-object v6
 
-    .line 312
+    .line 309
     .local v6, "thumbFilename":Ljava/lang/String;
     const-string v10, "s."
 
@@ -427,7 +427,7 @@
 
     move-result-object v1
 
-    .line 313
+    .line 310
     .local v1, "bigPicFilename":Ljava/lang/String;
     invoke-static {v1}, Lorg/xinhua/xnews_sports/util/PicUtil;->isLocalPicExisted(Ljava/lang/String;)Z
 
@@ -435,21 +435,21 @@
 
     if-nez v10, :cond_73
 
-    .line 314
+    .line 311
     invoke-static {p0}, Lorg/xinhua/xnews_sports/util/Tools;->CheckNetwork(Landroid/content/Context;)Z
 
     move-result v10
 
     if-eqz v10, :cond_73
 
-    .line 315
+    .line 312
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->loadingbar:Landroid/view/View;
 
     const/4 v11, 0x0
 
     invoke-virtual {v10, v11}, Landroid/view/View;->setVisibility(I)V
 
-    .line 319
+    .line 316
     :cond_73
     const-string v10, "articleid"
 
@@ -461,11 +461,11 @@
 
     move-result-object v4
 
-    .line 320
+    .line 317
     .local v4, "hashMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz v4, :cond_10c
 
-    .line 321
+    .line 318
     const-string v10, "content"
 
     invoke-virtual {v4, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -474,7 +474,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 322
+    .line 319
     .local v2, "content":Ljava/lang/String;
     const-string v10, "title"
 
@@ -484,7 +484,7 @@
 
     check-cast v9, Ljava/lang/String;
 
-    .line 323
+    .line 320
     .local v9, "title":Ljava/lang/String;
     const-string v10, "pubtime"
 
@@ -494,7 +494,7 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 324
+    .line 321
     .local v8, "time":Ljava/lang/String;
     const-string v10, "author"
 
@@ -504,30 +504,30 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 325
+    .line 322
     .local v0, "author":Ljava/lang/String;
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_phototitle:Landroid/widget/TextView;
 
     invoke-virtual {v10, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 326
+    .line 323
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_photodigest:Landroid/widget/TextView;
 
     invoke-virtual {v10, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 327
+    .line 324
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->scrollView_photoinfo:Landroid/widget/ScrollView;
 
     const/4 v11, 0x0
 
     invoke-virtual {v10, v11}, Landroid/widget/ScrollView;->setVisibility(I)V
 
-    .line 328
+    .line 325
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_phototime:Landroid/widget/TextView;
 
     invoke-virtual {v10, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 329
+    .line 326
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_photoauthor:Landroid/widget/TextView;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -560,14 +560,14 @@
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 330
+    .line 327
     const/4 v10, 0x1
 
     invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v5
 
-    .line 331
+    .line 328
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->loadingStateListener:Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$LoadingStateListener;
 
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->getPosition()I
@@ -576,7 +576,7 @@
 
     invoke-virtual {v10, v11}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$LoadingStateListener;->onInfoSet(I)V
 
-    .line 336
+    .line 333
     .end local v0    # "author":Ljava/lang/String;
     .end local v2    # "content":Ljava/lang/String;
     .end local v8    # "time":Ljava/lang/String;
@@ -584,7 +584,7 @@
     :goto_e5
     const/4 v3, 0x0
 
-    .line 337
+    .line 334
     .local v3, "getContentTask":Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;
     invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -592,7 +592,7 @@
 
     if-nez v10, :cond_101
 
-    .line 338
+    .line 335
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->getPosition()I
 
     move-result v10
@@ -603,13 +603,13 @@
 
     if-nez v3, :cond_114
 
-    .line 339
+    .line 336
     new-instance v3, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;
 
     .end local v3    # "getContentTask":Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;
     invoke-direct {v3, p0, p1}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;-><init>(Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;Landroid/os/Bundle;)V
 
-    .line 340
+    .line 337
     .restart local v3    # "getContentTask":Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;
     const/4 v10, 0x0
 
@@ -617,12 +617,12 @@
 
     invoke-virtual {v3, v10}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 346
+    .line 343
     :cond_101
     :goto_101
     return-void
 
-    .line 307
+    .line 304
     .end local v1    # "bigPicFilename":Ljava/lang/String;
     .end local v3    # "getContentTask":Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;
     .end local v4    # "hashMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
@@ -636,7 +636,7 @@
 
     goto/16 :goto_4d
 
-    .line 333
+    .line 330
     .restart local v1    # "bigPicFilename":Ljava/lang/String;
     .restart local v4    # "hashMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     .restart local v6    # "thumbFilename":Ljava/lang/String;
@@ -649,7 +649,7 @@
 
     goto :goto_e5
 
-    .line 342
+    .line 339
     .restart local v3    # "getContentTask":Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;
     :cond_114
     invoke-static {p0}, Lorg/xinhua/xnews_sports/util/Tools;->CheckNetwork(Landroid/content/Context;)Z
@@ -658,7 +658,7 @@
 
     if-eqz v10, :cond_101
 
-    .line 343
+    .line 340
     iget-object v10, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->loadingbar:Landroid/view/View;
 
     const/4 v11, 0x0
@@ -673,7 +673,7 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 349
+    .line 346
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->contentDownloaderTasks:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -693,7 +693,7 @@
     .registers 3
 
     .prologue
-    .line 466
+    .line 463
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->metadata:Landroid/os/Bundle;
 
     const-string v1, "count"
@@ -710,12 +710,12 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 372
+    .line 369
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gallery_photo:Landroid/widget/Gallery;
 
     if-eqz v1, :cond_d
 
-    .line 373
+    .line 370
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -728,7 +728,7 @@
 
     if-lt v0, v1, :cond_f
 
-    .line 378
+    .line 375
     .end local v0    # "i":I
     :cond_d
     const/4 v1, 0x0
@@ -736,7 +736,7 @@
     :goto_e
     return-object v1
 
-    .line 374
+    .line 371
     .restart local v0    # "i":I
     :cond_f
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gallery_photo:Landroid/widget/Gallery;
@@ -763,7 +763,7 @@
 
     if-ne v1, p1, :cond_30
 
-    .line 375
+    .line 372
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gallery_photo:Landroid/widget/Gallery;
 
     invoke-virtual {v1, v0}, Landroid/widget/Gallery;->getChildAt(I)Landroid/view/View;
@@ -774,7 +774,7 @@
 
     goto :goto_e
 
-    .line 373
+    .line 370
     :cond_30
     add-int/lit8 v0, v0, 0x1
 
@@ -786,12 +786,12 @@
     .param p1, "expected"    # I
 
     .prologue
-    .line 486
+    .line 483
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 487
+    .line 484
     .local v1, "metadata":Landroid/os/Bundle;
     iget-object v3, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->db:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -811,7 +811,7 @@
 
     move-result-object v0
 
-    .line 489
+    .line 486
     .local v0, "cursor":Landroid/database/Cursor;
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -819,7 +819,7 @@
 
     if-eqz v3, :cond_c6
 
-    .line 490
+    .line 487
     const-string v3, "articleid"
 
     const-string v4, "articleid"
@@ -834,7 +834,7 @@
 
     invoke-virtual {v1, v3, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 491
+    .line 488
     const-string v3, "colcatcode"
 
     const-string v4, "colcatcode"
@@ -849,7 +849,7 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 492
+    .line 489
     const-string v3, "abstract"
 
     const-string v4, "abstract"
@@ -864,7 +864,7 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
+    .line 490
     const-string v3, "contenturi"
 
     const-string v4, "contenturi"
@@ -879,7 +879,7 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 494
+    .line 491
     const-string v3, "ruleid"
 
     const-string v4, "ruleid"
@@ -894,7 +894,7 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 495
+    .line 492
     const-string v3, "title"
 
     const-string v4, "title"
@@ -909,7 +909,7 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 496
+    .line 493
     const-string v3, "topview"
 
     const-string v4, "topview"
@@ -924,7 +924,7 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 497
+    .line 494
     const-string v3, "pubtime"
 
     const-string v4, "pubtime"
@@ -939,7 +939,7 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 498
+    .line 495
     const-string v3, "thumburi"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -950,7 +950,7 @@
 
     move-result-object v2
 
-    .line 499
+    .line 496
     .local v2, "thumburl":Ljava/lang/String;
     const-string v3, "photo_cnml"
 
@@ -970,12 +970,12 @@
 
     move-result-object v2
 
-    .line 500
+    .line 497
     const-string v3, "thumburi"
 
     invoke-virtual {v1, v3, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 501
+    .line 498
     const-string v3, "count"
 
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->getCount()I
@@ -984,26 +984,26 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 502
+    .line 499
     const-string v3, "position"
 
     invoke-virtual {v1, v3, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 503
+    .line 500
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 507
+    .line 504
     .end local v1    # "metadata":Landroid/os/Bundle;
     .end local v2    # "thumburl":Ljava/lang/String;
     :goto_c5
     return-object v1
 
-    .line 506
+    .line 503
     .restart local v1    # "metadata":Landroid/os/Bundle;
     :cond_c6
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 507
+    .line 504
     const/4 v1, 0x0
 
     goto :goto_c5
@@ -1013,7 +1013,7 @@
     .registers 3
 
     .prologue
-    .line 478
+    .line 475
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->metadata:Landroid/os/Bundle;
 
     const-string v1, "position"
@@ -1030,7 +1030,7 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 482
+    .line 479
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->metadata:Landroid/os/Bundle;
 
     const-string v1, "articleid"
@@ -1050,7 +1050,7 @@
     .registers 3
 
     .prologue
-    .line 152
+    .line 154
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gobackButton:Landroid/widget/ImageButton;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$1;
@@ -1059,7 +1059,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 162
+    .line 164
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageButton_favorite:Landroid/widget/ImageButton;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$2;
@@ -1068,7 +1068,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 202
+    .line 191
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageButton_sharethis:Landroid/widget/ImageButton;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$3;
@@ -1077,7 +1077,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 214
+    .line 211
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageButton_leftarrow:Landroid/widget/ImageButton;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$4;
@@ -1086,7 +1086,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 231
+    .line 228
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageButton_rightarrow:Landroid/widget/ImageButton;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$5;
@@ -1095,7 +1095,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 248
+    .line 245
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gallery_photo:Landroid/widget/Gallery;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$6;
@@ -1104,7 +1104,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Gallery;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 265
+    .line 262
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gallery_photo:Landroid/widget/Gallery;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$7;
@@ -1113,14 +1113,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Gallery;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 276
+    .line 273
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->galleryAdapter:Lorg/xinhua/xnews_sports/adapter/GalleryAdapter;
 
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->loadingStateListener:Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$LoadingStateListener;
 
     invoke-virtual {v0, v1}, Lorg/xinhua/xnews_sports/adapter/GalleryAdapter;->setOnImageSetListener(Lorg/xinhua/xnews_sports/adapter/GalleryAdapter$OnImageSetListener;)V
 
-    .line 278
+    .line 275
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageView_photobig:Landroid/widget/ImageView;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$8;
@@ -1129,7 +1129,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 284
+    .line 281
     return-void
 .end method
 
@@ -1138,7 +1138,7 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 470
+    .line 467
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->getCount()I
 
     move-result v0
@@ -1159,25 +1159,25 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 95
+    .line 97
     invoke-super {p0, p1}, Lorg/xinhua/xnews_sports/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 97
+    .line 99
     const/4 v2, 0x1
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->requestWindowFeature(I)Z
 
-    .line 98
+    .line 100
     const v2, 0x7f030004
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->setContentView(I)V
 
-    .line 100
+    .line 102
     invoke-virtual {p0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 101
+    .line 103
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "table"
 
@@ -1187,7 +1187,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->table:Ljava/lang/String;
 
-    .line 102
+    .line 104
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->table:Ljava/lang/String;
 
     if-nez v2, :cond_21
@@ -1196,7 +1196,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->table:Ljava/lang/String;
 
-    .line 103
+    .line 105
     :cond_21
     invoke-virtual {v1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -1204,7 +1204,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->metadata:Landroid/os/Bundle;
 
-    .line 105
+    .line 107
     const v2, 0x7f06000e
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
@@ -1215,8 +1215,8 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gobackButton:Landroid/widget/ImageButton;
 
-    .line 106
-    const v2, 0x7f06001a
+    .line 108
+    const v2, 0x7f06001f
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
 
@@ -1226,8 +1226,8 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gallery_photo:Landroid/widget/Gallery;
 
-    .line 107
-    const v2, 0x7f060025
+    .line 109
+    const v2, 0x7f06002a
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
 
@@ -1237,8 +1237,8 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageView_photobig:Landroid/widget/ImageView;
 
-    .line 108
-    const v2, 0x7f06001f
+    .line 110
+    const v2, 0x7f060024
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
 
@@ -1248,8 +1248,8 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_phototitle:Landroid/widget/TextView;
 
-    .line 109
-    const v2, 0x7f060022
+    .line 111
+    const v2, 0x7f060027
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
 
@@ -1259,8 +1259,8 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_photodigest:Landroid/widget/TextView;
 
-    .line 110
-    const v2, 0x7f060020
+    .line 112
+    const v2, 0x7f060025
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
 
@@ -1270,8 +1270,8 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_phototime:Landroid/widget/TextView;
 
-    .line 111
-    const v2, 0x7f060021
+    .line 113
+    const v2, 0x7f060026
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
 
@@ -1281,8 +1281,8 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_photoauthor:Landroid/widget/TextView;
 
-    .line 112
-    const v2, 0x7f06001d
+    .line 114
+    const v2, 0x7f060022
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
 
@@ -1292,8 +1292,8 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->scrollView_photoinfo:Landroid/widget/ScrollView;
 
-    .line 113
-    const v2, 0x7f060023
+    .line 115
+    const v2, 0x7f060028
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
 
@@ -1301,14 +1301,14 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->loadingbar:Landroid/view/View;
 
-    .line 114
+    .line 116
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->loadingbar:Landroid/view/View;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 115
+    .line 117
     invoke-virtual {p0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -1319,7 +1319,7 @@
 
     move-result-object v0
 
-    .line 116
+    .line 118
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v2, Lorg/xinhua/xnews_sports/util/BaseImageDownloader;
 
@@ -1327,14 +1327,14 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->baseImageDownloader:Lorg/xinhua/xnews_sports/util/BaseImageDownloader;
 
-    .line 117
+    .line 119
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->baseImageDownloader:Lorg/xinhua/xnews_sports/util/BaseImageDownloader;
 
     sget-object v3, Lorg/xinhua/xnews_sports/util/BaseImageDownloader$Mode;->NO_DOWNLOADED_DRAWABLE:Lorg/xinhua/xnews_sports/util/BaseImageDownloader$Mode;
 
     invoke-virtual {v2, v3}, Lorg/xinhua/xnews_sports/util/BaseImageDownloader;->setMode(Lorg/xinhua/xnews_sports/util/BaseImageDownloader$Mode;)V
 
-    .line 119
+    .line 121
     const v2, 0x7f060010
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
@@ -1345,7 +1345,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageButton_sharethis:Landroid/widget/ImageButton;
 
-    .line 120
+    .line 122
     const v2, 0x7f060011
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
@@ -1356,7 +1356,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageButton_favorite:Landroid/widget/ImageButton;
 
-    .line 121
+    .line 123
     const v2, 0x7f060014
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
@@ -1367,7 +1367,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageButton_leftarrow:Landroid/widget/ImageButton;
 
-    .line 122
+    .line 124
     const v2, 0x7f060015
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
@@ -1378,7 +1378,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->imageButton_rightarrow:Landroid/widget/ImageButton;
 
-    .line 124
+    .line 126
     const v2, 0x7f06000f
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->findViewById(I)Landroid/view/View;
@@ -1389,14 +1389,14 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->textView_pagination:Landroid/widget/TextView;
 
-    .line 126
+    .line 128
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->contentDownloaderTasks:Ljava/util/HashMap;
 
-    .line 128
+    .line 130
     new-instance v2, Lorg/xinhua/xnews_sports/adapter/GalleryAdapter;
 
     iget-object v3, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->db:Landroid/database/sqlite/SQLiteDatabase;
@@ -1415,14 +1415,14 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->galleryAdapter:Lorg/xinhua/xnews_sports/adapter/GalleryAdapter;
 
-    .line 129
+    .line 131
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gallery_photo:Landroid/widget/Gallery;
 
     iget-object v3, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->galleryAdapter:Lorg/xinhua/xnews_sports/adapter/GalleryAdapter;
 
     invoke-virtual {v2, v3}, Landroid/widget/Gallery;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    .line 130
+    .line 132
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->gallery_photo:Landroid/widget/Gallery;
 
     iget-object v3, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->metadata:Landroid/os/Bundle;
@@ -1441,22 +1441,22 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/Gallery;->setSelection(IZ)V
 
-    .line 131
+    .line 133
     new-instance v2, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$LoadingStateListener;
 
     invoke-direct {v2, p0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$LoadingStateListener;-><init>(Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;)V
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->loadingStateListener:Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$LoadingStateListener;
 
-    .line 133
+    .line 135
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->setListeners()V
 
-    .line 135
+    .line 137
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->metadata:Landroid/os/Bundle;
 
     invoke-direct {p0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->displayInfo(Landroid/os/Bundle;)V
 
-    .line 136
+    .line 138
     return-void
 .end method
 
@@ -1464,7 +1464,7 @@
     .registers 6
 
     .prologue
-    .line 288
+    .line 285
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->contentDownloaderTasks:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -1483,13 +1483,13 @@
 
     if-nez v2, :cond_14
 
-    .line 293
+    .line 290
     invoke-super {p0}, Lorg/xinhua/xnews_sports/activity/BaseActivity;->onDestroy()V
 
-    .line 294
+    .line 291
     return-void
 
-    .line 288
+    .line 285
     :cond_14
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1501,7 +1501,7 @@
 
     move-result v1
 
-    .line 289
+    .line 286
     .local v1, "position":I
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->contentDownloaderTasks:Ljava/util/HashMap;
 
@@ -1515,7 +1515,7 @@
 
     check-cast v0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;
 
-    .line 290
+    .line 287
     .local v0, "getContentTask":Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;
     if-eqz v0, :cond_a
 
@@ -1525,7 +1525,7 @@
 
     if-nez v2, :cond_a
 
-    .line 291
+    .line 288
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage$GetContentTask;->cancel(Z)Z
@@ -1539,28 +1539,28 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 141
+    .line 143
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_10
 
-    .line 142
+    .line 144
     iget-boolean v0, p0, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->favoriteChange:Z
 
     if-eqz v0, :cond_b
 
-    .line 143
+    .line 145
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0}, Lorg/xinhua/xnews_sports/activity/PhotoDetailPage;->setResult(I)V
 
-    .line 145
+    .line 147
     :cond_b
     invoke-super {p0, p1, p2}, Lorg/xinhua/xnews_sports/activity/BaseActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
-    .line 147
+    .line 149
     :goto_f
     return v0
 

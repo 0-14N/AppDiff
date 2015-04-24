@@ -24,12 +24,20 @@
 
 .field private i:Lthird/pulltorefresh/RefreshableView;
 
+.field private j:Landroid/os/Handler;
+
 
 # direct methods
 .method public constructor <init>()V
-    .registers 1
+    .registers 2
 
     invoke-direct {p0}, Lbiz/nicenight/nicenight/ui/ah;-><init>()V
+
+    new-instance v0, Lbiz/nicenight/nicenight/ui/ai;
+
+    invoke-direct {v0, p0}, Lbiz/nicenight/nicenight/ui/ai;-><init>(Lbiz/nicenight/nicenight/ui/NearbyActivity;)V
+
+    iput-object v0, p0, Lbiz/nicenight/nicenight/ui/NearbyActivity;->j:Landroid/os/Handler;
 
     return-void
 .end method
@@ -84,7 +92,23 @@
     return p1
 .end method
 
-.method static synthetic b(Lbiz/nicenight/nicenight/ui/NearbyActivity;)Lbiz/nicenight/nicenight/a/j;
+.method static synthetic b(Lbiz/nicenight/nicenight/ui/NearbyActivity;)Lthird/pulltorefresh/RefreshableView;
+    .registers 2
+
+    iget-object v0, p0, Lbiz/nicenight/nicenight/ui/NearbyActivity;->i:Lthird/pulltorefresh/RefreshableView;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lbiz/nicenight/nicenight/ui/NearbyActivity;)Landroid/os/Handler;
+    .registers 2
+
+    iget-object v0, p0, Lbiz/nicenight/nicenight/ui/NearbyActivity;->j:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method static synthetic d(Lbiz/nicenight/nicenight/ui/NearbyActivity;)Lbiz/nicenight/nicenight/a/j;
     .registers 2
 
     iget-object v0, p0, Lbiz/nicenight/nicenight/ui/NearbyActivity;->c:Lbiz/nicenight/nicenight/a/j;
@@ -92,7 +116,7 @@
     return-object v0
 .end method
 
-.method static synthetic c(Lbiz/nicenight/nicenight/ui/NearbyActivity;)I
+.method static synthetic e(Lbiz/nicenight/nicenight/ui/NearbyActivity;)I
     .registers 2
 
     iget v0, p0, Lbiz/nicenight/nicenight/ui/NearbyActivity;->e:I
@@ -100,7 +124,7 @@
     return v0
 .end method
 
-.method static synthetic d(Lbiz/nicenight/nicenight/ui/NearbyActivity;)I
+.method static synthetic f(Lbiz/nicenight/nicenight/ui/NearbyActivity;)I
     .registers 2
 
     iget v0, p0, Lbiz/nicenight/nicenight/ui/NearbyActivity;->f:I
@@ -183,13 +207,45 @@
 
     iget-object v0, p0, Lbiz/nicenight/nicenight/ui/NearbyActivity;->a:Landroid/widget/ListView;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/ak;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/al;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/ak;-><init>(Lbiz/nicenight/nicenight/ui/NearbyActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/al;-><init>(Lbiz/nicenight/nicenight/ui/NearbyActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
     return-void
+.end method
+
+.method public a(Landroid/content/Context;)Z
+    .registers 3
+
+    if-eqz p1, :cond_15
+
+    const-string v0, "connectivity"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_15
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
+
+    move-result v0
+
+    :goto_14
+    return v0
+
+    :cond_15
+    const/4 v0, 0x0
+
+    goto :goto_14
 .end method
 
 .method public b(Lbiz/nicenight/nicenight/logic/s;ZLjava/util/ArrayList;)V
@@ -249,9 +305,9 @@
 
     iget-object v0, p0, Lbiz/nicenight/nicenight/ui/NearbyActivity;->i:Lthird/pulltorefresh/RefreshableView;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/ai;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/aj;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/ai;-><init>(Lbiz/nicenight/nicenight/ui/NearbyActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/aj;-><init>(Lbiz/nicenight/nicenight/ui/NearbyActivity;)V
 
     invoke-virtual {v0, v1, v2}, Lthird/pulltorefresh/RefreshableView;->a(Lthird/pulltorefresh/b;I)V
 
@@ -267,9 +323,9 @@
 
     iget-object v0, p0, Lbiz/nicenight/nicenight/ui/NearbyActivity;->a:Landroid/widget/ListView;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/aj;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/ak;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/aj;-><init>(Lbiz/nicenight/nicenight/ui/NearbyActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/ak;-><init>(Lbiz/nicenight/nicenight/ui/NearbyActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 

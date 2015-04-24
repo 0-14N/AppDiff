@@ -23,9 +23,7 @@
 
 .field private E:Lorg/holoeverywhere/preference/Preference;
 
-.field private F:Lorg/holoeverywhere/preference/Preference;
-
-.field private G:Lcom/actionbarsherlock/app/ActionBar;
+.field private F:Lcom/actionbarsherlock/app/ActionBar;
 
 .field private b:Lorg/holoeverywhere/preference/SharedPreferences;
 
@@ -88,7 +86,7 @@
 .method static synthetic a(Lxcxin/filexpert/settings/FileGeneralSetting;)Lorg/holoeverywhere/preference/Preference;
     .registers 2
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
 
     return-object v0
 .end method
@@ -127,7 +125,7 @@
 
     const-string/jumbo v6, ""
 
-    const v3, 0x7f09036c
+    const v3, 0x7f090378
 
     const v9, 0x7f090058
 
@@ -146,7 +144,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f090124
+    const v2, 0x7f09013d
 
     move-object v0, p0
 
@@ -188,9 +186,9 @@
 
     :cond_51
     :goto_51
-    const v9, 0x7f0903be
+    const v9, 0x7f09039d
 
-    const v3, 0x7f0903c4
+    const v3, 0x7f0903a3
 
     sget-object v1, Lcom/geeksoft/b/d;->d:Lcom/geeksoft/b/d;
 
@@ -234,9 +232,9 @@
 
     :cond_7e
     :goto_7e
-    const v9, 0x7f0903c0
+    const v9, 0x7f09039f
 
-    const v3, 0x7f0903c3
+    const v3, 0x7f0903a2
 
     sget-object v1, Lcom/geeksoft/b/d;->a:Lcom/geeksoft/b/d;
 
@@ -280,9 +278,9 @@
 
     :cond_ab
     :goto_ab
-    const v9, 0x7f0903c8
+    const v9, 0x7f0903a7
 
-    const v3, 0x7f0903c9
+    const v3, 0x7f0903a8
 
     sget-object v1, Lcom/geeksoft/b/d;->f:Lcom/geeksoft/b/d;
 
@@ -330,7 +328,7 @@
 .end method
 
 .method private a(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 7
+    .registers 6
 
     const/4 v1, 0x1
 
@@ -354,7 +352,7 @@
 
     iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->v:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f090201
+    const v1, 0x7f090209
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
@@ -365,7 +363,7 @@
     :cond_1d
     iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->v:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f090202
+    const v1, 0x7f09020a
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
@@ -384,41 +382,41 @@
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_168
+    packed-switch v0, :pswitch_data_132
 
     goto :goto_1c
 
     :pswitch_37
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f0903ea
+    const v1, 0x7f0903c8
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
     goto :goto_1c
 
     :pswitch_40
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f0903eb
+    const v1, 0x7f0903c9
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
     goto :goto_1c
 
     :pswitch_49
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f0903ec
+    const v1, 0x7f0903ca
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
     goto :goto_1c
 
     :pswitch_52
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f0903ed
+    const v1, 0x7f0903cb
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
@@ -441,7 +439,7 @@
 
     iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->w:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f090206
+    const v1, 0x7f09020c
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
@@ -450,7 +448,7 @@
     :cond_73
     iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->w:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f090207
+    const v1, 0x7f09020d
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
@@ -492,7 +490,7 @@
 
     if-eqz v0, :cond_a8
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->F:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->E:Lorg/holoeverywhere/preference/Preference;
 
     invoke-virtual {v0, p2}, Lorg/holoeverywhere/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -515,7 +513,7 @@
 
     iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->y:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f090134
+    const v1, 0x7f09022a
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
@@ -524,128 +522,77 @@
     :cond_c1
     iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->y:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f0901c7
+    const v1, 0x7f090229
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
     goto/16 :goto_1c
 
     :cond_cb
-    const-string/jumbo v0, "LanguageSetting"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_101
-
-    invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_ec
-
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
-
-    const v1, 0x7f090287
-
-    invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
-
-    :goto_e2
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
-
-    const v1, 0x7f090286
-
-    invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setTitle(I)V
-
-    goto/16 :goto_1c
-
-    :cond_ec
-    iget-object v1, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
-
-    invoke-virtual {p0}, Lxcxin/filexpert/settings/FileGeneralSetting;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f0f0021
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
-
-    move-result-object v2
-
-    add-int/lit8 v0, v0, -0x1
-
-    aget-object v0, v2, v0
-
-    invoke-virtual {v1, v0}, Lorg/holoeverywhere/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
-
-    goto :goto_e2
-
-    :cond_101
     const-string/jumbo v0, "ThemeSetting"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_135
+    if-eqz v0, :cond_ff
 
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    if-ne v0, v1, :cond_11a
+    if-ne v0, v1, :cond_e4
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->C:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->B:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f0902f8
+    const v1, 0x7f090302
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
     goto/16 :goto_1c
 
-    :cond_11a
+    :cond_e4
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_12b
+    if-ne v0, v1, :cond_f5
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->C:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->B:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f0902f9
-
-    invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
-
-    goto/16 :goto_1c
-
-    :cond_12b
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->C:Lorg/holoeverywhere/preference/Preference;
-
-    const v1, 0x7f0902fa
+    const v1, 0x7f090303
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
     goto/16 :goto_1c
 
-    :cond_135
+    :cond_f5
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->B:Lorg/holoeverywhere/preference/Preference;
+
+    const v1, 0x7f090304
+
+    invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
+
+    goto/16 :goto_1c
+
+    :cond_ff
     const-string/jumbo v0, "feAccountSetting"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_145
+    if-eqz v0, :cond_10f
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->D:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->C:Lorg/holoeverywhere/preference/Preference;
 
     invoke-virtual {v0, p2}, Lorg/holoeverywhere/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_1c
 
-    :cond_145
+    :cond_10f
     const-string/jumbo v0, "pullToRefresh"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -658,26 +605,26 @@
 
     move-result v0
 
-    if-ne v0, v1, :cond_15e
+    if-ne v0, v1, :cond_128
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->B:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
 
-    const v1, 0x7f090321
-
-    invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
-
-    goto/16 :goto_1c
-
-    :cond_15e
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->B:Lorg/holoeverywhere/preference/Preference;
-
-    const v1, 0x7f090320
+    const v1, 0x7f090331
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
 
     goto/16 :goto_1c
 
-    :pswitch_data_168
+    :cond_128
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
+
+    const v1, 0x7f090330
+
+    invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/Preference;->setSummary(I)V
+
+    goto/16 :goto_1c
+
+    :pswitch_data_132
     .packed-switch 0x1
         :pswitch_37
         :pswitch_40
@@ -701,7 +648,7 @@
 
     if-eqz p4, :cond_1b
 
-    const v0, 0x7f0903c1
+    const v0, 0x7f0903a0
 
     new-instance v2, Lxcxin/filexpert/settings/o;
 
@@ -856,7 +803,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->C:Lorg/holoeverywhere/preference/Preference;
+    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->B:Lorg/holoeverywhere/preference/Preference;
 
     const-string/jumbo v0, "FileExpertSmbStreamBufSize"
 
@@ -864,7 +811,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->F:Lorg/holoeverywhere/preference/Preference;
+    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->E:Lorg/holoeverywhere/preference/Preference;
 
     const-string/jumbo v0, "PhoneInfo"
 
@@ -922,14 +869,6 @@
 
     iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->p:Lorg/holoeverywhere/preference/Preference;
 
-    const-string/jumbo v0, "LanguageSetting"
-
-    invoke-virtual {p0, v0}, Lxcxin/filexpert/settings/FileGeneralSetting;->findPreference(Ljava/lang/CharSequence;)Lorg/holoeverywhere/preference/Preference;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
-
     const-string/jumbo v0, "DownloadSetting"
 
     invoke-virtual {p0, v0}, Lxcxin/filexpert/settings/FileGeneralSetting;->findPreference(Ljava/lang/CharSequence;)Lorg/holoeverywhere/preference/Preference;
@@ -952,7 +891,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
+    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
 
     const-string/jumbo v0, "myfeSetting"
 
@@ -968,7 +907,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->B:Lorg/holoeverywhere/preference/Preference;
+    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
 
     const-string/jumbo v0, "feAccountSetting"
 
@@ -976,7 +915,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->D:Lorg/holoeverywhere/preference/Preference;
+    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->C:Lorg/holoeverywhere/preference/Preference;
 
     const-string/jumbo v0, "feGetAuthFile"
 
@@ -984,31 +923,31 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->E:Lorg/holoeverywhere/preference/Preference;
+    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->D:Lorg/holoeverywhere/preference/Preference;
 
     invoke-virtual {p0}, Lxcxin/filexpert/settings/FileGeneralSetting;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
 
     move-result-object v0
 
-    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->G:Lcom/actionbarsherlock/app/ActionBar;
+    iput-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->F:Lcom/actionbarsherlock/app/ActionBar;
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->G:Lcom/actionbarsherlock/app/ActionBar;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->F:Lcom/actionbarsherlock/app/ActionBar;
 
-    if-eqz v0, :cond_120
+    if-eqz v0, :cond_117
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->G:Lcom/actionbarsherlock/app/ActionBar;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->F:Lcom/actionbarsherlock/app/ActionBar;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/actionbarsherlock/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->G:Lcom/actionbarsherlock/app/ActionBar;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->F:Lcom/actionbarsherlock/app/ActionBar;
 
-    const v1, 0x7f0900a0
+    const v1, 0x7f0900a9
 
     invoke-virtual {v0, v1}, Lcom/actionbarsherlock/app/ActionBar;->setTitle(I)V
 
-    :cond_120
+    :cond_117
     return-void
 .end method
 
@@ -1053,7 +992,7 @@
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/widget/EditText;->setInputType(I)V
 
-    const v1, 0x7f09008c
+    const v1, 0x7f090090
 
     invoke-virtual {p0, v1}, Lxcxin/filexpert/settings/FileGeneralSetting;->getString(I)Ljava/lang/String;
 
@@ -1176,7 +1115,7 @@
 
     invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->F:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->E:Lorg/holoeverywhere/preference/Preference;
 
     invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1212,31 +1151,7 @@
 
     invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
-
-    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
-
     iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->s:Lorg/holoeverywhere/preference/Preference;
-
-    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
-
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->C:Lorg/holoeverywhere/preference/Preference;
-
-    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
-
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->u:Lorg/holoeverywhere/preference/Preference;
-
-    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
-
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->D:Lorg/holoeverywhere/preference/Preference;
-
-    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
-
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->E:Lorg/holoeverywhere/preference/Preference;
-
-    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
-
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
 
     invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1244,9 +1159,29 @@
 
     invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
 
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->u:Lorg/holoeverywhere/preference/Preference;
+
+    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
+
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->C:Lorg/holoeverywhere/preference/Preference;
+
+    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
+
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->D:Lorg/holoeverywhere/preference/Preference;
+
+    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
+
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->z:Lorg/holoeverywhere/preference/Preference;
+
+    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
+
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->A:Lorg/holoeverywhere/preference/Preference;
+
+    invoke-virtual {v0, p0}, Lorg/holoeverywhere/preference/Preference;->setOnPreferenceClickListener(Lorg/holoeverywhere/preference/Preference$OnPreferenceClickListener;)V
+
     iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->e:Lorg/holoeverywhere/preference/CheckBoxPreference;
 
-    if-eqz v0, :cond_a3
+    if-eqz v0, :cond_9e
 
     iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->e:Lorg/holoeverywhere/preference/CheckBoxPreference;
 
@@ -1258,7 +1193,7 @@
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/preference/CheckBoxPreference;->setChecked(Z)V
 
-    :cond_a3
+    :cond_9e
     iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->f:Lorg/holoeverywhere/preference/CheckBoxPreference;
 
     sget-object v1, Lxcxin/filexpert/settings/FileGeneralSetting;->a:Lxcxin/filexpert/settings/i;
@@ -1419,28 +1354,6 @@
 
     invoke-direct {p0, v0, v1}, Lxcxin/filexpert/settings/FileGeneralSetting;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "LanguageSetting"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    sget-object v2, Lxcxin/filexpert/settings/FileGeneralSetting;->a:Lxcxin/filexpert/settings/i;
-
-    invoke-virtual {v2}, Lxcxin/filexpert/settings/i;->aB()I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p0, v0, v1}, Lxcxin/filexpert/settings/FileGeneralSetting;->a(Ljava/lang/String;Ljava/lang/String;)V
-
     const-string/jumbo v0, "ListItemSizeShow"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1533,7 +1446,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1f0
+    if-eqz v0, :cond_1d2
 
     sget-object v0, Lxcxin/filexpert/settings/FileGeneralSetting;->a:Lxcxin/filexpert/settings/i;
 
@@ -1541,11 +1454,11 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1f0
+    if-eqz v0, :cond_1d2
 
     const-string/jumbo v0, "feAccountSetting"
 
-    const v1, 0x7f090323
+    const v1, 0x7f090336
 
     invoke-virtual {p0, v1}, Lxcxin/filexpert/settings/FileGeneralSetting;->getString(I)Ljava/lang/String;
 
@@ -1553,7 +1466,7 @@
 
     invoke-direct {p0, v0, v1}, Lxcxin/filexpert/settings/FileGeneralSetting;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_1f0
+    :cond_1d2
     return-void
 .end method
 
@@ -1563,11 +1476,11 @@
     .registers 3
 
     :try_start_0
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->D:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->C:Lorg/holoeverywhere/preference/Preference;
 
     if-eqz v0, :cond_9
 
-    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->D:Lorg/holoeverywhere/preference/Preference;
+    iget-object v0, p0, Lxcxin/filexpert/settings/FileGeneralSetting;->C:Lorg/holoeverywhere/preference/Preference;
 
     invoke-virtual {v0, p1}, Lorg/holoeverywhere/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
     :try_end_9
@@ -1603,7 +1516,7 @@
     if-ne p1, v0, :cond_1e
 
     :cond_f
-    const v0, 0x7f090323
+    const v0, 0x7f090336
 
     invoke-virtual {p0, v0}, Lxcxin/filexpert/settings/FileGeneralSetting;->getString(I)Ljava/lang/String;
 
@@ -1917,7 +1830,7 @@
 
     if-nez v0, :cond_bd
 
-    const v0, 0x7f09031b
+    const v0, 0x7f09032e
 
     invoke-static {v0}, Lxcxin/filexpert/n/bh;->a(I)V
 
@@ -2041,9 +1954,9 @@
 .method public onPreferenceClick(Lorg/holoeverywhere/preference/Preference;)Z
     .registers 10
 
-    const/high16 v7, 0x7f0f0000
+    const v7, 0x7f0f0002
 
-    const v5, 0x7f09017f
+    const v5, 0x7f09019d
 
     const/4 v0, 0x0
 
@@ -2065,13 +1978,13 @@
 
     move-result v3
 
-    if-eqz v3, :cond_45
+    if-eqz v3, :cond_46
 
     new-instance v0, Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Lorg/holoeverywhere/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f09020e
+    const v1, 0x7f09020f
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setTitle(I)Lorg/holoeverywhere/app/AlertDialog$Builder;
 
@@ -2085,7 +1998,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090088
+    const v1, 0x7f09008b
 
     new-instance v2, Lxcxin/filexpert/settings/k;
 
@@ -2103,30 +2016,30 @@
 
     invoke-virtual {v0}, Lorg/holoeverywhere/app/AlertDialog$Builder;->show()Lorg/holoeverywhere/app/AlertDialog;
 
-    :cond_44
-    :goto_44
+    :cond_45
+    :goto_45
     return v6
 
-    :cond_45
+    :cond_46
     const-string/jumbo v3, "FeViewMode"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_6d
+    if-eqz v3, :cond_6e
 
     new-instance v0, Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Lorg/holoeverywhere/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0901fe
+    const v1, 0x7f090207
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setTitle(I)Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f0f0005
+    const v1, 0x7f0f000c
 
     sget-object v3, Lxcxin/filexpert/settings/FileGeneralSetting;->a:Lxcxin/filexpert/settings/i;
 
@@ -2142,22 +2055,22 @@
 
     invoke-virtual {v0}, Lorg/holoeverywhere/app/AlertDialog$Builder;->show()Lorg/holoeverywhere/app/AlertDialog;
 
-    goto :goto_44
+    goto :goto_45
 
-    :cond_6d
+    :cond_6e
     const-string/jumbo v3, "FileExpertSimpleListShow"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_95
+    if-eqz v3, :cond_96
 
     new-instance v0, Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Lorg/holoeverywhere/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f090203
+    const v1, 0x7f09020b
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setTitle(I)Lorg/holoeverywhere/app/AlertDialog$Builder;
 
@@ -2179,16 +2092,16 @@
 
     invoke-virtual {v0}, Lorg/holoeverywhere/app/AlertDialog$Builder;->show()Lorg/holoeverywhere/app/AlertDialog;
 
-    goto :goto_44
+    goto :goto_45
 
-    :cond_95
+    :cond_96
     const-string/jumbo v3, "UncompressEncode"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_d8
+    if-eqz v3, :cond_d9
 
     new-instance v2, Lxcxin/filexpert/settings/l;
 
@@ -2212,16 +2125,16 @@
 
     move v1, v0
 
-    :goto_b4
+    :goto_b5
     array-length v5, v3
 
-    if-lt v0, v5, :cond_cc
+    if-lt v0, v5, :cond_cd
 
     new-instance v0, Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Lorg/holoeverywhere/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f09011c
+    const v3, 0x7f090135
 
     invoke-virtual {v0, v3}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setTitle(I)Lorg/holoeverywhere/app/AlertDialog$Builder;
 
@@ -2233,32 +2146,32 @@
 
     invoke-virtual {v0}, Lorg/holoeverywhere/app/AlertDialog$Builder;->show()Lorg/holoeverywhere/app/AlertDialog;
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_cc
+    :cond_cd
     aget-object v5, v3, v0
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_d5
+    if-eqz v5, :cond_d6
 
     move v1, v0
 
-    :cond_d5
+    :cond_d6
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_b4
+    goto :goto_b5
 
-    :cond_d8
+    :cond_d9
     const-string/jumbo v0, "app_manager_settings"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_ed
+    if-eqz v0, :cond_ee
 
     new-instance v0, Landroid/content/Intent;
 
@@ -2268,16 +2181,16 @@
 
     invoke-virtual {p0, v0}, Lxcxin/filexpert/settings/FileGeneralSetting;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_ed
+    :cond_ee
     const-string/jumbo v0, "SocialShareSettings"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_102
+    if-eqz v0, :cond_103
 
     new-instance v0, Landroid/content/Intent;
 
@@ -2287,42 +2200,42 @@
 
     invoke-virtual {p0, v0}, Lxcxin/filexpert/settings/FileGeneralSetting;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_102
+    :cond_103
     const-string/jumbo v0, "RateFilexpert"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_110
+    if-eqz v0, :cond_111
 
     invoke-static {p0}, Lxcxin/filexpert/n/p;->c(Landroid/app/Activity;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_110
+    :cond_111
     const-string/jumbo v0, "FileExpertSmbStreamBufSize"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_11e
+    if-eqz v0, :cond_11f
 
     invoke-direct {p0, v1}, Lxcxin/filexpert/settings/FileGeneralSetting;->b(Ljava/lang/String;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_11e
+    :cond_11f
     const-string/jumbo v0, "FtpClientPassiveModeShow"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_14a
+    if-eqz v0, :cond_14b
 
     new-instance v0, Lxcxin/filexpert/settings/m;
 
@@ -2338,7 +2251,7 @@
 
     invoke-direct {v2, p0}, Lorg/holoeverywhere/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f0901c8
+    const v3, 0x7f09022b
 
     invoke-virtual {v2, v3}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setTitle(I)Lorg/holoeverywhere/app/AlertDialog$Builder;
 
@@ -2352,29 +2265,29 @@
 
     invoke-virtual {v0}, Lorg/holoeverywhere/app/AlertDialog$Builder;->show()Lorg/holoeverywhere/app/AlertDialog;
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_14a
+    :cond_14b
     const-string/jumbo v0, "FollowFilexpertOfficial"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_158
+    if-eqz v0, :cond_159
 
     invoke-static {p0}, Lxcxin/filexpert/n/p;->d(Landroid/content/Context;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_158
+    :cond_159
     const-string/jumbo v0, "help_tip"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_16b
+    if-eqz v0, :cond_16c
 
     sget-object v0, Lxcxin/filexpert/settings/FileGeneralSetting;->a:Lxcxin/filexpert/settings/i;
 
@@ -2382,29 +2295,29 @@
 
     invoke-virtual {p0}, Lxcxin/filexpert/settings/FileGeneralSetting;->finish()V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_16b
+    :cond_16c
     const-string/jumbo v0, "About_info"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_179
+    if-eqz v0, :cond_17a
 
     invoke-static {p0}, Lxcxin/filexpert/n/p;->a(Landroid/app/Activity;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_179
+    :cond_17a
     const-string/jumbo v0, "tabsManagerSettings"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_18e
+    if-eqz v0, :cond_18f
 
     new-instance v0, Landroid/content/Intent;
 
@@ -2414,53 +2327,16 @@
 
     invoke-virtual {p0, v0}, Lxcxin/filexpert/settings/FileGeneralSetting;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_18e
-    const-string/jumbo v0, "LanguageSetting"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1b7
-
-    new-instance v0, Lorg/holoeverywhere/app/AlertDialog$Builder;
-
-    invoke-direct {v0, p0}, Lorg/holoeverywhere/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    const v1, 0x7f090286
-
-    invoke-virtual {v0, v1}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setTitle(I)Lorg/holoeverywhere/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    const v1, 0x7f0f0021
-
-    sget-object v3, Lxcxin/filexpert/settings/FileGeneralSetting;->a:Lxcxin/filexpert/settings/i;
-
-    invoke-virtual {v3}, Lxcxin/filexpert/settings/i;->aB()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, -0x1
-
-    invoke-virtual {v0, v1, v3, v2}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setSingleChoiceItems(IILandroid/content/DialogInterface$OnClickListener;)Lorg/holoeverywhere/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lorg/holoeverywhere/app/AlertDialog$Builder;->show()Lorg/holoeverywhere/app/AlertDialog;
-
-    goto/16 :goto_44
-
-    :cond_1b7
+    :cond_18f
     const-string/jumbo v0, "DownloadSetting"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1cc
+    if-eqz v0, :cond_1a4
 
     new-instance v0, Landroid/content/Intent;
 
@@ -2470,28 +2346,28 @@
 
     invoke-virtual {p0, v0}, Lxcxin/filexpert/settings/FileGeneralSetting;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_1cc
+    :cond_1a4
     const-string/jumbo v0, "retrievalSetting"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1f5
+    if-eqz v0, :cond_1cd
 
     new-instance v0, Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Lorg/holoeverywhere/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f090365
+    const v1, 0x7f0902fb
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setTitle(I)Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f0f0024
+    const v1, 0x7f0f001d
 
     sget-object v3, Lxcxin/filexpert/settings/FileGeneralSetting;->a:Lxcxin/filexpert/settings/i;
 
@@ -2507,28 +2383,28 @@
 
     invoke-virtual {v0}, Lorg/holoeverywhere/app/AlertDialog$Builder;->show()Lorg/holoeverywhere/app/AlertDialog;
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_1f5
+    :cond_1cd
     const-string/jumbo v0, "ThemeSetting"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_21e
+    if-eqz v0, :cond_1f6
 
     new-instance v0, Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Lorg/holoeverywhere/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0902ff
+    const v1, 0x7f090301
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setTitle(I)Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f0f0011
+    const v1, 0x7f0f001f
 
     sget-object v3, Lxcxin/filexpert/settings/FileGeneralSetting;->a:Lxcxin/filexpert/settings/i;
 
@@ -2544,28 +2420,28 @@
 
     invoke-virtual {v0}, Lorg/holoeverywhere/app/AlertDialog$Builder;->show()Lorg/holoeverywhere/app/AlertDialog;
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_21e
+    :cond_1f6
     const-string/jumbo v0, "delete_setting"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_245
+    if-eqz v0, :cond_21d
 
     new-instance v0, Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Lorg/holoeverywhere/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0903e9
+    const v1, 0x7f0903c7
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setTitle(I)Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f0f0025
+    const v1, 0x7f0f001e
 
     sget-object v3, Lxcxin/filexpert/settings/FileGeneralSetting;->a:Lxcxin/filexpert/settings/i;
 
@@ -2579,16 +2455,16 @@
 
     invoke-virtual {v0}, Lorg/holoeverywhere/app/AlertDialog$Builder;->show()Lorg/holoeverywhere/app/AlertDialog;
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_245
+    :cond_21d
     const-string/jumbo v0, "fileSearchSetting"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_25a
+    if-eqz v0, :cond_232
 
     new-instance v0, Landroid/content/Intent;
 
@@ -2598,16 +2474,16 @@
 
     invoke-virtual {p0, v0}, Lxcxin/filexpert/settings/FileGeneralSetting;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_25a
+    :cond_232
     const-string/jumbo v0, "myfeSetting"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_26f
+    if-eqz v0, :cond_247
 
     new-instance v0, Landroid/content/Intent;
 
@@ -2617,22 +2493,22 @@
 
     invoke-virtual {p0, v0}, Lxcxin/filexpert/settings/FileGeneralSetting;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_26f
+    :cond_247
     const-string/jumbo v0, "feAccountSetting"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_29e
+    if-eqz v0, :cond_276
 
     invoke-static {p0}, Lxcxin/filexpert/n/cr;->b(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-nez v0, :cond_287
+    if-nez v0, :cond_25f
 
     invoke-virtual {p0, v5}, Lxcxin/filexpert/settings/FileGeneralSetting;->getString(I)Ljava/lang/String;
 
@@ -2640,20 +2516,20 @@
 
     invoke-static {p0, v0, v4, v4}, Lxcxin/filexpert/n/cr;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/Runnable;Ljava/lang/Runnable;)Z
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_287
+    :cond_25f
     invoke-static {p0}, Lxcxin/filexpert/login/e;->a(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_292
+    if-eqz v0, :cond_26a
 
     invoke-static {p0}, Lxcxin/filexpert/login/e;->d(Landroid/content/Context;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_292
+    :cond_26a
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lxcxin/filexpert/login/FeLoginActiviy;
@@ -2662,28 +2538,28 @@
 
     invoke-virtual {p0, v0, v6}, Lxcxin/filexpert/settings/FileGeneralSetting;->startActivityForResult(Landroid/content/Intent;I)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_29e
+    :cond_276
     const-string/jumbo v0, "pullToRefresh"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2c7
+    if-eqz v0, :cond_29f
 
     new-instance v0, Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Lorg/holoeverywhere/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f09031f
+    const v1, 0x7f09032f
 
     invoke-virtual {v0, v1}, Lorg/holoeverywhere/app/AlertDialog$Builder;->setTitle(I)Lorg/holoeverywhere/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f0f0026
+    const v1, 0x7f0f0021
 
     sget-object v3, Lxcxin/filexpert/settings/FileGeneralSetting;->a:Lxcxin/filexpert/settings/i;
 
@@ -2699,22 +2575,22 @@
 
     invoke-virtual {v0}, Lorg/holoeverywhere/app/AlertDialog$Builder;->show()Lorg/holoeverywhere/app/AlertDialog;
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_2c7
+    :cond_29f
     const-string/jumbo v0, "feGetAuthFile"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_44
+    if-eqz v0, :cond_45
 
     invoke-static {p0}, Lxcxin/filexpert/n/cr;->b(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2df
+    if-nez v0, :cond_2b7
 
     invoke-virtual {p0, v5}, Lxcxin/filexpert/settings/FileGeneralSetting;->getString(I)Ljava/lang/String;
 
@@ -2722,20 +2598,20 @@
 
     invoke-static {p0, v0, v4, v4}, Lxcxin/filexpert/n/cr;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/Runnable;Ljava/lang/Runnable;)Z
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_2df
+    :cond_2b7
     invoke-static {p0}, Lxcxin/filexpert/login/e;->a(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2ea
+    if-eqz v0, :cond_2c2
 
     invoke-static {p0}, Lcom/geeksoft/inappbuilling/b;->b(Landroid/app/Activity;)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 
-    :cond_2ea
+    :cond_2c2
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lxcxin/filexpert/login/FeLoginActiviy;
@@ -2746,5 +2622,5 @@
 
     invoke-virtual {p0, v0, v1}, Lxcxin/filexpert/settings/FileGeneralSetting;->startActivityForResult(Landroid/content/Intent;I)V
 
-    goto/16 :goto_44
+    goto/16 :goto_45
 .end method

@@ -102,16 +102,16 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/framework/ThemeEditor;->k:Ljava/lang/String;
 
     .line 143
-    new-instance v0, Lazg;
+    new-instance v0, Lasm;
 
-    invoke-direct {v0, p0}, Lazg;-><init>(Lcom/quvideo/xiaoying/videoeditor/framework/ThemeEditor;)V
+    invoke-direct {v0, p0}, Lasm;-><init>(Lcom/quvideo/xiaoying/videoeditor/framework/ThemeEditor;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/framework/ThemeEditor;->a:Lxiaoying/engine/base/IQSessionStateListener;
 
     .line 184
-    new-instance v0, Lazh;
+    new-instance v0, Lasn;
 
-    invoke-direct {v0, p0}, Lazh;-><init>(Lcom/quvideo/xiaoying/videoeditor/framework/ThemeEditor;)V
+    invoke-direct {v0, p0}, Lasn;-><init>(Lcom/quvideo/xiaoying/videoeditor/framework/ThemeEditor;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/framework/ThemeEditor;->b:Lxiaoying/engine/storyboard/IQThemeOperationListener;
 

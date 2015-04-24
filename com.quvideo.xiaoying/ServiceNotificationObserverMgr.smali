@@ -66,9 +66,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lapa;
+    new-instance v0, Laig;
 
-    invoke-direct {v0, p0}, Lapa;-><init>(Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;)V
+    invoke-direct {v0, p0}, Laig;-><init>(Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->f:Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;
 

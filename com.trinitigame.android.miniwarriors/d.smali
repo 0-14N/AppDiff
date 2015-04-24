@@ -1419,10 +1419,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "com.android.vending"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
     iget-object v1, p0, Lcom/trinitigame/android/c/d;->g:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1439,7 +1435,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_3e
+    if-nez v1, :cond_39
 
     iget-object v1, p0, Lcom/trinitigame/android/c/d;->g:Landroid/content/Context;
 
@@ -1449,12 +1445,12 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    :cond_3d
-    :goto_3d
+    :cond_38
+    :goto_38
     return-void
 
-    :cond_3e
-    if-eqz p1, :cond_3d
+    :cond_39
+    if-eqz p1, :cond_38
 
     new-instance v0, Lcom/trinitigame/android/c/p;
 
@@ -1466,7 +1462,7 @@
 
     invoke-interface {p1, v0}, Lcom/trinitigame/android/c/n;->a(Lcom/trinitigame/android/c/p;)V
 
-    goto :goto_3d
+    goto :goto_38
 .end method
 
 .method a(Lcom/trinitigame/android/c/r;)V

@@ -40,7 +40,7 @@
 .method static synthetic a(Lcom/cungo/callrecorder/ui/ActivityVipFunction_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
 
     return-void
 .end method
@@ -72,7 +72,7 @@
 .method static synthetic b(Lcom/cungo/callrecorder/ui/ActivityVipFunction_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
 .method private g()V
     .registers 2
 
-    const v0, 0x7f0e0163
+    const v0, 0x7f0e0165
 
     invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->findViewById(I)Landroid/view/View;
 
@@ -88,47 +88,7 @@
 
     check-cast v0, Lcom/cungo/callrecorder/ui/MenuView;
 
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->t:Lcom/cungo/callrecorder/ui/MenuView;
-
-    const v0, 0x7f0e00bd
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->q:Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
-
-    const v0, 0x7f0e00bb
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->o:Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
-
-    const v0, 0x7f0e0164
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ToggleButton;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->s:Landroid/widget/ToggleButton;
-
-    const v0, 0x7f0e00ba
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->n:Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->r:Lcom/cungo/callrecorder/ui/MenuView;
 
     const v0, 0x7f0e00bc
 
@@ -140,7 +100,7 @@
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->p:Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
 
-    const v0, 0x7f0e0165
+    const v0, 0x7f0e0163
 
     invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->findViewById(I)Landroid/view/View;
 
@@ -148,7 +108,47 @@
 
     check-cast v0, Lcom/cungo/callrecorder/ui/MenuView;
 
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->r:Lcom/cungo/callrecorder/ui/MenuView;
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->t:Lcom/cungo/callrecorder/ui/MenuView;
+
+    const v0, 0x7f0e00bb
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->o:Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
+
+    const v0, 0x7f0e00bd
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->q:Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
+
+    const v0, 0x7f0e00ba
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->n:Lcom/cungo/callrecorder/ui/CGVipFunctionItem;
+
+    const v0, 0x7f0e0164
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ToggleButton;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->s:Landroid/widget/ToggleButton;
 
     invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->u()V
 
@@ -188,9 +188,9 @@
 .method public o()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/nf;
+    new-instance v0, Lcom/cungo/callrecorder/ui/ne;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/nf;-><init>(Lcom/cungo/callrecorder/ui/ActivityVipFunction_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/ne;-><init>(Lcom/cungo/callrecorder/ui/ActivityVipFunction_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -208,37 +208,37 @@
     return-void
 
     :sswitch_7
-    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->g(I)V
-
-    goto :goto_6
-
-    :sswitch_b
-    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->a(I)V
-
-    goto :goto_6
-
-    :sswitch_f
-    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->f(I)V
-
-    goto :goto_6
-
-    :sswitch_13
-    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->i(I)V
-
-    goto :goto_6
-
-    :sswitch_17
     invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->h(I)V
 
     goto :goto_6
 
+    :sswitch_b
+    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->f(I)V
+
+    goto :goto_6
+
+    :sswitch_f
+    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->a(I)V
+
+    goto :goto_6
+
+    :sswitch_13
+    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->g(I)V
+
+    goto :goto_6
+
+    :sswitch_17
+    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->j(I)V
+
+    goto :goto_6
+
     :sswitch_1b
-    invoke-virtual {p0, p2, p3}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->a(ILandroid/content/Intent;)V
+    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->i(I)V
 
     goto :goto_6
 
     :sswitch_1f
-    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->j(I)V
+    invoke-virtual {p0, p2, p3}, Lcom/cungo/callrecorder/ui/ActivityVipFunction_;->a(ILandroid/content/Intent;)V
 
     goto :goto_6
 
@@ -251,13 +251,13 @@
 
     :sswitch_data_28
     .sparse-switch
-        0x0 -> :sswitch_13
-        0x1 -> :sswitch_1b
-        0x2 -> :sswitch_1f
-        0x4 -> :sswitch_7
-        0x5 -> :sswitch_17
-        0x8 -> :sswitch_b
-        0x9 -> :sswitch_f
+        0x0 -> :sswitch_1b
+        0x1 -> :sswitch_1f
+        0x2 -> :sswitch_17
+        0x4 -> :sswitch_13
+        0x5 -> :sswitch_7
+        0x8 -> :sswitch_f
+        0x9 -> :sswitch_b
         0x2766 -> :sswitch_23
     .end sparse-switch
 .end method
@@ -310,9 +310,9 @@
 .method public p()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/ne;
+    new-instance v0, Lcom/cungo/callrecorder/ui/nf;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/ne;-><init>(Lcom/cungo/callrecorder/ui/ActivityVipFunction_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/nf;-><init>(Lcom/cungo/callrecorder/ui/ActivityVipFunction_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 

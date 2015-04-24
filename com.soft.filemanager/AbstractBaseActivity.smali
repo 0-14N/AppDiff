@@ -26,13 +26,11 @@
 .method public constructor <init>()V
     .registers 2
 
+    const/4 v0, 0x0
+
     invoke-direct {p0}, Landroid/support/v4/app/FragmentActivity;-><init>()V
 
-    const/4 v0, 0x1
-
     iput-boolean v0, p0, Lcom/soft/filemanager/activities/AbstractBaseActivity;->r:Z
-
-    const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/soft/filemanager/activities/AbstractBaseActivity;->o:Z
 
@@ -75,30 +73,30 @@
 
 
 # virtual methods
-.method public a(Landroid/app/Activity;Landroid/widget/LinearLayout;)Lcom/google/ads/AdView;
+.method public a(Landroid/app/Activity;Landroid/widget/LinearLayout;)Lcn/domob/android/ads/DomobAdView;
     .registers 7
 
     const/4 v3, -0x2
 
-    new-instance v0, Lcom/google/ads/AdView;
+    new-instance v0, Lcn/domob/android/ads/DomobAdView;
 
-    sget-object v1, Lcom/google/ads/g;->b:Lcom/google/ads/g;
+    invoke-static {p0}, Lcn/domob/android/ads/o;->a(Landroid/content/Context;)Ljava/lang/String;
 
-    const-string v2, "a1502373a61a802"
+    move-result-object v1
 
-    invoke-direct {v0, p1, v1, v2}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/g;Ljava/lang/String;)V
+    const-string v2, "320x50"
+
+    invoke-direct {v0, p0, v1, v2}, Lcn/domob/android/ads/DomobAdView;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v1, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    new-instance v2, Lcom/google/ads/d;
+    const-string v2, "game"
 
-    invoke-direct {v2}, Lcom/google/ads/d;-><init>()V
+    invoke-virtual {v0, v2}, Lcn/domob/android/ads/DomobAdView;->setKeyword(Ljava/lang/String;)V
 
     invoke-virtual {p2, v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v0, v2}, Lcom/google/ads/AdView;->a(Lcom/google/ads/d;)V
 
     return-object v0
 .end method
@@ -388,266 +386,32 @@
 .end method
 
 .method protected f()Z
-    .registers 10
+    .registers 2
 
-    const/4 v2, 0x0
+    const/4 v0, 0x1
 
-    invoke-static {p0}, Lcom/soft/filemanager/d;->a(Landroid/content/Context;)J
-
-    move-result-wide v5
-
-    iget-object v0, p0, Lcom/soft/filemanager/activities/AbstractBaseActivity;->q:Ljava/util/Map;
-
-    const-string v1, "ad_delay"
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    const-wide/32 v3, 0x5265c00
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v7
-
-    :try_start_16
-    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-    :try_end_19
-    .catch Ljava/lang/NumberFormatException; {:try_start_16 .. :try_end_19} :catch_54
-
-    move-result-wide v0
-
-    const-wide/16 v3, 0x3e8
-
-    mul-long/2addr v0, v3
-
-    :goto_1d
-    const-wide/16 v3, 0x0
-
-    cmp-long v3, v5, v3
-
-    if-lez v3, :cond_5c
-
-    sub-long v3, v7, v5
-
-    cmp-long v0, v3, v0
-
-    if-lez v0, :cond_5c
-
-    const/4 v1, 0x1
-
-    iget-object v0, p0, Lcom/soft/filemanager/activities/AbstractBaseActivity;->q:Ljava/util/Map;
-
-    const-string v3, "banner_ad_switch"
-
-    invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-eqz v0, :cond_57
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_3a
-    const-string v3, "off"
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_52
-
-    const-string v3, "0"
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_52
-
-    const-string v3, "false"
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5a
-
-    :cond_52
-    move v0, v2
-
-    :goto_53
     return v0
-
-    :catch_54
-    move-exception v0
-
-    move-wide v0, v3
-
-    goto :goto_1d
-
-    :cond_57
-    const-string v0, ""
-
-    goto :goto_3a
-
-    :cond_5a
-    move v0, v1
-
-    goto :goto_53
-
-    :cond_5c
-    move v0, v2
-
-    goto :goto_53
 .end method
 
-.method protected g()Z
-    .registers 10
-
-    const/4 v2, 0x0
-
-    invoke-static {p0}, Lcom/soft/filemanager/d;->a(Landroid/content/Context;)J
-
-    move-result-wide v5
-
-    iget-object v0, p0, Lcom/soft/filemanager/activities/AbstractBaseActivity;->q:Ljava/util/Map;
-
-    const-string v1, "ad_delay"
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    const-wide/32 v3, 0x5265c00
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v7
-
-    :try_start_16
-    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-    :try_end_19
-    .catch Ljava/lang/NumberFormatException; {:try_start_16 .. :try_end_19} :catch_54
-
-    move-result-wide v0
-
-    const-wide/16 v3, 0x3e8
-
-    mul-long/2addr v0, v3
-
-    :goto_1d
-    const-wide/16 v3, 0x0
-
-    cmp-long v3, v5, v3
-
-    if-lez v3, :cond_5c
-
-    sub-long v3, v7, v5
-
-    cmp-long v0, v3, v0
-
-    if-lez v0, :cond_5c
-
-    const/4 v1, 0x1
-
-    iget-object v0, p0, Lcom/soft/filemanager/activities/AbstractBaseActivity;->q:Ljava/util/Map;
-
-    const-string v3, "icon_ad_switch"
-
-    invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-eqz v0, :cond_57
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_3a
-    const-string v3, "off"
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_52
-
-    const-string v3, "0"
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_52
-
-    const-string v3, "false"
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5a
-
-    :cond_52
-    move v0, v2
-
-    :goto_53
-    return v0
-
-    :catch_54
-    move-exception v0
-
-    move-wide v0, v3
-
-    goto :goto_1d
-
-    :cond_57
-    const-string v0, ""
-
-    goto :goto_3a
-
-    :cond_5a
-    move v0, v1
-
-    goto :goto_53
-
-    :cond_5c
-    move v0, v2
-
-    goto :goto_53
-.end method
-
-.method protected h()V
+.method protected g()V
     .registers 1
 
     return-void
 .end method
 
-.method public i()Lcom/soft/filemanager/activities/AbstractBaseActivity;
+.method public h()Lcom/soft/filemanager/activities/AbstractBaseActivity;
     .registers 1
 
     return-object p0
 .end method
 
-.method public j()V
+.method public i()V
     .registers 1
 
     return-void
 .end method
 
-.method public k()Lcom/soft/filemanager/FileManagerApplication;
+.method public j()Lcom/soft/filemanager/FileManagerApplication;
     .registers 2
 
     invoke-virtual {p0}, Lcom/soft/filemanager/activities/AbstractBaseActivity;->getApplication()Landroid/app/Application;
@@ -668,27 +432,27 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 6
+    .registers 5
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     invoke-super {p0, p1}, Landroid/support/v4/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-static {v1}, Lcom/umeng/a/a;->b(Z)V
+    invoke-static {v2}, Lcom/umeng/a/a;->b(Z)V
 
-    const-wide/32 v2, 0xea60
+    const-wide/32 v0, 0xea60
 
-    invoke-static {v2, v3}, Lcom/umeng/a/a;->a(J)V
+    invoke-static {v0, v1}, Lcom/umeng/a/a;->a(J)V
 
     invoke-static {p0}, Lcom/umeng/a/a;->c(Landroid/content/Context;)V
 
-    invoke-static {v1}, Lcom/umeng/a/a;->a(Z)V
+    invoke-static {v2}, Lcom/umeng/a/a;->a(Z)V
 
-    invoke-static {v1}, Lcom/umeng/b/b;->a(Z)V
+    invoke-static {v2}, Lcom/umeng/b/b;->a(Z)V
 
-    const-wide/32 v2, 0x5265c00
+    const-wide/32 v0, 0x5265c00
 
-    invoke-static {p0, v2, v3}, Lcom/umeng/b/b;->a(Landroid/content/Context;J)V
+    invoke-static {p0, v0, v1}, Lcom/umeng/b/b;->a(Landroid/content/Context;J)V
 
     invoke-static {p0}, Lcom/umeng/a/a;->f(Landroid/content/Context;)V
 
@@ -710,101 +474,26 @@
 
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v3, "baseParams:"
+    const-string v2, "baseParams:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/soft/filemanager/activities/AbstractBaseActivity;->q:Ljava/util/Map;
+    iget-object v2, p0, Lcom/soft/filemanager/activities/AbstractBaseActivity;->q:Ljava/util/Map;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v0, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     :cond_45
-    iget-object v0, p0, Lcom/soft/filemanager/activities/AbstractBaseActivity;->q:Ljava/util/Map;
-
-    const-string v2, "icon_ad_switch"
-
-    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-eqz v0, :cond_55
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_55
-    const-string v2, "on"
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_6d
-
-    const-string v2, "1"
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_6d
-
-    const-string v2, "true"
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8b
-
-    :cond_6d
-    const/4 v0, 0x1
-
-    :goto_6e
-    if-eqz v0, :cond_8a
-
-    new-instance v0, Lcom/wIwzugDT/REXxAgdQ105357/a;
-
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/AbstractBaseActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/wIwzugDT/REXxAgdQ105357/a;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0}, Lcom/wIwzugDT/REXxAgdQ105357/a;->b()V
-
-    new-instance v0, Lcom/pad/android/xappad/AdController;
-
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/AbstractBaseActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-string v2, "776671459"
-
-    invoke-direct {v0, v1, v2}, Lcom/pad/android/xappad/AdController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lcom/pad/android/xappad/AdController;->loadIcon()V
-
-    :cond_8a
     return-void
-
-    :cond_8b
-    move v0, v1
-
-    goto :goto_6e
 .end method
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z

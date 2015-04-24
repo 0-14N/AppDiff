@@ -292,7 +292,7 @@
     .registers 1
 
     .prologue
-    .line 1087
+    .line 1096
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->queryMediaSearchMap()V
 
     return-void
@@ -304,7 +304,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 789
+    .line 790
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getView()Landroid/view/View;
 
     move-result-object v1
@@ -317,11 +317,11 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 790
+    .line 791
     .local v0, "btn":Landroid/widget/ImageButton;
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setSelected(Z)V
 
-    .line 792
+    .line 793
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getView()Landroid/view/View;
 
     move-result-object v1
@@ -335,11 +335,11 @@
     .end local v0    # "btn":Landroid/widget/ImageButton;
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 793
+    .line 794
     .restart local v0    # "btn":Landroid/widget/ImageButton;
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setSelected(Z)V
 
-    .line 795
+    .line 796
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getView()Landroid/view/View;
 
     move-result-object v1
@@ -353,11 +353,11 @@
     .end local v0    # "btn":Landroid/widget/ImageButton;
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 796
+    .line 797
     .restart local v0    # "btn":Landroid/widget/ImageButton;
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setSelected(Z)V
 
-    .line 798
+    .line 799
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getView()Landroid/view/View;
 
     move-result-object v1
@@ -371,7 +371,7 @@
     .end local v0    # "btn":Landroid/widget/ImageButton;
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 799
+    .line 800
     .restart local v0    # "btn":Landroid/widget/ImageButton;
     invoke-virtual {v0}, Landroid/widget/ImageButton;->isSelected()Z
 
@@ -379,13 +379,13 @@
 
     if-eqz v1, :cond_4a
 
-    .line 800
+    .line 801
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->switchScreenToMovieList()V
 
-    .line 801
+    .line 802
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setSelected(Z)V
 
-    .line 804
+    .line 805
     :cond_4a
     return-void
 .end method
@@ -394,7 +394,7 @@
     .registers 1
 
     .prologue
-    .line 1272
+    .line 1281
     return-void
 .end method
 
@@ -402,7 +402,7 @@
     .registers 1
 
     .prologue
-    .line 1142
+    .line 1151
     return-void
 .end method
 
@@ -411,7 +411,7 @@
     .param p0, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 686
+    .line 687
     new-instance v4, Lorg/apache/http/client/methods/HttpGet;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -436,38 +436,38 @@
 
     invoke-direct {v4, v10}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
-    .line 687
+    .line 688
     .local v4, "httpGet":Lorg/apache/http/client/methods/HttpGet;
     new-instance v1, Lorg/apache/http/impl/client/DefaultHttpClient;
 
     invoke-direct {v1}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
 
-    .line 689
+    .line 690
     .local v1, "client":Lorg/apache/http/client/HttpClient;
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 692
+    .line 693
     .local v9, "stringBuilder":Ljava/lang/StringBuilder;
     :try_start_24
     invoke-interface {v1, v4}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v7
 
-    .line 693
+    .line 694
     .local v7, "response":Lorg/apache/http/HttpResponse;
     invoke-interface {v7}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
     move-result-object v3
 
-    .line 694
+    .line 695
     .local v3, "entity":Lorg/apache/http/HttpEntity;
     invoke-interface {v3}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
 
     move-result-object v8
 
-    .line 696
+    .line 697
     .local v8, "stream":Ljava/io/InputStream;
     :goto_30
     invoke-virtual {v8}, Ljava/io/InputStream;->read()I
@@ -482,7 +482,7 @@
 
     if-ne v0, v10, :cond_47
 
-    .line 703
+    .line 704
     .end local v0    # "b":I
     .end local v3    # "entity":Lorg/apache/http/HttpEntity;
     .end local v7    # "response":Lorg/apache/http/HttpResponse;
@@ -492,7 +492,7 @@
 
     invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
 
-    .line 705
+    .line 706
     .local v5, "jsonObject":Lorg/json/JSONObject;
     :try_start_3c
     new-instance v6, Lorg/json/JSONObject;
@@ -509,13 +509,13 @@
     .local v6, "jsonObject":Lorg/json/JSONObject;
     move-object v5, v6
 
-    .line 711
+    .line 712
     .end local v6    # "jsonObject":Lorg/json/JSONObject;
     .restart local v5    # "jsonObject":Lorg/json/JSONObject;
     :goto_46
     return-object v5
 
-    .line 697
+    .line 698
     .end local v5    # "jsonObject":Lorg/json/JSONObject;
     .restart local v0    # "b":I
     .restart local v3    # "entity":Lorg/apache/http/HttpEntity;
@@ -532,7 +532,7 @@
 
     goto :goto_30
 
-    .line 699
+    .line 700
     .end local v0    # "b":I
     .end local v3    # "entity":Lorg/apache/http/HttpEntity;
     .end local v7    # "response":Lorg/apache/http/HttpResponse;
@@ -542,18 +542,18 @@
 
     goto :goto_37
 
-    .line 706
+    .line 707
     .restart local v5    # "jsonObject":Lorg/json/JSONObject;
     :catch_4e
     move-exception v2
 
-    .line 708
+    .line 709
     .local v2, "e":Lorg/json/JSONException;
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_46
 
-    .line 700
+    .line 701
     .end local v2    # "e":Lorg/json/JSONException;
     .end local v5    # "jsonObject":Lorg/json/JSONObject;
     :catch_53
@@ -569,7 +569,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1075
+    .line 1084
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
@@ -582,7 +582,7 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 1076
+    .line 1085
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->editSearch:Landroid/widget/EditText;
 
@@ -592,22 +592,22 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 1078
+    .line 1087
     if-eqz p1, :cond_24
 
-    .line 1079
+    .line 1088
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->editSearch:Landroid/widget/EditText;
 
     const-string v2, ""
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1080
+    .line 1089
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->editSearch:Landroid/widget/EditText;
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setCursorVisible(Z)V
 
-    .line 1082
+    .line 1091
     :cond_24
     return-void
 .end method
@@ -705,7 +705,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 478
+    .line 479
     new-instance v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;
 
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -716,7 +716,7 @@
 
     iput-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;
 
-    .line 479
+    .line 480
     new-instance v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;
 
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -727,7 +727,7 @@
 
     iput-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->noResultListAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;
 
-    .line 481
+    .line 482
     const v0, 0x7f0500be
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -738,14 +738,14 @@
 
     iput-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
-    .line 482
+    .line 483
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;
 
     invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 483
+    .line 484
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->getRefreshableView()Landroid/view/View;
@@ -756,7 +756,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setDividerHeight(I)V
 
-    .line 484
+    .line 485
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->getRefreshableView()Landroid/view/View;
@@ -769,7 +769,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelector(I)V
 
-    .line 485
+    .line 486
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->getRefreshableView()Landroid/view/View;
@@ -780,7 +780,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setCacheColorHint(I)V
 
-    .line 486
+    .line 487
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->getRefreshableView()Landroid/view/View;
@@ -791,14 +791,14 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setTranscriptMode(I)V
 
-    .line 487
+    .line 488
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setDisableScrollingWhileRefreshing(Z)V
 
-    .line 488
+    .line 489
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$3;
@@ -807,7 +807,7 @@
 
     invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
-    .line 512
+    .line 513
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$4;
@@ -816,7 +816,7 @@
 
     invoke-virtual {v0, v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setOnRefreshListener(Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener;)V
 
-    .line 523
+    .line 524
     return-void
 .end method
 
@@ -824,21 +824,21 @@
     .registers 15
 
     .prologue
-    .line 1089
+    .line 1098
     const/4 v8, 0x0
 
     invoke-direct {p0, v8}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->hideInput(Z)V
 
-    .line 1091
+    .line 1100
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-nez v8, :cond_9
 
-    .line 1135
+    .line 1144
     :goto_8
     return-void
 
-    .line 1096
+    .line 1105
     :cond_9
     sget-object v8, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -846,7 +846,7 @@
 
     invoke-virtual {v8, v10}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1097
+    .line 1106
     sget-object v8, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -871,7 +871,7 @@
 
     invoke-virtual {v8, v10}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1098
+    .line 1107
     sget-object v8, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -900,7 +900,7 @@
 
     invoke-virtual {v8, v10}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1100
+    .line 1109
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->editSearch:Landroid/widget/EditText;
 
     invoke-virtual {v8}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -913,10 +913,10 @@
 
     if-lez v8, :cond_99
 
-    .line 1104
+    .line 1113
     const-string v9, "/maps/api/geocode/json?address="
 
-    .line 1105
+    .line 1114
     .local v9, "path":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -944,7 +944,7 @@
 
     move-result-object v9
 
-    .line 1106
+    .line 1115
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-static {v9}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -963,7 +963,7 @@
 
     move-result-object v9
 
-    .line 1108
+    .line 1117
     const-string v8, "http://maps.googleapis.com"
 
     const/4 v10, 0x0
@@ -980,7 +980,7 @@
 
     invoke-static {v8, v9, v10, v11}, Lcom/kia/android/moviesns/net/api/ApiClient;->get(Ljava/lang/String;Ljava/lang/String;Lcom/loopj/android/http/RequestParams;Lcom/kia/android/moviesns/net/api/ApiResponseHandler;)V
 
-    .line 1133
+    .line 1142
     .end local v9    # "path":Ljava/lang/String;
     :goto_94
     const/4 v8, 0x2
@@ -989,7 +989,7 @@
 
     goto/16 :goto_8
 
-    .line 1123
+    .line 1132
     :cond_99
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -1007,7 +1007,7 @@
 
     iget-wide v0, v8, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
-    .line 1124
+    .line 1133
     .local v0, "neLati":D
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -1025,7 +1025,7 @@
 
     iget-wide v2, v8, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
 
-    .line 1125
+    .line 1134
     .local v2, "neLongi":D
     const-wide/16 v10, 0x0
 
@@ -1037,7 +1037,7 @@
 
     add-double/2addr v2, v10
 
-    .line 1126
+    .line 1135
     :cond_c5
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -1055,7 +1055,7 @@
 
     iget-wide v4, v8, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
-    .line 1127
+    .line 1136
     .local v4, "swLati":D
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -1073,7 +1073,7 @@
 
     iget-wide v6, v8, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
 
-    .line 1128
+    .line 1137
     .local v6, "swLongi":D
     const-wide/16 v10, 0x0
 
@@ -1085,7 +1085,7 @@
 
     add-double/2addr v6, v10
 
-    .line 1129
+    .line 1138
     :cond_f1
     new-instance v8, Lcom/kia/android/moviesns/net/api/ApiResponseHandler;
 
@@ -1107,7 +1107,7 @@
     .param p1, "result"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 1588
+    .line 1597
     :try_start_0
     const-string v13, "results"
 
@@ -1117,11 +1117,11 @@
 
     move-result-object v15
 
-    .line 1589
+    .line 1598
     .local v15, "dataList":Lorg/json/JSONArray;
     const/4 v14, 0x0
 
-    .line 1590
+    .line 1599
     .local v14, "data":Lorg/json/JSONObject;
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1157,7 +1157,7 @@
 
     invoke-static {v13, v0}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 1592
+    .line 1601
     const/16 v16, 0x0
 
     .local v16, "i":I
@@ -1169,12 +1169,12 @@
 
     if-ge v0, v13, :cond_f6
 
-    .line 1593
+    .line 1602
     invoke-virtual/range {v15 .. v16}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v14
 
-    .line 1595
+    .line 1604
     const-string v13, "geometry"
 
     invoke-virtual {v14, v13}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -1197,7 +1197,7 @@
 
     move-result-wide v17
 
-    .line 1596
+    .line 1605
     .local v17, "latitude":D
     const-string v13, "geometry"
 
@@ -1221,7 +1221,7 @@
 
     move-result-wide v19
 
-    .line 1598
+    .line 1607
     .local v19, "longitude":D
     move-object/from16 v0, p0
 
@@ -1247,7 +1247,7 @@
 
     invoke-virtual {v13, v0}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
 
-    .line 1599
+    .line 1608
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -1266,7 +1266,7 @@
 
     iget-wide v5, v13, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
-    .line 1600
+    .line 1609
     .local v5, "neLati":D
     move-object/from16 v0, p0
 
@@ -1286,7 +1286,7 @@
 
     iget-wide v7, v13, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
 
-    .line 1601
+    .line 1610
     .local v7, "neLongi":D
     const-wide/16 v21, 0x0
 
@@ -1298,7 +1298,7 @@
 
     add-double v7, v7, v21
 
-    .line 1602
+    .line 1611
     :cond_b1
     move-object/from16 v0, p0
 
@@ -1318,7 +1318,7 @@
 
     iget-wide v9, v13, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
-    .line 1603
+    .line 1612
     .local v9, "swLati":D
     move-object/from16 v0, p0
 
@@ -1338,7 +1338,7 @@
 
     iget-wide v11, v13, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
 
-    .line 1604
+    .line 1613
     .local v11, "swLongi":D
     const-wide/16 v21, 0x0
 
@@ -1350,7 +1350,7 @@
 
     add-double v11, v11, v21
 
-    .line 1605
+    .line 1614
     :cond_e2
     new-instance v13, Lcom/kia/android/moviesns/net/api/ApiResponseHandler;
 
@@ -1372,7 +1372,7 @@
     :try_end_f6
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_f6} :catch_f7
 
-    .line 1613
+    .line 1622
     .end local v5    # "neLati":D
     .end local v7    # "neLongi":D
     .end local v9    # "swLati":D
@@ -1386,7 +1386,7 @@
     :goto_f6
     return-void
 
-    .line 1610
+    .line 1619
     :catch_f7
     move-exception v13
 
@@ -1398,17 +1398,17 @@
     .param p1, "result"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 1281
+    .line 1290
     iget v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->currentQuery:I
 
     iput v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->lastQuery:I
 
-    .line 1282
+    .line 1291
     const/4 v9, 0x0
 
     iput v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->currentQuery:I
 
-    .line 1287
+    .line 1296
     :try_start_7
     const-string v9, "MESSAGE"
 
@@ -1418,7 +1418,7 @@
 
     move-result-object v5
 
-    .line 1296
+    .line 1305
     .local v5, "strMsg":Ljava/lang/String;
     const-string v9, "MSG_NO_DATA"
 
@@ -1428,74 +1428,74 @@
 
     if-nez v9, :cond_42
 
-    .line 1297
+    .line 1306
     const/4 v9, 0x0
 
     iput v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
-    .line 1299
+    .line 1308
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     iget-object v10, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->noResultListAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;
 
     invoke-virtual {v9, v10}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1300
+    .line 1309
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->noResultListAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;
 
     invoke-virtual {v9}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;->notifyDataSetChanged()V
 
-    .line 1371
+    .line 1380
     :cond_24
     :goto_24
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isAddDataToList:Z
 
-    .line 1372
+    .line 1381
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
     if-eqz v9, :cond_33
 
-    .line 1373
+    .line 1382
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
     invoke-virtual {v9}, Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;->dismiss()V
 
-    .line 1374
+    .line 1383
     const/4 v9, 0x0
 
     iput-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
-    .line 1376
+    .line 1385
     .end local v5    # "strMsg":Ljava/lang/String;
     :cond_33
     :goto_33
     return-void
 
-    .line 1288
+    .line 1297
     :catch_34
     move-exception v3
 
-    .line 1289
+    .line 1298
     .local v3, "e":Lorg/json/JSONException;
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
     if-eqz v9, :cond_33
 
-    .line 1290
+    .line 1299
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
     invoke-virtual {v9}, Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;->dismiss()V
 
-    .line 1291
+    .line 1300
     const/4 v9, 0x0
 
     iput-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
     goto :goto_33
 
-    .line 1305
+    .line 1314
     .end local v3    # "e":Lorg/json/JSONException;
     .restart local v5    # "strMsg":Ljava/lang/String;
     :cond_42
@@ -1504,13 +1504,13 @@
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1306
+    .line 1315
     .local v6, "tmpFirstRows":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/Home100ItemDto;>;"
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1308
+    .line 1317
     .local v7, "tmpOtherRows":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/Home100ItemDto;>;"
     const-string v9, "DATA"
 
@@ -1536,7 +1536,7 @@
 
     iput v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->maxPageNo:I
 
-    .line 1310
+    .line 1319
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v9
@@ -1573,7 +1573,7 @@
 
     invoke-static {v9, v10}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 1312
+    .line 1321
     const-string v9, "DATA"
 
     invoke-virtual {p1, v9}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -1586,15 +1586,15 @@
 
     move-result-object v1
 
-    .line 1313
+    .line 1322
     .local v1, "dataList":Lorg/json/JSONArray;
     const/4 v0, 0x0
 
-    .line 1314
+    .line 1323
     .local v0, "data":Lorg/json/JSONObject;
     const/4 v2, 0x0
 
-    .line 1315
+    .line 1324
     .local v2, "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1624,7 +1624,7 @@
 
     invoke-static {v9, v10}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 1318
+    .line 1327
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v9
@@ -1633,10 +1633,10 @@
 
     if-le v9, v10, :cond_101
 
-    .line 1319
+    .line 1328
     const/16 v8, 0x14
 
-    .line 1323
+    .line 1332
     .local v8, "tmp_datalength":I
     :goto_b7
     const/4 v4, 0x0
@@ -1645,47 +1645,47 @@
     :goto_b8
     if-lt v4, v8, :cond_106
 
-    .line 1340
+    .line 1349
     iget-boolean v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isAddDataToList:Z
 
     if-eqz v9, :cond_131
 
-    .line 1342
+    .line 1351
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1343
+    .line 1352
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1344
+    .line 1353
     iget v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
     add-int/lit8 v9, v9, 0x1
 
     iput v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
-    .line 1354
+    .line 1363
     :goto_ce
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;
 
     invoke-virtual {v9}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;->notifyDataSetChanged()V
 
-    .line 1355
+    .line 1364
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     iget-object v10, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;
 
     invoke-virtual {v9, v10}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1357
+    .line 1366
     iget-boolean v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listViewRestore:Z
 
     if-eqz v9, :cond_24
 
-    .line 1358
+    .line 1367
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v9}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->getRefreshableView()Landroid/view/View;
@@ -1704,7 +1704,7 @@
 
     goto/16 :goto_24
 
-    .line 1361
+    .line 1370
     .end local v0    # "data":Lorg/json/JSONObject;
     .end local v1    # "dataList":Lorg/json/JSONArray;
     .end local v2    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
@@ -1715,27 +1715,27 @@
     :catch_ef
     move-exception v3
 
-    .line 1363
+    .line 1372
     .restart local v3    # "e":Lorg/json/JSONException;
     const/4 v9, 0x0
 
     iput v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
-    .line 1365
+    .line 1374
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     iget-object v10, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->noResultListAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;
 
     invoke-virtual {v9, v10}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1366
+    .line 1375
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->noResultListAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;
 
     invoke-virtual {v9}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;->notifyDataSetChanged()V
 
     goto/16 :goto_24
 
-    .line 1321
+    .line 1330
     .end local v3    # "e":Lorg/json/JSONException;
     .restart local v0    # "data":Lorg/json/JSONObject;
     .restart local v1    # "dataList":Lorg/json/JSONArray;
@@ -1751,20 +1751,20 @@
     .restart local v8    # "tmp_datalength":I
     goto :goto_b7
 
-    .line 1324
+    .line 1333
     .restart local v4    # "i":I
     :cond_106
     invoke-virtual {v1, v4}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 1325
+    .line 1334
     new-instance v2, Lcom/kia/android/moviesns/dto/Home100ItemDto;
 
     .end local v2    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     invoke-direct {v2, v0}, Lcom/kia/android/moviesns/dto/Home100ItemDto;-><init>(Lorg/json/JSONObject;)V
 
-    .line 1327
+    .line 1336
     .restart local v2    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     const-string v9, "ISENCODE"
 
@@ -1774,13 +1774,13 @@
 
     if-nez v9, :cond_11a
 
-    .line 1323
+    .line 1332
     :goto_117
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_b8
 
-    .line 1331
+    .line 1340
     :cond_11a
     const-string v9, "SEQ"
 
@@ -1790,7 +1790,7 @@
 
     iput v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->seqValue:I
 
-    .line 1333
+    .line 1342
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v9
@@ -1799,39 +1799,39 @@
 
     if-ge v9, v10, :cond_12d
 
-    .line 1334
+    .line 1343
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_117
 
-    .line 1336
+    .line 1345
     :cond_12d
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_117
 
-    .line 1346
+    .line 1355
     :cond_131
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->firstRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->clear()V
 
-    .line 1347
+    .line 1356
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->firstRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1349
+    .line 1358
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->clear()V
 
-    .line 1350
+    .line 1359
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1351
+    .line 1360
     const/4 v9, 0x0
 
     iput v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
@@ -1846,7 +1846,7 @@
     .param p1, "result"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 1151
+    .line 1160
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->currentQuery:I
@@ -1859,7 +1859,7 @@
 
     iput v0, v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->lastQuery:I
 
-    .line 1152
+    .line 1161
     const/16 v18, 0x0
 
     move/from16 v0, v18
@@ -1868,7 +1868,7 @@
 
     iput v0, v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->currentQuery:I
 
-    .line 1154
+    .line 1163
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -1877,12 +1877,12 @@
 
     if-nez v18, :cond_1d
 
-    .line 1217
+    .line 1226
     :cond_1c
     :goto_1c
     return-void
 
-    .line 1159
+    .line 1168
     :cond_1d
     :try_start_1d
     const-string v18, "MESSAGE"
@@ -1897,7 +1897,7 @@
 
     move-result-object v16
 
-    .line 1164
+    .line 1173
     .local v16, "strMsg":Ljava/lang/String;
     const-string v18, "MSG_NO_DATA"
 
@@ -1911,7 +1911,7 @@
 
     if-eqz v18, :cond_1c
 
-    .line 1170
+    .line 1179
     :try_start_33
     const-string v18, "DATA"
 
@@ -1929,15 +1929,15 @@
 
     move-result-object v3
 
-    .line 1171
+    .line 1180
     .local v3, "dataList":Lorg/json/JSONArray;
     const/4 v2, 0x0
 
-    .line 1172
+    .line 1181
     .local v2, "data":Lorg/json/JSONObject;
     const/4 v4, 0x0
 
-    .line 1173
+    .line 1182
     .local v4, "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1971,7 +1971,7 @@
 
     invoke-static/range {v18 .. v19}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 1174
+    .line 1183
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -1980,7 +1980,7 @@
 
     invoke-virtual/range {v18 .. v18}, Lcom/google/android/gms/maps/GoogleMap;->clear()V
 
-    .line 1175
+    .line 1184
     const/4 v6, 0x0
 
     .local v6, "i":I
@@ -1993,12 +1993,12 @@
 
     if-ge v6, v0, :cond_1c
 
-    .line 1176
+    .line 1185
     invoke-virtual {v3, v6}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    .line 1177
+    .line 1186
     new-instance v4, Lcom/kia/android/moviesns/dto/Home100ItemDto;
 
     .end local v4    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
@@ -2006,7 +2006,7 @@
     :try_end_81
     .catch Lorg/json/JSONException; {:try_start_33 .. :try_end_81} :catch_157
 
-    .line 1181
+    .line 1190
     .restart local v4    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     :try_start_81
     move-object/from16 v0, p0
@@ -2023,7 +2023,7 @@
 
     move-result-object v7
 
-    .line 1182
+    .line 1191
     .local v7, "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_8f
     :goto_8f
@@ -2033,7 +2033,7 @@
 
     if-nez v18, :cond_12d
 
-    .line 1192
+    .line 1201
     const-string v18, "LATITUDE"
 
     move-object/from16 v0, v18
@@ -2042,7 +2042,7 @@
 
     move-result-wide v9
 
-    .line 1193
+    .line 1202
     .local v9, "latitude":D
     const-string v18, "LONGITUDE"
 
@@ -2052,7 +2052,7 @@
 
     move-result-wide v12
 
-    .line 1194
+    .line 1203
     .local v12, "longitude":D
     const-wide v18, 0x4066800000000000L    # 180.0
 
@@ -2064,13 +2064,13 @@
 
     sub-double v12, v12, v18
 
-    .line 1195
+    .line 1204
     :cond_b5
     new-instance v11, Lcom/google/android/gms/maps/model/LatLng;
 
     invoke-direct {v11, v9, v10, v12, v13}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
-    .line 1197
+    .line 1206
     .local v11, "latlng":Lcom/google/android/gms/maps/model/LatLng;
     new-instance v18, Lcom/google/android/gms/maps/model/MarkerOptions;
 
@@ -2082,7 +2082,7 @@
 
     move-result-object v15
 
-    .line 1198
+    .line 1207
     .local v15, "opt":Lcom/google/android/gms/maps/model/MarkerOptions;
     const-string v18, "DESCRIPTION"
 
@@ -2096,7 +2096,7 @@
 
     invoke-virtual {v15, v0}, Lcom/google/android/gms/maps/model/MarkerOptions;->title(Ljava/lang/String;)Lcom/google/android/gms/maps/model/MarkerOptions;
 
-    .line 1199
+    .line 1208
     const v18, 0x7f020218
 
     invoke-static/range {v18 .. v18}, Lcom/google/android/gms/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/google/android/gms/maps/model/BitmapDescriptor;
@@ -2107,7 +2107,7 @@
 
     invoke-virtual {v15, v0}, Lcom/google/android/gms/maps/model/MarkerOptions;->icon(Lcom/google/android/gms/maps/model/BitmapDescriptor;)Lcom/google/android/gms/maps/model/MarkerOptions;
 
-    .line 1200
+    .line 1209
     const-string v18, "CREATE_DATE"
 
     move-object/from16 v0, v18
@@ -2126,7 +2126,7 @@
 
     invoke-virtual {v15, v0}, Lcom/google/android/gms/maps/model/MarkerOptions;->snippet(Ljava/lang/String;)Lcom/google/android/gms/maps/model/MarkerOptions;
 
-    .line 1202
+    .line 1211
     invoke-virtual {v4}, Lcom/kia/android/moviesns/dto/Home100ItemDto;->getThumbnailImageUrl()Ljava/lang/String;
 
     move-result-object v18
@@ -2137,7 +2137,7 @@
 
     invoke-direct {v0, v1}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->imageDownloadMain(Ljava/lang/String;)V
 
-    .line 1204
+    .line 1213
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -2150,7 +2150,7 @@
 
     move-result-object v14
 
-    .line 1205
+    .line 1214
     .local v14, "marker":Lcom/google/android/gms/maps/model/Marker;
     move-object/from16 v0, p0
 
@@ -2168,10 +2168,10 @@
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1206
+    .line 1215
     if-eqz v14, :cond_126
 
-    .line 1207
+    .line 1216
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v18
@@ -2182,7 +2182,7 @@
 
     invoke-static/range {v18 .. v19}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 1175
+    .line 1184
     .end local v7    # "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     .end local v9    # "latitude":D
     .end local v11    # "latlng":Lcom/google/android/gms/maps/model/LatLng;
@@ -2195,7 +2195,7 @@
 
     goto/16 :goto_70
 
-    .line 1160
+    .line 1169
     .end local v2    # "data":Lorg/json/JSONObject;
     .end local v3    # "dataList":Lorg/json/JSONArray;
     .end local v4    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
@@ -2204,11 +2204,11 @@
     :catch_12a
     move-exception v5
 
-    .line 1161
+    .line 1170
     .local v5, "e":Lorg/json/JSONException;
     goto/16 :goto_1c
 
-    .line 1183
+    .line 1192
     .end local v5    # "e":Lorg/json/JSONException;
     .restart local v2    # "data":Lorg/json/JSONObject;
     .restart local v3    # "dataList":Lorg/json/JSONArray;
@@ -2223,7 +2223,7 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 1184
+    .line 1193
     .local v8, "key":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2239,7 +2239,7 @@
 
     check-cast v17, Lcom/kia/android/moviesns/dto/Home100ItemDto;
 
-    .line 1186
+    .line 1195
     .local v17, "value":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     const-string v18, "MEDIA_ID"
 
@@ -2266,7 +2266,7 @@
 
     goto/16 :goto_8f
 
-    .line 1213
+    .line 1222
     .end local v2    # "data":Lorg/json/JSONObject;
     .end local v3    # "dataList":Lorg/json/JSONArray;
     .end local v4    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
@@ -2279,7 +2279,7 @@
 
     goto/16 :goto_1c
 
-    .line 1209
+    .line 1218
     .restart local v2    # "data":Lorg/json/JSONObject;
     .restart local v3    # "dataList":Lorg/json/JSONArray;
     .restart local v4    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
@@ -2295,14 +2295,14 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 820
+    .line 826
     invoke-static {}, Lcom/kia/android/moviesns/util/Utils;->IsSupportGoogleMaps()Z
 
     move-result v2
 
     if-nez v2, :cond_20
 
-    .line 821
+    .line 827
     new-instance v11, Landroid/app/AlertDialog$Builder;
 
     invoke-virtual/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -2311,7 +2311,7 @@
 
     invoke-direct {v11, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 822
+    .line 828
     .local v11, "alert_confirm":Landroid/app/AlertDialog$Builder;
     const v2, 0x7f08007b
 
@@ -2325,23 +2325,23 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 823
+    .line 829
     invoke-virtual {v11}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 972
+    .line 981
     .end local v11    # "alert_confirm":Landroid/app/AlertDialog$Builder;
     :goto_1f
     return-void
 
-    .line 827
+    .line 833
     :cond_20
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isSelected()Z
 
     move-result v2
 
-    if-nez v2, :cond_1c5
+    if-nez v2, :cond_1ca
 
-    .line 831
+    .line 837
     invoke-virtual/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v2
@@ -2354,7 +2354,7 @@
 
     check-cast v17, Landroid/location/LocationManager;
 
-    .line 832
+    .line 838
     .local v17, "manager":Landroid/location/LocationManager;
     const-string v2, "gps"
 
@@ -2364,7 +2364,7 @@
 
     move-result v8
 
-    .line 835
+    .line 841
     .local v8, "RealStatusOfGPS":Z
     invoke-virtual/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
@@ -2376,22 +2376,22 @@
 
     move-result-object v19
 
-    .line 836
+    .line 842
     .local v19, "sharedPref":Landroid/content/SharedPreferences;
     invoke-interface/range {v19 .. v19}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v13
 
-    .line 837
+    .line 843
     .local v13, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "RealStatusOfGPS"
 
     invoke-interface {v13, v2, v8}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 838
+    .line 844
     invoke-interface {v13}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 841
+    .line 847
     const-string v2, "agreeGPS"
 
     const/4 v4, 0x0
@@ -2402,11 +2402,11 @@
 
     move-result v9
 
-    .line 842
+    .line 848
     .local v9, "agreeGPS":Z
-    if-nez v9, :cond_181
+    if-nez v9, :cond_184
 
-    .line 844
+    .line 850
     new-instance v11, Landroid/app/AlertDialog$Builder;
 
     invoke-virtual/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -2415,7 +2415,7 @@
 
     invoke-direct {v11, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 845
+    .line 851
     .restart local v11    # "alert_confirm":Landroid/app/AlertDialog$Builder;
     const v2, 0x7f080079
 
@@ -2429,7 +2429,7 @@
 
     move-result-object v2
 
-    const-string v4, "Confirm"
+    const v4, 0x7f080042
 
     new-instance v5, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$11;
 
@@ -2437,12 +2437,12 @@
 
     invoke-direct {v5, v0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$11;-><init>(Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;)V
 
-    invoke-virtual {v2, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v2, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v2
 
-    .line 871
-    const-string v4, "Cancel"
+    .line 877
+    const v4, 0x7f080043
 
     new-instance v5, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$12;
 
@@ -2450,22 +2450,22 @@
 
     invoke-direct {v5, v0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$12;-><init>(Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;)V
 
-    invoke-virtual {v2, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v2, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 879
+    .line 885
     invoke-virtual {v11}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v10
 
-    .line 880
+    .line 886
     .local v10, "alert":Landroid/app/AlertDialog;
     invoke-virtual {v10}, Landroid/app/AlertDialog;->show()V
 
-    .line 914
+    .line 920
     .end local v10    # "alert":Landroid/app/AlertDialog;
     .end local v11    # "alert_confirm":Landroid/app/AlertDialog$Builder;
-    :cond_8f
-    :goto_8f
+    :cond_91
+    :goto_91
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->editSearch:Landroid/widget/EditText;
@@ -2474,30 +2474,30 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 915
+    .line 924
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->editSearch:Landroid/widget/EditText;
 
-    const-string v4, "Please enter any address"
+    const v4, 0x7f080083
 
-    invoke-virtual {v2, v4}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v4}, Landroid/widget/EditText;->setHint(I)V
 
-    .line 917
+    .line 926
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mapDataMap:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->clear()V
 
-    .line 918
+    .line 927
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
-    if-eqz v2, :cond_170
+    if-eqz v2, :cond_173
 
-    .line 919
+    .line 928
     const-string v2, "agreeGPS"
 
     const/4 v4, 0x0
@@ -2508,20 +2508,20 @@
 
     move-result v18
 
-    .line 920
+    .line 929
     .local v18, "pre_agreeGPS":Z
-    if-eqz v18, :cond_1ba
+    if-eqz v18, :cond_1bf
 
-    if-eqz v8, :cond_1ba
+    if-eqz v8, :cond_1bf
 
-    .line 921
+    .line 930
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v2}, Lcom/google/android/gms/maps/GoogleMap;->clear()V
 
-    .line 922
+    .line 931
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -2530,7 +2530,7 @@
 
     invoke-virtual {v2, v4}, Lcom/google/android/gms/maps/GoogleMap;->setMyLocationEnabled(Z)V
 
-    .line 923
+    .line 932
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -2543,7 +2543,7 @@
 
     invoke-virtual {v2, v4}, Lcom/google/android/gms/maps/UiSettings;->setMyLocationButtonEnabled(Z)V
 
-    .line 927
+    .line 936
     new-instance v16, Landroid/location/Geocoder;
 
     invoke-virtual/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -2556,7 +2556,7 @@
 
     invoke-direct {v0, v2, v4}, Landroid/location/Geocoder;-><init>(Landroid/content/Context;Ljava/util/Locale;)V
 
-    .line 929
+    .line 938
     .local v16, "mGeoCoder":Landroid/location/Geocoder;
     move-object/from16 v0, p0
 
@@ -2566,11 +2566,11 @@
 
     move-result-object v15
 
-    .line 930
+    .line 939
     .local v15, "loc":Landroid/location/Location;
-    if-eqz v15, :cond_115
+    if-eqz v15, :cond_118
 
-    .line 931
+    .line 940
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->locationManager:Landroid/location/LocationManager;
@@ -2581,114 +2581,114 @@
 
     move-result-object v14
 
-    .line 932
+    .line 941
     .local v14, "lastKnownLocation":Landroid/location/Location;
-    if-eqz v14, :cond_115
-
-    .line 933
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
-
-    new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
-
-    invoke-virtual {v14}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v5
-
-    invoke-virtual {v14}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v20
-
-    move-wide/from16 v0, v20
-
-    invoke-direct {v4, v5, v6, v0, v1}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
-
-    const/high16 v5, 0x41500000    # 13.0f
-
-    invoke-static {v4, v5}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLngZoom(Lcom/google/android/gms/maps/model/LatLng;F)Lcom/google/android/gms/maps/CameraUpdate;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
-
-    .line 936
-    .end local v14    # "lastKnownLocation":Landroid/location/Location;
-    :cond_115
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->locationManager:Landroid/location/LocationManager;
-
-    const-string v4, "network"
-
-    invoke-virtual {v2, v4}, Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
-
-    move-result-object v14
-
-    .line 937
-    .restart local v14    # "lastKnownLocation":Landroid/location/Location;
-    if-eqz v14, :cond_13d
-
-    .line 938
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
-
-    new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
-
-    invoke-virtual {v14}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v5
-
-    invoke-virtual {v14}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v20
-
-    move-wide/from16 v0, v20
-
-    invoke-direct {v4, v5, v6, v0, v1}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
-
-    const/high16 v5, 0x41500000    # 13.0f
-
-    invoke-static {v4, v5}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLngZoom(Lcom/google/android/gms/maps/model/LatLng;F)Lcom/google/android/gms/maps/CameraUpdate;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
+    if-eqz v14, :cond_118
 
     .line 942
-    :cond_13d
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
+
+    new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v14}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide v5
+
+    invoke-virtual {v14}, Landroid/location/Location;->getLongitude()D
+
+    move-result-wide v20
+
+    move-wide/from16 v0, v20
+
+    invoke-direct {v4, v5, v6, v0, v1}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+
+    const/high16 v5, 0x41500000    # 13.0f
+
+    invoke-static {v4, v5}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLngZoom(Lcom/google/android/gms/maps/model/LatLng;F)Lcom/google/android/gms/maps/CameraUpdate;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
+
+    .line 945
+    .end local v14    # "lastKnownLocation":Landroid/location/Location;
+    :cond_118
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->locationManager:Landroid/location/LocationManager;
+
+    const-string v4, "network"
+
+    invoke-virtual {v2, v4}, Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
+
+    move-result-object v14
+
+    .line 946
+    .restart local v14    # "lastKnownLocation":Landroid/location/Location;
+    if-eqz v14, :cond_140
+
+    .line 947
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
+
+    new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v14}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide v5
+
+    invoke-virtual {v14}, Landroid/location/Location;->getLongitude()D
+
+    move-result-wide v20
+
+    move-wide/from16 v0, v20
+
+    invoke-direct {v4, v5, v6, v0, v1}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+
+    const/high16 v5, 0x41500000    # 13.0f
+
+    invoke-static {v4, v5}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLngZoom(Lcom/google/android/gms/maps/model/LatLng;F)Lcom/google/android/gms/maps/CameraUpdate;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
+
+    .line 951
+    :cond_140
     new-instance v12, Landroid/location/Criteria;
 
     invoke-direct {v12}, Landroid/location/Criteria;-><init>()V
 
-    .line 943
+    .line 952
     .local v12, "criteria":Landroid/location/Criteria;
     const/4 v2, 0x0
 
     invoke-virtual {v12, v2}, Landroid/location/Criteria;->setAccuracy(I)V
 
-    .line 944
+    .line 953
     const/4 v2, 0x0
 
     invoke-virtual {v12, v2}, Landroid/location/Criteria;->setPowerRequirement(I)V
 
-    .line 945
+    .line 954
     const/4 v2, 0x0
 
     invoke-virtual {v12, v2}, Landroid/location/Criteria;->setAltitudeRequired(Z)V
 
-    .line 946
+    .line 955
     const/4 v2, 0x0
 
     invoke-virtual {v12, v2}, Landroid/location/Criteria;->setBearingRequired(Z)V
 
-    .line 947
+    .line 956
     const/4 v2, 0x0
 
     invoke-virtual {v12, v2}, Landroid/location/Criteria;->setSpeedRequired(Z)V
 
-    .line 949
+    .line 958
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->locationManager:Landroid/location/LocationManager;
@@ -2699,11 +2699,11 @@
 
     move-result-object v3
 
-    .line 950
+    .line 959
     .local v3, "best":Ljava/lang/String;
-    if-eqz v3, :cond_16d
+    if-eqz v3, :cond_170
 
-    .line 951
+    .line 960
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->locationManager:Landroid/location/LocationManager;
@@ -2716,42 +2716,42 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
-    .line 960
+    .line 969
     .end local v3    # "best":Ljava/lang/String;
     .end local v12    # "criteria":Landroid/location/Criteria;
     .end local v14    # "lastKnownLocation":Landroid/location/Location;
     .end local v15    # "loc":Landroid/location/Location;
     .end local v16    # "mGeoCoder":Landroid/location/Geocoder;
-    :cond_16d
-    :goto_16d
+    :cond_170
+    :goto_170
     invoke-direct/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->switchScreenToMapView()V
 
-    .line 962
+    .line 971
     .end local v18    # "pre_agreeGPS":Z
-    :cond_170
+    :cond_173
     invoke-direct/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->deSelectAllTopButton()V
 
-    .line 963
+    .line 972
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isSelected()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1c3
+    if-eqz v2, :cond_1c8
 
     const/4 v2, 0x0
 
-    :goto_17a
+    :goto_17d
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setSelected(Z)V
 
     goto/16 :goto_1f
 
-    .line 883
-    :cond_181
-    if-nez v8, :cond_8f
+    .line 889
+    :cond_184
+    if-nez v8, :cond_91
 
-    .line 885
+    .line 891
     new-instance v11, Landroid/app/AlertDialog$Builder;
 
     invoke-virtual/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -2760,7 +2760,7 @@
 
     invoke-direct {v11, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 886
+    .line 892
     .restart local v11    # "alert_confirm":Landroid/app/AlertDialog$Builder;
     const v2, 0x7f080079
 
@@ -2774,7 +2774,7 @@
 
     move-result-object v2
 
-    const-string v4, "Confirm"
+    const v4, 0x7f080042
 
     new-instance v5, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$13;
 
@@ -2782,12 +2782,12 @@
 
     invoke-direct {v5, v0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$13;-><init>(Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;)V
 
-    invoke-virtual {v2, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v2, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v2
 
-    .line 901
-    const-string v4, "Cancel"
+    .line 907
+    const v4, 0x7f080043
 
     new-instance v5, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$14;
 
@@ -2795,24 +2795,24 @@
 
     invoke-direct {v5, v0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$14;-><init>(Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;)V
 
-    invoke-virtual {v2, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v2, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 908
+    .line 914
     invoke-virtual {v11}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v10
 
-    .line 909
+    .line 915
     .restart local v10    # "alert":Landroid/app/AlertDialog;
     invoke-virtual {v10}, Landroid/app/AlertDialog;->show()V
 
-    goto/16 :goto_8f
+    goto/16 :goto_91
 
-    .line 956
+    .line 965
     .end local v10    # "alert":Landroid/app/AlertDialog;
     .end local v11    # "alert_confirm":Landroid/app/AlertDialog$Builder;
     .restart local v18    # "pre_agreeGPS":Z
-    :cond_1ba
+    :cond_1bf
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -2821,65 +2821,65 @@
 
     invoke-virtual {v2, v4}, Lcom/google/android/gms/maps/GoogleMap;->setMyLocationEnabled(Z)V
 
-    goto :goto_16d
+    goto :goto_170
 
-    .line 963
+    .line 972
     .end local v18    # "pre_agreeGPS":Z
-    :cond_1c3
+    :cond_1c8
     const/4 v2, 0x1
 
-    goto :goto_17a
+    goto :goto_17d
 
-    .line 967
+    .line 976
     .end local v8    # "RealStatusOfGPS":Z
     .end local v9    # "agreeGPS":Z
     .end local v13    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v17    # "manager":Landroid/location/LocationManager;
     .end local v19    # "sharedPref":Landroid/content/SharedPreferences;
-    :cond_1c5
+    :cond_1ca
     invoke-direct/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->switchScreenToMovieList()V
 
-    .line 968
+    .line 977
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isSelected()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1d9
+    if-eqz v2, :cond_1de
 
     const/4 v2, 0x0
 
-    :goto_1cf
+    :goto_1d4
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setSelected(Z)V
 
-    .line 969
+    .line 978
     invoke-direct/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->setSortType()V
 
     goto/16 :goto_1f
 
-    .line 968
-    :cond_1d9
+    .line 977
+    :cond_1de
     const/4 v2, 0x1
 
-    goto :goto_1cf
+    goto :goto_1d4
 .end method
 
 .method private setMyLocationOnMap()V
     .registers 9
 
     .prologue
-    .line 668
+    .line 669
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-nez v1, :cond_5
 
-    .line 675
+    .line 676
     :cond_4
     :goto_4
     return-void
 
-    .line 671
+    .line 672
     :cond_5
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -2887,11 +2887,11 @@
 
     move-result-object v0
 
-    .line 672
+    .line 673
     .local v0, "location":Landroid/location/Location;
     if-eqz v0, :cond_4
 
-    .line 673
+    .line 674
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v2, Lcom/google/android/gms/maps/model/MarkerOptions;
@@ -2931,16 +2931,16 @@
     .prologue
     const v2, 0x7f0500c1
 
-    .line 770
+    .line 771
     const/4 v0, 0x0
 
-    .line 771
+    .line 772
     .local v0, "btn":Landroid/widget/ImageButton;
     iget v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->sortType:I
 
     packed-switch v1, :pswitch_data_42
 
-    .line 782
+    .line 783
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getView()Landroid/view/View;
 
     move-result-object v1
@@ -2952,20 +2952,20 @@
     .end local v0    # "btn":Landroid/widget/ImageButton;
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 783
+    .line 784
     .restart local v0    # "btn":Landroid/widget/ImageButton;
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->sortType:I
 
-    .line 785
+    .line 786
     :goto_16
     invoke-direct {p0, v0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->setSortType(Landroid/view/View;)V
 
-    .line 786
+    .line 787
     return-void
 
-    .line 773
+    .line 774
     :pswitch_1a
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getView()Landroid/view/View;
 
@@ -2978,11 +2978,11 @@
     .end local v0    # "btn":Landroid/widget/ImageButton;
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 774
+    .line 775
     .restart local v0    # "btn":Landroid/widget/ImageButton;
     goto :goto_16
 
-    .line 776
+    .line 777
     :pswitch_25
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getView()Landroid/view/View;
 
@@ -2997,11 +2997,11 @@
     .end local v0    # "btn":Landroid/widget/ImageButton;
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 777
+    .line 778
     .restart local v0    # "btn":Landroid/widget/ImageButton;
     goto :goto_16
 
-    .line 779
+    .line 780
     :pswitch_33
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getView()Landroid/view/View;
 
@@ -3016,11 +3016,11 @@
     .end local v0    # "btn":Landroid/widget/ImageButton;
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 780
+    .line 781
     .restart local v0    # "btn":Landroid/widget/ImageButton;
     goto :goto_16
 
-    .line 771
+    .line 772
     nop
 
     :pswitch_data_42
@@ -3040,27 +3040,27 @@
 
     const/4 v4, 0x0
 
-    .line 729
+    .line 730
     invoke-virtual {p1}, Landroid/view/View;->isSelected()Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    .line 768
+    .line 769
     :goto_8
     return-void
 
-    .line 732
+    .line 733
     :cond_9
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->deSelectAllTopButton()V
 
-    .line 734
+    .line 735
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
     if-nez v2, :cond_20
 
-    .line 735
+    .line 736
     new-instance v2, Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -3071,12 +3071,12 @@
 
     iput-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
-    .line 736
+    .line 737
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
     invoke-virtual {v2}, Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;->show()V
 
-    .line 739
+    .line 740
     :cond_20
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -3084,63 +3084,63 @@
 
     packed-switch v2, :pswitch_data_66
 
-    .line 750
+    .line 751
     :goto_27
     invoke-virtual {p1, v5}, Landroid/view/View;->setSelected(Z)V
 
-    .line 753
+    .line 754
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 754
+    .line 755
     .local v0, "tmpFirstRows":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/Home100ItemDto;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 756
+    .line 757
     .local v1, "tmpOtherRows":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/Home100ItemDto;>;"
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->firstRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 757
+    .line 758
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->firstRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 759
+    .line 760
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 760
+    .line 761
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 761
+    .line 762
     iput v4, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
-    .line 763
+    .line 764
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;
 
     invoke-virtual {v2}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;->notifyDataSetChanged()V
 
-    .line 764
+    .line 765
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     iget-object v3, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;
 
     invoke-virtual {v2, v3}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 767
+    .line 768
     invoke-virtual {p0, v4}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->queryMediaList(Z)V
 
     goto :goto_8
 
-    .line 741
+    .line 742
     .end local v0    # "tmpFirstRows":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/Home100ItemDto;>;"
     .end local v1    # "tmpOtherRows":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/Home100ItemDto;>;"
     :pswitch_5a
@@ -3148,7 +3148,7 @@
 
     goto :goto_27
 
-    .line 744
+    .line 745
     :pswitch_5d
     const/4 v2, 0x2
 
@@ -3156,7 +3156,7 @@
 
     goto :goto_27
 
-    .line 747
+    .line 748
     :pswitch_61
     const/4 v2, 0x3
 
@@ -3164,7 +3164,7 @@
 
     goto :goto_27
 
-    .line 739
+    .line 740
     nop
 
     :pswitch_data_66
@@ -3179,16 +3179,16 @@
     .registers 4
 
     .prologue
-    .line 575
+    .line 576
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-nez v0, :cond_5
 
-    .line 662
+    .line 663
     :goto_4
     return-void
 
-    .line 578
+    .line 579
     :cond_5
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -3196,12 +3196,12 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->setMyLocationEnabled(Z)V
 
-    .line 579
+    .line 580
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v0}, Lcom/google/android/gms/maps/GoogleMap;->getMyLocation()Landroid/location/Location;
 
-    .line 581
+    .line 582
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$MyInfoWindowAdapter;
@@ -3212,7 +3212,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->setInfoWindowAdapter(Lcom/google/android/gms/maps/GoogleMap$InfoWindowAdapter;)V
 
-    .line 583
+    .line 584
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$5;
@@ -3221,7 +3221,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->setOnCameraChangeListener(Lcom/google/android/gms/maps/GoogleMap$OnCameraChangeListener;)V
 
-    .line 594
+    .line 595
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$6;
@@ -3230,7 +3230,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->setOnInfoWindowClickListener(Lcom/google/android/gms/maps/GoogleMap$OnInfoWindowClickListener;)V
 
-    .line 615
+    .line 616
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$7;
@@ -3239,7 +3239,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->setOnMapClickListener(Lcom/google/android/gms/maps/GoogleMap$OnMapClickListener;)V
 
-    .line 624
+    .line 625
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$8;
@@ -3248,7 +3248,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->setOnMapLongClickListener(Lcom/google/android/gms/maps/GoogleMap$OnMapLongClickListener;)V
 
-    .line 633
+    .line 634
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$9;
@@ -3257,7 +3257,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->setOnMarkerClickListener(Lcom/google/android/gms/maps/GoogleMap$OnMarkerClickListener;)V
 
-    .line 642
+    .line 643
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$10;
@@ -3273,17 +3273,17 @@
     .registers 4
 
     .prologue
-    .line 558
+    .line 559
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-nez v2, :cond_23
 
-    .line 560
+    .line 561
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 561
+    .line 562
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     const v2, 0x7f0500c8
 
@@ -3293,7 +3293,7 @@
 
     check-cast v0, Lcom/google/android/gms/maps/SupportMapFragment;
 
-    .line 563
+    .line 564
     .local v0, "f":Lcom/google/android/gms/maps/SupportMapFragment;
     invoke-virtual {v0}, Lcom/google/android/gms/maps/SupportMapFragment;->getMap()Lcom/google/android/gms/maps/GoogleMap;
 
@@ -3301,20 +3301,20 @@
 
     iput-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
-    .line 564
+    .line 565
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-eqz v2, :cond_23
 
-    .line 565
+    .line 566
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v2, p0}, Lcom/google/android/gms/maps/GoogleMap;->setLocationSource(Lcom/google/android/gms/maps/LocationSource;)V
 
-    .line 566
+    .line 567
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->setUpMap()V
 
-    .line 569
+    .line 570
     .end local v0    # "f":Lcom/google/android/gms/maps/SupportMapFragment;
     .end local v1    # "fm":Landroid/support/v4/app/FragmentManager;
     :cond_23
@@ -3327,24 +3327,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 814
+    .line 820
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->searchBox:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 815
+    .line 821
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->sortButtonBox:Landroid/widget/LinearLayout;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 816
+    .line 822
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->layoutMaps:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 817
+    .line 823
     return-void
 .end method
 
@@ -3354,31 +3354,31 @@
     .prologue
     const/16 v2, 0x8
 
-    .line 807
+    .line 812
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->editSearch:Landroid/widget/EditText;
 
-    const-string v1, "Please enter any description"
+    const v1, 0x7f080082
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(I)V
 
-    .line 808
+    .line 814
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->searchBox:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 809
+    .line 815
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->sortButtonBox:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 810
+    .line 816
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->layoutMaps:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 812
+    .line 818
     return-void
 .end method
 
@@ -3389,10 +3389,10 @@
     .param p1, "listener"    # Lcom/google/android/gms/maps/LocationSource$OnLocationChangedListener;
 
     .prologue
-    .line 975
+    .line 984
     iput-object p1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mListener:Lcom/google/android/gms/maps/LocationSource$OnLocationChangedListener;
 
-    .line 976
+    .line 985
     return-void
 .end method
 
@@ -3400,12 +3400,12 @@
     .registers 2
 
     .prologue
-    .line 979
+    .line 988
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mListener:Lcom/google/android/gms/maps/LocationSource$OnLocationChangedListener;
 
-    .line 980
+    .line 989
     return-void
 .end method
 
@@ -3413,7 +3413,7 @@
     .registers 1
 
     .prologue
-    .line 1423
+    .line 1432
     return-void
 .end method
 
@@ -3441,10 +3441,10 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 715
+    .line 716
     const/4 v2, 0x0
 
-    .line 716
+    .line 717
     .local v2, "packName":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
@@ -3454,7 +3454,7 @@
 
     move-result-object v3
 
-    .line 717
+    .line 718
     .local v3, "packagemanager":Landroid/content/pm/PackageManager;
     const/4 v4, 0x0
 
@@ -3462,7 +3462,7 @@
 
     move-result-object v0
 
-    .line 718
+    .line 719
     .local v0, "appList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     const/4 v1, 0x0
 
@@ -3474,11 +3474,11 @@
 
     if-lt v1, v4, :cond_16
 
-    .line 725
+    .line 726
     :goto_15
     return-object v2
 
-    .line 719
+    .line 720
     :cond_16
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3496,7 +3496,7 @@
 
     if-eqz v4, :cond_2f
 
-    .line 720
+    .line 721
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -3505,10 +3505,10 @@
 
     iget-object v2, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 721
+    .line 722
     goto :goto_15
 
-    .line 718
+    .line 719
     :cond_2f
     add-int/lit8 v1, v1, 0x1
 
@@ -3520,24 +3520,24 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 526
+    .line 527
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
     sparse-switch v0, :sswitch_data_2c
 
-    .line 551
+    .line 552
     :goto_7
     return-void
 
-    .line 528
+    .line 529
     :sswitch_8
     invoke-direct {p0, p1}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->setListKind(Landroid/view/View;)V
 
     goto :goto_7
 
-    .line 534
+    .line 535
     :sswitch_c
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->layoutMaps:Landroid/view/View;
 
@@ -3547,12 +3547,12 @@
 
     if-nez v0, :cond_18
 
-    .line 535
+    .line 536
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->queryMediaSearchMap()V
 
     goto :goto_7
 
-    .line 537
+    .line 538
     :cond_18
     const/4 v0, 0x0
 
@@ -3560,18 +3560,18 @@
 
     goto :goto_7
 
-    .line 543
+    .line 544
     :sswitch_1d
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
     if-nez v0, :cond_25
 
-    .line 545
+    .line 546
     invoke-direct {p0, p1}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->setSortType(Landroid/view/View;)V
 
     goto :goto_7
 
-    .line 547
+    .line 548
     :cond_25
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->progressDlg:Lcom/kia/android/moviesns/ui/dialog/CustomProgressDialog;
 
@@ -3579,7 +3579,7 @@
 
     goto :goto_7
 
-    .line 526
+    .line 527
     nop
 
     :sswitch_data_2c
@@ -3602,10 +3602,10 @@
 
     const/16 v6, 0x2710
 
-    .line 1015
+    .line 1024
     if-nez p2, :cond_49
 
-    .line 1017
+    .line 1026
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->firstRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3614,7 +3614,7 @@
 
     check-cast v1, Lcom/kia/android/moviesns/dto/Home100ItemDto;
 
-    .line 1019
+    .line 1028
     .local v1, "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     new-instance v3, Landroid/content/Intent;
 
@@ -3626,16 +3626,16 @@
 
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 1020
+    .line 1029
     .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {v3, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1022
+    .line 1031
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1023
+    .line 1032
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v4, "extra_media_id"
 
@@ -3647,7 +3647,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1024
+    .line 1033
     const-string v4, "extra_media_uuid"
 
     const-string v5, "UUID"
@@ -3658,31 +3658,31 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1025
+    .line 1034
     const-string v4, "extra_call_from"
 
     invoke-virtual {v0, v4, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1026
+    .line 1035
     const-string v4, "extra_bundle"
 
     invoke-virtual {v3, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 1027
+    .line 1036
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v4
 
     invoke-virtual {v4, v3}, Landroid/support/v4/app/FragmentActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1048
+    .line 1057
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v3    # "intent":Landroid/content/Intent;
     :cond_48
     :goto_48
     return-void
 
-    .line 1031
+    .line 1040
     .end local v1    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     :cond_49
     add-int/lit8 v4, p2, -0x1
@@ -3691,7 +3691,7 @@
 
     add-int v2, p1, v4
 
-    .line 1033
+    .line 1042
     .local v2, "id":I
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
@@ -3701,11 +3701,11 @@
 
     check-cast v1, Lcom/kia/android/moviesns/dto/Home100ItemDto;
 
-    .line 1035
+    .line 1044
     .restart local v1    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     if-eqz v1, :cond_48
 
-    .line 1036
+    .line 1045
     new-instance v3, Landroid/content/Intent;
 
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -3716,16 +3716,16 @@
 
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 1037
+    .line 1046
     .restart local v3    # "intent":Landroid/content/Intent;
     invoke-virtual {v3, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1039
+    .line 1048
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1040
+    .line 1049
     .restart local v0    # "bundle":Landroid/os/Bundle;
     const-string v4, "extra_media_id"
 
@@ -3737,7 +3737,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1041
+    .line 1050
     const-string v4, "extra_media_uuid"
 
     const-string v5, "UUID"
@@ -3748,17 +3748,17 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1042
+    .line 1051
     const-string v4, "extra_call_from"
 
     invoke-virtual {v0, v4, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1043
+    .line 1052
     const-string v4, "extra_bundle"
 
     invoke-virtual {v3, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 1044
+    .line 1053
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v4
@@ -3774,29 +3774,29 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1051
+    .line 1060
     iget v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->lastQuery:I
 
     packed-switch v0, :pswitch_data_10
 
-    .line 1067
+    .line 1076
     :goto_6
     :pswitch_6
     return-void
 
-    .line 1057
+    .line 1066
     :pswitch_7
     invoke-virtual {p0, v1}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->queryMediaSearchText(Z)V
 
     goto :goto_6
 
-    .line 1062
+    .line 1071
     :pswitch_b
     invoke-virtual {p0, v1}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->queryMediaList(Z)V
 
     goto :goto_6
 
-    .line 1051
+    .line 1060
     nop
 
     :pswitch_data_10
@@ -3969,10 +3969,10 @@
     .registers 5
 
     .prologue
-    .line 461
+    .line 462
     invoke-super {p0}, Lcom/kia/android/moviesns/ui/fragment/BaseFragment;->onDestroyView()V
 
-    .line 463
+    .line 464
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v2
@@ -3983,11 +3983,11 @@
 
     move-result-object v0
 
-    .line 464
+    .line 465
     .local v0, "frag":Landroid/support/v4/app/Fragment;
     if-eqz v0, :cond_21
 
-    .line 466
+    .line 467
     :try_start_10
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getFragmentManager()Landroid/support/v4/app/FragmentManager;
 
@@ -3997,27 +3997,27 @@
 
     move-result-object v1
 
-    .line 467
+    .line 468
     .local v1, "ft":Landroid/support/v4/app/FragmentTransaction;
     invoke-virtual {v1, v0}, Landroid/support/v4/app/FragmentTransaction;->remove(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 468
+    .line 469
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentTransaction;->commit()I
 
-    .line 470
+    .line 471
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
     :try_end_21
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_21} :catch_22
 
-    .line 475
+    .line 476
     .end local v1    # "ft":Landroid/support/v4/app/FragmentTransaction;
     :cond_21
     :goto_21
     return-void
 
-    .line 471
+    .line 472
     :catch_22
     move-exception v2
 
@@ -4051,7 +4051,7 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 988
+    .line 997
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->layoutMaps:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -4060,18 +4060,18 @@
 
     if-eqz v0, :cond_9
 
-    .line 995
+    .line 1004
     :cond_8
     :goto_8
     return-void
 
-    .line 992
+    .line 1001
     :cond_9
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mListener:Lcom/google/android/gms/maps/LocationSource$OnLocationChangedListener;
 
     if-eqz v0, :cond_8
 
-    .line 993
+    .line 1002
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mListener:Lcom/google/android/gms/maps/LocationSource$OnLocationChangedListener;
 
     invoke-interface {v0, p1}, Lcom/google/android/gms/maps/LocationSource$OnLocationChangedListener;->onLocationChanged(Landroid/location/Location;)V
@@ -4083,31 +4083,31 @@
     .registers 2
 
     .prologue
-    .line 445
+    .line 446
     invoke-super {p0}, Lcom/kia/android/moviesns/ui/fragment/BaseFragment;->onPause()V
 
-    .line 447
+    .line 448
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mCache:Ledu/mit/mobile/android/imagecache/ImageCache;
 
     invoke-virtual {v0, p0}, Ledu/mit/mobile/android/imagecache/ImageCache;->unregisterOnImageLoadListener(Ledu/mit/mobile/android/imagecache/ImageCache$OnImageLoadListener;)V
 
-    .line 449
+    .line 450
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->locationManager:Landroid/location/LocationManager;
 
     if-eqz v0, :cond_11
 
-    .line 450
+    .line 451
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->locationManager:Landroid/location/LocationManager;
 
     invoke-virtual {v0, p0}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
-    .line 453
+    .line 454
     :cond_11
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;
 
     invoke-virtual {v0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;->onPause()V
 
-    .line 454
+    .line 455
     return-void
 .end method
 
@@ -4116,7 +4116,7 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 998
+    .line 1007
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
@@ -4125,7 +4125,7 @@
 
     invoke-static {v0, v1}, Lcom/kia/android/moviesns/util/ToastUtil;->show(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 999
+    .line 1008
     return-void
 .end method
 
@@ -4134,7 +4134,7 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 1002
+    .line 1011
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
@@ -4143,7 +4143,7 @@
 
     invoke-static {v0, v1}, Lcom/kia/android/moviesns/util/ToastUtil;->show(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 1003
+    .line 1012
     return-void
 .end method
 
@@ -4338,17 +4338,18 @@
 
     if-nez v1, :cond_a0
 
+    .line 372
     const/4 v1, 0x0
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v1}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->queryMediaList(Z)V
 
-    .line 373
+    .line 374
     :cond_a0
     invoke-direct/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->setUpMapIfNeeded()V
 
-    .line 376
+    .line 377
     invoke-virtual/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
@@ -4361,7 +4362,7 @@
 
     check-cast v14, Landroid/location/LocationManager;
 
-    .line 377
+    .line 378
     .local v14, "manager":Landroid/location/LocationManager;
     const-string v1, "gps"
 
@@ -4369,7 +4370,7 @@
 
     move-result v9
 
-    .line 380
+    .line 381
     .local v9, "RealStatusOfGPS":Z
     invoke-virtual/range {p0 .. p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
@@ -4381,7 +4382,7 @@
 
     move-result-object v16
 
-    .line 381
+    .line 382
     .restart local v16    # "sharedPref":Landroid/content/SharedPreferences;
     const-string v1, "agreeGPS"
 
@@ -4393,27 +4394,27 @@
 
     move-result v10
 
-    .line 382
+    .line 383
     .local v10, "agreeGPS":Z
     if-eqz v10, :cond_16e
 
     if-eqz v9, :cond_16e
 
-    .line 383
+    .line 384
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mapDataMap:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->clear()V
 
-    .line 384
+    .line 385
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-eqz v1, :cond_16e
 
-    .line 385
+    .line 386
     const-string v1, "agreeGPS"
 
     const/4 v3, 0x0
@@ -4424,20 +4425,20 @@
 
     move-result v15
 
-    .line 386
+    .line 387
     .local v15, "pre_agreeGPS":Z
     if-eqz v15, :cond_1e6
 
     if-eqz v9, :cond_1e6
 
-    .line 387
+    .line 388
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v1}, Lcom/google/android/gms/maps/GoogleMap;->clear()V
 
-    .line 388
+    .line 389
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -4446,7 +4447,7 @@
 
     invoke-virtual {v1, v3}, Lcom/google/android/gms/maps/GoogleMap;->setMyLocationEnabled(Z)V
 
-    .line 389
+    .line 390
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -4459,7 +4460,7 @@
 
     invoke-virtual {v1, v3}, Lcom/google/android/gms/maps/UiSettings;->setMyLocationButtonEnabled(Z)V
 
-    .line 394
+    .line 395
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -4468,11 +4469,11 @@
 
     move-result-object v13
 
-    .line 395
+    .line 396
     .local v13, "loc":Landroid/location/Location;
     if-eqz v13, :cond_16f
 
-    .line 399
+    .line 400
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -4497,40 +4498,40 @@
 
     invoke-virtual {v1, v3}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
 
-    .line 418
+    .line 419
     :cond_124
     :goto_124
     new-instance v11, Landroid/location/Criteria;
 
     invoke-direct {v11}, Landroid/location/Criteria;-><init>()V
 
-    .line 419
+    .line 420
     .restart local v11    # "criteria":Landroid/location/Criteria;
     const/4 v1, 0x0
 
     invoke-virtual {v11, v1}, Landroid/location/Criteria;->setAccuracy(I)V
 
-    .line 420
+    .line 421
     const/4 v1, 0x0
 
     invoke-virtual {v11, v1}, Landroid/location/Criteria;->setPowerRequirement(I)V
 
-    .line 421
+    .line 422
     const/4 v1, 0x0
 
     invoke-virtual {v11, v1}, Landroid/location/Criteria;->setAltitudeRequired(Z)V
 
-    .line 422
+    .line 423
     const/4 v1, 0x0
 
     invoke-virtual {v11, v1}, Landroid/location/Criteria;->setBearingRequired(Z)V
 
-    .line 423
+    .line 424
     const/4 v1, 0x0
 
     invoke-virtual {v11, v1}, Landroid/location/Criteria;->setSpeedRequired(Z)V
 
-    .line 425
+    .line 426
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->locationManager:Landroid/location/LocationManager;
@@ -4541,11 +4542,11 @@
 
     move-result-object v2
 
-    .line 426
+    .line 427
     .restart local v2    # "best":Ljava/lang/String;
     if-eqz v2, :cond_154
 
-    .line 427
+    .line 428
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->locationManager:Landroid/location/LocationManager;
@@ -4558,7 +4559,7 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
-    .line 431
+    .line 432
     :cond_154
     move-object/from16 v0, p0
 
@@ -4572,7 +4573,7 @@
 
     if-eqz v1, :cond_16e
 
-    .line 432
+    .line 433
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->locationManager:Landroid/location/LocationManager;
@@ -4587,7 +4588,7 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
-    .line 442
+    .line 443
     .end local v2    # "best":Ljava/lang/String;
     .end local v11    # "criteria":Landroid/location/Criteria;
     .end local v13    # "loc":Landroid/location/Location;
@@ -4596,7 +4597,7 @@
     :goto_16e
     return-void
 
-    .line 401
+    .line 402
     .restart local v13    # "loc":Landroid/location/Location;
     .restart local v15    # "pre_agreeGPS":Z
     :cond_16f
@@ -4610,11 +4611,11 @@
 
     move-result-object v12
 
-    .line 402
+    .line 403
     .local v12, "lastKnownLocation":Landroid/location/Location;
     if-eqz v12, :cond_196
 
-    .line 403
+    .line 404
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -4641,7 +4642,7 @@
 
     goto :goto_124
 
-    .line 405
+    .line 406
     :cond_196
     move-object/from16 v0, p0
 
@@ -4653,10 +4654,10 @@
 
     move-result-object v12
 
-    .line 406
+    .line 407
     if-eqz v12, :cond_1be
 
-    .line 407
+    .line 408
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -4683,7 +4684,7 @@
 
     goto/16 :goto_124
 
-    .line 409
+    .line 410
     :cond_1be
     move-object/from16 v0, p0
 
@@ -4695,10 +4696,10 @@
 
     move-result-object v12
 
-    .line 410
+    .line 411
     if-eqz v12, :cond_124
 
-    .line 411
+    .line 412
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->mMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -4725,7 +4726,7 @@
 
     goto/16 :goto_124
 
-    .line 437
+    .line 438
     .end local v12    # "lastKnownLocation":Landroid/location/Location;
     .end local v13    # "loc":Landroid/location/Location;
     :cond_1e6
@@ -4747,7 +4748,7 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1006
+    .line 1015
     return-void
 .end method
 
@@ -4755,10 +4756,10 @@
     .registers 1
 
     .prologue
-    .line 457
+    .line 458
     invoke-super {p0}, Lcom/kia/android/moviesns/ui/fragment/BaseFragment;->onStop()V
 
-    .line 458
+    .line 459
     return-void
 .end method
 
@@ -4767,51 +4768,51 @@
     .param p1, "requestCode"    # Ljava/lang/String;
 
     .prologue
-    .line 1551
+    .line 1560
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isWaitResponse:Z
 
-    .line 1552
+    .line 1561
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->onRefreshComplete()V
 
-    .line 1554
+    .line 1563
     const-string v0, "URL_GET_MEDIA_LIST_REQ"
 
     if-ne p1, v0, :cond_11
 
-    .line 1555
+    .line 1564
     iget v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->currentQuery:I
 
     packed-switch v0, :pswitch_data_1e
 
-    .line 1578
+    .line 1587
     :cond_11
     :goto_11
     :pswitch_11
     return-void
 
-    .line 1562
+    .line 1571
     :pswitch_12
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->failedResponseMediaSearchText()V
 
     goto :goto_11
 
-    .line 1567
+    .line 1576
     :pswitch_16
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->failedResponseMediaList()V
 
     goto :goto_11
 
-    .line 1572
+    .line 1581
     :pswitch_1a
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->failedResponseMediaSearchMap()V
 
     goto :goto_11
 
-    .line 1555
+    .line 1564
     :pswitch_data_1e
     .packed-switch 0x0
         :pswitch_11
@@ -4832,17 +4833,17 @@
     .end annotation
 
     .prologue
-    .line 1518
+    .line 1527
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isWaitResponse:Z
 
-    .line 1519
+    .line 1528
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->onRefreshComplete()V
 
-    .line 1521
+    .line 1530
     const-string v0, "URL_GET_MEDIA_LIST_REQ"
 
     if-eq p1, v0, :cond_10
@@ -4851,48 +4852,48 @@
 
     if-ne p1, v0, :cond_22
 
-    .line 1522
+    .line 1531
     :cond_10
     iget v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->currentQuery:I
 
     packed-switch v0, :pswitch_data_2a
 
-    .line 1548
+    .line 1557
     :cond_15
     :goto_15
     :pswitch_15
     return-void
 
-    .line 1529
+    .line 1538
     :pswitch_16
     invoke-virtual {p0, p2}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->responseMediaSearchText(Lorg/json/JSONObject;)V
 
     goto :goto_15
 
-    .line 1534
+    .line 1543
     :pswitch_1a
     invoke-direct {p0, p2}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->responseMediaList(Lorg/json/JSONObject;)V
 
     goto :goto_15
 
-    .line 1539
+    .line 1548
     :pswitch_1e
     invoke-direct {p0, p2}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->responseMediaSearchMap(Lorg/json/JSONObject;)V
 
     goto :goto_15
 
-    .line 1544
+    .line 1553
     :cond_22
     const-string v0, ""
 
     if-ne p1, v0, :cond_15
 
-    .line 1545
+    .line 1554
     invoke-direct {p0, p2}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->responseGeocode(Lorg/json/JSONObject;)V
 
     goto :goto_15
 
-    .line 1522
+    .line 1531
     :pswitch_data_2a
     .packed-switch 0x0
         :pswitch_15
@@ -4913,34 +4914,34 @@
 
     const/4 v5, 0x1
 
-    .line 1227
+    .line 1236
     iget-boolean v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isWaitResponse:Z
 
     if-eqz v0, :cond_8
 
-    .line 1265
+    .line 1274
     :goto_7
     return-void
 
-    .line 1230
+    .line 1239
     :cond_8
     iput-boolean v5, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isWaitResponse:Z
 
-    .line 1232
+    .line 1241
     iput-boolean p1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isAddDataToList:Z
 
-    .line 1236
+    .line 1245
     if-eqz p1, :cond_60
 
-    .line 1239
+    .line 1248
     iget v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->sortType:I
 
     if-eq v0, v5, :cond_58
 
-    .line 1241
+    .line 1250
     iput v4, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->seqValue:I
 
-    .line 1247
+    .line 1256
     :goto_14
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
@@ -4956,7 +4957,7 @@
 
     iput v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listViewIndex:I
 
-    .line 1248
+    .line 1257
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->getRefreshableView()Landroid/view/View;
@@ -4969,7 +4970,7 @@
 
     move-result-object v9
 
-    .line 1249
+    .line 1258
     .local v9, "v":Landroid/view/View;
     if-nez v9, :cond_5b
 
@@ -4978,15 +4979,15 @@
     :goto_31
     iput v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listViewTop:I
 
-    .line 1250
+    .line 1259
     iput-boolean v5, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listViewRestore:Z
 
-    .line 1251
+    .line 1260
     iget v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
     add-int/lit8 v6, v0, 0x1
 
-    .line 1260
+    .line 1269
     .end local v9    # "v":Landroid/view/View;
     .local v6, "requestPage":I
     :goto_39
@@ -5015,24 +5016,24 @@
 
     invoke-static/range {v0 .. v8}, Lcom/kia/android/moviesns/net/api/ApiClient;->getMediaList(ZIILjava/lang/String;IIIILcom/kia/android/moviesns/net/api/ApiResponseHandler;)V
 
-    .line 1262
+    .line 1271
     invoke-direct {p0, v5}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->hideInput(Z)V
 
-    .line 1264
+    .line 1273
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->currentQuery:I
 
     goto :goto_7
 
-    .line 1244
+    .line 1253
     .end local v6    # "requestPage":I
     :cond_58
     iput v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
     goto :goto_14
 
-    .line 1249
+    .line 1258
     .restart local v9    # "v":Landroid/view/View;
     :cond_5b
     invoke-virtual {v9}, Landroid/view/View;->getTop()I
@@ -5041,18 +5042,18 @@
 
     goto :goto_31
 
-    .line 1253
+    .line 1262
     .end local v9    # "v":Landroid/view/View;
     :cond_60
     iput v4, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->seqValue:I
 
-    .line 1254
+    .line 1263
     iput v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
-    .line 1256
+    .line 1265
     iput-boolean v1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listViewRestore:Z
 
-    .line 1257
+    .line 1266
     iget v6, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
     .restart local v6    # "requestPage":I
@@ -5061,7 +5062,7 @@
     :cond_69
     move v0, v1
 
-    .line 1260
+    .line 1269
     goto :goto_3e
 .end method
 
@@ -5076,35 +5077,35 @@
 
     const/4 v10, 0x0
 
-    .line 1385
+    .line 1394
     iget-boolean v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isWaitResponse:Z
 
     if-eqz v0, :cond_8
 
-    .line 1416
+    .line 1425
     :goto_7
     return-void
 
-    .line 1388
+    .line 1397
     :cond_8
     iput-boolean v11, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isWaitResponse:Z
 
-    .line 1393
+    .line 1402
     iput-boolean p1, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isAddDataToList:Z
 
-    .line 1395
+    .line 1404
     if-nez p1, :cond_3d
 
-    .line 1396
+    .line 1405
     iput v2, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->seqValue:I
 
-    .line 1397
+    .line 1406
     iput v10, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
-    .line 1399
+    .line 1408
     iput-boolean v10, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listViewRestore:Z
 
-    .line 1410
+    .line 1419
     :goto_14
     iget v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->seqValue:I
 
@@ -5135,29 +5136,29 @@
 
     move-result-object v4
 
-    .line 1411
+    .line 1420
     invoke-direct {v8, v4, v11, p0}, Lcom/kia/android/moviesns/net/api/ApiResponseHandler;-><init>(Landroid/content/Context;ZLcom/kia/android/moviesns/net/api/OnApiUiUpdateCallback;)V
 
     move v4, v2
 
     move v5, v2
 
-    .line 1410
+    .line 1419
     invoke-static/range {v0 .. v8}, Lcom/kia/android/moviesns/net/api/ApiClient;->getMediaList(ZIILjava/lang/String;IIIILcom/kia/android/moviesns/net/api/ApiResponseHandler;)V
 
-    .line 1413
+    .line 1422
     invoke-direct {p0, v10}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->hideInput(Z)V
 
-    .line 1415
+    .line 1424
     iput v11, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->currentQuery:I
 
     goto :goto_7
 
-    .line 1401
+    .line 1410
     :cond_3d
     iput v10, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
-    .line 1404
+    .line 1413
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->getRefreshableView()Landroid/view/View;
@@ -5172,7 +5173,7 @@
 
     iput v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listViewIndex:I
 
-    .line 1405
+    .line 1414
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->getRefreshableView()Landroid/view/View;
@@ -5185,7 +5186,7 @@
 
     move-result-object v9
 
-    .line 1406
+    .line 1415
     .local v9, "v":Landroid/view/View;
     if-nez v9, :cond_61
 
@@ -5194,12 +5195,12 @@
     :goto_5c
     iput v0, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listViewTop:I
 
-    .line 1407
+    .line 1416
     iput-boolean v11, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listViewRestore:Z
 
     goto :goto_14
 
-    .line 1406
+    .line 1415
     :cond_61
     invoke-virtual {v9}, Landroid/view/View;->getTop()I
 
@@ -5211,7 +5212,7 @@
     :cond_66
     move v0, v10
 
-    .line 1410
+    .line 1419
     goto :goto_19
 .end method
 
@@ -5220,17 +5221,17 @@
     .param p1, "result"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 1432
+    .line 1441
     iget v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->currentQuery:I
 
     iput v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->lastQuery:I
 
-    .line 1433
+    .line 1442
     const/4 v8, 0x0
 
     iput v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->currentQuery:I
 
-    .line 1438
+    .line 1447
     :try_start_7
     const-string v8, "MESSAGE"
 
@@ -5240,7 +5241,7 @@
 
     move-result-object v5
 
-    .line 1443
+    .line 1452
     .local v5, "strMsg":Ljava/lang/String;
     const-string v8, "MSG_NO_DATA"
 
@@ -5250,38 +5251,38 @@
 
     if-nez v8, :cond_27
 
-    .line 1445
+    .line 1454
     const/4 v8, 0x0
 
     iput v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
-    .line 1447
+    .line 1456
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->noResultListAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;
 
     invoke-virtual {v8, v9}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1448
+    .line 1457
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->noResultListAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;
 
     invoke-virtual {v8}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;->notifyDataSetChanged()V
 
-    .line 1515
+    .line 1524
     .end local v5    # "strMsg":Ljava/lang/String;
     :cond_24
     :goto_24
     return-void
 
-    .line 1439
+    .line 1448
     :catch_25
     move-exception v3
 
-    .line 1440
+    .line 1449
     .local v3, "e":Lorg/json/JSONException;
     goto :goto_24
 
-    .line 1454
+    .line 1463
     .end local v3    # "e":Lorg/json/JSONException;
     .restart local v5    # "strMsg":Ljava/lang/String;
     :cond_27
@@ -5290,13 +5291,13 @@
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1455
+    .line 1464
     .local v6, "tmpFirstRows":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/Home100ItemDto;>;"
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1457
+    .line 1466
     .local v7, "tmpOtherRows":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kia/android/moviesns/dto/Home100ItemDto;>;"
     const-string v8, "DATA"
 
@@ -5322,7 +5323,7 @@
 
     iput v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->maxPageNo:I
 
-    .line 1459
+    .line 1468
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v8
@@ -5359,7 +5360,7 @@
 
     invoke-static {v8, v9}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 1461
+    .line 1470
     const-string v8, "DATA"
 
     invoke-virtual {p1, v8}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -5372,15 +5373,15 @@
 
     move-result-object v1
 
-    .line 1462
+    .line 1471
     .local v1, "dataList":Lorg/json/JSONArray;
     const/4 v0, 0x0
 
-    .line 1463
+    .line 1472
     .local v0, "data":Lorg/json/JSONObject;
     const/4 v2, 0x0
 
-    .line 1464
+    .line 1473
     .local v2, "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -5410,7 +5411,7 @@
 
     invoke-static {v8, v9}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 1466
+    .line 1475
     const/4 v4, 0x0
 
     .local v4, "i":I
@@ -5421,47 +5422,47 @@
 
     if-lt v4, v8, :cond_e0
 
-    .line 1483
+    .line 1492
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;
 
     invoke-virtual {v8, v9}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1485
+    .line 1494
     iget-boolean v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->isAddDataToList:Z
 
     if-eqz v8, :cond_10b
 
-    .line 1487
+    .line 1496
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1488
+    .line 1497
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1489
+    .line 1498
     iget v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
     add-int/lit8 v8, v8, 0x1
 
     iput v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
-    .line 1499
+    .line 1508
     :goto_b4
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;
 
     invoke-virtual {v8}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$GridViewAdapter;->notifyDataSetChanged()V
 
-    .line 1501
+    .line 1510
     iget-boolean v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listViewRestore:Z
 
     if-eqz v8, :cond_24
 
-    .line 1502
+    .line 1511
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     invoke-virtual {v8}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->getRefreshableView()Landroid/view/View;
@@ -5480,7 +5481,7 @@
 
     goto/16 :goto_24
 
-    .line 1505
+    .line 1514
     .end local v0    # "data":Lorg/json/JSONObject;
     .end local v1    # "dataList":Lorg/json/JSONArray;
     .end local v2    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
@@ -5490,27 +5491,27 @@
     :catch_ce
     move-exception v3
 
-    .line 1507
+    .line 1516
     .restart local v3    # "e":Lorg/json/JSONException;
     const/4 v8, 0x0
 
     iput v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
 
-    .line 1509
+    .line 1518
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->listView:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
 
     iget-object v9, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->noResultListAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;
 
     invoke-virtual {v8, v9}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1510
+    .line 1519
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->noResultListAdapter:Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;
 
     invoke-virtual {v8}, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment$NoResultGridViewAdapter;->notifyDataSetChanged()V
 
     goto/16 :goto_24
 
-    .line 1467
+    .line 1476
     .end local v3    # "e":Lorg/json/JSONException;
     .restart local v0    # "data":Lorg/json/JSONObject;
     .restart local v1    # "dataList":Lorg/json/JSONArray;
@@ -5524,13 +5525,13 @@
 
     move-result-object v0
 
-    .line 1468
+    .line 1477
     new-instance v2, Lcom/kia/android/moviesns/dto/Home100ItemDto;
 
     .end local v2    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     invoke-direct {v2, v0}, Lcom/kia/android/moviesns/dto/Home100ItemDto;-><init>(Lorg/json/JSONObject;)V
 
-    .line 1470
+    .line 1479
     .restart local v2    # "dto":Lcom/kia/android/moviesns/dto/Home100ItemDto;
     const-string v8, "ISENCODE"
 
@@ -5540,13 +5541,13 @@
 
     if-nez v8, :cond_f4
 
-    .line 1466
+    .line 1475
     :goto_f1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_93
 
-    .line 1474
+    .line 1483
     :cond_f4
     const-string v8, "SEQ"
 
@@ -5556,7 +5557,7 @@
 
     iput v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->seqValue:I
 
-    .line 1476
+    .line 1485
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v8
@@ -5565,39 +5566,39 @@
 
     if-ge v8, v9, :cond_107
 
-    .line 1477
+    .line 1486
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_f1
 
-    .line 1479
+    .line 1488
     :cond_107
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_f1
 
-    .line 1491
+    .line 1500
     :cond_10b
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->firstRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
-    .line 1492
+    .line 1501
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->firstRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1494
+    .line 1503
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
-    .line 1495
+    .line 1504
     iget-object v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->otherRowDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1496
+    .line 1505
     const/4 v8, 0x0
 
     iput v8, p0, Lcom/kia/android/moviesns/ui/fragment/Home100Fragment;->pageNo:I
@@ -5613,15 +5614,15 @@
     .param p2, "responseBody"    # Ljava/lang/String;
 
     .prologue
-    .line 2103
+    .line 2112
     invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 2105
+    .line 2114
     instance-of v0, p1, Ljava/util/concurrent/TimeoutException;
 
     if-eqz v0, :cond_11
 
-    .line 2107
+    .line 2116
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -5630,18 +5631,18 @@
 
     invoke-static {v0, v1}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 2119
+    .line 2128
     :cond_10
     :goto_10
     return-void
 
-    .line 2109
+    .line 2118
     :cond_11
     instance-of v0, p1, Ljava/net/SocketTimeoutException;
 
     if-eqz v0, :cond_1f
 
-    .line 2111
+    .line 2120
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -5652,13 +5653,13 @@
 
     goto :goto_10
 
-    .line 2113
+    .line 2122
     :cond_1f
     instance-of v0, p1, Lorg/apache/http/conn/ConnectTimeoutException;
 
     if-eqz v0, :cond_10
 
-    .line 2115
+    .line 2124
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0

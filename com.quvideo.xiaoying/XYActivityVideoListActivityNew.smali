@@ -222,44 +222,44 @@
     iput v1, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->T:I
 
     .line 824
-    new-instance v0, Lpg;
+    new-instance v0, Lin;
 
-    invoke-direct {v0, p0}, Lpg;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
+    invoke-direct {v0, p0}, Lin;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->U:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     .line 837
-    new-instance v0, Lph;
+    new-instance v0, Lio;
 
-    invoke-direct {v0, p0}, Lph;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
+    invoke-direct {v0, p0}, Lio;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->V:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshBase$OnPullEventListener;
 
     .line 865
-    new-instance v0, Lpi;
+    new-instance v0, Lip;
 
-    invoke-direct {v0, p0}, Lpi;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
+    invoke-direct {v0, p0}, Lip;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->W:Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListManager$XYActivityVideoListManagerCallback;
 
     .line 947
-    new-instance v0, Lpj;
+    new-instance v0, Liq;
 
-    invoke-direct {v0, p0}, Lpj;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
+    invoke-direct {v0, p0}, Liq;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->X:Landroid/view/View$OnClickListener;
 
     .line 968
-    new-instance v0, Lpk;
+    new-instance v0, Lir;
 
-    invoke-direct {v0, p0}, Lpk;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
+    invoke-direct {v0, p0}, Lir;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->Y:Lcom/quvideo/xiaoying/app/activity/XYActivityVideoViewPager$XYActivityVideoViewPagerCallback;
 
     .line 977
-    new-instance v0, Lpl;
+    new-instance v0, Lis;
 
-    invoke-direct {v0, p0}, Lpl;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
+    invoke-direct {v0, p0}, Lis;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->Z:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/CustomScrollView$OnScrollListener;
 
@@ -283,7 +283,7 @@
     .prologue
     const/4 v3, 0x0
 
-    const v1, 0x7f020667
+    const v1, 0x7f020647
 
     const/16 v2, 0xff
 
@@ -350,7 +350,7 @@
     .line 1000
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->u:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f020577
+    const v1, 0x7f02055d
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
@@ -378,7 +378,7 @@
     invoke-direct {v0, v1}, Lcom/quvideo/xiaoying/common/VideoShare$VideoShareInfo;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;)V
 
     .line 573
-    const v1, 0x7f0a03bb
+    const v1, 0x7f0a0398
 
     invoke-virtual {p0, v1}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->getString(I)Ljava/lang/String;
 
@@ -1066,9 +1066,9 @@
     .line 532
     new-instance v4, Lcom/quvideo/xiaoying/dialog/ComGridDialog;
 
-    new-instance v5, Lpm;
+    new-instance v5, Lit;
 
-    invoke-direct {v5, p0, v0, v1}, Lpm;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v5, p0, v0, v1}, Lit;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;Ljava/lang/String;Ljava/util/List;)V
 
     invoke-direct {v4, p0, v2, v5}, Lcom/quvideo/xiaoying/dialog/ComGridDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;Lcom/quvideo/xiaoying/dialog/ComGridDialog$OnGridDialogClickListener;)V
 
@@ -1285,7 +1285,7 @@
     if-gez v3, :cond_76
 
     .line 656
-    const v0, 0x7f0a032c
+    const v0, 0x7f0a0309
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -1315,7 +1315,7 @@
     div-long v0, v1, v8
 
     .line 659
-    const v2, 0x7f0a032d
+    const v2, 0x7f0a030a
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -1345,7 +1345,7 @@
     div-long v0, v1, v10
 
     .line 662
-    const v2, 0x7f0a032e
+    const v2, 0x7f0a030b
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -1371,7 +1371,7 @@
     div-long v0, v1, v12
 
     .line 665
-    const v2, 0x7f0a032f
+    const v2, 0x7f0a030c
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -2040,7 +2040,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->S:Lcom/quvideo/xiaoying/app/activity/XYActivityInfoMgr$XYActivityInfo;
 
     .line 292
-    const v0, 0x7f060472
+    const v0, 0x7f06045d
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -2051,7 +2051,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->C:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshCustomScrollView;
 
     .line 293
-    const v0, 0x7f060478
+    const v0, 0x7f060463
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -2090,7 +2090,7 @@
     invoke-virtual {v0, v2}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoViewPager;->setViewPagerCallback(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoViewPager$XYActivityVideoViewPagerCallback;)V
 
     .line 298
-    const v0, 0x7f060479
+    const v0, 0x7f060464
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -2153,7 +2153,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0205d0
+    const v2, 0x7f0205b2
 
     invoke-static {v0, v2}, Lcom/networkbench/agent/impl/instrumentation/NBSBitmapFactoryInstrumentation;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -2202,7 +2202,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 313
-    const v0, 0x7f06047a
+    const v0, 0x7f060465
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -2229,7 +2229,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->y:Landroid/widget/TextView;
 
     .line 317
-    const v0, 0x7f060473
+    const v0, 0x7f06045e
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -2240,7 +2240,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->D:Landroid/widget/RelativeLayout;
 
     .line 318
-    const v0, 0x7f060474
+    const v0, 0x7f06045f
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -2306,7 +2306,7 @@
     invoke-virtual {v0, p0, v2, v3, v4}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoInfoMgr;->dbActivityVideoInfoQuery(Landroid/content/Context;Ljava/lang/String;II)V
 
     .line 330
-    const v0, 0x7f060477
+    const v0, 0x7f060462
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -2340,7 +2340,7 @@
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     .line 335
-    const v0, 0x7f060475
+    const v0, 0x7f060460
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -2624,9 +2624,9 @@
 
     const-string/jumbo v1, "activity.join"
 
-    new-instance v2, Lpo;
+    new-instance v2, Liv;
 
-    invoke-direct {v2, p0}, Lpo;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
+    invoke-direct {v2, p0}, Liv;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityVideoListActivityNew;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 

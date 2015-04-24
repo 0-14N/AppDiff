@@ -599,14 +599,14 @@
     if-nez v1, :cond_215
 
     .line 721
-    invoke-static {v2, v3}, Llw;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lfd;->a(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
     iput v1, v5, Lcom/quvideo/xiaoying/common/RunModeInfo;->mAdvEditFeature:I
 
     .line 723
-    invoke-static {v2, v3}, Llw;->c(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lfd;->c(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -618,14 +618,14 @@
     iput-boolean v1, v5, Lcom/quvideo/xiaoying/common/RunModeInfo;->mbWatermarkEnable:Z
 
     .line 725
-    invoke-static {v2, v3}, Llw;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lfd;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
     iput v1, v5, Lcom/quvideo/xiaoying/common/RunModeInfo;->mDurationAuth:I
 
     .line 726
-    invoke-static {v2, v3}, Llw;->b(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lfd;->b(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -906,14 +906,14 @@
     move-result-object v3
 
     .line 734
-    invoke-static {v2, v3}, Llw;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lfd;->a(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
     iput v1, v5, Lcom/quvideo/xiaoying/common/RunModeInfo;->mAdvEditFeature:I
 
     .line 736
-    invoke-static {v2, v3}, Llw;->c(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lfd;->c(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -925,14 +925,14 @@
     iput-boolean v1, v5, Lcom/quvideo/xiaoying/common/RunModeInfo;->mbWatermarkEnable:Z
 
     .line 738
-    invoke-static {v2, v3}, Llw;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lfd;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
     iput v1, v5, Lcom/quvideo/xiaoying/common/RunModeInfo;->mDurationAuth:I
 
     .line 739
-    invoke-static {v2, v3}, Llw;->b(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lfd;->b(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -2079,9 +2079,9 @@
     .line 769
     :cond_5e
     :goto_5e
-    new-instance v4, Llf;
+    new-instance v4, Lem;
 
-    invoke-direct {v4, p0}, Llf;-><init>(Lcom/quvideo/xiaoying/XiaoYingActivity;)V
+    invoke-direct {v4, p0}, Lem;-><init>(Lcom/quvideo/xiaoying/XiaoYingActivity;)V
 
     iput-object v4, p0, Lcom/quvideo/xiaoying/XiaoYingActivity;->G:Landroid/content/BroadcastReceiver;
 
@@ -2108,16 +2108,16 @@
     invoke-virtual {v5, v6, v4}, Landroid/support/v4/content/LocalBroadcastManager;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
     .line 793
-    new-instance v4, Llg;
+    new-instance v4, Len;
 
-    invoke-direct {v4, p0, v3, v0}, Llg;-><init>(Lcom/quvideo/xiaoying/XiaoYingActivity;ZZ)V
+    invoke-direct {v4, p0, v3, v0}, Len;-><init>(Lcom/quvideo/xiaoying/XiaoYingActivity;ZZ)V
 
     new-array v5, v1, [Landroid/content/Context;
 
     .line 827
     aput-object p0, v5, v2
 
-    invoke-virtual {v4, v5}, Llg;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v4, v5}, Len;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     .line 830
     :try_start_89
@@ -2634,9 +2634,9 @@
 
     aput-object v0, v5, v3
 
-    new-instance v0, Llh;
+    new-instance v0, Leo;
 
-    invoke-direct {v0, p0, v9}, Llh;-><init>(Lcom/quvideo/xiaoying/XiaoYingActivity;Landroid/content/Intent;)V
+    invoke-direct {v0, p0, v9}, Leo;-><init>(Lcom/quvideo/xiaoying/XiaoYingActivity;Landroid/content/Intent;)V
 
     invoke-static {p0, v5, v1, v0}, Lcom/quvideo/xiaoying/common/ComUtil;->scanFile2MediaStore(Landroid/content/Context;[Ljava/lang/String;[Ljava/lang/String;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
 

@@ -80,7 +80,7 @@
 
     .prologue
     .line 65
-    const v0, 0x7f0604f5
+    const v0, 0x7f0604e0
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/IMSetting;->findViewById(I)Landroid/view/View;
 
@@ -91,7 +91,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/IMSetting;->p:Landroid/widget/ImageView;
 
     .line 66
-    const v0, 0x7f0604f7
+    const v0, 0x7f0604e2
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/IMSetting;->findViewById(I)Landroid/view/View;
 
@@ -102,7 +102,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/IMSetting;->q:Landroid/widget/ImageView;
 
     .line 68
-    const v0, 0x7f0604f4
+    const v0, 0x7f0604df
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/IMSetting;->findViewById(I)Landroid/view/View;
 
@@ -113,7 +113,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/IMSetting;->n:Landroid/widget/RelativeLayout;
 
     .line 69
-    const v0, 0x7f0604f6
+    const v0, 0x7f0604e1
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/IMSetting;->findViewById(I)Landroid/view/View;
 
@@ -421,9 +421,9 @@
 
     const-string/jumbo v2, "user.get.setting"
 
-    new-instance v3, Lvb;
+    new-instance v3, Loi;
 
-    invoke-direct {v3, p0}, Lvb;-><init>(Lcom/quvideo/xiaoying/app/im/IMSetting;)V
+    invoke-direct {v3, p0}, Loi;-><init>(Lcom/quvideo/xiaoying/app/im/IMSetting;)V
 
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 

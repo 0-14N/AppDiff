@@ -107,6 +107,8 @@
 
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+
     iget-object v0, p0, Lcom/unity3d/player/UnityPlayerActivity;->a:Lcom/unity3d/player/UnityPlayer;
 
     invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->quit()V

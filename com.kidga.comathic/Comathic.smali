@@ -78,38 +78,38 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 32
+    .line 34
     invoke-direct {p0}, Lcom/kidga/common/KidgaActivity;-><init>()V
 
-    .line 36
+    .line 38
     const/4 v0, 0x6
 
     iput v0, p0, Lcom/kidga/comathic/Comathic;->size:I
 
-    .line 38
+    .line 40
     const/16 v0, -0x100
 
     iput v0, p0, Lcom/kidga/comathic/Comathic;->levelColor:I
 
-    .line 39
+    .line 41
     const v0, -0xff0100
 
     iput v0, p0, Lcom/kidga/comathic/Comathic;->posColor:I
 
-    .line 40
+    .line 42
     const/16 v0, 0x64
 
     iput v0, p0, Lcom/kidga/comathic/Comathic;->gameMode:I
 
-    .line 44
+    .line 46
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/kidga/comathic/Comathic;->elemsTypesCount:I
 
-    .line 50
+    .line 52
     iput-object v1, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
-    .line 52
+    .line 54
     new-instance v0, Lcom/kidga/common/Game;
 
     invoke-direct {v0, p0}, Lcom/kidga/common/Game;-><init>(Lcom/kidga/common/IGameHandler;)V
@@ -126,13 +126,13 @@
 
     iput v0, p0, Lcom/kidga/comathic/Comathic;->currentDestroy:I
 
-    .line 643
+    .line 602
     iput-object v1, p0, Lcom/kidga/comathic/Comathic;->hints:Ljava/util/ArrayList;
 
-    .line 762
+    .line 721
     iput-object v1, p0, Lcom/kidga/comathic/Comathic;->stored:Lcom/kidga/common/ui/Cell;
 
-    .line 32
+    .line 34
     return-void
 .end method
 
@@ -140,7 +140,7 @@
     .registers 2
 
     .prologue
-    .line 32
+    .line 34
     iget-object v0, p0, Lcom/kidga/comathic/Comathic;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     return-object v0
@@ -160,44 +160,40 @@
     .registers 2
 
     .prologue
-    .line 50
+    .line 52
     iget-object v0, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
     return-object v0
 .end method
 
-.method static synthetic access$3(Lcom/kidga/comathic/Comathic;Landroid/view/MotionEvent;Landroid/widget/GridView;Lcom/kidga/common/ui/Board;)I
-    .registers 5
-
-    .prologue
-    .line 1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/kidga/comathic/Comathic;->getGridRow(Landroid/view/MotionEvent;Landroid/widget/GridView;Lcom/kidga/common/ui/Board;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$4(Lcom/kidga/comathic/Comathic;Landroid/view/MotionEvent;Landroid/widget/GridView;Lcom/kidga/common/ui/Board;)I
-    .registers 5
-
-    .prologue
-    .line 1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/kidga/comathic/Comathic;->getGridCol(Landroid/view/MotionEvent;Landroid/widget/GridView;Lcom/kidga/common/ui/Board;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$5(Lcom/kidga/comathic/Comathic;)Lcom/kidga/common/Game;
+.method static synthetic access$3(Lcom/kidga/comathic/Comathic;)Lcom/kidga/common/Game;
     .registers 2
 
     .prologue
-    .line 52
+    .line 54
     iget-object v0, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     return-object v0
+.end method
+
+.method static synthetic access$4(Lcom/kidga/comathic/Comathic;)I
+    .registers 2
+
+    .prologue
+    .line 57
+    iget v0, p0, Lcom/kidga/comathic/Comathic;->removedCounter:I
+
+    return v0
+.end method
+
+.method static synthetic access$5(Lcom/kidga/comathic/Comathic;I)V
+    .registers 2
+
+    .prologue
+    .line 57
+    iput p1, p0, Lcom/kidga/comathic/Comathic;->removedCounter:I
+
+    return-void
 .end method
 
 .method private checkForMaxTypeNearBonus(Lcom/kidga/common/ui/Cell;Lcom/kidga/common/ui/Cell;)Z
@@ -210,7 +206,7 @@
 
     const/4 v3, 0x1
 
-    .line 918
+    .line 877
     instance-of v2, p1, Lcom/kidga/common/ui/CellSubElem;
 
     if-eqz v2, :cond_25
@@ -223,7 +219,7 @@
 
     move-result v0
 
-    .line 919
+    .line 878
     .local v0, "sub1":I
     :goto_d
     instance-of v2, p2, Lcom/kidga/common/ui/CellSubElem;
@@ -238,7 +234,7 @@
 
     move-result v1
 
-    .line 920
+    .line 879
     .local v1, "sub2":I
     :goto_18
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
@@ -253,7 +249,7 @@
 
     if-ne v1, v2, :cond_29
 
-    .line 922
+    .line 881
     :cond_24
     :goto_24
     return v3
@@ -263,24 +259,24 @@
     :cond_25
     move v0, v3
 
-    .line 918
+    .line 877
     goto :goto_d
 
     .restart local v0    # "sub1":I
     :cond_27
     move v1, v3
 
-    .line 919
+    .line 878
     goto :goto_18
 
     .restart local v1    # "sub2":I
     :cond_29
     move v3, v4
 
-    .line 920
+    .line 879
     goto :goto_24
 
-    .line 921
+    .line 880
     :cond_2b
     invoke-virtual {p2}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -301,7 +297,7 @@
     :cond_39
     move v3, v4
 
-    .line 922
+    .line 881
     goto :goto_24
 .end method
 
@@ -318,7 +314,7 @@
     .end annotation
 
     .prologue
-    .line 682
+    .line 641
     .local p1, "toDisable":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -332,10 +328,10 @@
 
     if-nez v2, :cond_b
 
-    .line 686
+    .line 645
     return-void
 
-    .line 682
+    .line 641
     :cond_b
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -343,13 +339,13 @@
 
     check-cast v0, Lcom/kidga/common/ui/Cell;
 
-    .line 683
+    .line 642
     .local v0, "c":Lcom/kidga/common/ui/Cell;
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/kidga/common/ui/Cell;->setDisabled(Z)V
 
-    .line 684
+    .line 643
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getRow()I
 
     move-result v2
@@ -388,7 +384,7 @@
     .end annotation
 
     .prologue
-    .line 689
+    .line 648
     .local p1, "toEnable":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -401,10 +397,10 @@
 
     if-nez v2, :cond_b
 
-    .line 693
+    .line 652
     return-void
 
-    .line 689
+    .line 648
     :cond_b
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -412,7 +408,7 @@
 
     check-cast v0, Lcom/kidga/common/ui/Cell;
 
-    .line 690
+    .line 649
     .local v0, "c":Lcom/kidga/common/ui/Cell;
     const/4 v2, 0x0
 
@@ -449,20 +445,20 @@
 
     const/4 v8, 0x1
 
-    .line 873
+    .line 832
     if-nez p2, :cond_c
 
-    .line 874
+    .line 833
     new-instance p2, Ljava/util/ArrayList;
 
     .end local p2    # "sol":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 875
+    .line 834
     .restart local p2    # "sol":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 878
+    .line 837
     :cond_c
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getCol()I
 
@@ -486,7 +482,7 @@
 
     move-result-object v1
 
-    .line 879
+    .line 838
     .local v1, "cellLeft":Lcom/kidga/common/ui/Cell;
     :goto_22
     instance-of v6, v1, Lcom/kidga/common/ui/CellSubElem;
@@ -501,7 +497,7 @@
 
     move-result v4
 
-    .line 880
+    .line 839
     .local v4, "elSubType":I
     :goto_2d
     if-eqz v1, :cond_62
@@ -514,7 +510,7 @@
 
     if-eq v4, p4, :cond_4d
 
-    .line 881
+    .line 840
     :cond_37
     invoke-virtual {v1}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -539,7 +535,7 @@
 
     if-nez v6, :cond_62
 
-    .line 882
+    .line 841
     :cond_4d
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -555,15 +551,15 @@
 
     if-eq v6, v9, :cond_62
 
-    .line 883
+    .line 842
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 884
+    .line 843
     invoke-direct {p0, v1, p2, p3, p4}, Lcom/kidga/comathic/Comathic;->getAround(Lcom/kidga/common/ui/Cell;Ljava/util/ArrayList;Lcom/kidga/common/ui/Type;I)Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 886
+    .line 845
     :cond_62
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getCol()I
 
@@ -595,7 +591,7 @@
 
     move-result-object v2
 
-    .line 887
+    .line 846
     .local v2, "cellRight":Lcom/kidga/common/ui/Cell;
     :goto_80
     instance-of v6, v2, Lcom/kidga/common/ui/CellSubElem;
@@ -610,7 +606,7 @@
 
     move-result v4
 
-    .line 888
+    .line 847
     :goto_8b
     if-eqz v2, :cond_c0
 
@@ -622,7 +618,7 @@
 
     if-eq v4, p4, :cond_ab
 
-    .line 889
+    .line 848
     :cond_95
     invoke-virtual {v2}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -647,7 +643,7 @@
 
     if-nez v6, :cond_c0
 
-    .line 890
+    .line 849
     :cond_ab
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -663,15 +659,15 @@
 
     if-eq v6, v9, :cond_c0
 
-    .line 891
+    .line 850
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 892
+    .line 851
     invoke-direct {p0, v2, p2, p3, p4}, Lcom/kidga/comathic/Comathic;->getAround(Lcom/kidga/common/ui/Cell;Ljava/util/ArrayList;Lcom/kidga/common/ui/Type;I)Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 894
+    .line 853
     :cond_c0
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
 
@@ -703,7 +699,7 @@
 
     move-result-object v3
 
-    .line 895
+    .line 854
     .local v3, "cellTop":Lcom/kidga/common/ui/Cell;
     :goto_de
     instance-of v6, v3, Lcom/kidga/common/ui/CellSubElem;
@@ -718,7 +714,7 @@
 
     move-result v4
 
-    .line 896
+    .line 855
     :goto_e9
     if-eqz v3, :cond_11e
 
@@ -730,7 +726,7 @@
 
     if-eq v4, p4, :cond_109
 
-    .line 897
+    .line 856
     :cond_f3
     invoke-virtual {v3}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -755,7 +751,7 @@
 
     if-nez v6, :cond_11e
 
-    .line 898
+    .line 857
     :cond_109
     invoke-virtual {p2, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -771,15 +767,15 @@
 
     if-eq v6, v9, :cond_11e
 
-    .line 899
+    .line 858
     invoke-virtual {p2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 900
+    .line 859
     invoke-direct {p0, v3, p2, p3, p4}, Lcom/kidga/comathic/Comathic;->getAround(Lcom/kidga/common/ui/Cell;Ljava/util/ArrayList;Lcom/kidga/common/ui/Type;I)Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 902
+    .line 861
     :cond_11e
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
 
@@ -803,7 +799,7 @@
 
     move-result-object v0
 
-    .line 903
+    .line 862
     .local v0, "cellBottom":Lcom/kidga/common/ui/Cell;
     :goto_134
     instance-of v6, v0, Lcom/kidga/common/ui/CellSubElem;
@@ -818,7 +814,7 @@
 
     move-result v4
 
-    .line 904
+    .line 863
     :goto_13f
     if-eqz v0, :cond_176
 
@@ -830,7 +826,7 @@
 
     if-eq v4, p4, :cond_15f
 
-    .line 905
+    .line 864
     :cond_149
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -855,7 +851,7 @@
 
     if-nez v6, :cond_176
 
-    .line 906
+    .line 865
     :cond_15f
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -873,28 +869,28 @@
 
     if-ne v4, p4, :cond_176
 
-    .line 907
+    .line 866
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 908
+    .line 867
     invoke-direct {p0, v0, p2, p3, p4}, Lcom/kidga/comathic/Comathic;->getAround(Lcom/kidga/common/ui/Cell;Ljava/util/ArrayList;Lcom/kidga/common/ui/Type;I)Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 911
+    .line 870
     :cond_176
     new-instance v5, Ljava/util/HashSet;
 
     invoke-direct {v5, p2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 913
+    .line 872
     .local v5, "hashSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Lcom/kidga/common/ui/Cell;>;"
     new-instance p2, Ljava/util/ArrayList;
 
     .end local p2    # "sol":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-direct {p2, v5}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 914
+    .line 873
     .restart local p2    # "sol":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     return-object p2
 
@@ -907,54 +903,54 @@
     :cond_181
     move-object v1, v7
 
-    .line 878
+    .line 837
     goto/16 :goto_22
 
     .restart local v1    # "cellLeft":Lcom/kidga/common/ui/Cell;
     :cond_184
     move v4, v8
 
-    .line 879
+    .line 838
     goto/16 :goto_2d
 
     .restart local v4    # "elSubType":I
     :cond_187
     move-object v2, v7
 
-    .line 886
+    .line 845
     goto/16 :goto_80
 
     .restart local v2    # "cellRight":Lcom/kidga/common/ui/Cell;
     :cond_18a
     move v4, v8
 
-    .line 887
+    .line 846
     goto/16 :goto_8b
 
     :cond_18d
     move-object v3, v7
 
-    .line 894
+    .line 853
     goto/16 :goto_de
 
     .restart local v3    # "cellTop":Lcom/kidga/common/ui/Cell;
     :cond_190
     move v4, v8
 
-    .line 895
+    .line 854
     goto/16 :goto_e9
 
     :cond_193
     move-object v0, v7
 
-    .line 902
+    .line 861
     goto :goto_134
 
     .restart local v0    # "cellBottom":Lcom/kidga/common/ui/Cell;
     :cond_195
     move v4, v8
 
-    .line 903
+    .line 862
     goto :goto_13f
 .end method
 
@@ -977,17 +973,17 @@
     .end annotation
 
     .prologue
-    .line 825
+    .line 784
     .local p2, "sol":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     if-nez p2, :cond_7
 
-    .line 826
+    .line 785
     new-instance p2, Ljava/util/ArrayList;
 
     .end local p2    # "sol":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 828
+    .line 787
     .restart local p2    # "sol":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     :cond_7
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -998,7 +994,7 @@
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 829
+    .line 788
     :cond_10
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
 
@@ -1014,7 +1010,7 @@
 
     if-ge v1, v2, :cond_9c
 
-    .line 830
+    .line 789
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -1031,7 +1027,7 @@
 
     move-result-object v0
 
-    .line 831
+    .line 790
     .local v0, "c":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -1051,7 +1047,7 @@
 
     move-result-object p2
 
-    .line 833
+    .line 792
     :cond_40
     :goto_40
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getCol()I
@@ -1068,7 +1064,7 @@
 
     if-ge v1, v2, :cond_72
 
-    .line 834
+    .line 793
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -1087,7 +1083,7 @@
 
     move-result-object v0
 
-    .line 835
+    .line 794
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v1
@@ -1106,7 +1102,7 @@
 
     move-result-object p2
 
-    .line 838
+    .line 797
     :cond_72
     :goto_72
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getCol()I
@@ -1115,7 +1111,7 @@
 
     if-lez v1, :cond_9c
 
-    .line 839
+    .line 798
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -1134,7 +1130,7 @@
 
     move-result-object v0
 
-    .line 840
+    .line 799
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v1
@@ -1153,7 +1149,7 @@
 
     move-result-object p2
 
-    .line 844
+    .line 803
     .end local v0    # "c":Lcom/kidga/common/ui/Cell;
     :cond_9c
     :goto_9c
@@ -1163,7 +1159,7 @@
 
     if-lez v1, :cond_120
 
-    .line 845
+    .line 804
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -1180,7 +1176,7 @@
 
     move-result-object v0
 
-    .line 846
+    .line 805
     .restart local v0    # "c":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -1200,7 +1196,7 @@
 
     move-result-object p2
 
-    .line 848
+    .line 807
     :cond_c4
     :goto_c4
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getCol()I
@@ -1217,7 +1213,7 @@
 
     if-ge v1, v2, :cond_f6
 
-    .line 849
+    .line 808
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -1236,7 +1232,7 @@
 
     move-result-object v0
 
-    .line 850
+    .line 809
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v1
@@ -1255,7 +1251,7 @@
 
     move-result-object p2
 
-    .line 853
+    .line 812
     :cond_f6
     :goto_f6
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getCol()I
@@ -1264,7 +1260,7 @@
 
     if-lez v1, :cond_120
 
-    .line 854
+    .line 813
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -1283,7 +1279,7 @@
 
     move-result-object v0
 
-    .line 855
+    .line 814
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v1
@@ -1302,7 +1298,7 @@
 
     move-result-object p2
 
-    .line 859
+    .line 818
     .end local v0    # "c":Lcom/kidga/common/ui/Cell;
     :cond_120
     :goto_120
@@ -1320,7 +1316,7 @@
 
     if-ge v1, v2, :cond_150
 
-    .line 860
+    .line 819
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -1337,7 +1333,7 @@
 
     move-result-object v0
 
-    .line 861
+    .line 820
     .restart local v0    # "c":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -1357,7 +1353,7 @@
 
     move-result-object p2
 
-    .line 864
+    .line 823
     .end local v0    # "c":Lcom/kidga/common/ui/Cell;
     :cond_150
     :goto_150
@@ -1367,7 +1363,7 @@
 
     if-lez v1, :cond_178
 
-    .line 865
+    .line 824
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getRow()I
@@ -1384,7 +1380,7 @@
 
     move-result-object v0
 
-    .line 866
+    .line 825
     .restart local v0    # "c":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v0}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -1404,13 +1400,13 @@
 
     move-result-object p2
 
-    .line 869
+    .line 828
     .end local v0    # "c":Lcom/kidga/common/ui/Cell;
     :cond_178
     :goto_178
     return-object p2
 
-    .line 832
+    .line 791
     .restart local v0    # "c":Lcom/kidga/common/ui/Cell;
     :cond_179
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -1423,7 +1419,7 @@
 
     goto/16 :goto_40
 
-    .line 836
+    .line 795
     :cond_184
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -1435,7 +1431,7 @@
 
     goto/16 :goto_72
 
-    .line 841
+    .line 800
     :cond_18f
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -1447,7 +1443,7 @@
 
     goto/16 :goto_9c
 
-    .line 847
+    .line 806
     :cond_19a
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -1459,7 +1455,7 @@
 
     goto/16 :goto_c4
 
-    .line 851
+    .line 810
     :cond_1a5
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -1471,7 +1467,7 @@
 
     goto/16 :goto_f6
 
-    .line 856
+    .line 815
     :cond_1b0
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -1483,7 +1479,7 @@
 
     goto/16 :goto_120
 
-    .line 862
+    .line 821
     :cond_1bb
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -1495,7 +1491,7 @@
 
     goto :goto_150
 
-    .line 867
+    .line 826
     :cond_1c5
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -1512,33 +1508,33 @@
     .registers 3
 
     .prologue
-    .line 138
+    .line 140
     new-instance v0, Lcom/kidga/comathic/ResourceHandler;
 
     invoke-direct {v0, p0}, Lcom/kidga/comathic/ResourceHandler;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/kidga/comathic/Comathic;->resHandler:Lcom/kidga/comathic/ResourceHandler;
 
-    .line 139
+    .line 141
     const-string v0, "comathic"
 
     invoke-static {p0, v0}, Lcom/kidga/common/activity/DataProvider;->initInstance(Lcom/kidga/common/ICommonHandler;Ljava/lang/String;)V
 
-    .line 140
+    .line 142
     invoke-static {}, Lcom/kidga/common/sound/SoundManager;->getInstance()Lcom/kidga/common/sound/SoundManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/kidga/common/sound/SoundManager;->init(Lcom/kidga/common/IGameHandler;)V
 
-    .line 141
+    .line 143
     invoke-static {}, Lcom/kidga/common/vibro/VibroManager;->getInstance()Lcom/kidga/common/vibro/VibroManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/kidga/common/vibro/VibroManager;->init(Lcom/kidga/common/ICommonHandler;)V
 
-    .line 142
+    .line 144
     new-instance v0, Lcom/kidga/common/saves/SavesHandler;
 
     const-string v1, "comathic"
@@ -1547,7 +1543,7 @@
 
     iput-object v0, p0, Lcom/kidga/comathic/Comathic;->saves:Lcom/kidga/common/saves/SavesHandler;
 
-    .line 143
+    .line 145
     new-instance v0, Lcom/kidga/common/record/RecordHandler;
 
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->saves:Lcom/kidga/common/saves/SavesHandler;
@@ -1556,7 +1552,7 @@
 
     iput-object v0, p0, Lcom/kidga/comathic/Comathic;->recordHandler:Lcom/kidga/common/record/RecordHandler;
 
-    .line 144
+    .line 146
     new-instance v0, Lcom/kidga/common/ad/AdHandler;
 
     const-string v1, "a14e079704cd453"
@@ -1565,14 +1561,14 @@
 
     iput-object v0, p0, Lcom/kidga/comathic/Comathic;->adHandler:Lcom/kidga/common/ad/AdHandler;
 
-    .line 145
+    .line 147
     new-instance v0, Lcom/kidga/common/score/ScorePlaceFlipper;
 
     invoke-direct {v0}, Lcom/kidga/common/score/ScorePlaceFlipper;-><init>()V
 
     iput-object v0, p0, Lcom/kidga/comathic/Comathic;->scoreFlipper:Lcom/kidga/common/score/ScorePlaceFlipper;
 
-    .line 146
+    .line 148
     return-void
 .end method
 
@@ -1585,72 +1581,36 @@
 
     const/4 v3, 0x2
 
-    .line 182
+    .line 184
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->l:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 184
-    new-instance v1, Landroid/widget/LinearLayout;
-
-    invoke-direct {v1, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    iput-object v1, p0, Lcom/kidga/comathic/Comathic;->scoreLayout:Landroid/widget/LinearLayout;
-
-    .line 185
-    iget-object v1, p0, Lcom/kidga/comathic/Comathic;->scoreLayout:Landroid/widget/LinearLayout;
-
-    const/16 v2, 0x11
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setHorizontalGravity(I)V
-
-    .line 186
-    iget-object v1, p0, Lcom/kidga/comathic/Comathic;->scoreLayout:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v3, v3, v3, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
-
     .line 187
-    invoke-virtual {p0}, Lcom/kidga/comathic/Comathic;->updateHeader()V
-
-    .line 188
-    iget-object v1, p0, Lcom/kidga/comathic/Comathic;->l:Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/kidga/comathic/Comathic;->scoreLayout:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    .line 191
     new-instance v0, Lcom/kidga/comathic/Comathic$2;
 
     invoke-direct {v0, p0, p0}, Lcom/kidga/comathic/Comathic$2;-><init>(Lcom/kidga/comathic/Comathic;Landroid/content/Context;)V
 
-    .line 206
+    .line 200
     .local v0, "a":Landroid/widget/GridView;
-    iget-object v1, p0, Lcom/kidga/comathic/Comathic;->scoreLayout:Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/kidga/comathic/Comathic;->setupGrid(Landroid/widget/GridView;Landroid/widget/LinearLayout;Lcom/kidga/common/ui/Board;)V
-
-    .line 208
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v1, v4}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
-    .line 209
+    .line 201
     invoke-virtual {v0, p1}, Landroid/widget/GridView;->setNumColumns(I)V
 
-    .line 210
+    .line 202
     invoke-virtual {v0, v3}, Landroid/widget/GridView;->setStretchMode(I)V
 
-    .line 212
+    .line 204
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v1}, Lcom/kidga/common/Game;->fillBoard()V
 
-    .line 214
+    .line 205
     new-instance v1, Lcom/kidga/comathic/Comathic$BoardAdapter;
 
     iget-object v2, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
@@ -1659,10 +1619,54 @@
 
     iput-object v1, p0, Lcom/kidga/comathic/Comathic;->adapter:Lcom/kidga/comathic/Comathic$BoardAdapter;
 
-    .line 215
+    .line 206
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->adapter:Lcom/kidga/comathic/Comathic$BoardAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    .line 207
+    iget-object v1, p0, Lcom/kidga/comathic/Comathic;->l:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v1
+
+    if-lez v1, :cond_3a
+
+    .line 208
+    iget-object v1, p0, Lcom/kidga/comathic/Comathic;->l:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v4}, Landroid/widget/LinearLayout;->removeViewAt(I)V
+
+    .line 211
+    :cond_3a
+    new-instance v1, Landroid/widget/LinearLayout;
+
+    invoke-direct {v1, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    iput-object v1, p0, Lcom/kidga/comathic/Comathic;->scoreLayout:Landroid/widget/LinearLayout;
+
+    .line 212
+    iget-object v1, p0, Lcom/kidga/comathic/Comathic;->scoreLayout:Landroid/widget/LinearLayout;
+
+    const/16 v2, 0x11
+
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setHorizontalGravity(I)V
+
+    .line 213
+    iget-object v1, p0, Lcom/kidga/comathic/Comathic;->scoreLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v3, v3, v3, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    .line 214
+    invoke-virtual {p0}, Lcom/kidga/comathic/Comathic;->updateHeader()V
+
+    .line 219
+    iget-object v1, p0, Lcom/kidga/comathic/Comathic;->l:Landroid/widget/LinearLayout;
+
+    iget-object v2, p0, Lcom/kidga/comathic/Comathic;->scoreLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 220
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->l:Landroid/widget/LinearLayout;
@@ -1692,17 +1696,17 @@
     .param p2, "to"    # Lcom/kidga/common/ui/Cell;
 
     .prologue
-    .line 958
+    .line 917
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/kidga/comathic/Comathic;->increaseLevelBar(I)Z
 
-    .line 959
+    .line 918
     iget-object v0, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v0, p1, p2}, Lcom/kidga/common/Game;->moveToSpec(Lcom/kidga/common/ui/Cell;Lcom/kidga/common/ui/Cell;)V
 
-    .line 960
+    .line 919
     iget-object v0, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
@@ -1715,8 +1719,8 @@
 
     invoke-virtual {v0, v1}, Lcom/kidga/common/Game;->addGameScore(I)V
 
-    .line 961
-    const v0, 0x7f090004
+    .line 920
+    const v0, 0x7f090002
 
     invoke-virtual {p0, v0}, Lcom/kidga/comathic/Comathic;->findViewById(I)Landroid/view/View;
 
@@ -1746,10 +1750,10 @@
 
     invoke-static {p0, v0, v1}, Lcom/kidga/common/popup/PopupManager;->showPopup(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)V
 
-    .line 962
+    .line 921
     invoke-direct {p0}, Lcom/kidga/comathic/Comathic;->updateScore()V
 
-    .line 963
+    .line 922
     return-void
 .end method
 
@@ -1773,7 +1777,7 @@
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
     if-ne p1, v4, :cond_3d
 
-    const v3, 0x7f070053
+    const v3, 0x7f070047
 
     :goto_d
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
@@ -1788,7 +1792,7 @@
     :goto_14
     if-nez p1, :cond_59
 
-    const v3, 0x7f07001c
+    const v3, 0x7f07001b
 
     .line 271
     :goto_19
@@ -1812,7 +1816,7 @@
     move-result-object v3
 
     .line 274
-    const v4, 0x7f070025
+    const v4, 0x7f070024
 
     new-instance v5, Lcom/kidga/comathic/Comathic$3;
 
@@ -1838,12 +1842,12 @@
     :cond_3d
     if-ne p1, v5, :cond_43
 
-    const v3, 0x7f070049
+    const v3, 0x7f070046
 
     goto :goto_d
 
     :cond_43
-    const v3, 0x7f07002f
+    const v3, 0x7f07002d
 
     goto :goto_d
 
@@ -1879,14 +1883,14 @@
     :cond_59
     if-ne p1, v6, :cond_5f
 
-    const v3, 0x7f07001d
+    const v3, 0x7f07001c
 
     goto :goto_19
 
     :cond_5f
     if-ne p1, v4, :cond_65
 
-    const v3, 0x7f07001e
+    const v3, 0x7f07001d
 
     goto :goto_19
 
@@ -1894,12 +1898,12 @@
     if-ne p1, v5, :cond_6b
 
     .line 273
-    const v3, 0x7f070015
+    const v3, 0x7f070014
 
     goto :goto_19
 
     :cond_6b
-    const v3, 0x7f070020
+    const v3, 0x7f07001f
 
     goto :goto_19
 .end method
@@ -1920,7 +1924,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07002c
+    const v2, 0x7f07002a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1984,7 +1988,7 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 731
+    .line 690
     return-void
 .end method
 
@@ -2003,12 +2007,12 @@
     .prologue
     const/4 v11, 0x2
 
-    .line 646
+    .line 605
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 647
+    .line 606
     .local v4, "maxhint":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     new-instance v9, Ljava/util/ArrayList;
 
@@ -2016,22 +2020,22 @@
 
     iput-object v9, p0, Lcom/kidga/comathic/Comathic;->hints:Ljava/util/ArrayList;
 
-    .line 648
+    .line 607
     const/4 v3, 0x0
 
-    .line 649
+    .line 608
     .local v3, "hintvalue":I
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 650
+    .line 609
     .local v5, "processed":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 651
+    .line 610
     .local v8, "toDisable":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     const/4 v0, 0x0
 
@@ -2045,13 +2049,13 @@
 
     if-lt v0, v9, :cond_25
 
-    .line 675
+    .line 634
     invoke-direct {p0, v8}, Lcom/kidga/comathic/Comathic;->disableCells(Ljava/util/ArrayList;)V
 
-    .line 678
+    .line 637
     return-object v4
 
-    .line 652
+    .line 611
     :cond_25
     const/4 v6, 0x0
 
@@ -2065,12 +2069,12 @@
 
     if-lt v6, v9, :cond_31
 
-    .line 651
+    .line 610
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_19
 
-    .line 653
+    .line 612
     :cond_31
     iget-object v9, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
@@ -2078,7 +2082,7 @@
 
     move-result-object v1
 
-    .line 654
+    .line 613
     .local v1, "cell":Lcom/kidga/common/ui/Cell;
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -2102,7 +2106,7 @@
 
     if-eq v9, v10, :cond_8b
 
-    .line 655
+    .line 614
     instance-of v9, v1, Lcom/kidga/common/ui/CellSubElem;
 
     if-eqz v9, :cond_83
@@ -2115,7 +2119,7 @@
 
     move-result v2
 
-    .line 656
+    .line 615
     .local v2, "elSubType":I
     :goto_58
     const/4 v9, 0x0
@@ -2128,11 +2132,11 @@
 
     move-result-object v7
 
-    .line 658
+    .line 617
     .local v7, "sols":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 659
+    .line 618
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v9
@@ -2149,10 +2153,10 @@
 
     if-ne v2, v9, :cond_77
 
-    .line 661
+    .line 620
     invoke-virtual {v4, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 664
+    .line 623
     :cond_77
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -2160,10 +2164,10 @@
 
     if-ge v9, v11, :cond_85
 
-    .line 665
+    .line 624
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 652
+    .line 611
     .end local v2    # "elSubType":I
     .end local v7    # "sols":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     :cond_80
@@ -2172,24 +2176,24 @@
 
     goto :goto_26
 
-    .line 655
+    .line 614
     :cond_83
     const/4 v2, 0x1
 
     goto :goto_58
 
-    .line 667
+    .line 626
     .restart local v2    # "elSubType":I
     .restart local v7    # "sols":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     :cond_85
     iput-object v7, p0, Lcom/kidga/comathic/Comathic;->hints:Ljava/util/ArrayList;
 
-    .line 668
+    .line 627
     invoke-direct {p0, v7}, Lcom/kidga/comathic/Comathic;->enableCells(Ljava/util/ArrayList;)V
 
     goto :goto_80
 
-    .line 670
+    .line 629
     .end local v2    # "elSubType":I
     .end local v7    # "sols":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     :cond_8b
@@ -2201,7 +2205,7 @@
 
     if-ne v9, v10, :cond_80
 
-    .line 671
+    .line 630
     iget-object v9, p0, Lcom/kidga/comathic/Comathic;->hints:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -2237,7 +2241,7 @@
     iget-object v2, p0, Lcom/kidga/comathic/Comathic;->recordHandler:Lcom/kidga/common/record/RecordHandler;
 
     .line 405
-    const v3, 0x7f07000f
+    const v3, 0x7f07000e
 
     const/16 v4, 0x64
 
@@ -2328,6 +2332,8 @@
 
     .prologue
     .local p1, "solutions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
+    const/4 v9, 0x0
+
     const/4 v8, 0x1
 
     .line 524
@@ -2335,23 +2341,24 @@
 
     .line 525
     .local v4, "score":I
+    iput v9, p0, Lcom/kidga/comathic/Comathic;->removedCounter:I
+
+    .line 526
     invoke-static {}, Lcom/kidga/common/sound/SoundManager;->getInstance()Lcom/kidga/common/sound/SoundManager;
 
     move-result-object v7
 
     invoke-virtual {v7, p2}, Lcom/kidga/common/sound/SoundManager;->playSound(I)V
 
-    .line 526
+    .line 527
     invoke-static {}, Lcom/kidga/common/vibro/VibroManager;->getInstance()Lcom/kidga/common/vibro/VibroManager;
 
     move-result-object v7
 
     invoke-virtual {v7}, Lcom/kidga/common/vibro/VibroManager;->vibrate()V
 
-    .line 531
-    const/4 v7, 0x0
-
-    invoke-virtual {p1, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 533
+    invoke-virtual {p1, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
@@ -2361,47 +2368,19 @@
 
     move-result v2
 
-    .line 533
+    .line 534
     .local v2, "cellSize":I
-    const v7, 0x10a0001
-
-    invoke-static {p0, v7}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
-
-    move-result-object v0
-
-    .line 535
-    .local v0, "a":Landroid/view/animation/Animation;
-    const-wide/16 v9, 0x46
-
-    invoke-virtual {v0, v9, v10}, Landroid/view/animation/Animation;->setDuration(J)V
-
-    .line 537
-    new-instance v7, Lcom/kidga/comathic/Comathic$4;
-
-    invoke-direct {v7, p0, p1, v2}, Lcom/kidga/comathic/Comathic$4;-><init>(Lcom/kidga/comathic/Comathic;Ljava/util/ArrayList;I)V
-
-    invoke-virtual {v0, v7}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
-
-    .line 559
     const/4 v3, 0x0
 
     .local v3, "i":I
-    :goto_30
+    :goto_1e
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v7
 
-    if-lt v3, v7, :cond_88
+    if-lt v3, v7, :cond_6e
 
-    .line 568
-    invoke-virtual {v0}, Landroid/view/animation/Animation;->start()V
-
-    .line 569
-    iget-object v7, p0, Lcom/kidga/comathic/Comathic;->l:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v7}, Landroid/widget/LinearLayout;->invalidate()V
-
-    .line 614
+    .line 573
     iget-object v7, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     iget v9, p0, Lcom/kidga/comathic/Comathic;->combo:I
@@ -2410,13 +2389,13 @@
 
     invoke-virtual {v7, v9}, Lcom/kidga/common/Game;->addGameScore(I)V
 
-    .line 615
+    .line 574
     invoke-direct {p0}, Lcom/kidga/comathic/Comathic;->updateScore()V
 
-    .line 616
+    .line 575
     iget v7, p0, Lcom/kidga/comathic/Comathic;->combo:I
 
-    if-le v7, v8, :cond_a9
+    if-le v7, v8, :cond_a5
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2440,10 +2419,10 @@
 
     move-result-object v1
 
-    .line 618
+    .line 577
     .local v1, "addon":Ljava/lang/String;
-    :goto_64
-    const v7, 0x7f090004
+    :goto_4a
+    const v7, 0x7f090002
 
     invoke-virtual {p0, v7}, Lcom/kidga/comathic/Comathic;->findViewById(I)Landroid/view/View;
 
@@ -2469,44 +2448,65 @@
 
     invoke-static {p0, v7, v9}, Lcom/kidga/common/popup/PopupManager;->showPopup2(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)V
 
-    .line 619
+    .line 578
     iget v7, p0, Lcom/kidga/comathic/Comathic;->combo:I
 
     add-int/lit8 v7, v7, 0x1
 
     iput v7, p0, Lcom/kidga/comathic/Comathic;->combo:I
 
-    .line 620
+    .line 579
     return v8
 
-    .line 560
+    .line 535
     .end local v1    # "addon":Ljava/lang/String;
-    :cond_88
+    :cond_6e
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/kidga/common/ui/Cell;
 
-    .line 563
+    .line 538
     .local v5, "toDelete":Lcom/kidga/common/ui/Cell;
-    invoke-virtual {v5, v0}, Lcom/kidga/common/ui/Cell;->setAnimation(Landroid/view/animation/Animation;)V
+    const v7, 0x10a0001
 
-    .line 564
+    invoke-static {p0, v7}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+
+    move-result-object v0
+
+    .line 539
+    .local v0, "a":Landroid/view/animation/Animation;
+    const-wide/16 v9, 0x32
+
+    invoke-virtual {v0, v9, v10}, Landroid/view/animation/Animation;->setDuration(J)V
+
+    .line 541
+    new-instance v7, Lcom/kidga/comathic/Comathic$4;
+
+    invoke-direct {v7, p0, v5, p1, v2}, Lcom/kidga/comathic/Comathic$4;-><init>(Lcom/kidga/comathic/Comathic;Lcom/kidga/common/ui/Cell;Ljava/util/ArrayList;I)V
+
+    invoke-virtual {v0, v7}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    .line 568
     instance-of v7, v5, Lcom/kidga/common/ui/CellSubElem;
 
-    if-eqz v7, :cond_a7
+    if-eqz v7, :cond_a3
 
-    check-cast v5, Lcom/kidga/common/ui/CellSubElem;
+    move-object v7, v5
 
-    .end local v5    # "toDelete":Lcom/kidga/common/ui/Cell;
-    invoke-virtual {v5}, Lcom/kidga/common/ui/CellSubElem;->getSubType()I
+    check-cast v7, Lcom/kidga/common/ui/CellSubElem;
+
+    invoke-virtual {v7}, Lcom/kidga/common/ui/CellSubElem;->getSubType()I
 
     move-result v6
 
-    .line 565
+    .line 569
     .local v6, "typeScore":I
-    :goto_9b
+    :goto_93
+    invoke-virtual {v5, v0}, Lcom/kidga/common/ui/Cell;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 570
     iget-object v7, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v7}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -2519,25 +2519,25 @@
 
     add-int/2addr v4, v7
 
-    .line 559
+    .line 534
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_30
+    goto/16 :goto_1e
 
     .end local v6    # "typeScore":I
-    .restart local v5    # "toDelete":Lcom/kidga/common/ui/Cell;
-    :cond_a7
+    :cond_a3
     move v6, v8
 
-    .line 564
-    goto :goto_9b
+    .line 568
+    goto :goto_93
 
-    .line 616
+    .line 575
+    .end local v0    # "a":Landroid/view/animation/Animation;
     .end local v5    # "toDelete":Lcom/kidga/common/ui/Cell;
-    :cond_a9
+    :cond_a5
     const-string v1, ""
 
-    goto :goto_64
+    goto :goto_4a
 .end method
 
 .method public endLevel()V
@@ -2607,7 +2607,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020035
+    const v2, 0x7f020034
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2668,7 +2668,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020036
+    const v2, 0x7f020035
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2693,7 +2693,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020037
+    const v2, 0x7f020036
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2714,7 +2714,7 @@
 
     const/4 v7, 0x1
 
-    .line 698
+    .line 657
     iget-object v6, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v6}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -2743,7 +2743,7 @@
     :goto_17
     add-int/2addr v9, v6
 
-    .line 699
+    .line 658
     iget-object v6, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v6}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -2756,11 +2756,11 @@
 
     move v6, v7
 
-    .line 698
+    .line 657
     :goto_23
     add-int/2addr v9, v6
 
-    .line 699
+    .line 658
     iget-object v6, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v6}, Lcom/kidga/common/Game;->getLevelTotal()I
@@ -2773,11 +2773,11 @@
 
     move v6, v7
 
-    .line 698
+    .line 657
     :goto_2f
     add-int v0, v9, v6
 
-    .line 700
+    .line 659
     .local v0, "addonBalls":I
     invoke-static {}, Ljava/lang/Math;->random()D
 
@@ -2793,7 +2793,7 @@
 
     double-to-int v5, v9
 
-    .line 704
+    .line 663
     .local v5, "type":I
     invoke-static {}, Ljava/lang/Math;->random()D
 
@@ -2805,7 +2805,7 @@
 
     double-to-int v3, v9
 
-    .line 705
+    .line 664
     .local v3, "bonusNum1":I
     invoke-static {}, Ljava/lang/Math;->random()D
 
@@ -2825,7 +2825,7 @@
 
     double-to-int v4, v9
 
-    .line 709
+    .line 668
     .local v4, "bonusNum2":I
     if-ne v3, v7, :cond_87
 
@@ -2839,7 +2839,7 @@
 
     move v1, v7
 
-    .line 710
+    .line 669
     .local v1, "bonus1":Z
     :goto_5d
     if-ne v4, v13, :cond_89
@@ -2856,12 +2856,12 @@
 
     move v2, v7
 
-    .line 711
+    .line 670
     .local v2, "bonus2":Z
     :goto_6a
     if-eqz v1, :cond_8b
 
-    .line 712
+    .line 671
     iget-object v6, p0, Lcom/kidga/comathic/Comathic;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v6}, Lcom/kidga/common/saves/SavesHandler;->isBonusOpen0()Z
@@ -2870,19 +2870,19 @@
 
     if-nez v6, :cond_7c
 
-    .line 713
+    .line 672
     iget-object v6, p0, Lcom/kidga/comathic/Comathic;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v6, v7}, Lcom/kidga/common/saves/SavesHandler;->setBonusOpen0(Z)V
 
-    .line 714
+    .line 673
     invoke-direct {p0, v8}, Lcom/kidga/comathic/Comathic;->showInfoDialog(I)V
 
-    .line 716
+    .line 675
     :cond_7c
     sget-object v6, Lcom/kidga/common/ui/Type;->BONUS_0:Lcom/kidga/common/ui/Type;
 
-    .line 727
+    .line 686
     :goto_7e
     return-object v6
 
@@ -2895,7 +2895,7 @@
     :cond_7f
     move v6, v8
 
-    .line 698
+    .line 657
     goto :goto_d
 
     :cond_81
@@ -2906,7 +2906,7 @@
     :cond_83
     move v6, v8
 
-    .line 699
+    .line 658
     goto :goto_23
 
     :cond_85
@@ -2921,22 +2921,22 @@
     :cond_87
     move v1, v8
 
-    .line 709
+    .line 668
     goto :goto_5d
 
     .restart local v1    # "bonus1":Z
     :cond_89
     move v2, v8
 
-    .line 710
+    .line 669
     goto :goto_6a
 
-    .line 717
+    .line 676
     .restart local v2    # "bonus2":Z
     :cond_8b
     if-eqz v2, :cond_a0
 
-    .line 718
+    .line 677
     iget-object v6, p0, Lcom/kidga/comathic/Comathic;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v6}, Lcom/kidga/common/saves/SavesHandler;->isBonusOpen1()Z
@@ -2945,21 +2945,21 @@
 
     if-nez v6, :cond_9d
 
-    .line 719
+    .line 678
     iget-object v6, p0, Lcom/kidga/comathic/Comathic;->saves:Lcom/kidga/common/saves/SavesHandler;
 
     invoke-virtual {v6, v7}, Lcom/kidga/common/saves/SavesHandler;->setBonusOpen1(Z)V
 
-    .line 720
+    .line 679
     invoke-direct {p0, v7}, Lcom/kidga/comathic/Comathic;->showInfoDialog(I)V
 
-    .line 722
+    .line 681
     :cond_9d
     sget-object v6, Lcom/kidga/common/ui/Type;->BOMB:Lcom/kidga/common/ui/Type;
 
     goto :goto_7e
 
-    .line 727
+    .line 686
     :cond_a0
     invoke-static {v5}, Lcom/kidga/common/ui/TypeUtil;->getElemType(I)Lcom/kidga/common/ui/Type;
 
@@ -2980,7 +2980,7 @@
     .registers 2
 
     .prologue
-    .line 927
+    .line 886
     const/4 v0, 0x0
 
     return-object v0
@@ -3029,7 +3029,7 @@
     .param p2, "subType"    # I
 
     .prologue
-    .line 968
+    .line 927
     iget-object v0, p0, Lcom/kidga/comathic/Comathic;->resHandler:Lcom/kidga/comathic/ResourceHandler;
 
     if-nez v0, :cond_b
@@ -3040,7 +3040,7 @@
 
     iput-object v0, p0, Lcom/kidga/comathic/Comathic;->resHandler:Lcom/kidga/comathic/ResourceHandler;
 
-    .line 969
+    .line 928
     :cond_b
     iget-object v0, p0, Lcom/kidga/comathic/Comathic;->resHandler:Lcom/kidga/comathic/ResourceHandler;
 
@@ -3139,12 +3139,12 @@
     .registers 2
 
     .prologue
-    .line 177
+    .line 179
     iget-object v0, p0, Lcom/kidga/comathic/Comathic;->adapter:Lcom/kidga/comathic/Comathic$BoardAdapter;
 
     invoke-virtual {v0}, Lcom/kidga/comathic/Comathic$BoardAdapter;->notifyDataSetChanged()V
 
-    .line 178
+    .line 180
     return-void
 .end method
 
@@ -3153,10 +3153,10 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 974
+    .line 933
     invoke-super {p0, p1}, Lcom/kidga/common/KidgaActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 975
+    .line 934
     return-void
 .end method
 
@@ -3171,39 +3171,39 @@
 
     const/4 v7, -0x1
 
-    .line 70
+    .line 72
     invoke-super {p0, p1}, Lcom/kidga/common/KidgaActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 71
-    invoke-direct {p0}, Lcom/kidga/comathic/Comathic;->initCommonUtils()V
-
     .line 73
-    invoke-virtual {p0}, Lcom/kidga/comathic/Comathic;->getWindow()Landroid/view/Window;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v8}, Landroid/view/Window;->requestFeature(I)Z
+    invoke-direct {p0}, Lcom/kidga/comathic/Comathic;->initCommonUtils()V
 
     .line 75
     invoke-virtual {p0}, Lcom/kidga/comathic/Comathic;->getWindow()Landroid/view/Window;
 
     move-result-object v5
 
-    invoke-virtual {v5, v6, v6}, Landroid/view/Window;->setFlags(II)V
+    invoke-virtual {v5, v8}, Landroid/view/Window;->requestFeature(I)Z
 
     .line 77
-    const v5, 0x7f030003
+    invoke-virtual {p0}, Lcom/kidga/comathic/Comathic;->getWindow()Landroid/view/Window;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v6, v6}, Landroid/view/Window;->setFlags(II)V
+
+    .line 79
+    const v5, 0x7f030002
 
     invoke-virtual {p0, v5}, Lcom/kidga/comathic/Comathic;->setContentView(I)V
 
-    .line 79
+    .line 81
     new-instance v5, Landroid/util/DisplayMetrics;
 
     invoke-direct {v5}, Landroid/util/DisplayMetrics;-><init>()V
 
     iput-object v5, p0, Lcom/kidga/comathic/Comathic;->displayMetrics:Landroid/util/DisplayMetrics;
 
-    .line 80
+    .line 82
     invoke-virtual {p0}, Lcom/kidga/comathic/Comathic;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v5
@@ -3216,8 +3216,8 @@
 
     invoke-virtual {v5, v6}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 82
-    const v5, 0x7f090004
+    .line 84
+    const v5, 0x7f090002
 
     invoke-virtual {p0, v5}, Lcom/kidga/comathic/Comathic;->findViewById(I)Landroid/view/View;
 
@@ -3227,19 +3227,19 @@
 
     iput-object v5, p0, Lcom/kidga/comathic/Comathic;->l:Landroid/widget/LinearLayout;
 
-    .line 83
+    .line 85
     iget-object v5, p0, Lcom/kidga/comathic/Comathic;->l:Landroid/widget/LinearLayout;
 
     invoke-virtual {v5, v8}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 84
+    .line 86
     iget-object v5, p0, Lcom/kidga/comathic/Comathic;->l:Landroid/widget/LinearLayout;
 
     const/16 v6, 0x70
 
     invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    .line 86
+    .line 88
     iget-object v5, p0, Lcom/kidga/comathic/Comathic;->displayMetrics:Landroid/util/DisplayMetrics;
 
     iget v5, v5, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -3248,8 +3248,8 @@
 
     if-lt v5, v6, :cond_5f
 
-    .line 88
-    const v5, 0x7f090005
+    .line 90
+    const v5, 0x7f090003
 
     invoke-virtual {p0, v5}, Lcom/kidga/comathic/Comathic;->findViewById(I)Landroid/view/View;
 
@@ -3257,21 +3257,21 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    .line 89
+    .line 91
     .local v0, "adLayout":Landroid/widget/RelativeLayout;
     iget-object v5, p0, Lcom/kidga/comathic/Comathic;->adHandler:Lcom/kidga/common/ad/AdHandler;
 
     invoke-virtual {v5, v0}, Lcom/kidga/common/ad/AdHandler;->fillAdLayout(Landroid/widget/RelativeLayout;)V
 
-    .line 92
+    .line 94
     .end local v0    # "adLayout":Landroid/widget/RelativeLayout;
     :cond_5f
     const/4 v5, 0x0
 
     invoke-virtual {p0, v5}, Lcom/kidga/comathic/Comathic;->start(Z)V
 
-    .line 94
-    const v5, 0x7f090006
+    .line 96
+    const v5, 0x7f090004
 
     invoke-virtual {p0, v5}, Lcom/kidga/comathic/Comathic;->findViewById(I)Landroid/view/View;
 
@@ -3279,19 +3279,19 @@
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    .line 95
+    .line 97
     .local v2, "l2":Landroid/widget/LinearLayout;
     new-instance v1, Landroid/widget/ImageView;
 
     invoke-direct {v1, p0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 96
+    .line 98
     .local v1, "im":Landroid/widget/ImageView;
     invoke-virtual {p0}, Lcom/kidga/comathic/Comathic;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x7f02002f
+    const v6, 0x7f02002e
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3299,45 +3299,45 @@
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 97
+    .line 99
     const/high16 v5, -0x1000000
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setBackgroundColor(I)V
 
-    .line 99
+    .line 101
     new-instance v3, Landroid/widget/TableLayout$LayoutParams;
 
-    .line 98
+    .line 100
     invoke-direct {v3, v7, v7}, Landroid/widget/TableLayout$LayoutParams;-><init>(II)V
 
-    .line 101
+    .line 103
     .local v3, "lp":Landroid/widget/TableLayout$LayoutParams;
     invoke-virtual {v2, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 108
+    .line 110
     const v5, 0x10a0001
 
     invoke-static {p0, v5}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v4
 
-    .line 109
+    .line 111
     .local v4, "out":Landroid/view/animation/Animation;
     const-wide/16 v5, 0x7d0
 
     invoke-virtual {v4, v5, v6}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 110
+    .line 112
     new-instance v5, Lcom/kidga/comathic/Comathic$1;
 
     invoke-direct {v5, p0, v2}, Lcom/kidga/comathic/Comathic$1;-><init>(Lcom/kidga/comathic/Comathic;Landroid/widget/LinearLayout;)V
 
     invoke-virtual {v4, v5}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 126
+    .line 128
     invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 135
+    .line 137
     return-void
 .end method
 
@@ -3346,43 +3346,43 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 150
+    .line 152
     const/4 v0, 0x0
 
-    .line 151
+    .line 153
     .local v0, "dialog":Landroid/app/Dialog;
     packed-switch p1, :pswitch_data_1c
 
-    .line 159
+    .line 161
     :goto_4
     return-object v0
 
-    .line 153
+    .line 155
     :pswitch_5
     new-instance v0, Landroid/app/Dialog;
 
     .end local v0    # "dialog":Landroid/app/Dialog;
     invoke-direct {v0, p0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
-    .line 154
+    .line 156
     .restart local v0    # "dialog":Landroid/app/Dialog;
     const v1, 0x7f030001
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setContentView(I)V
 
-    .line 155
-    const v1, 0x7f070014
+    .line 157
+    const v1, 0x7f070013
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setTitle(I)V
 
-    .line 156
+    .line 158
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
     goto :goto_4
 
-    .line 151
+    .line 153
     nop
 
     :pswitch_data_1c
@@ -3399,13 +3399,13 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 939
+    .line 898
     iput v4, p0, Lcom/kidga/comathic/Comathic;->combo:I
 
-    .line 940
+    .line 899
     const/4 v2, 0x0
 
-    .line 941
+    .line 900
     .local v2, "toCell":Lcom/kidga/common/ui/Cell;
     const/4 v3, 0x4
 
@@ -3427,7 +3427,7 @@
 
     move-result-object v2
 
-    .line 946
+    .line 905
     :goto_17
     instance-of v3, p2, Lcom/kidga/common/ui/CellSubElem;
 
@@ -3441,7 +3441,7 @@
 
     move-result v0
 
-    .line 947
+    .line 906
     .local v0, "subType1":I
     :goto_22
     instance-of v3, v2, Lcom/kidga/common/ui/CellSubElem;
@@ -3456,7 +3456,7 @@
 
     move-result v1
 
-    .line 948
+    .line 907
     .local v1, "subType2":I
     :goto_2d
     invoke-direct {p0, p2, v2}, Lcom/kidga/comathic/Comathic;->checkForMaxTypeNearBonus(Lcom/kidga/common/ui/Cell;Lcom/kidga/common/ui/Cell;)Z
@@ -3481,7 +3481,7 @@
 
     if-eq v3, v4, :cond_72
 
-    .line 949
+    .line 908
     invoke-virtual {p2}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v3
@@ -3494,7 +3494,7 @@
 
     if-eq v0, v1, :cond_5f
 
-    .line 950
+    .line 909
     :cond_4f
     invoke-virtual {p2}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -3512,7 +3512,7 @@
 
     if-ne v3, v4, :cond_72
 
-    .line 951
+    .line 910
     :cond_5f
     invoke-virtual {p2}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
@@ -3530,15 +3530,15 @@
 
     if-eq v3, v4, :cond_72
 
-    .line 952
+    .line 911
     :cond_6f
     invoke-direct {p0, p2, v2}, Lcom/kidga/comathic/Comathic;->performCopyMove(Lcom/kidga/common/ui/Cell;Lcom/kidga/common/ui/Cell;)V
 
-    .line 954
+    .line 913
     :cond_72
     return-void
 
-    .line 942
+    .line 901
     .end local v0    # "subType1":I
     .end local v1    # "subType2":I
     :cond_73
@@ -3564,7 +3564,7 @@
 
     goto :goto_17
 
-    .line 943
+    .line 902
     :cond_87
     const/4 v3, 0x2
 
@@ -3588,7 +3588,7 @@
 
     goto/16 :goto_17
 
-    .line 944
+    .line 903
     :cond_9c
     iget-object v3, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
@@ -3611,14 +3611,14 @@
     :cond_ae
     move v0, v4
 
-    .line 946
+    .line 905
     goto/16 :goto_22
 
     .restart local v0    # "subType1":I
     :cond_b1
     move v1, v4
 
-    .line 947
+    .line 906
     goto/16 :goto_2d
 .end method
 
@@ -3638,7 +3638,7 @@
     .registers 2
 
     .prologue
-    .line 740
+    .line 699
     const/4 v0, 0x0
 
     return v0
@@ -3649,7 +3649,7 @@
     .param p1, "cell"    # Lcom/kidga/common/ui/Cell;
 
     .prologue
-    .line 757
+    .line 716
     const/4 v0, 0x1
 
     return v0
@@ -3667,10 +3667,10 @@
 
     const/4 v2, 0x0
 
-    .line 766
+    .line 725
     if-nez p2, :cond_1e
 
-    .line 767
+    .line 726
     invoke-virtual {p1}, Lcom/kidga/common/ui/Cell;->getElementType()Lcom/kidga/common/ui/Type;
 
     move-result-object v2
@@ -3679,35 +3679,35 @@
 
     if-ne v2, v3, :cond_1b
 
-    .line 768
+    .line 727
     iget-object v2, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     invoke-virtual {v2, v1}, Lcom/kidga/common/Game;->setBusy(Z)V
 
-    .line 769
+    .line 728
     const/4 v2, 0x0
 
     invoke-direct {p0, p1, v2}, Lcom/kidga/comathic/Comathic;->getBombSolutions(Lcom/kidga/common/ui/Cell;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 770
+    .line 729
     .local v0, "solutions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     invoke-virtual {p0, v0, v4}, Lcom/kidga/comathic/Comathic;->destroyCells(Ljava/util/ArrayList;I)Z
 
-    .line 802
+    .line 761
     .end local v0    # "solutions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/kidga/common/ui/Cell;>;"
     :cond_1a
     :goto_1a
     return v1
 
-    .line 775
+    .line 734
     :cond_1b
     iput-object p1, p0, Lcom/kidga/comathic/Comathic;->stored:Lcom/kidga/common/ui/Cell;
 
     goto :goto_1a
 
-    .line 776
+    .line 735
     :cond_1e
     if-ne p2, v4, :cond_1a
 
@@ -3739,7 +3739,7 @@
 
     if-eq v3, v4, :cond_1a
 
-    .line 777
+    .line 736
     :cond_3c
     iget-object v3, p0, Lcom/kidga/comathic/Comathic;->stored:Lcom/kidga/common/ui/Cell;
 
@@ -3753,7 +3753,7 @@
 
     if-le v3, v4, :cond_51
 
-    .line 778
+    .line 737
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     iget-object v3, p0, Lcom/kidga/comathic/Comathic;->stored:Lcom/kidga/common/ui/Cell;
@@ -3762,10 +3762,10 @@
 
     move v1, v2
 
-    .line 779
+    .line 738
     goto :goto_1a
 
-    .line 781
+    .line 740
     :cond_51
     iget-object v3, p0, Lcom/kidga/comathic/Comathic;->stored:Lcom/kidga/common/ui/Cell;
 
@@ -3779,7 +3779,7 @@
 
     if-ge v3, v4, :cond_66
 
-    .line 782
+    .line 741
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     iget-object v3, p0, Lcom/kidga/comathic/Comathic;->stored:Lcom/kidga/common/ui/Cell;
@@ -3788,10 +3788,10 @@
 
     move v1, v2
 
-    .line 783
+    .line 742
     goto :goto_1a
 
-    .line 785
+    .line 744
     :cond_66
     iget-object v3, p0, Lcom/kidga/comathic/Comathic;->stored:Lcom/kidga/common/ui/Cell;
 
@@ -3805,7 +3805,7 @@
 
     if-le v3, v4, :cond_7b
 
-    .line 786
+    .line 745
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     iget-object v3, p0, Lcom/kidga/comathic/Comathic;->stored:Lcom/kidga/common/ui/Cell;
@@ -3814,10 +3814,10 @@
 
     move v1, v2
 
-    .line 787
+    .line 746
     goto :goto_1a
 
-    .line 789
+    .line 748
     :cond_7b
     iget-object v3, p0, Lcom/kidga/comathic/Comathic;->stored:Lcom/kidga/common/ui/Cell;
 
@@ -3831,7 +3831,7 @@
 
     if-ge v3, v4, :cond_1a
 
-    .line 790
+    .line 749
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     iget-object v3, p0, Lcom/kidga/comathic/Comathic;->stored:Lcom/kidga/common/ui/Cell;
@@ -3840,7 +3840,7 @@
 
     move v1, v2
 
-    .line 791
+    .line 750
     goto :goto_1a
 .end method
 
@@ -3848,7 +3848,7 @@
     .registers 2
 
     .prologue
-    .line 735
+    .line 694
     const/4 v0, 0x0
 
     return v0
@@ -3909,7 +3909,7 @@
     .registers 1
 
     .prologue
-    .line 931
+    .line 890
     return-void
 .end method
 
@@ -3918,14 +3918,14 @@
     .param p1, "restart"    # Z
 
     .prologue
-    .line 164
+    .line 166
     if-eqz p1, :cond_7
 
     iget-object v0, p0, Lcom/kidga/comathic/Comathic;->adHandler:Lcom/kidga/common/ad/AdHandler;
 
     invoke-virtual {v0}, Lcom/kidga/common/ad/AdHandler;->reloadAd()V
 
-    .line 165
+    .line 167
     :cond_7
     new-instance v0, Lcom/kidga/common/Game;
 
@@ -3933,7 +3933,7 @@
 
     iput-object v0, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
-    .line 166
+    .line 168
     new-instance v0, Lcom/kidga/common/ui/Board;
 
     iget v1, p0, Lcom/kidga/comathic/Comathic;->size:I
@@ -3946,24 +3946,24 @@
 
     iput-object v0, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
-    .line 167
+    .line 169
     iget-object v0, p0, Lcom/kidga/comathic/Comathic;->game:Lcom/kidga/common/Game;
 
     iget-object v1, p0, Lcom/kidga/comathic/Comathic;->board:Lcom/kidga/common/ui/Board;
 
     invoke-virtual {v0, v1}, Lcom/kidga/common/Game;->initGame(Lcom/kidga/common/ui/Board;)V
 
-    .line 168
+    .line 170
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/kidga/comathic/Comathic;->currentDestroy:I
 
-    .line 169
+    .line 171
     iget v0, p0, Lcom/kidga/comathic/Comathic;->size:I
 
     invoke-direct {p0, v0}, Lcom/kidga/comathic/Comathic;->initGameField(I)V
 
-    .line 171
+    .line 173
     return-void
 .end method
 
@@ -4025,7 +4025,7 @@
 
     new-array v8, v10, [F
 
-    fill-array-data v8, :array_14c
+    fill-array-data v8, :array_13c
 
     .line 307
     .local v8, "roundedCorners":[F
@@ -4214,13 +4214,6 @@
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 370
-    iget-object v10, p0, Lcom/kidga/comathic/Comathic;->levelView:Landroid/widget/TextView;
-
-    iget-object v11, p0, Lcom/kidga/comathic/Comathic;->GAME_FONT:Landroid/graphics/Typeface;
-
-    invoke-virtual {v10, v11}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
-
     .line 371
     iget-object v10, p0, Lcom/kidga/comathic/Comathic;->levelView:Landroid/widget/TextView;
 
@@ -4240,7 +4233,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f07002c
+    const v11, 0x7f07002a
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4295,7 +4288,7 @@
 
     move-result-object v11
 
-    const v12, 0x7f020034
+    const v12, 0x7f020033
 
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -4306,17 +4299,9 @@
     .line 381
     iget-object v10, p0, Lcom/kidga/comathic/Comathic;->levelTypeView:Landroid/widget/ImageView;
 
-    iget-object v11, p0, Lcom/kidga/comathic/Comathic;->displayMetrics:Landroid/util/DisplayMetrics;
+    const/16 v11, 0x12
 
-    iget v11, v11, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    div-int/lit8 v11, v11, 0x9
-
-    iget-object v12, p0, Lcom/kidga/comathic/Comathic;->displayMetrics:Landroid/util/DisplayMetrics;
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    div-int/lit8 v12, v12, 0x9
+    const/16 v12, 0x12
 
     invoke-virtual {v7, v10, v11, v12}, Landroid/widget/TableRow;->addView(Landroid/view/View;II)V
 
@@ -4332,9 +4317,7 @@
     return-void
 
     .line 304
-    nop
-
-    :array_14c
+    :array_13c
     .array-data 4
         0x40a00000    # 5.0f
         0x40a00000    # 5.0f
@@ -4352,6 +4335,6 @@
     .param p1, "elementType"    # I
 
     .prologue
-    .line 934
+    .line 893
     return-void
 .end method

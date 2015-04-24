@@ -45,7 +45,7 @@
 
     iget-object v0, p0, Lcom/hy/minifetion/ui/dl;->a:Lcom/hy/minifetion/ui/FriendListActivity;
 
-    invoke-static {v0}, Lcom/a/h;->b(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/a/e;->b(Landroid/app/Activity;)V
 
     :goto_17
     return-void

@@ -175,9 +175,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->B:Landroid/view/View;
 
     .line 420
-    new-instance v0, Lqb;
+    new-instance v0, Lji;
 
-    invoke-direct {v0, p0}, Lqb;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
+    invoke-direct {v0, p0}, Lji;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->C:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshListViewEx$OnScrollListenerEx;
 
@@ -290,9 +290,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->B:Landroid/view/View;
 
     .line 420
-    new-instance v0, Lqb;
+    new-instance v0, Lji;
 
-    invoke-direct {v0, p0}, Lqb;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
+    invoke-direct {v0, p0}, Lji;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->C:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshListViewEx$OnScrollListenerEx;
 
@@ -405,9 +405,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->B:Landroid/view/View;
 
     .line 420
-    new-instance v0, Lqb;
+    new-instance v0, Lji;
 
-    invoke-direct {v0, p0}, Lqb;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
+    invoke-direct {v0, p0}, Lji;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->C:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshListViewEx$OnScrollListenerEx;
 
@@ -576,7 +576,7 @@
     .line 282
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->q:Landroid/view/View;
 
-    const v1, 0x7f060491
+    const v1, 0x7f06047c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -589,7 +589,7 @@
     .line 283
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->q:Landroid/view/View;
 
-    const v1, 0x7f06048e
+    const v1, 0x7f060479
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -602,7 +602,7 @@
     .line 284
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->q:Landroid/view/View;
 
-    const v1, 0x7f06048f
+    const v1, 0x7f06047a
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -615,7 +615,7 @@
     .line 285
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->q:Landroid/view/View;
 
-    const v1, 0x7f060492
+    const v1, 0x7f06047d
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -628,7 +628,7 @@
     .line 286
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->q:Landroid/view/View;
 
-    const v1, 0x7f060451
+    const v1, 0x7f06043c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -641,7 +641,7 @@
     .line 287
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->q:Landroid/view/View;
 
-    const v1, 0x7f060494
+    const v1, 0x7f06047f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -667,7 +667,7 @@
     .line 289
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->q:Landroid/view/View;
 
-    const v1, 0x7f06048d
+    const v1, 0x7f060478
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -691,7 +691,7 @@
     .line 291
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->q:Landroid/view/View;
 
-    const v1, 0x7f06048c
+    const v1, 0x7f060477
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -704,7 +704,7 @@
     .line 292
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->q:Landroid/view/View;
 
-    const v1, 0x7f060443
+    const v1, 0x7f06042e
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -760,7 +760,7 @@
     .line 305
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->q:Landroid/view/View;
 
-    const v1, 0x7f060490
+    const v1, 0x7f06047b
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -833,7 +833,7 @@
     .line 856
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->A:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0604a4
+    const v1, 0x7f06048f
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -844,7 +844,7 @@
     .line 857
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->A:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f0604a5
+    const v2, 0x7f060490
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -863,12 +863,12 @@
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
     .line 860
-    const v2, 0x7f0a034d
+    const v2, 0x7f0a032a
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
     .line 861
-    const v2, 0x7f020689
+    const v2, 0x7f020669
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -880,7 +880,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f07005a
+    const v2, 0x7f070043
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -892,7 +892,7 @@
     .line 865
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->A:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f02068a
+    const v1, 0x7f02066a
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
@@ -1236,18 +1236,18 @@
 
     move-result-object v1
 
-    const v3, 0x7f070057
+    const v3, 0x7f070040
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v3
 
     .line 360
-    const v4, 0x7f020641
+    const v4, 0x7f020621
 
-    new-instance v5, Lqe;
+    new-instance v5, Ljl;
 
-    invoke-direct {v5, p0, p1}, Lqe;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;Ljava/lang/String;)V
+    invoke-direct {v5, p0, p1}, Ljl;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;Ljava/lang/String;)V
 
     move-object v1, p1
 
@@ -1350,9 +1350,9 @@
     .line 813
     const-string/jumbo v1, "follow.add"
 
-    new-instance v2, Lql;
+    new-instance v2, Ljs;
 
-    invoke-direct {v2, p0}, Lql;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
+    invoke-direct {v2, p0}, Ljs;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
 
     .line 812
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1414,9 +1414,9 @@
     const-string/jumbo v1, "follow.state"
 
     .line 914
-    new-instance v2, Lqd;
+    new-instance v2, Ljk;
 
-    invoke-direct {v2, p0}, Lqd;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
+    invoke-direct {v2, p0}, Ljk;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
 
     .line 912
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1448,7 +1448,7 @@
     .line 875
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->A:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0604a4
+    const v1, 0x7f06048f
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -1459,7 +1459,7 @@
     .line 876
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;->A:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f0604a5
+    const v2, 0x7f060490
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -1468,7 +1468,7 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 877
-    const v2, 0x7f0a034e
+    const v2, 0x7f0a032b
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -1508,9 +1508,9 @@
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->setAnimation(Landroid/view/animation/Animation;)V
 
     .line 884
-    new-instance v1, Lqc;
+    new-instance v1, Ljj;
 
-    invoke-direct {v1, p0}, Lqc;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
+    invoke-direct {v1, p0}, Ljj;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -1705,9 +1705,9 @@
     const-string/jumbo v1, "comment.add"
 
     .line 693
-    new-instance v2, Lqk;
+    new-instance v2, Ljr;
 
-    invoke-direct {v2, p0, p2}, Lqk;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p2}, Ljr;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;Ljava/lang/String;)V
 
     .line 691
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1867,9 +1867,9 @@
     const-string/jumbo v1, "comment.delete"
 
     .line 532
-    new-instance v2, Lqg;
+    new-instance v2, Ljn;
 
-    invoke-direct {v2, p0, p1}, Lqg;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Ljn;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;Ljava/lang/String;)V
 
     .line 530
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -2028,9 +2028,9 @@
 
     const-string/jumbo v1, "comment.commend"
 
-    new-instance v2, Lqi;
+    new-instance v2, Ljp;
 
-    invoke-direct {v2, p0, p1, p3, p2}, Lqi;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;Ljava/lang/String;ZI)V
+    invoke-direct {v2, p0, p1, p3, p2}, Ljp;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;Ljava/lang/String;ZI)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -2416,7 +2416,7 @@
     const-string/jumbo v7, "comment.reply"
 
     .line 635
-    new-instance v0, Lqj;
+    new-instance v0, Ljq;
 
     move-object v1, p0
 
@@ -2428,7 +2428,7 @@
 
     move-object v5, p1
 
-    invoke-direct/range {v0 .. v5}, Lqj;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Ljq;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 633
     invoke-virtual {v6, v7, v0}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -2482,9 +2482,9 @@
     const-string/jumbo v1, "comment.report"
 
     .line 565
-    new-instance v2, Lqh;
+    new-instance v2, Ljo;
 
-    invoke-direct {v2, p0}, Lqh;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
+    invoke-direct {v2, p0}, Ljo;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
 
     .line 563
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -2528,9 +2528,9 @@
 
     const-string/jumbo v1, "comment.get"
 
-    new-instance v2, Lqf;
+    new-instance v2, Ljm;
 
-    invoke-direct {v2, p0}, Lqf;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
+    invoke-direct {v2, p0}, Ljm;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentListManager;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 

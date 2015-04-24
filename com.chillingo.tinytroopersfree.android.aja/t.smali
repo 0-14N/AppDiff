@@ -7,7 +7,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/unity3d/player/p;
+    value = Lcom/unity3d/player/UnityPlayer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,14 +17,14 @@
 
 
 # instance fields
-.field private synthetic a:Lcom/unity3d/player/p;
+.field private synthetic a:Lcom/unity3d/player/UnityPlayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/unity3d/player/p;)V
+.method constructor <init>(Lcom/unity3d/player/UnityPlayer;)V
     .registers 2
 
-    iput-object p1, p0, Lcom/unity3d/player/t;->a:Lcom/unity3d/player/p;
+    iput-object p1, p0, Lcom/unity3d/player/t;->a:Lcom/unity3d/player/UnityPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,39 +34,26 @@
 
 # virtual methods
 .method public final run()V
-    .registers 7
+    .registers 3
 
-    iget-object v0, p0, Lcom/unity3d/player/t;->a:Lcom/unity3d/player/p;
+    iget-object v0, p0, Lcom/unity3d/player/t;->a:Lcom/unity3d/player/UnityPlayer;
 
-    invoke-static {v0}, Lcom/unity3d/player/p;->e(Lcom/unity3d/player/p;)Lcom/unity3d/player/UnityPlayer;
+    invoke-static {v0}, Lcom/unity3d/player/UnityPlayer;->l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/unity3d/player/t;->a:Lcom/unity3d/player/p;
+    if-eqz v0, :cond_13
 
-    invoke-static {v1}, Lcom/unity3d/player/p;->n(Lcom/unity3d/player/p;)F
+    iget-object v0, p0, Lcom/unity3d/player/t;->a:Lcom/unity3d/player/UnityPlayer;
 
-    move-result v1
+    invoke-static {v0}, Lcom/unity3d/player/UnityPlayer;->l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;
 
-    iget-object v2, p0, Lcom/unity3d/player/t;->a:Lcom/unity3d/player/p;
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/unity3d/player/p;->o(Lcom/unity3d/player/p;)F
+    const/16 v1, 0x8
 
-    move-result v2
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    iget-object v3, p0, Lcom/unity3d/player/t;->a:Lcom/unity3d/player/p;
-
-    invoke-static {v3}, Lcom/unity3d/player/p;->p(Lcom/unity3d/player/p;)F
-
-    move-result v3
-
-    iget-object v4, p0, Lcom/unity3d/player/t;->a:Lcom/unity3d/player/p;
-
-    invoke-static {v4}, Lcom/unity3d/player/p;->q(Lcom/unity3d/player/p;)J
-
-    move-result-wide v4
-
-    invoke-virtual/range {v0 .. v5}, Lcom/unity3d/player/UnityPlayer;->nativeLinearAcc(FFFJ)V
-
+    :cond_13
     return-void
 .end method

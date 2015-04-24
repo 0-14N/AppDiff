@@ -37,31 +37,12 @@
 .field private m:Ljava/io/Writer;
 
 .field private final n:Ljava/util/LinkedHashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/LinkedHashMap",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/c/a/a/a/a/a/f;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private o:I
 
 .field private p:J
 
 .field private final q:Ljava/util/concurrent/Callable;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/Callable",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -177,11 +158,6 @@
 
 .method public static a(Ljava/io/File;IIJI)Lcom/c/a/a/a/a/a/a;
     .registers 13
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const-wide/16 v0, 0x0
 
@@ -378,11 +354,6 @@
 
 .method private declared-synchronized a(Ljava/lang/String;J)Lcom/c/a/a/a/a/a/d;
     .registers 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/4 v1, 0x0
 
@@ -525,11 +496,6 @@
 
 .method static synthetic a(Lcom/c/a/a/a/a/a/a;Lcom/c/a/a/a/a/a/d;Z)V
     .registers 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-direct {p0, p1, p2}, Lcom/c/a/a/a/a/a/a;->a(Lcom/c/a/a/a/a/a/d;Z)V
 
@@ -538,11 +504,6 @@
 
 .method private declared-synchronized a(Lcom/c/a/a/a/a/a/d;Z)V
     .registers 13
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 
@@ -875,11 +836,6 @@
 
 .method private static a(Ljava/io/File;)V
     .registers 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -905,11 +861,6 @@
 
 .method private static a(Ljava/io/File;Ljava/io/File;Z)V
     .registers 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     if-eqz p2, :cond_5
 
@@ -942,11 +893,6 @@
 
 .method static synthetic b(Lcom/c/a/a/a/a/a/a;)V
     .registers 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-direct {p0}, Lcom/c/a/a/a/a/a/a;->h()V
 
@@ -955,11 +901,6 @@
 
 .method private c()V
     .registers 9
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     new-instance v1, Lcom/c/a/a/a/a/a/i;
 
@@ -1153,11 +1094,6 @@
 
 .method static synthetic c(Lcom/c/a/a/a/a/a/a;)V
     .registers 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-direct {p0}, Lcom/c/a/a/a/a/a/a;->i()V
 
@@ -1166,11 +1102,6 @@
 
 .method private d()V
     .registers 9
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/4 v2, 0x0
 
@@ -1276,11 +1207,6 @@
 
 .method private d(Ljava/lang/String;)V
     .registers 9
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/16 v1, 0x20
 
@@ -1511,11 +1437,6 @@
 
 .method private declared-synchronized e()V
     .registers 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     monitor-enter p0
 
@@ -1778,11 +1699,6 @@
 
 .method static synthetic e(Lcom/c/a/a/a/a/a/a;)V
     .registers 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-direct {p0}, Lcom/c/a/a/a/a/a/a;->e()V
 
@@ -1905,11 +1821,6 @@
 
 .method private h()V
     .registers 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     :goto_0
     iget-wide v0, p0, Lcom/c/a/a/a/a/a/a;->k:J
@@ -1952,11 +1863,6 @@
 
 .method private i()V
     .registers 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     :goto_0
     iget v0, p0, Lcom/c/a/a/a/a/a/a;->l:I
@@ -1999,11 +1905,6 @@
 # virtual methods
 .method public declared-synchronized a(Ljava/lang/String;)Lcom/c/a/a/a/a/a/g;
     .registers 12
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/4 v4, 0x0
 
@@ -2197,11 +2098,6 @@
 
 .method public a()V
     .registers 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-virtual {p0}, Lcom/c/a/a/a/a/a/a;->close()V
 
@@ -2214,11 +2110,6 @@
 
 .method public b(Ljava/lang/String;)Lcom/c/a/a/a/a/a/d;
     .registers 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const-wide/16 v0, -0x1
 
@@ -2231,11 +2122,6 @@
 
 .method public declared-synchronized c(Ljava/lang/String;)Z
     .registers 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/4 v1, 0x0
 
@@ -2418,11 +2304,6 @@
 
 .method public declared-synchronized close()V
     .registers 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     monitor-enter p0
 

@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/gm;->a:Lcom/youku/meidian/activity/VideoShareThumbActivity_;
 
-    invoke-virtual {v0}, Lcom/youku/meidian/activity/VideoShareThumbActivity_;->d()V
+    invoke-virtual {v0}, Lcom/youku/meidian/activity/VideoShareThumbActivity;->onBackPressed()V
 
     return-void
 .end method

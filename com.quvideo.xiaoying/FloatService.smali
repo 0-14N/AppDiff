@@ -78,9 +78,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/memfloat/FloatService;->u:Landroid/os/Handler;
 
     .line 165
-    new-instance v0, Lako;
+    new-instance v0, Ladu;
 
-    invoke-direct {v0, p0}, Lako;-><init>(Lcom/quvideo/xiaoying/common/memfloat/FloatService;)V
+    invoke-direct {v0, p0}, Ladu;-><init>(Lcom/quvideo/xiaoying/common/memfloat/FloatService;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/memfloat/FloatService;->v:Ljava/lang/Runnable;
 
@@ -210,18 +210,18 @@
     .line 115
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/memfloat/FloatService;->d:Landroid/view/View;
 
-    new-instance v1, Lakp;
+    new-instance v1, Ladv;
 
-    invoke-direct {v1, p0}, Lakp;-><init>(Lcom/quvideo/xiaoying/common/memfloat/FloatService;)V
+    invoke-direct {v1, p0}, Ladv;-><init>(Lcom/quvideo/xiaoying/common/memfloat/FloatService;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 144
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/memfloat/FloatService;->q:Landroid/widget/ImageView;
 
-    new-instance v1, Lakq;
+    new-instance v1, Ladw;
 
-    invoke-direct {v1, p0}, Lakq;-><init>(Lcom/quvideo/xiaoying/common/memfloat/FloatService;)V
+    invoke-direct {v1, p0}, Ladw;-><init>(Lcom/quvideo/xiaoying/common/memfloat/FloatService;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

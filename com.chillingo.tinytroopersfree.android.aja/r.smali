@@ -7,7 +7,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/unity3d/player/p;
+    value = Lcom/unity3d/player/UnityPlayer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,14 +17,14 @@
 
 
 # instance fields
-.field private synthetic a:Lcom/unity3d/player/p;
+.field private synthetic a:Lcom/unity3d/player/UnityPlayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/unity3d/player/p;)V
+.method constructor <init>(Lcom/unity3d/player/UnityPlayer;)V
     .registers 2
 
-    iput-object p1, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/p;
+    iput-object p1, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/UnityPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,39 +34,59 @@
 
 # virtual methods
 .method public final run()V
-    .registers 7
+    .registers 4
 
-    iget-object v0, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/p;
+    const/16 v2, 0xb
 
-    invoke-static {v0}, Lcom/unity3d/player/p;->e(Lcom/unity3d/player/p;)Lcom/unity3d/player/UnityPlayer;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v0, v2, :cond_12
+
+    iget-object v0, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-static {v0}, Lcom/unity3d/player/UnityPlayer;->i(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/UnityGL;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/p;
+    check-cast v0, Lcom/unity3d/player/q;
 
-    invoke-static {v1}, Lcom/unity3d/player/p;->f(Lcom/unity3d/player/p;)F
+    const/4 v1, 0x0
 
-    move-result v1
+    invoke-virtual {v0, v1}, Lcom/unity3d/player/q;->setPreserveEGLContextOnPause(Z)V
 
-    iget-object v2, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/p;
+    :cond_12
+    iget-object v0, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/UnityPlayer;
 
-    invoke-static {v2}, Lcom/unity3d/player/p;->g(Lcom/unity3d/player/p;)F
+    invoke-static {v0}, Lcom/unity3d/player/UnityPlayer;->i(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/UnityGL;
 
-    move-result v2
+    move-result-object v0
 
-    iget-object v3, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/p;
+    invoke-interface {v0}, Lcom/unity3d/player/UnityGL;->onPause()V
 
-    invoke-static {v3}, Lcom/unity3d/player/p;->h(Lcom/unity3d/player/p;)F
+    iget-object v0, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/UnityPlayer;
 
-    move-result v3
+    invoke-static {v0}, Lcom/unity3d/player/UnityPlayer;->i(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/UnityGL;
 
-    iget-object v4, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/p;
+    move-result-object v0
 
-    invoke-static {v4}, Lcom/unity3d/player/p;->i(Lcom/unity3d/player/p;)J
+    invoke-interface {v0}, Lcom/unity3d/player/UnityGL;->onResume()V
 
-    move-result-wide v4
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual/range {v0 .. v5}, Lcom/unity3d/player/UnityPlayer;->nativeGyro(FFFJ)V
+    if-lt v0, v2, :cond_34
 
+    iget-object v0, p0, Lcom/unity3d/player/r;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-static {v0}, Lcom/unity3d/player/UnityPlayer;->i(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/UnityGL;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/unity3d/player/q;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/unity3d/player/q;->setPreserveEGLContextOnPause(Z)V
+
+    :cond_34
     return-void
 .end method

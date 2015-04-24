@@ -36,7 +36,7 @@
 
     .prologue
     .line 21
-    invoke-super {p0}, Lcom/guangjieba/share/ui/category/ah;->f()V
+    invoke-super {p0}, Lcom/guangjieba/share/ui/category/ah;->g()V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
 
     .prologue
     .line 21
-    invoke-super {p0}, Lcom/guangjieba/share/ui/category/ah;->g()V
+    invoke-super {p0}, Lcom/guangjieba/share/ui/category/ah;->f()V
 
     return-void
 .end method
@@ -71,18 +71,18 @@
     .registers 4
 
     .prologue
-    .line 96
-    new-instance v0, Lcom/guangjieba/share/ui/category/ap;
+    .line 114
+    new-instance v0, Lcom/guangjieba/share/ui/category/aq;
 
     const-string v1, ""
 
     const-string v2, ""
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/guangjieba/share/ui/category/ap;-><init>(Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/guangjieba/share/ui/category/aq;-><init>(Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v0}, Lb/a/a/a;->a(Lb/a/a/b;)V
 
-    .line 110
+    .line 128
     return-void
 .end method
 
@@ -116,18 +116,18 @@
     .registers 4
 
     .prologue
-    .line 114
-    new-instance v0, Lcom/guangjieba/share/ui/category/aq;
+    .line 96
+    new-instance v0, Lcom/guangjieba/share/ui/category/ap;
 
     const-string v1, ""
 
     const-string v2, ""
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/guangjieba/share/ui/category/aq;-><init>(Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/guangjieba/share/ui/category/ap;-><init>(Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v0}, Lb/a/a/a;->a(Lb/a/a/b;)V
 
-    .line 128
+    .line 110
     return-void
 .end method
 
@@ -149,7 +149,7 @@
 
     if-eqz v2, :cond_3e
 
-    const-string v0, "api_method"
+    const-string v0, "api_url"
 
     invoke-virtual {v2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -158,27 +158,6 @@
     if-eqz v0, :cond_1c
 
     :try_start_14
-    const-string v0, "api_method"
-
-    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;->b:Ljava/lang/String;
-    :try_end_1c
-    .catch Ljava/lang/ClassCastException; {:try_start_14 .. :try_end_1c} :catch_63
-
-    :cond_1c
-    :goto_1c
-    const-string v0, "api_url"
-
-    invoke-virtual {v2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2c
-
-    :try_start_24
     const-string v0, "api_url"
 
     invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -186,20 +165,20 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;->a:Ljava/lang/String;
-    :try_end_2c
-    .catch Ljava/lang/ClassCastException; {:try_start_24 .. :try_end_2c} :catch_6c
+    :try_end_1c
+    .catch Ljava/lang/ClassCastException; {:try_start_14 .. :try_end_1c} :catch_63
 
-    :cond_2c
-    :goto_2c
+    :cond_1c
+    :goto_1c
     const-string v0, "listCategoryType"
 
     invoke-virtual {v2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3e
+    if-eqz v0, :cond_2e
 
-    :try_start_34
+    :try_start_24
     const-string v0, "listCategoryType"
 
     invoke-virtual {v2, v0}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
@@ -209,8 +188,29 @@
     check-cast v0, Lcom/guangjieba/share/ui/category/an;
 
     iput-object v0, p0, Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;->c:Lcom/guangjieba/share/ui/category/an;
+    :try_end_2e
+    .catch Ljava/lang/ClassCastException; {:try_start_24 .. :try_end_2e} :catch_6c
+
+    :cond_2e
+    :goto_2e
+    const-string v0, "api_method"
+
+    invoke-virtual {v2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3e
+
+    :try_start_36
+    const-string v0, "api_method"
+
+    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;->b:Ljava/lang/String;
     :try_end_3e
-    .catch Ljava/lang/ClassCastException; {:try_start_34 .. :try_end_3e} :catch_75
+    .catch Ljava/lang/ClassCastException; {:try_start_36 .. :try_end_3e} :catch_75
 
     :cond_3e
     :goto_3e
@@ -228,21 +228,21 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/guangjieba/share/b/i;->e(Landroid/content/Context;)Lcom/guangjieba/share/b/i;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;->d:Lcom/guangjieba/share/b/h;
-
-    invoke-virtual {p0}, Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v0
-
     invoke-static {v0}, Lcom/guangjieba/share/model/b/b;->a(Landroid/content/Context;)Lcom/guangjieba/share/model/b/b;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;->f:Lcom/guangjieba/share/model/b/a;
+
+    invoke-virtual {p0}, Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/guangjieba/share/b/i;->e(Landroid/content/Context;)Lcom/guangjieba/share/b/i;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/guangjieba/share/ui/category/ListWithCategoryFragment_;->d:Lcom/guangjieba/share/b/h;
 
     .line 40
     invoke-super {p0, p1}, Lcom/guangjieba/share/ui/category/ah;->onCreate(Landroid/os/Bundle;)V
@@ -274,7 +274,7 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_2c
+    goto :goto_2e
 
     :catch_75
     move-exception v0

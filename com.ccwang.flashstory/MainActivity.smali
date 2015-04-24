@@ -112,7 +112,9 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 4
+    .registers 6
+
+    const/4 v3, 0x0
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
@@ -135,6 +137,22 @@
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p0}, Lcom/ccwang/flashstory/MainActivity;->a()V
+
+    invoke-static {p0}, Lcom/ccwang/flash/parent/AdManager;->getInstance(Landroid/content/Context;)Lcom/ccwang/flash/parent/AdManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Lcom/ccwang/flash/parent/AdManager;->setEnableDebugLog(Z)V
+
+    invoke-static {p0}, Lcom/ccwang/flash/parent/AdManager;->getInstance(Landroid/content/Context;)Lcom/ccwang/flash/parent/AdManager;
+
+    move-result-object v0
+
+    const-string v1, "6477577d830013dc"
+
+    const-string v2, "ee0a9b489fc24686"
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/ccwang/flash/parent/AdManager;->init(Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void
 .end method

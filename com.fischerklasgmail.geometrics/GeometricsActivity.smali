@@ -199,6 +199,33 @@
     return-void
 .end method
 
+.method private initMyAD()V
+    .registers 5
+
+    .prologue
+    const/4 v3, -0x2
+
+    new-instance v0, Lcom/adview/AdViewLayout;
+
+    const-string v2, "SDK2012201508075067pwlc3l8okicrt"
+
+    invoke-direct {v0, p0, v2}, Lcom/adview/AdViewLayout;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
+
+    .local v0, "adViewLayout":Lcom/adview/AdViewLayout;
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v1, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .local v1, "params":Landroid/widget/FrameLayout$LayoutParams;
+    const/16 v2, 0x50
+
+    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {p0, v0, v1}, Lcom/fischerklasgmail/geometrics/GeometricsActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
 .method private resizeBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     .registers 14
     .param p1, "bm"    # Landroid/graphics/Bitmap;
@@ -557,7 +584,7 @@
 
     sget-object v7, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
 
-    const-string v8, "a14f1259d9a0c72"
+    const-string v8, "a15002ca975eadd"
 
     invoke-direct {v1, p0, v7, v8}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
 
@@ -760,6 +787,8 @@
     const/high16 v11, 0x7f030000
 
     invoke-virtual {p0, v11}, Lcom/fischerklasgmail/geometrics/GeometricsActivity;->setContentView(I)V
+
+    invoke-direct {p0}, Lcom/fischerklasgmail/geometrics/GeometricsActivity;->initMyAD()V
 
     .line 61
     const v11, 0x7f060001

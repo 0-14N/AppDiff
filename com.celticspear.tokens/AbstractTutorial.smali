@@ -14,7 +14,7 @@
 
 .field protected final text:Lorg/andengine/entity/text/Text;
 
-.field protected final textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
+.field protected final textBubble:Lorg/andengine/entity/sprite/Sprite;
 
 
 # direct methods
@@ -26,22 +26,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 35
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
+    .line 32
     const-string v0, "JandaManateeSolidBLUE"
 
     iput-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->fontName:Ljava/lang/String;
 
-    .line 36
+    .line 35
     iput-object p1, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->mContext:Lcom/celticspear/tokens/TokensActivity;
 
-    .line 37
+    .line 36
     iput-object p2, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    .line 38
-    new-instance v2, Lorg/andengine/entity/sprite/ButtonSprite;
+    .line 37
+    new-instance v2, Lorg/andengine/entity/sprite/Sprite;
 
     invoke-virtual {p1}, Lcom/celticspear/tokens/TokensActivity;->getCalculatedCameraHeight()F
 
@@ -67,14 +67,14 @@
 
     move-result-object v4
 
-    invoke-direct {v2, v1, v3, v0, v4}, Lorg/andengine/entity/sprite/ButtonSprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
+    invoke-direct {v2, v1, v3, v0, v4}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    iput-object v2, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
+    iput-object v2, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/Sprite;
 
-    .line 39
+    .line 38
     new-instance v0, Lorg/andengine/entity/text/Text;
 
-    .line 40
+    .line 39
     invoke-virtual {p1}, Lcom/celticspear/tokens/TokensActivity;->getFonts()Ljava/util/Map;
 
     move-result-object v2
@@ -87,13 +87,13 @@
 
     check-cast v3, Lorg/andengine/opengl/font/IFont;
 
-    .line 41
+    .line 40
     const-string v4, "Tap to pop group of 3 more crystals"
 
-    .line 42
+    .line 41
     const/16 v5, 0x3e8
 
-    .line 43
+    .line 42
     new-instance v6, Lorg/andengine/entity/text/TextOptions;
 
     sget-object v2, Lorg/andengine/entity/text/AutoWrap;->WORDS:Lorg/andengine/entity/text/AutoWrap;
@@ -108,7 +108,7 @@
 
     invoke-direct {v6, v2, v7, v8, v1}, Lorg/andengine/entity/text/TextOptions;-><init>(Lorg/andengine/entity/text/AutoWrap;FLorg/andengine/util/HorizontalAlign;F)V
 
-    .line 44
+    .line 43
     invoke-virtual {p1}, Lcom/celticspear/tokens/TokensActivity;->getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;
 
     move-result-object v7
@@ -117,18 +117,18 @@
 
     invoke-direct/range {v0 .. v7}, Lorg/andengine/entity/text/Text;-><init>(FFLorg/andengine/opengl/font/IFont;Ljava/lang/CharSequence;ILorg/andengine/entity/text/TextOptions;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 39
+    .line 38
     iput-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->text:Lorg/andengine/entity/text/Text;
 
-    .line 45
+    .line 44
     iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->text:Lorg/andengine/entity/text/Text;
 
     const/16 v2, 0xc
 
     invoke-virtual {v0, v2}, Lorg/andengine/entity/text/Text;->setZIndex(I)V
 
-    .line 47
-    iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
+    .line 46
+    iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/Sprite;
 
     iget-object v2, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->text:Lorg/andengine/entity/text/Text;
 
@@ -136,53 +136,39 @@
 
     move-result v2
 
-    iget-object v3, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
+    iget-object v3, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/Sprite;
 
-    invoke-virtual {v3}, Lorg/andengine/entity/sprite/ButtonSprite;->getWidth()F
+    invoke-virtual {v3}, Lorg/andengine/entity/sprite/Sprite;->getWidth()F
 
     move-result v3
 
     div-float/2addr v2, v3
 
-    invoke-virtual {v0, v2}, Lorg/andengine/entity/sprite/ButtonSprite;->setScale(F)V
+    invoke-virtual {v0, v2}, Lorg/andengine/entity/sprite/Sprite;->setScale(F)V
 
-    .line 48
-    iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
+    .line 47
+    iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/Sprite;
 
     const/16 v2, 0x96
 
-    invoke-virtual {v0, v2}, Lorg/andengine/entity/sprite/ButtonSprite;->setZIndex(I)V
+    invoke-virtual {v0, v2}, Lorg/andengine/entity/sprite/Sprite;->setZIndex(I)V
 
-    .line 49
-    iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
+    .line 48
+    iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/Sprite;
 
     iget-object v2, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->text:Lorg/andengine/entity/text/Text;
 
-    invoke-virtual {v0, v2}, Lorg/andengine/entity/sprite/ButtonSprite;->attachChild(Lorg/andengine/entity/IEntity;)V
+    invoke-virtual {v0, v2}, Lorg/andengine/entity/sprite/Sprite;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 50
-    iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
-
-    new-instance v2, Lcom/celticspear/tokens/tutorial/AbstractTutorial$1;
-
-    invoke-direct {v2, p0}, Lcom/celticspear/tokens/tutorial/AbstractTutorial$1;-><init>(Lcom/celticspear/tokens/tutorial/AbstractTutorial;)V
-
-    invoke-virtual {v0, v2}, Lorg/andengine/entity/sprite/ButtonSprite;->setOnClickListener(Lorg/andengine/entity/sprite/ButtonSprite$OnClickListener;)V
-
-    .line 56
-    iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
-
-    invoke-virtual {p2, v0}, Lorg/andengine/entity/scene/Scene;->registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V
-
-    .line 57
-    iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
+    .line 49
+    iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/Sprite;
 
     invoke-virtual {p2, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 59
+    .line 51
     new-instance v2, Lorg/andengine/entity/sprite/AnimatedSprite;
 
-    .line 60
+    .line 52
     invoke-virtual {p1}, Lcom/celticspear/tokens/TokensActivity;->getTiledTextureRegions()Ljava/util/Map;
 
     move-result-object v0
@@ -195,29 +181,29 @@
 
     check-cast v0, Lorg/andengine/opengl/texture/region/ITiledTextureRegion;
 
-    .line 61
+    .line 53
     invoke-virtual {p1}, Lcom/celticspear/tokens/TokensActivity;->getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;
 
     move-result-object v3
 
     invoke-direct {v2, v1, v1, v0, v3}, Lorg/andengine/entity/sprite/AnimatedSprite;-><init>(FFLorg/andengine/opengl/texture/region/ITiledTextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 59
+    .line 51
     iput-object v2, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->animatedFinger:Lorg/andengine/entity/sprite/AnimatedSprite;
 
-    .line 62
+    .line 54
     iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->animatedFinger:Lorg/andengine/entity/sprite/AnimatedSprite;
 
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1}, Lorg/andengine/entity/sprite/AnimatedSprite;->setZIndex(I)V
 
-    .line 63
+    .line 55
     iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->animatedFinger:Lorg/andengine/entity/sprite/AnimatedSprite;
 
     invoke-virtual {p2, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 64
+    .line 56
     return-void
 .end method
 
@@ -233,24 +219,24 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 129
+    .line 121
     invoke-virtual {p1}, Lorg/andengine/entity/sprite/AnimatedSprite;->getX()F
 
     move-result v3
 
-    .line 130
+    .line 122
     .local v3, "oldX":F
     invoke-virtual {p1}, Lorg/andengine/entity/sprite/AnimatedSprite;->getY()F
 
     move-result v5
 
-    .line 131
+    .line 123
     .local v5, "oldY":F
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lorg/andengine/entity/sprite/AnimatedSprite;->setAlpha(F)V
 
-    .line 132
+    .line 124
     const/4 v0, 0x2
 
     new-array v7, v0, [I
@@ -259,7 +245,7 @@
 
     aput v8, v7, v0
 
-    new-instance v0, Lcom/celticspear/tokens/tutorial/AbstractTutorial$4;
+    new-instance v0, Lcom/celticspear/tokens/tutorial/AbstractTutorial$3;
 
     move-object v1, p0
 
@@ -269,11 +255,11 @@
 
     move v6, p4
 
-    invoke-direct/range {v0 .. v6}, Lcom/celticspear/tokens/tutorial/AbstractTutorial$4;-><init>(Lcom/celticspear/tokens/tutorial/AbstractTutorial;Lorg/andengine/entity/sprite/AnimatedSprite;FFFF)V
+    invoke-direct/range {v0 .. v6}, Lcom/celticspear/tokens/tutorial/AbstractTutorial$3;-><init>(Lcom/celticspear/tokens/tutorial/AbstractTutorial;Lorg/andengine/entity/sprite/AnimatedSprite;FFFF)V
 
     invoke-virtual {p1, p2, v7, v8, v0}, Lorg/andengine/entity/sprite/AnimatedSprite;->animate([J[IZLorg/andengine/entity/sprite/AnimatedSprite$IAnimationListener;)V
 
-    .line 168
+    .line 160
     return-void
 .end method
 
@@ -285,25 +271,25 @@
     .param p4, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 67
+    .line 59
     invoke-virtual/range {p1 .. p1}, Lorg/andengine/entity/sprite/Sprite;->getX()F
 
     move-result v5
 
-    .line 68
+    .line 60
     .local v5, "oldX":F
     invoke-virtual/range {p1 .. p1}, Lorg/andengine/entity/sprite/Sprite;->getY()F
 
     move-result v6
 
-    .line 71
+    .line 63
     .local v6, "oldY":F
     new-instance v15, Lorg/andengine/entity/modifier/MoveModifier;
 
     const/high16 v9, 0x40000000    # 2.0f
 
-    .line 72
-    new-instance v1, Lcom/celticspear/tokens/tutorial/AbstractTutorial$2;
+    .line 64
+    new-instance v1, Lcom/celticspear/tokens/tutorial/AbstractTutorial$1;
 
     move-object/from16 v2, p0
 
@@ -315,9 +301,9 @@
 
     move/from16 v8, p3
 
-    invoke-direct/range {v1 .. v8}, Lcom/celticspear/tokens/tutorial/AbstractTutorial$2;-><init>(Lcom/celticspear/tokens/tutorial/AbstractTutorial;Ljava/lang/Runnable;Lorg/andengine/entity/sprite/Sprite;FFFF)V
+    invoke-direct/range {v1 .. v8}, Lcom/celticspear/tokens/tutorial/AbstractTutorial$1;-><init>(Lcom/celticspear/tokens/tutorial/AbstractTutorial;Ljava/lang/Runnable;Lorg/andengine/entity/sprite/Sprite;FFFF)V
 
-    .line 91
+    .line 83
     invoke-static {}, Lorg/andengine/util/modifier/ease/EaseCubicIn;->getInstance()Lorg/andengine/util/modifier/ease/EaseCubicIn;
 
     move-result-object v14
@@ -336,15 +322,15 @@
 
     move-object v13, v1
 
-    .line 71
+    .line 63
     invoke-direct/range {v7 .. v14}, Lorg/andengine/entity/modifier/MoveModifier;-><init>(FFFFFLorg/andengine/entity/modifier/IEntityModifier$IEntityModifierListener;Lorg/andengine/util/modifier/ease/IEaseFunction;)V
 
-    .line 70
+    .line 62
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v15}, Lorg/andengine/entity/sprite/Sprite;->registerEntityModifier(Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 93
+    .line 85
     return-void
 .end method
 
@@ -357,7 +343,7 @@
     .param p5, "isLoopFirst"    # Z
 
     .prologue
-    .line 96
+    .line 88
     const/4 v0, 0x2
 
     new-array v6, v0, [I
@@ -368,7 +354,7 @@
 
     aput v1, v6, v0
 
-    new-instance v0, Lcom/celticspear/tokens/tutorial/AbstractTutorial$3;
+    new-instance v0, Lcom/celticspear/tokens/tutorial/AbstractTutorial$2;
 
     move-object v1, p0
 
@@ -380,11 +366,11 @@
 
     move v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/celticspear/tokens/tutorial/AbstractTutorial$3;-><init>(Lcom/celticspear/tokens/tutorial/AbstractTutorial;Lorg/andengine/entity/sprite/AnimatedSprite;Lorg/andengine/entity/sprite/AnimatedSprite;[JZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/celticspear/tokens/tutorial/AbstractTutorial$2;-><init>(Lcom/celticspear/tokens/tutorial/AbstractTutorial;Lorg/andengine/entity/sprite/AnimatedSprite;Lorg/andengine/entity/sprite/AnimatedSprite;[JZ)V
 
     invoke-virtual {p1, p2, v6, p5, v0}, Lorg/andengine/entity/sprite/AnimatedSprite;->animate([J[IZLorg/andengine/entity/sprite/AnimatedSprite$IAnimationListener;)V
 
-    .line 125
+    .line 117
     return-void
 .end method
 
@@ -395,17 +381,17 @@
     .prologue
     const/high16 v4, 0x40000000    # 2.0f
 
-    .line 171
+    .line 163
     iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->text:Lorg/andengine/entity/text/Text;
 
     invoke-virtual {v0, p1}, Lorg/andengine/entity/text/Text;->setText(Ljava/lang/CharSequence;)V
 
-    .line 172
+    .line 164
     iget-object v0, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->text:Lorg/andengine/entity/text/Text;
 
-    iget-object v1, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
+    iget-object v1, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/Sprite;
 
-    invoke-virtual {v1}, Lorg/andengine/entity/sprite/ButtonSprite;->getWidth()F
+    invoke-virtual {v1}, Lorg/andengine/entity/sprite/Sprite;->getWidth()F
 
     move-result v1
 
@@ -421,9 +407,9 @@
 
     sub-float/2addr v1, v2
 
-    iget-object v2, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/ButtonSprite;
+    iget-object v2, p0, Lcom/celticspear/tokens/tutorial/AbstractTutorial;->textBubble:Lorg/andengine/entity/sprite/Sprite;
 
-    invoke-virtual {v2}, Lorg/andengine/entity/sprite/ButtonSprite;->getHeight()F
+    invoke-virtual {v2}, Lorg/andengine/entity/sprite/Sprite;->getHeight()F
 
     move-result v2
 
@@ -441,6 +427,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/andengine/entity/text/Text;->setPosition(FF)V
 
-    .line 173
+    .line 165
     return-void
 .end method

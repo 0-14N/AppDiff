@@ -464,13 +464,11 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 14
+    .registers 13
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/high16 v11, 0x7f060000
-
-    const/4 v10, 0x0
+    const/high16 v10, 0x7f060000
 
     .line 49
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
@@ -598,7 +596,7 @@
     const v6, 0x1090008
 
     .line 66
-    invoke-static {p0, v11, v6}, Landroid/widget/ArrayAdapter;->createFromResource(Landroid/content/Context;II)Landroid/widget/ArrayAdapter;
+    invoke-static {p0, v10, v6}, Landroid/widget/ArrayAdapter;->createFromResource(Landroid/content/Context;II)Landroid/widget/ArrayAdapter;
 
     move-result-object v1
 
@@ -754,7 +752,7 @@
 
     .line 83
     .local v3, "extras":Landroid/os/Bundle;
-    if-eqz v3, :cond_1f2
+    if-eqz v3, :cond_1ed
 
     .line 84
     const-string v6, "RecordId"
@@ -766,7 +764,7 @@
     sput v6, Lapp/diaryfree/newrecord;->row_id:I
 
     .line 89
-    :goto_11f
+    :goto_11e
     new-instance v6, Lapp/diary/db/dbinterface;
 
     invoke-direct {v6, p0}, Lapp/diary/db/dbinterface;-><init>(Landroid/content/Context;)V
@@ -776,7 +774,7 @@
     .line 91
     sget v6, Lapp/diaryfree/newrecord;->row_id:I
 
-    if-eqz v6, :cond_1ec
+    if-eqz v6, :cond_1e7
 
     .line 92
     new-instance v6, Lapp/diary/db/record;
@@ -785,11 +783,7 @@
 
     sget v8, Lapp/diaryfree/newrecord;->row_id:I
 
-    invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v9
-
-    invoke-direct {v6, v7, v8, v9}, Lapp/diary/db/record;-><init>(Lapp/diary/db/dbinterface;ILjava/lang/Boolean;)V
+    invoke-direct {v6, v7, v8}, Lapp/diary/db/record;-><init>(Lapp/diary/db/dbinterface;I)V
 
     iput-object v6, p0, Lapp/diaryfree/newrecord;->Record:Lapp/diary/db/record;
 
@@ -958,7 +952,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v6, v11}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+    invoke-virtual {v6, v10}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
@@ -971,13 +965,13 @@
     const/4 v4, 0x0
 
     .local v4, "i":I
-    :goto_1e4
+    :goto_1df
     array-length v6, v0
 
-    if-lt v4, v6, :cond_1f6
+    if-lt v4, v6, :cond_1f2
 
     .line 115
-    :goto_1e7
+    :goto_1e2
     iget-object v6, p0, Lapp/diaryfree/newrecord;->spinnerCategory:Landroid/widget/Spinner;
 
     invoke-virtual {v6, v5}, Landroid/widget/Spinner;->setSelection(I)V
@@ -986,7 +980,7 @@
     .end local v0    # "Categories":[Ljava/lang/String;
     .end local v4    # "i":I
     .end local v5    # "index_":I
-    :cond_1ec
+    :cond_1e7
     iget-object v6, p0, Lapp/diaryfree/newrecord;->dba:Lapp/diary/db/dbinterface;
 
     invoke-virtual {v6}, Lapp/diary/db/dbinterface;->close()V
@@ -995,16 +989,18 @@
     return-void
 
     .line 86
-    :cond_1f2
-    sput v10, Lapp/diaryfree/newrecord;->row_id:I
+    :cond_1ed
+    const/4 v6, 0x0
 
-    goto/16 :goto_11f
+    sput v6, Lapp/diaryfree/newrecord;->row_id:I
+
+    goto/16 :goto_11e
 
     .line 110
     .restart local v0    # "Categories":[Ljava/lang/String;
     .restart local v4    # "i":I
     .restart local v5    # "index_":I
-    :cond_1f6
+    :cond_1f2
     aget-object v6, v0, v4
 
     iget-object v7, p0, Lapp/diaryfree/newrecord;->Record:Lapp/diary/db/record;
@@ -1017,19 +1013,19 @@
 
     move-result v6
 
-    if-eqz v6, :cond_206
+    if-eqz v6, :cond_202
 
     .line 111
     move v5, v4
 
     .line 112
-    goto :goto_1e7
+    goto :goto_1e2
 
     .line 109
-    :cond_206
+    :cond_202
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_1e4
+    goto :goto_1df
 .end method
 
 .method protected onCreateDialog(I)Landroid/app/Dialog;

@@ -388,7 +388,7 @@
     iput-boolean v4, p0, Lcom/quvideo/xiaoying/videoeditor/util/TemplateMgr;->B:Z
 
     .line 975
-    new-instance v0, Lbdp;
+    new-instance v0, Lawv;
 
     const/16 v1, 0x64
 
@@ -396,7 +396,7 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lbdp;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/TemplateMgr;IFZ)V
+    invoke-direct {v0, p0, v1, v2, v3}, Lawv;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/TemplateMgr;IFZ)V
 
     invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -6637,11 +6637,11 @@
     if-nez v4, :cond_159
 
     .line 1570
-    new-instance v4, Lbdr;
+    new-instance v4, Lawx;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v4, v0, v3}, Lbdr;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/TemplateMgr;Ljava/util/ArrayList;)V
+    invoke-direct {v4, v0, v3}, Lawx;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/TemplateMgr;Ljava/util/ArrayList;)V
 
     invoke-static {v6, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -8075,9 +8075,9 @@
     if-eqz v0, :cond_6
 
     .line 1984
-    new-instance v0, Lbds;
+    new-instance v0, Lawy;
 
-    invoke-direct {v0, p0}, Lbds;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/TemplateMgr;)V
+    invoke-direct {v0, p0}, Lawy;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/TemplateMgr;)V
 
     .line 2006
     const/4 v1, 0x2
@@ -8713,9 +8713,9 @@
     .line 900
     :cond_d
     :try_start_d
-    new-instance v0, Lbdq;
+    new-instance v0, Laww;
 
-    invoke-direct {v0, p0}, Lbdq;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/TemplateMgr;)V
+    invoke-direct {v0, p0}, Laww;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/TemplateMgr;)V
 
     const/4 v1, 0x1
 
@@ -8726,7 +8726,7 @@
     .line 930
     aput-object p0, v1, v2
 
-    invoke-virtual {v0, v1}, Lbdq;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Laww;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
     :try_end_1b
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_1b} :catch_1c
 

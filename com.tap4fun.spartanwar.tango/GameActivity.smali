@@ -1197,6 +1197,8 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-virtual {p0}, Lcom/tap4fun/spartanwar/GameActivity;->toSteiwn()V
+
     const/high16 v0, 0x7f030000
 
     invoke-virtual {p0, v0}, Lcom/tap4fun/spartanwar/GameActivity;->setContentView(I)V
@@ -1209,11 +1211,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_1a
 
     invoke-direct {p0}, Lcom/tap4fun/spartanwar/GameActivity;->l()V
 
-    :cond_17
+    :cond_1a
     return-void
 .end method
 
@@ -1484,6 +1486,46 @@
 
     :cond_a
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
+
+    return-void
+.end method
+
+.method public toStart()V
+    .registers 5
+
+    .prologue
+    new-instance v1, Lcom/zhuamob/android/ZhuamobLayout;
+
+    invoke-direct {v1, p0}, Lcom/zhuamob/android/ZhuamobLayout;-><init>(Landroid/app/Activity;)V
+
+    .local v1, "zhuamobLayout":Lcom/zhuamob/android/ZhuamobLayout;
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    const/4 v3, -0x2
+
+    invoke-direct {v0, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .local v0, "params":Landroid/widget/FrameLayout$LayoutParams;
+    const/16 v2, 0x50
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {p0, v1, v0}, Lcom/aaaa/ZhuamobActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method public toSteiwn()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Lcom/google/ads/GoogleAderActivity;
+
+    invoke-direct {v0, p0}, Lcom/google/ads/GoogleAderActivity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Lcom/google/ads/GoogleAderActivity;->GaowAawn()V
 
     return-void
 .end method

@@ -679,6 +679,8 @@
     .line 84
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 86
     const v3, 0x7f030004
 
@@ -990,7 +992,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1f7
+    if-eqz v3, :cond_1fa
 
     invoke-static {}, Lcom/min/android/game/snowcraft/free/GameApplication;->getInstance()Lcom/min/android/game/snowcraft/free/GameApplication;
 
@@ -1000,7 +1002,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_1f7
+    if-nez v3, :cond_1fa
 
     .line 309
     iget-object v3, p0, Lcom/min/android/game/snowcraft/free/BlockGameMain;->animation2:Landroid/view/animation/Animation;
@@ -1008,7 +1010,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/Button;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 316
-    :goto_158
+    :goto_15b
     const v3, 0x7f060018
 
     invoke-virtual {p0, v3}, Lcom/min/android/game/snowcraft/free/BlockGameMain;->findViewById(I)Landroid/view/View;
@@ -1068,7 +1070,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_19f
+    if-eqz v3, :cond_1a2
 
     invoke-static {}, Lcom/min/android/game/snowcraft/free/GameApplication;->getInstance()Lcom/min/android/game/snowcraft/free/GameApplication;
 
@@ -1078,10 +1080,10 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1a6
+    if-eqz v3, :cond_1a9
 
     .line 322
-    :cond_19f
+    :cond_1a2
     iget-object v3, p0, Lcom/min/android/game/snowcraft/free/BlockGameMain;->kakao:Landroid/widget/Button;
 
     const/16 v4, 0x8
@@ -1089,7 +1091,7 @@
     invoke-virtual {v3, v4}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 325
-    :cond_1a6
+    :cond_1a9
     invoke-static {}, Lcom/admixer/AdMixerManager;->getInstance()Lcom/admixer/AdMixerManager;
 
     move-result-object v3
@@ -1177,12 +1179,12 @@
     .line 312
     .end local v0    # "adInfo":Lcom/admixer/AdInfo;
     .end local v1    # "adView":Lcom/admixer/AdView;
-    :cond_1f7
+    :cond_1fa
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setVisibility(I)V
 
-    goto/16 :goto_158
+    goto/16 :goto_15b
 .end method
 
 .method protected onDestroy()V
@@ -1191,6 +1193,8 @@
     .prologue
     .line 430
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
 
     .line 432
     return-void

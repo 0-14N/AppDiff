@@ -40,7 +40,7 @@
 
     sput-boolean v0, Lcom/jiuzhansoft/game/GameList2;->isConnectBluetooth:Z
 
-    .line 363
+    .line 32
     return-void
 .end method
 
@@ -102,47 +102,47 @@
 
     .prologue
     .line 50
-    const v8, 0x7f070262
+    const v8, 0x7f0800f3
 
     invoke-virtual {p0, v8}, Lcom/jiuzhansoft/game/GameList2;->findViewById(I)Landroid/view/View;
 
-    move-result-object v8
+    move-result-object v0
 
-    check-cast v8, Landroid/widget/TextView;
+    check-cast v0, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/jiuzhansoft/game/GameList2;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v9
+    move-result-object v8
 
-    const v10, 0x7f0d0131
+    const v9, 0x7f09014a
 
-    invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v8
 
-    invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 51
-    const v8, 0x7f070263
+    const v8, 0x7f0800f4
 
     invoke-virtual {p0, v8}, Lcom/jiuzhansoft/game/GameList2;->findViewById(I)Landroid/view/View;
 
-    move-result-object v8
+    move-result-object v0
 
-    check-cast v8, Landroid/widget/ImageButton;
+    check-cast v0, Landroid/widget/Button;
 
-    invoke-virtual {v8, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 53
-    const v8, 0x7f070207
+    const v8, 0x7f0800d2
 
     invoke-virtual {p0, v8}, Lcom/jiuzhansoft/game/GameList2;->findViewById(I)Landroid/view/View;
 
-    move-result-object v8
+    move-result-object v0
 
-    check-cast v8, Landroid/widget/RelativeLayout;
+    check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v8, p0, Lcom/jiuzhansoft/game/GameList2;->toprlp:Landroid/widget/RelativeLayout;
+    iput-object v0, p0, Lcom/jiuzhansoft/game/GameList2;->toprlp:Landroid/widget/RelativeLayout;
 
     .line 54
     invoke-virtual {p0}, Lcom/jiuzhansoft/game/GameList2;->getWindowManager()Landroid/view/WindowManager;
@@ -362,7 +362,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f0d0132
+    const v10, 0x7f09014b
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -419,7 +419,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f020058
+    const v10, 0x7f02003d
 
     invoke-static {v9, v10}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -513,7 +513,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f02005c
+    const v10, 0x7f020041
 
     invoke-static {v9, v10}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -543,7 +543,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f0d0133
+    const v10, 0x7f09014c
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -685,7 +685,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f02005e
+    const v10, 0x7f020043
 
     invoke-static {v9, v10}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -743,7 +743,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f0d0133
+    const v10, 0x7f09014c
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -884,7 +884,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f02005a
+    const v10, 0x7f02003f
 
     invoke-static {v9, v10}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -914,7 +914,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f0d0133
+    const v10, 0x7f09014c
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1048,7 +1048,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f020062
+    const v10, 0x7f020047
 
     invoke-static {v9, v10}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1078,7 +1078,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f0d0133
+    const v10, 0x7f09014c
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1221,7 +1221,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f0d0133
+    const v10, 0x7f09014c
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1278,7 +1278,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f020060
+    const v10, 0x7f020045
 
     invoke-static {v9, v10}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1344,7 +1344,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f0201e0
+    const v10, 0x7f0200fb
 
     invoke-static {v9, v10}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1441,9 +1441,9 @@
     .param p1, "getindex"    # I
 
     .prologue
-    const v5, 0x7f04000b
+    const v5, 0x7f040008
 
-    const v4, 0x7f040006
+    const v4, 0x7f040003
 
     const/4 v3, 0x5
 
@@ -1610,7 +1610,7 @@
 .end method
 
 .method private tointent(I)V
-    .registers 9
+    .registers 8
     .param p1, "getindex"    # I
 
     .prologue
@@ -1645,59 +1645,59 @@
 
     .line 195
     .local v3, "window":Landroid/view/Window;
-    const v4, 0x7f030052
+    const v4, 0x7f03002d
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setContentView(I)V
 
     .line 197
-    const v4, 0x7f0701e7
+    const v4, 0x7f0800d0
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v0
 
-    check-cast v4, Landroid/widget/LinearLayout;
+    check-cast v0, Landroid/widget/LinearLayout;
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {v4, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 198
-    const v4, 0x7f07014a
+    const v4, 0x7f080081
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v0
 
-    check-cast v4, Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
 
-    const/16 v5, 0x8
+    const/16 v4, 0x8
 
-    invoke-virtual {v4, v5}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 199
-    const v4, 0x7f0701e6
+    const v4, 0x7f0800cf
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v0
 
-    check-cast v4, Landroid/widget/TextView;
+    check-cast v0, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/jiuzhansoft/game/GameList2;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v5
+    move-result-object v4
 
-    const v6, 0x7f0d012e
+    const v5, 0x7f090147
 
-    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 201
-    const v4, 0x7f070148
+    const v4, 0x7f08007f
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -1711,7 +1711,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0d011e
+    const v5, 0x7f090127
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1727,7 +1727,7 @@
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 224
-    const v4, 0x7f070149
+    const v4, 0x7f080080
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -1741,7 +1741,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0d011f
+    const v5, 0x7f090128
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1795,7 +1795,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f020058
+    const v3, 0x7f02003d
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1812,7 +1812,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f02005a
+    const v3, 0x7f02003f
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1829,7 +1829,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f02005c
+    const v3, 0x7f020041
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1846,7 +1846,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f02005e
+    const v3, 0x7f020043
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1865,7 +1865,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f020060
+    const v3, 0x7f020045
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1884,7 +1884,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f020062
+    const v3, 0x7f020047
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1941,7 +1941,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f020059
+    const v3, 0x7f02003e
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1968,7 +1968,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f02005b
+    const v3, 0x7f020040
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1995,7 +1995,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f02005d
+    const v3, 0x7f020042
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -2022,7 +2022,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f02005f
+    const v3, 0x7f020044
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -2051,7 +2051,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f020061
+    const v3, 0x7f020046
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -2082,7 +2082,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f020063
+    const v3, 0x7f020048
 
     invoke-static {v2, v3}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -2126,9 +2126,9 @@
     .prologue
     const/4 v9, -0x1
 
-    const v8, 0x7f04000b
+    const v8, 0x7f040008
 
-    const v7, 0x7f040006
+    const v7, 0x7f040003
 
     const/4 v6, 0x5
 
@@ -2323,7 +2323,7 @@
 .end method
 
 .method public onClick(Landroid/view/View;)V
-    .registers 10
+    .registers 11
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
@@ -2336,7 +2336,7 @@
 
     move-result v0
 
-    sparse-switch v0, :sswitch_data_b4
+    sparse-switch v0, :sswitch_data_be
 
     .line 509
     :cond_a
@@ -2515,8 +2515,19 @@
 
     goto/16 :goto_a
 
-    .line 502
+    .line 500
     :sswitch_9a
+    new-instance v8, Landroid/content/Intent;
+
+    const-class v0, Lcom/jiuzhansoft/massage/subActivity/MainMenuActivity;
+
+    invoke-direct {v8, p0, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 501
+    .local v8, "intent":Landroid/content/Intent;
+    invoke-virtual {p0, v8}, Lcom/jiuzhansoft/game/GameList2;->startActivity(Landroid/content/Intent;)V
+
+    .line 502
     invoke-virtual {p0}, Lcom/jiuzhansoft/game/GameList2;->finish()V
 
     .line 504
@@ -2544,7 +2555,7 @@
     .line 468
     nop
 
-    :sswitch_data_b4
+    :sswitch_data_be
     .sparse-switch
         0x1 -> :sswitch_b
         0x2 -> :sswitch_22
@@ -2552,7 +2563,7 @@
         0x4 -> :sswitch_52
         0x5 -> :sswitch_6a
         0x6 -> :sswitch_81
-        0x7f070263 -> :sswitch_9a
+        0x7f0800f4 -> :sswitch_9a
     .end sparse-switch
 .end method
 
@@ -2565,7 +2576,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 185
-    const v0, 0x7f030056
+    const v0, 0x7f03002f
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/game/GameList2;->setContentView(I)V
 
@@ -2577,55 +2588,67 @@
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .registers 5
+    .registers 6
     .param p1, "keyCode"    # I
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 514
-    const/4 v0, 0x4
+    const/4 v1, 0x4
 
-    if-ne p1, v0, :cond_1d
+    if-ne p1, v1, :cond_27
+
+    .line 515
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/jiuzhansoft/massage/subActivity/MainMenuActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 516
+    .local v0, "intent":Landroid/content/Intent;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/game/GameList2;->startActivity(Landroid/content/Intent;)V
 
     .line 517
     invoke-virtual {p0}, Lcom/jiuzhansoft/game/GameList2;->finish()V
 
     .line 519
-    sget-object v0, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    move-result v0
+    move-result v1
 
-    const/4 v1, 0x5
+    const/4 v2, 0x5
 
-    if-lt v0, v1, :cond_1b
+    if-lt v1, v2, :cond_25
 
     .line 520
-    const/high16 v0, 0x7f040000
+    const/high16 v1, 0x7f040000
 
-    const v1, 0x7f040001
+    const v2, 0x7f040001
 
-    invoke-virtual {p0, v0, v1}, Lcom/jiuzhansoft/game/GameList2;->overridePendingTransition(II)V
+    invoke-virtual {p0, v1, v2}, Lcom/jiuzhansoft/game/GameList2;->overridePendingTransition(II)V
 
     .line 521
-    :cond_1b
-    const/4 v0, 0x1
+    :cond_25
+    const/4 v1, 0x1
 
     .line 523
-    :goto_1c
-    return v0
+    .end local v0    # "intent":Landroid/content/Intent;
+    :goto_26
+    return v1
 
-    :cond_1d
+    :cond_27
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
-    move-result v0
+    move-result v1
 
-    goto :goto_1c
+    goto :goto_26
 .end method
 
 .method public startAnimationsIn(Landroid/view/View;IFFILandroid/content/res/Resources;I)V

@@ -30,9 +30,9 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/aq;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/ar;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/aq;-><init>(Lbiz/nicenight/nicenight/ui/UmengDownActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/ar;-><init>(Lbiz/nicenight/nicenight/ui/UmengDownActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

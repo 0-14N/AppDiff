@@ -202,7 +202,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;
+    invoke-static {v0}, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;
 
     move-result-object v0
 
@@ -214,11 +214,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;
+    invoke-static {v0}, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lorg/dayup/gnotes/d/f;->isCancelled()Z
+    invoke-virtual {v0}, Lorg/dayup/gnotes/d/g;->isCancelled()Z
 
     move-result v0
 

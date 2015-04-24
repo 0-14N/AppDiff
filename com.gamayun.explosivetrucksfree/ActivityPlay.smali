@@ -20,6 +20,10 @@
 
 .field public static final FPS_60:Z = false
 
+.field public static final ID_Ad_Gamayun:Ljava/lang/String; = "a1503a1490e48b0"
+
+.field public static final ID_Ad_NOTGamayun:Ljava/lang/String; = "a1503a1490e48b0"
+
 .field public static final MSG_DELETEFILE:I = 0x4
 
 .field public static final MSG_FREEAD:I = 0x8
@@ -48,62 +52,60 @@
 
 .field public static final MSG_STARTVIDEO:I = 0x9
 
-.field public static final MSG_START_VIBRATE:I = 0x11
-
 .field public static final MSG_STOPMUSIC:I = 0xc
 
 .field public static final MSG_STOPVIDEO:I = 0xa
+
+.field private static final NO_SLEEP_TOUCHEVENT:Z = false
 
 .field private static final NO_USE_SENSOR:Z = false
 
 .field private static final TWO_INV_PI:F = 0.63661975f
 
-.field private static USE_SENSOR_GETORIENTATION:I
+.field private static USE_SENSOR_GETORIENTATION:I = 0x0
 
-.field public static ValTrigger:I
+.field public static ValTrigger:I = 0x0
 
-.field public static ValTriggerAD:I
+.field public static ValTriggerAD:I = 0x0
 
-.field public static ValTriggerInAppPurchase:I
+.field public static ValTriggerInAppPurchase:I = 0x0
 
-.field public static ValTriggerMusic:I
+.field public static ValTriggerMusic:I = 0x0
 
-.field static Vibrate:Landroid/os/Vibrator;
+.field static adView:Lcom/google/ads/AdView; = null
 
-.field static adView:Lcom/google/ads/AdView;
+.field static adsParams:Landroid/widget/RelativeLayout$LayoutParams; = null
 
-.field static adsParams:Landroid/widget/RelativeLayout$LayoutParams;
+.field private static bAutoAd:Z = false
 
-.field private static bAutoAd:Z
+.field static bBackFromAD:Ljava/lang/Boolean; = null
 
-.field static bBackFromAD:Ljava/lang/Boolean;
+.field static bBackFromInAppPurchase:Ljava/lang/Boolean; = null
 
-.field static bBackFromInAppPurchase:Ljava/lang/Boolean;
+.field static bBackFromMusicCompletion:Ljava/lang/Boolean; = null
 
-.field static bBackFromMusicCompletion:Ljava/lang/Boolean;
+.field static bBackFromStartURL:Ljava/lang/Boolean; = null
 
-.field static bBackFromStartURL:Ljava/lang/Boolean;
+.field static bMpPrepared:Ljava/lang/Boolean; = null
 
-.field static bMpPrepared:Ljava/lang/Boolean;
+.field public static bWaitOnCreate:Ljava/lang/Boolean; = null
 
-.field public static bWaitOnCreate:Ljava/lang/Boolean;
+.field private static freemium_has_advertisement:Z = false
 
-.field private static freemium_has_advertisement:Z
+.field static layout:Landroid/widget/RelativeLayout; = null
 
-.field static layout:Landroid/widget/RelativeLayout;
-
-.field public static mGLView:Lcom/gamayun/explosivetrucksfree/ActivityPlay$MyGLSurfaceView;
+.field public static mGLView:Lcom/gamayun/explosivetrucksfree/ActivityPlay$MyGLSurfaceView; = null
 
 .field public static final mHandler:Landroid/os/Handler;
 
-.field static mp:Landroid/media/MediaPlayer;
+.field static mp:Landroid/media/MediaPlayer; = null
+
+.field public static final percentOfAdsToGamayun:D = 50.0
 
 .field public static stContext:Landroid/content/Context;
 
 
 # instance fields
-.field public DeviceOrient:I
-
 .field bHasAccel:Z
 
 .field isMultiTouch:Z
@@ -116,6 +118,8 @@
 
 .field public pathToDatas:Ljava/lang/String;
 
+.field public rot:I
+
 .field private sensorManager:Landroid/hardware/SensorManager;
 
 
@@ -123,39 +127,33 @@
 .method static constructor <clinit>()V
     .registers 5
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
 
-    const/4 v3, -0x1
+    const/4 v3, 0x1
 
-    const/4 v2, 0x0
+    const/4 v2, -0x1
 
     const/4 v1, 0x0
 
-    sput-boolean v4, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->freemium_has_advertisement:Z
+    sput-boolean v3, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->freemium_has_advertisement:Z
 
     const/4 v0, 0x2
 
     sput v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->USE_SENSOR_GETORIENTATION:I
 
-    const-string v0, "DGLIB"
-
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-
     const-string v0, "DG"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     sput-object v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->bWaitOnCreate:Ljava/lang/Boolean;
 
-    sput-object v2, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->Dialog:Landroid/app/ProgressDialog;
+    sput-object v4, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->Dialog:Landroid/app/ProgressDialog;
 
-    sput-object v2, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->Vibrate:Landroid/os/Vibrator;
-
-    sput-object v2, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->mp:Landroid/media/MediaPlayer;
+    sput-object v4, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->mp:Landroid/media/MediaPlayer;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -187,15 +185,15 @@
 
     sput-object v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->bBackFromAD:Ljava/lang/Boolean;
 
-    sput-boolean v4, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->bAutoAd:Z
+    sput-boolean v3, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->bAutoAd:Z
 
-    sput-object v2, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->adView:Lcom/google/ads/AdView;
+    sput-object v4, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->adView:Lcom/google/ads/AdView;
 
-    sput v3, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->ValTrigger:I
+    sput v2, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->ValTrigger:I
 
-    sput v3, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->ValTriggerMusic:I
+    sput v2, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->ValTriggerMusic:I
 
-    sput v3, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->ValTriggerInAppPurchase:I
+    sput v2, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->ValTriggerInAppPurchase:I
 
     const v0, -0x30d40
 
@@ -291,6 +289,71 @@
     iput-object p1, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->myRenderer:Lcom/gamayun/explosivetrucksfree/MyRenderer;
 
     return-void
+.end method
+
+.method private static inputStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
+    .registers 6
+
+    const-string v0, ""
+
+    const-string v1, ""
+
+    new-instance v2, Ljava/io/BufferedReader;
+
+    new-instance v1, Ljava/io/InputStreamReader;
+
+    invoke-direct {v1, p0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+
+    invoke-direct {v2, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+
+    move-object v1, v0
+
+    :goto_f
+    :try_start_f
+    invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_16
+
+    :goto_15
+    return-object v1
+
+    :cond_16
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :try_end_26
+    .catch Ljava/io/IOException; {:try_start_f .. :try_end_26} :catch_29
+    .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_26} :catch_2e
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    goto :goto_f
+
+    :catch_29
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_15
+
+    :catch_2e
+    move-exception v0
+
+    goto :goto_15
 .end method
 
 .method static pauseGame()V
@@ -407,7 +470,7 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 9
+    .registers 10
 
     const/16 v3, 0x200
 
@@ -416,6 +479,8 @@
     const/4 v2, 0x0
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
 
     const v0, 0x7f030001
 
@@ -455,7 +520,7 @@
 
     const-string v0, "1.0"
 
-    :try_start_30
+    :try_start_33
     invoke-virtual {p0}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
@@ -471,11 +536,11 @@
     move-result-object v4
 
     iget-object v0, v4, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
-    :try_end_3f
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_30 .. :try_end_3f} :catch_1b3
-    .catch Ljava/lang/Throwable; {:try_start_30 .. :try_end_3f} :catch_1e7
+    :try_end_42
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_33 .. :try_end_42} :catch_1bd
+    .catch Ljava/lang/Throwable; {:try_start_33 .. :try_end_42} :catch_1f3
 
-    :goto_3f
+    :goto_42
     new-instance v4, Ljava/io/File;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -624,7 +689,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1b8
+    if-nez v0, :cond_1c2
 
     new-instance v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay$UnpackTask;
 
@@ -638,8 +703,8 @@
 
     invoke-virtual {v0, v3}, Lcom/gamayun/explosivetrucksfree/ActivityPlay$UnpackTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    :goto_e9
-    :try_start_e9
+    :goto_ec
+    :try_start_ec
     sget-object v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->Dialog:Landroid/app/ProgressDialog;
 
     const-string v3, "Loading.\nPlease wait ..."
@@ -649,46 +714,63 @@
     sget-object v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->Dialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
-    :try_end_f5
-    .catch Ljava/lang/Throwable; {:try_start_e9 .. :try_end_f5} :catch_1e4
+    :try_end_f8
+    .catch Ljava/lang/Throwable; {:try_start_ec .. :try_end_f8} :catch_1f0
 
-    :goto_f5
+    :goto_f8
     sget-boolean v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->freemium_has_advertisement:Z
 
-    if-eqz v0, :cond_12c
+    if-eqz v0, :cond_13e
 
-    :try_start_f9
-    new-instance v0, Landroid/util/DisplayMetrics;
+    :try_start_fc
+    new-instance v3, Landroid/util/DisplayMetrics;
 
-    invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
+    invoke-direct {v3}, Landroid/util/DisplayMetrics;-><init>()V
 
     invoke-virtual {p0}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->getWindowManager()Landroid/view/WindowManager;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-interface {v3}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-virtual {v3, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+    invoke-virtual {v0, v3}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+    invoke-static {}, Ljava/lang/Math;->random()D
 
-    const/16 v3, 0x1e0
+    move-result-wide v4
 
-    if-gt v0, v3, :cond_1d0
+    const-wide/high16 v6, 0x4059000000000000L    # 100.0
 
-    new-instance v0, Lcom/google/ads/AdView;
+    mul-double/2addr v4, v6
 
-    sget-object v3, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
+    const-string v0, ""
 
-    const-string v4, "a151fe90983734d"
+    const-wide/high16 v6, 0x4049000000000000L    # 50.0
 
-    invoke-direct {v0, p0, v3, v4}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+    cmpg-double v0, v4, v6
 
-    sput-object v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->adView:Lcom/google/ads/AdView;
+    if-gez v0, :cond_1da
 
-    :goto_11a
+    const-string v0, "a1503a1490e48b0"
+
+    :goto_11d
+    iget v3, v3, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    const/16 v4, 0x1e0
+
+    if-gt v3, v4, :cond_1de
+
+    new-instance v3, Lcom/google/ads/AdView;
+
+    sget-object v4, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
+
+    invoke-direct {v3, p0, v4, v0}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+
+    sput-object v3, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->adView:Lcom/google/ads/AdView;
+
+    :goto_12c
     sget-object v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->adView:Lcom/google/ads/AdView;
 
     invoke-virtual {v0, p0}, Lcom/google/ads/AdView;->setAdListener(Lcom/google/ads/AdListener;)V
@@ -704,12 +786,12 @@
     invoke-direct {v3}, Lcom/google/ads/AdRequest;-><init>()V
 
     invoke-virtual {v0, v3}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
-    :try_end_12c
-    .catch Ljava/lang/Throwable; {:try_start_f9 .. :try_end_12c} :catch_1dd
+    :try_end_13e
+    .catch Ljava/lang/Throwable; {:try_start_fc .. :try_end_13e} :catch_1e9
 
-    :cond_12c
-    :goto_12c
-    :try_start_12c
+    :cond_13e
+    :goto_13e
+    :try_start_13e
     new-instance v0, Ljava/lang/StringBuilder;
 
     iget-object v3, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->pathToDatas:Ljava/lang/String;
@@ -786,35 +868,25 @@
 
     move-result v0
 
-    if-lez v0, :cond_1e0
+    if-lez v0, :cond_1ec
 
     move v0, v1
 
-    :goto_17d
+    :goto_18f
     iput-boolean v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->bHasAccel:Z
 
     iget-boolean v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->bHasAccel:Z
 
-    if-nez v0, :cond_186
+    if-nez v0, :cond_198
 
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->bHasAccel:Z
+    :try_end_198
+    .catch Ljava/lang/Throwable; {:try_start_13e .. :try_end_198} :catch_1ee
 
-    :cond_186
-    const-string v0, "vibrator"
-
-    invoke-virtual {p0, v0}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Vibrator;
-
-    sput-object v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->Vibrate:Landroid/os/Vibrator;
-    :try_end_190
-    .catch Ljava/lang/Throwable; {:try_start_12c .. :try_end_190} :catch_1e2
-
-    :goto_190
+    :cond_198
+    :goto_198
     invoke-virtual {p0}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -826,6 +898,8 @@
     iget v0, v0, Landroid/content/res/Configuration;->orientation:I
 
     iput v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->ot:I
+
+    iget v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->ot:I
 
     iget v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->ot:I
 
@@ -843,22 +917,22 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
+    invoke-virtual {v0}, Landroid/view/Display;->getOrientation()I
 
     move-result v0
 
-    iput v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->DeviceOrient:I
+    iput v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->rot:I
 
     return-void
 
-    :catch_1b3
+    :catch_1bd
     move-exception v0
 
     const-string v0, "1.0"
 
-    goto/16 :goto_3f
+    goto/16 :goto_42
 
-    :cond_1b8
+    :cond_1c2
     sget-object v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->layout:Landroid/widget/RelativeLayout;
 
     sget-object v3, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->mGLView:Lcom/gamayun/explosivetrucksfree/ActivityPlay$MyGLSurfaceView;
@@ -879,54 +953,59 @@
 
     sput-object v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->bWaitOnCreate:Ljava/lang/Boolean;
 
-    goto/16 :goto_e9
+    goto/16 :goto_ec
 
-    :cond_1d0
-    :try_start_1d0
-    new-instance v0, Lcom/google/ads/AdView;
+    :cond_1da
+    :try_start_1da
+    const-string v0, "a1503a1490e48b0"
 
-    sget-object v3, Lcom/google/ads/AdSize;->SMART_BANNER:Lcom/google/ads/AdSize;
+    goto/16 :goto_11d
 
-    const-string v4, "a151fe90983734d"
+    :cond_1de
+    new-instance v3, Lcom/google/ads/AdView;
 
-    invoke-direct {v0, p0, v3, v4}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+    sget-object v4, Lcom/google/ads/AdSize;->SMART_BANNER:Lcom/google/ads/AdSize;
 
-    sput-object v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->adView:Lcom/google/ads/AdView;
-    :try_end_1db
-    .catch Ljava/lang/Throwable; {:try_start_1d0 .. :try_end_1db} :catch_1dd
+    invoke-direct {v3, p0, v4, v0}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
 
-    goto/16 :goto_11a
-
-    :catch_1dd
-    move-exception v0
+    sput-object v3, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->adView:Lcom/google/ads/AdView;
+    :try_end_1e7
+    .catch Ljava/lang/Throwable; {:try_start_1da .. :try_end_1e7} :catch_1e9
 
     goto/16 :goto_12c
 
-    :cond_1e0
+    :catch_1e9
+    move-exception v0
+
+    goto/16 :goto_13e
+
+    :cond_1ec
     move v0, v2
 
-    goto :goto_17d
+    goto :goto_18f
 
-    :catch_1e2
+    :catch_1ee
     move-exception v0
 
-    goto :goto_190
+    goto :goto_198
 
-    :catch_1e4
+    :catch_1f0
     move-exception v0
 
-    goto/16 :goto_f5
+    goto/16 :goto_f8
 
-    :catch_1e7
+    :catch_1f3
     move-exception v4
 
-    goto/16 :goto_3f
+    goto/16 :goto_42
 .end method
 
 .method protected onDestroy()V
     .registers 1
 
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -938,11 +1017,17 @@
 .end method
 
 .method public onFailedToReceiveAd(Lcom/google/ads/Ad;Lcom/google/ads/AdRequest$ErrorCode;)V
-    .registers 5
+    .registers 6
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const-string v0, "DGbuggAD"
+
+    const-string v1, "onFailedToReceiveAd"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -952,7 +1037,7 @@
 
     sput v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->ValTriggerAD:I
 
-    sput-boolean v1, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->bAutoAd:Z
+    sput-boolean v2, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->bAutoAd:Z
 
     return-void
 .end method
@@ -1174,15 +1259,17 @@
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
-    .registers 8
+    .registers 9
+
+    const/4 v6, 0x0
 
     const/4 v5, 0x2
 
     const/4 v4, 0x0
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const v3, 0x411cf5c3    # 9.81f
+    const v2, 0x411cf5c3    # 9.81f
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
@@ -1190,151 +1277,321 @@
 
     move-result v0
 
-    if-ne v0, v2, :cond_25
-
-    iget v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->DeviceOrient:I
-
-    packed-switch v0, :pswitch_data_7a
+    if-ne v0, v3, :cond_5c
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
-    aget v0, v0, v4
+    aget v0, v0, v6
 
-    div-float/2addr v0, v3
+    cmpl-float v0, v0, v2
+
+    if-lez v0, :cond_1b
+
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aput v2, v0, v6
+
+    :cond_1b
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v3
+
+    cmpl-float v0, v0, v2
+
+    if-lez v0, :cond_27
+
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aput v2, v0, v3
+
+    :cond_27
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v5
+
+    cmpl-float v0, v0, v2
+
+    if-lez v0, :cond_33
+
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aput v2, v0, v5
+
+    :cond_33
+    iget v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->rot:I
+
+    if-ne v0, v3, :cond_6a
+
+    sget v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->USE_SENSOR_GETORIENTATION:I
+
+    if-ne v0, v5, :cond_6a
+
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v3
+
+    cmpl-float v0, v0, v4
+
+    if-nez v0, :cond_5d
+
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v5
+
+    sub-float/2addr v0, v2
+
+    div-float/2addr v0, v2
+
+    :goto_49
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v1, v1, v6
+
+    cmpl-float v1, v1, v4
+
+    if-nez v1, :cond_63
 
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
 
-    aget v1, v1, v2
+    aget v1, v1, v5
 
-    div-float/2addr v1, v3
+    sub-float v1, v2, v1
 
-    iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
+    div-float/2addr v1, v2
 
-    aget v2, v2, v5
+    :goto_58
+    neg-float v1, v1
 
-    div-float/2addr v2, v3
+    invoke-virtual {p0, v4, v1, v0}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->AndroidAccelerometer(FFF)V
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->AndroidAccelerometer(FFF)V
-
-    :cond_25
-    :goto_25
+    :cond_5c
+    :goto_5c
     return-void
 
-    :pswitch_26
+    :cond_5d
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
-    aget v0, v0, v4
+    aget v0, v0, v3
 
-    neg-float v0, v0
+    div-float/2addr v0, v2
 
-    div-float/2addr v0, v3
+    goto :goto_49
 
+    :cond_63
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
 
-    aget v1, v1, v2
-
-    div-float/2addr v1, v3
-
-    iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    aget v2, v2, v5
-
-    neg-float v2, v2
-
-    div-float/2addr v2, v3
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->AndroidAccelerometer(FFF)V
-
-    goto :goto_25
-
-    :pswitch_3b
-    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    aget v0, v0, v2
-
-    div-float/2addr v0, v3
-
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    aget v1, v1, v4
-
-    div-float/2addr v1, v3
-
-    iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    aget v2, v2, v5
-
-    neg-float v2, v2
-
-    div-float/2addr v2, v3
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->AndroidAccelerometer(FFF)V
-
-    goto :goto_25
-
-    :pswitch_4f
-    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    aget v0, v0, v4
-
-    div-float/2addr v0, v3
-
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    aget v1, v1, v2
+    aget v1, v1, v6
 
     neg-float v1, v1
 
-    div-float/2addr v1, v3
+    div-float/2addr v1, v2
 
-    iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
+    goto :goto_58
 
-    aget v2, v2, v5
+    :cond_6a
+    iget v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->rot:I
 
-    neg-float v2, v2
+    if-nez v0, :cond_a0
 
-    div-float/2addr v2, v3
+    sget v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->USE_SENSOR_GETORIENTATION:I
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->AndroidAccelerometer(FFF)V
+    if-ne v0, v5, :cond_a0
 
-    goto :goto_25
-
-    :pswitch_64
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
-    aget v0, v0, v2
+    aget v0, v0, v6
 
-    neg-float v0, v0
+    cmpl-float v0, v0, v4
 
-    div-float/2addr v0, v3
+    if-nez v0, :cond_93
+
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v5
+
+    sub-float v0, v2, v0
+
+    div-float/2addr v0, v2
+
+    :goto_81
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v1, v1, v3
+
+    cmpl-float v1, v1, v4
+
+    if-nez v1, :cond_9a
 
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
 
-    aget v1, v1, v4
+    aget v1, v1, v5
+
+    sub-float/2addr v1, v2
+
+    div-float/2addr v1, v2
+
+    :goto_8f
+    invoke-virtual {p0, v4, v1, v0}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->AndroidAccelerometer(FFF)V
+
+    goto :goto_5c
+
+    :cond_93
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v6
+
+    neg-float v0, v0
+
+    div-float/2addr v0, v2
+
+    goto :goto_81
+
+    :cond_9a
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v1, v1, v3
+
+    div-float/2addr v1, v2
+
+    goto :goto_8f
+
+    :cond_a0
+    iget v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->rot:I
+
+    if-nez v0, :cond_d6
+
+    sget v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->USE_SENSOR_GETORIENTATION:I
+
+    if-ne v0, v3, :cond_d6
+
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v6
+
+    cmpl-float v0, v0, v4
+
+    if-nez v0, :cond_c9
+
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v5
+
+    sub-float v0, v2, v0
+
+    div-float/2addr v0, v2
+
+    :goto_b7
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v1, v1, v3
+
+    cmpl-float v1, v1, v4
+
+    if-nez v1, :cond_d0
+
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v1, v1, v5
+
+    sub-float/2addr v1, v2
+
+    div-float/2addr v1, v2
+
+    :goto_c5
+    invoke-virtual {p0, v4, v1, v0}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->AndroidAccelerometer(FFF)V
+
+    goto :goto_5c
+
+    :cond_c9
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v6
+
+    neg-float v0, v0
+
+    div-float/2addr v0, v2
+
+    goto :goto_b7
+
+    :cond_d0
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v1, v1, v3
+
+    div-float/2addr v1, v2
+
+    goto :goto_c5
+
+    :cond_d6
+    iget v0, p0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->rot:I
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_5c
+
+    sget v0, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->USE_SENSOR_GETORIENTATION:I
+
+    if-ne v0, v3, :cond_5c
+
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v3
+
+    cmpl-float v0, v0, v4
+
+    if-nez v0, :cond_102
+
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v5
+
+    sub-float/2addr v0, v2
+
+    div-float/2addr v0, v2
+
+    :goto_ed
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v1, v1, v6
+
+    cmpl-float v1, v1, v4
+
+    if-nez v1, :cond_108
+
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v1, v1, v5
+
+    sub-float v1, v2, v1
+
+    div-float/2addr v1, v2
+
+    :goto_fc
+    neg-float v0, v0
+
+    invoke-virtual {p0, v4, v1, v0}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->AndroidAccelerometer(FFF)V
+
+    goto/16 :goto_5c
+
+    :cond_102
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v0, v0, v3
+
+    div-float/2addr v0, v2
+
+    goto :goto_ed
+
+    :cond_108
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    aget v1, v1, v6
 
     neg-float v1, v1
 
-    div-float/2addr v1, v3
+    div-float/2addr v1, v2
 
-    iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    aget v2, v2, v5
-
-    neg-float v2, v2
-
-    div-float/2addr v2, v3
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/gamayun/explosivetrucksfree/ActivityPlay;->AndroidAccelerometer(FFF)V
-
-    goto :goto_25
-
-    :pswitch_data_7a
-    .packed-switch 0x0
-        :pswitch_26
-        :pswitch_3b
-        :pswitch_4f
-        :pswitch_64
-    .end packed-switch
+    goto :goto_fc
 .end method
 
 .method protected onStart()V

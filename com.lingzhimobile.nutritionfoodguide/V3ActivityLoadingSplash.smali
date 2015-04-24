@@ -55,6 +55,29 @@
     return-void
 .end method
 
+.method private initBanner()V
+    .registers 4
+
+    .prologue
+    .line 55
+    invoke-virtual {p0}, Lcom/lingzhimobile/nutritionfoodguide/v3/activity/V3ActivityLoadingSplash;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "xY1bLECwOFbjcsE47X8xjo5r"
+
+    invoke-static {v1, v2}, Lcom/fivefeiwo/coverscreen/CPManager;->init(Landroid/content/Context;Ljava/lang/String;)Lcom/fivefeiwo/coverscreen/CPManager;
+
+    .line 56
+    invoke-static {p0}, Lcom/fivefeiwo/coverscreen/CPManager;->showAd(Landroid/content/Context;)I
+
+    move-result v0
+
+    .line 57
+    .local v0, "resCode":I
+    return-void
+.end method
+
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
@@ -70,9 +93,11 @@
 
     move-result v0
 
+    invoke-direct {p0}, Lcom/lingzhimobile/nutritionfoodguide/v3/activity/V3ActivityLoadingSplash;->initBanner()V
+
     const-wide/16 v2, 0x3e8
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_1a
 
     const-wide/16 v2, 0xbb8
 
@@ -80,7 +105,7 @@
 
     invoke-static {p0, v1}, Lcom/lingzhimobile/nutritionfoodguide/ea;->a(Landroid/content/Context;Lcom/lingzhimobile/nutritionfoodguide/dy;)V
 
-    :cond_17
+    :cond_1a
     sget-object v1, Lcom/lingzhimobile/nutritionfoodguide/v3/activity/V3ActivityLoadingSplash;->a:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;

@@ -22,12 +22,12 @@
     .registers 1
 
     .prologue
-    .line 15
+    .line 18
     const/4 v0, 0x0
 
     sput-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
-    .line 17
+    .line 20
     invoke-static {}, Lorg/cocos2dx/lib/Cocos2dxActivity;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -36,7 +36,7 @@
 
     sput-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
-    .line 21
+    .line 24
     return-void
 .end method
 
@@ -44,7 +44,7 @@
     .registers 1
 
     .prologue
-    .line 13
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,7 +54,7 @@
     .registers 1
 
     .prologue
-    .line 206
+    .line 208
     invoke-static {}, Lcom/enjoygame/tool/gamecenter/GameCenter;->getGameHelper()Lcom/enjoygame/tool/gamecenter/GameHelper;
 
     move-result-object v0
@@ -66,7 +66,7 @@
     .registers 1
 
     .prologue
-    .line 17
+    .line 20
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
     return-object v0
@@ -76,7 +76,7 @@
     .registers 2
 
     .prologue
-    .line 196
+    .line 198
     invoke-static {p0}, Lcom/enjoygame/tool/gamecenter/GameCenter;->getResourceId(Ljava/lang/String;)I
 
     move-result v0
@@ -88,7 +88,7 @@
     .registers 1
 
     .prologue
-    .line 15
+    .line 18
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
     return-object v0
@@ -98,14 +98,14 @@
     .registers 2
 
     .prologue
-    .line 102
+    .line 103
     const-string v0, "GameCenter"
 
     const-string v1, "clearAllAchievements is not available on this platform"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
+    .line 104
     return-void
 .end method
 
@@ -113,14 +113,14 @@
     .registers 2
 
     .prologue
-    .line 141
+    .line 142
     const-string v0, "GameCenter"
 
     const-string v1, "clearAllScores is not available on this platform"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
+    .line 143
     return-void
 .end method
 
@@ -128,30 +128,30 @@
     .registers 3
 
     .prologue
-    .line 208
+    .line 210
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
-    if-nez v0, :cond_1f
+    if-nez v0, :cond_1e
 
-    .line 209
+    .line 211
     new-instance v0, Lcom/enjoygame/tool/gamecenter/GameHelper;
 
     sget-object v1, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
-    invoke-direct {v0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;-><init>(Landroid/app/Activity;)V
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;-><init>(Landroid/app/Activity;I)V
 
     sput-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
-    .line 210
+    .line 212
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
     const/4 v1, 0x0
 
-    const-string v2, "GameCenter"
+    invoke-virtual {v0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->enableDebugLog(Z)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/enjoygame/tool/gamecenter/GameHelper;->enableDebugLog(ZLjava/lang/String;)V
-
-    .line 212
+    .line 214
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
     new-instance v1, Lcom/enjoygame/tool/gamecenter/GameCenter$8;
@@ -160,8 +160,8 @@
 
     invoke-virtual {v0, v1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 231
-    :cond_1f
+    .line 233
+    :cond_1e
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
     return-object v0
@@ -172,7 +172,7 @@
     .param p0, "idName"    # Ljava/lang/String;
 
     .prologue
-    .line 198
+    .line 200
     sget-object v1, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
     invoke-virtual {v1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->getResources()Landroid/content/res/Resources;
@@ -191,11 +191,11 @@
 
     move-result v0
 
-    .line 199
+    .line 201
     .local v0, "rId":I
     if-nez v0, :cond_28
 
-    .line 200
+    .line 202
     const-string v1, "GameCenter"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -214,7 +214,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
+    .line 204
     :cond_28
     return v0
 .end method
@@ -223,7 +223,7 @@
     .registers 1
 
     .prologue
-    .line 63
+    .line 66
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
     if-eqz v0, :cond_10
@@ -253,7 +253,7 @@
     .registers 0
 
     .prologue
-    .line 37
+    .line 40
     return-void
 .end method
 
@@ -264,16 +264,16 @@
     .param p2, "data"    # Landroid/content/Intent;
 
     .prologue
-    .line 183
+    .line 185
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
     if-nez v0, :cond_5
 
-    .line 188
+    .line 190
     :goto_4
     return-void
 
-    .line 187
+    .line 189
     :cond_5
     invoke-static {}, Lcom/enjoygame/tool/gamecenter/GameCenter;->getGameHelper()Lcom/enjoygame/tool/gamecenter/GameHelper;
 
@@ -285,19 +285,10 @@
 .end method
 
 .method public static onStart()V
-    .registers 2
+    .registers 0
 
     .prologue
-    .line 169
-    invoke-static {}, Lcom/enjoygame/tool/gamecenter/GameCenter;->getGameHelper()Lcom/enjoygame/tool/gamecenter/GameHelper;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
-
-    invoke-virtual {v0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->onStart(Landroid/app/Activity;)V
-
-    .line 170
+    .line 172
     return-void
 .end method
 
@@ -305,24 +296,14 @@
     .registers 1
 
     .prologue
-    .line 174
+    .line 176
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_4
 
-    .line 179
-    :goto_4
+    .line 181
+    :cond_4
     return-void
-
-    .line 178
-    :cond_5
-    invoke-static {}, Lcom/enjoygame/tool/gamecenter/GameCenter;->getGameHelper()Lcom/enjoygame/tool/gamecenter/GameHelper;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->onStop()V
-
-    goto :goto_4
 .end method
 
 .method public static postAchievement(Ljava/lang/String;I)V
@@ -331,7 +312,7 @@
     .param p1, "percentComplete"    # I
 
     .prologue
-    .line 85
+    .line 86
     invoke-static {}, Lcom/enjoygame/tool/gamecenter/GameCenter;->isSignedIn()Z
 
     move-result v0
@@ -342,12 +323,12 @@
 
     if-ge p1, v0, :cond_b
 
-    .line 98
+    .line 99
     :cond_a
     :goto_a
     return-void
 
-    .line 89
+    .line 90
     :cond_b
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
@@ -366,18 +347,18 @@
     .param p1, "score"    # I
 
     .prologue
-    .line 124
+    .line 125
     invoke-static {}, Lcom/enjoygame/tool/gamecenter/GameCenter;->isSignedIn()Z
 
     move-result v0
 
     if-nez v0, :cond_7
 
-    .line 137
+    .line 138
     :goto_6
     return-void
 
-    .line 128
+    .line 129
     :cond_7
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
@@ -394,21 +375,21 @@
     .registers 2
 
     .prologue
-    .line 68
+    .line 71
     invoke-static {}, Lcom/enjoygame/tool/gamecenter/GameCenter;->isSignedIn()Z
 
     move-result v0
 
     if-nez v0, :cond_8
 
-    .line 69
+    .line 72
     const/4 v0, 0x0
 
-    .line 80
+    .line 81
     :goto_7
     return v0
 
-    .line 72
+    .line 75
     :cond_8
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
@@ -418,7 +399,7 @@
 
     invoke-virtual {v0, v1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 80
+    .line 81
     const/4 v0, 0x1
 
     goto :goto_7
@@ -429,7 +410,7 @@
     .param p0, "idName"    # Ljava/lang/String;
 
     .prologue
-    .line 146
+    .line 147
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
     new-instance v1, Lcom/enjoygame/tool/gamecenter/GameCenter$7;
@@ -438,7 +419,7 @@
 
     invoke-virtual {v0, v1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 159
+    .line 161
     return-void
 .end method
 
@@ -446,21 +427,21 @@
     .registers 2
 
     .prologue
-    .line 107
+    .line 108
     invoke-static {}, Lcom/enjoygame/tool/gamecenter/GameCenter;->isSignedIn()Z
 
     move-result v0
 
     if-nez v0, :cond_8
 
-    .line 108
+    .line 109
     const/4 v0, 0x0
 
-    .line 119
+    .line 120
     :goto_7
     return v0
 
-    .line 111
+    .line 112
     :cond_8
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
@@ -470,7 +451,7 @@
 
     invoke-virtual {v0, v1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 119
+    .line 120
     const/4 v0, 0x1
 
     goto :goto_7
@@ -480,7 +461,7 @@
     .registers 2
 
     .prologue
-    .line 41
+    .line 44
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 
     new-instance v1, Lcom/enjoygame/tool/gamecenter/GameCenter$1;
@@ -489,7 +470,7 @@
 
     invoke-virtual {v0, v1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 46
+    .line 49
     return-void
 .end method
 
@@ -497,16 +478,16 @@
     .registers 2
 
     .prologue
-    .line 50
+    .line 53
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
     if-nez v0, :cond_5
 
-    .line 59
+    .line 62
     :goto_4
     return-void
 
-    .line 54
+    .line 57
     :cond_5
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
 

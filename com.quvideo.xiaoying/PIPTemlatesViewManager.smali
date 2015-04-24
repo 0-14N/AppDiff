@@ -326,9 +326,9 @@
 
     .line 164
     :goto_52
-    new-instance v0, Lber;
+    new-instance v0, Laxx;
 
-    invoke-direct {v0, p0, v5, p4}, Lber;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTemlatesViewManager;Ljava/lang/Long;I)V
+    invoke-direct {v0, p0, v5, p4}, Laxx;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTemlatesViewManager;Ljava/lang/Long;I)V
 
     .line 175
     invoke-virtual {v4, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V

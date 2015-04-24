@@ -28,9 +28,9 @@
 
 
 # instance fields
-.field private final a:I
+.field private a:I
 
-.field private final b:I
+.field private b:I
 
 .field private c:Z
 
@@ -232,7 +232,7 @@
     .registers 3
 
     .prologue
-    .line 370
+    .line 348
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -241,7 +241,7 @@
 
     move-result-object v0
 
-    .line 371
+    .line 349
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     int-to-float v1, v1
@@ -259,7 +259,7 @@
     .registers 2
 
     .prologue
-    .line 249
+    .line 226
     iget v0, p0, Lcom/google/ads/AdSize;->a:I
 
     if-ltz v0, :cond_8
@@ -284,7 +284,7 @@
     .registers 3
 
     .prologue
-    .line 382
+    .line 360
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -293,7 +293,7 @@
 
     move-result-object v0
 
-    .line 383
+    .line 361
     iget v1, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     int-to-float v1, v1
@@ -304,30 +304,30 @@
 
     float-to-int v0, v0
 
-    .line 384
+    .line 362
     const/16 v1, 0x190
 
     if-gt v0, v1, :cond_17
 
-    .line 385
+    .line 363
     const/16 v0, 0x20
 
-    .line 389
+    .line 367
     :goto_16
     return v0
 
-    .line 386
+    .line 364
     :cond_17
     const/16 v1, 0x2d0
 
     if-gt v0, v1, :cond_1e
 
-    .line 387
+    .line 365
     const/16 v0, 0x32
 
     goto :goto_16
 
-    .line 389
+    .line 367
     :cond_1e
     const/16 v0, 0x5a
 
@@ -368,26 +368,30 @@
     .line 185
     .restart local p0    # "adSize":Lcom/google/ads/AdSize;
     :cond_11
-    iget-boolean v0, p0, Lcom/google/ads/AdSize;->c:Z
+    invoke-virtual {p0}, Lcom/google/ads/AdSize;->isFullWidth()Z
 
-    if-eqz v0, :cond_36
+    move-result v0
+
+    if-eqz v0, :cond_3a
 
     invoke-static {p1}, Lcom/google/ads/AdSize;->a(Landroid/content/Context;)I
 
     move-result v0
 
     .line 187
-    :goto_19
-    iget-boolean v1, p0, Lcom/google/ads/AdSize;->d:Z
+    :goto_1b
+    invoke-virtual {p0}, Lcom/google/ads/AdSize;->isAutoHeight()Z
 
-    if-eqz v1, :cond_3b
+    move-result v1
+
+    if-eqz v1, :cond_3f
 
     invoke-static {p1}, Lcom/google/ads/AdSize;->b(Landroid/content/Context;)I
 
     move-result v1
 
     .line 190
-    :goto_21
+    :goto_25
     new-instance v2, Lcom/google/ads/AdSize;
 
     iget-object v3, p0, Lcom/google/ads/AdSize;->f:Ljava/lang/String;
@@ -415,66 +419,24 @@
     goto :goto_10
 
     .line 185
-    :cond_36
+    :cond_3a
     invoke-virtual {p0}, Lcom/google/ads/AdSize;->getWidth()I
 
     move-result v0
 
-    goto :goto_19
+    goto :goto_1b
 
     .line 187
-    :cond_3b
+    :cond_3f
     invoke-virtual {p0}, Lcom/google/ads/AdSize;->getHeight()I
 
     move-result v1
 
-    goto :goto_21
+    goto :goto_25
 .end method
 
 
 # virtual methods
-.method public equals(Ljava/lang/Object;)Z
-    .registers 5
-    .param p1, "other"    # Ljava/lang/Object;
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 203
-    instance-of v1, p1, Lcom/google/ads/AdSize;
-
-    if-nez v1, :cond_6
-
-    .line 209
-    .end local p1    # "other":Ljava/lang/Object;
-    :cond_5
-    :goto_5
-    return v0
-
-    .line 207
-    .restart local p1    # "other":Ljava/lang/Object;
-    :cond_6
-    check-cast p1, Lcom/google/ads/AdSize;
-
-    .line 209
-    .end local p1    # "other":Ljava/lang/Object;
-    iget v1, p0, Lcom/google/ads/AdSize;->a:I
-
-    iget v2, p1, Lcom/google/ads/AdSize;->a:I
-
-    if-ne v1, v2, :cond_5
-
-    iget v1, p0, Lcom/google/ads/AdSize;->b:I
-
-    iget v2, p1, Lcom/google/ads/AdSize;->b:I
-
-    if-ne v1, v2, :cond_5
-
-    const/4 v0, 0x1
-
-    goto :goto_5
-.end method
-
 .method public varargs findBestSize([Lcom/google/ads/AdSize;)Lcom/google/ads/AdSize;
     .registers 16
     .param p1, "options"    # [Lcom/google/ads/AdSize;
@@ -482,16 +444,16 @@
     .prologue
     const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
 
-    .line 339
+    .line 317
     const/4 v5, 0x0
 
-    .line 340
+    .line 318
     const-wide/16 v2, 0x0
 
-    .line 342
+    .line 320
     if-eqz p1, :cond_38
 
-    .line 343
+    .line 321
     array-length v7, p1
 
     const/4 v0, 0x0
@@ -503,7 +465,7 @@
 
     aget-object v4, p1, v6
 
-    .line 344
+    .line 322
     iget v0, v4, Lcom/google/ads/AdSize;->a:I
 
     iget v1, v4, Lcom/google/ads/AdSize;->b:I
@@ -514,7 +476,7 @@
 
     if-eqz v0, :cond_39
 
-    .line 345
+    .line 323
     iget v0, v4, Lcom/google/ads/AdSize;->a:I
 
     int-to-double v0, v0
@@ -537,15 +499,15 @@
 
     div-double/2addr v0, v8
 
-    .line 347
+    .line 325
     cmpl-double v8, v0, v12
 
     if-lez v8, :cond_2d
 
-    .line 348
+    .line 326
     div-double v0, v12, v0
 
-    .line 351
+    .line 329
     :cond_2d
     cmpl-double v8, v0, v2
 
@@ -553,7 +515,7 @@
 
     move-object v2, v4
 
-    .line 343
+    .line 321
     :goto_32
     add-int/lit8 v3, v6, 0x1
 
@@ -565,7 +527,7 @@
 
     goto :goto_a
 
-    .line 359
+    .line 337
     :cond_38
     return-object v5
 
@@ -581,12 +543,12 @@
     .registers 3
 
     .prologue
-    .line 236
+    .line 213
     iget v0, p0, Lcom/google/ads/AdSize;->b:I
 
     if-gez v0, :cond_c
 
-    .line 237
+    .line 214
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Ad size was not set before getHeight() was called."
@@ -595,7 +557,7 @@
 
     throw v0
 
-    .line 240
+    .line 217
     :cond_c
     iget v0, p0, Lcom/google/ads/AdSize;->b:I
 
@@ -607,7 +569,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 301
+    .line 278
     const/4 v0, 0x1
 
     iget v1, p0, Lcom/google/ads/AdSize;->b:I
@@ -635,12 +597,12 @@
     .registers 3
 
     .prologue
-    .line 225
+    .line 202
     iget v0, p0, Lcom/google/ads/AdSize;->a:I
 
     if-gez v0, :cond_c
 
-    .line 226
+    .line 203
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Ad size was not set before getWidth() was called."
@@ -649,7 +611,7 @@
 
     throw v0
 
-    .line 229
+    .line 206
     :cond_c
     iget v0, p0, Lcom/google/ads/AdSize;->a:I
 
@@ -661,7 +623,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 291
+    .line 268
     const/4 v0, 0x1
 
     iget v1, p0, Lcom/google/ads/AdSize;->a:I
@@ -685,47 +647,11 @@
     return v0
 .end method
 
-.method public hashCode()I
-    .registers 4
-
-    .prologue
-    .line 217
-    iget v0, p0, Lcom/google/ads/AdSize;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->hashCode()I
-
-    move-result v0
-
-    shl-int/lit8 v0, v0, 0x10
-
-    iget v1, p0, Lcom/google/ads/AdSize;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->hashCode()I
-
-    move-result v1
-
-    const v2, 0xffff
-
-    and-int/2addr v1, v2
-
-    or-int/2addr v0, v1
-
-    return v0
-.end method
-
 .method public isAutoHeight()Z
     .registers 2
 
     .prologue
-    .line 267
+    .line 244
     iget-boolean v0, p0, Lcom/google/ads/AdSize;->d:Z
 
     return v0
@@ -735,7 +661,7 @@
     .registers 2
 
     .prologue
-    .line 276
+    .line 253
     iget-boolean v0, p0, Lcom/google/ads/AdSize;->e:Z
 
     return v0
@@ -745,7 +671,7 @@
     .registers 2
 
     .prologue
-    .line 258
+    .line 235
     iget-boolean v0, p0, Lcom/google/ads/AdSize;->c:Z
 
     return v0
@@ -761,7 +687,7 @@
 
     const-wide v4, 0x3fe999999999999aL    # 0.8
 
-    .line 317
+    .line 294
     int-to-double v0, p1
 
     iget v2, p0, Lcom/google/ads/AdSize;->a:I
@@ -825,7 +751,7 @@
     .registers 4
 
     .prologue
-    .line 284
+    .line 261
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

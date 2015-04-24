@@ -6,13 +6,11 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/facebook/Request$Attachment;,
         Lcom/facebook/Request$Callback;,
         Lcom/facebook/Request$GraphPlaceListCallback;,
         Lcom/facebook/Request$GraphUserCallback;,
         Lcom/facebook/Request$GraphUserListCallback;,
         Lcom/facebook/Request$KeyValueSerializer;,
-        Lcom/facebook/Request$OnProgressCallback;,
         Lcom/facebook/Request$ParcelFileDescriptorWithMimeType;,
         Lcom/facebook/Request$Serializer;
     }
@@ -20,8 +18,6 @@
 
 
 # static fields
-.field private static final ACCEPT_LANGUAGE_HEADER:Ljava/lang/String; = "Accept-Language"
-
 .field private static final ACCESS_TOKEN_PARAM:Ljava/lang/String; = "access_token"
 
 .field private static final ATTACHED_FILES_PARAM:Ljava/lang/String; = "attached_files"
@@ -56,9 +52,9 @@
 
 .field private static final ME:Ljava/lang/String; = "me"
 
-.field private static final MIME_BOUNDARY:Ljava/lang/String; = "3i2ndDfv2rTHiSisAbouNdArYfORhtTPEefj3q2f"
+.field private static final MIGRATION_BUNDLE_PARAM:Ljava/lang/String; = "migration_bundle"
 
-.field private static final MY_ACTION_FORMAT:Ljava/lang/String; = "me/%s"
+.field private static final MIME_BOUNDARY:Ljava/lang/String; = "3i2ndDfv2rTHiSisAbouNdArYfORhtTPEefj3q2f"
 
 .field private static final MY_FEED:Ljava/lang/String; = "me/feed"
 
@@ -84,19 +80,13 @@
 
 .field private static final STAGING_PARAM:Ljava/lang/String; = "file"
 
-.field public static final TAG:Ljava/lang/String;
-
 .field private static final USER_AGENT_BASE:Ljava/lang/String; = "FBAndroidSDK"
 
 .field private static final USER_AGENT_HEADER:Ljava/lang/String; = "User-Agent"
 
-.field private static final VIDEOS_SUFFIX:Ljava/lang/String; = "/videos"
-
 .field private static defaultBatchApplicationId:Ljava/lang/String;
 
 .field private static volatile userAgent:Ljava/lang/String;
-
-.field private static versionPattern:Ljava/util/regex/Pattern;
 
 
 # instance fields
@@ -118,47 +108,21 @@
 
 .field private parameters:Landroid/os/Bundle;
 
+.field private restMethod:Ljava/lang/String;
+
 .field private session:Lcom/facebook/Session;
 
 .field private tag:Ljava/lang/Object;
 
-.field private version:Ljava/lang/String;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .registers 1
-
-    .prologue
-    .line 69
-    const-class v0, Lcom/facebook/Request;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/facebook/Request;->TAG:Ljava/lang/String;
-
-    .line 113
-    const-string v0, "^/?v\\d+\\.\\d+/(.*)"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/facebook/Request;->versionPattern:Ljava/util/regex/Pattern;
-
-    .line 2097
-    return-void
-.end method
-
 .method public constructor <init>()V
     .registers 7
 
     .prologue
     const/4 v1, 0x0
 
-    .line 132
+    .line 127
     move-object v0, p0
 
     move-object v2, v1
@@ -171,7 +135,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/facebook/Request;-><init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/Request$Callback;)V
 
-    .line 133
+    .line 128
     return-void
 .end method
 
@@ -183,7 +147,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 147
+    .line 142
     move-object v0, p0
 
     move-object v1, p1
@@ -196,7 +160,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/facebook/Request;-><init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/Request$Callback;)V
 
-    .line 148
+    .line 143
     return-void
 .end method
 
@@ -208,7 +172,7 @@
     .param p4, "httpMethod"    # Lcom/facebook/HttpMethod;
 
     .prologue
-    .line 169
+    .line 164
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -223,12 +187,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/facebook/Request;-><init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/Request$Callback;)V
 
-    .line 170
+    .line 165
     return-void
 .end method
 
 .method public constructor <init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/Request$Callback;)V
-    .registers 13
+    .registers 9
     .param p1, "session"    # Lcom/facebook/Session;
     .param p2, "graphPath"    # Ljava/lang/String;
     .param p3, "parameters"    # Landroid/os/Bundle;
@@ -236,96 +200,70 @@
     .param p5, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 193
-    const/4 v6, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-direct/range {v0 .. v6}, Lcom/facebook/Request;-><init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/Request$Callback;Ljava/lang/String;)V
-
-    .line 194
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/Request$Callback;Ljava/lang/String;)V
-    .registers 8
-    .param p1, "session"    # Lcom/facebook/Session;
-    .param p2, "graphPath"    # Ljava/lang/String;
-    .param p3, "parameters"    # Landroid/os/Bundle;
-    .param p4, "httpMethod"    # Lcom/facebook/HttpMethod;
-    .param p5, "callback"    # Lcom/facebook/Request$Callback;
-    .param p6, "version"    # Ljava/lang/String;
-
-    .prologue
-    .line 218
+    .line 187
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
+    .line 117
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/facebook/Request;->batchEntryOmitResultOnSuccess:Z
 
-    .line 219
+    .line 188
     iput-object p1, p0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
-    .line 220
+    .line 189
     iput-object p2, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
 
-    .line 221
+    .line 190
     iput-object p5, p0, Lcom/facebook/Request;->callback:Lcom/facebook/Request$Callback;
 
-    .line 222
-    iput-object p6, p0, Lcom/facebook/Request;->version:Ljava/lang/String;
-
-    .line 224
+    .line 192
     invoke-virtual {p0, p4}, Lcom/facebook/Request;->setHttpMethod(Lcom/facebook/HttpMethod;)V
 
-    .line 226
-    if-eqz p3, :cond_25
+    .line 194
+    if-eqz p3, :cond_2c
 
-    .line 227
+    .line 195
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0, p3}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
     iput-object v0, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
-    .line 232
-    :goto_1a
-    iget-object v0, p0, Lcom/facebook/Request;->version:Ljava/lang/String;
+    .line 200
+    :goto_18
+    iget-object v0, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
-    if-nez v0, :cond_24
+    const-string v1, "migration_bundle"
 
-    .line 233
-    invoke-static {}, Lcom/facebook/internal/ServerProtocol;->getAPIVersion()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    move-result-object v0
+    move-result v0
 
-    iput-object v0, p0, Lcom/facebook/Request;->version:Ljava/lang/String;
+    if-nez v0, :cond_2b
 
-    .line 235
-    :cond_24
+    .line 201
+    iget-object v0, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
+
+    const-string v1, "migration_bundle"
+
+    const-string v2, "fbsdk:20130708"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 203
+    :cond_2b
     return-void
 
-    .line 229
-    :cond_25
+    .line 197
+    :cond_2c
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
-    goto :goto_1a
+    goto :goto_18
 .end method
 
 .method constructor <init>(Lcom/facebook/Session;Ljava/net/URL;)V
@@ -334,37 +272,37 @@
     .param p2, "overriddenURL"    # Ljava/net/URL;
 
     .prologue
-    .line 237
+    .line 205
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
+    .line 117
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/facebook/Request;->batchEntryOmitResultOnSuccess:Z
 
-    .line 238
+    .line 206
     iput-object p1, p0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
-    .line 239
+    .line 207
     invoke-virtual {p2}, Ljava/net/URL;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/Request;->overriddenURL:Ljava/lang/String;
 
-    .line 241
+    .line 209
     sget-object v0, Lcom/facebook/HttpMethod;->GET:Lcom/facebook/HttpMethod;
 
     invoke-virtual {p0, v0}, Lcom/facebook/Request;->setHttpMethod(Lcom/facebook/HttpMethod;)V
 
-    .line 243
+    .line 211
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
-    .line 244
+    .line 212
     return-void
 .end method
 
@@ -372,7 +310,7 @@
     .registers 2
 
     .prologue
-    .line 2140
+    .line 2025
     invoke-static {p0}, Lcom/facebook/Request;->isSupportedParameterType(Ljava/lang/Object;)Z
 
     move-result v0
@@ -384,7 +322,7 @@
     .registers 2
 
     .prologue
-    .line 2145
+    .line 2030
     invoke-static {p0}, Lcom/facebook/Request;->parameterToString(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -396,7 +334,7 @@
     .registers 3
 
     .prologue
-    .line 2121
+    .line 2006
     invoke-static {p0, p1}, Lcom/facebook/Request;->typedListFromResponse(Lcom/facebook/Response;Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v0
@@ -405,168 +343,84 @@
 .end method
 
 .method private addCommonParameters()V
-    .registers 7
+    .registers 5
 
     .prologue
-    .line 1693
-    iget-object v3, p0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
+    .line 1668
+    iget-object v1, p0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
-    if-eqz v3, :cond_41
+    if-eqz v1, :cond_2e
 
-    .line 1694
-    iget-object v3, p0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
+    .line 1669
+    iget-object v1, p0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
-    invoke-virtual {v3}, Lcom/facebook/Session;->isOpened()Z
+    invoke-virtual {v1}, Lcom/facebook/Session;->isOpened()Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_14
+    if-nez v1, :cond_14
 
-    .line 1695
-    new-instance v3, Lcom/facebook/FacebookException;
+    .line 1670
+    new-instance v1, Lcom/facebook/FacebookException;
 
-    const-string v4, "Session provided to a Request in un-opened state."
+    const-string v2, "Session provided to a Request in un-opened state."
 
-    invoke-direct {v3, v4}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
 
-    throw v3
+    throw v1
 
-    .line 1696
+    .line 1671
     :cond_14
-    iget-object v3, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
-    const-string v4, "access_token"
+    const-string v2, "access_token"
 
-    invoke-virtual {v3, v4}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_2e
+    if-nez v1, :cond_2e
 
-    .line 1697
-    iget-object v3, p0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
+    .line 1672
+    iget-object v1, p0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
-    invoke-virtual {v3}, Lcom/facebook/Session;->getAccessToken()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/facebook/Session;->getAccessToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1698
+    .line 1673
     .local v0, "accessToken":Ljava/lang/String;
     invoke-static {v0}, Lcom/facebook/internal/Logger;->registerAccessToken(Ljava/lang/String;)V
 
-    .line 1699
-    iget-object v3, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
+    .line 1674
+    iget-object v1, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
-    const-string v4, "access_token"
+    const-string v2, "access_token"
 
-    invoke-virtual {v3, v4, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1712
+    .line 1677
     .end local v0    # "accessToken":Ljava/lang/String;
     :cond_2e
-    :goto_2e
-    iget-object v3, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
-    const-string v4, "sdk"
+    const-string v2, "sdk"
 
-    const-string v5, "android"
+    const-string v3, "android"
 
-    invoke-virtual {v3, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1713
-    iget-object v3, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
+    .line 1678
+    iget-object v1, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
-    const-string v4, "format"
+    const-string v2, "format"
 
-    const-string v5, "json"
+    const-string v3, "json"
 
-    invoke-virtual {v3, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1714
+    .line 1679
     return-void
-
-    .line 1701
-    :cond_41
-    iget-object v3, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
-
-    const-string v4, "access_token"
-
-    invoke-virtual {v3, v4}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2e
-
-    .line 1702
-    invoke-static {}, Lcom/facebook/Settings;->getApplicationId()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 1703
-    .local v1, "appID":Ljava/lang/String;
-    invoke-static {}, Lcom/facebook/Settings;->getClientToken()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 1704
-    .local v2, "clientToken":Ljava/lang/String;
-    invoke-static {v1}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_7e
-
-    invoke-static {v2}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_7e
-
-    .line 1705
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v4, "|"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 1706
-    .restart local v0    # "accessToken":Ljava/lang/String;
-    iget-object v3, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
-
-    const-string v4, "access_token"
-
-    invoke-virtual {v3, v4, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_2e
-
-    .line 1708
-    .end local v0    # "accessToken":Ljava/lang/String;
-    :cond_7e
-    sget-object v3, Lcom/facebook/Request;->TAG:Ljava/lang/String;
-
-    .line 1709
-    const-string v4, "Warning: Sessionless Request needs token but missing either application ID or client token."
-
-    .line 1708
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_2e
 .end method
 
 .method private appendParametersToBaseUrl(Ljava/lang/String;)Ljava/lang/String;
@@ -574,7 +428,7 @@
     .param p1, "baseUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 1717
+    .line 1682
     new-instance v4, Landroid/net/Uri$Builder;
 
     invoke-direct {v4}, Landroid/net/Uri$Builder;-><init>()V
@@ -583,7 +437,7 @@
 
     move-result-object v2
 
-    .line 1719
+    .line 1684
     .local v2, "uriBuilder":Landroid/net/Uri$Builder;
     iget-object v4, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
@@ -591,7 +445,7 @@
 
     move-result-object v1
 
-    .line 1720
+    .line 1685
     .local v1, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -605,14 +459,14 @@
 
     if-nez v5, :cond_1e
 
-    .line 1740
+    .line 1705
     invoke-virtual {v2}, Landroid/net/Uri$Builder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
     return-object v4
 
-    .line 1720
+    .line 1685
     :cond_1e
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -620,7 +474,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1721
+    .line 1686
     .local v0, "key":Ljava/lang/String;
     iget-object v5, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
@@ -628,14 +482,14 @@
 
     move-result-object v3
 
-    .line 1723
+    .line 1688
     .local v3, "value":Ljava/lang/Object;
     if-nez v3, :cond_2e
 
-    .line 1724
+    .line 1689
     const-string v3, ""
 
-    .line 1727
+    .line 1692
     .end local v3    # "value":Ljava/lang/Object;
     :cond_2e
     invoke-static {v3}, Lcom/facebook/Request;->isSupportedParameterType(Ljava/lang/Object;)Z
@@ -644,12 +498,12 @@
 
     if-eqz v5, :cond_40
 
-    .line 1728
+    .line 1693
     invoke-static {v3}, Lcom/facebook/Request;->parameterToString(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1737
+    .line 1702
     .local v3, "value":Ljava/lang/String;
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -659,7 +513,7 @@
 
     goto :goto_13
 
-    .line 1730
+    .line 1695
     .end local v3    # "value":Ljava/lang/String;
     :cond_40
     iget-object v5, p0, Lcom/facebook/Request;->httpMethod:Lcom/facebook/HttpMethod;
@@ -668,7 +522,7 @@
 
     if-ne v5, v6, :cond_13
 
-    .line 1731
+    .line 1696
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "Unsupported parameter type for GET request: %s"
@@ -679,7 +533,7 @@
 
     const/4 v7, 0x0
 
-    .line 1732
+    .line 1697
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v8
@@ -690,7 +544,7 @@
 
     aput-object v8, v6, v7
 
-    .line 1731
+    .line 1696
     invoke-static {v5, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -710,14 +564,14 @@
     .end annotation
 
     .prologue
-    .line 1681
+    .line 1657
     invoke-virtual {p0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v0
 
     check-cast v0, Ljava/net/HttpURLConnection;
 
-    .line 1683
+    .line 1659
     .local v0, "connection":Ljava/net/HttpURLConnection;
     const-string v1, "User-Agent"
 
@@ -727,7 +581,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1684
+    .line 1660
     const-string v1, "Content-Type"
 
     invoke-static {}, Lcom/facebook/Request;->getMimeContentType()Ljava/lang/String;
@@ -736,25 +590,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1685
-    const-string v1, "Accept-Language"
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/Locale;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1687
+    .line 1662
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setChunkedStreamingMode(I)V
 
-    .line 1688
+    .line 1663
     return-object v0
 .end method
 
@@ -767,7 +608,7 @@
 
     const/4 v2, 0x0
 
-    .line 1375
+    .line 1351
     new-array v1, v3, [Lcom/facebook/Request;
 
     aput-object p0, v1, v2
@@ -776,7 +617,7 @@
 
     move-result-object v0
 
-    .line 1377
+    .line 1353
     .local v0, "responses":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/Response;>;"
     if-eqz v0, :cond_12
 
@@ -786,7 +627,7 @@
 
     if-eq v1, v3, :cond_1a
 
-    .line 1378
+    .line 1354
     :cond_12
     new-instance v1, Lcom/facebook/FacebookException;
 
@@ -796,7 +637,7 @@
 
     throw v1
 
-    .line 1381
+    .line 1357
     :cond_1a
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -823,15 +664,15 @@
     .end annotation
 
     .prologue
-    .line 1441
+    .line 1417
     const-string v3, "requests"
 
     invoke-static {p0, v3}, Lcom/facebook/internal/Validate;->notEmptyAndContainsNoNulls(Ljava/util/Collection;Ljava/lang/String;)V
 
-    .line 1443
+    .line 1419
     const/4 v0, 0x0
 
-    .line 1445
+    .line 1421
     .local v0, "connection":Ljava/net/HttpURLConnection;
     :try_start_6
     invoke-static {p0}, Lcom/facebook/Request;->toHttpConnection(Lcom/facebook/RequestBatch;)Ljava/net/HttpURLConnection;
@@ -840,22 +681,22 @@
 
     move-result-object v0
 
-    .line 1452
+    .line 1428
     invoke-static {v0, p0}, Lcom/facebook/Request;->executeConnectionAndWait(Ljava/net/HttpURLConnection;Lcom/facebook/RequestBatch;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 1453
+    .line 1429
     .local v2, "responses":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/Response;>;"
     :goto_e
     return-object v2
 
-    .line 1446
+    .line 1422
     .end local v2    # "responses":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/Response;>;"
     :catch_f
     move-exception v1
 
-    .line 1447
+    .line 1423
     .local v1, "ex":Ljava/lang/Exception;
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->getRequests()Ljava/util/List;
 
@@ -871,7 +712,7 @@
 
     move-result-object v2
 
-    .line 1448
+    .line 1424
     .restart local v2    # "responses":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/Response;>;"
     invoke-static {p0, v2}, Lcom/facebook/Request;->runCallbacks(Lcom/facebook/RequestBatch;Ljava/util/List;)V
 
@@ -895,7 +736,7 @@
     .end annotation
 
     .prologue
-    .line 1421
+    .line 1397
     .local p0, "requests":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/Request;>;"
     new-instance v0, Lcom/facebook/RequestBatch;
 
@@ -924,12 +765,12 @@
     .end annotation
 
     .prologue
-    .line 1401
+    .line 1377
     const-string v0, "requests"
 
     invoke-static {p0, v0}, Lcom/facebook/internal/Validate;->notNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1403
+    .line 1379
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -946,21 +787,21 @@
     .param p0, "requests"    # Lcom/facebook/RequestBatch;
 
     .prologue
-    .line 1509
+    .line 1485
     const-string v1, "requests"
 
     invoke-static {p0, v1}, Lcom/facebook/internal/Validate;->notEmptyAndContainsNoNulls(Ljava/util/Collection;Ljava/lang/String;)V
 
-    .line 1511
+    .line 1487
     new-instance v0, Lcom/facebook/RequestAsyncTask;
 
     invoke-direct {v0, p0}, Lcom/facebook/RequestAsyncTask;-><init>(Lcom/facebook/RequestBatch;)V
 
-    .line 1512
+    .line 1488
     .local v0, "asyncTask":Lcom/facebook/RequestAsyncTask;
     invoke-virtual {v0}, Lcom/facebook/RequestAsyncTask;->executeOnSettingsExecutor()Lcom/facebook/RequestAsyncTask;
 
-    .line 1513
+    .line 1489
     return-object v0
 .end method
 
@@ -978,7 +819,7 @@
     .end annotation
 
     .prologue
-    .line 1491
+    .line 1467
     .local p0, "requests":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/Request;>;"
     new-instance v0, Lcom/facebook/RequestBatch;
 
@@ -996,12 +837,12 @@
     .param p0, "requests"    # [Lcom/facebook/Request;
 
     .prologue
-    .line 1471
+    .line 1447
     const-string v0, "requests"
 
     invoke-static {p0, v0}, Lcom/facebook/internal/Validate;->notNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1473
+    .line 1449
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -1031,21 +872,21 @@
     .end annotation
 
     .prologue
-    .line 1553
+    .line 1529
     invoke-static {p0, p1}, Lcom/facebook/Response;->fromHttpConnection(Ljava/net/HttpURLConnection;Lcom/facebook/RequestBatch;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 1555
+    .line 1531
     .local v2, "responses":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/Response;>;"
     invoke-static {p0}, Lcom/facebook/internal/Utility;->disconnectQuietly(Ljava/net/URLConnection;)V
 
-    .line 1557
+    .line 1533
     invoke-virtual {p1}, Lcom/facebook/RequestBatch;->size()I
 
     move-result v0
 
-    .line 1558
+    .line 1534
     .local v0, "numRequests":I
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -1053,7 +894,7 @@
 
     if-eq v0, v5, :cond_32
 
-    .line 1559
+    .line 1535
     new-instance v5, Lcom/facebook/FacebookException;
 
     const-string v6, "Received %d responses while expecting %d"
@@ -1076,14 +917,14 @@
 
     const/4 v8, 0x1
 
-    .line 1560
+    .line 1536
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
 
     aput-object v9, v7, v8
 
-    .line 1559
+    .line 1535
     invoke-static {v6, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
@@ -1092,16 +933,16 @@
 
     throw v5
 
-    .line 1563
+    .line 1539
     :cond_32
     invoke-static {p1, v2}, Lcom/facebook/Request;->runCallbacks(Lcom/facebook/RequestBatch;Ljava/util/List;)V
 
-    .line 1567
+    .line 1543
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 1568
+    .line 1544
     .local v4, "sessions":Ljava/util/HashSet;, "Ljava/util/HashSet<Lcom/facebook/Session;>;"
     invoke-virtual {p1}, Lcom/facebook/RequestBatch;->iterator()Ljava/util/Iterator;
 
@@ -1115,7 +956,7 @@
 
     if-nez v6, :cond_4f
 
-    .line 1573
+    .line 1549
     invoke-virtual {v4}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -1127,10 +968,10 @@
 
     if-nez v6, :cond_5f
 
-    .line 1577
+    .line 1553
     return-object v2
 
-    .line 1568
+    .line 1544
     :cond_4f
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1138,20 +979,20 @@
 
     check-cast v1, Lcom/facebook/Request;
 
-    .line 1569
+    .line 1545
     .local v1, "request":Lcom/facebook/Request;
     iget-object v6, v1, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
     if-eqz v6, :cond_3e
 
-    .line 1570
+    .line 1546
     iget-object v6, v1, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
     invoke-virtual {v4, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_3e
 
-    .line 1573
+    .line 1549
     .end local v1    # "request":Lcom/facebook/Request;
     :cond_5f
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -1160,7 +1001,7 @@
 
     check-cast v3, Lcom/facebook/Session;
 
-    .line 1574
+    .line 1550
     .local v3, "session":Lcom/facebook/Session;
     invoke-virtual {v3}, Lcom/facebook/Session;->extendAccessTokenIfNeeded()V
 
@@ -1186,7 +1027,7 @@
     .end annotation
 
     .prologue
-    .line 1533
+    .line 1509
     .local p1, "requests":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/Request;>;"
     new-instance v0, Lcom/facebook/RequestBatch;
 
@@ -1206,24 +1047,24 @@
     .param p2, "requests"    # Lcom/facebook/RequestBatch;
 
     .prologue
-    .line 1621
+    .line 1597
     const-string v1, "connection"
 
     invoke-static {p1, v1}, Lcom/facebook/internal/Validate;->notNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1623
+    .line 1599
     new-instance v0, Lcom/facebook/RequestAsyncTask;
 
     invoke-direct {v0, p1, p2}, Lcom/facebook/RequestAsyncTask;-><init>(Ljava/net/HttpURLConnection;Lcom/facebook/RequestBatch;)V
 
-    .line 1624
+    .line 1600
     .local v0, "asyncTask":Lcom/facebook/RequestAsyncTask;
     invoke-virtual {p2, p0}, Lcom/facebook/RequestBatch;->setCallbackHandler(Landroid/os/Handler;)V
 
-    .line 1625
+    .line 1601
     invoke-virtual {v0}, Lcom/facebook/RequestAsyncTask;->executeOnSettingsExecutor()Lcom/facebook/RequestAsyncTask;
 
-    .line 1626
+    .line 1602
     return-object v0
 .end method
 
@@ -1233,7 +1074,7 @@
     .param p1, "requests"    # Lcom/facebook/RequestBatch;
 
     .prologue
-    .line 1597
+    .line 1573
     const/4 v0, 0x0
 
     invoke-static {v0, p0, p1}, Lcom/facebook/Request;->executeConnectionAsync(Landroid/os/Handler;Ljava/net/HttpURLConnection;Lcom/facebook/RequestBatch;)Lcom/facebook/RequestAsyncTask;
@@ -1252,7 +1093,7 @@
     .end annotation
 
     .prologue
-    .line 1194
+    .line 1166
     invoke-static {p0, p1, p2}, Lcom/facebook/Request;->newGraphPathRequest(Lcom/facebook/Session;Ljava/lang/String;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
 
     move-result-object v0
@@ -1272,7 +1113,7 @@
     .end annotation
 
     .prologue
-    .line 1117
+    .line 1089
     invoke-static {p0, p1}, Lcom/facebook/Request;->newMeRequest(Lcom/facebook/Session;Lcom/facebook/Request$GraphUserCallback;)Lcom/facebook/Request;
 
     move-result-object v0
@@ -1292,7 +1133,7 @@
     .end annotation
 
     .prologue
-    .line 1135
+    .line 1107
     invoke-static {p0, p1}, Lcom/facebook/Request;->newMyFriendsRequest(Lcom/facebook/Session;Lcom/facebook/Request$GraphUserListCallback;)Lcom/facebook/Request;
 
     move-result-object v0
@@ -1316,17 +1157,17 @@
     .end annotation
 
     .prologue
-    .line 1225
+    .line 1197
     invoke-static/range {p0 .. p5}, Lcom/facebook/Request;->newPlacesSearchRequest(Lcom/facebook/Session;Landroid/location/Location;IILjava/lang/String;Lcom/facebook/Request$GraphPlaceListCallback;)Lcom/facebook/Request;
 
     move-result-object v0
 
-    .line 1226
+    .line 1198
     invoke-virtual {v0}, Lcom/facebook/Request;->executeAsync()Lcom/facebook/RequestAsyncTask;
 
     move-result-object v0
 
-    .line 1225
+    .line 1197
     return-object v0
 .end method
 
@@ -1340,8 +1181,30 @@
     .end annotation
 
     .prologue
-    .line 1099
+    .line 1047
     invoke-static {p0, p1, p2, p3}, Lcom/facebook/Request;->newPostRequest(Lcom/facebook/Session;Ljava/lang/String;Lcom/facebook/model/GraphObject;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/facebook/Request;->executeAsync()Lcom/facebook/RequestAsyncTask;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static executeRestRequestAsync(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;)Lcom/facebook/RequestAsyncTask;
+    .registers 5
+    .param p0, "session"    # Lcom/facebook/Session;
+    .param p1, "restMethod"    # Ljava/lang/String;
+    .param p2, "parameters"    # Landroid/os/Bundle;
+    .param p3, "httpMethod"    # Lcom/facebook/HttpMethod;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1071
+    invoke-static {p0, p1, p2, p3}, Lcom/facebook/Request;->newRestRequest(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;)Lcom/facebook/Request;
 
     move-result-object v0
 
@@ -1361,7 +1224,7 @@
     .end annotation
 
     .prologue
-    .line 1246
+    .line 1218
     invoke-static {p0, p1, p2}, Lcom/facebook/Request;->newStatusUpdateRequest(Lcom/facebook/Session;Ljava/lang/String;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
 
     move-result-object v0
@@ -1382,7 +1245,7 @@
     .end annotation
 
     .prologue
-    .line 1155
+    .line 1127
     invoke-static {p0, p1, p2}, Lcom/facebook/Request;->newUploadPhotoRequest(Lcom/facebook/Session;Landroid/graphics/Bitmap;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
 
     move-result-object v0
@@ -1409,7 +1272,7 @@
     .end annotation
 
     .prologue
-    .line 1174
+    .line 1146
     invoke-static {p0, p1, p2}, Lcom/facebook/Request;->newUploadPhotoRequest(Lcom/facebook/Session;Ljava/io/File;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
 
     move-result-object v0
@@ -1426,7 +1289,7 @@
     .param p0, "batch"    # Lcom/facebook/RequestBatch;
 
     .prologue
-    .line 2108
+    .line 1993
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->getBatchApplicationId()Ljava/lang/String;
 
     move-result-object v2
@@ -1437,16 +1300,16 @@
 
     if-nez v2, :cond_f
 
-    .line 2109
+    .line 1994
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->getBatchApplicationId()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2118
+    .line 2003
     :goto_e
     return-object v2
 
-    .line 2112
+    .line 1997
     :cond_f
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->iterator()Ljava/util/Iterator;
 
@@ -1459,12 +1322,12 @@
 
     if-nez v3, :cond_1c
 
-    .line 2118
+    .line 2003
     sget-object v2, Lcom/facebook/Request;->defaultBatchApplicationId:Ljava/lang/String;
 
     goto :goto_e
 
-    .line 2112
+    .line 1997
     :cond_1c
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1472,15 +1335,15 @@
 
     check-cast v0, Lcom/facebook/Request;
 
-    .line 2113
+    .line 1998
     .local v0, "request":Lcom/facebook/Request;
     iget-object v1, v0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
-    .line 2114
+    .line 1999
     .local v1, "session":Lcom/facebook/Session;
     if-eqz v1, :cond_13
 
-    .line 2115
+    .line 2000
     invoke-virtual {v1}, Lcom/facebook/Session;->getApplicationId()Ljava/lang/String;
 
     move-result-object v2
@@ -1492,71 +1355,17 @@
     .registers 1
 
     .prologue
-    .line 1024
+    .line 972
     sget-object v0, Lcom/facebook/Request;->defaultBatchApplicationId:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method private getGraphPathWithVersion()Ljava/lang/String;
-    .registers 6
-
-    .prologue
-    .line 1771
-    sget-object v1, Lcom/facebook/Request;->versionPattern:Ljava/util/regex/Pattern;
-
-    iget-object v2, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    .line 1772
-    .local v0, "matcher":Ljava/util/regex/Matcher;
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_11
-
-    .line 1773
-    iget-object v1, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
-
-    .line 1775
-    :goto_10
-    return-object v1
-
-    :cond_11
-    const-string v1, "%s/%s"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lcom/facebook/Request;->version:Ljava/lang/String;
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
-
-    aput-object v4, v2, v3
-
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_10
 .end method
 
 .method private static getMimeContentType()Ljava/lang/String;
     .registers 4
 
     .prologue
-    .line 2094
+    .line 1979
     const-string v0, "multipart/form-data; boundary=%s"
 
     const/4 v1, 0x1
@@ -1580,12 +1389,12 @@
     .registers 4
 
     .prologue
-    .line 2100
+    .line 1985
     sget-object v0, Lcom/facebook/Request;->userAgent:Ljava/lang/String;
 
     if-nez v0, :cond_19
 
-    .line 2101
+    .line 1986
     const-string v0, "%s.%s"
 
     const/4 v1, 0x2
@@ -1600,7 +1409,7 @@
 
     const/4 v2, 0x1
 
-    const-string v3, "3.17.2"
+    const-string v3, "3.5.0"
 
     aput-object v3, v1, v2
 
@@ -1610,146 +1419,11 @@
 
     sput-object v0, Lcom/facebook/Request;->userAgent:Ljava/lang/String;
 
-    .line 2104
+    .line 1989
     :cond_19
     sget-object v0, Lcom/facebook/Request;->userAgent:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method private static hasOnProgressCallbacks(Lcom/facebook/RequestBatch;)Z
-    .registers 6
-    .param p0, "requests"    # Lcom/facebook/RequestBatch;
-
-    .prologue
-    const/4 v2, 0x1
-
-    .line 1850
-    invoke-virtual {p0}, Lcom/facebook/RequestBatch;->getCallbacks()Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :cond_9
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1b
-
-    .line 1856
-    invoke-virtual {p0}, Lcom/facebook/RequestBatch;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :cond_13
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-nez v4, :cond_26
-
-    .line 1862
-    const/4 v2, 0x0
-
-    :goto_1a
-    return v2
-
-    .line 1850
-    :cond_1b
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/facebook/RequestBatch$Callback;
-
-    .line 1851
-    .local v0, "callback":Lcom/facebook/RequestBatch$Callback;
-    instance-of v4, v0, Lcom/facebook/RequestBatch$OnProgressCallback;
-
-    if-eqz v4, :cond_9
-
-    goto :goto_1a
-
-    .line 1856
-    .end local v0    # "callback":Lcom/facebook/RequestBatch$Callback;
-    :cond_26
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/facebook/Request;
-
-    .line 1857
-    .local v1, "request":Lcom/facebook/Request;
-    invoke-virtual {v1}, Lcom/facebook/Request;->getCallback()Lcom/facebook/Request$Callback;
-
-    move-result-object v4
-
-    instance-of v4, v4, Lcom/facebook/Request$OnProgressCallback;
-
-    if-eqz v4, :cond_13
-
-    goto :goto_1a
-.end method
-
-.method private static isMeRequest(Ljava/lang/String;)Z
-    .registers 4
-    .param p0, "path"    # Ljava/lang/String;
-
-    .prologue
-    const/4 v1, 0x1
-
-    .line 1972
-    sget-object v2, Lcom/facebook/Request;->versionPattern:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v2, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    .line 1973
-    .local v0, "matcher":Ljava/util/regex/Matcher;
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_11
-
-    .line 1975
-    invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 1977
-    :cond_11
-    const-string v2, "me/"
-
-    invoke-virtual {p0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_21
-
-    const-string v2, "/me/"
-
-    invoke-virtual {p0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_22
-
-    .line 1980
-    :cond_21
-    :goto_21
-    return v1
-
-    :cond_22
-    const/4 v1, 0x0
-
-    goto :goto_21
 .end method
 
 .method private static isSupportedAttachmentType(Ljava/lang/Object;)Z
@@ -1757,7 +1431,7 @@
     .param p0, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 2136
+    .line 2021
     instance-of v0, p0, Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_12
@@ -1770,12 +1444,12 @@
 
     if-nez v0, :cond_12
 
-    .line 2137
+    .line 2022
     instance-of v0, p0, Lcom/facebook/Request$ParcelFileDescriptorWithMimeType;
 
     if-nez v0, :cond_12
 
-    .line 2136
+    .line 2021
     const/4 v0, 0x0
 
     :goto_11
@@ -1792,7 +1466,7 @@
     .param p0, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 2141
+    .line 2026
     instance-of v0, p0, Ljava/lang/String;
 
     if-nez v0, :cond_12
@@ -1805,12 +1479,12 @@
 
     if-nez v0, :cond_12
 
-    .line 2142
+    .line 2027
     instance-of v0, p0, Ljava/util/Date;
 
     if-nez v0, :cond_12
 
-    .line 2141
+    .line 2026
     const/4 v0, 0x0
 
     :goto_11
@@ -1829,7 +1503,7 @@
     .param p2, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 538
+    .line 523
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v0, p2}, Lcom/facebook/Request;->newCustomAudienceThirdPartyIdRequest(Lcom/facebook/Session;Landroid/content/Context;Ljava/lang/String;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
@@ -1840,22 +1514,22 @@
 .end method
 
 .method public static newCustomAudienceThirdPartyIdRequest(Lcom/facebook/Session;Landroid/content/Context;Ljava/lang/String;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
-    .registers 12
+    .registers 11
     .param p0, "session"    # Lcom/facebook/Session;
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "applicationId"    # Ljava/lang/String;
     .param p3, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 579
+    .line 561
     if-nez p0, :cond_6
 
-    .line 580
+    .line 562
     invoke-static {}, Lcom/facebook/Session;->getActiveSession()Lcom/facebook/Session;
 
     move-result-object p0
 
-    .line 583
+    .line 565
     :cond_6
     if-eqz p0, :cond_f
 
@@ -1865,27 +1539,27 @@
 
     if-nez v0, :cond_f
 
-    .line 584
+    .line 566
     const/4 p0, 0x0
 
-    .line 587
+    .line 569
     :cond_f
     if-nez p2, :cond_17
 
-    .line 588
+    .line 570
     if-eqz p0, :cond_21
 
-    .line 589
+    .line 571
     invoke-virtual {p0}, Lcom/facebook/Session;->getApplicationId()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 595
+    .line 577
     :cond_17
     :goto_17
     if-nez p2, :cond_26
 
-    .line 596
+    .line 578
     new-instance v0, Lcom/facebook/FacebookException;
 
     const-string v1, "Facebook App ID cannot be determined"
@@ -1894,7 +1568,7 @@
 
     throw v0
 
-    .line 591
+    .line 573
     :cond_21
     invoke-static {p1}, Lcom/facebook/internal/Utility;->getMetadataApplicationId(Landroid/content/Context;)Ljava/lang/String;
 
@@ -1902,7 +1576,7 @@
 
     goto :goto_17
 
-    .line 599
+    .line 581
     :cond_26
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1922,73 +1596,37 @@
 
     move-result-object v2
 
-    .line 600
+    .line 583
     .local v2, "endpoint":Ljava/lang/String;
-    invoke-static {p1}, Lcom/facebook/internal/AttributionIdentifiers;->getAttributionIdentifiers(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;
-
-    move-result-object v6
-
-    .line 601
-    .local v6, "attributionIdentifiers":Lcom/facebook/internal/AttributionIdentifiers;
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 603
+    .line 584
     .local v3, "parameters":Landroid/os/Bundle;
-    if-nez p0, :cond_59
+    if-nez p0, :cond_4f
 
-    .line 606
-    invoke-virtual {v6}, Lcom/facebook/internal/AttributionIdentifiers;->getAttributionId()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_76
-
-    .line 607
-    invoke-virtual {v6}, Lcom/facebook/internal/AttributionIdentifiers;->getAttributionId()Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 609
-    .local v7, "udid":Ljava/lang/String;
-    :goto_4e
-    invoke-virtual {v6}, Lcom/facebook/internal/AttributionIdentifiers;->getAttributionId()Ljava/lang/String;
+    .line 587
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    if-eqz v0, :cond_59
+    invoke-static {v0}, Lcom/facebook/Settings;->getAttributionId(Landroid/content/ContentResolver;)Ljava/lang/String;
 
-    .line 610
+    move-result-object v6
+
+    .line 588
+    .local v6, "attributionId":Ljava/lang/String;
+    if-eqz v6, :cond_4f
+
+    .line 589
     const-string v0, "udid"
 
-    invoke-virtual {v3, v0, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v0, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 616
-    .end local v7    # "udid":Ljava/lang/String;
-    :cond_59
-    invoke-static {p1}, Lcom/facebook/Settings;->getLimitEventAndDataUsage(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_65
-
-    invoke-virtual {v6}, Lcom/facebook/internal/AttributionIdentifiers;->isTrackingLimited()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6c
-
-    .line 617
-    :cond_65
-    const-string v0, "limit_event_usage"
-
-    const-string v1, "1"
-
-    invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 620
-    :cond_6c
+    .line 593
+    .end local v6    # "attributionId":Ljava/lang/String;
+    :cond_4f
     new-instance v0, Lcom/facebook/Request;
 
     sget-object v4, Lcom/facebook/HttpMethod;->GET:Lcom/facebook/HttpMethod;
@@ -2000,14 +1638,6 @@
     invoke-direct/range {v0 .. v5}, Lcom/facebook/Request;-><init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/Request$Callback;)V
 
     return-object v0
-
-    .line 608
-    :cond_76
-    invoke-virtual {v6}, Lcom/facebook/internal/AttributionIdentifiers;->getAndroidAdvertiserId()Ljava/lang/String;
-
-    move-result-object v7
-
-    goto :goto_4e
 .end method
 
 .method public static newDeleteObjectRequest(Lcom/facebook/Session;Ljava/lang/String;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
@@ -2017,7 +1647,7 @@
     .param p2, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 767
+    .line 716
     new-instance v0, Lcom/facebook/Request;
 
     const/4 v3, 0x0
@@ -2044,7 +1674,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 374
+    .line 362
     new-instance v0, Lcom/facebook/Request;
 
     move-object v1, p0
@@ -2068,12 +1698,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 276
+    .line 264
     new-instance v5, Lcom/facebook/Request$1;
 
     invoke-direct {v5, p1}, Lcom/facebook/Request$1;-><init>(Lcom/facebook/Request$GraphUserCallback;)V
 
-    .line 284
+    .line 272
     .local v5, "wrapper":Lcom/facebook/Request$Callback;
     new-instance v0, Lcom/facebook/Request;
 
@@ -2096,12 +1726,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 297
+    .line 285
     new-instance v5, Lcom/facebook/Request$2;
 
     invoke-direct {v5, p1}, Lcom/facebook/Request$2;-><init>(Lcom/facebook/Request$GraphUserListCallback;)V
 
-    .line 305
+    .line 293
     .local v5, "wrapper":Lcom/facebook/Request$Callback;
     new-instance v0, Lcom/facebook/Request;
 
@@ -2117,7 +1747,7 @@
 .end method
 
 .method public static newPlacesSearchRequest(Lcom/facebook/Session;Landroid/location/Location;IILjava/lang/String;Lcom/facebook/Request$GraphPlaceListCallback;)Lcom/facebook/Request;
-    .registers 16
+    .registers 15
     .param p0, "session"    # Lcom/facebook/Session;
     .param p1, "location"    # Landroid/location/Location;
     .param p2, "radiusInMeters"    # I
@@ -2126,7 +1756,7 @@
     .param p5, "callback"    # Lcom/facebook/Request$GraphPlaceListCallback;
 
     .prologue
-    .line 401
+    .line 389
     if-nez p1, :cond_10
 
     invoke-static {p4}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
@@ -2135,7 +1765,7 @@
 
     if-eqz v0, :cond_10
 
-    .line 402
+    .line 390
     new-instance v0, Lcom/facebook/FacebookException;
 
     const-string v1, "Either location or searchText must be specified."
@@ -2144,7 +1774,7 @@
 
     throw v0
 
-    .line 405
+    .line 393
     :cond_10
     new-instance v3, Landroid/os/Bundle;
 
@@ -2152,7 +1782,7 @@
 
     invoke-direct {v3, v0}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 406
+    .line 394
     .local v3, "parameters":Landroid/os/Bundle;
     const-string v0, "type"
 
@@ -2160,18 +1790,18 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 407
+    .line 395
     const-string v0, "limit"
 
     invoke-virtual {v3, v0, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 408
+    .line 396
     if-eqz p1, :cond_4f
 
-    .line 409
+    .line 397
     const-string v0, "center"
 
-    .line 410
+    .line 398
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v2, "%f,%f"
@@ -2184,9 +1814,9 @@
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
-    move-result-wide v8
+    move-result-wide v7
 
-    invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v7, v8}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v7
 
@@ -2196,9 +1826,9 @@
 
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
-    move-result-wide v8
+    move-result-wide v7
 
-    invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v7, v8}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v7
 
@@ -2208,15 +1838,15 @@
 
     move-result-object v1
 
-    .line 409
+    .line 397
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 411
+    .line 399
     const-string v0, "distance"
 
     invoke-virtual {v3, v0, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 413
+    .line 401
     :cond_4f
     invoke-static {p4}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
 
@@ -2224,18 +1854,18 @@
 
     if-nez v0, :cond_5a
 
-    .line 414
+    .line 402
     const-string v0, "q"
 
     invoke-virtual {v3, v0, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 417
+    .line 405
     :cond_5a
     new-instance v5, Lcom/facebook/Request$3;
 
     invoke-direct {v5, p5}, Lcom/facebook/Request$3;-><init>(Lcom/facebook/Request$GraphPlaceListCallback;)V
 
-    .line 426
+    .line 414
     .local v5, "wrapper":Lcom/facebook/Request$Callback;
     new-instance v0, Lcom/facebook/Request;
 
@@ -2250,75 +1880,6 @@
     return-object v0
 .end method
 
-.method public static newPostOpenGraphActionRequest(Lcom/facebook/Session;Lcom/facebook/model/OpenGraphAction;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
-    .registers 8
-    .param p0, "session"    # Lcom/facebook/Session;
-    .param p1, "openGraphAction"    # Lcom/facebook/model/OpenGraphAction;
-    .param p2, "callback"    # Lcom/facebook/Request$Callback;
-
-    .prologue
-    .line 744
-    if-nez p1, :cond_a
-
-    .line 745
-    new-instance v1, Lcom/facebook/FacebookException;
-
-    const-string v2, "openGraphAction cannot be null"
-
-    invoke-direct {v1, v2}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    .line 747
-    :cond_a
-    invoke-interface {p1}, Lcom/facebook/model/OpenGraphAction;->getType()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1c
-
-    .line 748
-    new-instance v1, Lcom/facebook/FacebookException;
-
-    const-string v2, "openGraphAction must have non-null \'type\' property"
-
-    invoke-direct {v1, v2}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    .line 751
-    :cond_1c
-    const-string v1, "me/%s"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-interface {p1}, Lcom/facebook/model/OpenGraphAction;->getType()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 752
-    .local v0, "path":Ljava/lang/String;
-    invoke-static {p0, v0, p1, p2}, Lcom/facebook/Request;->newPostRequest(Lcom/facebook/Session;Ljava/lang/String;Lcom/facebook/model/GraphObject;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
-
-    move-result-object v1
-
-    return-object v1
-.end method
-
 .method public static newPostOpenGraphObjectRequest(Lcom/facebook/Session;Lcom/facebook/model/OpenGraphObject;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
     .registers 9
     .param p0, "session"    # Lcom/facebook/Session;
@@ -2326,62 +1887,54 @@
     .param p2, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 682
+    .line 655
     if-nez p1, :cond_a
 
-    .line 683
-    new-instance v0, Lcom/facebook/FacebookException;
+    .line 656
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "openGraphObject cannot be null"
+    const-string v1, "OpenGraphObject cannot be null"
 
-    invoke-direct {v0, v1}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 685
+    .line 658
     :cond_a
     invoke-interface {p1}, Lcom/facebook/model/OpenGraphObject;->getType()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
+    if-nez v0, :cond_18
 
-    move-result v0
+    .line 659
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    if-eqz v0, :cond_1c
+    const-string v1, "OpenGraphObject must have non-null \'type\' property"
 
-    .line 686
-    new-instance v0, Lcom/facebook/FacebookException;
-
-    const-string v1, "openGraphObject must have non-null \'type\' property"
-
-    invoke-direct {v0, v1}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 688
-    :cond_1c
+    .line 661
+    :cond_18
     invoke-interface {p1}, Lcom/facebook/model/OpenGraphObject;->getTitle()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
+    if-nez v0, :cond_26
 
-    move-result v0
+    .line 662
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    if-eqz v0, :cond_2e
+    const-string v1, "OpenGraphObject must have non-null \'title\' property"
 
-    .line 689
-    new-instance v0, Lcom/facebook/FacebookException;
-
-    const-string v1, "openGraphObject must have non-null \'title\' property"
-
-    invoke-direct {v0, v1}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 692
-    :cond_2e
+    .line 665
+    :cond_26
     const-string v0, "me/objects/%s"
 
     const/4 v1, 0x1
@@ -2400,13 +1953,13 @@
 
     move-result-object v2
 
-    .line 693
+    .line 666
     .local v2, "path":Ljava/lang/String;
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 694
+    .line 667
     .local v3, "bundle":Landroid/os/Bundle;
     const-string v0, "object"
 
@@ -2420,7 +1973,7 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 695
+    .line 668
     new-instance v0, Lcom/facebook/Request;
 
     sget-object v4, Lcom/facebook/HttpMethod;->POST:Lcom/facebook/HttpMethod;
@@ -2446,7 +1999,7 @@
     .param p7, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 722
+    .line 695
     const-class v0, Lcom/facebook/model/OpenGraphObject;
 
     move-object v1, p1
@@ -2463,14 +2016,14 @@
 
     move-result-object v6
 
-    .line 724
+    .line 697
     .local v6, "openGraphObject":Lcom/facebook/model/OpenGraphObject;
     if-eqz p6, :cond_10
 
-    .line 725
+    .line 698
     invoke-interface {v6, p6}, Lcom/facebook/model/OpenGraphObject;->setData(Lcom/facebook/model/GraphObject;)V
 
-    .line 728
+    .line 701
     :cond_10
     invoke-static {p0, v6, p7}, Lcom/facebook/Request;->newPostOpenGraphObjectRequest(Lcom/facebook/Session;Lcom/facebook/model/OpenGraphObject;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
 
@@ -2487,7 +2040,7 @@
     .param p3, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 261
+    .line 229
     new-instance v0, Lcom/facebook/Request;
 
     const/4 v3, 0x0
@@ -2502,11 +2055,34 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/facebook/Request;-><init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/Request$Callback;)V
 
-    .line 262
+    .line 230
     .local v0, "request":Lcom/facebook/Request;
     invoke-virtual {v0, p2}, Lcom/facebook/Request;->setGraphObject(Lcom/facebook/model/GraphObject;)V
 
-    .line 263
+    .line 231
+    return-object v0
+.end method
+
+.method public static newRestRequest(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;)Lcom/facebook/Request;
+    .registers 6
+    .param p0, "session"    # Lcom/facebook/Session;
+    .param p1, "restMethod"    # Ljava/lang/String;
+    .param p2, "parameters"    # Landroid/os/Bundle;
+    .param p3, "httpMethod"    # Lcom/facebook/HttpMethod;
+
+    .prologue
+    .line 249
+    new-instance v0, Lcom/facebook/Request;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1, p2, p3}, Lcom/facebook/Request;-><init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;)V
+
+    .line 250
+    .local v0, "request":Lcom/facebook/Request;
+    invoke-virtual {v0, p1}, Lcom/facebook/Request;->setRestMethod(Ljava/lang/String;)V
+
+    .line 251
     return-object v0
 .end method
 
@@ -2519,7 +2095,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 441
+    .line 429
     invoke-static {p0, p1, v0, v0, p2}, Lcom/facebook/Request;->newStatusUpdateRequest(Lcom/facebook/Session;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
 
     move-result-object v0
@@ -2550,15 +2126,15 @@
     .end annotation
 
     .prologue
-    .line 495
+    .line 483
     .local p3, "tags":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/model/GraphUser;>;"
     const/4 v2, 0x0
 
-    .line 496
+    .line 484
     .local v2, "tagIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p3, :cond_16
 
-    .line 497
+    .line 485
     new-instance v2, Ljava/util/ArrayList;
 
     .end local v2    # "tagIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -2568,7 +2144,7 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 498
+    .line 486
     .restart local v2    # "tagIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2581,13 +2157,13 @@
 
     if-nez v4, :cond_1e
 
-    .line 502
+    .line 490
     :cond_16
     if-nez p2, :cond_2c
 
     const/4 v0, 0x0
 
-    .line 503
+    .line 491
     .local v0, "placeId":Ljava/lang/String;
     :goto_19
     invoke-static {p0, p1, v0, v2, p4}, Lcom/facebook/Request;->newStatusUpdateRequest(Lcom/facebook/Session;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
@@ -2596,7 +2172,7 @@
 
     return-object v3
 
-    .line 498
+    .line 486
     .end local v0    # "placeId":Ljava/lang/String;
     :cond_1e
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -2605,7 +2181,7 @@
 
     check-cast v1, Lcom/facebook/model/GraphUser;
 
-    .line 499
+    .line 487
     .local v1, "tag":Lcom/facebook/model/GraphUser;
     invoke-interface {v1}, Lcom/facebook/model/GraphUser;->getId()Ljava/lang/String;
 
@@ -2615,7 +2191,7 @@
 
     goto :goto_10
 
-    .line 502
+    .line 490
     .end local v1    # "tag":Lcom/facebook/model/GraphUser;
     :cond_2c
     invoke-interface {p2}, Lcom/facebook/model/GraphPlace;->getId()Ljava/lang/String;
@@ -2648,27 +2224,27 @@
     .end annotation
 
     .prologue
-    .line 462
+    .line 450
     .local p3, "tagIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 463
+    .line 451
     .local v3, "parameters":Landroid/os/Bundle;
     const-string v0, "message"
 
     invoke-virtual {v3, v0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 465
+    .line 453
     if-eqz p2, :cond_11
 
-    .line 466
+    .line 454
     const-string v0, "place"
 
     invoke-virtual {v3, v0, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 469
+    .line 457
     :cond_11
     if-eqz p3, :cond_24
 
@@ -2678,20 +2254,20 @@
 
     if-lez v0, :cond_24
 
-    .line 470
+    .line 458
     const-string v0, ","
 
     invoke-static {v0, p3}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 471
+    .line 459
     .local v6, "tags":Ljava/lang/String;
     const-string v0, "tags"
 
     invoke-virtual {v3, v0, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 474
+    .line 462
     .end local v6    # "tags":Ljava/lang/String;
     :cond_24
     new-instance v0, Lcom/facebook/Request;
@@ -2716,44 +2292,44 @@
     .param p2, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 783
+    .line 732
     if-nez p1, :cond_a
 
-    .line 784
-    new-instance v0, Lcom/facebook/FacebookException;
+    .line 733
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "openGraphObject cannot be null"
+    const-string v1, "OpenGraphObject cannot be null"
 
-    invoke-direct {v0, v1}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 787
+    .line 736
     :cond_a
     invoke-interface {p1}, Lcom/facebook/model/OpenGraphObject;->getId()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 788
+    .line 737
     .local v2, "path":Ljava/lang/String;
     if-nez v2, :cond_18
 
-    .line 789
-    new-instance v0, Lcom/facebook/FacebookException;
+    .line 738
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "openGraphObject must have an id"
+    const-string v1, "OpenGraphObject must have an id"
 
-    invoke-direct {v0, v1}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 792
+    .line 741
     :cond_18
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 793
+    .line 742
     .local v3, "bundle":Landroid/os/Bundle;
     const-string v0, "object"
 
@@ -2767,7 +2343,7 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 794
+    .line 743
     new-instance v0, Lcom/facebook/Request;
 
     sget-object v4, Lcom/facebook/HttpMethod;->POST:Lcom/facebook/HttpMethod;
@@ -2793,7 +2369,7 @@
     .param p7, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 820
+    .line 769
     const-class v0, Lcom/facebook/model/OpenGraphObject;
 
     const/4 v1, 0x0
@@ -2810,14 +2386,14 @@
 
     move-result-object v6
 
-    .line 822
+    .line 771
     .local v6, "openGraphObject":Lcom/facebook/model/OpenGraphObject;
     invoke-interface {v6, p1}, Lcom/facebook/model/OpenGraphObject;->setId(Ljava/lang/String;)V
 
-    .line 823
+    .line 772
     invoke-interface {v6, p6}, Lcom/facebook/model/OpenGraphObject;->setData(Lcom/facebook/model/GraphObject;)V
 
-    .line 825
+    .line 774
     invoke-static {p0, v6, p7}, Lcom/facebook/Request;->newUpdateOpenGraphObjectRequest(Lcom/facebook/Session;Lcom/facebook/model/OpenGraphObject;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
 
     move-result-object v0
@@ -2832,20 +2408,20 @@
     .param p2, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 320
+    .line 308
     new-instance v3, Landroid/os/Bundle;
 
     const/4 v0, 0x1
 
     invoke-direct {v3, v0}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 321
+    .line 309
     .local v3, "parameters":Landroid/os/Bundle;
     const-string v0, "picture"
 
     invoke-virtual {v3, v0, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 323
+    .line 311
     new-instance v0, Lcom/facebook/Request;
 
     const-string v2, "me/photos"
@@ -2873,14 +2449,14 @@
     .end annotation
 
     .prologue
-    .line 337
+    .line 325
     const/high16 v0, 0x10000000
 
     invoke-static {p1, v0}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v6
 
-    .line 338
+    .line 326
     .local v6, "descriptor":Landroid/os/ParcelFileDescriptor;
     new-instance v3, Landroid/os/Bundle;
 
@@ -2888,13 +2464,13 @@
 
     invoke-direct {v3, v0}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 339
+    .line 327
     .local v3, "parameters":Landroid/os/Bundle;
     const-string v0, "picture"
 
     invoke-virtual {v3, v0, v6}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 341
+    .line 329
     new-instance v0, Lcom/facebook/Request;
 
     const-string v2, "me/photos"
@@ -2917,20 +2493,20 @@
     .param p2, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 639
+    .line 612
     new-instance v3, Landroid/os/Bundle;
 
     const/4 v0, 0x1
 
     invoke-direct {v3, v0}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 640
+    .line 613
     .local v3, "parameters":Landroid/os/Bundle;
     const-string v0, "file"
 
     invoke-virtual {v3, v0, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 642
+    .line 615
     new-instance v0, Lcom/facebook/Request;
 
     const-string v2, "me/staging_resources"
@@ -2958,14 +2534,14 @@
     .end annotation
 
     .prologue
-    .line 661
+    .line 634
     const/high16 v0, 0x10000000
 
     invoke-static {p1, v0}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v6
 
-    .line 662
+    .line 635
     .local v6, "descriptor":Landroid/os/ParcelFileDescriptor;
     new-instance v7, Lcom/facebook/Request$ParcelFileDescriptorWithMimeType;
 
@@ -2973,7 +2549,7 @@
 
     invoke-direct {v7, v6, v0}, Lcom/facebook/Request$ParcelFileDescriptorWithMimeType;-><init>(Landroid/os/ParcelFileDescriptor;Ljava/lang/String;)V
 
-    .line 663
+    .line 636
     .local v7, "descriptorWithMimeType":Lcom/facebook/Request$ParcelFileDescriptorWithMimeType;
     new-instance v3, Landroid/os/Bundle;
 
@@ -2981,13 +2557,13 @@
 
     invoke-direct {v3, v0}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 664
+    .line 637
     .local v3, "parameters":Landroid/os/Bundle;
     const-string v0, "file"
 
     invoke-virtual {v3, v0, v7}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 666
+    .line 639
     new-instance v0, Lcom/facebook/Request;
 
     const-string v2, "me/staging_resources"
@@ -3015,14 +2591,14 @@
     .end annotation
 
     .prologue
-    .line 355
+    .line 343
     const/high16 v0, 0x10000000
 
     invoke-static {p1, v0}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v6
 
-    .line 356
+    .line 344
     .local v6, "descriptor":Landroid/os/ParcelFileDescriptor;
     new-instance v3, Landroid/os/Bundle;
 
@@ -3030,7 +2606,7 @@
 
     invoke-direct {v3, v0}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 357
+    .line 345
     .local v3, "parameters":Landroid/os/Bundle;
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -3038,7 +2614,7 @@
 
     invoke-virtual {v3, v0, v6}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 359
+    .line 347
     new-instance v0, Lcom/facebook/Request;
 
     const-string v2, "me/videos"
@@ -3059,21 +2635,21 @@
     .param p0, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 2146
+    .line 2031
     instance-of v1, p0, Ljava/lang/String;
 
     if-eqz v1, :cond_7
 
-    .line 2147
+    .line 2032
     check-cast p0, Ljava/lang/String;
 
-    .line 2152
+    .line 2037
     .end local p0    # "value":Ljava/lang/Object;
     .local v0, "iso8601DateFormat":Ljava/text/SimpleDateFormat;
     :goto_6
     return-object p0
 
-    .line 2148
+    .line 2033
     .end local v0    # "iso8601DateFormat":Ljava/text/SimpleDateFormat;
     .restart local p0    # "value":Ljava/lang/Object;
     :cond_7
@@ -3085,7 +2661,7 @@
 
     if-eqz v1, :cond_14
 
-    .line 2149
+    .line 2034
     :cond_f
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -3093,13 +2669,13 @@
 
     goto :goto_6
 
-    .line 2150
+    .line 2035
     :cond_14
     instance-of v1, p0, Ljava/util/Date;
 
     if-eqz v1, :cond_26
 
-    .line 2151
+    .line 2036
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "yyyy-MM-dd\'T\'HH:mm:ssZ"
@@ -3108,7 +2684,7 @@
 
     invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 2152
+    .line 2037
     .restart local v0    # "iso8601DateFormat":Ljava/text/SimpleDateFormat;
     invoke-virtual {v0, p0}, Ljava/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -3116,7 +2692,7 @@
 
     goto :goto_6
 
-    .line 2154
+    .line 2039
     .end local v0    # "iso8601DateFormat":Ljava/text/SimpleDateFormat;
     :cond_26
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -3144,25 +2720,36 @@
 
     const/4 v8, 0x0
 
-    .line 1991
+    .line 1877
     const/4 v3, 0x0
 
-    .line 1992
+    .line 1878
     .local v3, "isOGAction":Z
-    invoke-static {p1}, Lcom/facebook/Request;->isMeRequest(Ljava/lang/String;)Z
+    const-string v6, "me/"
+
+    invoke-virtual {p1, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_1e
+    if-nez v6, :cond_13
 
-    .line 1993
+    const-string v6, "/me/"
+
+    invoke-virtual {p1, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_28
+
+    .line 1879
+    :cond_13
     const-string v6, ":"
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 1994
+    .line 1880
     .local v0, "colonLocation":I
     const-string v6, "?"
 
@@ -3170,26 +2757,26 @@
 
     move-result v5
 
-    .line 1995
+    .line 1881
     .local v5, "questionMarkLocation":I
     const/4 v6, 0x3
 
-    if-le v0, v6, :cond_31
+    if-le v0, v6, :cond_3b
 
     const/4 v6, -0x1
 
-    if-eq v5, v6, :cond_1d
+    if-eq v5, v6, :cond_27
 
-    if-ge v0, v5, :cond_31
+    if-ge v0, v5, :cond_3b
 
-    :cond_1d
+    :cond_27
     move v3, v7
 
-    .line 1998
+    .line 1884
     .end local v0    # "colonLocation":I
     .end local v5    # "questionMarkLocation":I
-    :cond_1e
-    :goto_1e
+    :cond_28
+    :goto_28
     invoke-interface {p0}, Lcom/facebook/model/GraphObject;->asMap()Ljava/util/Map;
 
     move-result-object v6
@@ -3198,45 +2785,45 @@
 
     move-result-object v1
 
-    .line 1999
+    .line 1885
     .local v1, "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;>;"
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
 
-    :goto_2a
+    :goto_34
     invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v6
 
-    if-nez v6, :cond_33
+    if-nez v6, :cond_3d
 
-    .line 2003
+    .line 1889
     return-void
 
     .end local v1    # "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;>;"
     .restart local v0    # "colonLocation":I
     .restart local v5    # "questionMarkLocation":I
-    :cond_31
+    :cond_3b
     move v3, v8
 
-    .line 1995
-    goto :goto_1e
+    .line 1881
+    goto :goto_28
 
-    .line 1999
+    .line 1885
     .end local v0    # "colonLocation":I
     .end local v5    # "questionMarkLocation":I
     .restart local v1    # "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;>;"
-    :cond_33
+    :cond_3d
     invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 2000
+    .line 1886
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;"
-    if-eqz v3, :cond_58
+    if-eqz v3, :cond_62
 
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -3250,13 +2837,13 @@
 
     move-result v6
 
-    if-eqz v6, :cond_58
+    if-eqz v6, :cond_62
 
     move v4, v7
 
-    .line 2001
+    .line 1887
     .local v4, "passByValue":Z
-    :goto_4a
+    :goto_54
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -3269,14 +2856,14 @@
 
     invoke-static {v6, v10, p2, v4}, Lcom/facebook/Request;->processGraphObjectProperty(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/Request$KeyValueSerializer;Z)V
 
-    goto :goto_2a
+    goto :goto_34
 
     .end local v4    # "passByValue":Z
-    :cond_58
+    :cond_62
     move v4, v8
 
-    .line 2000
-    goto :goto_4a
+    .line 1886
+    goto :goto_54
 .end method
 
 .method private static processGraphObjectProperty(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/Request$KeyValueSerializer;Z)V
@@ -3292,12 +2879,12 @@
     .end annotation
 
     .prologue
-    .line 2007
+    .line 1893
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v12
 
-    .line 2008
+    .line 1894
     .local v12, "valueClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v13, Lcom/facebook/model/GraphObject;
 
@@ -3307,7 +2894,7 @@
 
     if-eqz v13, :cond_2f
 
-    .line 2009
+    .line 1895
     check-cast p1, Lcom/facebook/model/GraphObject;
 
     .end local p1    # "value":Ljava/lang/Object;
@@ -3315,13 +2902,13 @@
 
     move-result-object p1
 
-    .line 2010
+    .line 1896
     .local p1, "value":Lorg/json/JSONObject;
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v12
 
-    .line 2016
+    .line 1902
     .end local p1    # "value":Lorg/json/JSONObject;
     :cond_16
     :goto_16
@@ -3331,23 +2918,23 @@
 
     move-result v13
 
-    if-eqz v13, :cond_a9
+    if-eqz v13, :cond_93
 
     move-object/from16 v7, p1
 
-    .line 2017
+    .line 1903
     check-cast v7, Lorg/json/JSONObject;
 
-    .line 2018
+    .line 1904
     .local v7, "jsonObject":Lorg/json/JSONObject;
     if-eqz p3, :cond_63
 
-    .line 2021
+    .line 1907
     invoke-virtual {v7}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v8
 
-    .line 2022
+    .line 1908
     .local v8, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_28
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
@@ -3356,14 +2943,14 @@
 
     if-nez v13, :cond_42
 
-    .line 2059
+    .line 1943
     .end local v7    # "jsonObject":Lorg/json/JSONObject;
     .end local v8    # "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_2e
     :goto_2e
     return-void
 
-    .line 2011
+    .line 1897
     .local p1, "value":Ljava/lang/Object;
     :cond_2f
     const-class v13, Lcom/facebook/model/GraphObjectList;
@@ -3374,7 +2961,7 @@
 
     if-eqz v13, :cond_16
 
-    .line 2012
+    .line 1898
     check-cast p1, Lcom/facebook/model/GraphObjectList;
 
     .end local p1    # "value":Ljava/lang/Object;
@@ -3382,7 +2969,7 @@
 
     move-result-object p1
 
-    .line 2013
+    .line 1899
     .local p1, "value":Lorg/json/JSONArray;
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -3390,7 +2977,7 @@
 
     goto :goto_16
 
-    .line 2023
+    .line 1909
     .end local p1    # "value":Lorg/json/JSONArray;
     .restart local v7    # "jsonObject":Lorg/json/JSONObject;
     .restart local v8    # "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
@@ -3401,7 +2988,7 @@
 
     check-cast v10, Ljava/lang/String;
 
-    .line 2024
+    .line 1910
     .local v10, "propertyName":Ljava/lang/String;
     const-string v13, "%s[%s]"
 
@@ -3421,7 +3008,7 @@
 
     move-result-object v11
 
-    .line 2025
+    .line 1911
     .local v11, "subKey":Ljava/lang/String;
     invoke-virtual {v7, v10}, Lorg/json/JSONObject;->opt(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -3435,7 +3022,7 @@
 
     goto :goto_28
 
-    .line 2030
+    .line 1916
     .end local v8    # "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     .end local v10    # "propertyName":Ljava/lang/String;
     .end local v11    # "subKey":Ljava/lang/String;
@@ -3448,7 +3035,7 @@
 
     if-eqz v13, :cond_7b
 
-    .line 2031
+    .line 1917
     const-string v13, "id"
 
     invoke-virtual {v7, v13}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -3465,7 +3052,7 @@
 
     goto :goto_2e
 
-    .line 2032
+    .line 1918
     :cond_7b
     const-string v13, "url"
 
@@ -3473,9 +3060,9 @@
 
     move-result v13
 
-    if-eqz v13, :cond_93
+    if-eqz v13, :cond_2e
 
-    .line 2033
+    .line 1919
     const-string v13, "url"
 
     invoke-virtual {v7, v13}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -3492,62 +3079,37 @@
 
     goto :goto_2e
 
-    .line 2034
-    :cond_93
-    const-string v13, "fbsdk:create_object"
-
-    invoke-virtual {v7, v13}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_2e
-
-    .line 2035
-    invoke-virtual {v7}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p2
-
-    move/from16 v2, p3
-
-    invoke-static {v0, v13, v1, v2}, Lcom/facebook/Request;->processGraphObjectProperty(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/Request$KeyValueSerializer;Z)V
-
-    goto :goto_2e
-
-    .line 2038
+    .line 1922
     .end local v7    # "jsonObject":Lorg/json/JSONObject;
-    :cond_a9
+    :cond_93
     const-class v13, Lorg/json/JSONArray;
 
     invoke-virtual {v13, v12}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v13
 
-    if-eqz v13, :cond_dd
+    if-eqz v13, :cond_c7
 
     move-object/from16 v6, p1
 
-    .line 2039
+    .line 1923
     check-cast v6, Lorg/json/JSONArray;
 
-    .line 2040
+    .line 1924
     .local v6, "jsonArray":Lorg/json/JSONArray;
     invoke-virtual {v6}, Lorg/json/JSONArray;->length()I
 
     move-result v9
 
-    .line 2041
+    .line 1925
     .local v9, "length":I
     const/4 v4, 0x0
 
     .local v4, "i":I
-    :goto_ba
+    :goto_a4
     if-ge v4, v9, :cond_2e
 
-    .line 2042
+    .line 1926
     const-string v13, "%s[%d]"
 
     const/4 v14, 0x2
@@ -3570,7 +3132,7 @@
 
     move-result-object v11
 
-    .line 2043
+    .line 1927
     .restart local v11    # "subKey":Ljava/lang/String;
     invoke-virtual {v6, v4}, Lorg/json/JSONArray;->opt(I)Ljava/lang/Object;
 
@@ -3582,45 +3144,45 @@
 
     invoke-static {v11, v13, v0, v1}, Lcom/facebook/Request;->processGraphObjectProperty(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/Request$KeyValueSerializer;Z)V
 
-    .line 2041
+    .line 1925
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_ba
+    goto :goto_a4
 
-    .line 2045
+    .line 1929
     .end local v4    # "i":I
     .end local v6    # "jsonArray":Lorg/json/JSONArray;
     .end local v9    # "length":I
     .end local v11    # "subKey":Ljava/lang/String;
-    :cond_dd
+    :cond_c7
     const-class v13, Ljava/lang/String;
 
     invoke-virtual {v13, v12}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v13
 
-    if-nez v13, :cond_f5
+    if-nez v13, :cond_df
 
-    .line 2046
+    .line 1930
     const-class v13, Ljava/lang/Number;
 
     invoke-virtual {v13, v12}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v13
 
-    if-nez v13, :cond_f5
+    if-nez v13, :cond_df
 
-    .line 2047
+    .line 1931
     const-class v13, Ljava/lang/Boolean;
 
     invoke-virtual {v13, v12}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v13
 
-    if-eqz v13, :cond_102
+    if-eqz v13, :cond_ec
 
-    .line 2048
-    :cond_f5
+    .line 1932
+    :cond_df
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v13
@@ -3633,8 +3195,8 @@
 
     goto/16 :goto_2e
 
-    .line 2049
-    :cond_102
+    .line 1933
+    :cond_ec
     const-class v13, Ljava/util/Date;
 
     invoke-virtual {v13, v12}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -3645,10 +3207,10 @@
 
     move-object/from16 v3, p1
 
-    .line 2050
+    .line 1934
     check-cast v3, Ljava/util/Date;
 
-    .line 2056
+    .line 1940
     .local v3, "date":Ljava/util/Date;
     new-instance v5, Ljava/text/SimpleDateFormat;
 
@@ -3658,7 +3220,7 @@
 
     invoke-direct {v5, v13, v14}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 2057
+    .line 1941
     .local v5, "iso8601DateFormat":Ljava/text/SimpleDateFormat;
     invoke-virtual {v5, v3}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
@@ -3671,202 +3233,6 @@
     invoke-interface {v0, v1, v13}, Lcom/facebook/Request$KeyValueSerializer;->writeString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_2e
-.end method
-
-.method private static processRequest(Lcom/facebook/RequestBatch;Lcom/facebook/internal/Logger;ILjava/net/URL;Ljava/io/OutputStream;)V
-    .registers 13
-    .param p0, "requests"    # Lcom/facebook/RequestBatch;
-    .param p1, "logger"    # Lcom/facebook/internal/Logger;
-    .param p2, "numRequests"    # I
-    .param p3, "url"    # Ljava/net/URL;
-    .param p4, "outputStream"    # Ljava/io/OutputStream;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;,
-            Lorg/json/JSONException;
-        }
-    .end annotation
-
-    .prologue
-    .line 1924
-    new-instance v4, Lcom/facebook/Request$Serializer;
-
-    invoke-direct {v4, p4, p1}, Lcom/facebook/Request$Serializer;-><init>(Ljava/io/OutputStream;Lcom/facebook/internal/Logger;)V
-
-    .line 1926
-    .local v4, "serializer":Lcom/facebook/Request$Serializer;
-    const/4 v6, 0x1
-
-    if-ne p2, v6, :cond_61
-
-    .line 1927
-    const/4 v6, 0x0
-
-    invoke-virtual {p0, v6}, Lcom/facebook/RequestBatch;->get(I)Lcom/facebook/Request;
-
-    move-result-object v3
-
-    .line 1929
-    .local v3, "request":Lcom/facebook/Request;
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    .line 1930
-    .local v0, "attachments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/facebook/Request$Attachment;>;"
-    iget-object v6, v3, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
-
-    invoke-virtual {v6}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_1c
-    :goto_1c
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-nez v7, :cond_46
-
-    .line 1937
-    if-eqz p1, :cond_29
-
-    .line 1938
-    const-string v6, "  Parameters:\n"
-
-    invoke-virtual {p1, v6}, Lcom/facebook/internal/Logger;->append(Ljava/lang/String;)V
-
-    .line 1940
-    :cond_29
-    iget-object v6, v3, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
-
-    invoke-static {v6, v4, v3}, Lcom/facebook/Request;->serializeParameters(Landroid/os/Bundle;Lcom/facebook/Request$Serializer;Lcom/facebook/Request;)V
-
-    .line 1942
-    if-eqz p1, :cond_35
-
-    .line 1943
-    const-string v6, "  Attachments:\n"
-
-    invoke-virtual {p1, v6}, Lcom/facebook/internal/Logger;->append(Ljava/lang/String;)V
-
-    .line 1945
-    :cond_35
-    invoke-static {v0, v4}, Lcom/facebook/Request;->serializeAttachments(Ljava/util/Map;Lcom/facebook/Request$Serializer;)V
-
-    .line 1947
-    iget-object v6, v3, Lcom/facebook/Request;->graphObject:Lcom/facebook/model/GraphObject;
-
-    if-eqz v6, :cond_45
-
-    .line 1948
-    iget-object v6, v3, Lcom/facebook/Request;->graphObject:Lcom/facebook/model/GraphObject;
-
-    invoke-virtual {p3}, Ljava/net/URL;->getPath()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7, v4}, Lcom/facebook/Request;->processGraphObject(Lcom/facebook/model/GraphObject;Ljava/lang/String;Lcom/facebook/Request$KeyValueSerializer;)V
-
-    .line 1969
-    .end local v3    # "request":Lcom/facebook/Request;
-    :cond_45
-    :goto_45
-    return-void
-
-    .line 1930
-    .restart local v3    # "request":Lcom/facebook/Request;
-    :cond_46
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    .line 1931
-    .local v2, "key":Ljava/lang/String;
-    iget-object v7, v3, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
-
-    invoke-virtual {v7, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    .line 1932
-    .local v5, "value":Ljava/lang/Object;
-    invoke-static {v5}, Lcom/facebook/Request;->isSupportedAttachmentType(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1c
-
-    .line 1933
-    new-instance v7, Lcom/facebook/Request$Attachment;
-
-    invoke-direct {v7, v3, v5}, Lcom/facebook/Request$Attachment;-><init>(Lcom/facebook/Request;Ljava/lang/Object;)V
-
-    invoke-interface {v0, v2, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1c
-
-    .line 1951
-    .end local v0    # "attachments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/facebook/Request$Attachment;>;"
-    .end local v2    # "key":Ljava/lang/String;
-    .end local v3    # "request":Lcom/facebook/Request;
-    .end local v5    # "value":Ljava/lang/Object;
-    :cond_61
-    invoke-static {p0}, Lcom/facebook/Request;->getBatchAppId(Lcom/facebook/RequestBatch;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 1952
-    .local v1, "batchAppID":Ljava/lang/String;
-    invoke-static {v1}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_73
-
-    .line 1953
-    new-instance v6, Lcom/facebook/FacebookException;
-
-    const-string v7, "At least one request in a batch must have an open Session, or a default app ID must be specified."
-
-    invoke-direct {v6, v7}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
-
-    throw v6
-
-    .line 1957
-    :cond_73
-    const-string v6, "batch_app_id"
-
-    invoke-virtual {v4, v6, v1}, Lcom/facebook/Request$Serializer;->writeString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1961
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    .line 1962
-    .restart local v0    # "attachments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/facebook/Request$Attachment;>;"
-    invoke-static {v4, p0, v0}, Lcom/facebook/Request;->serializeRequestsAsJSON(Lcom/facebook/Request$Serializer;Ljava/util/Collection;Ljava/util/Map;)V
-
-    .line 1964
-    if-eqz p1, :cond_87
-
-    .line 1965
-    const-string v6, "  Attachments:\n"
-
-    invoke-virtual {p1, v6}, Lcom/facebook/internal/Logger;->append(Ljava/lang/String;)V
-
-    .line 1967
-    :cond_87
-    invoke-static {v0, v4}, Lcom/facebook/Request;->serializeAttachments(Ljava/util/Map;Lcom/facebook/Request$Serializer;)V
-
-    goto :goto_45
 .end method
 
 .method static runCallbacks(Lcom/facebook/RequestBatch;Ljava/util/List;)V
@@ -3884,19 +3250,19 @@
     .end annotation
 
     .prologue
-    .line 1643
+    .line 1619
     .local p1, "responses":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/Response;>;"
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->size()I
 
     move-result v3
 
-    .line 1646
+    .line 1622
     .local v3, "numRequests":I
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1647
+    .line 1623
     .local v1, "callbacks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/util/Pair<Lcom/facebook/Request$Callback;Lcom/facebook/Response;>;>;"
     const/4 v2, 0x0
 
@@ -3904,51 +3270,51 @@
     :goto_a
     if-lt v2, v3, :cond_21
 
-    .line 1654
+    .line 1630
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v6
 
     if-lez v6, :cond_20
 
-    .line 1655
+    .line 1631
     new-instance v5, Lcom/facebook/Request$4;
 
     invoke-direct {v5, v1, p0}, Lcom/facebook/Request$4;-><init>(Ljava/util/ArrayList;Lcom/facebook/RequestBatch;)V
 
-    .line 1668
+    .line 1644
     .local v5, "runnable":Ljava/lang/Runnable;
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->getCallbackHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 1669
+    .line 1645
     .local v0, "callbackHandler":Landroid/os/Handler;
     if-nez v0, :cond_3c
 
-    .line 1671
+    .line 1647
     invoke-interface {v5}, Ljava/lang/Runnable;->run()V
 
-    .line 1677
+    .line 1653
     .end local v0    # "callbackHandler":Landroid/os/Handler;
     .end local v5    # "runnable":Ljava/lang/Runnable;
     :cond_20
     :goto_20
     return-void
 
-    .line 1648
+    .line 1624
     :cond_21
     invoke-virtual {p0, v2}, Lcom/facebook/RequestBatch;->get(I)Lcom/facebook/Request;
 
     move-result-object v4
 
-    .line 1649
+    .line 1625
     .local v4, "request":Lcom/facebook/Request;
     iget-object v6, v4, Lcom/facebook/Request;->callback:Lcom/facebook/Request$Callback;
 
     if-eqz v6, :cond_39
 
-    .line 1650
+    .line 1626
     new-instance v7, Landroid/util/Pair;
 
     iget-object v8, v4, Lcom/facebook/Request;->callback:Lcom/facebook/Request$Callback;
@@ -3963,13 +3329,13 @@
 
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1647
+    .line 1623
     :cond_39
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_a
 
-    .line 1674
+    .line 1650
     .end local v4    # "request":Lcom/facebook/Request;
     .restart local v0    # "callbackHandler":Landroid/os/Handler;
     .restart local v5    # "runnable":Ljava/lang/Runnable;
@@ -3979,99 +3345,10 @@
     goto :goto_20
 .end method
 
-.method private static serializeAttachments(Ljava/util/Map;Lcom/facebook/Request$Serializer;)V
-    .registers 8
-    .param p1, "serializer"    # Lcom/facebook/Request$Serializer;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/facebook/Request$Attachment;",
-            ">;",
-            "Lcom/facebook/Request$Serializer;",
-            ")V"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 2073
-    .local p0, "attachments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/facebook/Request$Attachment;>;"
-    invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object v2
-
-    .line 2075
-    .local v2, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :cond_8
-    :goto_8
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-nez v4, :cond_f
-
-    .line 2081
-    return-void
-
-    .line 2075
-    :cond_f
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    .line 2076
-    .local v1, "key":Ljava/lang/String;
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/facebook/Request$Attachment;
-
-    .line 2077
-    .local v0, "attachment":Lcom/facebook/Request$Attachment;
-    invoke-virtual {v0}, Lcom/facebook/Request$Attachment;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lcom/facebook/Request;->isSupportedAttachmentType(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_8
-
-    .line 2078
-    invoke-virtual {v0}, Lcom/facebook/Request$Attachment;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lcom/facebook/Request$Attachment;->getRequest()Lcom/facebook/Request;
-
-    move-result-object v5
-
-    invoke-virtual {p1, v1, v4, v5}, Lcom/facebook/Request$Serializer;->writeObject(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/Request;)V
-
-    goto :goto_8
-.end method
-
-.method private static serializeParameters(Landroid/os/Bundle;Lcom/facebook/Request$Serializer;Lcom/facebook/Request;)V
-    .registers 8
+.method private static serializeAttachments(Landroid/os/Bundle;Lcom/facebook/Request$Serializer;)V
+    .registers 7
     .param p0, "bundle"    # Landroid/os/Bundle;
     .param p1, "serializer"    # Lcom/facebook/Request$Serializer;
-    .param p2, "request"    # Lcom/facebook/Request;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -4079,12 +3356,12 @@
     .end annotation
 
     .prologue
-    .line 2062
+    .line 1957
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 2064
+    .line 1959
     .local v1, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -4098,10 +3375,10 @@
 
     if-nez v4, :cond_f
 
-    .line 2070
+    .line 1965
     return-void
 
-    .line 2064
+    .line 1959
     :cond_f
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -4109,13 +3386,74 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 2065
+    .line 1960
     .local v0, "key":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 2066
+    .line 1961
+    .local v2, "value":Ljava/lang/Object;
+    invoke-static {v2}, Lcom/facebook/Request;->isSupportedAttachmentType(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_8
+
+    .line 1962
+    invoke-virtual {p1, v0, v2}, Lcom/facebook/Request$Serializer;->writeObject(Ljava/lang/String;Ljava/lang/Object;)V
+
+    goto :goto_8
+.end method
+
+.method private static serializeParameters(Landroid/os/Bundle;Lcom/facebook/Request$Serializer;)V
+    .registers 7
+    .param p0, "bundle"    # Landroid/os/Bundle;
+    .param p1, "serializer"    # Lcom/facebook/Request$Serializer;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1946
+    invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    .line 1948
+    .local v1, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_8
+    :goto_8
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-nez v4, :cond_f
+
+    .line 1954
+    return-void
+
+    .line 1948
+    :cond_f
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 1949
+    .local v0, "key":Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    .line 1950
     .local v2, "value":Ljava/lang/Object;
     invoke-static {v2}, Lcom/facebook/Request;->isSupportedParameterType(Ljava/lang/Object;)Z
 
@@ -4123,15 +3461,16 @@
 
     if-eqz v4, :cond_8
 
-    .line 2067
-    invoke-virtual {p1, v0, v2, p2}, Lcom/facebook/Request$Serializer;->writeObject(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/Request;)V
+    .line 1951
+    invoke-virtual {p1, v0, v2}, Lcom/facebook/Request$Serializer;->writeObject(Ljava/lang/String;Ljava/lang/Object;)V
 
     goto :goto_8
 .end method
 
-.method private static serializeRequestsAsJSON(Lcom/facebook/Request$Serializer;Ljava/util/Collection;Ljava/util/Map;)V
-    .registers 7
+.method private static serializeRequestsAsJSON(Lcom/facebook/Request$Serializer;Ljava/util/Collection;Landroid/os/Bundle;)V
+    .registers 8
     .param p0, "serializer"    # Lcom/facebook/Request$Serializer;
+    .param p2, "attachments"    # Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4140,11 +3479,8 @@
             "<",
             "Lcom/facebook/Request;",
             ">;",
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/facebook/Request$Attachment;",
-            ">;)V"
+            "Landroid/os/Bundle;",
+            ")V"
         }
     .end annotation
 
@@ -4156,64 +3492,59 @@
     .end annotation
 
     .prologue
-    .line 2085
+    .line 1969
     .local p1, "requests":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/Request;>;"
-    .local p2, "attachments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/facebook/Request$Attachment;>;"
     new-instance v0, Lorg/json/JSONArray;
 
     invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
 
-    .line 2086
+    .line 1970
     .local v0, "batch":Lorg/json/JSONArray;
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
+    move-result-object v3
 
     :goto_9
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_15
+    if-nez v4, :cond_19
 
-    .line 2090
-    const-string v2, "batch"
-
-    invoke-virtual {p0, v2, v0, p1}, Lcom/facebook/Request$Serializer;->writeRequestsAsJson(Ljava/lang/String;Lorg/json/JSONArray;Ljava/util/Collection;)V
-
-    .line 2091
-    return-void
-
-    .line 2086
-    :cond_15
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 1974
+    invoke-virtual {v0}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Lcom/facebook/Request;
+    .line 1975
+    .local v1, "batchAsString":Ljava/lang/String;
+    const-string v3, "batch"
 
-    .line 2087
-    .local v1, "request":Lcom/facebook/Request;
-    invoke-direct {v1, v0, p2}, Lcom/facebook/Request;->serializeToBatch(Lorg/json/JSONArray;Ljava/util/Map;)V
+    invoke-virtual {p0, v3, v1}, Lcom/facebook/Request$Serializer;->writeString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1976
+    return-void
+
+    .line 1970
+    .end local v1    # "batchAsString":Ljava/lang/String;
+    :cond_19
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/facebook/Request;
+
+    .line 1971
+    .local v2, "request":Lcom/facebook/Request;
+    invoke-direct {v2, v0, p2}, Lcom/facebook/Request;->serializeToBatch(Lorg/json/JSONArray;Landroid/os/Bundle;)V
 
     goto :goto_9
 .end method
 
-.method private serializeToBatch(Lorg/json/JSONArray;Ljava/util/Map;)V
+.method private serializeToBatch(Lorg/json/JSONArray;Landroid/os/Bundle;)V
     .registers 20
     .param p1, "batch"    # Lorg/json/JSONArray;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lorg/json/JSONArray;",
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/facebook/Request$Attachment;",
-            ">;)V"
-        }
-    .end annotation
-
+    .param p2, "attachments"    # Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;,
@@ -4222,13 +3553,12 @@
     .end annotation
 
     .prologue
-    .line 1797
-    .local p2, "attachments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/facebook/Request$Attachment;>;"
+    .line 1741
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
-    .line 1799
+    .line 1743
     .local v4, "batchEntry":Lorg/json/JSONObject;
     move-object/from16 v0, p0
 
@@ -4236,7 +3566,7 @@
 
     if-eqz v12, :cond_1d
 
-    .line 1800
+    .line 1744
     const-string v12, "name"
 
     move-object/from16 v0, p0
@@ -4245,7 +3575,7 @@
 
     invoke-virtual {v4, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 1801
+    .line 1745
     const-string v12, "omit_response_on_success"
 
     move-object/from16 v0, p0
@@ -4254,7 +3584,7 @@
 
     invoke-virtual {v4, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    .line 1803
+    .line 1747
     :cond_1d
     move-object/from16 v0, p0
 
@@ -4262,7 +3592,7 @@
 
     if-eqz v12, :cond_2c
 
-    .line 1804
+    .line 1748
     const-string v12, "depends_on"
 
     move-object/from16 v0, p0
@@ -4271,19 +3601,19 @@
 
     invoke-virtual {v4, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 1807
+    .line 1751
     :cond_2c
     invoke-virtual/range {p0 .. p0}, Lcom/facebook/Request;->getUrlForBatchedRequest()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 1808
+    .line 1752
     .local v10, "relativeURL":Ljava/lang/String;
     const-string v12, "relative_url"
 
     invoke-virtual {v4, v12, v10}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 1809
+    .line 1753
     const-string v12, "method"
 
     move-object/from16 v0, p0
@@ -4292,14 +3622,14 @@
 
     invoke-virtual {v4, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 1810
+    .line 1754
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
     if-eqz v12, :cond_4f
 
-    .line 1811
+    .line 1755
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
@@ -4308,18 +3638,18 @@
 
     move-result-object v1
 
-    .line 1812
+    .line 1756
     .local v1, "accessToken":Ljava/lang/String;
     invoke-static {v1}, Lcom/facebook/internal/Logger;->registerAccessToken(Ljava/lang/String;)V
 
-    .line 1816
+    .line 1760
     .end local v1    # "accessToken":Ljava/lang/String;
     :cond_4f
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1817
+    .line 1761
     .local v2, "attachmentNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
@@ -4329,7 +3659,7 @@
 
     move-result-object v7
 
-    .line 1818
+    .line 1762
     .local v7, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v7}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -4343,27 +3673,27 @@
 
     if-nez v13, :cond_a1
 
-    .line 1828
+    .line 1772
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v12
 
     if-nez v12, :cond_77
 
-    .line 1829
+    .line 1773
     const-string v12, ","
 
     invoke-static {v12, v2}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1830
+    .line 1774
     .local v3, "attachmentNamesString":Ljava/lang/String;
     const-string v12, "attached_files"
 
     invoke-virtual {v4, v12, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 1833
+    .line 1777
     .end local v3    # "attachmentNamesString":Ljava/lang/String;
     :cond_77
     move-object/from16 v0, p0
@@ -4372,12 +3702,12 @@
 
     if-eqz v12, :cond_9b
 
-    .line 1835
+    .line 1779
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1836
+    .line 1780
     .local v8, "keysAndValues":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
@@ -4391,20 +3721,20 @@
 
     invoke-static {v12, v10, v13}, Lcom/facebook/Request;->processGraphObject(Lcom/facebook/model/GraphObject;Ljava/lang/String;Lcom/facebook/Request$KeyValueSerializer;)V
 
-    .line 1842
+    .line 1786
     const-string v12, "&"
 
     invoke-static {v12, v8}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1843
+    .line 1787
     .local v5, "bodyValue":Ljava/lang/String;
     const-string v12, "body"
 
     invoke-virtual {v4, v12, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 1846
+    .line 1790
     .end local v5    # "bodyValue":Ljava/lang/String;
     .end local v8    # "keysAndValues":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_9b
@@ -4412,10 +3742,10 @@
 
     invoke-virtual {v0, v4}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    .line 1847
+    .line 1791
     return-void
 
-    .line 1818
+    .line 1762
     :cond_a1
     invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -4423,7 +3753,7 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 1819
+    .line 1763
     .local v6, "key":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -4433,7 +3763,7 @@
 
     move-result-object v11
 
-    .line 1820
+    .line 1764
     .local v11, "value":Ljava/lang/Object;
     invoke-static {v11}, Lcom/facebook/Request;->isSupportedAttachmentType(Ljava/lang/Object;)Z
 
@@ -4441,7 +3771,7 @@
 
     if-eqz v13, :cond_60
 
-    .line 1822
+    .line 1766
     const-string v13, "%s%d"
 
     const/4 v14, 0x2
@@ -4456,7 +3786,7 @@
 
     const/4 v15, 0x1
 
-    invoke-interface/range {p2 .. p2}, Ljava/util/Map;->size()I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Bundle;->size()I
 
     move-result v16
 
@@ -4470,26 +3800,20 @@
 
     move-result-object v9
 
-    .line 1823
+    .line 1767
     .local v9, "name":Ljava/lang/String;
     invoke-virtual {v2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1824
-    new-instance v13, Lcom/facebook/Request$Attachment;
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v13, v0, v11}, Lcom/facebook/Request$Attachment;-><init>(Lcom/facebook/Request;Ljava/lang/Object;)V
-
+    .line 1768
     move-object/from16 v0, p2
 
-    invoke-interface {v0, v9, v13}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v9, v11}, Lcom/facebook/internal/Utility;->putObjectInBundle(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Object;)V
 
     goto :goto_60
 .end method
 
 .method static final serializeToUrlConnection(Lcom/facebook/RequestBatch;Ljava/net/HttpURLConnection;)V
-    .registers 16
+    .registers 15
     .param p0, "requests"    # Lcom/facebook/RequestBatch;
     .param p1, "connection"    # Ljava/net/HttpURLConnection;
     .annotation system Ldalvik/annotation/Throws;
@@ -4500,276 +3824,291 @@
     .end annotation
 
     .prologue
-    const/4 v8, 0x0
+    const/4 v3, 0x0
 
-    const/4 v2, 0x1
+    const/4 v10, 0x1
 
-    .line 1867
-    new-instance v9, Lcom/facebook/internal/Logger;
+    .line 1801
+    new-instance v4, Lcom/facebook/internal/Logger;
 
-    sget-object v4, Lcom/facebook/LoggingBehavior;->REQUESTS:Lcom/facebook/LoggingBehavior;
+    sget-object v11, Lcom/facebook/LoggingBehavior;->REQUESTS:Lcom/facebook/LoggingBehavior;
 
-    const-string v5, "Request"
+    const-string v12, "Request"
 
-    invoke-direct {v9, v4, v5}, Lcom/facebook/internal/Logger;-><init>(Lcom/facebook/LoggingBehavior;Ljava/lang/String;)V
+    invoke-direct {v4, v11, v12}, Lcom/facebook/internal/Logger;-><init>(Lcom/facebook/LoggingBehavior;Ljava/lang/String;)V
 
-    .line 1869
-    .local v9, "logger":Lcom/facebook/internal/Logger;
+    .line 1803
+    .local v4, "logger":Lcom/facebook/internal/Logger;
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->size()I
 
-    move-result v11
+    move-result v5
 
-    .line 1871
-    .local v11, "numRequests":I
-    if-ne v11, v2, :cond_6d
+    .line 1805
+    .local v5, "numRequests":I
+    if-ne v5, v10, :cond_6d
 
-    invoke-virtual {p0, v8}, Lcom/facebook/RequestBatch;->get(I)Lcom/facebook/Request;
+    invoke-virtual {p0, v3}, Lcom/facebook/RequestBatch;->get(I)Lcom/facebook/Request;
 
-    move-result-object v4
+    move-result-object v11
 
-    iget-object v6, v4, Lcom/facebook/Request;->httpMethod:Lcom/facebook/HttpMethod;
+    iget-object v2, v11, Lcom/facebook/Request;->httpMethod:Lcom/facebook/HttpMethod;
 
-    .line 1872
-    .local v6, "connectionHttpMethod":Lcom/facebook/HttpMethod;
+    .line 1806
+    .local v2, "connectionHttpMethod":Lcom/facebook/HttpMethod;
     :goto_17
-    invoke-virtual {v6}, Lcom/facebook/HttpMethod;->name()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/facebook/HttpMethod;->name()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v11
 
-    invoke-virtual {p1, v4}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+    invoke-virtual {p1, v11}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 1874
+    .line 1808
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getURL()Ljava/net/URL;
 
-    move-result-object v13
+    move-result-object v9
 
-    .line 1875
-    .local v13, "url":Ljava/net/URL;
-    const-string v4, "Request:\n"
+    .line 1809
+    .local v9, "url":Ljava/net/URL;
+    const-string v11, "Request:\n"
 
-    invoke-virtual {v9, v4}, Lcom/facebook/internal/Logger;->append(Ljava/lang/String;)V
+    invoke-virtual {v4, v11}, Lcom/facebook/internal/Logger;->append(Ljava/lang/String;)V
 
-    .line 1876
-    const-string v4, "Id"
+    .line 1810
+    const-string v11, "Id"
 
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->getId()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v12
 
-    invoke-virtual {v9, v4, v5}, Lcom/facebook/internal/Logger;->appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v4, v11, v12}, Lcom/facebook/internal/Logger;->appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1877
-    const-string v4, "URL"
+    .line 1811
+    const-string v11, "URL"
 
-    invoke-virtual {v9, v4, v13}, Lcom/facebook/internal/Logger;->appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v4, v11, v9}, Lcom/facebook/internal/Logger;->appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1878
-    const-string v4, "Method"
+    .line 1812
+    const-string v11, "Method"
 
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getRequestMethod()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v12
 
-    invoke-virtual {v9, v4, v5}, Lcom/facebook/internal/Logger;->appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v4, v11, v12}, Lcom/facebook/internal/Logger;->appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1879
-    const-string v4, "User-Agent"
+    .line 1813
+    const-string v11, "User-Agent"
 
-    const-string v5, "User-Agent"
+    const-string v12, "User-Agent"
 
-    invoke-virtual {p1, v5}, Ljava/net/HttpURLConnection;->getRequestProperty(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v12}, Ljava/net/HttpURLConnection;->getRequestProperty(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v12
 
-    invoke-virtual {v9, v4, v5}, Lcom/facebook/internal/Logger;->appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v4, v11, v12}, Lcom/facebook/internal/Logger;->appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1880
-    const-string v4, "Content-Type"
+    .line 1814
+    const-string v11, "Content-Type"
 
-    const-string v5, "Content-Type"
+    const-string v12, "Content-Type"
 
-    invoke-virtual {p1, v5}, Ljava/net/HttpURLConnection;->getRequestProperty(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v12}, Ljava/net/HttpURLConnection;->getRequestProperty(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v12
 
-    invoke-virtual {v9, v4, v5}, Lcom/facebook/internal/Logger;->appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v4, v11, v12}, Lcom/facebook/internal/Logger;->appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1882
+    .line 1816
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->getTimeout()I
 
-    move-result v4
+    move-result v11
 
-    invoke-virtual {p1, v4}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
+    invoke-virtual {p1, v11}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 1883
+    .line 1817
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->getTimeout()I
 
-    move-result v4
+    move-result v11
 
-    invoke-virtual {p1, v4}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
+    invoke-virtual {p1, v11}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 1887
-    sget-object v4, Lcom/facebook/HttpMethod;->POST:Lcom/facebook/HttpMethod;
+    .line 1821
+    sget-object v11, Lcom/facebook/HttpMethod;->POST:Lcom/facebook/HttpMethod;
 
-    if-ne v6, v4, :cond_67
+    if-ne v2, v11, :cond_67
 
-    move v8, v2
+    move v3, v10
 
-    .line 1888
-    .local v8, "isPost":Z
+    .line 1822
+    .local v3, "isPost":Z
     :cond_67
-    if-nez v8, :cond_70
+    if-nez v3, :cond_70
 
-    .line 1889
-    invoke-virtual {v9}, Lcom/facebook/internal/Logger;->log()V
+    .line 1823
+    invoke-virtual {v4}, Lcom/facebook/internal/Logger;->log()V
 
-    .line 1919
+    .line 1867
     :goto_6c
     return-void
 
-    .line 1871
-    .end local v6    # "connectionHttpMethod":Lcom/facebook/HttpMethod;
-    .end local v8    # "isPost":Z
-    .end local v13    # "url":Ljava/net/URL;
+    .line 1805
+    .end local v2    # "connectionHttpMethod":Lcom/facebook/HttpMethod;
+    .end local v3    # "isPost":Z
+    .end local v9    # "url":Ljava/net/URL;
     :cond_6d
-    sget-object v6, Lcom/facebook/HttpMethod;->POST:Lcom/facebook/HttpMethod;
+    sget-object v2, Lcom/facebook/HttpMethod;->POST:Lcom/facebook/HttpMethod;
 
     goto :goto_17
 
-    .line 1893
-    .restart local v6    # "connectionHttpMethod":Lcom/facebook/HttpMethod;
-    .restart local v8    # "isPost":Z
-    .restart local v13    # "url":Ljava/net/URL;
+    .line 1827
+    .restart local v2    # "connectionHttpMethod":Lcom/facebook/HttpMethod;
+    .restart local v3    # "isPost":Z
+    .restart local v9    # "url":Ljava/net/URL;
     :cond_70
-    invoke-virtual {p1, v2}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
+    invoke-virtual {p1, v10}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
-    .line 1895
-    const/4 v12, 0x0
-
-    .line 1897
-    .local v12, "outputStream":Ljava/io/OutputStream;
-    :try_start_74
-    invoke-static {p0}, Lcom/facebook/Request;->hasOnProgressCallbacks(Lcom/facebook/RequestBatch;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_aa
-
-    .line 1898
-    const/4 v7, 0x0
-
-    .line 1899
-    .local v7, "countingStream":Lcom/facebook/ProgressNoopOutputStream;
-    new-instance v7, Lcom/facebook/ProgressNoopOutputStream;
-
-    .end local v7    # "countingStream":Lcom/facebook/ProgressNoopOutputStream;
-    invoke-virtual {p0}, Lcom/facebook/RequestBatch;->getCallbackHandler()Landroid/os/Handler;
-
-    move-result-object v2
-
-    invoke-direct {v7, v2}, Lcom/facebook/ProgressNoopOutputStream;-><init>(Landroid/os/Handler;)V
-
-    .line 1900
-    .restart local v7    # "countingStream":Lcom/facebook/ProgressNoopOutputStream;
-    const/4 v2, 0x0
-
-    invoke-static {p0, v2, v11, v13, v7}, Lcom/facebook/Request;->processRequest(Lcom/facebook/RequestBatch;Lcom/facebook/internal/Logger;ILjava/net/URL;Ljava/io/OutputStream;)V
-
-    .line 1902
-    invoke-virtual {v7}, Lcom/facebook/ProgressNoopOutputStream;->getMaxProgress()I
-
-    move-result v10
-
-    .line 1903
-    .local v10, "max":I
-    invoke-virtual {v7}, Lcom/facebook/ProgressNoopOutputStream;->getProgressMap()Ljava/util/Map;
-
-    move-result-object v3
-
-    .line 1905
-    .local v3, "progressMap":Ljava/util/Map;, "Ljava/util/Map<Lcom/facebook/Request;Lcom/facebook/RequestProgress;>;"
-    new-instance v1, Ljava/io/BufferedOutputStream;
+    .line 1829
+    new-instance v6, Ljava/io/BufferedOutputStream;
 
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
-    move-result-object v2
+    move-result-object v11
 
-    invoke-direct {v1, v2}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v6, v11}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 1906
-    .local v1, "buffered":Ljava/io/BufferedOutputStream;
-    new-instance v0, Lcom/facebook/ProgressOutputStream;
+    .line 1831
+    .local v6, "outputStream":Ljava/io/BufferedOutputStream;
+    :try_start_7c
+    new-instance v8, Lcom/facebook/Request$Serializer;
 
-    int-to-long v4, v10
+    invoke-direct {v8, v6, v4}, Lcom/facebook/Request$Serializer;-><init>(Ljava/io/BufferedOutputStream;Lcom/facebook/internal/Logger;)V
 
-    move-object v2, p0
+    .line 1833
+    .local v8, "serializer":Lcom/facebook/Request$Serializer;
+    if-ne v5, v10, :cond_b0
 
-    invoke-direct/range {v0 .. v5}, Lcom/facebook/ProgressOutputStream;-><init>(Ljava/io/OutputStream;Lcom/facebook/RequestBatch;Ljava/util/Map;J)V
-    :try_end_a0
-    .catchall {:try_start_74 .. :try_end_a0} :catchall_b4
+    .line 1834
+    const/4 v10, 0x0
 
-    .line 1912
-    .end local v1    # "buffered":Ljava/io/BufferedOutputStream;
-    .end local v3    # "progressMap":Ljava/util/Map;, "Ljava/util/Map<Lcom/facebook/Request;Lcom/facebook/RequestProgress;>;"
-    .end local v7    # "countingStream":Lcom/facebook/ProgressNoopOutputStream;
-    .end local v10    # "max":I
-    .end local v12    # "outputStream":Ljava/io/OutputStream;
-    .local v0, "outputStream":Ljava/io/OutputStream;
-    :goto_a0
-    :try_start_a0
-    invoke-static {p0, v9, v11, v13, v0}, Lcom/facebook/Request;->processRequest(Lcom/facebook/RequestBatch;Lcom/facebook/internal/Logger;ILjava/net/URL;Ljava/io/OutputStream;)V
-    :try_end_a3
-    .catchall {:try_start_a0 .. :try_end_a3} :catchall_ba
+    invoke-virtual {p0, v10}, Lcom/facebook/RequestBatch;->get(I)Lcom/facebook/Request;
 
-    .line 1915
-    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    move-result-object v7
 
-    .line 1918
-    invoke-virtual {v9}, Lcom/facebook/internal/Logger;->log()V
+    .line 1836
+    .local v7, "request":Lcom/facebook/Request;
+    const-string v10, "  Parameters:\n"
+
+    invoke-virtual {v4, v10}, Lcom/facebook/internal/Logger;->append(Ljava/lang/String;)V
+
+    .line 1837
+    iget-object v10, v7, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
+
+    invoke-static {v10, v8}, Lcom/facebook/Request;->serializeParameters(Landroid/os/Bundle;Lcom/facebook/Request$Serializer;)V
+
+    .line 1839
+    const-string v10, "  Attachments:\n"
+
+    invoke-virtual {v4, v10}, Lcom/facebook/internal/Logger;->append(Ljava/lang/String;)V
+
+    .line 1840
+    iget-object v10, v7, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
+
+    invoke-static {v10, v8}, Lcom/facebook/Request;->serializeAttachments(Landroid/os/Bundle;Lcom/facebook/Request$Serializer;)V
+
+    .line 1842
+    iget-object v10, v7, Lcom/facebook/Request;->graphObject:Lcom/facebook/model/GraphObject;
+
+    if-eqz v10, :cond_a9
+
+    .line 1843
+    iget-object v10, v7, Lcom/facebook/Request;->graphObject:Lcom/facebook/model/GraphObject;
+
+    invoke-virtual {v9}, Ljava/net/URL;->getPath()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v10, v11, v8}, Lcom/facebook/Request;->processGraphObject(Lcom/facebook/model/GraphObject;Ljava/lang/String;Lcom/facebook/Request$KeyValueSerializer;)V
+    :try_end_a9
+    .catchall {:try_start_7c .. :try_end_a9} :catchall_c2
+
+    .line 1863
+    .end local v7    # "request":Lcom/facebook/Request;
+    :cond_a9
+    :goto_a9
+    invoke-virtual {v6}, Ljava/io/BufferedOutputStream;->close()V
+
+    .line 1866
+    invoke-virtual {v4}, Lcom/facebook/internal/Logger;->log()V
 
     goto :goto_6c
 
-    .line 1909
-    .end local v0    # "outputStream":Ljava/io/OutputStream;
-    .restart local v12    # "outputStream":Ljava/io/OutputStream;
-    :cond_aa
-    :try_start_aa
-    new-instance v0, Ljava/io/BufferedOutputStream;
+    .line 1846
+    :cond_b0
+    :try_start_b0
+    invoke-static {p0}, Lcom/facebook/Request;->getBatchAppId(Lcom/facebook/RequestBatch;)Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
+    move-result-object v1
 
-    move-result-object v2
+    .line 1847
+    .local v1, "batchAppID":Ljava/lang/String;
+    invoke-static {v1}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
 
-    invoke-direct {v0, v2}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
-    :try_end_b3
-    .catchall {:try_start_aa .. :try_end_b3} :catchall_b4
+    move-result v10
 
-    .end local v12    # "outputStream":Ljava/io/OutputStream;
-    .restart local v0    # "outputStream":Ljava/io/OutputStream;
-    goto :goto_a0
+    if-eqz v10, :cond_c7
 
-    .line 1914
-    .end local v0    # "outputStream":Ljava/io/OutputStream;
-    .restart local v12    # "outputStream":Ljava/io/OutputStream;
-    :catchall_b4
-    move-exception v2
+    .line 1848
+    new-instance v10, Lcom/facebook/FacebookException;
 
-    move-object v0, v12
+    const-string v11, "At least one request in a batch must have an open Session, or a default app ID must be specified."
 
-    .line 1915
-    .end local v12    # "outputStream":Ljava/io/OutputStream;
-    .restart local v0    # "outputStream":Ljava/io/OutputStream;
-    :goto_b6
-    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    invoke-direct {v10, v11}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
 
-    .line 1916
-    throw v2
+    throw v10
+    :try_end_c2
+    .catchall {:try_start_b0 .. :try_end_c2} :catchall_c2
 
-    .line 1914
-    :catchall_ba
-    move-exception v2
+    .line 1862
+    .end local v1    # "batchAppID":Ljava/lang/String;
+    .end local v8    # "serializer":Lcom/facebook/Request$Serializer;
+    :catchall_c2
+    move-exception v10
 
-    goto :goto_b6
+    .line 1863
+    invoke-virtual {v6}, Ljava/io/BufferedOutputStream;->close()V
+
+    .line 1864
+    throw v10
+
+    .line 1852
+    .restart local v1    # "batchAppID":Ljava/lang/String;
+    .restart local v8    # "serializer":Lcom/facebook/Request$Serializer;
+    :cond_c7
+    :try_start_c7
+    const-string v10, "batch_app_id"
+
+    invoke-virtual {v8, v10, v1}, Lcom/facebook/Request$Serializer;->writeString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1856
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 1857
+    .local v0, "attachments":Landroid/os/Bundle;
+    invoke-static {v8, p0, v0}, Lcom/facebook/Request;->serializeRequestsAsJSON(Lcom/facebook/Request$Serializer;Ljava/util/Collection;Landroid/os/Bundle;)V
+
+    .line 1859
+    const-string v10, "  Attachments:\n"
+
+    invoke-virtual {v4, v10}, Lcom/facebook/internal/Logger;->append(Ljava/lang/String;)V
+
+    .line 1860
+    invoke-static {v0, v8}, Lcom/facebook/Request;->serializeAttachments(Landroid/os/Bundle;Lcom/facebook/Request$Serializer;)V
+    :try_end_dc
+    .catchall {:try_start_c7 .. :try_end_dc} :catchall_c2
+
+    goto :goto_a9
 .end method
 
 .method public static final setDefaultBatchApplicationId(Ljava/lang/String;)V
@@ -4777,10 +4116,10 @@
     .param p0, "applicationId"    # Ljava/lang/String;
 
     .prologue
-    .line 1036
+    .line 984
     sput-object p0, Lcom/facebook/Request;->defaultBatchApplicationId:Ljava/lang/String;
 
-    .line 1037
+    .line 985
     return-void
 .end method
 
@@ -4789,28 +4128,40 @@
     .param p0, "requests"    # Lcom/facebook/RequestBatch;
 
     .prologue
-    .line 1331
+    .line 1303
+    invoke-virtual {p0}, Lcom/facebook/RequestBatch;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :goto_4
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-nez v5, :cond_28
+
+    .line 1307
     const/4 v3, 0x0
 
-    .line 1333
+    .line 1309
     .local v3, "url":Ljava/net/URL;
-    :try_start_1
+    :try_start_b
     invoke-virtual {p0}, Lcom/facebook/RequestBatch;->size()I
 
     move-result v4
 
     const/4 v5, 0x1
 
-    if-ne v4, v5, :cond_1e
+    if-ne v4, v5, :cond_32
 
-    .line 1335
+    .line 1311
     const/4 v4, 0x0
 
     invoke-virtual {p0, v4}, Lcom/facebook/RequestBatch;->get(I)Lcom/facebook/Request;
 
     move-result-object v2
 
-    .line 1337
+    .line 1313
     .local v2, "request":Lcom/facebook/Request;
     new-instance v3, Ljava/net/URL;
 
@@ -4820,32 +4171,49 @@
     move-result-object v4
 
     invoke-direct {v3, v4}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-    :try_end_16
-    .catch Ljava/net/MalformedURLException; {:try_start_1 .. :try_end_16} :catch_28
+    :try_end_20
+    .catch Ljava/net/MalformedURLException; {:try_start_b .. :try_end_20} :catch_3c
 
-    .line 1349
+    .line 1325
     .end local v2    # "request":Lcom/facebook/Request;
     .restart local v3    # "url":Ljava/net/URL;
-    :goto_16
-    :try_start_16
+    :goto_20
+    :try_start_20
     invoke-static {v3}, Lcom/facebook/Request;->createConnection(Ljava/net/URL;)Ljava/net/HttpURLConnection;
 
     move-result-object v0
 
-    .line 1351
+    .line 1327
     .local v0, "connection":Ljava/net/HttpURLConnection;
     invoke-static {p0, v0}, Lcom/facebook/Request;->serializeToUrlConnection(Lcom/facebook/RequestBatch;Ljava/net/HttpURLConnection;)V
-    :try_end_1d
-    .catch Ljava/io/IOException; {:try_start_16 .. :try_end_1d} :catch_31
-    .catch Lorg/json/JSONException; {:try_start_16 .. :try_end_1d} :catch_3a
+    :try_end_27
+    .catch Ljava/io/IOException; {:try_start_20 .. :try_end_27} :catch_45
+    .catch Lorg/json/JSONException; {:try_start_20 .. :try_end_27} :catch_4e
 
-    .line 1358
+    .line 1334
     return-object v0
 
-    .line 1341
+    .line 1303
     .end local v0    # "connection":Ljava/net/HttpURLConnection;
-    :cond_1e
-    :try_start_1e
+    .end local v3    # "url":Ljava/net/URL;
+    :cond_28
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/facebook/Request;
+
+    .line 1304
+    .restart local v2    # "request":Lcom/facebook/Request;
+    invoke-direct {v2}, Lcom/facebook/Request;->validate()V
+
+    goto :goto_4
+
+    .line 1317
+    .end local v2    # "request":Lcom/facebook/Request;
+    .restart local v3    # "url":Ljava/net/URL;
+    :cond_32
+    :try_start_32
     new-instance v3, Ljava/net/URL;
 
     .end local v3    # "url":Ljava/net/URL;
@@ -4854,18 +4222,18 @@
     move-result-object v4
 
     invoke-direct {v3, v4}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-    :try_end_27
-    .catch Ljava/net/MalformedURLException; {:try_start_1e .. :try_end_27} :catch_28
+    :try_end_3b
+    .catch Ljava/net/MalformedURLException; {:try_start_32 .. :try_end_3b} :catch_3c
 
     .restart local v3    # "url":Ljava/net/URL;
-    goto :goto_16
+    goto :goto_20
 
-    .line 1343
+    .line 1319
     .end local v3    # "url":Ljava/net/URL;
-    :catch_28
+    :catch_3c
     move-exception v1
 
-    .line 1344
+    .line 1320
     .local v1, "e":Ljava/net/MalformedURLException;
     new-instance v4, Lcom/facebook/FacebookException;
 
@@ -4875,13 +4243,13 @@
 
     throw v4
 
-    .line 1352
+    .line 1328
     .end local v1    # "e":Ljava/net/MalformedURLException;
     .restart local v3    # "url":Ljava/net/URL;
-    :catch_31
+    :catch_45
     move-exception v1
 
-    .line 1353
+    .line 1329
     .local v1, "e":Ljava/io/IOException;
     new-instance v4, Lcom/facebook/FacebookException;
 
@@ -4891,12 +4259,12 @@
 
     throw v4
 
-    .line 1354
+    .line 1330
     .end local v1    # "e":Ljava/io/IOException;
-    :catch_3a
+    :catch_4e
     move-exception v1
 
-    .line 1355
+    .line 1331
     .local v1, "e":Lorg/json/JSONException;
     new-instance v4, Lcom/facebook/FacebookException;
 
@@ -4921,13 +4289,13 @@
     .end annotation
 
     .prologue
-    .line 1310
+    .line 1282
     .local p0, "requests":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/Request;>;"
     const-string v0, "requests"
 
     invoke-static {p0, v0}, Lcom/facebook/internal/Validate;->notEmptyAndContainsNoNulls(Ljava/util/Collection;Ljava/lang/String;)V
 
-    .line 1312
+    .line 1284
     new-instance v0, Lcom/facebook/RequestBatch;
 
     invoke-direct {v0, p0}, Lcom/facebook/RequestBatch;-><init>(Ljava/util/Collection;)V
@@ -4944,7 +4312,7 @@
     .param p0, "requests"    # [Lcom/facebook/Request;
 
     .prologue
-    .line 1292
+    .line 1264
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -4976,7 +4344,7 @@
     .local p1, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     const/4 v2, 0x0
 
-    .line 2122
+    .line 2007
     const-class v3, Lcom/facebook/model/GraphMultiResult;
 
     invoke-virtual {p0, v3}, Lcom/facebook/Response;->getGraphObjectAs(Ljava/lang/Class;)Lcom/facebook/model/GraphObject;
@@ -4985,31 +4353,58 @@
 
     check-cast v1, Lcom/facebook/model/GraphMultiResult;
 
-    .line 2123
+    .line 2008
     .local v1, "multiResult":Lcom/facebook/model/GraphMultiResult;
     if-nez v1, :cond_c
 
-    .line 2132
+    .line 2017
     :cond_b
     :goto_b
     return-object v2
 
-    .line 2127
+    .line 2012
     :cond_c
     invoke-interface {v1}, Lcom/facebook/model/GraphMultiResult;->getData()Lcom/facebook/model/GraphObjectList;
 
     move-result-object v0
 
-    .line 2128
+    .line 2013
     .local v0, "data":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
     if-eqz v0, :cond_b
 
-    .line 2132
+    .line 2017
     invoke-interface {v0, p1}, Lcom/facebook/model/GraphObjectList;->castToListOf(Ljava/lang/Class;)Lcom/facebook/model/GraphObjectList;
 
     move-result-object v2
 
     goto :goto_b
+.end method
+
+.method private validate()V
+    .registers 3
+
+    .prologue
+    .line 1794
+    iget-object v0, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
+
+    if-eqz v0, :cond_10
+
+    iget-object v0, p0, Lcom/facebook/Request;->restMethod:Ljava/lang/String;
+
+    if-eqz v0, :cond_10
+
+    .line 1795
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Only one of a graph path or REST method may be specified per request."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1797
+    :cond_10
+    return-void
 .end method
 
 
@@ -5018,7 +4413,7 @@
     .registers 2
 
     .prologue
-    .line 1261
+    .line 1233
     invoke-static {p0}, Lcom/facebook/Request;->executeAndWait(Lcom/facebook/Request;)Lcom/facebook/Response;
 
     move-result-object v0
@@ -5030,7 +4425,7 @@
     .registers 3
 
     .prologue
-    .line 1274
+    .line 1246
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/facebook/Request;
@@ -5050,7 +4445,7 @@
     .registers 2
 
     .prologue
-    .line 976
+    .line 924
     iget-object v0, p0, Lcom/facebook/Request;->batchEntryDependsOn:Ljava/lang/String;
 
     return-object v0
@@ -5060,7 +4455,7 @@
     .registers 2
 
     .prologue
-    .line 953
+    .line 901
     iget-object v0, p0, Lcom/facebook/Request;->batchEntryName:Ljava/lang/String;
 
     return-object v0
@@ -5070,7 +4465,7 @@
     .registers 2
 
     .prologue
-    .line 1000
+    .line 948
     iget-boolean v0, p0, Lcom/facebook/Request;->batchEntryOmitResultOnSuccess:Z
 
     return v0
@@ -5080,7 +4475,7 @@
     .registers 2
 
     .prologue
-    .line 1045
+    .line 993
     iget-object v0, p0, Lcom/facebook/Request;->callback:Lcom/facebook/Request$Callback;
 
     return-object v0
@@ -5090,7 +4485,7 @@
     .registers 2
 
     .prologue
-    .line 834
+    .line 783
     iget-object v0, p0, Lcom/facebook/Request;->graphObject:Lcom/facebook/model/GraphObject;
 
     return-object v0
@@ -5100,7 +4495,7 @@
     .registers 2
 
     .prologue
-    .line 853
+    .line 802
     iget-object v0, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
 
     return-object v0
@@ -5110,7 +4505,7 @@
     .registers 2
 
     .prologue
-    .line 872
+    .line 821
     iget-object v0, p0, Lcom/facebook/Request;->httpMethod:Lcom/facebook/HttpMethod;
 
     return-object v0
@@ -5120,8 +4515,18 @@
     .registers 2
 
     .prologue
-    .line 914
+    .line 843
     iget-object v0, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
+
+    return-object v0
+.end method
+
+.method public final getRestMethod()Ljava/lang/String;
+    .registers 2
+
+    .prologue
+    .line 862
+    iget-object v0, p0, Lcom/facebook/Request;->restMethod:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -5130,7 +4535,7 @@
     .registers 2
 
     .prologue
-    .line 933
+    .line 881
     iget-object v0, p0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
     return-object v0
@@ -5140,7 +4545,7 @@
     .registers 2
 
     .prologue
-    .line 1075
+    .line 1023
     iget-object v0, p0, Lcom/facebook/Request;->tag:Ljava/lang/Object;
 
     return-object v0
@@ -5150,12 +4555,12 @@
     .registers 4
 
     .prologue
-    .line 1744
+    .line 1709
     iget-object v1, p0, Lcom/facebook/Request;->overriddenURL:Ljava/lang/String;
 
     if-eqz v1, :cond_c
 
-    .line 1745
+    .line 1710
     new-instance v1, Lcom/facebook/FacebookException;
 
     const-string v2, "Can\'t override URL for a batch request"
@@ -5164,129 +4569,136 @@
 
     throw v1
 
-    .line 1748
+    .line 1714
     :cond_c
-    invoke-direct {p0}, Lcom/facebook/Request;->getGraphPathWithVersion()Ljava/lang/String;
+    iget-object v1, p0, Lcom/facebook/Request;->restMethod:Ljava/lang/String;
+
+    if-eqz v1, :cond_29
+
+    .line 1715
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "method/"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/facebook/Request;->restMethod:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1749
+    .line 1720
     .local v0, "baseUrl":Ljava/lang/String;
+    :goto_21
     invoke-direct {p0}, Lcom/facebook/Request;->addCommonParameters()V
 
-    .line 1750
+    .line 1721
     invoke-direct {p0, v0}, Lcom/facebook/Request;->appendParametersToBaseUrl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
+
+    .line 1717
+    .end local v0    # "baseUrl":Ljava/lang/String;
+    :cond_29
+    iget-object v0, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
+
+    .restart local v0    # "baseUrl":Ljava/lang/String;
+    goto :goto_21
 .end method
 
 .method final getUrlForSingleRequest()Ljava/lang/String;
     .registers 7
 
     .prologue
-    .line 1754
-    iget-object v2, p0, Lcom/facebook/Request;->overriddenURL:Ljava/lang/String;
+    const/4 v2, 0x2
 
-    if-eqz v2, :cond_b
-
-    .line 1755
-    iget-object v2, p0, Lcom/facebook/Request;->overriddenURL:Ljava/lang/String;
-
-    invoke-virtual {v2}, Ljava/lang/String;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 1767
-    :goto_a
-    return-object v2
-
-    .line 1759
-    :cond_b
-    invoke-virtual {p0}, Lcom/facebook/Request;->getHttpMethod()Lcom/facebook/HttpMethod;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/facebook/HttpMethod;->POST:Lcom/facebook/HttpMethod;
-
-    if-ne v2, v3, :cond_40
-
-    iget-object v2, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
-
-    if-eqz v2, :cond_40
-
-    iget-object v2, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
-
-    const-string v3, "/videos"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_40
-
-    .line 1760
-    invoke-static {}, Lcom/facebook/internal/ServerProtocol;->getGraphVideoUrlBase()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 1764
-    .local v1, "graphBaseUrlBase":Ljava/lang/String;
-    :goto_25
-    const-string v2, "%s/%s"
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Object;
+    const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    aput-object v1, v3, v4
+    .line 1725
+    iget-object v1, p0, Lcom/facebook/Request;->overriddenURL:Ljava/lang/String;
 
-    const/4 v4, 0x1
+    if-eqz v1, :cond_e
 
-    invoke-direct {p0}, Lcom/facebook/Request;->getGraphPathWithVersion()Ljava/lang/String;
+    .line 1726
+    iget-object v1, p0, Lcom/facebook/Request;->overriddenURL:Ljava/lang/String;
 
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 1766
-    .local v0, "baseUrl":Ljava/lang/String;
-    invoke-direct {p0}, Lcom/facebook/Request;->addCommonParameters()V
-
-    .line 1767
-    invoke-direct {p0, v0}, Lcom/facebook/Request;->appendParametersToBaseUrl(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_a
-
-    .line 1762
-    .end local v0    # "baseUrl":Ljava/lang/String;
-    .end local v1    # "graphBaseUrlBase":Ljava/lang/String;
-    :cond_40
-    invoke-static {}, Lcom/facebook/internal/ServerProtocol;->getGraphUrlBase()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/String;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .restart local v1    # "graphBaseUrlBase":Ljava/lang/String;
-    goto :goto_25
-.end method
+    .line 1737
+    :goto_d
+    return-object v1
 
-.method public final getVersion()Ljava/lang/String;
-    .registers 2
+    .line 1730
+    :cond_e
+    iget-object v1, p0, Lcom/facebook/Request;->restMethod:Ljava/lang/String;
 
-    .prologue
-    .line 895
-    iget-object v0, p0, Lcom/facebook/Request;->version:Ljava/lang/String;
+    if-eqz v1, :cond_2c
 
-    return-object v0
+    .line 1731
+    const-string v1, "%s/%s"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {}, Lcom/facebook/internal/ServerProtocol;->getRestUrlBase()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    iget-object v3, p0, Lcom/facebook/Request;->restMethod:Ljava/lang/String;
+
+    aput-object v3, v2, v5
+
+    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1736
+    .local v0, "baseUrl":Ljava/lang/String;
+    :goto_24
+    invoke-direct {p0}, Lcom/facebook/Request;->addCommonParameters()V
+
+    .line 1737
+    invoke-direct {p0, v0}, Lcom/facebook/Request;->appendParametersToBaseUrl(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_d
+
+    .line 1733
+    .end local v0    # "baseUrl":Ljava/lang/String;
+    :cond_2c
+    const-string v1, "%s/%s"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {}, Lcom/facebook/internal/ServerProtocol;->getGraphUrlBase()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    iget-object v3, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
+
+    aput-object v3, v2, v5
+
+    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .restart local v0    # "baseUrl":Ljava/lang/String;
+    goto :goto_24
 .end method
 
 .method public final setBatchEntryDependsOn(Ljava/lang/String;)V
@@ -5294,10 +4706,10 @@
     .param p1, "batchEntryDependsOn"    # Ljava/lang/String;
 
     .prologue
-    .line 989
+    .line 937
     iput-object p1, p0, Lcom/facebook/Request;->batchEntryDependsOn:Ljava/lang/String;
 
-    .line 990
+    .line 938
     return-void
 .end method
 
@@ -5306,10 +4718,10 @@
     .param p1, "batchEntryName"    # Ljava/lang/String;
 
     .prologue
-    .line 967
+    .line 915
     iput-object p1, p0, Lcom/facebook/Request;->batchEntryName:Ljava/lang/String;
 
-    .line 968
+    .line 916
     return-void
 .end method
 
@@ -5318,10 +4730,10 @@
     .param p1, "batchEntryOmitResultOnSuccess"    # Z
 
     .prologue
-    .line 1013
+    .line 961
     iput-boolean p1, p0, Lcom/facebook/Request;->batchEntryOmitResultOnSuccess:Z
 
-    .line 1014
+    .line 962
     return-void
 .end method
 
@@ -5330,10 +4742,10 @@
     .param p1, "callback"    # Lcom/facebook/Request$Callback;
 
     .prologue
-    .line 1055
+    .line 1003
     iput-object p1, p0, Lcom/facebook/Request;->callback:Lcom/facebook/Request$Callback;
 
-    .line 1056
+    .line 1004
     return-void
 .end method
 
@@ -5342,10 +4754,10 @@
     .param p1, "graphObject"    # Lcom/facebook/model/GraphObject;
 
     .prologue
-    .line 844
+    .line 793
     iput-object p1, p0, Lcom/facebook/Request;->graphObject:Lcom/facebook/model/GraphObject;
 
-    .line 845
+    .line 794
     return-void
 .end method
 
@@ -5354,10 +4766,10 @@
     .param p1, "graphPath"    # Ljava/lang/String;
 
     .prologue
-    .line 863
+    .line 812
     iput-object p1, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
 
-    .line 864
+    .line 813
     return-void
 .end method
 
@@ -5366,7 +4778,7 @@
     .param p1, "httpMethod"    # Lcom/facebook/HttpMethod;
 
     .prologue
-    .line 882
+    .line 831
     iget-object v0, p0, Lcom/facebook/Request;->overriddenURL:Ljava/lang/String;
 
     if-eqz v0, :cond_10
@@ -5375,7 +4787,7 @@
 
     if-eq p1, v0, :cond_10
 
-    .line 883
+    .line 832
     new-instance v0, Lcom/facebook/FacebookException;
 
     const-string v1, "Can\'t change HTTP method on request with overridden URL."
@@ -5384,7 +4796,7 @@
 
     throw v0
 
-    .line 885
+    .line 834
     :cond_10
     if-eqz p1, :cond_15
 
@@ -5392,10 +4804,10 @@
     :goto_12
     iput-object p1, p0, Lcom/facebook/Request;->httpMethod:Lcom/facebook/HttpMethod;
 
-    .line 886
+    .line 835
     return-void
 
-    .line 885
+    .line 834
     .restart local p1    # "httpMethod":Lcom/facebook/HttpMethod;
     :cond_15
     sget-object p1, Lcom/facebook/HttpMethod;->GET:Lcom/facebook/HttpMethod;
@@ -5408,10 +4820,22 @@
     .param p1, "parameters"    # Landroid/os/Bundle;
 
     .prologue
-    .line 924
+    .line 853
     iput-object p1, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
-    .line 925
+    .line 854
+    return-void
+.end method
+
+.method public final setRestMethod(Ljava/lang/String;)V
+    .registers 2
+    .param p1, "restMethod"    # Ljava/lang/String;
+
+    .prologue
+    .line 872
+    iput-object p1, p0, Lcom/facebook/Request;->restMethod:Ljava/lang/String;
+
+    .line 873
     return-void
 .end method
 
@@ -5420,10 +4844,10 @@
     .param p1, "session"    # Lcom/facebook/Session;
 
     .prologue
-    .line 944
+    .line 892
     iput-object p1, p0, Lcom/facebook/Request;->session:Lcom/facebook/Session;
 
-    .line 945
+    .line 893
     return-void
 .end method
 
@@ -5432,22 +4856,10 @@
     .param p1, "tag"    # Ljava/lang/Object;
 
     .prologue
-    .line 1065
+    .line 1013
     iput-object p1, p0, Lcom/facebook/Request;->tag:Ljava/lang/Object;
 
-    .line 1066
-    return-void
-.end method
-
-.method public final setVersion(Ljava/lang/String;)V
-    .registers 2
-    .param p1, "version"    # Ljava/lang/String;
-
-    .prologue
-    .line 905
-    iput-object p1, p0, Lcom/facebook/Request;->version:Ljava/lang/String;
-
-    .line 906
+    .line 1014
     return-void
 .end method
 
@@ -5455,7 +4867,7 @@
     .registers 3
 
     .prologue
-    .line 1636
+    .line 1612
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5484,7 +4896,7 @@
 
     move-result-object v0
 
-    .line 1637
+    .line 1613
     iget-object v1, p0, Lcom/facebook/Request;->graphPath:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5503,7 +4915,19 @@
 
     move-result-object v0
 
-    .line 1638
+    const-string v1, ", restMethod: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    .line 1614
+    iget-object v1, p0, Lcom/facebook/Request;->restMethod:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
     const-string v1, ", httpMethod: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5522,7 +4946,7 @@
 
     move-result-object v0
 
-    .line 1639
+    .line 1615
     iget-object v1, p0, Lcom/facebook/Request;->parameters:Landroid/os/Bundle;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -5539,6 +4963,6 @@
 
     move-result-object v0
 
-    .line 1636
+    .line 1612
     return-object v0
 .end method

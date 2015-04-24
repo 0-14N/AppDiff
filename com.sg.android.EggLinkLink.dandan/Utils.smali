@@ -432,7 +432,7 @@
 
     invoke-static {v0}, Ljava/lang/System;->load(Ljava/lang/String;)V
     :try_end_122
-    .catch Ljava/lang/Exception; {:try_start_100 .. :try_end_122} :catch_1bc
+    .catch Ljava/lang/Exception; {:try_start_100 .. :try_end_122} :catch_1ba
 
     :cond_122
     :try_start_122
@@ -448,11 +448,9 @@
 
     iget-object v1, p0, Lcom/unicom/dcLoader/Utils;->_$14:Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
-
-    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -476,11 +474,11 @@
 
     move-result v4
 
-    if-nez v4, :cond_151
+    if-nez v4, :cond_14f
 
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    :cond_151
+    :cond_14f
     sget-object v1, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
 
     const/16 v4, 0x400
@@ -513,11 +511,11 @@
 
     move-result v0
 
-    if-nez v0, :cond_1c3
+    if-nez v0, :cond_1c1
 
     invoke-virtual {v5}, Ljava/io/File;->createNewFile()Z
 
-    :goto_178
+    :goto_176
     invoke-direct {p0}, Lcom/unicom/dcLoader/Utils;->_$2()V
 
     iget-object v0, p0, Lcom/unicom/dcLoader/Utils;->_$14:Landroid/content/Context;
@@ -556,7 +554,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1f3
+    if-eqz v0, :cond_1f1
 
     const-string v0, "mips"
 
@@ -564,7 +562,7 @@
 
     move-result v0
 
-    if-le v0, v9, :cond_1d1
+    if-le v0, v9, :cond_1cf
 
     iget-object v0, p0, Lcom/unicom/dcLoader/Utils;->_$14:Landroid/content/Context;
 
@@ -575,41 +573,41 @@
     const-string v1, "mips/libunicomsdk.jar"
 
     invoke-virtual {v0, v1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
-    :try_end_1b6
-    .catch Ljava/lang/Exception; {:try_start_122 .. :try_end_1b6} :catch_1ca
+    :try_end_1b4
+    .catch Ljava/lang/Exception; {:try_start_122 .. :try_end_1b4} :catch_1c8
 
     move-result-object v0
 
-    :goto_1b7
-    if-nez v0, :cond_24f
+    :goto_1b5
+    if-nez v0, :cond_24d
 
     move v2, v3
 
     goto/16 :goto_d4
 
-    :catch_1bc
+    :catch_1ba
     move-exception v0
 
-    :try_start_1bd
+    :try_start_1bb
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_1c0
-    .catch Ljava/lang/Exception; {:try_start_1bd .. :try_end_1c0} :catch_cf
+    :try_end_1be
+    .catch Ljava/lang/Exception; {:try_start_1bb .. :try_end_1be} :catch_cf
 
     move v2, v3
 
     goto/16 :goto_d4
 
-    :cond_1c3
-    :try_start_1c3
+    :cond_1c1
+    :try_start_1c1
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
     invoke-virtual {v5}, Ljava/io/File;->createNewFile()Z
-    :try_end_1c9
-    .catch Ljava/lang/Exception; {:try_start_1c3 .. :try_end_1c9} :catch_1ca
+    :try_end_1c7
+    .catch Ljava/lang/Exception; {:try_start_1c1 .. :try_end_1c7} :catch_1c8
 
-    goto :goto_178
+    goto :goto_176
 
-    :catch_1ca
+    :catch_1c8
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -618,15 +616,15 @@
 
     goto/16 :goto_d4
 
-    :cond_1d1
-    :try_start_1d1
+    :cond_1cf
+    :try_start_1cf
     const-string v0, "x86"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    if-le v0, v9, :cond_1e6
+    if-le v0, v9, :cond_1e4
 
     iget-object v0, p0, Lcom/unicom/dcLoader/Utils;->_$14:Landroid/content/Context;
 
@@ -640,9 +638,9 @@
 
     move-result-object v0
 
-    goto :goto_1b7
+    goto :goto_1b5
 
-    :cond_1e6
+    :cond_1e4
     iget-object v0, p0, Lcom/unicom/dcLoader/Utils;->_$14:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
@@ -655,16 +653,16 @@
 
     move-result-object v0
 
-    goto :goto_1b7
+    goto :goto_1b5
 
-    :cond_1f3
+    :cond_1f1
     const-string v0, "mips"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    if-le v0, v9, :cond_214
+    if-le v0, v9, :cond_212
 
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -688,16 +686,16 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1b7
+    goto :goto_1b5
 
-    :cond_214
+    :cond_212
     const-string v0, "x86"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    if-le v0, v9, :cond_235
+    if-le v0, v9, :cond_233
 
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -721,9 +719,9 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1b7
+    goto :goto_1b5
 
-    :cond_235
+    :cond_233
     new-instance v0, Ljava/io/FileInputStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -746,27 +744,27 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    goto/16 :goto_1b7
+    goto/16 :goto_1b5
 
-    :cond_24f
+    :cond_24d
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, v5}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    :goto_254
+    :goto_252
     invoke-virtual {v0, v4}, Ljava/io/InputStream;->read([B)I
 
     move-result v5
 
-    if-eq v5, v9, :cond_25f
+    if-eq v5, v9, :cond_25d
 
     const/4 v6, 0x0
 
     invoke-virtual {v1, v4, v6, v5}, Ljava/io/FileOutputStream;->write([BII)V
 
-    goto :goto_254
+    goto :goto_252
 
-    :cond_25f
+    :cond_25d
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->flush()V
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
@@ -785,11 +783,9 @@
 
     iget-object v1, p0, Lcom/unicom/dcLoader/Utils;->_$14:Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
-
-    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -806,8 +802,8 @@
     move-result-object v0
 
     invoke-static {v0}, Ljava/lang/System;->load(Ljava/lang/String;)V
-    :try_end_28c
-    .catch Ljava/lang/Exception; {:try_start_1d1 .. :try_end_28c} :catch_1ca
+    :try_end_288
+    .catch Ljava/lang/Exception; {:try_start_1cf .. :try_end_288} :catch_1c8
 
     goto/16 :goto_d4
 .end method
@@ -817,6 +813,42 @@
 
     sget-object v0, Lcom/unicom/dcLoader/Utils;->_$15:Lcom/unicom/dcLoader/Utils$UnipayPayResultListener;
 
+    return-object v0
+.end method
+
+.method private _$1(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
+    .registers 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x80
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    invoke-virtual {v0, p2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_18
+
+    const-string v0, ""
+
+    :cond_18
     return-object v0
 .end method
 
@@ -1318,18 +1350,65 @@
 .end method
 
 .method public initSDK(Landroid/content/Context;I)V
-    .registers 4
+    .registers 5
 
     iput-object p1, p0, Lcom/unicom/dcLoader/Utils;->_$14:Landroid/content/Context;
 
     iput p2, p0, Lcom/unicom/dcLoader/Utils;->_$11:I
 
-    :try_start_4
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x9
+
+    if-ge v0, v1, :cond_15
+
+    const-string v0, "\u7cfb\u7edf\u7248\u672c\u8fc7\u4f4e\uff0c\u65e0\u6cd5\u4f7f\u7528SDK"
+
+    const/4 v1, 0x1
+
+    invoke-static {p1, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    :goto_14
+    return-void
+
+    :cond_15
+    :try_start_15
+    const-string v0, "wostore_billing_chinamobile"
+
+    invoke-direct {p0, p1, v0}, Lcom/unicom/dcLoader/Utils;->_$1(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "true"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2c
+
+    const-string v0, "megjb"
+
+    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    :try_end_2c
+    .catch Ljava/lang/Exception; {:try_start_15 .. :try_end_2c} :catch_4b
+
+    :cond_2c
+    :goto_2c
+    :try_start_2c
     invoke-direct {p0, p2}, Lcom/unicom/dcLoader/Utils;->_$1(I)I
 
     move-result v0
 
-    if-nez v0, :cond_15
+    if-nez v0, :cond_42
 
     check-cast p1, Landroid/app/Activity;
 
@@ -1338,27 +1417,34 @@
     invoke-direct {v0, p0}, Lcom/unicom/dcLoader/IIIIIIIlIlIIIllI;-><init>(Lcom/unicom/dcLoader/Utils;)V
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    :goto_14
-    return-void
-
-    :cond_15
-    new-instance v0, Lcom/unicom/dcLoader/lIIIIIIlIlIIIllI;
-
-    invoke-direct {v0, p0, p1}, Lcom/unicom/dcLoader/lIIIIIIlIlIIIllI;-><init>(Lcom/unicom/dcLoader/Utils;Landroid/content/Context;)V
-
-    invoke-virtual {v0}, Lcom/unicom/dcLoader/lIIIIIIlIlIIIllI;->start()V
-    :try_end_1d
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_1d} :catch_1e
+    :try_end_3c
+    .catch Ljava/lang/Exception; {:try_start_2c .. :try_end_3c} :catch_3d
 
     goto :goto_14
 
-    :catch_1e
+    :catch_3d
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_14
+
+    :cond_42
+    :try_start_42
+    new-instance v0, Lcom/unicom/dcLoader/lIIIIIIlIlIIIllI;
+
+    invoke-direct {v0, p0, p1}, Lcom/unicom/dcLoader/lIIIIIIlIlIIIllI;-><init>(Lcom/unicom/dcLoader/Utils;Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Lcom/unicom/dcLoader/lIIIIIIlIlIIIllI;->start()V
+    :try_end_4a
+    .catch Ljava/lang/Exception; {:try_start_42 .. :try_end_4a} :catch_3d
+
+    goto :goto_14
+
+    :catch_4b
+    move-exception v0
+
+    goto :goto_2c
 .end method
 
 .method public pay(Landroid/content/Context;Ljava/lang/String;Lcom/unicom/dcLoader/Utils$UnipayPayResultListener;)V

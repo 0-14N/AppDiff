@@ -23,29 +23,11 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .registers 5
+    .registers 3
 
-    new-instance v0, Landroid/content/Intent;
+    iget-object v0, p0, Lbiz/nicenight/nicenight/ui/as;->a:Lbiz/nicenight/nicenight/ui/UserInfoActivity;
 
-    iget-object v1, p0, Lbiz/nicenight/nicenight/ui/as;->a:Lbiz/nicenight/nicenight/ui/UserInfoActivity;
-
-    const-class v2, Lbiz/nicenight/nicenight/ui/ChatActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "toUid"
-
-    iget-object v2, p0, Lbiz/nicenight/nicenight/ui/as;->a:Lbiz/nicenight/nicenight/ui/UserInfoActivity;
-
-    invoke-static {v2}, Lbiz/nicenight/nicenight/ui/UserInfoActivity;->a(Lbiz/nicenight/nicenight/ui/UserInfoActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v1, p0, Lbiz/nicenight/nicenight/ui/as;->a:Lbiz/nicenight/nicenight/ui/UserInfoActivity;
-
-    invoke-virtual {v1, v0}, Lbiz/nicenight/nicenight/ui/UserInfoActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0}, Lbiz/nicenight/nicenight/ui/UserInfoActivity;->finish()V
 
     return-void
 .end method

@@ -231,16 +231,16 @@
     iput-boolean v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator;->s:Z
 
     .line 517
-    new-instance v0, Lbes;
+    new-instance v0, Laxy;
 
-    invoke-direct {v0, p0}, Lbes;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator;)V
+    invoke-direct {v0, p0}, Laxy;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator;->t:Lcom/quvideo/xiaoying/videoeditor/widget/VePIPGallery$OnGalleryOperationListener;
 
     .line 560
-    new-instance v0, Lbet;
+    new-instance v0, Laxz;
 
-    invoke-direct {v0, p0}, Lbet;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator;)V
+    invoke-direct {v0, p0}, Laxz;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator;->u:Lcom/quvideo/xiaoying/videoeditor/widget/VePIPGallery$OnLayoutListener;
 

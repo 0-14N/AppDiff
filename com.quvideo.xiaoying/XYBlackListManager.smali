@@ -107,16 +107,16 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->j:Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager$a;
 
     .line 187
-    new-instance v0, Lsg;
+    new-instance v0, Lln;
 
-    invoke-direct {v0, p0}, Lsg;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
+    invoke-direct {v0, p0}, Lln;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->k:Landroid/widget/AbsListView$OnScrollListener;
 
     .line 239
-    new-instance v0, Lsh;
+    new-instance v0, Llo;
 
-    invoke-direct {v0, p0}, Lsh;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
+    invoke-direct {v0, p0}, Llo;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->l:Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter$XYBlackListAdapterListener;
 
@@ -172,16 +172,16 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->j:Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager$a;
 
     .line 187
-    new-instance v0, Lsg;
+    new-instance v0, Lln;
 
-    invoke-direct {v0, p0}, Lsg;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
+    invoke-direct {v0, p0}, Lln;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->k:Landroid/widget/AbsListView$OnScrollListener;
 
     .line 239
-    new-instance v0, Lsh;
+    new-instance v0, Llo;
 
-    invoke-direct {v0, p0}, Lsh;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
+    invoke-direct {v0, p0}, Llo;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->l:Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter$XYBlackListAdapterListener;
 
@@ -237,16 +237,16 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->j:Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager$a;
 
     .line 187
-    new-instance v0, Lsg;
+    new-instance v0, Lln;
 
-    invoke-direct {v0, p0}, Lsg;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
+    invoke-direct {v0, p0}, Lln;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->k:Landroid/widget/AbsListView$OnScrollListener;
 
     .line 239
-    new-instance v0, Lsh;
+    new-instance v0, Llo;
 
-    invoke-direct {v0, p0}, Lsh;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
+    invoke-direct {v0, p0}, Llo;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->l:Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter$XYBlackListAdapterListener;
 
@@ -500,7 +500,7 @@
     .line 232
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->mHintView:Landroid/view/View;
 
-    const v1, 0x7f06052b
+    const v1, 0x7f060516
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -511,7 +511,7 @@
     .line 233
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->mHintView:Landroid/view/View;
 
-    const v2, 0x7f06052c
+    const v2, 0x7f060517
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -520,12 +520,12 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 234
-    const v2, 0x7f020602
+    const v2, 0x7f0205e2
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 235
-    const v0, 0x7f0a0391
+    const v0, 0x7f0a036e
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
 
@@ -561,9 +561,9 @@
 
     .prologue
     .line 274
-    new-instance v0, Lsj;
+    new-instance v0, Llq;
 
-    invoke-direct {v0, p0}, Lsj;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
+    invoke-direct {v0, p0}, Llq;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->i:Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;
 
@@ -579,9 +579,9 @@
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
     .line 291
-    new-instance v0, Lsk;
+    new-instance v0, Llr;
 
-    invoke-direct {v0, p0}, Lsk;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
+    invoke-direct {v0, p0}, Llr;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;->h:Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;
 
@@ -856,9 +856,9 @@
 
     const-string/jumbo v2, "balcklist.get"
 
-    new-instance v3, Lsi;
+    new-instance v3, Llp;
 
-    invoke-direct {v3, p0, p1, v0}, Lsi;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;ILjava/lang/String;)V
+    invoke-direct {v3, p0, p1, v0}, Llp;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListManager;ILjava/lang/String;)V
 
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 

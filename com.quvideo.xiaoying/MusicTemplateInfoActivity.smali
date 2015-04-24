@@ -195,37 +195,37 @@
     iput-boolean v2, p0, Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;->M:Z
 
     .line 554
-    new-instance v0, Lark;
+    new-instance v0, Lakq;
 
-    invoke-direct {v0, p0}, Lark;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
+    invoke-direct {v0, p0}, Lakq;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;->O:Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter$MusicListListener;
 
     .line 1127
-    new-instance v0, Larl;
+    new-instance v0, Lakr;
 
-    invoke-direct {v0, p0}, Larl;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
+    invoke-direct {v0, p0}, Lakr;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;->P:Landroid/media/MediaPlayer$OnCompletionListener;
 
     .line 1138
-    new-instance v0, Larm;
+    new-instance v0, Laks;
 
-    invoke-direct {v0, p0}, Larm;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
+    invoke-direct {v0, p0}, Laks;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;->Q:Landroid/media/MediaPlayer$OnPreparedListener;
 
     .line 1152
-    new-instance v0, Larn;
+    new-instance v0, Lakt;
 
-    invoke-direct {v0, p0}, Larn;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
+    invoke-direct {v0, p0}, Lakt;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;->R:Landroid/media/MediaPlayer$OnErrorListener;
 
     .line 1161
-    new-instance v0, Laro;
+    new-instance v0, Laku;
 
-    invoke-direct {v0, p0}, Laro;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
+    invoke-direct {v0, p0}, Laku;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;->S:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
 
@@ -704,9 +704,9 @@
 
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_com_delete_ask:I
 
-    new-instance v2, Larq;
+    new-instance v2, Lakw;
 
-    invoke-direct {v2, p0, p1}, Larq;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;I)V
+    invoke-direct {v2, p0, p1}, Lakw;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;I)V
 
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -742,9 +742,9 @@
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_template_msg_update_app_for_support_template:I
 
     .line 375
-    new-instance v2, Larr;
+    new-instance v2, Lakx;
 
-    invoke-direct {v2, p0}, Larr;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
+    invoke-direct {v2, p0}, Lakx;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
 
     .line 374
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -1687,9 +1687,9 @@
 
     move-result-object v7
 
-    new-instance v8, Larp;
+    new-instance v8, Lakv;
 
-    invoke-direct {v8, p0}, Larp;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
+    invoke-direct {v8, p0}, Lakv;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
 
     move-object v0, p0
 
@@ -1853,9 +1853,9 @@
 
     const-string/jumbo v1, "misc.apk"
 
-    new-instance v2, Lars;
+    new-instance v2, Laky;
 
-    invoke-direct {v2, p0}, Lars;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
+    invoke-direct {v2, p0}, Laky;-><init>(Lcom/quvideo/xiaoying/template/MusicTemplateInfoActivity;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 

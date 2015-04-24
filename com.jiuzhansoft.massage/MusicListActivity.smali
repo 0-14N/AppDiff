@@ -43,7 +43,7 @@
 
 .field private mylist:Landroid/widget/ListView;
 
-.field private returnBtn:Landroid/widget/ImageButton;
+.field private returnBtn:Landroid/widget/Button;
 
 
 # direct methods
@@ -53,23 +53,25 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 32
+    .line 35
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 42
+    .line 45
     iput-boolean v2, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->isring:Z
 
-    .line 46
+    .line 49
     const/16 v0, 0x9
 
     new-array v0, v0, [Ljava/lang/String;
 
+    .line 50
     const-string v1, "audio._id AS _id"
 
     aput-object v1, v0, v2
 
     const/4 v1, 0x1
 
+    .line 51
     const-string v2, "artist"
 
     aput-object v2, v0, v1
@@ -82,6 +84,7 @@
 
     const/4 v1, 0x3
 
+    .line 52
     const-string v2, "title"
 
     aput-object v2, v0, v1
@@ -94,7 +97,7 @@
 
     const/4 v1, 0x5
 
-    .line 47
+    .line 53
     const-string v2, "mime_type"
 
     aput-object v2, v0, v1
@@ -107,6 +110,7 @@
 
     const/4 v1, 0x7
 
+    .line 54
     const-string v2, "artist_id"
 
     aput-object v2, v0, v1
@@ -119,7 +123,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->mCursorCols:[Ljava/lang/String;
 
-    .line 32
+    .line 35
     return-void
 .end method
 
@@ -127,7 +131,7 @@
     .registers 2
 
     .prologue
-    .line 35
+    .line 38
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->component:Landroid/content/ComponentName;
 
     return-object v0
@@ -149,12 +153,12 @@
     .end annotation
 
     .prologue
-    .line 143
+    .line 155
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 144
+    .line 156
     .local v0, "aList":Ljava/util/List;, "Ljava/util/List<Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;>;"
     const/4 v2, 0x0
 
@@ -168,7 +172,7 @@
 
     if-lt v2, v5, :cond_21
 
-    .line 155
+    .line 167
     const-string v5, "msg"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -185,22 +189,22 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
+    .line 168
     return-object v0
 
-    .line 145
+    .line 157
     :cond_21
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 146
+    .line 158
     .local v3, "infoMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v5, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->cursor:Landroid/database/Cursor;
 
     invoke-interface {v5, v2}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 147
+    .line 159
     iget-object v5, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->cursor:Landroid/database/Cursor;
 
     const-string v6, "title"
@@ -209,7 +213,7 @@
 
     move-result v4
 
-    .line 148
+    .line 160
     .local v4, "titleColumn":I
     iget-object v5, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->cursor:Landroid/database/Cursor;
 
@@ -219,7 +223,7 @@
 
     move-result v1
 
-    .line 149
+    .line 161
     .local v1, "artistColumn":I
     iget-object v5, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->musicArtist:[Ljava/lang/String;
 
@@ -231,7 +235,7 @@
 
     aput-object v6, v5, v2
 
-    .line 150
+    .line 162
     iget-object v5, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->musicTitle:[Ljava/lang/String;
 
     iget-object v6, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->cursor:Landroid/database/Cursor;
@@ -242,12 +246,12 @@
 
     aput-object v6, v5, v2
 
-    .line 151
+    .line 163
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x7f0d00e9
+    const v6, 0x7f0900c8
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -259,12 +263,12 @@
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 152
+    .line 164
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x7f0d00ea
+    const v6, 0x7f0900c9
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -276,10 +280,10 @@
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 153
+    .line 165
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 144
+    .line 156
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_6
@@ -295,10 +299,10 @@
 
     const/4 v4, 0x0
 
-    .line 61
+    .line 69
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 62
+    .line 70
     .local v1, "MUSIC_URL":Landroid/net/Uri;
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -316,7 +320,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->cursor:Landroid/database/Cursor;
 
-    .line 64
+    .line 72
     new-instance v0, Landroid/content/ComponentName;
 
     const-class v2, Lcom/jiuzhansoft/massage/service/MusicService;
@@ -325,8 +329,8 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->component:Landroid/content/ComponentName;
 
-    .line 65
-    const v0, 0x7f0701d3
+    .line 73
+    const v0, 0x7f0800c6
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->findViewById(I)Landroid/view/View;
 
@@ -336,8 +340,8 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->mylist:Landroid/widget/ListView;
 
-    .line 67
-    const v0, 0x7f070262
+    .line 75
+    const v0, 0x7f0800f3
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->findViewById(I)Landroid/view/View;
 
@@ -349,7 +353,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0d00e3
+    const v3, 0x7f0900c2
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -357,23 +361,23 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 68
-    const v0, 0x7f070263
+    .line 76
+    const v0, 0x7f0800f4
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageButton;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->returnBtn:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->returnBtn:Landroid/widget/Button;
 
-    .line 70
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->returnBtn:Landroid/widget/ImageButton;
+    .line 78
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->returnBtn:Landroid/widget/Button;
 
-    invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 72
+    .line 80
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->cursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
@@ -384,7 +388,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->musicTitle:[Ljava/lang/String;
 
-    .line 73
+    .line 81
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->cursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
@@ -395,27 +399,29 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->musicArtist:[Ljava/lang/String;
 
-    .line 74
+    .line 82
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->getInfoArray()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->list:Ljava/util/List;
 
-    .line 75
+    .line 83
     new-instance v5, Landroid/widget/SimpleAdapter;
 
+    .line 84
     iget-object v7, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->list:Ljava/util/List;
 
-    const v8, 0x7f030051
+    const v8, 0x7f03002c
 
+    .line 85
     new-array v9, v10, [Ljava/lang/String;
 
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f0d00e9
+    const v2, 0x7f0900c8
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -423,23 +429,25 @@
 
     aput-object v0, v9, v6
 
+    .line 86
     new-array v10, v10, [I
 
-    const v0, 0x7f0701e5
+    const v0, 0x7f0800ce
 
     aput v0, v10, v6
 
     move-object v6, p0
 
+    .line 83
     invoke-direct/range {v5 .. v10}, Landroid/widget/SimpleAdapter;-><init>(Landroid/content/Context;Ljava/util/List;I[Ljava/lang/String;[I)V
 
-    .line 76
+    .line 87
     .local v5, "adapter":Landroid/widget/SimpleAdapter;
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->mylist:Landroid/widget/ListView;
 
     invoke-virtual {v0, v5}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 77
+    .line 88
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->mylist:Landroid/widget/ListView;
 
     new-instance v2, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity$1;
@@ -448,7 +456,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 99
+    .line 111
     const-string v0, "phone"
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -457,17 +465,19 @@
 
     check-cast v11, Landroid/telephony/TelephonyManager;
 
-    .line 100
+    .line 112
     .local v11, "telManager":Landroid/telephony/TelephonyManager;
     new-instance v0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity$MobliePhoneStateListener;
 
     invoke-direct {v0, p0, v4}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity$MobliePhoneStateListener;-><init>(Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;Lcom/jiuzhansoft/massage/subActivity/MusicListActivity$MobliePhoneStateListener;)V
 
+    .line 113
     const/16 v2, 0x20
 
+    .line 112
     invoke-virtual {v11, v0, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 101
+    .line 114
     return-void
 .end method
 
@@ -478,15 +488,15 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 162
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->returnBtn:Landroid/widget/ImageButton;
+    .line 174
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->returnBtn:Landroid/widget/Button;
 
     if-ne p1, v0, :cond_7
 
-    .line 163
+    .line 175
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->finish()V
 
-    .line 165
+    .line 177
     :cond_7
     return-void
 .end method
@@ -496,17 +506,17 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 52
+    .line 60
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 53
-    const v0, 0x7f03004f
+    .line 61
+    const v0, 0x7f03002a
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->setContentView(I)V
 
-    .line 54
+    .line 62
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/MusicListActivity;->setupViews()V
 
-    .line 57
+    .line 65
     return-void
 .end method

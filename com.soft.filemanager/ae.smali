@@ -198,7 +198,7 @@
 
     iget-object v0, p0, Lcom/soft/filemanager/e/ae;->b:Lcom/soft/filemanager/activities/MainActivity;
 
-    invoke-virtual {v0}, Lcom/soft/filemanager/activities/MainActivity;->k()Lcom/soft/filemanager/FileManagerApplication;
+    invoke-virtual {v0}, Lcom/soft/filemanager/activities/MainActivity;->j()Lcom/soft/filemanager/FileManagerApplication;
 
     move-result-object v0
 

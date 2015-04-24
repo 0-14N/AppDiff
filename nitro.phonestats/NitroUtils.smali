@@ -1528,21 +1528,23 @@
     .prologue
     const/4 v3, 0x1
 
+    return v3
+
     .line 75
     invoke-static {}, Lnitro/phonestats/core/helper/NitroUtils;->isDebug()Z
 
     move-result v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
     move v2, v3
 
     .line 101
-    :goto_8
+    :goto_9
     return v2
 
     .line 78
-    :cond_9
+    :cond_a
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
@@ -1563,32 +1565,32 @@
     .local v1, "state":Lnitro/phonestats/core/helper/PremiumActivator$PremiumState;
     sget-object v2, Lnitro/phonestats/core/helper/PremiumActivator$PremiumState;->PREMIUM:Lnitro/phonestats/core/helper/PremiumActivator$PremiumState;
 
-    if-ne v1, v2, :cond_1d
+    if-ne v1, v2, :cond_1e
 
     move v2, v3
 
     .line 84
-    goto :goto_8
+    goto :goto_9
 
     .line 86
-    :cond_1d
+    :cond_1e
     sget-object v2, Lnitro/phonestats/core/helper/PremiumActivator$PremiumState;->PREMIUM_VERIFIED:Lnitro/phonestats/core/helper/PremiumActivator$PremiumState;
 
-    if-ne v1, v2, :cond_23
+    if-ne v1, v2, :cond_24
 
     move v2, v3
 
     .line 89
-    goto :goto_8
+    goto :goto_9
 
     .line 91
-    :cond_23
+    :cond_24
     sget-object v2, Lnitro/phonestats/core/helper/PremiumActivator$PremiumState;->INVALID:Lnitro/phonestats/core/helper/PremiumActivator$PremiumState;
 
-    if-ne v1, v2, :cond_32
+    if-ne v1, v2, :cond_33
 
     .line 93
-    if-eqz p1, :cond_2d
+    if-eqz p1, :cond_2e
 
     .line 94
     const/4 v2, 0x3
@@ -1596,16 +1598,16 @@
     invoke-virtual {p1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 95
-    :cond_2d
+    :cond_2e
     const-string v2, "Invalid key"
 
     invoke-static {v2}, Lnitro/phonestats/core/helper/NitroUtils;->log(Ljava/lang/String;)V
 
     .line 101
-    :cond_32
+    :cond_33
     const/4 v2, 0x0
 
-    goto :goto_8
+    goto :goto_9
 .end method
 
 .method public static isServiceRunning(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z

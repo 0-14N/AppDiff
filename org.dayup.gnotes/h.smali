@@ -35,7 +35,7 @@
     .line 86
     iget-object v0, p0, Lorg/dayup/gnotes/promotion/h;->a:Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;
 
-    invoke-static {v0}, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;
+    invoke-static {v0}, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;
 
     move-result-object v0
 
@@ -44,11 +44,11 @@
     .line 87
     iget-object v0, p0, Lorg/dayup/gnotes/promotion/h;->a:Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;
 
-    invoke-static {v0}, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/f;
+    invoke-static {v0}, Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;->f(Lorg/dayup/gnotes/promotion/PromotionAppStoreActivity;)Lorg/dayup/gnotes/d/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lorg/dayup/gnotes/d/f;->cancel(Z)Z
+    invoke-virtual {v0, v1}, Lorg/dayup/gnotes/d/g;->cancel(Z)Z
 
     .line 89
     :cond_12

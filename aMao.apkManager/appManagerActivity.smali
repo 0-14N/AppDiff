@@ -1571,17 +1571,13 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    sget-object v1, LaMao/appManager/appManagerActivity;->d:Landroid/app/Activity;
+    sget-object v0, LaMao/appManager/appManagerActivity;->d:Landroid/app/Activity;
 
     const v0, 0x7f060022
 
     invoke-virtual {p0, v0}, LaMao/appManager/appManagerActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    invoke-static {v1, v0}, LaMao/a/a;->a(Landroid/content/Context;Landroid/widget/LinearLayout;)V
+    invoke-static {}, LaMao/a/a;->d()V
 
     return-void
 .end method

@@ -320,7 +320,9 @@
 
     const/4 v1, 0x2
 
-    const/16 v0, 0x9
+    const/4 v0, 0x0
+
+    return v0
 
     const/4 v2, 0x0
 

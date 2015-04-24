@@ -316,6 +316,8 @@
     .line 143
     invoke-super {p0, p1}, Lcom/badlogic/gdx/backends/android/AndroidApplication;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 144
     new-instance v0, Landroid/os/Handler;
 
@@ -463,7 +465,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_f7
+    if-eqz v1, :cond_fa
 
     .line 175
     invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
@@ -480,7 +482,7 @@
     invoke-virtual {v1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     .line 177
-    if-eqz v0, :cond_f7
+    if-eqz v0, :cond_fa
 
     .line 179
     new-instance v1, Ljava/io/File;
@@ -499,13 +501,13 @@
 
     move-result v3
 
-    if-nez v3, :cond_b8
+    if-nez v3, :cond_bb
 
     .line 186
     invoke-virtual {v2}, Ljava/io/File;->mkdir()Z
 
     .line 188
-    :cond_b8
+    :cond_bb
     new-instance v3, Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -519,7 +521,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_fe
+    if-nez v2, :cond_101
 
     .line 190
     invoke-virtual {v1, v3}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
@@ -527,7 +529,7 @@
     move-result v2
 
     .line 191
-    if-eqz v2, :cond_f8
+    if-eqz v2, :cond_fb
 
     .line 192
     iget-object v0, p0, Lcom/acr21/mx/android/beta/AndroidGame;->d:Lcom/acr21/mx/android/beta/i;
@@ -575,20 +577,20 @@
     invoke-virtual {v0, v1}, Lcom/acr21/mx/android/beta/i;->a(Ljava/lang/String;)V
 
     .line 205
-    :cond_f7
-    :goto_f7
+    :cond_fa
+    :goto_fa
     return-void
 
     .line 196
-    :cond_f8
+    :cond_fb
     iget-object v1, p0, Lcom/acr21/mx/android/beta/AndroidGame;->d:Lcom/acr21/mx/android/beta/i;
 
     invoke-virtual {v1, v0}, Lcom/acr21/mx/android/beta/i;->a(Ljava/lang/String;)V
 
-    goto :goto_f7
+    goto :goto_fa
 
     .line 199
-    :cond_fe
+    :cond_101
     iget-object v0, p0, Lcom/acr21/mx/android/beta/AndroidGame;->d:Lcom/acr21/mx/android/beta/i;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -633,5 +635,16 @@
     .line 199
     invoke-virtual {v0, v1}, Lcom/acr21/mx/android/beta/i;->a(Ljava/lang/String;)V
 
-    goto :goto_f7
+    goto :goto_fa
+.end method
+
+.method protected onDestroy()V
+    .registers 1
+
+    .prologue
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+
+    return-void
 .end method

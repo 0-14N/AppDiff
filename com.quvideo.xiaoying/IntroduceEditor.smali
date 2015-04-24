@@ -53,9 +53,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/IntroduceEditor;->d:Landroid/widget/EditText;
 
     .line 59
-    new-instance v0, Lzt;
+    new-instance v0, Lta;
 
-    invoke-direct {v0, p0}, Lzt;-><init>(Lcom/quvideo/xiaoying/app/studio/IntroduceEditor;)V
+    invoke-direct {v0, p0}, Lta;-><init>(Lcom/quvideo/xiaoying/app/studio/IntroduceEditor;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/IntroduceEditor;->e:Ljava/lang/Runnable;
 
@@ -99,9 +99,9 @@
     const-string/jumbo v2, "studio.profileUp"
 
     .line 104
-    new-instance v3, Lzv;
+    new-instance v3, Ltc;
 
-    invoke-direct {v3, p0, p1}, Lzv;-><init>(Lcom/quvideo/xiaoying/app/studio/IntroduceEditor;Ljava/lang/String;)V
+    invoke-direct {v3, p0, p1}, Ltc;-><init>(Lcom/quvideo/xiaoying/app/studio/IntroduceEditor;Ljava/lang/String;)V
 
     .line 102
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -201,9 +201,9 @@
     .line 82
     const v1, 0x7f0a0006
 
-    new-instance v2, Lzu;
+    new-instance v2, Ltb;
 
-    invoke-direct {v2, p0}, Lzu;-><init>(Lcom/quvideo/xiaoying/app/studio/IntroduceEditor;)V
+    invoke-direct {v2, p0}, Ltb;-><init>(Lcom/quvideo/xiaoying/app/studio/IntroduceEditor;)V
 
     .line 91
     const/4 v3, 0x1

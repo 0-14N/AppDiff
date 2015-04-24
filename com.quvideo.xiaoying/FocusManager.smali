@@ -146,9 +146,9 @@
     iput v3, p0, Lcom/quvideo/xiaoying/camera/FocusManager;->B:I
 
     .line 497
-    new-instance v0, Ladn;
+    new-instance v0, Lwt;
 
-    invoke-direct {v0, p0}, Ladn;-><init>(Lcom/quvideo/xiaoying/camera/FocusManager;)V
+    invoke-direct {v0, p0}, Lwt;-><init>(Lcom/quvideo/xiaoying/camera/FocusManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/FocusManager;->C:Landroid/hardware/SensorEventListener;
 

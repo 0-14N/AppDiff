@@ -2,9 +2,6 @@
 .super Lcom/celticspear/tokens/AbstractScreen;
 .source "MapScreen.java"
 
-# interfaces
-.implements Lorg/andengine/entity/scene/IOnSceneTouchListener;
-
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -19,14 +16,9 @@
         "Lcom/celticspear/tokens/AbstractScreen",
         "<",
         "Lcom/celticspear/tokens/TokensActivity;",
-        ">;",
-        "Lorg/andengine/entity/scene/IOnSceneTouchListener;"
+        ">;"
     }
 .end annotation
-
-
-# static fields
-.field private static final PAGE_MOVEMENT_DURATION:F = 0.5f
 
 
 # instance fields
@@ -43,232 +35,44 @@
 
 .field protected final fontName:Ljava/lang/String;
 
-.field private queue:Ljava/util/LinkedList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/LinkedList",
-            "<",
-            "Lorg/andengine/entity/IEntity;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private swipeAndClickListener:Lcom/celticspear/andengine/control/SwipeAndClickListener;
-
 
 # direct methods
 .method public constructor <init>(Lcom/celticspear/tokens/TokensActivity;Lcom/celticspear/tokens/AbstractScreen;Z)V
-    .registers 9
+    .registers 33
     .param p1, "pContext"    # Lcom/celticspear/tokens/TokensActivity;
     .param p2, "pPrevScreen"    # Lcom/celticspear/tokens/AbstractScreen;
     .param p3, "isPopUp"    # Z
 
     .prologue
-    .line 99
-    invoke-direct {p0, p1, p2}, Lcom/celticspear/tokens/AbstractScreen;-><init>(Lcom/celticspear/andengine/CelticSpearLayoutActivity;Lcom/celticspear/tokens/AbstractScreen;)V
+    .line 90
+    invoke-direct/range {p0 .. p2}, Lcom/celticspear/tokens/AbstractScreen;-><init>(Lcom/celticspear/andengine/CelticSpearLayoutActivity;Lcom/celticspear/tokens/AbstractScreen;)V
 
-    .line 33
-    new-instance v3, Ljava/util/ArrayList;
+    .line 27
+    new-instance v5, Ljava/util/ArrayList;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v3, p0, Lcom/celticspear/tokens/MapScreen;->arts:Ljava/util/List;
+    move-object/from16 v0, p0
 
-    .line 36
-    new-instance v3, Ljava/util/LinkedList;
+    iput-object v5, v0, Lcom/celticspear/tokens/MapScreen;->arts:Ljava/util/List;
 
-    invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
+    .line 196
+    const-string v5, "JandaManateeSolidBLUE"
 
-    iput-object v3, p0, Lcom/celticspear/tokens/MapScreen;->queue:Ljava/util/LinkedList;
+    move-object/from16 v0, p0
 
-    .line 322
-    const-string v3, "JandaManateeSolidBLUE"
+    iput-object v5, v0, Lcom/celticspear/tokens/MapScreen;->fontName:Ljava/lang/String;
 
-    iput-object v3, p0, Lcom/celticspear/tokens/MapScreen;->fontName:Ljava/lang/String;
+    .line 92
+    move-object/from16 v0, p0
 
-    .line 102
-    iget-object v3, p0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    check-cast v3, Lcom/celticspear/tokens/TokensActivity;
+    const/4 v6, 0x1
 
-    invoke-virtual {v3}, Lcom/celticspear/tokens/TokensActivity;->getDao()Lcom/celticspear/tokens/dao/Dao;
+    invoke-virtual {v5, v6}, Lorg/andengine/entity/scene/Scene;->setTouchAreaBindingOnActionDownEnabled(Z)V
 
-    move-result-object v3
-
-    const-string v4, "ARCADE_LEVEL_NUMBER"
-
-    invoke-virtual {v3, v4}, Lcom/celticspear/tokens/dao/Dao;->getIntValue(Ljava/lang/String;)I
-
-    move-result v1
-
-    .line 103
-    .local v1, "levelNumberDao":I
-    invoke-static {}, Lcom/celticspear/tokens/MapScreen$Level;->values()[Lcom/celticspear/tokens/MapScreen$Level;
-
-    move-result-object v3
-
-    array-length v3, v3
-
-    if-lt v1, v3, :cond_69
-
-    invoke-static {}, Lcom/celticspear/tokens/MapScreen$Level;->values()[Lcom/celticspear/tokens/MapScreen$Level;
-
-    move-result-object v3
-
-    array-length v3, v3
-
-    add-int/lit8 v0, v3, -0x1
-
-    .line 105
-    .local v0, "levelNumber":I
-    :goto_31
-    iget-object v3, p0, Lcom/celticspear/tokens/MapScreen;->queue:Ljava/util/LinkedList;
-
-    invoke-direct {p0, p1, p3, v1, v0}, Lcom/celticspear/tokens/MapScreen;->buildPage(Lcom/celticspear/tokens/TokensActivity;ZII)Lorg/andengine/entity/IEntity;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    .line 106
-    iget-object v3, p0, Lcom/celticspear/tokens/MapScreen;->queue:Ljava/util/LinkedList;
-
-    invoke-direct {p0, p1, p3, v1, v0}, Lcom/celticspear/tokens/MapScreen;->buildPage(Lcom/celticspear/tokens/TokensActivity;ZII)Lorg/andengine/entity/IEntity;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    .line 107
-    iget-object v3, p0, Lcom/celticspear/tokens/MapScreen;->queue:Ljava/util/LinkedList;
-
-    invoke-direct {p0, p1, p3, v1, v0}, Lcom/celticspear/tokens/MapScreen;->buildPage(Lcom/celticspear/tokens/TokensActivity;ZII)Lorg/andengine/entity/IEntity;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    .line 109
-    invoke-direct {p0}, Lcom/celticspear/tokens/MapScreen;->setPagePositions()V
-
-    .line 111
-    iget-object v3, p0, Lcom/celticspear/tokens/MapScreen;->queue:Ljava/util/LinkedList;
-
-    invoke-virtual {v3}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :goto_55
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-nez v4, :cond_6b
-
-    .line 115
-    iget-object v3, p0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
-
-    const/4 v4, 0x1
-
-    invoke-virtual {v3, v4}, Lorg/andengine/entity/scene/Scene;->setTouchAreaBindingOnActionDownEnabled(Z)V
-
-    .line 118
-    new-instance v3, Lcom/celticspear/tokens/MapScreen$1;
-
-    invoke-direct {v3, p0}, Lcom/celticspear/tokens/MapScreen$1;-><init>(Lcom/celticspear/tokens/MapScreen;)V
-
-    iput-object v3, p0, Lcom/celticspear/tokens/MapScreen;->swipeAndClickListener:Lcom/celticspear/andengine/control/SwipeAndClickListener;
-
-    .line 165
-    return-void
-
-    .end local v0    # "levelNumber":I
-    :cond_69
-    move v0, v1
-
-    .line 103
-    goto :goto_31
-
-    .line 111
-    .restart local v0    # "levelNumber":I
-    :cond_6b
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lorg/andengine/entity/IEntity;
-
-    .line 112
-    .local v2, "page":Lorg/andengine/entity/IEntity;
-    iget-object v4, p0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
-
-    invoke-virtual {v4, v2}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
-
-    goto :goto_55
-.end method
-
-.method static synthetic access$0(Lcom/celticspear/tokens/MapScreen;)Ljava/util/LinkedList;
-    .registers 2
-
-    .prologue
-    .line 36
-    iget-object v0, p0, Lcom/celticspear/tokens/MapScreen;->queue:Ljava/util/LinkedList;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1(Lcom/celticspear/tokens/MapScreen;Lorg/andengine/entity/IEntity;F)V
-    .registers 3
-
-    .prologue
-    .line 173
-    invoke-direct {p0, p1, p2}, Lcom/celticspear/tokens/MapScreen;->move(Lorg/andengine/entity/IEntity;F)V
-
-    return-void
-.end method
-
-.method static synthetic access$2(Lcom/celticspear/tokens/MapScreen;)V
-    .registers 1
-
-    .prologue
-    .line 167
-    invoke-direct {p0}, Lcom/celticspear/tokens/MapScreen;->setPagePositions()V
-
-    return-void
-.end method
-
-.method static synthetic access$3(Lcom/celticspear/tokens/MapScreen;)V
-    .registers 1
-
-    .prologue
-    .line 324
-    invoke-direct {p0}, Lcom/celticspear/tokens/MapScreen;->showCongratulationMessage()V
-
-    return-void
-.end method
-
-.method private buildPage(Lcom/celticspear/tokens/TokensActivity;ZII)Lorg/andengine/entity/IEntity;
-    .registers 33
-    .param p1, "pContext"    # Lcom/celticspear/tokens/TokensActivity;
-    .param p2, "isPopUp"    # Z
-    .param p3, "levelNumberDao"    # I
-    .param p4, "levelNumber"    # I
-
-    .prologue
-    .line 212
-    new-instance v16, Lorg/andengine/entity/Entity;
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    move-object/from16 v0, v16
-
-    invoke-direct {v0, v5, v6}, Lorg/andengine/entity/Entity;-><init>(FF)V
-
-    .line 213
-    .local v16, "page":Lorg/andengine/entity/IEntity;
+    .line 93
     const/4 v5, 0x3
 
     new-array v5, v5, [Ljava/lang/String;
@@ -295,14 +99,49 @@
 
     move-object/from16 v1, p1
 
-    move-object/from16 v2, v16
+    invoke-virtual {v0, v1, v5}, Lcom/celticspear/tokens/MapScreen;->setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;[Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2, v5}, Lcom/celticspear/tokens/MapScreen;->setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/IEntity;[Ljava/lang/String;)V
+    .line 94
+    move-object/from16 v0, p0
 
-    .line 214
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
+
+    check-cast v5, Lcom/celticspear/tokens/TokensActivity;
+
+    invoke-virtual {v5}, Lcom/celticspear/tokens/TokensActivity;->getDao()Lcom/celticspear/tokens/dao/Dao;
+
+    move-result-object v5
+
+    const-string v6, "ARCADE_LEVEL_NUMBER"
+
+    invoke-virtual {v5, v6}, Lcom/celticspear/tokens/dao/Dao;->getIntValue(Ljava/lang/String;)I
+
+    move-result v15
+
+    .line 95
+    .local v15, "levelNumberDao":I
+    invoke-static {}, Lcom/celticspear/tokens/MapScreen$Level;->values()[Lcom/celticspear/tokens/MapScreen$Level;
+
+    move-result-object v5
+
+    array-length v5, v5
+
+    if-lt v15, v5, :cond_1d9
+
+    invoke-static {}, Lcom/celticspear/tokens/MapScreen$Level;->values()[Lcom/celticspear/tokens/MapScreen$Level;
+
+    move-result-object v5
+
+    array-length v5, v5
+
+    add-int/lit8 v14, v5, -0x1
+
+    .line 96
+    .local v14, "levelNumber":I
+    :goto_51
     const/4 v13, 0x0
 
-    .line 215
+    .line 97
     .local v13, "isIdolShows":Z
     invoke-static {}, Lcom/celticspear/tokens/MapScreen$Level;->values()[Lcom/celticspear/tokens/MapScreen$Level;
 
@@ -310,18 +149,16 @@
 
     array-length v5, v5
 
-    move/from16 v0, p3
+    if-lt v15, v5, :cond_5a
 
-    if-lt v0, v5, :cond_2f
-
-    .line 216
+    .line 98
     const/4 v13, 0x1
 
-    .line 218
-    :cond_2f
+    .line 100
+    :cond_5a
     const/4 v11, 0x0
 
-    .line 219
+    .line 101
     .local v11, "i":I
     invoke-static {}, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->values()[Lcom/celticspear/tokens/MapScreen$ArtefactPart;
 
@@ -333,11 +170,11 @@
 
     move v7, v5
 
-    :goto_37
-    if-lt v7, v9, :cond_1b2
+    :goto_62
+    if-lt v7, v9, :cond_1dc
 
-    .line 238
-    new-instance v19, Lorg/andengine/entity/sprite/Sprite;
+    .line 120
+    new-instance v20, Lorg/andengine/entity/sprite/Sprite;
 
     sget v7, Lcom/celticspear/tokens/Coordinates;->AztecMapPath8_X:F
 
@@ -377,20 +214,22 @@
 
     move-result-object v6
 
-    move-object/from16 v0, v19
+    move-object/from16 v0, v20
 
     invoke-direct {v0, v7, v8, v5, v6}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 239
-    .local v19, "path8":Lorg/andengine/entity/sprite/Sprite;
-    move-object/from16 v0, v16
+    .line 121
+    .local v20, "path8":Lorg/andengine/entity/sprite/Sprite;
+    move-object/from16 v0, p0
 
-    move-object/from16 v1, v19
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    invoke-interface {v0, v1}, Lorg/andengine/entity/IEntity;->attachChild(Lorg/andengine/entity/IEntity;)V
+    move-object/from16 v0, v20
 
-    .line 240
-    new-instance v15, Lorg/andengine/entity/sprite/Sprite;
+    invoke-virtual {v5, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
+
+    .line 122
+    new-instance v17, Lorg/andengine/entity/sprite/Sprite;
 
     sget v7, Lcom/celticspear/tokens/Coordinates;->AztecMapQuestionMark_X:F
 
@@ -430,15 +269,21 @@
 
     move-result-object v6
 
-    invoke-direct {v15, v7, v8, v5, v6}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
+    move-object/from16 v0, v17
 
-    .line 241
-    .local v15, "mark":Lorg/andengine/entity/sprite/Sprite;
-    move-object/from16 v0, v16
+    invoke-direct {v0, v7, v8, v5, v6}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    invoke-interface {v0, v15}, Lorg/andengine/entity/IEntity;->attachChild(Lorg/andengine/entity/IEntity;)V
+    .line 123
+    .local v17, "mark":Lorg/andengine/entity/sprite/Sprite;
+    move-object/from16 v0, p0
 
-    .line 243
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v5, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
+
+    .line 125
     new-instance v3, Lcom/celticspear/tokens/InvisibleSpriteButton;
 
     sget v4, Lcom/celticspear/tokens/Coordinates;->PLAY_X:F
@@ -485,30 +330,30 @@
 
     move-result-object v7
 
-    new-instance v8, Lcom/celticspear/tokens/MapScreen$4;
+    new-instance v8, Lcom/celticspear/tokens/MapScreen$1;
 
     move-object/from16 v0, p0
 
-    move/from16 v1, p4
-
-    invoke-direct {v8, v0, v1}, Lcom/celticspear/tokens/MapScreen$4;-><init>(Lcom/celticspear/tokens/MapScreen;I)V
+    invoke-direct {v8, v0, v14}, Lcom/celticspear/tokens/MapScreen$1;-><init>(Lcom/celticspear/tokens/MapScreen;I)V
 
     invoke-direct/range {v3 .. v8}, Lcom/celticspear/tokens/InvisibleSpriteButton;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;Ljava/lang/Runnable;)V
 
-    .line 249
+    .line 131
     .local v3, "nextButton":Lcom/celticspear/tokens/InvisibleSpriteButton;
-    move-object/from16 v0, v16
+    move-object/from16 v0, p0
 
-    invoke-interface {v0, v3}, Lorg/andengine/entity/IEntity;->attachChild(Lorg/andengine/entity/IEntity;)V
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    .line 250
+    invoke-virtual {v5, v3}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
+
+    .line 132
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
     invoke-virtual {v5, v3}, Lorg/andengine/entity/scene/Scene;->registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V
 
-    .line 252
+    .line 134
     new-instance v4, Lorg/andengine/entity/text/Text;
 
     sget v5, Lcom/celticspear/tokens/TokensActivity;->CAMERA_WIDTH:F
@@ -525,7 +370,7 @@
 
     add-float/2addr v6, v7
 
-    .line 253
+    .line 135
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getFonts()Ljava/util/Map;
 
     move-result-object v7
@@ -538,8 +383,8 @@
 
     check-cast v7, Lorg/andengine/opengl/font/IFont;
 
-    .line 254
-    const v8, 0x7f040009
+    .line 136
+    const v8, 0x7f040016
 
     move-object/from16 v0, p1
 
@@ -547,57 +392,42 @@
 
     move-result-object v8
 
-    .line 255
+    .line 137
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;
 
     move-result-object v9
 
-    .line 252
+    .line 134
     invoke-direct/range {v4 .. v9}, Lorg/andengine/entity/text/Text;-><init>(FFLorg/andengine/opengl/font/IFont;Ljava/lang/CharSequence;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 256
+    .line 138
     .local v4, "next":Lorg/andengine/entity/text/Text;
-    invoke-static {v4}, Lcom/celticspear/tokens/MapScreen;->centerX(Lorg/andengine/entity/shape/RectangularShape;)V
+    invoke-static {v4}, Lcom/celticspear/tokens/MapScreen;->center(Lorg/andengine/entity/shape/RectangularShape;)V
 
-    .line 257
+    .line 139
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    check-cast v5, Lcom/celticspear/tokens/TokensActivity;
+    invoke-virtual {v5, v4}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    invoke-virtual {v5}, Lcom/celticspear/tokens/TokensActivity;->getGameScreenYShift()F
-
-    move-result v5
-
-    sget v6, Lcom/celticspear/tokens/Coordinates;->PLAY_Y_TEXT:F
-
-    add-float/2addr v5, v6
-
-    invoke-static {v4, v5}, Lcom/celticspear/tokens/MapScreen;->centerY(Lorg/andengine/entity/shape/RectangularShape;F)V
-
-    .line 258
-    move-object/from16 v0, v16
-
-    invoke-interface {v0, v4}, Lorg/andengine/entity/IEntity;->attachChild(Lorg/andengine/entity/IEntity;)V
-
-    .line 259
+    .line 140
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
     invoke-virtual {v5, v4}, Lorg/andengine/entity/scene/Scene;->registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V
 
-    .line 261
+    .line 142
     invoke-static {}, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->values()[Lcom/celticspear/tokens/MapScreen$ArtefactPart;
 
     move-result-object v5
 
-    aget-object v14, v5, p4
+    aget-object v16, v5, v14
 
-    .line 262
-    .local v14, "levelPart":Lcom/celticspear/tokens/MapScreen$ArtefactPart;
-    new-instance v20, Lorg/andengine/entity/sprite/Sprite;
+    .line 143
+    .local v16, "levelPart":Lcom/celticspear/tokens/MapScreen$ArtefactPart;
+    new-instance v21, Lorg/andengine/entity/sprite/Sprite;
 
     const/4 v7, 0x0
 
@@ -631,21 +461,21 @@
 
     move-result-object v6
 
-    move-object/from16 v0, v20
+    move-object/from16 v0, v21
 
     invoke-direct {v0, v7, v8, v5, v6}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 263
-    .local v20, "playerIcon":Lorg/andengine/entity/sprite/Sprite;
-    iget v6, v14, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->artX:F
+    .line 144
+    .local v21, "playerIcon":Lorg/andengine/entity/sprite/Sprite;
+    move-object/from16 v0, v16
+
+    iget v6, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->artX:F
 
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->arts:Ljava/util/List;
 
-    move/from16 v0, p4
-
-    invoke-interface {v5, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v5, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -661,7 +491,7 @@
 
     add-float/2addr v5, v6
 
-    invoke-virtual/range {v20 .. v20}, Lorg/andengine/entity/sprite/Sprite;->getWidth()F
+    invoke-virtual/range {v21 .. v21}, Lorg/andengine/entity/sprite/Sprite;->getWidth()F
 
     move-result v6
 
@@ -671,7 +501,7 @@
 
     sub-float v6, v5, v6
 
-    .line 264
+    .line 145
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
@@ -682,7 +512,9 @@
 
     move-result v5
 
-    iget v7, v14, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->artY:F
+    move-object/from16 v0, v16
+
+    iget v7, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->artY:F
 
     add-float/2addr v7, v5
 
@@ -690,9 +522,7 @@
 
     iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->arts:Ljava/util/List;
 
-    move/from16 v0, p4
-
-    invoke-interface {v5, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v5, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -708,7 +538,7 @@
 
     add-float/2addr v5, v7
 
-    invoke-virtual/range {v20 .. v20}, Lorg/andengine/entity/sprite/Sprite;->getHeight()F
+    invoke-virtual/range {v21 .. v21}, Lorg/andengine/entity/sprite/Sprite;->getHeight()F
 
     move-result v7
 
@@ -718,61 +548,75 @@
 
     sub-float/2addr v5, v7
 
-    .line 263
-    move-object/from16 v0, v20
+    .line 144
+    move-object/from16 v0, v21
 
     invoke-virtual {v0, v6, v5}, Lorg/andengine/entity/sprite/Sprite;->setPosition(FF)V
 
-    .line 265
-    move-object/from16 v0, v16
+    .line 146
+    move-object/from16 v0, p0
 
-    move-object/from16 v1, v20
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    invoke-interface {v0, v1}, Lorg/andengine/entity/IEntity;->attachChild(Lorg/andengine/entity/IEntity;)V
+    move-object/from16 v0, v21
 
-    .line 267
-    if-eqz v13, :cond_1b1
+    invoke-virtual {v5, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 268
-    if-eqz p2, :cond_2d3
+    .line 148
+    if-eqz v13, :cond_1d8
 
-    .line 269
+    .line 149
+    if-eqz p3, :cond_2fd
+
+    .line 150
     invoke-direct/range {p0 .. p0}, Lcom/celticspear/tokens/MapScreen;->showIdolWithShining()V
 
-    .line 275
-    :cond_1b1
-    :goto_1b1
-    return-object v16
+    .line 156
+    :cond_1d8
+    :goto_1d8
+    return-void
 
-    .line 219
     .end local v3    # "nextButton":Lcom/celticspear/tokens/InvisibleSpriteButton;
     .end local v4    # "next":Lorg/andengine/entity/text/Text;
-    .end local v14    # "levelPart":Lcom/celticspear/tokens/MapScreen$ArtefactPart;
-    .end local v15    # "mark":Lorg/andengine/entity/sprite/Sprite;
-    .end local v19    # "path8":Lorg/andengine/entity/sprite/Sprite;
-    .end local v20    # "playerIcon":Lorg/andengine/entity/sprite/Sprite;
-    :cond_1b2
-    aget-object v17, v8, v7
+    .end local v11    # "i":I
+    .end local v13    # "isIdolShows":Z
+    .end local v14    # "levelNumber":I
+    .end local v16    # "levelPart":Lcom/celticspear/tokens/MapScreen$ArtefactPart;
+    .end local v17    # "mark":Lorg/andengine/entity/sprite/Sprite;
+    .end local v20    # "path8":Lorg/andengine/entity/sprite/Sprite;
+    .end local v21    # "playerIcon":Lorg/andengine/entity/sprite/Sprite;
+    :cond_1d9
+    move v14, v15
 
-    .line 220
-    .local v17, "part":Lcom/celticspear/tokens/MapScreen$ArtefactPart;
-    new-instance v18, Lorg/andengine/entity/sprite/Sprite;
+    .line 95
+    goto/16 :goto_51
 
-    move-object/from16 v0, v17
+    .line 101
+    .restart local v11    # "i":I
+    .restart local v13    # "isIdolShows":Z
+    .restart local v14    # "levelNumber":I
+    :cond_1dc
+    aget-object v18, v8, v7
+
+    .line 102
+    .local v18, "part":Lcom/celticspear/tokens/MapScreen$ArtefactPart;
+    new-instance v19, Lorg/andengine/entity/sprite/Sprite;
+
+    move-object/from16 v0, v18
 
     iget v0, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->pathX:F
 
-    move/from16 v22, v0
+    move/from16 v23, v0
 
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getGameScreenYShift()F
 
     move-result v5
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     iget v6, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->pathY:F
 
-    add-float v23, v5, v6
+    add-float v24, v5, v6
 
     move-object/from16 v0, p0
 
@@ -784,7 +628,7 @@
 
     move-result-object v5
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     iget-object v6, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->pathSpriteId:Ljava/lang/String;
 
@@ -804,33 +648,33 @@
 
     move-result-object v6
 
-    move-object/from16 v0, v18
+    move-object/from16 v0, v19
 
-    move/from16 v1, v22
+    move/from16 v1, v23
 
-    move/from16 v2, v23
+    move/from16 v2, v24
 
     invoke-direct {v0, v1, v2, v5, v6}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 221
-    .local v18, "path":Lorg/andengine/entity/sprite/Sprite;
+    .line 103
+    .local v19, "path":Lorg/andengine/entity/sprite/Sprite;
     new-instance v10, Lorg/andengine/entity/sprite/Sprite;
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     iget v0, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->artX:F
 
-    move/from16 v22, v0
+    move/from16 v23, v0
 
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getGameScreenYShift()F
 
     move-result v5
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     iget v6, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->artY:F
 
-    add-float v23, v5, v6
+    add-float v24, v5, v6
 
     move-object/from16 v0, p0
 
@@ -842,7 +686,7 @@
 
     move-result-object v5
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     iget-object v6, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->artSpriteId:Ljava/lang/String;
 
@@ -862,13 +706,13 @@
 
     move-result-object v6
 
-    move/from16 v0, v22
+    move/from16 v0, v23
 
-    move/from16 v1, v23
+    move/from16 v1, v24
 
     invoke-direct {v10, v0, v1, v5, v6}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 222
+    .line 104
     .local v10, "art":Lorg/andengine/entity/sprite/Sprite;
     move-object/from16 v0, p0
 
@@ -876,48 +720,48 @@
 
     invoke-interface {v5, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 223
-    move-object/from16 v0, v16
+    .line 105
+    move-object/from16 v0, p0
 
-    move-object/from16 v1, v18
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    invoke-interface {v0, v1}, Lorg/andengine/entity/IEntity;->attachChild(Lorg/andengine/entity/IEntity;)V
+    move-object/from16 v0, v19
 
-    .line 224
-    move-object/from16 v0, v16
+    invoke-virtual {v5, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    invoke-interface {v0, v10}, Lorg/andengine/entity/IEntity;->attachChild(Lorg/andengine/entity/IEntity;)V
+    .line 106
+    move-object/from16 v0, p0
 
-    .line 225
-    move/from16 v0, p4
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    if-lt v11, v0, :cond_241
+    invoke-virtual {v5, v10}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    if-eqz v13, :cond_2cc
+    .line 107
+    if-lt v11, v14, :cond_26b
 
-    move/from16 v0, p4
+    if-eqz v13, :cond_2f6
 
-    if-ne v11, v0, :cond_2cc
+    if-ne v11, v14, :cond_2f6
 
-    .line 226
-    :cond_241
-    new-instance v21, Lorg/andengine/entity/sprite/Sprite;
+    .line 108
+    :cond_26b
+    new-instance v22, Lorg/andengine/entity/sprite/Sprite;
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     iget v0, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->realArtX:F
 
-    move/from16 v22, v0
+    move/from16 v23, v0
 
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getGameScreenYShift()F
 
     move-result v5
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     iget v6, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->realArtY:F
 
-    add-float v23, v5, v6
+    add-float v24, v5, v6
 
     move-object/from16 v0, p0
 
@@ -929,7 +773,7 @@
 
     move-result-object v5
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     iget-object v6, v0, Lcom/celticspear/tokens/MapScreen$ArtefactPart;->level:Lcom/celticspear/tokens/MapScreen$Level;
 
@@ -957,118 +801,118 @@
 
     move-result-object v6
 
-    move-object/from16 v0, v21
+    move-object/from16 v0, v22
 
-    move/from16 v1, v22
+    move/from16 v1, v23
 
-    move/from16 v2, v23
+    move/from16 v2, v24
 
     invoke-direct {v0, v1, v2, v5, v6}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 227
-    .local v21, "realArt":Lorg/andengine/entity/sprite/Sprite;
-    if-eqz p2, :cond_2c5
+    .line 109
+    .local v22, "realArt":Lorg/andengine/entity/sprite/Sprite;
+    if-eqz p3, :cond_2ed
 
-    if-nez v13, :cond_28a
+    if-nez v13, :cond_2b4
 
-    add-int/lit8 v5, p4, -0x1
+    add-int/lit8 v5, v14, -0x1
 
-    if-eq v11, v5, :cond_290
+    if-eq v11, v5, :cond_2b8
 
-    :cond_28a
-    if-eqz v13, :cond_2c5
+    :cond_2b4
+    if-eqz v13, :cond_2ed
 
-    move/from16 v0, p4
+    if-ne v11, v14, :cond_2ed
 
-    if-ne v11, v0, :cond_2c5
-
-    .line 228
-    :cond_290
+    .line 110
+    :cond_2b8
     const/4 v5, 0x0
 
-    move-object/from16 v0, v21
+    move-object/from16 v0, v22
 
     invoke-virtual {v0, v5}, Lorg/andengine/entity/sprite/Sprite;->setScale(F)V
 
-    .line 229
+    .line 111
     new-instance v5, Lorg/andengine/entity/modifier/SequenceEntityModifier;
 
     const/4 v6, 0x2
 
     new-array v6, v6, [Lorg/andengine/entity/modifier/IEntityModifier;
 
-    const/16 v22, 0x0
+    const/16 v23, 0x0
 
-    .line 230
-    new-instance v23, Lorg/andengine/entity/modifier/ScaleModifier;
+    .line 112
+    new-instance v24, Lorg/andengine/entity/modifier/ScaleModifier;
 
-    const/high16 v24, 0x3f000000    # 0.5f
-
-    const/16 v25, 0x0
+    const/high16 v25, 0x3f000000    # 0.5f
 
     const/16 v26, 0x0
 
-    invoke-direct/range {v23 .. v26}, Lorg/andengine/entity/modifier/ScaleModifier;-><init>(FFF)V
+    const/16 v27, 0x0
 
-    aput-object v23, v6, v22
+    invoke-direct/range {v24 .. v27}, Lorg/andengine/entity/modifier/ScaleModifier;-><init>(FFF)V
 
-    const/16 v22, 0x1
+    aput-object v24, v6, v23
 
-    .line 231
-    new-instance v23, Lorg/andengine/entity/modifier/ScaleModifier;
+    const/16 v23, 0x1
 
-    const/high16 v24, 0x3f000000    # 0.5f
+    .line 113
+    new-instance v24, Lorg/andengine/entity/modifier/ScaleModifier;
 
-    const/16 v25, 0x0
+    const/high16 v25, 0x3f000000    # 0.5f
 
-    const/high16 v26, 0x3f800000    # 1.0f
+    const/16 v26, 0x0
+
+    const/high16 v27, 0x3f800000    # 1.0f
 
     invoke-static {}, Lorg/andengine/util/modifier/ease/EaseBounceOut;->getInstance()Lorg/andengine/util/modifier/ease/EaseBounceOut;
 
-    move-result-object v27
+    move-result-object v28
 
-    invoke-direct/range {v23 .. v27}, Lorg/andengine/entity/modifier/ScaleModifier;-><init>(FFFLorg/andengine/util/modifier/ease/IEaseFunction;)V
+    invoke-direct/range {v24 .. v28}, Lorg/andengine/entity/modifier/ScaleModifier;-><init>(FFFLorg/andengine/util/modifier/ease/IEaseFunction;)V
 
-    aput-object v23, v6, v22
+    aput-object v24, v6, v23
 
     invoke-direct {v5, v6}, Lorg/andengine/entity/modifier/SequenceEntityModifier;-><init>([Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 229
-    move-object/from16 v0, v21
+    .line 111
+    move-object/from16 v0, v22
 
     invoke-virtual {v0, v5}, Lorg/andengine/entity/sprite/Sprite;->registerEntityModifier(Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 234
-    :cond_2c5
-    move-object/from16 v0, v16
+    .line 116
+    :cond_2ed
+    move-object/from16 v0, p0
 
-    move-object/from16 v1, v21
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    invoke-interface {v0, v1}, Lorg/andengine/entity/IEntity;->attachChild(Lorg/andengine/entity/IEntity;)V
+    move-object/from16 v0, v22
 
-    .line 236
-    .end local v21    # "realArt":Lorg/andengine/entity/sprite/Sprite;
-    :cond_2cc
+    invoke-virtual {v5, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
+
+    .line 118
+    .end local v22    # "realArt":Lorg/andengine/entity/sprite/Sprite;
+    :cond_2f6
     add-int/lit8 v11, v11, 0x1
 
-    .line 219
+    .line 101
     add-int/lit8 v5, v7, 0x1
 
     move v7, v5
 
-    goto/16 :goto_37
+    goto/16 :goto_62
 
-    .line 271
+    .line 152
     .end local v10    # "art":Lorg/andengine/entity/sprite/Sprite;
-    .end local v17    # "part":Lcom/celticspear/tokens/MapScreen$ArtefactPart;
-    .end local v18    # "path":Lorg/andengine/entity/sprite/Sprite;
+    .end local v18    # "part":Lcom/celticspear/tokens/MapScreen$ArtefactPart;
+    .end local v19    # "path":Lorg/andengine/entity/sprite/Sprite;
     .restart local v3    # "nextButton":Lcom/celticspear/tokens/InvisibleSpriteButton;
     .restart local v4    # "next":Lorg/andengine/entity/text/Text;
-    .restart local v14    # "levelPart":Lcom/celticspear/tokens/MapScreen$ArtefactPart;
-    .restart local v15    # "mark":Lorg/andengine/entity/sprite/Sprite;
-    .restart local v19    # "path8":Lorg/andengine/entity/sprite/Sprite;
-    .restart local v20    # "playerIcon":Lorg/andengine/entity/sprite/Sprite;
-    :cond_2d3
+    .restart local v16    # "levelPart":Lcom/celticspear/tokens/MapScreen$ArtefactPart;
+    .restart local v17    # "mark":Lorg/andengine/entity/sprite/Sprite;
+    .restart local v20    # "path8":Lorg/andengine/entity/sprite/Sprite;
+    .restart local v21    # "playerIcon":Lorg/andengine/entity/sprite/Sprite;
+    :cond_2fd
     new-instance v12, Lorg/andengine/entity/sprite/Sprite;
 
     sget v7, Lcom/celticspear/tokens/Coordinates;->ArtPos_idol_X:F
@@ -1117,131 +961,24 @@
 
     invoke-direct {v12, v7, v8, v5, v6}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 272
+    .line 153
     .local v12, "idol":Lorg/andengine/entity/sprite/Sprite;
-    move-object/from16 v0, v16
+    move-object/from16 v0, p0
 
-    invoke-interface {v0, v12}, Lorg/andengine/entity/IEntity;->attachChild(Lorg/andengine/entity/IEntity;)V
+    iget-object v5, v0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
-    goto/16 :goto_1b1
+    invoke-virtual {v5, v12}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
+
+    goto/16 :goto_1d8
 .end method
 
-.method private move(Lorg/andengine/entity/IEntity;F)V
-    .registers 5
-    .param p1, "entity"    # Lorg/andengine/entity/IEntity;
-    .param p2, "mDX"    # F
+.method static synthetic access$0(Lcom/celticspear/tokens/MapScreen;)V
+    .registers 1
 
     .prologue
-    .line 174
-    invoke-interface {p1}, Lorg/andengine/entity/IEntity;->getX()F
+    .line 198
+    invoke-direct {p0}, Lcom/celticspear/tokens/MapScreen;->showCongratulationMessage()V
 
-    move-result v0
-
-    add-float/2addr v0, p2
-
-    invoke-interface {p1}, Lorg/andengine/entity/IEntity;->getY()F
-
-    move-result v1
-
-    invoke-interface {p1, v0, v1}, Lorg/andengine/entity/IEntity;->setPosition(FF)V
-
-    .line 175
-    return-void
-.end method
-
-.method private movePage(Lorg/andengine/entity/IEntity;ILjava/lang/Runnable;)V
-    .registers 10
-    .param p1, "entity"    # Lorg/andengine/entity/IEntity;
-    .param p2, "page"    # I
-    .param p3, "runnable"    # Ljava/lang/Runnable;
-
-    .prologue
-    .line 195
-    new-instance v0, Lorg/andengine/entity/modifier/MoveXModifier;
-
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    invoke-interface {p1}, Lorg/andengine/entity/IEntity;->getX()F
-
-    move-result v2
-
-    .line 196
-    sget v3, Lcom/celticspear/tokens/TokensActivity;->CAMERA_WIDTH:F
-
-    int-to-float v4, p2
-
-    mul-float/2addr v3, v4
-
-    new-instance v4, Lcom/celticspear/tokens/MapScreen$3;
-
-    invoke-direct {v4, p0, p3}, Lcom/celticspear/tokens/MapScreen$3;-><init>(Lcom/celticspear/tokens/MapScreen;Ljava/lang/Runnable;)V
-
-    .line 207
-    invoke-static {}, Lorg/andengine/util/modifier/ease/EaseQuartInOut;->getInstance()Lorg/andengine/util/modifier/ease/EaseQuartInOut;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Lorg/andengine/entity/modifier/MoveXModifier;-><init>(FFFLorg/andengine/entity/modifier/IEntityModifier$IEntityModifierListener;Lorg/andengine/util/modifier/ease/IEaseFunction;)V
-
-    .line 195
-    invoke-interface {p1, v0}, Lorg/andengine/entity/IEntity;->registerEntityModifier(Lorg/andengine/entity/modifier/IEntityModifier;)V
-
-    .line 208
-    return-void
-.end method
-
-.method private setPagePositions()V
-    .registers 4
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 168
-    iget-object v0, p0, Lcom/celticspear/tokens/MapScreen;->queue:Ljava/util/LinkedList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/andengine/entity/IEntity;
-
-    sget v1, Lcom/celticspear/tokens/TokensActivity;->CAMERA_WIDTH:F
-
-    neg-float v1, v1
-
-    invoke-interface {v0, v1, v2}, Lorg/andengine/entity/IEntity;->setPosition(FF)V
-
-    .line 169
-    iget-object v0, p0, Lcom/celticspear/tokens/MapScreen;->queue:Ljava/util/LinkedList;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/andengine/entity/IEntity;
-
-    invoke-interface {v0, v2, v2}, Lorg/andengine/entity/IEntity;->setPosition(FF)V
-
-    .line 170
-    iget-object v0, p0, Lcom/celticspear/tokens/MapScreen;->queue:Ljava/util/LinkedList;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/andengine/entity/IEntity;
-
-    sget v1, Lcom/celticspear/tokens/TokensActivity;->CAMERA_WIDTH:F
-
-    invoke-interface {v0, v1, v2}, Lorg/andengine/entity/IEntity;->setPosition(FF)V
-
-    .line 171
     return-void
 .end method
 
@@ -1249,12 +986,12 @@
     .registers 16
 
     .prologue
-    .line 325
+    .line 199
     new-instance v10, Lorg/andengine/entity/scene/Scene;
 
     invoke-direct {v10}, Lorg/andengine/entity/scene/Scene;-><init>()V
 
-    .line 327
+    .line 201
     .local v10, "scene":Lorg/andengine/entity/scene/Scene;
     new-instance v0, Lorg/andengine/entity/text/Text;
 
@@ -1262,7 +999,7 @@
 
     const/4 v2, 0x0
 
-    .line 328
+    .line 202
     iget-object v3, p0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v3, Lcom/celticspear/tokens/TokensActivity;
@@ -1279,21 +1016,21 @@
 
     check-cast v3, Lorg/andengine/opengl/font/IFont;
 
-    .line 329
+    .line 203
     iget-object v4, p0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v4, Lcom/celticspear/tokens/TokensActivity;
 
-    const v5, 0x7f040016
+    const v5, 0x7f040028
 
     invoke-virtual {v4, v5}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 330
+    .line 204
     const/16 v5, 0x3e8
 
-    .line 331
+    .line 205
     new-instance v6, Lorg/andengine/entity/text/TextOptions;
 
     sget-object v7, Lorg/andengine/entity/text/AutoWrap;->WORDS:Lorg/andengine/entity/text/AutoWrap;
@@ -1310,7 +1047,7 @@
 
     invoke-direct {v6, v7, v8, v12, v13}, Lorg/andengine/entity/text/TextOptions;-><init>(Lorg/andengine/entity/text/AutoWrap;FLorg/andengine/util/HorizontalAlign;F)V
 
-    .line 332
+    .line 206
     iget-object v7, p0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v7, Lcom/celticspear/tokens/TokensActivity;
@@ -1319,16 +1056,16 @@
 
     move-result-object v7
 
-    .line 327
+    .line 201
     invoke-direct/range {v0 .. v7}, Lorg/andengine/entity/text/Text;-><init>(FFLorg/andengine/opengl/font/IFont;Ljava/lang/CharSequence;ILorg/andengine/entity/text/TextOptions;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 333
+    .line 207
     .local v0, "text":Lorg/andengine/entity/text/Text;
     const/16 v2, 0xc
 
     invoke-virtual {v0, v2}, Lorg/andengine/entity/text/Text;->setZIndex(I)V
 
-    .line 335
+    .line 209
     new-instance v11, Lorg/andengine/entity/sprite/Sprite;
 
     const/4 v4, 0x0
@@ -1371,7 +1108,7 @@
 
     invoke-direct {v11, v4, v5, v2, v3}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 336
+    .line 210
     .local v11, "textBubble":Lorg/andengine/entity/sprite/Sprite;
     invoke-virtual {v0}, Lorg/andengine/entity/text/Text;->getWidth()F
 
@@ -1385,15 +1122,15 @@
 
     invoke-virtual {v11, v2}, Lorg/andengine/entity/sprite/Sprite;->setScale(F)V
 
-    .line 338
+    .line 212
     const/16 v2, 0xc
 
     invoke-virtual {v11, v2}, Lorg/andengine/entity/sprite/Sprite;->setZIndex(I)V
 
-    .line 339
+    .line 213
     invoke-virtual {v11, v0}, Lorg/andengine/entity/sprite/Sprite;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 340
+    .line 214
     invoke-virtual {v11}, Lorg/andengine/entity/sprite/Sprite;->getWidth()F
 
     move-result v2
@@ -1432,7 +1169,7 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/andengine/entity/text/Text;->setPosition(FF)V
 
-    .line 342
+    .line 216
     new-instance v9, Lorg/andengine/entity/sprite/ButtonSprite;
 
     const/4 v4, 0x0
@@ -1465,7 +1202,7 @@
 
     invoke-direct {v9, v4, v5, v2, v3}, Lorg/andengine/entity/sprite/ButtonSprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 343
+    .line 217
     .local v9, "okButton":Lorg/andengine/entity/sprite/ButtonSprite;
     new-instance v1, Lorg/andengine/entity/text/Text;
 
@@ -1473,7 +1210,7 @@
 
     const/4 v3, 0x0
 
-    .line 344
+    .line 218
     iget-object v4, p0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v4, Lcom/celticspear/tokens/TokensActivity;
@@ -1490,13 +1227,13 @@
 
     check-cast v4, Lorg/andengine/opengl/font/IFont;
 
-    .line 345
+    .line 219
     const-string v5, "OK"
 
-    .line 346
+    .line 220
     const/16 v6, 0x3e8
 
-    .line 347
+    .line 221
     new-instance v7, Lorg/andengine/entity/text/TextOptions;
 
     sget-object v8, Lorg/andengine/entity/text/AutoWrap;->WORDS:Lorg/andengine/entity/text/AutoWrap;
@@ -1513,7 +1250,7 @@
 
     invoke-direct {v7, v8, v12, v13, v14}, Lorg/andengine/entity/text/TextOptions;-><init>(Lorg/andengine/entity/text/AutoWrap;FLorg/andengine/util/HorizontalAlign;F)V
 
-    .line 348
+    .line 222
     iget-object v8, p0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v8, Lcom/celticspear/tokens/TokensActivity;
@@ -1522,19 +1259,19 @@
 
     move-result-object v8
 
-    .line 343
+    .line 217
     invoke-direct/range {v1 .. v8}, Lorg/andengine/entity/text/Text;-><init>(FFLorg/andengine/opengl/font/IFont;Ljava/lang/CharSequence;ILorg/andengine/entity/text/TextOptions;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 349
+    .line 223
     .local v1, "textOk":Lorg/andengine/entity/text/Text;
     const/16 v2, 0xc
 
     invoke-virtual {v1, v2}, Lorg/andengine/entity/text/Text;->setZIndex(I)V
 
-    .line 350
+    .line 224
     invoke-virtual {v9, v1}, Lorg/andengine/entity/sprite/ButtonSprite;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 351
+    .line 225
     invoke-virtual {v9}, Lorg/andengine/entity/sprite/ButtonSprite;->getWidth()F
 
     move-result v2
@@ -1573,10 +1310,10 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/andengine/entity/text/Text;->setPosition(FF)V
 
-    .line 352
+    .line 226
     invoke-virtual {v11, v9}, Lorg/andengine/entity/sprite/Sprite;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 353
+    .line 227
     invoke-virtual {v11}, Lorg/andengine/entity/sprite/Sprite;->getWidth()F
 
     move-result v2
@@ -1611,7 +1348,7 @@
 
     invoke-virtual {v9, v2, v3}, Lorg/andengine/entity/sprite/ButtonSprite;->setPosition(FF)V
 
-    .line 354
+    .line 228
     sget v2, Lcom/celticspear/tokens/TokensActivity;->CAMERA_WIDTH:F
 
     const/high16 v3, 0x40000000    # 2.0f
@@ -1638,30 +1375,30 @@
 
     invoke-virtual {v11, v3, v2}, Lorg/andengine/entity/sprite/Sprite;->setPosition(FF)V
 
-    .line 355
+    .line 229
     invoke-virtual {v10, v9}, Lorg/andengine/entity/scene/Scene;->registerTouchArea(Lorg/andengine/entity/scene/ITouchArea;)V
 
-    .line 356
+    .line 230
     invoke-virtual {v10, v11}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 358
-    new-instance v2, Lcom/celticspear/tokens/MapScreen$6;
+    .line 232
+    new-instance v2, Lcom/celticspear/tokens/MapScreen$3;
 
-    invoke-direct {v2, p0}, Lcom/celticspear/tokens/MapScreen$6;-><init>(Lcom/celticspear/tokens/MapScreen;)V
+    invoke-direct {v2, p0}, Lcom/celticspear/tokens/MapScreen$3;-><init>(Lcom/celticspear/tokens/MapScreen;)V
 
     invoke-virtual {v9, v2}, Lorg/andengine/entity/sprite/ButtonSprite;->setOnClickListener(Lorg/andengine/entity/sprite/ButtonSprite$OnClickListener;)V
 
-    .line 364
+    .line 238
     const/4 v2, 0x1
 
     invoke-virtual {v10, v2}, Lorg/andengine/entity/scene/Scene;->setTouchAreaBindingOnActionDownEnabled(Z)V
 
-    .line 365
+    .line 239
     const/4 v2, 0x0
 
     invoke-virtual {v10, v2}, Lorg/andengine/entity/scene/Scene;->setBackgroundEnabled(Z)V
 
-    .line 366
+    .line 240
     iget-object v2, p0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
     const/4 v3, 0x0
@@ -1672,7 +1409,7 @@
 
     invoke-virtual {v2, v10, v3, v4, v5}, Lorg/andengine/entity/scene/Scene;->setChildScene(Lorg/andengine/entity/scene/Scene;ZZZ)V
 
-    .line 367
+    .line 241
     return-void
 .end method
 
@@ -1682,7 +1419,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 285
+    .line 159
     new-instance v1, Lorg/andengine/entity/sprite/Sprite;
 
     const/high16 v2, 0x42180000    # 38.0f
@@ -1707,7 +1444,7 @@
 
     add-float v5, v2, v3
 
-    .line 286
+    .line 160
     iget-object v2, p0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v2, Lcom/celticspear/tokens/TokensActivity;
@@ -1724,7 +1461,7 @@
 
     check-cast v2, Lorg/andengine/opengl/texture/region/ITextureRegion;
 
-    .line 287
+    .line 161
     iget-object v3, p0, Lcom/celticspear/tokens/MapScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
 
     check-cast v3, Lcom/celticspear/tokens/TokensActivity;
@@ -1733,22 +1470,22 @@
 
     move-result-object v3
 
-    .line 285
+    .line 159
     invoke-direct {v1, v4, v5, v2, v3}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 288
+    .line 162
     .local v1, "shining":Lorg/andengine/entity/sprite/Sprite;
     invoke-virtual {v1, v6, v6}, Lorg/andengine/entity/sprite/Sprite;->setScaleCenter(FF)V
 
-    .line 289
+    .line 163
     const/high16 v2, 0x40000000    # 2.0f
 
     invoke-virtual {v1, v2}, Lorg/andengine/entity/sprite/Sprite;->setScale(F)V
 
-    .line 290
+    .line 164
     invoke-virtual {v1, v6}, Lorg/andengine/entity/sprite/Sprite;->setAlpha(F)V
 
-    .line 291
+    .line 165
     const/high16 v2, 0x44040000    # 528.0f
 
     invoke-static {v2}, Lcom/celticspear/tokens/TokensActivity;->calc(F)F
@@ -1763,12 +1500,12 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/andengine/entity/sprite/Sprite;->setRotationCenter(FF)V
 
-    .line 292
+    .line 166
     iget-object v2, p0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
     invoke-virtual {v2, v1}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 294
+    .line 168
     new-instance v0, Lorg/andengine/entity/sprite/Sprite;
 
     sget v4, Lcom/celticspear/tokens/Coordinates;->ArtPos_idol_X:F
@@ -1811,103 +1548,28 @@
 
     invoke-direct {v0, v4, v5, v2, v3}, Lorg/andengine/entity/sprite/Sprite;-><init>(FFLorg/andengine/opengl/texture/region/ITextureRegion;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 295
+    .line 169
     .local v0, "idol":Lorg/andengine/entity/sprite/Sprite;
     invoke-virtual {v0, v6}, Lorg/andengine/entity/sprite/Sprite;->setAlpha(F)V
 
-    .line 296
+    .line 170
     new-instance v2, Lorg/andengine/entity/modifier/FadeInModifier;
 
     const v3, 0x3f19999a    # 0.6f
 
-    new-instance v4, Lcom/celticspear/tokens/MapScreen$5;
+    new-instance v4, Lcom/celticspear/tokens/MapScreen$2;
 
-    invoke-direct {v4, p0, v1}, Lcom/celticspear/tokens/MapScreen$5;-><init>(Lcom/celticspear/tokens/MapScreen;Lorg/andengine/entity/sprite/Sprite;)V
+    invoke-direct {v4, p0, v1}, Lcom/celticspear/tokens/MapScreen$2;-><init>(Lcom/celticspear/tokens/MapScreen;Lorg/andengine/entity/sprite/Sprite;)V
 
     invoke-direct {v2, v3, v4}, Lorg/andengine/entity/modifier/FadeInModifier;-><init>(FLorg/andengine/entity/modifier/IEntityModifier$IEntityModifierListener;)V
 
     invoke-virtual {v0, v2}, Lorg/andengine/entity/sprite/Sprite;->registerEntityModifier(Lorg/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 319
+    .line 193
     iget-object v2, p0, Lcom/celticspear/tokens/MapScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
     invoke-virtual {v2, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 320
+    .line 194
     return-void
-.end method
-
-
-# virtual methods
-.method public movePages([Lorg/andengine/entity/IEntity;[ILjava/lang/Runnable;)V
-    .registers 11
-    .param p1, "entities"    # [Lorg/andengine/entity/IEntity;
-    .param p2, "pages"    # [I
-    .param p3, "runnable"    # Ljava/lang/Runnable;
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 178
-    const/4 v4, 0x1
-
-    new-array v0, v4, [Ljava/lang/Integer;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v0, v3
-
-    .line 179
-    .local v0, "counter":[Ljava/lang/Integer;
-    const/4 v2, 0x0
-
-    .line 180
-    .local v2, "i":I
-    array-length v4, p1
-
-    :goto_c
-    if-lt v3, v4, :cond_f
-
-    .line 192
-    return-void
-
-    .line 180
-    :cond_f
-    aget-object v1, p1, v3
-
-    .line 181
-    .local v1, "entity":Lorg/andengine/entity/IEntity;
-    aget v5, p2, v2
-
-    new-instance v6, Lcom/celticspear/tokens/MapScreen$2;
-
-    invoke-direct {v6, p0, v0, p1, p3}, Lcom/celticspear/tokens/MapScreen$2;-><init>(Lcom/celticspear/tokens/MapScreen;[Ljava/lang/Integer;[Lorg/andengine/entity/IEntity;Ljava/lang/Runnable;)V
-
-    invoke-direct {p0, v1, v5, v6}, Lcom/celticspear/tokens/MapScreen;->movePage(Lorg/andengine/entity/IEntity;ILjava/lang/Runnable;)V
-
-    .line 190
-    add-int/lit8 v2, v2, 0x1
-
-    .line 180
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_c
-.end method
-
-.method public onSceneTouchEvent(Lorg/andengine/entity/scene/Scene;Lorg/andengine/input/touch/TouchEvent;)Z
-    .registers 4
-    .param p1, "pScene"    # Lorg/andengine/entity/scene/Scene;
-    .param p2, "pSceneTouchEvent"    # Lorg/andengine/input/touch/TouchEvent;
-
-    .prologue
-    .line 280
-    iget-object v0, p0, Lcom/celticspear/tokens/MapScreen;->swipeAndClickListener:Lcom/celticspear/andengine/control/SwipeAndClickListener;
-
-    invoke-virtual {v0, p1, p2}, Lcom/celticspear/andengine/control/SwipeAndClickListener;->onSceneTouchEvent(Lorg/andengine/entity/scene/Scene;Lorg/andengine/input/touch/TouchEvent;)Z
-
-    move-result v0
-
-    return v0
 .end method

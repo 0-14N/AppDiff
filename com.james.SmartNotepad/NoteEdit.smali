@@ -57,13 +57,13 @@
 
 .field private t:I
 
-.field private u:Lcom/james/SmartNotepad/CustomButton;
+.field private u:Landroid/widget/Button;
 
-.field private v:Lcom/james/SmartNotepad/CustomButton;
+.field private v:Landroid/widget/Button;
 
-.field private w:Lcom/james/SmartNotepad/CustomButton;
+.field private w:Landroid/widget/Button;
 
-.field private x:Lcom/james/SmartNotepad/CustomButton;
+.field private x:Landroid/widget/Button;
 
 .field private y:I
 
@@ -82,17 +82,19 @@
 .end method
 
 .method public constructor <init>()V
-    .registers 2
+    .registers 3
+
+    const-string v1, "N"
 
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     const-string v0, "N"
 
-    iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->C:Ljava/lang/String;
+    iput-object v1, p0, Lcom/james/SmartNotepad/NoteEdit;->C:Ljava/lang/String;
 
     const-string v0, "N"
 
-    iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->D:Ljava/lang/String;
+    iput-object v1, p0, Lcom/james/SmartNotepad/NoteEdit;->D:Ljava/lang/String;
 
     return-void
 .end method
@@ -216,15 +218,19 @@
 
     const/4 v9, 0x2
 
-    const/4 v8, 0x0
+    const/4 v6, 0x0
+
+    const-string v8, "SmartNotepad"
+
+    const-string v7, "NoteEdit"
 
     const/16 v0, 0x4d2
 
-    if-ne p1, v0, :cond_e4
+    if-ne p1, v0, :cond_e8
 
     const/4 v0, -0x1
 
-    if-ne p2, v0, :cond_e4
+    if-ne p2, v0, :cond_e8
 
     const-string v0, "android.speech.extra.RESULTS"
 
@@ -240,23 +246,23 @@
 
     const-string v2, "NoteEdit"
 
-    const-string v3, "SmartNotepad"
+    const-string v2, "SmartNotepad"
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v5, "cursorPosition :"
+    const-string v3, "cursorPosition :"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-static {v2, v3, v4}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->q:Landroid/widget/EditText;
 
@@ -274,25 +280,25 @@
 
     const-string v4, "NoteEdit"
 
-    const-string v5, "SmartNotepad"
+    const-string v4, "SmartNotepad"
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v7, "text length :"
+    const-string v5, "text length :"
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v4
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v4
 
-    invoke-static {v4, v5, v6}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v4}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v8, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v2, v6, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
 
@@ -302,35 +308,35 @@
 
     const-string v3, "NoteEdit"
 
-    const-string v5, "SmartNotepad"
+    const-string v3, "SmartNotepad"
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v7, "str1 : "
+    const-string v5, "str1 : "
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v3
 
-    const-string v7, " - str2 : "
+    const-string v5, " - str2 : "
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v3
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v3
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v3
 
-    invoke-static {v3, v5, v6}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v3}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -338,23 +344,23 @@
 
     const-string v3, "NoteEdit"
 
-    const-string v5, "SmartNotepad"
+    const-string v3, "SmartNotepad"
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v7, "voiceInput :"
+    const-string v5, "voiceInput :"
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v3
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v3
 
-    invoke-static {v3, v5, v6}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v3}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -362,37 +368,37 @@
 
     const-string v5, "NoteEdit"
 
-    const-string v6, "SmartNotepad"
+    const-string v5, "SmartNotepad"
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    const-string v8, "voiceInput length :"
+    const-string v6, "voiceInput length :"
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v5
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v5
 
-    invoke-static {v5, v6, v7}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v5}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/2addr v1, v3
 
     const-string v3, "NoteEdit"
 
-    const-string v5, "SmartNotepad"
+    const-string v3, "SmartNotepad"
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v7, "newCursorPosition :"
+    const-string v5, "newCursorPosition :"
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -400,7 +406,7 @@
 
     move-result-object v1
 
-    invoke-static {v3, v5, v1}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v1}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -428,12 +434,12 @@
 
     iput v9, p0, Lcom/james/SmartNotepad/NoteEdit;->t:I
 
-    :goto_e0
+    :goto_e4
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
 
     return-void
 
-    :cond_e4
+    :cond_e8
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->q:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -450,7 +456,7 @@
 
     iput v9, p0, Lcom/james/SmartNotepad/NoteEdit;->t:I
 
-    goto :goto_e0
+    goto :goto_e4
 .end method
 
 .method public onClick(Landroid/view/View;)V
@@ -765,23 +771,27 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 8
+    .registers 9
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
+
+    const-string v5, "SmartNotepad"
+
+    const-string v4, "NoteEdit"
 
     const-string v0, "NoteEdit"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    const-string v2, "onCreate()"
+    const-string v0, "onCreate()"
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0, v5}, Lcom/james/SmartNotepad/NoteEdit;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v6}, Lcom/james/SmartNotepad/NoteEdit;->requestWindowFeature(I)Z
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -849,25 +859,25 @@
 
     const-string v0, "NoteEdit"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v3, "ACTION_EDIT mUri : "
+    const-string v1, "ACTION_EDIT mUri : "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/james/SmartNotepad/NoteEdit;->m:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/james/SmartNotepad/NoteEdit;->m:Landroid/net/Uri;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const v0, 0x7f030004
 
@@ -935,9 +945,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->u:Lcom/james/SmartNotepad/CustomButton;
+    iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->u:Landroid/widget/Button;
 
     const v0, 0x7f090014
 
@@ -945,9 +955,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->v:Lcom/james/SmartNotepad/CustomButton;
+    iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->v:Landroid/widget/Button;
 
     const v0, 0x7f090013
 
@@ -955,9 +965,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->w:Lcom/james/SmartNotepad/CustomButton;
+    iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->w:Landroid/widget/Button;
 
     const v0, 0x7f090011
 
@@ -965,41 +975,25 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->x:Lcom/james/SmartNotepad/CustomButton;
+    iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->x:Landroid/widget/Button;
 
-    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->u:Lcom/james/SmartNotepad/CustomButton;
+    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->u:Landroid/widget/Button;
 
-    invoke-virtual {v0, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->v:Lcom/james/SmartNotepad/CustomButton;
+    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->v:Landroid/widget/Button;
 
-    invoke-virtual {v0, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->w:Lcom/james/SmartNotepad/CustomButton;
+    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->w:Landroid/widget/Button;
 
-    invoke-virtual {v0, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->x:Lcom/james/SmartNotepad/CustomButton;
+    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->x:Landroid/widget/Button;
 
-    invoke-virtual {v0, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->u:Lcom/james/SmartNotepad/CustomButton;
-
-    invoke-virtual {v0}, Lcom/james/SmartNotepad/CustomButton;->a()V
-
-    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->v:Lcom/james/SmartNotepad/CustomButton;
-
-    invoke-virtual {v0}, Lcom/james/SmartNotepad/CustomButton;->a()V
-
-    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->w:Lcom/james/SmartNotepad/CustomButton;
-
-    invoke-virtual {v0}, Lcom/james/SmartNotepad/CustomButton;->a()V
-
-    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->x:Lcom/james/SmartNotepad/CustomButton;
-
-    invoke-virtual {v0}, Lcom/james/SmartNotepad/CustomButton;->a()V
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p0}, Lcom/james/SmartNotepad/NoteEdit;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -1011,7 +1005,7 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+    invoke-virtual {v0, v1, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v0
 
@@ -1019,30 +1013,30 @@
 
     move-result v0
 
-    if-nez v0, :cond_121
+    if-nez v0, :cond_111
 
-    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->u:Lcom/james/SmartNotepad/CustomButton;
+    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->u:Landroid/widget/Button;
 
-    invoke-virtual {v0, v4}, Lcom/james/SmartNotepad/CustomButton;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->u:Lcom/james/SmartNotepad/CustomButton;
+    iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->u:Landroid/widget/Button;
 
     const-string v1, "No Support"
 
-    invoke-virtual {v0, v1}, Lcom/james/SmartNotepad/CustomButton;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_121
-    iput v5, p0, Lcom/james/SmartNotepad/NoteEdit;->t:I
+    :cond_111
+    iput v6, p0, Lcom/james/SmartNotepad/NoteEdit;->t:I
 
-    if-eqz p1, :cond_136
+    if-eqz p1, :cond_126
 
     const-string v0, "NoteEdit"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    const-string v2, "savedInstanceState != null"
+    const-string v0, "savedInstanceState != null"
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "origContent"
 
@@ -1052,8 +1046,8 @@
 
     iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->o:Ljava/lang/String;
 
-    :cond_136
-    iput v4, p0, Lcom/james/SmartNotepad/NoteEdit;->y:I
+    :cond_126
+    iput v3, p0, Lcom/james/SmartNotepad/NoteEdit;->y:I
 
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->q:Landroid/widget/EditText;
 
@@ -1062,6 +1056,8 @@
     invoke-direct {v1, p0}, Lcom/james/SmartNotepad/aw;-><init>(Lcom/james/SmartNotepad/NoteEdit;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    invoke-static {}, Lcom/admob/android/ads/ak;->c()V
 
     return-void
 .end method
@@ -1091,7 +1087,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02001a
+    const v1, 0x7f020015
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
@@ -1103,7 +1099,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020033
+    const v1, 0x7f02002d
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
@@ -1115,7 +1111,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020016
+    const v1, 0x7f020011
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
@@ -1157,7 +1153,7 @@
 
     invoke-direct {v2, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f020028
+    const v3, 0x7f020022
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 
@@ -1365,47 +1361,51 @@
 .end method
 
 .method protected onPause()V
-    .registers 9
+    .registers 10
+
+    const/4 v8, 0x0
 
     const/4 v7, 0x0
 
-    const/4 v6, 0x0
+    const-string v6, "SmartNotepad"
+
+    const-string v5, "NoteEdit"
 
     const-string v0, "NoteEdit"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    const-string v2, "onPause()"
+    const-string v0, "onPause()"
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     const-string v0, "NoteEdit"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v3, "mCursor : "
+    const-string v1, "mCursor : "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
+    iget-object v1, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
-    if-eqz v0, :cond_70
+    if-eqz v0, :cond_74
 
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->q:Landroid/widget/EditText;
 
@@ -1441,50 +1441,50 @@
 
     move-result v3
 
-    invoke-virtual {v2, v6, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v2, v7, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "NoteEdit"
 
-    const-string v4, "SmartNotepad"
+    const-string v3, "SmartNotepad"
 
-    const-string v5, "onPause Save : 1"
+    const-string v3, "onPause Save : 1"
 
-    invoke-static {v3, v4, v5}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v3}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/james/SmartNotepad/NoteEdit;->isFinishing()Z
 
     move-result v3
 
-    if-eqz v3, :cond_71
+    if-eqz v3, :cond_75
 
-    if-nez v1, :cond_71
+    if-nez v1, :cond_75
 
-    invoke-virtual {p0, v6}, Lcom/james/SmartNotepad/NoteEdit;->setResult(I)V
+    invoke-virtual {p0, v7}, Lcom/james/SmartNotepad/NoteEdit;->setResult(I)V
 
     invoke-direct {p0}, Lcom/james/SmartNotepad/NoteEdit;->a()V
 
     const-string v0, "NoteEdit"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    const-string v2, "onPause Save : 2"
+    const-string v0, "onPause Save : 2"
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_70
-    :goto_70
+    :cond_74
+    :goto_74
     return-void
 
-    :cond_71
+    :cond_75
     const-string v1, "NoteEdit"
 
-    const-string v3, "SmartNotepad"
+    const-string v1, "SmartNotepad"
 
-    const-string v4, "onPause Save : 3"
+    const-string v1, "onPause Save : 3"
 
-    invoke-static {v1, v3, v4}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v1}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Landroid/content/ContentValues;
 
@@ -1512,25 +1512,25 @@
 
     const-string v0, "NoteEdit"
 
-    const-string v2, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v4, "getContentResolver().update mUri : "
+    const-string v2, "getContentResolver().update mUri : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/james/SmartNotepad/NoteEdit;->m:Landroid/net/Uri;
+    iget-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->m:Landroid/net/Uri;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-static {v0, v2, v3}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/james/SmartNotepad/NoteEdit;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1538,27 +1538,31 @@
 
     iget-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->m:Landroid/net/Uri;
 
-    invoke-virtual {v0, v2, v1, v7, v7}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {v0, v2, v1, v8, v8}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    goto :goto_70
+    goto :goto_74
 .end method
 
 .method protected onResume()V
-    .registers 9
+    .registers 11
 
-    const/4 v7, 0x2
+    const/4 v9, 0x2
 
     const/4 v3, 0x0
 
     const/4 v6, 0x1
 
+    const-string v8, "SmartNotepad"
+
+    const-string v7, "NoteEdit"
+
     const-string v0, "NoteEdit"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    const-string v2, "onResume()"
+    const-string v0, "onResume()"
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
@@ -1580,25 +1584,25 @@
 
     const-string v0, "NoteEdit"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v3, "mCursor : "
+    const-string v1, "mCursor : "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
+    iget-object v1, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->f:Landroid/content/SharedPreferences;
 
@@ -1692,33 +1696,33 @@
 
     iget v0, p0, Lcom/james/SmartNotepad/NoteEdit;->t:I
 
-    if-eq v0, v7, :cond_138
+    if-eq v0, v9, :cond_13c
 
     const-string v0, "NoteEdit"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    const-string v2, "onResume 1"
+    const-string v0, "onResume 1"
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
-    if-eqz v0, :cond_19d
+    if-eqz v0, :cond_1a1
 
     const-string v0, "NoteEdit"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    const-string v2, "onResume 2"
+    const-string v0, "onResume 2"
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    :try_start_ad
+    :try_start_b1
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
     const/4 v1, 0x1
@@ -1730,11 +1734,11 @@
     iget-object v1, p0, Lcom/james/SmartNotepad/NoteEdit;->r:Landroid/widget/EditText;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-    :try_end_b9
-    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_ad .. :try_end_b9} :catch_13b
+    :try_end_bd
+    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_b1 .. :try_end_bd} :catch_13f
 
-    :goto_b9
-    :try_start_b9
+    :goto_bd
+    :try_start_bd
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
     const/4 v1, 0x4
@@ -1746,11 +1750,11 @@
     iget-object v1, p0, Lcom/james/SmartNotepad/NoteEdit;->q:Landroid/widget/EditText;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setTextKeepState(Ljava/lang/CharSequence;)V
-    :try_end_c5
-    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_b9 .. :try_end_c5} :catch_141
+    :try_end_c9
+    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_bd .. :try_end_c9} :catch_145
 
-    :goto_c5
-    :try_start_c5
+    :goto_c9
+    :try_start_c9
     iget-object v1, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
     const/4 v2, 0x2
@@ -1760,13 +1764,13 @@
     move-result-wide v1
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-    :try_end_cf
-    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_c5 .. :try_end_cf} :catch_149
+    :try_end_d3
+    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_c9 .. :try_end_d3} :catch_14d
 
     move-result-object v1
 
-    :goto_d0
-    :try_start_d0
+    :goto_d4
+    :try_start_d4
     iget-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
     const/4 v3, 0x5
@@ -1776,11 +1780,11 @@
     move-result-object v2
 
     iput-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->C:Ljava/lang/String;
-    :try_end_d9
-    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_d0 .. :try_end_d9} :catch_157
+    :try_end_dd
+    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_d4 .. :try_end_dd} :catch_15b
 
-    :goto_d9
-    :try_start_d9
+    :goto_dd
+    :try_start_dd
     iget-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
     const/4 v3, 0x7
@@ -1790,44 +1794,44 @@
     move-result-object v2
 
     iput-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->D:Ljava/lang/String;
-    :try_end_e2
-    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_d9 .. :try_end_e2} :catch_161
+    :try_end_e6
+    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_dd .. :try_end_e6} :catch_165
 
-    :goto_e2
+    :goto_e6
     iget-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->o:Ljava/lang/String;
 
-    if-nez v2, :cond_f1
+    if-nez v2, :cond_f5
 
     const-string v2, "NoteEdit"
 
-    const-string v3, "SmartNotepad"
+    const-string v2, "SmartNotepad"
 
-    const-string v4, "mOriginalContent == null : here"
+    const-string v2, "mOriginalContent == null : here"
 
-    invoke-static {v2, v3, v4}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->o:Ljava/lang/String;
 
-    :cond_f1
-    :try_start_f1
+    :cond_f5
+    :try_start_f5
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->n:Landroid/database/Cursor;
 
     const/4 v2, 0x3
 
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-    :try_end_f7
-    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_f1 .. :try_end_f7} :catch_16b
+    :try_end_fb
+    .catch Landroid/database/CursorIndexOutOfBoundsException; {:try_start_f5 .. :try_end_fb} :catch_16f
 
     move-result-object v0
 
-    :goto_f8
+    :goto_fc
     const-string v2, ""
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_172
+    if-eqz v2, :cond_176
 
     const/high16 v0, -0x1000000
 
@@ -1835,7 +1839,7 @@
 
     move-result-object v0
 
-    :goto_106
+    :goto_10a
     iget-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->q:Landroid/widget/EditText;
 
     iget-object v3, p0, Lcom/james/SmartNotepad/NoteEdit;->h:Ljava/lang/String;
@@ -1866,7 +1870,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_17b
+    if-eqz v0, :cond_17f
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
@@ -1878,34 +1882,34 @@
 
     move-result-object v0
 
-    :goto_133
+    :goto_137
     iget-object v1, p0, Lcom/james/SmartNotepad/NoteEdit;->s:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_138
-    :goto_138
+    :cond_13c
+    :goto_13c
     iput v6, p0, Lcom/james/SmartNotepad/NoteEdit;->t:I
 
     return-void
 
-    :catch_13b
+    :catch_13f
     move-exception v0
 
     invoke-virtual {v0}, Landroid/database/CursorIndexOutOfBoundsException;->printStackTrace()V
 
-    goto/16 :goto_b9
+    goto/16 :goto_bd
 
-    :catch_141
+    :catch_145
     move-exception v0
 
     invoke-virtual {v0}, Landroid/database/CursorIndexOutOfBoundsException;->printStackTrace()V
 
     const-string v0, ""
 
-    goto/16 :goto_c5
+    goto/16 :goto_c9
 
-    :catch_149
+    :catch_14d
     move-exception v1
 
     invoke-virtual {v1}, Landroid/database/CursorIndexOutOfBoundsException;->printStackTrace()V
@@ -1918,9 +1922,9 @@
 
     move-result-object v1
 
-    goto/16 :goto_d0
+    goto/16 :goto_d4
 
-    :catch_157
+    :catch_15b
     move-exception v2
 
     invoke-virtual {v2}, Landroid/database/CursorIndexOutOfBoundsException;->printStackTrace()V
@@ -1929,9 +1933,9 @@
 
     iput-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->C:Ljava/lang/String;
 
-    goto/16 :goto_d9
+    goto/16 :goto_dd
 
-    :catch_161
+    :catch_165
     move-exception v2
 
     invoke-virtual {v2}, Landroid/database/CursorIndexOutOfBoundsException;->printStackTrace()V
@@ -1940,18 +1944,18 @@
 
     iput-object v2, p0, Lcom/james/SmartNotepad/NoteEdit;->D:Ljava/lang/String;
 
-    goto/16 :goto_e2
+    goto/16 :goto_e6
 
-    :catch_16b
+    :catch_16f
     move-exception v0
 
     invoke-virtual {v0}, Landroid/database/CursorIndexOutOfBoundsException;->printStackTrace()V
 
     const-string v0, "-16777216"
 
-    goto :goto_f8
+    goto :goto_fc
 
-    :cond_172
+    :cond_176
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -1960,9 +1964,9 @@
 
     move-result-object v0
 
-    goto :goto_106
+    goto :goto_10a
 
-    :cond_17b
+    :cond_17f
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteEdit;->B:Ljava/lang/String;
 
     const-string v2, "English"
@@ -1971,7 +1975,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_191
+    if-eqz v0, :cond_195
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
@@ -1983,9 +1987,9 @@
 
     move-result-object v0
 
-    goto :goto_133
+    goto :goto_137
 
-    :cond_191
+    :cond_195
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v2, "EEEE, dd MMMM yyyy a h:mm:ss"
@@ -1996,9 +2000,9 @@
 
     move-result-object v0
 
-    goto :goto_133
+    goto :goto_137
 
-    :cond_19d
+    :cond_1a1
     const v0, 0x7f0700d2
 
     invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/NoteEdit;->getText(I)Ljava/lang/CharSequence;
@@ -2017,7 +2021,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_138
+    goto :goto_13c
 .end method
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V

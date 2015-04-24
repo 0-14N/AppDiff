@@ -111,7 +111,7 @@
     .registers 5
 
     .prologue
-    .line 175
+    .line 176
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
@@ -120,7 +120,7 @@
 
     if-eqz v1, :cond_11
 
-    .line 176
+    .line 177
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
@@ -129,7 +129,7 @@
 
     invoke-virtual {v1}, Lcom/cccdi/mabellefanshare/MainActivity;->showProgressDialog()V
 
-    .line 178
+    .line 179
     :cond_11
     new-instance v0, Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;
 
@@ -147,13 +147,13 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;-><init>(Ljava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 230
+    .line 231
     .local v0, "jsonArrayRequest":Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;
     sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->volleyQueue:Lcom/android/volley/RequestQueue;
 
     invoke-virtual {v1, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
-    .line 231
+    .line 232
     return-void
 .end method
 
@@ -182,7 +182,7 @@
 
     .line 106
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
@@ -210,10 +210,10 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 236
+    .line 237
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onAttach(Landroid/app/Activity;)V
 
-    .line 237
+    .line 238
     return-void
 .end method
 
@@ -246,7 +246,7 @@
 
     .prologue
     .line 115
-    const v6, 0x7f03005d
+    const v6, 0x7f03004e
 
     const/4 v7, 0x0
 
@@ -256,7 +256,7 @@
 
     .line 117
     .local v5, "v":Landroid/view/View;
-    const v6, 0x7f090172
+    const v6, 0x7f09012e
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -266,8 +266,15 @@
 
     iput-object v6, p0, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->keyword_txt:Landroid/widget/EditText;
 
-    .line 119
-    const v6, 0x7f09016f
+    .line 118
+    iget-object v6, p0, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->keyword_txt:Landroid/widget/EditText;
+
+    const/16 v7, 0x8
+
+    invoke-virtual {v6, v7}, Landroid/widget/EditText;->setVisibility(I)V
+
+    .line 120
+    const v6, 0x7f09012b
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -277,8 +284,8 @@
 
     iput-object v6, p0, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->minPriceTxt:Landroid/widget/EditText;
 
-    .line 120
-    const v6, 0x7f090170
+    .line 121
+    const v6, 0x7f09012c
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -288,8 +295,8 @@
 
     iput-object v6, p0, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->maxPriceTxt:Landroid/widget/EditText;
 
-    .line 122
-    const v6, 0x7f09016e
+    .line 123
+    const v6, 0x7f09012a
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -301,8 +308,8 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 123
-    const v6, 0x7f09016e
+    .line 124
+    const v6, 0x7f09012a
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -318,20 +325,20 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 127
+    .line 128
     const-string v3, "%s %d - %d"
 
-    .line 128
+    .line 129
     .local v3, "rangeTemplate":Ljava/lang/String;
     const-string v0, "%s %d>"
 
-    .line 130
+    .line 131
     .local v0, "greaterTemplate":Ljava/lang/String;
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 131
+    .line 132
     .local v2, "priceRangeArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v6, 0x3
 
@@ -377,7 +384,7 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 132
+    .line 133
     const/4 v6, 0x3
 
     new-array v6, v6, [Ljava/lang/Object;
@@ -430,7 +437,7 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 133
+    .line 134
     const/4 v6, 0x3
 
     new-array v6, v6, [Ljava/lang/Object;
@@ -483,7 +490,7 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 134
+    .line 135
     const/4 v6, 0x3
 
     new-array v6, v6, [Ljava/lang/Object;
@@ -536,7 +543,7 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 135
+    .line 136
     const/4 v6, 0x3
 
     new-array v6, v6, [Ljava/lang/Object;
@@ -589,7 +596,7 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 136
+    .line 137
     const/4 v6, 0x2
 
     new-array v6, v6, [Ljava/lang/Object;
@@ -624,8 +631,8 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 143
-    const v6, 0x7f0d015d
+    .line 144
+    const v6, 0x7f0d012a
 
     invoke-virtual {p0, v6}, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->getString(I)Ljava/lang/String;
 
@@ -633,25 +640,25 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 145
+    .line 146
     new-instance v1, Lcom/cccdi/mabellefanshare/adapter/SpinnerHintArrayAdapter;
 
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v6
 
-    const v7, 0x7f030036
+    const v7, 0x7f030027
 
     invoke-direct {v1, v6, v7, v2}, Lcom/cccdi/mabellefanshare/adapter/SpinnerHintArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
-    .line 146
+    .line 147
     .local v1, "priceRageAdatper":Lcom/cccdi/mabellefanshare/adapter/SpinnerHintArrayAdapter;
     const v6, 0x1090009
 
     invoke-virtual {v1, v6}, Lcom/cccdi/mabellefanshare/adapter/SpinnerHintArrayAdapter;->setDropDownViewResource(I)V
 
-    .line 150
-    const v6, 0x7f090171
+    .line 151
+    const v6, 0x7f09012d
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -661,8 +668,8 @@
 
     iput-object v6, p0, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->jewelry_type_spinner:Landroid/widget/Spinner;
 
-    .line 164
-    const v6, 0x7f090173
+    .line 165
+    const v6, 0x7f09012f
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -670,21 +677,21 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 165
+    .line 166
     .local v4, "searchBtn":Landroid/widget/TextView;
     iget-object v6, p0, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->onSearchListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v4, v6}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 167
+    .line 168
     iget-object v6, p0, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->userGreetingListener:Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;
 
     invoke-interface {v6, v5}, Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;->updateUserGreeting(Landroid/view/View;)V
 
-    .line 169
+    .line 170
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->retrieveProductCatetgory()V
 
-    .line 171
+    .line 172
     return-object v5
 .end method
 
@@ -692,9 +699,9 @@
     .registers 1
 
     .prologue
-    .line 241
+    .line 242
     invoke-super {p0}, Landroid/support/v4/app/Fragment;->onDetach()V
 
-    .line 242
+    .line 243
     return-void
 .end method

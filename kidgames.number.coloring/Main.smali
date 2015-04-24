@@ -18,7 +18,7 @@
 
 .field public static Imgid:[[Ljava/lang/Integer; = null
 
-.field public static final LAST_ACCSESORIES:I = 0x5
+.field public static final LAST_ACCSESORIES:I = 0x3
 
 .field static Language:I = 0x0
 
@@ -46,11 +46,7 @@
 
 .field public static adparams_height:I
 
-.field public static bBuy:Landroid/graphics/Bitmap;
-
 .field public static bLanguage:Landroid/graphics/Bitmap;
-
-.field public static bMore:Landroid/graphics/Bitmap;
 
 .field public static bSave:Landroid/graphics/Bitmap;
 
@@ -4851,7 +4847,7 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->DrawColor:[I
 
-    .line 811
+    .line 794
     sput-boolean v5, Lkidgames/number/coloring/Main;->isMainFinished:Z
 
     return-void
@@ -4889,7 +4885,7 @@
 
     iput v0, p0, Lkidgames/number/coloring/Main;->LineWidth:I
 
-    .line 675
+    .line 670
     new-instance v0, Lkidgames/number/coloring/Main$1;
 
     invoke-direct {v0, p0}, Lkidgames/number/coloring/Main$1;-><init>(Lkidgames/number/coloring/Main;)V
@@ -4906,14 +4902,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 621
+    .line 616
     sget-object v4, Lkidgames/number/coloring/Main;->dm:Landroid/util/DisplayMetrics;
 
     iget v4, v4, Landroid/util/DisplayMetrics;->widthPixels:I
 
     div-int/lit8 v3, v4, 0x4
 
-    .line 625
+    .line 620
     .local v3, "size":I
     sget-object v4, Lkidgames/number/coloring/Main;->Imgid:[[Ljava/lang/Integer;
 
@@ -4927,7 +4923,7 @@
 
     sput-object v4, Lkidgames/number/coloring/Main;->PreviewImgid:[Landroid/graphics/Bitmap;
 
-    .line 626
+    .line 621
     const/4 v8, 0x0
 
     .local v8, "i":I
@@ -4942,10 +4938,10 @@
 
     if-lt v8, v4, :cond_1d
 
-    .line 650
+    .line 645
     return-void
 
-    .line 628
+    .line 623
     :cond_1d
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getResources()Landroid/content/res/Resources;
 
@@ -4967,25 +4963,25 @@
 
     move-result-object v10
 
-    .line 629
+    .line 624
     .local v10, "temp":Landroid/graphics/Bitmap;
     if-eqz v10, :cond_54
 
-    .line 631
+    .line 626
     const/4 v4, 0x1
 
     invoke-static {v10, v3, v3, v4}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 632
+    .line 627
     .local v0, "Img":Landroid/graphics/Bitmap;
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 633
+    .line 628
     mul-int v9, v3, v3
 
-    .line 634
+    .line 629
     .local v9, "pixels_len":I
     new-array v1, v9, [I
 
@@ -4998,10 +4994,10 @@
 
     move v7, v3
 
-    .line 636
+    .line 631
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
-    .line 639
+    .line 634
     const/4 v11, 0x0
 
     .local v11, "x":I
@@ -5016,15 +5012,15 @@
 
     move v7, v3
 
-    .line 646
+    .line 641
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
 
-    .line 647
+    .line 642
     sget-object v4, Lkidgames/number/coloring/Main;->PreviewImgid:[Landroid/graphics/Bitmap;
 
     aput-object v0, v4, v8
 
-    .line 626
+    .line 621
     .end local v0    # "Img":Landroid/graphics/Bitmap;
     .end local v1    # "pixels":[I
     .end local v9    # "pixels_len":I
@@ -5034,7 +5030,7 @@
 
     goto :goto_13
 
-    .line 640
+    .line 635
     .restart local v0    # "Img":Landroid/graphics/Bitmap;
     .restart local v1    # "pixels":[I
     .restart local v9    # "pixels_len":I
@@ -5048,18 +5044,18 @@
 
     if-eqz v4, :cond_66
 
-    .line 641
+    .line 636
     aget v4, v1, v11
 
     aput v4, v1, v11
 
-    .line 639
+    .line 634
     :goto_63
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_47
 
-    .line 643
+    .line 638
     :cond_66
     const/4 v4, -0x1
 
@@ -5073,7 +5069,7 @@
     .param p0, "pos"    # I
 
     .prologue
-    .line 373
+    .line 370
     sget-object v0, Lkidgames/number/coloring/Main;->Soundid:[[Ljava/lang/Integer;
 
     sget v1, Lkidgames/number/coloring/Main;->Language:I
@@ -5084,10 +5080,10 @@
 
     if-ge p0, v0, :cond_29
 
-    .line 376
+    .line 373
     invoke-static {}, Lkidgames/number/coloring/Main;->stopAudio()V
 
-    .line 378
+    .line 375
     sget-object v0, Lkidgames/number/coloring/PuzzleView;->MyContext:Landroid/content/Context;
 
     sget-object v1, Lkidgames/number/coloring/Main;->Soundid:[[Ljava/lang/Integer;
@@ -5108,17 +5104,17 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->mp:Landroid/media/MediaPlayer;
 
-    .line 379
+    .line 376
     sget-object v0, Lkidgames/number/coloring/Main;->mp:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_29
 
-    .line 380
+    .line 377
     sget-object v0, Lkidgames/number/coloring/Main;->mp:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
 
-    .line 382
+    .line 379
     :cond_29
     return-void
 .end method
@@ -5129,7 +5125,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 712
+    .line 695
     sget v1, Lkidgames/number/coloring/PuzzleView;->Width:I
 
     sget v2, Lkidgames/number/coloring/PuzzleView;->Height:I
@@ -5142,14 +5138,14 @@
 
     sput-object v1, Lkidgames/number/coloring/Main;->toFile:Landroid/graphics/Bitmap;
 
-    .line 714
+    .line 697
     new-instance v0, Landroid/graphics/Canvas;
 
     sget-object v1, Lkidgames/number/coloring/Main;->toFile:Landroid/graphics/Bitmap;
 
     invoke-direct {v0, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 716
+    .line 699
     .local v0, "canvas":Landroid/graphics/Canvas;
     sget-object v1, Lkidgames/number/coloring/PuzzleView;->mBitmap:Landroid/graphics/Bitmap;
 
@@ -5157,7 +5153,7 @@
 
     invoke-virtual {v0, v1, v4, v4, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 718
+    .line 701
     return-void
 .end method
 
@@ -5165,12 +5161,12 @@
     .registers 2
 
     .prologue
-    .line 672
+    .line 667
     iget-object v0, p0, Lkidgames/number/coloring/Main;->Timer_Tick:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 673
+    .line 668
     return-void
 .end method
 
@@ -5178,7 +5174,7 @@
     .registers 1
 
     .prologue
-    .line 666
+    .line 661
     invoke-direct {p0}, Lkidgames/number/coloring/Main;->TimerMethod()V
 
     return-void
@@ -5198,27 +5194,27 @@
     .registers 1
 
     .prologue
-    .line 386
+    .line 383
     sget-object v0, Lkidgames/number/coloring/Main;->mp:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_11
 
-    .line 387
+    .line 384
     sget-object v0, Lkidgames/number/coloring/Main;->mp:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 388
+    .line 385
     sget-object v0, Lkidgames/number/coloring/Main;->mp:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 389
+    .line 386
     const/4 v0, 0x0
 
     sput-object v0, Lkidgames/number/coloring/Main;->mp:Landroid/media/MediaPlayer;
 
-    .line 391
+    .line 388
     :cond_11
     return-void
 .end method
@@ -5229,28 +5225,28 @@
     .registers 4
 
     .prologue
-    .line 597
+    .line 592
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 599
+    .line 594
     const/high16 v1, 0x7f090000
 
-    .line 600
+    .line 595
     new-instance v2, Lkidgames/number/coloring/Main$13;
 
     invoke-direct {v2, p0}, Lkidgames/number/coloring/Main$13;-><init>(Lkidgames/number/coloring/Main;)V
 
-    .line 599
+    .line 594
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 615
+    .line 610
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 616
+    .line 611
     return-void
 .end method
 
@@ -5258,27 +5254,27 @@
     .registers 6
 
     .prologue
-    .line 757
+    .line 740
     const-string v3, "NumberColor"
 
     const/4 v4, 0x1
 
     invoke-virtual {p0, v3, v4}, Lkidgames/number/coloring/Main;->StoreByteImage(Ljava/lang/String;Z)Z
 
-    .line 758
+    .line 741
     new-instance v0, Ljava/io/File;
 
     sget-object v3, Lkidgames/number/coloring/Main;->LastSavedFile:Ljava/lang/String;
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 759
+    .line 742
     .local v0, "F":Ljava/io/File;
     invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 761
+    .line 744
     .local v1, "U":Landroid/net/Uri;
     new-instance v2, Landroid/content/Intent;
 
@@ -5286,18 +5282,18 @@
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 762
+    .line 745
     .local v2, "i":Landroid/content/Intent;
     const-string v3, "image/jpg"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 763
+    .line 746
     const-string v3, "android.intent.extra.STREAM"
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 764
+    .line 747
     const-string v3, ""
 
     invoke-static {v2, v3}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
@@ -5306,7 +5302,7 @@
 
     invoke-virtual {p0, v3}, Lkidgames/number/coloring/Main;->startActivity(Landroid/content/Intent;)V
 
-    .line 766
+    .line 749
     return-void
 .end method
 
@@ -5314,12 +5310,12 @@
     .registers 5
 
     .prologue
-    .line 778
+    .line 761
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 779
+    .line 762
     .local v1, "builder":Landroid/app/AlertDialog$Builder;
     const v2, 0x7f07000d
 
@@ -5329,7 +5325,7 @@
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 780
+    .line 763
     const v2, 0x7f070005
 
     invoke-virtual {p0, v2}, Lkidgames/number/coloring/Main;->getString(I)Ljava/lang/String;
@@ -5342,7 +5338,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 786
+    .line 769
     const v2, 0x7f070006
 
     invoke-virtual {p0, v2}, Lkidgames/number/coloring/Main;->getString(I)Ljava/lang/String;
@@ -5355,16 +5351,16 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 791
+    .line 774
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v0
 
-    .line 792
+    .line 775
     .local v0, "alert":Landroid/app/AlertDialog;
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 799
+    .line 782
     return-void
 .end method
 
@@ -5376,7 +5372,7 @@
     .param p4, "adhub"    # I
 
     .prologue
-    .line 284
+    .line 281
     :try_start_0
     invoke-static {}, Lkidgames/number/coloring/Main;->$SWITCH_TABLE$kidgames$library$AdProvider$AD_PROVIDER()[I
 
@@ -5392,11 +5388,11 @@
 
     packed-switch v3, :pswitch_data_16c
 
-    .line 340
+    .line 337
     :pswitch_f
     invoke-virtual {p0, p2}, Lkidgames/number/coloring/Main;->setContentView(I)V
 
-    .line 341
+    .line 338
     const v3, 0x7f050012
 
     invoke-virtual {p0, v3}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -5407,7 +5403,7 @@
 
     iput-object v3, p0, Lkidgames/number/coloring/Main;->admob_adview:Lcom/google/ads/AdView;
 
-    .line 342
+    .line 339
     const/4 v3, 0x1
 
     const/high16 v4, 0x42480000    # 50.0f
@@ -5428,15 +5424,15 @@
 
     sput v3, Lkidgames/number/coloring/Main;->adparams_height:I
 
-    .line 362
+    .line 359
     :goto_2f
     return-void
 
-    .line 287
+    .line 284
     :pswitch_30
     invoke-virtual {p0, p1}, Lkidgames/number/coloring/Main;->setContentView(I)V
 
-    .line 288
+    .line 285
     const v3, 0x7f05000e
 
     invoke-virtual {p0, v3}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -5447,7 +5443,7 @@
 
     sput-object v3, Lkidgames/number/coloring/Main;->mopub_adview:Lcom/mopub/mobileads/MoPubView;
 
-    .line 289
+    .line 286
     const/4 v3, 0x1
 
     const/high16 v4, 0x42b40000    # 90.0f
@@ -5468,7 +5464,7 @@
 
     sput v3, Lkidgames/number/coloring/Main;->adparams_height:I
 
-    .line 290
+    .line 287
     sget-object v3, Lkidgames/number/coloring/Main;->mopub_adview:Lcom/mopub/mobileads/MoPubView;
 
     invoke-virtual {v3}, Lcom/mopub/mobileads/MoPubView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -5477,21 +5473,21 @@
 
     sput-object v3, Lkidgames/number/coloring/Main;->adparams:Landroid/view/ViewGroup$LayoutParams;
 
-    .line 291
+    .line 288
     sget-object v3, Lkidgames/number/coloring/Main;->adparams:Landroid/view/ViewGroup$LayoutParams;
 
     sget v4, Lkidgames/number/coloring/Main;->adparams_height:I
 
     iput v4, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 292
+    .line 289
     sget-object v3, Lkidgames/number/coloring/Main;->mopub_adview:Lcom/mopub/mobileads/MoPubView;
 
     sget-object v4, Lkidgames/number/coloring/Open;->MoPubBigId:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Lcom/mopub/mobileads/MoPubView;->setAdUnitId(Ljava/lang/String;)V
 
-    .line 293
+    .line 290
     sget-object v3, Lkidgames/number/coloring/Main;->mopub_adview:Lcom/mopub/mobileads/MoPubView;
 
     invoke-virtual {v3}, Lcom/mopub/mobileads/MoPubView;->loadAd()V
@@ -5500,16 +5496,16 @@
 
     goto :goto_2f
 
-    .line 353
+    .line 350
     :catch_6b
     move-exception v0
 
-    .line 355
+    .line 352
     .local v0, "e":Ljava/lang/Exception;
     :try_start_6c
     invoke-virtual {p0, p2}, Lkidgames/number/coloring/Main;->setContentView(I)V
 
-    .line 356
+    .line 353
     const v3, 0x7f050012
 
     invoke-virtual {p0, v3}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -5520,7 +5516,7 @@
 
     iput-object v3, p0, Lkidgames/number/coloring/Main;->admob_adview:Lcom/google/ads/AdView;
 
-    .line 357
+    .line 354
     const/4 v3, 0x1
 
     const/high16 v4, 0x42480000    # 50.0f
@@ -5545,24 +5541,24 @@
 
     goto :goto_2f
 
-    .line 358
+    .line 355
     :catch_8d
     move-exception v1
 
-    .line 359
+    .line 356
     .local v1, "e1":Ljava/lang/Exception;
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->finish()V
 
     goto :goto_2f
 
-    .line 296
+    .line 293
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "e1":Ljava/lang/Exception;
     :pswitch_92
     :try_start_92
     invoke-virtual {p0, p3}, Lkidgames/number/coloring/Main;->setContentView(I)V
 
-    .line 297
+    .line 294
     const v3, 0x7f050012
 
     invoke-virtual {p0, v3}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -5573,7 +5569,7 @@
 
     iput-object v3, p0, Lkidgames/number/coloring/Main;->admob_adview:Lcom/google/ads/AdView;
 
-    .line 298
+    .line 295
     const/4 v3, 0x1
 
     const/high16 v4, 0x42b40000    # 90.0f
@@ -5596,11 +5592,11 @@
 
     goto/16 :goto_2f
 
-    .line 301
+    .line 298
     :pswitch_b4
     invoke-virtual {p0, p4}, Lkidgames/number/coloring/Main;->setContentView(I)V
 
-    .line 303
+    .line 300
     const v3, 0x7f050011
 
     invoke-virtual {p0, v3}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -5611,7 +5607,7 @@
 
     sput-object v3, Lkidgames/number/coloring/Main;->adhub_adview:Lcom/sec/android/ad/AdHubView;
 
-    .line 304
+    .line 301
     const/4 v3, 0x1
 
     const/high16 v4, 0x42b40000    # 90.0f
@@ -5632,7 +5628,7 @@
 
     sput v3, Lkidgames/number/coloring/Main;->adparams_height:I
 
-    .line 305
+    .line 302
     const v3, 0x7f050010
 
     invoke-virtual {p0, v3}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -5641,7 +5637,7 @@
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    .line 306
+    .line 303
     .local v2, "l":Landroid/widget/LinearLayout;
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -5649,14 +5645,14 @@
 
     sput-object v3, Lkidgames/number/coloring/Main;->adparams:Landroid/view/ViewGroup$LayoutParams;
 
-    .line 307
+    .line 304
     sget-object v3, Lkidgames/number/coloring/Main;->adparams:Landroid/view/ViewGroup$LayoutParams;
 
     sget v4, Lkidgames/number/coloring/Main;->adparams_height:I
 
     iput v4, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 309
+    .line 306
     sget-object v3, Lkidgames/number/coloring/Main;->adhub_adview:Lcom/sec/android/ad/AdHubView;
 
     sget-object v4, Lkidgames/number/coloring/Open;->AdHubId:Ljava/lang/String;
@@ -5665,12 +5661,12 @@
 
     invoke-virtual {v3, p0, v4, v5}, Lcom/sec/android/ad/AdHubView;->init(Landroid/content/Context;Ljava/lang/String;Lcom/sec/android/ad/info/AdSize;)V
 
-    .line 310
+    .line 307
     sget-object v3, Lkidgames/number/coloring/Main;->adhub_adview:Lcom/sec/android/ad/AdHubView;
 
     invoke-virtual {v3}, Lcom/sec/android/ad/AdHubView;->startAd()V
 
-    .line 312
+    .line 309
     sget-object v3, Lkidgames/number/coloring/Main;->adhub_adview:Lcom/sec/android/ad/AdHubView;
 
     new-instance v4, Lkidgames/number/coloring/Main$2;
@@ -5681,12 +5677,12 @@
 
     goto/16 :goto_2f
 
-    .line 321
+    .line 318
     .end local v2    # "l":Landroid/widget/LinearLayout;
     :pswitch_103
     invoke-virtual {p0, p4}, Lkidgames/number/coloring/Main;->setContentView(I)V
 
-    .line 323
+    .line 320
     const v3, 0x7f050011
 
     invoke-virtual {p0, v3}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -5697,7 +5693,7 @@
 
     sput-object v3, Lkidgames/number/coloring/Main;->adhub_adview:Lcom/sec/android/ad/AdHubView;
 
-    .line 325
+    .line 322
     const/4 v3, 0x1
 
     const/high16 v4, 0x42480000    # 50.0f
@@ -5718,7 +5714,7 @@
 
     sput v3, Lkidgames/number/coloring/Main;->adparams_height:I
 
-    .line 326
+    .line 323
     sget-object v3, Lkidgames/number/coloring/Main;->adhub_adview:Lcom/sec/android/ad/AdHubView;
 
     sget-object v4, Lkidgames/number/coloring/Open;->AdHubId:Ljava/lang/String;
@@ -5727,12 +5723,12 @@
 
     invoke-virtual {v3, p0, v4, v5}, Lcom/sec/android/ad/AdHubView;->init(Landroid/content/Context;Ljava/lang/String;Lcom/sec/android/ad/info/AdSize;)V
 
-    .line 327
+    .line 324
     sget-object v3, Lkidgames/number/coloring/Main;->adhub_adview:Lcom/sec/android/ad/AdHubView;
 
     invoke-virtual {v3}, Lcom/sec/android/ad/AdHubView;->startAd()V
 
-    .line 329
+    .line 326
     sget-object v3, Lkidgames/number/coloring/Main;->adhub_adview:Lcom/sec/android/ad/AdHubView;
 
     new-instance v4, Lkidgames/number/coloring/Main$3;
@@ -5743,11 +5739,11 @@
 
     goto/16 :goto_2f
 
-    .line 346
+    .line 343
     :pswitch_13d
     invoke-virtual {p0, p1}, Lkidgames/number/coloring/Main;->setContentView(I)V
 
-    .line 347
+    .line 344
     const v3, 0x7f05000e
 
     invoke-virtual {p0, v3}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -5758,7 +5754,7 @@
 
     sput-object v3, Lkidgames/number/coloring/Main;->mopub_adview:Lcom/mopub/mobileads/MoPubView;
 
-    .line 348
+    .line 345
     const/4 v3, 0x1
 
     const/high16 v4, 0x42480000    # 50.0f
@@ -5779,14 +5775,14 @@
 
     sput v3, Lkidgames/number/coloring/Main;->adparams_height:I
 
-    .line 349
+    .line 346
     sget-object v3, Lkidgames/number/coloring/Main;->mopub_adview:Lcom/mopub/mobileads/MoPubView;
 
     sget-object v4, Lkidgames/number/coloring/Open;->MoPubSmallId:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Lcom/mopub/mobileads/MoPubView;->setAdUnitId(Ljava/lang/String;)V
 
-    .line 350
+    .line 347
     sget-object v3, Lkidgames/number/coloring/Main;->mopub_adview:Lcom/mopub/mobileads/MoPubView;
 
     invoke-virtual {v3}, Lcom/mopub/mobileads/MoPubView;->loadAd()V
@@ -5795,7 +5791,7 @@
 
     goto/16 :goto_2f
 
-    .line 284
+    .line 281
     nop
 
     :pswitch_data_16c
@@ -5817,12 +5813,12 @@
     .param p2, "isSilent"    # Z
 
     .prologue
-    .line 721
+    .line 704
     sget-object v4, Lkidgames/number/coloring/PuzzleView;->orig:Landroid/graphics/Bitmap;
 
     if-eqz v4, :cond_ce
 
-    .line 723
+    .line 706
     new-instance v3, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5853,14 +5849,14 @@
 
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 725
+    .line 708
     .local v3, "sdImageMainDirectory":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->mkdirs()Z
 
-    .line 726
+    .line 709
     const/4 v1, 0x0
 
-    .line 730
+    .line 713
     .local v1, "os":Ljava/io/FileOutputStream;
     :try_start_28
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5883,7 +5879,7 @@
 
     move-result-object p1
 
-    .line 731
+    .line 714
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/io/File;->toString()Ljava/lang/String;
@@ -5918,7 +5914,7 @@
 
     sput-object v4, Lkidgames/number/coloring/Main;->LastSavedFile:Ljava/lang/String;
 
-    .line 732
+    .line 715
     new-instance v2, Ljava/io/FileOutputStream;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5958,13 +5954,13 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_28 .. :try_end_86} :catch_d0
     .catch Ljava/io/IOException; {:try_start_28 .. :try_end_86} :catch_d5
 
-    .line 734
+    .line 717
     .end local v1    # "os":Ljava/io/FileOutputStream;
     .local v2, "os":Ljava/io/FileOutputStream;
     :try_start_86
     invoke-static {}, Lkidgames/number/coloring/Main;->PrepareSavePicture()V
 
-    .line 735
+    .line 718
     sget-object v4, Lkidgames/number/coloring/Main;->toFile:Landroid/graphics/Bitmap;
 
     sget-object v5, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
@@ -5973,16 +5969,16 @@
 
     invoke-virtual {v4, v5, v6, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 737
+    .line 720
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 738
+    .line 721
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
-    .line 740
+    .line 723
     if-nez p2, :cond_ce
 
-    .line 741
+    .line 724
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getBaseContext()Landroid/content/Context;
 
     move-result-object v4
@@ -6001,7 +5997,7 @@
 
     invoke-virtual {v4}, Landroid/widget/Toast;->show()V
 
-    .line 744
+    .line 727
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.MEDIA_MOUNTED"
@@ -6035,7 +6031,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_86 .. :try_end_ce} :catch_dd
     .catch Ljava/io/IOException; {:try_start_86 .. :try_end_ce} :catch_da
 
-    .line 752
+    .line 735
     .end local v2    # "os":Ljava/io/FileOutputStream;
     .end local v3    # "sdImageMainDirectory":Ljava/io/File;
     :cond_ce
@@ -6044,32 +6040,32 @@
 
     return v4
 
-    .line 746
+    .line 729
     .restart local v1    # "os":Ljava/io/FileOutputStream;
     .restart local v3    # "sdImageMainDirectory":Ljava/io/File;
     :catch_d0
     move-exception v0
 
-    .line 747
+    .line 730
     .local v0, "e":Ljava/io/FileNotFoundException;
     :goto_d1
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     goto :goto_ce
 
-    .line 748
+    .line 731
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_d5
     move-exception v0
 
-    .line 749
+    .line 732
     .local v0, "e":Ljava/io/IOException;
     :goto_d6
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_ce
 
-    .line 748
+    .line 731
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "os":Ljava/io/FileOutputStream;
     .restart local v2    # "os":Ljava/io/FileOutputStream;
@@ -6082,7 +6078,7 @@
     .restart local v1    # "os":Ljava/io/FileOutputStream;
     goto :goto_d6
 
-    .line 746
+    .line 729
     .end local v1    # "os":Ljava/io/FileOutputStream;
     .restart local v2    # "os":Ljava/io/FileOutputStream;
     :catch_dd
@@ -6099,7 +6095,7 @@
     .registers 4
 
     .prologue
-    .line 652
+    .line 647
     new-instance v0, Lkidgames/library/AmbilWarnaDialog;
 
     sget-object v1, Lkidgames/number/coloring/Main;->DrawColor:[I
@@ -6114,11 +6110,11 @@
 
     invoke-direct {v0, p0, v1, v2}, Lkidgames/library/AmbilWarnaDialog;-><init>(Landroid/content/Context;ILkidgames/library/AmbilWarnaDialog$OnAmbilWarnaListener;)V
 
-    .line 663
+    .line 658
     .local v0, "awdialog":Lkidgames/library/AmbilWarnaDialog;
     invoke-virtual {v0}, Lkidgames/library/AmbilWarnaDialog;->show()V
 
-    .line 664
+    .line 659
     return-void
 .end method
 
@@ -6127,12 +6123,12 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 368
+    .line 365
     iget-object v0, p0, Lkidgames/number/coloring/Main;->PortraitConfig:Landroid/content/res/Configuration;
 
     invoke-super {p0, v0}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 369
+    .line 366
     return-void
 .end method
 
@@ -6147,25 +6143,25 @@
 
     const/4 v8, 0x0
 
-    .line 402
+    .line 399
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 404
+    .line 401
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->setVolumeControlStream(I)V
 
-    .line 405
+    .line 402
     invoke-virtual {p0, v9}, Lkidgames/number/coloring/Main;->requestWindowFeature(I)Z
 
-    .line 406
+    .line 403
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
     invoke-virtual {v0, v1, v1}, Landroid/view/Window;->setFlags(II)V
 
-    .line 408
+    .line 405
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -6176,17 +6172,17 @@
 
     iput-object v0, p0, Lkidgames/number/coloring/Main;->PortraitConfig:Landroid/content/res/Configuration;
 
-    .line 410
+    .line 407
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 411
+    .line 408
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     sput-object v0, Lkidgames/number/coloring/Main;->dm:Landroid/util/DisplayMetrics;
 
-    .line 412
+    .line 409
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v0
@@ -6199,10 +6195,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 415
+    .line 412
     invoke-virtual {p0, v9}, Lkidgames/number/coloring/Main;->requestWindowFeature(I)Z
 
-    .line 418
+    .line 415
     const-string v0, "AbcColoringPrefsFile"
 
     invoke-virtual {p0, v0, v8}, Lkidgames/number/coloring/Main;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -6211,7 +6207,7 @@
 
     iput-object v0, p0, Lkidgames/number/coloring/Main;->settings:Landroid/content/SharedPreferences;
 
-    .line 419
+    .line 416
     iget-object v0, p0, Lkidgames/number/coloring/Main;->settings:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -6220,7 +6216,7 @@
 
     iput-object v0, p0, Lkidgames/number/coloring/Main;->editor:Landroid/content/SharedPreferences$Editor;
 
-    .line 420
+    .line 417
     iget-object v0, p0, Lkidgames/number/coloring/Main;->settings:Landroid/content/SharedPreferences;
 
     const-string v1, "Language"
@@ -6231,7 +6227,7 @@
 
     sput v0, Lkidgames/number/coloring/Main;->Language:I
 
-    .line 421
+    .line 418
     iget-object v0, p0, Lkidgames/number/coloring/Main;->settings:Landroid/content/SharedPreferences;
 
     const-string v1, "NumberType"
@@ -6242,52 +6238,52 @@
 
     sput v0, Lkidgames/number/coloring/Main;->NumberType:I
 
-    .line 422
+    .line 419
     sput v8, Lkidgames/number/coloring/Main;->ActiveInd:I
 
-    .line 424
+    .line 421
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
     iput-object v0, p0, Lkidgames/number/coloring/Main;->myTimer:Ljava/util/Timer;
 
-    .line 425
+    .line 422
     iget-object v0, p0, Lkidgames/number/coloring/Main;->myTimer:Ljava/util/Timer;
 
     new-instance v1, Lkidgames/number/coloring/Main$4;
 
     invoke-direct {v1, p0}, Lkidgames/number/coloring/Main$4;-><init>(Lkidgames/number/coloring/Main;)V
 
-    .line 431
+    .line 428
     const-wide/16 v2, 0x0
 
     const-wide/16 v4, 0x3e8
 
-    .line 425
+    .line 422
     invoke-virtual/range {v0 .. v5}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;JJ)V
 
-    .line 433
+    .line 430
     sput v8, Lkidgames/number/coloring/Main;->AccsesoriesType:I
 
-    .line 434
+    .line 431
     sput-boolean v8, Lkidgames/number/coloring/Main;->isDrawAccsesories:Z
 
-    .line 435
+    .line 432
     const/4 v0, 0x5
 
     iput v0, p0, Lkidgames/number/coloring/Main;->LineWidth:I
 
-    .line 437
+    .line 434
     sput v8, Lkidgames/number/coloring/Main;->ActiveColorInd:I
 
-    .line 439
+    .line 436
     sput v9, Lkidgames/number/coloring/Main;->Mode:I
 
-    .line 441
+    .line 438
     invoke-direct {p0}, Lkidgames/number/coloring/Main;->CreatePreviewImgid()V
 
-    .line 443
+    .line 440
     const v0, 0x7f03000a
 
     const v1, 0x7f030009
@@ -6298,7 +6294,7 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lkidgames/number/coloring/Main;->SetContentViewAD(IIII)V
 
-    .line 444
+    .line 441
     const v0, 0x7f050014
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -6309,7 +6305,7 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->puzzleView:Lkidgames/number/coloring/PuzzleView;
 
-    .line 446
+    .line 443
     const v0, 0x7f050015
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -6320,7 +6316,7 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->c1Button:Landroid/widget/Button;
 
-    .line 447
+    .line 444
     const v0, 0x7f050016
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -6331,7 +6327,7 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->c2Button:Landroid/widget/Button;
 
-    .line 448
+    .line 445
     const v0, 0x7f050017
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -6342,7 +6338,7 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->c3Button:Landroid/widget/Button;
 
-    .line 449
+    .line 446
     const v0, 0x7f05001a
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -6353,7 +6349,7 @@
 
     iput-object v0, p0, Lkidgames/number/coloring/Main;->chooseImageButton:Landroid/widget/Button;
 
-    .line 450
+    .line 447
     const v0, 0x7f05001b
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -6364,7 +6360,7 @@
 
     iput-object v0, p0, Lkidgames/number/coloring/Main;->undoButton:Landroid/widget/Button;
 
-    .line 451
+    .line 448
     const v0, 0x7f05001c
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -6375,7 +6371,7 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->settingButton:Landroid/widget/Button;
 
-    .line 452
+    .line 449
     const v0, 0x7f050019
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -6386,7 +6382,7 @@
 
     iput-object v0, p0, Lkidgames/number/coloring/Main;->modeButton:Landroid/widget/Button;
 
-    .line 453
+    .line 450
     const v0, 0x7f050018
 
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Main;->findViewById(I)Landroid/view/View;
@@ -6397,14 +6393,14 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->colorButton:Landroid/widget/Button;
 
-    .line 455
+    .line 452
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     sput-object v0, Lkidgames/number/coloring/Main;->dm:Landroid/util/DisplayMetrics;
 
-    .line 456
+    .line 453
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v0
@@ -6417,15 +6413,40 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 459
+    .line 456
     sget-object v0, Lkidgames/number/coloring/Main;->c1Button:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v7
 
-    .line 461
+    .line 458
     .local v7, "params":Landroid/view/ViewGroup$LayoutParams;
+    sget-object v0, Lkidgames/number/coloring/Main;->dm:Landroid/util/DisplayMetrics;
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    div-int/lit8 v0, v0, 0x8
+
+    iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    .line 459
+    sget-object v0, Lkidgames/number/coloring/Main;->dm:Landroid/util/DisplayMetrics;
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    div-int/lit8 v0, v0, 0x8
+
+    iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 460
+    sget-object v0, Lkidgames/number/coloring/Main;->c2Button:Landroid/widget/Button;
+
+    invoke-virtual {v0}, Landroid/widget/Button;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v7
+
+    .line 461
     sget-object v0, Lkidgames/number/coloring/Main;->dm:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -6444,7 +6465,7 @@
     iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 463
-    sget-object v0, Lkidgames/number/coloring/Main;->c2Button:Landroid/widget/Button;
+    sget-object v0, Lkidgames/number/coloring/Main;->c3Button:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -6469,7 +6490,7 @@
     iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 466
-    sget-object v0, Lkidgames/number/coloring/Main;->c3Button:Landroid/widget/Button;
+    iget-object v0, p0, Lkidgames/number/coloring/Main;->modeButton:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -6494,7 +6515,7 @@
     iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 469
-    iget-object v0, p0, Lkidgames/number/coloring/Main;->modeButton:Landroid/widget/Button;
+    sget-object v0, Lkidgames/number/coloring/Main;->colorButton:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -6519,7 +6540,7 @@
     iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 472
-    sget-object v0, Lkidgames/number/coloring/Main;->colorButton:Landroid/widget/Button;
+    iget-object v0, p0, Lkidgames/number/coloring/Main;->chooseImageButton:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -6544,7 +6565,7 @@
     iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 475
-    iget-object v0, p0, Lkidgames/number/coloring/Main;->chooseImageButton:Landroid/widget/Button;
+    iget-object v0, p0, Lkidgames/number/coloring/Main;->undoButton:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -6569,7 +6590,7 @@
     iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 478
-    iget-object v0, p0, Lkidgames/number/coloring/Main;->undoButton:Landroid/widget/Button;
+    sget-object v0, Lkidgames/number/coloring/Main;->settingButton:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -6593,32 +6614,7 @@
 
     iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 481
-    sget-object v0, Lkidgames/number/coloring/Main;->settingButton:Landroid/widget/Button;
-
-    invoke-virtual {v0}, Landroid/widget/Button;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v7
-
     .line 482
-    sget-object v0, Lkidgames/number/coloring/Main;->dm:Landroid/util/DisplayMetrics;
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    div-int/lit8 v0, v0, 0x8
-
-    iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    .line 483
-    sget-object v0, Lkidgames/number/coloring/Main;->dm:Landroid/util/DisplayMetrics;
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    div-int/lit8 v0, v0, 0x8
-
-    iput v0, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 485
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -6639,7 +6635,7 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->bShare:Landroid/graphics/Bitmap;
 
-    .line 486
+    .line 483
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -6660,7 +6656,7 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->bLanguage:Landroid/graphics/Bitmap;
 
-    .line 487
+    .line 484
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -6681,49 +6677,7 @@
 
     sput-object v0, Lkidgames/number/coloring/Main;->bSave:Landroid/graphics/Bitmap;
 
-    .line 488
-    invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f020015
-
-    invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iget v1, v7, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    iget v2, v7, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    invoke-static {v0, v1, v2, v9}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    sput-object v0, Lkidgames/number/coloring/Main;->bMore:Landroid/graphics/Bitmap;
-
-    .line 489
-    invoke-virtual {p0}, Lkidgames/number/coloring/Main;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f02000d
-
-    invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iget v1, v7, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    iget v2, v7, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    invoke-static {v0, v1, v2, v9}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    sput-object v0, Lkidgames/number/coloring/Main;->bBuy:Landroid/graphics/Bitmap;
-
-    .line 492
+    .line 487
     sget-object v0, Lkidgames/number/coloring/Main;->c1Button:Landroid/widget/Button;
 
     new-instance v1, Lkidgames/number/coloring/Main$5;
@@ -6732,7 +6686,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 500
+    .line 495
     sget-object v0, Lkidgames/number/coloring/Main;->c2Button:Landroid/widget/Button;
 
     new-instance v1, Lkidgames/number/coloring/Main$6;
@@ -6741,7 +6695,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 508
+    .line 503
     sget-object v0, Lkidgames/number/coloring/Main;->c3Button:Landroid/widget/Button;
 
     new-instance v1, Lkidgames/number/coloring/Main$7;
@@ -6750,7 +6704,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 516
+    .line 511
     sget-object v0, Lkidgames/number/coloring/Main;->colorButton:Landroid/widget/Button;
 
     new-instance v1, Lkidgames/number/coloring/Main$8;
@@ -6759,7 +6713,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 523
+    .line 518
     iget-object v0, p0, Lkidgames/number/coloring/Main;->modeButton:Landroid/widget/Button;
 
     new-instance v1, Lkidgames/number/coloring/Main$9;
@@ -6768,7 +6722,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 560
+    .line 555
     iget-object v0, p0, Lkidgames/number/coloring/Main;->chooseImageButton:Landroid/widget/Button;
 
     new-instance v1, Lkidgames/number/coloring/Main$10;
@@ -6777,7 +6731,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 570
+    .line 565
     iget-object v0, p0, Lkidgames/number/coloring/Main;->undoButton:Landroid/widget/Button;
 
     new-instance v1, Lkidgames/number/coloring/Main$11;
@@ -6786,7 +6740,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 576
+    .line 571
     sget-object v0, Lkidgames/number/coloring/Main;->settingButton:Landroid/widget/Button;
 
     new-instance v1, Lkidgames/number/coloring/Main$12;
@@ -6795,24 +6749,24 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 584
+    .line 579
     invoke-static {}, Lkidgames/number/coloring/PuzzleView;->PuzzleViewInit()V
 
-    .line 585
+    .line 580
     sget-object v0, Lkidgames/number/coloring/Main;->puzzleView:Lkidgames/number/coloring/PuzzleView;
 
     invoke-virtual {v0}, Lkidgames/number/coloring/PuzzleView;->SetPicture()V
 
-    .line 588
+    .line 583
     const/4 v0, 0x0
 
-    :try_start_27a
+    :try_start_250
     invoke-static {v0}, Lkidgames/number/coloring/Main;->PlayAudio(I)V
-    :try_end_27d
-    .catch Ljava/lang/Exception; {:try_start_27a .. :try_end_27d} :catch_289
+    :try_end_253
+    .catch Ljava/lang/Exception; {:try_start_250 .. :try_end_253} :catch_25f
 
-    .line 592
-    :goto_27d
+    .line 587
+    :goto_253
     sget-object v0, Lkidgames/number/coloring/PuzzleView;->mPaint:Landroid/graphics/Paint;
 
     sget-object v1, Lkidgames/number/coloring/Main;->DrawColor:[I
@@ -6823,28 +6777,28 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 593
+    .line 588
     return-void
 
-    .line 589
-    :catch_289
+    .line 584
+    :catch_25f
     move-exception v6
 
-    .line 590
+    .line 585
     .local v6, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_27d
+    goto :goto_253
 .end method
 
 .method public onDestroy()V
     .registers 3
 
     .prologue
-    .line 803
+    .line 786
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 805
+    .line 788
     sget-object v0, Lkidgames/library/AdProvider;->AdProv:Lkidgames/library/AdProvider$AD_PROVIDER;
 
     sget-object v1, Lkidgames/library/AdProvider$AD_PROVIDER;->MOPUB_BIG:Lkidgames/library/AdProvider$AD_PROVIDER;
@@ -6857,19 +6811,19 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 806
+    .line 789
     :cond_f
     sget-object v0, Lkidgames/number/coloring/Main;->mopub_adview:Lcom/mopub/mobileads/MoPubView;
 
     invoke-virtual {v0}, Lcom/mopub/mobileads/MoPubView;->destroy()V
 
-    .line 808
+    .line 791
     :cond_14
     iget-object v0, p0, Lkidgames/number/coloring/Main;->myTimer:Ljava/util/Timer;
 
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
 
-    .line 809
+    .line 792
     return-void
 .end method
 
@@ -6879,18 +6833,18 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 770
+    .line 753
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_8
 
-    .line 771
+    .line 754
     invoke-virtual {p0}, Lkidgames/number/coloring/Main;->MyFinish()V
 
-    .line 772
+    .line 755
     const/4 v0, 0x1
 
-    .line 775
+    .line 758
     :goto_7
     return v0
 
@@ -6906,13 +6860,13 @@
     .registers 1
 
     .prologue
-    .line 395
+    .line 392
     invoke-static {}, Lkidgames/number/coloring/Main;->stopAudio()V
 
-    .line 396
+    .line 393
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    .line 397
+    .line 394
     return-void
 .end method
 
@@ -6920,14 +6874,14 @@
     .registers 2
 
     .prologue
-    .line 813
+    .line 796
     const/4 v0, 0x1
 
     sput-boolean v0, Lkidgames/number/coloring/Main;->isMainFinished:Z
 
-    .line 814
+    .line 797
     invoke-super {p0}, Landroid/app/Activity;->finish()V
 
-    .line 815
+    .line 798
     return-void
 .end method

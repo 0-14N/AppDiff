@@ -15,18 +15,11 @@
 .end method
 
 .method private static a(Ljava/lang/String;)Ljava/util/Date;
-    .registers 11
+    .registers 9
     .param p0, "sendTime"    # Ljava/lang/String;
 
     .prologue
-    const/4 v9, 0x2
-
-    const/4 v8, 0x1
-
-    .line 194
-    const-string v5, "l99"
-
-    invoke-static {v5, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v7, 0x1
 
     .line 195
     new-instance v3, Ljava/lang/StringBuilder;
@@ -57,13 +50,13 @@
     .line 199
     const-string v5, "Jan"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_77
+    if-eqz v5, :cond_51
 
     .line 200
     const-string v5, "01"
@@ -71,14 +64,16 @@
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 224
-    :cond_2c
-    :goto_2c
+    :cond_26
+    :goto_26
     const-string v5, "-"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 225
-    aget-object v5, v2, v9
+    const/4 v5, 0x2
+
+    aget-object v5, v2, v5
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -94,39 +89,6 @@
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 228
-    const-string v5, "l99"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const/4 v7, 0x0
-
-    aget-object v7, v2, v7
-
-    invoke-static {v7}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    aget-object v7, v2, v8
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    aget-object v7, v2, v9
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 229
     new-instance v0, Ljava/util/Date;
 
@@ -134,7 +96,7 @@
 
     .line 231
     .local v0, "date":Ljava/util/Date;
-    :try_start_67
+    :try_start_41
     new-instance v4, Ljava/text/SimpleDateFormat;
 
     const-string v5, "yyyy-MM-dd HH:mm:ss"
@@ -148,236 +110,236 @@
     move-result-object v5
 
     invoke-virtual {v4, v5}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
-    :try_end_75
-    .catch Ljava/text/ParseException; {:try_start_67 .. :try_end_75} :catch_12f
+    :try_end_4f
+    .catch Ljava/text/ParseException; {:try_start_41 .. :try_end_4f} :catch_107
 
     move-result-object v0
 
     .line 236
     .end local v4    # "sdf":Ljava/text/SimpleDateFormat;
-    :goto_76
+    :goto_50
     return-object v0
 
     .line 201
     .end local v0    # "date":Ljava/util/Date;
-    :cond_77
+    :cond_51
     const-string v5, "Feb"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_87
+    if-eqz v5, :cond_61
 
     .line 202
     const-string v5, "02"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_2c
+    goto :goto_26
 
     .line 203
-    :cond_87
+    :cond_61
     const-string v5, "Mar"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_97
+    if-eqz v5, :cond_71
 
     .line 204
     const-string v5, "03"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_2c
+    goto :goto_26
 
     .line 205
-    :cond_97
+    :cond_71
     const-string v5, "Apr"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_a7
+    if-eqz v5, :cond_81
 
     .line 206
     const-string v5, "04"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_2c
+    goto :goto_26
 
     .line 207
-    :cond_a7
+    :cond_81
     const-string v5, "May"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_b8
+    if-eqz v5, :cond_91
 
     .line 208
     const-string v5, "05"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_2c
+    goto :goto_26
 
     .line 209
-    :cond_b8
+    :cond_91
     const-string v5, "Jun"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_c9
+    if-eqz v5, :cond_a1
 
     .line 210
     const-string v5, "06"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_2c
+    goto :goto_26
 
     .line 211
-    :cond_c9
+    :cond_a1
     const-string v5, "Jul"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_da
+    if-eqz v5, :cond_b2
 
     .line 212
     const-string v5, "07"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_2c
+    goto/16 :goto_26
 
     .line 213
-    :cond_da
+    :cond_b2
     const-string v5, "Aug"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_eb
+    if-eqz v5, :cond_c3
 
     .line 214
     const-string v5, "08"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_2c
+    goto/16 :goto_26
 
     .line 215
-    :cond_eb
+    :cond_c3
     const-string v5, "Sept"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_fc
+    if-eqz v5, :cond_d4
 
     .line 216
     const-string v5, "09"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_2c
+    goto/16 :goto_26
 
     .line 217
-    :cond_fc
+    :cond_d4
     const-string v5, "Oct"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_10d
+    if-eqz v5, :cond_e5
 
     .line 218
     const-string v5, "10"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_2c
+    goto/16 :goto_26
 
     .line 219
-    :cond_10d
+    :cond_e5
     const-string v5, "Nov"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_11e
+    if-eqz v5, :cond_f6
 
     .line 220
     const-string v5, "11"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_2c
+    goto/16 :goto_26
 
     .line 221
-    :cond_11e
+    :cond_f6
     const-string v5, "Dec"
 
-    aget-object v6, v2, v8
+    aget-object v6, v2, v7
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_2c
+    if-eqz v5, :cond_26
 
     .line 222
     const-string v5, "12"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_2c
+    goto/16 :goto_26
 
     .line 233
     .restart local v0    # "date":Ljava/util/Date;
-    :catch_12f
+    :catch_107
     move-exception v1
 
     .line 234
     .local v1, "e":Ljava/text/ParseException;
     invoke-virtual {v1}, Ljava/text/ParseException;->printStackTrace()V
 
-    goto/16 :goto_76
+    goto/16 :goto_50
 .end method
 
 .method private static b(Ljava/lang/String;)Ljava/lang/String;
@@ -563,7 +525,7 @@
 .end method
 
 .method public static parseFileXmlMessage(Ljava/lang/String;)Lhg;
-    .registers 40
+    .registers 39
     .param p0, "message"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -675,7 +637,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_58b
+    if-eqz v36, :cond_46c
 
     .line 172
     const-string v36, "/"
@@ -715,7 +677,7 @@
 
     invoke-virtual {v6, v0}, Lhg;->setFromUser(Lft;)V
     :try_end_74
-    .catch Ljava/lang/Exception; {:try_start_42 .. :try_end_74} :catch_5ba
+    .catch Ljava/lang/Exception; {:try_start_42 .. :try_end_74} :catch_49b
 
     .line 190
     .end local v6    # "chatMessage":Lhg;
@@ -727,7 +689,7 @@
     .line 43
     .restart local v6    # "chatMessage":Lhg;
     :cond_75
-    packed-switch v29, :pswitch_data_5c0
+    packed-switch v29, :pswitch_data_4a2
 
     .line 163
     :cond_78
@@ -744,17 +706,8 @@
 
     move-result-object v26
 
-    .line 46
-    .local v26, "tagName":Ljava/lang/String;
-    const-string v36, "l99"
-
-    move-object/from16 v0, v36
-
-    move-object/from16 v1, v26
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 47
+    .local v26, "tagName":Ljava/lang/String;
     const-string v36, "message"
 
     move-object/from16 v0, v36
@@ -765,7 +718,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_ba
+    if-eqz v36, :cond_b1
 
     .line 48
     new-instance v6, Lhg;
@@ -808,7 +761,7 @@
     goto :goto_78
 
     .line 52
-    :cond_ba
+    :cond_b1
     const-string v36, "history"
 
     move-object/from16 v0, v36
@@ -819,7 +772,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_127
+    if-eqz v36, :cond_f8
 
     .line 53
     const-string v36, ""
@@ -856,7 +809,7 @@
 
     move-result v36
 
-    if-nez v36, :cond_fb
+    if-nez v36, :cond_f2
 
     const-string v36, "true"
 
@@ -868,7 +821,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_fb
+    if-eqz v36, :cond_f2
 
     .line 56
     const/16 v36, 0x1
@@ -878,54 +831,15 @@
     invoke-virtual {v6, v0}, Lhg;->setHistory(Z)V
 
     .line 57
-    :cond_fb
+    :cond_f2
     move-object/from16 v0, v34
 
     invoke-virtual {v6, v0}, Lhg;->setUuid(Ljava/lang/String;)V
 
-    .line 58
-    const-string v37, "roi_l99"
-
-    new-instance v38, Ljava/lang/StringBuilder;
-
-    invoke-static/range {v17 .. v17}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v36
-
-    if-eqz v36, :cond_124
-
-    const/16 v36, 0x0
-
-    :goto_10c
-    invoke-static/range {v36 .. v36}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
-
-    move-result-object v36
-
-    move-object/from16 v0, v38
-
-    move-object/from16 v1, v36
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual/range {v38 .. v38}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v36
-
-    move-object/from16 v0, v37
-
-    move-object/from16 v1, v36
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_78
-
-    :cond_124
-    const/16 v36, 0x1
-
-    goto :goto_10c
+    goto :goto_78
 
     .line 59
-    :cond_127
+    :cond_f8
     const-string v36, "body"
 
     move-object/from16 v0, v36
@@ -936,7 +850,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_15b
+    if-eqz v36, :cond_12c
 
     .line 60
     invoke-interface/range {v23 .. v23}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
@@ -945,7 +859,7 @@
 
     .line 61
     .local v27, "text":Ljava/lang/String;
-    if-nez v27, :cond_145
+    if-nez v27, :cond_116
 
     const-string v36, "null"
 
@@ -960,7 +874,7 @@
     if-nez v36, :cond_78
 
     .line 62
-    :cond_145
+    :cond_116
     const-string v36, "Room is unlocked and ready for occupants"
 
     move-object/from16 v0, v27
@@ -971,7 +885,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_154
+    if-eqz v36, :cond_125
 
     .line 63
     const/4 v6, 0x0
@@ -979,7 +893,7 @@
     goto/16 :goto_74
 
     .line 65
-    :cond_154
+    :cond_125
     move-object/from16 v0, v27
 
     invoke-virtual {v6, v0}, Lhg;->setMsgText(Ljava/lang/String;)V
@@ -988,7 +902,7 @@
 
     .line 67
     .end local v27    # "text":Ljava/lang/String;
-    :cond_15b
+    :cond_12c
     const-string v36, "userInfo"
 
     move-object/from16 v0, v36
@@ -999,7 +913,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_21f
+    if-eqz v36, :cond_1b4
 
     .line 68
     const/16 v36, 0x0
@@ -1064,74 +978,15 @@
 
     move-result-object v30
 
-    .line 72
-    .local v30, "uid":Ljava/lang/String;
-    const-string v36, "l99"
-
-    new-instance v37, Ljava/lang/StringBuilder;
-
-    invoke-static/range {v33 .. v33}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v38
-
-    invoke-direct/range {v37 .. v38}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v38, "---"
-
-    invoke-virtual/range {v37 .. v38}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    move-object/from16 v0, v37
-
-    move-object/from16 v1, v24
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    const-string v38, "---"
-
-    invoke-virtual/range {v37 .. v38}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    move-object/from16 v0, v37
-
-    move-object/from16 v1, v18
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    const-string v38, "----"
-
-    invoke-virtual/range {v37 .. v38}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    move-object/from16 v0, v37
-
-    move-object/from16 v1, v30
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    invoke-virtual/range {v37 .. v37}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v37
-
-    invoke-static/range {v36 .. v37}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 73
+    .local v30, "uid":Ljava/lang/String;
     new-instance v14, Lft;
 
     invoke-direct {v14}, Lft;-><init>()V
 
     .line 74
     .local v14, "from":Lft;
-    if-eqz v18, :cond_204
+    if-eqz v18, :cond_199
 
     .line 75
     const/16 v36, 0x0
@@ -1169,8 +1024,8 @@
     iput-wide v0, v14, Lft;->long_no:J
 
     .line 77
-    :cond_204
-    if-eqz v30, :cond_20e
+    :cond_199
+    if-eqz v30, :cond_1a3
 
     .line 78
     invoke-static/range {v30 .. v30}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -1182,8 +1037,8 @@
     iput-wide v0, v14, Lft;->user_id:J
 
     .line 80
-    :cond_20e
-    if-eqz v33, :cond_214
+    :cond_1a3
+    if-eqz v33, :cond_1a9
 
     .line 81
     move-object/from16 v0, v33
@@ -1191,8 +1046,8 @@
     iput-object v0, v14, Lft;->name:Ljava/lang/String;
 
     .line 83
-    :cond_214
-    if-eqz v24, :cond_21a
+    :cond_1a9
+    if-eqz v24, :cond_1af
 
     .line 84
     move-object/from16 v0, v24
@@ -1200,7 +1055,7 @@
     iput-object v0, v14, Lft;->head:Ljava/lang/String;
 
     .line 86
-    :cond_21a
+    :cond_1af
     invoke-virtual {v6, v14}, Lhg;->setFromUser(Lft;)V
 
     goto/16 :goto_78
@@ -1211,7 +1066,7 @@
     .end local v24    # "photo":Ljava/lang/String;
     .end local v30    # "uid":Ljava/lang/String;
     .end local v33    # "userName":Ljava/lang/String;
-    :cond_21f
+    :cond_1b4
     const-string v36, "achievement"
 
     move-object/from16 v0, v36
@@ -1222,24 +1077,15 @@
 
     move-result v36
 
-    if-eqz v36, :cond_23f
+    if-eqz v36, :cond_1cb
 
     .line 88
     invoke-interface/range {v23 .. v23}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v27
 
-    .line 89
-    .restart local v27    # "text":Ljava/lang/String;
-    const-string v36, "l99"
-
-    move-object/from16 v0, v36
-
-    move-object/from16 v1, v27
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 90
+    .restart local v27    # "text":Ljava/lang/String;
     move-object/from16 v0, v27
 
     invoke-virtual {v6, v0}, Lhg;->setAchieveJson(Ljava/lang/String;)V
@@ -1248,7 +1094,7 @@
 
     .line 91
     .end local v27    # "text":Ljava/lang/String;
-    :cond_23f
+    :cond_1cb
     const-string v36, "roimsgnumber"
 
     move-object/from16 v0, v36
@@ -1259,7 +1105,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_328
+    if-eqz v36, :cond_27e
 
     .line 92
     const/16 v36, 0x0
@@ -1282,7 +1128,7 @@
 
     move-result v36
 
-    if-nez v36, :cond_26c
+    if-nez v36, :cond_1f8
 
     .line 94
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1298,7 +1144,7 @@
     invoke-virtual {v6, v0}, Lhg;->setCtNum(I)V
 
     .line 95
-    :cond_26c
+    :cond_1f8
     const/16 v36, 0x0
 
     const-string v37, "commentNum"
@@ -1319,7 +1165,7 @@
 
     move-result v36
 
-    if-nez v36, :cond_28d
+    if-nez v36, :cond_219
 
     .line 97
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1335,7 +1181,7 @@
     invoke-virtual {v6, v0}, Lhg;->setCommentNum(I)V
 
     .line 98
-    :cond_28d
+    :cond_219
     const/16 v36, 0x0
 
     const-string v37, "achieveNum"
@@ -1356,7 +1202,7 @@
 
     move-result v36
 
-    if-nez v36, :cond_2ae
+    if-nez v36, :cond_23a
 
     .line 100
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1372,7 +1218,7 @@
     invoke-virtual {v6, v0}, Lhg;->setAchieveNum(I)V
 
     .line 101
-    :cond_2ae
+    :cond_23a
     const/16 v36, 0x0
 
     const-string v37, "broadcastNum"
@@ -1393,7 +1239,7 @@
 
     move-result v36
 
-    if-nez v36, :cond_2cf
+    if-nez v36, :cond_25b
 
     .line 103
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1409,7 +1255,7 @@
     invoke-virtual {v6, v0}, Lhg;->setAchieveNum(I)V
 
     .line 104
-    :cond_2cf
+    :cond_25b
     const/16 v36, 0x0
 
     const-string v37, "followNum"
@@ -1430,7 +1276,7 @@
 
     move-result v36
 
-    if-nez v36, :cond_2f0
+    if-nez v36, :cond_78
 
     .line 106
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1445,60 +1291,6 @@
 
     invoke-virtual {v6, v0}, Lhg;->setFollowNum(I)V
 
-    .line 107
-    :cond_2f0
-    const-string v36, "l99"
-
-    new-instance v37, Ljava/lang/StringBuilder;
-
-    invoke-static {v8}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v38
-
-    invoke-direct/range {v37 .. v38}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v38, "---"
-
-    invoke-virtual/range {v37 .. v38}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    move-object/from16 v0, v37
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    const-string v38, "---"
-
-    invoke-virtual/range {v37 .. v38}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    move-object/from16 v0, v37
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    const-string v38, "----"
-
-    invoke-virtual/range {v37 .. v38}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    move-object/from16 v0, v37
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    invoke-virtual/range {v37 .. v37}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v37
-
-    invoke-static/range {v36 .. v37}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     goto/16 :goto_78
 
     .line 108
@@ -1507,7 +1299,7 @@
     .end local v7    # "commentNum":Ljava/lang/String;
     .end local v8    # "ctNum":Ljava/lang/String;
     .end local v13    # "followNum":Ljava/lang/String;
-    :cond_328
+    :cond_27e
     const-string v36, "toUserInfo"
 
     move-object/from16 v0, v36
@@ -1518,7 +1310,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_3aa
+    if-eqz v36, :cond_2c3
 
     .line 109
     const/16 v36, 0x0
@@ -1581,76 +1373,13 @@
 
     invoke-interface {v0, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v30
-
-    .line 113
-    .restart local v30    # "uid":Ljava/lang/String;
-    const-string v36, "l99"
-
-    new-instance v37, Ljava/lang/StringBuilder;
-
-    invoke-static/range {v33 .. v33}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v38
-
-    invoke-direct/range {v37 .. v38}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v38, "---"
-
-    invoke-virtual/range {v37 .. v38}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    move-object/from16 v0, v37
-
-    move-object/from16 v1, v24
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    const-string v38, "---"
-
-    invoke-virtual/range {v37 .. v38}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    move-object/from16 v0, v37
-
-    move-object/from16 v1, v18
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    const-string v38, "----"
-
-    invoke-virtual/range {v37 .. v38}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    move-object/from16 v0, v37
-
-    move-object/from16 v1, v30
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    invoke-virtual/range {v37 .. v37}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v37
-
-    invoke-static/range {v36 .. v37}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     goto/16 :goto_78
 
     .line 114
     .end local v18    # "jid":Ljava/lang/String;
     .end local v24    # "photo":Ljava/lang/String;
-    .end local v30    # "uid":Ljava/lang/String;
     .end local v33    # "userName":Ljava/lang/String;
-    :cond_3aa
+    :cond_2c3
     const-string v36, "x"
 
     move-object/from16 v0, v36
@@ -1661,7 +1390,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_3bf
+    if-eqz v36, :cond_2d8
 
     .line 115
     const/16 v36, 0x1
@@ -1673,7 +1402,7 @@
     goto/16 :goto_78
 
     .line 116
-    :cond_3bf
+    :cond_2d8
     const-string v36, "delay"
 
     move-object/from16 v0, v36
@@ -1684,7 +1413,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_3e0
+    if-eqz v36, :cond_2f9
 
     .line 117
     const/16 v36, 0x0
@@ -1711,7 +1440,7 @@
 
     .line 119
     .end local v25    # "stamp":Ljava/lang/String;
-    :cond_3e0
+    :cond_2f9
     const-string v36, "custom-image"
 
     move-object/from16 v0, v36
@@ -1722,7 +1451,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_3f4
+    if-eqz v36, :cond_30d
 
     .line 120
     const/16 v36, 0x1
@@ -1734,7 +1463,7 @@
     goto/16 :goto_78
 
     .line 121
-    :cond_3f4
+    :cond_30d
     const-string v36, "custom-audio"
 
     move-object/from16 v0, v36
@@ -1745,7 +1474,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_408
+    if-eqz v36, :cond_321
 
     .line 122
     const/16 v36, 0x1
@@ -1757,7 +1486,7 @@
     goto/16 :goto_78
 
     .line 123
-    :cond_408
+    :cond_321
     const-string v36, "custom"
 
     move-object/from16 v0, v36
@@ -1768,7 +1497,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_572
+    if-eqz v36, :cond_453
 
     .line 124
     const/16 v36, 0x0
@@ -1913,31 +1642,8 @@
 
     move-result-object v35
 
-    .line 134
-    .local v35, "videoThumbnailImage":Ljava/lang/String;
-    const-string v36, "l99"
-
-    new-instance v37, Ljava/lang/StringBuilder;
-
-    const-string v38, "lingURL"
-
-    invoke-direct/range {v37 .. v38}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    move-object/from16 v0, v37
-
-    move-object/from16 v1, v31
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    invoke-virtual/range {v37 .. v37}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v37
-
-    invoke-static/range {v36 .. v37}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 135
+    .local v35, "videoThumbnailImage":Ljava/lang/String;
     const/16 v36, 0x0
 
     const-string v37, "linkImage"
@@ -1952,39 +1658,8 @@
 
     move-result-object v19
 
-    .line 136
-    .local v19, "linkImage":Ljava/lang/String;
-    const-string v36, "l99"
-
-    new-instance v37, Ljava/lang/StringBuilder;
-
-    invoke-static/range {v22 .. v22}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v38
-
-    invoke-direct/range {v37 .. v38}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v38, "=="
-
-    invoke-virtual/range {v37 .. v38}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    move-object/from16 v0, v37
-
-    move-object/from16 v1, v21
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v37
-
-    invoke-virtual/range {v37 .. v37}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v37
-
-    invoke-static/range {v36 .. v37}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 137
+    .local v19, "linkImage":Ljava/lang/String;
     const-string v36, "image"
 
     move-object/from16 v0, v36
@@ -1995,7 +1670,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_4f2
+    if-eqz v36, :cond_3d3
 
     .line 138
     const/16 v36, 0x68
@@ -2012,7 +1687,7 @@
     goto/16 :goto_78
 
     .line 140
-    :cond_4f2
+    :cond_3d3
     const-string v36, "audio"
 
     move-object/from16 v0, v36
@@ -2023,7 +1698,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_515
+    if-eqz v36, :cond_3f6
 
     .line 141
     invoke-static {v11}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -2049,7 +1724,7 @@
     goto/16 :goto_78
 
     .line 144
-    :cond_515
+    :cond_3f6
     const-string v36, "video"
 
     move-object/from16 v0, v36
@@ -2060,7 +1735,7 @@
 
     move-result v36
 
-    if-eqz v36, :cond_53d
+    if-eqz v36, :cond_41e
 
     .line 145
     const/16 v36, 0x67
@@ -2091,7 +1766,7 @@
     goto/16 :goto_78
 
     .line 149
-    :cond_53d
+    :cond_41e
     const-string v36, "bet"
 
     move-object/from16 v0, v36
@@ -2116,7 +1791,7 @@
 
     move-result v36
 
-    if-nez v36, :cond_569
+    if-nez v36, :cond_44a
 
     const-string v36, "0"
 
@@ -2128,7 +1803,7 @@
 
     move-result v36
 
-    if-nez v36, :cond_569
+    if-nez v36, :cond_44a
 
     .line 152
     move-object/from16 v0, v22
@@ -2138,7 +1813,7 @@
     goto/16 :goto_78
 
     .line 154
-    :cond_569
+    :cond_44a
     const-string v36, "0"
 
     move-object/from16 v0, v36
@@ -2158,7 +1833,7 @@
     .end local v30    # "uid":Ljava/lang/String;
     .end local v31    # "url":Ljava/lang/String;
     .end local v35    # "videoThumbnailImage":Ljava/lang/String;
-    :cond_572
+    :cond_453
     const-string v36, "sendTime"
 
     move-object/from16 v0, v36
@@ -2190,8 +1865,8 @@
     .end local v9    # "date":Ljava/util/Date;
     .end local v26    # "tagName":Ljava/lang/String;
     .restart local v32    # "user":Lft;
-    :cond_58b
-    :try_start_58b
+    :cond_46c
+    :try_start_46c
     const-string v36, "@"
 
     move-object/from16 v0, v36
@@ -2241,15 +1916,15 @@
     move-object/from16 v2, v32
 
     iput-wide v0, v2, Lft;->long_no:J
-    :try_end_5b8
-    .catch Ljava/lang/Exception; {:try_start_58b .. :try_end_5b8} :catch_5ba
+    :try_end_499
+    .catch Ljava/lang/Exception; {:try_start_46c .. :try_end_499} :catch_49b
 
     goto/16 :goto_6f
 
     .line 180
     .end local v28    # "tmp":[Ljava/lang/String;
     .end local v32    # "user":Lft;
-    :catch_5ba
+    :catch_49b
     move-exception v12
 
     .line 181
@@ -2259,7 +1934,9 @@
     goto/16 :goto_74
 
     .line 43
-    :pswitch_data_5c0
+    nop
+
+    :pswitch_data_4a2
     .packed-switch 0x2
         :pswitch_7d
     .end packed-switch
@@ -2586,7 +2263,7 @@
 
     .line 325
     :cond_46
-    packed-switch v7, :pswitch_data_c2
+    packed-switch v7, :pswitch_data_be
 
     .line 343
     :cond_49
@@ -2603,20 +2280,15 @@
 
     move-result-object v6
 
-    .line 328
-    .local v6, "tagName":Ljava/lang/String;
-    const-string v8, "l99"
-
-    invoke-static {v8, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 329
+    .local v6, "tagName":Ljava/lang/String;
     const-string v8, "presence"
 
     invoke-virtual {v8, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
 
-    if-eqz v8, :cond_68
+    if-eqz v8, :cond_63
 
     .line 330
     const-string v8, ""
@@ -2630,7 +2302,7 @@
     .line 331
     goto :goto_49
 
-    :cond_68
+    :cond_63
     const-string v8, "userInfo"
 
     invoke-virtual {v8, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2734,7 +2406,9 @@
     goto :goto_49
 
     .line 325
-    :pswitch_data_c2
+    nop
+
+    :pswitch_data_be
     .packed-switch 0x2
         :pswitch_4e
     .end packed-switch

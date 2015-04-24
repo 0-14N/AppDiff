@@ -33,15 +33,6 @@
 .field private registerHandler:Lorg/linphone/RegisterCodeService$RegisterHandler;
 
 .field private registerTime:Ljava/util/concurrent/atomic/AtomicReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/atomic/AtomicReference",
-            "<",
-            "Ljava/util/Date;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

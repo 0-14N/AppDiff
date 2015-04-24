@@ -270,17 +270,17 @@
 
     iget-object v0, p0, Lcn/dxy/idxyer/activity/PictureViewActivity;->h:Lc/a/a/a/d;
 
-    new-instance v1, Lcn/dxy/idxyer/activity/s;
+    new-instance v1, Lcn/dxy/idxyer/activity/r;
 
-    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/s;-><init>(Lcn/dxy/idxyer/activity/PictureViewActivity;)V
+    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/r;-><init>(Lcn/dxy/idxyer/activity/PictureViewActivity;)V
 
     invoke-virtual {v0, v1}, Lc/a/a/a/d;->a(Lc/a/a/a/i;)V
 
     iget-object v0, p0, Lcn/dxy/idxyer/activity/PictureViewActivity;->h:Lc/a/a/a/d;
 
-    new-instance v1, Lcn/dxy/idxyer/activity/t;
+    new-instance v1, Lcn/dxy/idxyer/activity/s;
 
-    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/t;-><init>(Lcn/dxy/idxyer/activity/PictureViewActivity;)V
+    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/s;-><init>(Lcn/dxy/idxyer/activity/PictureViewActivity;)V
 
     invoke-virtual {v0, v1}, Lc/a/a/a/d;->a(Landroid/view/View$OnLongClickListener;)V
 
@@ -316,9 +316,9 @@
 
     iget-object v3, p0, Lcn/dxy/idxyer/activity/PictureViewActivity;->k:Lcom/c/a/b/d;
 
-    new-instance v4, Lcn/dxy/idxyer/activity/v;
+    new-instance v4, Lcn/dxy/idxyer/activity/u;
 
-    invoke-direct {v4, p0}, Lcn/dxy/idxyer/activity/v;-><init>(Lcn/dxy/idxyer/activity/PictureViewActivity;)V
+    invoke-direct {v4, p0}, Lcn/dxy/idxyer/activity/u;-><init>(Lcn/dxy/idxyer/activity/PictureViewActivity;)V
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/c/a/b/g;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/c/a/b/d;Lcom/c/a/b/f/a;)V
 

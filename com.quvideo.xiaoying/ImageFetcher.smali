@@ -222,9 +222,9 @@
 
     sget-object v1, Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcher;->a:Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcher$ImageFetcherHttpListener;
 
-    new-instance v4, Lakc;
+    new-instance v4, Ladi;
 
-    invoke-direct {v4, v0, p0}, Lakc;-><init>(Ljava/util/concurrent/LinkedBlockingQueue;Ljava/lang/String;)V
+    invoke-direct {v4, v0, p0}, Ladi;-><init>(Ljava/util/concurrent/LinkedBlockingQueue;Ljava/lang/String;)V
 
     invoke-interface {v1, p0, v3, v4}, Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcher$ImageFetcherHttpListener;->onFetchFile(Ljava/lang/String;Ljava/lang/String;Lcom/quvideo/xiaoying/common/ResultListener;)V
 

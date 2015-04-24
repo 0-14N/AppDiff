@@ -296,30 +296,30 @@
     iput-boolean v2, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->ah:Z
 
     .line 1099
-    new-instance v0, Lmc;
+    new-instance v0, Lfj;
 
-    invoke-direct {v0, p0}, Lmc;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v0, p0}, Lfj;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->ai:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     .line 1348
-    new-instance v0, Lmn;
+    new-instance v0, Lfu;
 
-    invoke-direct {v0, p0}, Lmn;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v0, p0}, Lfu;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->aj:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 
     .line 1389
-    new-instance v0, Lmo;
+    new-instance v0, Lfv;
 
-    invoke-direct {v0, p0}, Lmo;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v0, p0}, Lfv;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->ak:Lcom/quvideo/xiaoying/app/studio/LikeVideoListViewManager$VideoListManagerCallback;
 
     .line 1417
-    new-instance v0, Lmp;
+    new-instance v0, Lfw;
 
-    invoke-direct {v0, p0}, Lmp;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v0, p0}, Lfw;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->al:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/CustomScrollView$OnScrollListener;
 
@@ -358,7 +358,7 @@
     .line 1254
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->D:Landroid/widget/TextView;
 
-    const v1, 0x7f0a034d
+    const v1, 0x7f0a032a
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -382,7 +382,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02066b
+    const v1, 0x7f02064b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -428,7 +428,7 @@
     .line 1260
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->D:Landroid/widget/TextView;
 
-    const v1, 0x7f0a034e
+    const v1, 0x7f0a032b
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -439,7 +439,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07005b
+    const v2, 0x7f070044
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -452,7 +452,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02066c
+    const v1, 0x7f02064c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -543,7 +543,7 @@
     .prologue
     const/4 v3, 0x0
 
-    const v2, 0x7f020667
+    const v2, 0x7f020647
 
     const/16 v0, 0xff
 
@@ -600,7 +600,7 @@
     .line 1441
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->s:Landroid/view/View;
 
-    const v1, 0x7f020577
+    const v1, 0x7f02055d
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -662,9 +662,9 @@
 
     const-string/jumbo v1, "user.in_blacklist"
 
-    new-instance v2, Lmq;
+    new-instance v2, Lfx;
 
-    invoke-direct {v2, p0}, Lmq;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v2, p0}, Lfx;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -783,9 +783,9 @@
 
     const-string/jumbo v1, "user.report"
 
-    new-instance v2, Lmu;
+    new-instance v2, Lgb;
 
-    invoke-direct {v2, p0}, Lmu;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v2, p0}, Lgb;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -819,7 +819,7 @@
     const/4 v3, 0x0
 
     .line 438
-    const v0, 0x7f060448
+    const v0, 0x7f060433
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->findViewById(I)Landroid/view/View;
 
@@ -942,9 +942,9 @@
 
     const-string/jumbo v1, "balcklist.add"
 
-    new-instance v2, Lme;
+    new-instance v2, Lfl;
 
-    invoke-direct {v2, p0, p1}, Lme;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Lfl;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -1030,9 +1030,9 @@
 
     const-string/jumbo v1, "balcklist.remove"
 
-    new-instance v2, Lmh;
+    new-instance v2, Lfo;
 
-    invoke-direct {v2, p0, p1}, Lmh;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Lfo;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -1148,7 +1148,7 @@
 
     .line 481
     :goto_14
-    const v0, 0x7f060447
+    const v0, 0x7f060432
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->findViewById(I)Landroid/view/View;
 
@@ -1269,9 +1269,9 @@
     const-string/jumbo v2, "user.info"
 
     .line 506
-    new-instance v3, Lmr;
+    new-instance v3, Lfy;
 
-    invoke-direct {v3, p0}, Lmr;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v3, p0}, Lfy;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     .line 504
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1340,7 +1340,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0205d0
+    const v1, 0x7f0205b2
 
     invoke-static {v0, v1}, Lcom/networkbench/agent/impl/instrumentation/NBSBitmapFactoryInstrumentation;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -1364,7 +1364,7 @@
     .line 549
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->u:Landroid/widget/TextView;
 
-    const v1, 0x7f0a0365
+    const v1, 0x7f0a0342
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -1395,7 +1395,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 555
-    const v0, 0x7f060445
+    const v0, 0x7f060430
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->findViewById(I)Landroid/view/View;
 
@@ -1411,7 +1411,7 @@
     invoke-virtual {v0, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 557
-    const v0, 0x7f060449
+    const v0, 0x7f060434
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->findViewById(I)Landroid/view/View;
 
@@ -1427,7 +1427,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 560
-    const v0, 0x7f060444
+    const v0, 0x7f06042f
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->findViewById(I)Landroid/view/View;
 
@@ -1469,7 +1469,7 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/CustomScrollView;->setOnScrollListener(Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/CustomScrollView$OnScrollListener;)V
 
     .line 567
-    const v0, 0x7f06044a
+    const v0, 0x7f060435
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->findViewById(I)Landroid/view/View;
 
@@ -1480,7 +1480,7 @@
     .line 568
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->A:Landroid/view/View;
 
-    const v1, 0x7f06044b
+    const v1, 0x7f060436
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1491,7 +1491,7 @@
     .line 569
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->A:Landroid/view/View;
 
-    const v1, 0x7f06044d
+    const v1, 0x7f060438
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1502,7 +1502,7 @@
     .line 570
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->B:Landroid/view/View;
 
-    const v1, 0x7f06044c
+    const v1, 0x7f060437
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1658,9 +1658,9 @@
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
     .line 784
-    new-instance v2, Lms;
+    new-instance v2, Lfz;
 
-    invoke-direct {v2, p0}, Lms;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v2, p0}, Lfz;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     .line 783
     invoke-direct {v1, p0, v0, v2}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
@@ -1687,7 +1687,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0a03b1
+    const v2, 0x7f0a038e
 
     aput v2, v0, v1
 
@@ -1696,17 +1696,17 @@
     .line 770
     :array_38
     .array-data 4
-        0x7f0a03b1
-        0x7f0a03ac
-        0x7f0a03a3
+        0x7f0a038e
+        0x7f0a0389
+        0x7f0a0380
     .end array-data
 
     .line 775
     :array_42
     .array-data 4
-        0x7f0a03b1
-        0x7f0a03a2
-        0x7f0a03a3
+        0x7f0a038e
+        0x7f0a037f
+        0x7f0a0380
     .end array-data
 .end method
 
@@ -1718,18 +1718,18 @@
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 807
-    const v1, 0x7f0a03a6
+    const v1, 0x7f0a0383
 
     .line 808
-    new-instance v2, Lmt;
+    new-instance v2, Lga;
 
-    invoke-direct {v2, p0}, Lmt;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v2, p0}, Lga;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     .line 806
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
     .line 821
-    const v1, 0x7f0a03a3
+    const v1, 0x7f0a0380
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1890,14 +1890,14 @@
     if-eqz v2, :cond_b2
 
     .line 886
-    const v1, 0x7f0a03b9
+    const v1, 0x7f0a0396
 
     invoke-virtual {p0, v1}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     .line 887
-    const v1, 0x7f0a03ba
+    const v1, 0x7f0a0397
 
     new-array v4, v6, [Ljava/lang/Object;
 
@@ -1984,14 +1984,14 @@
 
     .line 889
     :cond_b2
-    const v2, 0x7f0a03b4
+    const v2, 0x7f0a0391
 
     invoke-virtual {p0, v2}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     .line 890
-    const v4, 0x7f0a03b5
+    const v4, 0x7f0a0392
 
     const/4 v5, 0x2
 
@@ -2026,18 +2026,18 @@
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 910
-    const v1, 0x7f0a03a5
+    const v1, 0x7f0a0382
 
     .line 911
-    new-instance v2, Lmd;
+    new-instance v2, Lfk;
 
-    invoke-direct {v2, p0}, Lmd;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v2, p0}, Lfk;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     .line 909
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
     .line 929
-    const v1, 0x7f0a03a2
+    const v1, 0x7f0a037f
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2091,9 +2091,9 @@
 
     const/4 v2, 0x1
 
-    new-instance v3, Lmk;
+    new-instance v3, Lfr;
 
-    invoke-direct {v3, p0}, Lmk;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v3, p0}, Lfr;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/quvideo/xiaoying/app/im/IMLoginMgr;->startChating(Ljava/lang/String;ZLcom/quvideo/xiaoying/app/im/IMLoginMgr$IMLoginListener;)V
 
@@ -2155,9 +2155,9 @@
     .line 1033
     const-string/jumbo v1, "follow.add"
 
-    new-instance v2, Lml;
+    new-instance v2, Lfs;
 
-    invoke-direct {v2, p0}, Lml;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v2, p0}, Lfs;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     .line 1032
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -2220,9 +2220,9 @@
     .line 1072
     const-string/jumbo v1, "follow.remove"
 
-    new-instance v2, Lmm;
+    new-instance v2, Lft;
 
-    invoke-direct {v2, p0}, Lmm;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
+    invoke-direct {v2, p0}, Lft;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;)V
 
     .line 1071
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V

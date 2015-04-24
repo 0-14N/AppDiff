@@ -28,7 +28,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/hehu360/babymusicbox/activity/r;->a:Lcom/hehu360/babymusicbox/activity/MainActivity_;
 
-    invoke-static {v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->d(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
+    invoke-static {v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->c(Lcom/hehu360/babymusicbox/activity/MainActivity_;)V
     :try_end_5
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_5} :catch_6
 

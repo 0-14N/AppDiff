@@ -367,11 +367,11 @@
 
     .line 204
     :cond_37
-    invoke-static {p1}, Lcom/wunderkinder/wunderlistandroid/util/push/PushHelper;->with(Landroid/content/Context;)Lcom/wunderkinder/wunderlistandroid/util/push/GcmHelper;
+    invoke-static {p1}, Lcom/wunderkinder/wunderlistandroid/util/push/PushHelper;->with(Landroid/content/Context;)Lcom/wunderkinder/wunderlistandroid/util/push/BaiduHelper;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/wunderkinder/wunderlistandroid/util/push/GcmHelper;->initializePushNotifications()V
+    invoke-virtual {v2}, Lcom/wunderkinder/wunderlistandroid/util/push/BaiduHelper;->initializePushNotifications()V
 
     .line 205
     return-void

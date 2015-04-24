@@ -1582,7 +1582,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "2"
+    const-string v3, "4"
 
     aput-object v3, v1, v2
 
@@ -1591,8 +1591,8 @@
     .line 174
     invoke-virtual {p0}, Lcom/gameimax/kidsspaandsalon/kids_spa_and_salon;->setuoLocalNotification()V
 
-    .line 175
-    invoke-virtual {p0}, Lcom/gameimax/kidsspaandsalon/kids_spa_and_salon;->setupAdmob()V
+    .line 177
+    invoke-virtual {p0}, Lcom/gameimax/kidsspaandsalon/kids_spa_and_salon;->setupInMobi()V
 
     .line 189
     new-instance v0, Lcom/gameimax/kidsspaandsalon/kids_spa_and_salon$2;

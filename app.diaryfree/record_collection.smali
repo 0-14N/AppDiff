@@ -121,13 +121,7 @@
 
     move-result v2
 
-    const/4 v3, 0x1
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    invoke-direct {v0, v1, v2, v3}, Lapp/diary/db/record;-><init>(Lapp/diary/db/dbinterface;ILjava/lang/Boolean;)V
+    invoke-direct {v0, v1, v2}, Lapp/diary/db/record;-><init>(Lapp/diary/db/dbinterface;I)V
 
     .line 31
     .local v0, "record_":Lapp/diary/db/record;
@@ -141,20 +135,6 @@
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_15
-.end method
-
-.method public GetTotalRecordCount()I
-    .registers 2
-
-    .prologue
-    .line 39
-    iget-object v0, p0, Lapp/diary/db/record_collection;->dba:Lapp/diary/db/dbinterface;
-
-    invoke-virtual {v0}, Lapp/diary/db/dbinterface;->GetRecordsCount()I
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public getCount()I

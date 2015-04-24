@@ -112,9 +112,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/UserVideoListViewManager;->q:Lcom/quvideo/xiaoying/app/studio/LikeVideoListViewManager$VideoListManagerCallback;
 
     .line 283
-    new-instance v0, Labj;
+    new-instance v0, Luq;
 
-    invoke-direct {v0, p0}, Labj;-><init>(Lcom/quvideo/xiaoying/app/studio/UserVideoListViewManager;)V
+    invoke-direct {v0, p0}, Luq;-><init>(Lcom/quvideo/xiaoying/app/studio/UserVideoListViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserVideoListViewManager;->r:Landroid/widget/AbsListView$OnScrollListener;
 
@@ -614,7 +614,7 @@
     invoke-virtual {v1}, Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshCustomScrollView;->onRefreshComplete()V
 
     .line 94
-    const v1, 0x7f0605d1
+    const v1, 0x7f0605bc
 
     invoke-virtual {p4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -625,7 +625,7 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/UserVideoListViewManager;->a:Landroid/widget/ListView;
 
     .line 95
-    const v1, 0x7f0605d0
+    const v1, 0x7f0605bb
 
     invoke-virtual {p4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

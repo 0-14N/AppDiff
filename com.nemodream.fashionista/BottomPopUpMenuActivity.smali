@@ -15,9 +15,15 @@
 
 .field private final KAKAOTALK:I
 
+.field private final QQ:I
+
+.field private final RENRENWANG:I
+
 .field private final SMS:I
 
 .field private final TWITTER:I
+
+.field private final WEIBO:I
 
 .field private mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
 
@@ -29,50 +35,65 @@
     .registers 2
 
     .prologue
-    .line 26
+    .line 28
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 28
+    .line 30
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->GO_SHOP:I
 
-    .line 29
+    .line 31
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->TWITTER:I
 
-    .line 30
+    .line 32
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->FACEBOOK:I
 
-    .line 31
+    .line 33
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->KAKAOTALK:I
 
-    .line 32
+    .line 34
+    const/16 v0, 0xb
+
+    iput v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->WEIBO:I
+
+    .line 35
+    const/16 v0, 0xc
+
+    iput v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->RENRENWANG:I
+
+    .line 36
+    const/16 v0, 0xd
+
+    iput v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->QQ:I
+
+    .line 37
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->SMS:I
 
-    .line 33
+    .line 38
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->EMAIL:I
 
-    .line 35
+    .line 40
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
 
-    .line 36
+    .line 41
     const-string v0, ""
 
     iput-object v0, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mSeq:Ljava/lang/String;
 
-    .line 26
+    .line 28
     return-void
 .end method
 
@@ -81,13 +102,32 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 191
+    .line 239
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 193
+    .line 241
     .local v0, "pref":Landroid/content/SharedPreferences;
+    const-string v2, "lgh"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "type >>>>>> "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 243
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "http://fashionista.widepics.co.kr/fapi2/addPleaLog.action?apiKey=2bcf61709f6511e1a8b00800200c9a66&productSeq="
@@ -110,7 +150,7 @@
 
     move-result-object v2
 
-    .line 194
+    .line 244
     const-string v3, "&accessToken="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -129,19 +169,34 @@
 
     move-result-object v2
 
-    .line 195
+    .line 245
+    const-string v3, "&language="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->getlanguage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    .line 246
     const-string v3, "&deviceId="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 193
+    .line 243
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 196
+    .line 247
     .local v1, "url":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -171,7 +226,26 @@
 
     move-result-object v1
 
-    .line 198
+    .line 248
+    const-string v2, "lgh"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "url >>>>>> "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 250
     new-instance v2, Lcom/nemodream/fashionista/task/PleaLogTask;
 
     invoke-direct {v2, v1, p0}, Lcom/nemodream/fashionista/task/PleaLogTask;-><init>(Ljava/lang/String;Landroid/app/Activity;)V
@@ -182,7 +256,7 @@
 
     invoke-virtual {v2, v3}, Lcom/nemodream/fashionista/task/PleaLogTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 199
+    .line 251
     return-void
 .end method
 
@@ -191,10 +265,10 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 86
+    .line 105
     const-string v0, "http://fashionista.widepics.co.kr/con.action?"
 
-    .line 87
+    .line 106
     .local v0, "str":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -220,7 +294,7 @@
 
     move-result-object v0
 
-    .line 88
+    .line 107
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -243,12 +317,38 @@
 
     move-result-object v0
 
-    .line 89
+    .line 108
     return-object v0
 .end method
 
 
 # virtual methods
+.method public getlanguage()Ljava/lang/String;
+    .registers 4
+
+    .prologue
+    .line 254
+    invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v2
+
+    iget-object v1, v2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    .line 255
+    .local v1, "systemLocale":Ljava/util/Locale;
+    invoke-virtual {v1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 256
+    .local v0, "strLanguage":Ljava/lang/String;
+    return-object v0
+.end method
+
 .method public onClick(Landroid/view/View;)V
     .registers 13
     .param p1, "v"    # Landroid/view/View;
@@ -258,34 +358,36 @@
 
     const/4 v6, 0x2
 
-    const/4 v5, 0x1
+    const/4 v5, -0x1
 
-    const/4 v4, -0x1
+    const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 94
+    .line 113
     const/4 v9, 0x0
 
-    .line 95
+    .line 114
     .local v9, "i":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v1
 
-    packed-switch v1, :pswitch_data_17a
+    packed-switch v1, :pswitch_data_226
 
-    .line 188
+    .line 236
     :cond_d
     :goto_d
     :pswitch_d
     return-void
 
-    .line 97
+    .line 117
     :pswitch_e
-    invoke-direct {p0, v6}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setPleaLog(I)V
+    const/16 v1, 0xb
 
-    .line 98
+    invoke-direct {p0, v1}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setPleaLog(I)V
+
+    .line 118
     new-instance v9, Landroid/content/Intent;
 
     .end local v9    # "i":Landroid/content/Intent;
@@ -293,7 +395,152 @@
 
     invoke-direct {v9, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 99
+    .line 119
+    .restart local v9    # "i":Landroid/content/Intent;
+    const-string v1, "TYPE"
+
+    const-string v2, "WEIBO"
+
+    invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 120
+    const-string v1, "URL"
+
+    const/16 v2, 0xb
+
+    invoke-direct {p0, v2}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->urlChange(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 121
+    const-string v1, "TEXT"
+
+    iget-object v2, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
+
+    invoke-virtual {v2}, Lcom/nemodream/fashionista/bean/AppInfoBean;->getWeiboPlea()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 122
+    invoke-virtual {p0, v9}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_d
+
+    .line 125
+    :pswitch_3b
+    const/16 v1, 0xc
+
+    invoke-direct {p0, v1}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setPleaLog(I)V
+
+    .line 126
+    new-instance v9, Landroid/content/Intent;
+
+    .end local v9    # "i":Landroid/content/Intent;
+    const-class v1, Lcom/nemodream/fashionista/WebViewActivity;
+
+    invoke-direct {v9, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 127
+    .restart local v9    # "i":Landroid/content/Intent;
+    const-string v1, "TYPE"
+
+    const-string v2, "RENRENWANG"
+
+    invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 128
+    const-string v1, "URL"
+
+    const/16 v2, 0xc
+
+    invoke-direct {p0, v2}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->urlChange(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 129
+    const-string v1, "TEXT"
+
+    iget-object v2, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
+
+    invoke-virtual {v2}, Lcom/nemodream/fashionista/bean/AppInfoBean;->getRenrenwangPlea()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 130
+    invoke-virtual {p0, v9}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_d
+
+    .line 133
+    :pswitch_68
+    const/16 v1, 0xd
+
+    invoke-direct {p0, v1}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setPleaLog(I)V
+
+    .line 134
+    new-instance v9, Landroid/content/Intent;
+
+    .end local v9    # "i":Landroid/content/Intent;
+    const-class v1, Lcom/nemodream/fashionista/WebViewActivity;
+
+    invoke-direct {v9, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 135
+    .restart local v9    # "i":Landroid/content/Intent;
+    const-string v1, "TYPE"
+
+    const-string v2, "QQ"
+
+    invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 136
+    const-string v1, "URL"
+
+    const/16 v2, 0xd
+
+    invoke-direct {p0, v2}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->urlChange(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 137
+    const-string v1, "TEXT"
+
+    iget-object v2, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
+
+    invoke-virtual {v2}, Lcom/nemodream/fashionista/bean/AppInfoBean;->getQqPlea()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 138
+    invoke-virtual {p0, v9}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_d
+
+    .line 142
+    :pswitch_96
+    invoke-direct {p0, v6}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setPleaLog(I)V
+
+    .line 143
+    new-instance v9, Landroid/content/Intent;
+
+    .end local v9    # "i":Landroid/content/Intent;
+    const-class v1, Lcom/nemodream/fashionista/WebViewActivity;
+
+    invoke-direct {v9, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 144
     .restart local v9    # "i":Landroid/content/Intent;
     const-string v1, "TYPE"
 
@@ -301,7 +548,7 @@
 
     invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 100
+    .line 145
     const-string v1, "URL"
 
     invoke-direct {p0, v6}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->urlChange(I)Ljava/lang/String;
@@ -310,7 +557,7 @@
 
     invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 101
+    .line 146
     const-string v1, "TEXT"
 
     iget-object v2, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
@@ -321,16 +568,16 @@
 
     invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 102
+    .line 147
     invoke-virtual {p0, v9}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_d
+    goto/16 :goto_d
 
-    .line 105
-    :pswitch_37
-    invoke-direct {p0, v5}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setPleaLog(I)V
+    .line 151
+    :pswitch_c0
+    invoke-direct {p0, v4}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setPleaLog(I)V
 
-    .line 106
+    .line 152
     new-instance v9, Landroid/content/Intent;
 
     .end local v9    # "i":Landroid/content/Intent;
@@ -338,7 +585,7 @@
 
     invoke-direct {v9, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 107
+    .line 153
     .restart local v9    # "i":Landroid/content/Intent;
     const-string v1, "TYPE"
 
@@ -346,16 +593,16 @@
 
     invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 108
+    .line 154
     const-string v1, "URL"
 
-    invoke-direct {p0, v5}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->urlChange(I)Ljava/lang/String;
+    invoke-direct {p0, v4}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->urlChange(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 109
+    .line 155
     const-string v1, "TEXT"
 
     iget-object v2, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
@@ -366,18 +613,41 @@
 
     invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 110
+    .line 156
+    const-string v1, "lgh"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "urlChange(TWITTER) >>>>>> "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {p0, v4}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->urlChange(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 157
     invoke-virtual {p0, v9}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_d
+    goto/16 :goto_d
 
-    .line 113
-    :pswitch_60
+    .line 161
+    :pswitch_102
     const/4 v1, 0x4
 
     invoke-direct {p0, v1}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setPleaLog(I)V
 
-    .line 132
+    .line 180
     new-instance v1, Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
@@ -412,7 +682,7 @@
 
     move-result-object v10
 
-    .line 133
+    .line 181
     .local v10, "msg":Ljava/lang/String;
     invoke-virtual {v10}, Ljava/lang/String;->length()I
 
@@ -420,9 +690,9 @@
 
     const/16 v2, 0x50
 
-    if-le v1, v2, :cond_b3
+    if-le v1, v2, :cond_15a
 
-    .line 134
+    .line 182
     invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -431,29 +701,33 @@
 
     move-result v1
 
-    if-eqz v1, :cond_a5
+    if-eqz v1, :cond_147
 
-    .line 135
+    .line 183
     invoke-static {p0, v10}, Lcom/nemodream/fashionista/util/SMSSender;->sendMMS(Landroid/app/Activity;Ljava/lang/String;)V
 
-    .line 146
-    :goto_9b
+    .line 194
+    :goto_13d
     invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->finish()V
 
-    .line 147
+    .line 195
     const/high16 v1, 0x7f040000
 
     invoke-virtual {p0, v1, v3}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->overridePendingTransition(II)V
 
     goto/16 :goto_d
 
-    .line 137
-    :cond_a5
+    .line 185
+    :cond_147
     invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const-string v2, "MMS \uc11c\ube44\uc2a4\ub97c \uc774\uc6a9\ud560 \uc218 \uc5c6\ub294 \ub2e8\ub9d0 \uc785\ub2c8\ub2e4."
+    const v2, 0x7f06005b
+
+    invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
 
     invoke-static {v1, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
@@ -461,10 +735,10 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    goto :goto_9b
+    goto :goto_13d
 
-    .line 140
-    :cond_b3
+    .line 188
+    :cond_15a
     invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -473,20 +747,24 @@
 
     move-result v1
 
-    if-eqz v1, :cond_c1
+    if-eqz v1, :cond_168
 
-    .line 141
+    .line 189
     invoke-static {p0, v10}, Lcom/nemodream/fashionista/util/SMSSender;->sendSMS(Landroid/app/Activity;Ljava/lang/String;)V
 
-    goto :goto_9b
+    goto :goto_13d
 
-    .line 143
-    :cond_c1
+    .line 191
+    :cond_168
     invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const-string v2, "SMS \uc11c\ube44\uc2a4\ub97c \uc774\uc6a9\ud560 \uc218 \uc5c6\ub294 \ub2e8\ub9d0 \uc785\ub2c8\ub2e4."
+    const v2, 0x7f06005c
+
+    invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
 
     invoke-static {v1, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
@@ -494,15 +772,15 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    goto :goto_9b
+    goto :goto_13d
 
-    .line 150
+    .line 198
     .end local v10    # "msg":Ljava/lang/String;
-    :pswitch_cf
+    :pswitch_17b
     invoke-direct {p0, v2}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setPleaLog(I)V
 
-    .line 152
-    :try_start_d2
+    .line 200
+    :try_start_17e
     new-instance v0, Lcom/nemodream/fashionista/util/KakaoLink;
 
     const/4 v1, 0x3
@@ -529,7 +807,7 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/nemodream/fashionista/util/KakaoLink;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
+    .line 201
     .local v0, "link":Lcom/nemodream/fashionista/util/KakaoLink;
     invoke-virtual {v0}, Lcom/nemodream/fashionista/util/KakaoLink;->isAvailable()Z
 
@@ -537,36 +815,36 @@
 
     if-eqz v1, :cond_d
 
-    .line 154
+    .line 202
     invoke-virtual {v0}, Lcom/nemodream/fashionista/util/KakaoLink;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->startActivity(Landroid/content/Intent;)V
-    :try_end_f8
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_d2 .. :try_end_f8} :catch_fa
+    :try_end_1a4
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_17e .. :try_end_1a4} :catch_1a6
 
     goto/16 :goto_d
 
-    .line 156
+    .line 204
     .end local v0    # "link":Lcom/nemodream/fashionista/util/KakaoLink;
-    :catch_fa
+    :catch_1a6
     move-exception v8
 
-    .line 158
+    .line 206
     .local v8, "e":Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v8}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
     goto/16 :goto_d
 
-    .line 162
+    .line 210
     .end local v8    # "e":Ljava/io/UnsupportedEncodingException;
-    :pswitch_100
+    :pswitch_1ac
     const/4 v1, 0x5
 
     invoke-direct {p0, v1}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setPleaLog(I)V
 
-    .line 163
+    .line 211
     new-instance v9, Landroid/content/Intent;
 
     .end local v9    # "i":Landroid/content/Intent;
@@ -574,18 +852,18 @@
 
     invoke-direct {v9, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 164
+    .line 212
     .restart local v9    # "i":Landroid/content/Intent;
     const-string v1, "android.intent.category.DEFAULT"
 
     invoke-virtual {v9, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 165
+    .line 213
     const-string v1, "message/rfc822"
 
     invoke-virtual {v9, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 167
+    .line 215
     const-string v1, "android.intent.extra.SUBJECT"
 
     iget-object v2, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
@@ -596,7 +874,7 @@
 
     invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 168
+    .line 216
     const-string v1, "android.intent.extra.TEXT"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -635,25 +913,25 @@
 
     invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 169
+    .line 217
     invoke-virtual {p0, v9}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_d
 
-    .line 172
-    :pswitch_14c
+    .line 220
+    :pswitch_1f8
     invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->finish()V
 
     goto/16 :goto_d
 
-    .line 175
-    :pswitch_151
+    .line 223
+    :pswitch_1fd
     new-instance v9, Landroid/content/Intent;
 
     .end local v9    # "i":Landroid/content/Intent;
     invoke-direct {v9}, Landroid/content/Intent;-><init>()V
 
-    .line 176
+    .line 224
     .restart local v9    # "i":Landroid/content/Intent;
     const-string v1, "TYPE"
 
@@ -661,22 +939,22 @@
 
     invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 177
-    invoke-virtual {p0, v4, v9}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setResult(ILandroid/content/Intent;)V
+    .line 225
+    invoke-virtual {p0, v5, v9}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 178
+    .line 226
     invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->finish()V
 
     goto/16 :goto_d
 
-    .line 181
-    :pswitch_165
+    .line 229
+    :pswitch_211
     new-instance v9, Landroid/content/Intent;
 
     .end local v9    # "i":Landroid/content/Intent;
     invoke-direct {v9}, Landroid/content/Intent;-><init>()V
 
-    .line 182
+    .line 230
     .restart local v9    # "i":Landroid/content/Intent;
     const-string v1, "TYPE"
 
@@ -684,29 +962,32 @@
 
     invoke-virtual {v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 183
-    invoke-virtual {p0, v4, v9}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setResult(ILandroid/content/Intent;)V
+    .line 231
+    invoke-virtual {p0, v5, v9}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 184
+    .line 232
     invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->finish()V
 
     goto/16 :goto_d
 
-    .line 95
+    .line 114
     nop
 
-    :pswitch_data_17a
+    :pswitch_data_226
     .packed-switch 0x7f080002
         :pswitch_e
-        :pswitch_37
+        :pswitch_3b
+        :pswitch_68
+        :pswitch_96
+        :pswitch_c0
         :pswitch_d
-        :pswitch_60
-        :pswitch_cf
-        :pswitch_100
+        :pswitch_102
+        :pswitch_17b
+        :pswitch_1ac
         :pswitch_d
-        :pswitch_151
-        :pswitch_165
-        :pswitch_14c
+        :pswitch_1fd
+        :pswitch_211
+        :pswitch_1f8
     .end packed-switch
 .end method
 
@@ -717,20 +998,20 @@
     .prologue
     const/16 v10, 0x8
 
-    .line 40
+    .line 45
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 41
+    .line 46
     const/high16 v8, 0x7f030000
 
     invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->setContentView(I)V
 
-    .line 43
+    .line 48
     invoke-virtual {p0}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 44
+    .line 49
     .local v2, "intent":Landroid/content/Intent;
     const-string v8, "TYPE"
 
@@ -740,7 +1021,7 @@
 
     move-result v7
 
-    .line 46
+    .line 51
     .local v7, "type":I
     const v8, 0x7f080001
 
@@ -750,9 +1031,9 @@
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    .line 47
+    .line 52
     .local v1, "gongLl":Landroid/widget/LinearLayout;
-    const v8, 0x7f080004
+    const v8, 0x7f080007
 
     invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
 
@@ -760,9 +1041,9 @@
 
     check-cast v3, Landroid/widget/LinearLayout;
 
-    .line 48
+    .line 53
     .local v3, "joLl":Landroid/widget/LinearLayout;
-    const v8, 0x7f080008
+    const v8, 0x7f08000b
 
     invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
 
@@ -770,7 +1051,7 @@
 
     check-cast v4, Landroid/widget/LinearLayout;
 
-    .line 49
+    .line 54
     .local v4, "loginLl":Landroid/widget/LinearLayout;
     const/high16 v8, 0x7f080000
 
@@ -780,19 +1061,19 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    .line 51
+    .line 57
     .local v6, "tv":Landroid/widget/TextView;
-    if-nez v7, :cond_fb
+    if-nez v7, :cond_146
 
     invoke-virtual {v3, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     invoke-virtual {v4, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    const v8, 0x7f060032
+    const v8, 0x7f060036
 
     invoke-virtual {v6, v8}, Landroid/widget/TextView;->setText(I)V
 
-    .line 55
+    .line 63
     :goto_46
     const v8, 0x7f080002
 
@@ -802,68 +1083,12 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 56
+    .line 64
     .local v0, "btn":Landroid/widget/Button;
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 57
-    const v8, 0x7f080003
-
-    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    .end local v0    # "btn":Landroid/widget/Button;
-    check-cast v0, Landroid/widget/Button;
-
-    .line 58
-    .restart local v0    # "btn":Landroid/widget/Button;
-    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 59
-    const v8, 0x7f080005
-
-    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    .end local v0    # "btn":Landroid/widget/Button;
-    check-cast v0, Landroid/widget/Button;
-
-    .line 60
-    .restart local v0    # "btn":Landroid/widget/Button;
-    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 61
-    const v8, 0x7f080006
-
-    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    .end local v0    # "btn":Landroid/widget/Button;
-    check-cast v0, Landroid/widget/Button;
-
-    .line 62
-    .restart local v0    # "btn":Landroid/widget/Button;
-    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 63
-    const v8, 0x7f080007
-
-    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    .end local v0    # "btn":Landroid/widget/Button;
-    check-cast v0, Landroid/widget/Button;
-
-    .line 64
-    .restart local v0    # "btn":Landroid/widget/Button;
-    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
     .line 65
-    const v8, 0x7f08000b
+    const v8, 0x7f080005
 
     invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
 
@@ -877,7 +1102,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 67
-    const v8, 0x7f080009
+    const v8, 0x7f080003
 
     invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
 
@@ -891,7 +1116,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 69
-    const v8, 0x7f08000a
+    const v8, 0x7f080006
 
     invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
 
@@ -904,7 +1129,105 @@
     .restart local v0    # "btn":Landroid/widget/Button;
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 71
+    const v8, 0x7f080004
+
+    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .end local v0    # "btn":Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
+
     .line 72
+    .restart local v0    # "btn":Landroid/widget/Button;
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 73
+    const v8, 0x7f080008
+
+    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .end local v0    # "btn":Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
+
+    .line 74
+    .restart local v0    # "btn":Landroid/widget/Button;
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 75
+    const v8, 0x7f080009
+
+    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .end local v0    # "btn":Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
+
+    .line 76
+    .restart local v0    # "btn":Landroid/widget/Button;
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 77
+    const v8, 0x7f08000a
+
+    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .end local v0    # "btn":Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
+
+    .line 78
+    .restart local v0    # "btn":Landroid/widget/Button;
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 79
+    const v8, 0x7f08000e
+
+    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .end local v0    # "btn":Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
+
+    .line 80
+    .restart local v0    # "btn":Landroid/widget/Button;
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 81
+    const v8, 0x7f08000c
+
+    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .end local v0    # "btn":Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
+
+    .line 82
+    .restart local v0    # "btn":Landroid/widget/Button;
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 83
+    const v8, 0x7f08000d
+
+    invoke-virtual {p0, v8}, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .end local v0    # "btn":Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
+
+    .line 84
+    .restart local v0    # "btn":Landroid/widget/Button;
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 86
     const-string v8, "SEQ"
 
     invoke-virtual {v2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -913,12 +1236,12 @@
 
     iput-object v8, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mSeq:Ljava/lang/String;
 
-    .line 75
+    .line 89
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v5
 
-    .line 76
+    .line 90
     .local v5, "pref":Landroid/content/SharedPreferences;
     new-instance v8, Lcom/nemodream/fashionista/bean/AppInfoBean;
 
@@ -926,7 +1249,7 @@
 
     iput-object v8, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
 
-    .line 77
+    .line 91
     iget-object v8, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
 
     const-string v9, "plea_facebook"
@@ -939,7 +1262,7 @@
 
     invoke-virtual {v8, v9}, Lcom/nemodream/fashionista/bean/AppInfoBean;->setFacebookPlea(Ljava/lang/String;)V
 
-    .line 78
+    .line 92
     iget-object v8, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
 
     const-string v9, "plea_twiter"
@@ -952,7 +1275,7 @@
 
     invoke-virtual {v8, v9}, Lcom/nemodream/fashionista/bean/AppInfoBean;->setTwiterPlea(Ljava/lang/String;)V
 
-    .line 79
+    .line 93
     iget-object v8, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
 
     const-string v9, "plea_sms"
@@ -965,7 +1288,7 @@
 
     invoke-virtual {v8, v9}, Lcom/nemodream/fashionista/bean/AppInfoBean;->setSmsPlea(Ljava/lang/String;)V
 
-    .line 80
+    .line 94
     iget-object v8, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
 
     const-string v9, "plea_kakaotok"
@@ -978,7 +1301,7 @@
 
     invoke-virtual {v8, v9}, Lcom/nemodream/fashionista/bean/AppInfoBean;->setKakaotalkPlea(Ljava/lang/String;)V
 
-    .line 81
+    .line 95
     iget-object v8, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
 
     const-string v9, "plea_mail"
@@ -991,34 +1314,73 @@
 
     invoke-virtual {v8, v9}, Lcom/nemodream/fashionista/bean/AppInfoBean;->setEmailPlea(Ljava/lang/String;)V
 
-    .line 83
+    .line 98
+    iget-object v8, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
+
+    const-string v9, "plea_weibo"
+
+    const-string v10, ""
+
+    invoke-interface {v5, v9, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Lcom/nemodream/fashionista/bean/AppInfoBean;->setWeiboPlea(Ljava/lang/String;)V
+
+    .line 99
+    iget-object v8, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
+
+    const-string v9, "plea_renrenwang"
+
+    const-string v10, ""
+
+    invoke-interface {v5, v9, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Lcom/nemodream/fashionista/bean/AppInfoBean;->setRenrenwangPlea(Ljava/lang/String;)V
+
+    .line 100
+    iget-object v8, p0, Lcom/nemodream/fashionista/BottomPopUpMenuActivity;->mAppInfoBean:Lcom/nemodream/fashionista/bean/AppInfoBean;
+
+    const-string v9, "plea_qq"
+
+    const-string v10, ""
+
+    invoke-interface {v5, v9, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Lcom/nemodream/fashionista/bean/AppInfoBean;->setQqPlea(Ljava/lang/String;)V
+
+    .line 102
     return-void
 
-    .line 52
+    .line 59
     .end local v0    # "btn":Landroid/widget/Button;
     .end local v5    # "pref":Landroid/content/SharedPreferences;
-    :cond_fb
+    :cond_146
     const/4 v8, 0x1
 
-    if-ne v7, v8, :cond_10c
+    if-ne v7, v8, :cond_157
 
     invoke-virtual {v1, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     invoke-virtual {v4, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    const v8, 0x7f060033
+    const v8, 0x7f060037
 
     invoke-virtual {v6, v8}, Landroid/widget/TextView;->setText(I)V
 
     goto/16 :goto_46
 
-    .line 53
-    :cond_10c
+    .line 61
+    :cond_157
     invoke-virtual {v3, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     invoke-virtual {v1, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    const v8, 0x7f060034
+    const v8, 0x7f060038
 
     invoke-virtual {v6, v8}, Landroid/widget/TextView;->setText(I)V
 

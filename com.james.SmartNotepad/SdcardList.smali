@@ -38,9 +38,9 @@
 
 .field private n:[Ljava/lang/String;
 
-.field private p:Lcom/james/SmartNotepad/CustomButton;
+.field private p:Landroid/widget/Button;
 
-.field private q:Lcom/james/SmartNotepad/CustomButton;
+.field private q:Landroid/widget/Button;
 
 .field private r:Landroid/widget/TextView;
 
@@ -338,7 +338,7 @@
     goto :goto_7
 
     :pswitch_data_4a
-    .packed-switch 0x7f090033
+    .packed-switch 0x7f090032
         :pswitch_8
         :pswitch_c
     .end packed-switch
@@ -393,7 +393,7 @@
 
     iput-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->u:Landroid/widget/ArrayAdapter;
 
-    const v0, 0x7f090032
+    const v0, 0x7f090031
 
     invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/SdcardList;->findViewById(I)Landroid/view/View;
 
@@ -445,65 +445,35 @@
 
     iput-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->s:Landroid/widget/TextView;
 
+    const v0, 0x7f090032
+
+    invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/SdcardList;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->p:Landroid/widget/Button;
+
     const v0, 0x7f090033
 
     invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/SdcardList;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->p:Lcom/james/SmartNotepad/CustomButton;
+    iput-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->q:Landroid/widget/Button;
 
-    const v0, 0x7f090034
+    iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->p:Landroid/widget/Button;
 
-    invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/SdcardList;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->q:Landroid/widget/Button;
 
-    check-cast v0, Lcom/james/SmartNotepad/CustomButton;
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iput-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->q:Lcom/james/SmartNotepad/CustomButton;
-
-    iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->p:Lcom/james/SmartNotepad/CustomButton;
-
-    invoke-virtual {v0, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->q:Lcom/james/SmartNotepad/CustomButton;
-
-    invoke-virtual {v0, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->p:Lcom/james/SmartNotepad/CustomButton;
-
-    invoke-virtual {v0}, Lcom/james/SmartNotepad/CustomButton;->a()V
-
-    iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->q:Lcom/james/SmartNotepad/CustomButton;
-
-    invoke-virtual {v0}, Lcom/james/SmartNotepad/CustomButton;->a()V
-
-    const v0, 0x7f090001
-
-    invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/SdcardList;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    new-instance v1, Lcom/google/ads/AdView;
-
-    sget-object v2, Lcom/google/ads/f;->a:Lcom/google/ads/f;
-
-    const-string v3, "a14cc162731f341"
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/f;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    new-instance v0, Lcom/google/ads/e;
-
-    invoke-direct {v0}, Lcom/google/ads/e;-><init>()V
-
-    invoke-virtual {v1, v0}, Lcom/google/ads/AdView;->a(Lcom/google/ads/e;)V
+    invoke-static {}, Lcom/admob/android/ads/ak;->c()V
 
     return-void
 .end method
@@ -634,17 +604,27 @@
 .end method
 
 .method protected onResume()V
-    .registers 11
+    .registers 16
+
+    const/4 v13, 0x0
+
+    const-string v14, "Size : n/a"
+
+    const-string v12, "SmartNotepad"
+
+    const-string v11, "SdcardList"
+
+    const-string v10, ""
 
     invoke-super {p0}, Landroid/app/ListActivity;->onResume()V
 
     const-string v0, "SdcardList"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    const-string v2, "onResume"
+    const-string v0, "onResume"
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v11, v12, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -680,9 +660,7 @@
 
     const-string v1, "PREFERENCE_TEXTSTYLE"
 
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v1, v13}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -690,25 +668,25 @@
 
     const-string v0, "SdcardList"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v3, "preferenceBackgroundTheme : "
+    const-string v1, "preferenceBackgroundTheme : "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/james/SmartNotepad/SdcardList;->a:Ljava/lang/String;
+    iget-object v1, p0, Lcom/james/SmartNotepad/SdcardList;->a:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v11, v12, v0}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->a:Ljava/lang/String;
 
@@ -718,7 +696,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_119
+    if-eqz v0, :cond_120
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->v:Landroid/widget/ListView;
 
@@ -726,7 +704,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setBackgroundResource(I)V
 
-    :goto_5f
+    :goto_67
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
@@ -741,7 +719,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1a1
+    if-eqz v0, :cond_1a7
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -785,22 +763,22 @@
 
     move-result-object v0
 
-    :goto_9d
+    :goto_a5
     iput-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->g:[Ljava/lang/String;
 
-    :try_start_9f
+    :try_start_a7
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->g:[Ljava/lang/String;
 
     sget-object v1, Ljava/lang/String;->CASE_INSENSITIVE_ORDER:Ljava/util/Comparator;
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
-    :try_end_a6
-    .catch Ljava/lang/NullPointerException; {:try_start_9f .. :try_end_a6} :catch_1a4
+    :try_end_ae
+    .catch Ljava/lang/NullPointerException; {:try_start_a7 .. :try_end_ae} :catch_1aa
 
-    :goto_a6
+    :goto_ae
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->g:[Ljava/lang/String;
 
-    if-eqz v0, :cond_e2
+    if-eqz v0, :cond_e9
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->g:[Ljava/lang/String;
 
@@ -858,18 +836,16 @@
 
     iput-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->n:[Ljava/lang/String;
 
-    const/4 v0, 0x0
+    move v9, v13
 
-    move v9, v0
-
-    :goto_dd
+    :goto_e4
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->g:[Ljava/lang/String;
 
     array-length v0, v0
 
-    if-lt v9, v0, :cond_1aa
+    if-lt v9, v0, :cond_1b0
 
-    :cond_e2
+    :cond_e9
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v0
@@ -880,13 +856,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3c7
+    if-eqz v0, :cond_3d1
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_3a9
+    if-lez v0, :cond_3af
 
     new-instance v0, Lcom/james/SmartNotepad/n;
 
@@ -894,25 +870,25 @@
 
     invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/SdcardList;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    :goto_fc
+    :goto_103
     const/4 v0, 0x0
 
-    :try_start_fd
+    :try_start_104
     iput v0, p0, Lcom/james/SmartNotepad/SdcardList;->t:I
-    :try_end_ff
-    .catch Ljava/lang/NumberFormatException; {:try_start_fd .. :try_end_ff} :catch_3e5
+    :try_end_106
+    .catch Ljava/lang/NumberFormatException; {:try_start_104 .. :try_end_106} :catch_3f3
 
-    :goto_ff
-    :try_start_ff
+    :goto_106
+    :try_start_106
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->g:[Ljava/lang/String;
 
     array-length v0, v0
 
     iput v0, p0, Lcom/james/SmartNotepad/SdcardList;->t:I
-    :try_end_104
-    .catch Ljava/lang/NullPointerException; {:try_start_ff .. :try_end_104} :catch_3ee
+    :try_end_10b
+    .catch Ljava/lang/NullPointerException; {:try_start_106 .. :try_end_10b} :catch_3fb
 
-    :goto_104
+    :goto_10b
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->s:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -933,7 +909,7 @@
 
     return-void
 
-    :cond_119
+    :cond_120
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->a:Ljava/lang/String;
 
     const-string v1, "B"
@@ -942,7 +918,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_12d
+    if-eqz v0, :cond_134
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->v:Landroid/widget/ListView;
 
@@ -950,9 +926,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setBackgroundResource(I)V
 
-    goto/16 :goto_5f
+    goto/16 :goto_67
 
-    :cond_12d
+    :cond_134
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->a:Ljava/lang/String;
 
     const-string v1, "C"
@@ -961,7 +937,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_141
+    if-eqz v0, :cond_148
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->v:Landroid/widget/ListView;
 
@@ -969,9 +945,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setBackgroundResource(I)V
 
-    goto/16 :goto_5f
+    goto/16 :goto_67
 
-    :cond_141
+    :cond_148
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->a:Ljava/lang/String;
 
     const-string v1, "D"
@@ -980,7 +956,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_155
+    if-eqz v0, :cond_15c
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->v:Landroid/widget/ListView;
 
@@ -988,9 +964,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setBackgroundResource(I)V
 
-    goto/16 :goto_5f
+    goto/16 :goto_67
 
-    :cond_155
+    :cond_15c
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->a:Ljava/lang/String;
 
     const-string v1, "E"
@@ -999,7 +975,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_169
+    if-eqz v0, :cond_170
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->v:Landroid/widget/ListView;
 
@@ -1007,9 +983,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setBackgroundResource(I)V
 
-    goto/16 :goto_5f
+    goto/16 :goto_67
 
-    :cond_169
+    :cond_170
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->a:Ljava/lang/String;
 
     const-string v1, "F"
@@ -1018,7 +994,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_17d
+    if-eqz v0, :cond_184
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->v:Landroid/widget/ListView;
 
@@ -1026,9 +1002,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setBackgroundResource(I)V
 
-    goto/16 :goto_5f
+    goto/16 :goto_67
 
-    :cond_17d
+    :cond_184
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->a:Ljava/lang/String;
 
     const-string v1, "G"
@@ -1037,7 +1013,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_199
+    if-nez v0, :cond_19f
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->a:Ljava/lang/String;
 
@@ -1047,38 +1023,36 @@
 
     move-result v0
 
-    if-eqz v0, :cond_199
+    if-eqz v0, :cond_19f
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->v:Landroid/widget/ListView;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v13}, Landroid/widget/ListView;->setBackgroundColor(I)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setBackgroundColor(I)V
+    goto/16 :goto_67
 
-    goto/16 :goto_5f
-
-    :cond_199
+    :cond_19f
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->v:Landroid/widget/ListView;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setBackgroundColor(I)V
 
-    goto/16 :goto_5f
+    goto/16 :goto_67
 
-    :cond_1a1
+    :cond_1a7
     const/4 v0, 0x0
 
-    goto/16 :goto_9d
+    goto/16 :goto_a5
 
-    :catch_1a4
+    :catch_1aa
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    goto/16 :goto_a6
+    goto/16 :goto_ae
 
-    :cond_1aa
+    :cond_1b0
     new-instance v0, Ljava/lang/StringBuilder;
 
     sget-object v1, Lcom/james/SmartNotepad/g;->b:Ljava/lang/String;
@@ -1109,25 +1083,25 @@
 
     const-string v1, "SdcardList"
 
-    const-string v2, "SmartNotepad"
+    const-string v1, "SmartNotepad"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v4, "pathName : "
+    const-string v2, "pathName : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-static {v1, v2, v3}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v11, v12, v1}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :try_start_1dd
+    :try_start_1e3
     iget-object v1, p0, Lcom/james/SmartNotepad/SdcardList;->h:[Ljava/lang/String;
 
     iget-object v2, p0, Lcom/james/SmartNotepad/SdcardList;->g:[Ljava/lang/String;
@@ -1159,63 +1133,63 @@
     move-result-object v3
 
     invoke-static {v1, v2, v3}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1ff
-    .catch Ljava/lang/NullPointerException; {:try_start_1dd .. :try_end_1ff} :catch_31c
+    :try_end_205
+    .catch Ljava/lang/NullPointerException; {:try_start_1e3 .. :try_end_205} :catch_322
 
-    :goto_1ff
+    :goto_205
     const-string v1, "SdcardList"
 
-    const-string v2, "SmartNotepad"
+    const-string v1, "SmartNotepad"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v4, "data4 : "
+    const-string v2, "data4 : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/james/SmartNotepad/SdcardList;->k:[Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/james/SmartNotepad/SdcardList;->k:[Landroid/graphics/drawable/Drawable;
 
-    aget-object v4, v4, v9
+    aget-object v2, v2, v9
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    const-string v4, ", data5 : "
+    const-string v2, ", data5 : "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    iget-object v4, p0, Lcom/james/SmartNotepad/SdcardList;->l:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/james/SmartNotepad/SdcardList;->l:[Ljava/lang/String;
 
-    aget-object v4, v4, v9
+    aget-object v2, v2, v9
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    const-string v4, ", data6 : "
+    const-string v2, ", data6 : "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    iget-object v4, p0, Lcom/james/SmartNotepad/SdcardList;->m:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/james/SmartNotepad/SdcardList;->m:[Ljava/lang/String;
 
-    aget-object v4, v4, v9
+    aget-object v2, v2, v9
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-static {v1, v2, v3}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v11, v12, v1}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :try_start_235
+    :try_start_23b
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -1243,16 +1217,16 @@
     move-result-object v5
 
     invoke-static {v0, v4, v5}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_254
-    .catch Ljava/lang/NullPointerException; {:try_start_235 .. :try_end_254} :catch_352
+    :try_end_25a
+    .catch Ljava/lang/NullPointerException; {:try_start_23b .. :try_end_25a} :catch_358
 
     const-wide/16 v4, 0x0
 
     cmp-long v0, v2, v4
 
-    if-lez v0, :cond_377
+    if-lez v0, :cond_37d
 
-    :try_start_25a
+    :try_start_260
     const-string v0, "SdcardList"
 
     const-string v4, "SmartNotepad"
@@ -1277,13 +1251,13 @@
 
     cmp-long v0, v2, v4
 
-    if-gez v0, :cond_322
+    if-gez v0, :cond_328
 
     const-wide/16 v4, 0x0
 
     cmp-long v0, v2, v4
 
-    if-ltz v0, :cond_322
+    if-ltz v0, :cond_328
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->m:[Ljava/lang/String;
 
@@ -1308,13 +1282,13 @@
     move-result-object v2
 
     aput-object v2, v0, v9
-    :try_end_295
-    .catch Ljava/lang/NumberFormatException; {:try_start_25a .. :try_end_295} :catch_346
-    .catch Ljava/util/IllegalFormatConversionException; {:try_start_25a .. :try_end_295} :catch_36b
-    .catch Ljava/lang/NullPointerException; {:try_start_25a .. :try_end_295} :catch_352
+    :try_end_29b
+    .catch Ljava/lang/NumberFormatException; {:try_start_260 .. :try_end_29b} :catch_34c
+    .catch Ljava/util/IllegalFormatConversionException; {:try_start_260 .. :try_end_29b} :catch_371
+    .catch Ljava/lang/NullPointerException; {:try_start_260 .. :try_end_29b} :catch_358
 
-    :goto_295
-    :try_start_295
+    :goto_29b
+    :try_start_29b
     new-instance v0, Ljava/util/Date;
 
     invoke-virtual {v1}, Ljava/io/File;->lastModified()J
@@ -1345,7 +1319,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_37f
+    if-eqz v2, :cond_385
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1365,12 +1339,12 @@
 
     move-result-object v0
 
-    :goto_2ca
+    :goto_2d0
     invoke-virtual {v1}, Ljava/io/File;->canWrite()Z
 
     move-result v1
 
-    if-eqz v1, :cond_394
+    if-eqz v1, :cond_39a
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1390,19 +1364,19 @@
 
     move-result-object v0
 
-    :goto_2e3
+    :goto_2e9
     iget-object v1, p0, Lcom/james/SmartNotepad/SdcardList;->n:[Ljava/lang/String;
 
     aput-object v0, v1, v9
-    :try_end_2e7
-    .catch Ljava/lang/NullPointerException; {:try_start_295 .. :try_end_2e7} :catch_352
+    :try_end_2ed
+    .catch Ljava/lang/NullPointerException; {:try_start_29b .. :try_end_2ed} :catch_358
 
-    :goto_2e7
+    :goto_2ed
     invoke-virtual {p0}, Lcom/james/SmartNotepad/SdcardList;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f02003a
+    const v1, 0x7f020030
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1448,23 +1422,23 @@
 
     move v9, v0
 
-    goto/16 :goto_dd
+    goto/16 :goto_e4
 
-    :catch_31c
+    :catch_322
     move-exception v1
 
     invoke-virtual {v1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    goto/16 :goto_1ff
+    goto/16 :goto_205
 
-    :cond_322
+    :cond_328
     const-wide/16 v4, 0x400
 
     cmp-long v0, v2, v4
 
-    if-ltz v0, :cond_363
+    if-ltz v0, :cond_369
 
-    :try_start_328
+    :try_start_32e
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->m:[Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1492,17 +1466,17 @@
     move-result-object v2
 
     aput-object v2, v0, v9
-    :try_end_344
-    .catch Ljava/lang/NumberFormatException; {:try_start_328 .. :try_end_344} :catch_346
-    .catch Ljava/util/IllegalFormatConversionException; {:try_start_328 .. :try_end_344} :catch_36b
-    .catch Ljava/lang/NullPointerException; {:try_start_328 .. :try_end_344} :catch_352
+    :try_end_34a
+    .catch Ljava/lang/NumberFormatException; {:try_start_32e .. :try_end_34a} :catch_34c
+    .catch Ljava/util/IllegalFormatConversionException; {:try_start_32e .. :try_end_34a} :catch_371
+    .catch Ljava/lang/NullPointerException; {:try_start_32e .. :try_end_34a} :catch_358
 
-    goto/16 :goto_295
+    goto/16 :goto_29b
 
-    :catch_346
+    :catch_34c
     move-exception v0
 
-    :try_start_347
+    :try_start_34d
     iget-object v2, p0, Lcom/james/SmartNotepad/SdcardList;->m:[Ljava/lang/String;
 
     const-string v3, "Size : n/a"
@@ -1510,12 +1484,12 @@
     aput-object v3, v2, v9
 
     invoke-virtual {v0}, Ljava/lang/NumberFormatException;->printStackTrace()V
-    :try_end_350
-    .catch Ljava/lang/NullPointerException; {:try_start_347 .. :try_end_350} :catch_352
+    :try_end_356
+    .catch Ljava/lang/NullPointerException; {:try_start_34d .. :try_end_356} :catch_358
 
-    goto/16 :goto_295
+    goto/16 :goto_29b
 
-    :catch_352
+    :catch_358
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
@@ -1524,7 +1498,7 @@
 
     const-string v1, "Size : n/a"
 
-    aput-object v1, v0, v9
+    aput-object v14, v0, v9
 
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->n:[Ljava/lang/String;
 
@@ -1532,26 +1506,26 @@
 
     aput-object v1, v0, v9
 
-    goto :goto_2e7
+    goto :goto_2ed
 
-    :cond_363
-    :try_start_363
+    :cond_369
+    :try_start_369
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->m:[Ljava/lang/String;
 
     const-string v2, "Size : n/a"
 
     aput-object v2, v0, v9
-    :try_end_369
-    .catch Ljava/lang/NumberFormatException; {:try_start_363 .. :try_end_369} :catch_346
-    .catch Ljava/util/IllegalFormatConversionException; {:try_start_363 .. :try_end_369} :catch_36b
-    .catch Ljava/lang/NullPointerException; {:try_start_363 .. :try_end_369} :catch_352
+    :try_end_36f
+    .catch Ljava/lang/NumberFormatException; {:try_start_369 .. :try_end_36f} :catch_34c
+    .catch Ljava/util/IllegalFormatConversionException; {:try_start_369 .. :try_end_36f} :catch_371
+    .catch Ljava/lang/NullPointerException; {:try_start_369 .. :try_end_36f} :catch_358
 
-    goto/16 :goto_295
+    goto/16 :goto_29b
 
-    :catch_36b
+    :catch_371
     move-exception v0
 
-    :try_start_36c
+    :try_start_372
     iget-object v2, p0, Lcom/james/SmartNotepad/SdcardList;->m:[Ljava/lang/String;
 
     const-string v3, "Size : n/a"
@@ -1560,18 +1534,18 @@
 
     invoke-virtual {v0}, Ljava/util/IllegalFormatConversionException;->printStackTrace()V
 
-    goto/16 :goto_295
+    goto/16 :goto_29b
 
-    :cond_377
+    :cond_37d
     iget-object v0, p0, Lcom/james/SmartNotepad/SdcardList;->m:[Ljava/lang/String;
 
     const-string v2, "Size : n/a"
 
     aput-object v2, v0, v9
 
-    goto/16 :goto_295
+    goto/16 :goto_29b
 
-    :cond_37f
+    :cond_385
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1590,9 +1564,9 @@
 
     move-result-object v0
 
-    goto/16 :goto_2ca
+    goto/16 :goto_2d0
 
-    :cond_394
+    :cond_39a
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1608,29 +1582,37 @@
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-    :try_end_3a6
-    .catch Ljava/lang/NullPointerException; {:try_start_36c .. :try_end_3a6} :catch_352
+    :try_end_3ac
+    .catch Ljava/lang/NullPointerException; {:try_start_372 .. :try_end_3ac} :catch_358
 
     move-result-object v0
 
-    goto/16 :goto_2e3
+    goto/16 :goto_2e9
 
-    :cond_3a9
+    :cond_3af
     new-instance v0, Lcom/james/SmartNotepad/h;
 
-    const-string v2, ""
+    const-string v1, ""
 
     const-string v3, "Empty list!"
 
-    const-string v4, ""
+    const-string v1, ""
 
     const/4 v5, 0x0
 
-    const-string v6, ""
+    const-string v1, ""
 
-    const-string v7, ""
+    const-string v1, ""
 
     move-object v1, p0
+
+    move-object v2, v10
+
+    move-object v4, v10
+
+    move-object v6, v10
+
+    move-object v7, v10
 
     invoke-direct/range {v0 .. v7}, Lcom/james/SmartNotepad/h;-><init>(Lcom/james/SmartNotepad/SdcardList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1642,24 +1624,32 @@
 
     invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/SdcardList;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    goto/16 :goto_fc
+    goto/16 :goto_103
 
-    :cond_3c7
+    :cond_3d1
     new-instance v0, Lcom/james/SmartNotepad/h;
 
-    const-string v2, ""
+    const-string v1, ""
 
     const-string v3, "SD card unmount!"
 
-    const-string v4, ""
+    const-string v1, ""
 
     const/4 v5, 0x0
 
-    const-string v6, ""
+    const-string v1, ""
 
-    const-string v7, ""
+    const-string v1, ""
 
     move-object v1, p0
+
+    move-object v2, v10
+
+    move-object v4, v10
+
+    move-object v6, v10
+
+    move-object v7, v10
 
     invoke-direct/range {v0 .. v7}, Lcom/james/SmartNotepad/h;-><init>(Lcom/james/SmartNotepad/SdcardList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1671,23 +1661,21 @@
 
     invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/SdcardList;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    goto/16 :goto_fc
+    goto/16 :goto_103
 
-    :catch_3e5
+    :catch_3f3
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
-    const/4 v0, 0x0
+    iput v13, p0, Lcom/james/SmartNotepad/SdcardList;->t:I
 
-    iput v0, p0, Lcom/james/SmartNotepad/SdcardList;->t:I
+    goto/16 :goto_106
 
-    goto/16 :goto_ff
-
-    :catch_3ee
+    :catch_3fb
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    goto/16 :goto_104
+    goto/16 :goto_10b
 .end method

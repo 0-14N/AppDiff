@@ -1848,23 +1848,23 @@
 .method public static i(Ljava/lang/String;)Z
     .registers 3
 
-    new-instance v0, Lnet/a/a/h/a;
+    new-instance v0, Lb/a/a/h/a;
 
-    invoke-direct {v0, p0}, Lnet/a/a/h/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Lb/a/a/h/a;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lnet/a/a/h/a;->a()Z
-
-    move-result v1
-
-    if-nez v1, :cond_17
-
-    invoke-virtual {v0}, Lnet/a/a/h/a;->b()Z
+    invoke-virtual {v0}, Lb/a/a/h/a;->a()Z
 
     move-result v1
 
     if-nez v1, :cond_17
 
-    invoke-virtual {v0}, Lnet/a/a/h/a;->c()Z
+    invoke-virtual {v0}, Lb/a/a/h/a;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_17
+
+    invoke-virtual {v0}, Lb/a/a/h/a;->c()Z
 
     move-result v0
 

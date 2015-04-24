@@ -1,62 +1,99 @@
 .class public Lru/magoga/Pingvin/PingvinActivity;
-.super Lcom/fortumo/android/PaymentActivity;
-.source "SourceFile"
+.super Landroid/app/Activity;
+.source "PingvinActivity.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lru/magoga/Pingvin/PingvinActivity$GameListener;,
+        Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
+    }
+.end annotation
 
 
 # static fields
-.field public static k:F
+.field static final banAdmob:I = 0x2
 
-.field public static l:F
+.field static final banFlurry:I = 0x3
 
-.field public static m:F
+.field static final banInner:I = 0x0
+
+.field static final banMobclix:I = 0x1
+
+.field static final banTapjoy:I = 0x4
+
+.field public static inputAccelX:F
+
+.field public static inputAccelY:F
+
+.field public static inputAccelZ:F
+
+.field public static instance:Lru/magoga/Pingvin/PingvinActivity;
+
+.field public static sp:Landroid/content/SharedPreferences;
 
 
 # instance fields
-.field public a:Lru/magoga/Pingvin/ar;
+.field volatile OceanRT:I
 
-.field public b:Lru/magoga/GameEngine/bh;
+.field volatile PostShadeSea:I
 
-.field public c:Lru/magoga/Pingvin/ad;
+.field volatile RT1:I
 
-.field d:Z
+.field volatile ShadeSea:I
 
-.field public volatile e:Lru/magoga/b;
+.field volatile ShadeVintage:I
 
-.field final f:Landroid/os/Handler;
+.field adIsShown:I
 
-.field volatile g:Z
+.field bannersType:I
 
-.field public volatile h:Z
+.field bannersTypeFull:I
 
-.field public volatile i:Z
+.field childParams:Landroid/widget/RelativeLayout$LayoutParams;
 
-.field public volatile j:Z
+.field public dmoveX:F
 
-.field n:Z
+.field public dmoveY:F
 
-.field volatile o:I
+.field public gameListener:Lru/magoga/Pingvin/PingvinActivity$GameListener;
 
-.field volatile p:I
+.field gui:Lru/magoga/Pingvin/Gui;
 
-.field volatile q:I
+.field public volatile isExit:Z
 
-.field volatile r:I
+.field public volatile isLocked:Z
 
-.field volatile s:I
+.field public volatile isResumed:Z
 
-.field t:Lru/magoga/Pingvin/w;
+.field layout:Landroid/view/ViewGroup;
 
-.field u:I
+.field public level:Lru/magoga/Pingvin/Level;
 
-.field v:Landroid/view/ViewGroup;
+.field public mEngine:Lru/magoga/GameEngine/GameEngine;
 
-.field w:Landroid/widget/RelativeLayout$LayoutParams;
+.field final mHandler:Landroid/os/Handler;
 
-.field x:Lru/magoga/Pingvin/ap;
+.field private mReceiver:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
 
-.field private y:Lnet/robotmedia/billing/helper/b;
+.field public moveX:F
 
-.field private z:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
+.field public moveY:F
+
+.field pause:Z
+
+.field public payClass:Lcom/i/free/pay/PayClass;
+
+.field public showRateOnMainMenu:Z
+
+.field volatile tapJoyInited:Z
+
+.field volatile tapjoyFullAd:Z
+
+.field public touchX:F
+
+.field public touchY:F
 
 
 # direct methods
@@ -66,1460 +103,1653 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 408
-    sput v0, Lru/magoga/Pingvin/PingvinActivity;->k:F
+    .line 332
+    sput v0, Lru/magoga/Pingvin/PingvinActivity;->inputAccelX:F
 
-    .line 409
-    sput v0, Lru/magoga/Pingvin/PingvinActivity;->l:F
+    .line 333
+    sput v0, Lru/magoga/Pingvin/PingvinActivity;->inputAccelY:F
 
-    .line 410
-    sput v0, Lru/magoga/Pingvin/PingvinActivity;->m:F
+    .line 334
+    sput v0, Lru/magoga/Pingvin/PingvinActivity;->inputAccelZ:F
 
-    .line 59
+    .line 36
     return-void
 .end method
 
 .method public constructor <init>()V
-    .registers 3
+    .registers 5
 
     .prologue
+    const/4 v3, 0x0
+
+    const/4 v2, 0x0
+
     const/4 v1, 0x0
 
-    .line 59
-    invoke-direct {p0}, Lcom/fortumo/android/PaymentActivity;-><init>()V
+    .line 36
+    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 218
+    .line 42
+    iput-object v3, p0, Lru/magoga/Pingvin/PingvinActivity;->payClass:Lcom/i/free/pay/PayClass;
+
+    .line 58
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lru/magoga/Pingvin/PingvinActivity;->showRateOnMainMenu:Z
+
+    .line 153
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->f:Landroid/os/Handler;
+    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->mHandler:Landroid/os/Handler;
 
-    .line 219
-    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->g:Z
+    .line 154
+    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->tapJoyInited:Z
 
-    .line 299
-    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->h:Z
+    .line 240
+    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->isLocked:Z
 
-    .line 300
-    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->i:Z
+    .line 241
+    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->isResumed:Z
 
-    .line 338
-    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->j:Z
+    .line 280
+    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->isExit:Z
 
-    .line 412
-    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->n:Z
+    .line 336
+    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->pause:Z
 
-    .line 419
-    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->o:I
+    .line 343
+    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->RT1:I
 
-    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->p:I
+    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->OceanRT:I
 
-    .line 420
-    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->q:I
+    .line 344
+    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->ShadeVintage:I
 
-    .line 421
-    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->r:I
+    .line 345
+    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->ShadeSea:I
 
-    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->s:I
+    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->PostShadeSea:I
 
-    .line 812
-    const/4 v0, 0x0
+    .line 587
+    iput v2, p0, Lru/magoga/Pingvin/PingvinActivity;->touchX:F
 
-    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->t:Lru/magoga/Pingvin/w;
+    iput v2, p0, Lru/magoga/Pingvin/PingvinActivity;->touchY:F
 
-    .line 822
+    iput v2, p0, Lru/magoga/Pingvin/PingvinActivity;->moveX:F
+
+    iput v2, p0, Lru/magoga/Pingvin/PingvinActivity;->moveY:F
+
+    iput v2, p0, Lru/magoga/Pingvin/PingvinActivity;->dmoveX:F
+
+    iput v2, p0, Lru/magoga/Pingvin/PingvinActivity;->dmoveY:F
+
+    .line 750
+    iput-object v3, p0, Lru/magoga/Pingvin/PingvinActivity;->gui:Lru/magoga/Pingvin/Gui;
+
+    .line 759
     const/4 v0, -0x1
 
-    iput v0, p0, Lru/magoga/Pingvin/PingvinActivity;->u:I
+    iput v0, p0, Lru/magoga/Pingvin/PingvinActivity;->adIsShown:I
 
-    .line 59
+    .line 1264
+    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->tapjoyFullAd:Z
+
+    .line 36
     return-void
-.end method
-
-.method public static b()V
-    .registers 0
-
-    .prologue
-    .line 241
-    invoke-static {}, Lcom/tapjoy/e;->a()Lcom/tapjoy/e;
-
-    invoke-static {}, Lcom/tapjoy/e;->b()V
-
-    .line 243
-    return-void
-.end method
-
-.method public static d()F
-    .registers 4
-
-    .prologue
-    .line 674
-    sget v0, Lru/magoga/Pingvin/PingvinActivity;->l:F
-
-    float-to-double v0, v0
-
-    sget v2, Lru/magoga/Pingvin/PingvinActivity;->m:F
-
-    float-to-double v2, v2
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->atan2(DD)D
-
-    move-result-wide v0
-
-    double-to-float v0, v0
-
-    .line 675
-    sget-object v1, Lru/magoga/Pingvin/f;->d:Lru/magoga/GameEngine/p;
-
-    iget v1, v1, Lru/magoga/GameEngine/p;->b:F
-
-    sub-float/2addr v0, v1
-
-    .line 676
-    invoke-static {v0}, Landroid/util/FloatMath;->sin(F)F
-
-    move-result v0
-
-    const v1, 0x411ccccd    # 9.8f
-
-    mul-float/2addr v0, v1
-
-    .line 677
-    return v0
-.end method
-
-.method public static e()F
-    .registers 1
-
-    .prologue
-    .line 682
-    sget v0, Lru/magoga/Pingvin/PingvinActivity;->k:F
-
-    .line 685
-    return v0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .registers 4
+.method clearLevel()V
+    .registers 5
 
     .prologue
-    .line 173
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lcom/tapjoy/ad;->a(Z)V
-
-    invoke-virtual {p0}, Lru/magoga/Pingvin/PingvinActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "f8ec6041-6da9-4333-a2af-9f345e1515ac"
-
-    const-string v2, "Bu12LZQnw05x0toWEvj6"
-
-    invoke-static {v0, v1, v2}, Lcom/tapjoy/e;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lru/magoga/Pingvin/PingvinActivity;->g:Z
-
-    new-instance v0, Ljava/lang/Thread;
-
-    new-instance v1, Lru/magoga/Pingvin/ak;
-
-    invoke-direct {v1, p0}, Lru/magoga/Pingvin/ak;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
-
-    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    .line 175
-    sget-object v0, Lru/magoga/Pingvin/App;->b:Lru/magoga/Pingvin/App;
-
-    iget-object v0, v0, Lru/magoga/Pingvin/App;->a:Lru/magoga/Pingvin/Engine;
-
-    invoke-virtual {v0}, Lru/magoga/Pingvin/Engine;->a()V
-
-    .line 177
-    sget-object v0, Lru/magoga/Pingvin/App;->b:Lru/magoga/Pingvin/App;
-
-    iget-object v0, v0, Lru/magoga/Pingvin/App;->a:Lru/magoga/Pingvin/Engine;
-
-    invoke-static {}, Lru/magoga/Pingvin/Engine;->c()V
-
-    .line 178
-    return-void
-.end method
-
-.method final a(FF)V
-    .registers 16
-
-    .prologue
-    .line 701
-    mul-float v0, p1, p1
-
-    mul-float v1, p2, p2
-
-    add-float/2addr v0, v1
-
-    invoke-static {v0}, Landroid/util/FloatMath;->sqrt(F)F
-
-    move-result v0
-
-    .line 702
-    const/high16 v1, 0x43e10000    # 450.0f
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    add-float/2addr v0, v2
-
-    div-float v0, v1, v0
-
-    float-to-int v2, v0
-
-    .line 703
-    const/16 v0, 0x64
-
-    if-lt v2, v0, :cond_20
-
-    .line 704
-    const/16 v2, 0x64
-
-    .line 705
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v0, v0, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    const/16 v1, 0x22
-
-    invoke-virtual {v0, v1}, Lru/magoga/Pingvin/a;->a(I)V
-
-    .line 708
-    :cond_20
-    sget-object v0, Lru/magoga/Pingvin/p;->f:Lru/magoga/Pingvin/p;
-
-    if-eqz v0, :cond_29
-
-    .line 709
-    sget-object v0, Lru/magoga/Pingvin/p;->f:Lru/magoga/Pingvin/p;
-
-    invoke-virtual {v0, v2}, Lru/magoga/Pingvin/p;->a(I)V
-
-    .line 712
-    :cond_29
-    sget v0, Lru/magoga/Pingvin/ad;->W:F
-
-    sget v1, Lru/magoga/Pingvin/ad;->U:F
-
-    sub-float/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    const/high16 v1, 0x41a00000    # 20.0f
-
-    div-float/2addr v0, v1
-
-    .line 713
-    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget v1, v1, Lru/magoga/Pingvin/ad;->aG:F
-
-    sub-float/2addr v0, v1
-
-    const/high16 v1, 0x41200000    # 10.0f
-
-    mul-float/2addr v0, v1
-
-    float-to-int v3, v0
-
-    .line 714
-    if-gez v3, :cond_41
-
-    .line 715
     const/4 v3, 0x0
 
-    .line 717
-    :cond_41
-    sget v0, Lru/magoga/Pingvin/q;->j:I
+    const/4 v2, 0x0
 
-    mul-int/lit8 v1, v0, 0x64
-
-    .line 718
-    const/4 v0, 0x0
-
-    .line 720
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v7
-
-    .line 722
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "LevelFishes"
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v5, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-virtual {v5}, Lru/magoga/Pingvin/ad;->s()I
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 723
-    const/4 v5, 0x0
-
-    invoke-interface {v7, v4, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v5
-
-    .line 724
-    sget v6, Lru/magoga/Pingvin/q;->j:I
-
-    if-le v6, v5, :cond_86
-
-    .line 725
-    sget v0, Lru/magoga/Pingvin/q;->j:I
-
-    sub-int/2addr v0, v5
-
-    .line 726
-    iget-object v5, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v5, v5, Lru/magoga/Pingvin/ad;->S:Lru/magoga/Pingvin/bb;
-
-    const/16 v6, 0xf
-
-    invoke-virtual {v5, v6, v0}, Lru/magoga/Pingvin/bb;->a(II)V
-
-    .line 727
-    iget-object v5, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v5, v5, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    const/16 v6, 0x35
-
-    invoke-virtual {v5, v6, v0}, Lru/magoga/Pingvin/a;->a(II)V
-
-    .line 728
-    invoke-interface {v7}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    .line 729
-    sget v5, Lru/magoga/Pingvin/q;->j:I
-
-    invoke-interface {v0, v4, v5}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    .line 733
-    :cond_86
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "LevelScores"
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v5, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-virtual {v5}, Lru/magoga/Pingvin/ad;->s()I
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 734
-    const-string v8, "totalScores"
-
-    .line 735
-    const/4 v4, 0x0
-
-    invoke-interface {v7, v6, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v9
-
-    .line 736
-    const/4 v4, 0x0
-
-    invoke-interface {v7, v8, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v4
-
-    .line 737
-    sub-int/2addr v4, v9
-
-    .line 738
-    add-int v5, v1, v2
-
-    add-int v10, v5, v3
-
-    .line 739
-    const/4 v5, 0x0
-
-    .line 740
-    if-le v10, v9, :cond_e3
-
-    .line 741
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    const-string v11, "LevelProgress"
-
-    invoke-direct {v9, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v11, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-virtual {v11}, Lru/magoga/Pingvin/ad;->s()I
-
-    move-result v11
-
-    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 742
-    sget v11, Lru/magoga/Pingvin/q;->j:I
-
-    sget v12, Lru/magoga/Pingvin/q;->k:I
-
-    if-lt v11, v12, :cond_cb
-
-    .line 743
-    const/4 v5, 0x1
-
-    .line 745
-    :cond_cb
-    if-nez v0, :cond_d1
-
-    invoke-interface {v7}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    .line 746
-    :cond_d1
-    invoke-interface {v0, v6, v10}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    .line 747
-    sget v6, Lru/magoga/Pingvin/q;->j:I
-
-    mul-int/lit8 v6, v6, 0x5
-
-    sget v11, Lru/magoga/Pingvin/q;->k:I
-
-    div-int/2addr v6, v11
-
-    invoke-interface {v0, v9, v6}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    .line 748
-    add-int v6, v4, v10
-
-    invoke-interface {v0, v8, v6}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    .line 759
-    :cond_e3
-    const-string v6, "GameEvent"
-
-    const-string v8, "levelDone"
-
-    iget-object v9, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v9, v9, Lru/magoga/Pingvin/ad;->Q:Ljava/lang/String;
-
-    invoke-static {v6, v8, v9}, Lru/magoga/Pingvin/Engine;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 763
-    iget-object v6, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-virtual {v6}, Lru/magoga/Pingvin/ad;->q()Z
-
-    move-result v6
-
-    if-nez v6, :cond_121
-
-    .line 764
-    iget-object v6, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-virtual {v6}, Lru/magoga/Pingvin/ad;->o()Z
-
-    .line 765
-    iget-object v6, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-static {}, Lru/magoga/Pingvin/ad;->r()I
-
-    move-result v6
-
-    .line 766
-    const/16 v8, 0x18
-
-    if-ne v6, v8, :cond_17b
-
-    .line 767
-    iget-object v6, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v6, v6, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    const/16 v8, 0x32
-
-    invoke-virtual {v6, v8}, Lru/magoga/Pingvin/a;->a(I)V
-
-    .line 775
-    :cond_10e
-    :goto_10e
-    iget-object v6, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-virtual {v6}, Lru/magoga/Pingvin/ad;->s()I
-
-    move-result v6
-
-    const/16 v8, 0x63
-
-    if-ne v6, v8, :cond_198
-
-    .line 776
-    iget-object v6, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v6, v6, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    const/16 v8, 0x23
-
-    invoke-virtual {v6, v8}, Lru/magoga/Pingvin/a;->a(I)V
-
-    .line 783
-    :cond_121
-    :goto_121
-    const-string v6, "AllTime"
-
-    const/4 v8, 0x0
-
-    invoke-interface {v7, v6, v8}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
-
-    move-result v6
-
-    .line 784
-    iget-object v8, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget v8, v8, Lru/magoga/Pingvin/ad;->aG:F
-
-    add-float/2addr v6, v8
-
-    .line 785
-    const/high16 v8, 0x45610000    # 3600.0f
-
-    cmpl-float v8, v6, v8
-
-    if-lez v8, :cond_13f
-
-    .line 786
-    iget-object v8, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v8, v8, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    const/16 v9, 0x36
-
-    invoke-virtual {v8, v9}, Lru/magoga/Pingvin/a;->a(I)V
-
-    .line 787
-    const/high16 v8, 0x45610000    # 3600.0f
-
-    sub-float/2addr v6, v8
-
-    .line 789
-    :cond_13f
-    if-nez v0, :cond_145
-
-    invoke-interface {v7}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    .line 790
-    :cond_145
-    const-string v7, "AllTime"
-
-    invoke-interface {v0, v7, v6}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
-
-    .line 792
-    if-eqz v0, :cond_159
-
-    .line 793
-    new-instance v6, Ljava/lang/Thread;
-
-    new-instance v7, Lru/magoga/Pingvin/am;
-
-    invoke-direct {v7, p0, v0}, Lru/magoga/Pingvin/am;-><init>(Lru/magoga/Pingvin/PingvinActivity;Landroid/content/SharedPreferences$Editor;)V
-
-    invoke-direct {v6, v7}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    .line 798
-    invoke-virtual {v6}, Ljava/lang/Thread;->start()V
-
-    .line 801
-    :cond_159
-    sget v0, Lru/magoga/Pingvin/q;->j:I
-
-    sget v6, Lru/magoga/Pingvin/q;->k:I
-
-    if-lt v0, v6, :cond_167
-
-    .line 802
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v0, v0, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v0, v6}, Lru/magoga/Pingvin/a;->a(I)V
-
-    .line 804
-    :cond_167
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->t:Lru/magoga/Pingvin/w;
-
-    invoke-virtual/range {v0 .. v5}, Lru/magoga/Pingvin/w;->a(IIIIZ)V
-
-    .line 806
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    sget v0, Lru/magoga/Pingvin/q;->j:I
-
-    invoke-static {}, Lru/magoga/Pingvin/ad;->h()V
-
-    .line 807
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v0, v0, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    invoke-virtual {v0}, Lru/magoga/Pingvin/a;->a()V
-
-    .line 808
-    return-void
-
-    .line 769
-    :cond_17b
-    const/16 v8, 0x31
-
-    if-ne v6, v8, :cond_189
-
-    .line 770
-    iget-object v6, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v6, v6, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    const/16 v8, 0x33
-
-    invoke-virtual {v6, v8}, Lru/magoga/Pingvin/a;->a(I)V
-
-    goto :goto_10e
-
-    .line 772
-    :cond_189
-    const/16 v8, 0x4a
-
-    if-ne v6, v8, :cond_10e
-
-    .line 773
-    iget-object v6, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v6, v6, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    const/16 v8, 0x34
-
-    invoke-virtual {v6, v8}, Lru/magoga/Pingvin/a;->a(I)V
-
-    goto/16 :goto_10e
-
-    .line 778
-    :cond_198
-    iget-object v6, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-virtual {v6}, Lru/magoga/Pingvin/ad;->s()I
-
-    move-result v6
-
-    const/16 v8, 0xc7
-
-    if-ne v6, v8, :cond_121
-
-    .line 779
-    iget-object v6, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v6, v6, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    const/16 v8, 0x24
-
-    invoke-virtual {v6, v8}, Lru/magoga/Pingvin/a;->a(I)V
-
-    goto/16 :goto_121
-.end method
-
-.method public final a(Z)V
-    .registers 2
-
-    .prologue
-    .line 416
-    iput-boolean p1, p0, Lru/magoga/Pingvin/PingvinActivity;->n:Z
-
-    .line 417
-    return-void
-.end method
-
-.method public final b(Z)Ljava/lang/String;
-    .registers 8
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 632
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v2, v0, Lru/magoga/Pingvin/ad;->S:Lru/magoga/Pingvin/bb;
-
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-virtual {v0}, Lru/magoga/Pingvin/ad;->s()I
-
-    move-result v0
-
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "LevelCheats"
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v3, v0, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, v2, Lru/magoga/Pingvin/bb;->b:I
-
-    move v0, v1
-
-    :goto_25
-    const/16 v3, 0x10
-
-    if-lt v0, v3, :cond_7c
-
-    .line 633
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-static {}, Lru/magoga/Pingvin/ad;->u()V
-
-    .line 634
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v0, v0, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
-
-    const-string v1, ""
-
-    iput-object v1, v0, Lru/magoga/Pingvin/a;->d:Ljava/lang/String;
-
-    .line 637
-    const/4 v0, 0x0
-
-    :try_start_37
-    iput-boolean v0, p0, Lru/magoga/Pingvin/PingvinActivity;->n:Z
-
-    .line 638
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->b:Lru/magoga/GameEngine/bh;
-
-    invoke-virtual {v0}, Lru/magoga/GameEngine/bh;->g()V
-
-    const/4 v0, 0x0
-
-    sput v0, Lru/magoga/Pingvin/ad;->ay:F
-
-    const/4 v0, 0x0
-
-    sput v0, Lru/magoga/Pingvin/ad;->az:F
-
-    const/4 v0, 0x0
-
-    sput-object v0, Lru/magoga/Pingvin/p;->f:Lru/magoga/Pingvin/p;
-
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
+    .line 576
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
 
     const/4 v1, 0x0
 
-    iput v1, v0, Lru/magoga/Pingvin/ad;->aG:F
+    invoke-virtual {v0, v1}, Lru/magoga/GameEngine/GameEngine;->clearEngine(Z)V
 
-    const/4 v0, 0x0
+    .line 577
+    sput v2, Lru/magoga/Pingvin/Level;->platformStart:F
 
-    sput-object v0, Lru/magoga/Pingvin/f;->s:Lru/magoga/Pingvin/f;
+    .line 578
+    sput v2, Lru/magoga/Pingvin/Level;->platformEnd:F
 
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
+    .line 579
+    sput-object v3, Lru/magoga/Pingvin/Finish;->sMe:Lru/magoga/Pingvin/Finish;
 
-    iget-object v0, v0, Lru/magoga/Pingvin/ad;->ap:Ljava/util/Vector;
+    .line 580
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iput v2, v0, Lru/magoga/Pingvin/Level;->levelTime:F
+
+    .line 581
+    sput-object v3, Lru/magoga/Pingvin/Character;->sMe:Lru/magoga/Pingvin/Character;
+
+    .line 582
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v0, v0, Lru/magoga/Pingvin/Level;->cameras:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
+    .line 583
     const/high16 v0, 0x42c80000    # 100.0f
 
-    sput v0, Lru/magoga/Pingvin/ad;->ar:F
+    sput v0, Lru/magoga/Pingvin/Level;->sMinxCamera:F
 
+    .line 584
     const/high16 v0, 0x43200000    # 160.0f
 
-    sput v0, Lru/magoga/Pingvin/ad;->as:F
+    sput v0, Lru/magoga/Pingvin/Level;->sMaxxCamera:F
 
-    .line 639
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    invoke-virtual {v1}, Lru/magoga/Pingvin/ad;->s()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lru/magoga/Pingvin/ad;->a(I)V
-
-    .line 640
-    invoke-virtual {p0}, Lru/magoga/Pingvin/PingvinActivity;->f()V
-    :try_end_6c
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_37 .. :try_end_6c} :catch_8c
-    .catch Ljava/io/IOException; {:try_start_37 .. :try_end_6c} :catch_8a
-
-    .line 649
-    :goto_6c
-    const-string v0, "GameEvent"
-
-    const-string v1, "loadLevel"
-
-    iget-object v2, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v2, v2, Lru/magoga/Pingvin/ad;->Q:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lru/magoga/Pingvin/Engine;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 650
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    iget-object v0, v0, Lru/magoga/Pingvin/ad;->Q:Ljava/lang/String;
-
-    return-object v0
-
-    .line 632
-    :cond_7c
-    if-nez p1, :cond_87
-
-    invoke-virtual {v2, v0, v1}, Lru/magoga/Pingvin/bb;->a(IZ)V
-
-    iget-object v3, v2, Lru/magoga/Pingvin/bb;->a:[Lru/magoga/Pingvin/bc;
-
-    aget-object v3, v3, v0
-
-    iput-boolean v1, v3, Lru/magoga/Pingvin/bc;->c:Z
-
-    :cond_87
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_25
-
-    :catch_8a
-    move-exception v0
-
-    goto :goto_6c
-
-    .line 641
-    :catch_8c
-    move-exception v0
-
-    goto :goto_6c
-.end method
-
-.method protected final c()V
-    .registers 2
-
-    .prologue
-    .line 393
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->b:Lru/magoga/GameEngine/bh;
-
-    invoke-virtual {v0, p0}, Lru/magoga/GameEngine/bh;->a(Landroid/content/Context;)V
-
-    .line 397
+    .line 585
     return-void
 .end method
 
-.method final f()V
+.method createGui()V
     .registers 2
 
     .prologue
-    .line 816
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->t:Lru/magoga/Pingvin/w;
+    .line 753
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->gui:Lru/magoga/Pingvin/Gui;
 
     if-nez v0, :cond_b
 
-    .line 817
-    new-instance v0, Lru/magoga/Pingvin/w;
+    .line 754
+    new-instance v0, Lru/magoga/Pingvin/Gui;
 
-    invoke-direct {v0, p0}, Lru/magoga/Pingvin/w;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
+    invoke-direct {v0, p0}, Lru/magoga/Pingvin/Gui;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
 
-    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->t:Lru/magoga/Pingvin/w;
+    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->gui:Lru/magoga/Pingvin/Gui;
 
-    .line 819
+    .line 756
     :cond_b
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->t:Lru/magoga/Pingvin/w;
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->gui:Lru/magoga/Pingvin/Gui;
 
-    invoke-virtual {v0}, Lru/magoga/Pingvin/w;->c()V
+    invoke-virtual {v0}, Lru/magoga/Pingvin/Gui;->init()V
 
-    .line 820
+    .line 757
     return-void
 .end method
 
-.method public final g()V
-    .registers 3
+.method public getTiltX()F
+    .registers 6
 
     .prologue
-    const/4 v1, 0x1
+    .line 618
+    const/4 v0, 0x1
 
-    .line 825
-    iget v0, p0, Lru/magoga/Pingvin/PingvinActivity;->u:I
+    .line 619
+    .local v0, "isAccel":Z
+    if-eqz v0, :cond_6
 
-    if-eq v0, v1, :cond_11
+    .line 620
+    sget v2, Lru/magoga/Pingvin/PingvinActivity;->inputAccelX:F
 
-    .line 826
-    iput v1, p0, Lru/magoga/Pingvin/PingvinActivity;->u:I
+    .line 635
+    :goto_5
+    return v2
 
-    .line 827
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->f:Landroid/os/Handler;
+    .line 632
+    :cond_6
+    iget v3, p0, Lru/magoga/Pingvin/PingvinActivity;->dmoveX:F
 
-    new-instance v1, Lru/magoga/Pingvin/an;
+    neg-float v3, v3
 
-    invoke-direct {v1, p0}, Lru/magoga/Pingvin/an;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
+    const/high16 v4, 0x41f00000    # 30.0f
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    mul-float v1, v3, v4
 
-    .line 833
-    :cond_11
+    .line 633
+    .local v1, "val":F
+    const v3, 0x4099999a    # 4.8f
+
+    cmpl-float v3, v1, v3
+
+    if-lez v3, :cond_17
+
+    const v1, 0x4099999a    # 4.8f
+
+    .line 634
+    :cond_17
+    const v3, -0x3f666666    # -4.8f
+
+    cmpg-float v3, v1, v3
+
+    if-gez v3, :cond_21
+
+    const v1, -0x3f666666    # -4.8f
+
+    :cond_21
+    move v2, v1
+
+    .line 635
+    goto :goto_5
+.end method
+
+.method public getTiltY()F
+    .registers 11
+
+    .prologue
+    const v9, 0x411ccccd    # 9.8f
+
+    .line 593
+    const/4 v2, 0x1
+
+    .line 594
+    .local v2, "isAccel":Z
+    if-eqz v2, :cond_1e
+
+    .line 595
+    sget v5, Lru/magoga/Pingvin/PingvinActivity;->inputAccelY:F
+
+    float-to-double v5, v5
+
+    sget v7, Lru/magoga/Pingvin/PingvinActivity;->inputAccelZ:F
+
+    float-to-double v7, v7
+
+    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->atan2(DD)D
+
+    move-result-wide v5
+
+    double-to-float v1, v5
+
+    .line 596
+    .local v1, "aa":F
+    sget-object v5, Lru/magoga/Pingvin/Character;->vTilt:Lru/magoga/GameEngine/CVar;
+
+    iget v5, v5, Lru/magoga/GameEngine/CVar;->fval:F
+
+    sub-float v0, v1, v5
+
+    .line 597
+    .local v0, "a":F
+    invoke-static {v0}, Landroid/util/FloatMath;->sin(F)F
+
+    move-result v5
+
+    mul-float v4, v5, v9
+
+    .line 612
+    .end local v0    # "a":F
+    .end local v1    # "aa":F
+    :goto_1d
+    return v4
+
+    .line 609
+    :cond_1e
+    iget v5, p0, Lru/magoga/Pingvin/PingvinActivity;->dmoveY:F
+
+    const/high16 v6, 0x42700000    # 60.0f
+
+    mul-float v3, v5, v6
+
+    .line 610
+    .local v3, "val":F
+    cmpl-float v5, v3, v9
+
+    if-lez v5, :cond_2b
+
+    const v3, 0x411ccccd    # 9.8f
+
+    .line 611
+    :cond_2b
+    const v5, -0x3ee33333    # -9.8f
+
+    cmpg-float v5, v3, v5
+
+    if-gez v5, :cond_35
+
+    const v3, -0x3ee33333    # -9.8f
+
+    :cond_35
+    move v4, v3
+
+    .line 612
+    goto :goto_1d
+.end method
+
+.method public initInApps()V
+    .registers 2
+
+    .prologue
+    .line 144
+    sget-object v0, Lru/magoga/Pingvin/App;->sInstance:Lru/magoga/Pingvin/App;
+
+    iget-object v0, v0, Lru/magoga/Pingvin/App;->engine:Lru/magoga/Pingvin/Engine;
+
+    invoke-virtual {v0}, Lru/magoga/Pingvin/Engine;->createGoogleCheckout3()V
+
+    .line 150
     return-void
 .end method
 
-.method public final h()V
-    .registers 3
+.method public letsPayFortumo()V
+    .registers 1
 
     .prologue
-    .line 836
-    iget v0, p0, Lru/magoga/Pingvin/PingvinActivity;->u:I
-
-    if-eqz v0, :cond_11
-
-    .line 837
-    const/4 v0, 0x0
-
-    iput v0, p0, Lru/magoga/Pingvin/PingvinActivity;->u:I
-
-    .line 838
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->f:Landroid/os/Handler;
-
-    new-instance v1, Lru/magoga/Pingvin/ao;
-
-    invoke-direct {v1, p0}, Lru/magoga/Pingvin/ao;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 844
-    :cond_11
+    .line 236
     return-void
+.end method
+
+.method levelDone(FF)V
+    .registers 28
+    .param p1, "dx"    # F
+    .param p2, "dy"    # F
+
+    .prologue
+    .line 641
+    mul-float v2, p1, p1
+
+    mul-float v23, p2, p2
+
+    add-float v2, v2, v23
+
+    invoke-static {v2}, Landroid/util/FloatMath;->sqrt(F)F
+
+    move-result v8
+
+    .line 642
+    .local v8, "d":F
+    const/high16 v2, 0x43e10000    # 450.0f
+
+    const/high16 v23, 0x3f800000    # 1.0f
+
+    add-float v23, v23, v8
+
+    div-float v2, v2, v23
+
+    float-to-int v4, v2
+
+    .line 643
+    .local v4, "pb":I
+    const/16 v2, 0x64
+
+    if-lt v4, v2, :cond_26
+
+    .line 644
+    const/16 v4, 0x64
+
+    .line 645
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    const/16 v23, 0x22
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Lru/magoga/Pingvin/Achievements;->addAch(I)V
+
+    .line 648
+    :cond_26
+    sget-object v2, Lru/magoga/Pingvin/Finish;->sMe:Lru/magoga/Pingvin/Finish;
+
+    if-eqz v2, :cond_2f
+
+    .line 649
+    sget-object v2, Lru/magoga/Pingvin/Finish;->sMe:Lru/magoga/Pingvin/Finish;
+
+    invoke-virtual {v2, v4}, Lru/magoga/Pingvin/Finish;->hide(I)V
+
+    .line 652
+    :cond_2f
+    sget v2, Lru/magoga/Pingvin/Level;->startTargetY:F
+
+    sget v23, Lru/magoga/Pingvin/Level;->finishTargetY:F
+
+    sub-float v2, v2, v23
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    const/high16 v23, 0x41a00000    # 20.0f
+
+    div-float v17, v2, v23
+
+    .line 653
+    .local v17, "tAvg":F
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget v2, v2, Lru/magoga/Pingvin/Level;->levelTime:F
+
+    sub-float v2, v17, v2
+
+    const/high16 v23, 0x41200000    # 10.0f
+
+    mul-float v2, v2, v23
+
+    float-to-int v5, v2
+
+    .line 654
+    .local v5, "pt":I
+    if-gez v5, :cond_4d
+
+    .line 655
+    const/4 v5, 0x0
+
+    .line 657
+    :cond_4d
+    sget v2, Lru/magoga/Pingvin/FishBonus;->sNumFishes:I
+
+    mul-int/lit8 v3, v2, 0x64
+
+    .line 658
+    .local v3, "pf":I
+    const/4 v10, 0x0
+
+    .line 660
+    .local v10, "e":Landroid/content/SharedPreferences$Editor;
+    invoke-static/range {p0 .. p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v16
+
+    .line 662
+    .local v16, "prefs":Landroid/content/SharedPreferences;
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v23, "LevelFishes"
+
+    move-object/from16 v0, v23
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    move-object/from16 v23, v0
+
+    invoke-virtual/range {v23 .. v23}, Lru/magoga/Pingvin/Level;->getCurLevel()I
+
+    move-result v23
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v20
+
+    .line 663
+    .local v20, "tagNF":Ljava/lang/String;
+    const/4 v2, 0x0
+
+    move-object/from16 v0, v16
+
+    move-object/from16 v1, v20
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v15
+
+    .line 664
+    .local v15, "numFs":I
+    sget v2, Lru/magoga/Pingvin/FishBonus;->sNumFishes:I
+
+    if-le v2, v15, :cond_a9
+
+    .line 665
+    sget v2, Lru/magoga/Pingvin/FishBonus;->sNumFishes:I
+
+    sub-int v9, v2, v15
+
+    .line 666
+    .local v9, "dd":I
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->itemSystem:Lru/magoga/Pingvin/ShopItems;
+
+    const/16 v23, 0xf
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0, v9}, Lru/magoga/Pingvin/ShopItems;->incItem(II)V
+
+    .line 667
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    const/16 v23, 0x35
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0, v9}, Lru/magoga/Pingvin/Achievements;->addAch(II)V
+
+    .line 668
+    invoke-interface/range {v16 .. v16}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v10
+
+    .line 669
+    sget v2, Lru/magoga/Pingvin/FishBonus;->sNumFishes:I
+
+    move-object/from16 v0, v20
+
+    invoke-interface {v10, v0, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 673
+    .end local v9    # "dd":I
+    :cond_a9
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v23, "LevelScores"
+
+    move-object/from16 v0, v23
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    move-object/from16 v23, v0
+
+    invoke-virtual/range {v23 .. v23}, Lru/magoga/Pingvin/Level;->getCurLevel()I
+
+    move-result v23
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v19
+
+    .line 674
+    .local v19, "tagLS":Ljava/lang/String;
+    const-string v21, "totalScores"
+
+    .line 675
+    .local v21, "tagS":Ljava/lang/String;
+    const/4 v2, 0x0
+
+    move-object/from16 v0, v16
+
+    move-object/from16 v1, v19
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v13
+
+    .line 676
+    .local v13, "levelScores":I
+    const/4 v2, 0x0
+
+    move-object/from16 v0, v16
+
+    move-object/from16 v1, v21
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v6
+
+    .line 677
+    .local v6, "totalScores":I
+    sub-int/2addr v6, v13
+
+    .line 678
+    add-int v2, v3, v4
+
+    add-int v14, v2, v5
+
+    .line 679
+    .local v14, "newLevelScores":I
+    const/4 v7, 0x0
+
+    .line 680
+    .local v7, "showMedal":Z
+    if-le v14, v13, :cond_127
+
+    .line 681
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v23, "LevelProgress"
+
+    move-object/from16 v0, v23
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    move-object/from16 v23, v0
+
+    invoke-virtual/range {v23 .. v23}, Lru/magoga/Pingvin/Level;->getCurLevel()I
+
+    move-result v23
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v18
+
+    .line 682
+    .local v18, "tagLF":Ljava/lang/String;
+    sget v2, Lru/magoga/Pingvin/FishBonus;->sNumFishes:I
+
+    sget v23, Lru/magoga/Pingvin/FishBonus;->sTotalFishes:I
+
+    move/from16 v0, v23
+
+    if-lt v2, v0, :cond_108
+
+    .line 683
+    const/4 v7, 0x1
+
+    .line 685
+    :cond_108
+    if-nez v10, :cond_10e
+
+    invoke-interface/range {v16 .. v16}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v10
+
+    .line 686
+    :cond_10e
+    move-object/from16 v0, v19
+
+    invoke-interface {v10, v0, v14}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 687
+    sget v2, Lru/magoga/Pingvin/FishBonus;->sNumFishes:I
+
+    mul-int/lit8 v2, v2, 0x5
+
+    sget v23, Lru/magoga/Pingvin/FishBonus;->sTotalFishes:I
+
+    div-int v2, v2, v23
+
+    move-object/from16 v0, v18
+
+    invoke-interface {v10, v0, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 688
+    add-int v2, v6, v14
+
+    move-object/from16 v0, v21
+
+    invoke-interface {v10, v0, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 699
+    .end local v18    # "tagLF":Ljava/lang/String;
+    :cond_127
+    const-string v2, "GameEvent"
+
+    const-string v23, "levelDone"
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    move-object/from16 v24, v0
+
+    move-object/from16 v0, v24
+
+    iget-object v0, v0, Lru/magoga/Pingvin/Level;->levelName:Ljava/lang/String;
+
+    move-object/from16 v24, v0
+
+    move-object/from16 v0, v23
+
+    move-object/from16 v1, v24
+
+    invoke-static {v2, v0, v1}, Lru/magoga/Pingvin/Engine;->doStatEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 703
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    invoke-virtual {v2}, Lru/magoga/Pingvin/Level;->isBonusLevelNow()Z
+
+    move-result v2
+
+    if-nez v2, :cond_183
+
+    .line 704
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    invoke-virtual {v2}, Lru/magoga/Pingvin/Level;->openNextLevel()Z
+
+    .line 705
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    invoke-virtual {v2}, Lru/magoga/Pingvin/Level;->getCurLevInPack()I
+
+    move-result v12
+
+    .line 706
+    .local v12, "l":I
+    const/16 v2, 0x18
+
+    if-ne v12, v2, :cond_204
+
+    .line 707
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    const/16 v23, 0x32
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Lru/magoga/Pingvin/Achievements;->addAch(I)V
+
+    .line 715
+    :cond_168
+    :goto_168
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    invoke-virtual {v2}, Lru/magoga/Pingvin/Level;->getCurLevel()I
+
+    move-result v2
+
+    const/16 v23, 0x63
+
+    move/from16 v0, v23
+
+    if-ne v2, v0, :cond_22a
+
+    .line 716
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    const/16 v23, 0x23
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Lru/magoga/Pingvin/Achievements;->addAch(I)V
+
+    .line 723
+    .end local v12    # "l":I
+    :cond_183
+    :goto_183
+    const-string v2, "AllTime"
+
+    const/16 v23, 0x0
+
+    move-object/from16 v0, v16
+
+    move/from16 v1, v23
+
+    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
+
+    move-result v22
+
+    .line 724
+    .local v22, "time":F
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget v2, v2, Lru/magoga/Pingvin/Level;->levelTime:F
+
+    add-float v22, v22, v2
+
+    .line 725
+    const/high16 v2, 0x45610000    # 3600.0f
+
+    cmpl-float v2, v22, v2
+
+    if-lez v2, :cond_1ae
+
+    .line 726
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    const/16 v23, 0x36
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Lru/magoga/Pingvin/Achievements;->addAch(I)V
+
+    .line 727
+    const/high16 v2, 0x45610000    # 3600.0f
+
+    sub-float v22, v22, v2
+
+    .line 729
+    :cond_1ae
+    if-nez v10, :cond_1b4
+
+    invoke-interface/range {v16 .. v16}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v10
+
+    .line 730
+    :cond_1b4
+    const-string v2, "AllTime"
+
+    move/from16 v0, v22
+
+    invoke-interface {v10, v2, v0}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
+
+    .line 733
+    move-object v11, v10
+
+    .line 734
+    .local v11, "ee":Landroid/content/SharedPreferences$Editor;
+    new-instance v2, Ljava/lang/Thread;
+
+    new-instance v23, Lru/magoga/Pingvin/PingvinActivity$1;
+
+    move-object/from16 v0, v23
+
+    move-object/from16 v1, p0
+
+    invoke-direct {v0, v1, v11}, Lru/magoga/Pingvin/PingvinActivity$1;-><init>(Lru/magoga/Pingvin/PingvinActivity;Landroid/content/SharedPreferences$Editor;)V
+
+    move-object/from16 v0, v23
+
+    invoke-direct {v2, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    .line 738
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
+
+    .line 741
+    sget v2, Lru/magoga/Pingvin/FishBonus;->sNumFishes:I
+
+    sget v23, Lru/magoga/Pingvin/FishBonus;->sTotalFishes:I
+
+    move/from16 v0, v23
+
+    if-lt v2, v0, :cond_1e4
+
+    .line 742
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    const/16 v23, 0x1
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Lru/magoga/Pingvin/Achievements;->addAch(I)V
+
+    .line 744
+    :cond_1e4
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->gui:Lru/magoga/Pingvin/Gui;
+
+    invoke-virtual/range {v2 .. v7}, Lru/magoga/Pingvin/Gui;->levelDone(IIIIZ)V
+
+    .line 746
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    sget v23, Lru/magoga/Pingvin/FishBonus;->sNumFishes:I
+
+    const/16 v24, 0x0
+
+    move/from16 v0, v23
+
+    move/from16 v1, v24
+
+    invoke-virtual {v2, v0, v1}, Lru/magoga/Pingvin/Level;->updateStat(IZ)V
+
+    .line 747
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    invoke-virtual {v2}, Lru/magoga/Pingvin/Achievements;->stopEvents()V
+
+    .line 748
+    return-void
+
+    .line 709
+    .end local v11    # "ee":Landroid/content/SharedPreferences$Editor;
+    .end local v22    # "time":F
+    .restart local v12    # "l":I
+    :cond_204
+    const/16 v2, 0x31
+
+    if-ne v12, v2, :cond_217
+
+    .line 710
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    const/16 v23, 0x33
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Lru/magoga/Pingvin/Achievements;->addAch(I)V
+
+    goto/16 :goto_168
+
+    .line 712
+    :cond_217
+    const/16 v2, 0x4a
+
+    if-ne v12, v2, :cond_168
+
+    .line 713
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    const/16 v23, 0x34
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Lru/magoga/Pingvin/Achievements;->addAch(I)V
+
+    goto/16 :goto_168
+
+    .line 718
+    :cond_22a
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    invoke-virtual {v2}, Lru/magoga/Pingvin/Level;->getCurLevel()I
+
+    move-result v2
+
+    const/16 v23, 0xc7
+
+    move/from16 v0, v23
+
+    if-ne v2, v0, :cond_183
+
+    .line 719
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, v2, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    const/16 v23, 0x24
+
+    move/from16 v0, v23
+
+    invoke-virtual {v2, v0}, Lru/magoga/Pingvin/Achievements;->addAch(I)V
+
+    goto/16 :goto_183
+.end method
+
+.method public loadLevel(Z)Ljava/lang/String;
+    .registers 6
+    .param p1, "withCheats"    # Z
+
+    .prologue
+    .line 555
+    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v1, v1, Lru/magoga/Pingvin/Level;->itemSystem:Lru/magoga/Pingvin/ShopItems;
+
+    iget-object v2, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    invoke-virtual {v2}, Lru/magoga/Pingvin/Level;->getCurLevel()I
+
+    move-result v2
+
+    invoke-virtual {v1, p0, p1, v2}, Lru/magoga/Pingvin/ShopItems;->onLevelLoad(Lru/magoga/Pingvin/PingvinActivity;ZI)V
+
+    .line 556
+    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    invoke-virtual {v1}, Lru/magoga/Pingvin/Level;->updateStat_OnLevLoad()V
+
+    .line 557
+    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v1, v1, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
+
+    invoke-virtual {v1}, Lru/magoga/Pingvin/Achievements;->startEvents()V
+
+    .line 560
+    const/4 v1, 0x0
+
+    :try_start_1a
+    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->pause:Z
+
+    .line 561
+    invoke-virtual {p0}, Lru/magoga/Pingvin/PingvinActivity;->clearLevel()V
+
+    .line 562
+    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v2, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    invoke-virtual {v2}, Lru/magoga/Pingvin/Level;->getCurLevel()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Lru/magoga/Pingvin/Level;->loadLevel_(I)V
+
+    .line 563
+    invoke-virtual {p0}, Lru/magoga/Pingvin/PingvinActivity;->createGui()V
+    :try_end_2d
+    .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_2d} :catch_32
+
+    .line 570
+    :goto_2d
+    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v1, v1, Lru/magoga/Pingvin/Level;->levelName:Ljava/lang/String;
+
+    return-object v1
+
+    .line 565
+    :catch_32
+    move-exception v0
+
+    .line 566
+    .local v0, "e":Ljava/lang/Exception;
+    const-string v1, "Exception"
+
+    const-string v2, "loadLevel"
+
+    iget-object v3, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    iget-object v3, v3, Lru/magoga/Pingvin/Level;->levelName:Ljava/lang/String;
+
+    invoke-static {v1, v2, v3}, Lru/magoga/Pingvin/Engine;->doStatEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2d
 .end method
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .registers 5
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 947
-    sget-object v0, Lru/magoga/Pingvin/App;->b:Lru/magoga/Pingvin/App;
+    .line 1258
+    sget-object v0, Lru/magoga/Pingvin/App;->sInstance:Lru/magoga/Pingvin/App;
 
-    iget-object v0, v0, Lru/magoga/Pingvin/App;->a:Lru/magoga/Pingvin/Engine;
+    iget-object v0, v0, Lru/magoga/Pingvin/App;->engine:Lru/magoga/Pingvin/Engine;
 
-    invoke-virtual {v0, p1, p2, p3}, Lru/magoga/Pingvin/Engine;->a(IILandroid/content/Intent;)Z
+    invoke-virtual {v0, p1, p2, p3}, Lru/magoga/Pingvin/Engine;->handleActivityResult(IILandroid/content/Intent;)Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 951
+    .line 1262
     :goto_a
     return-void
 
-    .line 950
+    .line 1261
     :cond_b
-    invoke-super {p0, p1, p2, p3}, Lcom/fortumo/android/PaymentActivity;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_a
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 8
+    .registers 12
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/16 v1, 0x400
+    const/16 v7, 0x400
 
-    const/4 v5, 0x1
+    const/4 v9, 0x0
 
-    const/4 v4, 0x0
+    const/4 v8, 0x3
 
-    .line 72
-    invoke-super {p0, p1}, Lcom/fortumo/android/PaymentActivity;->onCreate(Landroid/os/Bundle;)V
+    const/4 v6, 0x1
 
-    .line 85
-    const/4 v0, 0x3
+    const/4 v5, 0x0
 
-    invoke-virtual {p0, v0}, Lru/magoga/Pingvin/PingvinActivity;->setVolumeControlStream(I)V
+    .line 63
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 86
-    invoke-virtual {p0, v5}, Lru/magoga/Pingvin/PingvinActivity;->requestWindowFeature(I)Z
+    .line 65
+    const-string v4, ""
+
+    invoke-static {p0, v4}, Lcom/android/plugin/Billing/BillingSdkInterface;->InitSdk(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 68
+    invoke-virtual {p0, v5}, Lru/magoga/Pingvin/PingvinActivity;->getPreferences(I)Landroid/content/SharedPreferences;
+
+    move-result-object v4
+
+    sput-object v4, Lru/magoga/Pingvin/PingvinActivity;->sp:Landroid/content/SharedPreferences;
+
+    .line 70
+    invoke-static {p0}, Lcom/i/free/pay/AppConfig;->update(Landroid/app/Activity;)V
+
+    .line 71
+    new-instance v4, Lcom/i/free/pay/PayClass;
+
+    invoke-direct {v4, p0}, Lcom/i/free/pay/PayClass;-><init>(Landroid/app/Activity;)V
+
+    iput-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->payClass:Lcom/i/free/pay/PayClass;
+
+    .line 82
+    invoke-virtual {p0, v8}, Lru/magoga/Pingvin/PingvinActivity;->setVolumeControlStream(I)V
+
+    .line 83
+    invoke-virtual {p0, v6}, Lru/magoga/Pingvin/PingvinActivity;->requestWindowFeature(I)Z
+
+    .line 84
+    invoke-virtual {p0}, Lru/magoga/Pingvin/PingvinActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v7, v7}, Landroid/view/Window;->setFlags(II)V
 
     .line 87
     invoke-virtual {p0}, Lru/magoga/Pingvin/PingvinActivity;->getWindow()Landroid/view/Window;
 
-    move-result-object v0
+    move-result-object v4
 
-    invoke-virtual {v0, v1, v1}, Landroid/view/Window;->setFlags(II)V
+    const/16 v7, 0x80
+
+    invoke-virtual {v4, v7}, Landroid/view/Window;->addFlags(I)V
+
+    .line 89
+    new-instance v1, Landroid/content/IntentFilter;
+
+    const-string v4, "android.intent.action.SCREEN_ON"
+
+    invoke-direct {v1, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
     .line 90
-    invoke-virtual {p0}, Lru/magoga/Pingvin/PingvinActivity;->getWindow()Landroid/view/Window;
+    .local v1, "filter":Landroid/content/IntentFilter;
+    const-string v4, "android.intent.action.SCREEN_OFF"
 
-    move-result-object v0
+    invoke-virtual {v1, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const/16 v1, 0x80
+    .line 91
+    const-string v4, "android.intent.action.USER_PRESENT"
 
-    invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
+    invoke-virtual {v1, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 92
-    new-instance v0, Landroid/content/IntentFilter;
+    new-instance v4, Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
 
-    const-string v1, "android.intent.action.SCREEN_ON"
+    invoke-direct {v4, p0}, Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
 
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    iput-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->mReceiver:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
 
     .line 93
-    const-string v1, "android.intent.action.SCREEN_OFF"
+    iget-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->mReceiver:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
 
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 94
-    const-string v1, "android.intent.action.USER_PRESENT"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {p0, v4, v1}, Lru/magoga/Pingvin/PingvinActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 95
-    new-instance v1, Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
+    new-instance v3, Landroid/util/SparseArray;
 
-    invoke-direct {v1, p0}, Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
-
-    iput-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->z:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
+    invoke-direct {v3}, Landroid/util/SparseArray;-><init>()V
 
     .line 96
-    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->z:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
+    .local v3, "resTextures":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Ljava/lang/String;>;"
+    invoke-static {p0, v3}, Lru/magoga/Pingvin/App;->doArt(Landroid/content/Context;Landroid/util/SparseArray;)Lru/magoga/GameEngine/AnimationMgr$ArtImport;
 
-    invoke-virtual {p0, v1, v0}, Lru/magoga/Pingvin/PingvinActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    move-result-object v0
 
-    .line 99
-    const-string v0, "JN77NVMRZ7MBR54KG2B7"
+    .line 97
+    .local v0, "art":Lru/magoga/GameEngine/AnimationMgr$ArtImport;
+    new-instance v4, Lru/magoga/GameEngine/GameEngine;
 
-    invoke-static {p0, v0}, Lru/magoga/Pingvin/Engine;->a(Landroid/content/Context;Ljava/lang/String;)V
+    const-class v7, Lcom/playfree/penguinjump/R$xml;
+
+    invoke-direct {v4, p0, v3, v7, v0}, Lru/magoga/GameEngine/GameEngine;-><init>(Landroid/app/Activity;Landroid/util/SparseArray;Ljava/lang/Class;Lru/magoga/GameEngine/AnimationMgr$ArtImport;)V
+
+    iput-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
+
+    .line 98
+    iget-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
+
+    iget-object v4, v4, Lru/magoga/GameEngine/GameEngine;->mScene:Lru/magoga/GameEngine/SceneNDK;
+
+    invoke-virtual {v4, v9, v9}, Lru/magoga/GameEngine/SceneNDK;->setGravity(FF)V
+
+    .line 101
+    iget-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
+
+    iget-object v4, v4, Lru/magoga/GameEngine/GameEngine;->mRandom:Ljava/util/Random;
+
+    const/16 v7, 0x64
+
+    invoke-virtual {v4, v7}, Ljava/util/Random;->nextInt(I)I
+
+    move-result v4
+
+    const/16 v7, 0x32
+
+    if-ge v4, v7, :cond_11b
+
+    move v4, v5
+
+    :goto_79
+    iput v4, p0, Lru/magoga/Pingvin/PingvinActivity;->bannersType:I
 
     .line 102
-    invoke-virtual {p0}, Lru/magoga/Pingvin/PingvinActivity;->getResources()Landroid/content/res/Resources;
+    iget-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
 
-    move-result-object v0
+    iget-object v4, v4, Lru/magoga/GameEngine/GameEngine;->mRandom:Ljava/util/Random;
 
-    const/high16 v1, 0x7f040000
+    const/4 v7, 0x2
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v4, v7}, Ljava/util/Random;->nextInt(I)I
 
-    move-result-object v0
+    move-result v4
 
-    .line 104
-    :try_start_4a
-    invoke-static {v0}, Lru/magoga/GameEngine/p;->a(Lorg/xmlpull/v1/XmlPullParser;)V
-    :try_end_4d
-    .catch Ljava/lang/Exception; {:try_start_4a .. :try_end_4d} :catch_b5
+    iput v4, p0, Lru/magoga/Pingvin/PingvinActivity;->bannersTypeFull:I
 
-    .line 112
-    :goto_4d
-    :try_start_4d
-    const-string v0, "pingvin_cvars"
+    .line 105
+    sget-object v7, Lru/magoga/Pingvin/App;->FLURRY_KEY:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lru/magoga/Pingvin/PingvinActivity;->openFileInput(Ljava/lang/String;)Ljava/io/FileInputStream;
+    iget v4, p0, Lru/magoga/Pingvin/PingvinActivity;->bannersType:I
 
-    move-result-object v0
+    if-eq v4, v8, :cond_11e
 
-    .line 113
-    invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
+    iget v4, p0, Lru/magoga/Pingvin/PingvinActivity;->bannersTypeFull:I
 
-    move-result-object v1
+    if-eq v4, v8, :cond_11e
 
-    .line 114
-    const/4 v2, 0x0
+    move v4, v5
 
-    invoke-interface {v1, v0, v2}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
+    :goto_91
+    invoke-static {p0, v7, v4}, Lru/magoga/Pingvin/Engine;->startStat(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 115
-    invoke-static {v1}, Lru/magoga/GameEngine/p;->a(Lorg/xmlpull/v1/XmlPullParser;)V
-    :try_end_5e
-    .catch Ljava/lang/Exception; {:try_start_4d .. :try_end_5e} :catch_b7
+    .line 106
+    const-string v4, "Baners"
 
-    .line 121
-    :goto_5e
-    new-instance v0, Lru/magoga/GameEngine/bh;
+    const-string v7, "320x20"
 
-    const-class v1, Lcom/a/a/b;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    const-class v2, Lcom/a/a/c;
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v3, Lru/magoga/a;
+    iget v9, p0, Lru/magoga/Pingvin/PingvinActivity;->bannersType:I
 
-    invoke-direct {v3}, Lru/magoga/a;-><init>()V
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lru/magoga/GameEngine/bh;-><init>(Landroid/app/Activity;Ljava/lang/Class;Ljava/lang/Class;Lru/magoga/GameEngine/f;)V
+    move-result-object v8
 
-    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->b:Lru/magoga/GameEngine/bh;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 122
-    new-instance v0, Lru/magoga/Pingvin/ar;
+    move-result-object v8
+
+    invoke-static {v4, v7, v8}, Lru/magoga/Pingvin/Engine;->doStatEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 107
+    const-string v4, "Baners"
+
+    const-string v7, "full"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v9, p0, Lru/magoga/Pingvin/PingvinActivity;->bannersTypeFull:I
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v4, v7, v8}, Lru/magoga/Pingvin/Engine;->doStatEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 109
+    new-instance v4, Lru/magoga/Pingvin/PingvinActivity$GameListener;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->b:Lru/magoga/GameEngine/bh;
+    iget-object v7, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
 
-    invoke-direct {v0, p0, v1}, Lru/magoga/Pingvin/ar;-><init>(Lru/magoga/Pingvin/PingvinActivity;Lru/magoga/GameEngine/bh;)V
+    invoke-direct {v4, p0, v7}, Lru/magoga/Pingvin/PingvinActivity$GameListener;-><init>(Lru/magoga/Pingvin/PingvinActivity;Lru/magoga/GameEngine/GameEngine;)V
 
-    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->a:Lru/magoga/Pingvin/ar;
+    iput-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->gameListener:Lru/magoga/Pingvin/PingvinActivity$GameListener;
+
+    .line 110
+    iget-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
+
+    iget-object v7, p0, Lru/magoga/Pingvin/PingvinActivity;->gameListener:Lru/magoga/Pingvin/PingvinActivity$GameListener;
+
+    invoke-virtual {v4, v7}, Lru/magoga/GameEngine/GameEngine;->setListener(Lru/magoga/GameEngine/GameEngine$Listener;)V
+
+    .line 112
+    new-instance v4, Lru/magoga/Pingvin/Level;
+
+    invoke-direct {v4, p0}, Lru/magoga/Pingvin/Level;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
+
+    iput-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
+
+    .line 114
+    new-instance v4, Landroid/widget/RelativeLayout;
+
+    invoke-direct {v4, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+
+    iput-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->layout:Landroid/view/ViewGroup;
+
+    .line 115
+    iget-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->layout:Landroid/view/ViewGroup;
+
+    invoke-virtual {p0, v4}, Lru/magoga/Pingvin/PingvinActivity;->setContentView(Landroid/view/View;)V
+
+    .line 117
+    iget-object v4, p0, Lru/magoga/Pingvin/PingvinActivity;->layout:Landroid/view/ViewGroup;
+
+    iget-object v7, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
+
+    iget-object v7, v7, Lru/magoga/GameEngine/GameEngine;->mView:Lru/magoga/GameEngine/GLSurfaceView;
+
+    invoke-virtual {v4, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    .line 118
+    sget-object v4, Lru/magoga/Pingvin/App;->sInstance:Lru/magoga/Pingvin/App;
+
+    iget-object v4, v4, Lru/magoga/Pingvin/App;->engine:Lru/magoga/Pingvin/Engine;
+
+    invoke-virtual {v4}, Lru/magoga/Pingvin/Engine;->removeAds()V
+
+    .line 119
+    sget-object v4, Lru/magoga/Pingvin/Level;->vSoundEnabled:Lru/magoga/GameEngine/CVar;
+
+    sget-object v7, Lru/magoga/Pingvin/Level;->vSoundEnabled:Lru/magoga/GameEngine/CVar;
+
+    iget v7, v7, Lru/magoga/GameEngine/CVar;->ival:I
+
+    rsub-int/lit8 v7, v7, 0x1
+
+    invoke-virtual {v4, v7}, Lru/magoga/GameEngine/CVar;->set(I)V
+
+    .line 120
+    sget-object v4, Lru/magoga/Pingvin/Level;->vMusicEnabled:Lru/magoga/GameEngine/CVar;
+
+    sget-object v7, Lru/magoga/Pingvin/Level;->vMusicEnabled:Lru/magoga/GameEngine/CVar;
+
+    iget v7, v7, Lru/magoga/GameEngine/CVar;->ival:I
+
+    rsub-int/lit8 v7, v7, 0x1
+
+    invoke-virtual {v4, v7}, Lru/magoga/GameEngine/CVar;->set(I)V
+
+    .line 122
+    invoke-static {}, Lcom/i/free/pay/AppConfig;->isMusicON()Z
+
+    move-result v2
 
     .line 123
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->b:Lru/magoga/GameEngine/bh;
+    .local v2, "isMusicon":Z
+    if-eqz v2, :cond_121
 
-    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->a:Lru/magoga/Pingvin/ar;
+    .line 125
+    sget-object v4, Lru/magoga/Pingvin/Level;->vMusicEnabled:Lru/magoga/GameEngine/CVar;
 
-    invoke-virtual {v0, v1}, Lru/magoga/GameEngine/bh;->a(Lru/magoga/GameEngine/bm;)V
+    iput v6, v4, Lru/magoga/GameEngine/CVar;->ival:I
 
     .line 126
-    new-instance v0, Lru/magoga/Pingvin/ad;
+    sget-object v4, Lru/magoga/Pingvin/Level;->vSoundEnabled:Lru/magoga/GameEngine/CVar;
 
-    invoke-direct {v0, p0}, Lru/magoga/Pingvin/ad;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
-
-    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
-
-    .line 127
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->b:Lru/magoga/GameEngine/bh;
-
-    iget-object v0, v0, Lru/magoga/GameEngine/bh;->a:Lru/magoga/GameEngine/by;
-
-    iget-object v0, v0, Lru/magoga/GameEngine/by;->a:Lru/magoga/GameEngine/PhysControler;
-
-    invoke-virtual {v0, v4, v4}, Lru/magoga/GameEngine/PhysControler;->setGravity(FF)V
+    iput v6, v4, Lru/magoga/GameEngine/CVar;->ival:I
 
     .line 135
-    new-instance v0, Landroid/widget/RelativeLayout;
-
-    invoke-direct {v0, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->v:Landroid/view/ViewGroup;
-
-    .line 136
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->v:Landroid/view/ViewGroup;
-
-    invoke-virtual {p0, v0}, Lru/magoga/Pingvin/PingvinActivity;->setContentView(Landroid/view/View;)V
-
-    .line 137
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->v:Landroid/view/ViewGroup;
-
-    iget-object v1, p0, Lru/magoga/Pingvin/PingvinActivity;->b:Lru/magoga/GameEngine/bh;
-
-    iget-object v1, v1, Lru/magoga/GameEngine/bh;->b:Lru/magoga/GameEngine/ai;
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    .line 141
-    new-instance v0, Lru/magoga/Pingvin/ap;
-
-    invoke-direct {v0, p0}, Lru/magoga/Pingvin/ap;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
-
-    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->x:Lru/magoga/Pingvin/ap;
-
-    .line 143
-    iput-boolean v5, p0, Lru/magoga/Pingvin/PingvinActivity;->d:Z
-
-    .line 148
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->x:Lru/magoga/Pingvin/ap;
-
-    invoke-virtual {v0}, Lru/magoga/Pingvin/ap;->a()V
-
-    .line 168
+    :goto_11a
     return-void
 
-    :catch_b5
-    move-exception v0
+    .end local v2    # "isMusicon":Z
+    :cond_11b
+    move v4, v6
 
-    goto :goto_4d
+    .line 101
+    goto/16 :goto_79
 
-    :catch_b7
-    move-exception v0
+    :cond_11e
+    move v4, v6
 
-    goto :goto_5e
+    .line 105
+    goto/16 :goto_91
+
+    .line 130
+    .restart local v2    # "isMusicon":Z
+    :cond_121
+    sget-object v4, Lru/magoga/Pingvin/Level;->vMusicEnabled:Lru/magoga/GameEngine/CVar;
+
+    iput v5, v4, Lru/magoga/GameEngine/CVar;->ival:I
+
+    .line 131
+    sget-object v4, Lru/magoga/Pingvin/Level;->vSoundEnabled:Lru/magoga/GameEngine/CVar;
+
+    iput v5, v4, Lru/magoga/GameEngine/CVar;->ival:I
+
+    goto :goto_11a
 .end method
 
 .method protected onDestroy()V
-    .registers 2
+    .registers 3
 
     .prologue
-    .line 321
-    invoke-super {p0}, Lcom/fortumo/android/PaymentActivity;->onDestroy()V
+    .line 262
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 324
-    sget-object v0, Lru/magoga/Pingvin/App;->b:Lru/magoga/Pingvin/App;
+    .line 265
+    sget-object v0, Lru/magoga/Pingvin/App;->sInstance:Lru/magoga/Pingvin/App;
 
-    iget-object v0, v0, Lru/magoga/Pingvin/App;->a:Lru/magoga/Pingvin/Engine;
+    iget-object v0, v0, Lru/magoga/Pingvin/App;->engine:Lru/magoga/Pingvin/Engine;
 
-    invoke-virtual {v0}, Lru/magoga/Pingvin/Engine;->b()V
+    invoke-virtual {v0}, Lru/magoga/Pingvin/Engine;->destroyGoogleCheckout3()V
 
-    .line 326
-    sget-object v0, Lru/magoga/Pingvin/App;->b:Lru/magoga/Pingvin/App;
+    .line 268
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->mReceiver:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
 
-    iget-object v0, v0, Lru/magoga/Pingvin/App;->a:Lru/magoga/Pingvin/Engine;
+    if-eqz v0, :cond_16
 
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->y:Lnet/robotmedia/billing/helper/b;
-
-    invoke-static {}, Lru/magoga/Pingvin/Engine;->d()V
-
-    .line 328
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->z:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
-
-    if-eqz v0, :cond_1f
-
-    .line 329
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->z:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
+    .line 269
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->mReceiver:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
 
     invoke-virtual {p0, v0}, Lru/magoga/Pingvin/PingvinActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 330
+    .line 270
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->z:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
+    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->mReceiver:Lru/magoga/Pingvin/PingvinActivity$ScreenReceiver;
 
-    .line 332
-    :cond_1f
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->b:Lru/magoga/GameEngine/bh;
+    .line 272
+    :cond_16
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
 
-    invoke-virtual {v0}, Lru/magoga/GameEngine/bh;->a()V
+    const/4 v1, 0x0
 
-    .line 334
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->x:Lru/magoga/Pingvin/ap;
+    invoke-virtual {v0, v1}, Lru/magoga/GameEngine/GameEngine;->onDestroy(Z)V
 
-    invoke-virtual {v0}, Lru/magoga/Pingvin/ap;->c()V
+    .line 278
+    invoke-static {p0}, Lru/magoga/Pingvin/Engine;->stopStat(Landroid/content/Context;)V
 
-    .line 336
-    invoke-static {p0}, Lru/magoga/Pingvin/Engine;->a(Landroid/content/Context;)V
-
-    .line 337
+    .line 279
     return-void
-.end method
-
-.method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .registers 4
-
-    .prologue
-    .line 402
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_5
-
-    .line 403
-    const/4 v0, 0x1
-
-    .line 405
-    :goto_4
-    return v0
-
-    :cond_5
-    invoke-super {p0, p1, p2}, Lcom/fortumo/android/PaymentActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    goto :goto_4
 .end method
 
 .method protected onPause()V
-    .registers 7
+    .registers 4
 
     .prologue
-    const/4 v1, 0x0
+    .line 285
+    invoke-static {p0}, Lcom/tendcloud/tenddata/TalkingDataGA;->onPause(Landroid/app/Activity;)V
 
-    .line 343
-    invoke-super {p0}, Lcom/fortumo/android/PaymentActivity;->onPause()V
+    .line 286
+    const-string v0, "pingv"
 
-    .line 345
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
+    const-string v1, "onPause"
 
-    iget-object v2, v0, Lru/magoga/Pingvin/ad;->S:Lru/magoga/Pingvin/bb;
+    invoke-static {v0, v1}, Lru/magoga/GameEngine/DebugLog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    .line 287
+    invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    move-result-object v0
+    .line 288
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    iget-object v0, v0, Lru/magoga/Pingvin/Level;->itemSystem:Lru/magoga/Pingvin/ShopItems;
 
-    move-result-object v3
+    invoke-virtual {v0, p0}, Lru/magoga/Pingvin/ShopItems;->save(Landroid/content/Context;)V
 
-    move v0, v1
+    .line 289
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
 
-    :goto_11
-    const/16 v4, 0x10
+    iget-object v0, v0, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
 
-    if-lt v0, v4, :cond_46
+    invoke-virtual {v0, p0}, Lru/magoga/Pingvin/Achievements;->save(Landroid/content/Context;)V
 
-    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    .line 290
+    const/4 v0, 0x0
 
-    .line 346
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
+    iput-boolean v0, p0, Lru/magoga/Pingvin/PingvinActivity;->isResumed:Z
 
-    iget-object v0, v0, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
+    .line 291
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
 
-    invoke-virtual {v0, p0}, Lru/magoga/Pingvin/a;->a(Landroid/content/Context;)V
+    iget-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->isExit:Z
 
-    .line 347
-    iput-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->i:Z
+    invoke-virtual {v0, v1}, Lru/magoga/GameEngine/GameEngine;->onPause(Z)V
 
-    .line 348
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->b:Lru/magoga/GameEngine/bh;
-
-    iget-boolean v1, p0, Lru/magoga/Pingvin/PingvinActivity;->j:Z
-
-    invoke-virtual {v0, v1}, Lru/magoga/GameEngine/bh;->a(Z)V
-
-    .line 349
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->x:Lru/magoga/Pingvin/ap;
-
-    invoke-virtual {v0}, Lru/magoga/Pingvin/ap;->b()V
-
-    .line 350
-    sget-object v0, Lru/magoga/Pingvin/App;->b:Lru/magoga/Pingvin/App;
+    .line 293
+    sget-object v0, Lru/magoga/Pingvin/App;->sInstance:Lru/magoga/Pingvin/App;
 
     const-string v1, "pingvin_cvars"
 
-    invoke-static {v0, v1}, Lru/magoga/GameEngine/p;->a(Landroid/content/Context;Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    .line 351
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
+    invoke-static {v0, v1, v2}, Lru/magoga/GameEngine/CVar;->save(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    invoke-static {}, Lru/magoga/Pingvin/ad;->w()V
+    .line 294
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
 
-    .line 353
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->e:Lru/magoga/b;
+    invoke-virtual {v0}, Lru/magoga/Pingvin/Level;->saveStatToSD()V
 
-    if-eqz v0, :cond_45
-
-    .line 354
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->e:Lru/magoga/b;
-
-    invoke-virtual {v0}, Lru/magoga/b;->a()V
-
-    .line 355
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->e:Lru/magoga/b;
-
-    .line 357
-    :cond_45
+    .line 296
     return-void
-
-    .line 345
-    :cond_46
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "ItemCount"
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v5, v2, Lru/magoga/Pingvin/bb;->a:[Lru/magoga/Pingvin/bc;
-
-    aget-object v5, v5, v0
-
-    iget v5, v5, Lru/magoga/Pingvin/bc;->a:I
-
-    invoke-interface {v3, v4, v5}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_11
 .end method
 
 .method protected onResume()V
     .registers 3
 
     .prologue
-    .line 362
-    invoke-super {p0}, Lcom/fortumo/android/PaymentActivity;->onResume()V
+    .line 301
+    invoke-static {p0}, Lcom/tendcloud/tenddata/TalkingDataGA;->onResume(Landroid/app/Activity;)V
 
-    .line 364
+    .line 302
+    const-string v0, "pingv"
+
+    const-string v1, "onResume"
+
+    invoke-static {v0, v1}, Lru/magoga/GameEngine/DebugLog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 303
+    invoke-super {p0}, Landroid/app/Activity;->onResume()V
+
+    .line 304
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lru/magoga/Pingvin/PingvinActivity;->i:Z
+    iput-boolean v0, p0, Lru/magoga/Pingvin/PingvinActivity;->isResumed:Z
 
-    .line 365
-    iget-boolean v0, p0, Lru/magoga/Pingvin/PingvinActivity;->h:Z
+    .line 305
+    iget-boolean v0, p0, Lru/magoga/Pingvin/PingvinActivity;->isLocked:Z
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_17
 
-    .line 366
-    invoke-virtual {p0}, Lru/magoga/Pingvin/PingvinActivity;->c()V
+    .line 306
+    invoke-virtual {p0}, Lru/magoga/Pingvin/PingvinActivity;->resume_()V
 
-    .line 370
-    :cond_d
-    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->c:Lru/magoga/Pingvin/ad;
+    .line 309
+    :cond_17
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->level:Lru/magoga/Pingvin/Level;
 
-    iget-object v0, v0, Lru/magoga/Pingvin/ad;->R:Lru/magoga/Pingvin/a;
+    iget-object v0, v0, Lru/magoga/Pingvin/Level;->achSystem:Lru/magoga/Pingvin/Achievements;
 
-    invoke-virtual {v0}, Lru/magoga/Pingvin/a;->b()V
+    invoke-virtual {v0}, Lru/magoga/Pingvin/Achievements;->checkNotify()V
 
-    .line 372
-    new-instance v0, Ljava/lang/Thread;
+    .line 325
+    return-void
+.end method
 
-    new-instance v1, Lru/magoga/Pingvin/al;
+.method public pauseGame(Z)V
+    .registers 2
+    .param p1, "val"    # Z
 
-    invoke-direct {v1, p0}, Lru/magoga/Pingvin/al;-><init>(Lru/magoga/Pingvin/PingvinActivity;)V
+    .prologue
+    .line 340
+    iput-boolean p1, p0, Lru/magoga/Pingvin/PingvinActivity;->pause:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    .line 341
+    return-void
+.end method
 
-    .line 383
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+.method protected resume_()V
+    .registers 3
 
-    .line 389
+    .prologue
+    .line 329
+    const-string v0, "pingv"
+
+    const-string v1, "resume_"
+
+    invoke-static {v0, v1}, Lru/magoga/GameEngine/DebugLog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 330
+    iget-object v0, p0, Lru/magoga/Pingvin/PingvinActivity;->mEngine:Lru/magoga/GameEngine/GameEngine;
+
+    invoke-virtual {v0, p0}, Lru/magoga/GameEngine/GameEngine;->onResume(Landroid/content/Context;)V
+
+    .line 331
     return-void
 .end method

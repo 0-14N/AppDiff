@@ -1,24 +1,44 @@
-.class public final Ldv;
+.class public Ldv;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private synthetic a:Lcom/google/a/a$a;
+.field final synthetic a:Lcom/qiniu/android/storage/UploadManager;
 
-.field private synthetic b:Lcom/google/android/gms/internal/df;
+.field private final synthetic b:[B
+
+.field private final synthetic c:Ljava/lang/String;
+
+.field private final synthetic d:Ljava/lang/String;
+
+.field private final synthetic e:Lcom/qiniu/android/storage/UpCompletionHandler;
+
+.field private final synthetic f:Lcom/qiniu/android/storage/UploadOptions;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/df;Lcom/google/a/a$a;)V
-    .registers 3
+.method public constructor <init>(Lcom/qiniu/android/storage/UploadManager;[BLjava/lang/String;Ljava/lang/String;Lcom/qiniu/android/storage/UpCompletionHandler;Lcom/qiniu/android/storage/UploadOptions;)V
+    .registers 7
 
-    iput-object p1, p0, Ldv;->b:Lcom/google/android/gms/internal/df;
+    .prologue
+    .line 1
+    iput-object p1, p0, Ldv;->a:Lcom/qiniu/android/storage/UploadManager;
 
-    iput-object p2, p0, Ldv;->a:Lcom/google/a/a$a;
+    iput-object p2, p0, Ldv;->b:[B
 
+    iput-object p3, p0, Ldv;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Ldv;->d:Ljava/lang/String;
+
+    iput-object p5, p0, Ldv;->e:Lcom/qiniu/android/storage/UpCompletionHandler;
+
+    iput-object p6, p0, Ldv;->f:Lcom/qiniu/android/storage/UploadOptions;
+
+    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,35 +46,29 @@
 
 
 # virtual methods
-.method public final run()V
-    .registers 3
+.method public run()V
+    .registers 7
 
-    :try_start_0
-    iget-object v0, p0, Ldv;->b:Lcom/google/android/gms/internal/df;
+    .prologue
+    .line 86
+    iget-object v0, p0, Ldv;->a:Lcom/qiniu/android/storage/UploadManager;
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/df;->a(Lcom/google/android/gms/internal/df;)Lcom/google/android/gms/internal/da;
+    invoke-static {v0}, Lcom/qiniu/android/storage/UploadManager;->a(Lcom/qiniu/android/storage/UploadManager;)Lcom/qiniu/android/http/HttpManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Ldv;->a:Lcom/google/a/a$a;
+    iget-object v1, p0, Ldv;->b:[B
 
-    invoke-static {v1}, Lcom/google/android/gms/internal/dg;->a(Lcom/google/a/a$a;)I
+    iget-object v2, p0, Ldv;->c:Ljava/lang/String;
 
-    move-result v1
+    iget-object v3, p0, Ldv;->d:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/da;->onAdFailedToLoad(I)V
-    :try_end_f
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_f} :catch_10
+    iget-object v4, p0, Ldv;->e:Lcom/qiniu/android/storage/UpCompletionHandler;
 
-    :goto_f
+    iget-object v5, p0, Ldv;->f:Lcom/qiniu/android/storage/UploadOptions;
+
+    invoke-static/range {v0 .. v5}, Ldm;->a(Lcom/qiniu/android/http/HttpManager;[BLjava/lang/String;Ljava/lang/String;Lcom/qiniu/android/storage/UpCompletionHandler;Lcom/qiniu/android/storage/UploadOptions;)V
+
+    .line 87
     return-void
-
-    :catch_10
-    move-exception v0
-
-    const-string/jumbo v1, "Could not call onAdFailedToLoad."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/gr;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_f
 .end method

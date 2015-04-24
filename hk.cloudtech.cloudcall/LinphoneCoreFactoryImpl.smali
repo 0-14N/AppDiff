@@ -262,11 +262,6 @@
 
 .method public createLinphoneCore(Lorg/linphone/core/LinphoneCoreListener;)Lorg/linphone/core/LinphoneCore;
     .registers 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/core/LinphoneCoreException;
-        }
-    .end annotation
 
     :try_start_0
     new-instance v0, Lorg/linphone/core/LinphoneCoreImpl;
@@ -291,11 +286,6 @@
 
 .method public createLinphoneCore(Lorg/linphone/core/LinphoneCoreListener;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Lorg/linphone/core/LinphoneCore;
     .registers 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/core/LinphoneCoreException;
-        }
-    .end annotation
 
     :try_start_0
     new-instance v0, Lorg/linphone/core/LinphoneCoreImpl;
@@ -360,11 +350,6 @@
 
 .method public createProxyConfig(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lorg/linphone/core/LinphoneProxyConfig;
     .registers 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/core/LinphoneCoreException;
-        }
-    .end annotation
 
     new-instance v0, Lorg/linphone/core/LinphoneProxyConfigImpl;
 

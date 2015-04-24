@@ -317,7 +317,7 @@
     .line 464
     iput v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->T:I
 
-    .line 888
+    .line 892
     iput-boolean v1, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->V:Z
 
     .line 52
@@ -641,7 +641,7 @@
 
     const/4 v4, 0x1
 
-    .line 1088
+    .line 1092
     iget-object v1, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -660,7 +660,7 @@
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1089
+    .line 1093
     iget-object v0, p2, Lil;->remain_time:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -694,39 +694,39 @@
 
     move-result-object v0
 
-    .line 1088
+    .line 1092
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1090
+    .line 1094
     iget-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     if-eqz v0, :cond_ee
 
-    .line 1091
+    .line 1095
     iget v0, p2, Lil;->status:I
 
     if-nez v0, :cond_ae
 
-    .line 1092
+    .line 1096
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1093
+    .line 1097
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     const v1, 0x7f0200e4
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 1094
+    .line 1098
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     const v1, 0x7f0200e3
 
     invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setBackgroundResource(I)V
 
-    .line 1120
+    .line 1124
     :goto_5a
     iget v0, p2, Lil;->status:I
 
@@ -756,7 +756,7 @@
 
     if-ne v0, v1, :cond_15f
 
-    .line 1121
+    .line 1125
     :cond_76
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
@@ -764,7 +764,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1122
+    .line 1126
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v0, v8}, Landroid/widget/TextSwitcher;->getChildAt(I)Landroid/view/View;
@@ -775,7 +775,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1123
+    .line 1127
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextSwitcher;->getChildAt(I)Landroid/view/View;
@@ -786,17 +786,17 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1124
+    .line 1128
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextSwitcher;->setInAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1125
+    .line 1129
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextSwitcher;->setOutAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1126
+    .line 1130
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     iget v1, p2, Lil;->status:I
@@ -809,17 +809,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1142
+    .line 1146
     :goto_aa
     return-void
 
-    .line 1089
+    .line 1093
     :cond_ab
     const-string v0, ""
 
     goto :goto_32
 
-    .line 1095
+    .line 1099
     :cond_ae
     iget v0, p2, Lil;->status:I
 
@@ -843,20 +843,20 @@
 
     if-ne v0, v1, :cond_d7
 
-    .line 1096
+    .line 1100
     :cond_c1
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1097
+    .line 1101
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     const v1, 0x7f0200e2
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 1098
+    .line 1102
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     const v1, 0x7f0200e1
@@ -865,20 +865,20 @@
 
     goto :goto_5a
 
-    .line 1100
+    .line 1104
     :cond_d7
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1101
+    .line 1105
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     const v1, 0x7f0200de
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 1102
+    .line 1106
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     const v1, 0x7f0200dd
@@ -887,25 +887,25 @@
 
     goto/16 :goto_5a
 
-    .line 1105
+    .line 1109
     :cond_ee
     iget v0, p2, Lil;->status:I
 
     if-nez v0, :cond_109
 
-    .line 1106
+    .line 1110
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1107
+    .line 1111
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     const v1, 0x7f0200e4
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 1108
+    .line 1112
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     const v1, 0x7f0200e3
@@ -914,7 +914,7 @@
 
     goto/16 :goto_5a
 
-    .line 1109
+    .line 1113
     :cond_109
     iget v0, p2, Lil;->status:I
 
@@ -950,7 +950,7 @@
 
     if-eq v0, v1, :cond_131
 
-    .line 1110
+    .line 1114
     iget v0, p2, Lil;->status:I
 
     const/4 v1, 0x7
@@ -963,20 +963,20 @@
 
     if-ne v0, v1, :cond_148
 
-    .line 1111
+    .line 1115
     :cond_131
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1112
+    .line 1116
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     const v1, 0x7f0200e2
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 1113
+    .line 1117
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     const v1, 0x7f0200e1
@@ -985,20 +985,20 @@
 
     goto/16 :goto_5a
 
-    .line 1115
+    .line 1119
     :cond_148
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1116
+    .line 1120
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->b:Landroid/widget/TextView;
 
     const v1, 0x7f0200de
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 1117
+    .line 1121
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     const v1, 0x7f0200dd
@@ -1007,7 +1007,7 @@
 
     goto/16 :goto_5a
 
-    .line 1128
+    .line 1132
     :cond_15f
     iget v0, p2, Lil;->home_scores:I
 
@@ -1033,7 +1033,7 @@
 
     if-le v0, v4, :cond_1b9
 
-    .line 1129
+    .line 1133
     :cond_177
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
@@ -1045,7 +1045,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1130
+    .line 1134
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextSwitcher;->getChildAt(I)Landroid/view/View;
@@ -1056,17 +1056,17 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1131
+    .line 1135
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextSwitcher;->setInAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1132
+    .line 1136
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextSwitcher;->setOutAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1133
+    .line 1137
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1099,7 +1099,7 @@
 
     goto/16 :goto_aa
 
-    .line 1135
+    .line 1139
     :cond_1b9
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
@@ -1111,7 +1111,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1136
+    .line 1140
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextSwitcher;->getChildAt(I)Landroid/view/View;
@@ -1122,17 +1122,17 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1137
+    .line 1141
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextSwitcher;->setInAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1138
+    .line 1142
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextSwitcher;->setOutAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1139
+    .line 1143
     iget-object v0, p1, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1748,7 +1748,7 @@
     .local p1, "dataList":Ljava/util/List;, "Ljava/util/List<Lil;>;"
     const/4 v9, 0x0
 
-    .line 807
+    .line 811
     if-eqz p1, :cond_9
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -1757,15 +1757,15 @@
 
     if-nez v3, :cond_c
 
-    .line 808
+    .line 812
     :cond_9
     iput-object v9, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
-    .line 851
+    .line 855
     :goto_b
     return-void
 
-    .line 811
+    .line 815
     :cond_c
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1778,12 +1778,12 @@
 
     if-nez v4, :cond_19
 
-    .line 850
+    .line 854
     iput-object v9, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     goto :goto_b
 
-    .line 811
+    .line 815
     :cond_19
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1791,16 +1791,16 @@
 
     check-cast v1, Lil;
 
-    .line 812
+    .line 816
     .local v1, "contest":Lil;
     if-eqz p2, :cond_87
 
-    .line 813
+    .line 817
     iget-boolean v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     if-nez v4, :cond_54
 
-    .line 814
+    .line 818
     iget-object v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->d:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1821,7 +1821,7 @@
 
     check-cast v2, Lil;
 
-    .line 815
+    .line 819
     .local v2, "fbContest":Lil;
     iget-wide v5, v1, Lil;->contest_id:J
 
@@ -1831,7 +1831,7 @@
 
     if-nez v5, :cond_2b
 
-    .line 816
+    .line 820
     iget v5, v1, Lil;->home_scores:I
 
     iget v6, v2, Lil;->home_scores:I
@@ -1844,27 +1844,27 @@
 
     if-eq v5, v6, :cond_2b
 
-    .line 817
+    .line 821
     :cond_4b
     iget v5, v1, Lil;->home_scores:I
 
     iput v5, v2, Lil;->home_scores:I
 
-    .line 818
+    .line 822
     iget v5, v1, Lil;->away_scores:I
 
     iput v5, v2, Lil;->away_scores:I
 
     goto :goto_2b
 
-    .line 821
+    .line 825
     .end local v2    # "fbContest":Lil;
     :cond_54
     iget-boolean v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     if-eqz v4, :cond_10
 
-    .line 822
+    .line 826
     iget-object v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->e:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1885,7 +1885,7 @@
 
     check-cast v0, Lil;
 
-    .line 823
+    .line 827
     .local v0, "bbContest":Lil;
     iget-wide v5, v1, Lil;->contest_id:J
 
@@ -1895,7 +1895,7 @@
 
     if-nez v5, :cond_5e
 
-    .line 824
+    .line 828
     iget v5, v1, Lil;->home_scores:I
 
     iget v6, v0, Lil;->home_scores:I
@@ -1908,27 +1908,27 @@
 
     if-eq v5, v6, :cond_5e
 
-    .line 825
+    .line 829
     :cond_7e
     iget v5, v1, Lil;->home_scores:I
 
     iput v5, v0, Lil;->home_scores:I
 
-    .line 826
+    .line 830
     iget v5, v1, Lil;->away_scores:I
 
     iput v5, v0, Lil;->away_scores:I
 
     goto :goto_5e
 
-    .line 831
+    .line 835
     .end local v0    # "bbContest":Lil;
     :cond_87
     iget-boolean v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     if-eqz v4, :cond_ba
 
-    .line 832
+    .line 836
     iget-object v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->d:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1949,7 +1949,7 @@
 
     check-cast v2, Lil;
 
-    .line 833
+    .line 837
     .restart local v2    # "fbContest":Lil;
     iget-wide v5, v1, Lil;->contest_id:J
 
@@ -1959,7 +1959,7 @@
 
     if-nez v5, :cond_91
 
-    .line 834
+    .line 838
     iget v5, v1, Lil;->home_scores:I
 
     iget v6, v2, Lil;->home_scores:I
@@ -1972,27 +1972,27 @@
 
     if-eq v5, v6, :cond_91
 
-    .line 835
+    .line 839
     :cond_b1
     iget v5, v1, Lil;->home_scores:I
 
     iput v5, v2, Lil;->home_scores:I
 
-    .line 836
+    .line 840
     iget v5, v1, Lil;->away_scores:I
 
     iput v5, v2, Lil;->away_scores:I
 
     goto :goto_91
 
-    .line 839
+    .line 843
     .end local v2    # "fbContest":Lil;
     :cond_ba
     iget-boolean v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     if-nez v4, :cond_10
 
-    .line 840
+    .line 844
     iget-object v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->e:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2013,7 +2013,7 @@
 
     check-cast v0, Lil;
 
-    .line 841
+    .line 845
     .restart local v0    # "bbContest":Lil;
     iget-wide v5, v1, Lil;->contest_id:J
 
@@ -2023,7 +2023,7 @@
 
     if-nez v5, :cond_c4
 
-    .line 842
+    .line 846
     iget v5, v1, Lil;->home_scores:I
 
     iget v6, v0, Lil;->home_scores:I
@@ -2036,13 +2036,13 @@
 
     if-eq v5, v6, :cond_c4
 
-    .line 843
+    .line 847
     :cond_e4
     iget v5, v1, Lil;->home_scores:I
 
     iput v5, v0, Lil;->home_scores:I
 
-    .line 844
+    .line 848
     iget v5, v1, Lil;->away_scores:I
 
     iput v5, v0, Lil;->away_scores:I
@@ -2277,26 +2277,26 @@
     .end annotation
 
     .prologue
-    .line 926
+    .line 930
     .local p1, "oldVisibleContests":Ljava/util/List;, "Ljava/util/List<Lil;>;"
     const/4 v2, 0x0
 
-    .line 927
+    .line 931
     .local v2, "api":I
     iget-boolean v1, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     if-eqz v1, :cond_55
 
-    .line 928
+    .line 932
     const/16 v2, 0xd2
 
-    .line 931
+    .line 935
     :goto_7
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 932
+    .line 936
     .local v3, "params":Ljava/util/List;, "Ljava/util/List<Lfq<*>;>;"
     const-string v1, "verson_easy"
 
@@ -2308,7 +2308,7 @@
 
     if-eqz v1, :cond_24
 
-    .line 933
+    .line 937
     new-instance v1, Lfq;
 
     const-string v4, "odds_type"
@@ -2323,7 +2323,7 @@
 
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 935
+    .line 939
     :cond_24
     new-instance v4, Lfq;
 
@@ -2343,7 +2343,7 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 936
+    .line 940
     new-instance v0, Lfy;
 
     invoke-virtual {p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -2354,15 +2354,15 @@
 
     invoke-direct {v4, p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment$4;-><init>(Lcom/l99/lotto/business/play/sub/SoccerFragment;)V
 
-    .line 949
+    .line 953
     new-instance v5, Lcom/l99/lotto/business/play/sub/SoccerFragment$5;
 
     invoke-direct {v5, p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment$5;-><init>(Lcom/l99/lotto/business/play/sub/SoccerFragment;)V
 
-    .line 936
+    .line 940
     invoke-direct/range {v0 .. v5}, Lfy;-><init>(Landroid/content/Context;ILjava/util/List;Lfa$b;Lfa$a;)V
 
-    .line 956
+    .line 960
     .local v0, "request":Lfy;
     const/16 v1, 0x82
 
@@ -2375,11 +2375,11 @@
     :try_end_54
     .catch Ljava/lang/IllegalStateException; {:try_start_4d .. :try_end_54} :catch_58
 
-    .line 961
+    .line 965
     :goto_54
     return-void
 
-    .line 930
+    .line 934
     .end local v0    # "request":Lfy;
     .end local v3    # "params":Ljava/util/List;, "Ljava/util/List<Lfq<*>;>;"
     :cond_55
@@ -2387,13 +2387,13 @@
 
     goto :goto_7
 
-    .line 957
+    .line 961
     .restart local v0    # "request":Lfy;
     .restart local v3    # "params":Ljava/util/List;, "Ljava/util/List<Lfq<*>;>;"
     :catch_58
     move-exception v6
 
-    .line 958
+    .line 962
     .local v6, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v6}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
@@ -2485,13 +2485,13 @@
     .end annotation
 
     .prologue
-    .line 993
+    .line 997
     .local p1, "oldVisibleContests":Ljava/util/List;, "Ljava/util/List<Lil;>;"
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 994
+    .line 998
     .local v10, "nowVisibleContests":Ljava/util/List;, "Ljava/util/List<Lil;>;"
     move-object/from16 v0, p0
 
@@ -2501,7 +2501,7 @@
 
     move-result v5
 
-    .line 995
+    .line 999
     .local v5, "firstPosition":I
     move-object/from16 v0, p0
 
@@ -2511,7 +2511,7 @@
 
     move-result v9
 
-    .line 996
+    .line 1000
     .local v9, "lastPosition":I
     move v6, v5
 
@@ -2519,7 +2519,7 @@
     :goto_16
     if-lt v6, v9, :cond_2a
 
-    .line 1017
+    .line 1021
     const/4 v7, 0x0
 
     .local v7, "index":I
@@ -2530,7 +2530,7 @@
 
     if-lt v7, v11, :cond_a0
 
-    .line 1053
+    .line 1057
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -2542,22 +2542,22 @@
 
     if-nez v12, :cond_26d
 
-    .line 1085
+    .line 1089
     return-void
 
-    .line 997
+    .line 1001
     .end local v7    # "index":I
     :cond_2a
     if-eqz v5, :cond_64
 
-    .line 998
+    .line 1002
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     if-eqz v11, :cond_42
 
-    .line 999
+    .line 1003
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
@@ -2570,14 +2570,14 @@
 
     invoke-interface {v10, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 996
+    .line 1000
     :cond_3f
     :goto_3f
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_16
 
-    .line 1001
+    .line 1005
     :cond_42
     move-object/from16 v0, p0
 
@@ -2585,7 +2585,7 @@
 
     if-eqz v11, :cond_56
 
-    .line 1002
+    .line 1006
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->d:Ljava/util/List;
@@ -2600,7 +2600,7 @@
 
     goto :goto_3f
 
-    .line 1004
+    .line 1008
     :cond_56
     move-object/from16 v0, p0
 
@@ -2616,20 +2616,20 @@
 
     goto :goto_3f
 
-    .line 1006
+    .line 1010
     :cond_64
     if-nez v5, :cond_3f
 
     if-eqz v6, :cond_3f
 
-    .line 1007
+    .line 1011
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     if-eqz v11, :cond_7e
 
-    .line 1008
+    .line 1012
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
@@ -2646,7 +2646,7 @@
 
     goto :goto_3f
 
-    .line 1010
+    .line 1014
     :cond_7e
     move-object/from16 v0, p0
 
@@ -2654,7 +2654,7 @@
 
     if-eqz v11, :cond_92
 
-    .line 1011
+    .line 1015
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->d:Ljava/util/List;
@@ -2669,7 +2669,7 @@
 
     goto :goto_3f
 
-    .line 1013
+    .line 1017
     :cond_92
     move-object/from16 v0, p0
 
@@ -2685,7 +2685,7 @@
 
     goto :goto_3f
 
-    .line 1018
+    .line 1022
     .restart local v7    # "index":I
     :cond_a0
     const/4 v6, 0x0
@@ -2697,12 +2697,12 @@
 
     if-lt v6, v11, :cond_ab
 
-    .line 1017
+    .line 1021
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_19
 
-    .line 1019
+    .line 1023
     :cond_ab
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2726,7 +2726,7 @@
 
     if-nez v11, :cond_1c5
 
-    .line 1020
+    .line 1024
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->b:Landroid/widget/ListView;
@@ -2737,7 +2737,7 @@
 
     check-cast v8, Lcom/l99/lotto/business/play/adapter/MatchItem;
 
-    .line 1021
+    .line 1025
     .local v8, "item":Lcom/l99/lotto/business/play/adapter/MatchItem;
     iget-wide v12, v8, Lcom/l99/lotto/business/play/adapter/MatchItem;->e:J
 
@@ -2753,7 +2753,7 @@
 
     if-nez v11, :cond_1c5
 
-    .line 1022
+    .line 1026
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -2772,7 +2772,7 @@
 
     iput v12, v11, Lil;->status:I
 
-    .line 1023
+    .line 1027
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -2791,7 +2791,7 @@
 
     iput-object v12, v11, Lil;->remain_time:Ljava/lang/String;
 
-    .line 1024
+    .line 1028
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -2812,7 +2812,7 @@
 
     if-gt v11, v12, :cond_123
 
-    .line 1025
+    .line 1029
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -2833,7 +2833,7 @@
 
     if-le v11, v12, :cond_1c9
 
-    .line 1026
+    .line 1030
     :cond_123
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2855,7 +2855,7 @@
 
     if-ne v12, v11, :cond_14b
 
-    .line 1027
+    .line 1031
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -2876,7 +2876,7 @@
 
     if-eq v12, v11, :cond_1ba
 
-    .line 1028
+    .line 1032
     :cond_14b
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2896,7 +2896,7 @@
 
     iput v12, v11, Lil;->home_scores:I
 
-    .line 1029
+    .line 1033
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -2915,14 +2915,14 @@
 
     iput v12, v11, Lil;->away_scores:I
 
-    .line 1030
+    .line 1034
     iget-object v11, v8, Lcom/l99/lotto/business/play/adapter/MatchItem;->d:Landroid/widget/TextView;
 
     const/high16 v12, 0x41a00000    # 20.0f
 
     invoke-virtual {v11, v12}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1031
+    .line 1035
     iget-object v11, v8, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual/range {p0 .. p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -2933,7 +2933,7 @@
 
     invoke-virtual {v11, v12, v13}, Landroid/widget/TextSwitcher;->setInAnimation(Landroid/content/Context;I)V
 
-    .line 1032
+    .line 1036
     iget-object v11, v8, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual/range {p0 .. p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -2944,7 +2944,7 @@
 
     invoke-virtual {v11, v12, v13}, Landroid/widget/TextSwitcher;->setOutAnimation(Landroid/content/Context;I)V
 
-    .line 1033
+    .line 1037
     iget-object v12, v8, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -2987,7 +2987,7 @@
 
     invoke-virtual {v12, v11}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1035
+    .line 1039
     :cond_1ba
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2999,7 +2999,7 @@
 
     invoke-direct {v0, v8, v11}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->a(Lcom/l99/lotto/business/play/adapter/MatchItem;Lil;)V
 
-    .line 1018
+    .line 1022
     .end local v8    # "item":Lcom/l99/lotto/business/play/adapter/MatchItem;
     :cond_1c5
     :goto_1c5
@@ -3007,7 +3007,7 @@
 
     goto/16 :goto_a1
 
-    .line 1037
+    .line 1041
     .restart local v8    # "item":Lcom/l99/lotto/business/play/adapter/MatchItem;
     :cond_1c9
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3030,7 +3030,7 @@
 
     if-ne v12, v11, :cond_1f1
 
-    .line 1038
+    .line 1042
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -3051,7 +3051,7 @@
 
     if-eq v12, v11, :cond_260
 
-    .line 1039
+    .line 1043
     :cond_1f1
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3071,7 +3071,7 @@
 
     iput v12, v11, Lil;->home_scores:I
 
-    .line 1040
+    .line 1044
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -3090,14 +3090,14 @@
 
     iput v12, v11, Lil;->away_scores:I
 
-    .line 1041
+    .line 1045
     iget-object v11, v8, Lcom/l99/lotto/business/play/adapter/MatchItem;->d:Landroid/widget/TextView;
 
     const/high16 v12, 0x41a00000    # 20.0f
 
     invoke-virtual {v11, v12}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1042
+    .line 1046
     iget-object v11, v8, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual/range {p0 .. p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -3108,7 +3108,7 @@
 
     invoke-virtual {v11, v12, v13}, Landroid/widget/TextSwitcher;->setInAnimation(Landroid/content/Context;I)V
 
-    .line 1043
+    .line 1047
     iget-object v11, v8, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     invoke-virtual/range {p0 .. p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -3119,7 +3119,7 @@
 
     invoke-virtual {v11, v12, v13}, Landroid/widget/TextSwitcher;->setOutAnimation(Landroid/content/Context;I)V
 
-    .line 1044
+    .line 1048
     iget-object v12, v8, Lcom/l99/lotto/business/play/adapter/MatchItem;->a:Landroid/widget/TextSwitcher;
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -3144,7 +3144,7 @@
 
     move-result-object v13
 
-    .line 1045
+    .line 1049
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -3161,10 +3161,10 @@
 
     move-result-object v11
 
-    .line 1044
+    .line 1048
     invoke-virtual {v12, v11}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1047
+    .line 1051
     :cond_260
     invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3178,7 +3178,7 @@
 
     goto/16 :goto_1c5
 
-    .line 1053
+    .line 1057
     .end local v8    # "item":Lcom/l99/lotto/business/play/adapter/MatchItem;
     :cond_26d
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -3187,7 +3187,7 @@
 
     check-cast v3, Lil;
 
-    .line 1054
+    .line 1058
     .local v3, "contest0":Lil;
     move-object/from16 v0, p0
 
@@ -3195,7 +3195,7 @@
 
     if-eqz v12, :cond_2a6
 
-    .line 1055
+    .line 1059
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
@@ -3218,7 +3218,7 @@
 
     check-cast v2, Lil;
 
-    .line 1056
+    .line 1060
     .local v2, "contest":Lil;
     iget-wide v13, v2, Lil;->contest_id:J
 
@@ -3228,29 +3228,29 @@
 
     if-nez v13, :cond_281
 
-    .line 1057
+    .line 1061
     iget v13, v3, Lil;->home_scores:I
 
     iput v13, v2, Lil;->home_scores:I
 
-    .line 1058
+    .line 1062
     iget v13, v3, Lil;->away_scores:I
 
     iput v13, v2, Lil;->away_scores:I
 
-    .line 1059
+    .line 1063
     iget-object v13, v3, Lil;->remain_time:Ljava/lang/String;
 
     iput-object v13, v2, Lil;->remain_time:Ljava/lang/String;
 
-    .line 1060
+    .line 1064
     iget v13, v3, Lil;->status:I
 
     iput v13, v2, Lil;->status:I
 
     goto :goto_281
 
-    .line 1064
+    .line 1068
     .end local v2    # "contest":Lil;
     :cond_2a6
     move-object/from16 v0, p0
@@ -3259,7 +3259,7 @@
 
     if-eqz v12, :cond_2d9
 
-    .line 1065
+    .line 1069
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->d:Ljava/util/List;
@@ -3282,7 +3282,7 @@
 
     check-cast v4, Lil;
 
-    .line 1066
+    .line 1070
     .local v4, "fbContest":Lil;
     iget-wide v13, v4, Lil;->contest_id:J
 
@@ -3292,29 +3292,29 @@
 
     if-nez v13, :cond_2b4
 
-    .line 1067
+    .line 1071
     iget v13, v3, Lil;->home_scores:I
 
     iput v13, v4, Lil;->home_scores:I
 
-    .line 1068
+    .line 1072
     iget v13, v3, Lil;->away_scores:I
 
     iput v13, v4, Lil;->away_scores:I
 
-    .line 1069
+    .line 1073
     iget-object v13, v3, Lil;->remain_time:Ljava/lang/String;
 
     iput-object v13, v4, Lil;->remain_time:Ljava/lang/String;
 
-    .line 1070
+    .line 1074
     iget v13, v3, Lil;->status:I
 
     iput v13, v4, Lil;->status:I
 
     goto :goto_2b4
 
-    .line 1074
+    .line 1078
     .end local v4    # "fbContest":Lil;
     :cond_2d9
     move-object/from16 v0, p0
@@ -3339,7 +3339,7 @@
 
     check-cast v1, Lil;
 
-    .line 1075
+    .line 1079
     .local v1, "bbContest":Lil;
     iget-wide v13, v1, Lil;->contest_id:J
 
@@ -3349,22 +3349,22 @@
 
     if-nez v13, :cond_2e1
 
-    .line 1076
+    .line 1080
     iget v13, v3, Lil;->home_scores:I
 
     iput v13, v1, Lil;->home_scores:I
 
-    .line 1077
+    .line 1081
     iget v13, v3, Lil;->away_scores:I
 
     iput v13, v1, Lil;->away_scores:I
 
-    .line 1078
+    .line 1082
     iget-object v13, v3, Lil;->remain_time:Ljava/lang/String;
 
     iput-object v13, v1, Lil;->remain_time:Ljava/lang/String;
 
-    .line 1079
+    .line 1083
     iget v13, v3, Lil;->status:I
 
     iput v13, v1, Lil;->status:I
@@ -4083,19 +4083,19 @@
     .registers 10
 
     .prologue
-    .line 856
+    .line 860
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
-    .line 857
+    .line 861
     iget-boolean v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     if-eqz v3, :cond_84
 
-    .line 858
+    .line 862
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->d:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -4109,19 +4109,19 @@
 
     if-nez v4, :cond_58
 
-    .line 872
+    .line 876
     :cond_17
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 873
+    .line 877
     .local v1, "contestTemp":Ljava/util/List;, "Ljava/util/List<Lil;>;"
     iget v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->T:I
 
     if-eqz v3, :cond_42
 
-    .line 874
+    .line 878
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -4136,7 +4136,7 @@
 
     if-nez v4, :cond_bc
 
-    .line 879
+    .line 883
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
@@ -4149,17 +4149,17 @@
 
     if-eq v3, v4, :cond_42
 
-    .line 880
+    .line 884
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->clear()V
 
-    .line 881
+    .line 885
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 884
+    .line 888
     :cond_42
     iget-object v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->c:Lcom/l99/lotto/business/play/adapter/d;
 
@@ -4182,10 +4182,10 @@
 
     invoke-virtual {v4, v5, v3, v6, v7}, Lcom/l99/lotto/business/play/adapter/d;->notifyDateChanged(ZLil;ZLjava/util/List;)V
 
-    .line 885
+    .line 889
     return-void
 
-    .line 858
+    .line 862
     .end local v1    # "contestTemp":Ljava/util/List;, "Ljava/util/List<Lil;>;"
     :cond_58
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -4194,7 +4194,7 @@
 
     check-cast v0, Lil;
 
-    .line 859
+    .line 863
     .local v0, "contest":Lil;
     iget-object v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->z:Ljava/util/ArrayList;
 
@@ -4216,7 +4216,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 860
+    .line 864
     .local v2, "key":Ljava/lang/String;
     iget-wide v5, v0, Lil;->cup_id:J
 
@@ -4232,14 +4232,14 @@
 
     if-nez v5, :cond_64
 
-    .line 861
+    .line 865
     iget-object v5, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_64
 
-    .line 865
+    .line 869
     .end local v0    # "contest":Lil;
     .end local v2    # "key":Ljava/lang/String;
     :cond_84
@@ -4262,7 +4262,7 @@
 
     check-cast v0, Lil;
 
-    .line 866
+    .line 870
     .restart local v0    # "contest":Lil;
     iget-object v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->z:Ljava/util/ArrayList;
 
@@ -4284,7 +4284,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 867
+    .line 871
     .restart local v2    # "key":Ljava/lang/String;
     iget-wide v5, v0, Lil;->cup_id:J
 
@@ -4300,14 +4300,14 @@
 
     if-nez v5, :cond_9c
 
-    .line 868
+    .line 872
     iget-object v5, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_9c
 
-    .line 874
+    .line 878
     .end local v0    # "contest":Lil;
     .end local v2    # "key":Ljava/lang/String;
     .restart local v1    # "contestTemp":Ljava/util/List;, "Ljava/util/List<Lil;>;"
@@ -4318,7 +4318,7 @@
 
     check-cast v0, Lil;
 
-    .line 875
+    .line 879
     .restart local v0    # "contest":Lil;
     iget v4, v0, Lil;->level:I
 
@@ -4328,12 +4328,12 @@
 
     if-lez v4, :cond_26
 
-    .line 876
+    .line 880
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_26
 
-    .line 884
+    .line 888
     .end local v0    # "contest":Lil;
     :cond_ce
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->I:Lil;
@@ -4355,14 +4355,14 @@
     .registers 2
 
     .prologue
-    .line 892
+    .line 896
     new-instance v0, Lcom/l99/lotto/business/play/sub/SoccerFragment$3;
 
     invoke-direct {v0, p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment$3;-><init>(Lcom/l99/lotto/business/play/sub/SoccerFragment;)V
 
     iput-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->W:Ljava/lang/Thread;
 
-    .line 910
+    .line 914
     return-void
 .end method
 
@@ -4380,22 +4380,22 @@
     .registers 2
 
     .prologue
-    .line 913
+    .line 917
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     if-eqz v0, :cond_a
 
-    .line 914
+    .line 918
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     invoke-direct {p0, v0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->b(Ljava/util/List;)V
 
-    .line 923
+    .line 927
     :cond_9
     :goto_9
     return-void
 
-    .line 916
+    .line 920
     :cond_a
     iget-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
@@ -4413,14 +4413,14 @@
 
     if-eqz v0, :cond_20
 
-    .line 917
+    .line 921
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->d:Ljava/util/List;
 
     invoke-direct {p0, v0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->b(Ljava/util/List;)V
 
     goto :goto_9
 
-    .line 918
+    .line 922
     :cond_20
     iget-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
@@ -4438,7 +4438,7 @@
 
     if-eqz v0, :cond_9
 
-    .line 919
+    .line 923
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->e:Ljava/util/List;
 
     invoke-direct {p0, v0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->b(Ljava/util/List;)V
@@ -4472,7 +4472,7 @@
     .registers 1
 
     .prologue
-    .line 855
+    .line 859
     invoke-direct {p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->g()V
 
     return-void
@@ -4572,7 +4572,7 @@
     .registers 2
 
     .prologue
-    .line 888
+    .line 892
     iget-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->V:Z
 
     return v0
@@ -4582,7 +4582,7 @@
     .registers 1
 
     .prologue
-    .line 912
+    .line 916
     invoke-direct {p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->i()V
 
     return-void
@@ -5261,12 +5261,12 @@
 
     const/high16 v10, -0x80000000
 
-    .line 965
+    .line 969
     invoke-virtual {p1}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v5
 
-    .line 966
+    .line 970
     .local v5, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_7
     :goto_7
@@ -5276,21 +5276,21 @@
 
     if-nez v8, :cond_17
 
-    .line 988
+    .line 992
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v8
 
     if-eqz v8, :cond_16
 
-    .line 989
+    .line 993
     invoke-direct {p0, p2}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->c(Ljava/util/List;)V
 
-    .line 990
+    .line 994
     :cond_16
     return-void
 
-    .line 967
+    .line 971
     :cond_17
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -5298,22 +5298,22 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 968
+    .line 972
     .local v2, "contestId":Ljava/lang/String;
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v3
 
-    .line 971
+    .line 975
     .local v3, "contestInfo":Lorg/json/JSONObject;
     if-eqz v3, :cond_7
 
-    .line 972
+    .line 976
     new-instance v1, Lil;
 
     invoke-direct {v1}, Lil;-><init>()V
 
-    .line 973
+    .line 977
     .local v1, "contest":Lil;
     invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -5321,7 +5321,7 @@
 
     iput-wide v8, v1, Lil;->contest_id:J
 
-    .line 974
+    .line 978
     const-string v8, "t"
 
     const/4 v9, 0x0
@@ -5330,7 +5330,7 @@
 
     move-result-object v7
 
-    .line 975
+    .line 979
     .local v7, "time":Ljava/lang/String;
     const-string v8, "s"
 
@@ -5342,7 +5342,7 @@
 
     move-result-object v6
 
-    .line 976
+    .line 980
     .local v6, "status":Ljava/lang/Integer;
     const-string v8, "h"
 
@@ -5354,7 +5354,7 @@
 
     move-result-object v4
 
-    .line 977
+    .line 981
     .local v4, "h_scores":Ljava/lang/Integer;
     const-string v8, "a"
 
@@ -5366,7 +5366,7 @@
 
     move-result-object v0
 
-    .line 978
+    .line 982
     .local v0, "a_scores":Ljava/lang/Integer;
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
@@ -5374,31 +5374,31 @@
 
     if-eq v8, v10, :cond_7
 
-    .line 981
+    .line 985
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v8
 
     iput v8, v1, Lil;->home_scores:I
 
-    .line 982
+    .line 986
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v8
 
     iput v8, v1, Lil;->away_scores:I
 
-    .line 983
+    .line 987
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
     move-result v8
 
     iput v8, v1, Lil;->status:I
 
-    .line 984
+    .line 988
     iput-object v7, v1, Lil;->remain_time:Ljava/lang/String;
 
-    .line 985
+    .line 989
     invoke-interface {p2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_7
@@ -5410,16 +5410,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1172
+    .line 1176
     iput-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->h:Ljava/util/HashMap;
 
-    .line 1173
+    .line 1177
     iput-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->i:Ljava/util/HashMap;
 
-    .line 1174
+    .line 1178
     invoke-virtual {p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->onRefresh()V
 
-    .line 1175
+    .line 1179
     return-void
 .end method
 
@@ -5455,17 +5455,17 @@
 
     const/4 v1, -0x1
 
-    .line 779
+    .line 783
     const/16 v0, 0xc8
 
     if-ne p1, v0, :cond_8e
 
-    .line 780
+    .line 784
     invoke-virtual {p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     if-ne p2, v1, :cond_85
 
-    .line 781
+    .line 785
     const-string v0, "filter_level"
 
     invoke-virtual {p3, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -5474,7 +5474,7 @@
 
     iput v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->T:I
 
-    .line 782
+    .line 786
     const-string v0, "filter_list"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -5483,7 +5483,7 @@
 
     iput-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->z:Ljava/util/ArrayList;
 
-    .line 783
+    .line 787
     const-string v0, "filter_old_list"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -5492,7 +5492,7 @@
 
     iput-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->Q:Ljava/util/ArrayList;
 
-    .line 784
+    .line 788
     const-string v0, "filter_old_name"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -5501,7 +5501,7 @@
 
     iput-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->S:Ljava/util/ArrayList;
 
-    .line 785
+    .line 789
     invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
@@ -5516,12 +5516,12 @@
 
     iput-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->R:Ljava/util/ArrayList;
 
-    .line 786
+    .line 790
     iget-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     iput-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->P:Z
 
-    .line 787
+    .line 791
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->z:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_52
@@ -5534,31 +5534,31 @@
 
     if-eqz v0, :cond_52
 
-    .line 788
+    .line 792
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->b:Landroid/widget/ListView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 789
+    .line 793
     invoke-direct {p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->g()V
 
-    .line 804
+    .line 808
     :cond_51
     :goto_51
     return-void
 
-    .line 791
+    .line 795
     :cond_52
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     invoke-direct {p0, v0, v2}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->a(Ljava/util/List;Z)V
 
-    .line 792
+    .line 796
     iget-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     if-eqz v0, :cond_70
 
-    .line 793
+    .line 797
     iget-object v1, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->c:Lcom/l99/lotto/business/play/adapter/d;
 
     iget-boolean v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
@@ -5583,7 +5583,7 @@
 
     goto :goto_65
 
-    .line 795
+    .line 799
     :cond_70
     iget-object v1, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->c:Lcom/l99/lotto/business/play/adapter/d;
 
@@ -5609,20 +5609,20 @@
 
     goto :goto_7a
 
-    .line 797
+    .line 801
     :cond_85
     invoke-virtual {p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     if-nez p2, :cond_51
 
-    .line 798
+    .line 802
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->U:Ljava/util/List;
 
     goto :goto_51
 
-    .line 800
+    .line 804
     :cond_8e
     const/16 v0, 0xe6
 
@@ -5632,7 +5632,7 @@
 
     if-ne p2, v1, :cond_9f
 
-    .line 801
+    .line 805
     invoke-virtual {p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
@@ -5641,7 +5641,7 @@
 
     goto :goto_51
 
-    .line 803
+    .line 807
     :cond_9f
     invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
 
@@ -5668,9 +5668,9 @@
 
     move-result v2
 
-    sparse-switch v2, :sswitch_data_2ac
+    sparse-switch v2, :sswitch_data_2f4
 
-    .line 774
+    .line 778
     :cond_e
     :goto_e
     return-void
@@ -6085,19 +6085,37 @@
     :sswitch_172
     iget-boolean v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
-    if-eqz v2, :cond_19e
+    if-eqz v2, :cond_23b
 
     .line 733
     iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->L:Ljava/util/HashMap;
 
-    if-nez v2, :cond_17e
+    invoke-virtual {v2}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_186
 
     iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->M:Ljava/util/HashMap;
 
-    if-eqz v2, :cond_e
+    invoke-virtual {v2}, Ljava/util/HashMap;->isEmpty()Z
 
-    .line 734
-    :cond_17e
+    move-result v2
+
+    if-nez v2, :cond_e
+
+    .line 735
+    :cond_186
+    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->o:Ljava/util/List;
+
+    iget v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->n:I
+
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1a6
+
     iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->L:Ljava/util/HashMap;
 
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->o:Ljava/util/List;
@@ -6112,9 +6130,26 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_e
+    check-cast v2, Ljava/util/HashMap;
 
-    .line 735
+    invoke-virtual {v2}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_e
+
+    .line 737
+    :cond_1a6
+    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->o:Ljava/util/List;
+
+    iget v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->n:I
+
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1c6
+
     iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->M:Ljava/util/HashMap;
 
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->o:Ljava/util/List;
@@ -6129,60 +6164,16 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_e
+    check-cast v2, Ljava/util/HashMap;
 
-    .line 737
-    :cond_19e
-    iget-boolean v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
+    invoke-virtual {v2}, Ljava/util/HashMap;->isEmpty()Z
 
-    if-nez v2, :cond_1ca
+    move-result v2
 
-    .line 738
-    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->N:Ljava/util/HashMap;
+    if-nez v2, :cond_e
 
-    if-nez v2, :cond_1aa
-
-    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->O:Ljava/util/HashMap;
-
-    if-eqz v2, :cond_e
-
-    .line 739
-    :cond_1aa
-    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->N:Ljava/util/HashMap;
-
-    iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->o:Ljava/util/List;
-
-    iget v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->n:I
-
-    invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_e
-
-    .line 740
-    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->O:Ljava/util/HashMap;
-
-    iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->o:Ljava/util/List;
-
-    iget v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->n:I
-
-    invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_e
-
-    .line 743
-    :cond_1ca
+    .line 747
+    :cond_1c6
     new-instance v1, Landroid/content/Intent;
 
     invoke-virtual {p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -6193,54 +6184,54 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 744
+    .line 748
     .local v1, "intent":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 745
+    .line 749
     .local v0, "bundle":Landroid/os/Bundle;
     iget-boolean v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
-    if-eqz v2, :cond_23f
+    if-eqz v2, :cond_285
 
-    .line 746
+    .line 750
     const-string v2, "isFootball"
 
     iget-boolean v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 747
+    .line 751
     const-string v2, "filter_level"
 
     iget v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->T:I
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 748
+    .line 752
     const-string v2, "filter_old_list"
 
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->Q:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 749
+    .line 753
     const-string v2, "filter_old_select"
 
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->R:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 750
+    .line 754
     const-string v2, "filter_old_name"
 
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->S:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 751
+    .line 755
     const-string v3, "mcupfiltermap"
 
     iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->L:Ljava/util/HashMap;
@@ -6261,7 +6252,7 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 752
+    .line 756
     const-string v3, "mlevelfilter"
 
     iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->M:Ljava/util/HashMap;
@@ -6282,16 +6273,16 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 763
-    :goto_22b
+    .line 767
+    :goto_227
     invoke-virtual {v1, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 764
+    .line 768
     const/16 v2, 0xc8
 
     invoke-virtual {p0, v1, v2}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 765
+    .line 769
     invoke-virtual {p0}, Lcom/l99/lotto/business/play/sub/SoccerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v2
@@ -6302,50 +6293,134 @@
 
     goto/16 :goto_e
 
-    .line 754
-    :cond_23f
+    .line 740
+    .end local v0    # "bundle":Landroid/os/Bundle;
+    .end local v1    # "intent":Landroid/content/Intent;
+    :cond_23b
+    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->N:Ljava/util/HashMap;
+
+    if-nez v2, :cond_243
+
+    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->O:Ljava/util/HashMap;
+
+    if-eqz v2, :cond_e
+
+    .line 742
+    :cond_243
+    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->o:Ljava/util/List;
+
+    iget v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->n:I
+
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_263
+
+    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->N:Ljava/util/HashMap;
+
+    iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->o:Ljava/util/List;
+
+    iget v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->n:I
+
+    invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/HashMap;
+
+    invoke-virtual {v2}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_e
+
+    .line 744
+    :cond_263
+    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->o:Ljava/util/List;
+
+    iget v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->n:I
+
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1c6
+
+    iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->O:Ljava/util/HashMap;
+
+    iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->o:Ljava/util/List;
+
+    iget v4, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->n:I
+
+    invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/HashMap;
+
+    invoke-virtual {v2}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1c6
+
+    goto/16 :goto_e
+
+    .line 758
+    .restart local v0    # "bundle":Landroid/os/Bundle;
+    .restart local v1    # "intent":Landroid/content/Intent;
+    :cond_285
     const-string v2, "isFootball"
 
     iget-boolean v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->x:Z
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 755
+    .line 759
     const-string v2, "filter_level"
 
     iget v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->T:I
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 756
+    .line 760
     const-string v2, "filterList"
 
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->z:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 757
+    .line 761
     const-string v2, "filter_old_list"
 
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->Q:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 758
+    .line 762
     const-string v2, "filter_old_select"
 
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->R:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 759
+    .line 763
     const-string v2, "filter_old_name"
 
     iget-object v3, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->S:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 760
+    .line 764
     const-string v3, "mcupfiltermap"
 
     iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->N:Ljava/util/HashMap;
@@ -6366,7 +6441,7 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 761
+    .line 765
     const-string v3, "mlevelfilter"
 
     iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->O:Ljava/util/HashMap;
@@ -6387,37 +6462,39 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    goto :goto_22b
+    goto/16 :goto_227
 
-    .line 768
+    .line 772
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "intent":Landroid/content/Intent;
-    :sswitch_294
+    :sswitch_2db
     iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->J:Landroid/view/View;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 769
+    .line 773
     iget-object v2, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->K:Landroid/view/View;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 770
+    .line 774
     const-string v2, "is_show_guide_caibisai"
 
     invoke-static {v2, v6}, Lcom/l99/common/utils/g;->put(Ljava/lang/String;Z)V
 
-    .line 771
+    .line 775
     invoke-static {}, Lcom/l99/common/utils/g;->commit()V
 
     goto/16 :goto_e
 
     .line 639
-    :sswitch_data_2ac
+    nop
+
+    :sswitch_data_2f4
     .sparse-switch
         0x7f06002f -> :sswitch_f
         0x7f060230 -> :sswitch_17
@@ -6425,7 +6502,7 @@
         0x7f060281 -> :sswitch_fc
         0x7f060282 -> :sswitch_137
         0x7f060283 -> :sswitch_172
-        0x7f060288 -> :sswitch_294
+        0x7f060288 -> :sswitch_2db
     .end sparse-switch
 .end method
 
@@ -6902,17 +6979,17 @@
     .registers 2
 
     .prologue
-    .line 1160
+    .line 1164
     iget-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->V:Z
 
     if-eqz v0, :cond_7
 
-    .line 1161
+    .line 1165
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->V:Z
 
-    .line 1162
+    .line 1166
     :cond_7
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->W:Ljava/lang/Thread;
 
@@ -6926,25 +7003,25 @@
 
     if-eqz v0, :cond_18
 
-    .line 1163
+    .line 1167
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->W:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 1164
+    .line 1168
     :cond_18
     iget-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->A:Z
 
     if-eqz v0, :cond_1f
 
-    .line 1165
+    .line 1169
     invoke-static {p0}, Lcom/l99/lotto/b;->removeChangedListener(Lcom/l99/lotto/b$a;)V
 
-    .line 1167
+    .line 1171
     :cond_1f
     invoke-super {p0}, Landroid/support/v4/app/Fragment;->onDestroy()V
 
-    .line 1168
+    .line 1172
     return-void
 .end method
 
@@ -6952,15 +7029,15 @@
     .registers 2
 
     .prologue
-    .line 1146
+    .line 1150
     invoke-super {p0}, Landroid/support/v4/app/Fragment;->onPause()V
 
-    .line 1147
+    .line 1151
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->V:Z
 
-    .line 1148
+    .line 1152
     return-void
 .end method
 
@@ -6991,15 +7068,15 @@
     .registers 2
 
     .prologue
-    .line 1152
+    .line 1156
     invoke-super {p0}, Landroid/support/v4/app/Fragment;->onResume()V
 
-    .line 1153
+    .line 1157
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->V:Z
 
-    .line 1154
+    .line 1158
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->W:Ljava/lang/Thread;
 
     if-eqz v0, :cond_17
@@ -7012,12 +7089,12 @@
 
     if-nez v0, :cond_17
 
-    .line 1155
+    .line 1159
     iget-object v0, p0, Lcom/l99/lotto/business/play/sub/SoccerFragment;->W:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 1156
+    .line 1160
     :cond_17
     return-void
 .end method

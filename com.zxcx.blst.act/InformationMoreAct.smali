@@ -96,33 +96,34 @@
     return-object v0
 .end method
 
-.method static synthetic access$1(Lcom/zxcx/blst/act/InformationMoreAct;)V
-    .registers 1
+.method static synthetic access$1(Lcom/zxcx/blst/act/InformationMoreAct;Z)V
+    .registers 2
 
     .prologue
     .line 144
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationMoreAct;->getDateForInformation()V
+    invoke-direct {p0, p1}, Lcom/zxcx/blst/act/InformationMoreAct;->getDateForInformation(Z)V
 
     return-void
 .end method
 
-.method private getDateForInformation()V
-    .registers 3
+.method private getDateForInformation(Z)V
+    .registers 4
+    .param p1, "isPull"    # Z
 
     .prologue
     .line 146
     new-instance v0, Lcom/zxcx/blst/act/InformationMoreAct$4;
 
-    invoke-direct {v0, p0}, Lcom/zxcx/blst/act/InformationMoreAct$4;-><init>(Lcom/zxcx/blst/act/InformationMoreAct;)V
+    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/InformationMoreAct$4;-><init>(Lcom/zxcx/blst/act/InformationMoreAct;Z)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 214
+    .line 213
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/InformationMoreAct$4;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 215
+    .line 214
     return-void
 .end method
 
@@ -133,34 +134,38 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 220
+    .line 219
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_10
+    packed-switch v0, :pswitch_data_12
 
-    .line 231
+    .line 230
     :goto_7
     return-void
 
-    .line 222
+    .line 221
     :pswitch_8
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationMoreAct;->getDateForInformation()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/zxcx/blst/act/InformationMoreAct;->getDateForInformation(Z)V
 
     goto :goto_7
 
-    .line 225
-    :pswitch_c
+    .line 224
+    :pswitch_d
     invoke-virtual {p0}, Lcom/zxcx/blst/act/InformationMoreAct;->finish()V
 
     goto :goto_7
 
-    .line 220
-    :pswitch_data_10
-    .packed-switch 0x7f080167
+    .line 219
+    nop
+
+    :pswitch_data_12
+    .packed-switch 0x7f090180
         :pswitch_8
-        :pswitch_c
+        :pswitch_d
     .end packed-switch
 .end method
 
@@ -173,7 +178,7 @@
     invoke-super {p0, p1}, Lcom/zxcx/blst/act/BaseAct;->onCreate(Landroid/os/Bundle;)V
 
     .line 53
-    const v0, 0x7f030032
+    const v0, 0x7f030038
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationMoreAct;->setContentView(I)V
 
@@ -181,7 +186,9 @@
     invoke-virtual {p0}, Lcom/zxcx/blst/act/InformationMoreAct;->setupView()V
 
     .line 55
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationMoreAct;->getDateForInformation()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/zxcx/blst/act/InformationMoreAct;->getDateForInformation(Z)V
 
     .line 56
     return-void
@@ -255,7 +262,7 @@
     iput-object v1, p0, Lcom/zxcx/blst/act/InformationMoreAct;->pd:Landroid/app/ProgressDialog;
 
     .line 75
-    const v1, 0x7f080168
+    const v1, 0x7f090181
 
     invoke-virtual {p0, v1}, Lcom/zxcx/blst/act/InformationMoreAct;->findViewById(I)Landroid/view/View;
 
@@ -267,7 +274,7 @@
     iput-object v1, p0, Lcom/zxcx/blst/act/InformationMoreAct;->iv_title_bar_left:Landroid/widget/ImageButton;
 
     .line 77
-    const v1, 0x7f080166
+    const v1, 0x7f09017f
 
     invoke-virtual {p0, v1}, Lcom/zxcx/blst/act/InformationMoreAct;->findViewById(I)Landroid/view/View;
 
@@ -279,7 +286,7 @@
     iput-object v1, p0, Lcom/zxcx/blst/act/InformationMoreAct;->tv_title_bar_center:Landroid/widget/TextView;
 
     .line 79
-    const v1, 0x7f080167
+    const v1, 0x7f090180
 
     invoke-virtual {p0, v1}, Lcom/zxcx/blst/act/InformationMoreAct;->findViewById(I)Landroid/view/View;
 
@@ -319,7 +326,7 @@
     invoke-virtual {v1, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 89
-    const v1, 0x7f0800cb
+    const v1, 0x7f0900db
 
     invoke-virtual {p0, v1}, Lcom/zxcx/blst/act/InformationMoreAct;->findViewById(I)Landroid/view/View;
 

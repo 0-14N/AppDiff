@@ -3,6 +3,7 @@
 .source "ActivityStartingHandler.java"
 
 # interfaces
+.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 .implements Lcom/lock/appslocker/activities/handlers/ActivityStartingListener;
 
 
@@ -15,11 +16,25 @@
 
 
 # instance fields
+.field private appsList:Ljava/util/Hashtable;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Hashtable",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private broadcastReceiver:Landroid/content/BroadcastReceiver;
+
 .field private handler:Landroid/os/Handler;
 
-.field private lastRunningPackage:Ljava/lang/String;
+.field private lastLockedPkg:Ljava/lang/String;
 
-.field private lockScreenActivityName:Ljava/lang/String;
+.field private lastRunningPackage:Ljava/lang/String;
 
 .field private mAm:Landroid/app/ActivityManager;
 
@@ -37,6 +52,8 @@
     .end annotation
 .end field
 
+.field private timeout:J
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
@@ -44,69 +61,110 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 28
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
-    new-instance v0, Ljava/util/Hashtable;
+    .line 26
+    const-string v1, ""
 
-    invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
+    iput-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->tempAllowedPackages:Ljava/util/Hashtable;
+    const-string v1, ""
+
+    iput-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastLockedPkg:Ljava/lang/String;
+
+    .line 27
+    new-instance v1, Ljava/util/Hashtable;
+
+    invoke-direct {v1}, Ljava/util/Hashtable;-><init>()V
+
+    iput-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->tempAllowedPackages:Ljava/util/Hashtable;
 
     .line 29
+    const-wide/16 v1, 0x64
+
+    iput-wide v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->timeout:J
+
+    .line 34
     iput-object p1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
 
-    .line 30
-    new-instance v0, Landroid/os/Handler;
+    .line 35
+    invoke-static {p1}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/SharedPreferenceManager;
 
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->handler:Landroid/os/Handler;
+    invoke-virtual {v1}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getAppsPrefrence()Landroid/content/SharedPreferences;
 
-    .line 31
-    iget-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
+    move-result-object v1
 
-    .line 32
-    const-string v1, "activity"
+    .line 36
+    invoke-interface {v1, p0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 37
+    invoke-direct {p0}, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->loadSettings()V
 
-    move-result-object v0
+    .line 38
+    new-instance v1, Landroid/os/Handler;
 
-    check-cast v0, Landroid/app/ActivityManager;
+    invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    .line 31
-    iput-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mAm:Landroid/app/ActivityManager;
+    iput-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->handler:Landroid/os/Handler;
 
-    .line 33
+    .line 39
+    iget-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
+
+    .line 40
+    const-string v2, "activity"
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/ActivityManager;
+
+    .line 39
+    iput-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mAm:Landroid/app/ActivityManager;
+
+    .line 41
     invoke-direct {p0}, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->getRunningPackage()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
+    iput-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
 
-    .line 34
-    new-instance v0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler$1;
+    .line 44
+    new-instance v0, Landroid/content/IntentFilter;
 
-    invoke-direct {v0, p0}, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler$1;-><init>(Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;)V
+    .line 45
+    const-string v1, "com.lock.appslocker.applicationpassedtest"
 
-    .line 57
-    new-instance v1, Landroid/content/IntentFilter;
+    .line 44
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    const-string v2, "com.lock.appslocker.applicationpassedtest"
+    .line 46
+    .local v0, "intentFilter":Landroid/content/IntentFilter;
+    const-string v1, "android.intent.action.SCREEN_ON"
 
-    invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 34
-    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    .line 47
+    const-string v1, "android.intent.action.SCREEN_OFF"
 
-    .line 59
-    const-string v0, ".activities.LockScreenActivity"
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lockScreenActivityName:Ljava/lang/String;
+    .line 48
+    new-instance v1, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler$1;
 
-    .line 60
+    invoke-direct {v1, p0}, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler$1;-><init>(Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;)V
+
+    iput-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->broadcastReceiver:Landroid/content/BroadcastReceiver;
+
+    .line 73
+    iget-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->broadcastReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p1, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 75
     return-void
 .end method
 
@@ -114,92 +172,105 @@
     .registers 2
 
     .prologue
-    .line 24
+    .line 27
     iget-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->tempAllowedPackages:Ljava/util/Hashtable;
 
     return-object v0
 .end method
 
-.method static synthetic access$1(Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;)Landroid/content/Context;
+.method static synthetic access$1(Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;)Ljava/lang/String;
     .registers 2
 
     .prologue
-    .line 21
-    iget-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
+    .line 26
+    iget-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastLockedPkg:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$2(Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;)Landroid/os/Handler;
+.method static synthetic access$2(Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;Ljava/lang/String;)V
     .registers 2
 
     .prologue
-    .line 25
-    iget-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->handler:Landroid/os/Handler;
-
-    return-object v0
-.end method
-
-.method static synthetic access$3(Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;)V
-    .registers 1
-
-    .prologue
-    .line 62
-    invoke-direct {p0}, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->log()V
+    .line 26
+    iput-object p1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastLockedPkg:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$4(Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;Ljava/lang/String;)V
+.method static synthetic access$3(Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;Ljava/lang/String;)V
     .registers 2
 
     .prologue
-    .line 23
+    .line 26
     iput-object p1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
 
     return-void
 .end method
 
-.method private blockActivity(Ljava/lang/String;Ljava/lang/String;)V
+.method private blockActivity(Ljava/lang/String;)V
     .registers 6
     .param p1, "packageName"    # Ljava/lang/String;
-    .param p2, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 173
+    const/high16 v3, 0x10000000
+
+    .line 196
+    iget-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    .line 221
+    :goto_a
+    return-void
+
+    .line 209
+    :cond_b
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
 
-    const-class v2, Lcom/lock/appslocker/activities/LockScreenActivity;
+    const-class v2, Lcom/lock/appslocker/activities/lock/LockDeleget;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 174
+    .line 210
     .local v0, "lockIntent":Landroid/content/Intent;
-    const/high16 v1, 0x10000000
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 211
+    const/high16 v1, 0x20000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 176
-    const-string v1, "locked activity name"
+    .line 212
+    const/high16 v1, 0x20000000
 
-    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    move-result-object v1
+    .line 213
+    const/high16 v1, 0x400000
 
-    .line 177
-    const-string v2, "locked package name"
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    .line 214
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 180
+    .line 218
+    const-string v1, "com.lock.appslocker.activities.locked package name"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 220
     iget-object v1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 181
-    return-void
+    goto :goto_a
 .end method
 
 .method private getRunningPackage()Ljava/lang/String;
@@ -208,14 +279,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 84
+    .line 97
     iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mAm:Landroid/app/ActivityManager;
 
     invoke-virtual {v2, v3}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 85
+    .line 98
     .local v1, "infos":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -223,14 +294,14 @@
 
     if-ge v2, v3, :cond_f
 
-    .line 86
+    .line 99
     const/4 v2, 0x0
 
-    .line 88
+    .line 101
     :goto_e
     return-object v2
 
-    .line 87
+    .line 100
     :cond_f
     const/4 v2, 0x0
 
@@ -240,7 +311,7 @@
 
     check-cast v0, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 88
+    .line 101
     .local v0, "info":Landroid/app/ActivityManager$RunningTaskInfo;
     iget-object v2, v0, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
@@ -251,314 +322,194 @@
     goto :goto_e
 .end method
 
-.method private log()V
-    .registers 6
+.method private loadSettings()V
+    .registers 8
 
     .prologue
-    .line 63
-    const-string v0, "temp allowed: "
+    .line 177
+    iget-object v4, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
 
-    .line 64
-    .local v0, "output":Ljava/lang/String;
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->tempAllowedPackages:Ljava/util/Hashtable;
-
-    invoke-virtual {v2}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_c
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-nez v3, :cond_18
-
-    .line 67
-    const-string v2, "Detector"
-
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 68
-    return-void
-
-    .line 64
-    :cond_18
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    .line 65
-    .local v1, "p":Ljava/lang/String;
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/SharedPreferenceManager;
 
     move-result-object v4
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 178
+    invoke-virtual {v4}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getApplicationList()[Ljava/lang/String;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v3
+    .line 179
+    .local v2, "list":[Ljava/lang/String;
+    new-instance v4, Ljava/util/Hashtable;
 
-    const-string v4, ", "
+    invoke-direct {v4}, Ljava/util/Hashtable;-><init>()V
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v4, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->appsList:Ljava/util/Hashtable;
 
-    move-result-object v3
+    .line 180
+    const/4 v1, 0x0
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .local v1, "i":I
+    :goto_12
+    array-length v4, v2
+
+    if-lt v1, v4, :cond_30
+
+    .line 184
+    iget-object v4, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
+
+    invoke-static {v4}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/SharedPreferenceManager;
+
+    move-result-object v4
+
+    .line 185
+    const-string v5, "com.lock.appslocker.SHORT_EXIT_PERIODE"
+
+    .line 184
+    invoke-virtual {v4, v5}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getLong(Ljava/lang/String;)J
+
+    move-result-wide v4
+
+    iput-wide v4, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->timeout:J
+
+    .line 187
+    iget-object v4, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->appsList:Ljava/util/Hashtable;
+
+    invoke-virtual {v4}, Ljava/util/Hashtable;->elements()Ljava/util/Enumeration;
 
     move-result-object v0
 
-    goto :goto_c
+    .line 188
+    .local v0, "apppps":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/lang/String;>;"
+    :goto_29
+    invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v4
+
+    if-nez v4, :cond_3c
+
+    .line 193
+    return-void
+
+    .line 181
+    .end local v0    # "apppps":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/lang/String;>;"
+    :cond_30
+    iget-object v4, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->appsList:Ljava/util/Hashtable;
+
+    aget-object v5, v2, v1
+
+    aget-object v6, v2, v1
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 180
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_12
+
+    .line 189
+    .restart local v0    # "apppps":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/lang/String;>;"
+    :cond_3c
+    invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    .line 190
+    .local v3, "string":Ljava/lang/String;
+    const-string v4, "LOCKED _ APP "
+
+    invoke-static {v4, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_29
 .end method
 
 
 # virtual methods
-.method public onActivityStarting(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 7
+.method public onActivityStarting(Ljava/lang/String;)V
+    .registers 9
     .param p1, "packageName"    # Ljava/lang/String;
-    .param p2, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 93
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
+    const-wide/16 v5, 0x0
 
-    invoke-static {v2}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/SharedPreferenceManager;
+    .line 106
+    monitor-enter p0
 
-    move-result-object v2
+    .line 107
+    :try_start_3
+    iget-wide v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->timeout:J
 
-    .line 94
-    const-string v3, "com.lock.appslocker.Locking_service_state"
+    cmp-long v2, v2, v5
 
-    .line 93
-    invoke-virtual {v2, v3}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getString(Ljava/lang/String;)Ljava/lang/String;
+    if-lez v2, :cond_41
 
-    move-result-object v2
+    .line 108
+    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
 
-    if-eqz v2, :cond_22
-
-    .line 95
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
-
-    invoke-static {v2}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/SharedPreferenceManager;
-
-    move-result-object v2
-
-    .line 96
-    const-string v3, "com.lock.appslocker.Locking_service_state"
-
-    invoke-virtual {v2, v3}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 97
-    const-string v3, "0"
+    iget-object v3, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastLockedPkg:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_30
-
-    .line 99
-    :cond_22
-    monitor-enter p0
-
-    .line 101
-    :try_start_23
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_31
-
-    .line 104
-    monitor-exit p0
-
-    .line 129
-    :cond_30
-    :goto_30
-    return-void
+    if-eqz v2, :cond_41
 
     .line 109
-    :cond_31
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
-
-    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3e
-
-    .line 110
-    monitor-exit p0
-
-    goto :goto_30
-
-    .line 99
-    :catchall_3b
-    move-exception v2
-
-    monitor-exit p0
-    :try_end_3d
-    .catchall {:try_start_23 .. :try_end_3d} :catchall_3b
-
-    throw v2
-
-    .line 112
-    :cond_3e
-    :try_start_3e
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
-
-    invoke-static {v2}, Lcom/lock/appslocker/settings/AppLockerPreference;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/AppLockerPreference;
-
-    move-result-object v2
-
-    .line 113
-    invoke-virtual {v2}, Lcom/lock/appslocker/settings/AppLockerPreference;->getApplicationList()[Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 115
-    .local v1, "list":[Ljava/lang/String;
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
-
-    invoke-static {v2}, Lcom/lock/appslocker/settings/AppLockerPreference;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/AppLockerPreference;
-
-    move-result-object v2
-
-    .line 116
-    invoke-virtual {v2}, Lcom/lock/appslocker/settings/AppLockerPreference;->getRelockTimeout()I
-
-    move-result v2
-
-    if-lez v2, :cond_5e
-
-    .line 117
     iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->tempAllowedPackages:Ljava/util/Hashtable;
 
-    invoke-virtual {v2, p1}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
+    iget-object v3, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastLockedPkg:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_5e
+    if-eqz v2, :cond_2c
 
-    .line 118
-    monitor-exit p0
+    .line 111
+    iget-object v3, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->handler:Landroid/os/Handler;
 
-    goto :goto_30
+    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->tempAllowedPackages:Ljava/util/Hashtable;
+
+    .line 112
+    iget-object v4, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastLockedPkg:Ljava/lang/String;
+
+    invoke-virtual {v2, v4}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Runnable;
+
+    .line 111
+    invoke-virtual {v3, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 114
+    :cond_2c
+    new-instance v1, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler$RemoveFromTempRunnable;
+
+    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastLockedPkg:Ljava/lang/String;
+
+    invoke-direct {v1, p0, v2}, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler$RemoveFromTempRunnable;-><init>(Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;Ljava/lang/String;)V
+
+    .line 115
+    .local v1, "runnable":Ljava/lang/Runnable;
+    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->tempAllowedPackages:Ljava/util/Hashtable;
+
+    iget-object v3, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastLockedPkg:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 116
+    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->handler:Landroid/os/Handler;
+
+    iget-wide v3, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->timeout:J
+
+    invoke-virtual {v2, v1, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 120
-    :cond_5e
-    const/4 v0, 0x0
-
-    .local v0, "i":I
-    :goto_5f
-    array-length v2, v1
-
-    if-lt v0, v2, :cond_66
-
-    .line 127
-    iput-object p1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
-
-    .line 99
-    monitor-exit p0
-
-    goto :goto_30
-
-    .line 121
-    :cond_66
-    aget-object v2, v1, v0
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_73
-
-    .line 122
-    invoke-direct {p0, p1, p2}, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->blockActivity(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 123
-    monitor-exit p0
-    :try_end_72
-    .catchall {:try_start_3e .. :try_end_72} :catchall_3b
-
-    goto :goto_30
-
-    .line 120
-    :cond_73
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_5f
-.end method
-
-.method public onActivityStarting4JeallyBean(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 7
-    .param p1, "packageName"    # Ljava/lang/String;
-    .param p2, "activityName"    # Ljava/lang/String;
-
-    .prologue
-    .line 133
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
-
-    invoke-static {v2}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/SharedPreferenceManager;
-
-    move-result-object v2
-
-    .line 134
-    const-string v3, "com.lock.appslocker.Locking_service_state"
-
-    .line 133
-    invoke-virtual {v2, v3}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_22
-
-    .line 135
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
-
-    invoke-static {v2}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/SharedPreferenceManager;
-
-    move-result-object v2
-
-    .line 136
-    const-string v3, "com.lock.appslocker.Locking_service_state"
-
-    invoke-virtual {v2, v3}, Lcom/lock/appslocker/settings/SharedPreferenceManager;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 137
-    const-string v3, "0"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_30
-
-    .line 139
-    :cond_22
-    monitor-enter p0
-
-    .line 141
-    :try_start_23
+    .end local v1    # "runnable":Ljava/lang/Runnable;
+    :cond_41
     iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -569,125 +520,150 @@
 
     move-result v2
 
-    if-eqz v2, :cond_31
+    if-eqz v2, :cond_4f
 
-    .line 144
+    .line 122
     monitor-exit p0
 
-    .line 169
-    :cond_30
-    :goto_30
+    .line 174
+    :goto_4e
     return-void
 
-    .line 149
-    :cond_31
+    .line 132
+    :cond_4f
     iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_3e
+    if-eqz v2, :cond_5c
 
-    .line 150
+    .line 143
     monitor-exit p0
 
-    goto :goto_30
+    goto :goto_4e
 
-    .line 139
-    :catchall_3b
+    .line 106
+    :catchall_59
     move-exception v2
 
     monitor-exit p0
-    :try_end_3d
-    .catchall {:try_start_23 .. :try_end_3d} :catchall_3b
+    :try_end_5b
+    .catchall {:try_start_3 .. :try_end_5b} :catchall_59
 
     throw v2
 
-    .line 152
-    :cond_3e
-    :try_start_3e
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
+    .line 146
+    :cond_5c
+    :try_start_5c
+    iget-wide v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->timeout:J
 
-    invoke-static {v2}, Lcom/lock/appslocker/settings/AppLockerPreference;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/AppLockerPreference;
+    cmp-long v2, v2, v5
 
-    move-result-object v2
+    if-lez v2, :cond_6e
 
-    .line 153
-    invoke-virtual {v2}, Lcom/lock/appslocker/settings/AppLockerPreference;->getApplicationList()[Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 155
-    .local v1, "list":[Ljava/lang/String;
-    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->mContext:Landroid/content/Context;
-
-    invoke-static {v2}, Lcom/lock/appslocker/settings/AppLockerPreference;->getInstance(Landroid/content/Context;)Lcom/lock/appslocker/settings/AppLockerPreference;
-
-    move-result-object v2
-
-    .line 156
-    invoke-virtual {v2}, Lcom/lock/appslocker/settings/AppLockerPreference;->getRelockTimeout()I
-
-    move-result v2
-
-    if-lez v2, :cond_5e
-
-    .line 157
+    .line 147
     iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->tempAllowedPackages:Ljava/util/Hashtable;
 
     invoke-virtual {v2, p1}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_5e
+    if-eqz v2, :cond_6e
 
-    .line 158
-    monitor-exit p0
-
-    goto :goto_30
-
-    .line 159
-    :cond_5e
+    .line 148
     iput-object p1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
 
-    .line 161
-    const/4 v0, 0x0
-
-    .local v0, "i":I
-    :goto_61
-    array-length v2, v1
-
-    if-lt v0, v2, :cond_66
-
-    .line 139
+    .line 149
     monitor-exit p0
 
-    goto :goto_30
+    goto :goto_4e
 
-    .line 162
-    :cond_66
-    aget-object v2, v1, v0
+    .line 152
+    :cond_6e
+    iget-object v2, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->appsList:Ljava/util/Hashtable;
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, p1}, Ljava/util/Hashtable;->contains(Ljava/lang/Object;)Z
+    :try_end_73
+    .catchall {:try_start_5c .. :try_end_73} :catchall_59
 
     move-result v2
 
-    if-eqz v2, :cond_73
+    if-eqz v2, :cond_7e
 
-    .line 163
-    invoke-direct {p0, p1, p2}, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->blockActivity(Ljava/lang/String;Ljava/lang/String;)V
+    .line 156
+    const-wide/16 v2, 0x64
 
-    .line 164
-    monitor-exit p0
-    :try_end_72
-    .catchall {:try_start_3e .. :try_end_72} :catchall_3b
-
-    goto :goto_30
+    :try_start_78
+    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_7b
+    .catch Ljava/lang/InterruptedException; {:try_start_78 .. :try_end_7b} :catch_82
+    .catchall {:try_start_78 .. :try_end_7b} :catchall_59
 
     .line 161
-    :cond_73
-    add-int/lit8 v0, v0, 0x1
+    :goto_7b
+    :try_start_7b
+    invoke-direct {p0, p1}, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->blockActivity(Ljava/lang/String;)V
 
-    goto :goto_61
+    .line 172
+    :cond_7e
+    iput-object p1, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->lastRunningPackage:Ljava/lang/String;
+
+    .line 106
+    monitor-exit p0
+
+    goto :goto_4e
+
+    .line 157
+    :catch_82
+    move-exception v0
+
+    .line 159
+    .local v0, "e":Ljava/lang/InterruptedException;
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+    :try_end_86
+    .catchall {:try_start_7b .. :try_end_86} :catchall_59
+
+    goto :goto_7b
+.end method
+
+.method public onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
+    .registers 5
+    .param p1, "sharedPreferences"    # Landroid/content/SharedPreferences;
+    .param p2, "key"    # Ljava/lang/String;
+
+    .prologue
+    .line 226
+    invoke-direct {p0}, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->loadSettings()V
+
+    .line 227
+    const-string v0, "&&&&&&&settings&&&&&&&"
+
+    const-string v1, "settingsLoaded"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 228
+    return-void
+.end method
+
+.method public unRegisterReceiver(Landroid/content/Context;)V
+    .registers 3
+    .param p1, "context"    # Landroid/content/Context;
+
+    .prologue
+    .line 78
+    iget-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->broadcastReceiver:Landroid/content/BroadcastReceiver;
+
+    if-eqz v0, :cond_9
+
+    .line 79
+    iget-object v0, p0, Lcom/lock/appslocker/activities/handlers/ActivityStartingHandler;->broadcastReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    .line 80
+    :cond_9
+    return-void
 .end method

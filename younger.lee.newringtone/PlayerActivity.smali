@@ -14,7 +14,7 @@
 
 .field private m_ProgressHandler:Landroid/os/Handler;
 
-.field private sb_play:Landroid/widget/SeekBar;
+.field private pb_play:Landroid/widget/ProgressBar;
 
 
 # direct methods
@@ -32,67 +32,67 @@
 
     const/4 v4, 0x0
 
-    .line 282
+    .line 271
     const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 283
+    .line 272
     const-string v1, "_id"
 
     aput-object v1, v0, v4
 
-    .line 284
+    .line 273
     const-string v1, "_data"
 
     aput-object v1, v0, v5
 
-    .line 285
+    .line 274
     const-string v1, "title"
 
     aput-object v1, v0, v6
 
-    .line 286
+    .line 275
     const-string v1, "artist"
 
     aput-object v1, v0, v7
 
-    .line 287
+    .line 276
     const-string v1, "album"
 
     aput-object v1, v0, v8
 
     const/4 v1, 0x5
 
-    .line 288
+    .line 277
     const-string v2, "is_ringtone"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    .line 289
+    .line 278
     const-string v2, "is_alarm"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    .line 290
+    .line 279
     const-string v2, "is_notification"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    .line 291
+    .line 280
     const-string v2, "is_music"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    .line 292
+    .line 281
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "\""
@@ -117,70 +117,70 @@
 
     aput-object v2, v0, v1
 
-    .line 282
+    .line 271
     sput-object v0, Lyounger/lee/newringtone/PlayerActivity;->INTERNAL_COLUMNS:[Ljava/lang/String;
 
-    .line 295
+    .line 284
     const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 296
+    .line 285
     const-string v1, "_id"
 
     aput-object v1, v0, v4
 
-    .line 297
+    .line 286
     const-string v1, "_data"
 
     aput-object v1, v0, v5
 
-    .line 298
+    .line 287
     const-string v1, "title"
 
     aput-object v1, v0, v6
 
-    .line 299
+    .line 288
     const-string v1, "artist"
 
     aput-object v1, v0, v7
 
-    .line 300
+    .line 289
     const-string v1, "album"
 
     aput-object v1, v0, v8
 
     const/4 v1, 0x5
 
-    .line 301
+    .line 290
     const-string v2, "is_ringtone"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    .line 302
+    .line 291
     const-string v2, "is_alarm"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    .line 303
+    .line 292
     const-string v2, "is_notification"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    .line 304
+    .line 293
     const-string v2, "is_music"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    .line 305
+    .line 294
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "\""
@@ -205,7 +205,7 @@
 
     aput-object v2, v0, v1
 
-    .line 295
+    .line 284
     sput-object v0, Lyounger/lee/newringtone/PlayerActivity;->EXTERNAL_COLUMNS:[Ljava/lang/String;
 
     .line 28
@@ -228,18 +228,18 @@
     iput-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->m_ProgressHandler:Landroid/os/Handler;
 
     .line 32
-    iput-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->sb_play:Landroid/widget/SeekBar;
+    iput-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->pb_play:Landroid/widget/ProgressBar;
 
     .line 28
     return-void
 .end method
 
-.method static synthetic access$0(Lyounger/lee/newringtone/PlayerActivity;)Landroid/widget/SeekBar;
+.method static synthetic access$0(Lyounger/lee/newringtone/PlayerActivity;)Landroid/widget/ProgressBar;
     .registers 2
 
     .prologue
     .line 32
-    iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->sb_play:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->pb_play:Landroid/widget/ProgressBar;
 
     return-object v0
 .end method
@@ -268,7 +268,7 @@
     .registers 3
 
     .prologue
-    .line 236
+    .line 225
     invoke-direct {p0, p1}, Lyounger/lee/newringtone/PlayerActivity;->createCursor(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
@@ -285,16 +285,16 @@
 
     const/4 v6, 0x0
 
-    .line 237
+    .line 226
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 239
+    .line 228
     .local v0, "args":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v4, "("
 
-    .line 240
+    .line 229
     .local v4, "selection":Ljava/lang/String;
     invoke-static {}, Lyounger/lee/soundfile/CheapSoundFile;->getSupportedExtensions()[Ljava/lang/String;
 
@@ -307,7 +307,7 @@
     :goto_f
     if-lt v5, v8, :cond_a3
 
-    .line 246
+    .line 235
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -326,7 +326,7 @@
 
     move-result-object v4
 
-    .line 247
+    .line 236
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v7, "("
@@ -347,12 +347,12 @@
 
     move-result-object v4
 
-    .line 248
+    .line 237
     const-string v5, "%espeak-data/scratch%"
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 249
+    .line 238
     if-eqz p1, :cond_7f
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -361,7 +361,7 @@
 
     if-lez v5, :cond_7f
 
-    .line 250
+    .line 239
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v7, "%"
@@ -382,7 +382,7 @@
 
     move-result-object p1
 
-    .line 251
+    .line 240
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v7, "("
@@ -409,16 +409,16 @@
 
     move-result-object v4
 
-    .line 252
+    .line 241
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 253
+    .line 242
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 254
+    .line 243
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 256
+    .line 245
     :cond_7f
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -432,7 +432,7 @@
 
     check-cast v1, [Ljava/lang/String;
 
-    .line 257
+    .line 246
     .local v1, "argsArray":[Ljava/lang/String;
     new-instance v2, Landroid/database/MergeCursor;
 
@@ -440,37 +440,37 @@
 
     new-array v5, v5, [Landroid/database/Cursor;
 
-    .line 258
+    .line 247
     invoke-direct {p0, v4, v1}, Lyounger/lee/newringtone/PlayerActivity;->getExternalAudioCursor(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v7
 
     aput-object v7, v5, v6
 
-    .line 259
+    .line 248
     invoke-direct {p0, v4, v1}, Lyounger/lee/newringtone/PlayerActivity;->getInternalAudioCursor(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
     aput-object v6, v5, v11
 
-    .line 257
+    .line 246
     invoke-direct {v2, v5}, Landroid/database/MergeCursor;-><init>([Landroid/database/Cursor;)V
 
-    .line 260
+    .line 249
     .local v2, "c":Landroid/database/Cursor;
     invoke-virtual {p0, v2}, Lyounger/lee/newringtone/PlayerActivity;->startManagingCursor(Landroid/database/Cursor;)V
 
-    .line 261
+    .line 250
     return-object v2
 
-    .line 240
+    .line 229
     .end local v1    # "argsArray":[Ljava/lang/String;
     .end local v2    # "c":Landroid/database/Cursor;
     :cond_a3
     aget-object v3, v7, v5
 
-    .line 241
+    .line 230
     .local v3, "extension":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -488,14 +488,14 @@
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 242
+    .line 231
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v9
 
     if-le v9, v11, :cond_d0
 
-    .line 243
+    .line 232
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -514,7 +514,7 @@
 
     move-result-object v4
 
-    .line 244
+    .line 233
     :cond_d0
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -534,7 +534,7 @@
 
     move-result-object v4
 
-    .line 240
+    .line 229
     add-int/lit8 v5, v5, 0x1
 
     goto/16 :goto_f
@@ -546,14 +546,14 @@
     .param p2, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 274
-    .line 275
+    .line 263
+    .line 264
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 276
+    .line 265
     sget-object v2, Lyounger/lee/newringtone/PlayerActivity;->EXTERNAL_COLUMNS:[Ljava/lang/String;
 
-    .line 279
+    .line 268
     const-string v5, "title_key"
 
     move-object v0, p0
@@ -562,7 +562,7 @@
 
     move-object v4, p2
 
-    .line 274
+    .line 263
     invoke-virtual/range {v0 .. v5}, Lyounger/lee/newringtone/PlayerActivity;->managedQuery(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
@@ -576,14 +576,14 @@
     .param p2, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 265
-    .line 266
+    .line 254
+    .line 255
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->INTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 267
+    .line 256
     sget-object v2, Lyounger/lee/newringtone/PlayerActivity;->INTERNAL_COLUMNS:[Ljava/lang/String;
 
-    .line 270
+    .line 259
     const-string v5, "title_key"
 
     move-object v0, p0
@@ -592,7 +592,7 @@
 
     move-object v4, p2
 
-    .line 265
+    .line 254
     invoke-virtual/range {v0 .. v5}, Lyounger/lee/newringtone/PlayerActivity;->managedQuery(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
@@ -604,35 +604,35 @@
     .registers 2
 
     .prologue
-    .line 226
+    .line 215
     iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->m_Player:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_13
 
-    .line 229
+    .line 218
     :try_start_4
     iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->m_Player:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 230
+    .line 219
     iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->m_Player:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepare()V
 
-    .line 231
+    .line 220
     iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->m_Player:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
     :try_end_13
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_13} :catch_14
 
-    .line 234
+    .line 223
     :cond_13
     :goto_13
     return-void
 
-    .line 232
+    .line 221
     :catch_14
     move-exception v0
 
@@ -723,7 +723,7 @@
     if-eqz v0, :cond_4f
 
     .line 48
-    const v0, 0x7f060024
+    const v0, 0x7f060025
 
     invoke-virtual {p0, v0}, Lyounger/lee/newringtone/PlayerActivity;->findViewById(I)Landroid/view/View;
 
@@ -759,7 +759,7 @@
 
     if-nez v0, :cond_5a
 
-    .line 195
+    .line 184
     :goto_59
     return-void
 
@@ -790,7 +790,7 @@
 
     const/16 v3, 0xa
 
-    if-lt v0, v3, :cond_151
+    if-lt v0, v3, :cond_147
 
     const-string v0, ""
 
@@ -825,7 +825,7 @@
 
     const/16 v3, 0xa
 
-    if-lt v0, v3, :cond_155
+    if-lt v0, v3, :cond_14b
 
     const-string v0, ""
 
@@ -852,7 +852,7 @@
 
     .line 62
     .local v12, "second":Ljava/lang/String;
-    const v0, 0x7f060025
+    const v0, 0x7f060026
 
     invoke-virtual {p0, v0}, Lyounger/lee/newringtone/PlayerActivity;->findViewById(I)Landroid/view/View;
 
@@ -885,7 +885,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 64
-    const v0, 0x7f060020
+    const v0, 0x7f060021
 
     invoke-virtual {p0, v0}, Lyounger/lee/newringtone/PlayerActivity;->findViewById(I)Landroid/view/View;
 
@@ -900,7 +900,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 74
-    const v0, 0x7f06001f
+    const v0, 0x7f060020
 
     invoke-virtual {p0, v0}, Lyounger/lee/newringtone/PlayerActivity;->findViewById(I)Landroid/view/View;
 
@@ -915,7 +915,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 103
-    const v0, 0x7f060021
+    const v0, 0x7f060022
 
     invoke-virtual {p0, v0}, Lyounger/lee/newringtone/PlayerActivity;->findViewById(I)Landroid/view/View;
 
@@ -930,7 +930,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 132
-    const v0, 0x7f06001e
+    const v0, 0x7f06001f
 
     invoke-virtual {p0, v0}, Lyounger/lee/newringtone/PlayerActivity;->findViewById(I)Landroid/view/View;
 
@@ -945,7 +945,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 160
-    const v0, 0x7f060022
+    const v0, 0x7f060023
 
     invoke-virtual {p0, v0}, Lyounger/lee/newringtone/PlayerActivity;->findViewById(I)Landroid/view/View;
 
@@ -960,38 +960,29 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 172
-    const v0, 0x7f060023
+    const v0, 0x7f060024
 
     invoke-virtual {p0, v0}, Lyounger/lee/newringtone/PlayerActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/SeekBar;
+    check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->sb_play:Landroid/widget/SeekBar;
+    iput-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->pb_play:Landroid/widget/ProgressBar;
 
     .line 173
-    iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->sb_play:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->pb_play:Landroid/widget/ProgressBar;
 
-    invoke-virtual {v0, v6}, Landroid/widget/SeekBar;->setMax(I)V
+    invoke-virtual {v0, v6}, Landroid/widget/ProgressBar;->setMax(I)V
 
-    .line 174
-    iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->sb_play:Landroid/widget/SeekBar;
+    .line 175
+    new-instance v0, Lyounger/lee/newringtone/PlayerActivity$7;
 
-    new-instance v2, Lyounger/lee/newringtone/PlayerActivity$7;
-
-    invoke-direct {v2, p0}, Lyounger/lee/newringtone/PlayerActivity$7;-><init>(Lyounger/lee/newringtone/PlayerActivity;)V
-
-    invoke-virtual {v0, v2}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
-
-    .line 186
-    new-instance v0, Lyounger/lee/newringtone/PlayerActivity$8;
-
-    invoke-direct {v0, p0}, Lyounger/lee/newringtone/PlayerActivity$8;-><init>(Lyounger/lee/newringtone/PlayerActivity;)V
+    invoke-direct {v0, p0}, Lyounger/lee/newringtone/PlayerActivity$7;-><init>(Lyounger/lee/newringtone/PlayerActivity;)V
 
     iput-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->m_ProgressHandler:Landroid/os/Handler;
 
-    .line 194
+    .line 183
     iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->m_ProgressHandler:Landroid/os/Handler;
 
     const/4 v2, 0x0
@@ -1003,14 +994,14 @@
     .line 60
     .end local v8    # "minute":Ljava/lang/String;
     .end local v12    # "second":Ljava/lang/String;
-    :cond_151
+    :cond_147
     const-string v0, "0"
 
     goto/16 :goto_77
 
     .line 61
     .restart local v8    # "minute":Ljava/lang/String;
-    :cond_155
+    :cond_14b
     const-string v0, "0"
 
     goto/16 :goto_9a
@@ -1020,10 +1011,10 @@
     .registers 2
 
     .prologue
-    .line 205
+    .line 194
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    .line 206
+    .line 195
     iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->m_Player:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_c
@@ -1032,7 +1023,7 @@
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 207
+    .line 196
     :cond_c
     return-void
 .end method
@@ -1043,34 +1034,34 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 211
+    .line 200
     const/4 v2, 0x4
 
     if-ne p1, v2, :cond_33
 
-    .line 212
+    .line 201
     iget-object v2, p0, Lyounger/lee/newringtone/PlayerActivity;->m_Player:Landroid/media/MediaPlayer;
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 213
+    .line 202
     invoke-virtual {p0}, Lyounger/lee/newringtone/PlayerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 214
+    .line 203
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 215
+    .line 204
     .local v1, "optionIntent":Landroid/content/Intent;
     const-string v2, "younger.lee.newringtone.RINGTONEOPTIONS"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 216
+    .line 205
     const-string v2, "id"
 
     const-string v3, "id"
@@ -1083,7 +1074,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 217
+    .line 206
     const-string v2, "path"
 
     const-string v3, "path"
@@ -1094,13 +1085,13 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 218
+    .line 207
     invoke-virtual {p0, v1}, Lyounger/lee/newringtone/PlayerActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 219
+    .line 208
     invoke-virtual {p0}, Lyounger/lee/newringtone/PlayerActivity;->finish()V
 
-    .line 221
+    .line 210
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v1    # "optionIntent":Landroid/content/Intent;
     :cond_33
@@ -1115,17 +1106,17 @@
     .registers 2
 
     .prologue
-    .line 199
+    .line 188
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 200
+    .line 189
     iget-object v0, p0, Lyounger/lee/newringtone/PlayerActivity;->m_Player:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_a
 
     invoke-direct {p0}, Lyounger/lee/newringtone/PlayerActivity;->startPlayer()V
 
-    .line 201
+    .line 190
     :cond_a
     return-void
 .end method

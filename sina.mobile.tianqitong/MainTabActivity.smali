@@ -1333,59 +1333,6 @@
 .end method
 
 .method private K()V
-    .registers 6
-
-    .prologue
-    .line 3248
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    const-string v1, "update_recommend_time"
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    .line 3250
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    .line 3251
-    invoke-static {v2, v3, v0, v1}, Lcom/sina/tianqitong/lib/utility/e;->a(JJ)I
-
-    move-result v0
-
-    const/4 v1, 0x3
-
-    if-lt v0, v1, :cond_26
-
-    .line 3252
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 3254
-    const-string v1, "update_recommend"
-
-    const/4 v4, 0x1
-
-    invoke-static {v0, v1, v4}, Lcom/sina/tianqitong/lib/utility/k;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Z)V
-
-    .line 3256
-    const-string v1, "update_recommend_time"
-
-    invoke-static {v0, v1, v2, v3}, Lcom/sina/tianqitong/lib/utility/k;->a(Landroid/content/SharedPreferences;Ljava/lang/String;J)V
-
-    .line 3259
-    :cond_26
-    return-void
-.end method
-
-.method private L()V
     .registers 3
 
     .prologue
@@ -3994,7 +3941,7 @@
 
     .line 3472
     :pswitch_4
-    invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->L()V
+    invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->K()V
 
     .line 3473
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->F:Lcom/sina/tianqitong/ui/main/HomepageTipsView;
@@ -4017,7 +3964,7 @@
 
     .line 3484
     :pswitch_16
-    invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->L()V
+    invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->K()V
 
     .line 3485
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->F:Lcom/sina/tianqitong/ui/main/HomepageTipsView;
@@ -4028,7 +3975,7 @@
 
     .line 3490
     :pswitch_1f
-    invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->L()V
+    invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->K()V
 
     .line 3491
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->F:Lcom/sina/tianqitong/ui/main/HomepageTipsView;
@@ -4057,7 +4004,7 @@
 
     .line 3510
     :pswitch_39
-    invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->L()V
+    invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->K()V
 
     .line 3511
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->F:Lcom/sina/tianqitong/ui/main/HomepageTipsView;
@@ -5897,12 +5844,10 @@
 .end method
 
 .method public onClick(Landroid/view/View;)V
-    .registers 11
+    .registers 10
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    const v8, 0x7f0f01be
-
     const/4 v7, 0x1
 
     const/16 v2, 0x8
@@ -5912,14 +5857,14 @@
     .line 974
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->Z:Landroid/widget/RelativeLayout;
 
-    if-eq p1, v0, :cond_f
+    if-eq p1, v0, :cond_c
 
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->P:Landroid/widget/ImageView;
 
-    if-ne p1, v0, :cond_61
+    if-ne p1, v0, :cond_5e
 
     .line 975
-    :cond_f
+    :cond_c
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->m()V
 
     .line 976
@@ -5929,7 +5874,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3a
+    if-eqz v0, :cond_37
 
     .line 977
     invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->y()V
@@ -5938,40 +5883,40 @@
     invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->G()V
 
     .line 1298
-    :cond_20
-    :goto_20
+    :cond_1d
+    :goto_1d
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->R:Landroid/view/View;
 
-    if-eq p1, v0, :cond_34
+    if-eq p1, v0, :cond_31
 
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->S:Landroid/view/View;
 
-    if-eq p1, v0, :cond_34
+    if-eq p1, v0, :cond_31
 
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->T:Landroid/view/View;
 
-    if-eq p1, v0, :cond_34
+    if-eq p1, v0, :cond_31
 
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->U:Landroid/view/View;
 
-    if-eq p1, v0, :cond_34
+    if-eq p1, v0, :cond_31
 
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->V:Landroid/view/View;
 
-    if-ne p1, v0, :cond_39
+    if-ne p1, v0, :cond_36
 
     .line 1301
-    :cond_34
+    :cond_31
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->O:Lcom/sina/tianqitong/ui/main/m;
 
     invoke-virtual {v0}, Lcom/sina/tianqitong/ui/main/m;->dismiss()V
 
     .line 1303
-    :cond_39
+    :cond_36
     return-void
 
     .line 981
-    :cond_3a
+    :cond_37
     invoke-static {}, Lcom/sina/tianqitong/lib/b/a/b;->a()Lcom/sina/tianqitong/lib/b/a/b;
 
     move-result-object v0
@@ -6010,24 +5955,24 @@
     .line 992
     invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->F()V
 
-    goto :goto_20
+    goto :goto_1d
 
     .line 996
-    :cond_61
+    :cond_5e
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->z:Lcom/sina/tianqitong/ui/main/MainTabView;
 
-    if-ne p1, v0, :cond_97
+    if-ne p1, v0, :cond_94
 
     .line 997
     iget-boolean v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->aA:Z
 
-    if-eqz v0, :cond_6c
+    if-eqz v0, :cond_69
 
     .line 998
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->i()V
 
     .line 1000
-    :cond_6c
+    :cond_69
     invoke-virtual {p0, v1}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->b(I)V
 
     .line 1001
@@ -6069,13 +6014,13 @@
 
     invoke-static {v0}, Lcom/sina/tianqitong/lib/a/d;->b(Ljava/lang/String;)V
 
-    goto :goto_20
+    goto :goto_1d
 
     .line 1011
-    :cond_97
+    :cond_94
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->A:Lcom/sina/tianqitong/ui/main/MainTabView;
 
-    if-ne p1, v0, :cond_ca
+    if-ne p1, v0, :cond_c7
 
     .line 1013
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->j()V
@@ -6122,13 +6067,13 @@
 
     invoke-static {v0}, Lcom/sina/tianqitong/lib/a/d;->b(Ljava/lang/String;)V
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1027
-    :cond_ca
+    :cond_c7
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->B:Lcom/sina/tianqitong/ui/main/MainTabView;
 
-    if-ne p1, v0, :cond_fe
+    if-ne p1, v0, :cond_fb
 
     .line 1029
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->j()V
@@ -6177,13 +6122,13 @@
 
     invoke-static {v0}, Lcom/sina/tianqitong/lib/a/d;->b(Ljava/lang/String;)V
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1042
-    :cond_fe
+    :cond_fb
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->C:Lcom/sina/tianqitong/ui/main/MainTabView;
 
-    if-ne p1, v0, :cond_13b
+    if-ne p1, v0, :cond_138
 
     .line 1044
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->j()V
@@ -6243,13 +6188,13 @@
 
     invoke-static {v0}, Lcom/sina/tianqitong/lib/a/d;->b(Ljava/lang/String;)V
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1063
-    :cond_13b
+    :cond_138
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->N:Landroid/view/View;
 
-    if-ne p1, v0, :cond_15b
+    if-ne p1, v0, :cond_158
 
     .line 1065
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->l()Lcom/sina/tianqitong/ui/main/g;
@@ -6258,7 +6203,7 @@
 
     instance-of v0, v0, Lcom/sina/tianqitong/ui/main/l;
 
-    if-eqz v0, :cond_156
+    if-eqz v0, :cond_153
 
     .line 1066
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->getApplicationContext()Landroid/content/Context;
@@ -6276,16 +6221,16 @@
     invoke-interface {v0, v1}, Lcom/sina/tianqitong/service/m/d/d;->d(Ljava/lang/String;)Z
 
     .line 1070
-    :cond_156
+    :cond_153
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->q()V
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1071
-    :cond_15b
+    :cond_158
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->K:Lcom/sina/tianqitong/ui/homepage/HomepageTitleCityView;
 
-    if-ne p1, v0, :cond_188
+    if-ne p1, v0, :cond_185
 
     .line 1072
     new-instance v0, Landroid/content/Intent;
@@ -6326,13 +6271,13 @@
 
     invoke-interface {v0, v1}, Lcom/sina/tianqitong/service/m/d/d;->d(Ljava/lang/String;)Z
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1084
-    :cond_188
+    :cond_185
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->M:Landroid/view/View;
 
-    if-ne p1, v0, :cond_2bd
+    if-ne p1, v0, :cond_2c2
 
     .line 1085
     const v0, 0x7f0f02b1
@@ -6380,7 +6325,7 @@
     .line 1094
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->O:Lcom/sina/tianqitong/ui/main/m;
 
-    if-nez v0, :cond_200
+    if-nez v0, :cond_202
 
     .line 1095
     invoke-static {p0}, Lcom/sina/tianqitong/ui/main/m;->a(Landroid/content/Context;)Lcom/sina/tianqitong/ui/main/m;
@@ -6459,8 +6404,13 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 1109
+    iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->V:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
     .line 1113
-    :cond_200
+    :cond_202
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->R:Landroid/view/View;
 
     const v6, 0x7f0f01b0
@@ -6479,11 +6429,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2b5
+    if-eqz v0, :cond_2ba
 
     move v0, v1
 
-    :goto_216
+    :goto_218
     invoke-virtual {v6, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 1117
@@ -6505,11 +6455,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2b8
+    if-eqz v0, :cond_2bd
 
     move v0, v1
 
-    :goto_22f
+    :goto_231
     invoke-virtual {v6, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 1125
@@ -6531,17 +6481,19 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2bb
+    if-eqz v0, :cond_2c0
 
     move v0, v1
 
-    :goto_248
+    :goto_24a
     invoke-virtual {v6, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 1130
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->V:Landroid/view/View;
 
-    invoke-virtual {v0, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const v6, 0x7f0f01be
+
+    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -6555,11 +6507,11 @@
 
     move-result v6
 
-    if-eqz v6, :cond_25e
+    if-eqz v6, :cond_263
 
     move v2, v1
 
-    :cond_25e
+    :cond_263
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 1136
@@ -6621,7 +6573,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2a4
+    if-eqz v0, :cond_2a9
 
     .line 1156
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->aD:Landroid/os/Handler;
@@ -6633,7 +6585,7 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 1166
-    :cond_2a4
+    :cond_2a9
     invoke-static {}, Lsina/mobile/tianqitong/TQTApp;->a()Lsina/mobile/tianqitong/TQTApp;
 
     move-result-object v0
@@ -6648,31 +6600,31 @@
 
     invoke-interface {v0, v1}, Lcom/sina/tianqitong/service/m/d/d;->d(Ljava/lang/String;)Z
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
-    :cond_2b5
+    :cond_2ba
     move v0, v2
 
     .line 1113
-    goto/16 :goto_216
+    goto/16 :goto_218
 
-    :cond_2b8
+    :cond_2bd
     move v0, v2
 
     .line 1117
-    goto/16 :goto_22f
+    goto/16 :goto_231
 
-    :cond_2bb
+    :cond_2c0
     move v0, v2
 
     .line 1125
-    goto :goto_248
+    goto :goto_24a
 
     .line 1169
-    :cond_2bd
+    :cond_2c2
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->R:Landroid/view/View;
 
-    if-ne p1, v0, :cond_2db
+    if-ne p1, v0, :cond_2e0
 
     .line 1170
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->u()V
@@ -6698,13 +6650,13 @@
     .line 1174
     invoke-direct {p0, p1}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->b(Landroid/view/View;)V
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1175
-    :cond_2db
+    :cond_2e0
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->S:Landroid/view/View;
 
-    if-ne p1, v0, :cond_2f9
+    if-ne p1, v0, :cond_2fe
 
     .line 1176
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->u()V
@@ -6730,13 +6682,13 @@
     .line 1180
     invoke-direct {p0, p1}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->d(Landroid/view/View;)V
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1181
-    :cond_2f9
+    :cond_2fe
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->T:Landroid/view/View;
 
-    if-ne p1, v0, :cond_317
+    if-ne p1, v0, :cond_31c
 
     .line 1182
     invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->u()V
@@ -6762,13 +6714,13 @@
     .line 1186
     invoke-direct {p0, p1}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->c(Landroid/view/View;)V
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1187
-    :cond_317
+    :cond_31c
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->U:Landroid/view/View;
 
-    if-ne p1, v0, :cond_360
+    if-ne p1, v0, :cond_365
 
     .line 1189
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
@@ -6781,7 +6733,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_351
+    if-eqz v0, :cond_356
 
     .line 1191
     new-instance v0, Landroid/content/Intent;
@@ -6810,7 +6762,7 @@
     invoke-virtual {p0, v0, v1}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 1199
-    :goto_340
+    :goto_345
     invoke-static {}, Lsina/mobile/tianqitong/TQTApp;->a()Lsina/mobile/tianqitong/TQTApp;
 
     move-result-object v0
@@ -6825,10 +6777,10 @@
 
     invoke-interface {v0, v1}, Lcom/sina/tianqitong/service/m/d/d;->d(Ljava/lang/String;)Z
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1196
-    :cond_351
+    :cond_356
     const v0, 0x7f0c02ed
 
     invoke-virtual {p0, v0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->getString(I)Ljava/lang/String;
@@ -6841,70 +6793,18 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    goto :goto_340
+    goto :goto_345
 
     .line 1202
-    :cond_360
+    :cond_365
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->V:Landroid/view/View;
 
-    if-ne p1, v0, :cond_396
-
-    .line 1204
-    iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->V:Landroid/view/View;
-
-    invoke-virtual {v0, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 1207
-    invoke-static {p0}, Lcom/sina/tianqitong/ui/main/a;->c(Landroid/app/Activity;)V
-
-    .line 1208
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 1210
-    const-string v2, "update_recommend"
-
-    invoke-static {v0, v2, v1}, Lcom/sina/tianqitong/lib/utility/k;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Z)V
-
-    .line 1213
-    invoke-virtual {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->u()V
-
-    .line 1214
-    invoke-static {}, Lcom/sina/tianqitong/lib/b/a/b;->a()Lcom/sina/tianqitong/lib/b/a/b;
-
-    move-result-object v0
-
-    const-string v1, "itoprbimomw"
-
-    invoke-virtual {v0, v1}, Lcom/sina/tianqitong/lib/b/a/b;->a(Ljava/lang/String;)V
-
-    .line 1218
-    invoke-static {}, Lsina/mobile/tianqitong/TQTApp;->a()Lsina/mobile/tianqitong/TQTApp;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/sina/tianqitong/service/m/d/e;->a(Landroid/content/Context;)Lcom/sina/tianqitong/service/f/e;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/sina/tianqitong/service/m/d/d;
-
-    const-string v1, "119"
-
-    invoke-interface {v0, v1}, Lcom/sina/tianqitong/service/m/d/d;->d(Ljava/lang/String;)Z
-
-    goto/16 :goto_20
+    if-eq p1, v0, :cond_1d
 
     .line 1223
-    :cond_396
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->I:Landroid/widget/Button;
 
-    if-ne p1, v0, :cond_3ca
+    if-ne p1, v0, :cond_39d
 
     .line 1224
     new-instance v0, Landroid/content/Intent;
@@ -6952,13 +6852,13 @@
 
     invoke-interface {v0, v1}, Lcom/sina/tianqitong/service/m/d/d;->d(Ljava/lang/String;)Z
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1233
-    :cond_3ca
+    :cond_39d
     iget-object v0, p0, Lcom/sina/tianqitong/ui/main/MainTabActivity;->J:Landroid/widget/Button;
 
-    if-ne p1, v0, :cond_20
+    if-ne p1, v0, :cond_1d
 
     .line 1235
     new-instance v4, Ljava/lang/StringBuffer;
@@ -6992,7 +6892,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_3fc
+    if-nez v0, :cond_3cf
 
     .line 1241
     const-string v0, "\u201c"
@@ -7008,7 +6908,7 @@
     invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 1245
-    :cond_3fc
+    :cond_3cf
     const v0, 0x7f0c02f9
 
     invoke-virtual {p0, v0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->getString(I)Ljava/lang/String;
@@ -7035,7 +6935,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_42a
+    if-nez v3, :cond_3fd
 
     .line 1250
     new-instance v3, Ljava/lang/StringBuilder;
@@ -7055,7 +6955,7 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 1252
-    :cond_42a
+    :cond_3fd
     const v0, 0x7f0c02fb
 
     invoke-virtual {p0, v0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->getString(I)Ljava/lang/String;
@@ -7099,7 +6999,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4aa
+    if-eqz v0, :cond_47d
 
     .line 1263
     new-instance v0, Ljava/io/File;
@@ -7117,14 +7017,14 @@
 
     move-result v3
 
-    if-nez v3, :cond_46c
+    if-nez v3, :cond_43f
 
     .line 1267
     invoke-static {p0, v0}, Lcom/sina/tianqitong/lib/utility/f;->a(Landroid/content/Context;Ljava/io/File;)V
 
     .line 1286
-    :cond_46c
-    :goto_46c
+    :cond_43f
+    :goto_43f
     const v3, 0x7f0c02fd
 
     invoke-virtual {p0, v3}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->getString(I)Ljava/lang/String;
@@ -7150,13 +7050,13 @@
 
     move-result v3
 
-    if-eqz v3, :cond_4d3
+    if-eqz v3, :cond_4a6
 
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
-    :goto_48a
+    :goto_45d
     invoke-virtual {v4}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -7186,10 +7086,10 @@
 
     invoke-interface {v0, v1}, Lcom/sina/tianqitong/service/m/d/d;->d(Ljava/lang/String;)Z
 
-    goto/16 :goto_20
+    goto/16 :goto_1d
 
     .line 1270
-    :cond_4aa
+    :cond_47d
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -7212,7 +7112,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_46c
+    if-nez v3, :cond_43f
 
     .line 1276
     new-instance v0, Ljava/io/File;
@@ -7231,13 +7131,13 @@
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    goto :goto_46c
+    goto :goto_43f
 
     .line 1288
-    :cond_4d3
+    :cond_4a6
     const-string v3, ""
 
-    goto :goto_48a
+    goto :goto_45d
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
@@ -10098,81 +9998,65 @@
     const/4 v3, 0x0
 
     .line 3213
-    .line 3215
-    invoke-direct {p0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->K()V
+    .line 3222
+    const v0, 0x7f0f02bb
 
-    .line 3216
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v0}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const-string v1, "update_recommend"
-
-    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    .line 3222
-    const v1, 0x7f0f02bb
-
-    invoke-virtual {p0, v1}, Lcom/sina/tianqitong/ui/main/MainTabActivity;->findViewById(I)Landroid/view/View;
+    .line 3223
+    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 3223
-    if-nez v0, :cond_3b
-
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
     const-string v2, "has_tts_resource_new"
 
-    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_3b
+    if-nez v1, :cond_2c
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    move-result-object v0
+    move-result-object v1
 
     const-string v2, "has_widget_resource_new"
 
-    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_3b
+    if-nez v1, :cond_2c
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    move-result-object v0
+    move-result-object v1
 
     const-string v2, "has_background_resource_new"
 
-    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_3f
+    if-eqz v1, :cond_30
 
     .line 3240
-    :cond_3b
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+    :cond_2c
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 3245
-    :goto_3e
+    :goto_2f
     return-void
 
     .line 3243
-    :cond_3f
-    const/16 v0, 0x8
+    :cond_30
+    const/16 v1, 0x8
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    goto :goto_3e
+    goto :goto_2f
 .end method
 
 .method public updateAllForecastInfo(Landroid/view/View;)V

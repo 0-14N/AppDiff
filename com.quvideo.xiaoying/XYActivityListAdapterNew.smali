@@ -77,9 +77,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew;->h:Ljava/util/List;
 
     .line 263
-    new-instance v0, Lou;
+    new-instance v0, Lib;
 
-    invoke-direct {v0, p0}, Lou;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew;)V
+    invoke-direct {v0, p0}, Lib;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew;->i:Landroid/view/View$OnClickListener;
 
@@ -612,7 +612,7 @@
     .registers 13
 
     .prologue
-    const v8, 0x7f060437
+    const v8, 0x7f060422
 
     const v4, 0x7f0602e0
 
@@ -647,7 +647,7 @@
     invoke-direct {v2, p0}, Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew$a;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew;)V
 
     .line 167
-    const v0, 0x7f06043c
+    const v0, 0x7f060427
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -682,7 +682,7 @@
     .line 171
     iget-object v0, v2, Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew$a;->a:Landroid/widget/RelativeLayout;
 
-    const v3, 0x7f06043a
+    const v3, 0x7f060425
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -706,7 +706,7 @@
     .line 173
     iget-object v0, v2, Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew$a;->a:Landroid/widget/RelativeLayout;
 
-    const v3, 0x7f06043e
+    const v3, 0x7f060429
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -729,7 +729,7 @@
     invoke-direct {v3, p0}, Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew$a;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew;)V
 
     .line 177
-    const v0, 0x7f06043d
+    const v0, 0x7f060428
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -764,7 +764,7 @@
     .line 181
     iget-object v0, v3, Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew$a;->a:Landroid/widget/RelativeLayout;
 
-    const v4, 0x7f06043a
+    const v4, 0x7f060425
 
     invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -788,7 +788,7 @@
     .line 183
     iget-object v0, v3, Lcom/quvideo/xiaoying/app/activity/XYActivityListAdapterNew$a;->a:Landroid/widget/RelativeLayout;
 
-    const v4, 0x7f06043e
+    const v4, 0x7f060429
 
     invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 

@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/cz;->a:Lcom/youku/meidian/activity/MaterialShopActivity_;
 
-    invoke-virtual {v0}, Lcom/youku/meidian/activity/MaterialShopActivity;->finish()V
+    invoke-virtual {v0}, Lcom/youku/meidian/activity/MaterialShopActivity_;->h()V
 
     return-void
 .end method

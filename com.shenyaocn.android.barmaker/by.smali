@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field private synthetic a:Lcom/five/adwoad/bx;
+.field private final synthetic a:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/five/adwoad/bx;)V
-    .registers 2
+.method constructor <init>(Lcom/five/adwoad/bw;Ljava/lang/String;)V
+    .registers 3
 
-    iput-object p1, p0, Lcom/five/adwoad/by;->a:Lcom/five/adwoad/bx;
+    iput-object p2, p0, Lcom/five/adwoad/by;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,23 +23,48 @@
 
 # virtual methods
 .method public final run()V
-    .registers 3
+    .registers 4
 
-    iget-object v0, p0, Lcom/five/adwoad/by;->a:Lcom/five/adwoad/bx;
+    :try_start_0
+    new-instance v0, Landroid/media/MediaPlayer;
 
-    iget-object v0, v0, Lcom/five/adwoad/bx;->a:Lcom/five/adwoad/cu;
+    invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
 
-    invoke-static {v0}, Lcom/five/adwoad/cu;->a(Lcom/five/adwoad/cu;)Lcom/five/adwoad/cf;
+    const/4 v1, 0x3
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    invoke-static {v0}, Lcom/five/adwoad/cf;->b(Lcom/five/adwoad/cf;)Landroid/webkit/WebView;
+    new-instance v1, Lcom/five/adwoad/bz;
 
-    move-result-object v0
+    invoke-direct {v1, p0}, Lcom/five/adwoad/bz;-><init>(Lcom/five/adwoad/by;)V
 
-    const-string v1, "javascript:adwoSaveToAlbumComplete();"
+    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    invoke-static {}, Lcom/five/adwoad/bh;->b()Landroid/content/Context;
 
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/five/adwoad/by;->a:Ljava/lang/String;
+
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepare()V
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
+    :try_end_24
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_24} :catch_25
+
+    :goto_24
     return-void
+
+    :catch_25
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_24
 .end method

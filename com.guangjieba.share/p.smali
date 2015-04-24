@@ -36,13 +36,13 @@
 
     const-string v1, "\u53d6\u6d88"
 
-    invoke-virtual {v0, v1}, Lcom/guangjieba/share/widget/f;->d(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;
+    invoke-virtual {v0, v1}, Lcom/guangjieba/share/widget/f;->a(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;
 
     move-result-object v0
 
     const-string v1, "\u786e\u5b9a"
 
-    invoke-virtual {v0, v1}, Lcom/guangjieba/share/widget/f;->c(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;
+    invoke-virtual {v0, v1}, Lcom/guangjieba/share/widget/f;->d(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;
 
     move-result-object v0
 

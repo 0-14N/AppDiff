@@ -183,6 +183,8 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     const/4 v2, 0x2
 
     new-array v3, v2, [Ljava/lang/String;
@@ -197,19 +199,19 @@
 
     invoke-static {p0, v3}, Lcom/unity3d/player/UnityPlayerProxyActivity;->copyPlayerPrefs(Landroid/content/Context;[Ljava/lang/String;)V
 
-    :try_start_13
+    :try_start_16
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x9
 
-    if-lt v2, v4, :cond_40
+    if-lt v2, v4, :cond_43
 
     move v2, v0
 
-    :goto_1a
-    if-eqz v2, :cond_42
+    :goto_1d
+    if-eqz v2, :cond_45
 
-    :goto_1c
+    :goto_1f
     aget-object v0, v3, v0
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -232,44 +234,44 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_39
+    if-eqz v0, :cond_3c
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    :cond_39
+    :cond_3c
     invoke-virtual {p0, v1}, Lcom/unity3d/player/UnityPlayerProxyActivity;->startActivity(Landroid/content/Intent;)V
-    :try_end_3c
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_13 .. :try_end_3c} :catch_44
-    .catchall {:try_start_13 .. :try_end_3c} :catchall_4c
+    :try_end_3f
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_16 .. :try_end_3f} :catch_47
+    .catchall {:try_start_16 .. :try_end_3f} :catchall_4f
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerProxyActivity;->finish()V
 
-    :goto_3f
+    :goto_42
     return-void
 
-    :cond_40
+    :cond_43
     move v2, v1
 
-    goto :goto_1a
+    goto :goto_1d
 
-    :cond_42
+    :cond_45
     move v0, v1
 
-    goto :goto_1c
+    goto :goto_1f
 
-    :catch_44
+    :catch_47
     move-exception v0
 
-    :try_start_45
+    :try_start_48
     invoke-virtual {v0}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
-    :try_end_48
-    .catchall {:try_start_45 .. :try_end_48} :catchall_4c
+    :try_end_4b
+    .catchall {:try_start_48 .. :try_end_4b} :catchall_4f
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerProxyActivity;->finish()V
 
-    goto :goto_3f
+    goto :goto_42
 
-    :catchall_4c
+    :catchall_4f
     move-exception v0
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerProxyActivity;->finish()V

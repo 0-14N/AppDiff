@@ -96,9 +96,9 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 151
-    new-instance v0, Lzn;
+    new-instance v0, Lsu;
 
-    invoke-direct {v0, p0, p1, p2}, Lzn;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;Landroid/webkit/WebView;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, p2}, Lsu;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;Landroid/webkit/WebView;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroid/webkit/WebView;->post(Ljava/lang/Runnable;)Z
 
@@ -142,18 +142,18 @@
     .line 225
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
-    const v1, 0x7f0a03c8
+    const v1, 0x7f0a03a5
 
     .line 226
-    new-instance v2, Lzo;
+    new-instance v2, Lsv;
 
-    invoke-direct {v2, p0}, Lzo;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;)V
+    invoke-direct {v2, p0}, Lsv;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;)V
 
     .line 225
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
     .line 237
-    const v1, 0x7f0a03c6
+    const v1, 0x7f0a03a3
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -165,7 +165,7 @@
     const v1, 0x7f0a0008
 
     .line 239
-    const v2, 0x7f0a03c7
+    const v2, 0x7f0a03a4
 
     .line 238
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;->setButtonText(II)V
@@ -209,12 +209,12 @@
     .line 247
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
-    const v1, 0x7f0a03cb
+    const v1, 0x7f0a03a8
 
     .line 248
-    new-instance v2, Lzp;
+    new-instance v2, Lsw;
 
-    invoke-direct {v2, p0}, Lzp;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;)V
+    invoke-direct {v2, p0}, Lsw;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;)V
 
     .line 247
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -257,12 +257,12 @@
     .line 261
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
-    const v1, 0x7f0a03cd
+    const v1, 0x7f0a03aa
 
     .line 262
-    new-instance v2, Lzq;
+    new-instance v2, Lsx;
 
-    invoke-direct {v2, p0}, Lzq;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;)V
+    invoke-direct {v2, p0}, Lsx;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;)V
 
     .line 261
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -299,9 +299,9 @@
 
     const-string/jumbo v1, "user.feedback"
 
-    new-instance v2, Lzr;
+    new-instance v2, Lsy;
 
-    invoke-direct {v2, p0}, Lzr;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;)V
+    invoke-direct {v2, p0}, Lsy;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -493,7 +493,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;->r:Landroid/view/View;
 
     .line 100
-    const v0, 0x7f0605ca
+    const v0, 0x7f0605b5
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;->findViewById(I)Landroid/view/View;
 
@@ -585,7 +585,7 @@
     .line 113
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;->s:Landroid/widget/Button;
 
-    const v1, 0x7f0a03cc
+    const v1, 0x7f0a03a9
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
@@ -623,9 +623,9 @@
     .line 135
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;->o:Landroid/webkit/WebView;
 
-    new-instance v1, Lzm;
+    new-instance v1, Lst;
 
-    invoke-direct {v1, p0}, Lzm;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;)V
+    invoke-direct {v1, p0}, Lst;-><init>(Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
@@ -648,7 +648,7 @@
     .line 116
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;->s:Landroid/widget/Button;
 
-    const v1, 0x7f0a03ce
+    const v1, 0x7f0a03ab
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
@@ -676,7 +676,7 @@
     :cond_ea
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/studio/AvatarLevelActivity;->s:Landroid/widget/Button;
 
-    const v1, 0x7f0a03c5
+    const v1, 0x7f0a03a2
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 

@@ -60,25 +60,25 @@
 
     const/4 v0, 0x0
 
-    .line 72
+    .line 71
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;-><init>()V
 
-    .line 70
+    .line 69
     iput-boolean v1, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->auto_login_flag:Z
 
-    .line 74
+    .line 73
     iput-boolean v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->bVerifiedName:Z
 
-    .line 75
+    .line 74
     iput-boolean v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->bVerifiedMail:Z
 
-    .line 76
+    .line 75
     iput-boolean v1, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->bThreadStop:Z
 
-    .line 77
+    .line 76
     iput-boolean v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->bShowPassword:Z
 
-    .line 78
+    .line 77
     return-void
 .end method
 
@@ -87,7 +87,7 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 82
+    .line 81
     return-object p1
 .end method
 
@@ -95,19 +95,19 @@
     .registers 3
 
     .prologue
-    .line 132
+    .line 131
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 133
+    .line 132
     const-string v0, "RegisterActivity"
 
     const-string v1, "LoginError"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 136
+    .line 135
     :cond_b
     new-instance v0, Lcom/jiuzhansoft/massage/user/RegisterActivity$1;
 
@@ -115,7 +115,7 @@
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->post(Ljava/lang/Runnable;)V
 
-    .line 162
+    .line 161
     return-void
 .end method
 
@@ -124,19 +124,19 @@
     .param p1, "pinName"    # Ljava/lang/String;
 
     .prologue
-    .line 166
+    .line 165
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 167
+    .line 166
     const-string v0, "RegisterActivity"
 
     const-string v1, "LoginSuccess"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 170
+    .line 169
     :cond_b
     new-instance v0, Lcom/jiuzhansoft/massage/user/RegisterActivity$2;
 
@@ -144,7 +144,7 @@
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->post(Ljava/lang/Runnable;)V
 
-    .line 216
+    .line 215
     return-void
 .end method
 
@@ -152,7 +152,7 @@
     .registers 2
 
     .prologue
-    .line 64
+    .line 63
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegName:Ljava/lang/String;
 
     return-object v0
@@ -162,7 +162,7 @@
     .registers 1
 
     .prologue
-    .line 727
+    .line 726
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->onRegister()V
 
     return-void
@@ -172,7 +172,7 @@
     .registers 2
 
     .prologue
-    .line 425
+    .line 424
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->phoneCheck()Z
 
     move-result v0
@@ -184,7 +184,7 @@
     .registers 2
 
     .prologue
-    .line 164
+    .line 163
     invoke-direct {p0, p1}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->LoginSuccess(Ljava/lang/String;)V
 
     return-void
@@ -194,7 +194,7 @@
     .registers 1
 
     .prologue
-    .line 130
+    .line 129
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->LoginError()V
 
     return-void
@@ -204,7 +204,7 @@
     .registers 2
 
     .prologue
-    .line 70
+    .line 69
     iget-boolean v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->auto_login_flag:Z
 
     return v0
@@ -214,7 +214,7 @@
     .registers 1
 
     .prologue
-    .line 613
+    .line 612
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->onLogin()V
 
     return-void
@@ -224,7 +224,7 @@
     .registers 2
 
     .prologue
-    .line 49
+    .line 48
     iput-boolean p1, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->bThreadStop:Z
 
     return-void
@@ -234,7 +234,7 @@
     .registers 2
 
     .prologue
-    .line 50
+    .line 49
     iput-boolean p1, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->bVerifiedMail:Z
 
     return-void
@@ -244,7 +244,7 @@
     .registers 2
 
     .prologue
-    .line 51
+    .line 50
     iput-boolean p1, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->bVerifiedName:Z
 
     return-void
@@ -254,7 +254,7 @@
     .registers 2
 
     .prologue
-    .line 57
+    .line 56
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterName:Landroid/widget/EditText;
 
     return-object v0
@@ -264,7 +264,7 @@
     .registers 2
 
     .prologue
-    .line 55
+    .line 54
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterFirstPwd:Landroid/widget/EditText;
 
     return-object v0
@@ -274,7 +274,7 @@
     .registers 2
 
     .prologue
-    .line 58
+    .line 57
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterSecondPwd:Landroid/widget/EditText;
 
     return-object v0
@@ -284,7 +284,7 @@
     .registers 2
 
     .prologue
-    .line 54
+    .line 53
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mConfirmBtn:Landroid/widget/Button;
 
     return-object v0
@@ -294,7 +294,7 @@
     .registers 2
 
     .prologue
-    .line 70
+    .line 69
     iput-boolean p1, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->auto_login_flag:Z
 
     return-void
@@ -304,7 +304,7 @@
     .registers 2
 
     .prologue
-    .line 555
+    .line 554
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->nameCheck()Z
 
     move-result v0
@@ -316,7 +316,7 @@
     .registers 2
 
     .prologue
-    .line 59
+    .line 58
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterPhone:Landroid/widget/EditText;
 
     return-object v0
@@ -326,7 +326,7 @@
     .registers 2
 
     .prologue
-    .line 519
+    .line 518
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mailCheck()Z
 
     move-result v0
@@ -338,7 +338,7 @@
     .registers 2
 
     .prologue
-    .line 56
+    .line 55
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
     return-object v0
@@ -349,108 +349,127 @@
     .param p1, "phonenumber"    # Ljava/lang/String;
 
     .prologue
-    const/4 v2, 0x1
+    const/4 v4, 0x1
 
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
-    .line 396
+    .line 395
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v3
+    move-result v1
 
-    const/16 v4, 0xd
+    const/16 v2, 0xd
 
-    if-ne v3, v4, :cond_31
+    if-ne v1, v2, :cond_33
 
-    const-string v3, "86"
+    const-string v1, "86"
 
-    invoke-virtual {p1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v1
 
-    if-eqz v3, :cond_31
+    if-eqz v1, :cond_33
 
-    .line 398
-    const/4 v3, 0x2
+    .line 397
+    const/4 v1, 0x2
 
-    invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 399
+    .line 398
     .local v0, "temp":Ljava/lang/String;
-    const-string v3, "13"
+    const-string v1, "13"
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_2f
+    if-nez v1, :cond_2f
 
-    const-string v3, "15"
+    const-string v1, "15"
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_2f
+    if-nez v1, :cond_2f
 
-    const-string v3, "18"
+    const-string v1, "18"
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v1
 
-    if-eqz v3, :cond_30
+    if-eqz v1, :cond_31
 
     :cond_2f
-    move v1, v2
+    move v1, v4
 
-    .line 421
+    .line 420
     .end local v0    # "temp":Ljava/lang/String;
-    :cond_30
     :goto_30
     return v1
 
-    .line 408
+    .restart local v0    # "temp":Ljava/lang/String;
     :cond_31
+    move v1, v3
+
+    .line 404
+    goto :goto_30
+
+    .line 407
+    .end local v0    # "temp":Ljava/lang/String;
+    :cond_33
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v3
+    move-result v1
 
-    const/16 v4, 0xb
+    const/16 v2, 0xb
 
-    if-ne v3, v4, :cond_30
+    if-ne v1, v2, :cond_57
 
-    .line 410
-    const-string v3, "13"
+    .line 409
+    const-string v1, "13"
 
-    invoke-virtual {p1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_51
+    if-nez v1, :cond_53
 
-    const-string v3, "15"
+    const-string v1, "15"
 
-    invoke-virtual {p1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_51
+    if-nez v1, :cond_53
 
-    const-string v3, "18"
+    const-string v1, "18"
 
-    invoke-virtual {p1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v1
 
-    if-eqz v3, :cond_30
+    if-eqz v1, :cond_55
 
-    :cond_51
-    move v1, v2
+    :cond_53
+    move v1, v4
 
-    .line 412
+    .line 411
+    goto :goto_30
+
+    :cond_55
+    move v1, v3
+
+    .line 415
+    goto :goto_30
+
+    :cond_57
+    move v1, v3
+
+    .line 420
     goto :goto_30
 .end method
 
@@ -458,19 +477,19 @@
     .registers 3
 
     .prologue
-    .line 220
+    .line 219
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 221
+    .line 220
     const-string v0, "RegisterActivity"
 
     const-string v1, "clearTextview"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 224
+    .line 223
     :cond_b
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterName:Landroid/widget/EditText;
 
@@ -478,28 +497,28 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 225
+    .line 224
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 227
+    .line 226
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterFirstPwd:Landroid/widget/EditText;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 228
+    .line 227
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterSecondPwd:Landroid/widget/EditText;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 229
+    .line 228
     return-void
 .end method
 
@@ -507,7 +526,7 @@
     .registers 2
 
     .prologue
-    .line 233
+    .line 232
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegPwd1:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->EncryptPassword2(Ljava/lang/String;)Ljava/lang/String;
@@ -516,7 +535,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegPwd2:Ljava/lang/String;
 
-    .line 234
+    .line 233
     return-void
 .end method
 
@@ -524,21 +543,21 @@
     .registers 3
 
     .prologue
-    .line 243
+    .line 242
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 244
+    .line 243
     const-string v0, "RegisterActivity"
 
     const-string v1, "initBtn"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 247
+    .line 246
     :cond_b
-    const v0, 0x7f070242
+    const v0, 0x7f0800e2
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -548,7 +567,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mConfirmBtn:Landroid/widget/Button;
 
-    .line 248
+    .line 247
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mConfirmBtn:Landroid/widget/Button;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/RegisterActivity$3;
@@ -557,8 +576,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 258
-    const v0, 0x7f070262
+    .line 257
+    const v0, 0x7f0800f3
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -568,28 +587,28 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mTitle:Landroid/widget/TextView;
 
-    .line 259
+    .line 258
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f0d0079
+    const v1, 0x7f09004f
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 260
-    const v0, 0x7f070263
+    .line 259
+    const v0, 0x7f0800f4
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageButton;
+    check-cast v0, Landroid/widget/Button;
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 261
-    const v0, 0x7f07023d
+    .line 260
+    const v0, 0x7f0800dd
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -599,8 +618,8 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mShowPassword:Landroid/widget/CheckBox;
 
-    .line 262
-    const v0, 0x7f07023f
+    .line 261
+    const v0, 0x7f0800df
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -610,8 +629,8 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mAccept:Landroid/widget/CheckBox;
 
-    .line 263
-    const v0, 0x7f07023e
+    .line 262
+    const v0, 0x7f0800de
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -621,8 +640,8 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mAutoLogin:Landroid/widget/CheckBox;
 
-    .line 264
-    const v0, 0x7f070240
+    .line 263
+    const v0, 0x7f0800e0
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -632,7 +651,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->showAgreement:Landroid/widget/TextView;
 
-    .line 265
+    .line 264
     return-void
 .end method
 
@@ -640,19 +659,19 @@
     .registers 3
 
     .prologue
-    .line 269
+    .line 268
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 270
+    .line 269
     const-string v0, "RegisterActivity"
 
     const-string v1, "initCheckBox"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 273
+    .line 272
     :cond_b
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mShowPassword:Landroid/widget/CheckBox;
 
@@ -662,7 +681,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 301
+    .line 300
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mAccept:Landroid/widget/CheckBox;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/RegisterActivity$5;
@@ -671,7 +690,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 321
+    .line 320
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mAutoLogin:Landroid/widget/CheckBox;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/RegisterActivity$6;
@@ -680,7 +699,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 327
+    .line 326
     return-void
 .end method
 
@@ -688,21 +707,21 @@
     .registers 3
 
     .prologue
-    .line 331
+    .line 330
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 332
+    .line 331
     const-string v0, "RegisterActivity"
 
     const-string v1, "initTextView"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 335
+    .line 334
     :cond_b
-    const v0, 0x7f070234
+    const v0, 0x7f0800d4
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -712,7 +731,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterName:Landroid/widget/EditText;
 
-    .line 336
+    .line 335
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterName:Landroid/widget/EditText;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/RegisterActivity$7;
@@ -721,8 +740,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 343
-    const v0, 0x7f07023a
+    .line 342
+    const v0, 0x7f0800da
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -732,7 +751,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
-    .line 344
+    .line 343
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/RegisterActivity$8;
@@ -741,15 +760,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 352
+    .line 351
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 353
-    const v0, 0x7f07023c
+    .line 352
+    const v0, 0x7f0800dc
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -759,7 +778,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterPhone:Landroid/widget/EditText;
 
-    .line 354
+    .line 353
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterPhone:Landroid/widget/EditText;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/RegisterActivity$9;
@@ -768,15 +787,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 363
+    .line 362
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterPhone:Landroid/widget/EditText;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 364
-    const v0, 0x7f070236
+    .line 363
+    const v0, 0x7f0800d6
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -786,8 +805,8 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterFirstPwd:Landroid/widget/EditText;
 
-    .line 365
-    const v0, 0x7f070238
+    .line 364
+    const v0, 0x7f0800d8
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->findViewById(I)Landroid/view/View;
 
@@ -797,7 +816,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterSecondPwd:Landroid/widget/EditText;
 
-    .line 366
+    .line 365
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->showAgreement:Landroid/widget/TextView;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/RegisterActivity$10;
@@ -806,7 +825,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 382
+    .line 381
     return-void
 .end method
 
@@ -814,23 +833,23 @@
     .registers 12
 
     .prologue
-    .line 442
+    .line 441
     sget-boolean v7, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v7, :cond_b
 
-    .line 443
+    .line 442
     const-string v7, "RegisterActivity"
 
     const-string v8, "inputCheck"
 
     invoke-static {v7, v8}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 446
+    .line 445
     :cond_b
     const/4 v1, 0x0
 
-    .line 447
+    .line 446
     .local v1, "flag":Z
     iget-object v7, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
@@ -846,7 +865,7 @@
 
     move-result-object v2
 
-    .line 448
+    .line 447
     .local v2, "mailStr":Ljava/lang/String;
     iget-object v7, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterPhone:Landroid/widget/EditText;
 
@@ -858,7 +877,7 @@
 
     move-result-object v3
 
-    .line 449
+    .line 448
     .local v3, "phoneStr":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -872,13 +891,13 @@
 
     if-eqz v7, :cond_34
 
-    .line 450
+    .line 449
     const/4 v1, 0x1
 
-    .line 451
+    .line 450
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mailCheck()Z
 
-    .line 453
+    .line 452
     :cond_34
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -886,32 +905,32 @@
 
     if-nez v7, :cond_6a
 
-    .line 454
+    .line 453
     invoke-static {v2}, Lcom/jiuzhansoft/massage/utils/CommonUtil;->checkEmailWithSuffix(Ljava/lang/String;)Z
 
     move-result v7
 
     if-nez v7, :cond_6a
 
-    .line 456
+    .line 455
     const/4 v1, 0x1
 
-    .line 457
+    .line 456
     iget-object v7, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
-    .line 458
+    .line 457
     new-instance v8, Ljava/lang/StringBuilder;
 
     const-string v9, "<font color=#00ff00>"
 
     invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 459
+    .line 458
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
-    const v10, 0x7f0d0092
+    const v10, 0x7f090068
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -921,14 +940,14 @@
 
     move-result-object v8
 
-    .line 460
+    .line 459
     const-string v9, "</font>"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    .line 458
+    .line 457
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
@@ -937,10 +956,10 @@
 
     move-result-object v8
 
-    .line 457
+    .line 456
     invoke-virtual {v7, v8}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
-    .line 472
+    .line 471
     :cond_6a
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->nameCheck()Z
 
@@ -948,10 +967,10 @@
 
     if-eqz v7, :cond_71
 
-    .line 473
+    .line 472
     const/4 v1, 0x1
 
-    .line 475
+    .line 474
     :cond_71
     iget-object v7, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterFirstPwd:Landroid/widget/EditText;
 
@@ -967,7 +986,7 @@
 
     move-result-object v4
 
-    .line 476
+    .line 475
     .local v4, "s":Ljava/lang/String;
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -975,7 +994,7 @@
 
     if-nez v7, :cond_ff
 
-    .line 478
+    .line 477
     const/4 v7, 0x6
 
     const/16 v8, 0x14
@@ -986,25 +1005,25 @@
 
     if-nez v7, :cond_c4
 
-    .line 480
+    .line 479
     const/4 v1, 0x1
 
-    .line 482
+    .line 481
     iget-object v7, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterFirstPwd:Landroid/widget/EditText;
 
-    .line 483
+    .line 482
     new-instance v8, Ljava/lang/StringBuilder;
 
     const-string v9, "<font color=#00ff00>"
 
     invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 484
+    .line 483
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
-    const v10, 0x7f0d0075
+    const v10, 0x7f09004b
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1014,14 +1033,14 @@
 
     move-result-object v8
 
-    .line 485
+    .line 484
     const-string v9, "</font>"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    .line 483
+    .line 482
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
@@ -1030,28 +1049,28 @@
 
     move-result-object v8
 
-    .line 482
+    .line 481
     invoke-virtual {v7, v8}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
-    .line 513
+    .line 512
     :cond_b8
     :goto_b8
     sget-boolean v7, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v7, :cond_c3
 
-    .line 514
+    .line 513
     const-string v7, "temp"
 
     const-string v8, "inputCheck-end"
 
     invoke-static {v7, v8}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 516
+    .line 515
     :cond_c3
     return v1
 
-    .line 489
+    .line 488
     :cond_c4
     iget-object v7, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterSecondPwd:Landroid/widget/EditText;
 
@@ -1063,7 +1082,7 @@
 
     move-result-object v6
 
-    .line 490
+    .line 489
     .local v6, "s3":Ljava/lang/String;
     invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1071,25 +1090,25 @@
 
     if-nez v7, :cond_b8
 
-    .line 492
+    .line 491
     const/4 v1, 0x1
 
-    .line 494
+    .line 493
     iget-object v7, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterSecondPwd:Landroid/widget/EditText;
 
-    .line 495
+    .line 494
     new-instance v8, Ljava/lang/StringBuilder;
 
     const-string v9, "<font color=#00ff00>"
 
     invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 496
+    .line 495
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
-    const v10, 0x7f0d0091
+    const v10, 0x7f090067
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1099,14 +1118,14 @@
 
     move-result-object v8
 
-    .line 497
+    .line 496
     const-string v9, "</font>"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    .line 495
+    .line 494
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
@@ -1115,28 +1134,28 @@
 
     move-result-object v8
 
-    .line 494
+    .line 493
     invoke-virtual {v7, v8}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
     goto :goto_b8
 
-    .line 503
+    .line 502
     .end local v6    # "s3":Ljava/lang/String;
     :cond_ff
     const/4 v1, 0x1
 
-    .line 504
+    .line 503
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterFirstPwd:Landroid/widget/EditText;
 
-    .line 505
+    .line 504
     .local v0, "edittext":Landroid/widget/EditText;
-    const v7, 0x7f0d0073
+    const v7, 0x7f090049
 
     invoke-virtual {p0, v7}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 508
+    .line 507
     .local v5, "s1":Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1144,19 +1163,19 @@
 
     invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 509
+    .line 508
     invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
-    .line 510
+    .line 509
     const-string v8, "</font>"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
-    .line 508
+    .line 507
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -1165,7 +1184,7 @@
 
     move-result-object v7
 
-    .line 507
+    .line 506
     invoke-virtual {v0, v7}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
     goto :goto_b8
@@ -1175,23 +1194,23 @@
     .registers 7
 
     .prologue
-    .line 521
+    .line 520
     sget-boolean v2, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v2, :cond_b
 
-    .line 522
+    .line 521
     const-string v2, "RegisterActivity"
 
     const-string v3, "mailCheck"
 
     invoke-static {v2, v3}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 525
+    .line 524
     :cond_b
     const/4 v0, 0x0
 
-    .line 526
+    .line 525
     .local v0, "flag":Z
     iget-object v2, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
@@ -1207,7 +1226,7 @@
 
     move-result-object v1
 
-    .line 527
+    .line 526
     .local v1, "s":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1215,32 +1234,32 @@
 
     if-nez v2, :cond_5c
 
-    .line 529
+    .line 528
     invoke-static {v1}, Lcom/jiuzhansoft/massage/utils/CommonUtil;->checkEmailWithSuffix(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_50
 
-    .line 531
+    .line 530
     const/4 v0, 0x1
 
-    .line 533
+    .line 532
     iget-object v2, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
-    .line 534
+    .line 533
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "<font color=#00ff00>"
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 535
+    .line 534
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f0d0092
+    const v5, 0x7f090068
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1250,14 +1269,14 @@
 
     move-result-object v3
 
-    .line 536
+    .line 535
     const-string v4, "</font>"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 534
+    .line 533
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -1266,47 +1285,47 @@
 
     move-result-object v3
 
-    .line 533
+    .line 532
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
-    .line 549
+    .line 548
     :cond_50
     :goto_50
     sget-boolean v2, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v2, :cond_5b
 
-    .line 550
+    .line 549
     const-string v2, "temp"
 
     const-string v3, "mailCheck-end"
 
     invoke-static {v2, v3}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 552
+    .line 551
     :cond_5b
     return v0
 
-    .line 541
+    .line 540
     :cond_5c
     const/4 v0, 0x1
 
-    .line 543
+    .line 542
     iget-object v2, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
-    .line 544
+    .line 543
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "<font color=#00ff00>"
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 545
+    .line 544
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f0d0082
+    const v5, 0x7f090058
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1316,14 +1335,14 @@
 
     move-result-object v3
 
-    .line 546
+    .line 545
     const-string v4, "</font>"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 544
+    .line 543
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -1332,7 +1351,7 @@
 
     move-result-object v3
 
-    .line 543
+    .line 542
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
     goto :goto_50
@@ -1342,25 +1361,25 @@
     .registers 9
 
     .prologue
-    const v7, 0x7f0d0074
+    const v7, 0x7f09004a
 
-    .line 557
+    .line 556
     sget-boolean v4, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v4, :cond_e
 
-    .line 558
+    .line 557
     const-string v4, "RegisterActivity"
 
     const-string v5, "nameCheck"
 
     invoke-static {v4, v5}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 561
+    .line 560
     :cond_e
     const/4 v0, 0x0
 
-    .line 562
+    .line 561
     .local v0, "flag":Z
     iget-object v4, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterName:Landroid/widget/EditText;
 
@@ -1372,7 +1391,7 @@
 
     move-result-object v2
 
-    .line 563
+    .line 562
     .local v2, "s":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1382,13 +1401,13 @@
 
     move-result v1
 
-    .line 564
+    .line 563
     .local v1, "i":I
     sget-boolean v4, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v4, :cond_39
 
-    .line 566
+    .line 565
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "length:"
@@ -1403,13 +1422,13 @@
 
     move-result-object v3
 
-    .line 567
+    .line 566
     .local v3, "s1":Ljava/lang/String;
     const-string v4, "temp"
 
     invoke-static {v4, v3}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 570
+    .line 569
     .end local v3    # "s1":Ljava/lang/String;
     :cond_39
     invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -1422,27 +1441,27 @@
 
     if-nez v4, :cond_ab
 
-    .line 572
+    .line 571
     invoke-static {v2}, Lcom/jiuzhansoft/massage/utils/CommonUtil;->checkUsername(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_7c
 
-    .line 574
+    .line 573
     const/4 v0, 0x1
 
-    .line 582
+    .line 581
     iget-object v4, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterName:Landroid/widget/EditText;
 
-    .line 583
+    .line 582
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "<font color=#00ff00>"
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 584
+    .line 583
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -1455,14 +1474,14 @@
 
     move-result-object v5
 
-    .line 585
+    .line 584
     const-string v6, "</font>"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
-    .line 583
+    .line 582
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -1471,28 +1490,28 @@
 
     move-result-object v5
 
-    .line 582
+    .line 581
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
-    .line 607
+    .line 606
     :cond_70
     :goto_70
     sget-boolean v4, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v4, :cond_7b
 
-    .line 608
+    .line 607
     const-string v4, "temp"
 
     const-string v5, "nameCheck-end"
 
     invoke-static {v4, v5}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 610
+    .line 609
     :cond_7b
     return v0
 
-    .line 587
+    .line 586
     :cond_7c
     const/4 v4, 0x4
 
@@ -1502,21 +1521,21 @@
 
     if-le v1, v4, :cond_70
 
-    .line 589
+    .line 588
     :cond_83
     const/4 v0, 0x1
 
-    .line 591
+    .line 590
     iget-object v4, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterName:Landroid/widget/EditText;
 
-    .line 592
+    .line 591
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "<font color=#00ff00>"
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 593
+    .line 592
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -1529,14 +1548,14 @@
 
     move-result-object v5
 
-    .line 594
+    .line 593
     const-string v6, "</font>"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
-    .line 592
+    .line 591
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -1545,31 +1564,31 @@
 
     move-result-object v5
 
-    .line 591
+    .line 590
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
     goto :goto_70
 
-    .line 599
+    .line 598
     :cond_ab
     const/4 v0, 0x1
 
-    .line 601
+    .line 600
     iget-object v4, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterName:Landroid/widget/EditText;
 
-    .line 602
+    .line 601
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "<font color=#00ff00>"
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 603
+    .line 602
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    const v7, 0x7f0d0072
+    const v7, 0x7f090048
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1579,14 +1598,14 @@
 
     move-result-object v5
 
-    .line 604
+    .line 603
     const-string v6, "</font>"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
-    .line 602
+    .line 601
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -1595,7 +1614,7 @@
 
     move-result-object v5
 
-    .line 601
+    .line 600
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
     goto :goto_70
@@ -1607,19 +1626,19 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 615
+    .line 614
     sget-boolean v4, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v4, :cond_c
 
-    .line 616
+    .line 615
     const-string v4, "RegisterActivity"
 
     const-string v5, "onLogin"
 
     invoke-static {v4, v5}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 621
+    .line 620
     :cond_c
     iget-object v4, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegPwd1:Ljava/lang/String;
 
@@ -1637,13 +1656,13 @@
 
     if-lt v4, v6, :cond_3d
 
-    .line 625
+    .line 624
     :try_start_1c
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    .line 626
+    .line 625
     .local v2, "jsonobject":Lorg/json/JSONObject;
     const-string v4, "password"
 
@@ -1651,19 +1670,19 @@
 
     invoke-virtual {v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 627
+    .line 626
     const-string v4, "username"
 
     iget-object v5, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegName:Ljava/lang/String;
 
     invoke-virtual {v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 628
+    .line 627
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getHttpGroupaAsynPool()Lcom/massage/utils/http/HttpGroup;
 
     move-result-object v0
 
-    .line 629
+    .line 628
     .local v0, "httpgroup":Lcom/massage/utils/http/HttpGroup;
     const-string v4, "user.login"
 
@@ -1675,29 +1694,31 @@
     :try_end_3d
     .catch Lorg/json/JSONException; {:try_start_1c .. :try_end_3d} :catch_3e
 
-    .line 724
+    .line 723
     .end local v0    # "httpgroup":Lcom/massage/utils/http/HttpGroup;
     .end local v2    # "jsonobject":Lorg/json/JSONObject;
     :cond_3d
     :goto_3d
     return-void
 
-    .line 714
+    .line 713
     :catch_3e
-    move-exception v1
+    move-exception v4
 
-    .line 716
+    move-object v1, v4
+
+    .line 715
     .local v1, "jsonexception":Lorg/json/JSONException;
     sget-boolean v4, Lcom/massage/utils/log/Log;->V:Z
 
     if-eqz v4, :cond_3d
 
-    .line 718
+    .line 717
     invoke-virtual {v1}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 719
+    .line 718
     .local v3, "s2":Ljava/lang/String;
     const-string v4, "login_activity"
 
@@ -1710,19 +1731,19 @@
     .registers 9
 
     .prologue
-    .line 729
+    .line 728
     sget-boolean v6, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v6, :cond_b
 
-    .line 730
+    .line 729
     const-string v6, "RegisterActivity"
 
     const-string v7, "onRegister"
 
     invoke-static {v6, v7}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 735
+    .line 734
     :cond_b
     :try_start_b
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->inputCheck()Z
@@ -1731,7 +1752,7 @@
 
     if-nez v6, :cond_89
 
-    .line 739
+    .line 738
     const-string v6, "input_method"
 
     invoke-virtual {p0, v6}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1740,7 +1761,7 @@
 
     check-cast v3, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 740
+    .line 739
     .local v3, "inputmethodmanager":Landroid/view/inputmethod/InputMethodManager;
     iget-object v6, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterSecondPwd:Landroid/widget/EditText;
 
@@ -1748,21 +1769,21 @@
 
     move-result-object v2
 
-    .line 741
+    .line 740
     .local v2, "ibinder":Landroid/os/IBinder;
     const/4 v6, 0x0
 
     invoke-virtual {v3, v2, v6}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 742
+    .line 741
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getRegisterUserInfo()V
 
-    .line 744
+    .line 743
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
-    .line 746
+    .line 745
     .local v4, "jsonobject":Lorg/json/JSONObject;
     const-string v6, "username"
 
@@ -1770,14 +1791,14 @@
 
     invoke-virtual {v4, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 747
+    .line 746
     const-string v6, "password"
 
     iget-object v7, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegPwd1:Ljava/lang/String;
 
     invoke-virtual {v4, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 748
+    .line 747
     iget-object v6, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegMailAddr:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1786,14 +1807,14 @@
 
     if-nez v6, :cond_48
 
-    .line 749
+    .line 748
     const-string v6, "email"
 
     iget-object v7, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegMailAddr:Ljava/lang/String;
 
     invoke-virtual {v4, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 750
+    .line 749
     :cond_48
     iget-object v6, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegPhone:Ljava/lang/String;
 
@@ -1803,14 +1824,14 @@
 
     if-nez v6, :cond_57
 
-    .line 751
+    .line 750
     const-string v6, "phone"
 
     iget-object v7, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegPhone:Ljava/lang/String;
 
     invoke-virtual {v4, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 752
+    .line 751
     :cond_57
     const-string v6, "uuid"
 
@@ -1820,43 +1841,43 @@
 
     invoke-virtual {v4, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 753
+    .line 752
     new-instance v1, Lcom/massage/utils/http/HttpSetting;
 
     invoke-direct {v1}, Lcom/massage/utils/http/HttpSetting;-><init>()V
 
-    .line 754
+    .line 753
     .local v1, "httpsetting":Lcom/massage/utils/http/HttpSetting;
     const/16 v6, 0x258
 
     invoke-virtual {v1, v6}, Lcom/massage/utils/http/HttpSetting;->setReadTimeout(I)V
 
-    .line 755
+    .line 754
     const-string v6, "user.register"
 
     invoke-virtual {v1, v6}, Lcom/massage/utils/http/HttpSetting;->setFunctionId(Ljava/lang/String;)V
 
-    .line 756
+    .line 755
     invoke-virtual {v1, v4}, Lcom/massage/utils/http/HttpSetting;->setJsonParams(Lorg/json/JSONObject;)V
 
-    .line 757
+    .line 756
     const/4 v6, 0x1
 
     invoke-virtual {v1, v6}, Lcom/massage/utils/http/HttpSetting;->setPost(Z)V
 
-    .line 759
+    .line 758
     new-instance v6, Lcom/jiuzhansoft/massage/user/RegisterActivity$12;
 
     invoke-direct {v6, p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity$12;-><init>(Lcom/jiuzhansoft/massage/user/RegisterActivity;)V
 
     invoke-virtual {v1, v6}, Lcom/massage/utils/http/HttpSetting;->setListener(Lcom/massage/utils/http/HttpGroup$HttpTaskListener;)V
 
-    .line 911
+    .line 910
     const/4 v6, 0x1
 
     invoke-virtual {v1, v6}, Lcom/massage/utils/http/HttpSetting;->setNotifyUser(Z)V
 
-    .line 912
+    .line 911
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getHttpGroupaAsynPool()Lcom/massage/utils/http/HttpGroup;
 
     move-result-object v6
@@ -1865,7 +1886,7 @@
     :try_end_89
     .catch Lorg/json/JSONException; {:try_start_b .. :try_end_89} :catch_8a
 
-    .line 922
+    .line 921
     .end local v1    # "httpsetting":Lcom/massage/utils/http/HttpSetting;
     .end local v2    # "ibinder":Landroid/os/IBinder;
     .end local v3    # "inputmethodmanager":Landroid/view/inputmethod/InputMethodManager;
@@ -1874,17 +1895,19 @@
     :goto_89
     return-void
 
-    .line 916
+    .line 915
     :catch_8a
-    move-exception v0
+    move-exception v6
 
-    .line 918
+    move-object v0, v6
+
+    .line 917
     .local v0, "exception":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 919
+    .line 918
     .local v5, "s":Ljava/lang/String;
     const-string v6, "Register Error"
 
@@ -1897,19 +1920,19 @@
     .registers 3
 
     .prologue
-    .line 927
+    .line 926
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 928
+    .line 927
     const-string v0, "RegisterActivity"
 
     const-string v1, "onRegisterSuccess"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 931
+    .line 930
     :cond_b
     new-instance v0, Lcom/jiuzhansoft/massage/user/RegisterActivity$13;
 
@@ -1917,7 +1940,7 @@
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->post(Ljava/lang/Runnable;)V
 
-    .line 937
+    .line 936
     return-void
 .end method
 
@@ -1925,10 +1948,10 @@
     .registers 6
 
     .prologue
-    .line 427
+    .line 426
     const/4 v0, 0x0
 
-    .line 428
+    .line 427
     .local v0, "flag":Z
     iget-object v2, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterPhone:Landroid/widget/EditText;
 
@@ -1944,7 +1967,7 @@
 
     move-result-object v1
 
-    .line 429
+    .line 428
     .local v1, "s":Ljava/lang/String;
     if-eqz v1, :cond_27
 
@@ -1968,21 +1991,21 @@
 
     move-result v2
 
-    if-nez v2, :cond_4d
+    if-nez v2, :cond_4e
 
-    .line 431
+    .line 430
     :cond_27
     iget-object v2, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterPhone:Landroid/widget/EditText;
 
-    .line 432
+    .line 431
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "<font color=#00ff00>"
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 433
-    const v4, 0x7f0d0080
+    .line 432
+    const v4, 0x7f090056
 
     invoke-virtual {p0, v4}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getString(I)Ljava/lang/String;
 
@@ -1992,14 +2015,14 @@
 
     move-result-object v3
 
-    .line 434
+    .line 433
     const-string v4, "</font>"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 432
+    .line 431
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -2008,16 +2031,20 @@
 
     move-result-object v3
 
-    .line 431
+    .line 430
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
-    .line 435
-    const/4 v0, 0x1
+    .line 434
+    const/4 v2, 0x1
 
-    .line 437
-    .end local v0    # "flag":Z
-    :cond_4d
-    return v0
+    .line 436
+    :goto_4d
+    return v2
+
+    :cond_4e
+    move v2, v0
+
+    goto :goto_4d
 .end method
 
 .method private popupToast(Ljava/lang/String;)V
@@ -2025,19 +2052,19 @@
     .param p1, "sMsg"    # Ljava/lang/String;
 
     .prologue
-    .line 941
+    .line 940
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 942
+    .line 941
     const-string v0, "RegisterActivity"
 
     const-string v1, "popupToast"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 945
+    .line 944
     :cond_b
     new-instance v0, Lcom/jiuzhansoft/massage/user/RegisterActivity$14;
 
@@ -2045,7 +2072,7 @@
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->post(Ljava/lang/Runnable;)V
 
-    .line 951
+    .line 950
     return-void
 .end method
 
@@ -2055,21 +2082,21 @@
     .param p2, "password2"    # Ljava/lang/String;
 
     .prologue
-    .line 238
+    .line 237
     invoke-direct {p0, p1}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->EncryptPassword2(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegPwd1:Ljava/lang/String;
 
-    .line 239
+    .line 238
     invoke-direct {p0, p2}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->EncryptPassword2(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegPwd2:Ljava/lang/String;
 
-    .line 240
+    .line 239
     return-void
 .end method
 
@@ -2077,31 +2104,31 @@
     .registers 8
 
     .prologue
-    .line 955
+    .line 954
     sget-boolean v5, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v5, :cond_b
 
-    .line 956
+    .line 955
     const-string v5, "RegisterActivity"
 
     const-string v6, "verifyUserMailAddr"
 
     invoke-static {v5, v6}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 959
+    .line 958
     :cond_b
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->bVerifiedMail:Z
 
-    .line 963
+    .line 962
     :try_start_e
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
-    .line 964
+    .line 963
     .local v3, "jsonobject":Lorg/json/JSONObject;
     iget-object v5, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
@@ -2109,34 +2136,34 @@
 
     move-result-object v0
 
-    .line 965
+    .line 964
     .local v0, "editable":Landroid/text/Editable;
     const-string v5, "email"
 
     invoke-virtual {v3, v5, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 966
+    .line 965
     new-instance v1, Lcom/massage/utils/http/HttpSetting;
 
     invoke-direct {v1}, Lcom/massage/utils/http/HttpSetting;-><init>()V
 
-    .line 967
+    .line 966
     .local v1, "httpsetting":Lcom/massage/utils/http/HttpSetting;
     const-string v5, "validate"
 
     invoke-virtual {v1, v5}, Lcom/massage/utils/http/HttpSetting;->setFunctionId(Ljava/lang/String;)V
 
-    .line 968
+    .line 967
     invoke-virtual {v1, v3}, Lcom/massage/utils/http/HttpSetting;->setJsonParams(Lorg/json/JSONObject;)V
 
-    .line 970
+    .line 969
     new-instance v5, Lcom/jiuzhansoft/massage/user/RegisterActivity$15;
 
     invoke-direct {v5, p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity$15;-><init>(Lcom/jiuzhansoft/massage/user/RegisterActivity;)V
 
     invoke-virtual {v1, v5}, Lcom/massage/utils/http/HttpSetting;->setListener(Lcom/massage/utils/http/HttpGroup$HttpTaskListener;)V
 
-    .line 1063
+    .line 1062
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getHttpGroupaAsynPool()Lcom/massage/utils/http/HttpGroup;
 
     move-result-object v5
@@ -2145,7 +2172,7 @@
     :try_end_3a
     .catch Lorg/json/JSONException; {:try_start_e .. :try_end_3a} :catch_3b
 
-    .line 1074
+    .line 1073
     .end local v0    # "editable":Landroid/text/Editable;
     .end local v1    # "httpsetting":Lcom/massage/utils/http/HttpSetting;
     .end local v3    # "jsonobject":Lorg/json/JSONObject;
@@ -2153,22 +2180,24 @@
     :goto_3a
     return-void
 
-    .line 1065
+    .line 1064
     :catch_3b
-    move-exception v2
+    move-exception v5
 
-    .line 1067
+    move-object v2, v5
+
+    .line 1066
     .local v2, "jsonexception":Lorg/json/JSONException;
     sget-boolean v5, Lcom/massage/utils/log/Log;->V:Z
 
     if-eqz v5, :cond_3a
 
-    .line 1069
+    .line 1068
     invoke-virtual {v2}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1070
+    .line 1069
     .local v4, "s":Ljava/lang/String;
     const-string v5, "Register  mail error"
 
@@ -2181,31 +2210,31 @@
     .registers 8
 
     .prologue
-    .line 1079
+    .line 1078
     sget-boolean v5, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v5, :cond_b
 
-    .line 1080
+    .line 1079
     const-string v5, "RegisterActivity"
 
     const-string v6, "verifyUserName"
 
     invoke-static {v5, v6}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1083
+    .line 1082
     :cond_b
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->bVerifiedName:Z
 
-    .line 1087
+    .line 1086
     :try_start_e
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
-    .line 1088
+    .line 1087
     .local v3, "jsonobject":Lorg/json/JSONObject;
     iget-object v5, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterName:Landroid/widget/EditText;
 
@@ -2213,39 +2242,39 @@
 
     move-result-object v0
 
-    .line 1089
+    .line 1088
     .local v0, "editable":Landroid/text/Editable;
     const-string v5, "userName"
 
     invoke-virtual {v3, v5, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 1090
+    .line 1089
     new-instance v1, Lcom/massage/utils/http/HttpSetting;
 
     invoke-direct {v1}, Lcom/massage/utils/http/HttpSetting;-><init>()V
 
-    .line 1091
+    .line 1090
     .local v1, "httpsetting":Lcom/massage/utils/http/HttpSetting;
     const-string v5, "validate"
 
     invoke-virtual {v1, v5}, Lcom/massage/utils/http/HttpSetting;->setFunctionId(Ljava/lang/String;)V
 
-    .line 1092
+    .line 1091
     invoke-virtual {v1, v3}, Lcom/massage/utils/http/HttpSetting;->setJsonParams(Lorg/json/JSONObject;)V
 
-    .line 1093
+    .line 1092
     const/4 v5, 0x1
 
     invoke-virtual {v1, v5}, Lcom/massage/utils/http/HttpSetting;->setPost(Z)V
 
-    .line 1094
+    .line 1093
     new-instance v5, Lcom/jiuzhansoft/massage/user/RegisterActivity$16;
 
     invoke-direct {v5, p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity$16;-><init>(Lcom/jiuzhansoft/massage/user/RegisterActivity;)V
 
     invoke-virtual {v1, v5}, Lcom/massage/utils/http/HttpSetting;->setListener(Lcom/massage/utils/http/HttpGroup$HttpTaskListener;)V
 
-    .line 1170
+    .line 1169
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->getHttpGroupaAsynPool()Lcom/massage/utils/http/HttpGroup;
 
     move-result-object v5
@@ -2254,7 +2283,7 @@
     :try_end_3e
     .catch Lorg/json/JSONException; {:try_start_e .. :try_end_3e} :catch_3f
 
-    .line 1180
+    .line 1179
     .end local v0    # "editable":Landroid/text/Editable;
     .end local v1    # "httpsetting":Lcom/massage/utils/http/HttpSetting;
     .end local v3    # "jsonobject":Lorg/json/JSONObject;
@@ -2262,22 +2291,24 @@
     :goto_3e
     return-void
 
-    .line 1172
+    .line 1171
     :catch_3f
-    move-exception v2
+    move-exception v5
 
-    .line 1174
+    move-object v2, v5
+
+    .line 1173
     .local v2, "jsonexception":Lorg/json/JSONException;
     sget-boolean v5, Lcom/massage/utils/log/Log;->V:Z
 
     if-eqz v5, :cond_3e
 
-    .line 1176
+    .line 1175
     invoke-virtual {v2}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1177
+    .line 1176
     .local v4, "s":Ljava/lang/String;
     const-string v5, "Register user information error"
 
@@ -2292,19 +2323,19 @@
     .registers 3
 
     .prologue
-    .line 1184
+    .line 1183
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 1185
+    .line 1184
     const-string v0, "RegisterActivity"
 
     const-string v1, "getRegisterUserInfo"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1188
+    .line 1187
     :cond_b
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterName:Landroid/widget/EditText;
 
@@ -2318,7 +2349,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegName:Ljava/lang/String;
 
-    .line 1189
+    .line 1188
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterMail:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -2331,7 +2362,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegMailAddr:Ljava/lang/String;
 
-    .line 1190
+    .line 1189
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterPhone:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -2344,7 +2375,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegPhone:Ljava/lang/String;
 
-    .line 1191
+    .line 1190
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterFirstPwd:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -2357,7 +2388,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->sRegPwd1:Ljava/lang/String;
 
-    .line 1193
+    .line 1192
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/RegisterActivity;->mRegisterFirstPwd:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -2380,7 +2411,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->userInputPasswordMd5Handler(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1194
+    .line 1193
     return-void
 .end method
 
@@ -2389,37 +2420,37 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1198
+    .line 1197
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 1199
+    .line 1198
     const-string v0, "RegisterActivity"
 
     const-string v1, "onCreate"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1202
+    .line 1201
     :cond_b
     invoke-super {p0, p1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 1203
-    const v0, 0x7f030066
+    .line 1202
+    const v0, 0x7f030030
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->setContentView(I)V
 
-    .line 1204
+    .line 1203
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->initBtn()V
 
-    .line 1205
+    .line 1204
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->initTextView()V
 
-    .line 1206
+    .line 1205
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->initCheckBox()V
 
-    .line 1207
+    .line 1206
     return-void
 .end method
 
@@ -2428,19 +2459,19 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 1211
+    .line 1210
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 1212
+    .line 1211
     const-string v0, "RegisterActivity"
 
     const-string v1, "showDialog"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1225
+    .line 1224
     :cond_b
     new-instance v0, Lcom/jiuzhansoft/massage/user/RegisterActivity$17;
 
@@ -2448,6 +2479,6 @@
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/RegisterActivity;->post(Ljava/lang/Runnable;)V
 
-    .line 1246
+    .line 1245
     return-void
 .end method

@@ -53,9 +53,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/VolumneAdjustManager;->e:Lcom/quvideo/xiaoying/videoeditor2/ui/VolumneAdjustManager$OnFocusItemChangeListener;
 
     .line 46
-    new-instance v0, Lbga;
+    new-instance v0, Lazg;
 
-    invoke-direct {v0, p0}, Lbga;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/VolumneAdjustManager;)V
+    invoke-direct {v0, p0}, Lazg;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/VolumneAdjustManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/VolumneAdjustManager;->f:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
@@ -90,9 +90,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/VolumneAdjustManager;->e:Lcom/quvideo/xiaoying/videoeditor2/ui/VolumneAdjustManager$OnFocusItemChangeListener;
 
     .line 46
-    new-instance v0, Lbga;
+    new-instance v0, Lazg;
 
-    invoke-direct {v0, p0}, Lbga;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/VolumneAdjustManager;)V
+    invoke-direct {v0, p0}, Lazg;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/VolumneAdjustManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/VolumneAdjustManager;->f:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 

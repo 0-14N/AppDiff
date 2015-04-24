@@ -18,16 +18,6 @@
 .field private e:Ljava/io/File;
 
 .field private g:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap",
-            "<",
-            "Ljava/io/File;",
-            "Lcom/taobao/munion/base/utdid/b/a/d$a;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

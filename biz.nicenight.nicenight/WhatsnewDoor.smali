@@ -194,9 +194,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/av;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/aw;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/av;-><init>(Lbiz/nicenight/nicenight/ui/WhatsnewDoor;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/aw;-><init>(Lbiz/nicenight/nicenight/ui/WhatsnewDoor;)V
 
     const-wide/16 v2, 0x8fc
 

@@ -10,18 +10,18 @@
 
 .field private final synthetic b:Ljava/lang/String;
 
-.field private final synthetic c:Lcom/adsmogo/util/n;
+.field private final synthetic c:Lcom/adsmogo/util/m;
 
 
 # direct methods
-.method constructor <init>(Lcom/adsmogo/util/j;Ljava/lang/String;Lcom/adsmogo/util/n;)V
+.method constructor <init>(Lcom/adsmogo/util/j;Ljava/lang/String;Lcom/adsmogo/util/m;)V
     .registers 4
 
     iput-object p1, p0, Lcom/adsmogo/util/k;->a:Lcom/adsmogo/util/j;
 
     iput-object p2, p0, Lcom/adsmogo/util/k;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/adsmogo/util/k;->c:Lcom/adsmogo/util/n;
+    iput-object p3, p0, Lcom/adsmogo/util/k;->c:Lcom/adsmogo/util/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,9 +36,9 @@
     :try_start_0
     iget-object v0, p0, Lcom/adsmogo/util/k;->a:Lcom/adsmogo/util/j;
 
-    iget-object v1, p0, Lcom/adsmogo/util/k;->b:Ljava/lang/String;
+    iget-object v0, p0, Lcom/adsmogo/util/k;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/adsmogo/util/j;->a(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/adsmogo/util/j;->a(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -62,9 +62,9 @@
 
     new-instance v2, Lcom/adsmogo/util/l;
 
-    iget-object v3, p0, Lcom/adsmogo/util/k;->c:Lcom/adsmogo/util/n;
+    iget-object v3, p0, Lcom/adsmogo/util/k;->c:Lcom/adsmogo/util/m;
 
-    invoke-direct {v2, p0, v3, v0}, Lcom/adsmogo/util/l;-><init>(Lcom/adsmogo/util/k;Lcom/adsmogo/util/n;Landroid/graphics/Bitmap;)V
+    invoke-direct {v2, p0, v3, v0}, Lcom/adsmogo/util/l;-><init>(Lcom/adsmogo/util/k;Lcom/adsmogo/util/m;Landroid/graphics/drawable/Drawable;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_26

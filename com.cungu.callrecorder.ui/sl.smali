@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/cungu/lib/a/b;
+.field final synthetic a:Ljava/util/List;
 
 .field final synthetic b:Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;
 
 
 # direct methods
-.method constructor <init>(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Lcom/cungu/lib/a/b;)V
+.method constructor <init>(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Ljava/util/List;)V
     .registers 3
 
     iput-object p1, p0, Lcom/cungo/callrecorder/ui/sl;->b:Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;
 
-    iput-object p2, p0, Lcom/cungo/callrecorder/ui/sl;->a:Lcom/cungu/lib/a/b;
+    iput-object p2, p0, Lcom/cungo/callrecorder/ui/sl;->a:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,9 +32,9 @@
     :try_start_0
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/sl;->b:Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;
 
-    iget-object v1, p0, Lcom/cungo/callrecorder/ui/sl;->a:Lcom/cungu/lib/a/b;
+    iget-object v1, p0, Lcom/cungo/callrecorder/ui/sl;->a:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;->a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Lcom/cungu/lib/a/b;)V
+    invoke-static {v0, v1}, Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;->a(Lcom/cungo/callrecorder/ui/FragmentSyncRecordListInSafe_;Ljava/util/List;)V
     :try_end_7
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_7} :catch_8
 

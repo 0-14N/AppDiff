@@ -23,13 +23,11 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .registers 5
-
-    const/4 v2, 0x0
+    .registers 4
 
     sget-boolean v0, Lcom/ccwang/flashstory/FlashPlayer2;->p:Z
 
-    if-eqz v0, :cond_45
+    if-eqz v0, :cond_3d
 
     iget-object v0, p0, Lcom/ccwang/flashstory/ae;->a:Lcom/ccwang/flashstory/ab;
 
@@ -45,7 +43,9 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    sput-boolean v2, Lcom/ccwang/flashstory/FlashPlayer2;->p:Z
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/ccwang/flashstory/FlashPlayer2;->p:Z
 
     iget-object v0, p0, Lcom/ccwang/flashstory/ae;->a:Lcom/ccwang/flashstory/ab;
 
@@ -61,25 +61,19 @@
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/ccwang/flashstory/FlashPlayer2;->o:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/ccwang/flashstory/ae;->a:Lcom/ccwang/flashstory/ab;
-
-    invoke-static {v0}, Lcom/ccwang/flashstory/ab;->b(Lcom/ccwang/flashstory/ab;)Lcom/ccwang/flashstory/FlashPlayer2;
+    invoke-static {v0}, Lcom/ccwang/flash/parent/spot/SpotManager;->getInstance(Landroid/content/Context;)Lcom/ccwang/flash/parent/spot/SpotManager;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Lcom/google/ads/h;
+    iget-object v1, p0, Lcom/ccwang/flashstory/ae;->a:Lcom/ccwang/flashstory/ab;
 
-    new-instance v1, Lcom/google/ads/d;
+    invoke-static {v1}, Lcom/ccwang/flashstory/ab;->b(Lcom/ccwang/flashstory/ab;)Lcom/ccwang/flashstory/FlashPlayer2;
 
-    invoke-direct {v1}, Lcom/google/ads/d;-><init>()V
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/google/ads/h;->a(Lcom/google/ads/d;)V
+    invoke-virtual {v0, v1}, Lcom/ccwang/flash/parent/spot/SpotManager;->showSpotAds(Landroid/content/Context;)V
 
-    :goto_3b
+    :goto_33
     iget-object v0, p0, Lcom/ccwang/flashstory/ae;->a:Lcom/ccwang/flashstory/ab;
 
     invoke-static {v0}, Lcom/ccwang/flashstory/ab;->b(Lcom/ccwang/flashstory/ab;)Lcom/ccwang/flashstory/FlashPlayer2;
@@ -90,7 +84,7 @@
 
     return-void
 
-    :cond_45
+    :cond_3d
     iget-object v0, p0, Lcom/ccwang/flashstory/ae;->a:Lcom/ccwang/flashstory/ab;
 
     invoke-static {v0}, Lcom/ccwang/flashstory/ab;->b(Lcom/ccwang/flashstory/ab;)Lcom/ccwang/flashstory/FlashPlayer2;
@@ -117,17 +111,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/ae;->a:Lcom/ccwang/flashstory/ab;
-
-    invoke-static {v0}, Lcom/ccwang/flashstory/ab;->b(Lcom/ccwang/flashstory/ab;)Lcom/ccwang/flashstory/FlashPlayer2;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/ccwang/flashstory/FlashPlayer2;->o:Landroid/widget/RelativeLayout;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    goto :goto_3b
+    goto :goto_33
 .end method

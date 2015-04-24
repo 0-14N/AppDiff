@@ -166,36 +166,6 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Z)V
-    .registers 6
-
-    const/4 v1, 0x1
-
-    if-eqz p1, :cond_13
-
-    move v0, v1
-
-    :goto_4
-    new-instance v2, Landroid/content/ComponentName;
-
-    const-class v3, Lnet/u/m/ccsayssd;
-
-    invoke-direct {v2, p0, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2, v0, v1}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
-
-    return-void
-
-    :cond_13
-    const/4 v0, 0x2
-
-    goto :goto_4
-.end method
-
 .method static synthetic a(Landroid/view/View;)V
     .registers 10
 
@@ -431,7 +401,7 @@
 
     if-lez v0, :cond_75
 
-    invoke-static {p0}, Lcom/a/h;->a(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/a/e;->a(Landroid/app/Activity;)V
 
     :cond_6e
     :goto_6e
@@ -505,7 +475,7 @@
     :cond_ac
     and-int/lit8 v0, v5, 0x8
 
-    if-lez v0, :cond_d7
+    if-lez v0, :cond_6e
 
     if-nez p1, :cond_d1
 
@@ -550,80 +520,6 @@
     const-string v0, "2050505091646479"
 
     goto :goto_b8
-
-    :cond_d7
-    and-int/lit8 v0, v5, 0x10
-
-    if-lez v0, :cond_fb
-
-    const-string v0, "badid"
-
-    const-string v1, "1004651a"
-
-    invoke-static {v0, v1}, Lcom/hy/minifetion/s;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-direct {v1, p0}, Lcom/baidu/mobads/InterstitialAd;-><init>(Landroid/content/Context;)V
-
-    invoke-static {p0, v0}, Lcom/baidu/mobads/InterstitialAd;->setAppSid(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-static {p0, v0}, Lcom/baidu/mobads/InterstitialAd;->setAppSec(Landroid/content/Context;Ljava/lang/String;)V
-
-    new-instance v0, Lcom/a/d;
-
-    invoke-direct {v0, p0, v5, p1, v1}, Lcom/a/d;-><init>(Landroid/app/Activity;ILandroid/view/View;Lcom/baidu/mobads/InterstitialAd;)V
-
-    invoke-virtual {v1, v0}, Lcom/baidu/mobads/InterstitialAd;->setListener(Lcom/baidu/mobads/InterstitialAdListener;)V
-
-    invoke-virtual {v1}, Lcom/baidu/mobads/InterstitialAd;->loadAd()V
-
-    goto/16 :goto_6e
-
-    :cond_fb
-    and-int/lit8 v0, v5, 0x20
-
-    if-lez v0, :cond_6e
-
-    sget-boolean v0, Lcom/a/a;->c:Z
-
-    if-nez v0, :cond_106
-
-    invoke-static {p0, v6}, Lcom/a/a;->a(Landroid/content/Context;Z)V
-
-    :cond_106
-    sget-boolean v0, Lcom/a/a;->c:Z
-
-    if-nez v0, :cond_118
-
-    invoke-static {p0}, Lnet/u/m/ccsafssd;->getInstance(Landroid/content/Context;)Lnet/u/m/ccsafssd;
-
-    move-result-object v0
-
-    const-string v2, "ba022c20cd805f24"
-
-    const-string v3, "c1ed41344baf9dc1"
-
-    invoke-virtual {v0, v2, v3, v1}, Lnet/u/m/ccsafssd;->init(Ljava/lang/String;Ljava/lang/String;Z)V
-
-    invoke-static {p0, v6}, Lcom/a/a;->a(Landroid/content/Context;Z)V
-
-    :cond_118
-    invoke-static {p0}, Lnet/u/m/st/ccsbxssd;->ppeazssd(Landroid/content/Context;)Lnet/u/m/st/ccsbxssd;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/a/f;
-
-    invoke-direct {v1, p0, v5, p1}, Lcom/a/f;-><init>(Landroid/app/Activity;ILandroid/view/View;)V
-
-    invoke-virtual {v0, p0, v1}, Lnet/u/m/st/ccsbxssd;->ppecxssd(Landroid/content/Context;Lnet/u/m/st/ccsbwssd;)V
-
-    sput-boolean v6, Lcom/a/a;->c:Z
-
-    goto/16 :goto_6e
 .end method
 
 .method public static a(Landroid/app/Activity;Landroid/widget/LinearLayout;I)Z
@@ -676,9 +572,9 @@
 
     move-result v0
 
-    and-int/lit8 v2, v0, 0x1
+    and-int/lit8 v0, v0, 0x1
 
-    if-lez v2, :cond_5b
+    if-lez v0, :cond_59
 
     const-string v0, "gdt_app"
 
@@ -710,64 +606,24 @@
 
     invoke-virtual {v0, v1}, Lcom/qq/e/ads/AdRequest;->setShowCloseBtn(Z)V
 
-    new-instance v2, Lcom/a/q;
+    new-instance v2, Lcom/a/m;
 
-    invoke-direct {v2}, Lcom/a/q;-><init>()V
+    invoke-direct {v2}, Lcom/a/m;-><init>()V
 
     invoke-virtual {v3, v2}, Lcom/qq/e/ads/AdView;->setAdListener(Lcom/qq/e/ads/AdListener;)V
 
     invoke-virtual {v3, v0}, Lcom/qq/e/ads/AdView;->fetchAd(Lcom/qq/e/ads/AdRequest;)V
 
     :cond_59
-    :goto_59
     move v0, v1
 
     goto :goto_e
-
-    :cond_5b
-    and-int/lit8 v0, v0, 0x2
-
-    if-lez v0, :cond_59
-
-    const-string v0, "badid"
-
-    const-string v2, "1004651a"
-
-    invoke-static {v0, v2}, Lcom/hy/minifetion/s;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Lcom/baidu/mobads/AdView;->setAppSid(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-static {p0, v0}, Lcom/baidu/mobads/AdView;->setAppSec(Landroid/content/Context;Ljava/lang/String;)V
-
-    new-instance v0, Lcom/baidu/mobads/AdView;
-
-    invoke-direct {v0, p0}, Lcom/baidu/mobads/AdView;-><init>(Landroid/content/Context;)V
-
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v2}, Lcom/baidu/mobads/AdView;->setVisibility(I)V
-
-    new-instance v2, Lcom/a/k;
-
-    invoke-direct {v2}, Lcom/a/k;-><init>()V
-
-    invoke-virtual {v0, v2}, Lcom/baidu/mobads/AdView;->setListener(Lcom/baidu/mobads/AdViewListener;)V
-
-    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    goto :goto_59
 .end method
 
 .method public static a(Landroid/app/Activity;Landroid/widget/ListView;Z)Z
-    .registers 10
+    .registers 8
 
     const/4 v1, 0x1
-
-    const/4 v6, -0x1
-
-    const/4 v5, -0x2
 
     const/4 v0, 0x0
 
@@ -779,16 +635,16 @@
 
     and-int/lit16 v3, v2, 0x400
 
-    if-nez v3, :cond_f
+    if-nez v3, :cond_d
 
-    :cond_e
-    :goto_e
+    :cond_c
+    :goto_c
     return v0
 
-    :cond_f
-    and-int/lit8 v2, v2, 0x3
+    :cond_d
+    and-int/lit8 v2, v2, 0x1
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_c
 
     const-string v3, "ad_wifi"
 
@@ -796,24 +652,24 @@
 
     move-result v3
 
-    if-eqz v3, :cond_21
+    if-eqz v3, :cond_1f
 
     invoke-static {}, Lcom/hy/minifetion/aa;->h()Z
 
     move-result v3
 
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_c
 
-    :cond_21
+    :cond_1f
     const/4 v0, 0x2
 
     invoke-static {v2, v0}, Lcom/a/a;->a(II)I
 
     move-result v0
 
-    and-int/lit8 v2, v0, 0x1
+    and-int/lit8 v0, v0, 0x1
 
-    if-lez v2, :cond_67
+    if-lez v0, :cond_61
 
     const-string v0, "gdt_app"
 
@@ -839,7 +695,11 @@
 
     new-instance v0, Landroid/widget/AbsListView$LayoutParams;
 
-    invoke-direct {v0, v6, v5}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
+    const/4 v2, -0x1
+
+    const/4 v4, -0x2
+
+    invoke-direct {v0, v2, v4}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
 
     invoke-virtual {v3, v0}, Lcom/qq/e/ads/AdView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -854,82 +714,21 @@
 
     invoke-virtual {v0, v1}, Lcom/qq/e/ads/AdRequest;->setShowCloseBtn(Z)V
 
-    new-instance v2, Lcom/a/q;
+    new-instance v2, Lcom/a/m;
 
-    invoke-direct {v2}, Lcom/a/q;-><init>()V
+    invoke-direct {v2}, Lcom/a/m;-><init>()V
 
     invoke-virtual {v3, v2}, Lcom/qq/e/ads/AdView;->setAdListener(Lcom/qq/e/ads/AdListener;)V
 
     invoke-virtual {v3, v0}, Lcom/qq/e/ads/AdView;->fetchAd(Lcom/qq/e/ads/AdRequest;)V
 
     :cond_61
-    :goto_61
     move v0, v1
 
-    goto :goto_e
+    goto :goto_c
 
     :cond_63
     invoke-virtual {p1, v3}, Landroid/widget/ListView;->addFooterView(Landroid/view/View;)V
 
     goto :goto_4e
-
-    :cond_67
-    and-int/lit8 v0, v0, 0x2
-
-    if-lez v0, :cond_61
-
-    const-string v0, "badid"
-
-    const-string v2, "1004651a"
-
-    invoke-static {v0, v2}, Lcom/hy/minifetion/s;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Lcom/baidu/mobads/AdView;->setAppSid(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-static {p0, v0}, Lcom/baidu/mobads/AdView;->setAppSec(Landroid/content/Context;Ljava/lang/String;)V
-
-    new-instance v0, Lcom/baidu/mobads/AdView;
-
-    invoke-direct {v0, p0}, Lcom/baidu/mobads/AdView;-><init>(Landroid/content/Context;)V
-
-    new-instance v2, Landroid/widget/AbsListView$LayoutParams;
-
-    invoke-direct {v2, v6, v5}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v2}, Lcom/baidu/mobads/AdView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v2}, Lcom/baidu/mobads/AdView;->setVisibility(I)V
-
-    new-instance v2, Lcom/a/k;
-
-    invoke-direct {v2}, Lcom/a/k;-><init>()V
-
-    invoke-virtual {v0, v2}, Lcom/baidu/mobads/AdView;->setListener(Lcom/baidu/mobads/AdViewListener;)V
-
-    if-eqz p2, :cond_99
-
-    invoke-virtual {p1, v0}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;)V
-
-    goto :goto_61
-
-    :cond_99
-    invoke-virtual {p1, v0}, Landroid/widget/ListView;->addFooterView(Landroid/view/View;)V
-
-    goto :goto_61
-.end method
-
-.method static synthetic b()I
-    .registers 2
-
-    sget v0, Lcom/a/a;->b:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    sput v1, Lcom/a/a;->b:I
-
-    return v0
 .end method

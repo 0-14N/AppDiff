@@ -642,9 +642,9 @@
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_com_delete_ask:I
 
     .line 753
-    new-instance v2, Lasb;
+    new-instance v2, Lalh;
 
-    invoke-direct {v2, p0, p1}, Lasb;-><init>(Lcom/quvideo/xiaoying/template/TemplateInfoActivity;I)V
+    invoke-direct {v2, p0, p1}, Lalh;-><init>(Lcom/quvideo/xiaoying/template/TemplateInfoActivity;I)V
 
     .line 751
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -684,9 +684,9 @@
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_template_msg_update_app_for_support_template:I
 
     .line 778
-    new-instance v2, Lasc;
+    new-instance v2, Lali;
 
-    invoke-direct {v2, p0}, Lasc;-><init>(Lcom/quvideo/xiaoying/template/TemplateInfoActivity;)V
+    invoke-direct {v2, p0}, Lali;-><init>(Lcom/quvideo/xiaoying/template/TemplateInfoActivity;)V
 
     .line 776
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -1631,9 +1631,9 @@
 
     move-result-object v7
 
-    new-instance v8, Lasa;
+    new-instance v8, Lalg;
 
-    invoke-direct {v8, p0}, Lasa;-><init>(Lcom/quvideo/xiaoying/template/TemplateInfoActivity;)V
+    invoke-direct {v8, p0}, Lalg;-><init>(Lcom/quvideo/xiaoying/template/TemplateInfoActivity;)V
 
     move-object v0, p0
 
@@ -1954,9 +1954,9 @@
     const-string/jumbo v1, "misc.apk"
 
     .line 931
-    new-instance v2, Lasd;
+    new-instance v2, Lalj;
 
-    invoke-direct {v2, p0}, Lasd;-><init>(Lcom/quvideo/xiaoying/template/TemplateInfoActivity;)V
+    invoke-direct {v2, p0}, Lalj;-><init>(Lcom/quvideo/xiaoying/template/TemplateInfoActivity;)V
 
     .line 929
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V

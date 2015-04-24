@@ -53,7 +53,7 @@
 
     const-string v1, "\u54c1\u724c"
 
-    invoke-virtual {v0, v1}, Lcom/guangjieba/share/ui/category/ListWithCategoryActivity_$IntentBuilder_;->c(Ljava/lang/String;)Lcom/guangjieba/share/ui/category/ListWithCategoryActivity_$IntentBuilder_;
+    invoke-virtual {v0, v1}, Lcom/guangjieba/share/ui/category/ListWithCategoryActivity_$IntentBuilder_;->a(Ljava/lang/String;)Lcom/guangjieba/share/ui/category/ListWithCategoryActivity_$IntentBuilder_;
 
     move-result-object v0
 

@@ -132,9 +132,9 @@
 
     iget-object v0, p0, Lcn/dxy/idxyer/activity/PictureViewsActivity;->f:Lcn/dxy/idxyer/widget/HackyViewPager;
 
-    new-instance v2, Lcn/dxy/idxyer/activity/x;
+    new-instance v2, Lcn/dxy/idxyer/activity/w;
 
-    invoke-direct {v2, p0, v3}, Lcn/dxy/idxyer/activity/x;-><init>(Lcn/dxy/idxyer/activity/PictureViewsActivity;I)V
+    invoke-direct {v2, p0, v3}, Lcn/dxy/idxyer/activity/w;-><init>(Lcn/dxy/idxyer/activity/PictureViewsActivity;I)V
 
     invoke-virtual {v0, v2}, Lcn/dxy/idxyer/widget/HackyViewPager;->a(Landroid/support/v4/view/aS;)V
 

@@ -632,15 +632,6 @@
     .param p1, "percentage"    # I
 
     .prologue
-    .line 75
-    const-string v1, "setPercentage"
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 76
     const v0, 0x41855555
 
@@ -687,15 +678,8 @@
     :goto_4
     return-void
 
-    .line 55
-    :cond_5
-    const-string v0, "setPercentage"
-
-    const-string v1, "timer start"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 56
+    :cond_5
     const/16 v0, 0x5a
 
     iput v0, p0, Lcom/weathernews/sunnycomb/hex/HexProgress;->percentage:I
@@ -733,7 +717,7 @@
 .end method
 
 .method public stopTimer()V
-    .registers 3
+    .registers 2
 
     .prologue
     .line 43
@@ -744,14 +728,7 @@
     .line 44
     iget-object v0, p0, Lcom/weathernews/sunnycomb/hex/HexProgress;->_timer:Ljava/util/Timer;
 
-    if-eqz v0, :cond_1d
-
-    .line 45
-    const-string v0, "setPercentage"
-
-    const-string v1, "timer stop"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz v0, :cond_16
 
     .line 46
     iget-object v0, p0, Lcom/weathernews/sunnycomb/hex/HexProgress;->_timer:Ljava/util/Timer;
@@ -769,6 +746,6 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/hex/HexProgress;->_timer:Ljava/util/Timer;
 
     .line 50
-    :cond_1d
+    :cond_16
     return-void
 .end method

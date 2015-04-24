@@ -175,9 +175,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/util/AbstractExportUtil;->mInternalExportHandler:Lcom/quvideo/xiaoying/videoeditor/util/AbstractExportUtil$a;
 
     .line 126
-    new-instance v0, Lbdd;
+    new-instance v0, Lawj;
 
-    invoke-direct {v0, p0}, Lbdd;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/AbstractExportUtil;)V
+    invoke-direct {v0, p0}, Lawj;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/AbstractExportUtil;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/util/AbstractExportUtil;->mExportListener:Lcom/quvideo/xiaoying/videoeditor/util/AbstractExportUtil$ExportListener;
 

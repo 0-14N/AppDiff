@@ -6,52 +6,112 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/chartboost/sdk/Chartboost$b;,
         Lcom/chartboost/sdk/Chartboost$a;,
-        Lcom/chartboost/sdk/Chartboost$CBAgeGateConfirmation;,
-        Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;
+        Lcom/chartboost/sdk/Chartboost$b;,
+        Lcom/chartboost/sdk/Chartboost$c;
     }
 .end annotation
 
 
 # static fields
-.field private static volatile c:Lcom/chartboost/sdk/Chartboost;
-
-.field private static volatile q:Z
+.field private static b:Lcom/chartboost/sdk/Chartboost;
 
 
 # instance fields
-.field protected a:Lcom/chartboost/sdk/Libraries/l;
+.field private A:Lcom/chartboost/sdk/impl/m$a;
 
-.field protected b:Landroid/os/Handler;
+.field private B:Lcom/chartboost/sdk/impl/a$a;
 
-.field private d:Landroid/content/Context;
+.field private C:Lcom/chartboost/sdk/impl/j$c;
 
-.field private e:Lcom/chartboost/sdk/CBImpressionActivity;
+.field protected a:Landroid/os/Handler;
 
-.field private f:Lcom/chartboost/sdk/Model/a;
+.field private c:Lcom/chartboost/sdk/a;
 
-.field private g:Lcom/chartboost/sdk/CBPreferences;
+.field private d:Lcom/chartboost/sdk/impl/m;
 
-.field private h:Lcom/chartboost/sdk/impl/ax;
+.field private e:Landroid/content/Context;
 
-.field private i:Lcom/chartboost/sdk/impl/az;
+.field private f:Landroid/app/Activity;
 
-.field private j:Lcom/chartboost/sdk/impl/l;
+.field private g:Lcom/chartboost/sdk/CBImpressionActivity;
 
-.field private k:Lcom/chartboost/sdk/Tracking/a;
+.field private h:Lcom/chartboost/sdk/impl/j;
 
-.field private l:Z
+.field private i:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/chartboost/sdk/a$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private m:Z
+.field private j:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/chartboost/sdk/impl/a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private n:Landroid/util/SparseBooleanArray;
+.field private k:Lcom/chartboost/sdk/impl/a;
 
-.field private o:Lcom/chartboost/sdk/c;
+.field private l:Lcom/chartboost/sdk/impl/a;
 
-.field private p:Z
+.field private m:Ljava/lang/String;
 
-.field private r:Ljava/lang/Runnable;
+.field private n:Ljava/lang/String;
+
+.field private o:Lcom/chartboost/sdk/ChartboostDelegate;
+
+.field private p:I
+
+.field private q:Z
+
+.field private r:Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+.field private s:Z
+
+.field private t:Z
+
+.field private u:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private v:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/chartboost/sdk/a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private w:Z
+
+.field private x:J
+
+.field private y:Z
+
+.field private z:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -59,1086 +119,1620 @@
     .registers 1
 
     .prologue
-    .line 56
+    .line 49
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/Chartboost;
+    sput-object v0, Lcom/chartboost/sdk/Chartboost;->b:Lcom/chartboost/sdk/Chartboost;
 
-    .line 79
-    const/4 v0, 0x0
-
-    sput-boolean v0, Lcom/chartboost/sdk/Chartboost;->q:Z
-
+    .line 40
     return-void
 .end method
 
 .method private constructor <init>()V
-    .registers 4
+    .registers 5
 
     .prologue
+    const/4 v3, 0x0
+
     const/4 v2, 0x0
 
-    const/4 v1, 0x0
-
-    .line 100
+    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
+    .line 54
+    iput-object v2, p0, Lcom/chartboost/sdk/Chartboost;->e:Landroid/content/Context;
+
+    .line 55
+    iput-object v2, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    .line 56
+    iput-object v2, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBImpressionActivity;
 
     .line 58
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->e:Lcom/chartboost/sdk/CBImpressionActivity;
+    new-instance v0, Ljava/util/ArrayList;
 
-    .line 59
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->f:Lcom/chartboost/sdk/Model/a;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 60
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    .line 61
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    .line 62
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/ax;
-
-    .line 63
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->i:Lcom/chartboost/sdk/impl/az;
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->i:Ljava/util/List;
 
     .line 64
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->j:Lcom/chartboost/sdk/impl/l;
-
-    .line 65
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/Tracking/a;
-
-    .line 67
-    iput-boolean v2, p0, Lcom/chartboost/sdk/Chartboost;->l:Z
-
-    .line 73
-    iput-boolean v2, p0, Lcom/chartboost/sdk/Chartboost;->m:Z
-
-    .line 74
-    new-instance v0, Landroid/util/SparseBooleanArray;
-
-    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
-
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->n:Landroid/util/SparseBooleanArray;
-
-    .line 75
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->o:Lcom/chartboost/sdk/c;
-
-    .line 78
-    iput-boolean v2, p0, Lcom/chartboost/sdk/Chartboost;->p:Z
-
-    .line 82
-    new-instance v0, Lcom/chartboost/sdk/Chartboost$b;
-
-    invoke-direct {v0, p0, v1}, Lcom/chartboost/sdk/Chartboost$b;-><init>(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$1;)V
-
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->r:Ljava/lang/Runnable;
-
-    .line 101
-    sput-object p0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/Chartboost;
-
-    .line 102
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->b:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Landroid/os/Handler;
 
-    .line 103
-    invoke-static {}, Lcom/chartboost/sdk/impl/ax;->a()Lcom/chartboost/sdk/impl/ax;
+    .line 70
+    const/16 v0, 0x7530
 
-    move-result-object v0
+    iput v0, p0, Lcom/chartboost/sdk/Chartboost;->p:I
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/ax;
+    .line 71
+    iput-boolean v3, p0, Lcom/chartboost/sdk/Chartboost;->q:Z
 
-    .line 104
-    invoke-static {p0}, Lcom/chartboost/sdk/c;->a(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/c;
+    .line 76
+    iput-boolean v3, p0, Lcom/chartboost/sdk/Chartboost;->t:Z
 
-    move-result-object v0
+    .line 77
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->o:Lcom/chartboost/sdk/c;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 105
-    invoke-static {}, Lcom/chartboost/sdk/CBPreferences;->getInstance()Lcom/chartboost/sdk/CBPreferences;
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->u:Ljava/util/Map;
 
-    move-result-object v0
+    .line 78
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 106
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->v:Ljava/util/Map;
+
+    .line 79
+    iput-boolean v3, p0, Lcom/chartboost/sdk/Chartboost;->w:Z
+
+    .line 80
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/chartboost/sdk/Chartboost;->x:J
+
+    .line 81
+    iput-boolean v3, p0, Lcom/chartboost/sdk/Chartboost;->y:Z
+
+    .line 411
+    new-instance v0, Lcom/chartboost/sdk/Chartboost$a;
+
+    invoke-direct {v0, p0, v2}, Lcom/chartboost/sdk/Chartboost$a;-><init>(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$a;)V
+
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->z:Ljava/lang/Runnable;
+
+    .line 948
+    new-instance v0, Lcom/chartboost/sdk/Chartboost$1;
+
+    invoke-direct {v0, p0}, Lcom/chartboost/sdk/Chartboost$1;-><init>(Lcom/chartboost/sdk/Chartboost;)V
+
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->A:Lcom/chartboost/sdk/impl/m$a;
+
+    .line 960
+    new-instance v0, Lcom/chartboost/sdk/Chartboost$2;
+
+    invoke-direct {v0, p0}, Lcom/chartboost/sdk/Chartboost$2;-><init>(Lcom/chartboost/sdk/Chartboost;)V
+
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->B:Lcom/chartboost/sdk/impl/a$a;
+
+    .line 1109
+    new-instance v0, Lcom/chartboost/sdk/Chartboost$3;
+
+    invoke-direct {v0, p0}, Lcom/chartboost/sdk/Chartboost$3;-><init>(Lcom/chartboost/sdk/Chartboost;)V
+
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->C:Lcom/chartboost/sdk/impl/j$c;
+
+    .line 97
+    new-instance v0, Lcom/chartboost/sdk/impl/j;
+
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->C:Lcom/chartboost/sdk/impl/j$c;
+
+    invoke-direct {v0, v2, v1, v2}, Lcom/chartboost/sdk/impl/j;-><init>(Ljava/lang/String;Lcom/chartboost/sdk/impl/j$c;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/j;
+
+    .line 98
+    new-instance v0, Lcom/chartboost/sdk/impl/m;
+
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->A:Lcom/chartboost/sdk/impl/m$a;
+
+    invoke-direct {v0, v1}, Lcom/chartboost/sdk/impl/m;-><init>(Lcom/chartboost/sdk/impl/m$a;)V
+
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->d:Lcom/chartboost/sdk/impl/m;
+
+    .line 99
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->j:Ljava/util/Map;
+
+    .line 100
+    iput-object v2, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/impl/a;
+
+    .line 101
     return-void
 .end method
 
-.method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/CBImpressionActivity;)Lcom/chartboost/sdk/CBImpressionActivity;
+.method static synthetic a(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/a;
     .registers 2
 
     .prologue
-    .line 50
-    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->e:Lcom/chartboost/sdk/CBImpressionActivity;
+    .line 233
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->e()Lcom/chartboost/sdk/a;
 
-    return-object p1
-.end method
-
-.method static synthetic a(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/CBPreferences;
-    .registers 2
-
-    .prologue
-    .line 50
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method private a(IZ)V
-    .registers 4
-
-    .prologue
-    .line 298
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->n:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/util/SparseBooleanArray;->put(IZ)V
-
-    .line 299
-    return-void
-.end method
-
-.method private a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/chartboost/sdk/ChartboostDelegate;)V
-    .registers 7
-
-    .prologue
-    .line 205
-    const-string v0, "onCreate()"
-
-    invoke-direct {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Ljava/lang/String;)V
-
-    .line 208
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    if-eqz v0, :cond_22
-
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/Libraries/l;->b(Landroid/app/Activity;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_22
-
-    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_22
-
-    .line 209
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    invoke-direct {p0, v0}, Lcom/chartboost/sdk/Chartboost;->e(Lcom/chartboost/sdk/Libraries/l;)V
-
-    .line 210
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/Libraries/l;Z)V
-
-    .line 213
-    :cond_22
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->b:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->r:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 216
-    invoke-static {p1}, Lcom/chartboost/sdk/Libraries/l;->a(Landroid/app/Activity;)Lcom/chartboost/sdk/Libraries/l;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    .line 217
-    invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
-
-    .line 220
-    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->l:Z
-
-    if-nez v0, :cond_43
-
-    .line 221
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/ax;
-
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/impl/ax;->a(Landroid/content/Context;)V
-
-    .line 222
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->l:Z
-
-    .line 225
-    :cond_43
-    invoke-static {}, Lcom/chartboost/sdk/Libraries/c;->a()V
-
-    .line 228
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    invoke-virtual {v0, p2}, Lcom/chartboost/sdk/CBPreferences;->setAppID(Ljava/lang/String;)V
-
-    .line 229
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    invoke-virtual {v0, p3}, Lcom/chartboost/sdk/CBPreferences;->setAppSignature(Ljava/lang/String;)V
-
-    .line 230
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    invoke-virtual {v0, p4}, Lcom/chartboost/sdk/CBPreferences;->setDelegate(Lcom/chartboost/sdk/ChartboostDelegate;)V
-
-    .line 232
-    sget-boolean v0, Lcom/chartboost/sdk/Libraries/k;->b:Z
-
-    if-eqz v0, :cond_5c
-
-    .line 233
-    invoke-static {}, Lcom/chartboost/sdk/Libraries/k;->a()Z
-
-    .line 250
-    :cond_5c
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->i:Lcom/chartboost/sdk/impl/az;
-
-    if-nez v0, :cond_70
-
-    .line 251
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/chartboost/sdk/impl/az;->a(Landroid/content/Context;)Lcom/chartboost/sdk/impl/az;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->i:Lcom/chartboost/sdk/impl/az;
-
-    .line 252
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->i:Lcom/chartboost/sdk/impl/az;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/az;->a()Lcom/chartboost/sdk/impl/l;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->j:Lcom/chartboost/sdk/impl/l;
-
-    .line 267
-    :cond_70
-    return-void
-.end method
-
 .method private a(Landroid/app/Activity;Z)V
-    .registers 4
+    .registers 6
 
     .prologue
-    .line 284
+    .line 204
     if-nez p1, :cond_3
 
-    .line 287
+    .line 209
     :goto_2
     return-void
 
-    .line 286
+    .line 207
     :cond_3
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    invoke-direct {p0, v0, p2}, Lcom/chartboost/sdk/Chartboost;->a(IZ)V
+    .line 208
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->u:Ljava/util/Map;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-interface {v1, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_2
 .end method
 
-.method private a(Lcom/chartboost/sdk/Libraries/l;Z)V
-    .registers 4
-
-    .prologue
-    .line 291
-    if-nez p1, :cond_3
-
-    .line 294
-    :goto_2
-    return-void
-
-    .line 293
-    :cond_3
-    invoke-virtual {p1}, Lcom/chartboost/sdk/Libraries/l;->a()I
-
-    move-result v0
-
-    invoke-direct {p0, v0, p2}, Lcom/chartboost/sdk/Chartboost;->a(IZ)V
-
-    goto :goto_2
-.end method
-
-.method private a(Ljava/lang/String;)V
-    .registers 5
-
-    .prologue
-    .line 662
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/CBPreferences;->getIgnoreErrors()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2d
-
-    invoke-static {}, Lcom/chartboost/sdk/Libraries/CBUtility;->b()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2d
-
-    .line 663
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "It is illegal to call this method from any thread other than the UI thread. Please call it from the "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " method of your host activity."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 665
-    :cond_2d
-    return-void
-.end method
-
-.method private static a(Z)V
-    .registers 1
-
-    .prologue
-    .line 164
-    sput-boolean p0, Lcom/chartboost/sdk/Chartboost;->q:Z
-
-    .line 165
-    return-void
-.end method
-
-.method static synthetic b(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/CBImpressionActivity;
+.method static synthetic a(Lcom/chartboost/sdk/Chartboost;Landroid/app/Activity;)V
     .registers 2
 
     .prologue
-    .line 50
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->e:Lcom/chartboost/sdk/CBImpressionActivity;
+    .line 55
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
-    return-object v0
-.end method
-
-.method private b(Lcom/chartboost/sdk/Libraries/l;Z)V
-    .registers 3
-
-    .prologue
-    .line 303
     return-void
 .end method
 
-.method private c(Landroid/app/Activity;)Z
-    .registers 5
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 876
-    iget-object v2, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    invoke-virtual {v2}, Lcom/chartboost/sdk/CBPreferences;->getImpressionsUseActivities()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_11
-
-    .line 877
-    iget-object v2, p0, Lcom/chartboost/sdk/Chartboost;->e:Lcom/chartboost/sdk/CBImpressionActivity;
-
-    if-ne v2, p1, :cond_f
-
-    .line 881
-    :cond_e
-    :goto_e
-    return v0
-
-    :cond_f
-    move v0, v1
-
-    .line 877
-    goto :goto_e
-
-    .line 879
-    :cond_11
-    iget-object v2, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    if-nez v2, :cond_19
-
-    .line 880
-    if-eqz p1, :cond_e
-
-    move v0, v1
-
-    goto :goto_e
-
-    .line 881
-    :cond_19
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/Libraries/l;->b(Landroid/app/Activity;)Z
-
-    move-result v0
-
-    goto :goto_e
-.end method
-
-.method private cacheInterstitialData(Ljava/lang/String;Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
-    .registers 3
-    .param p1, "location"    # Ljava/lang/String;
-    .param p2, "callback"    # Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;
-
-    .prologue
-    .line 847
-    invoke-static {p1, p2}, Lcom/chartboost/sdk/e;->a(Ljava/lang/String;Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
-
-    .line 848
-    return-void
-.end method
-
-.method private cacheInterstitialDataBatch(Ljava/lang/String;ILcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
-    .registers 4
-    .param p1, "location"    # Ljava/lang/String;
-    .param p2, "amount"    # I
-    .param p3, "callback"    # Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;
-
-    .prologue
-    .line 836
-    invoke-static {p1, p2, p3}, Lcom/chartboost/sdk/e;->a(Ljava/lang/String;ILcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
-
-    .line 837
-    return-void
-.end method
-
-.method static synthetic e()Lcom/chartboost/sdk/Chartboost;
-    .registers 1
-
-    .prologue
-    .line 50
-    sget-object v0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/Chartboost;
-
-    return-object v0
-.end method
-
-.method private e(Lcom/chartboost/sdk/Libraries/l;)V
-    .registers 4
-
-    .prologue
-    .line 481
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/CBPreferences;->getImpressionsUseActivities()Z
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    .line 482
-    invoke-virtual {p0, p1}, Lcom/chartboost/sdk/Chartboost;->d(Lcom/chartboost/sdk/Libraries/l;)V
-
-    .line 484
-    :cond_b
-    invoke-virtual {p1}, Lcom/chartboost/sdk/Libraries/l;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lcom/chartboost/sdk/CBImpressionActivity;
-
-    if-nez v0, :cond_17
-
-    .line 485
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/Libraries/l;Z)V
-
-    .line 488
-    :cond_17
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/ax;
-
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/impl/ax;->c(Landroid/content/Context;)V
-
-    .line 491
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->j:Lcom/chartboost/sdk/impl/l;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/l;->b()V
-
-    .line 492
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->i:Lcom/chartboost/sdk/impl/az;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/az;->f()V
-
-    .line 495
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/Tracking/a;
-
-    if-nez v0, :cond_32
-
-    .line 496
-    invoke-static {}, Lcom/chartboost/sdk/Tracking/a;->a()Lcom/chartboost/sdk/Tracking/a;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/Tracking/a;
-
-    .line 497
-    :cond_32
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/Tracking/a;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/Tracking/a;->c()V
-
-    .line 513
-    return-void
-.end method
-
-.method private f()Z
+.method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/CBImpressionActivity;)V
     .registers 2
 
     .prologue
-    .line 271
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    .line 56
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBImpressionActivity;
 
-    invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/Libraries/l;)Z
-
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method private f(Lcom/chartboost/sdk/Libraries/l;)Z
+.method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/ChartboostDelegate;)V
+    .registers 2
+
+    .prologue
+    .line 69
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->o:Lcom/chartboost/sdk/ChartboostDelegate;
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;)V
+    .registers 3
+
+    .prologue
+    .line 781
+    invoke-direct {p0, p1, p2}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a;)V
+    .registers 2
+
+    .prologue
+    .line 894
+    invoke-direct {p0, p1}, Lcom/chartboost/sdk/Chartboost;->b(Lcom/chartboost/sdk/impl/a;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/chartboost/sdk/Chartboost;Ljava/lang/String;Z)V
+    .registers 3
+
+    .prologue
+    .line 800
+    invoke-direct {p0, p1, p2}, Lcom/chartboost/sdk/Chartboost;->a(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lorg/json/JSONObject;Lcom/chartboost/sdk/impl/a$c;ZLjava/lang/String;)V
     .registers 5
 
     .prologue
-    const/4 v0, 0x1
+    .line 866
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/chartboost/sdk/Chartboost;->a(Lorg/json/JSONObject;Lcom/chartboost/sdk/impl/a$c;ZLjava/lang/String;)V
 
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    .line 888
-    iget-object v2, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
+.method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lorg/json/JSONObject;Ljava/lang/String;)V
+    .registers 3
 
-    invoke-virtual {v2}, Lcom/chartboost/sdk/CBPreferences;->getImpressionsUseActivities()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1a
-
-    .line 889
-    if-nez p1, :cond_13
-
+    .prologue
     .line 890
-    iget-object v2, p0, Lcom/chartboost/sdk/Chartboost;->e:Lcom/chartboost/sdk/CBImpressionActivity;
+    invoke-direct {p0, p1, p2}, Lcom/chartboost/sdk/Chartboost;->a(Lorg/json/JSONObject;Ljava/lang/String;)V
 
-    if-nez v2, :cond_11
+    return-void
+.end method
 
-    .line 895
+.method static synthetic a(Lcom/chartboost/sdk/Chartboost;Z)V
+    .registers 2
+
+    .prologue
+    .line 831
+    invoke-direct {p0, p1}, Lcom/chartboost/sdk/Chartboost;->a(Z)V
+
+    return-void
+.end method
+
+.method private a(Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;)V
+    .registers 5
+
+    .prologue
+    .line 782
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->e()Lcom/chartboost/sdk/a;
+
+    move-result-object v0
+
+    .line 783
+    sget-object v1, Lcom/chartboost/sdk/impl/a$c;->c:Lcom/chartboost/sdk/impl/a$c;
+
+    if-ne p1, v1, :cond_14
+
+    .line 784
+    if-eqz v0, :cond_14
+
+    invoke-virtual {v0}, Lcom/chartboost/sdk/a;->a()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_14
+
+    .line 785
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/a;->a(Z)V
+
+    .line 788
+    :cond_14
+    sget-object v0, Lcom/chartboost/sdk/impl/a$c;->b:Lcom/chartboost/sdk/impl/a$c;
+
+    if-ne p1, v0, :cond_25
+
+    .line 789
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_25
+
+    .line 790
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    invoke-interface {v0, p2}, Lcom/chartboost/sdk/ChartboostDelegate;->didFailToLoadInterstitial(Ljava/lang/String;)V
+
+    .line 793
+    :cond_25
+    sget-object v0, Lcom/chartboost/sdk/impl/a$c;->c:Lcom/chartboost/sdk/impl/a$c;
+
+    if-ne p1, v0, :cond_36
+
+    .line 794
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_36
+
+    .line 795
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/chartboost/sdk/ChartboostDelegate;->didFailToLoadMoreApps()V
+
+    .line 798
+    :cond_36
+    return-void
+.end method
+
+.method private a(Ljava/lang/String;Z)V
+    .registers 6
+
+    .prologue
+    .line 801
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_11
+
+    .line 802
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lcom/chartboost/sdk/ChartboostDelegate;->shouldRequestInterstitial(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_11
+
+    .line 829
     :cond_10
     :goto_10
-    return v0
+    return-void
 
+    .line 807
     :cond_11
-    move v0, v1
-
-    .line 890
-    goto :goto_10
-
-    .line 891
-    :cond_13
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->e:Lcom/chartboost/sdk/CBImpressionActivity;
-
-    invoke-virtual {p1, v0}, Lcom/chartboost/sdk/Libraries/l;->b(Landroid/app/Activity;)Z
+    invoke-static {}, Lcom/chartboost/sdk/impl/l;->a()Z
 
     move-result v0
 
-    goto :goto_10
+    if-nez v0, :cond_25
 
-    .line 893
-    :cond_1a
-    iget-object v2, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    if-nez v2, :cond_22
-
-    .line 894
-    if-eqz p1, :cond_10
-
-    move v0, v1
-
-    goto :goto_10
-
-    .line 895
-    :cond_22
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/Libraries/l;->a(Lcom/chartboost/sdk/Libraries/l;)Z
-
-    move-result v0
-
-    goto :goto_10
-.end method
-
-.method private g()V
-    .registers 4
-
-    .prologue
-    .line 376
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
-
-    if-nez v0, :cond_c
-
-    .line 377
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "The context must be set through the Chartboost method onCreate() before calling startSession()."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 380
-    :cond_c
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Lcom/chartboost/sdk/Chartboost;->a(Z)V
-
-    .line 382
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/Tracking/a;
-
-    if-nez v0, :cond_1a
-
-    .line 383
-    invoke-static {}, Lcom/chartboost/sdk/Tracking/a;->a()Lcom/chartboost/sdk/Tracking/a;
+    .line 808
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/Tracking/a;
+    if-eqz v0, :cond_10
 
-    .line 386
-    :cond_1a
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/Tracking/a;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/Tracking/a;->h()V
-
-    .line 387
-    invoke-static {}, Lcom/chartboost/sdk/Tracking/a;->b()V
-
-    .line 389
-    invoke-static {}, Lcom/chartboost/sdk/Tracking/a;->i()Z
-
-    move-result v0
-
-    .line 392
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    new-instance v2, Lcom/chartboost/sdk/Chartboost$1;
-
-    invoke-direct {v2, p0, v0}, Lcom/chartboost/sdk/Chartboost$1;-><init>(Lcom/chartboost/sdk/Chartboost;Z)V
-
-    invoke-virtual {v1, v2}, Lcom/chartboost/sdk/CBPreferences;->a(Lcom/chartboost/sdk/Chartboost$a;)V
-
-    .line 425
-    return-void
-.end method
-
-.method public static isSessionStarted()Z
-    .registers 1
-
-    .prologue
-    .line 160
-    sget-boolean v0, Lcom/chartboost/sdk/Chartboost;->q:Z
-
-    return v0
-.end method
-
-.method public static sharedChartboost()Lcom/chartboost/sdk/Chartboost;
-    .registers 2
-
-    .prologue
-    .line 115
-    sget-object v0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/Chartboost;
-
-    if-nez v0, :cond_13
-
-    .line 116
-    const-class v1, Lcom/chartboost/sdk/Chartboost;
-
-    monitor-enter v1
-
-    .line 117
-    :try_start_7
-    sget-object v0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/Chartboost;
-
-    if-nez v0, :cond_12
-
-    .line 118
-    new-instance v0, Lcom/chartboost/sdk/Chartboost;
-
-    invoke-direct {v0}, Lcom/chartboost/sdk/Chartboost;-><init>()V
-
-    sput-object v0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/Chartboost;
-
-    .line 120
-    :cond_12
-    monitor-exit v1
-    :try_end_13
-    .catchall {:try_start_7 .. :try_end_13} :catchall_16
-
-    .line 122
-    :cond_13
-    sget-object v0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/Chartboost;
-
-    return-object v0
-
-    .line 120
-    :catchall_16
-    move-exception v0
-
-    :try_start_17
-    monitor-exit v1
-    :try_end_18
-    .catchall {:try_start_17 .. :try_end_18} :catchall_16
-
-    throw v0
-.end method
-
-.method private showInterstitialData(Ljava/lang/String;Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
-    .registers 3
-    .param p1, "ad_id"    # Ljava/lang/String;
-    .param p2, "callback"    # Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;
-
-    .prologue
-    .line 859
-    invoke-static {p1, p2}, Lcom/chartboost/sdk/e;->b(Ljava/lang/String;Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
-
-    .line 860
-    return-void
-.end method
-
-
-# virtual methods
-.method protected a()Lcom/chartboost/sdk/c;
-    .registers 2
-
-    .prologue
-    .line 308
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->c()Landroid/app/Activity;
+    .line 809
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
 
     move-result-object v0
 
-    .line 309
-    if-nez v0, :cond_8
+    invoke-interface {v0, p1}, Lcom/chartboost/sdk/ChartboostDelegate;->didFailToLoadInterstitial(Ljava/lang/String;)V
 
-    .line 310
-    const/4 v0, 0x0
+    goto :goto_10
 
-    .line 311
-    :goto_7
-    return-object v0
+    .line 813
+    :cond_25
+    new-instance v0, Lcom/chartboost/sdk/impl/k;
 
-    :cond_8
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->o:Lcom/chartboost/sdk/c;
+    const-string v1, "api"
 
-    goto :goto_7
+    const-string v2, "get"
+
+    invoke-direct {v0, v1, v2}, Lcom/chartboost/sdk/impl/k;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 814
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/impl/k;->a(Landroid/content/Context;)V
+
+    .line 815
+    const-string v1, "location"
+
+    invoke-virtual {v0, v1, p1}, Lcom/chartboost/sdk/impl/k;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 816
+    if-eqz p2, :cond_41
+
+    .line 817
+    const-string v1, "cache"
+
+    const-string v2, "1"
+
+    invoke-virtual {v0, v1, v2}, Lcom/chartboost/sdk/impl/k;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 818
+    :cond_41
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getAppID()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getAppSignature()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/chartboost/sdk/impl/k;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 822
+    new-instance v1, Lcom/chartboost/sdk/Chartboost$5;
+
+    invoke-direct {v1, p0, p2, p1}, Lcom/chartboost/sdk/Chartboost$5;-><init>(Lcom/chartboost/sdk/Chartboost;ZLjava/lang/String;)V
+
+    iput-object v1, v0, Lcom/chartboost/sdk/impl/k;->h:Lcom/chartboost/sdk/impl/k$a;
+
+    .line 828
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/j;
+
+    invoke-virtual {v1, v0}, Lcom/chartboost/sdk/impl/j;->a(Lcom/chartboost/sdk/impl/k;)V
+
+    goto :goto_10
 .end method
 
-.method protected a(Landroid/app/Activity;)V
-    .registers 5
+.method private a(Lorg/json/JSONObject;Lcom/chartboost/sdk/impl/a$c;ZLjava/lang/String;)V
+    .registers 11
 
     .prologue
     const/4 v2, 0x1
 
-    .line 348
+    const/4 v1, 0x0
+
+    .line 867
+    const-string v0, "status"
+
+    const-string v3, ""
+
+    invoke-virtual {p1, v0, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "200"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_16
+
+    .line 868
+    invoke-direct {p0, p2, p4}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;)V
+
+    .line 888
+    :cond_15
+    :goto_15
+    return-void
+
+    .line 872
+    :cond_16
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_51
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/chartboost/sdk/ChartboostDelegate;->shouldDisplayLoadingViewForMoreApps()Z
+
+    move-result v0
+
+    if-nez v0, :cond_51
+
+    move v0, v1
+
+    .line 874
+    :goto_27
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->e()Lcom/chartboost/sdk/a;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_38
+
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->e()Lcom/chartboost/sdk/a;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/chartboost/sdk/a;->a()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_38
+
+    move v1, v2
+
+    .line 876
+    :cond_38
+    sget-object v2, Lcom/chartboost/sdk/impl/a$c;->c:Lcom/chartboost/sdk/impl/a$c;
+
+    if-ne p2, v2, :cond_42
+
+    if-nez p3, :cond_42
+
+    .line 877
+    if-eqz v0, :cond_42
+
+    if-eqz v1, :cond_15
+
+    .line 881
+    :cond_42
+    if-eqz p3, :cond_53
+
+    .line 882
+    sget-object v4, Lcom/chartboost/sdk/impl/a$b;->e:Lcom/chartboost/sdk/impl/a$b;
+
+    .line 887
+    :goto_46
+    new-instance v0, Lcom/chartboost/sdk/impl/a;
+
+    iget-object v3, p0, Lcom/chartboost/sdk/Chartboost;->B:Lcom/chartboost/sdk/impl/a$a;
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/chartboost/sdk/impl/a;-><init>(Lorg/json/JSONObject;Lcom/chartboost/sdk/impl/a$c;Lcom/chartboost/sdk/impl/a$a;Lcom/chartboost/sdk/impl/a$b;Ljava/lang/String;)V
+
+    goto :goto_15
+
+    :cond_51
+    move v0, v2
+
+    .line 872
+    goto :goto_27
+
+    .line 884
+    :cond_53
+    sget-object v4, Lcom/chartboost/sdk/impl/a$b;->b:Lcom/chartboost/sdk/impl/a$b;
+
+    goto :goto_46
+.end method
+
+.method private a(Lorg/json/JSONObject;Ljava/lang/String;)V
+    .registers 5
+
+    .prologue
+    .line 891
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->d:Lcom/chartboost/sdk/impl/m;
+
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    invoke-virtual {v0, p2, v1}, Lcom/chartboost/sdk/impl/m;->a(Ljava/lang/String;Landroid/content/Context;)V
+
+    .line 892
+    return-void
+.end method
+
+.method private a(Z)V
+    .registers 5
+
+    .prologue
+    .line 833
+    invoke-static {}, Lcom/chartboost/sdk/impl/l;->a()Z
+
+    move-result v0
+
+    if-nez v0, :cond_14
+
+    .line 834
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_13
+
+    .line 835
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/chartboost/sdk/ChartboostDelegate;->didFailToLoadMoreApps()V
+
+    .line 864
+    :cond_13
+    :goto_13
+    return-void
+
+    .line 840
+    :cond_14
+    if-nez p1, :cond_30
+
+    .line 841
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_26
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/chartboost/sdk/ChartboostDelegate;->shouldDisplayLoadingViewForMoreApps()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_30
+
+    .line 844
+    :cond_26
+    new-instance v0, Lcom/chartboost/sdk/a$a;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lcom/chartboost/sdk/a$a;-><init>(ZLcom/chartboost/sdk/impl/a;)V
+
+    invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/a$a;)V
+
+    .line 849
+    :cond_30
+    new-instance v0, Lcom/chartboost/sdk/impl/k;
+
+    const-string v1, "api"
+
+    const-string v2, "more"
+
+    invoke-direct {v0, v1, v2}, Lcom/chartboost/sdk/impl/k;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 850
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/impl/k;->a(Landroid/content/Context;)V
+
+    .line 851
+    if-eqz p1, :cond_47
+
+    .line 852
+    const-string v1, "cache"
+
+    const-string v2, "1"
+
+    invoke-virtual {v0, v1, v2}, Lcom/chartboost/sdk/impl/k;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 853
+    :cond_47
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getAppID()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getAppSignature()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/chartboost/sdk/impl/k;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 856
+    new-instance v1, Lcom/chartboost/sdk/Chartboost$6;
+
+    invoke-direct {v1, p0, p1}, Lcom/chartboost/sdk/Chartboost$6;-><init>(Lcom/chartboost/sdk/Chartboost;Z)V
+
+    iput-object v1, v0, Lcom/chartboost/sdk/impl/k;->h:Lcom/chartboost/sdk/impl/k$a;
+
+    .line 863
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/j;
+
+    invoke-virtual {v1, v0}, Lcom/chartboost/sdk/impl/j;->a(Lcom/chartboost/sdk/impl/k;)V
+
+    goto :goto_13
+.end method
+
+.method static synthetic b(Lcom/chartboost/sdk/Chartboost;)Ljava/util/Map;
+    .registers 2
+
+    .prologue
+    .line 59
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->j:Ljava/util/Map;
+
+    return-object v0
+.end method
+
+.method private b(Landroid/app/Activity;Z)V
+    .registers 6
+
+    .prologue
+    .line 212
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    .line 215
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->v:Ljava/util/Map;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/chartboost/sdk/a;
+
+    .line 216
+    if-nez v0, :cond_30
+
+    if-eqz p2, :cond_30
+
+    .line 218
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/a;
+
+    if-eqz v0, :cond_2a
+
+    .line 219
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/a;
+
+    .line 220
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/a;
+
+    .line 221
+    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/a;->a(Landroid/app/Activity;)V
+
+    .line 225
+    :goto_20
+    iget-object v2, p0, Lcom/chartboost/sdk/Chartboost;->v:Ljava/util/Map;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 229
+    :cond_29
+    :goto_29
+    return-void
+
+    .line 223
+    :cond_2a
+    new-instance v0, Lcom/chartboost/sdk/a;
+
+    invoke-direct {v0, p0, p1}, Lcom/chartboost/sdk/a;-><init>(Lcom/chartboost/sdk/Chartboost;Landroid/app/Activity;)V
+
+    goto :goto_20
+
+    .line 226
+    :cond_30
+    if-eqz v0, :cond_29
+
+    if-nez p2, :cond_29
+
+    .line 227
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->v:Ljava/util/Map;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/chartboost/sdk/a;
+
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->c:Lcom/chartboost/sdk/a;
+
+    goto :goto_29
+.end method
+
+.method static synthetic b(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a;)V
+    .registers 2
+
+    .prologue
+    .line 917
+    invoke-direct {p0, p1}, Lcom/chartboost/sdk/Chartboost;->c(Lcom/chartboost/sdk/impl/a;)V
+
+    return-void
+.end method
+
+.method private b(Lcom/chartboost/sdk/impl/a;)V
+    .registers 5
+
+    .prologue
+    .line 895
+    iget-boolean v0, p1, Lcom/chartboost/sdk/impl/a;->k:Z
+
+    if-nez v0, :cond_17
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_17
+
+    .line 896
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lcom/chartboost/sdk/impl/a;->e:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Lcom/chartboost/sdk/ChartboostDelegate;->shouldDisplayInterstitial(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_17
+
+    .line 915
+    :goto_16
+    return-void
+
+    .line 900
+    :cond_17
+    iget-object v0, p1, Lcom/chartboost/sdk/impl/a;->c:Lcom/chartboost/sdk/impl/a$b;
+
+    sget-object v1, Lcom/chartboost/sdk/impl/a$b;->f:Lcom/chartboost/sdk/impl/a$b;
+
+    if-ne v0, v1, :cond_5b
+
+    .line 901
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->j:Ljava/util/Map;
+
+    iget-object v1, p1, Lcom/chartboost/sdk/impl/a;->e:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, p1, :cond_5b
+
+    .line 902
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->j:Ljava/util/Map;
+
+    iget-object v1, p1, Lcom/chartboost/sdk/impl/a;->e:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 904
+    new-instance v0, Lcom/chartboost/sdk/impl/k;
+
+    const-string v1, "api"
+
+    const-string v2, "show"
+
+    invoke-direct {v0, v1, v2}, Lcom/chartboost/sdk/impl/k;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 905
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/impl/k;->a(Landroid/content/Context;)V
+
+    .line 906
+    iget-object v1, p1, Lcom/chartboost/sdk/impl/a;->a:Lorg/json/JSONObject;
+
+    const-string v2, "ad_id"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 907
+    if-eqz v1, :cond_4b
+
+    .line 908
+    const-string v2, "ad_id"
+
+    invoke-virtual {v0, v2, v1}, Lcom/chartboost/sdk/impl/k;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 909
+    :cond_4b
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getAppID()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getAppSignature()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/chartboost/sdk/impl/k;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 910
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/j;
+
+    invoke-virtual {v1, v0}, Lcom/chartboost/sdk/impl/j;->a(Lcom/chartboost/sdk/impl/k;)V
+
+    .line 913
+    :cond_5b
+    sget-object v0, Lcom/chartboost/sdk/impl/a$b;->b:Lcom/chartboost/sdk/impl/a$b;
+
+    iput-object v0, p1, Lcom/chartboost/sdk/impl/a;->c:Lcom/chartboost/sdk/impl/a$b;
+
+    .line 914
+    new-instance v0, Lcom/chartboost/sdk/a$a;
+
+    invoke-direct {v0, p1}, Lcom/chartboost/sdk/a$a;-><init>(Lcom/chartboost/sdk/impl/a;)V
+
+    invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/a$a;)V
+
+    goto :goto_16
+.end method
+
+.method static synthetic c(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/impl/a;
+    .registers 2
+
+    .prologue
+    .line 60
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/impl/a;
+
+    return-object v0
+.end method
+
+.method private c(Landroid/app/Activity;)V
+    .registers 3
+
+    .prologue
+    .line 185
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    .line 186
     invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->e:Landroid/content/Context;
 
-    .line 349
-    instance-of v0, p1, Lcom/chartboost/sdk/CBImpressionActivity;
+    .line 187
+    return-void
+.end method
 
-    if-nez v0, :cond_26
+.method static synthetic c(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a;)V
+    .registers 2
 
-    .line 350
-    invoke-static {p1}, Lcom/chartboost/sdk/Libraries/l;->a(Landroid/app/Activity;)Lcom/chartboost/sdk/Libraries/l;
+    .prologue
+    .line 60
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/impl/a;
+
+    return-void
+.end method
+
+.method private c(Lcom/chartboost/sdk/impl/a;)V
+    .registers 7
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 918
+    iget-boolean v0, p1, Lcom/chartboost/sdk/impl/a;->k:Z
+
+    if-nez v0, :cond_17
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    if-eqz v0, :cond_17
 
-    .line 351
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
 
-    invoke-direct {p0, v0, v2}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/Libraries/l;Z)V
+    move-result-object v0
 
-    .line 359
-    :goto_16
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->b:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->r:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 361
-    if-eqz p1, :cond_25
-
-    invoke-direct {p0, p1}, Lcom/chartboost/sdk/Chartboost;->c(Landroid/app/Activity;)Z
+    invoke-interface {v0}, Lcom/chartboost/sdk/ChartboostDelegate;->shouldDisplayMoreApps()Z
 
     move-result v0
 
-    if-nez v0, :cond_30
+    if-nez v0, :cond_17
 
-    .line 373
-    :cond_25
-    :goto_25
+    .line 943
+    :goto_16
     return-void
 
-    .line 353
-    :cond_26
-    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->g()V
+    .line 922
+    :cond_17
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/impl/a;
 
-    move-object v0, p1
+    if-ne p1, v0, :cond_1e
 
-    .line 356
-    check-cast v0, Lcom/chartboost/sdk/CBImpressionActivity;
+    .line 923
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/CBImpressionActivity;)V
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/impl/a;
+
+    .line 926
+    :cond_1e
+    iget-object v0, p1, Lcom/chartboost/sdk/impl/a;->c:Lcom/chartboost/sdk/impl/a$b;
+
+    sget-object v3, Lcom/chartboost/sdk/impl/a$b;->f:Lcom/chartboost/sdk/impl/a$b;
+
+    if-ne v0, v3, :cond_5a
+
+    move v0, v1
+
+    .line 927
+    :goto_25
+    sget-object v3, Lcom/chartboost/sdk/impl/a$b;->a:Lcom/chartboost/sdk/impl/a$b;
+
+    iput-object v3, p1, Lcom/chartboost/sdk/impl/a;->c:Lcom/chartboost/sdk/impl/a$b;
+
+    .line 929
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_3a
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/chartboost/sdk/ChartboostDelegate;->shouldDisplayLoadingViewForMoreApps()Z
+
+    move-result v3
+
+    if-nez v3, :cond_3a
+
+    move v1, v2
+
+    .line 930
+    :cond_3a
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->e()Lcom/chartboost/sdk/a;
+
+    move-result-object v3
+
+    .line 931
+    if-eqz v3, :cond_4d
+
+    .line 932
+    invoke-virtual {v3}, Lcom/chartboost/sdk/a;->a()Z
+
+    move-result v4
+
+    if-nez v4, :cond_48
+
+    if-nez v1, :cond_5c
+
+    .line 933
+    :cond_48
+    if-eqz v1, :cond_4d
+
+    .line 934
+    invoke-virtual {v3, v2}, Lcom/chartboost/sdk/a;->a(Z)V
+
+    .line 941
+    :cond_4d
+    sget-object v0, Lcom/chartboost/sdk/impl/a$b;->b:Lcom/chartboost/sdk/impl/a$b;
+
+    iput-object v0, p1, Lcom/chartboost/sdk/impl/a;->c:Lcom/chartboost/sdk/impl/a$b;
+
+    .line 942
+    new-instance v0, Lcom/chartboost/sdk/a$a;
+
+    invoke-direct {v0, p1}, Lcom/chartboost/sdk/a$a;-><init>(Lcom/chartboost/sdk/impl/a;)V
+
+    invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/a$a;)V
 
     goto :goto_16
 
-    .line 364
-    :cond_30
-    invoke-static {p1}, Lcom/chartboost/sdk/Libraries/l;->a(Landroid/app/Activity;)Lcom/chartboost/sdk/Libraries/l;
+    :cond_5a
+    move v0, v2
+
+    .line 926
+    goto :goto_25
+
+    .line 936
+    :cond_5c
+    if-nez v0, :cond_4d
+
+    iget-boolean v0, p1, Lcom/chartboost/sdk/impl/a;->j:Z
+
+    if-nez v0, :cond_4d
+
+    goto :goto_16
+.end method
+
+.method static synthetic d(Lcom/chartboost/sdk/Chartboost;)Landroid/app/Activity;
+    .registers 2
+
+    .prologue
+    .line 55
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    return-object v0
+.end method
+
+.method static synthetic d(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a;)V
+    .registers 2
+
+    .prologue
+    .line 61
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
+
+    return-void
+.end method
+
+.method private d()Z
+    .registers 2
+
+    .prologue
+    .line 191
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    invoke-direct {p0, v0}, Lcom/chartboost/sdk/Chartboost;->d(Landroid/app/Activity;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private d(Landroid/app/Activity;)Z
+    .registers 5
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 196
+    if-nez p1, :cond_4
+
+    .line 199
+    :goto_3
+    return v1
+
+    .line 198
+    :cond_4
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->u:Ljava/util/Map;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {p0, v0, v2}, Lcom/chartboost/sdk/Chartboost;->b(Lcom/chartboost/sdk/Libraries/l;Z)V
+    check-cast v0, Ljava/lang/Boolean;
 
-    .line 366
+    .line 199
+    if-eqz v0, :cond_1c
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    :goto_1a
+    move v1, v0
+
+    goto :goto_3
+
+    :cond_1c
+    move v0, v1
+
+    goto :goto_1a
+.end method
+
+.method private e()Lcom/chartboost/sdk/a;
+    .registers 3
+
+    .prologue
+    .line 234
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->b()Landroid/app/Activity;
+
+    move-result-object v0
+
+    if-nez v0, :cond_8
+
+    .line 235
+    const/4 v0, 0x0
+
+    .line 236
+    :goto_7
+    return-object v0
+
+    :cond_8
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->v:Ljava/util/Map;
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->b()Landroid/app/Activity;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/chartboost/sdk/a;
+
+    goto :goto_7
+.end method
+
+.method static synthetic e(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/impl/j;
+    .registers 2
+
+    .prologue
+    .line 57
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/j;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/CBImpressionActivity;
+    .registers 2
+
+    .prologue
+    .line 56
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBImpressionActivity;
+
+    return-object v0
+.end method
+
+.method private f()V
+    .registers 3
+
+    .prologue
+    .line 700
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
+
+    if-nez v0, :cond_5
+
+    .line 702
+    :goto_4
+    return-void
+
+    .line 701
+    :cond_5
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->B:Lcom/chartboost/sdk/impl/a$a;
+
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
+
+    invoke-interface {v0, v1}, Lcom/chartboost/sdk/impl/a$a;->b(Lcom/chartboost/sdk/impl/a;)V
+
+    goto :goto_4
+.end method
+
+.method static synthetic g(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/ChartboostDelegate;
+    .registers 2
+
+    .prologue
+    .line 69
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->o:Lcom/chartboost/sdk/ChartboostDelegate;
+
+    return-object v0
+.end method
+
+.method public static declared-synchronized sharedChartboost()Lcom/chartboost/sdk/Chartboost;
+    .registers 2
+
+    .prologue
+    .line 90
+    const-class v1, Lcom/chartboost/sdk/Chartboost;
+
+    monitor-enter v1
+
+    :try_start_3
+    sget-object v0, Lcom/chartboost/sdk/Chartboost;->b:Lcom/chartboost/sdk/Chartboost;
+
+    if-nez v0, :cond_e
+
+    .line 91
+    new-instance v0, Lcom/chartboost/sdk/Chartboost;
+
+    invoke-direct {v0}, Lcom/chartboost/sdk/Chartboost;-><init>()V
+
+    sput-object v0, Lcom/chartboost/sdk/Chartboost;->b:Lcom/chartboost/sdk/Chartboost;
+
+    .line 93
+    :cond_e
+    sget-object v0, Lcom/chartboost/sdk/Chartboost;->b:Lcom/chartboost/sdk/Chartboost;
+    :try_end_10
+    .catchall {:try_start_3 .. :try_end_10} :catchall_12
+
+    monitor-exit v1
+
+    return-object v0
+
+    .line 90
+    :catchall_12
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method protected a(Landroid/app/Activity;)V
+    .registers 7
+
+    .prologue
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
+
+    .line 258
+    invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->e:Landroid/content/Context;
+
+    .line 259
     instance-of v0, p1, Lcom/chartboost/sdk/CBImpressionActivity;
 
-    if-eqz v0, :cond_3e
+    if-nez v0, :cond_23
 
-    .line 367
-    const/4 v0, 0x0
+    .line 260
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
-    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->p:Z
+    .line 261
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
-    .line 370
-    :cond_3e
-    invoke-static {}, Lcom/chartboost/sdk/a;->a()Lcom/chartboost/sdk/a;
+    invoke-direct {p0, v0, v3}, Lcom/chartboost/sdk/Chartboost;->a(Landroid/app/Activity;Z)V
+
+    .line 267
+    :goto_13
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->z:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 269
+    if-eqz p1, :cond_22
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->b()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 371
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->f:Lcom/chartboost/sdk/Model/a;
+    if-eq p1, v0, :cond_29
 
-    invoke-virtual {v0, p1, v1}, Lcom/chartboost/sdk/a;->a(Landroid/app/Activity;Lcom/chartboost/sdk/Model/a;)V
+    .line 306
+    :cond_22
+    :goto_22
+    return-void
 
-    .line 372
-    const/4 v0, 0x0
+    :cond_23
+    move-object v0, p1
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Lcom/chartboost/sdk/Model/a;
+    .line 264
+    check-cast v0, Lcom/chartboost/sdk/CBImpressionActivity;
 
-    goto :goto_25
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBImpressionActivity;
+
+    goto :goto_13
+
+    .line 272
+    :cond_29
+    invoke-direct {p0, p1, v3}, Lcom/chartboost/sdk/Chartboost;->b(Landroid/app/Activity;Z)V
+
+    .line 275
+    instance-of v0, p1, Lcom/chartboost/sdk/CBImpressionActivity;
+
+    if-eqz v0, :cond_46
+
+    .line 276
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->e()Lcom/chartboost/sdk/a;
+
+    move-result-object v4
+
+    .line 277
+    if-eqz v4, :cond_44
+
+    move v1, v2
+
+    .line 278
+    :goto_37
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->i:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lt v1, v0, :cond_6e
+
+    .line 281
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->i:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 283
+    :cond_44
+    iput-boolean v2, p0, Lcom/chartboost/sdk/Chartboost;->y:Z
+
+    .line 288
+    :cond_46
+    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->w:Z
+
+    if-eqz v0, :cond_7d
+
+    .line 289
+    iput-boolean v2, p0, Lcom/chartboost/sdk/Chartboost;->w:Z
+
+    move v0, v3
+
+    .line 294
+    :goto_4d
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
+
+    if-eqz v1, :cond_62
+
+    .line 295
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
+
+    iget-object v1, v1, Lcom/chartboost/sdk/impl/a;->c:Lcom/chartboost/sdk/impl/a$b;
+
+    sget-object v4, Lcom/chartboost/sdk/impl/a$b;->b:Lcom/chartboost/sdk/impl/a$b;
+
+    if-ne v1, v4, :cond_62
+
+    .line 296
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
+
+    invoke-virtual {v1}, Lcom/chartboost/sdk/impl/a;->a()Z
+
+    move-result v1
+
+    .line 297
+    if-eqz v1, :cond_62
+
+    move v0, v2
+
+    .line 303
+    :cond_62
+    if-eqz v0, :cond_22
+
+    .line 304
+    new-instance v0, Lcom/chartboost/sdk/a$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v3, v1}, Lcom/chartboost/sdk/a$a;-><init>(ZLcom/chartboost/sdk/impl/a;)V
+
+    invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/a$a;)V
+
+    goto :goto_22
+
+    .line 279
+    :cond_6e
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->i:Ljava/util/List;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/chartboost/sdk/a$a;
+
+    invoke-virtual {v4, v0}, Lcom/chartboost/sdk/a;->a(Lcom/chartboost/sdk/a$a;)V
+
+    .line 278
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_37
+
+    :cond_7d
+    move v0, v2
+
+    goto :goto_4d
 .end method
 
 .method protected a(Lcom/chartboost/sdk/CBImpressionActivity;)V
     .registers 4
 
     .prologue
-    .line 902
-    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->m:Z
+    .line 716
+    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->t:Z
 
     if-nez v0, :cond_f
 
-    .line 903
+    .line 717
     invoke-virtual {p1}, Lcom/chartboost/sdk/CBImpressionActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->e:Landroid/content/Context;
 
-    .line 904
-    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->e:Lcom/chartboost/sdk/CBImpressionActivity;
+    .line 718
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBImpressionActivity;
 
-    .line 905
+    .line 719
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->m:Z
+    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->t:Z
 
-    .line 908
+    .line 722
     :cond_f
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->b:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->r:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->z:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 909
+    .line 723
     return-void
 .end method
 
-.method protected a(Lcom/chartboost/sdk/Model/a;)V
-    .registers 9
+.method protected a(Lcom/chartboost/sdk/a$a;)V
+    .registers 8
 
     .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 926
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/CBPreferences;->getImpressionsUseActivities()Z
+    .line 741
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getImpressionsUseActivities()Z
 
     move-result v0
 
-    if-eqz v0, :cond_99
+    if-eqz v0, :cond_73
 
-    .line 927
-    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->m:Z
-
-    if-eqz v0, :cond_26
-
-    .line 928
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->a()Lcom/chartboost/sdk/c;
+    .line 742
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->e()Lcom/chartboost/sdk/a;
 
     move-result-object v0
 
-    .line 929
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->c()Landroid/app/Activity;
+    .line 743
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->b()Landroid/app/Activity;
 
-    move-result-object v1
+    move-result-object v3
 
-    if-eqz v1, :cond_1e
+    if-eqz v3, :cond_1c
 
-    if-eqz v0, :cond_1e
+    iget-boolean v3, p0, Lcom/chartboost/sdk/Chartboost;->t:Z
 
-    .line 930
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/c;->a(Lcom/chartboost/sdk/Model/a;)V
+    if-eqz v3, :cond_1c
 
-    .line 979
-    :goto_1d
+    if-eqz v0, :cond_1c
+
+    .line 744
+    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/a;->a(Lcom/chartboost/sdk/a$a;)V
+
+    .line 775
+    :cond_1b
+    :goto_1b
     return-void
 
-    .line 932
-    :cond_1e
-    const-string v0, "Chartboost"
-
-    const-string v1, "Missing CBViewController to manage the open CBImpressionActivity"
-
-    invoke-static {v0, v1}, Lcom/chartboost/sdk/Libraries/CBLogging;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    goto :goto_1d
-
-    .line 936
-    :cond_26
-    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->f()Z
+    .line 747
+    :cond_1c
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->d()Z
 
     move-result v0
 
-    if-nez v0, :cond_32
+    .line 748
+    if-eqz v0, :cond_1b
 
-    .line 937
-    sget-object v0, Lcom/chartboost/sdk/Model/CBError$CBImpressionError;->NO_HOST_ACTIVITY:Lcom/chartboost/sdk/Model/CBError$CBImpressionError;
+    .line 751
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->i:Ljava/util/List;
 
-    invoke-virtual {p1, v0}, Lcom/chartboost/sdk/Model/a;->a(Lcom/chartboost/sdk/Model/CBError$CBImpressionError;)V
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_1d
+    .line 752
+    new-instance v4, Landroid/content/Intent;
 
-    .line 941
-    :cond_32
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getHostActivity()Landroid/app/Activity;
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
-    move-result-object v4
+    const-class v3, Lcom/chartboost/sdk/CBImpressionActivity;
 
-    .line 942
-    if-nez v4, :cond_45
+    invoke-direct {v4, v0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 943
-    const-string v0, "Chartboost"
+    .line 754
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
-    const-string v1, "Failed to display impression as the host activity reference has been lost!"
-
-    invoke-static {v0, v1}, Lcom/chartboost/sdk/Libraries/CBLogging;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 944
-    sget-object v0, Lcom/chartboost/sdk/Model/CBError$CBImpressionError;->NO_HOST_ACTIVITY:Lcom/chartboost/sdk/Model/CBError$CBImpressionError;
-
-    invoke-virtual {p1, v0}, Lcom/chartboost/sdk/Model/a;->a(Lcom/chartboost/sdk/Model/CBError$CBImpressionError;)V
-
-    goto :goto_1d
-
-    .line 946
-    :cond_45
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Lcom/chartboost/sdk/Model/a;
-
-    if-eqz v0, :cond_53
-
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Lcom/chartboost/sdk/Model/a;
-
-    if-eq v0, p1, :cond_53
-
-    .line 948
-    sget-object v0, Lcom/chartboost/sdk/Model/CBError$CBImpressionError;->IMPRESSION_ALREADY_VISIBLE:Lcom/chartboost/sdk/Model/CBError$CBImpressionError;
-
-    invoke-virtual {p1, v0}, Lcom/chartboost/sdk/Model/a;->a(Lcom/chartboost/sdk/Model/CBError$CBImpressionError;)V
-
-    goto :goto_1d
-
-    .line 951
-    :cond_53
-    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->f:Lcom/chartboost/sdk/Model/a;
-
-    .line 952
-    new-instance v5, Landroid/content/Intent;
-
-    const-class v0, Lcom/chartboost/sdk/CBImpressionActivity;
-
-    invoke-direct {v5, v4, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 954
-    invoke-virtual {v4}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -1150,13 +1744,15 @@
 
     and-int/lit16 v0, v0, 0x400
 
-    if-eqz v0, :cond_93
+    if-eqz v0, :cond_6d
 
     move v0, v1
 
-    .line 956
-    :goto_6b
-    invoke-virtual {v4}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    .line 756
+    :goto_41
+    iget-object v3, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    invoke-virtual {v3}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v3
 
@@ -1168,39 +1764,41 @@
 
     and-int/lit16 v3, v3, 0x800
 
-    if-eqz v3, :cond_95
+    if-eqz v3, :cond_6f
 
     move v3, v1
 
-    .line 958
-    :goto_7a
-    const-string v6, "paramFullscreen"
+    .line 758
+    :goto_52
+    const-string v5, "paramFullscreen"
 
-    if-eqz v0, :cond_97
+    if-eqz v0, :cond_71
 
-    if-nez v3, :cond_97
+    if-nez v3, :cond_71
 
-    :goto_80
-    invoke-virtual {v5, v6, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    :goto_58
+    invoke-virtual {v4, v5, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 961
-    :try_start_83
-    invoke-virtual {v4, v5}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    .line 761
+    :try_start_5b
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
-    .line 962
+    invoke-virtual {v0, v4}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
+    .line 762
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->p:Z
-    :try_end_89
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_83 .. :try_end_89} :catch_8a
+    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->y:Z
+    :try_end_63
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_5b .. :try_end_63} :catch_64
 
-    goto :goto_1d
+    goto :goto_1b
 
-    .line 963
-    :catch_8a
+    .line 763
+    :catch_64
     move-exception v0
 
-    .line 964
+    .line 764
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Chartboost impression activity not declared in manifest. Please add the following inside your manifest\'s <application> tag: \n<activity android:name=\"com.chartboost.sdk.CBImpressionActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\" android:excludeFromRecents=\"true\" />"
@@ -1209,289 +1807,224 @@
 
     throw v0
 
-    :cond_93
+    :cond_6d
     move v0, v2
 
-    .line 954
-    goto :goto_6b
+    .line 754
+    goto :goto_41
 
-    :cond_95
+    :cond_6f
     move v3, v2
 
-    .line 956
-    goto :goto_7a
+    .line 756
+    goto :goto_52
 
-    :cond_97
+    :cond_71
     move v1, v2
 
-    .line 958
-    goto :goto_80
+    .line 758
+    goto :goto_58
 
-    .line 972
-    :cond_99
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->a()Lcom/chartboost/sdk/c;
+    .line 771
+    :cond_73
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->e()Lcom/chartboost/sdk/a;
 
     move-result-object v0
 
-    .line 973
-    if-eqz v0, :cond_aa
+    .line 772
+    if-eqz v0, :cond_1b
 
-    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->f()Z
+    .line 773
+    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/a;->a(Lcom/chartboost/sdk/a$a;)V
 
-    move-result v1
-
-    if-eqz v1, :cond_aa
-
-    .line 974
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/c;->a(Lcom/chartboost/sdk/Model/a;)V
-
-    goto/16 :goto_1d
-
-    .line 976
-    :cond_aa
-    sget-object v0, Lcom/chartboost/sdk/Model/CBError$CBImpressionError;->NO_HOST_ACTIVITY:Lcom/chartboost/sdk/Model/CBError$CBImpressionError;
-
-    invoke-virtual {p1, v0}, Lcom/chartboost/sdk/Model/a;->a(Lcom/chartboost/sdk/Model/CBError$CBImpressionError;)V
-
-    goto/16 :goto_1d
+    goto :goto_1b
 .end method
 
-.method protected a(Ljava/lang/Runnable;)V
-    .registers 3
+.method protected a(Lcom/chartboost/sdk/impl/a;)V
+    .registers 2
 
     .prologue
-    .line 987
-    invoke-static {}, Lcom/chartboost/sdk/Libraries/CBUtility;->b()Z
+    .line 778
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
 
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    .line 988
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->b:Landroid/os/Handler;
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 991
-    :goto_b
+    .line 779
     return-void
-
-    .line 990
-    :cond_c
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_b
 .end method
 
-.method protected a(Lcom/chartboost/sdk/Libraries/l;)Z
-    .registers 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 276
-    if-nez p1, :cond_4
-
-    .line 279
-    :cond_3
-    :goto_3
-    return v0
-
-    .line 278
-    :cond_4
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->n:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {p1}, Lcom/chartboost/sdk/Libraries/l;->a()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroid/util/SparseBooleanArray;->get(I)Z
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    .line 279
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_3
-.end method
-
-.method protected b(Landroid/app/Activity;)V
+.method protected a()Z
     .registers 4
-
-    .prologue
-    .line 658
-    invoke-static {p1}, Lcom/chartboost/sdk/Libraries/l;->a(Landroid/app/Activity;)Lcom/chartboost/sdk/Libraries/l;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1}, Lcom/chartboost/sdk/Chartboost;->b(Lcom/chartboost/sdk/Libraries/l;Z)V
-
-    .line 659
-    return-void
-.end method
-
-.method protected b(Lcom/chartboost/sdk/Libraries/l;)V
-    .registers 3
-
-    .prologue
-    .line 443
-    invoke-static {}, Lcom/chartboost/sdk/a;->a()Lcom/chartboost/sdk/a;
-
-    move-result-object v0
-
-    .line 444
-    invoke-virtual {v0}, Lcom/chartboost/sdk/a;->c()Lcom/chartboost/sdk/Model/a;
-
-    move-result-object v0
-
-    .line 445
-    if-eqz v0, :cond_d
-
-    .line 446
-    invoke-virtual {v0}, Lcom/chartboost/sdk/Model/a;->q()V
-
-    .line 447
-    :cond_d
-    return-void
-.end method
-
-.method protected b()Z
-    .registers 6
 
     .prologue
     const/4 v0, 0x1
 
-    .line 558
-    invoke-static {}, Lcom/chartboost/sdk/a;->a()Lcom/chartboost/sdk/a;
+    .line 369
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
 
-    move-result-object v1
+    if-eqz v1, :cond_11
 
-    .line 559
-    invoke-virtual {v1}, Lcom/chartboost/sdk/a;->c()Lcom/chartboost/sdk/Model/a;
+    .line 370
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
 
-    move-result-object v2
+    iget-object v1, v1, Lcom/chartboost/sdk/impl/a;->c:Lcom/chartboost/sdk/impl/a$b;
 
-    .line 560
-    if-eqz v2, :cond_21
+    sget-object v2, Lcom/chartboost/sdk/impl/a$b;->c:Lcom/chartboost/sdk/impl/a$b;
 
-    iget-object v3, v2, Lcom/chartboost/sdk/Model/a;->c:Lcom/chartboost/sdk/Model/a$b;
+    if-ne v1, v2, :cond_11
 
-    sget-object v4, Lcom/chartboost/sdk/Model/a$b;->c:Lcom/chartboost/sdk/Model/a$b;
+    .line 371
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->f()V
 
-    if-ne v3, v4, :cond_21
-
-    .line 561
-    invoke-virtual {v2}, Lcom/chartboost/sdk/Model/a;->p()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_18
-
-    .line 579
-    :goto_17
+    .line 379
+    :goto_10
     return v0
 
-    .line 563
-    :cond_18
-    new-instance v2, Lcom/chartboost/sdk/Chartboost$2;
-
-    invoke-direct {v2, p0, v1}, Lcom/chartboost/sdk/Chartboost$2;-><init>(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/a;)V
-
-    invoke-virtual {p0, v2}, Lcom/chartboost/sdk/Chartboost;->a(Ljava/lang/Runnable;)V
-
-    goto :goto_17
-
-    .line 570
-    :cond_21
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->a()Lcom/chartboost/sdk/c;
+    .line 374
+    :cond_11
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->e()Lcom/chartboost/sdk/a;
 
     move-result-object v1
 
-    .line 571
-    if-eqz v1, :cond_36
+    .line 375
+    if-eqz v1, :cond_21
 
-    invoke-virtual {v1}, Lcom/chartboost/sdk/c;->a()Z
+    invoke-virtual {v1}, Lcom/chartboost/sdk/a;->a()Z
 
     move-result v2
 
-    if-eqz v2, :cond_36
+    if-eqz v2, :cond_21
 
-    .line 572
-    new-instance v2, Lcom/chartboost/sdk/Chartboost$3;
+    .line 376
+    invoke-virtual {v1, v0}, Lcom/chartboost/sdk/a;->a(Z)V
 
-    invoke-direct {v2, p0, v1}, Lcom/chartboost/sdk/Chartboost$3;-><init>(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/c;)V
+    goto :goto_10
 
-    invoke-virtual {p0, v2}, Lcom/chartboost/sdk/Chartboost;->a(Ljava/lang/Runnable;)V
-
-    goto :goto_17
-
-    .line 579
-    :cond_36
+    .line 379
+    :cond_21
     const/4 v0, 0x0
 
-    goto :goto_17
+    goto :goto_10
 .end method
 
-.method protected c()Landroid/app/Activity;
+.method protected b()Landroid/app/Activity;
     .registers 2
 
     .prologue
-    .line 866
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
+    .line 706
+    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->q:Z
 
-    invoke-virtual {v0}, Lcom/chartboost/sdk/CBPreferences;->getImpressionsUseActivities()Z
+    if-eqz v0, :cond_7
 
-    move-result v0
+    .line 707
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBImpressionActivity;
 
-    if-eqz v0, :cond_b
-
-    .line 867
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->e:Lcom/chartboost/sdk/CBImpressionActivity;
-
-    .line 869
-    :goto_a
+    .line 709
+    :goto_6
     return-object v0
 
-    :cond_b
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getHostActivity()Landroid/app/Activity;
+    :cond_7
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
-    move-result-object v0
-
-    goto :goto_a
+    goto :goto_6
 .end method
 
-.method protected c(Lcom/chartboost/sdk/Libraries/l;)V
-    .registers 3
+.method protected b(Landroid/app/Activity;)V
+    .registers 5
 
     .prologue
-    .line 463
-    invoke-static {}, Lcom/chartboost/sdk/a;->a()Lcom/chartboost/sdk/a;
+    const/4 v2, 0x0
+
+    .line 328
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->e()Lcom/chartboost/sdk/a;
 
     move-result-object v0
 
-    .line 464
-    invoke-virtual {v0}, Lcom/chartboost/sdk/a;->c()Lcom/chartboost/sdk/Model/a;
+    .line 329
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->b()Landroid/app/Activity;
+
+    move-result-object v1
+
+    if-ne p1, v1, :cond_27
+
+    if-eqz v0, :cond_27
+
+    .line 330
+    invoke-direct {p0, p1, v2}, Lcom/chartboost/sdk/Chartboost;->b(Landroid/app/Activity;Z)V
+
+    .line 331
+    iput-boolean v2, p0, Lcom/chartboost/sdk/Chartboost;->w:Z
+
+    .line 332
+    invoke-virtual {v0}, Lcom/chartboost/sdk/a;->a()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1e
+
+    .line 333
+    invoke-virtual {v0, v2}, Lcom/chartboost/sdk/a;->a(Z)V
+
+    .line 334
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lcom/chartboost/sdk/Chartboost;->w:Z
+
+    .line 336
+    :cond_1e
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
+
+    if-eqz v1, :cond_27
+
+    .line 337
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->l:Lcom/chartboost/sdk/impl/a;
+
+    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/a;->a(Lcom/chartboost/sdk/impl/a;)V
+
+    .line 341
+    :cond_27
+    instance-of v0, p1, Lcom/chartboost/sdk/CBImpressionActivity;
+
+    if-nez v0, :cond_30
+
+    .line 342
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    invoke-direct {p0, v0, v2}, Lcom/chartboost/sdk/Chartboost;->a(Landroid/app/Activity;Z)V
+
+    .line 344
+    :cond_30
+    return-void
+.end method
+
+.method protected c()V
+    .registers 2
+
+    .prologue
+    .line 728
+    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->t:Z
+
+    if-eqz v0, :cond_12
+
+    .line 729
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 465
-    if-eqz v0, :cond_d
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->e:Landroid/content/Context;
 
-    .line 466
-    invoke-virtual {v0}, Lcom/chartboost/sdk/Model/a;->r()V
+    .line 730
+    const/4 v0, 0x0
 
-    .line 467
-    :cond_d
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBImpressionActivity;
+
+    .line 731
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->t:Z
+
+    .line 733
+    :cond_12
     return-void
 .end method
 
@@ -1499,26 +2032,28 @@
     .registers 2
 
     .prologue
-    .line 709
+    .line 436
     const-string v0, "Default"
 
     invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->cacheInterstitial(Ljava/lang/String;)V
 
-    .line 710
+    .line 437
     return-void
 .end method
 
 .method public cacheInterstitial(Ljava/lang/String;)V
-    .registers 4
+    .registers 6
     .param p1, "location"    # Ljava/lang/String;
 
     .prologue
-    .line 716
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    const/4 v3, 0x1
 
-    if-nez v0, :cond_c
+    .line 443
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
-    .line 717
+    if-nez v0, :cond_d
+
+    .line 444
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "The context must be set through the Chartboost method onCreate() before calling cacheInterstitial()."
@@ -1527,28 +2062,61 @@
 
     throw v0
 
-    .line 720
-    :cond_c
-    invoke-static {}, Lcom/chartboost/sdk/impl/ab;->e()Lcom/chartboost/sdk/impl/ab;
+    .line 446
+    :cond_d
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/impl/ab;->b(Ljava/lang/String;)V
+    if-eqz v0, :cond_2b
 
-    .line 721
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/chartboost/sdk/ChartboostDelegate;->shouldRequestInterstitialsInFirstSession()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2b
+
+    .line 447
+    invoke-static {}, Lcom/chartboost/sdk/Libraries/d;->a()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "cbPrefSessionCount"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    .line 448
+    if-gt v0, v3, :cond_2b
+
+    .line 453
+    :goto_2a
     return-void
+
+    .line 452
+    :cond_2b
+    invoke-direct {p0, p1, v3}, Lcom/chartboost/sdk/Chartboost;->a(Ljava/lang/String;Z)V
+
+    goto :goto_2a
 .end method
 
 .method public cacheMoreApps()V
     .registers 3
 
     .prologue
-    .line 793
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    .line 527
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
     if-nez v0, :cond_c
 
-    .line 794
+    .line 528
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "The context must be set through the Chartboost method onCreate() before calling cacheMoreApps()."
@@ -1557,258 +2125,188 @@
 
     throw v0
 
-    .line 796
+    .line 530
     :cond_c
-    invoke-static {}, Lcom/chartboost/sdk/impl/as;->e()Lcom/chartboost/sdk/impl/as;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    invoke-direct {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Z)V
 
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/as;->g()V
-
-    .line 797
+    .line 531
     return-void
 .end method
 
 .method public clearCache()V
-    .registers 3
+    .registers 2
 
     .prologue
-    .line 681
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getContext()Landroid/content/Context;
+    .line 429
+    new-instance v0, Ljava/util/HashMap;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    if-nez v0, :cond_e
+    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->j:Ljava/util/Map;
 
-    .line 682
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "The context must be set through the Chartboost method onCreate() before calling clearImageCache()."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 685
-    :cond_e
-    invoke-static {}, Lcom/chartboost/sdk/impl/bb;->a()Lcom/chartboost/sdk/impl/bb;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/bb;->b()V
-
-    .line 689
-    invoke-static {}, Lcom/chartboost/sdk/impl/ab;->e()Lcom/chartboost/sdk/impl/ab;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/ab;->a()V
-
-    .line 690
-    invoke-static {}, Lcom/chartboost/sdk/impl/as;->e()Lcom/chartboost/sdk/impl/as;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/as;->a()V
-
-    .line 691
+    .line 430
     return-void
 .end method
 
 .method public clearImageCache()V
-    .registers 1
-
-    .prologue
-    .line 675
-    return-void
-.end method
-
-.method protected d()V
     .registers 2
 
     .prologue
-    .line 914
-    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->m:Z
+    .line 422
+    invoke-static {}, Lcom/chartboost/sdk/Libraries/e;->a()Lcom/chartboost/sdk/Libraries/e;
 
-    if-eqz v0, :cond_a
+    move-result-object v0
 
-    .line 915
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lcom/chartboost/sdk/Libraries/e;->b()V
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->e:Lcom/chartboost/sdk/CBImpressionActivity;
-
-    .line 916
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->m:Z
-
-    .line 918
-    :cond_a
+    .line 423
     return-void
 .end method
 
-.method protected d(Lcom/chartboost/sdk/Libraries/l;)V
-    .registers 5
+.method public getAppID()Ljava/lang/String;
+    .registers 2
 
     .prologue
-    const/4 v2, 0x0
+    .line 572
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->m:Ljava/lang/String;
 
-    .line 519
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->a()Lcom/chartboost/sdk/c;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public getAppSignature()Ljava/lang/String;
+    .registers 2
 
-    .line 520
-    invoke-direct {p0, p1}, Lcom/chartboost/sdk/Chartboost;->f(Lcom/chartboost/sdk/Libraries/l;)Z
+    .prologue
+    .line 583
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->n:Ljava/lang/String;
 
-    move-result v1
-
-    if-eqz v1, :cond_2a
-
-    if-eqz v0, :cond_2a
-
-    .line 521
-    invoke-static {}, Lcom/chartboost/sdk/a;->a()Lcom/chartboost/sdk/a;
-
-    move-result-object v1
-
-    .line 522
-    invoke-virtual {v1}, Lcom/chartboost/sdk/a;->c()Lcom/chartboost/sdk/Model/a;
-
-    move-result-object v1
-
-    .line 523
-    if-eqz v1, :cond_1c
-
-    .line 524
-    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/c;->b(Lcom/chartboost/sdk/Model/a;)V
-
-    .line 525
-    iput-object v1, p0, Lcom/chartboost/sdk/Chartboost;->f:Lcom/chartboost/sdk/Model/a;
-
-    .line 527
-    :cond_1c
-    invoke-direct {p0, p1, v2}, Lcom/chartboost/sdk/Chartboost;->b(Lcom/chartboost/sdk/Libraries/l;Z)V
-
-    .line 528
-    invoke-virtual {p1}, Lcom/chartboost/sdk/Libraries/l;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lcom/chartboost/sdk/CBImpressionActivity;
-
-    if-eqz v0, :cond_2a
-
-    .line 529
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->d()V
-
-    .line 532
-    :cond_2a
-    invoke-virtual {p1}, Lcom/chartboost/sdk/Libraries/l;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lcom/chartboost/sdk/CBImpressionActivity;
-
-    if-nez v0, :cond_35
-
-    .line 533
-    invoke-direct {p0, p1, v2}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/Libraries/l;Z)V
-
-    .line 535
-    :cond_35
-    return-void
+    return-object v0
 .end method
 
 .method public getContext()Landroid/content/Context;
     .registers 2
 
     .prologue
-    .line 152
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
+    .line 146
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->e:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method public getDeviceIdentifier()Ljava/lang/String;
+.method public getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
     .registers 2
 
     .prologue
-    .line 824
-    invoke-static {}, Lcom/chartboost/sdk/Libraries/c;->b()Ljava/lang/String;
-
-    move-result-object v0
+    .line 594
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->o:Lcom/chartboost/sdk/ChartboostDelegate;
 
     return-object v0
 .end method
 
-.method protected getHostActivity()Landroid/app/Activity;
-    .registers 2
+.method public getForcedOrientationDifference()Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;
+    .registers 4
 
     .prologue
-    .line 983
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    .line 680
+    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->s:Z
 
-    if-eqz v0, :cond_d
+    if-nez v0, :cond_7
 
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    .line 681
+    sget-object v0, Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;->ANGLE_0:Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;
 
-    invoke-virtual {v0}, Lcom/chartboost/sdk/Libraries/l;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/Activity;
-
-    :goto_c
+    .line 693
+    :goto_6
     return-object v0
 
-    :cond_d
-    const/4 v0, 0x0
-
-    goto :goto_c
-.end method
-
-.method public getPreferences()Lcom/chartboost/sdk/CBPreferences;
-    .registers 2
-
-    .prologue
-    .line 134
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    return-object v0
-.end method
-
-.method protected getValidContext()Landroid/content/Context;
-    .registers 2
-
-    .prologue
-    .line 996
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    if-eqz v0, :cond_b
-
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/Libraries/l;->b()Landroid/content/Context;
-
-    move-result-object v0
-
-    :goto_a
-    return-object v0
-
-    :cond_b
+    .line 683
+    :cond_7
     invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    goto :goto_a
+    invoke-static {v0}, Lcom/chartboost/sdk/Libraries/d;->c(Landroid/content/Context;)Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    move-result-object v0
+
+    .line 684
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->orientation()Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    move-result-object v1
+
+    .line 686
+    sget-object v2, Lcom/chartboost/sdk/Libraries/CBOrientation;->UNSPECIFIED:Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    if-eq v1, v2, :cond_19
+
+    if-ne v1, v0, :cond_1c
+
+    .line 687
+    :cond_19
+    sget-object v0, Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;->ANGLE_0:Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;
+
+    goto :goto_6
+
+    .line 688
+    :cond_1c
+    invoke-virtual {v0}, Lcom/chartboost/sdk/Libraries/CBOrientation;->rotate90()Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_25
+
+    .line 689
+    sget-object v0, Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;->ANGLE_90:Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;
+
+    goto :goto_6
+
+    .line 690
+    :cond_25
+    invoke-virtual {v0}, Lcom/chartboost/sdk/Libraries/CBOrientation;->rotate180()Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    move-result-object v0
+
+    if-ne v1, v0, :cond_2e
+
+    .line 691
+    sget-object v0, Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;->ANGLE_180:Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;
+
+    goto :goto_6
+
+    .line 693
+    :cond_2e
+    sget-object v0, Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;->ANGLE_270:Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;
+
+    goto :goto_6
+.end method
+
+.method public getImpressionsUseActivities()Z
+    .registers 2
+
+    .prologue
+    .line 608
+    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->q:Z
+
+    return v0
+.end method
+
+.method public getTimeout()I
+    .registers 2
+
+    .prologue
+    .line 562
+    iget v0, p0, Lcom/chartboost/sdk/Chartboost;->p:I
+
+    return v0
 .end method
 
 .method public hasCachedInterstitial()Z
     .registers 2
 
     .prologue
-    .line 771
+    .line 502
     const-string v0, "Default"
 
     invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->hasCachedInterstitial(Ljava/lang/String;)Z
@@ -1819,32 +2317,98 @@
 .end method
 
 .method public hasCachedInterstitial(Ljava/lang/String;)Z
-    .registers 3
+    .registers 9
     .param p1, "location"    # Ljava/lang/String;
 
     .prologue
-    .line 785
-    invoke-static {}, Lcom/chartboost/sdk/impl/ab;->e()Lcom/chartboost/sdk/impl/ab;
+    const/4 v1, 0x0
+
+    .line 516
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->j:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/impl/ab;->c(Ljava/lang/String;)Z
+    check-cast v0, Lcom/chartboost/sdk/impl/a;
 
-    move-result v0
+    .line 517
+    if-nez v0, :cond_c
 
-    return v0
+    .line 520
+    :goto_b
+    return v1
+
+    .line 519
+    :cond_c
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v3, Ljava/util/Date;
+
+    invoke-direct {v3}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {v3}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v3
+
+    iget-object v0, v0, Lcom/chartboost/sdk/impl/a;->b:Ljava/util/Date;
+
+    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v5
+
+    sub-long/2addr v3, v5
+
+    invoke-virtual {v2, v3, v4}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+
+    move-result-wide v2
+
+    .line 520
+    const-wide/32 v4, 0x15180
+
+    cmp-long v0, v2, v4
+
+    if-gez v0, :cond_2c
+
+    const/4 v0, 0x1
+
+    :goto_2a
+    move v1, v0
+
+    goto :goto_b
+
+    :cond_2c
+    move v0, v1
+
+    goto :goto_2a
 .end method
 
 .method public hasCachedMoreApps()Z
     .registers 2
 
     .prologue
-    .line 778
-    invoke-static {}, Lcom/chartboost/sdk/impl/as;->e()Lcom/chartboost/sdk/impl/as;
+    .line 509
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->k:Lcom/chartboost/sdk/impl/a;
 
-    move-result-object v0
+    if-eqz v0, :cond_6
 
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/as;->h()Z
+    const/4 v0, 0x1
+
+    :goto_5
+    return v0
+
+    :cond_6
+    const/4 v0, 0x0
+
+    goto :goto_5
+.end method
+
+.method public isIdentityTrackingDisabledOnThisDevice()Z
+    .registers 2
+
+    .prologue
+    .line 643
+    invoke-static {}, Lcom/chartboost/sdk/Libraries/d;->c()Z
 
     move-result v0
 
@@ -1857,17 +2421,29 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 540
-    const-string v1, "onBackPressed()"
+    .line 349
+    invoke-static {}, Lcom/chartboost/sdk/Libraries/d;->d()Z
 
-    invoke-direct {p0, v1}, Lcom/chartboost/sdk/Chartboost;->a(Ljava/lang/String;)V
+    move-result v1
 
-    .line 541
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    if-nez v1, :cond_f
 
-    if-nez v1, :cond_12
+    .line 350
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 542
+    const-string v1, "It is illegal to call this method from any thread other than the UI thread. Please call it from the onBackPressed() method of your host activity."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 352
+    :cond_f
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    if-nez v1, :cond_1b
+
+    .line 353
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "The Chartboost methods onCreate(), onStart(), onStop(), and onDestroy() must be called in the corresponding methods of your activity in order for Chartboost to function properly."
@@ -1876,55 +2452,112 @@
 
     throw v0
 
-    .line 545
-    :cond_12
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
+    .line 356
+    :cond_1b
+    iget-boolean v1, p0, Lcom/chartboost/sdk/Chartboost;->q:Z
 
-    invoke-virtual {v1}, Lcom/chartboost/sdk/CBPreferences;->getImpressionsUseActivities()Z
+    if-eqz v1, :cond_2a
 
-    move-result v1
+    .line 357
+    iget-boolean v1, p0, Lcom/chartboost/sdk/Chartboost;->y:Z
 
-    if-eqz v1, :cond_25
+    if-eqz v1, :cond_29
 
-    .line 546
-    iget-boolean v1, p0, Lcom/chartboost/sdk/Chartboost;->p:Z
+    .line 358
+    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->y:Z
 
-    if-eqz v1, :cond_24
+    .line 359
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->a()Z
 
-    .line 547
-    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->p:Z
-
-    .line 548
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->b()Z
-
-    .line 549
+    .line 360
     const/4 v0, 0x1
 
-    .line 554
-    :cond_24
-    :goto_24
+    .line 365
+    :cond_29
+    :goto_29
     return v0
 
-    :cond_25
-    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->b()Z
+    :cond_2a
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->a()Z
 
     move-result v0
 
-    goto :goto_24
+    goto :goto_29
 .end method
 
 .method public onCreate(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/chartboost/sdk/ChartboostDelegate;)V
-    .registers 5
+    .registers 7
     .param p1, "activity"    # Landroid/app/Activity;
     .param p2, "appId"    # Ljava/lang/String;
     .param p3, "appSignature"    # Ljava/lang/String;
     .param p4, "chartBoostDelegate"    # Lcom/chartboost/sdk/ChartboostDelegate;
 
     .prologue
+    .line 162
+    invoke-static {}, Lcom/chartboost/sdk/Libraries/d;->d()Z
+
+    move-result v0
+
+    if-nez v0, :cond_e
+
+    .line 163
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "It is illegal to call this method from any thread other than the UI thread. Please call it from the onCreate() method of your host activity."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 167
+    :cond_e
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    if-eqz v0, :cond_27
+
+    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->d()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_27
+
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    if-eq v0, p1, :cond_27
+
+    .line 168
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->onStop(Landroid/app/Activity;)V
+
+    .line 169
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, v1}, Lcom/chartboost/sdk/Chartboost;->a(Landroid/app/Activity;Z)V
+
+    .line 172
+    :cond_27
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->z:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 175
+    invoke-direct {p0, p1}, Lcom/chartboost/sdk/Chartboost;->c(Landroid/app/Activity;)V
+
+    .line 178
+    invoke-virtual {p0, p2}, Lcom/chartboost/sdk/Chartboost;->setAppID(Ljava/lang/String;)V
+
     .line 179
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/chartboost/sdk/Chartboost;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/chartboost/sdk/ChartboostDelegate;)V
+    invoke-virtual {p0, p3}, Lcom/chartboost/sdk/Chartboost;->setAppSignature(Ljava/lang/String;)V
 
     .line 180
+    invoke-virtual {p0, p4}, Lcom/chartboost/sdk/Chartboost;->setDelegate(Lcom/chartboost/sdk/ChartboostDelegate;)V
+
+    .line 181
     return-void
 .end method
 
@@ -1933,50 +2566,16 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 632
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    .line 385
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Landroid/os/Handler;
 
-    if-eqz v0, :cond_c
-
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/Libraries/l;->b(Landroid/app/Activity;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_24
-
-    .line 633
-    :cond_c
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->b:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->r:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 634
-    new-instance v0, Lcom/chartboost/sdk/Chartboost$b;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lcom/chartboost/sdk/Chartboost$b;-><init>(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$1;)V
-
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->r:Ljava/lang/Runnable;
-
-    .line 635
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->b:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->r:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->z:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x2710
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 638
-    :cond_24
-    invoke-virtual {p0, p1}, Lcom/chartboost/sdk/Chartboost;->b(Landroid/app/Activity;)V
-
-    .line 654
+    .line 386
     return-void
 .end method
 
@@ -1985,263 +2584,301 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 317
-    const-string v0, "onStart()"
+    .line 241
+    invoke-static {}, Lcom/chartboost/sdk/Libraries/d;->d()Z
 
-    invoke-direct {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Ljava/lang/String;)V
+    move-result v0
 
-    .line 319
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->b:Landroid/os/Handler;
+    if-nez v0, :cond_e
 
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->r:Ljava/lang/Runnable;
+    .line 242
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "It is illegal to call this method from any thread other than the UI thread. Please call it from the onStart() method of your host activity."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 245
+    :cond_e
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->z:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 322
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    if-eqz v0, :cond_29
-
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/Libraries/l;->b(Landroid/app/Activity;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_29
-
-    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_29
-
-    .line 323
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    invoke-direct {p0, v0}, Lcom/chartboost/sdk/Chartboost;->e(Lcom/chartboost/sdk/Libraries/l;)V
-
-    .line 324
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/Libraries/l;Z)V
-
-    .line 327
-    :cond_29
+    .line 247
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/chartboost/sdk/Chartboost;->a(Landroid/app/Activity;Z)V
 
-    .line 328
-    invoke-static {p1}, Lcom/chartboost/sdk/Libraries/l;->a(Landroid/app/Activity;)Lcom/chartboost/sdk/Libraries/l;
+    .line 248
+    invoke-direct {p0, p1}, Lcom/chartboost/sdk/Chartboost;->c(Landroid/app/Activity;)V
 
-    move-result-object v0
+    .line 250
+    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->q:Z
 
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    if-nez v0, :cond_23
 
-    .line 329
-    invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
-
-    .line 331
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/CBPreferences;->getImpressionsUseActivities()Z
-
-    move-result v0
-
-    if-nez v0, :cond_44
-
-    .line 332
+    .line 251
     invoke-virtual {p0, p1}, Lcom/chartboost/sdk/Chartboost;->a(Landroid/app/Activity;)V
 
-    .line 335
-    :cond_44
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/ax;
-
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->d:Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/impl/ax;->b(Landroid/content/Context;)Landroid/content/Intent;
-
-    .line 338
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->j:Lcom/chartboost/sdk/impl/l;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/l;->a()V
-
-    .line 339
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->i:Lcom/chartboost/sdk/impl/az;
-
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/az;->e()V
-
-    .line 341
-    invoke-direct {p0}, Lcom/chartboost/sdk/Chartboost;->g()V
-
-    .line 342
+    .line 252
+    :cond_23
     return-void
 .end method
 
 .method public onStop(Landroid/app/Activity;)V
-    .registers 4
+    .registers 6
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 472
-    const-string v0, "onStop()"
+    .line 310
+    invoke-static {}, Lcom/chartboost/sdk/Libraries/d;->d()Z
 
-    invoke-direct {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Ljava/lang/String;)V
+    move-result v0
 
-    .line 474
-    invoke-static {p1}, Lcom/chartboost/sdk/Libraries/l;->a(Landroid/app/Activity;)Lcom/chartboost/sdk/Libraries/l;
+    if-nez v0, :cond_e
 
-    move-result-object v0
+    .line 311
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 475
-    invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->a(Lcom/chartboost/sdk/Libraries/l;)Z
+    const-string v1, "It is illegal to call this method from any thread other than the UI thread. Please call it from the onStop() method of your host activity."
 
-    move-result v1
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v1, :cond_12
+    throw v0
 
-    .line 476
-    invoke-direct {p0, v0}, Lcom/chartboost/sdk/Chartboost;->e(Lcom/chartboost/sdk/Libraries/l;)V
+    .line 314
+    :cond_e
+    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->q:Z
 
-    .line 478
-    :cond_12
+    if-nez v0, :cond_15
+
+    .line 315
+    invoke-virtual {p0, p1}, Lcom/chartboost/sdk/Chartboost;->b(Landroid/app/Activity;)V
+
+    .line 317
+    :cond_15
+    instance-of v0, p1, Lcom/chartboost/sdk/CBImpressionActivity;
+
+    if-nez v0, :cond_1d
+
+    .line 318
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/chartboost/sdk/Chartboost;->a(Landroid/app/Activity;Z)V
+
+    .line 321
+    :cond_1d
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    long-to-double v0, v0
+
+    const-wide v2, 0x412e848000000000L    # 1000000.0
+
+    div-double/2addr v0, v2
+
+    double-to-long v0, v0
+
+    iput-wide v0, p0, Lcom/chartboost/sdk/Chartboost;->x:J
+
+    .line 322
     return-void
 .end method
 
-.method public setFramework(Ljava/lang/String;)V
-    .registers 7
-    .param p1, "framework"    # Ljava/lang/String;
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+.method public orientation()Lcom/chartboost/sdk/Libraries/CBOrientation;
+    .registers 3
 
     .prologue
-    const/4 v4, 0x1
+    .line 662
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getContext()Landroid/content/Context;
 
-    .line 1035
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    move-result-object v0
 
-    move-result v0
+    if-nez v0, :cond_e
 
-    if-eqz v0, :cond_e
+    .line 663
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 1036
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
+    const-string v1, "The context must be set through the Chartboost method onCreate() before calling orientation()."
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/CBPreferences;->setUserAgentSuffix(Ljava/lang/String;)V
+    throw v0
 
-    .line 1042
-    :goto_d
+    .line 665
+    :cond_e
+    iget-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->s:Z
+
+    if-eqz v0, :cond_1b
+
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->r:Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    sget-object v1, Lcom/chartboost/sdk/Libraries/CBOrientation;->UNSPECIFIED:Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    if-eq v0, v1, :cond_1b
+
+    .line 666
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->r:Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    .line 668
+    :goto_1a
+    return-object v0
+
+    :cond_1b
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/chartboost/sdk/Libraries/d;->c(Landroid/content/Context;)Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    move-result-object v0
+
+    goto :goto_1a
+.end method
+
+.method public setAppID(Ljava/lang/String;)V
+    .registers 2
+    .param p1, "appId"    # Ljava/lang/String;
+
+    .prologue
+    .line 578
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->m:Ljava/lang/String;
+
+    .line 579
+    return-void
+.end method
+
+.method public setAppSignature(Ljava/lang/String;)V
+    .registers 2
+    .param p1, "appSignature"    # Ljava/lang/String;
+
+    .prologue
+    .line 589
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->n:Ljava/lang/String;
+
+    .line 590
+    return-void
+.end method
+
+.method public setDelegate(Lcom/chartboost/sdk/ChartboostDelegate;)V
+    .registers 2
+    .param p1, "delegate"    # Lcom/chartboost/sdk/ChartboostDelegate;
+
+    .prologue
+    .line 600
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->o:Lcom/chartboost/sdk/ChartboostDelegate;
+
+    .line 601
+    return-void
+.end method
+
+.method public setIdentityTrackingDisabledOnThisDevice(Z)V
+    .registers 4
+    .param p1, "disabled"    # Z
+
+    .prologue
+    .line 631
+    invoke-static {}, Lcom/chartboost/sdk/Libraries/d;->a()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 632
+    const-string v1, "cbIdentityTrackingDisabled"
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    .line 633
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 634
+    return-void
+.end method
+
+.method public setImpressionsUseActivities(Z)V
+    .registers 2
+    .param p1, "impressionsUseActivities"    # Z
+
+    .prologue
+    .line 621
+    iput-boolean p1, p0, Lcom/chartboost/sdk/Chartboost;->q:Z
+
+    .line 622
+    return-void
+.end method
+
+.method public setOrientation(Lcom/chartboost/sdk/Libraries/CBOrientation;)V
+    .registers 3
+    .param p1, "_orientation"    # Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    .prologue
+    .line 653
+    sget-object v0, Lcom/chartboost/sdk/Libraries/CBOrientation;->UNSPECIFIED:Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    if-eq p1, v0, :cond_a
+
+    const/4 v0, 0x1
+
+    :goto_5
+    iput-boolean v0, p0, Lcom/chartboost/sdk/Chartboost;->s:Z
+
+    .line 654
+    iput-object p1, p0, Lcom/chartboost/sdk/Chartboost;->r:Lcom/chartboost/sdk/Libraries/CBOrientation;
+
+    .line 655
     return-void
 
-    .line 1037
-    :cond_e
-    const-string v0, "-"
+    .line 653
+    :cond_a
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    goto :goto_5
+.end method
 
-    move-result v0
+.method public setTimeout(I)V
+    .registers 2
+    .param p1, "timeout"    # I
 
-    if-eqz v0, :cond_1c
+    .prologue
+    .line 567
+    iput p1, p0, Lcom/chartboost/sdk/Chartboost;->p:I
 
-    .line 1038
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/CBPreferences;->setUserAgentSuffix(Ljava/lang/String;)V
-
-    goto :goto_d
-
-    .line 1040
-    :cond_1c
-    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->g:Lcom/chartboost/sdk/CBPreferences;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "-"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v2
-
-    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-le v0, v4, :cond_4e
-
-    invoke-virtual {p1, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_42
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/chartboost/sdk/CBPreferences;->setUserAgentSuffix(Ljava/lang/String;)V
-
-    goto :goto_d
-
-    :cond_4e
-    const-string v0, ""
-
-    goto :goto_42
+    .line 568
+    return-void
 .end method
 
 .method public showInterstitial()V
     .registers 2
 
     .prologue
-    .line 742
+    .line 459
     const-string v0, "Default"
 
     invoke-virtual {p0, v0}, Lcom/chartboost/sdk/Chartboost;->showInterstitial(Ljava/lang/String;)V
 
-    .line 743
+    .line 460
     return-void
 .end method
 
 .method public showInterstitial(Ljava/lang/String;)V
-    .registers 4
+    .registers 5
     .param p1, "location"    # Ljava/lang/String;
 
     .prologue
-    .line 751
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    .line 467
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
     if-nez v0, :cond_c
 
-    .line 752
+    .line 468
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "The context must be set through the Chartboost method onCreate() before calling showInterstitial()."
@@ -2250,28 +2887,70 @@
 
     throw v0
 
-    .line 755
+    .line 471
     :cond_c
-    invoke-static {}, Lcom/chartboost/sdk/impl/ab;->e()Lcom/chartboost/sdk/impl/ab;
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/chartboost/sdk/impl/ab;->a(Ljava/lang/String;)V
+    if-eqz v0, :cond_2b
 
-    .line 756
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getDelegate()Lcom/chartboost/sdk/ChartboostDelegate;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/chartboost/sdk/ChartboostDelegate;->shouldRequestInterstitialsInFirstSession()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2b
+
+    .line 472
+    invoke-static {}, Lcom/chartboost/sdk/Libraries/d;->a()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "cbPrefSessionCount"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    .line 473
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_2b
+
+    .line 479
+    :goto_2a
     return-void
+
+    .line 477
+    :cond_2b
+    new-instance v0, Lcom/chartboost/sdk/Chartboost$b;
+
+    invoke-direct {v0, p0, p1}, Lcom/chartboost/sdk/Chartboost$b;-><init>(Lcom/chartboost/sdk/Chartboost;Ljava/lang/String;)V
+
+    .line 478
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->a:Landroid/os/Handler;
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    goto :goto_2a
 .end method
 
 .method public showMoreApps()V
     .registers 3
 
     .prologue
-    .line 804
-    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->a:Lcom/chartboost/sdk/Libraries/l;
+    .line 538
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
 
     if-nez v0, :cond_c
 
-    .line 805
+    .line 539
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "The context must be set through the Chartboost method onCreate() before calling showMoreApps()."
@@ -2280,34 +2959,137 @@
 
     throw v0
 
-    .line 808
+    .line 542
     :cond_c
-    invoke-static {}, Lcom/chartboost/sdk/impl/as;->e()Lcom/chartboost/sdk/impl/as;
+    new-instance v0, Lcom/chartboost/sdk/Chartboost$c;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lcom/chartboost/sdk/impl/as;->f()V
+    invoke-direct {v0, p0, v1}, Lcom/chartboost/sdk/Chartboost$c;-><init>(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$c;)V
 
-    .line 809
-    return-void
-.end method
+    .line 543
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->a:Landroid/os/Handler;
 
-.method public showMoreAppsData(Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
-    .registers 2
-    .param p1, "callback"    # Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .prologue
-    .line 816
-    invoke-static {p1}, Lcom/chartboost/sdk/e;->a(Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
-
-    .line 817
+    .line 544
     return-void
 .end method
 
 .method public startSession()V
-    .registers 1
+    .registers 5
 
     .prologue
-    .line 147
+    .line 107
+    iget-object v0, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    if-nez v0, :cond_c
+
+    .line 108
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "The context must be set through the Chartboost method onCreate() before calling startSession()."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 112
+    :cond_c
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    long-to-double v0, v0
+
+    const-wide v2, 0x412e848000000000L    # 1000000.0
+
+    div-double/2addr v0, v2
+
+    double-to-long v0, v0
+
+    .line 113
+    iget-wide v2, p0, Lcom/chartboost/sdk/Chartboost;->x:J
+
+    sub-long/2addr v0, v2
+
+    const-wide/16 v2, 0x2710
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_22
+
+    .line 141
+    :goto_21
     return-void
+
+    .line 116
+    :cond_22
+    invoke-static {}, Lcom/chartboost/sdk/Libraries/d;->a()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 117
+    const-string v1, "cbPrefSessionCount"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    .line 118
+    add-int/lit8 v1, v1, 0x1
+
+    .line 119
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 120
+    const-string v2, "cbPrefSessionCount"
+
+    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 121
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 123
+    new-instance v0, Lcom/chartboost/sdk/impl/k;
+
+    const-string v1, "api"
+
+    const-string v2, "install"
+
+    invoke-direct {v0, v1, v2}, Lcom/chartboost/sdk/impl/k;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 124
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->f:Landroid/app/Activity;
+
+    invoke-virtual {v0, v1}, Lcom/chartboost/sdk/impl/k;->a(Landroid/content/Context;)V
+
+    .line 125
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getAppID()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/chartboost/sdk/Chartboost;->getAppSignature()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/chartboost/sdk/impl/k;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 126
+    new-instance v1, Lcom/chartboost/sdk/Chartboost$4;
+
+    invoke-direct {v1, p0}, Lcom/chartboost/sdk/Chartboost$4;-><init>(Lcom/chartboost/sdk/Chartboost;)V
+
+    iput-object v1, v0, Lcom/chartboost/sdk/impl/k;->h:Lcom/chartboost/sdk/impl/k$a;
+
+    .line 140
+    iget-object v1, p0, Lcom/chartboost/sdk/Chartboost;->h:Lcom/chartboost/sdk/impl/j;
+
+    invoke-virtual {v1, v0}, Lcom/chartboost/sdk/impl/j;->a(Lcom/chartboost/sdk/impl/k;)V
+
+    goto :goto_21
 .end method

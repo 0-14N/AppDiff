@@ -578,7 +578,9 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 6
+    .registers 7
+
+    const/4 v4, 0x0
 
     const/4 v3, 0x1
 
@@ -686,9 +688,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/actionbarsherlock/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
+    invoke-virtual {v0, v4}, Lcom/actionbarsherlock/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
 
     invoke-virtual {p0}, Lcom/ccwang/flashstory/MainFragmentActivity;->getSupportActionBar()Lcom/actionbarsherlock/app/ActionBar;
 
@@ -718,38 +718,45 @@
 
     invoke-virtual {v0, v1}, Lcom/actionbarsherlock/app/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    new-instance v0, Lcom/google/ads/h;
-
-    sget-object v1, Lcom/google/ads/g;->b:Lcom/google/ads/g;
-
-    const-string v2, "a1525f3ddd677ac"
-
-    invoke-direct {v0, p0, v1, v2}, Lcom/google/ads/h;-><init>(Landroid/app/Activity;Lcom/google/ads/g;Ljava/lang/String;)V
-
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x2
-
-    invoke-direct {v1, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/16 v2, 0x55
-
-    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    invoke-virtual {p0, v0, v1}, Lcom/ccwang/flashstory/MainFragmentActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v1, Lcom/google/ads/d;
-
-    invoke-direct {v1}, Lcom/google/ads/d;-><init>()V
-
-    invoke-virtual {v0, v1}, Lcom/google/ads/h;->a(Lcom/google/ads/d;)V
-
     invoke-virtual {p0}, Lcom/ccwang/flashstory/MainFragmentActivity;->c()V
 
     invoke-virtual {p0}, Lcom/ccwang/flashstory/MainFragmentActivity;->d()V
 
+    const-string v0, "CFG"
+
+    invoke-virtual {p0, v0, v4}, Lcom/ccwang/flashstory/MainFragmentActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "SHOWADBAR"
+
+    invoke-interface {v0, v1, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-lez v0, :cond_c8
+
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v1, -0x1
+
+    const/4 v2, -0x2
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    const/16 v1, 0x55
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    new-instance v1, Lcom/ccwang/flash/parent/banner/AdView;
+
+    sget-object v2, Lcom/ccwang/flash/parent/banner/AdSize;->FIT_SCREEN:Lcom/ccwang/flash/parent/banner/AdSize;
+
+    invoke-direct {v1, p0, v2}, Lcom/ccwang/flash/parent/banner/AdView;-><init>(Landroid/content/Context;Lcom/ccwang/flash/parent/banner/AdSize;)V
+
+    invoke-virtual {p0, v1, v0}, Lcom/ccwang/flashstory/MainFragmentActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_c8
     return-void
 .end method
 

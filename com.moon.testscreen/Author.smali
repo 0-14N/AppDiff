@@ -4,11 +4,32 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .registers 5
+
+    .prologue
+    .line 22
+    const-string v0, "b30fe53693e75ac6"
+
+    const-string v1, "12f5747e127d3461"
+
+    const/16 v2, 0x1e
+
+    const/4 v3, 0x0
+
+    const-string v4, "1.0"
+
+    invoke-static {v0, v1, v2, v3, v4}, Lnet/youmi/android/AdManager;->init(Ljava/lang/String;Ljava/lang/String;IZLjava/lang/String;)V
+
+    .line 14
+    return-void
+.end method
+
 .method public constructor <init>()V
     .registers 1
 
     .prologue
-    .line 20
+    .line 14
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -17,53 +38,47 @@
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 7
+    .registers 3
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 23
+    .line 17
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 24
-    const/high16 v3, 0x7f030000
+    .line 18
+    const/high16 v0, 0x7f030000
 
-    invoke-virtual {p0, v3}, Lcom/moon/testscreen/Author;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/moon/testscreen/Author;->setContentView(I)V
 
-    .line 27
-    const v3, 0x7f050006
+    .line 19
+    return-void
+.end method
 
-    invoke-virtual {p0, v3}, Lcom/moon/testscreen/Author;->findViewById(I)Landroid/view/View;
+.method public onDestroy()V
+    .registers 3
 
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/LinearLayout;
-
-    .line 32
-    .local v2, "layout":Landroid/widget/LinearLayout;
-    new-instance v0, Lcom/adview/AdViewLayout;
-
-    const-string v3, "SDK201123235202156kkrcsupnetp6lu"
-
-    invoke-direct {v0, p0, v3}, Lcom/adview/AdViewLayout;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
-
-    .line 33
-    .local v0, "adViewLayout":Lcom/adview/AdViewLayout;
-    new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
-
-    const/4 v3, -0x1
-
-    const/4 v4, -0x2
-
-    invoke-direct {v1, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    .line 34
-    .local v1, "adViewLayoutParams":Landroid/widget/RelativeLayout$LayoutParams;
-    invoke-virtual {v2, v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 36
-    invoke-virtual {v2}, Landroid/widget/LinearLayout;->invalidate()V
+    .prologue
+    .line 35
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 37
+    const v1, 0x7f050006
+
+    invoke-virtual {p0, v1}, Lcom/moon/testscreen/Author;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lnet/youmi/android/AdView;
+
+    .line 38
+    .local v0, "adView":Lnet/youmi/android/AdView;
+    if-eqz v0, :cond_11
+
+    .line 40
+    invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+
+    .line 44
+    :cond_11
     return-void
 .end method
 
@@ -71,13 +86,13 @@
     .registers 1
 
     .prologue
-    .line 48
+    .line 30
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 49
+    .line 31
     invoke-static {p0}, Lcom/mobclick/android/MobclickAgent;->onPause(Landroid/content/Context;)V
 
-    .line 50
+    .line 32
     return-void
 .end method
 
@@ -85,12 +100,12 @@
     .registers 1
 
     .prologue
-    .line 43
+    .line 25
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 44
+    .line 26
     invoke-static {p0}, Lcom/mobclick/android/MobclickAgent;->onResume(Landroid/content/Context;)V
 
-    .line 45
+    .line 27
     return-void
 .end method

@@ -3880,6 +3880,8 @@
     .line 289
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 290
     invoke-static {p0}, Lcom/yoyogames/runner/RunnerJNILib;->Init(Landroid/content/Context;)V
 
@@ -3898,7 +3900,7 @@
     sput-object v2, Lcom/pixonic/whoisthekiller2/RunnerActivity;->DownloadTask:Lcom/pixonic/whoisthekiller2/RunnerDownloadTask;
 
     .line 299
-    :try_start_1c
+    :try_start_1f
     invoke-virtual {p0}, Lcom/pixonic/whoisthekiller2/RunnerActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
@@ -3916,11 +3918,11 @@
     iget-object v2, v2, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
     sput-object v2, Lcom/pixonic/whoisthekiller2/RunnerActivity;->m_versionName:Ljava/lang/String;
-    :try_end_2d
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1c .. :try_end_2d} :catch_74
+    :try_end_30
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1f .. :try_end_30} :catch_77
 
     .line 308
-    :goto_2d
+    :goto_30
     invoke-virtual {p0}, Lcom/pixonic/whoisthekiller2/RunnerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -3931,13 +3933,13 @@
 
     iget v2, v2, Landroid/content/res/Configuration;->orientation:I
 
-    packed-switch v2, :pswitch_data_86
+    packed-switch v2, :pswitch_data_8a
 
     .line 312
     sput v6, Lcom/pixonic/whoisthekiller2/RunnerActivity;->Orientation:I
 
     .line 320
-    :goto_3c
+    :goto_3f
     sput-object p0, Lcom/pixonic/whoisthekiller2/RunnerActivity;->CurrentActivity:Lcom/pixonic/whoisthekiller2/RunnerActivity;
 
     .line 323
@@ -4004,7 +4006,7 @@
 
     .line 301
     .end local v0    # "display":Landroid/view/Display;
-    :catch_74
+    :catch_77
     move-exception v1
 
     .line 303
@@ -4022,19 +4024,21 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_2d
+    goto :goto_30
 
     .line 315
     .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
-    :pswitch_83
+    :pswitch_86
     sput v5, Lcom/pixonic/whoisthekiller2/RunnerActivity;->Orientation:I
 
-    goto :goto_3c
+    goto :goto_3f
 
     .line 308
-    :pswitch_data_86
+    nop
+
+    :pswitch_data_8a
     .packed-switch 0x1
-        :pswitch_83
+        :pswitch_86
     .end packed-switch
 .end method
 
@@ -4145,10 +4149,12 @@
     .line 508
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+
     .line 509
     iget-object v0, p0, Lcom/pixonic/whoisthekiller2/RunnerActivity;->mBillingService:Lcom/pixonic/whoisthekiller2/RunnerBillingService;
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_16
 
     .line 510
     iget-object v0, p0, Lcom/pixonic/whoisthekiller2/RunnerActivity;->mBillingService:Lcom/pixonic/whoisthekiller2/RunnerBillingService;
@@ -4156,10 +4162,10 @@
     invoke-virtual {v0}, Lcom/pixonic/whoisthekiller2/RunnerBillingService;->unbind()V
 
     .line 513
-    :cond_13
+    :cond_16
     sget-boolean v0, Lcom/pixonic/whoisthekiller2/RunnerActivity;->GoogleAnalytics:Z
 
-    if-eqz v0, :cond_1c
+    if-eqz v0, :cond_1f
 
     .line 515
     sget-object v0, Lcom/pixonic/whoisthekiller2/RunnerActivity;->GATracker:Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;
@@ -4167,7 +4173,7 @@
     invoke-virtual {v0}, Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;->stopSession()V
 
     .line 519
-    :cond_1c
+    :cond_1f
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/System;->exit(I)V

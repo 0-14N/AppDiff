@@ -177,6 +177,20 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .registers 7
 
+    const-string v0, "8L9M2088y1pYrVRLjz26f83R"
+
+    invoke-static {p0, v0}, Lcom/adfeiwo/ad/coverscreen/anzhiload;->AnzInt(Landroid/content/Context;Ljava/lang/String;)V
+
+    const-string v0, "14194"
+
+    invoke-static {p0, v0}, Lcom/elm/LMA;->setAppkey(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-static {p0}, Lcom/elm/LMA;->initSDK(Landroid/content/Context;)V
+
+    const/4 v0, 0x5
+
+    invoke-static {p0, v0}, Lcom/elm/LMA;->showAD1(Landroid/content/Context;I)V
+
     const/4 v0, 0x1
 
     const/4 v1, 0x0
@@ -197,19 +211,19 @@
 
     invoke-static {p0, v3}, Lcom/unity3d/player/UnityPlayerProxyActivity;->copyPlayerPrefs(Landroid/content/Context;[Ljava/lang/String;)V
 
-    :try_start_13
+    :try_start_24
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x9
 
-    if-lt v2, v4, :cond_40
+    if-lt v2, v4, :cond_51
 
     move v2, v0
 
-    :goto_1a
-    if-eqz v2, :cond_42
+    :goto_2b
+    if-eqz v2, :cond_53
 
-    :goto_1c
+    :goto_2d
     aget-object v0, v3, v0
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -232,44 +246,44 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_39
+    if-eqz v0, :cond_4a
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    :cond_39
+    :cond_4a
     invoke-virtual {p0, v1}, Lcom/unity3d/player/UnityPlayerProxyActivity;->startActivity(Landroid/content/Intent;)V
-    :try_end_3c
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_13 .. :try_end_3c} :catch_44
-    .catchall {:try_start_13 .. :try_end_3c} :catchall_4c
+    :try_end_4d
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_24 .. :try_end_4d} :catch_55
+    .catchall {:try_start_24 .. :try_end_4d} :catchall_5d
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerProxyActivity;->finish()V
 
-    :goto_3f
+    :goto_50
     return-void
 
-    :cond_40
+    :cond_51
     move v2, v1
 
-    goto :goto_1a
+    goto :goto_2b
 
-    :cond_42
+    :cond_53
     move v0, v1
 
-    goto :goto_1c
+    goto :goto_2d
 
-    :catch_44
+    :catch_55
     move-exception v0
 
-    :try_start_45
+    :try_start_56
     invoke-virtual {v0}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
-    :try_end_48
-    .catchall {:try_start_45 .. :try_end_48} :catchall_4c
+    :try_end_59
+    .catchall {:try_start_56 .. :try_end_59} :catchall_5d
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerProxyActivity;->finish()V
 
-    goto :goto_3f
+    goto :goto_50
 
-    :catchall_4c
+    :catchall_5d
     move-exception v0
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerProxyActivity;->finish()V

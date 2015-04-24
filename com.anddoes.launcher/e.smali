@@ -1217,7 +1217,7 @@
     .prologue
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    return v0
 
     .line 102
     iget-object v2, p0, Lcom/anddoes/launcher/c/e;->c:Lcom/anddoes/launcher/preference/f;

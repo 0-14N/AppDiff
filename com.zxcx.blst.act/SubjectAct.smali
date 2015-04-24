@@ -47,7 +47,7 @@
 
 .field private iv_title_bar_right:Landroid/widget/ImageButton;
 
-.field private mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+.field private mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
 .field private page:I
 
@@ -110,12 +110,12 @@
     return-void
 .end method
 
-.method static synthetic access$0(Lcom/zxcx/blst/act/SubjectAct;)Lcom/zxcx/blst/custom/widget/RefreshableListView;
+.method static synthetic access$0(Lcom/zxcx/blst/act/SubjectAct;)Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
     .registers 2
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     return-object v0
 .end method
@@ -230,12 +230,12 @@
     return-void
 .end method
 
-.method static synthetic access$8(Lcom/zxcx/blst/act/SubjectAct;)V
-    .registers 1
+.method static synthetic access$8(Lcom/zxcx/blst/act/SubjectAct;Z)V
+    .registers 2
 
     .prologue
-    .line 141
-    invoke-direct {p0}, Lcom/zxcx/blst/act/SubjectAct;->getData()V
+    .line 142
+    invoke-direct {p0, p1}, Lcom/zxcx/blst/act/SubjectAct;->getData(Z)V
 
     return-void
 .end method
@@ -250,71 +250,79 @@
     return-void
 .end method
 
-.method private getData()V
-    .registers 3
+.method private getData(Z)V
+    .registers 4
+    .param p1, "isPull"    # Z
 
     .prologue
-    .line 143
+    .line 144
     new-instance v0, Lcom/zxcx/blst/act/SubjectAct$5;
 
-    invoke-direct {v0, p0}, Lcom/zxcx/blst/act/SubjectAct$5;-><init>(Lcom/zxcx/blst/act/SubjectAct;)V
+    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/SubjectAct$5;-><init>(Lcom/zxcx/blst/act/SubjectAct;Z)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 221
+    .line 223
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/SubjectAct$5;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 222
+    .line 224
     return-void
 .end method
 
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .registers 3
+    .registers 4
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 227
+    const/4 v1, 0x0
+
+    .line 229
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_18
+    packed-switch v0, :pswitch_data_1e
 
-    .line 240
-    :goto_7
+    .line 243
+    :goto_8
     return-void
 
-    .line 229
-    :pswitch_8
-    const/4 v0, 0x0
+    .line 231
+    :pswitch_9
+    iput v1, p0, Lcom/zxcx/blst/act/SubjectAct;->page:I
 
-    iput v0, p0, Lcom/zxcx/blst/act/SubjectAct;->page:I
-
-    .line 230
+    .line 232
     iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->dataList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 231
-    invoke-direct {p0}, Lcom/zxcx/blst/act/SubjectAct;->getData()V
+    .line 233
+    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->infoTopList:Ljava/util/List;
 
-    goto :goto_7
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 234
-    :pswitch_14
+    invoke-direct {p0, v1}, Lcom/zxcx/blst/act/SubjectAct;->getData(Z)V
+
+    goto :goto_8
+
+    .line 237
+    :pswitch_19
     invoke-virtual {p0}, Lcom/zxcx/blst/act/SubjectAct;->finish()V
 
-    goto :goto_7
+    goto :goto_8
 
-    .line 227
-    :pswitch_data_18
-    .packed-switch 0x7f080167
-        :pswitch_8
-        :pswitch_14
+    .line 229
+    nop
+
+    :pswitch_data_1e
+    .packed-switch 0x7f090180
+        :pswitch_9
+        :pswitch_19
     .end packed-switch
 .end method
 
@@ -327,7 +335,7 @@
     invoke-super {p0, p1}, Lcom/zxcx/blst/act/BaseAct;->onCreate(Landroid/os/Bundle;)V
 
     .line 75
-    const v0, 0x7f03006a
+    const v0, 0x7f030071
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SubjectAct;->setContentView(I)V
 
@@ -335,7 +343,9 @@
     invoke-virtual {p0}, Lcom/zxcx/blst/act/SubjectAct;->setupView()V
 
     .line 77
-    invoke-direct {p0}, Lcom/zxcx/blst/act/SubjectAct;->getData()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/zxcx/blst/act/SubjectAct;->getData(Z)V
 
     .line 78
     return-void
@@ -345,11 +355,9 @@
     .registers 7
 
     .prologue
-    const/4 v3, 0x0
-
     .line 82
     .line 83
-    const v0, 0x7f080168
+    const v0, 0x7f090181
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SubjectAct;->findViewById(I)Landroid/view/View;
 
@@ -361,7 +369,7 @@
     iput-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->iv_title_bar_left:Landroid/widget/ImageButton;
 
     .line 85
-    const v0, 0x7f080166
+    const v0, 0x7f09017f
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SubjectAct;->findViewById(I)Landroid/view/View;
 
@@ -373,7 +381,7 @@
     iput-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->tv_title_bar_center:Landroid/widget/TextView;
 
     .line 87
-    const v0, 0x7f080167
+    const v0, 0x7f090180
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SubjectAct;->findViewById(I)Landroid/view/View;
 
@@ -387,7 +395,9 @@
     .line 88
     iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->iv_title_bar_right:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
     .line 90
     iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->tv_title_bar_center:Landroid/widget/TextView;
@@ -407,20 +417,20 @@
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 95
-    const v0, 0x7f0800cb
+    const v0, 0x7f0900db
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SubjectAct;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    check-cast v0, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
-    iput-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    iput-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     .line 96
     iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->inflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f03007f
+    const v1, 0x7f030088
 
     const/4 v2, 0x0
 
@@ -431,48 +441,43 @@
     iput-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->headerView:Landroid/view/View;
 
     .line 97
-    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/SubjectAct;->headerView:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->addHeaderView(Landroid/view/View;)V
-
-    .line 98
-    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
-
-    invoke-virtual {v0, v3}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setCanPullRefresh(Z)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->addHeaderView(Landroid/view/View;)V
 
     .line 100
-    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     new-instance v1, Lcom/zxcx/blst/act/SubjectAct$2;
 
     invoke-direct {v1, p0}, Lcom/zxcx/blst/act/SubjectAct$2;-><init>(Lcom/zxcx/blst/act/SubjectAct;)V
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 115
-    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     new-instance v1, Lcom/zxcx/blst/act/SubjectAct$3;
 
     invoke-direct {v1, p0}, Lcom/zxcx/blst/act/SubjectAct$3;-><init>(Lcom/zxcx/blst/act/SubjectAct;)V
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnExplainListener;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnExplainListener;)V
 
     .line 125
-    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     new-instance v1, Lcom/zxcx/blst/act/SubjectAct$4;
 
     invoke-direct {v1, p0}, Lcom/zxcx/blst/act/SubjectAct$4;-><init>(Lcom/zxcx/blst/act/SubjectAct;)V
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnRefreshListener;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnRefreshListener;)V
 
-    .line 135
+    .line 136
     new-instance v0, Lcom/zxcx/blst/adapter/SubjectCommonActLvAdapter;
 
-    iget-object v2, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    iget-object v2, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v3, p0, Lcom/zxcx/blst/act/SubjectAct;->headerView:Landroid/view/View;
 
@@ -482,17 +487,17 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/zxcx/blst/adapter/SubjectCommonActLvAdapter;-><init>(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V
+    invoke-direct/range {v0 .. v5}, Lcom/zxcx/blst/adapter/SubjectCommonActLvAdapter;-><init>(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->adapterinformation:Lcom/zxcx/blst/adapter/SubjectCommonActLvAdapter;
 
-    .line 136
-    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 137
+    iget-object v0, p0, Lcom/zxcx/blst/act/SubjectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/SubjectAct;->adapterinformation:Lcom/zxcx/blst/adapter/SubjectCommonActLvAdapter;
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 138
+    .line 139
     return-void
 .end method

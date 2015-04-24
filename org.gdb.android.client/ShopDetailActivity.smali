@@ -30,11 +30,11 @@
 
 .field private K:Ljava/util/Stack;
 
-.field private L:Lorg/gdb/android/client/ma;
+.field private L:Lorg/gdb/android/client/lx;
 
 .field private M:Lorg/gdb/android/client/vo/ScanProductVO;
 
-.field private N:Lorg/gdb/android/client/ly;
+.field private N:Lorg/gdb/android/client/lv;
 
 .field private O:Lorg/gdb/android/client/remote/y;
 
@@ -50,7 +50,7 @@
 
 .field private U:Lorg/gdb/android/client/remote/y;
 
-.field b:Lorg/gdb/android/client/lz;
+.field b:Lorg/gdb/android/client/lw;
 
 .field private c:Landroid/widget/LinearLayout;
 
@@ -172,51 +172,51 @@
     iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->K:Ljava/util/Stack;
 
     .line 1420
-    new-instance v0, Lorg/gdb/android/client/ks;
+    new-instance v0, Lorg/gdb/android/client/kp;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/ks;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/kp;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->O:Lorg/gdb/android/client/remote/y;
 
     .line 1516
-    new-instance v0, Lorg/gdb/android/client/ld;
+    new-instance v0, Lorg/gdb/android/client/la;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/ld;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/la;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->P:Lorg/gdb/android/client/remote/y;
 
     .line 1542
-    new-instance v0, Lorg/gdb/android/client/lm;
+    new-instance v0, Lorg/gdb/android/client/lj;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/lm;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/lj;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->Q:Lorg/gdb/android/client/remote/y;
 
     .line 1564
-    new-instance v0, Lorg/gdb/android/client/ln;
+    new-instance v0, Lorg/gdb/android/client/lk;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/ln;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/lk;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->R:Lorg/gdb/android/client/remote/y;
 
     .line 1600
-    new-instance v0, Lorg/gdb/android/client/lo;
+    new-instance v0, Lorg/gdb/android/client/ll;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/lo;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/ll;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->S:Lorg/gdb/android/client/remote/y;
 
     .line 1619
-    new-instance v0, Lorg/gdb/android/client/lp;
+    new-instance v0, Lorg/gdb/android/client/lm;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/lp;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/lm;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->T:Lorg/gdb/android/client/remote/y;
 
     .line 1635
-    new-instance v0, Lorg/gdb/android/client/lq;
+    new-instance v0, Lorg/gdb/android/client/ln;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/lq;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/ln;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->U:Lorg/gdb/android/client/remote/y;
 
@@ -627,17 +627,17 @@
 
     .line 569
     :pswitch_3d
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/ma;->d()Z
+    invoke-virtual {v0}, Lorg/gdb/android/client/lx;->d()Z
 
     move-result v0
 
     if-nez v0, :cond_11
 
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/ma;->i()Z
+    invoke-virtual {v0}, Lorg/gdb/android/client/lx;->i()Z
 
     move-result v0
 
@@ -653,9 +653,9 @@
     goto :goto_11
 
     :pswitch_51
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/ma;->f()Z
+    invoke-virtual {v0}, Lorg/gdb/android/client/lx;->f()Z
 
     move-result v1
 
@@ -667,17 +667,17 @@
     goto :goto_11
 
     :pswitch_5a
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/ma;->d()Z
+    invoke-virtual {v0}, Lorg/gdb/android/client/lx;->d()Z
 
     move-result v0
 
     if-nez v0, :cond_11
 
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/ma;->i()Z
+    invoke-virtual {v0}, Lorg/gdb/android/client/lx;->i()Z
 
     move-result v0
 
@@ -915,28 +915,28 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->N:Lorg/gdb/android/client/ly;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->N:Lorg/gdb/android/client/lv;
 
     if-nez v0, :cond_32
 
-    new-instance v0, Lorg/gdb/android/client/ly;
+    new-instance v0, Lorg/gdb/android/client/lv;
 
-    invoke-direct {v0, p0, p1}, Lorg/gdb/android/client/ly;-><init>(Lorg/gdb/android/client/ShopDetailActivity;Ljava/util/List;)V
+    invoke-direct {v0, p0, p1}, Lorg/gdb/android/client/lv;-><init>(Lorg/gdb/android/client/ShopDetailActivity;Ljava/util/List;)V
 
-    iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->N:Lorg/gdb/android/client/ly;
+    iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->N:Lorg/gdb/android/client/lv;
 
     iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->f:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->N:Lorg/gdb/android/client/ly;
+    iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->N:Lorg/gdb/android/client/lv;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     goto :goto_13
 
     :cond_32
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->N:Lorg/gdb/android/client/ly;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->N:Lorg/gdb/android/client/lv;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/ly;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lorg/gdb/android/client/lv;->notifyDataSetChanged()V
 
     goto :goto_13
 .end method
@@ -1412,9 +1412,9 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    new-instance v1, Lorg/gdb/android/client/lg;
+    new-instance v1, Lorg/gdb/android/client/ld;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/lg;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/ld;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1426,9 +1426,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    new-instance v1, Lorg/gdb/android/client/lh;
+    new-instance v1, Lorg/gdb/android/client/le;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/lh;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/le;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1461,9 +1461,9 @@
     .line 346
     iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->h:Landroid/view/View;
 
-    new-instance v1, Lorg/gdb/android/client/lv;
+    new-instance v1, Lorg/gdb/android/client/ls;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/lv;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/ls;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1476,9 +1476,9 @@
     :goto_122
     iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->j:Landroid/widget/Button;
 
-    new-instance v1, Lorg/gdb/android/client/lt;
+    new-instance v1, Lorg/gdb/android/client/lq;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/lt;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/lq;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1928,12 +1928,12 @@
     goto :goto_141
 .end method
 
-.method static synthetic d(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/ma;
+.method static synthetic d(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/lx;
     .registers 2
 
     .prologue
     .line 165
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
     return-object v0
 .end method
@@ -2359,9 +2359,9 @@
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 865
-    new-instance v1, Lorg/gdb/android/client/lx;
+    new-instance v1, Lorg/gdb/android/client/lu;
 
-    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/lx;-><init>(Lorg/gdb/android/client/ShopDetailActivity;I)V
+    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/lu;-><init>(Lorg/gdb/android/client/ShopDetailActivity;I)V
 
     invoke-virtual {v6, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -2448,9 +2448,9 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 886
-    new-instance v1, Lorg/gdb/android/client/lx;
+    new-instance v1, Lorg/gdb/android/client/lu;
 
-    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/lx;-><init>(Lorg/gdb/android/client/ShopDetailActivity;I)V
+    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/lu;-><init>(Lorg/gdb/android/client/ShopDetailActivity;I)V
 
     invoke-virtual {v6, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -2605,9 +2605,9 @@
 
     .line 913
     :cond_192
-    new-instance v1, Lorg/gdb/android/client/lx;
+    new-instance v1, Lorg/gdb/android/client/lu;
 
-    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/lx;-><init>(Lorg/gdb/android/client/ShopDetailActivity;I)V
+    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/lu;-><init>(Lorg/gdb/android/client/ShopDetailActivity;I)V
 
     invoke-virtual {v6, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -2637,7 +2637,7 @@
     if-eqz v0, :cond_19
 
     .line 1279
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
     const/4 v1, 0x1
 
@@ -2653,7 +2653,7 @@
 
     aput-object v3, v1, v2
 
-    invoke-virtual {v0, p0, v1}, Lorg/gdb/android/client/ma;->d(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V
+    invoke-virtual {v0, p0, v1}, Lorg/gdb/android/client/lx;->d(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V
 
     .line 1280
     const/4 v0, 0x0
@@ -2866,19 +2866,19 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(I)V
 
-    new-instance v1, Lorg/gdb/android/client/lz;
+    new-instance v1, Lorg/gdb/android/client/lw;
 
-    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/lz;-><init>(Lorg/gdb/android/client/ShopDetailActivity;Ljava/util/List;)V
+    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/lw;-><init>(Lorg/gdb/android/client/ShopDetailActivity;Ljava/util/List;)V
 
-    iput-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->b:Lorg/gdb/android/client/lz;
+    iput-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->b:Lorg/gdb/android/client/lw;
 
-    iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->b:Lorg/gdb/android/client/lz;
+    iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->b:Lorg/gdb/android/client/lw;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    new-instance v1, Lorg/gdb/android/client/li;
+    new-instance v1, Lorg/gdb/android/client/lf;
 
-    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/li;-><init>(Lorg/gdb/android/client/ShopDetailActivity;Ljava/util/List;)V
+    invoke-direct {v1, p0, v3}, Lorg/gdb/android/client/lf;-><init>(Lorg/gdb/android/client/ShopDetailActivity;Ljava/util/List;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
@@ -3074,7 +3074,7 @@
 
     :cond_7b
     :try_start_7b
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
     const/4 v1, 0x2
 
@@ -3094,7 +3094,7 @@
 
     aput-object v3, v1, v2
 
-    invoke-virtual {v0, p0, v1}, Lorg/gdb/android/client/ma;->a(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V
+    invoke-virtual {v0, p0, v1}, Lorg/gdb/android/client/lx;->a(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V
     :try_end_8f
     .catch Ljava/lang/Throwable; {:try_start_7b .. :try_end_8f} :catch_70
 
@@ -3163,9 +3163,9 @@
 
     invoke-direct {v1, p0}, Lorg/gdb/android/client/remote/j;-><init>(Landroid/content/Context;)V
 
-    new-instance v2, Lorg/gdb/android/client/ll;
+    new-instance v2, Lorg/gdb/android/client/li;
 
-    invoke-direct {v2, p0}, Lorg/gdb/android/client/ll;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v2, p0}, Lorg/gdb/android/client/li;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-virtual {v1, v2}, Lorg/gdb/android/client/remote/j;->a(Lorg/gdb/android/client/remote/y;)V
 
@@ -3370,9 +3370,9 @@
     move-result-object v0
 
     .line 1137
-    new-instance v1, Lorg/gdb/android/client/lj;
+    new-instance v1, Lorg/gdb/android/client/lg;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/lj;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/lg;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     .line 1136
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -3663,9 +3663,9 @@
     invoke-direct {v0, v1, v2}, Lorg/gdb/android/client/remote/n;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1224
-    new-instance v1, Lorg/gdb/android/client/lk;
+    new-instance v1, Lorg/gdb/android/client/lh;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/lk;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/lh;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-static {v0, p0, v1}, Lorg/gdb/android/client/utils/v;->a(Lorg/gdb/android/client/remote/g;Landroid/app/Activity;Lorg/gdb/android/client/remote/y;)V
 
@@ -3996,41 +3996,41 @@
 
     iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->k:Landroid/widget/Button;
 
+    new-instance v1, Lorg/gdb/android/client/ku;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/ku;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->l:Landroid/widget/Button;
+
+    new-instance v1, Lorg/gdb/android/client/kv;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/kv;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->m:Landroid/widget/Button;
+
+    new-instance v1, Lorg/gdb/android/client/kw;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/kw;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->n:Landroid/widget/Button;
+
     new-instance v1, Lorg/gdb/android/client/kx;
 
     invoke-direct {v1, p0}, Lorg/gdb/android/client/kx;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->l:Landroid/widget/Button;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->o:Landroid/widget/Button;
 
     new-instance v1, Lorg/gdb/android/client/ky;
 
     invoke-direct {v1, p0}, Lorg/gdb/android/client/ky;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->m:Landroid/widget/Button;
-
-    new-instance v1, Lorg/gdb/android/client/kz;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/kz;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->n:Landroid/widget/Button;
-
-    new-instance v1, Lorg/gdb/android/client/la;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/la;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->o:Landroid/widget/Button;
-
-    new-instance v1, Lorg/gdb/android/client/lb;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/lb;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -4056,9 +4056,9 @@
 
     iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->q:Landroid/widget/RadioGroup;
 
-    new-instance v1, Lorg/gdb/android/client/lc;
+    new-instance v1, Lorg/gdb/android/client/kz;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/lc;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/kz;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/RadioGroup;->setOnCheckedChangeListener(Landroid/widget/RadioGroup$OnCheckedChangeListener;)V
 
@@ -4074,110 +4074,110 @@
 
     iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->r:Landroid/widget/RadioButton;
 
-    new-instance v1, Lorg/gdb/android/client/le;
+    new-instance v1, Lorg/gdb/android/client/lb;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/le;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/lb;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->e:Landroid/widget/Button;
 
-    new-instance v1, Lorg/gdb/android/client/lf;
+    new-instance v1, Lorg/gdb/android/client/lc;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/lf;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/lc;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 181
-    new-instance v0, Lorg/gdb/android/client/ma;
+    new-instance v0, Lorg/gdb/android/client/lx;
 
-    invoke-direct {v0, v3}, Lorg/gdb/android/client/ma;-><init>(B)V
+    invoke-direct {v0, v3}, Lorg/gdb/android/client/lx;-><init>(B)V
 
-    iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iput-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
     iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->Q:Lorg/gdb/android/client/remote/y;
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->a(Lorg/gdb/android/client/remote/y;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->a(Lorg/gdb/android/client/remote/y;)V
 
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
-    new-instance v1, Lorg/gdb/android/client/lr;
+    new-instance v1, Lorg/gdb/android/client/lo;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/lr;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/lo;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->a(Lorg/gdb/android/client/remote/x;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->a(Lorg/gdb/android/client/remote/x;)V
 
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
     iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->P:Lorg/gdb/android/client/remote/y;
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->b(Lorg/gdb/android/client/remote/y;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->b(Lorg/gdb/android/client/remote/y;)V
 
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
-    new-instance v1, Lorg/gdb/android/client/ls;
+    new-instance v1, Lorg/gdb/android/client/lp;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/ls;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/lp;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->b(Lorg/gdb/android/client/remote/x;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->b(Lorg/gdb/android/client/remote/x;)V
 
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
     iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->R:Lorg/gdb/android/client/remote/y;
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->c(Lorg/gdb/android/client/remote/y;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->c(Lorg/gdb/android/client/remote/y;)V
 
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
+
+    new-instance v1, Lorg/gdb/android/client/kq;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/kq;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->c(Lorg/gdb/android/client/remote/x;)V
+
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
+
+    iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->S:Lorg/gdb/android/client/remote/y;
+
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->d(Lorg/gdb/android/client/remote/y;)V
+
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
+
+    new-instance v1, Lorg/gdb/android/client/kr;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/kr;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->d(Lorg/gdb/android/client/remote/x;)V
+
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
+
+    iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->T:Lorg/gdb/android/client/remote/y;
+
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->e(Lorg/gdb/android/client/remote/y;)V
+
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
+
+    new-instance v1, Lorg/gdb/android/client/ks;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/ks;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
+
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->e(Lorg/gdb/android/client/remote/x;)V
+
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
+
+    iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->U:Lorg/gdb/android/client/remote/y;
+
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->f(Lorg/gdb/android/client/remote/y;)V
+
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
     new-instance v1, Lorg/gdb/android/client/kt;
 
     invoke-direct {v1, p0}, Lorg/gdb/android/client/kt;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->c(Lorg/gdb/android/client/remote/x;)V
-
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
-
-    iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->S:Lorg/gdb/android/client/remote/y;
-
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->d(Lorg/gdb/android/client/remote/y;)V
-
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
-
-    new-instance v1, Lorg/gdb/android/client/ku;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/ku;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
-
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->d(Lorg/gdb/android/client/remote/x;)V
-
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
-
-    iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->T:Lorg/gdb/android/client/remote/y;
-
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->e(Lorg/gdb/android/client/remote/y;)V
-
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
-
-    new-instance v1, Lorg/gdb/android/client/kv;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/kv;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
-
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->e(Lorg/gdb/android/client/remote/x;)V
-
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
-
-    iget-object v1, p0, Lorg/gdb/android/client/ShopDetailActivity;->U:Lorg/gdb/android/client/remote/y;
-
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->f(Lorg/gdb/android/client/remote/y;)V
-
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
-
-    new-instance v1, Lorg/gdb/android/client/kw;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/kw;-><init>(Lorg/gdb/android/client/ShopDetailActivity;)V
-
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ma;->f(Lorg/gdb/android/client/remote/x;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/lx;->f(Lorg/gdb/android/client/remote/x;)V
 
     .line 183
     invoke-virtual {p0}, Lorg/gdb/android/client/ShopDetailActivity;->getIntent()Landroid/content/Intent;
@@ -4215,7 +4215,7 @@
     move-result-object v1
 
     .line 191
-    iget-object v3, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v3, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
     const/4 v4, 0x3
 
@@ -4233,7 +4233,7 @@
 
     aput-object v1, v4, v0
 
-    invoke-virtual {v3, p0, v4}, Lorg/gdb/android/client/ma;->f(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V
+    invoke-virtual {v3, p0, v4}, Lorg/gdb/android/client/lx;->f(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V
     :try_end_1bb
     .catch Ljava/lang/Throwable; {:try_start_19e .. :try_end_1bb} :catch_1df
 
@@ -4332,7 +4332,7 @@
     if-eqz v0, :cond_21c
 
     .line 201
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
     new-array v1, v4, [Ljava/lang/String;
 
@@ -4350,7 +4350,7 @@
     aput-object v2, v1, v3
 
     .line 201
-    invoke-virtual {v0, p0, v1}, Lorg/gdb/android/client/ma;->c(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V
+    invoke-virtual {v0, p0, v1}, Lorg/gdb/android/client/lx;->c(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V
 
     goto :goto_1bb
 
@@ -4385,14 +4385,14 @@
     if-eqz v0, :cond_4f
 
     .line 300
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
     if-eqz v0, :cond_11
 
     .line 301
-    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/ma;
+    iget-object v0, p0, Lorg/gdb/android/client/ShopDetailActivity;->L:Lorg/gdb/android/client/lx;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/ma;->j()V
+    invoke-virtual {v0}, Lorg/gdb/android/client/lx;->j()V
 
     .line 303
     :cond_11

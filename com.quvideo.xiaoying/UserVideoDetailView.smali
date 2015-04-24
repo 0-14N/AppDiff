@@ -159,16 +159,16 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;->S:Ljava/lang/String;
 
     .line 124
-    new-instance v0, Lalp;
+    new-instance v0, Laev;
 
-    invoke-direct {v0, p0}, Lalp;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
+    invoke-direct {v0, p0}, Laev;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;->T:Lcom/quvideo/xiaoying/common/ui/custom/VideoMgrBase$StateChangeListener;
 
     .line 444
-    new-instance v0, Lalq;
+    new-instance v0, Laew;
 
-    invoke-direct {v0, p0}, Lalq;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
+    invoke-direct {v0, p0}, Laew;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;->U:Ljava/lang/Runnable;
 
@@ -227,16 +227,16 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;->S:Ljava/lang/String;
 
     .line 124
-    new-instance v0, Lalp;
+    new-instance v0, Laev;
 
-    invoke-direct {v0, p0}, Lalp;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
+    invoke-direct {v0, p0}, Laev;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;->T:Lcom/quvideo/xiaoying/common/ui/custom/VideoMgrBase$StateChangeListener;
 
     .line 444
-    new-instance v0, Lalq;
+    new-instance v0, Laew;
 
-    invoke-direct {v0, p0}, Lalq;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
+    invoke-direct {v0, p0}, Laew;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;->U:Ljava/lang/Runnable;
 
@@ -295,16 +295,16 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;->S:Ljava/lang/String;
 
     .line 124
-    new-instance v0, Lalp;
+    new-instance v0, Laev;
 
-    invoke-direct {v0, p0}, Lalp;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
+    invoke-direct {v0, p0}, Laev;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;->T:Lcom/quvideo/xiaoying/common/ui/custom/VideoMgrBase$StateChangeListener;
 
     .line 444
-    new-instance v0, Lalq;
+    new-instance v0, Laew;
 
-    invoke-direct {v0, p0}, Lalq;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
+    invoke-direct {v0, p0}, Laew;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;->U:Ljava/lang/Runnable;
 
@@ -1508,9 +1508,9 @@
     check-cast v0, Landroid/content/Context;
 
     .line 609
-    new-instance v3, Lalr;
+    new-instance v3, Laex;
 
-    invoke-direct {v3, p0}, Lalr;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
+    invoke-direct {v3, p0}, Laex;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
 
     .line 608
     invoke-direct {v2, v0, v1, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -1735,9 +1735,9 @@
 
     const-string/jumbo v1, "video.geturl"
 
-    new-instance v2, Lals;
+    new-instance v2, Laey;
 
-    invoke-direct {v2, p0}, Lals;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
+    invoke-direct {v2, p0}, Laey;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -2254,9 +2254,9 @@
 
     const-string/jumbo v3, "video.setlike"
 
-    new-instance v4, Lalu;
+    new-instance v4, Lafa;
 
-    invoke-direct {v4, p0, v5, v0}, Lalu;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;Ljava/lang/String;I)V
+    invoke-direct {v4, p0, v5, v0}, Lafa;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailView;Ljava/lang/String;I)V
 
     invoke-virtual {v2, v3, v4}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 

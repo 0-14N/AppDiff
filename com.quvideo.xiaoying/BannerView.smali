@@ -178,7 +178,7 @@
 
     .line 200
     :cond_1b
-    const v1, 0x7f060481
+    const v1, 0x7f06046c
 
     invoke-virtual {p0, v1}, Lcom/quvideo/xiaoying/app/banner/BannerView;->findViewById(I)Landroid/view/View;
 
@@ -242,7 +242,7 @@
     invoke-virtual {v1, p0}, Lcom/quvideo/xiaoying/app/banner/ExGallery;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 214
-    const v1, 0x7f060480
+    const v1, 0x7f06046b
 
     invoke-virtual {p0, v1}, Lcom/quvideo/xiaoying/app/banner/BannerView;->findViewById(I)Landroid/view/View;
 
@@ -253,7 +253,7 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/banner/BannerView;->h:Landroid/widget/RelativeLayout;
 
     .line 215
-    const v1, 0x7f060484
+    const v1, 0x7f06046f
 
     invoke-virtual {p0, v1}, Lcom/quvideo/xiaoying/app/banner/BannerView;->findViewById(I)Landroid/view/View;
 

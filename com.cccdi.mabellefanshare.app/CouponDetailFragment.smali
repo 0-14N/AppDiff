@@ -10,8 +10,6 @@
 
 .field private couponID:Ljava/lang/String;
 
-.field private fbLoginListener:Lcom/sromku/simple/fb/listeners/OnLoginListener;
-
 .field private onSocialMediaClickListener:Landroid/view/View$OnClickListener;
 
 .field private urlTextBox:Landroid/widget/EditText;
@@ -24,24 +22,17 @@
     .registers 2
 
     .prologue
-    .line 75
+    .line 63
     invoke-direct {p0}, Landroid/support/v4/app/Fragment;-><init>()V
 
-    .line 240
+    .line 227
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment$5;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment$5;-><init>(Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;)V
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->onSocialMediaClickListener:Landroid/view/View$OnClickListener;
 
-    .line 503
-    new-instance v0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment$6;
-
-    invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment$6;-><init>(Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;)V
-
-    iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->fbLoginListener:Lcom/sromku/simple/fb/listeners/OnLoginListener;
-
-    .line 77
+    .line 65
     return-void
 .end method
 
@@ -50,7 +41,7 @@
     .param p0, "x0"    # Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;
 
     .prologue
-    .line 61
+    .line 49
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->coupon:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleCoupon;
 
     return-object v0
@@ -62,7 +53,7 @@
     .param p1, "x1"    # Lcom/cccdi/mabellefanshare/mabelleobj/MabelleCoupon;
 
     .prologue
-    .line 61
+    .line 49
     iput-object p1, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->coupon:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleCoupon;
 
     return-object p1
@@ -73,7 +64,7 @@
     .param p0, "x0"    # Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;
 
     .prologue
-    .line 61
+    .line 49
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->container:Landroid/view/View;
 
     return-object v0
@@ -85,7 +76,7 @@
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
-    .line 61
+    .line 49
     invoke-direct {p0, p1}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->init_view(Landroid/view/View;)V
 
     return-void
@@ -96,29 +87,18 @@
     .param p0, "x0"    # Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;
 
     .prologue
-    .line 61
+    .line 49
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->urlTextBox:Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;)Lcom/sromku/simple/fb/listeners/OnLoginListener;
+.method static synthetic access$400(Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;)Landroid/view/View$OnClickListener;
     .registers 2
     .param p0, "x0"    # Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;
 
     .prologue
-    .line 61
-    iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->fbLoginListener:Lcom/sromku/simple/fb/listeners/OnLoginListener;
-
-    return-object v0
-.end method
-
-.method static synthetic access$500(Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;)Landroid/view/View$OnClickListener;
-    .registers 2
-    .param p0, "x0"    # Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;
-
-    .prologue
-    .line 61
+    .line 49
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->onSocialMediaClickListener:Landroid/view/View$OnClickListener;
 
     return-object v0
@@ -129,8 +109,8 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 157
-    const v8, 0x7f0900f5
+    .line 145
+    const v8, 0x7f0900c1
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -138,7 +118,7 @@
 
     check-cast v7, Landroid/widget/TextView;
 
-    .line 158
+    .line 146
     .local v7, "title":Landroid/widget/TextView;
     iget-object v8, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->coupon:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleCoupon;
 
@@ -148,8 +128,8 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 160
-    const v8, 0x7f0900f6
+    .line 148
+    const v8, 0x7f0900c2
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -157,7 +137,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 161
+    .line 149
     .local v2, "content":Landroid/widget/TextView;
     iget-object v8, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->coupon:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleCoupon;
 
@@ -167,8 +147,8 @@
 
     invoke-virtual {v2, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 163
-    const v8, 0x7f0900f7
+    .line 151
+    const v8, 0x7f0900c3
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -176,9 +156,9 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    .line 164
+    .line 152
     .local v5, "date":Landroid/widget/TextView;
-    const v8, 0x7f0d00ab
+    const v8, 0x7f0d0078
 
     invoke-virtual {p0, v8}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->getString(I)Ljava/lang/String;
 
@@ -204,8 +184,8 @@
 
     invoke-virtual {v5, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 167
-    const v8, 0x7f0900b6
+    .line 155
+    const v8, 0x7f090084
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -213,7 +193,7 @@
 
     check-cast v1, Landroid/widget/EditText;
 
-    .line 168
+    .line 156
     .local v1, "code":Landroid/widget/EditText;
     iget-object v8, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->coupon:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleCoupon;
 
@@ -223,8 +203,8 @@
 
     invoke-virtual {v1, v8}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 170
-    const v8, 0x7f0900b7
+    .line 158
+    const v8, 0x7f090085
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -232,7 +212,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 171
+    .line 159
     .local v3, "copyBtn":Landroid/widget/TextView;
     new-instance v8, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment$3;
 
@@ -240,8 +220,8 @@
 
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 188
-    const v8, 0x7f0900bd
+    .line 176
+    const v8, 0x7f09008b
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -251,16 +231,16 @@
 
     iput-object v8, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->urlTextBox:Landroid/widget/EditText;
 
-    .line 190
+    .line 178
     const-string v0, "http://fanshare.hk/myaccount/myCouponShare.aspx?"
 
-    .line 192
+    .line 180
     .local v0, "COUPON_URL":Ljava/lang/String;
     new-instance v6, Ljava/util/LinkedList;
 
     invoke-direct {v6}, Ljava/util/LinkedList;-><init>()V
 
-    .line 193
+    .line 181
     .local v6, "params":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
     new-instance v8, Lorg/apache/http/message/BasicNameValuePair;
 
@@ -276,7 +256,7 @@
 
     invoke-interface {v6, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 194
+    .line 182
     new-instance v8, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v9, "coupondesc"
@@ -291,7 +271,7 @@
 
     invoke-interface {v6, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 195
+    .line 183
     new-instance v8, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v9, "enddate"
@@ -306,7 +286,7 @@
 
     invoke-interface {v6, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 196
+    .line 184
     new-instance v8, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v9, "coupontype"
@@ -321,14 +301,14 @@
 
     invoke-interface {v6, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 197
+    .line 185
     new-instance v9, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v10, "defaultlanguage"
 
     sget v8, Lcom/cccdi/mabellefanshare/AppApplication;->currentLanguage:I
 
-    if-nez v8, :cond_14e
+    if-nez v8, :cond_136
 
     const-string v8, "eng"
 
@@ -337,7 +317,7 @@
 
     invoke-interface {v6, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 199
+    .line 187
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -360,13 +340,13 @@
 
     move-result-object v0
 
-    .line 201
+    .line 189
     iget-object v8, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->urlTextBox:Landroid/widget/EditText;
 
     invoke-virtual {v8, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 204
-    const v8, 0x7f0900be
+    .line 192
+    const v8, 0x7f09008c
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -374,7 +354,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 206
+    .line 194
     .local v4, "copyUrlBtn":Landroid/widget/TextView;
     new-instance v8, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment$4;
 
@@ -382,8 +362,8 @@
 
     invoke-virtual {v4, v8}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 222
-    const v8, 0x7f0900bf
+    .line 211
+    const v8, 0x7f09008d
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -393,8 +373,8 @@
 
     invoke-virtual {v8, v9}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 223
-    const v8, 0x7f0900c0
+    .line 212
+    const v8, 0x7f09008e
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -404,8 +384,30 @@
 
     invoke-virtual {v8, v9}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 224
-    const v8, 0x7f0900c1
+    .line 213
+    const v8, 0x7f09008f
+
+    invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v8
+
+    iget-object v9, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->onSocialMediaClickListener:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v8, v9}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 214
+    const v8, 0x7f090090
+
+    invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v8
+
+    iget-object v9, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->onSocialMediaClickListener:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v8, v9}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 215
+    const v8, 0x7f090091
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -416,58 +418,14 @@
     invoke-virtual {v8, v9}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 225
-    const v8, 0x7f0900c2
-
-    invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v8
-
-    iget-object v9, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->onSocialMediaClickListener:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {v8, v9}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 226
-    const v8, 0x7f0900c3
-
-    invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v8
-
-    iget-object v9, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->onSocialMediaClickListener:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {v8, v9}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 227
-    const v8, 0x7f0900c4
-
-    invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v8
-
-    iget-object v9, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->onSocialMediaClickListener:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {v8, v9}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 228
-    const v8, 0x7f0900c5
-
-    invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v8
-
-    iget-object v9, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->onSocialMediaClickListener:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {v8, v9}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 238
     return-void
 
-    .line 197
+    .line 185
     .end local v4    # "copyUrlBtn":Landroid/widget/TextView;
-    :cond_14e
+    :cond_136
     const-string v8, "chi"
 
-    goto/16 :goto_c6
+    goto :goto_c6
 .end method
 
 .method public static newInstance(Lcom/cccdi/mabellefanshare/mabelleobj/MabelleCoupon;)Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;
@@ -475,16 +433,16 @@
     .param p0, "coupon"    # Lcom/cccdi/mabellefanshare/mabelleobj/MabelleCoupon;
 
     .prologue
-    .line 64
+    .line 52
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;
 
     invoke-direct {v0}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;-><init>()V
 
-    .line 65
+    .line 53
     .local v0, "fragment":Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;
     iput-object p0, v0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->coupon:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleCoupon;
 
-    .line 66
+    .line 54
     return-object v0
 .end method
 
@@ -493,83 +451,24 @@
     .param p0, "couponID"    # Ljava/lang/String;
 
     .prologue
-    .line 70
+    .line 58
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;
 
     invoke-direct {v0}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;-><init>()V
 
-    .line 71
+    .line 59
     .local v0, "fragment":Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;
     iput-object p0, v0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->couponID:Ljava/lang/String;
 
-    .line 72
+    .line 60
     return-object v0
-.end method
-
-.method private publishFeedDialog(Ljava/lang/String;)V
-    .registers 8
-    .param p1, "text"    # Ljava/lang/String;
-
-    .prologue
-    .line 490
-    move-object v0, p1
-
-    .line 492
-    .local v0, "SHARE_LINK_BASE":Ljava/lang/String;
-    new-instance v2, Landroid/os/Bundle;
-
-    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
-
-    .line 493
-    .local v2, "params":Landroid/os/Bundle;
-    const-string v3, "name"
-
-    const-string v4, "fanShare"
-
-    invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 495
-    const-string v3, "description"
-
-    invoke-virtual {v2, v3, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 496
-    const-string v3, "link"
-
-    invoke-virtual {v2, v3, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 499
-    new-instance v3, Lcom/facebook/widget/WebDialog$FeedDialogBuilder;
-
-    invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v4
-
-    const v5, 0x7f0d002f
-
-    invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v3, v4, v5, v2}, Lcom/facebook/widget/WebDialog$FeedDialogBuilder;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
-
-    invoke-virtual {v3}, Lcom/facebook/widget/WebDialog$FeedDialogBuilder;->build()Lcom/facebook/widget/WebDialog;
-
-    move-result-object v1
-
-    .line 500
-    .local v1, "feedDialog":Lcom/facebook/widget/WebDialog;
-    invoke-virtual {v1}, Lcom/facebook/widget/WebDialog;->show()V
-
-    .line 501
-    return-void
 .end method
 
 .method private retrieveCoupon()V
     .registers 5
 
     .prologue
-    .line 120
+    .line 108
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
@@ -578,7 +477,7 @@
 
     if-eqz v1, :cond_11
 
-    .line 121
+    .line 109
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
@@ -587,7 +486,7 @@
 
     invoke-virtual {v1}, Lcom/cccdi/mabellefanshare/MainActivity;->showProgressDialog()V
 
-    .line 124
+    .line 112
     :cond_11
     new-instance v0, Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;
 
@@ -607,13 +506,13 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;-><init>(Ljava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 153
+    .line 141
     .local v0, "jsonArrayRequest":Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;
     sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->volleyQueue:Lcom/android/volley/RequestQueue;
 
     invoke-virtual {v1, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
-    .line 154
+    .line 142
     return-void
 .end method
 
@@ -624,10 +523,10 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 481
+    .line 413
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onAttach(Landroid/app/Activity;)V
 
-    .line 482
+    .line 414
     return-void
 .end method
 
@@ -636,10 +535,10 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 85
+    .line 73
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 86
+    .line 74
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
@@ -648,7 +547,7 @@
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->userGreetingListener:Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;
 
-    .line 87
+    .line 75
     return-void
 .end method
 
@@ -659,8 +558,8 @@
     .param p3, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 99
-    const v0, 0x7f030048
+    .line 87
+    const v0, 0x7f030039
 
     const/4 v1, 0x0
 
@@ -670,17 +569,17 @@
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->container:Landroid/view/View;
 
-    .line 109
+    .line 97
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->coupon:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleCoupon;
 
     if-eqz v0, :cond_1d
 
-    .line 110
+    .line 98
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->container:Landroid/view/View;
 
     invoke-direct {p0, v0}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->init_view(Landroid/view/View;)V
 
-    .line 114
+    .line 102
     :goto_13
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->userGreetingListener:Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;
 
@@ -688,12 +587,12 @@
 
     invoke-interface {v0, v1}, Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;->updateUserGreeting(Landroid/view/View;)V
 
-    .line 116
+    .line 104
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->container:Landroid/view/View;
 
     return-object v0
 
-    .line 112
+    .line 100
     :cond_1d
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/fragment/CouponDetailFragment;->retrieveCoupon()V
 
@@ -704,9 +603,9 @@
     .registers 1
 
     .prologue
-    .line 486
+    .line 418
     invoke-super {p0}, Landroid/support/v4/app/Fragment;->onDetach()V
 
-    .line 487
+    .line 419
     return-void
 .end method

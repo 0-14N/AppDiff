@@ -467,31 +467,29 @@
 
     check-cast v1, Lcom/celticspear/tokens/TokensActivity;
 
-    iget-object v2, p0, Lcom/celticspear/tokens/PuzzleGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
+    const/4 v2, 0x3
 
-    const/4 v3, 0x3
+    new-array v2, v2, [Ljava/lang/String;
 
-    new-array v3, v3, [Ljava/lang/String;
+    const-string v3, "bgMaskPuzzleTop"
 
-    const-string v4, "bgMaskPuzzleTop"
+    aput-object v3, v2, v8
 
-    aput-object v4, v3, v8
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    const-string v4, "boardBg"
 
-    const-string v5, "boardBg"
+    aput-object v4, v2, v3
 
-    aput-object v5, v3, v4
+    const-string v3, "bgMaskBottom"
 
-    const-string v4, "bgMaskBottom"
+    aput-object v3, v2, v9
 
-    aput-object v4, v3, v9
+    new-array v3, v9, [I
 
-    new-array v4, v9, [I
+    fill-array-data v3, :array_e4
 
-    fill-array-data v4, :array_e6
-
-    invoke-virtual {p0, v1, v2, v3, v4}, Lcom/celticspear/tokens/PuzzleGameScreen;->setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/IEntity;[Ljava/lang/String;[I)V
+    invoke-virtual {p0, v1, v2, v3}, Lcom/celticspear/tokens/PuzzleGameScreen;->setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;[Ljava/lang/String;[I)V
 
     .line 68
     iget-object v1, p0, Lcom/celticspear/tokens/PuzzleGameScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -504,7 +502,7 @@
     .line 66
     nop
 
-    :array_e6
+    :array_e4
     .array-data 4
         0xa
         0xa

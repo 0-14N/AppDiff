@@ -10,8 +10,6 @@
 
 .field private static final DISASN_TO_ALERT_NOT_SUPPORTED:Ljava/lang/String; = "NA"
 
-.field public static final IS_VALID_DATA:Ljava/lang/String; = "ISVALID"
-
 .field public static final LAST_USED_EXTRA_DATA:Ljava/lang/String; = "LAST"
 
 .field public static final MODEL_EXTRA_DATA:Ljava/lang/String; = "MODEL"
@@ -64,12 +62,12 @@
     .registers 4
 
     .prologue
-    .line 159
+    .line 158
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 160
+    .line 159
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
     const/high16 v1, 0x7f070000
 
@@ -79,8 +77,8 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 161
-    const v1, 0x7f07001a
+    .line 160
+    const v1, 0x7f070019
 
     invoke-virtual {p0, v1}, Ldisa/disascanner/ResultActivity;->getString(I)Ljava/lang/String;
 
@@ -88,21 +86,21 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 162
+    .line 161
     const v1, 0x104000a
 
-    .line 163
+    .line 162
     new-instance v2, Ldisa/disascanner/ResultActivity$1;
 
     invoke-direct {v2, p0}, Ldisa/disascanner/ResultActivity$1;-><init>(Ldisa/disascanner/ResultActivity;)V
 
-    .line 162
+    .line 161
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 169
+    .line 168
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 170
+    .line 169
     return-void
 .end method
 
@@ -112,7 +110,7 @@
     .param p2, "color"    # I
 
     .prologue
-    .line 111
+    .line 110
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -123,16 +121,16 @@
 
     if-lt v0, v2, :cond_8
 
-    .line 121
+    .line 120
     return-void
 
-    .line 112
+    .line 111
     :cond_8
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 113
+    .line 112
     .local v1, "nextChild":Landroid/view/View;
     instance-of v2, v1, Landroid/widget/TextView;
 
@@ -142,32 +140,32 @@
 
     if-nez v2, :cond_20
 
-    .line 114
+    .line 113
     iget-object v2, p0, Ldisa/disascanner/ResultActivity;->lblSpecialInstruction:Landroid/widget/TextView;
 
     if-eq v1, v2, :cond_1d
 
-    .line 115
+    .line 114
     check-cast v1, Landroid/widget/TextView;
 
     .end local v1    # "nextChild":Landroid/view/View;
     invoke-virtual {v1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 111
+    .line 110
     :cond_1d
     :goto_1d
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 117
+    .line 116
     .restart local v1    # "nextChild":Landroid/view/View;
     :cond_20
     instance-of v2, v1, Landroid/view/ViewGroup;
 
     if-eqz v2, :cond_1d
 
-    .line 118
+    .line 117
     check-cast v1, Landroid/view/ViewGroup;
 
     .end local v1    # "nextChild":Landroid/view/View;
@@ -180,7 +178,7 @@
     .registers 6
 
     .prologue
-    .line 136
+    .line 135
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->layout:Landroid/widget/LinearLayout;
 
     const/16 v1, 0xff
@@ -197,21 +195,21 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 137
+    .line 136
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->layout:Landroid/widget/LinearLayout;
 
     const/4 v1, -0x1
 
     invoke-direct {p0, v0, v1}, Ldisa/disascanner/ResultActivity;->setColor(Landroid/view/ViewGroup;I)V
 
-    .line 139
+    .line 138
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtResult:Landroid/widget/TextView;
 
-    const v1, 0x7f070004
+    const v1, 0x7f070003
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 140
+    .line 139
     return-void
 .end method
 
@@ -227,7 +225,7 @@
 
     const/4 v3, 0x0
 
-    .line 143
+    .line 142
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->layout:Landroid/widget/LinearLayout;
 
     const/16 v1, 0xc9
@@ -240,56 +238,56 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 144
+    .line 143
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->layout:Landroid/widget/LinearLayout;
 
     const/high16 v1, -0x1000000
 
     invoke-direct {p0, v0, v1}, Ldisa/disascanner/ResultActivity;->setColor(Landroid/view/ViewGroup;I)V
 
-    .line 146
+    .line 145
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->viewValid:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 147
+    .line 146
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtBrand:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 148
+    .line 147
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtModel:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 149
+    .line 148
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtDisasn:Landroid/widget/TextView;
 
     invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 151
+    .line 150
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->lblLastUsed:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 151
+    iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtLastUsed:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 152
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtLastUsed:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 153
-    iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtLastUsed:Landroid/widget/TextView;
-
     invoke-virtual {v0, p4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 155
+    .line 154
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtResult:Landroid/widget/TextView;
 
-    const v1, 0x7f070006
+    const v1, 0x7f070005
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 156
+    .line 155
     return-void
 .end method
 
@@ -300,7 +298,7 @@
     .param p3, "disasn"    # Ljava/lang/String;
 
     .prologue
-    .line 124
+    .line 123
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->layout:Landroid/widget/LinearLayout;
 
     const/16 v1, 0xff
@@ -317,43 +315,43 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 125
+    .line 124
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->layout:Landroid/widget/LinearLayout;
 
     const/4 v1, -0x1
 
     invoke-direct {p0, v0, v1}, Ldisa/disascanner/ResultActivity;->setColor(Landroid/view/ViewGroup;I)V
 
-    .line 127
+    .line 126
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->viewValid:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 128
+    .line 127
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtBrand:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 129
+    .line 128
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtModel:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 130
+    .line 129
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtDisasn:Landroid/widget/TextView;
 
     invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 132
+    .line 131
     iget-object v0, p0, Ldisa/disascanner/ResultActivity;->txtResult:Landroid/widget/TextView;
 
-    const v1, 0x7f070005
+    const v1, 0x7f070004
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 133
+    .line 132
     return-void
 .end method
 
@@ -364,397 +362,344 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 107
+    .line 106
     invoke-virtual {p0}, Ldisa/disascanner/ResultActivity;->finish()V
 
-    .line 108
+    .line 107
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 16
+    .registers 13
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/16 v13, 0x8
+    const/4 v8, 0x1
 
-    const/4 v10, 0x1
+    const/4 v9, 0x0
 
-    const/4 v11, 0x0
-
-    .line 43
+    .line 42
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 44
-    const v9, 0x7f030003
+    .line 43
+    const v10, 0x7f030002
 
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->setContentView(I)V
+    invoke-virtual {p0, v10}, Ldisa/disascanner/ResultActivity;->setContentView(I)V
 
-    .line 46
+    .line 45
     invoke-virtual {p0}, Ldisa/disascanner/ResultActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 47
+    .line 46
     .local v2, "intent":Landroid/content/Intent;
-    const-string v9, "ISVALID"
+    const-string v10, "BRAND"
 
-    invoke-virtual {v2, v9, v11}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v4
-
-    .line 48
-    .local v4, "isValid":Z
-    const-string v9, "BRAND"
-
-    invoke-virtual {v2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 49
+    .line 47
     .local v0, "brand":Ljava/lang/String;
-    const-string v9, "MODEL"
+    const-string v10, "MODEL"
 
-    invoke-virtual {v2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 50
-    .local v6, "model":Ljava/lang/String;
-    const-string v9, "DISASN"
-
-    invoke-virtual {v2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 51
-    .local v1, "disasn":Ljava/lang/String;
-    const-string v9, "PIN"
-
-    invoke-virtual {v2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 52
-    .local v7, "pin":Ljava/lang/String;
-    const-string v9, "LAST"
-
-    invoke-virtual {v2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 53
-    .local v5, "lastUsed":Ljava/lang/String;
-    const-string v9, "SP"
+    .line 48
+    .local v5, "model":Ljava/lang/String;
+    const-string v10, "DISASN"
 
-    invoke-virtual {v2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 49
+    .local v1, "disasn":Ljava/lang/String;
+    const-string v10, "LAST"
+
+    invoke-virtual {v2, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 50
+    .local v4, "lastUsed":Ljava/lang/String;
+    const-string v10, "SP"
+
+    invoke-virtual {v2, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 51
+    .local v7, "spi":Ljava/lang/String;
+    const-string v10, "PIN"
+
+    invoke-virtual {v2, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 53
+    .local v6, "pin":Ljava/lang/String;
+    if-eqz v0, :cond_fe
+
+    if-eqz v5, :cond_fe
+
+    move v3, v8
+
+    .line 59
+    .local v3, "isValid":Z
+    :goto_38
+    if-nez v3, :cond_101
+
+    if-eqz v1, :cond_101
+
+    const-string v10, "NA"
+
+    invoke-virtual {v1, v10}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_101
+
+    :goto_44
+    iput-boolean v8, p0, Ldisa/disascanner/ResultActivity;->toAlertNotSupported:Z
+
+    .line 61
+    const v8, 0x7f06000e
+
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v8
 
-    .line 55
-    .local v8, "spi":Ljava/lang/String;
-    const v9, 0x7f060013
+    check-cast v8, Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/widget/LinearLayout;
-
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->layout:Landroid/widget/LinearLayout;
-
-    .line 56
-    const v9, 0x7f060015
-
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v9
-
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->viewValid:Landroid/view/View;
-
-    .line 57
-    const v9, 0x7f060014
-
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/widget/TextView;
-
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->txtResult:Landroid/widget/TextView;
-
-    .line 58
-    const v9, 0x7f060017
-
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/widget/TextView;
-
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->txtBrand:Landroid/widget/TextView;
-
-    .line 59
-    const v9, 0x7f060018
-
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/widget/TextView;
-
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->txtModel:Landroid/widget/TextView;
-
-    .line 60
-    const v9, 0x7f060016
-
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/widget/TextView;
-
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->txtDisasn:Landroid/widget/TextView;
-
-    .line 61
-    const v9, 0x7f060019
-
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/widget/TextView;
-
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->lblPin:Landroid/widget/TextView;
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->layout:Landroid/widget/LinearLayout;
 
     .line 62
-    const v9, 0x7f06001a
+    const v8, 0x7f060010
 
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v9
+    move-result-object v8
 
-    check-cast v9, Landroid/widget/TextView;
-
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->txtPin:Landroid/widget/TextView;
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->viewValid:Landroid/view/View;
 
     .line 63
-    const v9, 0x7f06001b
+    const v8, 0x7f06000f
 
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v9
+    move-result-object v8
 
-    check-cast v9, Landroid/widget/TextView;
+    check-cast v8, Landroid/widget/TextView;
 
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->lblLastUsed:Landroid/widget/TextView;
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->txtResult:Landroid/widget/TextView;
 
     .line 64
-    const v9, 0x7f06001c
+    const v8, 0x7f060012
 
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v9
+    move-result-object v8
 
-    check-cast v9, Landroid/widget/TextView;
+    check-cast v8, Landroid/widget/TextView;
 
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->txtLastUsed:Landroid/widget/TextView;
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->txtBrand:Landroid/widget/TextView;
 
     .line 65
-    const v9, 0x7f06001e
+    const v8, 0x7f060013
 
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v9
+    move-result-object v8
 
-    check-cast v9, Landroid/widget/TextView;
+    check-cast v8, Landroid/widget/TextView;
 
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->txtSpecialInstruction:Landroid/widget/TextView;
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->txtModel:Landroid/widget/TextView;
 
     .line 66
-    const v9, 0x7f06001d
+    const v8, 0x7f060011
 
-    invoke-virtual {p0, v9}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v9
+    move-result-object v8
 
-    check-cast v9, Landroid/widget/TextView;
+    check-cast v8, Landroid/widget/TextView;
 
-    iput-object v9, p0, Ldisa/disascanner/ResultActivity;->lblSpecialInstruction:Landroid/widget/TextView;
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->txtDisasn:Landroid/widget/TextView;
+
+    .line 67
+    const v8, 0x7f060016
+
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v8
+
+    check-cast v8, Landroid/widget/TextView;
+
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->lblLastUsed:Landroid/widget/TextView;
 
     .line 68
-    iget-object v9, p0, Ldisa/disascanner/ResultActivity;->txtSpecialInstruction:Landroid/widget/TextView;
+    const v8, 0x7f060017
 
-    const v12, 0x7f07000f
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v9, v12}, Landroid/widget/TextView;->setText(I)V
+    move-result-object v8
 
-    .line 74
-    if-nez v4, :cond_12d
+    check-cast v8, Landroid/widget/TextView;
 
-    const-string v9, "NA"
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->txtLastUsed:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v9}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    .line 69
+    const v8, 0x7f060019
 
-    move-result v9
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
 
-    if-eqz v9, :cond_12d
+    move-result-object v8
 
-    move v9, v10
+    check-cast v8, Landroid/widget/TextView;
 
-    :goto_d0
-    iput-boolean v9, p0, Ldisa/disascanner/ResultActivity;->toAlertNotSupported:Z
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->txtSpecialInstruction:Landroid/widget/TextView;
 
-    .line 76
-    if-eqz v4, :cond_135
+    .line 70
+    const v8, 0x7f060018
+
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v8
+
+    check-cast v8, Landroid/widget/TextView;
+
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->lblSpecialInstruction:Landroid/widget/TextView;
+
+    .line 72
+    const v8, 0x7f060014
+
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v8
+
+    check-cast v8, Landroid/widget/TextView;
+
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->lblPin:Landroid/widget/TextView;
+
+    .line 73
+    const v8, 0x7f060015
+
+    invoke-virtual {p0, v8}, Ldisa/disascanner/ResultActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v8
+
+    check-cast v8, Landroid/widget/TextView;
+
+    iput-object v8, p0, Ldisa/disascanner/ResultActivity;->txtPin:Landroid/widget/TextView;
+
+    .line 75
+    iget-object v8, p0, Ldisa/disascanner/ResultActivity;->txtSpecialInstruction:Landroid/widget/TextView;
+
+    const v10, 0x7f07000e
+
+    invoke-virtual {v8, v10}, Landroid/widget/TextView;->setText(I)V
 
     .line 77
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    if-eqz v0, :cond_108
 
-    move-result v9
-
-    if-le v9, v10, :cond_12f
+    if-eqz v5, :cond_108
 
     .line 78
-    invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v9
-
-    const-string v12, "[NA]"
-
-    invoke-virtual {v9, v12}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_12f
-
-    move v3, v10
+    if-eqz v4, :cond_104
 
     .line 79
-    .local v3, "isLastUsed":Z
-    :goto_e7
-    if-eqz v3, :cond_131
+    invoke-direct {p0, v0, v5, v1, v4}, Ldisa/disascanner/ResultActivity;->setUsed(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
-    invoke-direct {p0, v0, v6, v1, v5}, Ldisa/disascanner/ResultActivity;->setUsed(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .line 87
+    :goto_d9
+    if-eqz v6, :cond_ee
+
+    const-string v8, ""
+
+    if-eq v6, v8, :cond_ee
 
     .line 88
-    .end local v3    # "isLastUsed":Z
-    :goto_ec
-    iget-object v9, p0, Ldisa/disascanner/ResultActivity;->txtPin:Landroid/widget/TextView;
+    iget-object v8, p0, Ldisa/disascanner/ResultActivity;->lblPin:Landroid/widget/TextView;
 
-    invoke-virtual {v9, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v8, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 89
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
+    iget-object v8, p0, Ldisa/disascanner/ResultActivity;->txtPin:Landroid/widget/TextView;
 
-    move-result v9
-
-    if-eqz v9, :cond_103
-
-    invoke-virtual {v7}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v9
-
-    const-string v10, "[NA]"
-
-    invoke-virtual {v9, v10}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_10d
+    invoke-virtual {v8, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 90
-    :cond_103
-    iget-object v9, p0, Ldisa/disascanner/ResultActivity;->lblPin:Landroid/widget/TextView;
+    iget-object v8, p0, Ldisa/disascanner/ResultActivity;->txtPin:Landroid/widget/TextView;
 
-    invoke-virtual {v9, v13}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v8, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 91
-    iget-object v9, p0, Ldisa/disascanner/ResultActivity;->txtPin:Landroid/widget/TextView;
-
-    invoke-virtual {v9, v13}, Landroid/widget/TextView;->setVisibility(I)V
+    .line 93
+    :cond_ee
+    if-eqz v7, :cond_fd
 
     .line 94
-    :cond_10d
-    invoke-virtual {v8}, Ljava/lang/String;->length()I
+    iget-object v8, p0, Ldisa/disascanner/ResultActivity;->txtSpecialInstruction:Landroid/widget/TextView;
 
-    move-result v9
+    const-string v9, "\\\\n"
 
-    if-lez v9, :cond_12c
+    const-string v10, "\n"
 
-    invoke-virtual {v8}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-virtual {v7, v9, v10}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    const-string v10, "[NA]"
-
-    invoke-virtual {v9, v10}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_12c
+    invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 95
-    iget-object v9, p0, Ldisa/disascanner/ResultActivity;->txtSpecialInstruction:Landroid/widget/TextView;
-
-    const-string v10, "\\\\n"
-
-    const-string v11, "\n"
-
-    invoke-virtual {v8, v10, v11}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-virtual {v9, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 96
-    :cond_12c
+    :cond_fd
     return-void
 
-    :cond_12d
-    move v9, v11
+    .end local v3    # "isValid":Z
+    :cond_fe
+    move v3, v9
 
-    .line 74
-    goto :goto_d0
+    .line 53
+    goto/16 :goto_38
 
-    :cond_12f
-    move v3, v11
+    .restart local v3    # "isValid":Z
+    :cond_101
+    move v8, v9
 
-    .line 78
-    goto :goto_e7
+    .line 59
+    goto/16 :goto_44
 
-    .line 82
-    .restart local v3    # "isLastUsed":Z
-    :cond_131
-    invoke-direct {p0, v0, v6, v1}, Ldisa/disascanner/ResultActivity;->setValid(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .line 81
+    :cond_104
+    invoke-direct {p0, v0, v5, v1}, Ldisa/disascanner/ResultActivity;->setValid(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_ec
+    goto :goto_d9
 
-    .line 85
-    .end local v3    # "isLastUsed":Z
-    :cond_135
+    .line 84
+    :cond_108
     invoke-direct {p0}, Ldisa/disascanner/ResultActivity;->setInvalid()V
 
-    goto :goto_ec
+    goto :goto_d9
 .end method
 
 .method protected onStart()V
     .registers 2
 
     .prologue
-    .line 100
+    .line 99
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
-    .line 101
+    .line 100
     iget-boolean v0, p0, Ldisa/disascanner/ResultActivity;->toAlertNotSupported:Z
 
     if-eqz v0, :cond_a
 
-    .line 102
+    .line 101
     invoke-direct {p0}, Ldisa/disascanner/ResultActivity;->displayNotSupportedMessage()V
 
-    .line 104
+    .line 103
     :cond_a
     return-void
 .end method

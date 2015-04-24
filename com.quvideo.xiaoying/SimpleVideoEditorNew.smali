@@ -254,65 +254,65 @@
     iput-object v2, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->N:Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;
 
     .line 786
-    new-instance v0, Lbax;
+    new-instance v0, Laud;
 
-    invoke-direct {v0, p0}, Lbax;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Laud;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->ao:Lcom/quvideo/xiaoying/videoeditor/framework/PlayerSeekThread$OnSeekListener;
 
     .line 809
-    new-instance v0, Lbbg;
+    new-instance v0, Laum;
 
-    invoke-direct {v0, p0}, Lbbg;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Laum;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->ap:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     .line 840
-    new-instance v0, Lbbh;
+    new-instance v0, Laun;
 
-    invoke-direct {v0, p0}, Lbbh;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Laun;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->aq:Lcom/quvideo/xiaoying/videoeditor/ui/ThemeContentPanel$IThemePanelListener;
 
     .line 883
-    new-instance v0, Lbbi;
+    new-instance v0, Lauo;
 
-    invoke-direct {v0, p0}, Lbbi;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Lauo;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->ar:Lcom/quvideo/xiaoying/videoeditor/framework/ThemeEditor$IThemeEditorListener;
 
     .line 905
-    new-instance v0, Lbbj;
+    new-instance v0, Laup;
 
-    invoke-direct {v0, p0}, Lbbj;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Laup;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->as:Landroid/view/View$OnClickListener;
 
     .line 991
-    new-instance v0, Lbbk;
+    new-instance v0, Lauq;
 
-    invoke-direct {v0, p0}, Lbbk;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Lauq;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->at:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     .line 1014
-    new-instance v0, Lbbl;
+    new-instance v0, Laur;
 
-    invoke-direct {v0, p0}, Lbbl;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Laur;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->au:Lcom/quvideo/xiaoying/videoeditor/explorer/MusicExplorer$OnMusicExplorerListener;
 
     .line 1099
-    new-instance v0, Lbbm;
+    new-instance v0, Laus;
 
-    invoke-direct {v0, p0}, Lbbm;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Laus;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->av:Lcom/quvideo/xiaoying/videoeditor/ui/ImgDurAdjustManagerNew$OnFocusItemChangeListener;
 
     .line 1139
-    new-instance v0, Lbbn;
+    new-instance v0, Laut;
 
-    invoke-direct {v0, p0}, Lbbn;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Laut;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->aw:Landroid/widget/AdapterView$OnItemClickListener;
 
@@ -320,51 +320,51 @@
     iput-wide v3, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->ax:J
 
     .line 1902
-    new-instance v0, Lbay;
+    new-instance v0, Laue;
 
-    invoke-direct {v0, p0}, Lbay;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Laue;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->ay:Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;
 
     .line 1951
-    new-instance v0, Lbaz;
+    new-instance v0, Lauf;
 
-    invoke-direct {v0, p0}, Lbaz;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Lauf;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->az:Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;
 
     .line 1960
-    new-instance v0, Lbba;
+    new-instance v0, Laug;
 
-    invoke-direct {v0, p0}, Lbba;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Laug;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->n:Lcom/quvideo/xiaoying/videoeditor/ui/FullscreenPreviewPanel$IFullscreenPreviewPanelListener;
 
     .line 2263
-    new-instance v0, Lbbb;
+    new-instance v0, Lauh;
 
-    invoke-direct {v0, p0}, Lbbb;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Lauh;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->aA:Lcom/quvideo/xiaoying/common/ui/widgets/scalewidget/ScaleRotateView$OnGestureListener;
 
     .line 2296
-    new-instance v0, Lbbc;
+    new-instance v0, Laui;
 
-    invoke-direct {v0, p0}, Lbbc;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Laui;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->o:Lcom/quvideo/xiaoying/dialog/ComTextEditDialog$OnEditDialogClickListener;
 
     .line 2323
-    new-instance v0, Lbbd;
+    new-instance v0, Lauj;
 
-    invoke-direct {v0, p0}, Lbbd;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Lauj;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->p:Lcom/quvideo/xiaoying/dialog/ComTextEditDialog$OnEditContentCheckListener;
 
     .line 2476
-    new-instance v0, Lbbe;
+    new-instance v0, Lauk;
 
-    invoke-direct {v0, p0}, Lbbe;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v0, p0}, Lauk;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;->q:Lcom/quvideo/xiaoying/videoeditor/util/TextPrepareListener;
 
@@ -3092,9 +3092,9 @@
     invoke-direct {v0, p0}, Lcom/quvideo/xiaoying/videoeditor/simpleedit/ProjectExportVideoMgr;-><init>(Landroid/app/Activity;)V
 
     .line 2535
-    new-instance v1, Lbbf;
+    new-instance v1, Laul;
 
-    invoke-direct {v1, p0}, Lbbf;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
+    invoke-direct {v1, p0}, Laul;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/SimpleVideoEditorNew;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/videoeditor/simpleedit/ProjectExportVideoMgr;->setExportListener(Lcom/quvideo/xiaoying/videoeditor/simpleedit/ProjectExportVideoMgr$ExportListener;)V
 

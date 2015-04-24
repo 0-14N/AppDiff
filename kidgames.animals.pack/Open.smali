@@ -43,7 +43,7 @@
     .registers 1
 
     .prologue
-    .line 182
+    .line 161
     const/4 v0, 0x0
 
     sput-boolean v0, Lkidgames/animals/pack/Open;->isStartFinished:Z
@@ -55,15 +55,15 @@
     .registers 2
 
     .prologue
-    .line 30
+    .line 22
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 42
+    .line 34
     const-string v0, "TA4f3sBUZCncPQp8JBYA"
 
     iput-object v0, p0, Lkidgames/animals/pack/Open;->token:Ljava/lang/String;
 
-    .line 30
+    .line 22
     return-void
 .end method
 
@@ -71,7 +71,7 @@
     .registers 1
 
     .prologue
-    .line 218
+    .line 174
     invoke-direct {p0}, Lkidgames/animals/pack/Open;->startGame()V
 
     return-void
@@ -81,28 +81,28 @@
     .registers 3
 
     .prologue
-    .line 220
+    .line 176
     sget-boolean v1, Lkidgames/animals/pack/Open;->isTablet:Z
 
     invoke-static {v1}, Lkidgames/library/AdProvider;->SetActiveAdProvider(Z)V
 
-    .line 222
+    .line 178
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lkidgames/animals/pack/Start;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 223
+    .line 179
     .local v0, "intent":Landroid/content/Intent;
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 224
+    .line 180
     invoke-virtual {p0, v0}, Lkidgames/animals/pack/Open;->startActivity(Landroid/content/Intent;)V
 
-    .line 225
+    .line 181
     return-void
 .end method
 
@@ -113,12 +113,12 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 52
+    .line 42
     iget-object v0, p0, Lkidgames/animals/pack/Open;->PortraitConfig:Landroid/content/res/Configuration;
 
     invoke-super {p0, v0}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 53
+    .line 43
     return-void
 .end method
 
@@ -127,31 +127,16 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 59
+    .line 48
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 61
-    :try_start_3
-    sget-object v2, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
-
-    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    const/4 v3, 0x7
-
-    if-lt v2, v3, :cond_f
-
-    .line 62
-    invoke-static {p0}, Lcom/appbrain/AppBrain;->init(Landroid/content/Context;)V
-
-    .line 66
-    :cond_f
+    .line 50
     const/4 v2, 0x1
 
+    :try_start_4
     invoke-virtual {p0, v2}, Lkidgames/animals/pack/Open;->requestWindowFeature(I)Z
 
-    .line 67
+    .line 51
     invoke-virtual {p0}, Lkidgames/animals/pack/Open;->getWindow()Landroid/view/Window;
 
     move-result-object v2
@@ -162,7 +147,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/Window;->setFlags(II)V
 
-    .line 69
+    .line 53
     invoke-virtual {p0}, Lkidgames/animals/pack/Open;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -173,10 +158,10 @@
 
     iput-object v2, p0, Lkidgames/animals/pack/Open;->PortraitConfig:Landroid/content/res/Configuration;
 
-    .line 70
+    .line 54
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 73
+    .line 57
     const-string v2, "AnimalsPackPrefs"
 
     const/4 v3, 0x0
@@ -187,7 +172,7 @@
 
     sput-object v2, Lkidgames/animals/pack/Open;->settings:Landroid/content/SharedPreferences;
 
-    .line 74
+    .line 58
     sget-object v2, Lkidgames/animals/pack/Open;->settings:Landroid/content/SharedPreferences;
 
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -196,7 +181,7 @@
 
     sput-object v2, Lkidgames/animals/pack/Open;->editor:Landroid/content/SharedPreferences$Editor;
 
-    .line 75
+    .line 59
     sget-object v2, Lkidgames/animals/pack/Open;->settings:Landroid/content/SharedPreferences;
 
     const-string v3, "SoundIsOn"
@@ -209,7 +194,7 @@
 
     invoke-static {v2}, Lkidgames/game/pack/library/Music;->turnSoundOnOff(Z)V
 
-    .line 77
+    .line 61
     invoke-virtual {p0}, Lkidgames/animals/pack/Open;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -222,14 +207,14 @@
 
     sput-boolean v2, Lkidgames/animals/pack/Open;->isTablet:Z
 
-    .line 79
+    .line 63
     new-instance v2, Landroid/util/DisplayMetrics;
 
     invoke-direct {v2}, Landroid/util/DisplayMetrics;-><init>()V
 
     iput-object v2, p0, Lkidgames/animals/pack/Open;->dm1:Landroid/util/DisplayMetrics;
 
-    .line 80
+    .line 64
     invoke-virtual {p0}, Lkidgames/animals/pack/Open;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v2
@@ -242,21 +227,21 @@
 
     invoke-virtual {v2, v3}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 81
+    .line 65
     iget-object v2, p0, Lkidgames/animals/pack/Open;->dm1:Landroid/util/DisplayMetrics;
 
     iget v2, v2, Landroid/util/DisplayMetrics;->heightPixels:I
 
     sput v2, Lkidgames/animals/pack/Open;->heightPixels:I
 
-    .line 82
+    .line 66
     sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v3, "Kindle Fire"
 
-    if-ne v2, v3, :cond_7c
+    if-ne v2, v3, :cond_70
 
-    .line 83
+    .line 67
     iget-object v2, p0, Lkidgames/animals/pack/Open;->dm1:Landroid/util/DisplayMetrics;
 
     iget v2, v2, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -265,8 +250,8 @@
 
     sput v2, Lkidgames/animals/pack/Open;->heightPixels:I
 
-    .line 86
-    :cond_7c
+    .line 70
+    :cond_70
     sget-object v2, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     const/4 v3, 0x0
@@ -287,7 +272,7 @@
 
     aput v4, v2, v3
 
-    .line 87
+    .line 71
     sget-object v2, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     const/4 v3, 0x0
@@ -308,7 +293,7 @@
 
     aput v4, v2, v3
 
-    .line 88
+    .line 72
     sget-object v2, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     const/4 v3, 0x0
@@ -329,7 +314,7 @@
 
     aput v4, v2, v3
 
-    .line 89
+    .line 73
     sget-object v2, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     const/4 v3, 0x0
@@ -350,7 +335,7 @@
 
     aput v4, v2, v3
 
-    .line 91
+    .line 75
     sget-object v2, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     const/4 v3, 0x1
@@ -371,7 +356,7 @@
 
     aput v4, v2, v3
 
-    .line 92
+    .line 76
     sget-object v2, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     const/4 v3, 0x1
@@ -392,7 +377,7 @@
 
     aput v4, v2, v3
 
-    .line 93
+    .line 77
     sget-object v2, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     const/4 v3, 0x1
@@ -413,7 +398,7 @@
 
     aput v4, v2, v3
 
-    .line 94
+    .line 78
     sget-object v2, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     const/4 v3, 0x1
@@ -434,7 +419,7 @@
 
     aput v4, v2, v3
 
-    .line 96
+    .line 80
     sget-object v2, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     const/4 v3, 0x2
@@ -455,14 +440,14 @@
 
     aput v4, v2, v3
 
-    .line 98
+    .line 82
     new-instance v2, Lkidgames/animals/pack/Open$TestAsyncTask;
 
     invoke-direct {v2, p0}, Lkidgames/animals/pack/Open$TestAsyncTask;-><init>(Lkidgames/animals/pack/Open;)V
 
     iput-object v2, p0, Lkidgames/animals/pack/Open;->myATask:Lkidgames/animals/pack/Open$TestAsyncTask;
 
-    .line 99
+    .line 83
     iget-object v2, p0, Lkidgames/animals/pack/Open;->myATask:Lkidgames/animals/pack/Open$TestAsyncTask;
 
     const/4 v3, 0x1
@@ -476,11 +461,11 @@
     aput-object v5, v3, v4
 
     invoke-virtual {v2, v3}, Lkidgames/animals/pack/Open$TestAsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
-    :try_end_12c
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_12c} :catch_13b
+    :try_end_120
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_120} :catch_12f
 
-    .line 105
-    :goto_12c
+    .line 89
+    :goto_120
     new-instance v1, Lcom/edealya/lib/DeviceIdentifier;
 
     invoke-virtual {p0}, Lkidgames/animals/pack/Open;->getApplicationContext()Landroid/content/Context;
@@ -491,70 +476,51 @@
 
     invoke-direct {v1, v2, v3}, Lcom/edealya/lib/DeviceIdentifier;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 106
+    .line 90
     .local v1, "edDevice":Lcom/edealya/lib/DeviceIdentifier;
     invoke-virtual {v1}, Lcom/edealya/lib/DeviceIdentifier;->update()V
 
-    .line 107
+    .line 91
     return-void
 
-    .line 100
+    .line 84
     .end local v1    # "edDevice":Lcom/edealya/lib/DeviceIdentifier;
-    :catch_13b
+    :catch_12f
     move-exception v0
 
-    .line 101
+    .line 85
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 102
+    .line 86
     invoke-virtual {p0}, Lkidgames/animals/pack/Open;->finish()V
 
-    .line 103
+    .line 87
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v2
 
     invoke-static {v2}, Landroid/os/Process;->killProcess(I)V
 
-    goto :goto_12c
+    goto :goto_120
 .end method
 
 .method public onResume()V
-    .registers 3
+    .registers 2
 
     .prologue
-    .line 187
+    .line 165
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 195
+    .line 167
     sget-boolean v0, Lkidgames/animals/pack/Open;->isStartFinished:Z
 
-    if-eqz v0, :cond_1a
+    if-eqz v0, :cond_a
 
-    .line 209
-    sget-object v0, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    const/4 v1, 0x7
-
-    if-lt v0, v1, :cond_17
-
-    .line 210
-    invoke-static {}, Lcom/appbrain/AppBrain;->getAds()Lcom/appbrain/AdService;
-
-    move-result-object v0
-
-    invoke-interface {v0, p0}, Lcom/appbrain/AdService;->maybeShowInterstitial(Landroid/app/Activity;)Z
-
-    .line 211
-    :cond_17
+    .line 168
     invoke-virtual {p0}, Lkidgames/animals/pack/Open;->finish()V
 
-    .line 214
-    :cond_1a
+    .line 170
+    :cond_a
     return-void
 .end method

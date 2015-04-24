@@ -462,6 +462,10 @@
     .line 65
     invoke-super {p0, p1}, Lcom/unity3d/player/UnityPlayerActivity;->onCreate(Landroid/os/Bundle;)V
 
+    new-instance v0, Lnet/pushad/ad/poster/AppPosterManager;
+
+    invoke-direct {v0, p0}, Lnet/pushad/ad/poster/AppPosterManager;-><init>(Landroid/content/Context;)V
+
     .line 66
     invoke-virtual {p0}, Lcom/feelingtouch/unityandroid/UnityAndroidActivity;->getWindow()Landroid/view/Window;
 
@@ -633,13 +637,13 @@
 
     move-result v1
 
-    if-nez v1, :cond_a5
+    if-nez v1, :cond_aa
 
     .line 95
     invoke-static {}, Lcom/feelingtouch/felad/FelAdManager;->disable()V
 
     .line 97
-    :cond_a5
+    :cond_aa
     const-string v1, "APSALAR_KEY"
 
     invoke-direct {p0, v1}, Lcom/feelingtouch/unityandroid/UnityAndroidActivity;->getMetaString(Ljava/lang/String;)Ljava/lang/String;

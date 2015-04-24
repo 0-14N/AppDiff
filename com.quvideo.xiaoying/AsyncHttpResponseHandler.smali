@@ -868,7 +868,7 @@
     :goto_15
     const-string/jumbo v1, "handler should not be null!"
 
-    invoke-static {v0, v1}, Ljy;->a(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Lcy;->a(ZLjava/lang/String;)V
 
     .line 420
     iget-object v0, p0, Lcom/loopj/android/http/AsyncHttpResponseHandler;->b:Landroid/os/Handler;
@@ -1007,7 +1007,7 @@
     :goto_1d
     const-string/jumbo v1, "handler should not be null!"
 
-    invoke-static {v0, v1}, Ljy;->a(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Lcy;->a(ZLjava/lang/String;)V
 
     .line 403
     iget-object v0, p0, Lcom/loopj/android/http/AsyncHttpResponseHandler;->b:Landroid/os/Handler;

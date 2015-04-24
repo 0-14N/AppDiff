@@ -52,11 +52,11 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const/high16 v0, 0x7f030000
+    const v0, 0x7f030001
 
     invoke-virtual {p0, v0}, LOurBirdMan/Pandora/UI/AcCategory;->setContentView(I)V
 
-    const v0, 0x7f0b0002
+    const v0, 0x7f0b0010
 
     invoke-virtual {p0, v0}, LOurBirdMan/Pandora/UI/AcCategory;->findViewById(I)Landroid/view/View;
 
@@ -74,101 +74,61 @@
 
     const v0, 0x7f02002a
 
-    const v1, 0x7f080004
-
-    invoke-virtual {p0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "\u81ea\u7136\u7c7b"
 
     invoke-direct {p0, v0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->a(ILjava/lang/String;)V
 
     const v0, 0x7f02001c
 
-    const v1, 0x7f080007
-
-    invoke-virtual {p0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "\u5efa\u7b51\u7c7b"
 
     invoke-direct {p0, v0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->a(ILjava/lang/String;)V
 
     const v0, 0x7f02001b
 
-    const v1, 0x7f080005
-
-    invoke-virtual {p0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "\u9b3c\u795e\u7c7b"
 
     invoke-direct {p0, v0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->a(ILjava/lang/String;)V
 
     const v0, 0x7f02002f
 
-    const v1, 0x7f080006
-
-    invoke-virtual {p0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "\u690d\u7269\u7c7b"
 
     invoke-direct {p0, v0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->a(ILjava/lang/String;)V
 
     const v0, 0x7f020002
 
-    const v1, 0x7f080008
-
-    invoke-virtual {p0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "\u52a8\u7269\u7c7b"
 
     invoke-direct {p0, v0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->a(ILjava/lang/String;)V
 
     const v0, 0x7f020009
 
-    const v1, 0x7f080009
-
-    invoke-virtual {p0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "\u8eab\u4f53\u7c7b"
 
     invoke-direct {p0, v0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->a(ILjava/lang/String;)V
 
     const v0, 0x7f020037
 
-    const v1, 0x7f08000a
-
-    invoke-virtual {p0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "\u7269\u54c1\u7c7b"
 
     invoke-direct {p0, v0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->a(ILjava/lang/String;)V
 
     const v0, 0x7f020025
 
-    const v1, 0x7f08000b
-
-    invoke-virtual {p0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "\u60c5\u7231\u7c7b"
 
     invoke-direct {p0, v0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->a(ILjava/lang/String;)V
 
     const v0, 0x7f020023
 
-    const v1, 0x7f08000c
-
-    invoke-virtual {p0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "\u751f\u6d3b\u7c7b"
 
     invoke-direct {p0, v0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->a(ILjava/lang/String;)V
 
     const v0, 0x7f02002e
 
-    const v1, 0x7f08000d
-
-    invoke-virtual {p0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, "\u4eba\u7269\u7c7b"
 
     invoke-direct {p0, v0, v1}, LOurBirdMan/Pandora/UI/AcCategory;->a(ILjava/lang/String;)V
 
@@ -176,7 +136,7 @@
 
     iget-object v2, p0, LOurBirdMan/Pandora/UI/AcCategory;->b:Ljava/util/List;
 
-    const v3, 0x7f030007
+    const v3, 0x7f030008
 
     new-array v4, v6, [Ljava/lang/String;
 
@@ -194,7 +154,7 @@
 
     new-array v5, v6, [I
 
-    fill-array-data v5, :array_ca
+    fill-array-data v5, :array_98
 
     move-object v1, p0
 
@@ -206,20 +166,18 @@
 
     iget-object v0, p0, LOurBirdMan/Pandora/UI/AcCategory;->a:Landroid/widget/GridView;
 
-    new-instance v1, LOurBirdMan/Pandora/UI/a;
+    new-instance v1, LOurBirdMan/Pandora/UI/c;
 
-    invoke-direct {v1, p0}, LOurBirdMan/Pandora/UI/a;-><init>(LOurBirdMan/Pandora/UI/AcCategory;)V
+    invoke-direct {v1, p0}, LOurBirdMan/Pandora/UI/c;-><init>(LOurBirdMan/Pandora/UI/AcCategory;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     return-void
 
-    nop
-
-    :array_ca
+    :array_98
     .array-data 4
-        0x7f0b001e
-        0x7f0b001f
+        0x7f0b002a
+        0x7f0b002b
     .end array-data
 .end method
 

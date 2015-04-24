@@ -91,9 +91,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/utils/VideoInfoListAdapter;->j:Ljava/lang/String;
 
     .line 134
-    new-instance v0, Lsq;
+    new-instance v0, Llx;
 
-    invoke-direct {v0, p0}, Lsq;-><init>(Lcom/quvideo/xiaoying/app/community/utils/VideoInfoListAdapter;)V
+    invoke-direct {v0, p0}, Llx;-><init>(Lcom/quvideo/xiaoying/app/community/utils/VideoInfoListAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/utils/VideoInfoListAdapter;->k:Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView$VideoMgrCallback;
 
@@ -310,9 +310,9 @@
     invoke-virtual/range {v0 .. v6}, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView;->updateDetailInfo(ILcom/quvideo/xiaoying/common/VideoDetailInfo;ILcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;Z)V
 
     .line 107
-    new-instance v1, Lsr;
+    new-instance v1, Lly;
 
-    invoke-direct {v1, p0}, Lsr;-><init>(Lcom/quvideo/xiaoying/app/community/utils/VideoInfoListAdapter;)V
+    invoke-direct {v1, p0}, Lly;-><init>(Lcom/quvideo/xiaoying/app/community/utils/VideoInfoListAdapter;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView;->setDataChangeListener(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView$DataChangeListener;)V
 

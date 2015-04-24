@@ -80,7 +80,7 @@
 .method static synthetic a(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/b;)V
     .registers 2
 
-    invoke-super {p0, p1}, Lcom/cungo/callrecorder/ui/ActivityLogin;->a(Lcom/cungu/lib/a/b;)V
+    invoke-super {p0, p1}, Lcom/cungo/callrecorder/ui/ActivityLogin;->b(Lcom/cungu/lib/a/b;)V
 
     return-void
 .end method
@@ -112,7 +112,7 @@
 .method static synthetic b(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/b;)V
     .registers 2
 
-    invoke-super {p0, p1}, Lcom/cungo/callrecorder/ui/ActivityLogin;->b(Lcom/cungu/lib/a/b;)V
+    invoke-super {p0, p1}, Lcom/cungo/callrecorder/ui/ActivityLogin;->a(Lcom/cungu/lib/a/b;)V
 
     return-void
 .end method
@@ -134,29 +134,11 @@
 .end method
 
 .method private n()V
-    .registers 4
+    .registers 5
 
-    const v2, 0x7f0e006f
+    const v3, 0x7f0e006f
 
-    const v1, 0x7f0e006d
-
-    const v0, 0x7f0e0068
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->n:Landroid/widget/EditText;
-
-    invoke-virtual {p0, v1}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->p:Landroid/widget/Button;
+    const v2, 0x7f0e006d
 
     const v0, 0x7f0e0069
 
@@ -167,16 +149,6 @@
     check-cast v0, Landroid/widget/EditText;
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->o:Landroid/widget/EditText;
-
-    const v0, 0x7f0e006e
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->r:Landroid/widget/LinearLayout;
 
     const v0, 0x7f0e006c
 
@@ -192,15 +164,45 @@
 
     move-result-object v0
 
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->p:Landroid/widget/Button;
+
+    invoke-virtual {p0, v3}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->s:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v1}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->findViewById(I)Landroid/view/View;
+    const v0, 0x7f0e006e
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_50
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->r:Landroid/widget/LinearLayout;
+
+    const v0, 0x7f0e0068
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/EditText;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->n:Landroid/widget/EditText;
+
+    const v0, 0x7f0e006a
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_53
 
     new-instance v1, Lcom/cungo/callrecorder/ui/fq;
 
@@ -208,10 +210,8 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_50
-    const v0, 0x7f0e006a
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->findViewById(I)Landroid/view/View;
+    :cond_53
+    invoke-virtual {p0, v3}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -261,9 +261,9 @@
 .method public a(Lcom/cungu/lib/a/a;)V
     .registers 3
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/fr;
+    new-instance v0, Lcom/cungo/callrecorder/ui/fs;
 
-    invoke-direct {v0, p0, p1}, Lcom/cungo/callrecorder/ui/fr;-><init>(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/a;)V
+    invoke-direct {v0, p0, p1}, Lcom/cungo/callrecorder/ui/fs;-><init>(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/a;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -275,9 +275,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->w:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/fy;
+    new-instance v1, Lcom/cungo/callrecorder/ui/fz;
 
-    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/fy;-><init>(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/b;)V
+    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/fz;-><init>(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/b;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -303,9 +303,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->w:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/fz;
+    new-instance v1, Lcom/cungo/callrecorder/ui/fx;
 
-    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/fz;-><init>(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/b;)V
+    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/fx;-><init>(Lcom/cungo/callrecorder/ui/ActivityLogin_;Lcom/cungu/lib/a/b;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -315,9 +315,9 @@
 .method public f(Ljava/lang/String;)V
     .registers 3
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/fs;
+    new-instance v0, Lcom/cungo/callrecorder/ui/fr;
 
-    invoke-direct {v0, p0, p1}, Lcom/cungo/callrecorder/ui/fs;-><init>(Lcom/cungo/callrecorder/ui/ActivityLogin_;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/cungo/callrecorder/ui/fr;-><init>(Lcom/cungo/callrecorder/ui/ActivityLogin_;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -345,9 +345,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLogin_;->w:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/fx;
+    new-instance v1, Lcom/cungo/callrecorder/ui/fy;
 
-    invoke-direct {v1, p0}, Lcom/cungo/callrecorder/ui/fx;-><init>(Lcom/cungo/callrecorder/ui/ActivityLogin_;)V
+    invoke-direct {v1, p0}, Lcom/cungo/callrecorder/ui/fy;-><init>(Lcom/cungo/callrecorder/ui/ActivityLogin_;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -377,12 +377,12 @@
     return-void
 
     :sswitch_7
-    invoke-virtual {p0, p2, p3}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->a(ILandroid/content/Intent;)V
+    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->a(I)V
 
     goto :goto_6
 
     :sswitch_b
-    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->a(I)V
+    invoke-virtual {p0, p2, p3}, Lcom/cungo/callrecorder/ui/ActivityLogin_;->a(ILandroid/content/Intent;)V
 
     goto :goto_6
 
@@ -395,8 +395,8 @@
 
     :sswitch_data_14
     .sparse-switch
-        0x0 -> :sswitch_7
-        0x1 -> :sswitch_b
+        0x0 -> :sswitch_b
+        0x1 -> :sswitch_7
         0x2766 -> :sswitch_f
     .end sparse-switch
 .end method

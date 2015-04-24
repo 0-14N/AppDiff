@@ -20,7 +20,7 @@
 
 .field private point_select_content:Landroid/widget/TextView;
 
-.field private returnBtn:Landroid/widget/ImageButton;
+.field private returnBtn:Landroid/widget/Button;
 
 
 # direct methods
@@ -41,7 +41,7 @@
     const/4 v3, 0x1
 
     .line 26
-    const v0, 0x7f070262
+    const v0, 0x7f0800f3
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->findViewById(I)Landroid/view/View;
 
@@ -53,7 +53,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d0124
+    const v2, 0x7f090132
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -62,27 +62,27 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 27
-    const v0, 0x7f070263
+    const v0, 0x7f0800f4
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageButton;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->returnBtn:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->returnBtn:Landroid/widget/Button;
 
     .line 30
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->returnBtn:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->returnBtn:Landroid/widget/Button;
 
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity$1;
 
     invoke-direct {v1, p0}, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity$1;-><init>(Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 42
-    const v0, 0x7f0700b3
+    const v0, 0x7f080033
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->findViewById(I)Landroid/view/View;
 
@@ -93,7 +93,7 @@
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->point_name_content:Landroid/widget/TextView;
 
     .line 43
-    const v0, 0x7f0700b6
+    const v0, 0x7f080036
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->findViewById(I)Landroid/view/View;
 
@@ -104,7 +104,7 @@
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->point_pos_content:Landroid/widget/TextView;
 
     .line 44
-    const v0, 0x7f0700b9
+    const v0, 0x7f080039
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->findViewById(I)Landroid/view/View;
 
@@ -124,7 +124,7 @@
     invoke-virtual {v0, v3}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
     .line 47
-    const v0, 0x7f0700bb
+    const v0, 0x7f08003b
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->findViewById(I)Landroid/view/View;
 
@@ -186,7 +186,7 @@
     invoke-super {p0, p1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 60
-    const v1, 0x7f03000c
+    const/high16 v1, 0x7f030000
 
     invoke-virtual {p0, v1}, Lcom/jiuzhansoft/massage/subActivity/AcupuncturePointDetailInfoActivity;->setContentView(I)V
 

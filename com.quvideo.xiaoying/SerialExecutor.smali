@@ -97,9 +97,9 @@
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/SerialExecutor;->g:Ljava/util/ArrayDeque;
 
-    new-instance v0, Lakg;
+    new-instance v0, Ladm;
 
-    invoke-direct {v0, p0, p1}, Lakg;-><init>(Lcom/quvideo/xiaoying/common/SerialExecutor;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Ladm;-><init>(Lcom/quvideo/xiaoying/common/SerialExecutor;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/SerialExecutor;->b:Ljava/util/concurrent/ThreadFactory;
 
@@ -162,9 +162,9 @@
     :try_start_1
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/SerialExecutor;->g:Ljava/util/ArrayDeque;
 
-    new-instance v1, Lakn;
+    new-instance v1, Ladt;
 
-    invoke-direct {v1, p0, p1}, Lakn;-><init>(Lcom/quvideo/xiaoying/common/SerialExecutor;Ljava/lang/Runnable;)V
+    invoke-direct {v1, p0, p1}, Ladt;-><init>(Lcom/quvideo/xiaoying/common/SerialExecutor;Ljava/lang/Runnable;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
 

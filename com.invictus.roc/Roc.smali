@@ -118,7 +118,7 @@
     .prologue
     const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     .line 120
     sput-boolean v0, Lcom/invictus/roc/Roc;->PocketChangeIsFullVersion:Z
@@ -742,28 +742,30 @@
     .param p0, "sku"    # Ljava/lang/String;
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v0, 0x1
+
+    return v0
 
     .line 819
     sget-boolean v1, Lcom/invictus/roc/Roc;->PocketChangeStarted:Z
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_7
 
     .line 823
-    :cond_5
-    :goto_5
+    :cond_6
+    :goto_6
     return v0
 
-    :cond_6
+    :cond_7
     invoke-static {p0}, Lcom/pocketchange/android/PocketChange;->getItemCount(Ljava/lang/String;)I
 
     move-result v1
 
-    if-lez v1, :cond_5
+    if-lez v1, :cond_6
 
     const/4 v0, 0x1
 
-    goto :goto_5
+    goto :goto_6
 .end method
 
 .method public static PocketChangePurchase(Ljava/lang/String;)V
@@ -844,7 +846,7 @@
 
     invoke-static {v0}, Lcom/invictus/roc/Roc;->PocketChangeIsPurchased(Ljava/lang/String;)Z
 
-    move-result v0
+    const/4 v0, 0x1
 
     if-eqz v0, :cond_22
 

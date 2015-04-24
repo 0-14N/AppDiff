@@ -149,30 +149,30 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;->x:Landroid/os/Handler;
 
     .line 508
-    new-instance v0, Lamb;
+    new-instance v0, Lafh;
 
-    invoke-direct {v0, p0}, Lamb;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
+    invoke-direct {v0, p0}, Lafh;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;->y:Landroid/media/MediaPlayer$OnInfoListener;
 
     .line 534
-    new-instance v0, Lamc;
+    new-instance v0, Lafi;
 
-    invoke-direct {v0, p0}, Lamc;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
+    invoke-direct {v0, p0}, Lafi;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;->z:Landroid/media/MediaPlayer$OnCompletionListener;
 
     .line 543
-    new-instance v0, Lamd;
+    new-instance v0, Lafj;
 
-    invoke-direct {v0, p0}, Lamd;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
+    invoke-direct {v0, p0}, Lafj;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;->A:Landroid/media/MediaPlayer$OnErrorListener;
 
     .line 557
-    new-instance v0, Lame;
+    new-instance v0, Lafk;
 
-    invoke-direct {v0, p0}, Lame;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
+    invoke-direct {v0, p0}, Lafk;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;->B:Landroid/media/MediaPlayer$OnPreparedListener;
 
@@ -482,45 +482,45 @@
     .line 321
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;->b:Landroid/widget/RelativeLayout;
 
-    new-instance v1, Lamf;
+    new-instance v1, Lafl;
 
-    invoke-direct {v1, p0}, Lamf;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
+    invoke-direct {v1, p0}, Lafl;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 355
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;->e:Landroid/widget/Button;
 
-    new-instance v1, Lamg;
+    new-instance v1, Lafm;
 
-    invoke-direct {v1, p0}, Lamg;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
+    invoke-direct {v1, p0}, Lafm;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 381
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;->f:Landroid/widget/Button;
 
-    new-instance v1, Lamh;
+    new-instance v1, Lafn;
 
-    invoke-direct {v1, p0}, Lamh;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
+    invoke-direct {v1, p0}, Lafn;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 397
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;->h:Landroid/widget/SeekBar;
 
-    new-instance v1, Lami;
+    new-instance v1, Lafo;
 
-    invoke-direct {v1, p0}, Lami;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
+    invoke-direct {v1, p0}, Lafo;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
     .line 436
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;->m:Landroid/widget/ImageButton;
 
-    new-instance v1, Lamj;
+    new-instance v1, Lafp;
 
-    invoke-direct {v1, p0}, Lamj;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
+    invoke-direct {v1, p0}, Lafp;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoMgr;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

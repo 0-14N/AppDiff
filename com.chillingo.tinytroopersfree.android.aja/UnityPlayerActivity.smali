@@ -107,6 +107,8 @@
 
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
+    invoke-static {p0}, Lcom/devgame/InitConfig;->destroy(Landroid/content/Context;)V
+
     iget-object v0, p0, Lcom/unity3d/player/UnityPlayerActivity;->a:Lcom/unity3d/player/UnityPlayer;
 
     invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->quit()V
@@ -147,17 +149,6 @@
 
     invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->pause()V
 
-    invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerActivity;->isFinishing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_13
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayerActivity;->a:Lcom/unity3d/player/UnityPlayer;
-
-    invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->quit()V
-
-    :cond_13
     return-void
 .end method
 

@@ -183,8 +183,6 @@
     .local v2, "projection":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    check-cast v4, [Ljava/lang/String;
-
     .line 178
     .local v4, "selectionArgs":[Ljava/lang/String;
     const-string v5, "display_name COLLATE LOCALIZED ASC"
@@ -215,10 +213,10 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4f
+    if-eqz v0, :cond_4d
 
     .line 190
-    :cond_2d
+    :cond_2b
     iget-object v0, p0, Lcom/nemodream/fashionista/SmSPopupActivity;->telAl:Ljava/util/ArrayList;
 
     new-instance v3, Lcom/nemodream/fashionista/SmSPopupActivity$Person;
@@ -249,13 +247,13 @@
 
     .line 191
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
-    :try_end_4c
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_4c} :catch_61
+    :try_end_4a
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_4a} :catch_5f
 
     move-result v0
 
     .line 189
-    if-nez v0, :cond_2d
+    if-nez v0, :cond_2b
 
     .line 197
     .end local v1    # "uri":Landroid/net/Uri;
@@ -263,8 +261,8 @@
     .end local v4    # "selectionArgs":[Ljava/lang/String;
     .end local v5    # "sortQrder":Ljava/lang/String;
     .end local v6    # "contactCursor":Landroid/database/Cursor;
-    :cond_4f
-    :goto_4f
+    :cond_4d
+    :goto_4d
     iget-object v0, p0, Lcom/nemodream/fashionista/SmSPopupActivity;->telAl:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -278,14 +276,14 @@
     const/4 v8, 0x0
 
     .local v8, "i":I
-    :goto_58
+    :goto_56
     iget-object v0, p0, Lcom/nemodream/fashionista/SmSPopupActivity;->telAl:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-lt v8, v0, :cond_66
+    if-lt v8, v0, :cond_64
 
     .line 200
     return-object v9
@@ -293,20 +291,20 @@
     .line 193
     .end local v8    # "i":I
     .end local v9    # "retString":[Ljava/lang/String;
-    :catch_61
+    :catch_5f
     move-exception v7
 
     .line 194
     .local v7, "e":Ljava/lang/Exception;
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_4f
+    goto :goto_4d
 
     .line 199
     .end local v7    # "e":Ljava/lang/Exception;
     .restart local v8    # "i":I
     .restart local v9    # "retString":[Ljava/lang/String;
-    :cond_66
+    :cond_64
     iget-object v0, p0, Lcom/nemodream/fashionista/SmSPopupActivity;->telAl:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -322,7 +320,7 @@
     .line 198
     add-int/lit8 v8, v8, 0x1
 
-    goto :goto_58
+    goto :goto_56
 .end method
 
 .method private showTelList()V
@@ -359,7 +357,7 @@
 
     array-length v2, v2
 
-    if-lt v1, v2, :cond_41
+    if-lt v1, v2, :cond_46
 
     .line 131
     new-instance v0, Landroid/app/AlertDialog$Builder;
@@ -368,7 +366,11 @@
 
     .line 132
     .local v0, "ab":Landroid/app/AlertDialog$Builder;
-    const-string v2, "\uc5f0\ub77d\ucc98"
+    const v2, 0x7f06005d
+
+    invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/SmSPopupActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
@@ -407,7 +409,7 @@
 
     .line 129
     .end local v0    # "ab":Landroid/app/AlertDialog$Builder;
-    :cond_41
+    :cond_46
     iget-object v2, p0, Lcom/nemodream/fashionista/SmSPopupActivity;->check:[Z
 
     const/4 v3, 0x0
@@ -433,7 +435,7 @@
 
     move-result v1
 
-    packed-switch v1, :pswitch_data_da
+    packed-switch v1, :pswitch_data_de
 
     .line 123
     :goto_8
@@ -464,10 +466,14 @@
 
     const/16 v2, 0xb
 
-    if-ge v1, v2, :cond_2e
+    if-ge v1, v2, :cond_33
 
     .line 88
-    const-string v1, "\ubc88\ud638\ub97c \uc785\ub825\ud574 \uc8fc\uc138\uc694."
+    const v1, 0x7f06005a
+
+    invoke-virtual {p0, v1}, Lcom/nemodream/fashionista/SmSPopupActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-static {p0, v1, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
@@ -486,7 +492,7 @@
 
     .line 95
     .end local v11    # "toast":Landroid/widget/Toast;
-    :cond_2e
+    :cond_33
     invoke-static {}, Landroid/telephony/gsm/SmsManager;->getDefault()Landroid/telephony/gsm/SmsManager;
 
     move-result-object v0
@@ -513,7 +519,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_a3
+    if-eqz v1, :cond_a8
 
     .line 98
     iget-object v1, p0, Lcom/nemodream/fashionista/SmSPopupActivity;->sendPhoneNumET:Landroid/widget/EditText;
@@ -547,7 +553,7 @@
     move-result-object v10
 
     .line 100
-    :goto_64
+    :goto_69
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -597,7 +603,7 @@
 
     const/16 v2, 0x50
 
-    if-le v1, v2, :cond_ae
+    if-le v1, v2, :cond_b3
 
     .line 106
     invoke-virtual {p0}, Lcom/nemodream/fashionista/SmSPopupActivity;->getApplicationContext()Landroid/content/Context;
@@ -608,13 +614,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9e
+    if-eqz v1, :cond_a3
 
     .line 107
     invoke-static {p0, v3}, Lcom/nemodream/fashionista/util/SMSSender;->sendMMS(Landroid/app/Activity;Ljava/lang/String;)V
 
     .line 120
-    :cond_9e
+    :cond_a3
     invoke-virtual {p0}, Lcom/nemodream/fashionista/SmSPopupActivity;->finish()V
 
     goto/16 :goto_8
@@ -623,7 +629,7 @@
     .end local v3    # "msg":Ljava/lang/String;
     .end local v6    # "bEnd":Z
     .end local v9    # "s":[Ljava/lang/String;
-    :cond_a3
+    :cond_a8
     iget-object v1, p0, Lcom/nemodream/fashionista/SmSPopupActivity;->sendPhoneNumET:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -634,23 +640,23 @@
 
     move-result-object v10
 
-    goto :goto_64
+    goto :goto_69
 
     .line 110
     .restart local v3    # "msg":Ljava/lang/String;
     .restart local v6    # "bEnd":Z
     .restart local v9    # "s":[Ljava/lang/String;
-    :cond_ae
+    :cond_b3
     const/4 v8, 0x0
 
     .local v8, "i":I
-    :goto_af
+    :goto_b4
     array-length v1, v9
 
-    if-ge v8, v1, :cond_9e
+    if-ge v8, v1, :cond_a3
 
     .line 112
-    :try_start_b2
+    :try_start_b7
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -681,17 +687,17 @@
     const/4 v5, 0x0
 
     invoke-virtual/range {v0 .. v5}, Landroid/telephony/gsm/SmsManager;->sendTextMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
-    :try_end_d0
-    .catch Ljava/lang/Exception; {:try_start_b2 .. :try_end_d0} :catch_d3
+    :try_end_d5
+    .catch Ljava/lang/Exception; {:try_start_b7 .. :try_end_d5} :catch_d8
 
     .line 110
-    :goto_d0
+    :goto_d5
     add-int/lit8 v8, v8, 0x1
 
-    goto :goto_af
+    goto :goto_b4
 
     .line 114
-    :catch_d3
+    :catch_d8
     move-exception v7
 
     .line 115
@@ -701,13 +707,11 @@
     .line 116
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_d0
+    goto :goto_d5
 
     .line 82
-    nop
-
-    :pswitch_data_da
-    .packed-switch 0x7f080083
+    :pswitch_data_de
+    .packed-switch 0x7f080090
         :pswitch_9
         :pswitch_8
         :pswitch_8
@@ -724,7 +728,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 43
-    const v2, 0x7f03001a
+    const v2, 0x7f03001c
 
     invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/SmSPopupActivity;->setContentView(I)V
 
@@ -735,7 +739,7 @@
 
     .line 47
     .local v1, "tb":Lcom/nemodream/fashionista/customUi/TitleBar;
-    const v2, 0x7f060053
+    const v2, 0x7f060057
 
     invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/SmSPopupActivity;->getString(I)Ljava/lang/String;
 
@@ -747,7 +751,7 @@
     invoke-virtual {v1}, Lcom/nemodream/fashionista/customUi/TitleBar;->showBackBtn()V
 
     .line 50
-    const v2, 0x7f080082
+    const v2, 0x7f08008f
 
     invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/SmSPopupActivity;->findViewById(I)Landroid/view/View;
 
@@ -758,7 +762,7 @@
     iput-object v2, p0, Lcom/nemodream/fashionista/SmSPopupActivity;->sendPhoneNumET:Landroid/widget/EditText;
 
     .line 51
-    const v2, 0x7f080084
+    const v2, 0x7f080091
 
     invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/SmSPopupActivity;->findViewById(I)Landroid/view/View;
 
@@ -774,7 +778,7 @@
     invoke-virtual {v2}, Lcom/nemodream/fashionista/customUi/CustomEditText;->requestFocus()Z
 
     .line 53
-    const v2, 0x7f080085
+    const v2, 0x7f080092
 
     invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/SmSPopupActivity;->findViewById(I)Landroid/view/View;
 
@@ -816,7 +820,7 @@
     invoke-virtual {v2, v3}, Lcom/nemodream/fashionista/customUi/CustomEditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 73
-    const v2, 0x7f080083
+    const v2, 0x7f080090
 
     invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/SmSPopupActivity;->findViewById(I)Landroid/view/View;
 
@@ -829,7 +833,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 76
-    const v2, 0x7f080086
+    const v2, 0x7f080093
 
     invoke-virtual {p0, v2}, Lcom/nemodream/fashionista/SmSPopupActivity;->findViewById(I)Landroid/view/View;
 

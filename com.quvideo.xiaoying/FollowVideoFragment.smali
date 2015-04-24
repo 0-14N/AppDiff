@@ -257,23 +257,23 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->aA:Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment$SCROLL_DIRECTION;
 
     .line 464
-    new-instance v0, Laca;
+    new-instance v0, Lvh;
 
-    invoke-direct {v0, p0}, Laca;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;)V
+    invoke-direct {v0, p0}, Lvh;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->aB:Lcom/quvideo/xiaoying/common/ui/widgets/waterfall/PLA_AbsListView$OnScrollListener;
 
     .line 562
-    new-instance v0, Lacb;
+    new-instance v0, Lvi;
 
-    invoke-direct {v0, p0}, Lacb;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;)V
+    invoke-direct {v0, p0}, Lvi;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->aC:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     .line 625
-    new-instance v0, Lacc;
+    new-instance v0, Lvj;
 
-    invoke-direct {v0, p0}, Lacc;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;)V
+    invoke-direct {v0, p0}, Lvj;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->aD:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshBase$OnPullEventListener;
 
@@ -303,7 +303,7 @@
     .line 721
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->aq:Lcom/quvideo/xiaoying/app/v3/ui/common/SpannableTextView;
 
-    const v1, 0x7f0a0385
+    const v1, 0x7f0a0362
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/v3/ui/common/SpannableTextView;->setText(I)V
 
@@ -359,7 +359,7 @@
 
     .line 727
     :cond_35
-    const v1, 0x7f0a0380
+    const v1, 0x7f0a035d
 
     const/4 v2, 0x1
 
@@ -944,9 +944,9 @@
     .line 649
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->Z:Landroid/app/ProgressDialog;
 
-    new-instance v1, Lace;
+    new-instance v1, Lvl;
 
-    invoke-direct {v1, p0}, Lace;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;)V
+    invoke-direct {v1, p0}, Lvl;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -1092,7 +1092,7 @@
     if-gez v3, :cond_66
 
     .line 677
-    const v0, 0x7f0a032c
+    const v0, 0x7f0a0309
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -1122,7 +1122,7 @@
     div-long v0, v1, v8
 
     .line 680
-    const v2, 0x7f0a032d
+    const v2, 0x7f0a030a
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -1152,7 +1152,7 @@
     div-long v0, v1, v10
 
     .line 683
-    const v2, 0x7f0a032e
+    const v2, 0x7f0a030b
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -1178,7 +1178,7 @@
     div-long v0, v1, v12
 
     .line 686
-    const v2, 0x7f0a032f
+    const v2, 0x7f0a030c
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -1444,7 +1444,7 @@
     .line 359
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->c:Landroid/view/View;
 
-    const v1, 0x7f0605d6
+    const v1, 0x7f0605c1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1457,7 +1457,7 @@
     .line 360
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->d:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f0605d7
+    const v1, 0x7f0605c2
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -1475,7 +1475,7 @@
     .line 362
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->c:Landroid/view/View;
 
-    const v1, 0x7f0605d8
+    const v1, 0x7f0605c3
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1488,7 +1488,7 @@
     .line 363
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->e:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f0605d9
+    const v1, 0x7f0605c4
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -1519,7 +1519,7 @@
     .line 367
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->c:Landroid/view/View;
 
-    const v1, 0x7f0605da
+    const v1, 0x7f0605c5
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1532,7 +1532,7 @@
     .line 369
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->c:Landroid/view/View;
 
-    const v1, 0x7f0605d5
+    const v1, 0x7f0605c0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1624,7 +1624,7 @@
     .line 390
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->c:Landroid/view/View;
 
-    const v1, 0x7f060445
+    const v1, 0x7f060430
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1827,9 +1827,9 @@
     invoke-virtual {p0}, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->init()V
 
     .line 315
-    new-instance v0, Lacd;
+    new-instance v0, Lvk;
 
-    invoke-direct {v0, p0}, Lacd;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;)V
+    invoke-direct {v0, p0}, Lvk;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/FollowVideoFragment;->au:Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;
 

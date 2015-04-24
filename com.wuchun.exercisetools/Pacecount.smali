@@ -21,7 +21,7 @@
 
 .field E:I
 
-.field F:Lcom/wuchun/exercisetools/e;
+.field F:Lcom/wuchun/exercisetools/d;
 
 .field G:Landroid/widget/TextView;
 
@@ -33,7 +33,7 @@
 
 .field K:Landroid/location/LocationListener;
 
-.field L:Lcom/wuchun/exercisetools/g;
+.field L:Lcom/wuchun/exercisetools/f;
 
 .field M:Landroid/widget/FrameLayout;
 
@@ -79,7 +79,7 @@
 
 .field private ag:Landroid/widget/TextView;
 
-.field b:Lcom/wuchun/exercisetools/h;
+.field b:Lcom/wuchun/exercisetools/g;
 
 .field c:Ljava/lang/Long;
 
@@ -228,11 +228,11 @@
 
     iput-object v0, p0, Lcom/wuchun/exercisetools/Pacecount;->ad:Ljava/lang/String;
 
-    new-instance v0, Lcom/wuchun/exercisetools/e;
+    new-instance v0, Lcom/wuchun/exercisetools/d;
 
-    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/d;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/wuchun/exercisetools/Pacecount;->F:Lcom/wuchun/exercisetools/e;
+    iput-object v0, p0, Lcom/wuchun/exercisetools/Pacecount;->F:Lcom/wuchun/exercisetools/d;
 
     const/4 v0, 0x0
 
@@ -1743,11 +1743,11 @@
 
     sput v0, Lcom/wuchun/exercisetools/Pacecount;->g:I
 
-    new-instance v0, Lcom/wuchun/exercisetools/h;
+    new-instance v0, Lcom/wuchun/exercisetools/g;
 
-    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/h;-><init>(Lcom/wuchun/exercisetools/Pacecount;)V
+    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/g;-><init>(Lcom/wuchun/exercisetools/Pacecount;)V
 
-    iput-object v0, p0, Lcom/wuchun/exercisetools/Pacecount;->b:Lcom/wuchun/exercisetools/h;
+    iput-object v0, p0, Lcom/wuchun/exercisetools/Pacecount;->b:Lcom/wuchun/exercisetools/g;
 
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -1757,7 +1757,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/wuchun/exercisetools/Pacecount;->b:Lcom/wuchun/exercisetools/h;
+    iget-object v1, p0, Lcom/wuchun/exercisetools/Pacecount;->b:Lcom/wuchun/exercisetools/g;
 
     invoke-virtual {p0, v1, v0}, Lcom/wuchun/exercisetools/Pacecount;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -1813,23 +1813,23 @@
 
     invoke-direct {v1, v5, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    new-instance v2, Lcom/wuchun/exercisetools/g;
+    new-instance v2, Lcom/wuchun/exercisetools/f;
 
-    invoke-direct {v2, p0, p0}, Lcom/wuchun/exercisetools/g;-><init>(Lcom/wuchun/exercisetools/Pacecount;Landroid/content/Context;)V
+    invoke-direct {v2, p0, p0}, Lcom/wuchun/exercisetools/f;-><init>(Lcom/wuchun/exercisetools/Pacecount;Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/wuchun/exercisetools/Pacecount;->L:Lcom/wuchun/exercisetools/g;
+    iput-object v2, p0, Lcom/wuchun/exercisetools/Pacecount;->L:Lcom/wuchun/exercisetools/f;
 
-    iget-object v2, p0, Lcom/wuchun/exercisetools/Pacecount;->L:Lcom/wuchun/exercisetools/g;
+    iget-object v2, p0, Lcom/wuchun/exercisetools/Pacecount;->L:Lcom/wuchun/exercisetools/f;
 
     const v3, 0x7f02000e
 
-    invoke-virtual {v2, v3}, Lcom/wuchun/exercisetools/g;->setImageResource(I)V
+    invoke-virtual {v2, v3}, Lcom/wuchun/exercisetools/f;->setImageResource(I)V
 
     const/16 v2, 0xd
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    iget-object v2, p0, Lcom/wuchun/exercisetools/Pacecount;->L:Lcom/wuchun/exercisetools/g;
+    iget-object v2, p0, Lcom/wuchun/exercisetools/Pacecount;->L:Lcom/wuchun/exercisetools/f;
 
     invoke-virtual {v0, v2, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -1907,9 +1907,9 @@
 
     invoke-direct {p0, v0}, Lcom/wuchun/exercisetools/Pacecount;->a(Landroid/location/Location;)V
 
-    new-instance v0, Lcom/wuchun/exercisetools/f;
+    new-instance v0, Lcom/wuchun/exercisetools/e;
 
-    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/f;-><init>(Lcom/wuchun/exercisetools/Pacecount;)V
+    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/e;-><init>(Lcom/wuchun/exercisetools/Pacecount;)V
 
     iput-object v0, p0, Lcom/wuchun/exercisetools/Pacecount;->K:Landroid/location/LocationListener;
 
@@ -1933,7 +1933,7 @@
 .method protected onDestroy()V
     .registers 2
 
-    iget-object v0, p0, Lcom/wuchun/exercisetools/Pacecount;->b:Lcom/wuchun/exercisetools/h;
+    iget-object v0, p0, Lcom/wuchun/exercisetools/Pacecount;->b:Lcom/wuchun/exercisetools/g;
 
     invoke-virtual {p0, v0}, Lcom/wuchun/exercisetools/Pacecount;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -2085,9 +2085,9 @@
 
     iput v1, p0, Lcom/wuchun/exercisetools/Pacecount;->A:F
 
-    iget-object v1, p0, Lcom/wuchun/exercisetools/Pacecount;->L:Lcom/wuchun/exercisetools/g;
+    iget-object v1, p0, Lcom/wuchun/exercisetools/Pacecount;->L:Lcom/wuchun/exercisetools/f;
 
-    invoke-virtual {v1}, Lcom/wuchun/exercisetools/g;->invalidate()V
+    invoke-virtual {v1}, Lcom/wuchun/exercisetools/f;->invalidate()V
 
     aget v0, v0, v5
 

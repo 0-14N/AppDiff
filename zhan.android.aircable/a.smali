@@ -243,7 +243,7 @@
 .method public static a(Landroid/content/Context;)Ljava/lang/String;
     .registers 7
 
-    invoke-static {p0}, Lzhan/android/common/a;->j(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lzhan/android/common/a;->i(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1000,7 +1000,7 @@
 .method public static b(Landroid/content/Context;)Z
     .registers 3
 
-    invoke-static {p0}, Lzhan/android/common/a;->l(Landroid/content/Context;)I
+    invoke-static {p0}, Lzhan/android/common/a;->k(Landroid/content/Context;)I
 
     move-result v0
 
@@ -1563,59 +1563,7 @@
     goto :goto_24
 .end method
 
-.method public static h(Landroid/content/Context;)Z
-    .registers 3
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
-
-    invoke-virtual {v0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "CN"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_28
-
-    const-string v1, "TW"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_28
-
-    const-string v1, "HK"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_28
-
-    const/4 v0, 0x0
-
-    :goto_27
-    return v0
-
-    :cond_28
-    const/4 v0, 0x1
-
-    goto :goto_27
-.end method
-
-.method public static i(Landroid/content/Context;)V
+.method public static h(Landroid/content/Context;)V
     .registers 5
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1723,12 +1671,12 @@
     goto :goto_52
 .end method
 
-.method private static j(Landroid/content/Context;)Ljava/lang/String;
+.method private static i(Landroid/content/Context;)Ljava/lang/String;
     .registers 9
 
     const/4 v7, 0x1
 
-    invoke-static {p0}, Lzhan/android/common/a;->k(Landroid/content/Context;)[Ljava/lang/String;
+    invoke-static {p0}, Lzhan/android/common/a;->j(Landroid/content/Context;)[Ljava/lang/String;
 
     move-result-object v1
 
@@ -1813,7 +1761,7 @@
     goto :goto_2b
 .end method
 
-.method private static k(Landroid/content/Context;)[Ljava/lang/String;
+.method private static j(Landroid/content/Context;)[Ljava/lang/String;
     .registers 6
 
     const/4 v1, 0x0
@@ -1869,7 +1817,7 @@
     goto :goto_21
 .end method
 
-.method private static l(Landroid/content/Context;)I
+.method private static k(Landroid/content/Context;)I
     .registers 5
 
     const-string v0, "wifi"

@@ -18,60 +18,23 @@
     .line 1
     iput-object p1, p0, Lorg/gdb/android/client/kl;->a:Lorg/gdb/android/client/SettingsActivity;
 
-    .line 152
+    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lorg/gdb/android/client/kl;)Lorg/gdb/android/client/SettingsActivity;
-    .registers 2
-
-    .prologue
-    .line 152
-    iget-object v0, p0, Lorg/gdb/android/client/kl;->a:Lorg/gdb/android/client/SettingsActivity;
-
-    return-object v0
-.end method
-
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .registers 5
+    .registers 3
 
     .prologue
-    .line 156
-    new-instance v0, Lorg/gdb/android/client/widget/ConfirmDialog;
+    .line 176
+    iget-object v0, p0, Lorg/gdb/android/client/kl;->a:Lorg/gdb/android/client/SettingsActivity;
 
-    iget-object v1, p0, Lorg/gdb/android/client/kl;->a:Lorg/gdb/android/client/SettingsActivity;
+    invoke-static {v0}, Lorg/gdb/android/client/SettingsActivity;->d(Lorg/gdb/android/client/SettingsActivity;)V
 
-    invoke-direct {v0, v1}, Lorg/gdb/android/client/widget/ConfirmDialog;-><init>(Landroid/content/Context;)V
-
-    .line 157
-    invoke-virtual {v0}, Lorg/gdb/android/client/widget/ConfirmDialog;->show()V
-
-    .line 158
-    iget-object v1, p0, Lorg/gdb/android/client/kl;->a:Lorg/gdb/android/client/SettingsActivity;
-
-    const v2, 0x7f08016d
-
-    invoke-virtual {v1, v2}, Lorg/gdb/android/client/SettingsActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/widget/ConfirmDialog;->a(Ljava/lang/String;)V
-
-    .line 159
-    invoke-virtual {v0}, Lorg/gdb/android/client/widget/ConfirmDialog;->a()Landroid/widget/Button;
-
-    move-result-object v1
-
-    new-instance v2, Lorg/gdb/android/client/km;
-
-    invoke-direct {v2, p0, v0}, Lorg/gdb/android/client/km;-><init>(Lorg/gdb/android/client/kl;Lorg/gdb/android/client/widget/ConfirmDialog;)V
-
-    invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 174
+    .line 177
     return-void
 .end method

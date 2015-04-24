@@ -72,70 +72,6 @@
     return-object v1
 .end method
 
-.method static varargs a([Ljava/lang/String;)Ljava/lang/String;
-    .registers 5
-
-    .prologue
-    .line 234
-    if-eqz p0, :cond_5
-
-    array-length v0, p0
-
-    if-nez v0, :cond_e
-
-    .line 235
-    :cond_5
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string/jumbo v1, "No senderIds"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 237
-    :cond_e
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const/4 v0, 0x0
-
-    aget-object v0, p0, v0
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 238
-    const/4 v0, 0x1
-
-    :goto_17
-    array-length v2, p0
-
-    if-ge v0, v2, :cond_28
-
-    .line 239
-    const/16 v2, 0x2c
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    aget-object v3, p0, v0
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 238
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_17
-
-    .line 241
-    :cond_28
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public static a(Landroid/content/Context;)V
     .registers 1
 
@@ -280,7 +216,51 @@
     const/4 v4, 0x0
 
     .line 222
-    invoke-static {p1}, Lcom/google/android/gcm/a;->a([Ljava/lang/String;)Ljava/lang/String;
+    if-eqz p1, :cond_6
+
+    array-length v0, p1
+
+    if-nez v0, :cond_f
+
+    :cond_6
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string/jumbo v1, "No senderIds"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_f
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    aget-object v0, p1, v4
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    :goto_17
+    array-length v2, p1
+
+    if-ge v0, v2, :cond_28
+
+    const/16 v2, 0x2c
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    aget-object v3, p1, v0
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_17
+
+    :cond_28
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

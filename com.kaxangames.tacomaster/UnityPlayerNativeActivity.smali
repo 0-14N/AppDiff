@@ -18,7 +18,7 @@
 
 # virtual methods
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .registers 4
+    .registers 5
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -26,23 +26,31 @@
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_e
+    if-ne v0, v1, :cond_16
 
     iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
 
-    invoke-virtual {v0, p1}, Lcom/unity3d/player/UnityPlayer;->injectEvent(Landroid/view/InputEvent;)Z
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2, p1}, Lcom/unity3d/player/UnityPlayer;->onKeyMultiple(IILandroid/view/KeyEvent;)Z
 
     move-result v0
 
-    :goto_d
+    :goto_15
     return v0
 
-    :cond_e
+    :cond_16
     invoke-super {p0, p1}, Landroid/app/NativeActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
 
-    goto :goto_d
+    goto :goto_15
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -64,6 +72,12 @@
 
     const/4 v2, 0x1
 
+    new-instance v0, Lcom/unity3d/player/UnityPlayer;
+
+    invoke-direct {v0, p0}, Lcom/unity3d/player/UnityPlayer;-><init>(Landroid/content/ContextWrapper;)V
+
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
+
     invoke-virtual {p0, v2}, Lcom/unity3d/player/UnityPlayerNativeActivity;->requestWindowFeature(I)Z
 
     invoke-super {p0, p1}, Landroid/app/NativeActivity;->onCreate(Landroid/os/Bundle;)V
@@ -84,15 +98,9 @@
 
     move-result-object v0
 
-    const/4 v1, 0x2
+    const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setFormat(I)V
-
-    new-instance v0, Lcom/unity3d/player/UnityPlayer;
-
-    invoke-direct {v0, p0}, Lcom/unity3d/player/UnityPlayer;-><init>(Landroid/content/ContextWrapper;)V
-
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
 
     iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
 
@@ -117,11 +125,31 @@
     :cond_3b
     iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
 
-    invoke-virtual {p0, v0}, Lcom/unity3d/player/UnityPlayerNativeActivity;->setContentView(Landroid/view/View;)V
+    invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->getSettings()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v1, "gles_mode"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcom/unity3d/player/UnityPlayer;->init(IZ)V
 
     iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
 
-    invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->requestFocus()Z
+    invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->getView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/unity3d/player/UnityPlayerNativeActivity;->setContentView(Landroid/view/View;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
     return-void
 .end method
@@ -129,49 +157,13 @@
 .method protected onDestroy()V
     .registers 2
 
+    invoke-super {p0}, Landroid/app/NativeActivity;->onDestroy()V
+
     iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
 
     invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->quit()V
 
-    invoke-super {p0}, Landroid/app/NativeActivity;->onDestroy()V
-
     return-void
-.end method
-
-.method public onGenericMotionEvent(Landroid/view/MotionEvent;)Z
-    .registers 3
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
-
-    invoke-virtual {v0, p1}, Lcom/unity3d/player/UnityPlayer;->injectEvent(Landroid/view/InputEvent;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .registers 4
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
-
-    invoke-virtual {v0, p2}, Lcom/unity3d/player/UnityPlayer;->injectEvent(Landroid/view/InputEvent;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public onKeyUp(ILandroid/view/KeyEvent;)Z
-    .registers 4
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
-
-    invoke-virtual {v0, p2}, Lcom/unity3d/player/UnityPlayer;->injectEvent(Landroid/view/InputEvent;)Z
-
-    move-result v0
-
-    return v0
 .end method
 
 .method protected onPause()V
@@ -183,6 +175,17 @@
 
     invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->pause()V
 
+    invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerNativeActivity;->isFinishing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_13
+
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->quit()V
+
+    :cond_13
     return-void
 .end method
 
@@ -196,18 +199,6 @@
     invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->resume()V
 
     return-void
-.end method
-
-.method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .registers 3
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
-
-    invoke-virtual {v0, p1}, Lcom/unity3d/player/UnityPlayer;->injectEvent(Landroid/view/InputEvent;)Z
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public onWindowFocusChanged(Z)V

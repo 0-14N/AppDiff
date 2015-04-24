@@ -164,44 +164,44 @@
     iput-boolean v2, p0, Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;->E:Z
 
     .line 416
-    new-instance v0, Lavw;
+    new-instance v0, Lapc;
 
-    invoke-direct {v0, p0}, Lavw;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
+    invoke-direct {v0, p0}, Lapc;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;->X:Landroid/view/View$OnClickListener;
 
     .line 498
-    new-instance v0, Lavy;
+    new-instance v0, Lape;
 
-    invoke-direct {v0, p0}, Lavy;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
+    invoke-direct {v0, p0}, Lape;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;->n:Lcom/quvideo/xiaoying/videoeditor2/ui/AddClipChooserView$OnEditModeClickListener;
 
     .line 510
-    new-instance v0, Lavz;
+    new-instance v0, Lapf;
 
-    invoke-direct {v0, p0}, Lavz;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
+    invoke-direct {v0, p0}, Lapf;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;->Y:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 732
-    new-instance v0, Lawa;
+    new-instance v0, Lapg;
 
-    invoke-direct {v0, p0}, Lawa;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
+    invoke-direct {v0, p0}, Lapg;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;->o:Lcom/quvideo/xiaoying/videoeditor/framework/PlayerSeekThread$OnSeekListener;
 
     .line 742
-    new-instance v0, Lawb;
+    new-instance v0, Laph;
 
-    invoke-direct {v0, p0}, Lawb;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
+    invoke-direct {v0, p0}, Laph;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;->p:Lcom/quvideo/xiaoying/videoeditor/ui/FullscreenPreviewPanel$IFullscreenPreviewPanelListener;
 
     .line 752
-    new-instance v0, Lawc;
+    new-instance v0, Lapi;
 
-    invoke-direct {v0, p0}, Lawc;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
+    invoke-direct {v0, p0}, Lapi;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;->q:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
@@ -786,9 +786,9 @@
     if-eqz v0, :cond_26
 
     .line 1268
-    new-instance v0, Lawd;
+    new-instance v0, Lapj;
 
-    invoke-direct {v0, p0}, Lawd;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
+    invoke-direct {v0, p0}, Lapj;-><init>(Lcom/quvideo/xiaoying/videoeditor/advanceedit/AdvanceEditorPreview;)V
 
     .line 1278
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;

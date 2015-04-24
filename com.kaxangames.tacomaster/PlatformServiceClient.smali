@@ -355,7 +355,7 @@
 
     iget v5, p0, Lcom/facebook/internal/PlatformServiceClient;->protocolVersion:I
 
-    invoke-static {v4, v5}, Lcom/facebook/internal/NativeProtocol;->getLatestAvailableProtocolVersionForService(Landroid/content/Context;I)I
+    invoke-static {v4, v5}, Lcom/facebook/internal/NativeProtocol;->getLatestAvailableProtocolVersion(Landroid/content/Context;I)I
 
     move-result v0
 

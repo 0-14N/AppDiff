@@ -34,39 +34,39 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 20
+    .line 21
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
-
-    .line 22
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mState:Ljava/lang/String;
 
     .line 23
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+    iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mState:Ljava/lang/String;
 
     .line 24
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mText:Ljava/lang/String;
+    iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
 
     .line 25
-    iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mText:Ljava/lang/String;
 
     .line 26
-    iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->progressBar:Landroid/widget/ProgressBar;
+    iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
     .line 27
+    iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->progressBar:Landroid/widget/ProgressBar;
+
+    .line 28
     iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
 
-    .line 29
+    .line 30
     const-string v0, ""
 
     iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->backUrl:Ljava/lang/String;
 
-    .line 20
+    .line 21
     return-void
 .end method
 
@@ -74,7 +74,7 @@
     .registers 2
 
     .prologue
-    .line 26
+    .line 27
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->progressBar:Landroid/widget/ProgressBar;
 
     return-object v0
@@ -84,7 +84,7 @@
     .registers 4
 
     .prologue
-    .line 174
+    .line 177
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mState:Ljava/lang/String;
 
     const-string v1, "FACEBOOK"
@@ -95,14 +95,14 @@
 
     if-eqz v0, :cond_3c
 
-    .line 175
+    .line 178
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
 
     const-string v1, "FACEBOOK"
 
     invoke-virtual {v0, v1}, Lcom/nemodream/fashionista/customUi/TitleBar;->setTitle(Ljava/lang/String;)V
 
-    .line 176
+    .line 179
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
@@ -111,7 +111,7 @@
 
     iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
 
-    .line 177
+    .line 180
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -144,11 +144,11 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 192
+    .line 213
     :goto_3b
     return-void
 
-    .line 179
+    .line 182
     :cond_3c
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mState:Ljava/lang/String;
 
@@ -160,14 +160,14 @@
 
     if-eqz v0, :cond_7c
 
-    .line 180
+    .line 183
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
 
     const-string v1, "TWITTER"
 
     invoke-virtual {v0, v1}, Lcom/nemodream/fashionista/customUi/TitleBar;->setTitle(Ljava/lang/String;)V
 
-    .line 181
+    .line 184
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
@@ -176,7 +176,7 @@
 
     iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
 
-    .line 182
+    .line 185
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -215,7 +215,7 @@
 
     goto :goto_3b
 
-    .line 183
+    .line 187
     :cond_7c
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mState:Ljava/lang/String;
 
@@ -227,14 +227,14 @@
 
     if-eqz v0, :cond_95
 
-    .line 184
+    .line 188
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
 
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->mText:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/nemodream/fashionista/customUi/TitleBar;->setTitle(Ljava/lang/String;)V
 
-    .line 185
+    .line 189
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
@@ -243,22 +243,211 @@
 
     goto :goto_3b
 
-    .line 187
+    .line 192
     :cond_95
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mState:Ljava/lang/String;
+
+    const-string v1, "WEIBO"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d2
+
+    .line 193
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
+
+    const-string v1, "WEIBO"
+
+    invoke-virtual {v0, v1}, Lcom/nemodream/fashionista/customUi/TitleBar;->setTitle(Ljava/lang/String;)V
+
+    .line 194
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+
+    .line 195
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "http://service.weibo.com/share/share.php?url="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "&title="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/nemodream/fashionista/WebViewActivity;->mText:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
+    goto/16 :goto_3b
+
+    .line 197
+    :cond_d2
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mState:Ljava/lang/String;
+
+    const-string v1, "RENRENWANG"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10f
+
+    .line 198
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
+
+    const-string v1, "RENRENWANG"
+
+    invoke-virtual {v0, v1}, Lcom/nemodream/fashionista/customUi/TitleBar;->setTitle(Ljava/lang/String;)V
+
+    .line 199
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+
+    .line 200
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "http://share.renren.com/share/buttonshare.do?link="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "&title="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/nemodream/fashionista/WebViewActivity;->mText:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
+    goto/16 :goto_3b
+
+    .line 202
+    :cond_10f
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mState:Ljava/lang/String;
+
+    const-string v1, "QQ"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_14c
+
+    .line 203
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
+
+    const-string v1, "Qzone"
+
+    invoke-virtual {v0, v1}, Lcom/nemodream/fashionista/customUi/TitleBar;->setTitle(Ljava/lang/String;)V
+
+    .line 204
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+
+    .line 205
+    iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "&title="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/nemodream/fashionista/WebViewActivity;->mText:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
+    goto/16 :goto_3b
+
+    .line 208
+    :cond_14c
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
 
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->mState:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/nemodream/fashionista/customUi/TitleBar;->setTitle(Ljava/lang/String;)V
 
-    .line 188
+    .line 209
     iget-object v0, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    goto :goto_3b
+    goto/16 :goto_3b
 .end method
 
 
@@ -267,46 +456,46 @@
     .registers 1
 
     .prologue
-    .line 198
+    .line 219
     invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
 
-    .line 199
+    .line 220
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 6
+    .registers 7
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/4 v3, 0x1
-
-    .line 33
-    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+    const/4 v4, 0x1
 
     .line 34
-    const v1, 0x7f03001c
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+
+    .line 35
+    const v1, 0x7f03001e
 
     invoke-virtual {p0, v1}, Lcom/nemodream/fashionista/WebViewActivity;->setContentView(I)V
 
-    .line 37
+    .line 38
     new-instance v1, Lcom/nemodream/fashionista/customUi/TitleBar;
 
     invoke-direct {v1, p0}, Lcom/nemodream/fashionista/customUi/TitleBar;-><init>(Landroid/app/Activity;)V
 
     iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
 
-    .line 38
+    .line 39
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
 
     invoke-virtual {v1}, Lcom/nemodream/fashionista/customUi/TitleBar;->showBackBtn()V
 
-    .line 40
+    .line 41
     invoke-virtual {p0}, Lcom/nemodream/fashionista/WebViewActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 41
+    .line 42
     .local v0, "i":Landroid/content/Intent;
     const-string v1, "TYPE"
 
@@ -316,7 +505,7 @@
 
     iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->mState:Ljava/lang/String;
 
-    .line 42
+    .line 43
     const-string v1, "URL"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -325,7 +514,28 @@
 
     iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
 
-    .line 43
+    .line 44
+    const-string v1, "lgh"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "mUrl >>>>>> "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/nemodream/fashionista/WebViewActivity;->mUrl:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 45
     const-string v1, "TEXT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -334,8 +544,29 @@
 
     iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->mText:Ljava/lang/String;
 
-    .line 48
-    const v1, 0x7f080088
+    .line 46
+    const-string v1, "lgh"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "mText >>>>>> "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/nemodream/fashionista/WebViewActivity;->mText:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 51
+    const v1, 0x7f080095
 
     invoke-virtual {p0, v1}, Lcom/nemodream/fashionista/WebViewActivity;->findViewById(I)Landroid/view/View;
 
@@ -345,8 +576,8 @@
 
     iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->progressBar:Landroid/widget/ProgressBar;
 
-    .line 49
-    const v1, 0x7f080087
+    .line 52
+    const v1, 0x7f080094
 
     invoke-virtual {p0, v1}, Lcom/nemodream/fashionista/WebViewActivity;->findViewById(I)Landroid/view/View;
 
@@ -356,25 +587,25 @@
 
     iput-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
-    .line 57
+    .line 60
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v1
 
-    invoke-virtual {v1, v3}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
+    invoke-virtual {v1, v4}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 58
+    .line 61
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v1
 
-    invoke-virtual {v1, v3}, Landroid/webkit/WebSettings;->setJavaScriptCanOpenWindowsAutomatically(Z)V
+    invoke-virtual {v1, v4}, Landroid/webkit/WebSettings;->setJavaScriptCanOpenWindowsAutomatically(Z)V
 
-    .line 59
+    .line 62
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -385,17 +616,17 @@
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
 
-    .line 60
+    .line 63
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
-    invoke-virtual {v1, v3}, Landroid/webkit/WebView;->setVerticalScrollbarOverlay(Z)V
+    invoke-virtual {v1, v4}, Landroid/webkit/WebView;->setVerticalScrollbarOverlay(Z)V
 
-    .line 61
+    .line 64
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
-    invoke-virtual {v1, v3}, Landroid/webkit/WebView;->setHorizontalScrollbarOverlay(Z)V
+    invoke-virtual {v1, v4}, Landroid/webkit/WebView;->setHorizontalScrollbarOverlay(Z)V
 
-    .line 62
+    .line 65
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
     new-instance v2, Lcom/nemodream/fashionista/WebViewActivity$1;
@@ -404,7 +635,7 @@
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 96
+    .line 99
     iget-object v1, p0, Lcom/nemodream/fashionista/WebViewActivity;->webView:Landroid/webkit/WebView;
 
     new-instance v2, Lcom/nemodream/fashionista/WebViewActivity$2;
@@ -413,9 +644,9 @@
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 161
+    .line 164
     invoke-direct {p0}, Lcom/nemodream/fashionista/WebViewActivity;->init()V
 
-    .line 162
+    .line 165
     return-void
 .end method

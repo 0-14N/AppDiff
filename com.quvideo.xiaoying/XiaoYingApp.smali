@@ -758,9 +758,9 @@
 
     const-string/jumbo v1, "template.item.push"
 
-    new-instance v2, Llk;
+    new-instance v2, Ler;
 
-    invoke-direct {v2, p1}, Llk;-><init>(Lxiaoying/engine/QEngine;)V
+    invoke-direct {v2, p1}, Ler;-><init>(Lxiaoying/engine/QEngine;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -1120,9 +1120,9 @@
 
     invoke-direct {v6, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    new-instance v7, Llp;
+    new-instance v7, Lew;
 
-    invoke-direct {v7, v1}, Llp;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v1}, Lew;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v6, v7}, Ljava/io/File;->list(Ljava/io/FilenameFilter;)[Ljava/lang/String;
 
@@ -1166,9 +1166,9 @@
 
     invoke-direct {v7, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    new-instance v8, Llq;
+    new-instance v8, Lex;
 
-    invoke-direct {v8, v1}, Llq;-><init>(Ljava/lang/String;)V
+    invoke-direct {v8, v1}, Lex;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v7, v8}, Ljava/io/File;->list(Ljava/io/FilenameFilter;)[Ljava/lang/String;
 
@@ -1610,9 +1610,9 @@
     invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 651
-    new-instance v4, Llr;
+    new-instance v4, Ley;
 
-    invoke-direct {v4}, Llr;-><init>()V
+    invoke-direct {v4}, Ley;-><init>()V
 
     invoke-virtual {v3, v4}, Ljava/io/File;->list(Ljava/io/FilenameFilter;)[Ljava/lang/String;
 
@@ -1661,9 +1661,9 @@
     invoke-direct {v4, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 664
-    new-instance v5, Lls;
+    new-instance v5, Lez;
 
-    invoke-direct {v5}, Lls;-><init>()V
+    invoke-direct {v5}, Lez;-><init>()V
 
     invoke-virtual {v4, v5}, Ljava/io/File;->list(Ljava/io/FilenameFilter;)[Ljava/lang/String;
 
@@ -1780,9 +1780,9 @@
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 692
-    new-instance v3, Llt;
+    new-instance v3, Lfa;
 
-    invoke-direct {v3}, Llt;-><init>()V
+    invoke-direct {v3}, Lfa;-><init>()V
 
     invoke-virtual {v0, v3}, Ljava/io/File;->list(Ljava/io/FilenameFilter;)[Ljava/lang/String;
 
@@ -2415,9 +2415,9 @@
     if-eqz v2, :cond_236
 
     .line 1620
-    new-instance v2, Lll;
+    new-instance v2, Les;
 
-    invoke-direct {v2, p0}, Lll;-><init>(Lcom/quvideo/xiaoying/XiaoYingApp;)V
+    invoke-direct {v2, p0}, Les;-><init>(Lcom/quvideo/xiaoying/XiaoYingApp;)V
 
     .line 1627
     new-instance v5, Ljava/io/File;
@@ -3914,9 +3914,9 @@
     invoke-static {v2, v0}, Lcom/quvideo/xiaoying/common/LogUtils;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 516
-    new-instance v0, Llo;
+    new-instance v0, Lev;
 
-    invoke-direct {v0, p0}, Llo;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lev;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/quvideo/xiaoying/XiaoYingApp;->p:Ljava/lang/Thread;
 
@@ -4148,9 +4148,9 @@
 
     .prologue
     .line 931
-    new-instance v0, Llv;
+    new-instance v0, Lfc;
 
-    invoke-direct {v0, p0}, Llv;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lfc;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/quvideo/xiaoying/XiaoYingApp;->n:Ljava/lang/Thread;
 
@@ -4245,9 +4245,9 @@
     if-nez v2, :cond_25
 
     .line 836
-    new-instance v2, Llu;
+    new-instance v2, Lfb;
 
-    invoke-direct {v2, v0}, Llu;-><init>(Lcom/quvideo/xiaoying/XiaoYingApp;)V
+    invoke-direct {v2, v0}, Lfb;-><init>(Lcom/quvideo/xiaoying/XiaoYingApp;)V
 
     sput-object v2, Lcom/quvideo/xiaoying/XiaoYingApp;->k:Lcom/quvideo/xiaoying/common/CrashHandler$UncaughtExceptionListener;
 
@@ -4389,9 +4389,9 @@
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/XiaoYingApp;->setAppMemoryShared(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1091
-    new-instance v0, Llj;
+    new-instance v0, Leq;
 
-    invoke-direct {v0, p0}, Llj;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Leq;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/quvideo/xiaoying/XiaoYingApp;->o:Ljava/lang/Thread;
 
@@ -5197,9 +5197,9 @@
     if-eqz v1, :cond_64
 
     .line 293
-    new-instance v1, Lli;
+    new-instance v1, Lep;
 
-    invoke-direct {v1, p0, v0}, Lli;-><init>(Lcom/quvideo/xiaoying/XiaoYingApp;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v0}, Lep;-><init>(Lcom/quvideo/xiaoying/XiaoYingApp;Ljava/lang/String;)V
 
     .line 300
     new-instance v0, Ljava/io/File;
@@ -5738,7 +5738,7 @@
     .line 1926
     sget-object v5, Lcom/quvideo/xiaoying/XiaoYingApp;->m:Ljava/lang/String;
 
-    invoke-static {v0, v5}, Llw;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v5}, Lfd;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -5767,7 +5767,7 @@
     :cond_c8
     sget-object v5, Lcom/quvideo/xiaoying/XiaoYingApp;->m:Ljava/lang/String;
 
-    invoke-static {v0, v5}, Llw;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v5}, Lfd;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -5954,16 +5954,16 @@
     sput-boolean v2, Lcom/quvideo/xiaoying/common/CommonConfigure;->EN_APP_KILL_PROCESS:Z
 
     .line 1953
-    new-instance v0, Llm;
+    new-instance v0, Let;
 
-    invoke-direct {v0, p0, v4}, Llm;-><init>(Lcom/quvideo/xiaoying/XiaoYingApp;Landroid/content/Context;)V
+    invoke-direct {v0, p0, v4}, Let;-><init>(Lcom/quvideo/xiaoying/XiaoYingApp;Landroid/content/Context;)V
 
     invoke-static {v0}, Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcher;->setOnResultListener(Lcom/quvideo/xiaoying/common/ResultListener;)V
 
     .line 1972
-    new-instance v0, Lln;
+    new-instance v0, Leu;
 
-    invoke-direct {v0, p0, v4}, Lln;-><init>(Lcom/quvideo/xiaoying/XiaoYingApp;Landroid/content/Context;)V
+    invoke-direct {v0, p0, v4}, Leu;-><init>(Lcom/quvideo/xiaoying/XiaoYingApp;Landroid/content/Context;)V
 
     invoke-static {v0}, Lcom/quvideo/xiaoying/common/UpgradeManager;->setOnResultListener(Lcom/quvideo/xiaoying/common/ResultListener;)V
 

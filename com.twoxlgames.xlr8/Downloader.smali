@@ -881,7 +881,7 @@
     const/4 v3, 0x1
 
     .line 378
-    invoke-virtual {v12}, Ljava/io/File;->length()J
+    invoke-static {v12}, Lxlr8;->length(Ljava/io/File;)J
 
     move-result-wide v1
 
@@ -982,7 +982,7 @@
     sput-boolean v1, Lcom/twoxlgames/tech/installer/InstallerActivity;->b:Z
 
     .line 402
-    invoke-virtual {v12}, Ljava/io/File;->length()J
+    invoke-static {v12}, Lxlr8;->length(Ljava/io/File;)J
 
     move-result-wide v5
 

@@ -32,7 +32,7 @@
     .line 108
     iget-object v0, p0, Lcom/zarosun/zxht_saler/ui/info/order/o;->a:Lcom/zarosun/zxht_saler/ui/info/order/BackDepositFailActivity_;
 
-    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/info/order/BackDepositFailActivity_;->d()V
+    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/info/order/BackDepositFailActivity_;->e()V
 
     .line 109
     return-void

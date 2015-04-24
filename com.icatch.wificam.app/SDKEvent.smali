@@ -13,7 +13,8 @@
         Lcom/icatch/wificam/app/controller/SDKEvent$SdcardErrorListener;,
         Lcom/icatch/wificam/app/controller/SDKEvent$SdcardStateListener;,
         Lcom/icatch/wificam/app/controller/SDKEvent$VideoOffListener;,
-        Lcom/icatch/wificam/app/controller/SDKEvent$VideoOnListener;
+        Lcom/icatch/wificam/app/controller/SDKEvent$VideoOnListener;,
+        Lcom/icatch/wificam/app/controller/SDKEvent$WxShareListener;
     }
 .end annotation
 
@@ -39,6 +40,8 @@
 
 .field private videoOnListener:Lcom/icatch/wificam/app/controller/SDKEvent$VideoOnListener;
 
+.field private wxShareListener:Lcom/icatch/wificam/app/controller/SDKEvent$WxShareListener;
+
 
 # direct methods
 .method public constructor <init>(Landroid/os/Handler;)V
@@ -46,7 +49,7 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 32
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 19
@@ -56,10 +59,10 @@
 
     iput-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
-    .line 33
+    .line 34
     iput-object p1, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->handler:Landroid/os/Handler;
 
-    .line 35
+    .line 36
     return-void
 .end method
 
@@ -80,19 +83,19 @@
     .param p1, "iCatchEventID"    # Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     .prologue
-    .line 38
+    .line 39
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_FULL:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     if-ne p1, v0, :cond_14
 
-    .line 39
+    .line 40
     new-instance v0, Lcom/icatch/wificam/app/controller/SDKEvent$SdcardStateListener;
 
     invoke-direct {v0, p0}, Lcom/icatch/wificam/app/controller/SDKEvent$SdcardStateListener;-><init>(Lcom/icatch/wificam/app/controller/SDKEvent;)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->sdcardStateListener:Lcom/icatch/wificam/app/controller/SDKEvent$SdcardStateListener;
 
-    .line 40
+    .line 41
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_FULL:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -101,20 +104,20 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 43
+    .line 44
     :cond_14
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_ERROR:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     if-ne p1, v0, :cond_28
 
-    .line 44
+    .line 45
     new-instance v0, Lcom/icatch/wificam/app/controller/SDKEvent$SdcardErrorListener;
 
     invoke-direct {v0, p0}, Lcom/icatch/wificam/app/controller/SDKEvent$SdcardErrorListener;-><init>(Lcom/icatch/wificam/app/controller/SDKEvent;)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->sdcardErrorListener:Lcom/icatch/wificam/app/controller/SDKEvent$SdcardErrorListener;
 
-    .line 45
+    .line 46
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_ERROR:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -123,20 +126,42 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 48
+    .line 50
     :cond_28
-    sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_BATTERY_LEVEL_CHANGED:Lcom/icatch/wificam/customer/type/ICatchEventID;
+    sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_ERROR:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     if-ne p1, v0, :cond_3c
 
-    .line 49
+    .line 51
+    new-instance v0, Lcom/icatch/wificam/app/controller/SDKEvent$WxShareListener;
+
+    invoke-direct {v0, p0}, Lcom/icatch/wificam/app/controller/SDKEvent$WxShareListener;-><init>(Lcom/icatch/wificam/app/controller/SDKEvent;)V
+
+    iput-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->wxShareListener:Lcom/icatch/wificam/app/controller/SDKEvent$WxShareListener;
+
+    .line 52
+    iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
+
+    sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_ERROR:Lcom/icatch/wificam/customer/type/ICatchEventID;
+
+    iget-object v2, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->wxShareListener:Lcom/icatch/wificam/app/controller/SDKEvent$WxShareListener;
+
+    invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
+
+    .line 55
+    :cond_3c
+    sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_BATTERY_LEVEL_CHANGED:Lcom/icatch/wificam/customer/type/ICatchEventID;
+
+    if-ne p1, v0, :cond_50
+
+    .line 56
     new-instance v0, Lcom/icatch/wificam/app/controller/SDKEvent$BatteryStateListener;
 
     invoke-direct {v0, p0}, Lcom/icatch/wificam/app/controller/SDKEvent$BatteryStateListener;-><init>(Lcom/icatch/wificam/app/controller/SDKEvent;)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->batteryStateListener:Lcom/icatch/wificam/app/controller/SDKEvent$BatteryStateListener;
 
-    .line 50
+    .line 57
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_BATTERY_LEVEL_CHANGED:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -145,20 +170,20 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 52
-    :cond_3c
+    .line 59
+    :cond_50
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_CAPTURE_COMPLETE:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
-    if-ne p1, v0, :cond_50
+    if-ne p1, v0, :cond_64
 
-    .line 53
+    .line 60
     new-instance v0, Lcom/icatch/wificam/app/controller/SDKEvent$CaptureDoneListener;
 
     invoke-direct {v0, p0}, Lcom/icatch/wificam/app/controller/SDKEvent$CaptureDoneListener;-><init>(Lcom/icatch/wificam/app/controller/SDKEvent;)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->captureDoneListener:Lcom/icatch/wificam/app/controller/SDKEvent$CaptureDoneListener;
 
-    .line 54
+    .line 61
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_CAPTURE_COMPLETE:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -167,20 +192,20 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 56
-    :cond_50
+    .line 63
+    :cond_64
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_VIDEO_OFF:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
-    if-ne p1, v0, :cond_64
+    if-ne p1, v0, :cond_78
 
-    .line 57
+    .line 64
     new-instance v0, Lcom/icatch/wificam/app/controller/SDKEvent$VideoOffListener;
 
     invoke-direct {v0, p0}, Lcom/icatch/wificam/app/controller/SDKEvent$VideoOffListener;-><init>(Lcom/icatch/wificam/app/controller/SDKEvent;)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->videoOffListener:Lcom/icatch/wificam/app/controller/SDKEvent$VideoOffListener;
 
-    .line 58
+    .line 65
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_VIDEO_OFF:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -189,20 +214,20 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 60
-    :cond_64
+    .line 67
+    :cond_78
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_FILE_ADDED:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
-    if-ne p1, v0, :cond_78
+    if-ne p1, v0, :cond_8c
 
-    .line 61
+    .line 68
     new-instance v0, Lcom/icatch/wificam/app/controller/SDKEvent$FileAddedListener;
 
     invoke-direct {v0, p0}, Lcom/icatch/wificam/app/controller/SDKEvent$FileAddedListener;-><init>(Lcom/icatch/wificam/app/controller/SDKEvent;)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->fileAddedListener:Lcom/icatch/wificam/app/controller/SDKEvent$FileAddedListener;
 
-    .line 62
+    .line 69
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_FILE_ADDED:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -211,20 +236,20 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 64
-    :cond_78
+    .line 71
+    :cond_8c
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_VIDEO_ON:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
-    if-ne p1, v0, :cond_8c
+    if-ne p1, v0, :cond_a0
 
-    .line 65
+    .line 72
     new-instance v0, Lcom/icatch/wificam/app/controller/SDKEvent$VideoOnListener;
 
     invoke-direct {v0, p0}, Lcom/icatch/wificam/app/controller/SDKEvent$VideoOnListener;-><init>(Lcom/icatch/wificam/app/controller/SDKEvent;)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->videoOnListener:Lcom/icatch/wificam/app/controller/SDKEvent$VideoOnListener;
 
-    .line 66
+    .line 73
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_VIDEO_ON:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -233,20 +258,20 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 68
-    :cond_8c
+    .line 75
+    :cond_a0
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_CONNECTION_DISCONNECTED:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
-    if-ne p1, v0, :cond_a0
+    if-ne p1, v0, :cond_b4
 
-    .line 69
+    .line 76
     new-instance v0, Lcom/icatch/wificam/app/controller/SDKEvent$ConnectionFailureListener;
 
     invoke-direct {v0, p0}, Lcom/icatch/wificam/app/controller/SDKEvent$ConnectionFailureListener;-><init>(Lcom/icatch/wificam/app/controller/SDKEvent;)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->connectionFailureListener:Lcom/icatch/wificam/app/controller/SDKEvent$ConnectionFailureListener;
 
-    .line 70
+    .line 77
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_CONNECTION_DISCONNECTED:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -255,8 +280,8 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 73
-    :cond_a0
+    .line 80
+    :cond_b4
     return-void
 .end method
 
@@ -265,7 +290,7 @@
     .param p1, "iCatchEventID"    # Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     .prologue
-    .line 77
+    .line 84
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_FULL:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     if-ne p1, v0, :cond_11
@@ -274,7 +299,7 @@
 
     if-eqz v0, :cond_11
 
-    .line 78
+    .line 85
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_FULL:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -283,7 +308,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 81
+    .line 88
     :cond_11
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_ERROR:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
@@ -293,7 +318,7 @@
 
     if-eqz v0, :cond_22
 
-    .line 82
+    .line 89
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_ERROR:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -302,17 +327,36 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 85
+    .line 93
     :cond_22
-    sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_BATTERY_LEVEL_CHANGED:Lcom/icatch/wificam/customer/type/ICatchEventID;
+    sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_ERROR:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     if-ne p1, v0, :cond_33
 
-    iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->batteryStateListener:Lcom/icatch/wificam/app/controller/SDKEvent$BatteryStateListener;
+    iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->wxShareListener:Lcom/icatch/wificam/app/controller/SDKEvent$WxShareListener;
 
     if-eqz v0, :cond_33
 
-    .line 86
+    .line 94
+    iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
+
+    sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_ERROR:Lcom/icatch/wificam/customer/type/ICatchEventID;
+
+    iget-object v2, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->wxShareListener:Lcom/icatch/wificam/app/controller/SDKEvent$WxShareListener;
+
+    invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
+
+    .line 97
+    :cond_33
+    sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_BATTERY_LEVEL_CHANGED:Lcom/icatch/wificam/customer/type/ICatchEventID;
+
+    if-ne p1, v0, :cond_44
+
+    iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->batteryStateListener:Lcom/icatch/wificam/app/controller/SDKEvent$BatteryStateListener;
+
+    if-eqz v0, :cond_44
+
+    .line 98
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_BATTERY_LEVEL_CHANGED:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -321,17 +365,17 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 88
-    :cond_33
+    .line 100
+    :cond_44
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_CAPTURE_COMPLETE:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
-    if-ne p1, v0, :cond_44
+    if-ne p1, v0, :cond_55
 
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->captureDoneListener:Lcom/icatch/wificam/app/controller/SDKEvent$CaptureDoneListener;
 
-    if-eqz v0, :cond_44
+    if-eqz v0, :cond_55
 
-    .line 89
+    .line 101
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_CAPTURE_COMPLETE:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -340,17 +384,17 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 91
-    :cond_44
+    .line 103
+    :cond_55
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_VIDEO_OFF:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
-    if-ne p1, v0, :cond_55
+    if-ne p1, v0, :cond_66
 
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->videoOffListener:Lcom/icatch/wificam/app/controller/SDKEvent$VideoOffListener;
 
-    if-eqz v0, :cond_55
+    if-eqz v0, :cond_66
 
-    .line 92
+    .line 104
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_VIDEO_OFF:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -359,17 +403,17 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 94
-    :cond_55
+    .line 106
+    :cond_66
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_FILE_ADDED:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
-    if-ne p1, v0, :cond_66
+    if-ne p1, v0, :cond_77
 
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->fileAddedListener:Lcom/icatch/wificam/app/controller/SDKEvent$FileAddedListener;
 
-    if-eqz v0, :cond_66
+    if-eqz v0, :cond_77
 
-    .line 95
+    .line 107
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_FILE_ADDED:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -378,17 +422,17 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 97
-    :cond_66
+    .line 109
+    :cond_77
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_VIDEO_ON:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
-    if-ne p1, v0, :cond_77
+    if-ne p1, v0, :cond_88
 
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->videoOnListener:Lcom/icatch/wificam/app/controller/SDKEvent$VideoOnListener;
 
-    if-eqz v0, :cond_77
+    if-eqz v0, :cond_88
 
-    .line 98
+    .line 110
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_VIDEO_ON:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -397,17 +441,17 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 100
-    :cond_77
+    .line 112
+    :cond_88
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_CONNECTION_DISCONNECTED:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
-    if-ne p1, v0, :cond_88
+    if-ne p1, v0, :cond_99
 
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->connectionFailureListener:Lcom/icatch/wificam/app/controller/SDKEvent$ConnectionFailureListener;
 
-    if-eqz v0, :cond_88
+    if-eqz v0, :cond_99
 
-    .line 101
+    .line 113
     iget-object v0, p0, Lcom/icatch/wificam/app/controller/SDKEvent;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     sget-object v1, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_CONNECTION_DISCONNECTED:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -416,7 +460,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;->delEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;Lcom/icatch/wificam/customer/ICatchWificamListener;)Z
 
-    .line 103
-    :cond_88
+    .line 115
+    :cond_99
     return-void
 .end method

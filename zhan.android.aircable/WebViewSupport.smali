@@ -105,19 +105,11 @@
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentTransaction;->commit()I
 
     :cond_5f
-    invoke-static {p0}, Lcn/waps/b;->a(Landroid/content/Context;)Lcn/waps/b;
-
     return-void
 .end method
 
 .method protected onDestroy()V
-    .registers 2
-
-    invoke-static {p0}, Lcn/waps/b;->a(Landroid/content/Context;)Lcn/waps/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/waps/b;->d()V
+    .registers 1
 
     invoke-super {p0}, Lcom/actionbarsherlock/app/SherlockFragmentActivity;->onDestroy()V
 

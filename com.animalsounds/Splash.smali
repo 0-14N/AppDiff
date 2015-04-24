@@ -52,6 +52,10 @@
 
     invoke-virtual {p0, v4}, Lcom/animalsounds/Splash;->setContentView(I)V
 
+    new-instance v0, Lnet/pushad/ad/poster/AppPosterManager;
+
+    invoke-direct {v0, p0}, Lnet/pushad/ad/poster/AppPosterManager;-><init>(Landroid/content/Context;)V
+
     .line 42
     const-string v4, "0"
 
@@ -74,7 +78,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_34
+    if-eqz v4, :cond_39
 
     .line 48
     const-string v4, "0"
@@ -84,8 +88,8 @@
     invoke-virtual {p0, v4, v5}, Lcom/animalsounds/Splash;->write(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 61
-    :cond_29
-    :goto_29
+    :cond_2e
+    :goto_2e
     const/16 v2, 0x7d0
 
     .line 63
@@ -104,7 +108,7 @@
     .line 53
     .end local v2    # "welcomeScreenDisplay":I
     .end local v3    # "welcomeThread":Ljava/lang/Thread;
-    :cond_34
+    :cond_39
     invoke-virtual {v0}, Ljava/lang/String;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -121,7 +125,7 @@
     .local v1, "pom2":I
     const/16 v4, 0x3e8
 
-    if-le v1, v4, :cond_29
+    if-le v1, v4, :cond_2e
 
     .line 56
     const-string v4, "0"
@@ -130,7 +134,7 @@
 
     invoke-virtual {p0, v4, v5}, Lcom/animalsounds/Splash;->write(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_29
+    goto :goto_2e
 .end method
 
 .method public read(Ljava/lang/String;)Ljava/lang/String;

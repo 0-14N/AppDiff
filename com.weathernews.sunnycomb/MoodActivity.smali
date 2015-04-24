@@ -14,6 +14,8 @@
 # instance fields
 .field private akey:Ljava/lang/String;
 
+.field private app:Lcom/weathernews/sunnycomb/Sunnycomb;
+
 .field private example:Landroid/widget/TextView;
 
 .field private feel_week_icon:Landroid/widget/ImageView;
@@ -24,9 +26,9 @@
 
 .field private for_rank2:Landroid/widget/FrameLayout;
 
-.field private gpsLocation:Lcom/weathernews/sunnycomb/gps/GpsLocation;
-
 .field private loading_view:Lcom/weathernews/sunnycomb/view/HexLoadingView;
+
+.field private mLocClient:Lcom/baidu/location/LocationClient;
 
 .field private moodData:Lcom/weathernews/sunnycomb/loader/data/MoodData;
 
@@ -124,30 +126,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 55
+    .line 57
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/SunnycombActivityBase;-><init>()V
 
-    .line 103
+    .line 105
     invoke-static {}, Lcom/weathernews/sunnycomb/common/SCFontStyle;->getInstance()Lcom/weathernews/sunnycomb/common/SCFontStyle;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
 
-    .line 104
+    .line 106
     iput-boolean v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->once:Z
 
-    .line 105
+    .line 107
     iput-boolean v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->showLoading:Z
 
-    .line 111
-    invoke-static {}, Lcom/weathernews/sunnycomb/gps/GpsLocation;->getInstance()Lcom/weathernews/sunnycomb/gps/GpsLocation;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->gpsLocation:Lcom/weathernews/sunnycomb/gps/GpsLocation;
-
-    .line 55
+    .line 57
     return-void
 .end method
 
@@ -155,26 +150,26 @@
     .registers 5
 
     .prologue
-    .line 798
+    .line 812
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodDataLoader:Lcom/weathernews/sunnycomb/loader/MoodDataLoader;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->akey:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->gpsLocation:Lcom/weathernews/sunnycomb/gps/GpsLocation;
+    iget-object v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->app:Lcom/weathernews/sunnycomb/Sunnycomb;
 
-    invoke-virtual {v2}, Lcom/weathernews/sunnycomb/gps/GpsLocation;->getLat()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/weathernews/sunnycomb/Sunnycomb;->getStrLat()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->gpsLocation:Lcom/weathernews/sunnycomb/gps/GpsLocation;
+    iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->app:Lcom/weathernews/sunnycomb/Sunnycomb;
 
-    invoke-virtual {v3}, Lcom/weathernews/sunnycomb/gps/GpsLocation;->getLon()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/weathernews/sunnycomb/Sunnycomb;->getStrLon()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/weathernews/sunnycomb/loader/MoodDataLoader;->setParam(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 799
+    .line 813
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodDataLoader:Lcom/weathernews/sunnycomb/loader/MoodDataLoader;
 
     new-instance v1, Lcom/weathernews/sunnycomb/mood/MoodActivity$21;
@@ -183,7 +178,7 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/weathernews/sunnycomb/loader/MoodDataLoader;->start(Landroid/content/Context;Lcom/weathernews/sunnycomb/loader/OnDataLoaderListener;)V
 
-    .line 829
+    .line 843
     return-void
 .end method
 
@@ -191,7 +186,7 @@
     .registers 2
 
     .prologue
-    .line 86
+    .line 88
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->sample_bg:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -211,7 +206,7 @@
     .registers 3
 
     .prologue
-    .line 513
+    .line 527
     invoke-direct {p0, p1, p2}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->bound(Landroid/view/View;Lcom/weathernews/libwnianim/ModAnimListener;)V
 
     return-void
@@ -221,7 +216,7 @@
     .registers 2
 
     .prologue
-    .line 73
+    .line 75
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->for_rank2:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -231,7 +226,7 @@
     .registers 2
 
     .prologue
-    .line 65
+    .line 67
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_mood_icon:Landroid/widget/ImageView;
 
     return-object v0
@@ -241,7 +236,7 @@
     .registers 2
 
     .prologue
-    .line 404
+    .line 419
     invoke-direct {p0, p1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setMoodWeek(Z)V
 
     return-void
@@ -251,7 +246,7 @@
     .registers 2
 
     .prologue
-    .line 66
+    .line 68
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_adj:Landroid/widget/TextView;
 
     return-object v0
@@ -261,7 +256,7 @@
     .registers 2
 
     .prologue
-    .line 88
+    .line 90
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitday:Landroid/widget/TextView;
 
     return-object v0
@@ -271,7 +266,7 @@
     .registers 2
 
     .prologue
-    .line 87
+    .line 89
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitcount:Landroid/widget/TextView;
 
     return-object v0
@@ -281,7 +276,7 @@
     .registers 2
 
     .prologue
-    .line 105
+    .line 107
     iget-boolean v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->showLoading:Z
 
     return v0
@@ -291,7 +286,7 @@
     .registers 2
 
     .prologue
-    .line 100
+    .line 102
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->loading_view:Lcom/weathernews/sunnycomb/view/HexLoadingView;
 
     return-object v0
@@ -301,7 +296,7 @@
     .registers 1
 
     .prologue
-    .line 886
+    .line 900
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->showAlert()V
 
     return-void
@@ -311,7 +306,7 @@
     .registers 2
 
     .prologue
-    .line 102
+    .line 104
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodEffect:Lcom/weathernews/sunnycomb/mood/MoodEffect;
 
     return-object v0
@@ -321,7 +316,7 @@
     .registers 2
 
     .prologue
-    .line 98
+    .line 100
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodDataLoader:Lcom/weathernews/sunnycomb/loader/MoodDataLoader;
 
     return-object v0
@@ -331,7 +326,7 @@
     .registers 2
 
     .prologue
-    .line 97
+    .line 99
     iput-object p1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodData:Lcom/weathernews/sunnycomb/loader/data/MoodData;
 
     return-void
@@ -341,7 +336,7 @@
     .registers 2
 
     .prologue
-    .line 57
+    .line 59
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_forecast:Landroid/widget/LinearLayout;
 
     return-object v0
@@ -351,7 +346,7 @@
     .registers 2
 
     .prologue
-    .line 90
+    .line 92
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -361,7 +356,7 @@
     .registers 2
 
     .prologue
-    .line 745
+    .line 759
     invoke-direct {p0, p1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setSample(Z)V
 
     return-void
@@ -371,7 +366,7 @@
     .registers 1
 
     .prologue
-    .line 330
+    .line 345
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setMoodToday()V
 
     return-void
@@ -381,7 +376,7 @@
     .registers 2
 
     .prologue
-    .line 69
+    .line 71
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->worldAdj:[Landroid/widget/TextView;
 
     return-object v0
@@ -391,7 +386,7 @@
     .registers 2
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today:Landroid/widget/TextView;
 
     return-object v0
@@ -401,7 +396,7 @@
     .registers 2
 
     .prologue
-    .line 62
+    .line 64
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_is:Landroid/widget/TextView;
 
     return-object v0
@@ -411,7 +406,7 @@
     .registers 2
 
     .prologue
-    .line 63
+    .line 65
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel:Landroid/widget/TextView;
 
     return-object v0
@@ -421,7 +416,7 @@
     .registers 2
 
     .prologue
-    .line 97
+    .line 99
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodData:Lcom/weathernews/sunnycomb/loader/data/MoodData;
 
     return-object v0
@@ -431,7 +426,7 @@
     .registers 2
 
     .prologue
-    .line 709
+    .line 723
     invoke-direct {p0, p1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->feelAnim(I)V
 
     return-void
@@ -441,7 +436,7 @@
     .registers 2
 
     .prologue
-    .line 64
+    .line 66
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     return-object v0
@@ -455,7 +450,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 514
+    .line 528
     new-instance v0, Lcom/weathernews/libwnianim/ModTranslateAnim;
 
     const/high16 v4, 0x42480000    # 50.0f
@@ -476,7 +471,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 549
+    .line 563
     return-void
 .end method
 
@@ -485,44 +480,44 @@
     .param p1, "rank"    # I
 
     .prologue
-    .line 710
+    .line 724
     packed-switch p1, :pswitch_data_18
 
-    .line 722
+    .line 736
     :goto_3
     return-void
 
-    .line 711
+    .line 725
     :pswitch_4
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->rank1()V
 
     goto :goto_3
 
-    .line 713
+    .line 727
     :pswitch_8
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->rank2()V
 
     goto :goto_3
 
-    .line 715
+    .line 729
     :pswitch_c
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->rank3()V
 
     goto :goto_3
 
-    .line 717
+    .line 731
     :pswitch_10
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->rank4()V
 
     goto :goto_3
 
-    .line 719
+    .line 733
     :pswitch_14
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->rank5()V
 
     goto :goto_3
 
-    .line 710
+    .line 724
     :pswitch_data_18
     .packed-switch 0x1
         :pswitch_4
@@ -547,8 +542,8 @@
 
     const/4 v7, 0x4
 
-    .line 277
-    const v1, 0x7f090112
+    .line 292
+    const v1, 0x7f09010f
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->findViewById(I)Landroid/view/View;
 
@@ -558,8 +553,8 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_forecast:Landroid/widget/LinearLayout;
 
-    .line 280
-    const v1, 0x7f090113
+    .line 295
+    const v1, 0x7f090110
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->findViewById(I)Landroid/view/View;
 
@@ -569,10 +564,10 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
-    .line 281
+    .line 296
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f090126
+    const v2, 0x7f090123
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -582,7 +577,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today:Landroid/widget/TextView;
 
-    .line 282
+    .line 297
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today:Landroid/widget/TextView;
 
     iget-object v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -593,10 +588,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 283
+    .line 298
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f090127
+    const v2, 0x7f090124
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -606,7 +601,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_is:Landroid/widget/TextView;
 
-    .line 284
+    .line 299
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_is:Landroid/widget/TextView;
 
     iget-object v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -617,10 +612,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 286
+    .line 301
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f09012a
+    const v2, 0x7f090127
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -630,15 +625,15 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->for_rank2:Landroid/widget/FrameLayout;
 
-    .line 287
+    .line 302
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->for_rank2:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1, v8}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 289
+    .line 304
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f090128
+    const v2, 0x7f090125
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -648,7 +643,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel:Landroid/widget/TextView;
 
-    .line 290
+    .line 305
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel:Landroid/widget/TextView;
 
     iget-object v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -659,10 +654,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 292
+    .line 307
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f090129
+    const v2, 0x7f090126
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -672,10 +667,10 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
-    .line 293
+    .line 308
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f090137
+    const v2, 0x7f090134
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -685,10 +680,10 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_mood_icon:Landroid/widget/ImageView;
 
-    .line 294
+    .line 309
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f090138
+    const v2, 0x7f090135
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -698,7 +693,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_adj:Landroid/widget/TextView;
 
-    .line 295
+    .line 310
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_adj:Landroid/widget/TextView;
 
     iget-object v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -709,10 +704,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 296
+    .line 311
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f090124
+    const v2, 0x7f090121
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -722,7 +717,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_fusen:Landroid/widget/FrameLayout;
 
-    .line 299
+    .line 314
     new-array v1, v7, [Landroid/widget/TextView;
 
     iget-object v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->world_adj_1:Landroid/widget/TextView;
@@ -745,7 +740,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->worldAdj:[Landroid/widget/TextView;
 
-    .line 300
+    .line 315
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -756,7 +751,7 @@
 
     if-lt v0, v1, :cond_143
 
-    .line 305
+    .line 320
     const/4 v1, 0x7
 
     new-array v1, v1, [Landroid/widget/TextView;
@@ -797,10 +792,10 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->star:[Landroid/widget/TextView;
 
-    .line 306
+    .line 321
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f09012f
+    const v2, 0x7f09012c
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -810,12 +805,12 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->star_area:Landroid/widget/FrameLayout;
 
-    .line 307
+    .line 322
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->star_area:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1, v7}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 308
+    .line 323
     const/4 v0, 0x0
 
     :goto_107
@@ -825,8 +820,8 @@
 
     if-lt v0, v1, :cond_177
 
-    .line 313
-    const v1, 0x7f090114
+    .line 328
+    const v1, 0x7f090111
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->findViewById(I)Landroid/view/View;
 
@@ -836,8 +831,8 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_week_area:Landroid/widget/LinearLayout;
 
-    .line 316
-    const v1, 0x7f090111
+    .line 331
+    const v1, 0x7f09010e
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->findViewById(I)Landroid/view/View;
 
@@ -847,8 +842,8 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
-    .line 317
-    const v1, 0x7f090117
+    .line 332
+    const v1, 0x7f090114
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->findViewById(I)Landroid/view/View;
 
@@ -858,17 +853,17 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->times_hex:Landroid/widget/FrameLayout;
 
-    .line 320
+    .line 335
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v1, v8}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 321
+    .line 336
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_forecast:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v8}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 323
+    .line 338
     const v1, 0x7f090033
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->findViewById(I)Landroid/view/View;
@@ -879,10 +874,10 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->loading_view:Lcom/weathernews/sunnycomb/view/HexLoadingView;
 
-    .line 325
+    .line 340
     return-void
 
-    .line 301
+    .line 316
     :cond_143
     iget-object v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->worldAdj:[Landroid/widget/TextView;
 
@@ -924,19 +919,19 @@
 
     aput-object v1, v2, v0
 
-    .line 302
+    .line 317
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->worldAdj:[Landroid/widget/TextView;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 300
+    .line 315
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_cb
 
-    .line 309
+    .line 324
     :cond_177
     iget-object v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->star:[Landroid/widget/TextView;
 
@@ -978,7 +973,7 @@
 
     aput-object v1, v2, v0
 
-    .line 308
+    .line 323
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_107
@@ -989,14 +984,14 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 838
+    .line 852
     const/16 v0, -0x3e7
 
-    .line 839
+    .line 853
     .local v0, "color":I
     packed-switch p1, :pswitch_data_20
 
-    .line 858
+    .line 872
     :goto_5
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->res:Landroid/content/res/Resources;
 
@@ -1006,42 +1001,42 @@
 
     return v1
 
-    .line 841
+    .line 855
     :pswitch_c
     const v0, 0x7f080023
 
-    .line 842
+    .line 856
     goto :goto_5
 
-    .line 844
+    .line 858
     :pswitch_10
     const v0, 0x7f080024
 
-    .line 845
+    .line 859
     goto :goto_5
 
-    .line 847
+    .line 861
     :pswitch_14
     const v0, 0x7f080025
 
-    .line 848
+    .line 862
     goto :goto_5
 
-    .line 850
+    .line 864
     :pswitch_18
     const v0, 0x7f080026
 
-    .line 851
+    .line 865
     goto :goto_5
 
-    .line 853
+    .line 867
     :pswitch_1c
     const v0, 0x7f080027
 
-    .line 854
+    .line 868
     goto :goto_5
 
-    .line 839
+    .line 853
     :pswitch_data_20
     .packed-switch 0x1
         :pswitch_c
@@ -1056,7 +1051,7 @@
     .registers 2
 
     .prologue
-    .line 206
+    .line 221
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getHeight()I
@@ -1067,7 +1062,7 @@
 
     iput v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->week_slide_dist:I
 
-    .line 207
+    .line 222
     return-void
 .end method
 
@@ -1076,7 +1071,7 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 141
+    .line 150
     const-string v0, "push"
 
     const/4 v1, 0x0
@@ -1087,15 +1082,15 @@
 
     iput-boolean v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->isFromPush:Z
 
-    .line 142
+    .line 151
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getUtilProfParam()V
 
-    .line 143
+    .line 152
     sget-object v0, Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;->MOOD:Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->countLog(Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;)V
 
-    .line 144
+    .line 153
     return-void
 .end method
 
@@ -1103,12 +1098,12 @@
     .registers 3
 
     .prologue
-    .line 220
+    .line 235
     new-instance v0, Lcom/weathernews/sunnycomb/util/UtilProf;
 
     invoke-direct {v0, p0}, Lcom/weathernews/sunnycomb/util/UtilProf;-><init>(Landroid/content/Context;)V
 
-    .line 221
+    .line 236
     .local v0, "utilProf":Lcom/weathernews/sunnycomb/util/UtilProf;
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/util/UtilProf;->getAkey()Ljava/lang/String;
 
@@ -1116,7 +1111,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->akey:Ljava/lang/String;
 
-    .line 222
+    .line 237
     return-void
 .end method
 
@@ -1125,7 +1120,7 @@
     .param p1, "moodInfo"    # Lcom/weathernews/sunnycomb/mood/MoodInfo;
 
     .prologue
-    .line 453
+    .line 467
     iget-object v4, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->utilCalendar:Lcom/weathernews/libwniutil/UtilCalendar;
 
     invoke-virtual {p1}, Lcom/weathernews/sunnycomb/mood/MoodInfo;->getTm()I
@@ -1138,14 +1133,14 @@
 
     invoke-virtual {v4, v5}, Lcom/weathernews/libwniutil/UtilCalendar;->setTime(Ljava/lang/String;)V
 
-    .line 454
+    .line 468
     iget-object v4, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->utilCalendar:Lcom/weathernews/libwniutil/UtilCalendar;
 
     invoke-virtual {v4}, Lcom/weathernews/libwniutil/UtilCalendar;->getDayOfWeek()I
 
     move-result v0
 
-    .line 455
+    .line 469
     .local v0, "dayOfweek":I
     iget-object v4, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->res:Landroid/content/res/Resources;
 
@@ -1155,7 +1150,7 @@
 
     move-result-object v2
 
-    .line 456
+    .line 470
     .local v2, "weekdays":[Ljava/lang/String;
     const-string v4, "<B>%s</B> %s %s , %s"
 
@@ -1203,13 +1198,13 @@
 
     move-result-object v3
 
-    .line 457
+    .line 471
     .local v3, "weektext":Ljava/lang/String;
     invoke-static {v3}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object v1
 
-    .line 458
+    .line 472
     .local v1, "source":Ljava/lang/CharSequence;
     return-object v1
 .end method
@@ -1218,7 +1213,7 @@
     .registers 3
 
     .prologue
-    .line 250
+    .line 265
     sget-object v0, Lcom/weathernews/sunnycomb/view/NavigationBarView$IconType;->BACK:Lcom/weathernews/sunnycomb/view/NavigationBarView$IconType;
 
     new-instance v1, Lcom/weathernews/sunnycomb/mood/MoodActivity$1;
@@ -1227,7 +1222,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setNavigationBarLeftButton(Lcom/weathernews/sunnycomb/view/NavigationBarView$IconType;Landroid/view/View$OnClickListener;)V
 
-    .line 257
+    .line 272
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->akey:Ljava/lang/String;
 
     if-eqz v0, :cond_22
@@ -1242,7 +1237,7 @@
 
     if-nez v0, :cond_22
 
-    .line 258
+    .line 273
     sget-object v0, Lcom/weathernews/sunnycomb/view/NavigationBarView$IconType;->PERSONALITY_SETTING:Lcom/weathernews/sunnycomb/view/NavigationBarView$IconType;
 
     new-instance v1, Lcom/weathernews/sunnycomb/mood/MoodActivity$2;
@@ -1251,7 +1246,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setNavigationBarRightButton(Lcom/weathernews/sunnycomb/view/NavigationBarView$IconType;Landroid/view/View$OnClickListener;)V
 
-    .line 273
+    .line 288
     :cond_22
     const v0, 0x7f070060
 
@@ -1261,7 +1256,7 @@
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setNavigationBarTitle(Ljava/lang/String;)V
 
-    .line 274
+    .line 289
     return-void
 .end method
 
@@ -1274,7 +1269,7 @@
 
     const/4 v3, 0x1
 
-    .line 729
+    .line 743
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_mood_icon:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodEffect:Lcom/weathernews/sunnycomb/mood/MoodEffect;
@@ -1289,7 +1284,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 736
+    .line 750
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_adj:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodEffect:Lcom/weathernews/sunnycomb/mood/MoodEffect;
@@ -1304,7 +1299,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 742
+    .line 756
     return-void
 .end method
 
@@ -1314,7 +1309,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 596
+    .line 610
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getWidth()I
@@ -1323,7 +1318,7 @@
 
     div-int/lit8 v9, v0, 0x2
 
-    .line 597
+    .line 611
     .local v9, "half_feel_view":I
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
 
@@ -1333,21 +1328,21 @@
 
     div-int/lit8 v10, v0, 0x2
 
-    .line 598
+    .line 612
     .local v10, "half_today_area":I
     add-int v12, v9, v10
 
-    .line 599
+    .line 613
     .local v12, "start_x":I
     sub-int v11, v12, v9
 
-    .line 600
+    .line 614
     .local v11, "middle_x":I
     const/16 v0, 0x125c
 
     invoke-direct {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodAnim(I)V
 
-    .line 601
+    .line 615
     iget-object v13, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     new-instance v0, Lcom/weathernews/libwnianim/ModTranslateAnim;
@@ -1372,7 +1367,7 @@
 
     invoke-virtual {v13, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 617
+    .line 631
     return-void
 .end method
 
@@ -1384,17 +1379,17 @@
 
     const/4 v1, 0x0
 
-    .line 576
+    .line 590
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->for_rank2:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v5}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 577
+    .line 591
     const/16 v0, 0xbb8
 
     invoke-direct {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodAnim(I)V
 
-    .line 578
+    .line 592
     iget-object v9, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     new-instance v0, Lcom/weathernews/libwnianim/ModTranslateAnim;
@@ -1417,7 +1412,7 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 589
+    .line 603
     return-void
 .end method
 
@@ -1425,17 +1420,17 @@
     .registers 8
 
     .prologue
-    .line 556
+    .line 570
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->bringToFront()V
 
-    .line 557
+    .line 571
     const/16 v0, 0x4b0
 
     invoke-direct {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodAnim(I)V
 
-    .line 558
+    .line 572
     iget-object v6, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     new-instance v0, Lcom/weathernews/libwnianim/ModScaleAnim;
@@ -1456,7 +1451,7 @@
 
     invoke-virtual {v6, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 569
+    .line 583
     return-void
 .end method
 
@@ -1464,14 +1459,14 @@
     .registers 23
 
     .prologue
-    .line 624
+    .line 638
     const/16 v9, 0x3e8
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodAnim(I)V
 
-    .line 626
+    .line 640
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_today_area:Landroid/widget/FrameLayout;
@@ -1484,7 +1479,7 @@
 
     div-int/lit8 v20, v9, 0x2
 
-    .line 627
+    .line 641
     .local v20, "startX":I
     move-object/from16 v0, p0
 
@@ -1498,11 +1493,11 @@
 
     div-int/lit8 v21, v9, 0x2
 
-    .line 628
+    .line 642
     .local v21, "startY":I
     const/16 v19, 0x0
 
-    .line 630
+    .line 644
     .local v19, "isFin":Z
     new-instance v2, Landroid/view/animation/ScaleAnimation;
 
@@ -1536,18 +1531,18 @@
 
     invoke-direct/range {v2 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 631
+    .line 645
     .local v2, "scale2":Landroid/view/animation/ScaleAnimation;
     const-wide/16 v9, 0x64
 
     invoke-virtual {v2, v9, v10}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 632
+    .line 646
     const/4 v9, 0x1
 
     invoke-virtual {v2, v9}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 635
+    .line 649
     new-instance v3, Landroid/view/animation/ScaleAnimation;
 
     const/high16 v4, 0x3f800000    # 1.0f
@@ -1580,18 +1575,18 @@
 
     invoke-direct/range {v3 .. v9}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 636
+    .line 650
     .local v3, "scale1":Landroid/view/animation/ScaleAnimation;
     const-wide/16 v9, 0x64
 
     invoke-virtual {v3, v9, v10}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 637
+    .line 651
     const/4 v9, 0x1
 
     invoke-virtual {v3, v9}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 639
+    .line 653
     new-instance v4, Lcom/weathernews/libwnianim/ModTranslateAnim;
 
     const/4 v5, 0x0
@@ -1610,7 +1605,7 @@
 
     invoke-direct/range {v4 .. v11}, Lcom/weathernews/libwnianim/ModTranslateAnim;-><init>(FFFFIILcom/weathernews/libwnianim/ModAnimListener;)V
 
-    .line 640
+    .line 654
     .local v4, "trans_scale2":Lcom/weathernews/libwnianim/ModTranslateAnim;
     new-instance v5, Lcom/weathernews/libwnianim/ModTranslateAnim;
 
@@ -1634,7 +1629,7 @@
 
     invoke-direct/range {v5 .. v12}, Lcom/weathernews/libwnianim/ModTranslateAnim;-><init>(FFFFIILcom/weathernews/libwnianim/ModAnimListener;)V
 
-    .line 643
+    .line 657
     .local v5, "trans_scale1":Lcom/weathernews/libwnianim/ModTranslateAnim;
     new-instance v18, Lcom/weathernews/libwnianim/ModAnimSet;
 
@@ -1654,18 +1649,18 @@
 
     invoke-direct {v0, v9, v10, v11, v12}, Lcom/weathernews/libwnianim/ModAnimSet;-><init>(ZIILcom/weathernews/libwnianim/ModAnimListener;)V
 
-    .line 649
+    .line 663
     .local v18, "animSet3":Lcom/weathernews/libwnianim/ModAnimSet;
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v3}, Lcom/weathernews/libwnianim/ModAnimSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 650
+    .line 664
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v4}, Lcom/weathernews/libwnianim/ModAnimSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 653
+    .line 667
     new-instance v6, Lcom/weathernews/libwnianim/ModTranslateAnim;
 
     div-int/lit8 v9, v20, 0x4
@@ -1694,7 +1689,7 @@
 
     invoke-direct/range {v6 .. v13}, Lcom/weathernews/libwnianim/ModTranslateAnim;-><init>(FFFFIILcom/weathernews/libwnianim/ModAnimListener;)V
 
-    .line 661
+    .line 675
     .local v6, "trans3":Lcom/weathernews/libwnianim/ModTranslateAnim;
     new-instance v9, Landroid/view/animation/AccelerateInterpolator;
 
@@ -1704,7 +1699,7 @@
 
     invoke-virtual {v6, v9}, Lcom/weathernews/libwnianim/ModTranslateAnim;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 663
+    .line 677
     new-instance v7, Lcom/weathernews/libwnianim/ModTranslateAnim;
 
     div-int/lit8 v9, v20, 0x2
@@ -1733,7 +1728,7 @@
 
     invoke-direct/range {v7 .. v14}, Lcom/weathernews/libwnianim/ModTranslateAnim;-><init>(FFFFIILcom/weathernews/libwnianim/ModAnimListener;)V
 
-    .line 669
+    .line 683
     .local v7, "trans2":Lcom/weathernews/libwnianim/ModTranslateAnim;
     new-instance v9, Landroid/view/animation/DecelerateInterpolator;
 
@@ -1743,7 +1738,7 @@
 
     invoke-virtual {v7, v9}, Lcom/weathernews/libwnianim/ModTranslateAnim;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 671
+    .line 685
     new-instance v17, Lcom/weathernews/libwnianim/ModAnimSet;
 
     const/4 v9, 0x1
@@ -1762,25 +1757,25 @@
 
     invoke-direct {v0, v9, v10, v11, v12}, Lcom/weathernews/libwnianim/ModAnimSet;-><init>(ZIILcom/weathernews/libwnianim/ModAnimListener;)V
 
-    .line 678
+    .line 692
     .local v17, "animSet2":Lcom/weathernews/libwnianim/ModAnimSet;
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v5}, Lcom/weathernews/libwnianim/ModAnimSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 679
+    .line 693
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v2}, Lcom/weathernews/libwnianim/ModAnimSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 680
+    .line 694
     const/4 v9, 0x1
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v9}, Lcom/weathernews/libwnianim/ModAnimSet;->setFillAfter(Z)V
 
-    .line 683
+    .line 697
     new-instance v16, Lcom/weathernews/libwnianim/ModAnimSet;
 
     const/4 v9, 0x1
@@ -1801,25 +1796,25 @@
 
     invoke-direct {v0, v9, v10, v11, v12}, Lcom/weathernews/libwnianim/ModAnimSet;-><init>(ZIILcom/weathernews/libwnianim/ModAnimListener;)V
 
-    .line 689
+    .line 703
     .local v16, "animSet":Lcom/weathernews/libwnianim/ModAnimSet;
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v3}, Lcom/weathernews/libwnianim/ModAnimSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 690
+    .line 704
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v5}, Lcom/weathernews/libwnianim/ModAnimSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 691
+    .line 705
     const/4 v9, 0x1
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v9}, Lcom/weathernews/libwnianim/ModAnimSet;->setFillAfter(Z)V
 
-    .line 693
+    .line 707
     new-instance v8, Lcom/weathernews/libwnianim/ModTranslateAnim;
 
     move/from16 v0, v20
@@ -1850,7 +1845,7 @@
 
     invoke-direct/range {v8 .. v15}, Lcom/weathernews/libwnianim/ModTranslateAnim;-><init>(FFFFIILcom/weathernews/libwnianim/ModAnimListener;)V
 
-    .line 699
+    .line 713
     .local v8, "trans1":Lcom/weathernews/libwnianim/ModTranslateAnim;
     new-instance v9, Landroid/view/animation/AccelerateInterpolator;
 
@@ -1860,19 +1855,19 @@
 
     invoke-virtual {v8, v9}, Lcom/weathernews/libwnianim/ModTranslateAnim;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 700
+    .line 714
     const/4 v9, 0x1
 
     invoke-virtual {v8, v9}, Lcom/weathernews/libwnianim/ModTranslateAnim;->setFillAfter(Z)V
 
-    .line 701
+    .line 715
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     invoke-virtual {v9, v8}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 703
+    .line 717
     return-void
 .end method
 
@@ -1880,7 +1875,7 @@
     .registers 8
 
     .prologue
-    .line 491
+    .line 505
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1891,19 +1886,19 @@
 
     if-lt v0, v1, :cond_27
 
-    .line 494
+    .line 508
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->star_area:Landroid/widget/FrameLayout;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 495
+    .line 509
     const/16 v1, 0x7d0
 
     invoke-direct {p0, v1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodAnim(I)V
 
-    .line 497
+    .line 511
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     iget-object v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodEffect:Lcom/weathernews/sunnycomb/mood/MoodEffect;
@@ -1924,10 +1919,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 510
+    .line 524
     return-void
 
-    .line 492
+    .line 506
     :cond_27
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->star:[Landroid/widget/TextView;
 
@@ -1935,7 +1930,7 @@
 
     invoke-direct {p0, v1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setShine(Landroid/view/View;)V
 
-    .line 491
+    .line 505
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -1945,12 +1940,12 @@
     .registers 2
 
     .prologue
-    .line 401
+    .line 416
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_week_area:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 402
+    .line 417
     return-void
 .end method
 
@@ -1958,7 +1953,7 @@
     .registers 7
 
     .prologue
-    .line 466
+    .line 480
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodEffect:Lcom/weathernews/sunnycomb/mood/MoodEffect;
@@ -1979,7 +1974,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 485
+    .line 499
     return-void
 .end method
 
@@ -1989,37 +1984,37 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 211
+    .line 226
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 212
+    .line 227
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_is:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 213
+    .line 228
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 214
+    .line 229
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 215
+    .line 230
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_mood_icon:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 216
+    .line 231
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_adj:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 217
+    .line 232
     return-void
 .end method
 
@@ -2029,7 +2024,7 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 331
+    .line 346
     iget-object v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodData:Lcom/weathernews/sunnycomb/loader/data/MoodData;
 
     invoke-virtual {v5}, Lcom/weathernews/sunnycomb/loader/data/MoodData;->getMoodInfo()Ljava/util/List;
@@ -2042,7 +2037,7 @@
 
     check-cast v0, Lcom/weathernews/sunnycomb/mood/MoodInfo;
 
-    .line 332
+    .line 347
     .local v0, "TodayMood":Lcom/weathernews/sunnycomb/mood/MoodInfo;
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/mood/MoodInfo;->getFeelface()I
 
@@ -2052,7 +2047,7 @@
 
     move-result v3
 
-    .line 334
+    .line 349
     .local v3, "moodcolor":I
     const/4 v2, 0x0
 
@@ -2064,12 +2059,12 @@
 
     if-lt v2, v5, :cond_8c
 
-    .line 339
+    .line 354
     iget-object v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_fusen:Landroid/widget/FrameLayout;
 
     invoke-virtual {v5, v3}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 341
+    .line 356
     iget-object v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/mood/MoodInfo;->getFeeltext()Ljava/lang/String;
@@ -2078,7 +2073,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 344
+    .line 359
     iget-object v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_adj:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/mood/MoodInfo;->getMoodtext()Ljava/lang/String;
@@ -2087,7 +2082,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 345
+    .line 360
     iget-object v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->res:Landroid/content/res/Resources;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2118,13 +2113,13 @@
 
     move-result v1
 
-    .line 347
+    .line 362
     .local v1, "feelicon":I
     iget-object v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     invoke-virtual {v5, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 348
+    .line 363
     iget-object v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->res:Landroid/content/res/Resources;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2155,13 +2150,13 @@
 
     move-result v4
 
-    .line 349
+    .line 364
     .local v4, "moodicon":I
     iget-object v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_mood_icon:Landroid/widget/ImageView;
 
     invoke-virtual {v5, v4}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 352
+    .line 367
     iget-object v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->today_feel_icon:Landroid/widget/ImageView;
 
     new-instance v6, Lcom/weathernews/sunnycomb/mood/MoodActivity$3;
@@ -2170,19 +2165,19 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 375
+    .line 390
     iget-boolean v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->showLoading:Z
 
     if-nez v5, :cond_8b
 
-    .line 376
+    .line 391
     invoke-direct {p0, v9}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setMoodWeek(Z)V
 
-    .line 379
+    .line 394
     :cond_8b
     return-void
 
-    .line 335
+    .line 350
     .end local v1    # "feelicon":I
     .end local v4    # "moodicon":I
     :cond_8c
@@ -2204,14 +2199,14 @@
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 336
+    .line 351
     iget-object v5, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->worldAdj:[Landroid/widget/TextView;
 
     aget-object v5, v5, v2
 
     invoke-virtual {v5, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 334
+    .line 349
     add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_16
@@ -2222,10 +2217,10 @@
     .param p1, "isAnim"    # Z
 
     .prologue
-    .line 405
+    .line 420
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getParam()V
 
-    .line 406
+    .line 421
     const/4 v3, 0x1
 
     .local v3, "i":I
@@ -2234,10 +2229,10 @@
 
     if-lt v3, v10, :cond_8
 
-    .line 445
+    .line 459
     return-void
 
-    .line 407
+    .line 422
     :cond_8
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
@@ -2251,9 +2246,9 @@
 
     move-result-object v9
 
-    .line 409
+    .line 423
     .local v9, "view":Landroid/view/View;
-    const v10, 0x7f09013a
+    const v10, 0x7f090137
 
     invoke-virtual {v9, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2263,8 +2258,8 @@
 
     iput-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->week_fusen:Landroid/widget/FrameLayout;
 
-    .line 410
-    const v10, 0x7f09013b
+    .line 424
+    const v10, 0x7f090138
 
     invoke-virtual {v9, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2274,8 +2269,8 @@
 
     iput-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->feel_week_icon:Landroid/widget/ImageView;
 
-    .line 411
-    const v10, 0x7f09013c
+    .line 425
+    const v10, 0x7f090139
 
     invoke-virtual {v9, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2285,7 +2280,7 @@
 
     iput-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->feel_week_text:Landroid/widget/TextView;
 
-    .line 412
+    .line 426
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->feel_week_text:Landroid/widget/TextView;
 
     iget-object v11, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -2296,8 +2291,8 @@
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 414
-    const v10, 0x7f09013e
+    .line 428
+    const v10, 0x7f09013b
 
     invoke-virtual {v9, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2307,7 +2302,7 @@
 
     iput-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_week_icon:Landroid/widget/ImageView;
 
-    .line 416
+    .line 430
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodData:Lcom/weathernews/sunnycomb/loader/data/MoodData;
 
     invoke-virtual {v10}, Lcom/weathernews/sunnycomb/loader/data/MoodData;->getMoodInfo()Ljava/util/List;
@@ -2320,7 +2315,7 @@
 
     check-cast v0, Lcom/weathernews/sunnycomb/mood/MoodInfo;
 
-    .line 417
+    .line 431
     .local v0, "WeekMood":Lcom/weathernews/sunnycomb/mood/MoodInfo;
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/mood/MoodInfo;->getFeelface()I
 
@@ -2330,7 +2325,7 @@
 
     move-result v5
 
-    .line 418
+    .line 432
     .local v5, "moodcolor":I
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->res:Landroid/content/res/Resources;
 
@@ -2362,7 +2357,7 @@
 
     move-result v6
 
-    .line 419
+    .line 433
     .local v6, "moodicon":I
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->res:Landroid/content/res/Resources;
 
@@ -2394,7 +2389,7 @@
 
     move-result v2
 
-    .line 421
+    .line 435
     .local v2, "feelicon":I
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->feel_week_text:Landroid/widget/TextView;
 
@@ -2404,44 +2399,44 @@
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 423
+    .line 437
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_week_area:Landroid/widget/LinearLayout;
 
     invoke-virtual {v10, v9}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 424
+    .line 438
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
 
     invoke-virtual {v9, v10}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 425
+    .line 439
     new-instance v10, Lcom/weathernews/sunnycomb/mood/MoodActivity$5;
 
     invoke-direct {v10, p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity$5;-><init>(Lcom/weathernews/sunnycomb/mood/MoodActivity;)V
 
     invoke-virtual {v9, v10}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 431
+    .line 445
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->week_fusen:Landroid/widget/FrameLayout;
 
     invoke-virtual {v10, v5}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 432
+    .line 446
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_week_icon:Landroid/widget/ImageView;
 
     invoke-virtual {v10, v6}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 433
+    .line 447
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->feel_week_icon:Landroid/widget/ImageView;
 
     invoke-virtual {v10, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 434
+    .line 448
     if-eqz p1, :cond_e4
 
-    .line 435
+    .line 449
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodEffect:Lcom/weathernews/sunnycomb/mood/MoodEffect;
 
     iget v11, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->week_slide_dist:I
@@ -2462,7 +2457,7 @@
 
     invoke-virtual {v9, v10}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 437
+    .line 451
     const/4 v4, 0x0
 
     .local v4, "j":I
@@ -2473,21 +2468,21 @@
 
     if-lt v4, v10, :cond_e8
 
-    .line 406
+    .line 421
     .end local v4    # "j":I
     :cond_e4
     add-int/lit8 v3, v3, 0x1
 
     goto/16 :goto_4
 
-    .line 438
+    .line 452
     .restart local v4    # "j":I
     :cond_e8
     new-instance v8, Ljava/util/Random;
 
     invoke-direct {v8}, Ljava/util/Random;-><init>()V
 
-    .line 439
+    .line 453
     .local v8, "random":Ljava/util/Random;
     const/16 v10, 0x8
 
@@ -2495,11 +2490,11 @@
 
     move-result v7
 
-    .line 440
+    .line 454
     .local v7, "ran":I
     mul-int/lit16 v1, v7, 0xc8
 
-    .line 441
+    .line 455
     .local v1, "fadein_offset":I
     iget-object v10, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->worldAdj:[Landroid/widget/TextView;
 
@@ -2519,7 +2514,7 @@
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 437
+    .line 451
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_df
@@ -2534,13 +2529,13 @@
 
     const/4 v5, 0x0
 
-    .line 746
+    .line 760
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getParam()V
 
-    .line 747
+    .line 761
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
-    const v4, 0x7f09011d
+    const v4, 0x7f09011a
 
     invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2550,7 +2545,7 @@
 
     iput-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->sample_bg:Landroid/widget/FrameLayout;
 
-    .line 748
+    .line 762
     new-instance v2, Lcom/weathernews/sunnycomb/mood/MoodActivity$sampleCircle;
 
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getApplication()Landroid/app/Application;
@@ -2559,13 +2554,39 @@
 
     invoke-direct {v2, p0, v3}, Lcom/weathernews/sunnycomb/mood/MoodActivity$sampleCircle;-><init>(Lcom/weathernews/sunnycomb/mood/MoodActivity;Landroid/content/Context;)V
 
-    .line 749
+    .line 763
     .local v2, "sample":Lcom/weathernews/sunnycomb/mood/MoodActivity$sampleCircle;
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->sample_bg:Landroid/widget/FrameLayout;
 
     invoke-virtual {v3, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 750
+    .line 764
+    iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
+
+    const v4, 0x7f090116
+
+    invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/TextView;
+
+    iput-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitcount:Landroid/widget/TextView;
+
+    .line 765
+    iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
+
+    const v4, 0x7f090117
+
+    invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/TextView;
+
+    iput-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitday:Landroid/widget/TextView;
+
+    .line 766
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
     const v4, 0x7f090119
@@ -2576,38 +2597,12 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitcount:Landroid/widget/TextView;
-
-    .line 751
-    iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
-
-    const v4, 0x7f09011a
-
-    invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/TextView;
-
-    iput-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitday:Landroid/widget/TextView;
-
-    .line 752
-    iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
-
-    const v4, 0x7f09011c
-
-    invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/TextView;
-
     iput-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->example:Landroid/widget/TextView;
 
-    .line 753
+    .line 767
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
-    const v4, 0x7f090115
+    const v4, 0x7f090112
 
     invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2617,10 +2612,10 @@
 
     iput-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample_explain:Landroid/widget/TextView;
 
-    .line 754
+    .line 768
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
-    const v4, 0x7f090121
+    const v4, 0x7f09011e
 
     invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2630,10 +2625,10 @@
 
     iput-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->sample_feeling:Landroid/widget/TextView;
 
-    .line 755
+    .line 769
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
-    const v4, 0x7f090120
+    const v4, 0x7f09011d
 
     invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2643,10 +2638,10 @@
 
     iput-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->sample_day:Landroid/widget/TextView;
 
-    .line 756
+    .line 770
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
-    const v4, 0x7f090122
+    const v4, 0x7f09011f
 
     invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2656,7 +2651,7 @@
 
     iput-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->sample_mood:Landroid/widget/TextView;
 
-    .line 758
+    .line 772
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitcount:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -2667,7 +2662,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 759
+    .line 773
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitday:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -2678,7 +2673,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 760
+    .line 774
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample_explain:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -2689,7 +2684,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 761
+    .line 775
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->sample_feeling:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -2700,7 +2695,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 762
+    .line 776
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->sample_day:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -2711,7 +2706,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 763
+    .line 777
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->sample_mood:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -2722,7 +2717,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 764
+    .line 778
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->example:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->fontStyle:Lcom/weathernews/sunnycomb/common/SCFontStyle;
@@ -2733,22 +2728,22 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 766
+    .line 780
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitday:Landroid/widget/TextView;
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 767
+    .line 781
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitcount:Landroid/widget/TextView;
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 768
+    .line 782
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->akey:Ljava/lang/String;
 
     if-nez v3, :cond_107
 
-    .line 769
+    .line 783
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitcount:Landroid/widget/TextView;
 
     const/4 v4, 0x7
@@ -2759,16 +2754,16 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 774
+    .line 788
     :goto_e0
     if-eqz p1, :cond_119
 
-    .line 775
+    .line 789
     invoke-static {}, Lcom/weathernews/sunnycomb/common/CommonParams;->getInstance()Lcom/weathernews/sunnycomb/common/CommonParams;
 
     move-result-object v0
 
-    .line 776
+    .line 790
     .local v0, "commonParams":Lcom/weathernews/sunnycomb/common/CommonParams;
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/common/CommonParams;->getDispWidth()I
 
@@ -2786,7 +2781,7 @@
 
     add-int v1, v3, v4
 
-    .line 778
+    .line 792
     .local v1, "dist":I
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->times_hex:Landroid/widget/FrameLayout;
 
@@ -2802,13 +2797,13 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/FrameLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 791
+    .line 805
     .end local v0    # "commonParams":Lcom/weathernews/sunnycomb/common/CommonParams;
     .end local v1    # "dist":I
     :goto_106
     return-void
 
-    .line 771
+    .line 785
     :cond_107
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitcount:Landroid/widget/TextView;
 
@@ -2828,13 +2823,13 @@
 
     goto :goto_e0
 
-    .line 788
+    .line 802
     :cond_119
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitday:Landroid/widget/TextView;
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 789
+    .line 803
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->submitcount:Landroid/widget/TextView;
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setVisibility(I)V
@@ -2847,12 +2842,12 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 383
+    .line 398
     new-instance v2, Ljava/util/Random;
 
     invoke-direct {v2}, Ljava/util/Random;-><init>()V
 
-    .line 384
+    .line 399
     .local v2, "random":Ljava/util/Random;
     const/16 v3, 0xa
 
@@ -2860,11 +2855,11 @@
 
     move-result v1
 
-    .line 385
+    .line 400
     .local v1, "ran":I
     mul-int/lit8 v0, v1, 0x64
 
-    .line 387
+    .line 402
     .local v0, "offset":I
     iget-object v3, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodEffect:Lcom/weathernews/sunnycomb/mood/MoodEffect;
 
@@ -2882,7 +2877,7 @@
 
     invoke-virtual {p1, v3}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 398
+    .line 413
     return-void
 .end method
 
@@ -2890,19 +2885,19 @@
     .registers 4
 
     .prologue
-    .line 887
+    .line 901
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 888
+    .line 902
     .local v0, "alertDialog":Landroid/app/AlertDialog$Builder;
     const v1, 0x7f070087
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 889
-    const v1, 0x7f070154
+    .line 903
+    const v1, 0x7f07015b
 
     new-instance v2, Lcom/weathernews/sunnycomb/mood/MoodActivity$22;
 
@@ -2910,13 +2905,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 897
+    .line 911
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
-    .line 898
+    .line 912
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 899
+    .line 913
     return-void
 .end method
 
@@ -2926,22 +2921,22 @@
     .registers 2
 
     .prologue
-    .line 863
+    .line 877
     iget-boolean v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->isFromPush:Z
 
     if-nez v0, :cond_b
 
-    .line 864
+    .line 878
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->finish()V
 
-    .line 865
+    .line 879
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setActivityAnimAlphaFinish()V
 
-    .line 869
+    .line 883
     :goto_a
     return-void
 
-    .line 867
+    .line 881
     :cond_b
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->backToHex()V
 
@@ -2952,7 +2947,7 @@
     .registers 2
 
     .prologue
-    .line 914
+    .line 928
     sget-object v0, Lcom/weathernews/sunnycomb/sidemenu/MenuType;->MOOD:Lcom/weathernews/sunnycomb/sidemenu/MenuType;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/sidemenu/MenuType;->getIconResId()I
@@ -2966,81 +2961,129 @@
     .registers 2
 
     .prologue
-    .line 904
+    .line 918
     sget-object v0, Lcom/weathernews/sunnycomb/SunnycombActivityBase$NaviBarAlpha;->ALPHA_96:Lcom/weathernews/sunnycomb/SunnycombActivityBase$NaviBarAlpha;
 
     return-object v0
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 3
+    .registers 5
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 116
+    const/4 v2, 0x1
+
+    .line 120
     const/16 v0, 0x9
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->requestWindowFeature(I)Z
 
-    .line 117
+    .line 121
     invoke-super {p0, p1}, Lcom/weathernews/sunnycomb/SunnycombActivityBase;->onCreate(Landroid/os/Bundle;)V
 
-    .line 119
-    const/4 v0, 0x1
+    .line 123
+    invoke-virtual {p0, v2}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setIsSideMenu(Z)V
 
-    invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setIsSideMenu(Z)V
+    .line 125
+    invoke-virtual {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getApplication()Landroid/app/Application;
 
-    .line 121
+    move-result-object v0
+
+    check-cast v0, Lcom/weathernews/sunnycomb/Sunnycomb;
+
+    iput-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->app:Lcom/weathernews/sunnycomb/Sunnycomb;
+
+    .line 126
+    iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->app:Lcom/weathernews/sunnycomb/Sunnycomb;
+
+    iget-object v0, v0, Lcom/weathernews/sunnycomb/Sunnycomb;->mLocationClient:Lcom/baidu/location/LocationClient;
+
+    iput-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mLocClient:Lcom/baidu/location/LocationClient;
+
+    .line 127
+    iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mLocClient:Lcom/baidu/location/LocationClient;
+
+    iget-object v1, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->app:Lcom/weathernews/sunnycomb/Sunnycomb;
+
+    invoke-virtual {v1, v2}, Lcom/weathernews/sunnycomb/Sunnycomb;->setLocationOption(Z)Lcom/baidu/location/LocationClientOption;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/baidu/location/LocationClient;->setLocOption(Lcom/baidu/location/LocationClientOption;)V
+
+    .line 128
+    iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mLocClient:Lcom/baidu/location/LocationClient;
+
+    invoke-virtual {v0}, Lcom/baidu/location/LocationClient;->start()V
+
+    .line 130
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->res:Landroid/content/res/Resources;
 
-    .line 122
+    .line 131
     new-instance v0, Lcom/weathernews/libwniutil/UtilCalendar;
 
     invoke-direct {v0, p0}, Lcom/weathernews/libwniutil/UtilCalendar;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->utilCalendar:Lcom/weathernews/libwniutil/UtilCalendar;
 
-    .line 123
+    .line 132
     invoke-static {}, Lcom/weathernews/sunnycomb/common/ProfileManager;->getInstance()Lcom/weathernews/sunnycomb/common/ProfileManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
-    .line 124
+    .line 133
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
     invoke-virtual {v0, p0}, Lcom/weathernews/sunnycomb/common/ProfileManager;->init(Landroid/app/Activity;)V
 
-    .line 126
+    .line 135
     const v0, 0x7f03002c
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setContentView(I)V
 
-    .line 127
+    .line 136
     invoke-static {}, Lcom/weathernews/sunnycomb/loader/MoodDataLoader;->getInstance()Lcom/weathernews/sunnycomb/loader/MoodDataLoader;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodDataLoader:Lcom/weathernews/sunnycomb/loader/MoodDataLoader;
 
-    .line 129
+    .line 138
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getParams(Landroid/content/Intent;)V
 
-    .line 131
+    .line 140
     sget-object v0, Lcom/weathernews/sunnycomb/sidemenu/MenuType;->MOOD:Lcom/weathernews/sunnycomb/sidemenu/MenuType;
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setLeftLogo(Lcom/weathernews/sunnycomb/sidemenu/MenuType;)V
 
-    .line 132
+    .line 141
+    return-void
+.end method
+
+.method protected onDestroy()V
+    .registers 2
+
+    .prologue
+    .line 216
+    invoke-super {p0}, Lcom/weathernews/sunnycomb/SunnycombActivityBase;->onDestroy()V
+
+    .line 217
+    iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mLocClient:Lcom/baidu/location/LocationClient;
+
+    invoke-virtual {v0}, Lcom/baidu/location/LocationClient;->stop()V
+
+    .line 218
     return-void
 .end method
 
@@ -3049,13 +3092,13 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 136
+    .line 145
     invoke-super {p0, p1}, Lcom/weathernews/sunnycomb/SunnycombActivityBase;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 137
+    .line 146
     invoke-direct {p0, p1}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getParams(Landroid/content/Intent;)V
 
-    .line 138
+    .line 147
     return-void
 .end method
 
@@ -3063,20 +3106,20 @@
     .registers 3
 
     .prologue
-    .line 148
+    .line 157
     invoke-super {p0}, Lcom/weathernews/sunnycomb/SunnycombActivityBase;->onResume()V
 
-    .line 149
+    .line 158
     new-instance v0, Lcom/weathernews/sunnycomb/mood/MoodEffect;
 
     invoke-direct {v0}, Lcom/weathernews/sunnycomb/mood/MoodEffect;-><init>()V
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodEffect:Lcom/weathernews/sunnycomb/mood/MoodEffect;
 
-    .line 150
+    .line 159
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->find()V
 
-    .line 151
+    .line 160
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/common/ProfileManager;->elapsedTimeStatus()I
@@ -3089,18 +3132,18 @@
 
     if-ne v0, v1, :cond_22
 
-    .line 152
+    .line 161
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->showLoading:Z
 
-    .line 153
+    .line 162
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->removeWeek()V
 
-    .line 154
+    .line 163
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->StartLoad()V
 
-    .line 167
+    .line 175
     :cond_22
     return-void
 .end method
@@ -3114,81 +3157,81 @@
 
     const/4 v2, 0x0
 
-    .line 172
+    .line 180
     invoke-super {p0, p1}, Lcom/weathernews/sunnycomb/SunnycombActivityBase;->onWindowFocusChanged(Z)V
 
-    .line 173
+    .line 181
     iget-boolean v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->once:Z
 
     if-eqz v0, :cond_1c
 
-    .line 174
+    .line 182
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->initNaviBar()V
 
-    .line 175
+    .line 183
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->getParam()V
 
-    .line 176
+    .line 184
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodData:Lcom/weathernews/sunnycomb/loader/data/MoodData;
 
     if-nez v0, :cond_1a
 
-    .line 177
+    .line 185
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setAnim()V
 
-    .line 178
+    .line 186
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setInvisible()V
 
-    .line 180
+    .line 188
     :cond_1a
     iput-boolean v2, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->once:Z
 
-    .line 183
+    .line 191
     :cond_1c
     if-eqz p1, :cond_34
 
-    .line 184
+    .line 192
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->akey:Ljava/lang/String;
 
     if-nez v0, :cond_35
 
-    .line 185
+    .line 193
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_forecast:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 186
+    .line 194
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 187
+    .line 195
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setSample(Z)V
 
-    .line 201
+    .line 209
     :goto_31
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->initNaviBar()V
 
-    .line 203
+    .line 211
     :cond_34
     return-void
 
-    .line 188
+    .line 196
     :cond_35
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodData:Lcom/weathernews/sunnycomb/loader/data/MoodData;
 
     if-nez v0, :cond_3d
 
-    .line 189
+    .line 197
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->StartLoad()V
 
     goto :goto_31
 
-    .line 191
+    .line 199
     :cond_3d
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->moodData:Lcom/weathernews/sunnycomb/loader/data/MoodData;
 
@@ -3200,28 +3243,28 @@
 
     if-ge v0, v1, :cond_54
 
-    .line 192
+    .line 200
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_forecast:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 193
+    .line 201
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 194
+    .line 202
     invoke-direct {p0, v2}, Lcom/weathernews/sunnycomb/mood/MoodActivity;->setSample(Z)V
 
     goto :goto_31
 
-    .line 196
+    .line 204
     :cond_54
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_forecast:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 197
+    .line 205
     iget-object v0, p0, Lcom/weathernews/sunnycomb/mood/MoodActivity;->mood_sample:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->setVisibility(I)V
@@ -3233,6 +3276,6 @@
     .registers 1
 
     .prologue
-    .line 910
+    .line 924
     return-void
 .end method

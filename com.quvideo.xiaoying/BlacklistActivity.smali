@@ -90,18 +90,18 @@
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 76
-    const v1, 0x7f0a03ac
+    const v1, 0x7f0a0389
 
     .line 77
-    new-instance v2, Ltb;
+    new-instance v2, Lmi;
 
-    invoke-direct {v2, p0, p1}, Ltb;-><init>(Lcom/quvideo/xiaoying/app/im/BlacklistActivity;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Lmi;-><init>(Lcom/quvideo/xiaoying/app/im/BlacklistActivity;Ljava/lang/String;)V
 
     .line 75
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
     .line 90
-    const v1, 0x7f0a03ab
+    const v1, 0x7f0a0388
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -152,9 +152,9 @@
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 128
-    new-instance v0, Ltc;
+    new-instance v0, Lmj;
 
-    invoke-direct {v0, p0}, Ltc;-><init>(Lcom/quvideo/xiaoying/app/im/BlacklistActivity;)V
+    invoke-direct {v0, p0}, Lmj;-><init>(Lcom/quvideo/xiaoying/app/im/BlacklistActivity;)V
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/BlacklistActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -222,7 +222,7 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;->setImageFadeIn(I)V
 
     .line 49
-    const v0, 0x7f0604df
+    const v0, 0x7f0604ca
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/BlacklistActivity;->findViewById(I)Landroid/view/View;
 
@@ -279,9 +279,9 @@
     :cond_52
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/im/BlacklistActivity;->n:Landroid/widget/ListView;
 
-    new-instance v1, Lta;
+    new-instance v1, Lmh;
 
-    invoke-direct {v1, p0}, Lta;-><init>(Lcom/quvideo/xiaoying/app/im/BlacklistActivity;)V
+    invoke-direct {v1, p0}, Lmh;-><init>(Lcom/quvideo/xiaoying/app/im/BlacklistActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 

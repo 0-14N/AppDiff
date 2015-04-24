@@ -81,16 +81,16 @@
 
     .line 28
     :try_start_13
-    new-instance v1, Lvp;
+    new-instance v1, Low;
 
-    invoke-direct {v1, p0, v0, p3, p5}, Lvp;-><init>(Lcom/quvideo/xiaoying/app/location/GoogleGeocoderService;Ljava/lang/ref/WeakReference;Ljava/lang/String;I)V
+    invoke-direct {v1, p0, v0, p3, p5}, Low;-><init>(Lcom/quvideo/xiaoying/app/location/GoogleGeocoderService;Ljava/lang/ref/WeakReference;Ljava/lang/String;I)V
 
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/lang/Void;
 
     .line 91
-    invoke-virtual {v1, v0}, Lvp;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v1, v0}, Low;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
     :try_end_1e
     .catch Ljava/lang/Exception; {:try_start_13 .. :try_end_1e} :catch_1f
 

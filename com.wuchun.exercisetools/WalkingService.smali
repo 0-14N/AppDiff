@@ -666,11 +666,11 @@
 
     move-result-object v1
 
-    new-instance v0, Lcom/wuchun/exercisetools/e;
+    new-instance v0, Lcom/wuchun/exercisetools/d;
 
-    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/d;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Lcom/wuchun/exercisetools/e;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Lcom/wuchun/exercisetools/d;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -932,11 +932,11 @@
 
     const/4 v3, 0x0
 
-    new-instance v0, Lcom/wuchun/exercisetools/e;
+    new-instance v0, Lcom/wuchun/exercisetools/d;
 
-    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/d;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Lcom/wuchun/exercisetools/e;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Lcom/wuchun/exercisetools/d;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 

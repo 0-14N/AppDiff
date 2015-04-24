@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ad;->a:Lcom/cungo/callrecorder/ui/ActivityAlipayChooser_;
 
-    invoke-virtual {v0}, Lcom/cungo/callrecorder/ui/ActivityAlipayChooser_;->a()V
+    invoke-virtual {v0}, Lcom/cungo/callrecorder/ui/ActivityAlipayChooser_;->b()V
 
     return-void
 .end method

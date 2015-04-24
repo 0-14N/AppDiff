@@ -699,7 +699,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/saltchucker/mapapi/MyApplicaton;->errorEditUser()V
+    invoke-virtual {v0}, Lcom/saltchucker/mapapi/MyApplicaton;->beforeErrorEditUser()V
 
     .line 352
     :cond_2c
@@ -748,7 +748,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/saltchucker/mapapi/MyApplicaton;->errorEditUser()V
+    invoke-virtual {v0}, Lcom/saltchucker/mapapi/MyApplicaton;->beforeErrorEditUser()V
 
     .line 363
     :cond_1f

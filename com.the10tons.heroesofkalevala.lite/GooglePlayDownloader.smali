@@ -628,6 +628,8 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     const-string v0, "Downloader"
 
     const-string v1, "GooglePlayDownloader onCreate()"
@@ -656,7 +658,7 @@
 
     const/4 v0, 0x0
 
-    :try_start_22
+    :try_start_25
     invoke-virtual {p0}, Lcom/the10tons/GooglePlayDownloader;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -668,12 +670,12 @@
     const/16 v5, 0x80
 
     invoke-virtual {v1, v4, v5}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
-    :try_end_2f
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_22 .. :try_end_2f} :catch_f4
+    :try_end_32
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_25 .. :try_end_32} :catch_f7
 
     move-result-object v0
 
-    :goto_30
+    :goto_33
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     const-string v1, "expansion.main.version"
@@ -750,8 +752,8 @@
 
     move v0, v2
 
-    :goto_7c
-    if-ge v0, v4, :cond_fd
+    :goto_7f
+    if-ge v0, v4, :cond_100
 
     aget-object v5, v1, v0
 
@@ -769,11 +771,11 @@
 
     move-result v7
 
-    if-nez v7, :cond_fa
+    if-nez v7, :cond_fd
 
     iget v5, v5, Lcom/the10tons/o;->b:I
 
-    if-lez v5, :cond_fa
+    if-lez v5, :cond_fd
 
     const-string v0, "Downloader"
 
@@ -799,12 +801,12 @@
 
     move v0, v2
 
-    :goto_ad
-    if-nez v0, :cond_12d
+    :goto_b0
+    if-nez v0, :cond_130
 
     iput-boolean v2, p0, Lcom/the10tons/GooglePlayDownloader;->b:Z
 
-    :try_start_b1
+    :try_start_b4
     invoke-virtual {p0}, Lcom/the10tons/GooglePlayDownloader;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -831,7 +833,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_106
+    if-eqz v2, :cond_109
 
     invoke-virtual {v0}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
@@ -841,12 +843,12 @@
 
     move-result-object v2
 
-    :goto_d8
+    :goto_db
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_106
+    if-eqz v0, :cond_109
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -855,12 +857,12 @@
     check-cast v0, Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
-    :try_end_e7
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_b1 .. :try_end_e7} :catch_e8
+    :try_end_ea
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_b4 .. :try_end_ea} :catch_eb
 
-    goto :goto_d8
+    goto :goto_db
 
-    :catch_e8
+    :catch_eb
     move-exception v0
 
     const-string v1, "Downloader"
@@ -871,23 +873,23 @@
 
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    :cond_f3
-    :goto_f3
+    :cond_f6
+    :goto_f6
     return-void
 
-    :catch_f4
+    :catch_f7
     move-exception v1
 
     invoke-virtual {v1}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    goto/16 :goto_30
-
-    :cond_fa
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_7c
+    goto/16 :goto_33
 
     :cond_fd
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_7f
+
+    :cond_100
     const-string v0, "Downloader"
 
     const-string v1, "Expansion files are delivered OK."
@@ -896,14 +898,14 @@
 
     move v0, v3
 
-    goto :goto_ad
+    goto :goto_b0
 
-    :cond_106
+    :cond_109
     const/4 v0, 0x0
 
     const/high16 v2, 0x8000000
 
-    :try_start_109
+    :try_start_10c
     invoke-static {p0, v0, v1, v2}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
@@ -932,20 +934,20 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v0, :cond_f3
+    if-eqz v0, :cond_f6
 
     invoke-direct {p0}, Lcom/the10tons/GooglePlayDownloader;->b()V
-    :try_end_12c
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_109 .. :try_end_12c} :catch_e8
+    :try_end_12f
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_10c .. :try_end_12f} :catch_eb
 
-    goto :goto_f3
+    goto :goto_f6
 
-    :cond_12d
+    :cond_130
     iput-boolean v3, p0, Lcom/the10tons/GooglePlayDownloader;->b:Z
 
     invoke-direct {p0}, Lcom/the10tons/GooglePlayDownloader;->a()V
 
-    goto :goto_f3
+    goto :goto_f6
 .end method
 
 .method public onDestroy()V
@@ -966,6 +968,8 @@
     iput-boolean v0, p0, Lcom/the10tons/GooglePlayDownloader;->r:Z
 
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
 
     return-void
 .end method

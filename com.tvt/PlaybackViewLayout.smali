@@ -175,150 +175,150 @@
 
     const/4 v2, 0x0
 
-    .line 139
+    .line 127
     invoke-direct {p0, p1}, Lcom/tvt/skin/BaseAbsoluteLayout;-><init>(Landroid/content/Context;)V
 
-    .line 61
+    .line 49
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_inflater:Landroid/view/LayoutInflater;
 
-    .line 62
+    .line 50
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_context:Landroid/content/Context;
 
-    .line 64
+    .line 52
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_layoutlocal:Landroid/widget/RelativeLayout;
 
-    .line 65
+    .line 53
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_layouttime:Landroid/widget/RelativeLayout;
 
-    .line 66
+    .line 54
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_layoutevent:Landroid/widget/RelativeLayout;
 
-    .line 67
+    .line 55
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_layoutfile:Landroid/widget/RelativeLayout;
 
-    .line 68
+    .line 56
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_llayout:Landroid/widget/LinearLayout;
 
-    .line 70
+    .line 58
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bsearch:Landroid/widget/Button;
 
-    .line 71
+    .line 59
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_tpicker:Landroid/widget/TimePicker;
 
-    .line 72
+    .line 60
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_dpicker:Landroid/widget/DatePicker;
 
-    .line 73
+    .line 61
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
 
-    .line 74
+    .line 62
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_locallv:Lcom/tvt/ui/LinearLayoutForListView;
 
-    .line 75
+    .line 63
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_eventlv:Lcom/tvt/ui/LinearLayoutForListView;
 
-    .line 76
+    .line 64
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_filelv:Lcom/tvt/ui/LinearLayoutForListView;
 
-    .line 78
+    .line 66
     new-array v0, v4, [Landroid/widget/CheckBox;
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    .line 81
+    .line 69
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->handler:Landroid/os/Handler;
 
-    .line 83
+    .line 71
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->layoutTitle:Landroid/widget/AbsoluteLayout;
 
-    .line 84
+    .line 72
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->layoutControl:Landroid/widget/AbsoluteLayout;
 
-    .line 85
+    .line 73
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_ImageVideo:Landroid/widget/ImageView;
 
-    .line 86
+    .line 74
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->btnPlay:Landroid/widget/Button;
 
-    .line 92
+    .line 80
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
-    .line 93
+    .line 81
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->Decode:Lcom/tvt/network/H264Decode;
 
-    .line 94
+    .line 82
     iput v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoWidth:I
 
-    .line 95
+    .line 83
     iput v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoHeight:I
 
-    .line 96
+    .line 84
     iput v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoFrameCounts:I
 
-    .line 97
+    .line 85
     iput v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurPlayIndex:I
 
-    .line 98
+    .line 86
     iput v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoFrameRate:I
 
-    .line 100
+    .line 88
     iput-boolean v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPause:Z
 
-    .line 101
+    .line 89
     iput-boolean v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPStop:Z
 
-    .line 102
+    .line 90
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayTimer:Ljava/util/Timer;
 
-    .line 103
+    .line 91
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayTimerTask:Ljava/util/TimerTask;
 
-    .line 104
+    .line 92
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_DateBuffer:[B
 
-    .line 105
+    .line 93
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->bmp:Lcom/tvt/network/BMPImage;
 
-    .line 106
+    .line 94
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bitmapBuffer:[B
 
-    .line 107
+    .line 95
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 112
+    .line 100
     const-wide/16 v0, 0x64
 
     iput-wide v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->lDelay:J
 
-    .line 113
+    .line 101
     const-wide/16 v0, 0x1f4
 
     iput-wide v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->lPeriod:J
 
-    .line 115
+    .line 103
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
 
-    .line 116
+    .line 104
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
 
-    .line 117
+    .line 105
     iput v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
-    .line 120
+    .line 108
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bclose:Landroid/widget/Button;
 
-    .line 121
+    .line 109
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_tvtitle:Landroid/widget/TextView;
 
-    .line 122
+    .line 110
     const/4 v0, 0x3
 
     new-array v0, v0, [I
@@ -327,7 +327,7 @@
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_date:[I
 
-    .line 123
+    .line 111
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -336,48 +336,48 @@
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_time:[I
 
-    .line 124
+    .line 112
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_adapterfll:Lcom/tvt/ui/AdapterForLinearLayout;
 
-    .line 125
+    .line 113
     iput v4, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCHCount:I
 
-    .line 126
+    .line 114
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iParent:Lcom/tvt/ui/MainViewLayout;
 
-    .line 127
+    .line 115
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_ivSlideButton:Landroid/widget/ImageView;
 
-    .line 128
+    .line 116
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_linearBottom:Landroid/widget/LinearLayout;
 
-    .line 129
+    .line 117
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_layout:Landroid/widget/RelativeLayout;
 
-    .line 130
+    .line 118
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_display:Landroid/view/Display;
 
-    .line 134
+    .line 122
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iSelectedItemIndex:I
 
-    .line 135
+    .line 123
     iput-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayLayout:Lcom/tvt/ui/PlaybackViewLayout;
 
-    .line 140
+    .line 128
     iput-object p1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_context:Landroid/content/Context;
 
-    .line 142
+    .line 130
     iput p2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCHCount:I
 
-    .line 143
+    .line 131
     iput-object p0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayLayout:Lcom/tvt/ui/PlaybackViewLayout;
 
-    .line 144
+    .line 132
     return-void
 
-    .line 122
+    .line 110
     nop
 
     :array_96
@@ -387,7 +387,7 @@
         -0x1
     .end array-data
 
-    .line 123
+    .line 111
     :array_a0
     .array-data 4
         -0x1
@@ -402,12 +402,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1152
+    .line 1174
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1153
+    .line 1175
     .local v0, "pFileDir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -415,17 +415,17 @@
 
     if-nez v2, :cond_13
 
-    .line 1155
+    .line 1177
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
     move-result v2
 
     if-nez v2, :cond_13
 
-    .line 1157
+    .line 1179
     const/4 v1, 0x0
 
-    .line 1161
+    .line 1183
     :cond_13
     return v1
 .end method
@@ -437,14 +437,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1128
+    .line 1150
     const/4 v0, 0x0
 
-    .line 1129
+    .line 1151
     .local v0, "strPath":Ljava/lang/String;
     move-object v0, p0
 
-    .line 1130
+    .line 1152
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -463,19 +463,19 @@
 
     move-result-object v0
 
-    .line 1131
+    .line 1153
     invoke-static {v0}, Lcom/tvt/ui/PlaybackViewLayout;->CreateDirectory(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_1d
 
-    .line 1147
+    .line 1169
     :cond_1c
     :goto_1c
     return-object v1
 
-    .line 1136
+    .line 1158
     :cond_1d
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -495,14 +495,14 @@
 
     move-result-object v0
 
-    .line 1137
+    .line 1159
     invoke-static {v0}, Lcom/tvt/ui/PlaybackViewLayout;->CreateDirectory(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1c
 
-    .line 1142
+    .line 1164
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -527,7 +527,7 @@
 
     move-result-object v0
 
-    .line 1143
+    .line 1165
     invoke-static {v0}, Lcom/tvt/ui/PlaybackViewLayout;->CreateDirectory(Ljava/lang/String;)Z
 
     move-result v2
@@ -536,7 +536,7 @@
 
     move-object v1, v0
 
-    .line 1147
+    .line 1169
     goto :goto_1c
 .end method
 
@@ -544,7 +544,7 @@
     .registers 2
 
     .prologue
-    .line 124
+    .line 112
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_adapterfll:Lcom/tvt/ui/AdapterForLinearLayout;
 
     return-object v0
@@ -554,7 +554,7 @@
     .registers 2
 
     .prologue
-    .line 74
+    .line 62
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_locallv:Lcom/tvt/ui/LinearLayoutForListView;
 
     return-object v0
@@ -564,7 +564,7 @@
     .registers 2
 
     .prologue
-    .line 64
+    .line 52
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_layoutlocal:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -574,7 +574,7 @@
     .registers 2
 
     .prologue
-    .line 61
+    .line 49
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_inflater:Landroid/view/LayoutInflater;
 
     return-object v0
@@ -584,7 +584,7 @@
     .registers 2
 
     .prologue
-    .line 64
+    .line 52
     iput-object p1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_layoutlocal:Landroid/widget/RelativeLayout;
 
     return-void
@@ -594,7 +594,7 @@
     .registers 2
 
     .prologue
-    .line 63
+    .line 51
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->relative:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -604,7 +604,7 @@
     .registers 2
 
     .prologue
-    .line 124
+    .line 112
     iput-object p1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_adapterfll:Lcom/tvt/ui/AdapterForLinearLayout;
 
     return-void
@@ -614,7 +614,7 @@
     .registers 2
 
     .prologue
-    .line 135
+    .line 123
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayLayout:Lcom/tvt/ui/PlaybackViewLayout;
 
     return-object v0
@@ -624,7 +624,7 @@
     .registers 2
 
     .prologue
-    .line 122
+    .line 110
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_date:[I
 
     return-object v0
@@ -634,7 +634,7 @@
     .registers 2
 
     .prologue
-    .line 72
+    .line 60
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_dpicker:Landroid/widget/DatePicker;
 
     return-object v0
@@ -644,7 +644,7 @@
     .registers 2
 
     .prologue
-    .line 123
+    .line 111
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_time:[I
 
     return-object v0
@@ -654,7 +654,7 @@
     .registers 2
 
     .prologue
-    .line 71
+    .line 59
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_tpicker:Landroid/widget/TimePicker;
 
     return-object v0
@@ -664,7 +664,7 @@
     .registers 2
 
     .prologue
-    .line 73
+    .line 61
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
 
     return-object v0
@@ -674,7 +674,7 @@
     .registers 2
 
     .prologue
-    .line 118
+    .line 106
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivplay:Landroid/widget/ImageView;
 
     return-object v0
@@ -684,7 +684,7 @@
     .registers 2
 
     .prologue
-    .line 134
+    .line 122
     iput p1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iSelectedItemIndex:I
 
     return-void
@@ -694,7 +694,7 @@
     .registers 2
 
     .prologue
-    .line 134
+    .line 122
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iSelectedItemIndex:I
 
     return v0
@@ -704,7 +704,7 @@
     .registers 2
 
     .prologue
-    .line 62
+    .line 50
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_context:Landroid/content/Context;
 
     return-object v0
@@ -714,7 +714,7 @@
     .registers 2
 
     .prologue
-    .line 63
+    .line 51
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->relsearchtime:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -724,7 +724,7 @@
     .registers 2
 
     .prologue
-    .line 63
+    .line 51
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->relsearchevent:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -734,7 +734,7 @@
     .registers 2
 
     .prologue
-    .line 63
+    .line 51
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->relsearchfile:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -744,7 +744,7 @@
     .registers 2
 
     .prologue
-    .line 63
+    .line 51
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->relsearchlocal:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -755,7 +755,7 @@
     .param p1, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 764
+    .line 752
     const-string v3, "/"
 
     invoke-virtual {p1, v3}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
@@ -774,7 +774,7 @@
 
     move-result-object v1
 
-    .line 766
+    .line 754
     .local v1, "channel":Ljava/lang/String;
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -784,7 +784,7 @@
 
     move-result v2
 
-    .line 767
+    .line 755
     .local v2, "m":I
     iget-object v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
@@ -794,7 +794,7 @@
 
     move-result v0
 
-    .line 768
+    .line 756
     .local v0, "b":Z
     iget-object v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
@@ -806,10 +806,10 @@
 
     if-eqz v3, :cond_2e
 
-    .line 769
+    .line 757
     const/4 v3, 0x1
 
-    .line 771
+    .line 759
     :goto_2d
     return v3
 
@@ -821,14 +821,14 @@
 
 
 # virtual methods
-.method public ChooseAlertDialo_Positive_Clicked(I)V
+.method public ChooseAlertDialog_Positive_Clicked(I)V
     .registers 13
     .param p1, "whichButton"    # I
 
     .prologue
     const/4 v10, 0x2
 
-    .line 1166
+    .line 1188
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iSelectedItemIndex:I
 
     if-ltz v0, :cond_f
@@ -843,18 +843,18 @@
 
     if-lt v0, v1, :cond_10
 
-    .line 1185
+    .line 1207
     :cond_f
     :goto_f
     return-void
 
-    .line 1169
+    .line 1191
     :cond_10
     const/16 v0, 0x3ec
 
     if-ne p1, v0, :cond_f
 
-    .line 1170
+    .line 1192
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
 
     iget v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iSelectedItemIndex:I
@@ -865,7 +865,7 @@
 
     check-cast v9, Ljava/lang/String;
 
-    .line 1171
+    .line 1193
     .local v9, "strFilePath":Ljava/lang/String;
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
 
@@ -873,28 +873,28 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1172
+    .line 1194
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
 
     iget v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iSelectedItemIndex:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1173
+    .line 1195
     new-instance v7, Ljava/io/File;
 
     invoke-direct {v7, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1174
+    .line 1196
     .local v7, "DelFile":Ljava/io/File;
     invoke-virtual {v7}, Ljava/io/File;->delete()Z
 
-    .line 1175
+    .line 1197
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 1176
+    .line 1198
     .local v8, "item":Ljava/util/HashMap;
     const-string v0, "channel"
 
@@ -902,31 +902,31 @@
 
     invoke-virtual {v8, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1177
+    .line 1199
     const-string v0, "time"
 
     const-string v1, ""
 
     invoke-virtual {v8, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1178
+    .line 1200
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1180
+    .line 1202
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_locallv:Lcom/tvt/ui/LinearLayoutForListView;
 
     invoke-virtual {v0}, Lcom/tvt/ui/LinearLayoutForListView;->removeAllViews()V
 
-    .line 1181
+    .line 1203
     new-instance v0, Lcom/tvt/ui/AdapterForLinearLayout;
 
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_context:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
 
-    const v3, 0x7f030030
+    const v3, 0x7f030035
 
     new-array v4, v10, [Ljava/lang/String;
 
@@ -952,27 +952,27 @@
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_adapterfll:Lcom/tvt/ui/AdapterForLinearLayout;
 
-    .line 1182
+    .line 1204
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_locallv:Lcom/tvt/ui/LinearLayoutForListView;
 
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_adapterfll:Lcom/tvt/ui/AdapterForLinearLayout;
 
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/LinearLayoutForListView;->setAdapter(Lcom/tvt/ui/AdapterForLinearLayout;)V
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/LinearLayoutForListView;->setAdapter(Landroid/widget/BaseAdapter;)V
 
-    .line 1183
+    .line 1205
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_locallv:Lcom/tvt/ui/LinearLayoutForListView;
 
     invoke-virtual {v0}, Lcom/tvt/ui/LinearLayoutForListView;->invalidate()V
 
     goto :goto_f
 
-    .line 1181
+    .line 1203
     nop
 
     :array_80
     .array-data 4
-        0x7f0900d5
-        0x7f090105
+        0x7f0a00dd
+        0x7f0a0109
     .end array-data
 .end method
 
@@ -982,36 +982,36 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 937
+    .line 944
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->ClosePlayTimer()V
 
-    .line 938
+    .line 945
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     if-eqz v0, :cond_f
 
-    .line 940
+    .line 947
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     invoke-virtual {v0}, Lcom/tvt/network/RecorderInterface;->CloseAviReadFrame()V
 
-    .line 941
+    .line 948
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
-    .line 943
+    .line 950
     :cond_f
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->bmp:Lcom/tvt/network/BMPImage;
 
     if-eqz v0, :cond_15
 
-    .line 945
+    .line 952
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->bmp:Lcom/tvt/network/BMPImage;
 
-    .line 947
+    .line 954
     :cond_15
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->ReleaseDecoder()V
 
-    .line 949
+    .line 956
     return-void
 .end method
 
@@ -1019,28 +1019,28 @@
     .registers 2
 
     .prologue
-    .line 952
+    .line 959
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayTimer:Ljava/util/Timer;
 
     if-eqz v0, :cond_9
 
-    .line 954
+    .line 961
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayTimer:Ljava/util/Timer;
 
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
 
-    .line 956
+    .line 963
     :cond_9
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayTimerTask:Ljava/util/TimerTask;
 
     if-eqz v0, :cond_12
 
-    .line 958
+    .line 965
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayTimerTask:Ljava/util/TimerTask;
 
     invoke-virtual {v0}, Ljava/util/TimerTask;->cancel()Z
 
-    .line 960
+    .line 967
     :cond_12
     return-void
 .end method
@@ -1049,21 +1049,21 @@
     .registers 7
 
     .prologue
-    .line 1048
+    .line 1070
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayTimer:Ljava/util/Timer;
 
-    .line 1050
+    .line 1072
     new-instance v0, Lcom/tvt/ui/PlaybackViewLayout$13;
 
     invoke-direct {v0, p0}, Lcom/tvt/ui/PlaybackViewLayout$13;-><init>(Lcom/tvt/ui/PlaybackViewLayout;)V
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayTimerTask:Ljava/util/TimerTask;
 
-    .line 1059
+    .line 1081
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayTimer:Ljava/util/Timer;
 
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_PlayTimerTask:Ljava/util/TimerTask;
@@ -1074,7 +1074,7 @@
 
     invoke-virtual/range {v0 .. v5}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;JJ)V
 
-    .line 1060
+    .line 1082
     return-void
 .end method
 
@@ -1082,12 +1082,12 @@
     .registers 5
 
     .prologue
-    .line 1110
+    .line 1132
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->bmp:Lcom/tvt/network/BMPImage;
 
-    .line 1111
+    .line 1133
     new-instance v1, Lcom/tvt/network/BMPImage;
 
     iget v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoWidth:I
@@ -1098,39 +1098,39 @@
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->bmp:Lcom/tvt/network/BMPImage;
 
-    .line 1112
+    .line 1134
     new-instance v1, Lcom/tvt/network/H264Decode;
 
     invoke-direct {v1}, Lcom/tvt/network/H264Decode;-><init>()V
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->Decode:Lcom/tvt/network/H264Decode;
 
-    .line 1113
+    .line 1135
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->Decode:Lcom/tvt/network/H264Decode;
 
     invoke-virtual {v1}, Lcom/tvt/network/H264Decode;->initDecode()I
 
     move-result v0
 
-    .line 1115
+    .line 1137
     .local v0, "iReturn":I
     if-eqz v0, :cond_26
 
-    .line 1117
+    .line 1139
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v2, "Decode Init Succeed"
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1118
+    .line 1140
     const/4 v1, 0x1
 
-    .line 1123
+    .line 1145
     :goto_25
     return v1
 
-    .line 1122
+    .line 1144
     :cond_26
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -1138,35 +1138,37 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1123
+    .line 1145
     const/4 v1, 0x0
 
     goto :goto_25
 .end method
 
 .method public PlayAvi()V
-    .registers 10
+    .registers 12
 
     .prologue
-    .line 1009
+    const/4 v10, 0x0
+
+    .line 1016
     iget-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_6
 
-    .line 1045
-    :cond_4
-    :goto_4
+    .line 1067
+    :cond_5
+    :goto_5
     return-void
 
-    .line 1013
-    :cond_5
+    .line 1020
+    :cond_6
     new-instance v5, Lcom/tvt/network/RecorderInterface;
 
     invoke-direct {v5}, Lcom/tvt/network/RecorderInterface;-><init>()V
 
     iput-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
-    .line 1014
+    .line 1021
     iget-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     iget-object v6, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
@@ -1177,9 +1179,9 @@
 
     const/4 v6, -0x1
 
-    if-eq v5, v6, :cond_fe
+    if-eq v5, v6, :cond_15a
 
-    .line 1017
+    .line 1024
     iget-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
@@ -1204,7 +1206,7 @@
 
     move-result-object v0
 
-    .line 1019
+    .line 1026
     .local v0, "seconds":Ljava/lang/String;
     invoke-static {v0}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -1220,7 +1222,7 @@
 
     move-result-object v2
 
-    .line 1020
+    .line 1027
     .local v2, "secondstime":Ljava/lang/String;
     invoke-static {v0}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -1236,7 +1238,7 @@
 
     move-result-object v1
 
-    .line 1022
+    .line 1028
     .local v1, "secondsdate":Ljava/lang/String;
     iget-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
 
@@ -1244,11 +1246,21 @@
 
     const-string v7, "/"
 
-    invoke-virtual {v6, v7}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+    iget-object v8, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
+
+    const-string v9, "/"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+
+    move-result v8
+
+    add-int/lit8 v8, v8, -0x1
+
+    invoke-virtual {v6, v7, v8}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;I)I
 
     move-result v6
 
-    add-int/lit8 v6, v6, -0x1
+    add-int/lit8 v6, v6, 0x1
 
     iget-object v7, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
 
@@ -1262,7 +1274,7 @@
 
     move-result-object v3
 
-    .line 1024
+    .line 1030
     .local v3, "strcam":Ljava/lang/String;
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -1278,7 +1290,7 @@
 
     move-result-object v3
 
-    .line 1025
+    .line 1031
     sget-object v5, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1317,7 +1329,7 @@
 
     invoke-virtual {v5, v6}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1026
+    .line 1032
     iget-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_tvtitle:Landroid/widget/TextView;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1356,7 +1368,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1028
+    .line 1034
     iget-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     invoke-virtual {v5}, Lcom/tvt/network/RecorderInterface;->GetReadAviFileFrameCount()I
@@ -1365,7 +1377,69 @@
 
     iput v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoFrameCounts:I
 
-    .line 1029
+    .line 1035
+    const-string v5, "playback"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    iget v7, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoFrameCounts:I
+
+    invoke-static {v7}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1036
+    iget v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoFrameCounts:I
+
+    if-gtz v5, :cond_10f
+
+    .line 1037
+    invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    const v7, 0x7f0602eb
+
+    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {p0, v5, v6}, Lcom/tvt/ui/PlaybackViewLayout;->ShowMessageBox(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 1038
+    const/4 v5, 0x1
+
+    iput-boolean v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPStop:Z
+
+    .line 1039
+    iput-object v10, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
+
+    .line 1040
+    invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->ReleaseDecoder()V
+
+    .line 1041
+    invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->ClosePlayTimer()V
+
+    goto/16 :goto_5
+
+    .line 1046
+    :cond_10f
     iget-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     invoke-virtual {v5}, Lcom/tvt/network/RecorderInterface;->GetReadAviFileHeight()I
@@ -1374,7 +1448,7 @@
 
     iput v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoHeight:I
 
-    .line 1030
+    .line 1047
     iget-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     invoke-virtual {v5}, Lcom/tvt/network/RecorderInterface;->GetReadAviFileWidth()I
@@ -1383,7 +1457,7 @@
 
     iput v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoWidth:I
 
-    .line 1031
+    .line 1048
     iget-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     invoke-virtual {v5}, Lcom/tvt/network/RecorderInterface;->GetReadAviFileFrameRate()I
@@ -1392,7 +1466,7 @@
 
     iput v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoFrameRate:I
 
-    .line 1032
+    .line 1049
     const/16 v5, 0x3e8
 
     iget v6, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoFrameRate:I
@@ -1403,12 +1477,12 @@
 
     iput-wide v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->lPeriod:J
 
-    .line 1033
+    .line 1050
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->InitDecode()Z
 
     move-result v4
 
-    .line 1034
+    .line 1051
     .local v4, "temp":Z
     iget v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoHeight:I
 
@@ -1420,49 +1494,68 @@
 
     iput-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_DateBuffer:[B
 
-    .line 1035
+    .line 1052
+    const-string v5, "playback"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, "m_dateBuffer:"
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v7, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_DateBuffer:[B
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1054
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->CreatePlayTimer()V
 
-    .line 1036
+    .line 1056
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPStop:Z
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
-    .line 1040
+    .line 1062
     .end local v0    # "seconds":Ljava/lang/String;
     .end local v1    # "secondsdate":Ljava/lang/String;
     .end local v2    # "secondstime":Ljava/lang/String;
     .end local v3    # "strcam":Ljava/lang/String;
     .end local v4    # "temp":Z
-    :cond_fe
+    :cond_15a
     iget-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_5
 
-    .line 1042
-    const/4 v5, 0x0
+    .line 1064
+    iput-object v10, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
-    iput-object v5, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
-
-    goto/16 :goto_4
+    goto/16 :goto_5
 .end method
 
 .method PlayFrame()V
     .registers 4
 
     .prologue
-    .line 1063
+    .line 1085
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     if-nez v1, :cond_5
 
-    .line 1079
+    .line 1101
     :goto_4
     return-void
 
-    .line 1067
+    .line 1089
     :cond_5
     iget v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurPlayIndex:I
 
@@ -1470,14 +1563,14 @@
 
     if-ge v1, v2, :cond_30
 
-    .line 1069
+    .line 1091
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     iget v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurPlayIndex:I
 
     invoke-virtual {v1, v2}, Lcom/tvt/network/RecorderInterface;->AviSetNewPosition(I)V
 
-    .line 1070
+    .line 1092
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     iget v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurPlayIndex:I
@@ -1488,7 +1581,7 @@
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_DateBuffer:[B
 
-    .line 1071
+    .line 1093
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
     iget v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurPlayIndex:I
@@ -1497,13 +1590,13 @@
 
     move-result v0
 
-    .line 1072
+    .line 1094
     .local v0, "iFrameLen":I
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_DateBuffer:[B
 
     invoke-virtual {p0, v1, v0}, Lcom/tvt/ui/PlaybackViewLayout;->StartDecode([BI)Z
 
-    .line 1073
+    .line 1095
     iget v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurPlayIndex:I
 
     add-int/lit8 v1, v1, 0x1
@@ -1512,7 +1605,7 @@
 
     goto :goto_4
 
-    .line 1077
+    .line 1099
     .end local v0    # "iFrameLen":I
     :cond_30
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->playStop()V
@@ -1524,22 +1617,22 @@
     .registers 2
 
     .prologue
-    .line 963
+    .line 970
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->Decode:Lcom/tvt/network/H264Decode;
 
     if-nez v0, :cond_5
 
-    .line 969
+    .line 976
     :goto_4
     return-void
 
-    .line 967
+    .line 974
     :cond_5
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->Decode:Lcom/tvt/network/H264Decode;
 
     invoke-virtual {v0}, Lcom/tvt/network/H264Decode;->cleanup()V
 
-    .line 968
+    .line 975
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->Decode:Lcom/tvt/network/H264Decode;
@@ -1551,7 +1644,7 @@
     .registers 20
 
     .prologue
-    .line 148
+    .line 136
     invoke-virtual/range {p0 .. p0}, Lcom/tvt/ui/PlaybackViewLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1564,12 +1657,12 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_inflater:Landroid/view/LayoutInflater;
 
-    .line 149
+    .line 137
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_inflater:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f030027
+    const v2, 0x7f03002c
 
     const/4 v3, 0x0
 
@@ -1577,7 +1670,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0900cd
+    const v2, 0x7f0a00d6
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1589,10 +1682,10 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_layout:Landroid/widget/RelativeLayout;
 
-    .line 150
+    .line 138
     invoke-virtual/range {p0 .. p0}, Lcom/tvt/ui/PlaybackViewLayout;->removeAllViews()V
 
-    .line 151
+    .line 139
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_layout:Landroid/widget/RelativeLayout;
@@ -1601,8 +1694,8 @@
 
     invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->addView(Landroid/view/View;)V
 
-    .line 154
-    const v1, 0x7f0900d1
+    .line 142
+    const v1, 0x7f0a00da
 
     move-object/from16 v0, p0
 
@@ -1612,14 +1705,14 @@
 
     check-cast v12, Landroid/widget/TextView;
 
-    .line 155
+    .line 143
     .local v12, "itvDate":Landroid/widget/TextView;
     const/high16 v1, 0x41700000    # 15.0f
 
     invoke-virtual {v12, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 157
-    const v1, 0x7f0900d3
+    .line 145
+    const v1, 0x7f0a001c
 
     move-object/from16 v0, p0
 
@@ -1629,7 +1722,7 @@
 
     check-cast v17, Landroid/widget/TextView;
 
-    .line 158
+    .line 146
     .local v17, "itvTime":Landroid/widget/TextView;
     const/high16 v1, 0x41700000    # 15.0f
 
@@ -1637,8 +1730,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 160
-    const v1, 0x7f0900d5
+    .line 148
+    const v1, 0x7f0a00dd
 
     move-object/from16 v0, p0
 
@@ -1648,14 +1741,14 @@
 
     check-cast v11, Landroid/widget/TextView;
 
-    .line 161
+    .line 149
     .local v11, "itvChannel":Landroid/widget/TextView;
     const/high16 v1, 0x41700000    # 15.0f
 
     invoke-virtual {v11, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 163
-    const v1, 0x7f0900e6
+    .line 151
+    const v1, 0x7f0a00ee
 
     move-object/from16 v0, p0
 
@@ -1665,14 +1758,14 @@
 
     check-cast v9, Landroid/widget/Button;
 
-    .line 164
+    .line 152
     .local v9, "ibtnSearch":Landroid/widget/Button;
     const/high16 v1, 0x41700000    # 15.0f
 
     invoke-virtual {v9, v1}, Landroid/widget/Button;->setTextSize(F)V
 
-    .line 166
-    const v1, 0x7f0900e8
+    .line 154
+    const v1, 0x7f0a00f0
 
     move-object/from16 v0, p0
 
@@ -1682,7 +1775,7 @@
 
     check-cast v16, Landroid/widget/TextView;
 
-    .line 167
+    .line 155
     .local v16, "itvSearchRes":Landroid/widget/TextView;
     const/high16 v1, 0x41700000    # 15.0f
 
@@ -1690,8 +1783,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 169
-    const v1, 0x7f0900ec
+    .line 157
+    const v1, 0x7f0a00f4
 
     move-object/from16 v0, p0
 
@@ -1701,13 +1794,13 @@
 
     check-cast v15, Landroid/widget/TextView;
 
-    .line 170
+    .line 158
     .local v15, "itvSearchLoc":Landroid/widget/TextView;
     const/high16 v1, 0x41500000    # 13.0f
 
     invoke-virtual {v15, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 173
+    .line 161
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_context:Landroid/content/Context;
@@ -1726,8 +1819,8 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_display:Landroid/view/Display;
 
-    .line 175
-    const v1, 0x7f0900ea
+    .line 163
+    const v1, 0x7f0a00f2
 
     move-object/from16 v0, p0
 
@@ -1741,12 +1834,12 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->relsearchlocal:Landroid/widget/RelativeLayout;
 
-    .line 176
+    .line 164
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_layout:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f090044
+    const v2, 0x7f0a004d
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -1758,8 +1851,8 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_linearBottom:Landroid/widget/LinearLayout;
 
-    .line 184
-    const v1, 0x7f0900e9
+    .line 172
+    const v1, 0x7f0a00f1
 
     move-object/from16 v0, p0
 
@@ -1773,8 +1866,8 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->relative:Landroid/widget/RelativeLayout;
 
-    .line 186
-    const v1, 0x7f0900ed
+    .line 174
+    const v1, 0x7f0a00f5
 
     move-object/from16 v0, p0
 
@@ -1788,8 +1881,8 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->relsearchtime:Landroid/widget/RelativeLayout;
 
-    .line 187
-    const v1, 0x7f0900f0
+    .line 175
+    const v1, 0x7f0a00f8
 
     move-object/from16 v0, p0
 
@@ -1803,8 +1896,8 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->relsearchevent:Landroid/widget/RelativeLayout;
 
-    .line 188
-    const v1, 0x7f0900f3
+    .line 176
+    const v1, 0x7f0a00fb
 
     move-object/from16 v0, p0
 
@@ -1818,8 +1911,8 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->relsearchfile:Landroid/widget/RelativeLayout;
 
-    .line 189
-    const v1, 0x7f0900e6
+    .line 177
+    const v1, 0x7f0a00ee
 
     move-object/from16 v0, p0
 
@@ -1833,8 +1926,8 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_bsearch:Landroid/widget/Button;
 
-    .line 190
-    const v1, 0x7f0900d4
+    .line 178
+    const v1, 0x7f0a00dc
 
     move-object/from16 v0, p0
 
@@ -1848,8 +1941,8 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_tpicker:Landroid/widget/TimePicker;
 
-    .line 191
-    const v1, 0x7f0900d2
+    .line 179
+    const v1, 0x7f0a00db
 
     move-object/from16 v0, p0
 
@@ -1863,7 +1956,7 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_dpicker:Landroid/widget/DatePicker;
 
-    .line 192
+    .line 180
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_date:[I
@@ -1876,7 +1969,7 @@
 
     if-eq v1, v2, :cond_156
 
-    .line 193
+    .line 181
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_dpicker:Landroid/widget/DatePicker;
@@ -1907,7 +2000,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/widget/DatePicker;->updateDate(III)V
 
-    .line 194
+    .line 182
     :cond_156
     move-object/from16 v0, p0
 
@@ -1921,7 +2014,7 @@
 
     if-eq v1, v2, :cond_4d8
 
-    .line 195
+    .line 183
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_tpicker:Landroid/widget/TimePicker;
@@ -1940,7 +2033,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TimePicker;->setCurrentHour(Ljava/lang/Integer;)V
 
-    .line 196
+    .line 184
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_tpicker:Landroid/widget/TimePicker;
@@ -1959,7 +2052,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TimePicker;->setCurrentMinute(Ljava/lang/Integer;)V
 
-    .line 203
+    .line 191
     :goto_184
     move-object/from16 v0, p0
 
@@ -1967,7 +2060,235 @@
 
     const/4 v3, 0x0
 
-    const v1, 0x7f090018
+    const v1, 0x7f0a001e
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 192
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/4 v3, 0x1
+
+    const v1, 0x7f0a001f
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 193
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/4 v3, 0x2
+
+    const v1, 0x7f0a0020
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 194
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/4 v3, 0x3
+
+    const v1, 0x7f0a0021
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 195
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/4 v3, 0x4
+
+    const v1, 0x7f0a0022
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 196
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/4 v3, 0x5
+
+    const v1, 0x7f0a0023
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 197
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/4 v3, 0x6
+
+    const v1, 0x7f0a0024
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 198
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/4 v3, 0x7
+
+    const v1, 0x7f0a0025
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 199
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/16 v3, 0x8
+
+    const v1, 0x7f0a0026
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 200
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/16 v3, 0x9
+
+    const v1, 0x7f0a0027
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 201
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/16 v3, 0xa
+
+    const v1, 0x7f0a0028
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 202
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/16 v3, 0xb
+
+    const v1, 0x7f0a0029
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/CheckBox;
+
+    aput-object v1, v2, v3
+
+    .line 203
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
+
+    const/16 v3, 0xc
+
+    const v1, 0x7f0a002a
 
     move-object/from16 v0, p0
 
@@ -1984,9 +2305,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/4 v3, 0x1
+    const/16 v3, 0xd
 
-    const v1, 0x7f090019
+    const v1, 0x7f0a002b
 
     move-object/from16 v0, p0
 
@@ -2003,9 +2324,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/4 v3, 0x2
+    const/16 v3, 0xe
 
-    const v1, 0x7f09001a
+    const v1, 0x7f0a002c
 
     move-object/from16 v0, p0
 
@@ -2022,9 +2343,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/4 v3, 0x3
+    const/16 v3, 0xf
 
-    const v1, 0x7f09001b
+    const v1, 0x7f0a002d
 
     move-object/from16 v0, p0
 
@@ -2041,9 +2362,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/4 v3, 0x4
+    const/16 v3, 0x10
 
-    const v1, 0x7f09001c
+    const v1, 0x7f0a00de
 
     move-object/from16 v0, p0
 
@@ -2060,9 +2381,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/4 v3, 0x5
+    const/16 v3, 0x11
 
-    const v1, 0x7f09001d
+    const v1, 0x7f0a00df
 
     move-object/from16 v0, p0
 
@@ -2079,9 +2400,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/4 v3, 0x6
+    const/16 v3, 0x12
 
-    const v1, 0x7f09001e
+    const v1, 0x7f0a00e0
 
     move-object/from16 v0, p0
 
@@ -2098,9 +2419,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/4 v3, 0x7
+    const/16 v3, 0x13
 
-    const v1, 0x7f09001f
+    const v1, 0x7f0a00e1
 
     move-object/from16 v0, p0
 
@@ -2117,9 +2438,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0x8
+    const/16 v3, 0x14
 
-    const v1, 0x7f090020
+    const v1, 0x7f0a00e2
 
     move-object/from16 v0, p0
 
@@ -2136,9 +2457,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0x9
+    const/16 v3, 0x15
 
-    const v1, 0x7f090021
+    const v1, 0x7f0a00e3
 
     move-object/from16 v0, p0
 
@@ -2155,9 +2476,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0xa
+    const/16 v3, 0x16
 
-    const v1, 0x7f090022
+    const v1, 0x7f0a00e4
 
     move-object/from16 v0, p0
 
@@ -2174,9 +2495,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0xb
+    const/16 v3, 0x17
 
-    const v1, 0x7f090023
+    const v1, 0x7f0a00e5
 
     move-object/from16 v0, p0
 
@@ -2193,9 +2514,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0xc
+    const/16 v3, 0x18
 
-    const v1, 0x7f090024
+    const v1, 0x7f0a00e6
 
     move-object/from16 v0, p0
 
@@ -2212,9 +2533,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0xd
+    const/16 v3, 0x19
 
-    const v1, 0x7f090025
+    const v1, 0x7f0a00e7
 
     move-object/from16 v0, p0
 
@@ -2231,9 +2552,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0xe
+    const/16 v3, 0x1a
 
-    const v1, 0x7f090026
+    const v1, 0x7f0a00e8
 
     move-object/from16 v0, p0
 
@@ -2250,9 +2571,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0xf
+    const/16 v3, 0x1b
 
-    const v1, 0x7f090027
+    const v1, 0x7f0a00e9
 
     move-object/from16 v0, p0
 
@@ -2269,9 +2590,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0x10
+    const/16 v3, 0x1c
 
-    const v1, 0x7f0900d6
+    const v1, 0x7f0a00ea
 
     move-object/from16 v0, p0
 
@@ -2288,9 +2609,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0x11
+    const/16 v3, 0x1d
 
-    const v1, 0x7f0900d7
+    const v1, 0x7f0a00eb
 
     move-object/from16 v0, p0
 
@@ -2307,9 +2628,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0x12
+    const/16 v3, 0x1e
 
-    const v1, 0x7f0900d8
+    const v1, 0x7f0a00ec
 
     move-object/from16 v0, p0
 
@@ -2326,47 +2647,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
 
-    const/16 v3, 0x13
+    const/16 v3, 0x1f
 
-    const v1, 0x7f0900d9
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 223
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x14
-
-    const v1, 0x7f0900da
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 224
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x15
-
-    const v1, 0x7f0900db
+    const v1, 0x7f0a00ed
 
     move-object/from16 v0, p0
 
@@ -2379,196 +2662,6 @@
     aput-object v1, v2, v3
 
     .line 225
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x16
-
-    const v1, 0x7f0900dc
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 226
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x17
-
-    const v1, 0x7f0900dd
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 227
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x18
-
-    const v1, 0x7f0900de
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 228
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x19
-
-    const v1, 0x7f0900df
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 229
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x1a
-
-    const v1, 0x7f0900e0
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 230
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x1b
-
-    const v1, 0x7f0900e1
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 231
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x1c
-
-    const v1, 0x7f0900e2
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 232
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x1d
-
-    const v1, 0x7f0900e3
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 233
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x1e
-
-    const v1, 0x7f0900e4
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 234
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
-
-    const/16 v3, 0x1f
-
-    const v1, 0x7f0900e5
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/CheckBox;
-
-    aput-object v1, v2, v3
-
-    .line 237
     const/4 v8, 0x0
 
     .local v8, "i":I
@@ -2577,7 +2670,7 @@
 
     if-lt v8, v1, :cond_4f2
 
-    .line 240
+    .line 228
     const/4 v8, 0x0
 
     :goto_3e2
@@ -2587,7 +2680,7 @@
 
     if-lt v8, v1, :cond_501
 
-    .line 243
+    .line 231
     const/4 v8, 0x0
 
     :goto_3e9
@@ -2597,12 +2690,12 @@
 
     if-lt v8, v1, :cond_50f
 
-    .line 248
+    .line 236
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_inflater:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f03002a
+    const v2, 0x7f03002f
 
     const/4 v3, 0x0
 
@@ -2610,7 +2703,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f090104
+    const v2, 0x7f0a0108
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2622,14 +2715,14 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_layoutlocal:Landroid/widget/RelativeLayout;
 
-    .line 249
+    .line 237
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->relative:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v1}, Landroid/widget/RelativeLayout;->removeAllViews()V
 
-    .line 250
+    .line 238
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->relative:Landroid/widget/RelativeLayout;
@@ -2640,12 +2733,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 252
+    .line 240
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_layoutlocal:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f0900d5
+    const v2, 0x7f0a00dd
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2653,18 +2746,18 @@
 
     check-cast v14, Landroid/widget/TextView;
 
-    .line 253
+    .line 241
     .local v14, "itvLocChannel":Landroid/widget/TextView;
     const/high16 v1, 0x41880000    # 17.0f
 
     invoke-virtual {v14, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 255
+    .line 243
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_layoutlocal:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f090105
+    const v2, 0x7f0a0109
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2672,18 +2765,18 @@
 
     check-cast v13, Landroid/widget/TextView;
 
-    .line 256
+    .line 244
     .local v13, "itvLocBeginTime":Landroid/widget/TextView;
     const/high16 v1, 0x41880000    # 17.0f
 
     invoke-virtual {v13, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 258
+    .line 246
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_layoutlocal:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f0900fd
+    const v2, 0x7f0a0105
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2695,7 +2788,7 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_locallv:Lcom/tvt/ui/LinearLayoutForListView;
 
-    .line 261
+    .line 249
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
@@ -2708,7 +2801,7 @@
 
     if-ge v1, v2, :cond_469
 
-    .line 262
+    .line 250
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
@@ -2717,11 +2810,11 @@
 
     move-result v18
 
-    .line 263
+    .line 251
     .local v18, "size":I
     const/4 v10, 0x0
 
-    .line 264
+    .line 252
     .local v10, "item":Ljava/util/HashMap;
     const/4 v8, 0x0
 
@@ -2730,7 +2823,7 @@
 
     if-lt v8, v1, :cond_528
 
-    .line 271
+    .line 259
     .end local v10    # "item":Ljava/util/HashMap;
     .end local v18    # "size":I
     :cond_469
@@ -2744,7 +2837,7 @@
 
     iget-object v3, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
 
-    const v4, 0x7f030030
+    const v4, 0x7f030035
 
     const/4 v5, 0x2
 
@@ -2778,7 +2871,7 @@
 
     iput-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_adapterfll:Lcom/tvt/ui/AdapterForLinearLayout;
 
-    .line 283
+    .line 271
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_locallv:Lcom/tvt/ui/LinearLayoutForListView;
@@ -2791,7 +2884,7 @@
 
     invoke-virtual {v1, v2}, Lcom/tvt/ui/LinearLayoutForListView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 302
+    .line 290
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_locallv:Lcom/tvt/ui/LinearLayoutForListView;
@@ -2804,7 +2897,7 @@
 
     invoke-virtual {v1, v2}, Lcom/tvt/ui/LinearLayoutForListView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 320
+    .line 308
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_locallv:Lcom/tvt/ui/LinearLayoutForListView;
@@ -2813,9 +2906,9 @@
 
     iget-object v2, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_adapterfll:Lcom/tvt/ui/AdapterForLinearLayout;
 
-    invoke-virtual {v1, v2}, Lcom/tvt/ui/LinearLayoutForListView;->setAdapter(Lcom/tvt/ui/AdapterForLinearLayout;)V
+    invoke-virtual {v1, v2}, Lcom/tvt/ui/LinearLayoutForListView;->setAdapter(Landroid/widget/BaseAdapter;)V
 
-    .line 322
+    .line 310
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->relsearchlocal:Landroid/widget/RelativeLayout;
@@ -2828,7 +2921,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 570
+    .line 556
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_bsearch:Landroid/widget/Button;
@@ -2841,10 +2934,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 630
+    .line 616
     return-void
 
-    .line 198
+    .line 186
     .end local v8    # "i":I
     .end local v13    # "itvLocBeginTime":Landroid/widget/TextView;
     .end local v14    # "itvLocChannel":Landroid/widget/TextView;
@@ -2861,7 +2954,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TimePicker;->setCurrentHour(Ljava/lang/Integer;)V
 
-    .line 199
+    .line 187
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_tpicker:Landroid/widget/TimePicker;
@@ -2876,7 +2969,7 @@
 
     goto/16 :goto_184
 
-    .line 238
+    .line 226
     .restart local v8    # "i":I
     :cond_4f2
     move-object/from16 v0, p0
@@ -2889,12 +2982,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckBox;->setVisibility(I)V
 
-    .line 237
+    .line 225
     add-int/lit8 v8, v8, 0x1
 
     goto/16 :goto_3dd
 
-    .line 241
+    .line 229
     :cond_501
     move-object/from16 v0, p0
 
@@ -2906,12 +2999,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckBox;->setVisibility(I)V
 
-    .line 240
+    .line 228
     add-int/lit8 v8, v8, 0x1
 
     goto/16 :goto_3e2
 
-    .line 244
+    .line 232
     :cond_50f
     move-object/from16 v0, p0
 
@@ -2923,7 +3016,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 245
+    .line 233
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_ckb:[Landroid/widget/CheckBox;
@@ -2934,12 +3027,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckBox;->setTextSize(F)V
 
-    .line 243
+    .line 231
     add-int/lit8 v8, v8, 0x1
 
     goto/16 :goto_3e9
 
-    .line 265
+    .line 253
     .restart local v10    # "item":Ljava/util/HashMap;
     .restart local v13    # "itvLocBeginTime":Landroid/widget/TextView;
     .restart local v14    # "itvLocChannel":Landroid/widget/TextView;
@@ -2950,7 +3043,7 @@
     .end local v10    # "item":Ljava/util/HashMap;
     invoke-direct {v10}, Ljava/util/HashMap;-><init>()V
 
-    .line 266
+    .line 254
     .restart local v10    # "item":Ljava/util/HashMap;
     const-string v1, "channel"
 
@@ -2958,30 +3051,30 @@
 
     invoke-virtual {v10, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 267
+    .line 255
     const-string v1, "time"
 
     const-string v2, ""
 
     invoke-virtual {v10, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 268
+    .line 256
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 264
+    .line 252
     add-int/lit8 v8, v8, 0x1
 
     goto/16 :goto_465
 
-    .line 271
+    .line 259
     :array_546
     .array-data 4
-        0x7f0900d5
-        0x7f090105
+        0x7f0a00dd
+        0x7f0a0109
     .end array-data
 .end method
 
@@ -2991,10 +3084,10 @@
     .prologue
     const/high16 v4, 0x41700000    # 15.0f
 
-    .line 784
+    .line 772
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_inflater:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f03002d
+    const v2, 0x7f030032
 
     const/4 v3, 0x0
 
@@ -3002,7 +3095,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f090111
+    const v2, 0x7f0a0115
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3010,14 +3103,14 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    .line 785
+    .line 773
     .local v0, "layout":Landroid/widget/RelativeLayout;
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->removeAllViews()V
 
-    .line 786
+    .line 774
     invoke-virtual {p0, v0}, Lcom/tvt/ui/PlaybackViewLayout;->addView(Landroid/view/View;)V
 
-    .line 789
+    .line 777
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
 
     iget v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iSelectedItemIndex:I
@@ -3030,8 +3123,8 @@
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
 
-    .line 790
-    const v1, 0x7f0900c9
+    .line 778
+    const v1, 0x7f0a00d2
 
     invoke-virtual {p0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -3041,13 +3134,13 @@
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bclose:Landroid/widget/Button;
 
-    .line 791
+    .line 779
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bclose:Landroid/widget/Button;
 
     invoke-virtual {v1, v4}, Landroid/widget/Button;->setTextSize(F)V
 
-    .line 792
-    const v1, 0x7f09003d
+    .line 780
+    const v1, 0x7f0a0046
 
     invoke-virtual {p0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -3057,13 +3150,13 @@
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_tvtitle:Landroid/widget/TextView;
 
-    .line 793
+    .line 781
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_tvtitle:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 794
-    const v1, 0x7f090113
+    .line 782
+    const v1, 0x7f0a0117
 
     invoke-virtual {p0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -3073,8 +3166,8 @@
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_ImageVideo:Landroid/widget/ImageView;
 
-    .line 798
-    const v1, 0x7f090117
+    .line 786
+    const v1, 0x7f0a011b
 
     invoke-virtual {p0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -3084,8 +3177,8 @@
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivplay:Landroid/widget/ImageView;
 
-    .line 799
-    const v1, 0x7f090115
+    .line 787
+    const v1, 0x7f0a0119
 
     invoke-virtual {p0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -3095,8 +3188,8 @@
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivstop:Landroid/widget/ImageView;
 
-    .line 800
-    const v1, 0x7f090116
+    .line 788
+    const v1, 0x7f0a011a
 
     invoke-virtual {p0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -3106,8 +3199,8 @@
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivpre:Landroid/widget/ImageView;
 
-    .line 801
-    const v1, 0x7f090118
+    .line 789
+    const v1, 0x7f0a011c
 
     invoke-virtual {p0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -3117,7 +3210,7 @@
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivnext:Landroid/widget/ImageView;
 
-    .line 805
+    .line 793
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bclose:Landroid/widget/Button;
 
     new-instance v2, Lcom/tvt/ui/PlaybackViewLayout$7;
@@ -3126,7 +3219,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 813
+    .line 801
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivplay:Landroid/widget/ImageView;
 
     new-instance v2, Lcom/tvt/ui/PlaybackViewLayout$8;
@@ -3135,7 +3228,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 826
+    .line 814
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivstop:Landroid/widget/ImageView;
 
     new-instance v2, Lcom/tvt/ui/PlaybackViewLayout$9;
@@ -3144,7 +3237,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 831
+    .line 819
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivnext:Landroid/widget/ImageView;
 
     new-instance v2, Lcom/tvt/ui/PlaybackViewLayout$10;
@@ -3153,7 +3246,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 837
+    .line 825
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivpre:Landroid/widget/ImageView;
 
     new-instance v2, Lcom/tvt/ui/PlaybackViewLayout$11;
@@ -3162,17 +3255,17 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 843
+    .line 831
     new-instance v1, Lcom/tvt/ui/PlaybackViewLayout$12;
 
     invoke-direct {v1, p0}, Lcom/tvt/ui/PlaybackViewLayout$12;-><init>(Lcom/tvt/ui/PlaybackViewLayout;)V
 
     iput-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->handler:Landroid/os/Handler;
 
-    .line 863
+    .line 851
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->initData()V
 
-    .line 864
+    .line 852
     return-void
 .end method
 
@@ -3182,7 +3275,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 634
+    .line 620
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -3207,7 +3300,7 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/tvt/ui/PlaybackViewLayout;->ShowProgressView(Landroid/content/Context;Landroid/view/ViewGroup;IIII)V
 
-    .line 635
+    .line 621
     return-void
 .end method
 
@@ -3219,27 +3312,27 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1082
+    .line 1104
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->Decode:Lcom/tvt/network/H264Decode;
 
     if-nez v1, :cond_6
 
-    .line 1106
+    .line 1128
     :goto_5
     return v0
 
-    .line 1087
+    .line 1109
     :cond_6
     iget-boolean v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPStop:Z
 
     if-eqz v1, :cond_e
 
-    .line 1089
+    .line 1111
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->ReleaseDecoder()V
 
     goto :goto_5
 
-    .line 1093
+    .line 1115
     :cond_e
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoWidth:I
 
@@ -3251,7 +3344,7 @@
 
     new-array v5, v0, [B
 
-    .line 1095
+    .line 1117
     .local v5, "iOutBuffer":[B
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->Decode:Lcom/tvt/network/H264Decode;
 
@@ -3267,7 +3360,7 @@
 
     move-result v6
 
-    .line 1096
+    .line 1118
     .local v6, "iReturn":I
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->Decode:Lcom/tvt/network/H264Decode;
 
@@ -3277,12 +3370,12 @@
 
     if-ne v0, p2, :cond_47
 
-    .line 1099
+    .line 1121
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->bmp:Lcom/tvt/network/BMPImage;
 
     if-eqz v0, :cond_47
 
-    .line 1101
+    .line 1123
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->bmp:Lcom/tvt/network/BMPImage;
 
     iget v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoWidth:I
@@ -3291,7 +3384,7 @@
 
     invoke-virtual {v0, v5, v1, v2}, Lcom/tvt/network/BMPImage;->BMPImagePutDate([BII)V
 
-    .line 1102
+    .line 1124
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->bmp:Lcom/tvt/network/BMPImage;
 
     invoke-virtual {v0}, Lcom/tvt/network/BMPImage;->getByte()[B
@@ -3300,14 +3393,14 @@
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bitmapBuffer:[B
 
-    .line 1103
+    .line 1125
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->handler:Landroid/os/Handler;
 
     const/16 v1, 0x3e9
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 1106
+    .line 1128
     :cond_47
     const/4 v0, 0x1
 
@@ -3319,10 +3412,10 @@
     .param p1, "arg"    # I
 
     .prologue
-    .line 637
+    .line 623
     iget-object v6, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_inflater:Landroid/view/LayoutInflater;
 
-    const v7, 0x7f03002e
+    const v7, 0x7f030033
 
     const/4 v8, 0x0
 
@@ -3330,13 +3423,13 @@
 
     move-result-object v6
 
-    const v7, 0x7f090119
+    const v7, 0x7f0a011d
 
     invoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 638
+    .line 624
     .local v4, "layout":Landroid/view/View;
     new-instance v6, Landroid/app/AlertDialog$Builder;
 
@@ -3350,9 +3443,9 @@
 
     move-result-object v0
 
-    .line 639
+    .line 625
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    const v6, 0x7f09011a
+    const v6, 0x7f0a011e
 
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3360,9 +3453,9 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    .line 640
+    .line 626
     .local v2, "i_bplay":Landroid/widget/Button;
-    const v6, 0x7f0900ca
+    const v6, 0x7f0a00d3
 
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3370,38 +3463,38 @@
 
     check-cast v1, Landroid/widget/Button;
 
-    .line 641
+    .line 627
     .local v1, "i_bdelete":Landroid/widget/Button;
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v3
 
-    .line 642
+    .line 628
     .local v3, "i_dialog":Landroid/app/Dialog;
     invoke-virtual {v3}, Landroid/app/Dialog;->show()V
 
-    .line 643
+    .line 629
     move v5, p1
 
-    .line 644
+    .line 630
     .local v5, "m_iReSelIndex":I
     iput p1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
-    .line 645
+    .line 631
     new-instance v6, Lcom/tvt/ui/PlaybackViewLayout$5;
 
     invoke-direct {v6, p0, v5, v3}, Lcom/tvt/ui/PlaybackViewLayout$5;-><init>(Lcom/tvt/ui/PlaybackViewLayout;ILandroid/app/Dialog;)V
 
     invoke-virtual {v2, v6}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 664
+    .line 650
     new-instance v6, Lcom/tvt/ui/PlaybackViewLayout$6;
 
     invoke-direct {v6, p0, v3, v5}, Lcom/tvt/ui/PlaybackViewLayout$6;-><init>(Lcom/tvt/ui/PlaybackViewLayout;Landroid/app/Dialog;I)V
 
     invoke-virtual {v1, v6}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 702
+    .line 688
     return-void
 .end method
 
@@ -3413,12 +3506,12 @@
 
     const/4 v1, 0x0
 
-    .line 972
+    .line 979
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bitmapBuffer:[B
 
     if-eqz v0, :cond_63
 
-    .line 976
+    .line 983
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoWidth:I
 
     iget v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iVideoHeight:I
@@ -3431,38 +3524,38 @@
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 977
+    .line 984
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bitmapBuffer:[B
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v7
 
-    .line 978
+    .line 985
     .local v7, "buffer":Ljava/nio/ByteBuffer;
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->bitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v7}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
-    .line 981
+    .line 988
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 982
+    .line 989
     .local v5, "m":Landroid/graphics/Matrix;
     const/high16 v0, -0x3ccc0000    # -180.0f
 
     invoke-virtual {v5, v0}, Landroid/graphics/Matrix;->setRotate(F)V
 
-    .line 983
+    .line 990
     const/high16 v0, 0x3f800000    # 1.0f
 
     const/high16 v2, -0x40800000    # -1.0f
 
     invoke-virtual {v5, v0, v2}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 984
+    .line 991
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->bitmap:Landroid/graphics/Bitmap;
 
     iget-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->bitmap:Landroid/graphics/Bitmap;
@@ -3485,7 +3578,7 @@
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 995
+    .line 1002
     .end local v5    # "m":Landroid/graphics/Matrix;
     .end local v7    # "buffer":Ljava/nio/ByteBuffer;
     :goto_43
@@ -3501,41 +3594,41 @@
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 996
+    .line 1003
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_ImageVideo:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->bitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 997
+    .line 1004
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_ImageVideo:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 998
+    .line 1005
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_ImageVideo:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->invalidate()V
 
-    .line 999
+    .line 1006
     return-void
 
-    .line 989
+    .line 996
     :cond_63
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020052
+    const v1, 0x7f020065
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
     move-result-object v8
 
-    .line 991
+    .line 998
     .local v8, "is":Ljava/io/InputStream;
     invoke-static {v8}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
@@ -3550,12 +3643,12 @@
     .registers 3
 
     .prologue
-    .line 1002
+    .line 1009
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iSelectedItemIndex:I
 
     iput v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
-    .line 1003
+    .line 1010
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
 
     iget v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
@@ -3568,10 +3661,10 @@
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
 
-    .line 1004
+    .line 1011
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->playStartOrPause()V
 
-    .line 1006
+    .line 1013
     return-void
 .end method
 
@@ -3581,7 +3674,7 @@
     .param p2, "time"    # Ljava/lang/String;
 
     .prologue
-    .line 774
+    .line 762
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -3590,7 +3683,7 @@
 
     if-lez v1, :cond_11
 
-    .line 775
+    .line 763
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -3603,7 +3696,7 @@
 
     if-lt v0, v1, :cond_13
 
-    .line 781
+    .line 769
     .end local v0    # "i":I
     :cond_11
     const/4 v1, 0x0
@@ -3611,7 +3704,7 @@
     :goto_12
     return v1
 
-    .line 776
+    .line 764
     .restart local v0    # "i":I
     :cond_13
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
@@ -3634,7 +3727,7 @@
 
     if-eqz v1, :cond_3d
 
-    .line 777
+    .line 765
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3655,12 +3748,12 @@
 
     if-eqz v1, :cond_3d
 
-    .line 778
+    .line 766
     const/4 v1, 0x1
 
     goto :goto_12
 
-    .line 775
+    .line 763
     :cond_3d
     add-int/lit8 v0, v0, 0x1
 
@@ -3674,17 +3767,17 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 906
+    .line 910
     if-eqz p1, :cond_30
 
-    .line 908
+    .line 912
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
-    .line 909
+    .line 913
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
     iget-object v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
@@ -3695,7 +3788,7 @@
 
     if-lt v0, v1, :cond_57
 
-    .line 911
+    .line 915
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -3704,7 +3797,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f06005c
+    const v2, 0x7f060063
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3716,18 +3809,18 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 912
+    .line 916
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
-    .line 933
+    .line 940
     :goto_2f
     return-void
 
-    .line 918
+    .line 923
     :cond_30
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
@@ -3735,12 +3828,12 @@
 
     iput v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
-    .line 919
+    .line 924
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
     if-gez v0, :cond_57
 
-    .line 921
+    .line 926
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -3749,7 +3842,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f06005d
+    const v2, 0x7f060064
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3761,7 +3854,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 922
+    .line 927
     iget v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
 
     add-int/lit8 v0, v0, 0x1
@@ -3770,27 +3863,27 @@
 
     goto :goto_2f
 
-    .line 926
+    .line 932
     :cond_57
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->CloseAvi()V
 
-    .line 927
+    .line 933
     iput-boolean v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPause:Z
 
-    .line 928
+    .line 934
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPStop:Z
 
-    .line 929
+    .line 935
     iput v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurPlayIndex:I
 
-    .line 930
+    .line 936
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bitmapBuffer:[B
 
-    .line 931
+    .line 937
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
 
     iget v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurSelectIndex:I
@@ -3803,94 +3896,195 @@
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
 
-    .line 932
+    .line 938
+    const-string v0, "playback"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "next-->strFile:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_strFilePath:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 939
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->playStartOrPause()V
 
     goto :goto_2f
 .end method
 
 .method playStartOrPause()V
-    .registers 4
+    .registers 7
 
     .prologue
-    const v2, 0x7f02004a
+    const v5, 0x7f02005e
 
-    .line 868
+    const v4, 0x7f02005d
+
+    const/4 v3, 0x1
+
+    .line 856
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
 
-    if-nez v0, :cond_17
+    if-nez v0, :cond_1b
 
-    .line 870
+    .line 858
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "------------------1-------------"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 871
+    .line 859
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivplay:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 872
+    .line 860
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->PlayAvi()V
 
-    .line 890
-    :goto_16
+    .line 894
+    :goto_1a
     return-void
 
-    .line 876
-    :cond_17
+    .line 864
+    :cond_1b
+    const-string v0, "playback"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "m_Recorder.GetReadAviFileFrameCount():"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
+
+    invoke-virtual {v2}, Lcom/tvt/network/RecorderInterface;->GetReadAviFileFrameCount()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 865
+    iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
+
+    invoke-virtual {v0}, Lcom/tvt/network/RecorderInterface;->GetReadAviFileFrameCount()I
+
+    move-result v0
+
+    if-gtz v0, :cond_66
+
+    .line 866
+    invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0602eb
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/tvt/ui/PlaybackViewLayout;->ShowMessageBox(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 867
+    iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivplay:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 868
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_Recorder:Lcom/tvt/network/RecorderInterface;
+
+    .line 869
+    invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->ClosePlayTimer()V
+
+    .line 870
+    invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->ReleaseDecoder()V
+
+    .line 872
+    iput-boolean v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPause:Z
+
+    .line 873
+    iput-boolean v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPStop:Z
+
+    goto :goto_1a
+
+    .line 878
+    :cond_66
     iget-boolean v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPause:Z
 
-    if-nez v0, :cond_31
+    if-nez v0, :cond_7c
 
-    .line 877
+    .line 879
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "------------------2-------------"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 878
-    const/4 v0, 0x1
+    .line 880
+    iput-boolean v3, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPause:Z
 
-    iput-boolean v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPause:Z
-
-    .line 879
+    .line 881
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->ClosePlayTimer()V
 
-    .line 880
+    .line 882
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivplay:Landroid/widget/ImageView;
 
-    const v1, 0x7f02004b
+    invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    goto :goto_1a
 
-    goto :goto_16
-
-    .line 884
-    :cond_31
+    .line 886
+    :cond_7c
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "------------------3-------------"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 885
+    .line 888
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPause:Z
 
-    .line 886
+    .line 890
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->CreatePlayTimer()V
 
-    .line 887
+    .line 891
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->ivplay:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    goto :goto_16
+    goto :goto_1a
 .end method
 
 .method playStop()V
@@ -3899,50 +4093,50 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 894
+    .line 898
     invoke-virtual {p0}, Lcom/tvt/ui/PlaybackViewLayout;->CloseAvi()V
 
-    .line 895
+    .line 899
     iput-boolean v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPause:Z
 
-    .line 896
+    .line 900
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bPStop:Z
 
-    .line 897
+    .line 901
     iput v1, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_iCurPlayIndex:I
 
-    .line 898
+    .line 902
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->m_bitmapBuffer:[B
 
-    .line 899
+    .line 903
     const-wide/16 v0, 0x1f4
 
     iput-wide v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->lPeriod:J
 
-    .line 900
+    .line 904
     const-wide/16 v0, 0x64
 
     iput-wide v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->lDelay:J
 
-    .line 901
+    .line 905
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->handler:Landroid/os/Handler;
 
     const/16 v1, 0x3e8
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 902
+    .line 906
     iget-object v0, p0, Lcom/tvt/ui/PlaybackViewLayout;->handler:Landroid/os/Handler;
 
     const/16 v1, 0x3e9
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 903
+    .line 907
     return-void
 .end method
 
@@ -3951,28 +4145,28 @@
     .param p1, "strFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 705
+    .line 691
     new-instance v1, Ljava/io/File;
 
     move-object/from16 v0, p1
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 706
+    .line 692
     .local v1, "dir":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v2
 
-    .line 708
+    .line 694
     .local v2, "files":[Ljava/io/File;
     if-nez v2, :cond_e
 
-    .line 761
+    .line 749
     :cond_d
     return-void
 
-    .line 710
+    .line 696
     :cond_e
     const/4 v3, 0x0
 
@@ -3980,9 +4174,9 @@
     :goto_f
     array-length v14, v2
 
-    if-lt v3, v14, :cond_d0
+    if-lt v3, v14, :cond_d8
 
-    .line 741
+    .line 728
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
@@ -3993,10 +4187,10 @@
 
     if-lez v14, :cond_d
 
-    .line 743
+    .line 730
     const/4 v4, 0x0
 
-    .line 744
+    .line 731
     .local v4, "item":Ljava/util/HashMap;
     const/4 v3, 0x0
 
@@ -4011,7 +4205,7 @@
 
     if-ge v3, v14, :cond_d
 
-    .line 745
+    .line 732
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
@@ -4022,7 +4216,7 @@
 
     check-cast v13, Ljava/lang/String;
 
-    .line 746
+    .line 733
     .local v13, "strFileName":Ljava/lang/String;
     const-string v14, "/"
 
@@ -4042,7 +4236,7 @@
 
     move-result-object v5
 
-    .line 748
+    .line 735
     .local v5, "seconds":Ljava/lang/String;
     invoke-static {v5}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -4058,7 +4252,7 @@
 
     move-result-object v7
 
-    .line 749
+    .line 736
     .local v7, "secondsTime":Ljava/lang/String;
     invoke-static {v5}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -4074,15 +4268,23 @@
 
     move-result-object v6
 
-    .line 751
+    .line 738
     .local v6, "secondsDate":Ljava/lang/String;
     const-string v14, "/"
 
-    invoke-virtual {v13, v14}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+    const-string v15, "/"
+
+    invoke-virtual {v13, v15}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+
+    move-result v15
+
+    add-int/lit8 v15, v15, -0x1
+
+    invoke-virtual {v13, v14, v15}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;I)I
 
     move-result v14
 
-    add-int/lit8 v14, v14, -0x1
+    add-int/lit8 v14, v14, 0x1
 
     const-string v15, "/"
 
@@ -4094,7 +4296,7 @@
 
     move-result-object v12
 
-    .line 752
+    .line 740
     .local v12, "strCam":Ljava/lang/String;
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -4110,7 +4312,7 @@
 
     move-result-object v12
 
-    .line 753
+    .line 741
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -4139,21 +4341,21 @@
 
     move-result v14
 
-    if-nez v14, :cond_cc
+    if-nez v14, :cond_d4
 
-    .line 754
+    .line 742
     new-instance v4, Ljava/util/HashMap;
 
     .end local v4    # "item":Ljava/util/HashMap;
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 755
+    .line 743
     .restart local v4    # "item":Ljava/util/HashMap;
     const-string v14, "channel"
 
     invoke-virtual {v4, v14, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 756
+    .line 744
     const-string v14, "time"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -4180,36 +4382,36 @@
 
     invoke-virtual {v4, v14, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 757
+    .line 745
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_localdata:Ljava/util/ArrayList;
 
     invoke-virtual {v14, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 744
-    :cond_cc
+    .line 731
+    :cond_d4
     add-int/lit8 v3, v3, 0x1
 
     goto/16 :goto_1e
 
-    .line 711
+    .line 697
     .end local v4    # "item":Ljava/util/HashMap;
     .end local v5    # "seconds":Ljava/lang/String;
     .end local v6    # "secondsDate":Ljava/lang/String;
     .end local v7    # "secondsTime":Ljava/lang/String;
     .end local v12    # "strCam":Ljava/lang/String;
     .end local v13    # "strFileName":Ljava/lang/String;
-    :cond_d0
+    :cond_d8
     aget-object v14, v2, v3
 
     invoke-virtual {v14}, Ljava/io/File;->isDirectory()Z
 
     move-result v14
 
-    if-eqz v14, :cond_e7
+    if-eqz v14, :cond_ef
 
-    .line 712
+    .line 698
     aget-object v14, v2, v3
 
     invoke-virtual {v14}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -4220,22 +4422,22 @@
 
     invoke-virtual {v0, v14}, Lcom/tvt/ui/PlaybackViewLayout;->searchRecord(Ljava/lang/String;)V
 
-    .line 710
-    :cond_e3
-    :goto_e3
+    .line 696
+    :cond_eb
+    :goto_eb
     add-int/lit8 v3, v3, 0x1
 
     goto/16 :goto_f
 
-    .line 714
-    :cond_e7
+    .line 700
+    :cond_ef
     aget-object v14, v2, v3
 
     invoke-virtual {v14}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 715
+    .line 702
     .restart local v13    # "strFileName":Ljava/lang/String;
     const-string v14, ".avi"
 
@@ -4245,9 +4447,9 @@
 
     const/4 v15, -0x1
 
-    if-eq v14, v15, :cond_e3
+    if-eq v14, v15, :cond_eb
 
-    .line 717
+    .line 704
     const-string v14, "/"
 
     invoke-virtual {v13, v14}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
@@ -4266,7 +4468,7 @@
 
     move-result-object v5
 
-    .line 719
+    .line 706
     .restart local v5    # "seconds":Ljava/lang/String;
     invoke-static {v5}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -4282,7 +4484,7 @@
 
     move-result-object v10
 
-    .line 720
+    .line 707
     .local v10, "secondstime":Ljava/lang/String;
     invoke-static {v5}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -4298,7 +4500,7 @@
 
     move-result-object v8
 
-    .line 722
+    .line 709
     .local v8, "secondsdate":Ljava/lang/String;
     const-string v14, "-"
 
@@ -4306,7 +4508,7 @@
 
     move-result-object v11
 
-    .line 723
+    .line 710
     .local v11, "secondstime1":[Ljava/lang/String;
     const-string v14, "-"
 
@@ -4314,7 +4516,7 @@
 
     move-result-object v9
 
-    .line 726
+    .line 713
     .local v9, "secondsdate1":[Ljava/lang/String;
     const/4 v14, 0x0
 
@@ -4336,9 +4538,9 @@
 
     move-result v15
 
-    if-ne v14, v15, :cond_e3
+    if-ne v14, v15, :cond_eb
 
-    .line 727
+    .line 714
     const/4 v14, 0x1
 
     aget-object v14, v9, v14
@@ -4361,9 +4563,9 @@
 
     add-int/lit8 v15, v15, 0x1
 
-    if-ne v14, v15, :cond_e3
+    if-ne v14, v15, :cond_eb
 
-    .line 728
+    .line 715
     const/4 v14, 0x2
 
     aget-object v14, v9, v14
@@ -4384,9 +4586,9 @@
 
     move-result v15
 
-    if-ne v14, v15, :cond_e3
+    if-ne v14, v15, :cond_eb
 
-    .line 729
+    .line 716
     const/4 v14, 0x0
 
     aget-object v14, v11, v14
@@ -4411,28 +4613,28 @@
 
     move-result v15
 
-    if-le v14, v15, :cond_19b
+    if-le v14, v15, :cond_1a3
 
-    .line 730
+    .line 717
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/tvt/ui/PlaybackViewLayout;->isChannelChecked(Ljava/lang/String;)Z
 
     move-result v14
 
-    if-eqz v14, :cond_19b
+    if-eqz v14, :cond_1a3
 
-    .line 731
+    .line 718
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
 
     invoke-virtual {v14, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto/16 :goto_e3
+    goto/16 :goto_eb
 
-    .line 732
-    :cond_19b
+    .line 719
+    :cond_1a3
     const/4 v14, 0x0
 
     aget-object v14, v11, v14
@@ -4449,9 +4651,9 @@
 
     move-result-object v15
 
-    if-ne v14, v15, :cond_e3
+    if-ne v14, v15, :cond_eb
 
-    .line 733
+    .line 720
     const/4 v14, 0x1
 
     aget-object v14, v11, v14
@@ -4476,23 +4678,23 @@
 
     move-result v15
 
-    if-lt v14, v15, :cond_e3
+    if-lt v14, v15, :cond_eb
 
-    .line 734
+    .line 721
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/tvt/ui/PlaybackViewLayout;->isChannelChecked(Ljava/lang/String;)Z
 
     move-result v14
 
-    if-eqz v14, :cond_e3
+    if-eqz v14, :cond_eb
 
-    .line 735
+    .line 722
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/tvt/ui/PlaybackViewLayout;->m_RecordList:Ljava/util/ArrayList;
 
     invoke-virtual {v14, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto/16 :goto_e3
+    goto/16 :goto_eb
 .end method

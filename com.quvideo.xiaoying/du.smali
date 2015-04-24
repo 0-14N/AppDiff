@@ -1,20 +1,32 @@
-.class public final Ldu;
+.class public Ldu;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private synthetic a:Lcom/google/android/gms/internal/df;
+.field private final synthetic a:Lcom/qiniu/android/storage/UpCompletionHandler;
+
+.field private final synthetic b:Ljava/lang/String;
+
+.field private final synthetic c:Lcom/qiniu/android/http/ResponseInfo;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/df;)V
-    .registers 2
+.method public constructor <init>(Lcom/qiniu/android/storage/UpCompletionHandler;Ljava/lang/String;Lcom/qiniu/android/http/ResponseInfo;)V
+    .registers 4
 
-    iput-object p1, p0, Ldu;->a:Lcom/google/android/gms/internal/df;
+    .prologue
+    .line 1
+    iput-object p1, p0, Ldu;->a:Lcom/qiniu/android/storage/UpCompletionHandler;
 
+    iput-object p2, p0, Ldu;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Ldu;->c:Lcom/qiniu/android/http/ResponseInfo;
+
+    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,29 +34,21 @@
 
 
 # virtual methods
-.method public final run()V
-    .registers 3
+.method public run()V
+    .registers 5
 
-    :try_start_0
-    iget-object v0, p0, Ldu;->a:Lcom/google/android/gms/internal/df;
+    .prologue
+    .line 61
+    iget-object v0, p0, Ldu;->a:Lcom/qiniu/android/storage/UpCompletionHandler;
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/df;->a(Lcom/google/android/gms/internal/df;)Lcom/google/android/gms/internal/da;
+    iget-object v1, p0, Ldu;->b:Ljava/lang/String;
 
-    move-result-object v0
+    iget-object v2, p0, Ldu;->c:Lcom/qiniu/android/http/ResponseInfo;
 
-    invoke-interface {v0}, Lcom/google/android/gms/internal/da;->onAdClosed()V
-    :try_end_9
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_9} :catch_a
+    const/4 v3, 0x0
 
-    :goto_9
+    invoke-interface {v0, v1, v2, v3}, Lcom/qiniu/android/storage/UpCompletionHandler;->complete(Ljava/lang/String;Lcom/qiniu/android/http/ResponseInfo;Lorg/json/JSONObject;)V
+
+    .line 62
     return-void
-
-    :catch_a
-    move-exception v0
-
-    const-string/jumbo v1, "Could not call onAdClosed."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/gr;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_9
 .end method

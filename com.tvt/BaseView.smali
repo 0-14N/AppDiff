@@ -20,24 +20,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 29
+    .line 25
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 31
+    .line 27
     iput v0, p0, Lcom/tvt/skin/BaseView;->SCREENWIDTH:I
 
-    .line 32
+    .line 28
     iput v0, p0, Lcom/tvt/skin/BaseView;->SCREENHEIGHT:I
 
-    .line 34
+    .line 30
     iput v0, p0, Lcom/tvt/skin/BaseView;->m_iAlertDialogID:I
 
-    .line 35
+    .line 31
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tvt/skin/BaseView;->m_iAlertDialog:Landroid/app/AlertDialog;
 
-    .line 29
+    .line 25
     return-void
 .end method
 
@@ -53,12 +53,12 @@
     .param p6, "iViewTop"    # I
 
     .prologue
-    .line 76
+    .line 68
     new-instance v0, Lcom/tvt/skin/BaseAbsoluteLayout;
 
     invoke-direct {v0, p1}, Lcom/tvt/skin/BaseAbsoluteLayout;-><init>(Landroid/content/Context;)V
 
-    .line 77
+    .line 69
     .local v0, "iNewLayout":Lcom/tvt/skin/BaseAbsoluteLayout;
     new-instance v1, Landroid/widget/AbsoluteLayout$LayoutParams;
 
@@ -66,7 +66,7 @@
 
     invoke-virtual {v0, v1}, Lcom/tvt/skin/BaseAbsoluteLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 78
+    .line 70
     return-object v0
 .end method
 
@@ -84,7 +84,7 @@
     .param p2, "strMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 83
+    .line 75
     const v3, 0x7f060010
 
     move-object/from16 v0, p1
@@ -93,7 +93,7 @@
 
     move-result-object v55
 
-    .line 84
+    .line 76
     .local v55, "strTitle":Ljava/lang/String;
     const v3, 0x7f060011
 
@@ -103,7 +103,7 @@
 
     move-result-object v54
 
-    .line 85
+    .line 77
     .local v54, "strPositiveBtnTitle":Ljava/lang/String;
     const v3, 0x7f060012
 
@@ -113,7 +113,7 @@
 
     move-result-object v39
 
-    .line 86
+    .line 78
     .local v39, "strNegativeBtnTitle":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -121,7 +121,7 @@
 
     iput v3, v0, Lcom/tvt/skin/BaseView;->m_iAlertDialogID:I
 
-    .line 87
+    .line 79
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v0, p1
@@ -136,14 +136,14 @@
 
     iput-object v3, v0, Lcom/tvt/skin/BaseView;->m_iAlertDialog:Landroid/app/AlertDialog;
 
-    .line 88
+    .line 80
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/tvt/skin/BaseView;->m_iAlertDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v3}, Landroid/app/AlertDialog;->show()V
 
-    .line 89
+    .line 81
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/tvt/skin/BaseView;->m_iAlertDialog:Landroid/app/AlertDialog;
@@ -152,62 +152,62 @@
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
-    .line 91
+    .line 83
     const/16 v28, 0x15e
 
-    .line 92
+    .line 84
     .local v28, "iAlarmWidth":I
     const/16 v47, 0xbe
 
-    .line 93
+    .line 85
     .local v47, "iAlarmHeight":I
     const/16 v17, 0xa
 
-    .line 94
+    .line 86
     .local v17, "iVDistance":I
     const/16 v8, 0x14
 
-    .line 95
+    .line 87
     .local v8, "iHDistance":I
     const/16 v15, 0x1e
 
-    .line 96
+    .line 88
     .local v15, "iTextHeight":I
     const/16 v23, 0x1
 
-    .line 97
+    .line 89
     .local v23, "iSperatorLineHeight":I
     const/16 v50, 0x14
 
-    .line 99
+    .line 91
     .local v50, "iTextFontSize":I
     const/16 v6, 0x1e
 
-    .line 100
+    .line 92
     .local v6, "iImageButtonWidth":I
     const/16 v7, 0x1a
 
-    .line 101
+    .line 93
     .local v7, "iImageButtonHeight":I
     const/4 v3, 0x4
 
     div-int/lit8 v49, v3, 0x2
 
-    .line 103
+    .line 95
     .local v49, "iImageButtonVDistance":I
     const/16 v33, 0x78
 
-    .line 104
+    .line 96
     .local v33, "iOPButtonWidth":I
     const/16 v34, 0x23
 
-    .line 105
+    .line 97
     .local v34, "iOPButtonHeight":I
     const/16 v3, 0x6e
 
     div-int/lit8 v35, v3, 0x3
 
-    .line 107
+    .line 99
     .local v35, "iOPButtonHDistance":I
     const/16 v3, 0x8
 
@@ -217,7 +217,7 @@
 
     fill-array-data v53, :array_1d8
 
-    .line 109
+    .line 101
     .local v53, "roundRect":[F
     move-object/from16 v0, p0
 
@@ -233,14 +233,14 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/view/Window;->setLayout(II)V
 
-    .line 111
+    .line 103
     new-instance v2, Lcom/tvt/skin/BaseAbsoluteLayout;
 
     move-object/from16 v0, p1
 
     invoke-direct {v2, v0}, Lcom/tvt/skin/BaseAbsoluteLayout;-><init>(Landroid/content/Context;)V
 
-    .line 112
+    .line 104
     .local v2, "iNewLayout":Lcom/tvt/skin/BaseAbsoluteLayout;
     new-instance v3, Landroid/widget/AbsoluteLayout$LayoutParams;
 
@@ -256,14 +256,14 @@
 
     invoke-virtual {v2, v3}, Lcom/tvt/skin/BaseAbsoluteLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 113
+    .line 105
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/tvt/skin/BaseView;->m_iAlertDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v3, v2}, Landroid/app/AlertDialog;->setContentView(Landroid/view/View;)V
 
-    .line 115
+    .line 107
     new-instance v46, Landroid/graphics/drawable/ShapeDrawable;
 
     new-instance v3, Landroid/graphics/drawable/shapes/RoundRectShape;
@@ -280,7 +280,7 @@
 
     invoke-direct {v0, v3}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 116
+    .line 108
     .local v46, "dialogDrawable":Landroid/graphics/drawable/ShapeDrawable;
     const-string v3, "#3D414B"
 
@@ -294,27 +294,29 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/graphics/drawable/ShapeDrawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 117
+    .line 109
     move-object/from16 v0, v46
 
     invoke-virtual {v2, v0}, Lcom/tvt/skin/BaseAbsoluteLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 119
+    .line 111
     add-int/lit8 v9, v17, 0x2
 
-    .line 121
+    .line 113
     .local v9, "iTopPosition":I
-    const v5, 0x7f020005
+    const v5, 0x7f020006
 
+    .line 114
     const/4 v10, 0x1
 
     move-object/from16 v3, p1
 
     move-object v4, v2
 
+    .line 113
     invoke-virtual/range {v2 .. v10}, Lcom/tvt/skin/BaseAbsoluteLayout;->AddImageViewToLayOut(Landroid/content/Context;Landroid/view/ViewGroup;IIIIII)Landroid/widget/ImageView;
 
-    .line 122
+    .line 115
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, " "
@@ -331,10 +333,12 @@
 
     move-result-object v13
 
+    .line 116
     const/16 v14, 0x118
 
     const/16 v16, 0x32
 
+    .line 117
     const/16 v18, 0x1
 
     move-object v10, v2
@@ -343,11 +347,12 @@
 
     move-object v12, v2
 
+    .line 115
     invoke-virtual/range {v10 .. v18}, Lcom/tvt/skin/BaseAbsoluteLayout;->AddTextViewToLayOut(Landroid/content/Context;Landroid/view/ViewGroup;Ljava/lang/String;IIIII)Landroid/widget/TextView;
 
     move-result-object v51
 
-    .line 123
+    .line 118
     .local v51, "iTextView":Landroid/widget/TextView;
     const/16 v3, 0x70
 
@@ -355,7 +360,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 124
+    .line 119
     move/from16 v0, v50
 
     int-to-float v3, v0
@@ -364,21 +369,22 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 125
+    .line 120
     const/4 v3, -0x1
 
     move-object/from16 v0, v51
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 127
+    .line 122
     add-int/lit8 v9, v9, 0x26
 
-    .line 128
-    const v21, 0x7f020004
+    .line 123
+    const v21, 0x7f020005
 
     const/16 v22, 0x136
 
+    .line 124
     const/16 v26, 0x1
 
     move-object/from16 v18, v2
@@ -391,16 +397,18 @@
 
     move/from16 v25, v9
 
+    .line 123
     invoke-virtual/range {v18 .. v26}, Lcom/tvt/skin/BaseAbsoluteLayout;->AddImageViewToLayOut(Landroid/content/Context;Landroid/view/ViewGroup;IIIIII)Landroid/widget/ImageView;
 
-    .line 130
+    .line 126
     add-int/lit8 v9, v9, 0xb
 
-    .line 131
+    .line 127
     const/16 v29, 0x3c
 
     const/16 v30, 0x0
 
+    .line 128
     const/16 v32, 0x1
 
     move-object/from16 v24, v2
@@ -413,18 +421,19 @@
 
     move/from16 v31, v9
 
+    .line 127
     invoke-virtual/range {v24 .. v32}, Lcom/tvt/skin/BaseAbsoluteLayout;->AddTextViewToLayOut(Landroid/content/Context;Landroid/view/ViewGroup;Ljava/lang/String;IIIII)Landroid/widget/TextView;
 
     move-result-object v51
 
-    .line 132
+    .line 129
     const/16 v3, 0x11
 
     move-object/from16 v0, v51
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 133
+    .line 130
     move/from16 v0, v50
 
     int-to-float v3, v0
@@ -433,17 +442,17 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 134
+    .line 131
     const/4 v3, -0x1
 
     move-object/from16 v0, v51
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 136
+    .line 133
     add-int/lit8 v9, v9, 0x50
 
-    .line 138
+    .line 135
     const/16 v3, 0x8
 
     new-array v0, v3, [F
@@ -452,7 +461,7 @@
 
     fill-array-data v52, :array_1ec
 
-    .line 139
+    .line 136
     .local v52, "roundBtnRect":[F
     new-instance v45, Landroid/graphics/drawable/ShapeDrawable;
 
@@ -470,7 +479,7 @@
 
     invoke-direct {v0, v3}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 140
+    .line 137
     .local v45, "btnDrawable":Landroid/graphics/drawable/ShapeDrawable;
     const-string v3, "#99A0A8"
 
@@ -484,7 +493,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/graphics/drawable/ShapeDrawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 142
+    .line 140
     const/16 v37, 0x1
 
     move-object/from16 v29, v2
@@ -497,11 +506,12 @@
 
     move/from16 v36, v9
 
+    .line 139
     invoke-virtual/range {v29 .. v37}, Lcom/tvt/skin/BaseAbsoluteLayout;->AddButtonToLayout(Landroid/content/Context;Landroid/view/ViewGroup;Ljava/lang/String;IIIII)Landroid/widget/Button;
 
     move-result-object v48
 
-    .line 143
+    .line 141
     .local v48, "iButton":Landroid/widget/Button;
     const/16 v3, 0x11
 
@@ -509,21 +519,21 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setGravity(I)V
 
-    .line 144
+    .line 142
     move-object/from16 v0, v48
 
     move-object/from16 v1, v45
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 145
+    .line 143
     const/4 v3, -0x1
 
     move-object/from16 v0, v48
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setTextColor(I)V
 
-    .line 146
+    .line 144
     new-instance v3, Lcom/tvt/skin/BaseView$1;
 
     move-object/from16 v0, p0
@@ -534,7 +544,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 159
+    .line 157
     new-instance v3, Lcom/tvt/skin/BaseView$2;
 
     move-object/from16 v0, p0
@@ -545,9 +555,10 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 181
+    .line 180
     const/16 v42, 0xc0
 
+    .line 181
     const/16 v44, 0x1
 
     move-object/from16 v36, v2
@@ -562,6 +573,7 @@
 
     move/from16 v43, v9
 
+    .line 179
     invoke-virtual/range {v36 .. v44}, Lcom/tvt/skin/BaseAbsoluteLayout;->AddButtonToLayout(Landroid/content/Context;Landroid/view/ViewGroup;Ljava/lang/String;IIIII)Landroid/widget/Button;
 
     move-result-object v48
@@ -612,7 +624,7 @@
     .line 218
     return-void
 
-    .line 107
+    .line 99
     nop
 
     :array_1d8
@@ -627,7 +639,7 @@
         0x41400000    # 12.0f
     .end array-data
 
-    .line 138
+    .line 135
     :array_1ec
     .array-data 4
         0x40c00000    # 6.0f
@@ -646,76 +658,65 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 40
+    .line 36
     new-instance v0, Landroid/os/StrictMode$ThreadPolicy$Builder;
 
     invoke-direct {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;-><init>()V
 
-    .line 41
     invoke-virtual {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;->detectDiskReads()Landroid/os/StrictMode$ThreadPolicy$Builder;
 
     move-result-object v0
 
-    .line 42
     invoke-virtual {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;->detectDiskWrites()Landroid/os/StrictMode$ThreadPolicy$Builder;
 
     move-result-object v0
 
-    .line 43
+    .line 37
     invoke-virtual {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;->detectNetwork()Landroid/os/StrictMode$ThreadPolicy$Builder;
 
     move-result-object v0
 
-    .line 44
+    .line 38
     invoke-virtual {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;->penaltyLog()Landroid/os/StrictMode$ThreadPolicy$Builder;
 
     move-result-object v0
 
-    .line 45
     invoke-virtual {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;->build()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
 
-    .line 40
+    .line 36
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 46
+    .line 39
     new-instance v0, Landroid/os/StrictMode$VmPolicy$Builder;
 
     invoke-direct {v0}, Landroid/os/StrictMode$VmPolicy$Builder;-><init>()V
 
-    .line 47
     invoke-virtual {v0}, Landroid/os/StrictMode$VmPolicy$Builder;->detectLeakedSqlLiteObjects()Landroid/os/StrictMode$VmPolicy$Builder;
 
     move-result-object v0
 
-    .line 48
-    invoke-virtual {v0}, Landroid/os/StrictMode$VmPolicy$Builder;->detectLeakedClosableObjects()Landroid/os/StrictMode$VmPolicy$Builder;
-
-    move-result-object v0
-
-    .line 49
+    .line 41
     invoke-virtual {v0}, Landroid/os/StrictMode$VmPolicy$Builder;->penaltyLog()Landroid/os/StrictMode$VmPolicy$Builder;
 
     move-result-object v0
 
-    .line 50
     invoke-virtual {v0}, Landroid/os/StrictMode$VmPolicy$Builder;->penaltyDeath()Landroid/os/StrictMode$VmPolicy$Builder;
 
     move-result-object v0
 
-    .line 51
     invoke-virtual {v0}, Landroid/os/StrictMode$VmPolicy$Builder;->build()Landroid/os/StrictMode$VmPolicy;
 
     move-result-object v0
 
-    .line 46
+    .line 39
     invoke-static {v0}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
 
-    .line 53
+    .line 43
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 55
+    .line 45
     invoke-virtual {p0}, Lcom/tvt/skin/BaseView;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -734,7 +735,7 @@
 
     iput v0, p0, Lcom/tvt/skin/BaseView;->SCREENWIDTH:I
 
-    .line 56
+    .line 46
     invoke-virtual {p0}, Lcom/tvt/skin/BaseView;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -753,6 +754,6 @@
 
     iput v0, p0, Lcom/tvt/skin/BaseView;->SCREENHEIGHT:I
 
-    .line 71
+    .line 62
     return-void
 .end method

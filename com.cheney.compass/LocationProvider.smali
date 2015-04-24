@@ -248,7 +248,17 @@
     .local v2, "networkOprator":Ljava/lang/String;
     iget-object v4, p0, Lcom/cheney/compass/utils/LocationProvider;->telephonyManager:Landroid/telephony/TelephonyManager;
 
-    if-eqz v4, :cond_80
+    if-eqz v4, :cond_8a
+
+    if-eqz v2, :cond_8a
+
+    const-string v4, ""
+
+    invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_8a
 
     .line 106
     iget-object v4, p0, Lcom/cheney/compass/utils/LocationProvider;->telephonyManager:Landroid/telephony/TelephonyManager;
@@ -277,7 +287,7 @@
     .local v1, "mnc":Ljava/lang/String;
     const/4 v4, 0x1
 
-    if-ne v3, v4, :cond_83
+    if-ne v3, v4, :cond_8d
 
     .line 110
     iget-object v4, p0, Lcom/cheney/compass/utils/LocationProvider;->telephonyManager:Landroid/telephony/TelephonyManager;
@@ -293,7 +303,7 @@
     .line 111
     iget-object v4, p0, Lcom/cheney/compass/utils/LocationProvider;->gsmLocation:Landroid/telephony/gsm/GsmCellLocation;
 
-    if-eqz v4, :cond_80
+    if-eqz v4, :cond_8a
 
     .line 112
     iget-object v4, p0, Lcom/cheney/compass/utils/LocationProvider;->locationInfo:Lcom/cheney/domain/LocationInfo;
@@ -362,8 +372,8 @@
     .end local v0    # "mcc":Ljava/lang/String;
     .end local v1    # "mnc":Ljava/lang/String;
     .end local v3    # "simType":I
-    :cond_80
-    :goto_80
+    :cond_8a
+    :goto_8a
     iget-object v4, p0, Lcom/cheney/compass/utils/LocationProvider;->locationInfo:Lcom/cheney/domain/LocationInfo;
 
     return-object v4
@@ -372,10 +382,10 @@
     .restart local v0    # "mcc":Ljava/lang/String;
     .restart local v1    # "mnc":Ljava/lang/String;
     .restart local v3    # "simType":I
-    :cond_83
+    :cond_8d
     const/4 v4, 0x2
 
-    if-ne v3, v4, :cond_80
+    if-ne v3, v4, :cond_8a
 
     .line 119
     iget-object v4, p0, Lcom/cheney/compass/utils/LocationProvider;->telephonyManager:Landroid/telephony/TelephonyManager;
@@ -391,7 +401,7 @@
     .line 120
     iget-object v4, p0, Lcom/cheney/compass/utils/LocationProvider;->cdmaLocation:Landroid/telephony/cdma/CdmaCellLocation;
 
-    if-eqz v4, :cond_80
+    if-eqz v4, :cond_8a
 
     .line 121
     iget-object v4, p0, Lcom/cheney/compass/utils/LocationProvider;->locationInfo:Lcom/cheney/domain/LocationInfo;
@@ -479,7 +489,7 @@
 
     invoke-virtual {v4, v5}, Lcom/cheney/domain/LocationInfo;->setType(Ljava/lang/String;)V
 
-    goto :goto_80
+    goto :goto_8a
 .end method
 
 .method public getLocationProvider(Landroid/location/LocationManager;)Ljava/lang/String;

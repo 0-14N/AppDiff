@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/fu;->a:Lcom/youku/meidian/activity/VideoShareActivity_;
 
-    invoke-virtual {v0}, Lcom/youku/meidian/activity/VideoShareActivity_;->e()V
+    invoke-virtual {v0}, Lcom/youku/meidian/activity/VideoShareActivity_;->h()V
 
     return-void
 .end method

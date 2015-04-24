@@ -53,7 +53,7 @@
 
 .field private iv_title_bar_right:Landroid/widget/ImageView;
 
-.field private lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+.field private lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
 .field moreAdapter:Lcom/zxcx/blst/adapter/MoreAdapter;
 
@@ -171,126 +171,126 @@
 
     const/4 v0, 0x0
 
-    .line 38
+    .line 39
     invoke-direct {p0}, Lcom/zxcx/blst/act/BaseAct;-><init>()V
 
-    .line 39
+    .line 40
     iput-boolean v0, p0, Lcom/zxcx/blst/act/InformationAct;->isRefreshing_top:Z
 
-    .line 40
+    .line 41
     iput-boolean v0, p0, Lcom/zxcx/blst/act/InformationAct;->isRefreshing:Z
 
-    .line 41
+    .line 42
     iput-boolean v0, p0, Lcom/zxcx/blst/act/InformationAct;->isRefreshing_sort:Z
 
-    .line 50
+    .line 51
     iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
-    .line 52
+    .line 53
     iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageheadline:I
 
-    .line 53
+    .line 54
     iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->pagecompany:I
 
-    .line 54
+    .line 55
     iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageproduct:I
 
-    .line 55
+    .line 56
     iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageresearch:I
 
-    .line 56
+    .line 57
     iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->pagepolicy:I
-
-    .line 59
-    new-array v0, v2, [Ljava/lang/String;
-
-    iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->requestResult:[Ljava/lang/String;
 
     .line 60
     new-array v0, v2, [Ljava/lang/String;
 
+    iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->requestResult:[Ljava/lang/String;
+
+    .line 61
+    new-array v0, v2, [Ljava/lang/String;
+
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->requestResult_infoSort:[Ljava/lang/String;
 
-    .line 62
+    .line 63
     invoke-static {v1, v1, v1}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
 
     iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
-    .line 66
+    .line 67
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->infoTopList:Ljava/util/List;
 
-    .line 67
+    .line 68
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
 
-    .line 77
+    .line 78
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListheadline:Ljava/util/List;
 
-    .line 78
+    .line 79
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListcompany:Ljava/util/List;
 
-    .line 79
+    .line 80
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListproduct:Ljava/util/List;
 
-    .line 80
+    .line 81
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListresearch:Ljava/util/List;
 
-    .line 81
+    .line 82
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListpolicy:Ljava/util/List;
 
-    .line 82
+    .line 83
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListmore:Ljava/util/List;
 
-    .line 84
+    .line 85
     new-instance v0, Lcom/zxcx/blst/act/InformationAct$1;
 
     invoke-direct {v0, p0}, Lcom/zxcx/blst/act/InformationAct$1;-><init>(Lcom/zxcx/blst/act/InformationAct;)V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->handler:Landroid/os/Handler;
 
-    .line 38
+    .line 39
     return-void
 .end method
 
-.method static synthetic access$0(Lcom/zxcx/blst/act/InformationAct;)V
-    .registers 1
+.method static synthetic access$0(Lcom/zxcx/blst/act/InformationAct;Z)V
+    .registers 2
 
     .prologue
-    .line 508
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation()V
+    .line 588
+    invoke-direct {p0, p1}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation(Z)V
 
     return-void
 .end method
@@ -299,7 +299,7 @@
     .registers 1
 
     .prologue
-    .line 749
+    .line 830
     invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->updateInformationList()V
 
     return-void
@@ -309,8 +309,8 @@
     .registers 2
 
     .prologue
-    .line 72
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
+    .line 71
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
 
     return-object v0
 .end method
@@ -319,8 +319,8 @@
     .registers 2
 
     .prologue
-    .line 73
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
+    .line 72
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
 
     return-object v0
 .end method
@@ -329,90 +329,90 @@
     .registers 2
 
     .prologue
+    .line 73
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
+
+    return-object v0
+.end method
+
+.method static synthetic access$13(Lcom/zxcx/blst/act/InformationAct;)Landroid/widget/RadioButton;
+    .registers 2
+
+    .prologue
     .line 74
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
+
+    return-object v0
+.end method
+
+.method static synthetic access$14(Lcom/zxcx/blst/act/InformationAct;)Landroid/widget/RadioButton;
+    .registers 2
+
+    .prologue
+    .line 75
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_policy:Landroid/widget/RadioButton;
 
     return-object v0
 .end method
 
-.method static synthetic access$13(Lcom/zxcx/blst/act/InformationAct;)Landroid/os/Handler;
+.method static synthetic access$15(Lcom/zxcx/blst/act/InformationAct;)Landroid/os/Handler;
     .registers 2
 
     .prologue
-    .line 84
+    .line 85
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->handler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$14(Lcom/zxcx/blst/act/InformationAct;Z)V
+.method static synthetic access$16(Lcom/zxcx/blst/act/InformationAct;Z)V
     .registers 2
 
     .prologue
-    .line 41
+    .line 42
     iput-boolean p1, p0, Lcom/zxcx/blst/act/InformationAct;->isRefreshing_sort:Z
 
     return-void
 .end method
 
-.method static synthetic access$15(Lcom/zxcx/blst/act/InformationAct;)Z
+.method static synthetic access$17(Lcom/zxcx/blst/act/InformationAct;)Z
     .registers 2
 
     .prologue
-    .line 39
+    .line 40
     iget-boolean v0, p0, Lcom/zxcx/blst/act/InformationAct;->isRefreshing_top:Z
 
     return v0
 .end method
 
-.method static synthetic access$16(Lcom/zxcx/blst/act/InformationAct;Ljava/util/List;)V
+.method static synthetic access$18(Lcom/zxcx/blst/act/InformationAct;Ljava/util/List;)V
     .registers 2
 
     .prologue
-    .line 66
+    .line 67
     iput-object p1, p0, Lcom/zxcx/blst/act/InformationAct;->infoTopList:Ljava/util/List;
 
     return-void
 .end method
 
-.method static synthetic access$17(Lcom/zxcx/blst/act/InformationAct;Z)V
+.method static synthetic access$19(Lcom/zxcx/blst/act/InformationAct;Z)V
     .registers 2
 
     .prologue
-    .line 39
+    .line 40
     iput-boolean p1, p0, Lcom/zxcx/blst/act/InformationAct;->isRefreshing_top:Z
 
     return-void
 .end method
 
-.method static synthetic access$18(Lcom/zxcx/blst/act/InformationAct;)I
-    .registers 2
+.method static synthetic access$2(Lcom/zxcx/blst/act/InformationAct;)V
+    .registers 1
 
     .prologue
-    .line 52
-    iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageheadline:I
+    .line 112
+    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->clearList()V
 
-    return v0
-.end method
-
-.method static synthetic access$19(Lcom/zxcx/blst/act/InformationAct;)Ljava/lang/String;
-    .registers 2
-
-    .prologue
-    .line 51
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixungroupid:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2(Lcom/zxcx/blst/act/InformationAct;)I
-    .registers 2
-
-    .prologue
-    .line 50
-    iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
-
-    return v0
+    return-void
 .end method
 
 .method static synthetic access$20(Lcom/zxcx/blst/act/InformationAct;)I
@@ -420,27 +420,27 @@
 
     .prologue
     .line 53
-    iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->pagecompany:I
+    iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageheadline:I
 
     return v0
 .end method
 
-.method static synthetic access$21(Lcom/zxcx/blst/act/InformationAct;)I
+.method static synthetic access$21(Lcom/zxcx/blst/act/InformationAct;)Ljava/lang/String;
     .registers 2
 
     .prologue
-    .line 54
-    iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageproduct:I
+    .line 52
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixungroupid:Ljava/lang/String;
 
-    return v0
+    return-object v0
 .end method
 
 .method static synthetic access$22(Lcom/zxcx/blst/act/InformationAct;)I
     .registers 2
 
     .prologue
-    .line 55
-    iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageresearch:I
+    .line 54
+    iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->pagecompany:I
 
     return v0
 .end method
@@ -449,40 +449,40 @@
     .registers 2
 
     .prologue
+    .line 55
+    iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageproduct:I
+
+    return v0
+.end method
+
+.method static synthetic access$24(Lcom/zxcx/blst/act/InformationAct;)I
+    .registers 2
+
+    .prologue
     .line 56
+    iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageresearch:I
+
+    return v0
+.end method
+
+.method static synthetic access$25(Lcom/zxcx/blst/act/InformationAct;)I
+    .registers 2
+
+    .prologue
+    .line 57
     iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->pagepolicy:I
 
     return v0
 .end method
 
-.method static synthetic access$24(Lcom/zxcx/blst/act/InformationAct;)Z
+.method static synthetic access$26(Lcom/zxcx/blst/act/InformationAct;)Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
     .registers 2
 
     .prologue
-    .line 40
-    iget-boolean v0, p0, Lcom/zxcx/blst/act/InformationAct;->isRefreshing:Z
-
-    return v0
-.end method
-
-.method static synthetic access$25(Lcom/zxcx/blst/act/InformationAct;)Lcom/zxcx/blst/custom/widget/RefreshableListView;
-    .registers 2
-
-    .prologue
-    .line 64
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 65
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     return-object v0
-.end method
-
-.method static synthetic access$26(Lcom/zxcx/blst/act/InformationAct;I)V
-    .registers 2
-
-    .prologue
-    .line 52
-    iput p1, p0, Lcom/zxcx/blst/act/InformationAct;->pageheadline:I
-
-    return-void
 .end method
 
 .method static synthetic access$27(Lcom/zxcx/blst/act/InformationAct;I)V
@@ -490,7 +490,7 @@
 
     .prologue
     .line 53
-    iput p1, p0, Lcom/zxcx/blst/act/InformationAct;->pagecompany:I
+    iput p1, p0, Lcom/zxcx/blst/act/InformationAct;->pageheadline:I
 
     return-void
 .end method
@@ -500,7 +500,7 @@
 
     .prologue
     .line 54
-    iput p1, p0, Lcom/zxcx/blst/act/InformationAct;->pageproduct:I
+    iput p1, p0, Lcom/zxcx/blst/act/InformationAct;->pagecompany:I
 
     return-void
 .end method
@@ -510,19 +510,19 @@
 
     .prologue
     .line 55
-    iput p1, p0, Lcom/zxcx/blst/act/InformationAct;->pageresearch:I
+    iput p1, p0, Lcom/zxcx/blst/act/InformationAct;->pageproduct:I
 
     return-void
 .end method
 
-.method static synthetic access$3(Lcom/zxcx/blst/act/InformationAct;)Landroid/content/SharedPreferences;
+.method static synthetic access$3(Lcom/zxcx/blst/act/InformationAct;)Z
     .registers 2
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->sp:Landroid/content/SharedPreferences;
+    .line 41
+    iget-boolean v0, p0, Lcom/zxcx/blst/act/InformationAct;->isRefreshing:Z
 
-    return-object v0
+    return v0
 .end method
 
 .method static synthetic access$30(Lcom/zxcx/blst/act/InformationAct;I)V
@@ -530,114 +530,185 @@
 
     .prologue
     .line 56
+    iput p1, p0, Lcom/zxcx/blst/act/InformationAct;->pageresearch:I
+
+    return-void
+.end method
+
+.method static synthetic access$31(Lcom/zxcx/blst/act/InformationAct;I)V
+    .registers 2
+
+    .prologue
+    .line 57
     iput p1, p0, Lcom/zxcx/blst/act/InformationAct;->pagepolicy:I
 
     return-void
 .end method
 
-.method static synthetic access$31(Lcom/zxcx/blst/act/InformationAct;Z)V
+.method static synthetic access$32(Lcom/zxcx/blst/act/InformationAct;Z)V
     .registers 2
 
     .prologue
-    .line 40
+    .line 41
     iput-boolean p1, p0, Lcom/zxcx/blst/act/InformationAct;->isRefreshing:Z
 
     return-void
 .end method
 
-.method static synthetic access$4(Lcom/zxcx/blst/act/InformationAct;)Z
+.method static synthetic access$4(Lcom/zxcx/blst/act/InformationAct;)I
     .registers 2
 
     .prologue
-    .line 41
+    .line 51
+    iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
+
+    return v0
+.end method
+
+.method static synthetic access$5(Lcom/zxcx/blst/act/InformationAct;)Landroid/content/SharedPreferences;
+    .registers 2
+
+    .prologue
+    .line 45
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->sp:Landroid/content/SharedPreferences;
+
+    return-object v0
+.end method
+
+.method static synthetic access$6(Lcom/zxcx/blst/act/InformationAct;)Z
+    .registers 2
+
+    .prologue
+    .line 42
     iget-boolean v0, p0, Lcom/zxcx/blst/act/InformationAct;->isRefreshing_sort:Z
 
     return v0
 .end method
 
-.method static synthetic access$5(Lcom/zxcx/blst/act/InformationAct;Ljava/util/List;)V
+.method static synthetic access$7(Lcom/zxcx/blst/act/InformationAct;Ljava/util/List;)V
     .registers 2
 
     .prologue
-    .line 67
+    .line 68
     iput-object p1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
 
     return-void
 .end method
 
-.method static synthetic access$6(Lcom/zxcx/blst/act/InformationAct;)Ljava/util/List;
+.method static synthetic access$8(Lcom/zxcx/blst/act/InformationAct;)Ljava/util/List;
     .registers 2
 
     .prologue
-    .line 67
+    .line 68
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method static synthetic access$7(Lcom/zxcx/blst/act/InformationAct;Ljava/lang/String;)V
+.method static synthetic access$9(Lcom/zxcx/blst/act/InformationAct;Ljava/lang/String;)V
     .registers 2
 
     .prologue
-    .line 51
+    .line 52
     iput-object p1, p0, Lcom/zxcx/blst/act/InformationAct;->zixungroupid:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$8(Lcom/zxcx/blst/act/InformationAct;)Landroid/widget/RadioButton;
+.method private clearList()V
     .registers 2
 
     .prologue
-    .line 70
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
+    const/4 v0, 0x0
 
-    return-object v0
+    .line 113
+    iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageheadline:I
+
+    .line 114
+    iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->pagecompany:I
+
+    .line 115
+    iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageproduct:I
+
+    .line 116
+    iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->pageresearch:I
+
+    .line 117
+    iput v0, p0, Lcom/zxcx/blst/act/InformationAct;->pagepolicy:I
+
+    .line 119
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->infoTopList:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 120
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListheadline:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 121
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListcompany:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 122
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListproduct:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 123
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListresearch:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 124
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListpolicy:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 125
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListmore:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 127
+    return-void
 .end method
 
-.method static synthetic access$9(Lcom/zxcx/blst/act/InformationAct;)Landroid/widget/RadioButton;
-    .registers 2
-
-    .prologue
-    .line 71
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
-
-    return-object v0
-.end method
-
-.method private getDateForInformation()V
-    .registers 4
+.method private getDateForInformation(Z)V
+    .registers 5
+    .param p1, "isPull"    # Z
 
     .prologue
     const/4 v2, 0x0
 
-    .line 510
+    .line 590
     iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
     if-nez v0, :cond_f
 
-    .line 512
-    new-instance v0, Lcom/zxcx/blst/act/InformationAct$5;
-
-    invoke-direct {v0, p0}, Lcom/zxcx/blst/act/InformationAct$5;-><init>(Lcom/zxcx/blst/act/InformationAct;)V
-
-    new-array v1, v2, [Ljava/lang/Void;
-
-    .line 563
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/InformationAct$5;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
-
-    .line 566
-    :cond_f
+    .line 592
     new-instance v0, Lcom/zxcx/blst/act/InformationAct$6;
 
     invoke-direct {v0, p0}, Lcom/zxcx/blst/act/InformationAct$6;-><init>(Lcom/zxcx/blst/act/InformationAct;)V
 
     new-array v1, v2, [Ljava/lang/Void;
 
-    .line 745
+    .line 643
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/InformationAct$6;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 746
+    .line 646
+    :cond_f
+    new-instance v0, Lcom/zxcx/blst/act/InformationAct$7;
+
+    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/InformationAct$7;-><init>(Lcom/zxcx/blst/act/InformationAct;Z)V
+
+    new-array v1, v2, [Ljava/lang/Void;
+
+    .line 826
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/InformationAct$7;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    .line 827
     return-void
 .end method
 
@@ -645,19 +716,19 @@
     .registers 3
 
     .prologue
-    .line 439
-    new-instance v0, Lcom/zxcx/blst/act/InformationAct$4;
+    .line 511
+    new-instance v0, Lcom/zxcx/blst/act/InformationAct$5;
 
-    invoke-direct {v0, p0}, Lcom/zxcx/blst/act/InformationAct$4;-><init>(Lcom/zxcx/blst/act/InformationAct;)V
+    invoke-direct {v0, p0}, Lcom/zxcx/blst/act/InformationAct$5;-><init>(Lcom/zxcx/blst/act/InformationAct;)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 504
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/InformationAct$4;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    .line 584
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/InformationAct$5;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 505
+    .line 585
     return-void
 .end method
 
@@ -667,60 +738,65 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 420
+    .line 491
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->infoTopList:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 492
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListheadline:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 421
+    .line 493
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListcompany:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 422
+    .line 494
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListproduct:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 423
+    .line 495
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListresearch:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 424
+    .line 496
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListpolicy:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 425
+    .line 497
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListmore:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 426
+    .line 498
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->notifyDataSetChanged()V
 
-    .line 428
+    .line 500
     iput v1, p0, Lcom/zxcx/blst/act/InformationAct;->pageheadline:I
 
-    .line 429
+    .line 501
     iput v1, p0, Lcom/zxcx/blst/act/InformationAct;->pagecompany:I
 
-    .line 430
+    .line 502
     iput v1, p0, Lcom/zxcx/blst/act/InformationAct;->pageproduct:I
 
-    .line 431
+    .line 503
     iput v1, p0, Lcom/zxcx/blst/act/InformationAct;->pageresearch:I
 
-    .line 432
+    .line 504
     iput v1, p0, Lcom/zxcx/blst/act/InformationAct;->pagepolicy:I
 
-    .line 433
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation()V
+    .line 505
+    invoke-direct {p0, v1}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation(Z)V
 
-    .line 434
+    .line 506
     return-void
 .end method
 
@@ -728,19 +804,19 @@
     .registers 7
 
     .prologue
-    const/4 v3, 0x0
-
-    .line 113
+    .line 131
     const-string v0, "blstConfig"
 
-    invoke-virtual {p0, v0, v3}, Lcom/zxcx/blst/act/InformationAct;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lcom/zxcx/blst/act/InformationAct;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->sp:Landroid/content/SharedPreferences;
 
-    .line 114
-    const v0, 0x7f080168
+    .line 133
+    const v0, 0x7f090181
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->findViewById(I)Landroid/view/View;
 
@@ -748,22 +824,23 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
+    .line 132
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->iv_title_bar_left:Landroid/widget/ImageView;
 
-    .line 115
+    .line 134
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->iv_title_bar_left:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 116
+    .line 135
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->iv_title_bar_left:Landroid/widget/ImageView;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 117
-    const v0, 0x7f080166
+    .line 137
+    const v0, 0x7f09017f
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->findViewById(I)Landroid/view/View;
 
@@ -771,17 +848,18 @@
 
     check-cast v0, Landroid/widget/TextView;
 
+    .line 136
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->tv_title_bar_center:Landroid/widget/TextView;
 
-    .line 118
+    .line 138
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->tv_title_bar_center:Landroid/widget/TextView;
 
     const-string v1, "\u8d44\u8baf"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 119
-    const v0, 0x7f080167
+    .line 140
+    const v0, 0x7f090180
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->findViewById(I)Landroid/view/View;
 
@@ -789,15 +867,16 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
+    .line 139
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->iv_title_bar_right:Landroid/widget/ImageView;
 
-    .line 120
+    .line 141
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->iv_title_bar_right:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 123
-    const v0, 0x7f0800b9
+    .line 144
+    const v0, 0x7f0900c9
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->findViewById(I)Landroid/view/View;
 
@@ -807,8 +886,8 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
 
-    .line 124
-    const v0, 0x7f0800ba
+    .line 145
+    const v0, 0x7f0900ca
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->findViewById(I)Landroid/view/View;
 
@@ -818,8 +897,8 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
 
-    .line 125
-    const v0, 0x7f0800bb
+    .line 146
+    const v0, 0x7f0900cb
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->findViewById(I)Landroid/view/View;
 
@@ -829,8 +908,8 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
 
-    .line 126
-    const v0, 0x7f0800bc
+    .line 147
+    const v0, 0x7f0900cc
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->findViewById(I)Landroid/view/View;
 
@@ -840,8 +919,8 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
 
-    .line 127
-    const v0, 0x7f0800bd
+    .line 148
+    const v0, 0x7f0900cd
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->findViewById(I)Landroid/view/View;
 
@@ -851,8 +930,8 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_policy:Landroid/widget/RadioButton;
 
-    .line 128
-    const v0, 0x7f0800be
+    .line 149
+    const v0, 0x7f0900ce
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->findViewById(I)Landroid/view/View;
 
@@ -862,51 +941,57 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_more:Landroid/widget/RadioButton;
 
-    .line 130
+    .line 151
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 131
+    .line 152
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 132
+    .line 153
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 133
+    .line 154
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 134
+    .line 155
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_policy:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 135
+    .line 156
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_more:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 137
-    const v0, 0x7f080098
+    .line 159
+    const v0, 0x7f0900a9
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    check-cast v0, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
-    iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 158
+    iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
-    .line 138
+    .line 161
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
+
+    sput-object v0, Lcom/zxcx/blst/app/AppAplication;->infoListView:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
+
+    .line 163
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->inflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f03007f
+    const v1, 0x7f030088
 
     const/4 v2, 0x0
 
@@ -916,47 +1001,52 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->headerView:Landroid/view/View;
 
-    .line 139
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 164
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->headerView:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->addHeaderView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->addHeaderView(Landroid/view/View;)V
 
-    .line 140
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
-
-    invoke-virtual {v0, v3}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setCanPullRefresh(Z)V
-
-    .line 141
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 166
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     new-instance v1, Lcom/zxcx/blst/act/InformationAct$2;
 
     invoke-direct {v1, p0}, Lcom/zxcx/blst/act/InformationAct$2;-><init>(Lcom/zxcx/blst/act/InformationAct;)V
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnExplainListener;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnExplainListener;)V
 
-    .line 149
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 174
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     new-instance v1, Lcom/zxcx/blst/act/InformationAct$3;
 
     invoke-direct {v1, p0}, Lcom/zxcx/blst/act/InformationAct$3;-><init>(Lcom/zxcx/blst/act/InformationAct;)V
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView_Info$OnRefreshListener;)V
 
-    .line 263
+    .line 184
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
+
+    new-instance v1, Lcom/zxcx/blst/act/InformationAct$4;
+
+    invoke-direct {v1, p0}, Lcom/zxcx/blst/act/InformationAct$4;-><init>(Lcom/zxcx/blst/act/InformationAct;)V
+
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    .line 329
     new-instance v0, Lcom/zxcx/blst/adapter/MoreAdapter;
 
     invoke-direct {v0, p0}, Lcom/zxcx/blst/adapter/MoreAdapter;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->moreAdapter:Lcom/zxcx/blst/adapter/MoreAdapter;
 
-    .line 264
+    .line 330
     new-instance v0, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
-    iget-object v2, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 331
+    iget-object v2, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v3, p0, Lcom/zxcx/blst/act/InformationAct;->headerView:Landroid/view/View;
 
@@ -966,18 +1056,19 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;-><init>(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V
+    invoke-direct/range {v0 .. v5}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;-><init>(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V
 
+    .line 330
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
-    .line 265
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 332
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 266
+    .line 333
     return-void
 .end method
 
@@ -995,12 +1086,12 @@
 
     const/4 v1, 0x1
 
-    .line 750
+    .line 831
     iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
     if-nez v0, :cond_65
 
-    .line 751
+    .line 832
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListheadline:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1009,57 +1100,57 @@
 
     if-nez v0, :cond_5f
 
-    .line 752
+    .line 833
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setIsnull(Z)V
 
-    .line 756
+    .line 837
     :goto_16
     new-instance v0, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
-    .line 757
-    iget-object v2, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 838
+    iget-object v2, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v3, p0, Lcom/zxcx/blst/act/InformationAct;->headerView:Landroid/view/View;
 
-    .line 758
+    .line 839
     iget-object v4, p0, Lcom/zxcx/blst/act/InformationAct;->infoTopList:Ljava/util/List;
 
     iget-object v5, p0, Lcom/zxcx/blst/act/InformationAct;->metric:Landroid/util/DisplayMetrics;
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;-><init>(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V
+    invoke-direct/range {v0 .. v5}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;-><init>(Landroid/content/Context;Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;Landroid/view/View;Ljava/util/List;Landroid/util/DisplayMetrics;)V
 
-    .line 756
+    .line 837
     iput-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
-    .line 760
+    .line 841
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0, v6}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setType(I)V
 
-    .line 761
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 842
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 763
+    .line 844
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->returnListheadline:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->reset(Ljava/util/List;)V
 
-    .line 764
+    .line 845
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->notifyDataSetChanged()V
 
-    .line 766
+    .line 847
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListheadline:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1074,14 +1165,14 @@
 
     if-le v0, v1, :cond_5e
 
-    .line 767
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 848
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget v1, p0, Lcom/zxcx/blst/act/InformationAct;->pageheadline:I
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 768
+    .line 849
     sget-object v2, Lcache/memory/impl/Constants;->maxrow:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1092,15 +1183,15 @@
 
     add-int/lit8 v1, v1, -0x4
 
-    .line 767
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setSelection(I)V
+    .line 848
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setSelection(I)V
 
-    .line 840
+    .line 921
     :cond_5e
     :goto_5e
     return-void
 
-    .line 754
+    .line 835
     :cond_5f
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
@@ -1108,18 +1199,18 @@
 
     goto :goto_16
 
-    .line 770
+    .line 851
     :cond_65
     iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
     if-ne v0, v1, :cond_b5
 
-    .line 771
+    .line 852
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setType(I)V
 
-    .line 772
+    .line 853
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListcompany:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1128,12 +1219,12 @@
 
     if-nez v0, :cond_af
 
-    .line 773
+    .line 854
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setIsnull(Z)V
 
-    .line 777
+    .line 858
     :goto_7b
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
@@ -1141,19 +1232,19 @@
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->reset(Ljava/util/List;)V
 
-    .line 778
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 859
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 779
+    .line 860
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->notifyDataSetChanged()V
 
-    .line 780
+    .line 861
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListcompany:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1168,14 +1259,14 @@
 
     if-le v0, v1, :cond_5e
 
-    .line 781
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 862
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget v1, p0, Lcom/zxcx/blst/act/InformationAct;->pagecompany:I
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 782
+    .line 863
     sget-object v2, Lcache/memory/impl/Constants;->maxrow:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1186,12 +1277,12 @@
 
     add-int/lit8 v1, v1, -0x4
 
-    .line 781
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setSelection(I)V
+    .line 862
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setSelection(I)V
 
     goto :goto_5e
 
-    .line 775
+    .line 856
     :cond_af
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
@@ -1199,18 +1290,18 @@
 
     goto :goto_7b
 
-    .line 785
+    .line 866
     :cond_b5
     iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
     if-ne v0, v2, :cond_106
 
-    .line 786
+    .line 867
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0, v2}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setType(I)V
 
-    .line 787
+    .line 868
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListproduct:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1219,12 +1310,12 @@
 
     if-nez v0, :cond_100
 
-    .line 788
+    .line 869
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setIsnull(Z)V
 
-    .line 792
+    .line 873
     :goto_cb
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
@@ -1232,19 +1323,19 @@
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->reset(Ljava/util/List;)V
 
-    .line 793
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 874
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 794
+    .line 875
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->notifyDataSetChanged()V
 
-    .line 795
+    .line 876
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListproduct:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1259,14 +1350,14 @@
 
     if-le v0, v1, :cond_5e
 
-    .line 796
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 877
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget v1, p0, Lcom/zxcx/blst/act/InformationAct;->pageproduct:I
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 797
+    .line 878
     sget-object v2, Lcache/memory/impl/Constants;->maxrow:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1277,12 +1368,12 @@
 
     add-int/lit8 v1, v1, -0x4
 
-    .line 796
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setSelection(I)V
+    .line 877
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setSelection(I)V
 
     goto/16 :goto_5e
 
-    .line 790
+    .line 871
     :cond_100
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
@@ -1290,18 +1381,18 @@
 
     goto :goto_cb
 
-    .line 799
+    .line 880
     :cond_106
     iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
     if-ne v0, v3, :cond_157
 
-    .line 800
+    .line 881
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0, v3}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setType(I)V
 
-    .line 801
+    .line 882
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListresearch:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1310,12 +1401,12 @@
 
     if-nez v0, :cond_151
 
-    .line 802
+    .line 883
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setIsnull(Z)V
 
-    .line 806
+    .line 887
     :goto_11c
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
@@ -1323,19 +1414,19 @@
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->reset(Ljava/util/List;)V
 
-    .line 807
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 888
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 808
+    .line 889
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->notifyDataSetChanged()V
 
-    .line 809
+    .line 890
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListresearch:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1350,14 +1441,14 @@
 
     if-le v0, v1, :cond_5e
 
-    .line 810
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 891
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget v1, p0, Lcom/zxcx/blst/act/InformationAct;->pageresearch:I
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 811
+    .line 892
     sget-object v2, Lcache/memory/impl/Constants;->maxrow:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1368,12 +1459,12 @@
 
     add-int/lit8 v1, v1, -0x4
 
-    .line 810
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setSelection(I)V
+    .line 891
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setSelection(I)V
 
     goto/16 :goto_5e
 
-    .line 804
+    .line 885
     :cond_151
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
@@ -1381,18 +1472,18 @@
 
     goto :goto_11c
 
-    .line 813
+    .line 894
     :cond_157
     iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
     if-ne v0, v4, :cond_1a8
 
-    .line 814
+    .line 895
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0, v4}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setType(I)V
 
-    .line 815
+    .line 896
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListpolicy:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1401,12 +1492,12 @@
 
     if-nez v0, :cond_1a2
 
-    .line 816
+    .line 897
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setIsnull(Z)V
 
-    .line 820
+    .line 901
     :goto_16d
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
@@ -1414,19 +1505,19 @@
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->reset(Ljava/util/List;)V
 
-    .line 821
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 902
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 822
+    .line 903
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->notifyDataSetChanged()V
 
-    .line 823
+    .line 904
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->returnListpolicy:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1441,14 +1532,14 @@
 
     if-le v0, v1, :cond_5e
 
-    .line 824
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 905
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget v1, p0, Lcom/zxcx/blst/act/InformationAct;->pagepolicy:I
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 825
+    .line 906
     sget-object v2, Lcache/memory/impl/Constants;->maxrow:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1459,12 +1550,12 @@
 
     add-int/lit8 v1, v1, -0x4
 
-    .line 824
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setSelection(I)V
+    .line 905
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setSelection(I)V
 
     goto/16 :goto_5e
 
-    .line 818
+    .line 899
     :cond_1a2
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
@@ -1472,7 +1563,7 @@
 
     goto :goto_16d
 
-    .line 827
+    .line 908
     :cond_1a8
     iget v0, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
@@ -1480,35 +1571,35 @@
 
     if-ne v0, v1, :cond_5e
 
-    .line 829
+    .line 910
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->setType(I)V
 
-    .line 830
+    .line 911
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->reset(Ljava/util/List;)V
 
-    .line 832
+    .line 913
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->moreAdapter:Lcom/zxcx/blst/adapter/MoreAdapter;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->returnListmore:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/MoreAdapter;->reset(Ljava/util/List;)V
 
-    .line 833
-    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .line 914
+    iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->lv_refresh_infomation:Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->moreAdapter:Lcom/zxcx/blst/adapter/MoreAdapter;
 
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView_Info;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 834
+    .line 915
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->moreAdapter:Lcom/zxcx/blst/adapter/MoreAdapter;
 
     invoke-virtual {v0}, Lcom/zxcx/blst/adapter/MoreAdapter;->notifyDataSetChanged()V
@@ -1523,34 +1614,34 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v5, -0x1
 
-    const/4 v4, -0x1
+    const/4 v4, 0x0
 
-    .line 278
+    .line 346
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v1
 
     sparse-switch v1, :sswitch_data_286
 
-    .line 417
+    .line 488
     :goto_9
     return-void
 
-    .line 280
+    .line 348
     :sswitch_a
     invoke-virtual {p0}, Lcom/zxcx/blst/act/InformationAct;->finish()V
 
     goto :goto_9
 
-    .line 283
+    .line 351
     :sswitch_e
     invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->refresh()V
 
     goto :goto_9
 
-    .line 286
+    .line 354
     :sswitch_12
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
 
@@ -1560,16 +1651,16 @@
 
     if-nez v1, :cond_1e
 
-    .line 287
+    .line 355
     invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getInfoSortData()V
 
     goto :goto_9
 
-    .line 290
+    .line 358
     :cond_1e
-    iput v5, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
+    iput v4, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
-    .line 291
+    .line 359
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1584,60 +1675,60 @@
 
     if-nez v2, :cond_5f
 
-    .line 296
+    .line 365
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
 
-    invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setTextColor(I)V
+    invoke-virtual {v1, v5}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 297
+    .line 366
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 298
+    .line 367
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 299
+    .line 368
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 300
+    .line 369
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_policy:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 301
+    .line 370
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_more:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 302
+    .line 371
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->returnListheadline:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 303
-    iput v5, p0, Lcom/zxcx/blst/act/InformationAct;->pageheadline:I
+    .line 372
+    iput v4, p0, Lcom/zxcx/blst/act/InformationAct;->pageheadline:I
 
-    .line 304
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation()V
+    .line 373
+    invoke-direct {p0, v4}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation(Z)V
 
     goto :goto_9
 
-    .line 291
+    .line 359
     :cond_5f
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1645,12 +1736,13 @@
 
     check-cast v0, Lcom/zxcx/blst/viewmodel/InforgroupView;
 
-    .line 292
+    .line 360
     .local v0, "inforgroupView":Lcom/zxcx/blst/viewmodel/InforgroupView;
     invoke-virtual {v0}, Lcom/zxcx/blst/viewmodel/InforgroupView;->getGroupname()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 361
     iget-object v3, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
 
     invoke-virtual {v3}, Landroid/widget/RadioButton;->getText()Ljava/lang/CharSequence;
@@ -1661,13 +1753,14 @@
 
     move-result-object v3
 
+    .line 360
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_26
 
-    .line 293
+    .line 362
     invoke-virtual {v0}, Lcom/zxcx/blst/viewmodel/InforgroupView;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -1676,7 +1769,7 @@
 
     goto :goto_26
 
-    .line 307
+    .line 376
     .end local v0    # "inforgroupView":Lcom/zxcx/blst/viewmodel/InforgroupView;
     :sswitch_80
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
@@ -1687,18 +1780,18 @@
 
     if-nez v1, :cond_8d
 
-    .line 308
+    .line 377
     invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getInfoSortData()V
 
     goto/16 :goto_9
 
-    .line 311
+    .line 380
     :cond_8d
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
-    .line 312
+    .line 381
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1713,60 +1806,60 @@
 
     if-nez v2, :cond_d0
 
-    .line 317
+    .line 387
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
 
-    invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setTextColor(I)V
+    invoke-virtual {v1, v5}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 318
+    .line 388
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 319
+    .line 389
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 320
+    .line 390
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 321
+    .line 391
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_policy:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 322
+    .line 392
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_more:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 323
-    iput v5, p0, Lcom/zxcx/blst/act/InformationAct;->pagecompany:I
+    .line 393
+    iput v4, p0, Lcom/zxcx/blst/act/InformationAct;->pagecompany:I
 
-    .line 324
+    .line 394
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->returnListcompany:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 325
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation()V
+    .line 395
+    invoke-direct {p0, v4}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation(Z)V
 
     goto/16 :goto_9
 
-    .line 312
+    .line 381
     :cond_d0
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1774,12 +1867,13 @@
 
     check-cast v0, Lcom/zxcx/blst/viewmodel/InforgroupView;
 
-    .line 313
+    .line 382
     .restart local v0    # "inforgroupView":Lcom/zxcx/blst/viewmodel/InforgroupView;
     invoke-virtual {v0}, Lcom/zxcx/blst/viewmodel/InforgroupView;->getGroupname()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 383
     iget-object v3, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
 
     invoke-virtual {v3}, Landroid/widget/RadioButton;->getText()Ljava/lang/CharSequence;
@@ -1790,13 +1884,14 @@
 
     move-result-object v3
 
+    .line 382
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_96
 
-    .line 314
+    .line 384
     invoke-virtual {v0}, Lcom/zxcx/blst/viewmodel/InforgroupView;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -1805,7 +1900,7 @@
 
     goto :goto_96
 
-    .line 328
+    .line 398
     .end local v0    # "inforgroupView":Lcom/zxcx/blst/viewmodel/InforgroupView;
     :sswitch_f1
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
@@ -1816,18 +1911,18 @@
 
     if-nez v1, :cond_fe
 
-    .line 329
+    .line 399
     invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getInfoSortData()V
 
     goto/16 :goto_9
 
-    .line 332
+    .line 402
     :cond_fe
     const/4 v1, 0x2
 
     iput v1, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
-    .line 333
+    .line 403
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1842,60 +1937,60 @@
 
     if-nez v2, :cond_141
 
-    .line 339
+    .line 409
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
 
-    invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setTextColor(I)V
+    invoke-virtual {v1, v5}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 340
+    .line 410
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 341
+    .line 411
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 342
+    .line 412
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 343
+    .line 413
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_policy:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 344
+    .line 414
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_more:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 345
-    iput v5, p0, Lcom/zxcx/blst/act/InformationAct;->pageproduct:I
+    .line 415
+    iput v4, p0, Lcom/zxcx/blst/act/InformationAct;->pageproduct:I
 
-    .line 346
+    .line 416
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->returnListproduct:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 347
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation()V
+    .line 417
+    invoke-direct {p0, v4}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation(Z)V
 
     goto/16 :goto_9
 
-    .line 333
+    .line 403
     :cond_141
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1903,13 +1998,13 @@
 
     check-cast v0, Lcom/zxcx/blst/viewmodel/InforgroupView;
 
-    .line 334
+    .line 404
     .restart local v0    # "inforgroupView":Lcom/zxcx/blst/viewmodel/InforgroupView;
     invoke-virtual {v0}, Lcom/zxcx/blst/viewmodel/InforgroupView;->getGroupname()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 335
+    .line 405
     iget-object v3, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
 
     invoke-virtual {v3}, Landroid/widget/RadioButton;->getText()Ljava/lang/CharSequence;
@@ -1920,14 +2015,14 @@
 
     move-result-object v3
 
-    .line 334
+    .line 404
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_107
 
-    .line 336
+    .line 406
     invoke-virtual {v0}, Lcom/zxcx/blst/viewmodel/InforgroupView;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -1936,7 +2031,7 @@
 
     goto :goto_107
 
-    .line 351
+    .line 421
     .end local v0    # "inforgroupView":Lcom/zxcx/blst/viewmodel/InforgroupView;
     :sswitch_162
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
@@ -1947,18 +2042,18 @@
 
     if-nez v1, :cond_16f
 
-    .line 352
+    .line 422
     invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getInfoSortData()V
 
     goto/16 :goto_9
 
-    .line 355
+    .line 425
     :cond_16f
     const/4 v1, 0x3
 
     iput v1, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
-    .line 356
+    .line 426
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1973,60 +2068,60 @@
 
     if-nez v2, :cond_1b2
 
-    .line 362
+    .line 432
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
 
-    invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setTextColor(I)V
+    invoke-virtual {v1, v5}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 363
+    .line 433
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 364
+    .line 434
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 365
+    .line 435
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 366
+    .line 436
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_policy:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 367
+    .line 437
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_more:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 368
-    iput v5, p0, Lcom/zxcx/blst/act/InformationAct;->pageresearch:I
+    .line 438
+    iput v4, p0, Lcom/zxcx/blst/act/InformationAct;->pageresearch:I
 
-    .line 369
+    .line 439
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->returnListresearch:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 370
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation()V
+    .line 440
+    invoke-direct {p0, v4}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation(Z)V
 
     goto/16 :goto_9
 
-    .line 356
+    .line 426
     :cond_1b2
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2034,13 +2129,13 @@
 
     check-cast v0, Lcom/zxcx/blst/viewmodel/InforgroupView;
 
-    .line 357
+    .line 427
     .restart local v0    # "inforgroupView":Lcom/zxcx/blst/viewmodel/InforgroupView;
     invoke-virtual {v0}, Lcom/zxcx/blst/viewmodel/InforgroupView;->getGroupname()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 358
+    .line 428
     iget-object v3, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
 
     invoke-virtual {v3}, Landroid/widget/RadioButton;->getText()Ljava/lang/CharSequence;
@@ -2051,14 +2146,14 @@
 
     move-result-object v3
 
-    .line 357
+    .line 427
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_178
 
-    .line 359
+    .line 429
     invoke-virtual {v0}, Lcom/zxcx/blst/viewmodel/InforgroupView;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -2067,7 +2162,7 @@
 
     goto :goto_178
 
-    .line 374
+    .line 444
     .end local v0    # "inforgroupView":Lcom/zxcx/blst/viewmodel/InforgroupView;
     :sswitch_1d3
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
@@ -2078,18 +2173,18 @@
 
     if-nez v1, :cond_1e0
 
-    .line 375
+    .line 445
     invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getInfoSortData()V
 
     goto/16 :goto_9
 
-    .line 378
+    .line 448
     :cond_1e0
     const/4 v1, 0x4
 
     iput v1, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
-    .line 379
+    .line 449
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2104,60 +2199,60 @@
 
     if-nez v2, :cond_223
 
-    .line 384
+    .line 455
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_policy:Landroid/widget/RadioButton;
 
-    invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setTextColor(I)V
+    invoke-virtual {v1, v5}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 385
+    .line 456
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 386
+    .line 457
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 387
+    .line 458
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 388
+    .line 459
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 389
+    .line 460
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_more:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 391
-    iput v5, p0, Lcom/zxcx/blst/act/InformationAct;->pagepolicy:I
+    .line 462
+    iput v4, p0, Lcom/zxcx/blst/act/InformationAct;->pagepolicy:I
 
-    .line 392
+    .line 463
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->returnListpolicy:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 393
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation()V
+    .line 464
+    invoke-direct {p0, v4}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation(Z)V
 
     goto/16 :goto_9
 
-    .line 379
+    .line 449
     :cond_223
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2165,12 +2260,13 @@
 
     check-cast v0, Lcom/zxcx/blst/viewmodel/InforgroupView;
 
-    .line 380
+    .line 450
     .restart local v0    # "inforgroupView":Lcom/zxcx/blst/viewmodel/InforgroupView;
     invoke-virtual {v0}, Lcom/zxcx/blst/viewmodel/InforgroupView;->getGroupname()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 451
     iget-object v3, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_policy:Landroid/widget/RadioButton;
 
     invoke-virtual {v3}, Landroid/widget/RadioButton;->getText()Ljava/lang/CharSequence;
@@ -2181,13 +2277,14 @@
 
     move-result-object v3
 
+    .line 450
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1e9
 
-    .line 381
+    .line 452
     invoke-virtual {v0}, Lcom/zxcx/blst/viewmodel/InforgroupView;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -2196,7 +2293,7 @@
 
     goto :goto_1e9
 
-    .line 397
+    .line 468
     .end local v0    # "inforgroupView":Lcom/zxcx/blst/viewmodel/InforgroupView;
     :sswitch_244
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->infoGroupList:Ljava/util/List;
@@ -2207,78 +2304,78 @@
 
     if-nez v1, :cond_251
 
-    .line 398
+    .line 469
     invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getInfoSortData()V
 
     goto/16 :goto_9
 
-    .line 401
+    .line 472
     :cond_251
     const/4 v1, 0x5
 
     iput v1, p0, Lcom/zxcx/blst/act/InformationAct;->zixuntype:I
 
-    .line 402
+    .line 473
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_more:Landroid/widget/RadioButton;
 
-    invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setTextColor(I)V
+    invoke-virtual {v1, v5}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 403
+    .line 474
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_policy:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 404
+    .line 475
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_research:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 405
+    .line 476
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_company:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 406
+    .line 477
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_product:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 407
+    .line 478
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->rdo_headline:Landroid/widget/RadioButton;
 
     iget v2, p0, Lcom/zxcx/blst/act/InformationAct;->rgb:I
 
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setTextColor(I)V
 
-    .line 408
+    .line 479
     iget-object v1, p0, Lcom/zxcx/blst/act/InformationAct;->returnListmore:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 409
-    invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation()V
+    .line 480
+    invoke-direct {p0, v4}, Lcom/zxcx/blst/act/InformationAct;->getDateForInformation(Z)V
 
     goto/16 :goto_9
 
-    .line 278
+    .line 346
     :sswitch_data_286
     .sparse-switch
-        0x7f0800b9 -> :sswitch_12
-        0x7f0800ba -> :sswitch_80
-        0x7f0800bb -> :sswitch_f1
-        0x7f0800bc -> :sswitch_162
-        0x7f0800bd -> :sswitch_1d3
-        0x7f0800be -> :sswitch_244
-        0x7f080167 -> :sswitch_e
-        0x7f080168 -> :sswitch_a
+        0x7f0900c9 -> :sswitch_12
+        0x7f0900ca -> :sswitch_80
+        0x7f0900cb -> :sswitch_f1
+        0x7f0900cc -> :sswitch_162
+        0x7f0900cd -> :sswitch_1d3
+        0x7f0900ce -> :sswitch_244
+        0x7f090180 -> :sswitch_e
+        0x7f090181 -> :sswitch_a
     .end sparse-switch
 .end method
 
@@ -2287,21 +2384,21 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 105
+    .line 106
     invoke-super {p0, p1}, Lcom/zxcx/blst/act/BaseAct;->onCreate(Landroid/os/Bundle;)V
 
-    .line 106
-    const v0, 0x7f03002f
+    .line 107
+    const v0, 0x7f030035
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/InformationAct;->setContentView(I)V
 
-    .line 107
+    .line 108
     invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->setupView()V
 
-    .line 108
+    .line 109
     invoke-direct {p0}, Lcom/zxcx/blst/act/InformationAct;->getInfoSortData()V
 
-    .line 109
+    .line 110
     return-void
 .end method
 
@@ -2309,10 +2406,10 @@
     .registers 2
 
     .prologue
-    .line 845
+    .line 926
     invoke-super {p0}, Lcom/zxcx/blst/act/BaseAct;->onDestroy()V
 
-    .line 846
+    .line 927
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->pd:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_14
@@ -2325,12 +2422,12 @@
 
     if-eqz v0, :cond_14
 
-    .line 847
+    .line 928
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->pd:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 849
+    .line 930
     :cond_14
     return-void
 .end method
@@ -2339,19 +2436,19 @@
     .registers 2
 
     .prologue
-    .line 270
+    .line 338
     invoke-super {p0}, Lcom/zxcx/blst/act/BaseAct;->onRestart()V
 
-    .line 271
+    .line 339
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->updataIds()V
 
-    .line 272
+    .line 340
     iget-object v0, p0, Lcom/zxcx/blst/act/InformationAct;->adapterinformation:Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;
 
     invoke-virtual {v0}, Lcom/zxcx/blst/adapter/InformationCommonActLvAdapter;->notifyDataSetChanged()V
 
-    .line 273
+    .line 341
     return-void
 .end method

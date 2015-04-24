@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private adView:Lcom/google/ads/AdView;
+.field private mAdview:Lcn/domob/android/ads/DomobAdView;
 
 
 # direct methods
@@ -24,17 +24,17 @@
     .registers 1
 
     .prologue
-    .line 47
+    .line 43
     const/4 v0, 0x0
 
     sput-object v0, Lcom/jellysoft/jellyball/ballandroid;->in:Lcom/jellysoft/jellyball/ballandroid;
 
-    .line 115
+    .line 74
     const-string v0, "game"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 116
+    .line 75
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .registers 1
 
     .prologue
-    .line 45
+    .line 40
     invoke-direct {p0}, Lorg/cocos2dx/lib/Cocos2dxActivity;-><init>()V
 
     return-void
@@ -52,148 +52,133 @@
     .registers 1
 
     .prologue
-    .line 124
+    .line 83
     invoke-direct {p0}, Lcom/jellysoft/jellyball/ballandroid;->initTenCentAd()V
 
     return-void
 .end method
 
 .method private initTenCentAd()V
-    .registers 1
+    .registers 8
 
     .prologue
-    .line 137
+    const/4 v4, -0x1
+
+    .line 84
+    new-instance v2, Landroid/widget/RelativeLayout;
+
+    invoke-direct {v2, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+
+    .line 85
+    .local v2, "parent":Landroid/widget/RelativeLayout;
+    new-instance v3, Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-direct {v3, v4, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, v2, v3}, Lcom/jellysoft/jellyball/ballandroid;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 86
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
+
+    .line 87
+    new-instance v0, Lcom/tencent/exmobwin/banner/TAdView;
+
+    invoke-direct {v0, p0}, Lcom/tencent/exmobwin/banner/TAdView;-><init>(Landroid/app/Activity;)V
+
+    .line 88
+    .local v0, "layoutView":Lcom/tencent/exmobwin/banner/TAdView;
+    new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    const/4 v3, -0x2
+
+    invoke-direct {v1, v4, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    .line 89
+    .local v1, "params":Landroid/widget/RelativeLayout$LayoutParams;
+    const/16 v3, 0xe
+
+    invoke-virtual {v1, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    .line 90
+    const/16 v3, 0xc
+
+    invoke-virtual {v1, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    .line 92
+    new-instance v3, Lcn/domob/android/ads/DomobAdView;
+
+    const-string v4, "56OJzdx4uNX9WdPE+Y"
+
+    const-string v5, "16TLmqMlApCBANUHYzUUA4Qs"
+
+    .line 93
+    const-string v6, "320x50"
+
+    invoke-direct {v3, p0, v4, v5, v6}, Lcn/domob/android/ads/DomobAdView;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 92
+    iput-object v3, p0, Lcom/jellysoft/jellyball/ballandroid;->mAdview:Lcn/domob/android/ads/DomobAdView;
+
+    .line 95
+    iget-object v3, p0, Lcom/jellysoft/jellyball/ballandroid;->mAdview:Lcn/domob/android/ads/DomobAdView;
+
+    invoke-virtual {v2, v3, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 96
     return-void
 .end method
 
 
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 12
+    .registers 7
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/16 v9, 0xc
-
-    const/4 v8, -0x1
-
-    const/4 v7, -0x2
-
-    .line 51
-    invoke-super {p0, p1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onCreate(Landroid/os/Bundle;)V
-
-    .line 64
-    new-instance v4, Lcom/google/ads/AdView;
-
-    sget-object v5, Lcom/google/ads/AdSize;->BANNER:Lcom/google/ads/AdSize;
-
-    const-string v6, "ca-app-pub-8858228884022741/8727681517"
-
-    invoke-direct {v4, p0, v5, v6}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
-
-    iput-object v4, p0, Lcom/jellysoft/jellyball/ballandroid;->adView:Lcom/google/ads/AdView;
-
-    .line 66
-    new-instance v3, Landroid/widget/RelativeLayout;
-
-    invoke-direct {v3, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
-
-    .line 67
-    .local v3, "parent":Landroid/widget/RelativeLayout;
-    new-instance v4, Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-direct {v4, v8, v8}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, v3, v4}, Lcom/jellysoft/jellyball/ballandroid;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 68
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
+    const/4 v3, 0x1
 
-    .line 69
-    new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
+    .line 46
+    invoke-super {p0, p1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-direct {v2, v8, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    .line 47
+    sput-object p0, Lcom/jellysoft/jellyball/ballandroid;->in:Lcom/jellysoft/jellyball/ballandroid;
 
-    .line 70
-    .local v2, "params":Landroid/widget/RelativeLayout$LayoutParams;
-    const/16 v4, 0xe
+    .line 48
+    new-array v1, v3, [I
 
-    invoke-virtual {v2, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    const/4 v2, 0x0
 
-    .line 71
-    invoke-virtual {v2, v9}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    aput v3, v1, v2
 
-    .line 73
-    iget-object v4, p0, Lcom/jellysoft/jellyball/ballandroid;->adView:Lcom/google/ads/AdView;
+    invoke-static {p0, v1}, Lcom/tencent/exmobwin/MobWINManager;->init(Landroid/content/Context;[I)V
 
-    invoke-virtual {v3, v4, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .line 49
+    new-instance v0, Lcom/jellysoft/jellyball/ballandroid$PushTask;
 
-    .line 74
-    iget-object v4, p0, Lcom/jellysoft/jellyball/ballandroid;->adView:Lcom/google/ads/AdView;
+    invoke-direct {v0, p0, v4}, Lcom/jellysoft/jellyball/ballandroid$PushTask;-><init>(Lcom/jellysoft/jellyball/ballandroid;Lcom/jellysoft/jellyball/ballandroid$PushTask;)V
 
-    new-instance v5, Lcom/google/ads/AdRequest;
+    .line 50
+    .local v0, "task":Lcom/jellysoft/jellyball/ballandroid$PushTask;
+    invoke-virtual {v0, v4}, Lcom/jellysoft/jellyball/ballandroid$PushTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    invoke-direct {v5}, Lcom/google/ads/AdRequest;-><init>()V
-
-    invoke-virtual {v4, v5}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
-
-    .line 76
-    new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
-
-    invoke-direct {v0, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    .line 77
-    .local v0, "adParams":Landroid/widget/RelativeLayout$LayoutParams;
-    invoke-virtual {v0, v9}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
-
-    .line 78
-    const/high16 v4, 0x41f00000    # 30.0f
-
-    invoke-static {p0, v4}, Lcom/jellysoft/jellyball/ConvertUtils;->dip2px(Landroid/content/Context;F)I
-
-    move-result v4
-
-    iput v4, v0, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
-
-    .line 79
-    new-instance v1, Landroid/widget/ImageView;
-
-    invoke-direct {v1, p0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
-
-    .line 80
-    .local v1, "imageView":Landroid/widget/ImageView;
-    const/high16 v4, 0x7f020000
-
-    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 82
-    new-instance v4, Lcom/jellysoft/jellyball/ballandroid$1;
-
-    invoke-direct {v4, p0, v3}, Lcom/jellysoft/jellyball/ballandroid$1;-><init>(Lcom/jellysoft/jellyball/ballandroid;Landroid/widget/RelativeLayout;)V
-
-    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 90
-    invoke-virtual {v3, v1, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 92
+    .line 51
     return-void
 .end method
 
 .method protected onDestroy()V
-    .registers 2
+    .registers 1
 
     .prologue
-    .line 120
-    iget-object v0, p0, Lcom/jellysoft/jellyball/ballandroid;->adView:Lcom/google/ads/AdView;
+    .line 79
+    invoke-static {}, Lcom/tencent/exmobwin/MobWINManager;->destroy()V
 
-    invoke-virtual {v0}, Lcom/google/ads/AdView;->destroy()V
-
-    .line 121
+    .line 80
     invoke-super {p0}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onDestroy()V
 
-    .line 122
+    .line 81
     return-void
 .end method

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private returnBtn:Landroid/widget/ImageButton;
+.field private returnBtn:Landroid/widget/Button;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     .prologue
     .line 27
-    const v0, 0x7f070262
+    const v0, 0x7f0800f3
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/game/Game3;->findViewById(I)Landroid/view/View;
 
@@ -37,7 +37,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d0133
+    const v2, 0x7f09014c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -46,24 +46,24 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 28
-    const v0, 0x7f070263
+    const v0, 0x7f0800f4
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/game/Game3;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageButton;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/jiuzhansoft/game/Game3;->returnBtn:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcom/jiuzhansoft/game/Game3;->returnBtn:Landroid/widget/Button;
 
     .line 29
-    iget-object v0, p0, Lcom/jiuzhansoft/game/Game3;->returnBtn:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcom/jiuzhansoft/game/Game3;->returnBtn:Landroid/widget/Button;
 
     new-instance v1, Lcom/jiuzhansoft/game/Game3$1;
 
     invoke-direct {v1, p0}, Lcom/jiuzhansoft/game/Game3$1;-><init>(Lcom/jiuzhansoft/game/Game3;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 42
     return-void
@@ -78,7 +78,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 21
-    const v0, 0x7f030030
+    const v0, 0x7f030015
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/game/Game3;->setContentView(I)V
 
@@ -130,9 +130,9 @@
     if-lt v1, v2, :cond_26
 
     .line 53
-    const v1, 0x7f040006
+    const v1, 0x7f040003
 
-    const v2, 0x7f04000b
+    const v2, 0x7f040008
 
     invoke-virtual {p0, v1, v2}, Lcom/jiuzhansoft/game/Game3;->overridePendingTransition(II)V
 

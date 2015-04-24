@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/dz;->a:Lcom/youku/meidian/activity/MixVideoActivity_;
 
-    invoke-virtual {v0}, Lcom/youku/meidian/activity/MixVideoActivity_;->g()V
+    invoke-virtual {v0}, Lcom/youku/meidian/activity/MixVideoActivity_;->j()V
 
     return-void
 .end method

@@ -1,29 +1,22 @@
 .class final Lcom/adwo/adsdk/G;
-.super Ljava/lang/Object;
+.super Ljava/lang/Thread;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/adwo/adsdk/E;
-
-.field private final synthetic b:Ljava/lang/String;
+.field private final synthetic a:Lcom/adwo/adsdk/A;
 
 
 # direct methods
-.method constructor <init>(Lcom/adwo/adsdk/E;Ljava/lang/String;)V
+.method constructor <init>(Lcom/adwo/adsdk/F;Lcom/adwo/adsdk/A;)V
     .registers 3
 
     .prologue
     .line 1
-    iput-object p1, p0, Lcom/adwo/adsdk/G;->a:Lcom/adwo/adsdk/E;
+    iput-object p2, p0, Lcom/adwo/adsdk/G;->a:Lcom/adwo/adsdk/A;
 
-    iput-object p2, p0, Lcom/adwo/adsdk/G;->b:Ljava/lang/String;
-
-    .line 624
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 364
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     return-void
 .end method
@@ -31,52 +24,51 @@
 
 # virtual methods
 .method public final run()V
-    .registers 3
+    .registers 4
 
     .prologue
-    .line 626
-    iget-object v1, p0, Lcom/adwo/adsdk/G;->b:Ljava/lang/String;
+    .line 366
+    iget-object v0, p0, Lcom/adwo/adsdk/G;->a:Lcom/adwo/adsdk/A;
 
-    iget-object v0, p0, Lcom/adwo/adsdk/G;->a:Lcom/adwo/adsdk/E;
+    iget-object v0, v0, Lcom/adwo/adsdk/A;->f:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/adwo/adsdk/E;->a(Lcom/adwo/adsdk/E;)Lcom/adwo/adsdk/z;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result-object v0
+    move-result v2
 
-    invoke-virtual {v0}, Lcom/adwo/adsdk/z;->getContext()Landroid/content/Context;
+    .line 367
+    if-eqz v2, :cond_e
 
-    move-result-object v0
+    .line 368
+    const/4 v0, 0x0
 
-    check-cast v0, Landroid/app/Activity;
+    move v1, v0
 
-    invoke-static {v1, v0}, Lcom/adwo/adsdk/Y;->a(Ljava/lang/String;Landroid/app/Activity;)V
+    :goto_c
+    if-lt v1, v2, :cond_f
 
-    .line 628
-    :try_start_11
-    iget-object v0, p0, Lcom/adwo/adsdk/G;->a:Lcom/adwo/adsdk/E;
-
-    invoke-static {v0}, Lcom/adwo/adsdk/E;->a(Lcom/adwo/adsdk/E;)Lcom/adwo/adsdk/z;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/adwo/adsdk/H;
-
-    invoke-direct {v1, p0}, Lcom/adwo/adsdk/H;-><init>(Lcom/adwo/adsdk/G;)V
-
-    invoke-virtual {v0, v1}, Lcom/adwo/adsdk/z;->post(Ljava/lang/Runnable;)Z
-    :try_end_1f
-    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_1f} :catch_20
-
-    .line 636
-    :goto_1f
+    .line 374
+    :cond_e
     return-void
 
-    .line 633
-    :catch_20
-    move-exception v0
+    .line 370
+    :cond_f
+    iget-object v0, p0, Lcom/adwo/adsdk/G;->a:Lcom/adwo/adsdk/A;
 
-    .line 634
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    iget-object v0, v0, Lcom/adwo/adsdk/A;->f:Ljava/util/List;
 
-    goto :goto_1f
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/adwo/adsdk/M;->a(Ljava/lang/String;)V
+
+    .line 368
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_c
 .end method

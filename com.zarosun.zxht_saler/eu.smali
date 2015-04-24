@@ -32,7 +32,7 @@
     .line 180
     iget-object v0, p0, Lcom/zarosun/zxht_saler/ui/shop/eu;->a:Lcom/zarosun/zxht_saler/ui/shop/ShopModifyGoodsDownActivity_;
 
-    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/shop/ShopModifyGoodsDownActivity_;->i()V
+    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/shop/ShopModifyGoodsDownActivity_;->b()V
 
     .line 181
     return-void

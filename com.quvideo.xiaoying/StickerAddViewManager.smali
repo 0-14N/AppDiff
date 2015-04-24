@@ -150,51 +150,51 @@
     iput-object v3, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;->D:Lxiaoying/engine/QEngine;
 
     .line 340
-    new-instance v0, Lbeu;
+    new-instance v0, Laya;
 
-    invoke-direct {v0, p0}, Lbeu;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
+    invoke-direct {v0, p0}, Laya;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;->b:Lcom/quvideo/xiaoying/dialog/ComTextEditDialog$OnEditDialogClickListener;
 
     .line 365
-    new-instance v0, Lbev;
+    new-instance v0, Layb;
 
-    invoke-direct {v0, p0}, Lbev;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
+    invoke-direct {v0, p0}, Layb;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;->c:Lcom/quvideo/xiaoying/dialog/ComTextEditDialog$OnEditContentCheckListener;
 
     .line 377
-    new-instance v0, Lbew;
+    new-instance v0, Layc;
 
-    invoke-direct {v0, p0}, Lbew;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
+    invoke-direct {v0, p0}, Layc;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;->E:Lcom/quvideo/xiaoying/common/ui/widgets/scalewidget/ScaleRotateHighlightView$OnDrawableClickListener;
 
     .line 448
-    new-instance v0, Lbex;
+    new-instance v0, Layd;
 
-    invoke-direct {v0, p0}, Lbex;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
+    invoke-direct {v0, p0}, Layd;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;->F:Lcom/quvideo/xiaoying/common/ui/widgets/scalewidget/ScaleRotateView$OnGestureListener;
 
     .line 472
-    new-instance v0, Lbey;
+    new-instance v0, Laye;
 
-    invoke-direct {v0, p0}, Lbey;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
+    invoke-direct {v0, p0}, Laye;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;->d:Landroid/view/View$OnClickListener;
 
     .line 498
-    new-instance v0, Lbez;
+    new-instance v0, Layf;
 
-    invoke-direct {v0, p0}, Lbez;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
+    invoke-direct {v0, p0}, Layf;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;->G:Lcom/quvideo/xiaoying/videoeditor/widget/VeTextPositionAdjustDialog$OnPositionClickedLister;
 
     .line 565
-    new-instance v0, Lbfa;
+    new-instance v0, Layg;
 
-    invoke-direct {v0, p0}, Lbfa;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
+    invoke-direct {v0, p0}, Layg;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/StickerAddViewManager;->H:Lcom/quvideo/xiaoying/storyboard/widget/DragListener;
 

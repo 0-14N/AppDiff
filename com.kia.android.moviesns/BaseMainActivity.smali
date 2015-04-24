@@ -172,7 +172,7 @@
     .registers 1
 
     .prologue
-    .line 367
+    .line 373
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->initSelectedSettingButton()V
 
     return-void
@@ -306,28 +306,28 @@
 
     const/4 v1, 0x0
 
-    .line 578
+    .line 584
     invoke-virtual {p0, v3}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 579
+    .line 585
     invoke-virtual {p0, v5}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 580
+    .line 586
     invoke-virtual {p0, v4}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 582
+    .line 588
     const-string v0, "feed"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -336,19 +336,19 @@
 
     if-eqz v0, :cond_30
 
-    .line 583
+    .line 589
     invoke-virtual {p0, v3}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setSelected(Z)V
 
-    .line 589
+    .line 595
     :cond_2f
     :goto_2f
     return-void
 
-    .line 584
+    .line 590
     :cond_30
     const-string v0, "make"
 
@@ -358,7 +358,7 @@
 
     if-eqz v0, :cond_40
 
-    .line 585
+    .line 591
     invoke-virtual {p0, v5}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -367,7 +367,7 @@
 
     goto :goto_2f
 
-    .line 586
+    .line 592
     :cond_40
     const-string v0, "album"
 
@@ -377,7 +377,7 @@
 
     if-eqz v0, :cond_2f
 
-    .line 587
+    .line 593
     invoke-virtual {p0, v4}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -391,7 +391,7 @@
     .registers 1
 
     .prologue
-    .line 371
+    .line 377
     return-void
 .end method
 
@@ -521,14 +521,14 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 351
+    .line 357
     const/4 v2, 0x0
 
-    .line 352
+    .line 358
     .local v2, "isSettingBtn":Z
     const/4 v1, 0x0
 
-    .line 353
+    .line 359
     .local v1, "index":I
     iget-object v4, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->settingButtonIds:[I
 
@@ -539,15 +539,15 @@
     :goto_6
     if-lt v3, v5, :cond_9
 
-    .line 361
+    .line 367
     :goto_8
     return v2
 
-    .line 353
+    .line 359
     :cond_9
     aget v0, v4, v3
 
-    .line 354
+    .line 360
     .local v0, "id":I
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -555,20 +555,20 @@
 
     if-ne v6, v0, :cond_16
 
-    .line 355
+    .line 361
     invoke-direct {p0, p1, v1}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->moveToSetting(Landroid/view/View;I)V
 
-    .line 356
+    .line 362
     const/4 v2, 0x1
 
-    .line 357
+    .line 363
     goto :goto_8
 
-    .line 359
+    .line 365
     :cond_16
     add-int/lit8 v1, v1, 0x1
 
-    .line 353
+    .line 359
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_6
@@ -582,7 +582,7 @@
     .prologue
     const/high16 v3, 0x20000000
 
-    .line 381
+    .line 387
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->settingButtonIds:[I
 
     aget v1, v1, p2
@@ -607,7 +607,7 @@
 
     if-eq v1, v2, :cond_26
 
-    .line 382
+    .line 388
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->settingButtonIds:[I
 
     aget v1, v1, p2
@@ -616,11 +616,11 @@
 
     if-ne v1, v2, :cond_39
 
-    .line 383
+    .line 389
     :cond_26
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->initSelectedSettingButton()V
 
-    .line 385
+    .line 391
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->settingActivities:[Ljava/lang/Class;
@@ -629,20 +629,20 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 386
+    .line 392
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 387
+    .line 393
     invoke-virtual {p0, v0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 514
+    .line 520
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_38
     :goto_38
     return-void
 
-    .line 394
+    .line 400
     :cond_39
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->settingButtonIds:[I
 
@@ -652,7 +652,7 @@
 
     if-ne v1, v2, :cond_91
 
-    .line 396
+    .line 402
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     invoke-virtual {v1}, Lcom/kia/android/moviesns/ApplicationImpl;->getUserManager()Lcom/kia/android/moviesns/UserManager;
@@ -665,10 +665,10 @@
 
     if-eqz v1, :cond_61
 
-    .line 399
+    .line 405
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->initSelectedSettingButton()V
 
-    .line 401
+    .line 407
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->settingActivities:[Ljava/lang/Class;
@@ -677,16 +677,16 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 402
+    .line 408
     .restart local v0    # "intent":Landroid/content/Intent;
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 403
+    .line 409
     invoke-virtual {p0, v0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_38
 
-    .line 405
+    .line 411
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_61
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
@@ -701,10 +701,10 @@
 
     if-eqz v1, :cond_80
 
-    .line 409
+    .line 415
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->initSelectedSettingButton()V
 
-    .line 411
+    .line 417
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->settingActivities:[Ljava/lang/Class;
@@ -713,37 +713,37 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 412
+    .line 418
     .restart local v0    # "intent":Landroid/content/Intent;
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 413
+    .line 419
     invoke-virtual {p0, v0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_38
 
-    .line 418
+    .line 424
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_80
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->initSelectedSettingButton()V
 
-    .line 420
+    .line 426
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/kia/android/moviesns/ui/activity/login/Login050Activity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 421
+    .line 427
     .restart local v0    # "intent":Landroid/content/Intent;
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 422
+    .line 428
     invoke-virtual {p0, v0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_38
 
-    .line 432
+    .line 438
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_91
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->settingButtonIds:[I
@@ -762,7 +762,7 @@
 
     if-ne v1, v2, :cond_f3
 
-    .line 434
+    .line 440
     :cond_a3
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
@@ -776,10 +776,10 @@
 
     if-eqz v1, :cond_c3
 
-    .line 437
+    .line 443
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->initSelectedSettingButton()V
 
-    .line 439
+    .line 445
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->settingActivities:[Ljava/lang/Class;
@@ -788,16 +788,16 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 440
+    .line 446
     .restart local v0    # "intent":Landroid/content/Intent;
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 441
+    .line 447
     invoke-virtual {p0, v0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_38
 
-    .line 443
+    .line 449
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_c3
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
@@ -812,44 +812,44 @@
 
     if-eqz v1, :cond_e1
 
-    .line 446
+    .line 452
     const v1, 0x7f080076
 
     new-instance v2, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$4;
 
     invoke-direct {v2, p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$4;-><init>(Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;)V
 
-    .line 456
+    .line 462
     new-instance v3, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$5;
 
     invoke-direct {v3, p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$5;-><init>(Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;)V
 
-    .line 446
+    .line 452
     invoke-static {p0, v1, v2, v3}, Lcom/kia/android/moviesns/util/Utils;->sysAlertWithAsk(Landroid/content/Context;ILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_38
 
-    .line 466
+    .line 472
     :cond_e1
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->initSelectedSettingButton()V
 
-    .line 468
+    .line 474
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/kia/android/moviesns/ui/activity/login/Login100Activity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 469
+    .line 475
     .restart local v0    # "intent":Landroid/content/Intent;
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 470
+    .line 476
     invoke-virtual {p0, v0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_38
 
-    .line 480
+    .line 486
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_f3
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->settingButtonIds:[I
@@ -860,7 +860,7 @@
 
     if-ne v1, v2, :cond_38
 
-    .line 482
+    .line 488
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     invoke-virtual {v1}, Lcom/kia/android/moviesns/ApplicationImpl;->getUserManager()Lcom/kia/android/moviesns/UserManager;
@@ -873,7 +873,7 @@
 
     if-eqz v1, :cond_122
 
-    .line 484
+    .line 490
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     invoke-virtual {v1}, Lcom/kia/android/moviesns/ApplicationImpl;->getUserManager()Lcom/kia/android/moviesns/UserManager;
@@ -882,24 +882,24 @@
 
     invoke-virtual {v1}, Lcom/kia/android/moviesns/UserManager;->logoutProcess()V
 
-    .line 486
+    .line 492
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->setSignButtonStatus()V
 
-    .line 487
+    .line 493
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getSlidingMenu()Lcom/slidingmenu/lib/SlidingMenu;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/slidingmenu/lib/SlidingMenu;->showAbove()V
 
-    .line 488
+    .line 494
     const-string v1, "feed"
 
     invoke-virtual {p0, v1}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->onTabChanged(Ljava/lang/String;)V
 
     goto/16 :goto_38
 
-    .line 490
+    .line 496
     :cond_122
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
@@ -913,7 +913,7 @@
 
     if-eqz v1, :cond_148
 
-    .line 492
+    .line 498
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     invoke-virtual {v1}, Lcom/kia/android/moviesns/ApplicationImpl;->getUserManager()Lcom/kia/android/moviesns/UserManager;
@@ -922,39 +922,39 @@
 
     invoke-virtual {v1}, Lcom/kia/android/moviesns/UserManager;->logoutProcess()V
 
-    .line 494
+    .line 500
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->setSignButtonStatus()V
 
-    .line 495
+    .line 501
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getSlidingMenu()Lcom/slidingmenu/lib/SlidingMenu;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/slidingmenu/lib/SlidingMenu;->showAbove()V
 
-    .line 496
+    .line 502
     const-string v1, "feed"
 
     invoke-virtual {p0, v1}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->onTabChanged(Ljava/lang/String;)V
 
     goto/16 :goto_38
 
-    .line 501
+    .line 507
     :cond_148
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->initSelectedSettingButton()V
 
-    .line 503
+    .line 509
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/kia/android/moviesns/ui/activity/login/Login050Activity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 504
+    .line 510
     .restart local v0    # "intent":Landroid/content/Intent;
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 505
+    .line 511
     invoke-virtual {p0, v0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_38
@@ -1043,23 +1043,23 @@
     .registers 2
 
     .prologue
-    .line 593
+    .line 599
     iget-boolean v0, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->isSliding:Z
 
     if-eqz v0, :cond_c
 
-    .line 595
+    .line 601
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getSlidingMenu()Lcom/slidingmenu/lib/SlidingMenu;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->showAbove()V
 
-    .line 599
+    .line 605
     :goto_b
     return-void
 
-    .line 597
+    .line 603
     :cond_c
     invoke-super {p0}, Lcom/slidingmenu/lib/app/SlidingFragmentActivity;->onBackPressed()V
 
@@ -1071,12 +1071,12 @@
     .param p1, "resid"    # I
 
     .prologue
-    .line 522
+    .line 528
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->titleBar:Lcom/kia/android/moviesns/ui/view/TitleBar;
 
     invoke-virtual {v0, p1}, Lcom/kia/android/moviesns/ui/view/TitleBar;->chageTitle(I)V
 
-    .line 523
+    .line 529
     return-void
 .end method
 
@@ -1085,18 +1085,18 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 321
+    .line 327
     invoke-direct {p0, p1}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->moveToSet(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 342
+    .line 348
     :goto_6
     return-void
 
-    .line 325
+    .line 331
     :cond_7
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -1106,37 +1106,37 @@
 
     goto :goto_6
 
-    .line 327
+    .line 333
     :sswitch_f
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->clickBottomLeft()V
 
     goto :goto_6
 
-    .line 330
+    .line 336
     :sswitch_13
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->clickBottomCenter()V
 
     goto :goto_6
 
-    .line 333
+    .line 339
     :sswitch_17
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->clickBottomRight()V
 
     goto :goto_6
 
-    .line 336
+    .line 342
     :sswitch_1b
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->clickTitleLeft()V
 
     goto :goto_6
 
-    .line 339
+    .line 345
     :sswitch_1f
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->clickTitleRight()V
 
     goto :goto_6
 
-    .line 325
+    .line 331
     nop
 
     :sswitch_data_24
@@ -1368,17 +1368,20 @@
     .registers 3
 
     .prologue
-    .line 315
+    .line 318
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/kia/android/moviesns/ApplicationImpl;->setStatus(I)V
 
-    .line 316
+    .line 319
     invoke-super {p0}, Lcom/slidingmenu/lib/app/SlidingFragmentActivity;->onPause()V
 
-    .line 317
+    .line 322
+    invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onPause(Landroid/content/Context;)V
+
+    .line 323
     return-void
 .end method
 
@@ -1454,7 +1457,7 @@
     const/4 v5, 0x0
 
     :goto_39
-    if-lt v5, v7, :cond_3f
+    if-lt v5, v7, :cond_42
 
     .line 311
     .end local v1    # "btnLayout":Landroid/widget/LinearLayout;
@@ -1462,13 +1465,16 @@
     :cond_3b
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->setSignButtonStatus()V
 
-    .line 312
+    .line 314
+    invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onResume(Landroid/content/Context;)V
+
+    .line 315
     return-void
 
     .line 284
     .restart local v1    # "btnLayout":Landroid/widget/LinearLayout;
     .restart local v2    # "i":I
-    :cond_3f
+    :cond_42
     aget v3, v6, v5
 
     .line 285
@@ -1489,7 +1495,7 @@
 
     .line 288
     .local v4, "params":Landroid/widget/LinearLayout$LayoutParams;
-    if-nez v2, :cond_64
+    if-nez v2, :cond_67
 
     .line 289
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getResources()Landroid/content/res/Resources;
@@ -1505,8 +1511,8 @@
     iput v8, v4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     .line 305
-    :cond_5c
-    :goto_5c
+    :cond_5f
+    :goto_5f
     invoke-virtual {v0, v4}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 307
@@ -1518,8 +1524,8 @@
     goto :goto_39
 
     .line 290
-    :cond_64
-    if-ne v2, v10, :cond_74
+    :cond_67
+    if-ne v2, v10, :cond_77
 
     .line 291
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getResources()Landroid/content/res/Resources;
@@ -1534,13 +1540,13 @@
 
     iput v8, v4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    goto :goto_5c
+    goto :goto_5f
 
     .line 292
-    :cond_74
+    :cond_77
     const/4 v8, 0x2
 
-    if-ne v2, v8, :cond_85
+    if-ne v2, v8, :cond_88
 
     .line 293
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getResources()Landroid/content/res/Resources;
@@ -1555,13 +1561,13 @@
 
     iput v8, v4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    goto :goto_5c
+    goto :goto_5f
 
     .line 294
-    :cond_85
+    :cond_88
     const/4 v8, 0x3
 
-    if-ne v2, v8, :cond_96
+    if-ne v2, v8, :cond_99
 
     .line 295
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getResources()Landroid/content/res/Resources;
@@ -1576,13 +1582,13 @@
 
     iput v8, v4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    goto :goto_5c
+    goto :goto_5f
 
     .line 296
-    :cond_96
+    :cond_99
     const/4 v8, 0x4
 
-    if-ne v2, v8, :cond_a7
+    if-ne v2, v8, :cond_aa
 
     .line 297
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getResources()Landroid/content/res/Resources;
@@ -1597,13 +1603,13 @@
 
     iput v8, v4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    goto :goto_5c
+    goto :goto_5f
 
     .line 298
-    :cond_a7
+    :cond_aa
     const/4 v8, 0x5
 
-    if-ne v2, v8, :cond_b8
+    if-ne v2, v8, :cond_bb
 
     .line 299
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getResources()Landroid/content/res/Resources;
@@ -1618,13 +1624,13 @@
 
     iput v8, v4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    goto :goto_5c
+    goto :goto_5f
 
     .line 300
-    :cond_b8
+    :cond_bb
     const/4 v8, 0x6
 
-    if-ne v2, v8, :cond_c9
+    if-ne v2, v8, :cond_cc
 
     .line 301
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getResources()Landroid/content/res/Resources;
@@ -1639,13 +1645,13 @@
 
     iput v8, v4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    goto :goto_5c
+    goto :goto_5f
 
     .line 302
-    :cond_c9
+    :cond_cc
     const/4 v8, 0x7
 
-    if-ne v2, v8, :cond_5c
+    if-ne v2, v8, :cond_5f
 
     .line 303
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getResources()Landroid/content/res/Resources;
@@ -1660,7 +1666,7 @@
 
     iput v8, v4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    goto :goto_5c
+    goto :goto_5f
 .end method
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
@@ -1691,7 +1697,7 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 540
+    .line 546
     iget-object v2, p0, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->mapTabInfo:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1700,20 +1706,20 @@
 
     check-cast v1, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;
 
-    .line 542
+    .line 548
     .local v1, "newTab":Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;
     sget-object v2, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->mLastTab:Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;
 
     if-eqz v2, :cond_2b
 
-    .line 543
+    .line 549
     sget-object v2, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->mLastTab:Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;
 
     iget-object v2, v2, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;->fragment:Lcom/kia/android/moviesns/ui/fragment/BaseFragment;
 
     if-eqz v2, :cond_2b
 
-    .line 544
+    .line 550
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v2
@@ -1722,7 +1728,7 @@
 
     move-result-object v0
 
-    .line 545
+    .line 551
     .local v0, "ft":Landroid/support/v4/app/FragmentTransaction;
     sget-object v2, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->mLastTab:Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;
 
@@ -1730,27 +1736,27 @@
 
     invoke-virtual {v0, v2}, Landroid/support/v4/app/FragmentTransaction;->detach(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 546
+    .line 552
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentTransaction;->commit()I
 
-    .line 547
+    .line 553
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v2
 
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentManager;->executePendingTransactions()Z
 
-    .line 550
+    .line 556
     .end local v0    # "ft":Landroid/support/v4/app/FragmentTransaction;
     :cond_2b
     if-eqz v1, :cond_68
 
-    .line 551
+    .line 557
     iget-object v2, v1, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;->fragment:Lcom/kia/android/moviesns/ui/fragment/BaseFragment;
 
     if-nez v2, :cond_73
 
-    .line 552
+    .line 558
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v2
@@ -1759,7 +1765,7 @@
 
     move-result-object v0
 
-    .line 553
+    .line 559
     .restart local v0    # "ft":Landroid/support/v4/app/FragmentTransaction;
     # getter for: Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;->clss:Ljava/lang/Class;
     invoke-static {v1}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;->access$1(Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;)Ljava/lang/Class;
@@ -1783,12 +1789,12 @@
 
     iput-object v2, v1, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;->fragment:Lcom/kia/android/moviesns/ui/fragment/BaseFragment;
 
-    .line 554
+    .line 560
     iget-object v2, v1, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;->fragment:Lcom/kia/android/moviesns/ui/fragment/BaseFragment;
 
     invoke-virtual {v2, p0}, Lcom/kia/android/moviesns/ui/fragment/BaseFragment;->setOnChangeTitleListener(Lcom/kia/android/moviesns/listener/OnChangeTitleListener;)V
 
-    .line 555
+    .line 561
     const v2, 0x1020011
 
     iget-object v3, v1, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;->fragment:Lcom/kia/android/moviesns/ui/fragment/BaseFragment;
@@ -1800,34 +1806,34 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 556
+    .line 562
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentTransaction;->commit()I
 
-    .line 557
+    .line 563
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v2
 
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentManager;->executePendingTransactions()Z
 
-    .line 566
+    .line 572
     .end local v0    # "ft":Landroid/support/v4/app/FragmentTransaction;
     :cond_68
     :goto_68
     sput-object v1, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->mLastTab:Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;
 
-    .line 568
+    .line 574
     sget-object v2, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v2, p1}, Landroid/widget/TabHost;->setCurrentTabByTag(Ljava/lang/String;)V
 
-    .line 569
+    .line 575
     invoke-direct {p0, p1}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->initSelectButton(Ljava/lang/String;)V
 
-    .line 570
+    .line 576
     return-void
 
-    .line 559
+    .line 565
     :cond_73
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
@@ -1837,16 +1843,16 @@
 
     move-result-object v0
 
-    .line 560
+    .line 566
     .restart local v0    # "ft":Landroid/support/v4/app/FragmentTransaction;
     iget-object v2, v1, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity$TabInfo;->fragment:Lcom/kia/android/moviesns/ui/fragment/BaseFragment;
 
     invoke-virtual {v0, v2}, Landroid/support/v4/app/FragmentTransaction;->attach(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 561
+    .line 567
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentTransaction;->commit()I
 
-    .line 562
+    .line 568
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v2
@@ -1861,7 +1867,7 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 531
+    .line 537
     const v0, 0x7f050035
 
     invoke-virtual {p0, v0}, Lcom/kia/android/moviesns/ui/activity/BaseMainActivity;->findViewById(I)Landroid/view/View;
@@ -1870,6 +1876,6 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 532
+    .line 538
     return-void
 .end method

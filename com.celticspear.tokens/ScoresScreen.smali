@@ -57,37 +57,33 @@
     iput-object v6, v0, Lcom/celticspear/tokens/ScoresScreen;->dao:Lcom/celticspear/tokens/dao/Dao;
 
     .line 28
-    move-object/from16 v0, p0
+    const/4 v6, 0x3
 
-    iget-object v6, v0, Lcom/celticspear/tokens/ScoresScreen;->mScene:Lorg/andengine/entity/scene/Scene;
+    new-array v6, v6, [Ljava/lang/String;
 
-    const/4 v7, 0x3
+    const/4 v7, 0x0
 
-    new-array v7, v7, [Ljava/lang/String;
+    const-string v23, "purchMenuBgTop"
 
-    const/16 v23, 0x0
+    aput-object v23, v6, v7
 
-    const-string v24, "purchMenuBgTop"
+    const/4 v7, 0x1
 
-    aput-object v24, v7, v23
+    const-string v23, "purchMenuBg"
 
-    const/16 v23, 0x1
+    aput-object v23, v6, v7
 
-    const-string v24, "purchMenuBg"
+    const/4 v7, 0x2
 
-    aput-object v24, v7, v23
+    const-string v23, "purchMenuBgBottom"
 
-    const/16 v23, 0x2
-
-    const-string v24, "purchMenuBgBottom"
-
-    aput-object v24, v7, v23
+    aput-object v23, v6, v7
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1, v6, v7}, Lcom/celticspear/tokens/ScoresScreen;->setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;Lorg/andengine/entity/IEntity;[Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v6}, Lcom/celticspear/tokens/ScoresScreen;->setThreePartBackground(Lcom/celticspear/tokens/TokensActivity;[Ljava/lang/String;)V
 
     .line 29
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getFonts()Ljava/util/Map;
@@ -118,7 +114,7 @@
 
     check-cast v23, Lcom/celticspear/tokens/TokensActivity;
 
-    const v24, 0x7f040027
+    const v24, 0x7f040018
 
     invoke-virtual/range {v23 .. v24}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -145,7 +141,7 @@
 
     check-cast v23, Lcom/celticspear/tokens/TokensActivity;
 
-    const v24, 0x7f040028
+    const v24, 0x7f040019
 
     invoke-virtual/range {v23 .. v24}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -172,7 +168,7 @@
 
     check-cast v23, Lcom/celticspear/tokens/TokensActivity;
 
-    const v24, 0x7f04000a
+    const v24, 0x7f04001a
 
     invoke-virtual/range {v23 .. v24}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -198,7 +194,7 @@
 
     check-cast v6, Lcom/celticspear/tokens/TokensActivity;
 
-    const v7, 0x7f04000b
+    const v7, 0x7f04001b
 
     invoke-virtual {v6, v7}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -226,7 +222,7 @@
 
     check-cast v6, Lcom/celticspear/tokens/TokensActivity;
 
-    const v7, 0x7f04000c
+    const v7, 0x7f04001c
 
     invoke-virtual {v6, v7}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -254,7 +250,7 @@
 
     check-cast v6, Lcom/celticspear/tokens/TokensActivity;
 
-    const v7, 0x7f04000d
+    const v7, 0x7f04001d
 
     invoke-virtual {v6, v7}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -282,7 +278,7 @@
 
     check-cast v6, Lcom/celticspear/tokens/TokensActivity;
 
-    const v7, 0x7f040029
+    const v7, 0x7f04001e
 
     invoke-virtual {v6, v7}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -309,7 +305,7 @@
 
     check-cast v6, Lcom/celticspear/tokens/TokensActivity;
 
-    const v7, 0x7f04002a
+    const v7, 0x7f04001f
 
     invoke-virtual {v6, v7}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -336,7 +332,7 @@
 
     check-cast v6, Lcom/celticspear/tokens/TokensActivity;
 
-    const v7, 0x7f04000e
+    const v7, 0x7f040020
 
     invoke-virtual {v6, v7}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -364,7 +360,7 @@
 
     check-cast v6, Lcom/celticspear/tokens/TokensActivity;
 
-    const v7, 0x7f04000f
+    const v7, 0x7f040021
 
     invoke-virtual {v6, v7}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -739,7 +735,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_321
+    if-eqz v6, :cond_31a
 
     .line 77
     new-instance v28, Lorg/andengine/entity/sprite/Sprite;
@@ -810,7 +806,7 @@
 
     .line 78
     .local v28, "realArt":Lorg/andengine/entity/sprite/Sprite;
-    invoke-static/range {v28 .. v28}, Lcom/celticspear/tokens/ScoresScreen;->centerX(Lorg/andengine/entity/shape/RectangularShape;)V
+    invoke-static/range {v28 .. v28}, Lcom/celticspear/tokens/ScoresScreen;->center(Lorg/andengine/entity/shape/RectangularShape;)V
 
     .line 79
     const/4 v6, 0x0
@@ -888,7 +884,7 @@
 
     .line 87
     .end local v28    # "realArt":Lorg/andengine/entity/sprite/Sprite;
-    :cond_321
+    :cond_31a
     new-instance v20, Lcom/celticspear/tokens/InvisibleSpriteButton;
 
     sget v21, Lcom/celticspear/tokens/Coordinates;->PLAY_X:F
@@ -1003,7 +999,7 @@
 
     check-cast v6, Lcom/celticspear/tokens/TokensActivity;
 
-    const v7, 0x7f040011
+    const v7, 0x7f040023
 
     invoke-virtual {v6, v7}, Lcom/celticspear/tokens/TokensActivity;->getString(I)Ljava/lang/String;
 
@@ -1019,28 +1015,9 @@
 
     .line 100
     .local v21, "titleText":Lorg/andengine/entity/text/Text;
-    invoke-static/range {v21 .. v21}, Lcom/celticspear/tokens/ScoresScreen;->centerX(Lorg/andengine/entity/shape/RectangularShape;)V
+    invoke-static/range {v21 .. v21}, Lcom/celticspear/tokens/ScoresScreen;->center(Lorg/andengine/entity/shape/RectangularShape;)V
 
     .line 101
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/celticspear/tokens/ScoresScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
-
-    check-cast v6, Lcom/celticspear/tokens/TokensActivity;
-
-    invoke-virtual {v6}, Lcom/celticspear/tokens/TokensActivity;->getGameScreenYShift()F
-
-    move-result v6
-
-    sget v7, Lcom/celticspear/tokens/Coordinates;->TITLE_OF_SCREEN_Y:F
-
-    add-float/2addr v6, v7
-
-    move-object/from16 v0, v21
-
-    invoke-static {v0, v6}, Lcom/celticspear/tokens/ScoresScreen;->centerY(Lorg/andengine/entity/shape/RectangularShape;F)V
-
-    .line 102
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/celticspear/tokens/ScoresScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -1049,7 +1026,7 @@
 
     invoke-virtual {v6, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 104
+    .line 103
     new-instance v22, Lorg/andengine/entity/text/Text;
 
     sget v6, Lcom/celticspear/tokens/TokensActivity;->CAMERA_WIDTH:F
@@ -1066,7 +1043,7 @@
 
     add-float v24, v6, v7
 
-    .line 105
+    .line 104
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getFonts()Ljava/util/Map;
 
     move-result-object v6
@@ -1079,8 +1056,8 @@
 
     check-cast v25, Lorg/andengine/opengl/font/IFont;
 
-    .line 106
-    const v6, 0x7f040009
+    .line 105
+    const v6, 0x7f040016
 
     move-object/from16 v0, p1
 
@@ -1088,38 +1065,19 @@
 
     move-result-object v26
 
-    .line 107
+    .line 106
     invoke-virtual/range {p1 .. p1}, Lcom/celticspear/tokens/TokensActivity;->getVertexBufferObjectManager()Lorg/andengine/opengl/vbo/VertexBufferObjectManager;
 
     move-result-object v27
 
-    .line 104
+    .line 103
     invoke-direct/range {v22 .. v27}, Lorg/andengine/entity/text/Text;-><init>(FFLorg/andengine/opengl/font/IFont;Ljava/lang/CharSequence;Lorg/andengine/opengl/vbo/VertexBufferObjectManager;)V
 
-    .line 108
+    .line 107
     .local v22, "next":Lorg/andengine/entity/text/Text;
-    invoke-static/range {v22 .. v22}, Lcom/celticspear/tokens/ScoresScreen;->centerX(Lorg/andengine/entity/shape/RectangularShape;)V
+    invoke-static/range {v22 .. v22}, Lcom/celticspear/tokens/ScoresScreen;->center(Lorg/andengine/entity/shape/RectangularShape;)V
 
-    .line 109
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/celticspear/tokens/ScoresScreen;->mContext:Lcom/celticspear/andengine/CelticSpearLayoutActivity;
-
-    check-cast v6, Lcom/celticspear/tokens/TokensActivity;
-
-    invoke-virtual {v6}, Lcom/celticspear/tokens/TokensActivity;->getGameScreenYShift()F
-
-    move-result v6
-
-    sget v7, Lcom/celticspear/tokens/Coordinates;->PLAY_Y_TEXT:F
-
-    add-float/2addr v6, v7
-
-    move-object/from16 v0, v22
-
-    invoke-static {v0, v6}, Lcom/celticspear/tokens/ScoresScreen;->centerY(Lorg/andengine/entity/shape/RectangularShape;F)V
-
-    .line 110
+    .line 108
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/celticspear/tokens/ScoresScreen;->mScene:Lorg/andengine/entity/scene/Scene;
@@ -1128,7 +1086,7 @@
 
     invoke-virtual {v6, v0}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 111
+    .line 109
     return-void
 .end method
 
@@ -1137,7 +1095,7 @@
     .param p1, "texts"    # [Lorg/andengine/entity/text/Text;
 
     .prologue
-    .line 114
+    .line 112
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1146,10 +1104,10 @@
 
     if-lt v0, v1, :cond_5
 
-    .line 118
+    .line 116
     return-void
 
-    .line 115
+    .line 113
     :cond_5
     aget-object v2, p1, v0
 
@@ -1181,14 +1139,14 @@
 
     invoke-virtual {v2, v3, v1}, Lorg/andengine/entity/text/Text;->setPosition(FF)V
 
-    .line 116
+    .line 114
     iget-object v1, p0, Lcom/celticspear/tokens/ScoresScreen;->mScene:Lorg/andengine/entity/scene/Scene;
 
     aget-object v2, p1, v0
 
     invoke-virtual {v1, v2}, Lorg/andengine/entity/scene/Scene;->attachChild(Lorg/andengine/entity/IEntity;)V
 
-    .line 114
+    .line 112
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -1198,7 +1156,7 @@
     .registers 5
 
     .prologue
-    .line 121
+    .line 119
     iget-object v0, p0, Lcom/celticspear/tokens/ScoresScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
     invoke-virtual {v0}, Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;->getScore()I
@@ -1215,7 +1173,7 @@
 
     if-le v0, v1, :cond_1d
 
-    .line 122
+    .line 120
     iget-object v0, p0, Lcom/celticspear/tokens/ScoresScreen;->dao:Lcom/celticspear/tokens/dao/Dao;
 
     const-string v1, "ARCADE_HIGH_SCORE"
@@ -1228,7 +1186,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/celticspear/tokens/dao/Dao;->setIntValue(Ljava/lang/String;I)V
 
-    .line 124
+    .line 122
     :cond_1d
     iget-object v0, p0, Lcom/celticspear/tokens/ScoresScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
@@ -1246,7 +1204,7 @@
 
     if-le v0, v1, :cond_3a
 
-    .line 125
+    .line 123
     iget-object v0, p0, Lcom/celticspear/tokens/ScoresScreen;->dao:Lcom/celticspear/tokens/dao/Dao;
 
     const-string v1, "ARCADE_HIGH_TOKENS_REDUCED"
@@ -1259,7 +1217,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/celticspear/tokens/dao/Dao;->setIntValue(Ljava/lang/String;I)V
 
-    .line 127
+    .line 125
     :cond_3a
     iget-object v0, p0, Lcom/celticspear/tokens/ScoresScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
@@ -1277,7 +1235,7 @@
 
     if-le v0, v1, :cond_57
 
-    .line 128
+    .line 126
     iget-object v0, p0, Lcom/celticspear/tokens/ScoresScreen;->dao:Lcom/celticspear/tokens/dao/Dao;
 
     const-string v1, "ARCADE_HIGH_BONUSES_USED"
@@ -1290,7 +1248,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/celticspear/tokens/dao/Dao;->setIntValue(Ljava/lang/String;I)V
 
-    .line 130
+    .line 128
     :cond_57
     iget-object v0, p0, Lcom/celticspear/tokens/ScoresScreen;->results:Lcom/celticspear/tokens/ArcadeGameScreen$GameResults;
 
@@ -1308,7 +1266,7 @@
 
     if-le v0, v1, :cond_74
 
-    .line 131
+    .line 129
     iget-object v0, p0, Lcom/celticspear/tokens/ScoresScreen;->dao:Lcom/celticspear/tokens/dao/Dao;
 
     const-string v1, "ARCADE_HIGH_MAX_COMBO"
@@ -1321,7 +1279,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/celticspear/tokens/dao/Dao;->setIntValue(Ljava/lang/String;I)V
 
-    .line 133
+    .line 131
     :cond_74
     iget-object v0, p0, Lcom/celticspear/tokens/ScoresScreen;->dao:Lcom/celticspear/tokens/dao/Dao;
 
@@ -1345,6 +1303,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/celticspear/tokens/dao/Dao;->setIntValue(Ljava/lang/String;I)V
 
-    .line 134
+    .line 132
     return-void
 .end method

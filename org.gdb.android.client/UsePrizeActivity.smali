@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field a:Lorg/gdb/android/client/nm;
+.field a:Lorg/gdb/android/client/nj;
 
 .field private c:Lorg/gdb/android/client/vo/AwardVO;
 
@@ -45,21 +45,21 @@
     invoke-direct {p0}, Lorg/gdb/android/client/NullImageActivity;-><init>()V
 
     .line 35
-    new-instance v0, Lorg/gdb/android/client/nj;
+    new-instance v0, Lorg/gdb/android/client/ng;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/nj;-><init>(Lorg/gdb/android/client/UsePrizeActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/ng;-><init>(Lorg/gdb/android/client/UsePrizeActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/UsePrizeActivity;->f:Lorg/gdb/android/client/remote/y;
 
     .line 52
-    new-instance v0, Lorg/gdb/android/client/nm;
+    new-instance v0, Lorg/gdb/android/client/nj;
 
     .line 53
     iget-object v1, p0, Lorg/gdb/android/client/UsePrizeActivity;->f:Lorg/gdb/android/client/remote/y;
 
-    invoke-direct {v0, p0, v1}, Lorg/gdb/android/client/nm;-><init>(Lorg/gdb/android/client/UsePrizeActivity;Lorg/gdb/android/client/remote/y;)V
+    invoke-direct {v0, p0, v1}, Lorg/gdb/android/client/nj;-><init>(Lorg/gdb/android/client/UsePrizeActivity;Lorg/gdb/android/client/remote/y;)V
 
-    iput-object v0, p0, Lorg/gdb/android/client/UsePrizeActivity;->a:Lorg/gdb/android/client/nm;
+    iput-object v0, p0, Lorg/gdb/android/client/UsePrizeActivity;->a:Lorg/gdb/android/client/nj;
 
     .line 26
     return-void
@@ -81,7 +81,7 @@
     .prologue
     .line 139
     :try_start_0
-    iget-object v0, p0, Lorg/gdb/android/client/UsePrizeActivity;->a:Lorg/gdb/android/client/nm;
+    iget-object v0, p0, Lorg/gdb/android/client/UsePrizeActivity;->a:Lorg/gdb/android/client/nj;
 
     const-wide/16 v1, 0x0
 
@@ -101,7 +101,7 @@
 
     aput-object p1, v3, v4
 
-    invoke-virtual {v0, p0, v1, v2, v3}, Lorg/gdb/android/client/nm;->a(Landroid/app/Activity;J[Ljava/lang/String;)V
+    invoke-virtual {v0, p0, v1, v2, v3}, Lorg/gdb/android/client/nj;->a(Landroid/app/Activity;J[Ljava/lang/String;)V
     :try_end_14
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_14} :catch_15
 
@@ -465,9 +465,9 @@
 
     .line 118
     :goto_134
-    new-instance v0, Lorg/gdb/android/client/nk;
+    new-instance v0, Lorg/gdb/android/client/nh;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/nk;-><init>(Lorg/gdb/android/client/UsePrizeActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/nh;-><init>(Lorg/gdb/android/client/UsePrizeActivity;)V
 
     invoke-virtual {v5, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

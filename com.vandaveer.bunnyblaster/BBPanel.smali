@@ -51,13 +51,9 @@
 
 .field private birdDroppedCarrotY:F
 
-.field private birdHeight:I
-
 .field private birdLFlying:Z
 
 .field private birdRFlying:Z
-
-.field private birdWidth:I
 
 .field private birdXSpeed:F
 
@@ -164,8 +160,6 @@
 
 .field private gunSiteWidthDividedByTwo:I
 
-.field private gunWidth:I
-
 .field private gundSnd:I
 
 .field private highScoreY:F
@@ -251,8 +245,6 @@
 
 .field private shellEjectSnd:I
 
-.field private shellHeight:I
-
 .field private shellInitYSpeed:F
 
 .field private shellXSpeed:F
@@ -293,17 +285,17 @@
     .registers 1
 
     .prologue
-    .line 85
+    .line 84
     const/high16 v0, 0x43a00000    # 320.0f
 
     sput v0, Lcom/vandaveer/bunnyblaster/BBPanel;->SCALE_HEIGHT:F
 
-    .line 86
+    .line 85
     const/high16 v0, 0x43f00000    # 480.0f
 
     sput v0, Lcom/vandaveer/bunnyblaster/BBPanel;->SCALE_WIDTH:F
 
-    .line 87
+    .line 86
     const/4 v0, 0x7
 
     sput v0, Lcom/vandaveer/bunnyblaster/BBPanel;->MAX_BULLETS:I
@@ -324,7 +316,7 @@
 
     const/4 v2, 0x0
 
-    .line 184
+    .line 176
     invoke-direct {p0, p1}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;)V
 
     .line 41
@@ -342,168 +334,168 @@
     .line 50
     iput-boolean v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->movingGun:Z
 
-    .line 57
+    .line 56
     iput v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->score:I
 
-    .line 59
+    .line 58
     iput v3, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 67
+    .line 66
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitSpeedY:F
 
-    .line 68
+    .line 67
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitStartY:F
 
-    .line 70
+    .line 69
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shellXSpeed:F
 
-    .line 71
+    .line 70
     const/high16 v0, -0x40000000    # -2.0f
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shellInitYSpeed:F
 
-    .line 73
+    .line 72
     iput-boolean v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gameOver:Z
 
-    .line 76
+    .line 75
     iput v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->lowestHighScore:I
 
-    .line 79
+    .line 78
     iput-boolean v3, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->playSound:Z
 
-    .line 81
+    .line 80
     iput v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenWidth:I
 
-    .line 82
+    .line 81
     iput v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenHeight:I
 
-    .line 88
+    .line 87
     const/4 v0, 0x7
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->tot_carrots:I
 
-    .line 91
+    .line 90
     const/16 v0, 0x32
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadXPadding:I
 
-    .line 92
+    .line 91
     const/16 v0, 0x1e
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadYPadding:I
 
-    .line 132
+    .line 124
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
 
-    .line 135
+    .line 127
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->droppedCarrots:Ljava/util/ArrayList;
 
-    .line 138
+    .line 130
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
 
-    .line 141
+    .line 133
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->carrots:Ljava/util/ArrayList;
 
-    .line 144
+    .line 136
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
 
-    .line 148
+    .line 140
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shells:Ljava/util/ArrayList;
 
-    .line 157
+    .line 149
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
-    .line 165
+    .line 157
     iput v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gundSnd:I
 
-    .line 166
+    .line 158
     iput v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadSnd:I
 
-    .line 167
+    .line 159
     iput v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdsSnd:I
 
-    .line 168
+    .line 160
     iput v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->deadBirdSnd:I
 
-    .line 169
+    .line 161
     iput v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bloodSnd:I
 
-    .line 170
+    .line 162
     iput v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shellEjectSnd:I
 
-    .line 175
+    .line 167
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->lastTimeMissileFired:J
 
-    .line 176
+    .line 168
     iput-boolean v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->missileFired:Z
 
-    .line 186
+    .line 178
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->fillBitmapCache()V
 
-    .line 188
+    .line 180
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->requestFocus()Z
 
-    .line 189
+    .line 181
     invoke-virtual {p0, v3}, Lcom/vandaveer/bunnyblaster/BBPanel;->setFocusableInTouchMode(Z)V
 
-    .line 190
+    .line 182
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->loadSounds()V
 
-    .line 192
+    .line 184
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
     invoke-interface {v0, p0}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
-    .line 193
+    .line 185
     new-instance v0, Lcom/vandaveer/bunnyblaster/BBThread;
 
     invoke-direct {v0, p0}, Lcom/vandaveer/bunnyblaster/BBThread;-><init>(Lcom/vandaveer/bunnyblaster/BBPanel;)V
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_thread:Lcom/vandaveer/bunnyblaster/BBThread;
 
-    .line 195
+    .line 187
     invoke-virtual {p0, v3}, Lcom/vandaveer/bunnyblaster/BBPanel;->setFocusable(Z)V
 
-    .line 196
+    .line 188
     iput p2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
-    .line 197
+    .line 189
     return-void
 .end method
 
@@ -522,12 +514,12 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 1177
+    .line 1169
     iget v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdsSnd:I
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 1179
+    .line 1171
     iget v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenWidth:I
 
     int-to-float v1, v1
@@ -536,613 +528,613 @@
 
     div-float v0, v1, v2
 
-    .line 1181
+    .line 1173
     .local v0, "speedScale":F
     packed-switch p1, :pswitch_data_1fc
 
-    .line 1319
+    .line 1311
     :goto_1b
     iput p1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
-    .line 1321
+    .line 1313
     iget v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
     iget v2, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gameLevel:I
 
     if-le v1, v2, :cond_27
 
-    .line 1322
+    .line 1314
     iget v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gameLevel:I
 
-    .line 1323
+    .line 1315
     :cond_27
     return-void
 
-    .line 1184
+    .line 1176
     :pswitch_28
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1185
+    .line 1177
     const/4 v1, 0x2
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1186
+    .line 1178
     mul-float v1, v6, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1187
+    .line 1179
     mul-float v1, v6, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1188
+    .line 1180
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1189
+    .line 1181
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1190
+    .line 1182
     const/16 v1, 0x7d0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1191
+    .line 1183
     const-string v1, "Level 1"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1192
+    .line 1184
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto :goto_1b
 
-    .line 1195
+    .line 1187
     :pswitch_4c
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageNight:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1196
+    .line 1188
     const/4 v1, 0x2
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1197
+    .line 1189
     mul-float v1, v6, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1198
+    .line 1190
     const v1, 0x3f333333    # 0.7f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1199
+    .line 1191
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1200
+    .line 1192
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1201
+    .line 1193
     const/16 v1, 0x5dc
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1202
+    .line 1194
     const-string v1, "Level 2"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1203
+    .line 1195
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto :goto_1b
 
-    .line 1206
+    .line 1198
     :pswitch_72
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1207
+    .line 1199
     const/4 v1, 0x3
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1208
+    .line 1200
     const v1, 0x3f333333    # 0.7f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1209
+    .line 1201
     mul-float v1, v7, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1210
+    .line 1202
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1211
+    .line 1203
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1212
+    .line 1204
     const/16 v1, 0x5dc
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1213
+    .line 1205
     const-string v1, "Level 3"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1214
+    .line 1206
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto :goto_1b
 
-    .line 1217
+    .line 1209
     :pswitch_98
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageNight:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1218
+    .line 1210
     const/4 v1, 0x3
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1219
+    .line 1211
     mul-float v1, v7, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1220
+    .line 1212
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1221
+    .line 1213
     mul-float v1, v5, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1222
+    .line 1214
     mul-float v1, v5, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1223
+    .line 1215
     const/16 v1, 0x5dc
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1224
+    .line 1216
     const-string v1, "Level 4"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1225
+    .line 1217
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto/16 :goto_1b
 
-    .line 1228
+    .line 1220
     :pswitch_bd
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1229
+    .line 1221
     const/4 v1, 0x4
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1230
+    .line 1222
     mul-float v1, v7, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1231
+    .line 1223
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1232
+    .line 1224
     mul-float v1, v5, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1233
+    .line 1225
     mul-float v1, v5, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1234
+    .line 1226
     const/16 v1, 0x514
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1235
+    .line 1227
     const-string v1, "Level 5"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1236
+    .line 1228
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto/16 :goto_1b
 
-    .line 1239
+    .line 1231
     :pswitch_e2
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageNight:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1240
+    .line 1232
     const/4 v1, 0x4
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1241
+    .line 1233
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1242
+    .line 1234
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1243
+    .line 1235
     const v1, 0x3fb33333    # 1.4f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1244
+    .line 1236
     const v1, 0x3fb33333    # 1.4f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1245
+    .line 1237
     const/16 v1, 0x4b0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1246
+    .line 1238
     const-string v1, "Level 6"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1247
+    .line 1239
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto/16 :goto_1b
 
-    .line 1250
+    .line 1242
     :pswitch_10b
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1251
+    .line 1243
     const/4 v1, 0x5
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1252
+    .line 1244
     mul-float v1, v3, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1253
+    .line 1245
     mul-float v1, v5, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1254
+    .line 1246
     const v1, 0x3fcccccd    # 1.6f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1255
+    .line 1247
     const v1, 0x3fe66666    # 1.8f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1256
+    .line 1248
     const/16 v1, 0x3e8
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1257
+    .line 1249
     const-string v1, "Level 7"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1258
+    .line 1250
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto/16 :goto_1b
 
-    .line 1261
+    .line 1253
     :pswitch_134
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageNight:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1262
+    .line 1254
     const/4 v1, 0x5
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1263
+    .line 1255
     mul-float v1, v5, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1264
+    .line 1256
     const v1, 0x3fb33333    # 1.4f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1265
+    .line 1257
     const v1, 0x3fe66666    # 1.8f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1266
+    .line 1258
     const v1, 0x3fe66666    # 1.8f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1267
+    .line 1259
     const/16 v1, 0x320
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1268
+    .line 1260
     const-string v1, "Level 8"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1269
+    .line 1261
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto/16 :goto_1b
 
-    .line 1272
+    .line 1264
     :pswitch_15f
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1273
+    .line 1265
     const/4 v1, 0x6
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1274
+    .line 1266
     const/high16 v1, 0x3fc00000    # 1.5f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1275
+    .line 1267
     const/high16 v1, 0x3fc00000    # 1.5f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1276
+    .line 1268
     mul-float v1, v4, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1277
+    .line 1269
     mul-float v1, v4, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1278
+    .line 1270
     const/16 v1, 0x320
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1279
+    .line 1271
     const-string v1, "Level 9"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1280
+    .line 1272
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto/16 :goto_1b
 
-    .line 1283
+    .line 1275
     :pswitch_186
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1284
+    .line 1276
     const/4 v1, 0x6
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1285
+    .line 1277
     const/high16 v1, 0x3fc00000    # 1.5f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1286
+    .line 1278
     const v1, 0x3fd9999a    # 1.7f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1287
+    .line 1279
     mul-float v1, v4, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1288
+    .line 1280
     mul-float v1, v4, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1289
+    .line 1281
     const/16 v1, 0x320
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1290
+    .line 1282
     const-string v1, "Level 10"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1291
+    .line 1283
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto/16 :goto_1b
 
-    .line 1294
+    .line 1286
     :pswitch_1ae
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1295
+    .line 1287
     const/4 v1, 0x7
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1296
+    .line 1288
     const v1, 0x3fd9999a    # 1.7f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1297
+    .line 1289
     mul-float v1, v4, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1298
+    .line 1290
     mul-float v1, v4, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1299
+    .line 1291
     mul-float v1, v4, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1300
+    .line 1292
     const/16 v1, 0x1f4
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1301
+    .line 1293
     const-string v1, "Level 11"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1302
+    .line 1294
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto/16 :goto_1b
 
-    .line 1305
+    .line 1297
     :pswitch_1d5
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1306
+    .line 1298
     const/16 v1, 0x8
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->totRabbits:I
 
-    .line 1307
+    .line 1299
     mul-float v1, v4, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitSpeed:F
 
-    .line 1308
+    .line 1300
     const/high16 v1, 0x40400000    # 3.0f
 
     mul-float/2addr v1, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
-    .line 1309
+    .line 1301
     mul-float v1, v4, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdXSpeed:F
 
-    .line 1310
+    .line 1302
     mul-float v1, v4, v0
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdYSpeed:F
 
-    .line 1311
+    .line 1303
     const/16 v1, 0x1f4
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdChances:I
 
-    .line 1312
+    .line 1304
     const-string v1, "Level 12"
 
     invoke-direct {p0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->DisplayMessage(Ljava/lang/String;)V
 
-    .line 1313
+    .line 1305
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ResetForNextLevel()V
 
     goto/16 :goto_1b
 
-    .line 1181
+    .line 1173
     :pswitch_data_1fc
     .packed-switch 0x1
         :pswitch_28
@@ -1167,7 +1159,7 @@
     .param p3, "padding"    # I
 
     .prologue
-    .line 1126
+    .line 1118
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v8
@@ -1176,7 +1168,7 @@
 
     move-result v4
 
-    .line 1127
+    .line 1119
     .local v4, "x1":F
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -1186,7 +1178,7 @@
 
     move-result v6
 
-    .line 1128
+    .line 1120
     .local v6, "y1":F
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -1198,7 +1190,7 @@
 
     int-to-float v2, v8
 
-    .line 1129
+    .line 1121
     .local v2, "w1":F
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -1210,7 +1202,7 @@
 
     int-to-float v0, v8
 
-    .line 1131
+    .line 1123
     .local v0, "h1":F
     invoke-virtual {p2}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -1220,7 +1212,7 @@
 
     move-result v5
 
-    .line 1132
+    .line 1124
     .local v5, "x2":F
     invoke-virtual {p2}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -1230,7 +1222,7 @@
 
     move-result v7
 
-    .line 1133
+    .line 1125
     .local v7, "y2":F
     invoke-virtual {p2}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -1242,7 +1234,7 @@
 
     int-to-float v3, v8
 
-    .line 1134
+    .line 1126
     .local v3, "w2":F
     invoke-virtual {p2}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -1254,7 +1246,7 @@
 
     int-to-float v1, v8
 
-    .line 1136
+    .line 1128
     .local v1, "h2":F
     add-float v8, v4, v2
 
@@ -1280,7 +1272,7 @@
 
     if-gez v8, :cond_6e
 
-    .line 1137
+    .line 1129
     add-float v8, v6, v0
 
     add-float v9, v7, v1
@@ -1305,10 +1297,10 @@
 
     if-gez v8, :cond_6e
 
-    .line 1138
+    .line 1130
     const/4 v8, 0x1
 
-    .line 1141
+    .line 1133
     :goto_6d
     return v8
 
@@ -1323,7 +1315,7 @@
     .param p1, "coord"    # Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     .prologue
-    .line 720
+    .line 712
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
     move-result v9
@@ -1336,7 +1328,7 @@
 
     sub-float v7, v9, v10
 
-    .line 721
+    .line 713
     .local v7, "startX":F
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getY()F
 
@@ -1350,7 +1342,7 @@
 
     sub-float v8, v9, v10
 
-    .line 723
+    .line 715
     .local v8, "startY":F
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -1358,7 +1350,7 @@
 
     invoke-direct {v0, v9}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 724
+    .line 716
     .local v0, "exp0":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -1366,26 +1358,26 @@
 
     invoke-virtual {v9, v7}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 725
+    .line 717
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v9
 
     invoke-virtual {v9, v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 726
+    .line 718
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 728
+    .line 720
     new-instance v1, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmDeadr2:Landroid/graphics/Bitmap;
 
     invoke-direct {v1, v9}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 729
+    .line 721
     .local v1, "exp1":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v1}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -1393,26 +1385,26 @@
 
     invoke-virtual {v9, v7}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 730
+    .line 722
     invoke-virtual {v1}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v9
 
     invoke-virtual {v9, v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 731
+    .line 723
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 733
+    .line 725
     new-instance v2, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmDeadr3:Landroid/graphics/Bitmap;
 
     invoke-direct {v2, v9}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 734
+    .line 726
     .local v2, "exp2":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -1420,26 +1412,26 @@
 
     invoke-virtual {v9, v7}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 735
+    .line 727
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v9
 
     invoke-virtual {v9, v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 736
+    .line 728
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 738
+    .line 730
     new-instance v3, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmDeadr4:Landroid/graphics/Bitmap;
 
     invoke-direct {v3, v9}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 739
+    .line 731
     .local v3, "exp3":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v3}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -1447,26 +1439,26 @@
 
     invoke-virtual {v9, v7}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 740
+    .line 732
     invoke-virtual {v3}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v9
 
     invoke-virtual {v9, v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 741
+    .line 733
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 743
+    .line 735
     new-instance v4, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmDeadr3:Landroid/graphics/Bitmap;
 
     invoke-direct {v4, v9}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 744
+    .line 736
     .local v4, "exp4":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v4}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -1474,26 +1466,26 @@
 
     invoke-virtual {v9, v7}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 745
+    .line 737
     invoke-virtual {v4}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v9
 
     invoke-virtual {v9, v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 746
+    .line 738
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 748
+    .line 740
     new-instance v5, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmDeadr2:Landroid/graphics/Bitmap;
 
     invoke-direct {v5, v9}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 749
+    .line 741
     .local v5, "exp5":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v5}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -1501,26 +1493,26 @@
 
     invoke-virtual {v9, v7}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 750
+    .line 742
     invoke-virtual {v5}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v9
 
     invoke-virtual {v9, v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 751
+    .line 743
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 753
+    .line 745
     new-instance v6, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmDeadr1:Landroid/graphics/Bitmap;
 
     invoke-direct {v6, v9}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 754
+    .line 746
     .local v6, "exp6":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v6}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -1528,19 +1520,19 @@
 
     invoke-virtual {v9, v7}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 755
+    .line 747
     invoke-virtual {v6}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v9
 
     invoke-virtual {v9, v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 756
+    .line 748
     iget-object v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 757
+    .line 749
     return-void
 .end method
 
@@ -1549,19 +1541,19 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 1147
+    .line 1139
     iput-object p1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->message:Ljava/lang/String;
 
-    .line 1149
+    .line 1141
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 1150
+    .line 1142
     .local v1, "context":Landroid/content/Context;
     move-object v2, p0
 
-    .line 1153
+    .line 1145
     .local v2, "panel":Lcom/vandaveer/bunnyblaster/BBPanel;
     move-object v0, v1
 
@@ -1575,7 +1567,7 @@
 
     invoke-virtual {v3, v4}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 1159
+    .line 1151
     return-void
 .end method
 
@@ -1583,22 +1575,22 @@
     .registers 2
 
     .prologue
-    .line 1081
+    .line 1073
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
     if-eqz v0, :cond_c
 
-    .line 1083
+    .line 1075
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
     invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
 
-    .line 1084
+    .line 1076
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
-    .line 1087
+    .line 1079
     :cond_c
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
 
@@ -1609,7 +1601,7 @@
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 1088
+    .line 1080
     return-void
 .end method
 
@@ -1619,39 +1611,39 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1092
+    .line 1084
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1093
+    .line 1085
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->lastTimeMissileFired:J
 
-    .line 1094
+    .line 1086
     iput-boolean v3, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->missileFired:Z
 
-    .line 1096
+    .line 1088
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdsSnd:I
 
     invoke-direct {p0, v0}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 1098
+    .line 1090
     iput-boolean v3, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdLFlying:Z
 
-    .line 1099
+    .line 1091
     iput-boolean v3, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdRFlying:Z
 
-    .line 1101
+    .line 1093
     iput-boolean v3, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gameOver:Z
 
-    .line 1102
+    .line 1094
     iput v3, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->score:I
 
-    .line 1104
+    .line 1096
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -1680,7 +1672,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 1105
+    .line 1097
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -1709,7 +1701,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 1107
+    .line 1099
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -1734,7 +1726,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 1108
+    .line 1100
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -1755,15 +1747,15 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 1110
+    .line 1102
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
     invoke-direct {p0, v0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ChangeLevel(I)V
 
-    .line 1111
+    .line 1103
     invoke-virtual {p0, v3}, Lcom/vandaveer/bunnyblaster/BBPanel;->PauseGame(Z)V
 
-    .line 1112
+    .line 1104
     return-void
 .end method
 
@@ -1772,12 +1764,12 @@
     .param p1, "snd"    # I
 
     .prologue
-    .line 1454
+    .line 1446
     iget-boolean v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->playSound:Z
 
     if-eqz v0, :cond_12
 
-    .line 1458
+    .line 1450
     :try_start_4
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
@@ -1797,18 +1789,18 @@
     :try_end_12
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_12} :catch_13
 
-    .line 1467
+    .line 1459
     :cond_12
     :goto_12
     return-void
 
-    .line 1461
+    .line 1453
     :catch_13
     move-exception v0
 
     move-object v7, v0
 
-    .line 1464
+    .line 1456
     .local v7, "e":Ljava/lang/Exception;
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->loadSounds()V
 
@@ -1824,10 +1816,10 @@
     .param p5, "yBuffer"    # I
 
     .prologue
-    .line 1022
+    .line 1014
     if-eqz p1, :cond_54
 
-    .line 1024
+    .line 1016
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v2
@@ -1836,7 +1828,7 @@
 
     move-result v1
 
-    .line 1025
+    .line 1017
     .local v1, "graphicWidth":I
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -1846,7 +1838,7 @@
 
     move-result v0
 
-    .line 1027
+    .line 1019
     .local v0, "graphicHeight":I
     int-to-float v2, p2
 
@@ -1888,7 +1880,7 @@
 
     if-gez v2, :cond_54
 
-    .line 1028
+    .line 1020
     int-to-float v2, p3
 
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -1929,10 +1921,10 @@
 
     if-gez v2, :cond_54
 
-    .line 1030
+    .line 1022
     const/4 v2, 0x1
 
-    .line 1034
+    .line 1026
     .end local v0    # "graphicHeight":I
     .end local v1    # "graphicWidth":I
     :goto_53
@@ -1950,16 +1942,16 @@
     .prologue
     const/4 v7, 0x5
 
-    .line 1434
+    .line 1426
     const/4 v0, 0x0
 
-    .line 1435
+    .line 1427
     .local v0, "bullet":Lcom/vandaveer/bunnyblaster/Graphic;
     iget-object v5, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 1437
+    .line 1429
     iget-object v5, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v5}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -1976,7 +1968,7 @@
 
     sub-float v3, v5, v6
 
-    .line 1438
+    .line 1430
     .local v3, "reloadButtonX":F
     iget-object v5, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -1994,7 +1986,7 @@
 
     sub-float v4, v5, v6
 
-    .line 1439
+    .line 1431
     .local v4, "reloadButtonY":F
     const/16 v5, 0x64
 
@@ -2002,7 +1994,7 @@
 
     move-result v2
 
-    .line 1441
+    .line 1433
     .local v2, "iSpacing":F
     const/4 v1, 0x0
 
@@ -2012,10 +2004,10 @@
 
     if-lt v1, v5, :cond_33
 
-    .line 1450
+    .line 1442
     return-void
 
-    .line 1443
+    .line 1435
     :cond_33
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -2024,7 +2016,7 @@
 
     invoke-direct {v0, v5}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 1444
+    .line 1436
     .restart local v0    # "bullet":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -2034,14 +2026,14 @@
 
     invoke-virtual {v5, v6}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 1445
+    .line 1437
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v5
 
     invoke-virtual {v5, v4}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 1447
+    .line 1439
     const/16 v5, 0xe
 
     invoke-direct {p0, v5}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleWidth(I)F
@@ -2050,12 +2042,12 @@
 
     sub-float/2addr v2, v5
 
-    .line 1448
+    .line 1440
     iget-object v5, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1441
+    .line 1433
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2e
@@ -2067,39 +2059,39 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1164
+    .line 1156
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shells:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1165
+    .line 1157
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1166
+    .line 1158
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1167
+    .line 1159
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->droppedCarrots:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1168
+    .line 1160
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->firingGunIndex:I
 
-    .line 1169
+    .line 1161
     iput-boolean v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdLFlying:Z
 
-    .line 1170
+    .line 1162
     iput-boolean v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdRFlying:Z
 
-    .line 1172
+    .line 1164
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->Reload()V
 
-    .line 1173
+    .line 1165
     return-void
 .end method
 
@@ -2108,7 +2100,7 @@
     .param p1, "target"    # Lcom/vandaveer/bunnyblaster/Graphic;
 
     .prologue
-    .line 1413
+    .line 1405
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -2119,7 +2111,7 @@
 
     move-result v2
 
-    .line 1414
+    .line 1406
     .local v2, "gunX":F
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -2131,7 +2123,7 @@
 
     move-result v3
 
-    .line 1415
+    .line 1407
     .local v3, "gunY":F
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSiteBmp:Landroid/graphics/Bitmap;
 
@@ -2143,7 +2135,7 @@
 
     int-to-float v1, v8
 
-    .line 1416
+    .line 1408
     .local v1, "gunW":F
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSiteBmp:Landroid/graphics/Bitmap;
 
@@ -2155,7 +2147,7 @@
 
     int-to-float v0, v8
 
-    .line 1418
+    .line 1410
     .local v0, "gunH":F
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -2165,7 +2157,7 @@
 
     move-result v6
 
-    .line 1419
+    .line 1411
     .local v6, "targetX":F
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -2175,7 +2167,7 @@
 
     move-result v7
 
-    .line 1420
+    .line 1412
     .local v7, "targetY":F
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -2189,7 +2181,7 @@
 
     int-to-float v5, v8
 
-    .line 1421
+    .line 1413
     .local v5, "targetW":F
     invoke-virtual {p1}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -2203,7 +2195,7 @@
 
     int-to-float v4, v8
 
-    .line 1423
+    .line 1415
     .local v4, "targetH":F
     add-float v8, v2, v1
 
@@ -2229,7 +2221,7 @@
 
     if-gez v8, :cond_7a
 
-    .line 1424
+    .line 1416
     add-float v8, v3, v0
 
     add-float v9, v7, v4
@@ -2254,10 +2246,10 @@
 
     if-gez v8, :cond_7a
 
-    .line 1425
+    .line 1417
     const/4 v8, 0x1
 
-    .line 1427
+    .line 1419
     :goto_79
     return v8
 
@@ -2271,7 +2263,7 @@
     .registers 2
 
     .prologue
-    .line 78
+    .line 77
     iput p1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
     return-void
@@ -2281,7 +2273,7 @@
     .registers 1
 
     .prologue
-    .line 199
+    .line 191
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->loadSounds()V
 
     return-void
@@ -2291,7 +2283,7 @@
     .registers 1
 
     .prologue
-    .line 1090
+    .line 1082
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->NewGame()V
 
     return-void
@@ -2301,7 +2293,7 @@
     .registers 1
 
     .prologue
-    .line 1596
+    .line 1584
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->upSell()V
 
     return-void
@@ -2311,7 +2303,7 @@
     .registers 1
 
     .prologue
-    .line 1079
+    .line 1071
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->EndGame()V
 
     return-void
@@ -2325,10 +2317,10 @@
     .prologue
     const/16 v3, 0x14
 
-    .line 695
+    .line 687
     const/4 v0, 0x0
 
-    .line 698
+    .line 690
     .local v0, "graphic":Lcom/vandaveer/bunnyblaster/Graphic;
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -2337,7 +2329,7 @@
 
     invoke-direct {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 699
+    .line 691
     .restart local v0    # "graphic":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -2351,14 +2343,14 @@
 
     invoke-virtual {v1, v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 700
+    .line 692
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v1
 
     invoke-virtual {v1, p2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 702
+    .line 694
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getSpeed()Lcom/vandaveer/bunnyblaster/Graphic$Speed;
 
     move-result-object v1
@@ -2367,12 +2359,12 @@
 
     invoke-virtual {v1, v2}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setY(F)V
 
-    .line 703
+    .line 695
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->droppedCarrots:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 705
+    .line 697
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
     .end local v0    # "graphic":Lcom/vandaveer/bunnyblaster/Graphic;
@@ -2380,7 +2372,7 @@
 
     invoke-direct {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 706
+    .line 698
     .restart local v0    # "graphic":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -2394,14 +2386,14 @@
 
     invoke-virtual {v1, v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 707
+    .line 699
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v1
 
     invoke-virtual {v1, p2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 709
+    .line 701
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getSpeed()Lcom/vandaveer/bunnyblaster/Graphic$Speed;
 
     move-result-object v1
@@ -2410,12 +2402,12 @@
 
     invoke-virtual {v1, v2}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setY(F)V
 
-    .line 710
+    .line 702
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->droppedCarrots:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 712
+    .line 704
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v1
@@ -2430,7 +2422,7 @@
 
     iput v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdDroppedCarrotY:F
 
-    .line 714
+    .line 706
     return-void
 .end method
 
@@ -2438,14 +2430,14 @@
     .registers 5
 
     .prologue
-    .line 513
+    .line 505
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmShell:Landroid/graphics/Bitmap;
 
     invoke-direct {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 517
+    .line 509
     .local v0, "shell":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -2461,7 +2453,15 @@
 
     move-result v2
 
-    iget v3, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunWidth:I
+    iget-object v3, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
+
+    invoke-virtual {v3}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
 
     int-to-float v3, v3
 
@@ -2469,7 +2469,7 @@
 
     invoke-virtual {v1, v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 518
+    .line 510
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v1
@@ -2486,7 +2486,7 @@
 
     invoke-virtual {v1, v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 519
+    .line 511
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getSpeed()Lcom/vandaveer/bunnyblaster/Graphic$Speed;
 
     move-result-object v1
@@ -2495,7 +2495,7 @@
 
     invoke-virtual {v1, v2}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setY(F)V
 
-    .line 520
+    .line 512
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getSpeed()Lcom/vandaveer/bunnyblaster/Graphic$Speed;
 
     move-result-object v1
@@ -2504,12 +2504,12 @@
 
     invoke-virtual {v1, v2}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setX(F)V
 
-    .line 522
+    .line 514
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shells:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 524
+    .line 516
     return-void
 .end method
 
@@ -2527,7 +2527,7 @@
 
     const/high16 v3, 0x7f020000
 
-    .line 217
+    .line 209
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2544,7 +2544,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 218
+    .line 210
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2561,7 +2561,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 219
+    .line 211
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f02000d
@@ -2582,7 +2582,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 220
+    .line 212
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020017
@@ -2603,7 +2603,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 221
+    .line 213
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020018
@@ -2624,7 +2624,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 222
+    .line 214
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2641,7 +2641,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 223
+    .line 215
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f02000e
@@ -2662,7 +2662,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 225
+    .line 217
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020012
@@ -2683,7 +2683,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 226
+    .line 218
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020013
@@ -2704,7 +2704,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 228
+    .line 220
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020014
@@ -2725,7 +2725,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 229
+    .line 221
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020015
@@ -2746,7 +2746,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 231
+    .line 223
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020006
@@ -2767,7 +2767,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 232
+    .line 224
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020007
@@ -2788,7 +2788,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
+    .line 226
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020008
@@ -2809,7 +2809,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
+    .line 227
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020009
@@ -2830,7 +2830,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
+    .line 228
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f02000a
@@ -2851,7 +2851,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
+    .line 229
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f02000b
@@ -2872,7 +2872,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 239
+    .line 231
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020016
@@ -2893,7 +2893,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 241
+    .line 233
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2910,7 +2910,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
+    .line 234
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2927,7 +2927,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 245
+    .line 237
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f02000c
@@ -2948,7 +2948,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 248
+    .line 240
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020010
@@ -2969,7 +2969,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 249
+    .line 241
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020019
@@ -2990,7 +2990,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 250
+    .line 242
     return-void
 .end method
 
@@ -2999,7 +2999,7 @@
     .param p1, "factor"    # I
 
     .prologue
-    .line 1401
+    .line 1393
     int-to-float v0, p1
 
     sget v1, Lcom/vandaveer/bunnyblaster/BBPanel;->SCALE_HEIGHT:F
@@ -3020,7 +3020,7 @@
     .param p1, "factor"    # I
 
     .prologue
-    .line 1407
+    .line 1399
     int-to-float v0, p1
 
     sget v1, Lcom/vandaveer/bunnyblaster/BBPanel;->SCALE_WIDTH:F
@@ -3042,22 +3042,22 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 201
+    .line 193
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
     if-eqz v0, :cond_d
 
-    .line 203
+    .line 195
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
     invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
 
-    .line 204
+    .line 196
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
-    .line 207
+    .line 199
     :cond_d
     new-instance v0, Landroid/media/SoundPool;
 
@@ -3071,7 +3071,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
-    .line 208
+    .line 200
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
@@ -3086,7 +3086,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gundSnd:I
 
-    .line 209
+    .line 201
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
@@ -3101,7 +3101,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadSnd:I
 
-    .line 210
+    .line 202
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
@@ -3116,7 +3116,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdsSnd:I
 
-    .line 211
+    .line 203
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
@@ -3131,7 +3131,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->deadBirdSnd:I
 
-    .line 212
+    .line 204
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
@@ -3146,7 +3146,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bloodSnd:I
 
-    .line 213
+    .line 205
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_soundPool:Landroid/media/SoundPool;
 
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
@@ -3161,7 +3161,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shellEjectSnd:I
 
-    .line 214
+    .line 206
     return-void
 .end method
 
@@ -3169,17 +3169,17 @@
     .registers 5
 
     .prologue
-    .line 1560
+    .line 1548
     const/4 v2, 0x1
 
     invoke-virtual {p0, v2}, Lcom/vandaveer/bunnyblaster/BBPanel;->PauseGame(Z)V
 
-    .line 1562
+    .line 1550
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 1565
+    .line 1553
     .local v1, "context":Landroid/content/Context;
     move-object v0, v1
 
@@ -3193,7 +3193,7 @@
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 1594
+    .line 1582
     return-void
 .end method
 
@@ -3211,21 +3211,21 @@
 
     const/4 v4, 0x1
 
-    .line 1471
+    .line 1463
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenWidth:I
 
-    .line 1472
+    .line 1464
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenHeight:I
 
-    .line 1475
+    .line 1467
     const/16 v0, 0xc8
 
     invoke-direct {p0, v0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleHeight(I)F
@@ -3234,7 +3234,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitY:F
 
-    .line 1476
+    .line 1468
     const/16 v0, 0x5f
 
     invoke-direct {p0, v0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleHeight(I)F
@@ -3243,14 +3243,14 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitY:F
 
-    .line 1477
+    .line 1469
     invoke-direct {p0, v6}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleWidth(I)F
 
     move-result v0
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->offScreenX:F
 
-    .line 1479
+    .line 1471
     const/16 v0, 0x6e
 
     invoke-direct {p0, v0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleWidth(I)F
@@ -3261,7 +3261,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSitePadding:I
 
-    .line 1480
+    .line 1472
     invoke-direct {p0, v3}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleWidth(I)F
 
     move-result v0
@@ -3270,7 +3270,7 @@
 
     sput v0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitEatCarrotsPadding:I
 
-    .line 1482
+    .line 1474
     const/4 v0, 0x5
 
     invoke-direct {p0, v0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleWidth(I)F
@@ -3279,7 +3279,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->targetLockXPadding:F
 
-    .line 1483
+    .line 1475
     const/4 v0, 0x5
 
     invoke-direct {p0, v0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleHeight(I)F
@@ -3288,7 +3288,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->targetLockYPadding:F
 
-    .line 1485
+    .line 1477
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const/high16 v1, 0x7f020000
@@ -3313,7 +3313,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
-    .line 1486
+    .line 1478
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020001
@@ -3338,12 +3338,12 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageNight:Landroid/graphics/Bitmap;
 
-    .line 1488
+    .line 1480
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImageDay:Landroid/graphics/Bitmap;
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
 
-    .line 1491
+    .line 1483
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bgImage:Landroid/graphics/Bitmap;
@@ -3352,7 +3352,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->background:Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 1493
+    .line 1485
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020014
@@ -3389,7 +3389,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBmp:Landroid/graphics/Bitmap;
 
-    .line 1494
+    .line 1486
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020015
@@ -3426,7 +3426,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmReloadYellow:Landroid/graphics/Bitmap;
 
-    .line 1495
+    .line 1487
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBmp:Landroid/graphics/Bitmap;
@@ -3435,7 +3435,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 1497
+    .line 1489
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f02000d
@@ -3472,7 +3472,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmGun:Landroid/graphics/Bitmap;
 
-    .line 1498
+    .line 1490
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020005
@@ -3509,7 +3509,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmBullet:Landroid/graphics/Bitmap;
 
-    .line 1500
+    .line 1492
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020012
@@ -3546,7 +3546,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmRabbitL:Landroid/graphics/Bitmap;
 
-    .line 1501
+    .line 1493
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020013
@@ -3583,7 +3583,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmRabbitR:Landroid/graphics/Bitmap;
 
-    .line 1503
+    .line 1495
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020006
@@ -3616,7 +3616,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmCarrotL:Landroid/graphics/Bitmap;
 
-    .line 1504
+    .line 1496
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020007
@@ -3649,7 +3649,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmCarrotR:Landroid/graphics/Bitmap;
 
-    .line 1506
+    .line 1498
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020002
@@ -3684,7 +3684,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmBirdL:Landroid/graphics/Bitmap;
 
-    .line 1507
+    .line 1499
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020003
@@ -3719,7 +3719,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmBirdR:Landroid/graphics/Bitmap;
 
-    .line 1508
+    .line 1500
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmBirdL:Landroid/graphics/Bitmap;
@@ -3728,7 +3728,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 1509
+    .line 1501
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmBirdR:Landroid/graphics/Bitmap;
@@ -3737,25 +3737,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 1510
-    iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmBirdL:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdWidth:I
-
-    .line 1511
-    iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmBirdL:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdHeight:I
-
-    .line 1513
+    .line 1503
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020008
@@ -3792,7 +3774,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmDeadr1:Landroid/graphics/Bitmap;
 
-    .line 1514
+    .line 1504
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020009
@@ -3829,7 +3811,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmDeadr2:Landroid/graphics/Bitmap;
 
-    .line 1515
+    .line 1505
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f02000a
@@ -3866,7 +3848,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmDeadr3:Landroid/graphics/Bitmap;
 
-    .line 1516
+    .line 1506
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f02000b
@@ -3903,7 +3885,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmDeadr4:Landroid/graphics/Bitmap;
 
-    .line 1518
+    .line 1508
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020016
@@ -3940,16 +3922,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmShell:Landroid/graphics/Bitmap;
 
-    .line 1519
-    iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmShell:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shellHeight:I
-
-    .line 1521
+    .line 1510
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020017
@@ -3986,7 +3959,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSiteBmp:Landroid/graphics/Bitmap;
 
-    .line 1522
+    .line 1511
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020018
@@ -4023,7 +3996,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSiteLockBmp:Landroid/graphics/Bitmap;
 
-    .line 1523
+    .line 1512
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmGun:Landroid/graphics/Bitmap;
@@ -4032,16 +4005,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 1524
-    iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSiteBmp:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunWidth:I
-
-    .line 1526
+    .line 1514
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenWidth:I
 
     int-to-float v0, v0
@@ -4056,7 +4020,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadX:F
 
-    .line 1527
+    .line 1515
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenHeight:I
 
     int-to-float v0, v0
@@ -4071,7 +4035,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadY:F
 
-    .line 1528
+    .line 1516
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -4082,7 +4046,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 1529
+    .line 1517
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -4093,7 +4057,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 1531
+    .line 1519
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSiteBmp:Landroid/graphics/Bitmap;
@@ -4102,7 +4066,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 1532
+    .line 1520
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
@@ -4117,7 +4081,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSiteWidthDividedByTwo:I
 
-    .line 1533
+    .line 1521
     new-instance v1, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
@@ -4158,7 +4122,7 @@
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunFire:Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 1536
+    .line 1524
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f02000c
@@ -4191,7 +4155,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmExit:Landroid/graphics/Bitmap;
 
-    .line 1537
+    .line 1525
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmExit:Landroid/graphics/Bitmap;
@@ -4200,7 +4164,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgExit:Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 1538
+    .line 1526
     const/16 v0, 0x6e
 
     invoke-direct {p0, v0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleWidth(I)F
@@ -4209,7 +4173,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->exitX:F
 
-    .line 1539
+    .line 1527
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenHeight:I
 
     int-to-float v0, v0
@@ -4224,7 +4188,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->exitY:F
 
-    .line 1540
+    .line 1528
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgExit:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -4235,7 +4199,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 1541
+    .line 1529
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgExit:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -4246,7 +4210,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 1543
+    .line 1531
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020010
@@ -4279,7 +4243,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmMute:Landroid/graphics/Bitmap;
 
-    .line 1544
+    .line 1532
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
 
     const v1, 0x7f020019
@@ -4312,7 +4276,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmUnMute:Landroid/graphics/Bitmap;
 
-    .line 1545
+    .line 1533
     new-instance v0, Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmMute:Landroid/graphics/Bitmap;
@@ -4321,7 +4285,7 @@
 
     iput-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgMute:Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 1546
+    .line 1534
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->exitX:F
 
     const/16 v1, 0x28
@@ -4334,12 +4298,12 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->muteX:F
 
-    .line 1547
+    .line 1535
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->exitY:F
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->muteY:F
 
-    .line 1548
+    .line 1536
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgMute:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -4350,7 +4314,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 1549
+    .line 1537
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgMute:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -4361,14 +4325,14 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 1551
+    .line 1539
     invoke-direct {p0, v6}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleWidth(I)F
 
     move-result v0
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->scoreX:F
 
-    .line 1552
+    .line 1540
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenHeight:I
 
     int-to-float v0, v0
@@ -4383,7 +4347,7 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->scoreY:F
 
-    .line 1553
+    .line 1541
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenHeight:I
 
     int-to-float v0, v0
@@ -4396,14 +4360,14 @@
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->highScoreY:F
 
-    .line 1555
+    .line 1543
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->getScaleHeight(I)F
 
     move-result v0
 
     iput v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->scoreTextHeight:F
 
-    .line 1556
+    .line 1544
     return-void
 .end method
 
@@ -4411,12 +4375,12 @@
     .registers 5
 
     .prologue
-    .line 1598
+    .line 1586
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 1601
+    .line 1589
     .local v1, "context":Landroid/content/Context;
     move-object v0, v1
 
@@ -4430,7 +4394,7 @@
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 1631
+    .line 1619
     return-void
 .end method
 
@@ -4444,22 +4408,22 @@
 
     const/4 v8, 0x0
 
-    .line 1372
+    .line 1364
     iget-boolean v4, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->missileFired:Z
 
     if-eqz v4, :cond_8
 
     move v4, v8
 
-    .line 1396
+    .line 1388
     :goto_7
     return v4
 
-    .line 1374
+    .line 1366
     :cond_8
     const-wide/16 v2, 0x1b58
 
-    .line 1376
+    .line 1368
     .local v2, "waitTime":J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -4475,15 +4439,15 @@
 
     if-lez v4, :cond_2b
 
-    .line 1378
+    .line 1370
     iput-boolean v9, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->missileFired:Z
 
-    .line 1380
+    .line 1372
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 1383
+    .line 1375
     .local v1, "context":Landroid/content/Context;
     move-object v0, v1
 
@@ -4499,14 +4463,14 @@
 
     move v4, v9
 
-    .line 1393
+    .line 1385
     goto :goto_7
 
     .end local v1    # "context":Landroid/content/Context;
     :cond_2b
     move v4, v8
 
-    .line 1396
+    .line 1388
     goto :goto_7
 .end method
 
@@ -4522,25 +4486,25 @@
 
     const/4 v10, 0x1
 
-    .line 532
+    .line 524
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
 
     if-nez v7, :cond_c
 
-    .line 691
+    .line 683
     .end local p0    # "this":Lcom/vandaveer/bunnyblaster/BBPanel;
     :cond_b
     :goto_b
     return-void
 
-    .line 535
+    .line 527
     .restart local p0    # "this":Lcom/vandaveer/bunnyblaster/BBPanel;
     :cond_c
     iget-boolean v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gameOver:Z
 
     if-eqz v7, :cond_3b
 
-    .line 538
+    .line 530
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
@@ -4549,10 +4513,10 @@
 
     if-gtz v7, :cond_b
 
-    .line 540
+    .line 532
     invoke-virtual {p0, v10}, Lcom/vandaveer/bunnyblaster/BBPanel;->PauseGame(Z)V
 
-    .line 543
+    .line 535
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->score:I
 
     iget v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->lowestHighScore:I
@@ -4563,16 +4527,16 @@
 
     if-eqz v7, :cond_37
 
-    .line 545
+    .line 537
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    .line 546
+    .line 538
     .local v2, "context":Landroid/content/Context;
     move-object v5, p0
 
-    .line 549
+    .line 541
     .local v5, "panel":Lcom/vandaveer/bunnyblaster/BBPanel;
     move-object v0, v2
 
@@ -4588,7 +4552,7 @@
 
     goto :goto_b
 
-    .line 559
+    .line 551
     .end local v2    # "context":Landroid/content/Context;
     .end local v5    # "panel":Lcom/vandaveer/bunnyblaster/BBPanel;
     :cond_37
@@ -4596,7 +4560,7 @@
 
     goto :goto_b
 
-    .line 567
+    .line 559
     :cond_3b
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -4604,19 +4568,19 @@
 
     invoke-virtual {v7, v8}, Lcom/vandaveer/bunnyblaster/Graphic;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 569
+    .line 561
     iget-boolean v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->movingGun:Z
 
     if-eqz v7, :cond_1b3
 
-    .line 571
+    .line 563
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v6
 
-    .line 572
+    .line 564
     .local v6, "rabbitSize":I
     const/4 v3, 0x0
 
@@ -4624,7 +4588,7 @@
     :goto_4d
     if-lt v3, v6, :cond_af
 
-    .line 603
+    .line 595
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->TargetLock(Lcom/vandaveer/bunnyblaster/Graphic;)Z
@@ -4637,14 +4601,14 @@
 
     if-eqz v7, :cond_13b
 
-    .line 605
+    .line 597
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSiteLockBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v7, v8}, Lcom/vandaveer/bunnyblaster/Graphic;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 607
+    .line 599
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
@@ -4653,18 +4617,18 @@
 
     if-lez v7, :cond_123
 
-    .line 609
+    .line 601
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gundSnd:I
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 610
+    .line 602
     iput v10, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->firingGunIndex:I
 
-    .line 612
+    .line 604
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ejectShell()V
 
-    .line 613
+    .line 605
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
 
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
@@ -4683,7 +4647,7 @@
 
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 616
+    .line 608
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v7}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -4706,7 +4670,7 @@
 
     invoke-direct {p0, v7, v8}, Lcom/vandaveer/bunnyblaster/BBPanel;->dropCarrots(FF)V
 
-    .line 617
+    .line 609
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v7}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -4715,17 +4679,17 @@
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->CreateRabbitExplosion(Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;)V
 
-    .line 618
+    .line 610
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->deadBirdSnd:I
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 621
+    .line 613
     iput-boolean v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdLFlying:Z
 
     goto/16 :goto_b
 
-    .line 574
+    .line 566
     :cond_af
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
 
@@ -4741,14 +4705,14 @@
 
     if-eqz v7, :cond_11f
 
-    .line 576
+    .line 568
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSiteLockBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v7, v8}, Lcom/vandaveer/bunnyblaster/Graphic;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 578
+    .line 570
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
@@ -4757,15 +4721,15 @@
 
     if-lez v7, :cond_111
 
-    .line 580
+    .line 572
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gundSnd:I
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 581
+    .line 573
     iput v10, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->firingGunIndex:I
 
-    .line 582
+    .line 574
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4780,25 +4744,25 @@
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->CreateRabbitExplosion(Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;)V
 
-    .line 583
+    .line 575
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->deadBirdSnd:I
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 584
+    .line 576
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ejectShell()V
 
-    .line 585
+    .line 577
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bloodSnd:I
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 586
+    .line 578
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 587
+    .line 579
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
 
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
@@ -4817,25 +4781,25 @@
 
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 589
+    .line 581
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->score:I
 
     add-int/lit8 v7, v7, 0x1
 
     iput v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->score:I
 
-    .line 590
+    .line 582
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->CheckLevel()V
 
     goto/16 :goto_b
 
-    .line 595
+    .line 587
     :cond_111
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadSnd:I
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 596
+    .line 588
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmReloadYellow:Landroid/graphics/Bitmap;
@@ -4844,19 +4808,19 @@
 
     goto/16 :goto_b
 
-    .line 572
+    .line 564
     :cond_11f
     add-int/lit8 v3, v3, 0x1
 
     goto/16 :goto_4d
 
-    .line 626
+    .line 618
     :cond_123
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadSnd:I
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 627
+    .line 619
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
@@ -4876,7 +4840,7 @@
 
     goto/16 :goto_b
 
-    .line 633
+    .line 625
     .restart local p0    # "this":Lcom/vandaveer/bunnyblaster/BBPanel;
     :cond_13b
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -4891,14 +4855,14 @@
 
     if-eqz v7, :cond_1b3
 
-    .line 635
+    .line 627
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSiteLockBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v7, v8}, Lcom/vandaveer/bunnyblaster/Graphic;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 637
+    .line 629
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
@@ -4907,18 +4871,18 @@
 
     if-lez v7, :cond_19b
 
-    .line 639
+    .line 631
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gundSnd:I
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 640
+    .line 632
     iput v10, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->firingGunIndex:I
 
-    .line 642
+    .line 634
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ejectShell()V
 
-    .line 643
+    .line 635
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
 
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->staticBullets:Ljava/util/ArrayList;
@@ -4937,7 +4901,7 @@
 
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 646
+    .line 638
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v7}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -4960,7 +4924,7 @@
 
     invoke-direct {p0, v7, v8}, Lcom/vandaveer/bunnyblaster/BBPanel;->dropCarrots(FF)V
 
-    .line 647
+    .line 639
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v7}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -4969,23 +4933,23 @@
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->CreateRabbitExplosion(Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;)V
 
-    .line 649
+    .line 641
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->deadBirdSnd:I
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 650
+    .line 642
     iput-boolean v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdRFlying:Z
 
     goto/16 :goto_b
 
-    .line 655
+    .line 647
     :cond_19b
     iget v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadSnd:I
 
     invoke-direct {p0, v7}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 656
+    .line 648
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v8, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_bitmapCache:Ljava/util/Map;
@@ -5005,7 +4969,7 @@
 
     goto/16 :goto_b
 
-    .line 664
+    .line 656
     .end local v3    # "i":I
     .end local v6    # "rabbitSize":I
     .restart local p0    # "this":Lcom/vandaveer/bunnyblaster/BBPanel;
@@ -5016,7 +4980,7 @@
 
     move-result v6
 
-    .line 665
+    .line 657
     .restart local v6    # "rabbitSize":I
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->carrots:Ljava/util/ArrayList;
 
@@ -5024,7 +4988,7 @@
 
     move-result v1
 
-    .line 667
+    .line 659
     .local v1, "carrotSize":I
     const/4 v3, 0x0
 
@@ -5032,19 +4996,19 @@
     :goto_1c0
     if-ge v3, v1, :cond_b
 
-    .line 669
+    .line 661
     const/4 v4, 0x0
 
     .local v4, "j":I
     :goto_1c3
     if-lt v4, v6, :cond_1c8
 
-    .line 667
+    .line 659
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1c0
 
-    .line 671
+    .line 663
     :cond_1c8
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
 
@@ -5070,12 +5034,12 @@
 
     if-eqz v7, :cond_20b
 
-    .line 674
+    .line 666
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->carrots:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 677
+    .line 669
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->carrots:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
@@ -5092,7 +5056,7 @@
 
     if-nez v7, :cond_b
 
-    .line 679
+    .line 671
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v7}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5101,7 +5065,7 @@
 
     invoke-virtual {v7, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 680
+    .line 672
     iget-object v7, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v7}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5110,12 +5074,12 @@
 
     invoke-virtual {v7, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 684
+    .line 676
     iput-boolean v10, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gameOver:Z
 
     goto/16 :goto_b
 
-    .line 669
+    .line 661
     :cond_20b
     add-int/lit8 v4, v4, 0x1
 
@@ -5136,17 +5100,17 @@
 
     const/4 v2, 0x2
 
-    .line 1327
+    .line 1319
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->message:Ljava/lang/String;
 
     if-eqz v0, :cond_a
 
-    .line 1367
+    .line 1359
     :cond_9
     :goto_9
     return-void
 
-    .line 1330
+    .line 1322
     :cond_a
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->score:I
 
@@ -5154,7 +5118,7 @@
 
     goto :goto_9
 
-    .line 1333
+    .line 1325
     :sswitch_10
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
@@ -5166,7 +5130,7 @@
 
     goto :goto_9
 
-    .line 1336
+    .line 1328
     :sswitch_19
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
@@ -5176,7 +5140,7 @@
 
     goto :goto_9
 
-    .line 1339
+    .line 1331
     :sswitch_21
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
@@ -5186,7 +5150,7 @@
 
     goto :goto_9
 
-    .line 1342
+    .line 1334
     :sswitch_29
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
@@ -5196,7 +5160,7 @@
 
     goto :goto_9
 
-    .line 1345
+    .line 1337
     :sswitch_31
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
@@ -5206,7 +5170,7 @@
 
     goto :goto_9
 
-    .line 1348
+    .line 1340
     :sswitch_39
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
@@ -5218,7 +5182,7 @@
 
     goto :goto_9
 
-    .line 1351
+    .line 1343
     :sswitch_42
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
@@ -5230,7 +5194,7 @@
 
     invoke-direct {p0, v0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ChangeLevel(I)V
 
-    .line 1353
+    .line 1345
     :cond_4c
     :sswitch_4c
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
@@ -5245,7 +5209,7 @@
 
     goto :goto_9
 
-    .line 1356
+    .line 1348
     :sswitch_58
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
@@ -5259,7 +5223,7 @@
 
     goto :goto_9
 
-    .line 1359
+    .line 1351
     :sswitch_64
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
@@ -5273,7 +5237,7 @@
 
     goto :goto_9
 
-    .line 1362
+    .line 1354
     :sswitch_70
     iget v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->level:I
 
@@ -5287,7 +5251,7 @@
 
     goto :goto_9
 
-    .line 1330
+    .line 1322
     :sswitch_data_7c
     .sparse-switch
         0xf -> :sswitch_10
@@ -5309,12 +5273,12 @@
     .param p1, "pause"    # Z
 
     .prologue
-    .line 1017
+    .line 1009
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_thread:Lcom/vandaveer/bunnyblaster/BBThread;
 
     invoke-virtual {v0, p1}, Lcom/vandaveer/bunnyblaster/BBThread;->Pause(Z)V
 
-    .line 1018
+    .line 1010
     return-void
 .end method
 
@@ -5323,12 +5287,12 @@
     .param p1, "displayGameOverMessage"    # Z
 
     .prologue
-    .line 1040
+    .line 1032
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 1043
+    .line 1035
     .local v1, "context":Landroid/content/Context;
     move-object v0, v1
 
@@ -5342,7 +5306,7 @@
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 1077
+    .line 1069
     return-void
 .end method
 
@@ -5351,26 +5315,26 @@
     .param p1, "plySnd"    # Z
 
     .prologue
-    .line 1635
+    .line 1623
     iput-boolean p1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->playSound:Z
 
-    .line 1637
+    .line 1625
     iget-boolean v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->playSound:Z
 
     if-eqz v0, :cond_e
 
-    .line 1638
+    .line 1626
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgMute:Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmMute:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1641
+    .line 1629
     :goto_d
     return-void
 
-    .line 1640
+    .line 1628
     :cond_e
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgMute:Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -5385,7 +5349,7 @@
     .registers 15
 
     .prologue
-    .line 325
+    .line 317
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
 
     if-eqz v11, :cond_8
@@ -5394,22 +5358,22 @@
 
     if-eqz v11, :cond_9
 
-    .line 509
+    .line 501
     :cond_8
     return-void
 
-    .line 330
+    .line 322
     :cond_9
     iget-boolean v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdLFlying:Z
 
-    if-nez v11, :cond_116
+    if-nez v11, :cond_11e
 
-    .line 332
+    .line 324
     new-instance v8, Ljava/util/Random;
 
     invoke-direct {v8}, Ljava/util/Random;-><init>()V
 
-    .line 333
+    .line 325
     .local v8, "random":Ljava/util/Random;
     invoke-virtual {v8}, Ljava/util/Random;->nextInt()I
 
@@ -5425,7 +5389,7 @@
 
     if-nez v11, :cond_59
 
-    .line 335
+    .line 327
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5446,7 +5410,7 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 336
+    .line 328
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5459,7 +5423,7 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 337
+    .line 329
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getSpeed()Lcom/vandaveer/bunnyblaster/Graphic$Speed;
@@ -5472,7 +5436,7 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setX(F)V
 
-    .line 338
+    .line 330
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getSpeed()Lcom/vandaveer/bunnyblaster/Graphic$Speed;
@@ -5485,25 +5449,25 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setY(F)V
 
-    .line 340
+    .line 332
     const/4 v11, 0x1
 
     iput-boolean v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdLFlying:Z
 
-    .line 358
+    .line 350
     .end local v8    # "random":Ljava/util/Random;
     :cond_59
     :goto_59
     iget-boolean v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdRFlying:Z
 
-    if-nez v11, :cond_16c
+    if-nez v11, :cond_17c
 
-    .line 360
+    .line 352
     new-instance v8, Ljava/util/Random;
 
     invoke-direct {v8}, Ljava/util/Random;-><init>()V
 
-    .line 361
+    .line 353
     .restart local v8    # "random":Ljava/util/Random;
     invoke-virtual {v8}, Ljava/util/Random;->nextInt()I
 
@@ -5517,9 +5481,9 @@
 
     move-result v11
 
-    if-nez v11, :cond_aa
+    if-nez v11, :cond_b2
 
-    .line 363
+    .line 355
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5540,7 +5504,7 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 364
+    .line 356
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5549,7 +5513,15 @@
 
     const/4 v12, 0x0
 
-    iget v13, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdWidth:I
+    iget-object v13, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
+
+    invoke-virtual {v13}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v13
 
     sub-int/2addr v12, v13
 
@@ -5557,7 +5529,7 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 365
+    .line 357
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getSpeed()Lcom/vandaveer/bunnyblaster/Graphic$Speed;
@@ -5568,7 +5540,7 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setX(F)V
 
-    .line 366
+    .line 358
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getSpeed()Lcom/vandaveer/bunnyblaster/Graphic$Speed;
@@ -5581,66 +5553,66 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setY(F)V
 
-    .line 368
+    .line 360
     const/4 v11, 0x1
 
     iput-boolean v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdRFlying:Z
 
-    .line 390
+    .line 382
     .end local v8    # "random":Ljava/util/Random;
-    :cond_aa
-    :goto_aa
+    :cond_b2
+    :goto_b2
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
 
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 392
+    .line 384
     .local v0, "arrayLen":I
     const v6, 0x3e4ccccd    # 0.2f
 
-    .line 394
+    .line 386
     .local v6, "rabbitIncrementSpeed":F
     new-instance v4, Ljava/util/Random;
 
     invoke-direct {v4}, Ljava/util/Random;-><init>()V
 
-    .line 396
+    .line 388
     .local v4, "generator":Ljava/util/Random;
     const/4 v5, 0x0
 
     .local v5, "i":I
-    :goto_b9
-    if-lt v5, v0, :cond_1c2
+    :goto_c1
+    if-lt v5, v0, :cond_1da
 
-    .line 466
+    .line 458
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shells:Ljava/util/ArrayList;
 
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 467
+    .line 459
     const/4 v5, 0x0
 
-    :goto_c2
-    if-lt v5, v0, :cond_2e5
+    :goto_ca
+    if-lt v5, v0, :cond_2fd
 
-    .line 489
+    .line 481
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->droppedCarrots:Ljava/util/ArrayList;
 
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 491
+    .line 483
     const/4 v5, 0x0
 
-    :goto_cb
+    :goto_d3
     if-ge v5, v0, :cond_8
 
-    .line 493
+    .line 485
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->droppedCarrots:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5653,7 +5625,7 @@
 
     move-result-object v2
 
-    .line 494
+    .line 486
     .local v2, "coord":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->droppedCarrots:Ljava/util/ArrayList;
 
@@ -5667,7 +5639,7 @@
 
     move-result-object v10
 
-    .line 496
+    .line 488
     .local v10, "speed":Lcom/vandaveer/bunnyblaster/Graphic$Speed;
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getY()F
 
@@ -5679,28 +5651,28 @@
 
     add-float v3, v11, v12
 
-    .line 498
+    .line 490
     .local v3, "droppedCarrotY":F
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdDroppedCarrotY:F
 
     cmpl-float v11, v3, v11
 
-    if-gtz v11, :cond_fb
+    if-gtz v11, :cond_103
 
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitY:F
 
     cmpl-float v11, v3, v11
 
-    if-lez v11, :cond_33a
+    if-lez v11, :cond_360
 
-    :cond_fb
+    :cond_103
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitY:F
 
     cmpl-float v11, v3, v11
 
-    if-lez v11, :cond_33a
+    if-lez v11, :cond_360
 
-    .line 500
+    .line 492
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->carrots:Ljava/util/ArrayList;
 
     iget-object v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->droppedCarrots:Ljava/util/ArrayList;
@@ -5713,18 +5685,18 @@
 
     invoke-virtual {v11, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 501
+    .line 493
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->droppedCarrots:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 491
-    :goto_113
+    .line 483
+    :goto_11b
     add-int/lit8 v5, v5, 0x1
 
-    goto :goto_cb
+    goto :goto_d3
 
-    .line 345
+    .line 337
     .end local v0    # "arrayLen":I
     .end local v2    # "coord":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     .end local v3    # "droppedCarrotY":F
@@ -5732,7 +5704,7 @@
     .end local v5    # "i":I
     .end local v6    # "rabbitIncrementSpeed":F
     .end local v10    # "speed":Lcom/vandaveer/bunnyblaster/Graphic$Speed;
-    :cond_116
+    :cond_11e
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5743,11 +5715,19 @@
 
     move-result v1
 
-    .line 347
+    .line 339
     .local v1, "birdlY":F
     const/4 v11, 0x0
 
-    iget v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdHeight:I
+    iget-object v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
+
+    invoke-virtual {v12}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v12
 
     sub-int/2addr v11, v12
 
@@ -5755,9 +5735,9 @@
 
     cmpl-float v11, v1, v11
 
-    if-lez v11, :cond_167
+    if-lez v11, :cond_177
 
-    .line 349
+    .line 341
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5788,7 +5768,7 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 350
+    .line 342
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5821,17 +5801,17 @@
 
     goto/16 :goto_59
 
-    .line 354
-    :cond_167
+    .line 346
+    :cond_177
     const/4 v11, 0x0
 
     iput-boolean v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdLFlying:Z
 
     goto/16 :goto_59
 
-    .line 373
+    .line 365
     .end local v1    # "birdlY":F
-    :cond_16c
+    :cond_17c
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5842,11 +5822,19 @@
 
     move-result v1
 
-    .line 375
+    .line 367
     .restart local v1    # "birdlY":F
     const/4 v11, 0x0
 
-    iget v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdHeight:I
+    iget-object v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
+
+    invoke-virtual {v12}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v12
 
     sub-int/2addr v11, v12
 
@@ -5854,9 +5842,9 @@
 
     cmpl-float v11, v1, v11
 
-    if-lez v11, :cond_1bd
+    if-lez v11, :cond_1d5
 
-    .line 377
+    .line 369
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5887,7 +5875,7 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 378
+    .line 370
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v11}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -5918,23 +5906,23 @@
 
     invoke-virtual {v11, v12}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    goto/16 :goto_aa
+    goto/16 :goto_b2
 
-    .line 382
-    :cond_1bd
+    .line 374
+    :cond_1d5
     const/4 v11, 0x0
 
     iput-boolean v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdRFlying:Z
 
-    goto/16 :goto_aa
+    goto/16 :goto_b2
 
-    .line 398
+    .line 390
     .end local v1    # "birdlY":F
     .restart local v0    # "arrayLen":I
     .restart local v4    # "generator":Ljava/util/Random;
     .restart local v5    # "i":I
     .restart local v6    # "rabbitIncrementSpeed":F
-    :cond_1c2
+    :cond_1da
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5947,7 +5935,7 @@
 
     move-result-object v2
 
-    .line 399
+    .line 391
     .restart local v2    # "coord":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
 
@@ -5961,7 +5949,7 @@
 
     move-result-object v10
 
-    .line 402
+    .line 394
     .restart local v10    # "speed":Lcom/vandaveer/bunnyblaster/Graphic$Speed;
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
@@ -5973,9 +5961,9 @@
 
     cmpg-float v11, v11, v12
 
-    if-gez v11, :cond_229
+    if-gez v11, :cond_241
 
-    .line 405
+    .line 397
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitY:F
 
     iget v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitY:F
@@ -6000,7 +5988,7 @@
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 406
+    .line 398
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->screenWidth:I
 
     int-to-float v11, v11
@@ -6011,7 +5999,7 @@
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 408
+    .line 400
     invoke-virtual {v10}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->getX()F
 
     move-result v11
@@ -6028,9 +6016,9 @@
 
     cmpg-float v11, v11, v12
 
-    if-gez v11, :cond_222
+    if-gez v11, :cond_23a
 
-    .line 409
+    .line 401
     invoke-virtual {v10}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->getX()F
 
     move-result v11
@@ -6043,24 +6031,24 @@
 
     invoke-virtual {v10, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setX(F)V
 
-    .line 396
-    :goto_21e
+    .line 388
+    :goto_236
     add-int/lit8 v5, v5, 0x1
 
-    goto/16 :goto_b9
+    goto/16 :goto_c1
 
-    .line 411
-    :cond_222
+    .line 403
+    :cond_23a
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
     neg-float v11, v11
 
     invoke-virtual {v10, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setX(F)V
 
-    goto :goto_21e
+    goto :goto_236
 
-    .line 413
-    :cond_229
+    .line 405
+    :cond_241
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
     move-result v11
@@ -6075,9 +6063,9 @@
 
     cmpl-float v11, v11, v12
 
-    if-lez v11, :cond_271
+    if-lez v11, :cond_289
 
-    .line 415
+    .line 407
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitY:F
 
     iget v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitY:F
@@ -6102,14 +6090,14 @@
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 416
+    .line 408
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->offScreenX:F
 
     neg-float v11, v11
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 418
+    .line 410
     invoke-virtual {v10}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->getX()F
 
     move-result v11
@@ -6122,9 +6110,9 @@
 
     cmpg-float v11, v11, v12
 
-    if-gez v11, :cond_26b
+    if-gez v11, :cond_283
 
-    .line 419
+    .line 411
     invoke-virtual {v10}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->getX()F
 
     move-result v11
@@ -6135,18 +6123,18 @@
 
     invoke-virtual {v10, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setX(F)V
 
-    goto :goto_21e
+    goto :goto_236
 
-    .line 421
-    :cond_26b
+    .line 413
+    :cond_283
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitSpeed:F
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    goto :goto_21e
+    goto :goto_236
 
-    .line 425
-    :cond_271
+    .line 417
+    :cond_289
     const/4 v11, 0x2
 
     invoke-virtual {v4, v11}, Ljava/util/Random;->nextInt(I)I
@@ -6159,14 +6147,14 @@
 
     iput v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitSpeedY:F
 
-    .line 427
+    .line 419
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitFrames:I
 
     const/16 v12, 0x1e
 
-    if-ge v11, v12, :cond_2b5
+    if-ge v11, v12, :cond_2cd
 
-    .line 429
+    .line 421
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitSpeedY:F
 
     const/high16 v12, 0x3f000000    # 0.5f
@@ -6175,35 +6163,35 @@
 
     iput v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitSpeedY:F
 
-    .line 440
-    :cond_288
-    :goto_288
+    .line 432
+    :cond_2a0
+    :goto_2a0
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitFrames:I
 
     add-int/lit8 v11, v11, 0x1
 
     iput v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitFrames:I
 
-    .line 442
+    .line 434
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getY()F
 
     move-result v7
 
-    .line 444
+    .line 436
     .local v7, "rabbitY":F
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitY:F
 
     cmpl-float v11, v7, v11
 
-    if-lez v11, :cond_2d3
+    if-lez v11, :cond_2eb
 
-    .line 448
+    .line 440
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitY:F
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 460
-    :goto_29d
+    .line 452
+    :goto_2b5
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getY()F
 
     move-result v11
@@ -6214,7 +6202,7 @@
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 461
+    .line 453
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
     move-result v11
@@ -6227,24 +6215,24 @@
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    goto/16 :goto_21e
+    goto/16 :goto_236
 
-    .line 431
+    .line 423
     .end local v7    # "rabbitY":F
-    :cond_2b5
+    :cond_2cd
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitFrames:I
 
     const/16 v12, 0x1e
 
-    if-le v11, v12, :cond_2c9
+    if-le v11, v12, :cond_2e1
 
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitFrames:I
 
     const/16 v12, 0x3c
 
-    if-ge v11, v12, :cond_2c9
+    if-ge v11, v12, :cond_2e1
 
-    .line 433
+    .line 425
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitSpeedY:F
 
     const/high16 v12, -0x41000000    # -0.5f
@@ -6253,52 +6241,52 @@
 
     iput v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitSpeedY:F
 
-    goto :goto_288
+    goto :goto_2a0
 
-    .line 435
-    :cond_2c9
+    .line 427
+    :cond_2e1
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitFrames:I
 
     const/16 v12, 0x3c
 
-    if-lt v11, v12, :cond_288
+    if-lt v11, v12, :cond_2a0
 
-    .line 437
+    .line 429
     const/4 v11, 0x0
 
     iput v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitFrames:I
 
-    goto :goto_288
+    goto :goto_2a0
 
-    .line 451
+    .line 443
     .restart local v7    # "rabbitY":F
-    :cond_2d3
+    :cond_2eb
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitY:F
 
     cmpg-float v11, v7, v11
 
-    if-gez v11, :cond_2df
+    if-gez v11, :cond_2f7
 
-    .line 455
+    .line 447
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->minRabbitY:F
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    goto :goto_29d
+    goto :goto_2b5
 
-    .line 458
-    :cond_2df
+    .line 450
+    :cond_2f7
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitSpeedY:F
 
     invoke-virtual {v10, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setY(F)V
 
-    goto :goto_29d
+    goto :goto_2b5
 
-    .line 469
+    .line 461
     .end local v2    # "coord":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     .end local v7    # "rabbitY":F
     .end local v10    # "speed":Lcom/vandaveer/bunnyblaster/Graphic$Speed;
-    :cond_2e5
+    :cond_2fd
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shells:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -6311,7 +6299,7 @@
 
     move-result-object v2
 
-    .line 470
+    .line 462
     .restart local v2    # "coord":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shells:Ljava/util/ArrayList;
 
@@ -6325,26 +6313,40 @@
 
     move-result-object v10
 
-    .line 472
+    .line 464
     .restart local v10    # "speed":Lcom/vandaveer/bunnyblaster/Graphic$Speed;
     invoke-virtual {v10}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->getY()F
 
     move-result v9
 
-    .line 473
+    .line 465
     .local v9, "shellYSpeed":F
     const/high16 v11, 0x3f000000    # 0.5f
 
     add-float/2addr v9, v11
 
-    .line 475
+    .line 467
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getY()F
 
     move-result v11
 
     add-float/2addr v11, v9
 
-    iget v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shellHeight:I
+    iget-object v12, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shells:Ljava/util/ArrayList;
+
+    invoke-virtual {v12, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/vandaveer/bunnyblaster/Graphic;
+
+    invoke-virtual {v1}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v12
 
     int-to-float v12, v12
 
@@ -6356,12 +6358,12 @@
 
     cmpg-float v11, v11, v12
 
-    if-gez v11, :cond_32f
+    if-gez v11, :cond_355
 
-    .line 477
+    .line 469
     invoke-virtual {v10, v9}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setY(F)V
 
-    .line 479
+    .line 471
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
     move-result v11
@@ -6374,7 +6376,7 @@
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 480
+    .line 472
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getY()F
 
     move-result v11
@@ -6383,29 +6385,29 @@
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 467
-    :goto_32b
+    .line 459
+    :goto_351
     add-int/lit8 v5, v5, 0x1
 
-    goto/16 :goto_c2
+    goto/16 :goto_ca
 
-    .line 484
-    :cond_32f
+    .line 476
+    :cond_355
     iget v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shellEjectSnd:I
 
     invoke-direct {p0, v11}, Lcom/vandaveer/bunnyblaster/BBPanel;->PlaySound(I)V
 
-    .line 485
+    .line 477
     iget-object v11, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->shells:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    goto :goto_32b
+    goto :goto_351
 
-    .line 505
+    .line 497
     .end local v9    # "shellYSpeed":F
     .restart local v3    # "droppedCarrotY":F
-    :cond_33a
+    :cond_360
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
     move-result v11
@@ -6418,7 +6420,7 @@
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 506
+    .line 498
     invoke-virtual {v2}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getY()F
 
     move-result v11
@@ -6431,7 +6433,7 @@
 
     invoke-virtual {v2, v11}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    goto/16 :goto_113
+    goto/16 :goto_11b
 .end method
 
 .method public onDraw(Landroid/graphics/Canvas;)V
@@ -6439,7 +6441,7 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 772
+    .line 764
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->background:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -6448,10 +6450,10 @@
 
     if-nez v22, :cond_1c
 
-    .line 773
+    .line 765
     invoke-direct/range {p0 .. p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->setUpImages()V
 
-    .line 774
+    .line 766
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->playSound:Z
@@ -6464,15 +6466,15 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/BBPanel;->ToggleSound(Z)V
 
-    .line 775
+    .line 767
     invoke-direct/range {p0 .. p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->NewGame()V
 
-    .line 966
+    .line 958
     :cond_1b
     :goto_1b
     return-void
 
-    .line 780
+    .line 772
     :cond_1c
     move-object/from16 v0, p0
 
@@ -6498,7 +6500,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 783
+    .line 775
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->message:Ljava/lang/String;
@@ -6507,7 +6509,7 @@
 
     if-nez v22, :cond_1b
 
-    .line 790
+    .line 782
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -6518,7 +6520,7 @@
 
     move-result-object v5
 
-    .line 791
+    .line 783
     .local v5, "bitmap":Landroid/graphics/Bitmap;
     move-object/from16 v0, p0
 
@@ -6546,7 +6548,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 794
+    .line 786
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->carrots:Ljava/util/ArrayList;
@@ -6567,20 +6569,20 @@
 
     if-nez v22, :cond_95
 
-    .line 796
+    .line 788
     new-instance v19, Ljava/util/Random;
 
     invoke-direct/range {v19 .. v19}, Ljava/util/Random;-><init>()V
 
-    .line 797
+    .line 789
     .local v19, "random":Ljava/util/Random;
     const/16 v17, 0x0
 
-    .line 800
+    .line 792
     .local v17, "randX":I
     const/4 v13, 0x0
 
-    .line 801
+    .line 793
     .local v13, "lastTargetX":I
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->getWidth()I
 
@@ -6594,7 +6596,7 @@
 
     div-int v12, v22, v23
 
-    .line 803
+    .line 795
     .local v12, "intSpacing":I
     const/4 v11, 0x0
 
@@ -6612,7 +6614,7 @@
 
     if-lt v0, v1, :cond_40b
 
-    .line 834
+    .line 826
     .end local v11    # "i":I
     .end local v12    # "intSpacing":I
     .end local v13    # "lastTargetX":I
@@ -6636,7 +6638,7 @@
 
     if-nez v23, :cond_4b7
 
-    .line 841
+    .line 833
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->carrots:Ljava/util/ArrayList;
@@ -6654,7 +6656,7 @@
 
     if-nez v23, :cond_4dd
 
-    .line 847
+    .line 839
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
@@ -6685,16 +6687,16 @@
 
     if-nez v22, :cond_174
 
-    .line 849
+    .line 841
     new-instance v19, Ljava/util/Random;
 
     invoke-direct/range {v19 .. v19}, Ljava/util/Random;-><init>()V
 
-    .line 850
+    .line 842
     .restart local v19    # "random":Ljava/util/Random;
     const/4 v15, 0x0
 
-    .line 854
+    .line 846
     .local v15, "rabbit":Lcom/vandaveer/bunnyblaster/Graphic;
     move-object/from16 v0, p0
 
@@ -6704,7 +6706,7 @@
 
     if-eqz v22, :cond_503
 
-    .line 856
+    .line 848
     new-instance v15, Lcom/vandaveer/bunnyblaster/Graphic;
 
     .end local v15    # "rabbit":Lcom/vandaveer/bunnyblaster/Graphic;
@@ -6720,7 +6722,7 @@
 
     invoke-direct {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 857
+    .line 849
     .restart local v15    # "rabbit":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v15}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -6740,7 +6742,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 858
+    .line 850
     invoke-virtual {v15}, Lcom/vandaveer/bunnyblaster/Graphic;->getSpeed()Lcom/vandaveer/bunnyblaster/Graphic$Speed;
 
     move-result-object v22
@@ -6773,7 +6775,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setX(F)V
 
-    .line 859
+    .line 851
     const/16 v22, 0x0
 
     move/from16 v0, v22
@@ -6782,7 +6784,7 @@
 
     iput-boolean v0, v1, Lcom/vandaveer/bunnyblaster/BBPanel;->lastDirectionRightToLeft:Z
 
-    .line 869
+    .line 861
     :goto_129
     move-object/from16 v0, p0
 
@@ -6836,7 +6838,7 @@
 
     iput v0, v1, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbitStartY:F
 
-    .line 870
+    .line 862
     invoke-virtual {v15}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v22
@@ -6849,7 +6851,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 872
+    .line 864
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->rabbits:Ljava/util/ArrayList;
@@ -6862,7 +6864,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 876
+    .line 868
     .end local v15    # "rabbit":Lcom/vandaveer/bunnyblaster/Graphic;
     .end local v19    # "random":Ljava/util/Random;
     :cond_174
@@ -6878,7 +6880,7 @@
 
     if-lez v22, :cond_1d6
 
-    .line 878
+    .line 870
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
@@ -6893,7 +6895,7 @@
 
     sub-int v9, v22, v23
 
-    .line 879
+    .line 871
     .local v9, "expSize":I
     move-object/from16 v0, p0
 
@@ -6916,7 +6918,7 @@
 
     move-result-object v5
 
-    .line 880
+    .line 872
     .restart local v5    # "bitmap":Landroid/graphics/Bitmap;
     move-object/from16 v0, p0
 
@@ -6938,7 +6940,7 @@
 
     move-result-object v8
 
-    .line 881
+    .line 873
     .local v8, "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
@@ -6962,7 +6964,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 882
+    .line 874
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->explosions:Ljava/util/ArrayList;
@@ -6975,7 +6977,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 886
+    .line 878
     .end local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     .end local v9    # "expSize":I
     :cond_1d6
@@ -6996,7 +6998,7 @@
 
     if-nez v23, :cond_558
 
-    .line 893
+    .line 885
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdLFlying:Z
@@ -7005,7 +7007,7 @@
 
     if-eqz v22, :cond_218
 
-    .line 895
+    .line 887
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -7016,10 +7018,67 @@
 
     move-result-object v5
 
-    .line 896
+    .line 888
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdl:Lcom/vandaveer/bunnyblaster/Graphic;
+
+    move-object/from16 v22, v0
+
+    invoke-virtual/range {v22 .. v22}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
+
+    move-result-object v8
+
+    .line 889
+    .restart local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
+    invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
+
+    move-result v22
+
+    invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getY()F
+
+    move-result v23
+
+    const/16 v24, 0x0
+
+    move-object/from16 v0, p1
+
+    move-object v1, v5
+
+    move/from16 v2, v22
+
+    move/from16 v3, v23
+
+    move-object/from16 v4, v24
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    .line 893
+    .end local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
+    :cond_218
+    move-object/from16 v0, p0
+
+    iget-boolean v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdRFlying:Z
+
+    move/from16 v22, v0
+
+    if-eqz v22, :cond_24a
+
+    .line 895
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
+
+    move-object/from16 v22, v0
+
+    invoke-virtual/range {v22 .. v22}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v5
+
+    .line 896
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
 
     move-object/from16 v22, v0
 
@@ -7051,64 +7110,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 901
-    .end local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
-    :cond_218
-    move-object/from16 v0, p0
-
-    iget-boolean v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdRFlying:Z
-
-    move/from16 v22, v0
-
-    if-eqz v22, :cond_24a
-
-    .line 903
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
-
-    move-object/from16 v22, v0
-
-    invoke-virtual/range {v22 .. v22}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v5
-
-    .line 904
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->birdr:Lcom/vandaveer/bunnyblaster/Graphic;
-
-    move-object/from16 v22, v0
-
-    invoke-virtual/range {v22 .. v22}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
-
-    move-result-object v8
-
-    .line 905
-    .restart local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
-    invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
-
-    move-result v22
-
-    invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getY()F
-
-    move-result v23
-
-    const/16 v24, 0x0
-
-    move-object/from16 v0, p1
-
-    move-object v1, v5
-
-    move/from16 v2, v22
-
-    move/from16 v3, v23
-
-    move-object/from16 v4, v24
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    .line 910
+    .line 902
     .end local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     :cond_24a
     move-object/from16 v0, p0
@@ -7121,7 +7123,7 @@
 
     move-result-object v5
 
-    .line 911
+    .line 903
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -7132,7 +7134,7 @@
 
     move-result-object v8
 
-    .line 912
+    .line 904
     .restart local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
@@ -7156,7 +7158,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 915
+    .line 907
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->firingGunIndex:I
@@ -7165,7 +7167,7 @@
 
     if-eqz v22, :cond_2d6
 
-    .line 917
+    .line 909
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunFire:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -7176,7 +7178,7 @@
 
     move-result-object v5
 
-    .line 918
+    .line 910
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -7187,7 +7189,7 @@
 
     move-result-object v8
 
-    .line 919
+    .line 911
     invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
     move-result v22
@@ -7222,7 +7224,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 921
+    .line 913
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->firingGunIndex:I
@@ -7237,7 +7239,7 @@
 
     iput v0, v1, Lcom/vandaveer/bunnyblaster/BBPanel;->firingGunIndex:I
 
-    .line 923
+    .line 915
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->firingGunIndex:I
@@ -7252,7 +7254,7 @@
 
     if-ne v0, v1, :cond_2d6
 
-    .line 924
+    .line 916
     const/16 v22, 0x0
 
     move/from16 v0, v22
@@ -7261,7 +7263,7 @@
 
     iput v0, v1, Lcom/vandaveer/bunnyblaster/BBPanel;->firingGunIndex:I
 
-    .line 929
+    .line 921
     :cond_2d6
     move-object/from16 v0, p0
 
@@ -7280,7 +7282,7 @@
 
     if-nez v23, :cond_57e
 
-    .line 936
+    .line 928
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->droppedCarrots:Ljava/util/ArrayList;
@@ -7298,7 +7300,7 @@
 
     if-nez v23, :cond_5a4
 
-    .line 942
+    .line 934
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgExit:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -7309,7 +7311,7 @@
 
     move-result-object v5
 
-    .line 943
+    .line 935
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->exitX:F
@@ -7336,7 +7338,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 945
+    .line 937
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgMute:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -7347,7 +7349,7 @@
 
     move-result-object v5
 
-    .line 946
+    .line 938
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->muteX:F
@@ -7374,12 +7376,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 949
+    .line 941
     new-instance v14, Landroid/graphics/Paint;
 
     invoke-direct {v14}, Landroid/graphics/Paint;-><init>()V
 
-    .line 950
+    .line 942
     .local v14, "paint":Landroid/graphics/Paint;
     move-object/from16 v0, p0
 
@@ -7393,7 +7395,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 951
+    .line 943
     const/16 v22, -0x1
 
     move-object v0, v14
@@ -7402,7 +7404,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 952
+    .line 944
     const/16 v22, 0x1
 
     move-object v0, v14
@@ -7411,7 +7413,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 953
+    .line 945
     new-instance v22, Ljava/lang/StringBuilder;
 
     const-string v23, "Score: "
@@ -7456,7 +7458,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 955
+    .line 947
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->score:I
@@ -7475,7 +7477,7 @@
 
     if-le v0, v1, :cond_3aa
 
-    .line 956
+    .line 948
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->score:I
@@ -7488,7 +7490,7 @@
 
     iput v0, v1, Lcom/vandaveer/bunnyblaster/BBPanel;->highscore:I
 
-    .line 958
+    .line 950
     :cond_3aa
     new-instance v22, Ljava/lang/StringBuilder;
 
@@ -7534,7 +7536,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 961
+    .line 953
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -7543,7 +7545,7 @@
 
     if-eqz v22, :cond_1b
 
-    .line 962
+    .line 954
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -7554,7 +7556,7 @@
 
     move-result-object v5
 
-    .line 963
+    .line 955
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
@@ -7565,7 +7567,7 @@
 
     move-result-object v8
 
-    .line 964
+    .line 956
     invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
     move-result v22
@@ -7590,7 +7592,7 @@
 
     goto/16 :goto_1b
 
-    .line 806
+    .line 798
     .end local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     .end local v14    # "paint":Landroid/graphics/Paint;
     .restart local v11    # "i":I
@@ -7609,19 +7611,19 @@
 
     move-result v16
 
-    .line 807
+    .line 799
     .local v16, "randTarget":I
     const/4 v10, 0x0
 
-    .line 809
+    .line 801
     .local v10, "graphic":Lcom/vandaveer/bunnyblaster/Graphic;
     packed-switch v16, :pswitch_data_5ca
 
-    .line 816
+    .line 808
     :goto_419
     if-eqz v10, :cond_493
 
-    .line 819
+    .line 811
     move-object/from16 v0, v19
 
     move v1, v12
@@ -7642,10 +7644,10 @@
 
     add-int v17, v22, v23
 
-    .line 820
+    .line 812
     move/from16 v13, v17
 
-    .line 821
+    .line 813
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->maxRabbitY:F
@@ -7692,7 +7694,7 @@
 
     add-float v18, v22, v23
 
-    .line 823
+    .line 815
     .local v18, "randY":F
     invoke-virtual {v10}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -7706,7 +7708,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 824
+    .line 816
     invoke-virtual {v10}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v22
@@ -7717,7 +7719,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setY(F)V
 
-    .line 827
+    .line 819
     invoke-virtual/range {p0 .. p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getWidth()I
 
     move-result v22
@@ -7738,7 +7740,7 @@
 
     if-ge v0, v1, :cond_493
 
-    .line 828
+    .line 820
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/vandaveer/bunnyblaster/BBPanel;->carrots:Ljava/util/ArrayList;
@@ -7751,14 +7753,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 803
+    .line 795
     .end local v18    # "randY":F
     :cond_493
     add-int/lit8 v11, v11, 0x1
 
     goto/16 :goto_8a
 
-    .line 810
+    .line 802
     :pswitch_497
     new-instance v10, Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -7775,11 +7777,11 @@
 
     invoke-direct {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 811
+    .line 803
     .restart local v10    # "graphic":Lcom/vandaveer/bunnyblaster/Graphic;
     goto/16 :goto_419
 
-    .line 812
+    .line 804
     :pswitch_4a7
     new-instance v10, Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -7799,7 +7801,7 @@
     .restart local v10    # "graphic":Lcom/vandaveer/bunnyblaster/Graphic;
     goto/16 :goto_419
 
-    .line 834
+    .line 826
     .end local v10    # "graphic":Lcom/vandaveer/bunnyblaster/Graphic;
     .end local v11    # "i":I
     .end local v12    # "intSpacing":I
@@ -7814,18 +7816,18 @@
 
     check-cast v6, Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 835
+    .line 827
     .local v6, "bullet":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v6}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v5
 
-    .line 836
+    .line 828
     invoke-virtual {v6}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v8
 
-    .line 837
+    .line 829
     .restart local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
@@ -7851,7 +7853,7 @@
 
     goto/16 :goto_9f
 
-    .line 841
+    .line 833
     .end local v6    # "bullet":Lcom/vandaveer/bunnyblaster/Graphic;
     .end local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     :cond_4dd
@@ -7861,18 +7863,18 @@
 
     check-cast v21, Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 842
+    .line 834
     .local v21, "target":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual/range {v21 .. v21}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v5
 
-    .line 843
+    .line 835
     invoke-virtual/range {v21 .. v21}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v8
 
-    .line 844
+    .line 836
     .restart local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
@@ -7898,7 +7900,7 @@
 
     goto/16 :goto_af
 
-    .line 863
+    .line 855
     .end local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     .end local v21    # "target":Lcom/vandaveer/bunnyblaster/Graphic;
     .restart local v15    # "rabbit":Lcom/vandaveer/bunnyblaster/Graphic;
@@ -7919,7 +7921,7 @@
 
     invoke-direct {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 864
+    .line 856
     .restart local v15    # "rabbit":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v15}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
@@ -7945,7 +7947,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 865
+    .line 857
     invoke-virtual {v15}, Lcom/vandaveer/bunnyblaster/Graphic;->getSpeed()Lcom/vandaveer/bunnyblaster/Graphic$Speed;
 
     move-result-object v22
@@ -7984,7 +7986,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/vandaveer/bunnyblaster/Graphic$Speed;->setX(F)V
 
-    .line 866
+    .line 858
     const/16 v22, 0x1
 
     move/from16 v0, v22
@@ -7995,7 +7997,7 @@
 
     goto/16 :goto_129
 
-    .line 886
+    .line 878
     .end local v15    # "rabbit":Lcom/vandaveer/bunnyblaster/Graphic;
     .end local v19    # "random":Ljava/util/Random;
     :cond_558
@@ -8005,18 +8007,18 @@
 
     check-cast v15, Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 887
+    .line 879
     .restart local v15    # "rabbit":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v15}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v5
 
-    .line 888
+    .line 880
     invoke-virtual {v15}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v8
 
-    .line 889
+    .line 881
     .restart local v8    # "coords":Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
     invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
@@ -8042,7 +8044,7 @@
 
     goto/16 :goto_1e0
 
-    .line 929
+    .line 921
     .end local v15    # "rabbit":Lcom/vandaveer/bunnyblaster/Graphic;
     :cond_57e
     invoke-interface/range {v22 .. v22}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -8051,18 +8053,18 @@
 
     check-cast v20, Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 930
+    .line 922
     .local v20, "shell":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual/range {v20 .. v20}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v5
 
-    .line 931
+    .line 923
     invoke-virtual/range {v20 .. v20}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v8
 
-    .line 932
+    .line 924
     invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
     move-result v23
@@ -8087,7 +8089,7 @@
 
     goto/16 :goto_2e0
 
-    .line 936
+    .line 928
     .end local v20    # "shell":Lcom/vandaveer/bunnyblaster/Graphic;
     :cond_5a4
     invoke-interface/range {v22 .. v22}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -8096,18 +8098,18 @@
 
     check-cast v7, Lcom/vandaveer/bunnyblaster/Graphic;
 
-    .line 937
+    .line 929
     .local v7, "carrot":Lcom/vandaveer/bunnyblaster/Graphic;
     invoke-virtual {v7}, Lcom/vandaveer/bunnyblaster/Graphic;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v5
 
-    .line 938
+    .line 930
     invoke-virtual {v7}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
 
     move-result-object v8
 
-    .line 939
+    .line 931
     invoke-virtual {v8}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->getX()F
 
     move-result v23
@@ -8132,7 +8134,7 @@
 
     goto/16 :goto_2f0
 
-    .line 809
+    .line 801
     :pswitch_data_5ca
     .packed-switch 0x0
         :pswitch_497
@@ -8149,14 +8151,14 @@
 
     const/4 v8, 0x1
 
-    .line 258
+    .line 250
     invoke-virtual {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v7
 
     monitor-enter v7
 
-    .line 260
+    .line 252
     :try_start_7
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->message:Ljava/lang/String;
 
@@ -8166,23 +8168,23 @@
 
     if-nez v0, :cond_12
 
-    .line 261
+    .line 253
     :cond_f
     monitor-exit v7
 
     move v0, v8
 
-    .line 311
+    .line 303
     :goto_11
     return v0
 
-    .line 263
+    .line 255
     :cond_12
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v6
 
-    .line 264
+    .line 256
     .local v6, "eventaction":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -8190,7 +8192,7 @@
 
     float-to-int v2, v0
 
-    .line 265
+    .line 257
     .local v2, "x":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -8198,21 +8200,21 @@
 
     float-to-int v3, v0
 
-    .line 267
+    .line 259
     .local v3, "y":I
     packed-switch v6, :pswitch_data_c8
 
-    .line 309
+    .line 301
     :cond_23
     :goto_23
     monitor-exit v7
 
     move v0, v8
 
-    .line 311
+    .line 303
     goto :goto_11
 
-    .line 272
+    .line 264
     :pswitch_26
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgExit:Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -8228,17 +8230,17 @@
 
     if-eqz v0, :cond_37
 
-    .line 274
+    .line 266
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->promptToExitGame()V
 
-    .line 275
+    .line 267
     monitor-exit v7
 
     move v0, v8
 
     goto :goto_11
 
-    .line 278
+    .line 270
     :cond_37
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->imgMute:Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -8254,7 +8256,7 @@
 
     if-eqz v0, :cond_4f
 
-    .line 280
+    .line 272
     iget-boolean v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->playSound:Z
 
     if-eqz v0, :cond_4d
@@ -8264,7 +8266,7 @@
     :goto_47
     invoke-virtual {p0, v0}, Lcom/vandaveer/bunnyblaster/BBPanel;->ToggleSound(Z)V
 
-    .line 281
+    .line 273
     monitor-exit v7
 
     move v0, v8
@@ -8274,10 +8276,10 @@
     :cond_4d
     move v0, v8
 
-    .line 280
+    .line 272
     goto :goto_47
 
-    .line 284
+    .line 276
     :cond_4f
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -8293,24 +8295,24 @@
 
     if-eqz v0, :cond_23
 
-    .line 286
+    .line 278
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->reloadBtn:Lcom/vandaveer/bunnyblaster/Graphic;
 
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->bmReloadYellow:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 287
+    .line 279
     invoke-direct {p0}, Lcom/vandaveer/bunnyblaster/BBPanel;->Reload()V
 
-    .line 288
+    .line 280
     monitor-exit v7
 
     move v0, v8
 
     goto :goto_11
 
-    .line 293
+    .line 285
     :pswitch_69
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
@@ -8326,7 +8328,7 @@
 
     if-eqz v0, :cond_23
 
-    .line 295
+    .line 287
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -8351,7 +8353,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 296
+    .line 288
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gunSite:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -8376,7 +8378,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setTouchedY(F)V
 
-    .line 298
+    .line 290
     iget-object v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->gun:Lcom/vandaveer/bunnyblaster/Graphic;
 
     invoke-virtual {v0}, Lcom/vandaveer/bunnyblaster/Graphic;->getCoordinates()Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;
@@ -8397,14 +8399,14 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic$Coordinates;->setX(F)V
 
-    .line 300
+    .line 292
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->movingGun:Z
 
     goto/16 :goto_23
 
-    .line 258
+    .line 250
     .end local v2    # "x":I
     .end local v3    # "y":I
     .end local v6    # "eventaction":I
@@ -8417,7 +8419,7 @@
 
     throw v0
 
-    .line 306
+    .line 298
     .restart local v2    # "x":I
     .restart local v3    # "y":I
     .restart local v6    # "eventaction":I
@@ -8429,7 +8431,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vandaveer/bunnyblaster/Graphic;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 307
+    .line 299
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->movingGun:Z
@@ -8438,7 +8440,7 @@
 
     goto/16 :goto_23
 
-    .line 267
+    .line 259
     :pswitch_data_c8
     .packed-switch 0x0
         :pswitch_26
@@ -8452,7 +8454,7 @@
     .param p1, "sleep_time"    # I
 
     .prologue
-    .line 1117
+    .line 1109
     int-to-long v1, p1
 
     :try_start_1
@@ -8460,15 +8462,15 @@
     :try_end_4
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_4} :catch_5
 
-    .line 1122
+    .line 1114
     :goto_4
     return-void
 
-    .line 1118
+    .line 1110
     :catch_5
     move-exception v0
 
-    .line 1120
+    .line 1112
     .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
@@ -8483,7 +8485,7 @@
     .param p4, "height"    # I
 
     .prologue
-    .line 974
+    .line 966
     return-void
 .end method
 
@@ -8492,7 +8494,7 @@
     .param p1, "holder"    # Landroid/view/SurfaceHolder;
 
     .prologue
-    .line 981
+    .line 973
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_thread:Lcom/vandaveer/bunnyblaster/BBThread;
 
     invoke-virtual {v1}, Lcom/vandaveer/bunnyblaster/BBThread;->isAlive()Z
@@ -8501,14 +8503,14 @@
 
     if-nez v1, :cond_f
 
-    .line 982
+    .line 974
     new-instance v1, Lcom/vandaveer/bunnyblaster/BBThread;
 
     invoke-direct {v1, p0}, Lcom/vandaveer/bunnyblaster/BBThread;-><init>(Lcom/vandaveer/bunnyblaster/BBPanel;)V
 
     iput-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_thread:Lcom/vandaveer/bunnyblaster/BBThread;
 
-    .line 984
+    .line 976
     :cond_f
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_thread:Lcom/vandaveer/bunnyblaster/BBThread;
 
@@ -8516,7 +8518,7 @@
 
     invoke-virtual {v1, v2}, Lcom/vandaveer/bunnyblaster/BBThread;->setRunning(Z)V
 
-    .line 988
+    .line 980
     :try_start_15
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_thread:Lcom/vandaveer/bunnyblaster/BBThread;
 
@@ -8524,17 +8526,17 @@
     :try_end_1a
     .catch Ljava/lang/IllegalThreadStateException; {:try_start_15 .. :try_end_1a} :catch_1b
 
-    .line 994
+    .line 986
     :goto_1a
     return-void
 
-    .line 990
+    .line 982
     :catch_1b
     move-exception v1
 
     move-object v0, v1
 
-    .line 992
+    .line 984
     .local v0, "itse":Ljava/lang/IllegalThreadStateException;
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_thread:Lcom/vandaveer/bunnyblaster/BBThread;
 
@@ -8548,10 +8550,10 @@
     .param p1, "holder"    # Landroid/view/SurfaceHolder;
 
     .prologue
-    .line 1002
+    .line 994
     const/4 v0, 0x1
 
-    .line 1003
+    .line 995
     .local v0, "retry":Z
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_thread:Lcom/vandaveer/bunnyblaster/BBThread;
 
@@ -8559,21 +8561,21 @@
 
     invoke-virtual {v1, v2}, Lcom/vandaveer/bunnyblaster/BBThread;->setRunning(Z)V
 
-    .line 1004
+    .line 996
     :goto_7
     if-nez v0, :cond_11
 
-    .line 1012
+    .line 1004
     const-string v1, "thread"
 
     const-string v2, "Thread terminated..."
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1013
+    .line 1005
     return-void
 
-    .line 1006
+    .line 998
     :cond_11
     :try_start_11
     iget-object v1, p0, Lcom/vandaveer/bunnyblaster/BBPanel;->_thread:Lcom/vandaveer/bunnyblaster/BBThread;
@@ -8582,12 +8584,12 @@
     :try_end_16
     .catch Ljava/lang/InterruptedException; {:try_start_11 .. :try_end_16} :catch_18
 
-    .line 1007
+    .line 999
     const/4 v0, 0x0
 
     goto :goto_7
 
-    .line 1008
+    .line 1000
     :catch_18
     move-exception v1
 

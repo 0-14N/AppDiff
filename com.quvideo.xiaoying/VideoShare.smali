@@ -138,9 +138,9 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 158
-    new-instance v1, Lajq;
+    new-instance v1, Lacw;
 
-    invoke-direct {v1, p0}, Lajq;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;)V
+    invoke-direct {v1, p0}, Lacw;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;)V
 
     iput-object v1, p0, Lcom/quvideo/xiaoying/common/VideoShare;->r:Landroid/content/BroadcastReceiver;
 
@@ -233,9 +233,9 @@
     .line 227
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/VideoShare;->a:Landroid/app/ProgressDialog;
 
-    new-instance v1, Lajr;
+    new-instance v1, Lacx;
 
-    invoke-direct {v1, p0}, Lajr;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;)V
+    invoke-direct {v1, p0}, Lacx;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;)V
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
     :try_end_3a
@@ -350,9 +350,9 @@
 
     .line 424
     :cond_15
-    new-instance v1, Laju;
+    new-instance v1, Lada;
 
-    invoke-direct {v1, p0, v0, p1}, Laju;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;Landroid/app/Activity;Landroid/content/Intent;)V
+    invoke-direct {v1, p0, v0, p1}, Lada;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;Landroid/app/Activity;Landroid/content/Intent;)V
 
     const/4 v2, 0x2
 
@@ -371,7 +371,7 @@
 
     aput-object v3, v2, v0
 
-    invoke-virtual {v1, v2}, Laju;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v1, v2}, Lada;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     move-result-object v0
 
@@ -436,9 +436,9 @@
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComDescEditDialog;
 
     .line 524
-    new-instance v2, Lajv;
+    new-instance v2, Ladb;
 
-    invoke-direct {v2, p0, p2, v0}, Lajv;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;Ljava/lang/String;Landroid/app/Activity;)V
+    invoke-direct {v2, p0, p2, v0}, Ladb;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;Ljava/lang/String;Landroid/app/Activity;)V
 
     .line 523
     invoke-direct {v1, v0, p1, v2}, Lcom/quvideo/xiaoying/dialog/ComDescEditDialog;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;Lcom/quvideo/xiaoying/dialog/ComDescEditDialog$OnDescEditDialogClickListener;)V
@@ -1306,13 +1306,13 @@
     .line 363
     new-instance v7, Lcom/quvideo/xiaoying/dialog/ComGridDialog;
 
-    new-instance v0, Lajs;
+    new-instance v0, Lacy;
 
     move-object v1, p0
 
     move-object v2, p1
 
-    invoke-direct/range {v0 .. v5}, Lajs;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;Lcom/quvideo/xiaoying/common/VideoShare$VideoShareInfo;Ljava/util/List;Landroid/app/Activity;Landroid/content/Intent;)V
+    invoke-direct/range {v0 .. v5}, Lacy;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;Lcom/quvideo/xiaoying/common/VideoShare$VideoShareInfo;Ljava/util/List;Landroid/app/Activity;Landroid/content/Intent;)V
 
     invoke-direct {v7, v4, v6, v0}, Lcom/quvideo/xiaoying/dialog/ComGridDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;Lcom/quvideo/xiaoying/dialog/ComGridDialog$OnGridDialogClickListener;)V
 
@@ -1326,9 +1326,9 @@
     invoke-virtual {v7, v0}, Lcom/quvideo/xiaoying/dialog/ComGridDialog;->setButtonText(Ljava/lang/Integer;)V
 
     .line 378
-    new-instance v0, Lajt;
+    new-instance v0, Lacz;
 
-    invoke-direct {v0, p0}, Lajt;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;)V
+    invoke-direct {v0, p0}, Lacz;-><init>(Lcom/quvideo/xiaoying/common/VideoShare;)V
 
     invoke-virtual {v7, v0}, Lcom/quvideo/xiaoying/dialog/ComGridDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 

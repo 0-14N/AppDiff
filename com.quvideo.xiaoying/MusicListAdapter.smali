@@ -91,9 +91,9 @@
     iput v0, p0, Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter;->c:I
 
     .line 328
-    new-instance v0, Last;
+    new-instance v0, Lalz;
 
-    invoke-direct {v0, p0}, Last;-><init>(Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter;)V
+    invoke-direct {v0, p0}, Lalz;-><init>(Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter;->a:Landroid/view/View$OnClickListener;
 
@@ -589,9 +589,9 @@
     .line 149
     iget-object v1, v0, Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter$a;->a:Landroid/widget/Button;
 
-    new-instance v4, Lasu;
+    new-instance v4, Lama;
 
-    invoke-direct {v4, p0}, Lasu;-><init>(Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter;)V
+    invoke-direct {v4, p0}, Lama;-><init>(Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter;)V
 
     invoke-virtual {v1, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -655,9 +655,9 @@
     :goto_fe
     iget-object v1, v0, Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter$a;->g:Landroid/widget/ImageView;
 
-    new-instance v2, Lasv;
+    new-instance v2, Lamb;
 
-    invoke-direct {v2, p0, p1}, Lasv;-><init>(Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter;I)V
+    invoke-direct {v2, p0, p1}, Lamb;-><init>(Lcom/quvideo/xiaoying/template/adapter/MusicListAdapter;I)V
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

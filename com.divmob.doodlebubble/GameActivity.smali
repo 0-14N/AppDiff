@@ -86,8 +86,6 @@
 
 .field private fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
-.field private gameDiff:I
-
 .field private gameMode:I
 
 .field private gameTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
@@ -121,8 +119,6 @@
 .field private mCelling:Lorg/anddev/andengine/entity/sprite/Sprite;
 
 .field private mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
-
-.field private mHelpScene:Lorg/anddev/andengine/entity/scene/Scene;
 
 .field private mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
@@ -190,12 +186,12 @@
     .registers 1
 
     .prologue
-    .line 94
+    .line 87
     const/4 v0, 0x0
 
     sput v0, Lcom/divmob/doodlebubble/GameActivity;->ceil:F
 
-    .line 60
+    .line 53
     return-void
 .end method
 
@@ -203,20 +199,20 @@
     .registers 2
 
     .prologue
-    .line 60
+    .line 53
     invoke-direct {p0}, Lcom/divmob/common/PortrailGame;-><init>()V
 
-    .line 90
+    .line 83
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/divmob/doodlebubble/GameActivity;->isMoving:Z
 
-    .line 1115
+    .line 1049
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->m_divmobbutton:Landroid/widget/Button;
 
-    .line 60
+    .line 53
     return-void
 .end method
 
@@ -224,7 +220,7 @@
     .registers 2
 
     .prologue
-    .line 90
+    .line 83
     iget-boolean v0, p0, Lcom/divmob/doodlebubble/GameActivity;->isMoving:Z
 
     return v0
@@ -234,7 +230,7 @@
     .registers 2
 
     .prologue
-    .line 89
+    .line 82
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
     return-object v0
@@ -244,7 +240,7 @@
     .registers 3
 
     .prologue
-    .line 320
+    .line 292
     iput-wide p1, p0, Lcom/divmob/doodlebubble/GameActivity;->lastUpdate:J
 
     return-void
@@ -254,7 +250,7 @@
     .registers 2
 
     .prologue
-    .line 84
+    .line 77
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
     return-object v0
@@ -264,7 +260,7 @@
     .registers 1
 
     .prologue
-    .line 474
+    .line 453
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->placeBubble()V
 
     return-void
@@ -274,7 +270,7 @@
     .registers 2
 
     .prologue
-    .line 96
+    .line 89
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     return-object v0
@@ -284,7 +280,7 @@
     .registers 2
 
     .prologue
-    .line 102
+    .line 95
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mWorldPreferences:Lcom/divmob/doodlebubble/WorldPreferences;
 
     return-object v0
@@ -294,7 +290,7 @@
     .registers 1
 
     .prologue
-    .line 952
+    .line 936
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->completeLevel()V
 
     return-void
@@ -304,7 +300,7 @@
     .registers 3
 
     .prologue
-    .line 320
+    .line 292
     iget-wide v0, p0, Lcom/divmob/doodlebubble/GameActivity;->lastUpdate:J
 
     return-wide v0
@@ -314,7 +310,7 @@
     .registers 1
 
     .prologue
-    .line 258
+    .line 234
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->endlessModeUpdate()V
 
     return-void
@@ -324,7 +320,7 @@
     .registers 1
 
     .prologue
-    .line 276
+    .line 252
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->storyModeUpdate()V
 
     return-void
@@ -334,17 +330,17 @@
     .registers 6
 
     .prologue
-    .line 659
+    .line 644
     const/high16 v2, -0x3d580000    # -84.0f
 
     sput v2, Lcom/divmob/doodlebubble/GameActivity;->ceil:F
 
-    .line 661
+    .line 646
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
-    .line 663
+    .line 648
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -357,15 +353,15 @@
 
     if-lt v1, v2, :cond_17
 
-    .line 670
+    .line 655
     const/4 v2, 0x2
 
     invoke-direct {p0, v2}, Lcom/divmob/doodlebubble/GameActivity;->loadBubble(I)V
 
-    .line 671
+    .line 656
     return-void
 
-    .line 664
+    .line 649
     :cond_17
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
@@ -375,7 +371,7 @@
 
     check-cast v0, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 665
+    .line 650
     .local v0, "ball":Lcom/divmob/doodlebubble/ball/Ball;
     iget v2, v0, Lcom/divmob/doodlebubble/ball/Ball;->row:I
 
@@ -385,7 +381,7 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/divmob/doodlebubble/ball/Ball;->setCell(II)V
 
-    .line 666
+    .line 651
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -416,7 +412,7 @@
 
     invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 663
+    .line 648
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_a
@@ -430,12 +426,12 @@
 
     const/4 v3, 0x0
 
-    .line 953
+    .line 937
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->sndWin:Lorg/anddev/andengine/audio/sound/Sound;
 
     invoke-static {v0}, Lcom/divmob/maegame/sound/MSoundManager;->playSound(Lorg/anddev/andengine/audio/sound/Sound;)V
 
-    .line 954
+    .line 938
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     invoke-virtual {v0}, Lcom/divmob/doodlebubble/hud/MHud;->getLevel()I
@@ -452,12 +448,12 @@
 
     if-ge v0, v1, :cond_55
 
-    .line 955
+    .line 939
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->resultScoreText:Lcom/divmob/maegame/util/MBMText;
 
     invoke-virtual {v0, v4}, Lcom/divmob/maegame/util/MBMText;->setVisible(Z)V
 
-    .line 956
+    .line 940
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->resultScoreText:Lcom/divmob/maegame/util/MBMText;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -480,64 +476,64 @@
 
     invoke-virtual {v0, v1}, Lcom/divmob/maegame/util/MBMText;->setText(Ljava/lang/String;)V
 
-    .line 957
+    .line 941
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->resultScoreText:Lcom/divmob/maegame/util/MBMText;
 
     iget v1, p0, Lcom/divmob/doodlebubble/GameActivity;->CAMERA_WIDTH:I
 
     invoke-virtual {v0, v1}, Lcom/divmob/maegame/util/MBMText;->alignCenterX(I)V
 
-    .line 958
+    .line 942
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->titleLevel:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v0, v4}, Lorg/anddev/andengine/entity/sprite/Sprite;->setVisible(Z)V
 
-    .line 959
+    .line 943
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->contentLevel:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v0, v4}, Lorg/anddev/andengine/entity/sprite/Sprite;->setVisible(Z)V
 
-    .line 960
+    .line 944
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->titleWorld:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v0, v3}, Lorg/anddev/andengine/entity/sprite/Sprite;->setVisible(Z)V
 
-    .line 961
+    .line 945
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->contentWorld:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v0, v3}, Lorg/anddev/andengine/entity/sprite/Sprite;->setVisible(Z)V
 
-    .line 970
+    .line 954
     :goto_4f
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mResultScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {p0, v0, v3, v4}, Lcom/divmob/doodlebubble/GameActivity;->showAScene(Lorg/anddev/andengine/entity/scene/Scene;ZZ)V
 
-    .line 971
+    .line 955
     return-void
 
-    .line 963
+    .line 947
     :cond_55
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->resultScoreText:Lcom/divmob/maegame/util/MBMText;
 
     invoke-virtual {v0, v3}, Lcom/divmob/maegame/util/MBMText;->setVisible(Z)V
 
-    .line 964
+    .line 948
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->titleLevel:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v0, v3}, Lorg/anddev/andengine/entity/sprite/Sprite;->setVisible(Z)V
 
-    .line 965
+    .line 949
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->contentLevel:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v0, v3}, Lorg/anddev/andengine/entity/sprite/Sprite;->setVisible(Z)V
 
-    .line 967
+    .line 951
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->titleWorld:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v0, v4}, Lorg/anddev/andengine/entity/sprite/Sprite;->setVisible(Z)V
 
-    .line 968
+    .line 952
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->contentWorld:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v0, v4}, Lorg/anddev/andengine/entity/sprite/Sprite;->setVisible(Z)V
@@ -549,7 +545,7 @@
     .registers 4
 
     .prologue
-    .line 295
+    .line 271
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -562,16 +558,16 @@
 
     if-lt v0, v1, :cond_e
 
-    .line 301
+    .line 277
     const/high16 v1, 0x40a00000    # 5.0f
 
     iput v1, p0, Lcom/divmob/doodlebubble/GameActivity;->ceilFallingVel:F
 
-    .line 302
+    .line 278
     :goto_d
     return-void
 
-    .line 296
+    .line 272
     :cond_e
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
@@ -587,14 +583,14 @@
 
     if-lt v1, v2, :cond_21
 
-    .line 297
+    .line 273
     const v1, 0x3e99999a    # 0.3f
 
     iput v1, p0, Lcom/divmob/doodlebubble/GameActivity;->ceilFallingVel:F
 
     goto :goto_d
 
-    .line 295
+    .line 271
     :cond_21
     add-int/lit8 v0, v0, 0x1
 
@@ -610,10 +606,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 715
+    .line 700
     const/4 v0, 0x0
 
-    .line 716
+    .line 701
     .local v0, "ball":Lcom/divmob/doodlebubble/ball/Ball;
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubblesToReuse:Ljava/util/ArrayList;
 
@@ -623,7 +619,7 @@
 
     if-eqz v2, :cond_4c
 
-    .line 717
+    .line 702
     new-instance v0, Lcom/divmob/doodlebubble/ball/Ball;
 
     .end local v0    # "ball":Lcom/divmob/doodlebubble/ball/Ball;
@@ -631,25 +627,25 @@
 
     invoke-direct {v0, v2}, Lcom/divmob/doodlebubble/ball/Ball;-><init>(Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;)V
 
-    .line 718
+    .line 703
     .restart local v0    # "ball":Lcom/divmob/doodlebubble/ball/Ball;
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v0, v2, v3}, Lcom/divmob/doodlebubble/ball/Ball;->addToScene(Lorg/anddev/andengine/entity/scene/Scene;I)V
 
-    .line 724
+    .line 709
     :goto_16
     invoke-virtual {v0, p1, p2}, Lcom/divmob/doodlebubble/ball/Ball;->setCell(II)V
 
-    .line 730
+    .line 715
     if-nez p3, :cond_26
 
-    .line 731
+    .line 716
     invoke-direct {p0, p1, p2}, Lcom/divmob/doodlebubble/GameActivity;->forceAssign(II)Landroid/graphics/Point;
 
     move-result-object v1
 
-    .line 732
+    .line 717
     .local v1, "p":Landroid/graphics/Point;
     iget v2, v1, Landroid/graphics/Point;->x:I
 
@@ -657,7 +653,7 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/divmob/doodlebubble/ball/Ball;->setCell(II)V
 
-    .line 738
+    .line 722
     .end local v1    # "p":Landroid/graphics/Point;
     :cond_26
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
@@ -690,15 +686,15 @@
 
     invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 739
+    .line 723
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 741
+    .line 725
     return-object v0
 
-    .line 720
+    .line 705
     :cond_4c
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubblesToReuse:Ljava/util/ArrayList;
 
@@ -709,7 +705,7 @@
     .end local v0    # "ball":Lcom/divmob/doodlebubble/ball/Ball;
     check-cast v0, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 721
+    .line 706
     .restart local v0    # "ball":Lcom/divmob/doodlebubble/ball/Ball;
     invoke-virtual {v0}, Lcom/divmob/doodlebubble/ball/Ball;->visible()V
 
@@ -722,7 +718,7 @@
     .param p2, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 687
+    .line 672
     const/4 v1, 0x0
 
     .local v1, "col":I
@@ -733,10 +729,10 @@
 
     if-lt v1, v3, :cond_8
 
-    .line 699
+    .line 684
     return-void
 
-    .line 688
+    .line 673
     :cond_8
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -758,11 +754,11 @@
 
     move-result v2
 
-    .line 689
+    .line 674
     .local v2, "color":I
     if-lez v2, :cond_3e
 
-    .line 690
+    .line 675
     rem-int/lit8 v3, p1, 0x2
 
     if-nez v3, :cond_41
@@ -776,22 +772,22 @@
 
     move-result-object v0
 
-    .line 691
+    .line 676
     .local v0, "ball":Lcom/divmob/doodlebubble/ball/Ball;
     sget v3, Lcom/divmob/common/constant/Constant;->TOTALS_BUBBLES:I
 
     if-le v2, v3, :cond_2f
 
-    .line 692
+    .line 677
     add-int/lit8 v2, v2, -0x1
 
-    .line 694
+    .line 679
     :cond_2f
     add-int/lit8 v3, v2, -0x1
 
     invoke-virtual {v0, v3}, Lcom/divmob/doodlebubble/ball/Ball;->setColor(I)V
 
-    .line 696
+    .line 681
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->numOfBubblesEachColor:[I
 
     add-int/lit8 v4, v2, -0x1
@@ -802,14 +798,14 @@
 
     aput v5, v3, v4
 
-    .line 687
+    .line 672
     .end local v0    # "ball":Lcom/divmob/doodlebubble/ball/Ball;
     :cond_3e
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 690
+    .line 675
     :cond_41
     add-int/lit8 v3, v1, 0x1
 
@@ -821,7 +817,7 @@
     .param p1, "fallingFeather"    # Z
 
     .prologue
-    .line 534
+    .line 515
     iget v2, p0, Lcom/divmob/doodlebubble/GameActivity;->kaboomBubble:I
 
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
@@ -834,7 +830,7 @@
 
     iput v2, p0, Lcom/divmob/doodlebubble/GameActivity;->kaboomBubble:I
 
-    .line 535
+    .line 516
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -847,10 +843,10 @@
 
     if-lt v1, v2, :cond_15
 
-    .line 548
+    .line 529
     return-void
 
-    .line 536
+    .line 517
     :cond_15
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
 
@@ -860,13 +856,13 @@
 
     check-cast v0, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 537
+    .line 518
     .local v0, "ball":Lcom/divmob/doodlebubble/ball/Ball;
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 538
+    .line 519
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -897,25 +893,25 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 540
+    .line 521
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubblesToReuse:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 541
+    .line 522
     invoke-virtual {v0}, Lcom/divmob/doodlebubble/ball/Ball;->invisible()V
 
-    .line 543
+    .line 524
     invoke-direct {p0, v0, p1}, Lcom/divmob/doodlebubble/GameActivity;->makeExplosion(Lcom/divmob/doodlebubble/ball/Ball;Z)V
 
-    .line 545
+    .line 526
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     sget v3, Lcom/divmob/common/constant/Constant;->POINT:I
 
     invoke-virtual {v2, v3}, Lcom/divmob/doodlebubble/hud/MHud;->addScore(I)V
 
-    .line 535
+    .line 516
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_c
@@ -925,10 +921,10 @@
     .registers 4
 
     .prologue
-    .line 260
+    .line 236
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->computeCeilFallingVel()V
 
-    .line 261
+    .line 237
     sget v1, Lcom/divmob/doodlebubble/GameActivity;->ceil:F
 
     iget v2, p0, Lcom/divmob/doodlebubble/GameActivity;->ceilFallingVel:F
@@ -937,7 +933,7 @@
 
     sput v1, Lcom/divmob/doodlebubble/GameActivity;->ceil:F
 
-    .line 262
+    .line 238
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -950,7 +946,7 @@
 
     if-lt v0, v1, :cond_1e
 
-    .line 269
+    .line 245
     sget v1, Lcom/divmob/doodlebubble/GameActivity;->ceil:F
 
     const/4 v2, 0x0
@@ -959,14 +955,14 @@
 
     if-lez v1, :cond_1d
 
-    .line 270
+    .line 246
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->ceilFalling()V
 
-    .line 273
+    .line 249
     :cond_1d
     return-void
 
-    .line 263
+    .line 239
     :cond_1e
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
@@ -980,7 +976,7 @@
 
     invoke-virtual {v1, v2}, Lcom/divmob/doodlebubble/ball/Ball;->move(F)V
 
-    .line 264
+    .line 240
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1003,10 +999,10 @@
 
     if-lez v1, :cond_43
 
-    .line 266
+    .line 242
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->gameOver()V
 
-    .line 262
+    .line 238
     :cond_43
     add-int/lit8 v0, v0, 0x1
 
@@ -1023,17 +1019,17 @@
 
     const/high16 v5, 0x41400000    # 12.0f
 
-    .line 454
+    .line 424
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->sndShoot:Lorg/anddev/andengine/audio/sound/Sound;
 
     invoke-static {v3}, Lcom/divmob/maegame/sound/MSoundManager;->playSound(Lorg/anddev/andengine/audio/sound/Sound;)V
 
-    .line 456
+    .line 426
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/divmob/doodlebubble/GameActivity;->isMoving:Z
 
-    .line 458
+    .line 437
     iget v3, p0, Lcom/divmob/doodlebubble/GameActivity;->CAMERA_WIDTH:I
 
     int-to-float v3, v3
@@ -1044,7 +1040,7 @@
 
     sub-float v1, p1, v3
 
-    .line 459
+    .line 438
     .local v1, "dx":F
     const/4 v3, 0x0
 
@@ -1052,10 +1048,10 @@
 
     if-lez v3, :cond_49
 
-    .line 460
+    .line 439
     add-float/2addr v1, v5
 
-    .line 464
+    .line 443
     :goto_1a
     iget v3, p0, Lcom/divmob/doodlebubble/GameActivity;->CAMERA_HEIGHT:I
 
@@ -1063,7 +1059,7 @@
 
     sub-float v2, v3, p2
 
-    .line 465
+    .line 444
     .local v2, "dy":F
     mul-float v3, v1, v1
 
@@ -1079,7 +1075,7 @@
 
     double-to-float v0, v3
 
-    .line 466
+    .line 445
     .local v0, "d":F
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
@@ -1095,7 +1091,7 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/divmob/doodlebubble/ball/MotionBall;->fire(FF)V
 
-    .line 468
+    .line 447
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->mCannon:Lcom/divmob/doodlebubble/cannon/Cannon;
 
     div-float v4, v1, v0
@@ -1116,10 +1112,10 @@
 
     invoke-virtual {v3, v4}, Lcom/divmob/doodlebubble/cannon/Cannon;->setRotation(F)V
 
-    .line 469
+    .line 448
     return-void
 
-    .line 462
+    .line 441
     .end local v0    # "d":F
     .end local v2    # "dy":F
     :cond_49
@@ -1138,12 +1134,12 @@
 
     const/4 v9, -0x1
 
-    .line 748
+    .line 732
     new-instance v3, Landroid/graphics/Point;
 
     invoke-direct {v3, p1, p2}, Landroid/graphics/Point;-><init>(II)V
 
-    .line 749
+    .line 733
     .local v3, "me":Landroid/graphics/Point;
     iget-object v6, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
 
@@ -1175,26 +1171,26 @@
 
     check-cast v0, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 750
+    .line 734
     .local v0, "b":Lcom/divmob/doodlebubble/ball/Ball;
     const/4 v4, 0x0
 
-    .line 751
+    .line 735
     .local v4, "neigh":Lcom/divmob/doodlebubble/ball/Ball;
     rem-int/lit8 v5, p1, 0x2
 
-    .line 752
+    .line 736
     .local v5, "odd":I
     if-eqz v0, :cond_2e
 
-    .line 754
+    .line 738
     const/4 v1, 0x1
 
     .local v1, "i":I
     :goto_2c
     if-ge v1, v9, :cond_3d
 
-    .line 773
+    .line 757
     .end local v1    # "i":I
     :cond_2e
     const/4 v1, 0x1
@@ -1203,7 +1199,7 @@
     :goto_2f
     if-ge v1, v9, :cond_84
 
-    .line 790
+    .line 774
     const/4 v6, 0x0
 
     iget v7, v3, Landroid/graphics/Point;->x:I
@@ -1216,12 +1212,12 @@
 
     iput v6, v3, Landroid/graphics/Point;->x:I
 
-    .line 791
+    .line 775
     :cond_3c
     :goto_3c
     return-object v3
 
-    .line 755
+    .line 739
     :cond_3d
     const/4 v2, 0x1
 
@@ -1229,18 +1225,18 @@
     :goto_3e
     if-ge v2, v9, :cond_43
 
-    .line 754
+    .line 738
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_2c
 
-    .line 756
+    .line 740
     :cond_43
     if-nez v1, :cond_47
 
     if-eqz v2, :cond_81
 
-    .line 757
+    .line 741
     :cond_47
     if-eqz v1, :cond_53
 
@@ -1255,7 +1251,7 @@
 
     if-ne v5, v10, :cond_81
 
-    .line 758
+    .line 742
     :cond_53
     iget-object v6, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
 
@@ -1292,29 +1288,29 @@
     .end local v4    # "neigh":Lcom/divmob/doodlebubble/ball/Ball;
     check-cast v4, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 759
+    .line 743
     .restart local v4    # "neigh":Lcom/divmob/doodlebubble/ball/Ball;
     if-nez v4, :cond_81
 
-    .line 761
+    .line 745
     add-int v6, p1, v1
 
     iput v6, v3, Landroid/graphics/Point;->x:I
 
-    .line 762
+    .line 746
     add-int v6, p2, v2
 
     iput v6, v3, Landroid/graphics/Point;->y:I
 
     goto :goto_3c
 
-    .line 755
+    .line 739
     :cond_81
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_3e
 
-    .line 774
+    .line 758
     .end local v2    # "j":I
     :cond_84
     const/4 v2, 0x1
@@ -1323,18 +1319,18 @@
     :goto_85
     if-ge v2, v9, :cond_8a
 
-    .line 773
+    .line 757
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_2f
 
-    .line 775
+    .line 759
     :cond_8a
     if-nez v1, :cond_8e
 
     if-eqz v2, :cond_bf
 
-    .line 776
+    .line 760
     :cond_8e
     if-eqz v1, :cond_9a
 
@@ -1349,7 +1345,7 @@
 
     if-ne v5, v10, :cond_bf
 
-    .line 777
+    .line 761
     :cond_9a
     iget-object v6, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
 
@@ -1386,11 +1382,11 @@
     .end local v4    # "neigh":Lcom/divmob/doodlebubble/ball/Ball;
     check-cast v4, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 778
+    .line 762
     .restart local v4    # "neigh":Lcom/divmob/doodlebubble/ball/Ball;
     if-nez v4, :cond_3c
 
-    .line 774
+    .line 758
     :cond_bf
     add-int/lit8 v2, v2, -0x1
 
@@ -1403,7 +1399,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 941
+    .line 926
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->gameoverScoreText:Lcom/divmob/maegame/util/MBMText;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1426,42 +1422,39 @@
 
     invoke-virtual {v0, v1}, Lcom/divmob/maegame/util/MBMText;->setText(Ljava/lang/String;)V
 
-    .line 942
+    .line 927
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->gameoverScoreText:Lcom/divmob/maegame/util/MBMText;
 
     iget v1, p0, Lcom/divmob/doodlebubble/GameActivity;->CAMERA_WIDTH:I
 
     invoke-virtual {v0, v1}, Lcom/divmob/maegame/util/MBMText;->alignCenterX(I)V
 
-    .line 943
+    .line 928
     iget v0, p0, Lcom/divmob/doodlebubble/GameActivity;->gameMode:I
 
-    if-nez v0, :cond_32
+    if-nez v0, :cond_2f
 
-    .line 944
-    invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->saveScore()V
-
-    .line 945
+    .line 929
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->sndWin:Lorg/anddev/andengine/audio/sound/Sound;
 
     invoke-static {v0}, Lcom/divmob/maegame/sound/MSoundManager;->playSound(Lorg/anddev/andengine/audio/sound/Sound;)V
 
-    .line 949
-    :goto_2c
+    .line 933
+    :goto_29
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {p0, v0, v3, v3}, Lcom/divmob/doodlebubble/GameActivity;->showAScene(Lorg/anddev/andengine/entity/scene/Scene;ZZ)V
 
-    .line 950
+    .line 934
     return-void
 
-    .line 947
-    :cond_32
+    .line 931
+    :cond_2f
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->sndLost:Lorg/anddev/andengine/audio/sound/Sound;
 
     invoke-static {v0}, Lcom/divmob/maegame/sound/MSoundManager;->playSound(Lorg/anddev/andengine/audio/sound/Sound;)V
 
-    goto :goto_2c
+    goto :goto_29
 .end method
 
 .method private getChain(Lcom/divmob/doodlebubble/ball/Ball;)V
@@ -1471,26 +1464,26 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 569
+    .line 550
     iput-boolean v8, p1, Lcom/divmob/doodlebubble/ball/Ball;->isDel:Z
 
-    .line 570
+    .line 551
     iget-object v5, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v5, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 571
+    .line 552
     iget v5, p1, Lcom/divmob/doodlebubble/ball/Ball;->row:I
 
     rem-int/lit8 v4, v5, 0x2
 
-    .line 572
+    .line 553
     .local v4, "odd":I
     invoke-virtual {p1}, Lcom/divmob/doodlebubble/ball/Ball;->getColor()I
 
     move-result v2
 
-    .line 573
+    .line 554
     .local v2, "match":I
     const/4 v0, -0x1
 
@@ -1498,10 +1491,10 @@
     :goto_11
     if-le v0, v8, :cond_14
 
-    .line 589
+    .line 570
     return-void
 
-    .line 574
+    .line 555
     :cond_14
     const/4 v1, -0x1
 
@@ -1509,18 +1502,18 @@
     :goto_15
     if-le v1, v8, :cond_1a
 
-    .line 573
+    .line 554
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_11
 
-    .line 575
+    .line 556
     :cond_1a
     if-nez v0, :cond_1e
 
     if-eqz v1, :cond_5f
 
-    .line 576
+    .line 557
     :cond_1e
     if-eqz v0, :cond_2b
 
@@ -1537,7 +1530,7 @@
 
     if-ne v4, v8, :cond_5f
 
-    .line 577
+    .line 558
     :cond_2b
     iget-object v5, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
 
@@ -1577,11 +1570,11 @@
 
     check-cast v3, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 578
+    .line 559
     .local v3, "neigh":Lcom/divmob/doodlebubble/ball/Ball;
     if-eqz v3, :cond_5f
 
-    .line 579
+    .line 560
     invoke-virtual {v3}, Lcom/divmob/doodlebubble/ball/Ball;->getColor()I
 
     move-result v5
@@ -1592,10 +1585,10 @@
 
     if-nez v5, :cond_5f
 
-    .line 580
+    .line 561
     invoke-direct {p0, v3}, Lcom/divmob/doodlebubble/GameActivity;->getChain(Lcom/divmob/doodlebubble/ball/Ball;)V
 
-    .line 574
+    .line 555
     .end local v3    # "neigh":Lcom/divmob/doodlebubble/ball/Ball;
     :cond_5f
     add-int/lit8 v1, v1, 0x1
@@ -1610,15 +1603,15 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 629
+    .line 614
     iput-boolean v7, p1, Lcom/divmob/doodlebubble/ball/Ball;->isDel:Z
 
-    .line 630
+    .line 615
     iget v4, p1, Lcom/divmob/doodlebubble/ball/Ball;->row:I
 
     rem-int/lit8 v3, v4, 0x2
 
-    .line 632
+    .line 617
     .local v3, "odd":I
     const/4 v0, -0x1
 
@@ -1626,10 +1619,10 @@
     :goto_8
     if-le v0, v7, :cond_b
 
-    .line 647
+    .line 632
     return-void
 
-    .line 633
+    .line 618
     :cond_b
     const/4 v1, -0x1
 
@@ -1637,18 +1630,18 @@
     :goto_c
     if-le v1, v7, :cond_11
 
-    .line 632
+    .line 617
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_8
 
-    .line 634
+    .line 619
     :cond_11
     if-nez v0, :cond_15
 
     if-eqz v1, :cond_50
 
-    .line 635
+    .line 620
     :cond_15
     if-eqz v0, :cond_22
 
@@ -1665,7 +1658,7 @@
 
     if-ne v3, v7, :cond_50
 
-    .line 636
+    .line 621
     :cond_22
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
 
@@ -1705,19 +1698,19 @@
 
     check-cast v2, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 637
+    .line 622
     .local v2, "neigh":Lcom/divmob/doodlebubble/ball/Ball;
     if-eqz v2, :cond_50
 
-    .line 638
+    .line 623
     iget-boolean v4, v2, Lcom/divmob/doodlebubble/ball/Ball;->isDel:Z
 
     if-nez v4, :cond_50
 
-    .line 639
+    .line 624
     invoke-direct {p0, v2}, Lcom/divmob/doodlebubble/GameActivity;->getLinkedBall(Lcom/divmob/doodlebubble/ball/Ball;)V
 
-    .line 633
+    .line 618
     .end local v2    # "neigh":Lcom/divmob/doodlebubble/ball/Ball;
     :cond_50
     add-int/lit8 v1, v1, 0x1
@@ -1730,17 +1723,17 @@
     .param p1, "numOfRow"    # I
 
     .prologue
-    .line 703
+    .line 688
     const/4 v2, 0x0
 
     .local v2, "j":I
     :goto_1
     if-lt v2, p1, :cond_4
 
-    .line 711
+    .line 696
     return-void
 
-    .line 704
+    .line 689
     :cond_4
     rem-int/lit8 v1, v2, 0x2
 
@@ -1750,12 +1743,12 @@
 
     if-lt v1, v3, :cond_d
 
-    .line 703
+    .line 688
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 706
+    .line 691
     :cond_d
     const/4 v3, 0x1
 
@@ -1763,7 +1756,7 @@
 
     move-result-object v0
 
-    .line 708
+    .line 693
     .local v0, "ball":Lcom/divmob/doodlebubble/ball/Ball;
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
@@ -1773,7 +1766,7 @@
 
     invoke-virtual {v0, v3}, Lcom/divmob/doodlebubble/ball/Ball;->setColor(I)V
 
-    .line 704
+    .line 689
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_6
@@ -1785,7 +1778,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 554
+    .line 535
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
     sget v1, Lcom/divmob/maegame/constant/SCREEN;->CAMERA_WIDTH:I
@@ -1810,7 +1803,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/divmob/doodlebubble/ball/MotionBall;->setPosition(FF)V
 
-    .line 557
+    .line 538
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->nextBall:Lcom/divmob/doodlebubble/ball/Ball;
@@ -1821,7 +1814,7 @@
 
     invoke-virtual {v0, v1}, Lcom/divmob/doodlebubble/ball/MotionBall;->setColor(I)V
 
-    .line 558
+    .line 539
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->nextBall:Lcom/divmob/doodlebubble/ball/Ball;
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
@@ -1832,110 +1825,17 @@
 
     invoke-virtual {v0, v1}, Lcom/divmob/doodlebubble/ball/Ball;->setColor(I)V
 
-    .line 560
+    .line 541
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/divmob/doodlebubble/GameActivity;->isMoving:Z
 
-    .line 562
+    .line 543
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
     invoke-virtual {v0, v4, v4}, Lcom/divmob/doodlebubble/ball/MotionBall;->setVel(FF)V
 
-    .line 563
-    return-void
-.end method
-
-.method private loadHelpScene()V
-    .registers 10
-
-    .prologue
-    const/16 v4, 0x80
-
-    const/4 v3, 0x0
-
-    .line 1070
-    new-instance v0, Lorg/anddev/andengine/entity/scene/Scene;
-
-    invoke-direct {v0}, Lorg/anddev/andengine/entity/scene/Scene;-><init>()V
-
-    iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHelpScene:Lorg/anddev/andengine/entity/scene/Scene;
-
-    .line 1071
-    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHelpScene:Lorg/anddev/andengine/entity/scene/Scene;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lorg/anddev/andengine/entity/scene/Scene;->setBackgroundEnabled(Z)V
-
-    .line 1072
-    new-instance v8, Lorg/anddev/andengine/entity/sprite/Sprite;
-
-    const-string v0, "help"
-
-    const/16 v1, 0x200
-
-    const/16 v2, 0x400
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/divmob/doodlebubble/GameActivity;->createTextureRegion(Ljava/lang/String;II)Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
-
-    move-result-object v0
-
-    invoke-direct {v8, v3, v3, v0}, Lorg/anddev/andengine/entity/sprite/Sprite;-><init>(FFLorg/anddev/andengine/opengl/texture/region/TextureRegion;)V
-
-    .line 1073
-    .local v8, "dialog":Lorg/anddev/andengine/entity/sprite/Sprite;
-    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHelpScene:Lorg/anddev/andengine/entity/scene/Scene;
-
-    invoke-virtual {v0, v8}, Lorg/anddev/andengine/entity/scene/Scene;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
-
-    .line 1075
-    const-string v1, "menu/back_btn"
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x2
-
-    move-object v0, p0
-
-    move v5, v4
-
-    invoke-virtual/range {v0 .. v5}, Lcom/divmob/doodlebubble/GameActivity;->createTiledTextureRegion(Ljava/lang/String;IIII)Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
-
-    move-result-object v7
-
-    .line 1076
-    .local v7, "backBtnRegion":Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
-    new-instance v6, Lcom/divmob/doodlebubble/GameActivity$3;
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    iget v1, p0, Lcom/divmob/doodlebubble/GameActivity;->CAMERA_HEIGHT:I
-
-    invoke-virtual {v7}, Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;->getTileHeight()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    add-int/lit8 v1, v1, -0x5
-
-    int-to-float v1, v1
-
-    invoke-direct {v6, p0, v0, v1, v7}, Lcom/divmob/doodlebubble/GameActivity$3;-><init>(Lcom/divmob/doodlebubble/GameActivity;FFLorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;)V
-
-    .line 1098
-    .local v6, "backBtn":Lorg/anddev/andengine/entity/sprite/AnimatedSprite;
-    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHelpScene:Lorg/anddev/andengine/entity/scene/Scene;
-
-    invoke-virtual {v0, v6}, Lorg/anddev/andengine/entity/scene/Scene;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
-
-    .line 1099
-    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHelpScene:Lorg/anddev/andengine/entity/scene/Scene;
-
-    invoke-virtual {v0, v6}, Lorg/anddev/andengine/entity/scene/Scene;->registerTouchArea(Lorg/anddev/andengine/entity/scene/Scene$ITouchArea;)V
-
-    .line 1100
+    .line 544
     return-void
 .end method
 
@@ -1945,7 +1845,7 @@
     .param p2, "world"    # I
 
     .prologue
-    .line 678
+    .line 663
     invoke-virtual {p0}, Lcom/divmob/doodlebubble/GameActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -1988,7 +1888,7 @@
 
     move-result v1
 
-    .line 679
+    .line 664
     .local v1, "id":I
     invoke-virtual {p0}, Lcom/divmob/doodlebubble/GameActivity;->getResources()Landroid/content/res/Resources;
 
@@ -1998,7 +1898,7 @@
 
     move-result-object v2
 
-    .line 680
+    .line 665
     .local v2, "s":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -2008,16 +1908,16 @@
 
     if-lt v0, v3, :cond_38
 
-    .line 683
+    .line 668
     return-void
 
-    .line 681
+    .line 666
     :cond_38
     aget-object v3, v2, v0
 
     invoke-direct {p0, v0, v3}, Lcom/divmob/doodlebubble/GameActivity;->createBubblesFromString(ILjava/lang/String;)V
 
-    .line 680
+    .line 665
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_34
@@ -2031,21 +1931,21 @@
 
     const/4 v8, 0x0
 
-    .line 899
+    .line 883
     new-instance v4, Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-direct {v4}, Lorg/anddev/andengine/entity/scene/Scene;-><init>()V
 
     iput-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
 
-    .line 900
+    .line 884
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Lorg/anddev/andengine/entity/scene/Scene;->setBackgroundEnabled(Z)V
 
-    .line 901
+    .line 885
     new-instance v0, Lorg/anddev/andengine/entity/primitive/Rectangle;
 
     sget v4, Lcom/divmob/maegame/constant/SCREEN;->CAMERA_WIDTH:I
@@ -2058,23 +1958,23 @@
 
     invoke-direct {v0, v8, v8, v4, v5}, Lorg/anddev/andengine/entity/primitive/Rectangle;-><init>(FFFF)V
 
-    .line 902
+    .line 886
     .local v0, "blur":Lorg/anddev/andengine/entity/primitive/Rectangle;
     const v4, -0xcccccd
 
     invoke-static {v0, v4}, Lcom/divmob/maegame/util/MUtil;->setColor(Lorg/anddev/andengine/entity/Entity;I)V
 
-    .line 903
+    .line 887
     const v4, 0x3f333333    # 0.7f
 
     invoke-virtual {v0, v4}, Lorg/anddev/andengine/entity/primitive/Rectangle;->setAlpha(F)V
 
-    .line 905
+    .line 889
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v4, v0}, Lorg/anddev/andengine/entity/scene/Scene;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 907
+    .line 891
     const-string v4, "rs/result_dialog"
 
     const/16 v5, 0x200
@@ -2085,25 +1985,25 @@
 
     move-result-object v1
 
-    .line 908
+    .line 892
     .local v1, "dialog":Lorg/anddev/andengine/entity/sprite/Sprite;
     const/high16 v4, 0x42700000    # 60.0f
 
     invoke-virtual {v1, v8, v4}, Lorg/anddev/andengine/entity/sprite/Sprite;->setPosition(FF)V
 
-    .line 909
+    .line 893
     iget v4, p0, Lcom/divmob/doodlebubble/GameActivity;->CAMERA_WIDTH:I
 
     int-to-float v4, v4
 
     invoke-static {v1, v4}, Lcom/divmob/maegame/util/MUtil;->alignCenterX(Lorg/anddev/andengine/entity/sprite/BaseSprite;F)V
 
-    .line 910
+    .line 894
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v4, v1}, Lorg/anddev/andengine/entity/scene/Scene;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 912
+    .line 896
     new-instance v2, Lorg/anddev/andengine/entity/sprite/Sprite;
 
     const/high16 v4, 0x436e0000    # 238.0f
@@ -2112,18 +2012,18 @@
 
     invoke-direct {v2, v8, v4, v5}, Lorg/anddev/andengine/entity/sprite/Sprite;-><init>(FFLorg/anddev/andengine/opengl/texture/region/TextureRegion;)V
 
-    .line 913
+    .line 897
     .local v2, "title":Lorg/anddev/andengine/entity/sprite/Sprite;
     invoke-virtual {v1, v2}, Lorg/anddev/andengine/entity/sprite/Sprite;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 914
+    .line 898
     invoke-virtual {v1}, Lorg/anddev/andengine/entity/sprite/Sprite;->getWidth()F
 
     move-result v4
 
     invoke-static {v2, v4}, Lcom/divmob/maegame/util/MUtil;->alignCenterX(Lorg/anddev/andengine/entity/sprite/BaseSprite;F)V
 
-    .line 916
+    .line 900
     const-string v4, "rs/u_scored"
 
     const/16 v5, 0x100
@@ -2134,23 +2034,23 @@
 
     move-result-object v3
 
-    .line 917
+    .line 901
     .local v3, "uScored":Lorg/anddev/andengine/entity/sprite/Sprite;
     const v4, 0x43988000    # 305.0f
 
     invoke-virtual {v3, v8, v4}, Lorg/anddev/andengine/entity/sprite/Sprite;->setPosition(FF)V
 
-    .line 918
+    .line 902
     invoke-virtual {v1}, Lorg/anddev/andengine/entity/sprite/Sprite;->getWidth()F
 
     move-result v4
 
     invoke-static {v3, v4}, Lcom/divmob/maegame/util/MUtil;->alignCenterX(Lorg/anddev/andengine/entity/sprite/BaseSprite;F)V
 
-    .line 919
+    .line 903
     invoke-virtual {v1, v3}, Lorg/anddev/andengine/entity/sprite/Sprite;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 921
+    .line 905
     new-instance v4, Lcom/divmob/maegame/util/MBMText;
 
     invoke-virtual {v1}, Lorg/anddev/andengine/entity/sprite/Sprite;->getY()F
@@ -2169,14 +2069,14 @@
 
     iput-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->gameoverScoreText:Lcom/divmob/maegame/util/MBMText;
 
-    .line 922
+    .line 906
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     iget-object v5, p0, Lcom/divmob/doodlebubble/GameActivity;->gameoverScoreText:Lcom/divmob/maegame/util/MBMText;
 
     invoke-virtual {v4, v5}, Lorg/anddev/andengine/entity/scene/Scene;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 924
+    .line 908
     new-instance v4, Lorg/anddev/andengine/entity/sprite/Sprite;
 
     const/high16 v5, 0x438d0000    # 282.0f
@@ -2187,7 +2087,7 @@
 
     iput-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->tryAgainBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
-    .line 925
+    .line 909
     new-instance v4, Lorg/anddev/andengine/entity/sprite/Sprite;
 
     const/high16 v5, 0x428a0000    # 69.0f
@@ -2198,21 +2098,21 @@
 
     iput-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->menuBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
-    .line 927
+    .line 911
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     iget-object v5, p0, Lcom/divmob/doodlebubble/GameActivity;->tryAgainBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v4, v5}, Lorg/anddev/andengine/entity/scene/Scene;->registerTouchArea(Lorg/anddev/andengine/entity/scene/Scene$ITouchArea;)V
 
-    .line 928
+    .line 912
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     iget-object v5, p0, Lcom/divmob/doodlebubble/GameActivity;->menuBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v4, v5}, Lorg/anddev/andengine/entity/scene/Scene;->registerTouchArea(Lorg/anddev/andengine/entity/scene/Scene$ITouchArea;)V
 
-    .line 930
+    .line 914
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     sget v5, Lcom/divmob/maegame/constant/SCREEN;->CAMERA_WIDTH:I
@@ -2221,22 +2121,22 @@
 
     invoke-virtual {v4, v5, v8}, Lorg/anddev/andengine/entity/scene/Scene;->setPosition(FF)V
 
-    .line 932
+    .line 916
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->tryAgainBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1, v4}, Lorg/anddev/andengine/entity/sprite/Sprite;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 933
+    .line 917
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->menuBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1, v4}, Lorg/anddev/andengine/entity/sprite/Sprite;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 935
+    .line 919
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->mGameOverScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v4, p0}, Lorg/anddev/andengine/entity/scene/Scene;->setOnAreaTouchListener(Lorg/anddev/andengine/entity/scene/Scene$IOnAreaTouchListener;)V
 
-    .line 937
+    .line 922
     return-void
 .end method
 
@@ -2244,7 +2144,7 @@
     .registers 5
 
     .prologue
-    .line 884
+    .line 868
     new-instance v0, Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
     const/16 v1, 0x200
@@ -2257,12 +2157,12 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->overSceneTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
-    .line 886
+    .line 870
     iget v0, p0, Lcom/divmob/doodlebubble/GameActivity;->gameMode:I
 
     if-nez v0, :cond_35
 
-    .line 887
+    .line 871
     const-string v0, "rs/congrats"
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->overSceneTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
@@ -2273,7 +2173,7 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->overTitleRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 891
+    .line 875
     :goto_1b
     const-string v0, "rs/tryagain"
 
@@ -2285,7 +2185,7 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->tryAgainRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 892
+    .line 876
     const-string v0, "rs/menu"
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->overSceneTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
@@ -2296,15 +2196,15 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->menuRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 894
+    .line 878
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->overSceneTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
     invoke-virtual {p0, v0}, Lcom/divmob/doodlebubble/GameActivity;->buildAndLoadTexture(Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;)V
 
-    .line 895
+    .line 879
     return-void
 
-    .line 889
+    .line 873
     :cond_35
     const-string v0, "rs/gameover"
 
@@ -2331,21 +2231,21 @@
 
     const/4 v6, 0x0
 
-    .line 1017
+    .line 989
     new-instance v2, Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-direct {v2}, Lorg/anddev/andengine/entity/scene/Scene;-><init>()V
 
     iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mResultScene:Lorg/anddev/andengine/entity/scene/Scene;
 
-    .line 1018
+    .line 990
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mResultScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Lorg/anddev/andengine/entity/scene/Scene;->setBackgroundEnabled(Z)V
 
-    .line 1019
+    .line 991
     new-instance v0, Lorg/anddev/andengine/entity/primitive/Rectangle;
 
     sget v2, Lcom/divmob/maegame/constant/SCREEN;->CAMERA_WIDTH:I
@@ -2358,23 +2258,23 @@
 
     invoke-direct {v0, v6, v6, v2, v3}, Lorg/anddev/andengine/entity/primitive/Rectangle;-><init>(FFFF)V
 
-    .line 1020
+    .line 992
     .local v0, "blur":Lorg/anddev/andengine/entity/primitive/Rectangle;
     const v2, -0xcccccd
 
     invoke-static {v0, v2}, Lcom/divmob/maegame/util/MUtil;->setColor(Lorg/anddev/andengine/entity/Entity;I)V
 
-    .line 1021
+    .line 993
     const v2, 0x3f333333    # 0.7f
 
     invoke-virtual {v0, v2}, Lorg/anddev/andengine/entity/primitive/Rectangle;->setAlpha(F)V
 
-    .line 1023
+    .line 995
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mResultScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v2, v0}, Lorg/anddev/andengine/entity/scene/Scene;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 1025
+    .line 997
     const-string v2, "rs/result_dialog"
 
     const/16 v3, 0x200
@@ -2385,25 +2285,25 @@
 
     move-result-object v1
 
-    .line 1026
+    .line 998
     .local v1, "dialog":Lorg/anddev/andengine/entity/sprite/Sprite;
     const/high16 v2, 0x42700000    # 60.0f
 
     invoke-virtual {v1, v6, v2}, Lorg/anddev/andengine/entity/sprite/Sprite;->setPosition(FF)V
 
-    .line 1027
+    .line 999
     iget v2, p0, Lcom/divmob/doodlebubble/GameActivity;->CAMERA_WIDTH:I
 
     int-to-float v2, v2
 
     invoke-static {v1, v2}, Lcom/divmob/maegame/util/MUtil;->alignCenterX(Lorg/anddev/andengine/entity/sprite/BaseSprite;F)V
 
-    .line 1028
+    .line 1000
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mResultScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v2, v1}, Lorg/anddev/andengine/entity/scene/Scene;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 1030
+    .line 1002
     new-instance v2, Lorg/anddev/andengine/entity/sprite/Sprite;
 
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->rsLevelCompleteRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
@@ -2412,12 +2312,12 @@
 
     iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->titleLevel:Lorg/anddev/andengine/entity/sprite/Sprite;
 
-    .line 1031
+    .line 1003
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->titleLevel:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1, v2}, Lorg/anddev/andengine/entity/sprite/Sprite;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 1032
+    .line 1004
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->titleLevel:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1}, Lorg/anddev/andengine/entity/sprite/Sprite;->getWidth()F
@@ -2426,7 +2326,7 @@
 
     invoke-static {v2, v3}, Lcom/divmob/maegame/util/MUtil;->alignCenterX(Lorg/anddev/andengine/entity/sprite/BaseSprite;F)V
 
-    .line 1034
+    .line 1006
     new-instance v2, Lorg/anddev/andengine/entity/sprite/Sprite;
 
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->rsWorldCompleTextureRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
@@ -2435,12 +2335,12 @@
 
     iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->titleWorld:Lorg/anddev/andengine/entity/sprite/Sprite;
 
-    .line 1035
+    .line 1007
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->titleWorld:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1, v2}, Lorg/anddev/andengine/entity/sprite/Sprite;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 1036
+    .line 1008
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->titleWorld:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1}, Lorg/anddev/andengine/entity/sprite/Sprite;->getWidth()F
@@ -2449,7 +2349,7 @@
 
     invoke-static {v2, v3}, Lcom/divmob/maegame/util/MUtil;->alignCenterX(Lorg/anddev/andengine/entity/sprite/BaseSprite;F)V
 
-    .line 1038
+    .line 1010
     new-instance v2, Lorg/anddev/andengine/entity/sprite/Sprite;
 
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->rsUscoredRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
@@ -2458,12 +2358,12 @@
 
     iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->contentLevel:Lorg/anddev/andengine/entity/sprite/Sprite;
 
-    .line 1039
+    .line 1011
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->contentLevel:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1, v2}, Lorg/anddev/andengine/entity/sprite/Sprite;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 1040
+    .line 1012
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->contentLevel:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1}, Lorg/anddev/andengine/entity/sprite/Sprite;->getWidth()F
@@ -2472,7 +2372,7 @@
 
     invoke-static {v2, v3}, Lcom/divmob/maegame/util/MUtil;->alignCenterX(Lorg/anddev/andengine/entity/sprite/BaseSprite;F)V
 
-    .line 1041
+    .line 1013
     new-instance v2, Lorg/anddev/andengine/entity/sprite/Sprite;
 
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->rsWorldFinishRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
@@ -2481,12 +2381,12 @@
 
     iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->contentWorld:Lorg/anddev/andengine/entity/sprite/Sprite;
 
-    .line 1042
+    .line 1014
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->contentWorld:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1, v2}, Lorg/anddev/andengine/entity/sprite/Sprite;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 1043
+    .line 1015
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->contentWorld:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1}, Lorg/anddev/andengine/entity/sprite/Sprite;->getWidth()F
@@ -2495,7 +2395,7 @@
 
     invoke-static {v2, v3}, Lcom/divmob/maegame/util/MUtil;->alignCenterX(Lorg/anddev/andengine/entity/sprite/BaseSprite;F)V
 
-    .line 1046
+    .line 1018
     new-instance v2, Lcom/divmob/maegame/util/MBMText;
 
     invoke-virtual {v1}, Lorg/anddev/andengine/entity/sprite/Sprite;->getY()F
@@ -2514,14 +2414,14 @@
 
     iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->resultScoreText:Lcom/divmob/maegame/util/MBMText;
 
-    .line 1047
+    .line 1019
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mResultScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->resultScoreText:Lcom/divmob/maegame/util/MBMText;
 
     invoke-virtual {v2, v3}, Lorg/anddev/andengine/entity/scene/Scene;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 1050
+    .line 1022
     new-instance v2, Lorg/anddev/andengine/entity/sprite/Sprite;
 
     const/high16 v3, 0x428a0000    # 69.0f
@@ -2532,7 +2432,7 @@
 
     iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->menuBtn2:Lorg/anddev/andengine/entity/sprite/Sprite;
 
-    .line 1051
+    .line 1023
     new-instance v2, Lorg/anddev/andengine/entity/sprite/Sprite;
 
     const v3, 0x438f8000    # 287.0f
@@ -2543,21 +2443,21 @@
 
     iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->continueBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
-    .line 1053
+    .line 1025
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mResultScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->continueBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v2, v3}, Lorg/anddev/andengine/entity/scene/Scene;->registerTouchArea(Lorg/anddev/andengine/entity/scene/Scene$ITouchArea;)V
 
-    .line 1054
+    .line 1026
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mResultScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->menuBtn2:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v2, v3}, Lorg/anddev/andengine/entity/scene/Scene;->registerTouchArea(Lorg/anddev/andengine/entity/scene/Scene$ITouchArea;)V
 
-    .line 1056
+    .line 1028
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mResultScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     sget v3, Lcom/divmob/maegame/constant/SCREEN;->CAMERA_WIDTH:I
@@ -2566,22 +2466,22 @@
 
     invoke-virtual {v2, v3, v6}, Lorg/anddev/andengine/entity/scene/Scene;->setPosition(FF)V
 
-    .line 1058
+    .line 1030
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->continueBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1, v2}, Lorg/anddev/andengine/entity/sprite/Sprite;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 1059
+    .line 1031
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->menuBtn2:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {v1, v2}, Lorg/anddev/andengine/entity/sprite/Sprite;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 1061
+    .line 1033
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mResultScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v2, p0}, Lorg/anddev/andengine/entity/scene/Scene;->setOnAreaTouchListener(Lorg/anddev/andengine/entity/scene/Scene$IOnAreaTouchListener;)V
 
-    .line 1062
+    .line 1034
     return-void
 .end method
 
@@ -2591,7 +2491,7 @@
     .prologue
     const/16 v2, 0x200
 
-    .line 1000
+    .line 972
     new-instance v0, Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
     sget-object v1, Lorg/anddev/andengine/opengl/texture/TextureOptions;->BILINEAR:Lorg/anddev/andengine/opengl/texture/TextureOptions;
@@ -2600,7 +2500,7 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->resultSceneTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
-    .line 1003
+    .line 975
     const-string v0, "rs/world_completed"
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->resultSceneTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
@@ -2611,7 +2511,7 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->rsWorldCompleTextureRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 1004
+    .line 976
     const-string v0, "rs/finish_world_text"
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->resultSceneTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
@@ -2622,7 +2522,7 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->rsWorldFinishRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 1006
+    .line 978
     const-string v0, "rs/level_completed"
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->resultSceneTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
@@ -2633,7 +2533,7 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->rsLevelCompleteRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 1007
+    .line 979
     const-string v0, "rs/u_scored"
 
     const/16 v1, 0x100
@@ -2646,7 +2546,7 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->rsUscoredRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 1009
+    .line 981
     const-string v0, "rs/continue"
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->resultSceneTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
@@ -2657,12 +2557,12 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->continueRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 1012
+    .line 984
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->resultSceneTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
     invoke-virtual {p0, v0}, Lcom/divmob/doodlebubble/GameActivity;->buildAndLoadTexture(Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;)V
 
-    .line 1013
+    .line 985
     return-void
 .end method
 
@@ -2672,7 +2572,7 @@
     .param p2, "fallingFeather"    # Z
 
     .prologue
-    .line 803
+    .line 787
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     invoke-virtual {v2}, Lcom/divmob/doodlebubble/hud/MHud;->isEndlessMode()Z
@@ -2681,7 +2581,7 @@
 
     if-nez v2, :cond_2b
 
-    .line 804
+    .line 788
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->numOfBubblesEachColor:[I
 
     invoke-virtual {p1}, Lcom/divmob/doodlebubble/ball/Ball;->getColor()I
@@ -2694,7 +2594,7 @@
 
     aput v4, v2, v3
 
-    .line 805
+    .line 789
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->numOfBubblesEachColor:[I
 
     invoke-virtual {p1}, Lcom/divmob/doodlebubble/ball/Ball;->getColor()I
@@ -2705,14 +2605,14 @@
 
     if-gtz v2, :cond_2b
 
-    .line 807
+    .line 791
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     iget-object v2, v2, Lcom/divmob/doodlebubble/hud/MHud;->availBubble:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 809
+    .line 793
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -2723,7 +2623,7 @@
 
     if-lt v1, v2, :cond_43
 
-    .line 818
+    .line 802
     .end local v1    # "i":I
     :cond_2b
     sget-object v2, Lcom/divmob/doodlebubble/GameActivity;->mExplosionPool:Lcom/divmob/doodlebubble/effect/ExplosionPool;
@@ -2734,7 +2634,7 @@
 
     check-cast v0, Lcom/divmob/doodlebubble/effect/Explosion;
 
-    .line 819
+    .line 803
     .local v0, "e":Lcom/divmob/doodlebubble/effect/Explosion;
     invoke-virtual {v0}, Lcom/divmob/doodlebubble/effect/Explosion;->hasParent()Z
 
@@ -2742,21 +2642,21 @@
 
     if-nez v2, :cond_3f
 
-    .line 820
+    .line 804
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     const/4 v3, 0x1
 
     invoke-virtual {v0, v2, v3}, Lcom/divmob/doodlebubble/effect/Explosion;->addToScene(Lorg/anddev/andengine/entity/scene/Scene;I)V
 
-    .line 823
+    .line 807
     :cond_3f
     invoke-virtual {v0, p1, p2}, Lcom/divmob/doodlebubble/effect/Explosion;->bounce(Lcom/divmob/doodlebubble/ball/Ball;Z)V
 
-    .line 825
+    .line 809
     return-void
 
-    .line 810
+    .line 794
     .end local v0    # "e":Lcom/divmob/doodlebubble/effect/Explosion;
     .restart local v1    # "i":I
     :cond_43
@@ -2766,12 +2666,12 @@
 
     if-lez v2, :cond_4e
 
-    .line 811
+    .line 795
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     invoke-virtual {v2, v1}, Lcom/divmob/doodlebubble/hud/MHud;->addAvailBubble(I)V
 
-    .line 809
+    .line 793
     :cond_4e
     add-int/lit8 v1, v1, 0x1
 
@@ -2786,7 +2686,7 @@
 
     const/4 v8, 0x0
 
-    .line 475
+    .line 456
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
     invoke-virtual {v4}, Lcom/divmob/doodlebubble/ball/MotionBall;->getY()F
@@ -2813,7 +2713,7 @@
 
     add-int/lit8 v3, v4, 0x0
 
-    .line 476
+    .line 457
     .local v3, "row":I
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
@@ -2847,7 +2747,7 @@
 
     double-to-int v1, v4
 
-    .line 477
+    .line 458
     .local v1, "col":I
     rem-int/lit8 v4, v3, 0x2
 
@@ -2855,32 +2755,32 @@
 
     if-le v1, v4, :cond_3b
 
-    .line 478
+    .line 459
     rem-int/lit8 v4, v3, 0x2
 
     add-int/lit8 v1, v4, 0x8
 
-    .line 481
+    .line 462
     :cond_3b
     if-gez v1, :cond_3e
 
-    .line 482
+    .line 463
     const/4 v1, 0x0
 
-    .line 485
+    .line 466
     :cond_3e
     if-gez v3, :cond_41
 
-    .line 486
+    .line 467
     const/4 v3, 0x0
 
-    .line 489
+    .line 470
     :cond_41
     invoke-direct {p0, v3, v1, v8}, Lcom/divmob/doodlebubble/GameActivity;->createBall(IIZ)Lcom/divmob/doodlebubble/ball/Ball;
 
     move-result-object v0
 
-    .line 491
+    .line 472
     .local v0, "ball":Lcom/divmob/doodlebubble/ball/Ball;
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
@@ -2890,15 +2790,15 @@
 
     invoke-virtual {v0, v4}, Lcom/divmob/doodlebubble/ball/Ball;->setColor(I)V
 
-    .line 494
+    .line 475
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 495
+    .line 476
     invoke-direct {p0, v0}, Lcom/divmob/doodlebubble/GameActivity;->getChain(Lcom/divmob/doodlebubble/ball/Ball;)V
 
-    .line 496
+    .line 477
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
@@ -2909,20 +2809,20 @@
 
     if-le v4, v5, :cond_7f
 
-    .line 497
+    .line 478
     iput v8, p0, Lcom/divmob/doodlebubble/GameActivity;->kaboomBubble:I
 
-    .line 499
+    .line 480
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->sndPop:Lorg/anddev/andengine/audio/sound/Sound;
 
     invoke-static {v4}, Lcom/divmob/maegame/sound/MSoundManager;->playSound(Lorg/anddev/andengine/audio/sound/Sound;)V
 
-    .line 501
+    .line 482
     const/4 v4, 0x1
 
     invoke-direct {p0, v4}, Lcom/divmob/doodlebubble/GameActivity;->delBubbles(Z)V
 
-    .line 503
+    .line 484
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->numOfBubblesEachColor:[I
 
     iget-object v5, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
@@ -2937,17 +2837,17 @@
 
     aput v6, v4, v5
 
-    .line 506
+    .line 487
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->removeUnconnectedBubble()V
 
-    .line 527
+    .line 508
     :goto_7b
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->loadCannon()V
 
-    .line 528
+    .line 509
     return-void
 
-    .line 516
+    .line 497
     :cond_7f
     const/4 v2, 0x0
 
@@ -2961,12 +2861,12 @@
 
     if-lt v2, v4, :cond_a1
 
-    .line 519
+    .line 500
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 521
+    .line 502
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->numOfBubblesEachColor:[I
 
     iget-object v5, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
@@ -2981,14 +2881,14 @@
 
     aput v6, v4, v5
 
-    .line 523
+    .line 504
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->sndCollide:Lorg/anddev/andengine/audio/sound/Sound;
 
     invoke-static {v4}, Lcom/divmob/maegame/sound/MSoundManager;->playSound(Lorg/anddev/andengine/audio/sound/Sound;)V
 
     goto :goto_7b
 
-    .line 517
+    .line 498
     :cond_a1
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
 
@@ -3000,7 +2900,7 @@
 
     iput-boolean v8, v4, Lcom/divmob/doodlebubble/ball/Ball;->isDel:Z
 
-    .line 516
+    .line 497
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_80
@@ -3012,7 +2912,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 596
+    .line 577
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -3021,12 +2921,12 @@
 
     if-lt v1, v2, :cond_18
 
-    .line 609
+    .line 594
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 611
+    .line 596
     const/4 v1, 0x0
 
     :goto_c
@@ -3038,13 +2938,13 @@
 
     if-lt v1, v2, :cond_37
 
-    .line 619
+    .line 604
     invoke-direct {p0, v5}, Lcom/divmob/doodlebubble/GameActivity;->delBubbles(Z)V
 
-    .line 621
+    .line 606
     return-void
 
-    .line 597
+    .line 578
     :cond_18
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
 
@@ -3068,20 +2968,20 @@
 
     check-cast v0, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 598
+    .line 579
     .local v0, "ball":Lcom/divmob/doodlebubble/ball/Ball;
     if-eqz v0, :cond_34
 
-    .line 599
+    .line 580
     invoke-direct {p0, v0}, Lcom/divmob/doodlebubble/GameActivity;->getLinkedBall(Lcom/divmob/doodlebubble/ball/Ball;)V
 
-    .line 596
+    .line 577
     :cond_34
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 612
+    .line 597
     .end local v0    # "ball":Lcom/divmob/doodlebubble/ball/Ball;
     :cond_37
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
@@ -3092,22 +2992,22 @@
 
     check-cast v0, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 613
+    .line 598
     .restart local v0    # "ball":Lcom/divmob/doodlebubble/ball/Ball;
     iget-boolean v2, v0, Lcom/divmob/doodlebubble/ball/Ball;->isDel:Z
 
     if-eqz v2, :cond_48
 
-    .line 614
+    .line 599
     iput-boolean v5, v0, Lcom/divmob/doodlebubble/ball/Ball;->isDel:Z
 
-    .line 611
+    .line 596
     :goto_45
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_c
 
-    .line 616
+    .line 601
     :cond_48
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
 
@@ -3122,7 +3022,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 411
+    .line 381
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -3133,17 +3033,17 @@
 
     if-lt v1, v2, :cond_47
 
-    .line 416
+    .line 386
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 417
+    .line 387
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
-    .line 419
+    .line 389
     :goto_11
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
@@ -3153,12 +3053,12 @@
 
     if-eqz v2, :cond_4e
 
-    .line 425
+    .line 395
     const/4 v2, 0x0
 
     sput v2, Lcom/divmob/doodlebubble/GameActivity;->ceil:F
 
-    .line 427
+    .line 397
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     invoke-virtual {v2}, Lcom/divmob/doodlebubble/hud/MHud;->isEndlessMode()Z
@@ -3167,21 +3067,21 @@
 
     if-eqz v2, :cond_5f
 
-    .line 428
+    .line 398
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     invoke-virtual {v2}, Lcom/divmob/doodlebubble/hud/MHud;->reset()V
 
-    .line 429
+    .line 399
     const/4 v2, 0x5
 
     invoke-direct {p0, v2}, Lcom/divmob/doodlebubble/GameActivity;->loadBubble(I)V
 
-    .line 440
+    .line 410
     :cond_2d
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->loadCannon()V
 
-    .line 441
+    .line 411
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
@@ -3192,33 +3092,33 @@
 
     invoke-virtual {v2, v3}, Lcom/divmob/doodlebubble/ball/MotionBall;->setColor(I)V
 
-    .line 443
+    .line 413
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/divmob/doodlebubble/GameActivity;->timeSinceStarted:J
 
-    .line 445
+    .line 415
     const v2, 0x3e99999a    # 0.3f
 
     iput v2, p0, Lcom/divmob/doodlebubble/GameActivity;->ceilFallingVel:F
 
-    .line 446
+    .line 416
     return-void
 
-    .line 412
+    .line 382
     :cond_47
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->numOfBubblesEachColor:[I
 
     aput v3, v2, v1
 
-    .line 411
+    .line 381
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 420
+    .line 390
     :cond_4e
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
@@ -3228,18 +3128,18 @@
 
     check-cast v0, Lcom/divmob/doodlebubble/ball/Ball;
 
-    .line 421
+    .line 391
     .local v0, "ball":Lcom/divmob/doodlebubble/ball/Ball;
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubblesToReuse:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 422
+    .line 392
     invoke-virtual {v0}, Lcom/divmob/doodlebubble/ball/Ball;->invisible()V
 
     goto :goto_11
 
-    .line 431
+    .line 401
     .end local v0    # "ball":Lcom/divmob/doodlebubble/ball/Ball;
     :cond_5f
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
@@ -3256,12 +3156,12 @@
 
     invoke-direct {p0, v2, v3}, Lcom/divmob/doodlebubble/GameActivity;->loadLevel(II)V
 
-    .line 432
+    .line 402
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     invoke-virtual {v2}, Lcom/divmob/doodlebubble/hud/MHud;->reset()V
 
-    .line 433
+    .line 403
     const/4 v1, 0x0
 
     :goto_74
@@ -3271,55 +3171,30 @@
 
     if-ge v1, v2, :cond_2d
 
-    .line 434
+    .line 404
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->numOfBubblesEachColor:[I
 
     aget v2, v2, v1
 
     if-lez v2, :cond_84
 
-    .line 435
+    .line 405
     iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     invoke-virtual {v2, v1}, Lcom/divmob/doodlebubble/hud/MHud;->addAvailBubble(I)V
 
-    .line 433
+    .line 403
     :cond_84
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_74
 .end method
 
-.method private saveScore()V
-    .registers 4
-
-    .prologue
-    .line 974
-    new-instance v0, Lcom/divmob/doodlebubble/highscore/HighScore;
-
-    invoke-direct {v0, p0}, Lcom/divmob/doodlebubble/highscore/HighScore;-><init>(Landroid/content/Context;)V
-
-    .line 975
-    .local v0, "mHighScore":Lcom/divmob/doodlebubble/highscore/HighScore;
-    iget v1, p0, Lcom/divmob/doodlebubble/GameActivity;->gameDiff:I
-
-    iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
-
-    invoke-virtual {v2}, Lcom/divmob/doodlebubble/hud/MHud;->getScore()I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/divmob/doodlebubble/highscore/HighScore;->addScore(II)Z
-
-    .line 976
-    return-void
-.end method
-
 .method private storyModeUpdate()V
     .registers 6
 
     .prologue
-    .line 277
+    .line 253
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -3328,7 +3203,7 @@
 
     if-nez v1, :cond_27
 
-    .line 278
+    .line 254
     sget v1, Lcom/divmob/doodlebubble/GameActivity;->ceil:F
 
     iget v2, p0, Lcom/divmob/doodlebubble/GameActivity;->ceilFallingVel:F
@@ -3337,7 +3212,7 @@
 
     sput v1, Lcom/divmob/doodlebubble/GameActivity;->ceil:F
 
-    .line 280
+    .line 256
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->mCelling:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     const/4 v2, 0x0
@@ -3354,7 +3229,7 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/anddev/andengine/entity/sprite/Sprite;->setPosition(FF)V
 
-    .line 282
+    .line 258
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -3367,12 +3242,12 @@
 
     if-lt v0, v1, :cond_28
 
-    .line 290
+    .line 266
     .end local v0    # "i":I
     :cond_27
     return-void
 
-    .line 283
+    .line 259
     .restart local v0    # "i":I
     :cond_28
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
@@ -3387,7 +3262,7 @@
 
     invoke-virtual {v1, v2}, Lcom/divmob/doodlebubble/ball/Ball;->move(F)V
 
-    .line 284
+    .line 260
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3410,10 +3285,10 @@
 
     if-lez v1, :cond_4d
 
-    .line 286
+    .line 262
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->gameOver()V
 
-    .line 282
+    .line 258
     :cond_4d
     add-int/lit8 v0, v0, 0x1
 
@@ -3429,265 +3304,242 @@
     .prologue
     const/high16 v1, 0x3f000000    # 0.5f
 
-    .line 1112
+    .line 1046
     invoke-static {v1}, Lcom/divmob/maegame/effect/ScreenTranslation;->moveOutToRight(F)Lorg/anddev/andengine/entity/modifier/MoveXModifier;
 
     move-result-object v0
 
     invoke-super {p0, v1, v0}, Lcom/divmob/common/PortrailGame;->dismissMScene(FLorg/anddev/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 1113
+    .line 1047
     return-void
 .end method
 
 .method public initGame()V
-    .registers 9
+    .registers 10
 
     .prologue
-    const/4 v7, 0x1
+    const/4 v8, 0x0
 
-    const/4 v6, 0x0
+    .line 192
+    iput-boolean v8, p0, Lcom/divmob/doodlebubble/GameActivity;->isMoving:Z
 
-    .line 204
-    iput-boolean v6, p0, Lcom/divmob/doodlebubble/GameActivity;->isMoving:Z
+    .line 194
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
+
+    .line 195
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
+
+    .line 196
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->bubblesToReuse:Ljava/util/ArrayList;
+
+    .line 197
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
+
+    .line 199
+    new-instance v0, Lcom/divmob/doodlebubble/cannon/Cannon;
+
+    iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->cannonRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
+
+    invoke-direct {v0, v1}, Lcom/divmob/doodlebubble/cannon/Cannon;-><init>(Lorg/anddev/andengine/opengl/texture/region/TextureRegion;)V
+
+    iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mCannon:Lcom/divmob/doodlebubble/cannon/Cannon;
+
+    .line 201
+    const/4 v0, 0x6
+
+    new-array v6, v0, [Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
+
+    .line 202
+    .local v6, "featherRegion":[Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
+    const/4 v7, 0x0
+
+    .local v7, "i":I
+    :goto_2c
+    array-length v0, v6
+
+    if-lt v7, v0, :cond_8b
 
     .line 206
-    new-instance v2, Ljava/util/HashMap;
+    new-instance v0, Lcom/divmob/doodlebubble/effect/ExplosionPool;
 
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+    iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbleTiledRegion:Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
 
-    iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->helpBubbles:Ljava/util/HashMap;
+    invoke-direct {v0, v1, v6}, Lcom/divmob/doodlebubble/effect/ExplosionPool;-><init>(Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;[Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;)V
 
-    .line 207
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbles:Ljava/util/ArrayList;
-
-    .line 208
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->bubblesToReuse:Ljava/util/ArrayList;
+    sput-object v0, Lcom/divmob/doodlebubble/GameActivity;->mExplosionPool:Lcom/divmob/doodlebubble/effect/ExplosionPool;
 
     .line 209
-    new-instance v2, Ljava/util/ArrayList;
+    new-instance v0, Lcom/divmob/doodlebubble/ball/MotionBall;
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbleTiledRegion:Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
 
-    iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->delBubbles:Ljava/util/ArrayList;
+    invoke-direct {v0, v1}, Lcom/divmob/doodlebubble/ball/MotionBall;-><init>(Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;)V
+
+    iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
+
+    .line 210
+    new-instance v0, Lcom/divmob/doodlebubble/ball/Ball;
+
+    iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbleTiledRegion:Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
+
+    invoke-direct {v0, v1}, Lcom/divmob/doodlebubble/ball/Ball;-><init>(Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;)V
+
+    iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->nextBall:Lcom/divmob/doodlebubble/ball/Ball;
 
     .line 211
-    new-instance v2, Lcom/divmob/doodlebubble/cannon/Cannon;
+    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->nextBall:Lcom/divmob/doodlebubble/ball/Ball;
 
-    iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->cannonRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
+    sget v1, Lcom/divmob/maegame/constant/SCREEN;->CAMERA_WIDTH:I
 
-    invoke-direct {v2, v3}, Lcom/divmob/doodlebubble/cannon/Cannon;-><init>(Lorg/anddev/andengine/opengl/texture/region/TextureRegion;)V
+    int-to-float v1, v1
 
-    iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mCannon:Lcom/divmob/doodlebubble/cannon/Cannon;
+    const/high16 v2, 0x3f000000    # 0.5f
 
-    .line 214
-    const/4 v2, 0x6
+    mul-float/2addr v1, v2
 
-    new-array v0, v2, [Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
+    const/high16 v2, 0x42c00000    # 96.0f
+
+    sub-float/2addr v1, v2
+
+    sget v2, Lcom/divmob/maegame/constant/SCREEN;->CAMERA_HEIGHT:I
+
+    int-to-float v2, v2
+
+    const/high16 v3, 0x42400000    # 48.0f
+
+    sub-float/2addr v2, v3
+
+    invoke-virtual {v0, v1, v2}, Lcom/divmob/doodlebubble/ball/Ball;->setPosition(FF)V
+
+    .line 213
+    new-instance v0, Lcom/divmob/doodlebubble/hud/MHud;
+
+    iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->hudRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
+
+    iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->violetNumberFont:Lcom/divmob/maegame/util/MBitmapFont;
+
+    invoke-direct {v0, v1, v2}, Lcom/divmob/doodlebubble/hud/MHud;-><init>(Lorg/anddev/andengine/opengl/texture/region/TextureRegion;Lcom/divmob/maegame/util/MBitmapFont;)V
+
+    iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     .line 215
-    .local v0, "feather":[Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
-    const/4 v1, 0x0
-
-    .local v1, "i":I
-    :goto_2d
-    array-length v2, v0
-
-    if-lt v1, v2, :cond_90
-
-    .line 219
-    new-instance v2, Lcom/divmob/doodlebubble/effect/ExplosionPool;
-
-    iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbleTiledRegion:Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
-
-    invoke-direct {v2, v3, v0}, Lcom/divmob/doodlebubble/effect/ExplosionPool;-><init>(Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;[Lorg/anddev/andengine/opengl/texture/region/TextureRegion;)V
-
-    sput-object v2, Lcom/divmob/doodlebubble/GameActivity;->mExplosionPool:Lcom/divmob/doodlebubble/effect/ExplosionPool;
-
-    .line 222
-    new-instance v2, Lcom/divmob/doodlebubble/ball/MotionBall;
-
-    iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbleTiledRegion:Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
-
-    invoke-direct {v2, v3}, Lcom/divmob/doodlebubble/ball/MotionBall;-><init>(Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;)V
-
-    iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
-
-    .line 223
-    new-instance v2, Lcom/divmob/doodlebubble/ball/Ball;
-
-    iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbleTiledRegion:Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
-
-    invoke-direct {v2, v3}, Lcom/divmob/doodlebubble/ball/Ball;-><init>(Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;)V
-
-    iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->nextBall:Lcom/divmob/doodlebubble/ball/Ball;
-
-    .line 224
-    iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->nextBall:Lcom/divmob/doodlebubble/ball/Ball;
-
-    sget v3, Lcom/divmob/maegame/constant/SCREEN;->CAMERA_WIDTH:I
-
-    int-to-float v3, v3
-
-    const/high16 v4, 0x3f000000    # 0.5f
-
-    mul-float/2addr v3, v4
-
-    const/high16 v4, 0x42c00000    # 96.0f
-
-    sub-float/2addr v3, v4
-
-    sget v4, Lcom/divmob/maegame/constant/SCREEN;->CAMERA_HEIGHT:I
-
-    int-to-float v4, v4
-
-    const/high16 v5, 0x42400000    # 48.0f
-
-    sub-float/2addr v4, v5
-
-    invoke-virtual {v2, v3, v4}, Lcom/divmob/doodlebubble/ball/Ball;->setPosition(FF)V
-
-    .line 226
-    new-instance v2, Lcom/divmob/doodlebubble/hud/MHud;
-
-    iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->hudRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
-
-    iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->violetNumberFont:Lcom/divmob/maegame/util/MBitmapFont;
-
-    invoke-direct {v2, v3, v4}, Lcom/divmob/doodlebubble/hud/MHud;-><init>(Lorg/anddev/andengine/opengl/texture/region/TextureRegion;Lcom/divmob/maegame/util/MBitmapFont;)V
-
-    iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
-
-    .line 228
     invoke-virtual {p0}, Lcom/divmob/doodlebubble/GameActivity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-    move-result-object v2
+    move-result-object v0
 
-    const-string v3, "mode"
+    const-string v1, "mode"
 
-    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
-    move-result v1
-
-    .line 229
-    if-lez v1, :cond_b3
-
-    .line 231
-    iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
-
-    invoke-virtual {v2}, Lcom/divmob/doodlebubble/hud/MHud;->reset()V
-
-    .line 232
-    iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
-
-    invoke-virtual {v2, v7, v1}, Lcom/divmob/doodlebubble/hud/MHud;->setMode(ZI)V
-
-    .line 233
-    packed-switch v1, :pswitch_data_c2
-
-    .line 241
-    :pswitch_87
-    iput v6, p0, Lcom/divmob/doodlebubble/GameActivity;->gameDiff:I
-
-    .line 253
-    :goto_89
-    sget v2, Lcom/divmob/common/constant/Constant;->TOTALS_BUBBLES:I
-
-    new-array v2, v2, [I
-
-    iput-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->numOfBubblesEachColor:[I
-
-    .line 255
-    return-void
+    move-result v7
 
     .line 216
-    :cond_90
-    new-instance v2, Ljava/lang/StringBuilder;
+    if-lez v7, :cond_aa
 
-    const-string v3, "feather_"
+    .line 218
+    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcom/divmob/doodlebubble/hud/MHud;->reset()V
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 219
+    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
-    move-result-object v2
+    const/4 v1, 0x1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1, v7}, Lcom/divmob/doodlebubble/hud/MHud;->setMode(ZI)V
 
-    move-result-object v2
+    .line 229
+    :goto_84
+    sget v0, Lcom/divmob/common/constant/Constant;->TOTALS_BUBBLES:I
 
-    const/16 v3, 0x20
+    new-array v0, v0, [I
 
-    const/16 v4, 0x40
+    iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->numOfBubblesEachColor:[I
 
-    invoke-virtual {p0, v2, v3, v4}, Lcom/divmob/doodlebubble/GameActivity;->createTextureRegion(Ljava/lang/String;II)Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
+    .line 231
+    return-void
 
-    move-result-object v2
+    .line 203
+    :cond_8b
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    aput-object v2, v0, v1
+    const-string v1, "feather_"
 
-    .line 215
-    add-int/lit8 v1, v1, 0x1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_2d
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 235
-    :pswitch_ac
-    iput v7, p0, Lcom/divmob/doodlebubble/GameActivity;->gameDiff:I
+    move-result-object v0
 
-    goto :goto_89
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 238
-    :pswitch_af
-    const/4 v2, 0x2
+    move-result-object v1
 
-    iput v2, p0, Lcom/divmob/doodlebubble/GameActivity;->gameDiff:I
+    const/4 v2, 0x4
 
-    goto :goto_89
+    const/4 v3, 0x3
 
-    .line 247
-    :cond_b3
-    iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
+    const/16 v4, 0x200
 
-    invoke-virtual {v2, v6, v1}, Lcom/divmob/doodlebubble/hud/MHud;->setMode(ZI)V
+    const/16 v5, 0x100
 
-    .line 248
-    iget-object v2, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
+    move-object v0, p0
 
-    iget v3, p0, Lcom/divmob/doodlebubble/GameActivity;->level:I
+    invoke-virtual/range {v0 .. v5}, Lcom/divmob/doodlebubble/GameActivity;->createTiledTextureRegion(Ljava/lang/String;IIII)Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
 
-    iget v4, p0, Lcom/divmob/doodlebubble/GameActivity;->world:I
+    move-result-object v0
 
-    invoke-virtual {v2, v3, v4}, Lcom/divmob/doodlebubble/hud/MHud;->setLevel(II)V
+    aput-object v0, v6, v7
 
-    goto :goto_89
+    .line 202
+    add-int/lit8 v7, v7, 0x1
 
-    .line 233
-    :pswitch_data_c2
-    .packed-switch 0x3
-        :pswitch_ac
-        :pswitch_87
-        :pswitch_af
-    .end packed-switch
+    goto :goto_2c
+
+    .line 223
+    :cond_aa
+    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
+
+    invoke-virtual {v0, v8, v7}, Lcom/divmob/doodlebubble/hud/MHud;->setMode(ZI)V
+
+    .line 224
+    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
+
+    iget v1, p0, Lcom/divmob/doodlebubble/GameActivity;->level:I
+
+    iget v2, p0, Lcom/divmob/doodlebubble/GameActivity;->world:I
+
+    invoke-virtual {v0, v1, v2}, Lcom/divmob/doodlebubble/hud/MHud;->setLevel(II)V
+
+    goto :goto_84
 .end method
 
 .method public loadFonts()V
     .registers 4
 
     .prologue
-    .line 176
+    .line 166
     new-instance v0, Lcom/divmob/maegame/util/MBitmapFont;
 
     const-string v1, "violetnumber"
@@ -3698,7 +3550,7 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->violetNumberFont:Lcom/divmob/maegame/util/MBitmapFont;
 
-    .line 181
+    .line 170
     return-void
 .end method
 
@@ -3714,14 +3566,14 @@
 
     const/16 v6, 0x200
 
-    .line 117
+    .line 108
     new-instance v3, Lcom/divmob/doodlebubble/WorldPreferences;
 
     invoke-direct {v3, p0}, Lcom/divmob/doodlebubble/WorldPreferences;-><init>(Landroid/content/Context;)V
 
     iput-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->mWorldPreferences:Lcom/divmob/doodlebubble/WorldPreferences;
 
-    .line 119
+    .line 110
     new-instance v3, Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
     sget-object v4, Lorg/anddev/andengine/opengl/texture/TextureOptions;->BILINEAR_PREMULTIPLYALPHA:Lorg/anddev/andengine/opengl/texture/TextureOptions;
@@ -3730,7 +3582,7 @@
 
     iput-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->gameTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
-    .line 123
+    .line 114
     const-string v3, "cannon"
 
     iget-object v4, p0, Lcom/divmob/doodlebubble/GameActivity;->gameTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
@@ -3741,12 +3593,12 @@
 
     iput-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->cannonRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 125
+    .line 116
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->gameTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
     invoke-virtual {p0, v3}, Lcom/divmob/doodlebubble/GameActivity;->buildAndLoadTexture(Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;)V
 
-    .line 127
+    .line 118
     new-instance v1, Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BitmapTextureAtlas;
 
     const/16 v3, 0x100
@@ -3757,7 +3609,7 @@
 
     invoke-direct {v1, v3, v4, v5}, Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BitmapTextureAtlas;-><init>(IILorg/anddev/andengine/opengl/texture/TextureOptions;)V
 
-    .line 130
+    .line 120
     .local v1, "bubbleTeAtlas":Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BitmapTextureAtlas;
     const-string v3, "bubbles"
 
@@ -3771,10 +3623,10 @@
 
     iput-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->bubbleTiledRegion:Lorg/anddev/andengine/opengl/texture/region/TiledTextureRegion;
 
-    .line 131
+    .line 121
     invoke-virtual {p0, v1}, Lcom/divmob/doodlebubble/GameActivity;->loadTexture(Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BitmapTextureAtlas;)V
 
-    .line 133
+    .line 123
     new-instance v3, Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
     sget-object v4, Lorg/anddev/andengine/opengl/texture/TextureOptions;->BILINEAR_PREMULTIPLYALPHA:Lorg/anddev/andengine/opengl/texture/TextureOptions;
@@ -3783,10 +3635,10 @@
 
     iput-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->backgroundTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
-    .line 135
+    .line 125
     const/4 v0, 0x1
 
-    .line 136
+    .line 126
     .local v0, "bg":I
     invoke-virtual {p0}, Lcom/divmob/doodlebubble/GameActivity;->getIntent()Landroid/content/Intent;
 
@@ -3802,23 +3654,23 @@
 
     move-result v2
 
-    .line 137
+    .line 127
     .local v2, "i":I
     if-lez v2, :cond_98
 
-    .line 138
+    .line 128
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/divmob/doodlebubble/GameActivity;->gameMode:I
 
-    .line 139
+    .line 129
     const/4 v3, 0x6
 
     invoke-static {v8, v3}, Lorg/anddev/andengine/util/MathUtils;->random(II)I
 
     move-result v0
 
-    .line 147
+    .line 137
     :goto_60
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3842,10 +3694,10 @@
 
     iput-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->backgroundRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 148
+    .line 138
     packed-switch v0, :pswitch_data_d2
 
-    .line 157
+    .line 147
     :pswitch_7a
     const-string v3, "rope_0"
 
@@ -3855,7 +3707,7 @@
 
     iput-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->ropeRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 161
+    .line 151
     :goto_82
     const-string v3, "hud/hud"
 
@@ -3867,25 +3719,25 @@
 
     iput-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->hudRegion:Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
 
-    .line 162
+    .line 152
     iget-object v3, p0, Lcom/divmob/doodlebubble/GameActivity;->backgroundTexture:Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;
 
     invoke-virtual {p0, v3}, Lcom/divmob/doodlebubble/GameActivity;->buildAndLoadTexture(Lorg/anddev/andengine/opengl/texture/atlas/bitmap/BuildableBitmapTextureAtlas;)V
 
-    .line 164
+    .line 154
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->loadOverSceneTexture()V
 
-    .line 165
+    .line 155
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->loadResultSceneTexture()V
 
-    .line 167
+    .line 157
     return-void
 
-    .line 141
+    .line 131
     :cond_98
     iput v8, p0, Lcom/divmob/doodlebubble/GameActivity;->gameMode:I
 
-    .line 142
+    .line 132
     invoke-virtual {p0}, Lcom/divmob/doodlebubble/GameActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
@@ -3902,7 +3754,7 @@
 
     iput v3, p0, Lcom/divmob/doodlebubble/GameActivity;->level:I
 
-    .line 143
+    .line 133
     invoke-virtual {p0}, Lcom/divmob/doodlebubble/GameActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
@@ -3919,14 +3771,14 @@
 
     iput v3, p0, Lcom/divmob/doodlebubble/GameActivity;->world:I
 
-    .line 144
+    .line 134
     iget v3, p0, Lcom/divmob/doodlebubble/GameActivity;->world:I
 
     add-int/lit8 v0, v3, 0x1
 
     goto :goto_60
 
-    .line 151
+    .line 141
     :pswitch_bf
     const-string v3, "rope_2"
 
@@ -3938,7 +3790,7 @@
 
     goto :goto_82
 
-    .line 154
+    .line 144
     :pswitch_c8
     const-string v3, "rope_1"
 
@@ -3950,7 +3802,7 @@
 
     goto :goto_82
 
-    .line 148
+    .line 138
     nop
 
     :pswitch_data_d2
@@ -3973,16 +3825,16 @@
 
     const/4 v2, 0x0
 
-    .line 326
+    .line 298
     const/4 v8, 0x0
 
     .local v8, "i":I
     :goto_4
     const/4 v0, 0x3
 
-    if-lt v8, v0, :cond_ba
+    if-lt v8, v0, :cond_bb
 
-    .line 330
+    .line 302
     iget-object v10, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     new-instance v11, Lorg/anddev/andengine/entity/scene/background/SpriteBackground;
@@ -4009,19 +3861,12 @@
 
     invoke-virtual {v10, v11}, Lorg/anddev/andengine/entity/scene/Scene;->setBackground(Lorg/anddev/andengine/entity/scene/background/IBackground;)V
 
-    .line 338
+    .line 310
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v0, p0}, Lorg/anddev/andengine/entity/scene/Scene;->setOnSceneTouchListener(Lorg/anddev/andengine/entity/scene/Scene$IOnSceneTouchListener;)V
 
-    .line 340
-    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mCannon:Lcom/divmob/doodlebubble/cannon/Cannon;
-
-    iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
-
-    invoke-virtual {v0, v1, v12}, Lcom/divmob/doodlebubble/cannon/Cannon;->addToScene(Lorg/anddev/andengine/entity/scene/Scene;I)V
-
-    .line 342
+    .line 312
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v0, v12}, Lorg/anddev/andengine/entity/scene/Scene;->getChild(I)Lorg/anddev/andengine/entity/IEntity;
@@ -4032,21 +3877,30 @@
 
     invoke-interface {v0, v1}, Lorg/anddev/andengine/entity/IEntity;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 343
+    .line 313
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->fireBubble:Lcom/divmob/doodlebubble/ball/MotionBall;
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v0, v1, v12}, Lcom/divmob/doodlebubble/ball/MotionBall;->addToScene(Lorg/anddev/andengine/entity/scene/Scene;I)V
 
-    .line 346
+    .line 315
+    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mCannon:Lcom/divmob/doodlebubble/cannon/Cannon;
+
+    iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v0, v1, v3}, Lcom/divmob/doodlebubble/cannon/Cannon;->addToScene(Lorg/anddev/andengine/entity/scene/Scene;I)V
+
+    .line 317
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v0, v1, v13}, Lcom/divmob/doodlebubble/hud/MHud;->addToScene(Lorg/anddev/andengine/entity/scene/Scene;I)V
 
-    .line 347
+    .line 318
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->pauseBtn:Lcom/divmob/maegame/ui/button/MFadeButton;
 
     iget v1, p0, Lcom/divmob/doodlebubble/GameActivity;->CAMERA_WIDTH:I
@@ -4069,14 +3923,14 @@
 
     invoke-virtual {v0, v1, v3}, Lcom/divmob/maegame/ui/button/MFadeButton;->setPosition(FF)V
 
-    .line 348
+    .line 319
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->pauseBtn:Lcom/divmob/maegame/ui/button/MFadeButton;
 
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v0, v1, v13}, Lcom/divmob/maegame/ui/button/MFadeButton;->addToScene(Lorg/anddev/andengine/entity/scene/Scene;I)V
 
-    .line 353
+    .line 324
     new-instance v9, Lorg/anddev/andengine/entity/sprite/Sprite;
 
     sget v0, Lcom/divmob/maegame/constant/SCREEN;->CAMERA_HEIGHT:I
@@ -4089,7 +3943,7 @@
 
     invoke-direct {v9, v2, v0, v1}, Lorg/anddev/andengine/entity/sprite/Sprite;-><init>(FFLorg/anddev/andengine/opengl/texture/region/TextureRegion;)V
 
-    .line 354
+    .line 325
     .local v9, "rope":Lorg/anddev/andengine/entity/sprite/Sprite;
     iget v0, p0, Lcom/divmob/doodlebubble/GameActivity;->CAMERA_WIDTH:I
 
@@ -4097,7 +3951,7 @@
 
     invoke-virtual {v9, v0}, Lorg/anddev/andengine/entity/sprite/Sprite;->setWidth(F)V
 
-    .line 355
+    .line 326
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v0, v13}, Lorg/anddev/andengine/entity/scene/Scene;->getChild(I)Lorg/anddev/andengine/entity/IEntity;
@@ -4106,10 +3960,10 @@
 
     invoke-interface {v0, v9}, Lorg/anddev/andengine/entity/IEntity;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 358
+    .line 329
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->resetGame()V
 
-    .line 360
+    .line 331
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     new-instance v1, Lcom/divmob/doodlebubble/GameActivity$2;
@@ -4118,16 +3972,16 @@
 
     invoke-virtual {v0, v1}, Lorg/anddev/andengine/entity/scene/Scene;->registerUpdateHandler(Lorg/anddev/andengine/engine/handler/IUpdateHandler;)V
 
-    .line 399
+    .line 369
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     invoke-virtual {v0}, Lcom/divmob/doodlebubble/hud/MHud;->isEndlessMode()Z
 
     move-result v0
 
-    if-nez v0, :cond_b9
+    if-nez v0, :cond_ba
 
-    .line 400
+    .line 370
     const-string v0, "ceil"
 
     const/16 v1, 0x200
@@ -4138,7 +3992,7 @@
 
     move-result-object v7
 
-    .line 401
+    .line 371
     .local v7, "ceilRegion":Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
     new-instance v0, Lorg/anddev/andengine/entity/sprite/Sprite;
 
@@ -4152,7 +4006,7 @@
 
     iput-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mCelling:Lorg/anddev/andengine/entity/sprite/Sprite;
 
-    .line 402
+    .line 372
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mCelling:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     iget v1, p0, Lcom/divmob/doodlebubble/GameActivity;->CAMERA_WIDTH:I
@@ -4161,7 +4015,7 @@
 
     invoke-virtual {v0, v1}, Lorg/anddev/andengine/entity/sprite/Sprite;->setWidth(F)V
 
-    .line 403
+    .line 373
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     invoke-virtual {v0, v12}, Lorg/anddev/andengine/entity/scene/Scene;->getChild(I)Lorg/anddev/andengine/entity/IEntity;
@@ -4172,14 +4026,14 @@
 
     invoke-interface {v0, v1}, Lorg/anddev/andengine/entity/IEntity;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 406
+    .line 376
     .end local v7    # "ceilRegion":Lorg/anddev/andengine/opengl/texture/region/TextureRegion;
-    :cond_b9
+    :cond_ba
     return-void
 
-    .line 327
+    .line 299
     .end local v9    # "rope":Lorg/anddev/andengine/entity/sprite/Sprite;
-    :cond_ba
+    :cond_bb
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mMainScene:Lorg/anddev/andengine/entity/scene/Scene;
 
     new-instance v1, Lorg/anddev/andengine/entity/Entity;
@@ -4188,46 +4042,26 @@
 
     invoke-virtual {v0, v1}, Lorg/anddev/andengine/entity/scene/Scene;->attachChild(Lorg/anddev/andengine/entity/IEntity;)V
 
-    .line 326
+    .line 298
     add-int/lit8 v8, v8, 0x1
 
     goto/16 :goto_4
 .end method
 
 .method public loadScene()V
-    .registers 3
+    .registers 1
 
     .prologue
-    const/4 v1, 0x0
-
-    .line 310
+    .line 286
     invoke-super {p0}, Lcom/divmob/common/PortrailGame;->loadScene()V
 
-    .line 311
+    .line 287
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->loadOverScene()V
 
-    .line 312
+    .line 288
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->loadResultScene()V
 
-    .line 313
-    invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->loadHelpScene()V
-
-    .line 314
-    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mWorldPreferences:Lcom/divmob/doodlebubble/WorldPreferences;
-
-    invoke-virtual {v0}, Lcom/divmob/doodlebubble/WorldPreferences;->isFirstPlay()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1a
-
-    .line 315
-    iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHelpScene:Lorg/anddev/andengine/entity/scene/Scene;
-
-    invoke-virtual {p0, v0, v1, v1}, Lcom/divmob/doodlebubble/GameActivity;->showAScene(Lorg/anddev/andengine/entity/scene/Scene;ZZ)V
-
-    .line 317
-    :cond_1a
+    .line 289
     return-void
 .end method
 
@@ -4235,7 +4069,7 @@
     .registers 3
 
     .prologue
-    .line 191
+    .line 180
     :try_start_0
     const-string v1, "fire.ogg"
 
@@ -4245,7 +4079,7 @@
 
     iput-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->sndShoot:Lorg/anddev/andengine/audio/sound/Sound;
 
-    .line 192
+    .line 181
     const-string v1, "pop.ogg"
 
     invoke-virtual {p0, v1}, Lcom/divmob/doodlebubble/GameActivity;->createSound(Ljava/lang/String;)Lorg/anddev/andengine/audio/sound/Sound;
@@ -4254,7 +4088,7 @@
 
     iput-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->sndPop:Lorg/anddev/andengine/audio/sound/Sound;
 
-    .line 193
+    .line 182
     const-string v1, "collide.ogg"
 
     invoke-virtual {p0, v1}, Lcom/divmob/doodlebubble/GameActivity;->createSound(Ljava/lang/String;)Lorg/anddev/andengine/audio/sound/Sound;
@@ -4263,7 +4097,7 @@
 
     iput-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->sndCollide:Lorg/anddev/andengine/audio/sound/Sound;
 
-    .line 194
+    .line 183
     const-string v1, "lost.ogg"
 
     invoke-virtual {p0, v1}, Lcom/divmob/doodlebubble/GameActivity;->createSound(Ljava/lang/String;)Lorg/anddev/andengine/audio/sound/Sound;
@@ -4272,7 +4106,7 @@
 
     iput-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->sndLost:Lorg/anddev/andengine/audio/sound/Sound;
 
-    .line 195
+    .line 184
     const-string v1, "win.ogg"
 
     invoke-virtual {p0, v1}, Lcom/divmob/doodlebubble/GameActivity;->createSound(Ljava/lang/String;)Lorg/anddev/andengine/audio/sound/Sound;
@@ -4283,15 +4117,15 @@
     :try_end_28
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_28} :catch_29
 
-    .line 200
+    .line 188
     :goto_28
     return-void
 
-    .line 197
+    .line 185
     :catch_29
     move-exception v0
 
-    .line 198
+    .line 186
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -4308,14 +4142,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 852
+    .line 836
     invoke-virtual {p1}, Lorg/anddev/andengine/input/touch/TouchEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_15
 
-    .line 853
+    .line 837
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->tryAgainBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
     invoke-virtual {p2, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -4324,13 +4158,13 @@
 
     if-eqz v0, :cond_1a
 
-    .line 854
+    .line 838
     invoke-virtual {p0, v3}, Lcom/divmob/doodlebubble/GameActivity;->dismissMScene(F)V
 
-    .line 855
+    .line 839
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->resetGame()V
 
-    .line 869
+    .line 853
     :cond_15
     :goto_15
     invoke-super {p0, p1, p2, p3, p4}, Lcom/divmob/common/PortrailGame;->onAreaTouched(Lorg/anddev/andengine/input/touch/TouchEvent;Lorg/anddev/andengine/entity/scene/Scene$ITouchArea;FF)Z
@@ -4339,7 +4173,7 @@
 
     return v0
 
-    .line 856
+    .line 840
     :cond_1a
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->menuBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
@@ -4357,13 +4191,13 @@
 
     if-eqz v0, :cond_2e
 
-    .line 857
+    .line 841
     :cond_2a
     invoke-virtual {p0}, Lcom/divmob/doodlebubble/GameActivity;->finish()V
 
     goto :goto_15
 
-    .line 858
+    .line 842
     :cond_2e
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->continueBtn:Lorg/anddev/andengine/entity/sprite/Sprite;
 
@@ -4373,7 +4207,7 @@
 
     if-eqz v0, :cond_15
 
-    .line 859
+    .line 843
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     invoke-virtual {v0}, Lcom/divmob/doodlebubble/hud/MHud;->getLevel()I
@@ -4394,21 +4228,21 @@
 
     if-lt v0, v1, :cond_4e
 
-    .line 861
+    .line 845
     invoke-virtual {p0}, Lcom/divmob/doodlebubble/GameActivity;->finish()V
 
     goto :goto_15
 
-    .line 863
+    .line 847
     :cond_4e
     iget-object v0, p0, Lcom/divmob/doodlebubble/GameActivity;->mHud:Lcom/divmob/doodlebubble/hud/MHud;
 
     invoke-virtual {v0}, Lcom/divmob/doodlebubble/hud/MHud;->levelUp()V
 
-    .line 864
+    .line 848
     invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->resetGame()V
 
-    .line 865
+    .line 849
     invoke-virtual {p0, v3}, Lcom/divmob/doodlebubble/GameActivity;->dismissMScene(F)V
 
     goto :goto_15
@@ -4419,10 +4253,10 @@
     .param p1, "pSavedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1119
+    .line 1053
     invoke-super {p0, p1}, Lcom/divmob/common/PortrailGame;->onCreate(Landroid/os/Bundle;)V
 
-    .line 1121
+    .line 1055
     const v1, 0x7f060002
 
     invoke-virtual {p0, v1}, Lcom/divmob/doodlebubble/GameActivity;->findViewById(I)Landroid/view/View;
@@ -4433,16 +4267,16 @@
 
     iput-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->m_divmobbutton:Landroid/widget/Button;
 
-    .line 1122
+    .line 1056
     iget-object v1, p0, Lcom/divmob/doodlebubble/GameActivity;->m_divmobbutton:Landroid/widget/Button;
 
-    new-instance v2, Lcom/divmob/doodlebubble/GameActivity$4;
+    new-instance v2, Lcom/divmob/doodlebubble/GameActivity$3;
 
-    invoke-direct {v2, p0}, Lcom/divmob/doodlebubble/GameActivity$4;-><init>(Lcom/divmob/doodlebubble/GameActivity;)V
+    invoke-direct {v2, p0}, Lcom/divmob/doodlebubble/GameActivity$3;-><init>(Lcom/divmob/doodlebubble/GameActivity;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1145
+    .line 1079
     const v1, 0x7f060001
 
     invoke-virtual {p0, v1}, Lcom/divmob/doodlebubble/GameActivity;->findViewById(I)Landroid/view/View;
@@ -4451,7 +4285,7 @@
 
     check-cast v0, Lcom/google/ads/AdView;
 
-    .line 1146
+    .line 1080
     .local v0, "adView":Lcom/google/ads/AdView;
     new-instance v1, Lcom/google/ads/AdRequest;
 
@@ -4459,7 +4293,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
 
-    .line 1147
+    .line 1081
     return-void
 .end method
 
@@ -4471,7 +4305,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 832
+    .line 816
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
@@ -4486,19 +4320,19 @@
 
     if-lez v5, :cond_71
 
-    .line 833
+    .line 817
     invoke-virtual {p2}, Lorg/anddev/andengine/input/touch/TouchEvent;->getAction()I
 
     move-result v5
 
     if-ne v5, v4, :cond_24
 
-    .line 834
+    .line 818
     iget-boolean v5, p0, Lcom/divmob/doodlebubble/GameActivity;->isMoving:Z
 
     if-nez v5, :cond_71
 
-    .line 835
+    .line 819
     invoke-virtual {p2}, Lorg/anddev/andengine/input/touch/TouchEvent;->getX()F
 
     move-result v5
@@ -4509,11 +4343,11 @@
 
     invoke-direct {p0, v5, v6}, Lcom/divmob/doodlebubble/GameActivity;->fire(FF)V
 
-    .line 847
+    .line 831
     :goto_23
     return v4
 
-    .line 838
+    .line 822
     :cond_24
     invoke-virtual {p2}, Lorg/anddev/andengine/input/touch/TouchEvent;->getY()F
 
@@ -4537,7 +4371,7 @@
 
     if-lez v5, :cond_71
 
-    .line 839
+    .line 823
     invoke-virtual {p2}, Lorg/anddev/andengine/input/touch/TouchEvent;->getX()F
 
     move-result v5
@@ -4552,7 +4386,7 @@
 
     sub-float v2, v5, v6
 
-    .line 840
+    .line 824
     .local v2, "dx":F
     const/high16 v5, 0x41c00000    # 24.0f
 
@@ -4570,7 +4404,7 @@
 
     move-result v3
 
-    .line 841
+    .line 825
     .local v3, "dy":F
     mul-float v5, v2, v2
 
@@ -4586,11 +4420,11 @@
 
     double-to-float v1, v5
 
-    .line 842
+    .line 826
     .local v1, "d":F
     div-float v0, v2, v1
 
-    .line 844
+    .line 828
     .local v0, "cos":F
     iget-object v5, p0, Lcom/divmob/doodlebubble/GameActivity;->mCannon:Lcom/divmob/doodlebubble/cannon/Cannon;
 
@@ -4612,7 +4446,7 @@
 
     goto :goto_23
 
-    .line 847
+    .line 831
     .end local v0    # "cos":F
     .end local v1    # "d":F
     .end local v2    # "dx":F
@@ -4623,26 +4457,6 @@
     goto :goto_23
 .end method
 
-.method public quitGame()V
-    .registers 2
-
-    .prologue
-    .line 980
-    iget v0, p0, Lcom/divmob/doodlebubble/GameActivity;->gameMode:I
-
-    if-nez v0, :cond_7
-
-    .line 981
-    invoke-direct {p0}, Lcom/divmob/doodlebubble/GameActivity;->saveScore()V
-
-    .line 983
-    :cond_7
-    invoke-virtual {p0}, Lcom/divmob/doodlebubble/GameActivity;->finish()V
-
-    .line 984
-    return-void
-.end method
-
 .method protected showAScene(Lorg/anddev/andengine/entity/scene/Scene;ZZ)V
     .registers 5
     .param p1, "scene"    # Lorg/anddev/andengine/entity/scene/Scene;
@@ -4650,7 +4464,7 @@
     .param p3, "isUpdated"    # Z
 
     .prologue
-    .line 1106
+    .line 1040
     const v0, 0x3e99999a    # 0.3f
 
     invoke-static {v0}, Lcom/divmob/maegame/effect/ScreenTranslation;->moveInFromLeft(F)Lorg/anddev/andengine/entity/modifier/MoveXModifier;
@@ -4659,6 +4473,6 @@
 
     invoke-super {p0, p1, p2, p3, v0}, Lcom/divmob/common/PortrailGame;->showScene(Lorg/anddev/andengine/entity/scene/Scene;ZZLorg/anddev/andengine/entity/modifier/IEntityModifier;)V
 
-    .line 1107
+    .line 1041
     return-void
 .end method

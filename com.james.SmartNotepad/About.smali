@@ -17,19 +17,21 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .registers 5
+    .registers 6
+
+    const-string v3, "android.intent.action.VIEW"
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_4e
+    packed-switch v0, :pswitch_data_50
 
-    :goto_7
-    :pswitch_7
+    :goto_9
+    :pswitch_9
     return-void
 
-    :pswitch_8
+    :pswitch_a
     const-string v0, "market://search?q=pname:com.svox.langpack.installer"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -40,15 +42,15 @@
 
     const-string v2, "android.intent.action.VIEW"
 
-    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v1, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     const/4 v0, 0x0
 
     invoke-virtual {p0, v1, v0}, Lcom/james/SmartNotepad/About;->startActivityForResult(Landroid/content/Intent;I)V
 
-    goto :goto_7
+    goto :goto_9
 
-    :pswitch_1a
+    :pswitch_1c
     const-string v0, "market://details?id=com.james.SmartNotepad"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -59,13 +61,13 @@
 
     const-string v2, "android.intent.action.VIEW"
 
-    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v1, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     invoke-virtual {p0, v1}, Lcom/james/SmartNotepad/About;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_7
+    goto :goto_9
 
-    :pswitch_2b
+    :pswitch_2d
     const-string v0, "http://market.android.com/search?q=pub:\"SmartWho\""
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -76,13 +78,13 @@
 
     const-string v2, "android.intent.action.VIEW"
 
-    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v1, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     invoke-virtual {p0, v1}, Lcom/james/SmartNotepad/About;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_7
+    goto :goto_9
 
-    :pswitch_3c
+    :pswitch_3e
     const-string v0, "market://details?id=com.james.SmartNotepadPro"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -93,21 +95,21 @@
 
     const-string v2, "android.intent.action.VIEW"
 
-    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v1, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     invoke-virtual {p0, v1}, Lcom/james/SmartNotepad/About;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_7
+    goto :goto_9
 
     nop
 
-    :pswitch_data_4e
+    :pswitch_data_50
     .packed-switch 0x7f09000a
-        :pswitch_3c
-        :pswitch_7
-        :pswitch_8
-        :pswitch_1a
-        :pswitch_2b
+        :pswitch_3e
+        :pswitch_9
+        :pswitch_a
+        :pswitch_1c
+        :pswitch_2d
     .end packed-switch
 .end method
 
@@ -138,7 +140,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v0, Landroid/widget/Button;
 
     const v1, 0x7f09000d
 
@@ -146,7 +148,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v1, Landroid/widget/Button;
 
     const v2, 0x7f09000e
 
@@ -154,7 +156,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v2, Landroid/widget/Button;
 
     const v3, 0x7f09000a
 
@@ -162,23 +164,15 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v3, Landroid/widget/Button;
 
-    invoke-virtual {v0, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v1, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v2, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v3, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v0}, Lcom/james/SmartNotepad/CustomButton;->a()V
-
-    invoke-virtual {v1}, Lcom/james/SmartNotepad/CustomButton;->a()V
-
-    invoke-virtual {v2}, Lcom/james/SmartNotepad/CustomButton;->a()V
-
-    invoke-virtual {v3}, Lcom/james/SmartNotepad/CustomButton;->a()V
+    invoke-virtual {v3, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const v0, 0x7f090004
 
@@ -212,7 +206,7 @@
 
     const-string v1, "1.0"
 
-    :try_start_75
+    :try_start_69
     invoke-virtual {p0}, Lcom/james/SmartNotepad/About;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
@@ -228,44 +222,22 @@
     move-result-object v2
 
     iget-object v1, v2, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
-    :try_end_84
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_75 .. :try_end_84} :catch_a5
+    :try_end_78
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_69 .. :try_end_78} :catch_7f
 
-    :goto_84
+    :goto_78
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f090001
-
-    invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/About;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    new-instance v1, Lcom/google/ads/AdView;
-
-    sget-object v2, Lcom/google/ads/f;->a:Lcom/google/ads/f;
-
-    const-string v3, "a14cc162731f341"
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/f;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    new-instance v0, Lcom/google/ads/e;
-
-    invoke-direct {v0}, Lcom/google/ads/e;-><init>()V
-
-    invoke-virtual {v1, v0}, Lcom/google/ads/AdView;->a(Lcom/google/ads/e;)V
+    invoke-static {}, Lcom/admob/android/ads/ak;->c()V
 
     return-void
 
-    :catch_a5
+    :catch_7f
     move-exception v2
 
     invoke-virtual {v2}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    goto :goto_84
+    goto :goto_78
 .end method
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z
@@ -283,7 +255,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020027
+    const v1, 0x7f020021
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 

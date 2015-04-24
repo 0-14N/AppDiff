@@ -131,17 +131,17 @@
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ExAsyncTask;->g:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance v0, Lakd;
+    new-instance v0, Ladj;
 
-    invoke-direct {v0, p0}, Lakd;-><init>(Lcom/quvideo/xiaoying/common/ExAsyncTask;)V
+    invoke-direct {v0, p0}, Ladj;-><init>(Lcom/quvideo/xiaoying/common/ExAsyncTask;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ExAsyncTask;->c:Lcom/quvideo/xiaoying/common/ExAsyncTask$c;
 
-    new-instance v0, Lake;
+    new-instance v0, Ladk;
 
     iget-object v1, p0, Lcom/quvideo/xiaoying/common/ExAsyncTask;->c:Lcom/quvideo/xiaoying/common/ExAsyncTask$c;
 
-    invoke-direct {v0, p0, v1}, Lake;-><init>(Lcom/quvideo/xiaoying/common/ExAsyncTask;Ljava/util/concurrent/Callable;)V
+    invoke-direct {v0, p0, v1}, Ladk;-><init>(Lcom/quvideo/xiaoying/common/ExAsyncTask;Ljava/util/concurrent/Callable;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ExAsyncTask;->d:Ljava/util/concurrent/FutureTask;
 

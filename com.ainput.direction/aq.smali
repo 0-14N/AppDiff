@@ -23,19 +23,15 @@
 
 # virtual methods
 .method public run()V
-    .registers 5
+    .registers 3
 
-    new-instance v0, Lcom/ainput/direction/a/b;
+    new-instance v0, Lcom/ainput/direction/ad;
 
     sget-object v1, Lcom/GameActivity;->a:Lcom/GameActivity;
 
-    const v2, 0x7f090002
+    invoke-direct {v0, v1}, Lcom/ainput/direction/ad;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f030006
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/ainput/direction/a/b;-><init>(Landroid/content/Context;II)V
-
-    invoke-virtual {v0}, Lcom/ainput/direction/a/b;->show()V
+    invoke-virtual {v0}, Lcom/ainput/direction/ad;->show()V
 
     return-void
 .end method

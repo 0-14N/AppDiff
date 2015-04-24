@@ -36,7 +36,7 @@
 
     move-result-object v1
 
-    const-string v2, "my_share_gift"
+    const-string v2, "my_pre"
 
     invoke-static {v1, v2}, Lcom/umeng/a/a;->a(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -44,11 +44,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/guangjieba/share/ui/user/ShareGiftsActivity_;->a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/ShareGiftsActivity_$IntentBuilder_;
+    invoke-static {v0}, Lcom/guangjieba/share/ui/user/ProfileActivity_;->a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/ProfileActivity_$IntentBuilder_;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/ShareGiftsActivity_$IntentBuilder_;->a()V
+    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/ProfileActivity_$IntentBuilder_;->a()V
 
     .line 155
     return-void

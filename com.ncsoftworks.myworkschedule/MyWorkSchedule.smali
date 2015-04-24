@@ -137,7 +137,7 @@
 
     .line 148
     .local v3, "fourthTime":Z
-    if-eqz v2, :cond_46
+    if-eqz v2, :cond_54
 
     .line 150
     new-instance v5, Landroid/app/AlertDialog$Builder;
@@ -150,17 +150,29 @@
 
     .line 151
     .local v0, "alertDialog":Landroid/app/AlertDialog;
-    const-string v5, "MyWorkSchedule"
+    const/high16 v5, 0x7f050000
+
+    invoke-virtual {p0, v5}, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
 
     invoke-virtual {v0, v5}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 152
-    const-string v5, "Thanks for trying MyWorkSchedule.  Hit the menu button on your phone to change shift presets and begin scheduling!"
+    const v5, 0x7f050013
+
+    invoke-virtual {p0, v5}, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
 
     invoke-virtual {v0, v5}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 154
-    const-string v5, "OK"
+    .line 153
+    const v5, 0x7f050014
+
+    invoke-virtual {p0, v5}, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
 
     new-instance v6, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule$1;
 
@@ -168,67 +180,67 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/app/AlertDialog;->setButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 160
+    .line 159
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 161
+    .line 160
     iget-object v5, p0, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->prefs:Landroid/content/SharedPreferences;
 
     invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    .line 162
+    .line 161
     .local v1, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v5, "FirstTime"
 
     invoke-interface {v1, v9, v7}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 163
+    .line 162
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 166
+    .line 165
     .end local v0    # "alertDialog":Landroid/app/AlertDialog;
     .end local v1    # "editor":Landroid/content/SharedPreferences$Editor;
-    :cond_46
-    if-eqz v3, :cond_65
+    :cond_54
+    if-eqz v3, :cond_73
 
-    .line 168
+    .line 167
     new-instance v4, Landroid/content/Intent;
 
     const-class v5, Lcom/ncsoftworks/myworkschedule/ChangelogActivitiy;
 
     invoke-direct {v4, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 169
+    .line 168
     .local v4, "i":Landroid/content/Intent;
     invoke-virtual {p0, v4}, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->startActivity(Landroid/content/Intent;)V
 
-    .line 170
+    .line 169
     iget-object v5, p0, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->prefs:Landroid/content/SharedPreferences;
 
     invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    .line 171
+    .line 170
     .restart local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     const-string v5, "FourthTime"
 
     invoke-interface {v1, v10, v7}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 172
+    .line 171
     const-string v5, "ThirdTime"
 
     invoke-interface {v1, v5}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 173
+    .line 172
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 176
+    .line 175
     .end local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v4    # "i":Landroid/content/Intent;
-    :cond_65
+    :cond_73
     return-void
 .end method
 
@@ -377,14 +389,22 @@
     .line 49
     const/4 v0, 0x1
 
-    const-string v1, "Edit this day"
+    const v1, 0x7f05000f
+
+    invoke-virtual {p0, v1}, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     .line 50
     const/4 v0, 0x2
 
-    const-string v1, "Delete this day"
+    const v1, 0x7f050010
+
+    invoke-virtual {p0, v1}, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
@@ -402,21 +422,33 @@
     .line 95
     const/4 v0, 0x1
 
-    const-string v1, "Enter Schedule"
+    const v1, 0x7f050011
+
+    invoke-virtual {p0, v1}, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     .line 96
     const/4 v0, 0x3
 
-    const-string v1, "Send Schedule"
+    const v1, 0x7f050012
+
+    invoke-virtual {p0, v1}, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     .line 97
     const/4 v0, 0x2
 
-    const-string v1, "Settings"
+    const v1, 0x7f050015
+
+    invoke-virtual {p0, v1}, Lcom/ncsoftworks/myworkschedule/MyWorkSchedule;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 

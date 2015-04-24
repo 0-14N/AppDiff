@@ -4,136 +4,21 @@
 
 
 # static fields
-.field private static final GOOGLE_Currency:I = 0x2
-
-.field private static final GOOGLE_ID:[Ljava/lang/String;
-
-.field private static final GOOGLE_Payflat:I = 0x4
-
-.field static final RC_REQUEST:I = 0x2711
-
-.field static final TAG:Ljava/lang/String; = "Clear The Nest"
-
 .field static mPushService:Landroid/os/Messenger;
 
 
 # instance fields
-.field private iap_is_ok:Z
-
 .field mBound:Z
 
 .field private mConnection:Landroid/content/ServiceConnection;
 
-.field mConsumeFinishedListener:Lcom/sg/android/google/util/IabHelper$OnConsumeFinishedListener;
-
-.field mGotInventoryListener:Lcom/sg/android/google/util/IabHelper$QueryInventoryFinishedListener;
-
-.field mHelper:Lcom/sg/android/google/util/IabHelper;
-
-.field mPurchaseFinishedListener:Lcom/sg/android/google/util/IabHelper$OnIabPurchaseFinishedListener;
-
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 3
+    .registers 1
 
     .prologue
-    .line 64
-    const/16 v0, 0xe
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    const-string v2, "gold100"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    const-string v2, "gold220"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x2
-
-    .line 65
-    const-string v2, "gold600"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x3
-
-    const-string v2, "gold880"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x4
-
-    const-string v2, "gold1700"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x5
-
-    const-string v2, "removeprop3"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x6
-
-    const-string v2, "removeprop20"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x7
-
-    .line 66
-    const-string v2, "explosionprop2"
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x8
-
-    const-string v2, "explosionprop12"
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x9
-
-    const-string v2, "renovateprop3"
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xa
-
-    .line 67
-    const-string v2, "renovateprop18"
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xb
-
-    const-string v2, "gold3800"
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xc
-
-    const-string v2, "super_value_package"
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xd
-
-    const-string v2, "limited_gift"
-
-    aput-object v2, v0, v1
-
-    .line 64
-    sput-object v0, Lcom/sg/android/EggLinkLink/LeNorm;->GOOGLE_ID:[Ljava/lang/String;
-
-    .line 244
+    .line 204
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sg/android/EggLinkLink/LeNorm;->mPushService:Landroid/os/Messenger;
@@ -145,589 +30,907 @@
     .registers 2
 
     .prologue
-    .line 53
+    .line 43
     invoke-direct {p0}, Lcom/sg/android/game/SGBaseActivity;-><init>()V
 
-    .line 62
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->iap_is_ok:Z
-
-    .line 251
+    .line 211
     new-instance v0, Lcom/sg/android/EggLinkLink/LeNorm$1;
 
     invoke-direct {v0, p0}, Lcom/sg/android/EggLinkLink/LeNorm$1;-><init>(Lcom/sg/android/EggLinkLink/LeNorm;)V
 
     iput-object v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 276
-    new-instance v0, Lcom/sg/android/EggLinkLink/LeNorm$2;
-
-    invoke-direct {v0, p0}, Lcom/sg/android/EggLinkLink/LeNorm$2;-><init>(Lcom/sg/android/EggLinkLink/LeNorm;)V
-
-    iput-object v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mPurchaseFinishedListener:Lcom/sg/android/google/util/IabHelper$OnIabPurchaseFinishedListener;
-
-    .line 307
-    new-instance v0, Lcom/sg/android/EggLinkLink/LeNorm$3;
-
-    invoke-direct {v0, p0}, Lcom/sg/android/EggLinkLink/LeNorm$3;-><init>(Lcom/sg/android/EggLinkLink/LeNorm;)V
-
-    iput-object v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mConsumeFinishedListener:Lcom/sg/android/google/util/IabHelper$OnConsumeFinishedListener;
-
-    .line 378
-    new-instance v0, Lcom/sg/android/EggLinkLink/LeNorm$4;
-
-    invoke-direct {v0, p0}, Lcom/sg/android/EggLinkLink/LeNorm$4;-><init>(Lcom/sg/android/EggLinkLink/LeNorm;)V
-
-    iput-object v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mGotInventoryListener:Lcom/sg/android/google/util/IabHelper$QueryInventoryFinishedListener;
-
-    .line 53
-    return-void
-.end method
-
-.method static synthetic access$0()[Ljava/lang/String;
-    .registers 1
-
-    .prologue
-    .line 64
-    sget-object v0, Lcom/sg/android/EggLinkLink/LeNorm;->GOOGLE_ID:[Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1(Lcom/sg/android/EggLinkLink/LeNorm;Z)V
-    .registers 2
-
-    .prologue
-    .line 62
-    iput-boolean p1, p0, Lcom/sg/android/EggLinkLink/LeNorm;->iap_is_ok:Z
-
-    return-void
-.end method
-
-.method static synthetic access$2(Lcom/sg/android/EggLinkLink/LeNorm;)Z
-    .registers 2
-
-    .prologue
-    .line 62
-    iget-boolean v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->iap_is_ok:Z
-
-    return v0
-.end method
-
-.method static synthetic access$3(Lcom/sg/android/EggLinkLink/LeNorm;Ljava/lang/String;Ljava/lang/String;)V
-    .registers 3
-
-    .prologue
-    .line 448
-    invoke-direct {p0, p1, p2}, Lcom/sg/android/EggLinkLink/LeNorm;->showMessage(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private showMessage(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 6
-    .param p1, "title"    # Ljava/lang/String;
-    .param p2, "message"    # Ljava/lang/String;
-
-    .prologue
-    .line 449
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    .line 450
-    invoke-virtual {v0, p2}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    const-string v1, "Sure"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
-
-    .line 451
+    .line 43
     return-void
 .end method
 
 
 # virtual methods
-.method alert(Ljava/lang/String;)V
-    .registers 6
-    .param p1, "message"    # Ljava/lang/String;
-
-    .prologue
-    .line 441
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    .line 442
-    .local v0, "bld":Landroid/app/AlertDialog$Builder;
-    invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    .line 443
-    const-string v1, "OK"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNeutralButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 444
-    const-string v1, "Clear The Nest"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Showing alert dialog: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 445
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
-
-    .line 446
-    return-void
-.end method
-
-.method complain(Ljava/lang/String;)V
-    .registers 5
-    .param p1, "message"    # Ljava/lang/String;
-
-    .prologue
-    .line 436
-    const-string v0, "Clear The Nest"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "**** Wow Fish 3 Error: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 438
-    return-void
-.end method
-
-.method protected onActivityResult(IILandroid/content/Intent;)V
-    .registers 7
-    .param p1, "requestCode"    # I
-    .param p2, "resultCode"    # I
-    .param p3, "data"    # Landroid/content/Intent;
-
-    .prologue
-    .line 412
-    const-string v0, "Clear The Nest"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onActivityResult("
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ","
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ","
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    .line 413
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 412
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 416
-    iget-object v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mHelper:Lcom/sg/android/google/util/IabHelper;
-
-    invoke-virtual {v0, p1, p2, p3}, Lcom/sg/android/google/util/IabHelper;->handleActivityResult(IILandroid/content/Intent;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_34
-
-    .line 420
-    invoke-super {p0, p1, p2, p3}, Lcom/sg/android/game/SGBaseActivity;->onActivityResult(IILandroid/content/Intent;)V
-
-    .line 424
-    :goto_33
-    return-void
-
-    .line 422
-    :cond_34
-    const-string v0, "Clear The Nest"
-
-    const-string v1, "onActivityResult handled by IABUtil."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_33
-.end method
-
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 14
+    .registers 17
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/4 v11, 0x7
+    .line 46
+    const-string v11, "onCreate=======>"
 
-    const/4 v10, 0x2
+    const-string v12, "onCreate1111"
 
-    const/4 v9, 0x3
+    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v8, 0x0
+    .line 49
+    const/16 v11, 0x1f
 
-    const/4 v7, 0x1
+    sput v11, Lcom/sg/android/util/ContextConfigure;->GAMEID:I
 
-    .line 74
-    const-string v5, "onCreate=======>"
+    .line 50
+    const-string v11, "1"
 
-    const-string v6, "onCreate1111"
+    sput-object v11, Lcom/sg/android/util/ContextConfigure;->DIANXIN_CHANNEL:Ljava/lang/String;
 
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 52
+    const/4 v11, 0x0
 
-    .line 77
-    const/16 v5, 0x1f
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISMORE:Z
 
-    sput v5, Lcom/sg/android/util/ContextConfigure;->GAMEID:I
+    .line 57
+    const/4 v11, 0x1
+
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISSMSPAY:Z
+
+    .line 59
+    const/4 v11, 0x0
+
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISALIPAY:Z
+
+    .line 61
+    const/4 v11, 0x1
+
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISLIANTONGPAY:Z
+
+    .line 63
+    const/4 v11, 0x1
+
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISWOPAY:Z
+
+    .line 65
+    const/4 v11, 0x1
+
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISDIANXINPAY:Z
+
+    .line 67
+    const/4 v11, 0x1
+
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISAIYOUXIPAY:Z
+
+    .line 69
+    const/4 v11, 0x1
+
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISYIDONGPAY:Z
+
+    .line 71
+    const/4 v11, 0x0
+
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISWAILIAN:Z
+
+    .line 73
+    const/4 v11, 0x1
+
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISGUANFANG:Z
+
+    .line 75
+    const/4 v11, 0x0
+
+    sput-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISAUTOUPDATE:Z
+
+    .line 78
+    const/16 v11, 0xe
+
+    new-array v4, v11, [I
+
+    fill-array-data v4, :array_2c2
 
     .line 79
-    sput-boolean v8, Lcom/sg/android/util/ContextConfigure;->ISMORE:Z
+    .local v4, "goodsNum":[I
+    sput-object v4, Lcom/sg/android/util/ContextConfigure;->GOODS_NUM:[I
 
-    .line 81
-    const-string v5, "3"
+    .line 83
+    const/16 v11, 0xe
 
-    sput-object v5, Lcom/sg/android/util/ContextConfigure;->DIANXIN_CHANNEL:Ljava/lang/String;
+    new-array v3, v11, [Ljava/lang/String;
+
+    const/4 v11, 0x0
+
+    const-string v12, "70\u91d1\u5e01"
+
+    aput-object v12, v3, v11
+
+    const/4 v11, 0x1
+
+    const-string v12, "190\u91d1\u5e01"
+
+    aput-object v12, v3, v11
+
+    const/4 v11, 0x2
+
+    const-string v12, "320\u91d1\u5e01"
+
+    aput-object v12, v3, v11
+
+    const/4 v11, 0x3
+
+    const-string v12, "630\u91d1\u5e01"
+
+    aput-object v12, v3, v11
+
+    const/4 v11, 0x4
+
+    const-string v12, "880\u91d1\u5e01"
+
+    aput-object v12, v3, v11
+
+    const/4 v11, 0x5
+
+    .line 84
+    const-string v12, "\u5355\u6d88\u70b8\u5f39"
+
+    aput-object v12, v3, v11
+
+    const/4 v11, 0x6
+
+    const-string v12, "6\u4e2a\u5355\u6d88\u70b8\u5f39"
+
+    aput-object v12, v3, v11
+
+    const/4 v11, 0x7
+
+    const-string v12, "\u4e5d\u5bab\u683c\u7206\u7834"
+
+    aput-object v12, v3, v11
+
+    const/16 v11, 0x8
+
+    const-string v12, "6\u4e2a\u4e5d\u5bab\u683c\u7206\u7834"
+
+    aput-object v12, v3, v11
+
+    const/16 v11, 0x9
 
     .line 85
-    sput-boolean v8, Lcom/sg/android/util/ContextConfigure;->ISYOUSHUOPEN:Z
+    const-string v12, "\u91cd\u5217"
 
-    .line 87
-    sput-boolean v7, Lcom/sg/android/util/ContextConfigure;->ISSMSPAY:Z
+    aput-object v12, v3, v11
+
+    const/16 v11, 0xa
+
+    const-string v12, "8\u4e2a\u91cd\u5217"
+
+    aput-object v12, v3, v11
+
+    const/16 v11, 0xb
+
+    const-string v12, "\u89e3\u9501\u5173\u5361"
+
+    aput-object v12, v3, v11
+
+    const/16 v11, 0xc
+
+    const-string v12, "\u8282\u65e5\u793c\u5305"
+
+    aput-object v12, v3, v11
+
+    const/16 v11, 0xd
+
+    const-string v12, "\u798f\u888b"
+
+    aput-object v12, v3, v11
+
+    .line 86
+    .local v3, "goodsName":[Ljava/lang/String;
+    sput-object v3, Lcom/sg/android/util/ContextConfigure;->GOODS_NAME:[Ljava/lang/String;
 
     .line 89
-    sput-boolean v7, Lcom/sg/android/util/ContextConfigure;->ISALIPAY:Z
+    const/16 v11, 0xe
 
-    .line 91
-    sput-boolean v7, Lcom/sg/android/util/ContextConfigure;->ISLIANTONGPAY:Z
+    new-array v6, v11, [F
+
+    fill-array-data v6, :array_2e2
+
+    .line 90
+    .local v6, "goodsPrices":[F
+    sput-object v6, Lcom/sg/android/util/ContextConfigure;->GOODS_PRICES:[F
 
     .line 93
-    sput-boolean v7, Lcom/sg/android/util/ContextConfigure;->ISWOPAY:Z
+    const/16 v11, 0xe
 
-    .line 95
-    sput-boolean v7, Lcom/sg/android/util/ContextConfigure;->ISDIANXINPAY:Z
+    new-array v5, v11, [Ljava/lang/String;
 
-    .line 97
-    sput-boolean v7, Lcom/sg/android/util/ContextConfigure;->ISYIDONGPAY:Z
+    const/4 v11, 0x0
 
-    .line 99
-    sput-boolean v7, Lcom/sg/android/util/ContextConfigure;->ISWAILIAN:Z
+    const-string v12, "2"
 
-    .line 101
-    sput-boolean v8, Lcom/sg/android/util/ContextConfigure;->ISAUTOUPDATE:Z
+    aput-object v12, v5, v11
 
-    .line 104
-    const/16 v5, 0xe
+    const/4 v11, 0x1
 
-    new-array v2, v5, [I
+    const-string v12, "5"
 
-    const/16 v5, 0x64
+    aput-object v12, v5, v11
 
-    aput v5, v2, v8
+    const/4 v11, 0x2
 
-    const/16 v5, 0x226
+    const-string v12, "8"
 
-    aput v5, v2, v7
+    aput-object v12, v5, v11
 
-    const/16 v5, 0x4b0
+    const/4 v11, 0x3
 
-    aput v5, v2, v10
+    const-string v12, "15"
 
-    const/16 v5, 0xbb8
+    aput-object v12, v5, v11
 
-    aput v5, v2, v9
+    const/4 v11, 0x4
 
-    const/4 v5, 0x4
+    const-string v12, "20"
 
-    const/16 v6, 0x2328
+    aput-object v12, v5, v11
 
-    aput v6, v2, v5
+    const/4 v11, 0x5
 
-    const/4 v5, 0x5
+    const-string v12, "2"
 
-    aput v9, v2, v5
+    aput-object v12, v5, v11
 
-    const/4 v5, 0x6
+    const/4 v11, 0x6
 
-    const/16 v6, 0x14
+    const-string v12, "8"
 
-    aput v6, v2, v5
+    aput-object v12, v5, v11
 
-    aput v10, v2, v11
+    const/4 v11, 0x7
 
-    const/16 v5, 0x8
+    const-string v12, "3"
 
-    const/16 v6, 0xc
+    aput-object v12, v5, v11
 
-    aput v6, v2, v5
+    const/16 v11, 0x8
 
-    const/16 v5, 0x9
+    const-string v12, "15"
 
-    aput v9, v2, v5
+    aput-object v12, v5, v11
 
-    const/16 v5, 0xa
+    const/16 v11, 0x9
 
-    const/16 v6, 0x12
+    const-string v12, "3"
 
-    aput v6, v2, v5
+    aput-object v12, v5, v11
 
-    const/16 v5, 0xc
+    const/16 v11, 0xa
 
-    .line 105
-    aput v7, v2, v5
+    const-string v12, "15"
+
+    aput-object v12, v5, v11
+
+    const/16 v11, 0xb
+
+    const-string v12, "6"
+
+    aput-object v12, v5, v11
+
+    const/16 v11, 0xc
+
+    const-string v12, "4"
+
+    aput-object v12, v5, v11
+
+    const/16 v11, 0xd
+
+    const-string v12, "0.1"
+
+    aput-object v12, v5, v11
+
+    .line 94
+    .local v5, "goodsPayPrice":[Ljava/lang/String;
+    sput-object v5, Lcom/sg/android/util/ContextConfigure;->GOODS_PAY_PRICES:[Ljava/lang/String;
+
+    .line 100
+    const-string v11, "300008176701"
+
+    sput-object v11, Lcom/sg/android/util/ContextConfigure;->MM_APPID:Ljava/lang/String;
+
+    .line 103
+    const-string v11, "55F426176949E372"
+
+    sput-object v11, Lcom/sg/android/util/ContextConfigure;->MM_APPKEY:Ljava/lang/String;
 
     .line 106
-    .local v2, "goodsNum":[I
-    sput-object v2, Lcom/sg/android/util/ContextConfigure;->GOODS_NUM:[I
+    const/16 v11, 0xe
+
+    new-array v10, v11, [Ljava/lang/String;
+
+    const/4 v11, 0x0
+
+    const-string v12, "30000817670101"
+
+    aput-object v12, v10, v11
+
+    const/4 v11, 0x1
+
+    const-string v12, "30000817670102"
+
+    aput-object v12, v10, v11
+
+    const/4 v11, 0x2
+
+    const-string v12, "30000817670103"
+
+    aput-object v12, v10, v11
+
+    const/4 v11, 0x3
+
+    .line 107
+    const-string v12, "30000817670104"
+
+    aput-object v12, v10, v11
+
+    const/4 v11, 0x4
+
+    const-string v12, "30000817670105"
+
+    aput-object v12, v10, v11
+
+    const/4 v11, 0x5
+
+    const-string v12, "30000817670106"
+
+    aput-object v12, v10, v11
+
+    const/4 v11, 0x6
+
+    const-string v12, "30000817670107"
+
+    aput-object v12, v10, v11
+
+    const/4 v11, 0x7
+
+    .line 108
+    const-string v12, "30000817670108"
+
+    aput-object v12, v10, v11
+
+    const/16 v11, 0x8
+
+    const-string v12, "30000817670109"
+
+    aput-object v12, v10, v11
+
+    const/16 v11, 0x9
+
+    const-string v12, "30000817670110"
+
+    aput-object v12, v10, v11
+
+    const/16 v11, 0xa
+
+    const-string v12, "30000817670111"
+
+    aput-object v12, v10, v11
+
+    const/16 v11, 0xb
 
     .line 109
-    const/16 v5, 0xe
+    const-string v12, "30000817670112"
 
-    new-array v1, v5, [Ljava/lang/String;
+    aput-object v12, v10, v11
 
-    const-string v5, "gold100"
+    const/16 v11, 0xc
 
-    aput-object v5, v1, v8
+    const-string v12, "30000817670113"
 
-    const-string v5, "gold550"
+    aput-object v12, v10, v11
 
-    aput-object v5, v1, v7
+    const/16 v11, 0xd
 
-    const-string v5, "gold1200"
+    const-string v12, "30000817670115"
 
-    aput-object v5, v1, v10
-
-    const-string v5, "gold3000"
-
-    aput-object v5, v1, v9
-
-    const/4 v5, 0x4
+    aput-object v12, v10, v11
 
     .line 110
-    const-string v6, "gold9000"
+    .local v10, "mmPayCode":[Ljava/lang/String;
+    sput-object v10, Lcom/sg/android/util/ContextConfigure;->MM_PAYCODE:[Ljava/lang/String;
 
-    aput-object v6, v1, v5
+    .line 115
+    const/16 v11, 0xe
 
-    const/4 v5, 0x5
+    new-array v2, v11, [Ljava/lang/String;
 
-    const-string v6, "removeprop3"
+    const/4 v11, 0x0
 
-    aput-object v6, v1, v5
+    const-string v12, "F322CE9121CA443EE0430100007FDD8A"
 
-    const/4 v5, 0x6
+    aput-object v12, v2, v11
 
-    const-string v6, "removeprop20"
+    const/4 v11, 0x1
 
-    aput-object v6, v1, v5
+    const-string v12, "F322CE9121CB443EE0430100007FDD8A"
 
-    const-string v5, "explosionprop2"
+    aput-object v12, v2, v11
 
-    aput-object v5, v1, v11
-
-    const/16 v5, 0x8
-
-    .line 111
-    const-string v6, "explosionprop12"
-
-    aput-object v6, v1, v5
-
-    const/16 v5, 0x9
-
-    const-string v6, "renovateprop3"
-
-    aput-object v6, v1, v5
-
-    const/16 v5, 0xa
-
-    const-string v6, "renovateprop18"
-
-    aput-object v6, v1, v5
-
-    const/16 v5, 0xb
-
-    const-string v6, " "
-
-    aput-object v6, v1, v5
-
-    const/16 v5, 0xc
-
-    .line 112
-    const-string v6, "super_value_package"
-
-    aput-object v6, v1, v5
-
-    const/16 v5, 0xd
-
-    const-string v6, " "
-
-    aput-object v6, v1, v5
-
-    .line 113
-    .local v1, "goodsName":[Ljava/lang/String;
-    sput-object v1, Lcom/sg/android/util/ContextConfigure;->GOODS_NAME:[Ljava/lang/String;
+    const/4 v11, 0x2
 
     .line 116
-    const/16 v5, 0xe
+    const-string v12, "F322CE9121CC443EE0430100007FDD8A"
 
-    new-array v3, v5, [F
+    aput-object v12, v2, v11
 
-    fill-array-data v3, :array_f6
+    const/4 v11, 0x3
+
+    const-string v12, "F322CE9121CD443EE0430100007FDD8A"
+
+    aput-object v12, v2, v11
+
+    const/4 v11, 0x4
+
+    .line 117
+    const-string v12, "F322CE9121CE443EE0430100007FDD8A"
+
+    aput-object v12, v2, v11
+
+    const/4 v11, 0x5
+
+    const-string v12, "F322CE9121CF443EE0430100007FDD8A"
+
+    aput-object v12, v2, v11
+
+    const/4 v11, 0x6
 
     .line 118
-    .local v3, "goodsPrices":[F
-    sput-object v3, Lcom/sg/android/util/ContextConfigure;->GOODS_PRICES:[F
+    const-string v12, "F322CE9121D0443EE0430100007FDD8A"
+
+    aput-object v12, v2, v11
+
+    const/4 v11, 0x7
+
+    const-string v12, "F322CE9121D1443EE0430100007FDD8A"
+
+    aput-object v12, v2, v11
+
+    const/16 v11, 0x8
+
+    .line 119
+    const-string v12, "F322CE9121D2443EE0430100007FDD8A"
+
+    aput-object v12, v2, v11
+
+    const/16 v11, 0x9
+
+    const-string v12, "F322CE9121D3443EE0430100007FDD8A"
+
+    aput-object v12, v2, v11
+
+    const/16 v11, 0xa
+
+    .line 120
+    const-string v12, "F322CE9121D4443EE0430100007FDD8A"
+
+    aput-object v12, v2, v11
+
+    const/16 v11, 0xb
+
+    const-string v12, "F322CE9121D5443EE0430100007FDD8A"
+
+    aput-object v12, v2, v11
+
+    const/16 v11, 0xc
+
+    const-string v12, "F322CE9121D6443EE0430100007FDD8A"
+
+    aput-object v12, v2, v11
+
+    const/16 v11, 0xd
+
+    const-string v12, ""
+
+    aput-object v12, v2, v11
 
     .line 121
-    const-string v5, "Clear The Nest"
+    .local v2, "dianxinPayCode":[Ljava/lang/String;
+    sput-object v2, Lcom/sg/android/util/ContextConfigure;->DIANXIN_PAYCODE:[Ljava/lang/String;
 
-    sput-object v5, Lcom/sg/android/util/ContextConfigure;->GAME_NAME:Ljava/lang/String;
+    .line 124
+    const/16 v11, 0xe
 
-    .line 123
-    invoke-super {p0, p1}, Lcom/sg/android/game/SGBaseActivity;->onCreate(Landroid/os/Bundle;)V
+    new-array v1, v11, [Ljava/lang/String;
+
+    const/4 v11, 0x0
+
+    const-string v12, "5126182"
+
+    aput-object v12, v1, v11
+
+    const/4 v11, 0x1
+
+    const-string v12, "5126183"
+
+    aput-object v12, v1, v11
+
+    const/4 v11, 0x2
+
+    const-string v12, "5126184"
+
+    aput-object v12, v1, v11
+
+    const/4 v11, 0x3
+
+    const-string v12, "5126185"
+
+    aput-object v12, v1, v11
+
+    const/4 v11, 0x4
+
+    const-string v12, "5126186"
+
+    aput-object v12, v1, v11
+
+    const/4 v11, 0x5
+
+    .line 125
+    const-string v12, "5126187"
+
+    aput-object v12, v1, v11
+
+    const/4 v11, 0x6
+
+    const-string v12, "5126188"
+
+    aput-object v12, v1, v11
+
+    const/4 v11, 0x7
+
+    const-string v12, "5126189"
+
+    aput-object v12, v1, v11
+
+    const/16 v11, 0x8
+
+    const-string v12, "5126190"
+
+    aput-object v12, v1, v11
+
+    const/16 v11, 0x9
+
+    .line 126
+    const-string v12, "5126191"
+
+    aput-object v12, v1, v11
+
+    const/16 v11, 0xa
+
+    const-string v12, "5126192"
+
+    aput-object v12, v1, v11
+
+    const/16 v11, 0xb
+
+    const-string v12, "5126193"
+
+    aput-object v12, v1, v11
+
+    const/16 v11, 0xc
+
+    const-string v12, "5126194"
+
+    aput-object v12, v1, v11
+
+    const/16 v11, 0xd
+
+    const-string v12, " "
+
+    aput-object v12, v1, v11
+
+    .line 127
+    .local v1, "aiyouxiPayCode":[Ljava/lang/String;
+    sput-object v1, Lcom/sg/android/util/ContextConfigure;->DIANXIN_AIYOUXI_PAYCODE:[Ljava/lang/String;
+
+    .line 132
+    const/16 v11, 0xe
+
+    new-array v8, v11, [Ljava/lang/String;
+
+    const/4 v11, 0x0
+
+    const-string v12, "0102018006"
+
+    aput-object v12, v8, v11
+
+    const/4 v11, 0x1
+
+    const-string v12, "0105018006"
+
+    aput-object v12, v8, v11
+
+    const/4 v11, 0x2
+
+    const-string v12, "0108018006"
+
+    aput-object v12, v8, v11
+
+    const/4 v11, 0x3
+
+    .line 133
+    const-string v12, "0115018006"
+
+    aput-object v12, v8, v11
+
+    const/4 v11, 0x4
+
+    const-string v12, "0120018006"
+
+    aput-object v12, v8, v11
+
+    const/4 v11, 0x5
+
+    const-string v12, "0202018006"
+
+    aput-object v12, v8, v11
+
+    const/4 v11, 0x6
+
+    const-string v12, "0208018006"
+
+    aput-object v12, v8, v11
+
+    const/4 v11, 0x7
+
+    .line 134
+    const-string v12, "0103018006"
+
+    aput-object v12, v8, v11
+
+    const/16 v11, 0x8
+
+    const-string v12, "0215018006"
+
+    aput-object v12, v8, v11
+
+    const/16 v11, 0x9
+
+    const-string v12, "0203018006"
+
+    aput-object v12, v8, v11
+
+    const/16 v11, 0xa
+
+    const-string v12, "0315018006"
+
+    aput-object v12, v8, v11
+
+    const/16 v11, 0xb
+
+    const-string v12, "0106018006"
+
+    aput-object v12, v8, v11
+
+    const/16 v11, 0xc
+
+    const-string v12, "0104018006"
+
+    aput-object v12, v8, v11
+
+    const/16 v11, 0xd
+
+    const-string v12, ""
+
+    aput-object v12, v8, v11
+
+    .line 135
+    .local v8, "liantongPayCode":[Ljava/lang/String;
+    sput-object v8, Lcom/sg/android/util/ContextConfigure;->LIANTONG_PAYCODE:[Ljava/lang/String;
+
+    .line 138
+    const/16 v11, 0xe
+
+    new-array v0, v11, [Ljava/lang/String;
+
+    const/4 v11, 0x0
+
+    const-string v12, "001"
+
+    aput-object v12, v0, v11
+
+    const/4 v11, 0x1
+
+    const-string v12, "002"
+
+    aput-object v12, v0, v11
+
+    const/4 v11, 0x2
+
+    const-string v12, "003"
+
+    aput-object v12, v0, v11
+
+    const/4 v11, 0x3
+
+    const-string v12, "004"
+
+    aput-object v12, v0, v11
+
+    const/4 v11, 0x4
+
+    const-string v12, "005"
+
+    aput-object v12, v0, v11
+
+    const/4 v11, 0x5
+
+    const-string v12, "006"
+
+    aput-object v12, v0, v11
+
+    const/4 v11, 0x6
+
+    const-string v12, "007"
+
+    aput-object v12, v0, v11
+
+    const/4 v11, 0x7
+
+    .line 139
+    const-string v12, "008"
+
+    aput-object v12, v0, v11
+
+    const/16 v11, 0x8
+
+    const-string v12, "009"
+
+    aput-object v12, v0, v11
+
+    const/16 v11, 0x9
+
+    const-string v12, "010"
+
+    aput-object v12, v0, v11
+
+    const/16 v11, 0xa
+
+    const-string v12, "011"
+
+    aput-object v12, v0, v11
+
+    const/16 v11, 0xb
+
+    const-string v12, "012"
+
+    aput-object v12, v0, v11
+
+    const/16 v11, 0xc
+
+    const-string v12, "013"
+
+    aput-object v12, v0, v11
+
+    const/16 v11, 0xd
+
+    const-string v12, "014"
+
+    aput-object v12, v0, v11
 
     .line 140
-    sget-boolean v5, Lcom/sg/android/util/ContextConfigure;->ISUMENGPUSHOPEN:Z
-
-    if-eqz v5, :cond_d5
-
-    .line 141
-    sget-object v5, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    const-string v6, "oooo"
-
-    invoke-virtual {v5, v6}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    .line 142
-    invoke-static {p0}, Lcom/umeng/message/PushAgent;->getInstance(Landroid/content/Context;)Lcom/umeng/message/PushAgent;
-
-    move-result-object v4
+    .local v0, "WO_NUMBER":[Ljava/lang/String;
+    sput-object v0, Lcom/sg/android/util/ContextConfigure;->WO_NUMBER:[Ljava/lang/String;
 
     .line 143
-    .local v4, "mPushAgent":Lcom/umeng/message/PushAgent;
-    invoke-virtual {v4}, Lcom/umeng/message/PushAgent;->enable()V
+    const-string v11, "200970"
 
-    .line 145
-    const/16 v5, 0x17
+    sput-object v11, Lcom/sg/android/util/ContextConfigure;->SOFT_CODE:Ljava/lang/String;
 
-    invoke-virtual {v4, v5, v8, v11, v8}, Lcom/umeng/message/PushAgent;->setNoDisturbMode(IIII)V
+    .line 147
+    const-string v11, "\u86cb\u86cb\u8fde\u840c"
+
+    sput-object v11, Lcom/sg/android/util/ContextConfigure;->GAME_NAME:Ljava/lang/String;
+
+    .line 149
+    invoke-super/range {p0 .. p1}, Lcom/sg/android/game/SGBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 156
-    .end local v4    # "mPushAgent":Lcom/umeng/message/PushAgent;
-    :cond_d5
-    const-string v0, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxr40ijCf1RxrW18Wlz/nGWdm3cnjcZrJKfwK8Uvv/iNy/4vSMThddUHg3hNAuqrfDMSUDF3Wl9NvOCnvUhVZSlkbjBeinQqAmzx0PpwqZso6yXb6wkTJxKgJaumeIsxgTXCumbY0t3eJyatQn2c773eNgb80Fwj9VT9wUvgKet/bd9tQJcxKHk0+mkZuSRfoiOxiUuxPd56pslWinfsf1Z9PnLlRQeYtw82gugktQlXBtY8X0c/yAkm5nEjGKoM7WD1BQ9UBVMztq4BVY75FElzU0Ywwctz9OxpFs0cbe5UMlOFmqYfUNWGXNTKhqgGk7KJ0J9gnZCaybDDsjgzeAwIDAQAB"
+    sget-boolean v11, Lcom/sg/android/util/ContextConfigure;->isMyPush:Z
+
+    if-eqz v11, :cond_2ae
 
     .line 157
-    .local v0, "base64EncodedPublicKey":Ljava/lang/String;
-    new-instance v5, Lcom/sg/android/google/util/IabHelper;
+    new-instance v7, Landroid/content/Intent;
 
-    invoke-direct {v5, p0, v0}, Lcom/sg/android/google/util/IabHelper;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    const-string v11, "android.intent.action.MY_PUSH"
 
-    iput-object v5, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mHelper:Lcom/sg/android/google/util/IabHelper;
+    invoke-direct {v7, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 160
-    iget-object v5, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mHelper:Lcom/sg/android/google/util/IabHelper;
+    .line 158
+    .local v7, "i":Landroid/content/Intent;
+    invoke-virtual {p0, v7}, Lcom/sg/android/EggLinkLink/LeNorm;->sendBroadcast(Landroid/content/Intent;)V
 
-    invoke-virtual {v5, v8}, Lcom/sg/android/google/util/IabHelper;->enableDebugLogging(Z)V
+    .line 159
+    new-instance v11, Landroid/content/Intent;
 
-    .line 163
-    const-string v5, "Clear The Nest"
+    const-class v12, Lcom/sg/android/EggLinkLink/PushService;
 
-    const-string v6, "Starting setup."
+    invoke-direct {v11, p0, v12}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iget-object v12, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 164
-    iget-object v5, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mHelper:Lcom/sg/android/google/util/IabHelper;
+    const/4 v13, 0x1
 
-    new-instance v6, Lcom/sg/android/EggLinkLink/LeNorm$5;
+    invoke-virtual {p0, v11, v12, v13}, Lcom/sg/android/EggLinkLink/LeNorm;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    invoke-direct {v6, p0}, Lcom/sg/android/EggLinkLink/LeNorm$5;-><init>(Lcom/sg/android/EggLinkLink/LeNorm;)V
+    .line 166
+    .end local v7    # "i":Landroid/content/Intent;
+    :cond_2ae
+    sget-boolean v11, Lcom/sg/android/util/ContextConfigure;->ISUMENGPUSHOPEN:Z
 
-    invoke-virtual {v5, v6}, Lcom/sg/android/google/util/IabHelper;->startSetup(Lcom/sg/android/google/util/IabHelper$OnIabSetupFinishedListener;)V
+    if-eqz v11, :cond_2c1
 
-    .line 179
+    .line 167
+    invoke-static {p0}, Lcom/umeng/message/PushAgent;->getInstance(Landroid/content/Context;)Lcom/umeng/message/PushAgent;
+
+    move-result-object v9
+
+    .line 168
+    .local v9, "mPushAgent":Lcom/umeng/message/PushAgent;
+    invoke-virtual {v9}, Lcom/umeng/message/PushAgent;->enable()V
+
+    .line 170
+    const/16 v11, 0x17
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x7
+
+    const/4 v14, 0x0
+
+    invoke-virtual {v9, v11, v12, v13, v14}, Lcom/umeng/message/PushAgent;->setNoDisturbMode(IIII)V
+
+    .line 172
+    .end local v9    # "mPushAgent":Lcom/umeng/message/PushAgent;
+    :cond_2c1
     return-void
 
-    .line 116
-    nop
-
-    :array_f6
+    .line 78
+    :array_2c2
     .array-data 4
+        0x46
+        0xbe
+        0x140
+        0x276
+        0x370
+        0x1
+        0x6
+        0x1
+        0x6
+        0x1
+        0x8
+        0x1
+        0x1
+        0x1
+    .end array-data
+
+    .line 89
+    :array_2e2
+    .array-data 4
+        0x40000000    # 2.0f
+        0x40a00000    # 5.0f
         0x41000000    # 8.0f
-        0x42200000    # 40.0f
-        0x42a00000    # 80.0f
-        0x43200000    # 160.0f
-        0x43c80000    # 400.0f
+        0x41700000    # 15.0f
+        0x41a00000    # 20.0f
+        0x40000000    # 2.0f
         0x41000000    # 8.0f
-        0x42200000    # 40.0f
-        0x41000000    # 8.0f
-        0x42200000    # 40.0f
-        0x41000000    # 8.0f
-        0x42200000    # 40.0f
-        0x0
-        0x41000000    # 8.0f
-        0x0
+        0x40400000    # 3.0f
+        0x41700000    # 15.0f
+        0x40400000    # 3.0f
+        0x41700000    # 15.0f
+        0x40c00000    # 6.0f
+        0x40800000    # 4.0f
+        0x3dcccccd    # 0.1f
     .end array-data
 .end method
 
@@ -735,7 +938,7 @@
     .registers 2
 
     .prologue
-    .line 184
+    .line 177
     invoke-super {p0}, Lcom/sg/android/game/SGBaseActivity;->onCreateView()Lorg/cocos2dx/lib/Cocos2dxGLSurfaceView;
 
     move-result-object v0
@@ -743,57 +946,30 @@
     return-object v0
 .end method
 
-.method protected onDestroy()V
-    .registers 2
-
-    .prologue
-    .line 429
-    invoke-super {p0}, Lcom/sg/android/game/SGBaseActivity;->onDestroy()V
-
-    .line 430
-    iget-object v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mHelper:Lcom/sg/android/google/util/IabHelper;
-
-    if-eqz v0, :cond_c
-
-    .line 431
-    iget-object v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mHelper:Lcom/sg/android/google/util/IabHelper;
-
-    invoke-virtual {v0}, Lcom/sg/android/google/util/IabHelper;->dispose()V
-
-    .line 432
-    :cond_c
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mHelper:Lcom/sg/android/google/util/IabHelper;
-
-    .line 433
-    return-void
-.end method
-
 .method protected onStop()V
     .registers 2
 
     .prologue
-    .line 268
+    .line 228
     iget-boolean v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mBound:Z
 
     if-eqz v0, :cond_c
 
-    .line 269
+    .line 229
     iget-object v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {p0, v0}, Lcom/sg/android/EggLinkLink/LeNorm;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 270
+    .line 230
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sg/android/EggLinkLink/LeNorm;->mBound:Z
 
-    .line 272
+    .line 232
     :cond_c
     invoke-super {p0}, Lcom/sg/android/game/SGBaseActivity;->onStop()V
 
-    .line 273
+    .line 233
     return-void
 .end method
 
@@ -802,41 +978,39 @@
     .param p1, "isGaming"    # Ljava/lang/String;
 
     .prologue
-    .line 229
+    .line 187
     const-string v3, "isGaming"
 
     invoke-static {v3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
+    .line 188
     sget-boolean v3, Lcom/sg/android/util/ContextConfigure;->isMyPush:Z
 
     if-nez v3, :cond_a
 
-    .line 241
+    .line 200
     :goto_9
     return-void
 
-    .line 232
+    .line 190
     :cond_a
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 234
+    .line 192
     .local v0, "_isGaming":I
     const/4 v3, 0x0
 
     const/16 v4, 0x64
 
-    .line 235
     const/4 v5, 0x0
 
-    .line 234
     invoke-static {v3, v4, v0, v5}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
 
     move-result-object v2
 
-    .line 237
+    .line 194
     .local v2, "msg":Landroid/os/Message;
     :try_start_16
     sget-object v3, Lcom/sg/android/EggLinkLink/LeNorm;->mPushService:Landroid/os/Messenger;
@@ -847,80 +1021,13 @@
 
     goto :goto_9
 
-    .line 238
+    .line 195
     :catch_1c
     move-exception v1
 
-    .line 239
+    .line 196
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_9
-.end method
-
-.method public startPay(Ljava/lang/String;)V
-    .registers 6
-    .param p1, "feedOrder"    # Ljava/lang/String;
-
-    .prologue
-    .line 196
-    const-string v1, "\u652f\u4ed8::::"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "java\u652f\u4ed8\u63a5\u53e3\u88ab\u8c03\u7528,\u6807\u8bc6\u53f7:"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 198
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    sput v1, Lcom/sg/android/util/ContextConfigure;->buyTag:I
-
-    .line 200
-    new-instance v0, Lcom/sg/android/EggLinkLink/LeNorm$6;
-
-    invoke-direct {v0, p0}, Lcom/sg/android/EggLinkLink/LeNorm$6;-><init>(Lcom/sg/android/EggLinkLink/LeNorm;)V
-
-    .line 220
-    .local v0, "showpay":Ljava/lang/Runnable;
-    sget-object v1, Lcom/sg/android/EggLinkLink/LeNorm;->activity:Landroid/app/Activity;
-
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    .line 221
-    return-void
-.end method
-
-.method verifyDeveloperPayload(Lcom/sg/android/google/util/Purchase;)Z
-    .registers 4
-    .param p1, "p"    # Lcom/sg/android/google/util/Purchase;
-
-    .prologue
-    .line 455
-    invoke-virtual {p1}, Lcom/sg/android/google/util/Purchase;->getDeveloperPayload()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 482
-    .local v0, "payload":Ljava/lang/String;
-    const/4 v1, 0x1
-
-    return v1
 .end method

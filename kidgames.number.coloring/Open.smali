@@ -53,32 +53,32 @@
     .registers 1
 
     .prologue
-    .line 38
+    .line 36
     const-string v0, "xv0c000000011f"
 
     sput-object v0, Lkidgames/number/coloring/Open;->AdHubId:Ljava/lang/String;
 
-    .line 39
+    .line 37
     const-string v0, "0dcccb52746e11e281c11231392559e4"
 
     sput-object v0, Lkidgames/number/coloring/Open;->MoPubBigId:Ljava/lang/String;
 
-    .line 40
+    .line 38
     const-string v0, "f2cf4adc746d11e281c11231392559e4"
 
     sput-object v0, Lkidgames/number/coloring/Open;->MoPubSmallId:Ljava/lang/String;
 
-    .line 41
+    .line 39
     const-string v0, "16380504746e11e295fa123138070049"
 
     sput-object v0, Lkidgames/number/coloring/Open;->MoPubBigChooseId:Ljava/lang/String;
 
-    .line 42
+    .line 40
     const-string v0, "0743f79c746e11e295fa123138070049"
 
     sput-object v0, Lkidgames/number/coloring/Open;->MoPubSmallChooseId:Ljava/lang/String;
 
-    .line 46
+    .line 44
     return-void
 .end method
 
@@ -86,15 +86,15 @@
     .registers 2
 
     .prologue
-    .line 24
+    .line 22
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 44
+    .line 42
     const-string v0, "TA4f3sBUZCncPQp8JBYA"
 
     iput-object v0, p0, Lkidgames/number/coloring/Open;->token:Ljava/lang/String;
 
-    .line 24
+    .line 22
     return-void
 .end method
 
@@ -102,7 +102,7 @@
     .registers 1
 
     .prologue
-    .line 181
+    .line 173
     invoke-direct {p0}, Lkidgames/number/coloring/Open;->startGame()V
 
     return-void
@@ -112,33 +112,33 @@
     .registers 3
 
     .prologue
-    .line 183
+    .line 175
     iget-boolean v1, p0, Lkidgames/number/coloring/Open;->isTablet:Z
 
     invoke-static {v1}, Lkidgames/library/AdProvider;->SetActiveAdProvider(Z)V
 
-    .line 185
+    .line 177
     sget-object v1, Lkidgames/number/coloring/Open$CHOOSED_GAME;->MAIN:Lkidgames/number/coloring/Open$CHOOSED_GAME;
 
     sput-object v1, Lkidgames/number/coloring/Open;->runGame:Lkidgames/number/coloring/Open$CHOOSED_GAME;
 
-    .line 186
+    .line 178
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lkidgames/number/coloring/Main;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 187
+    .line 179
     .local v0, "intent":Landroid/content/Intent;
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 188
+    .line 180
     invoke-virtual {p0, v0}, Lkidgames/number/coloring/Open;->startActivity(Landroid/content/Intent;)V
 
-    .line 189
+    .line 181
     return-void
 .end method
 
@@ -149,12 +149,12 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 51
+    .line 49
     iget-object v0, p0, Lkidgames/number/coloring/Open;->PortraitConfig:Landroid/content/res/Configuration;
 
     invoke-super {p0, v0}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 52
+    .line 50
     return-void
 .end method
 
@@ -173,28 +173,13 @@
 
     const/4 v4, 0x0
 
-    .line 58
+    .line 55
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 59
-    sget-object v1, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
-
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    if-lt v1, v2, :cond_15
-
-    .line 60
-    invoke-static {p0}, Lcom/appbrain/AppBrain;->init(Landroid/content/Context;)V
-
-    .line 61
-    :cond_15
+    .line 56
     invoke-virtual {p0, v5}, Lkidgames/number/coloring/Open;->requestWindowFeature(I)Z
 
-    .line 62
+    .line 57
     invoke-virtual {p0}, Lkidgames/number/coloring/Open;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -205,7 +190,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/Window;->setFlags(II)V
 
-    .line 64
+    .line 59
     invoke-virtual {p0}, Lkidgames/number/coloring/Open;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -216,7 +201,7 @@
 
     iput-object v1, p0, Lkidgames/number/coloring/Open;->PortraitConfig:Landroid/content/res/Configuration;
 
-    .line 67
+    .line 62
     const-string v1, "AbcColoringPrefsFile"
 
     invoke-virtual {p0, v1, v4}, Lkidgames/number/coloring/Open;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -225,7 +210,7 @@
 
     sput-object v1, Lkidgames/number/coloring/Open;->settings:Landroid/content/SharedPreferences;
 
-    .line 68
+    .line 63
     sget-object v1, Lkidgames/number/coloring/Open;->settings:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -234,7 +219,7 @@
 
     sput-object v1, Lkidgames/number/coloring/Open;->editor:Landroid/content/SharedPreferences$Editor;
 
-    .line 70
+    .line 65
     invoke-virtual {p0}, Lkidgames/number/coloring/Open;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -247,14 +232,14 @@
 
     iput-boolean v1, p0, Lkidgames/number/coloring/Open;->isTablet:Z
 
-    .line 72
+    .line 67
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
     iput-object v1, p0, Lkidgames/number/coloring/Open;->dm1:Landroid/util/DisplayMetrics;
 
-    .line 73
+    .line 68
     invoke-virtual {p0}, Lkidgames/number/coloring/Open;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v1
@@ -267,21 +252,21 @@
 
     invoke-virtual {v1, v2}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 74
+    .line 69
     iget-object v1, p0, Lkidgames/number/coloring/Open;->dm1:Landroid/util/DisplayMetrics;
 
     iget v1, v1, Landroid/util/DisplayMetrics;->heightPixels:I
 
     sput v1, Lkidgames/number/coloring/Open;->heightPixels:I
 
-    .line 75
+    .line 70
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v2, "Kindle Fire"
 
-    if-ne v1, v2, :cond_71
+    if-ne v1, v2, :cond_65
 
-    .line 76
+    .line 71
     iget-object v1, p0, Lkidgames/number/coloring/Open;->dm1:Landroid/util/DisplayMetrics;
 
     iget v1, v1, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -290,15 +275,15 @@
 
     sput v1, Lkidgames/number/coloring/Open;->heightPixels:I
 
-    .line 78
-    :cond_71
+    .line 73
+    :cond_65
     iget-object v1, p0, Lkidgames/number/coloring/Open;->dm1:Landroid/util/DisplayMetrics;
 
     iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     sput v1, Lkidgames/number/coloring/Open;->widthPixels:I
 
-    .line 79
+    .line 74
     const-string v1, "KIDGAMES:"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -335,7 +320,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
+    .line 75
     const-string v1, "KIDGAMES:"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -368,7 +353,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
+    .line 78
     sget-object v1, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     aget-object v1, v1, v4
@@ -383,7 +368,7 @@
 
     aput v2, v1, v4
 
-    .line 84
+    .line 79
     sget-object v1, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     aget-object v1, v1, v4
@@ -398,7 +383,7 @@
 
     aput v2, v1, v5
 
-    .line 85
+    .line 80
     sget-object v1, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     aget-object v1, v1, v4
@@ -413,7 +398,7 @@
 
     aput v2, v1, v6
 
-    .line 86
+    .line 81
     sget-object v1, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     aget-object v1, v1, v4
@@ -428,7 +413,7 @@
 
     aput v2, v1, v7
 
-    .line 88
+    .line 83
     sget-object v1, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     aget-object v1, v1, v5
@@ -443,7 +428,7 @@
 
     aput v2, v1, v4
 
-    .line 89
+    .line 84
     sget-object v1, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     aget-object v1, v1, v5
@@ -458,7 +443,7 @@
 
     aput v2, v1, v5
 
-    .line 90
+    .line 85
     sget-object v1, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     aget-object v1, v1, v5
@@ -473,7 +458,7 @@
 
     aput v2, v1, v6
 
-    .line 91
+    .line 86
     sget-object v1, Lkidgames/library/AdProvider;->AdProviderPerc:[[I
 
     aget-object v1, v1, v5
@@ -488,14 +473,14 @@
 
     aput v2, v1, v7
 
-    .line 94
+    .line 89
     new-instance v1, Lkidgames/number/coloring/Open$TestAsyncTask;
 
     invoke-direct {v1, p0}, Lkidgames/number/coloring/Open$TestAsyncTask;-><init>(Lkidgames/number/coloring/Open;)V
 
     iput-object v1, p0, Lkidgames/number/coloring/Open;->myATask:Lkidgames/number/coloring/Open$TestAsyncTask;
 
-    .line 95
+    .line 90
     iget-object v1, p0, Lkidgames/number/coloring/Open;->myATask:Lkidgames/number/coloring/Open$TestAsyncTask;
 
     new-array v2, v5, [Ljava/lang/String;
@@ -506,7 +491,7 @@
 
     invoke-virtual {v1, v2}, Lkidgames/number/coloring/Open$TestAsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 97
+    .line 92
     new-instance v0, Lcom/edealya/lib/DeviceIdentifier;
 
     invoke-virtual {p0}, Lkidgames/number/coloring/Open;->getApplicationContext()Landroid/content/Context;
@@ -517,56 +502,37 @@
 
     invoke-direct {v0, v1, v2}, Lcom/edealya/lib/DeviceIdentifier;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 98
+    .line 93
     .local v0, "edDevice":Lcom/edealya/lib/DeviceIdentifier;
     invoke-virtual {v0}, Lcom/edealya/lib/DeviceIdentifier;->update()V
 
-    .line 99
+    .line 94
     return-void
 .end method
 
 .method public onResume()V
-    .registers 3
+    .registers 2
 
     .prologue
-    .line 169
+    .line 163
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 171
+    .line 165
     sget-boolean v0, Lkidgames/number/coloring/Main;->isMainFinished:Z
 
-    if-eqz v0, :cond_21
+    if-eqz v0, :cond_11
 
-    .line 172
-    sget-object v0, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    const/4 v1, 0x7
-
-    if-lt v0, v1, :cond_17
-
-    .line 173
-    invoke-static {}, Lcom/appbrain/AppBrain;->getAds()Lcom/appbrain/AdService;
-
-    move-result-object v0
-
-    invoke-interface {v0, p0}, Lcom/appbrain/AdService;->maybeShowInterstitial(Landroid/app/Activity;)Z
-
-    .line 174
-    :cond_17
+    .line 166
     invoke-virtual {p0}, Lkidgames/number/coloring/Open;->finish()V
 
-    .line 175
+    .line 167
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
     invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
 
-    .line 177
-    :cond_21
+    .line 169
+    :cond_11
     return-void
 .end method

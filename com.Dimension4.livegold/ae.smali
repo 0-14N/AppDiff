@@ -1,73 +1,43 @@
-.class public Lcom/google/ads/ae;
+.class final Lcom/google/ads/ae;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private a:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Lcom/google/ads/internal/d;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/google/ads/z;
+
+.field final synthetic b:Lcom/google/ads/ac;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/ads/internal/d;)V
+.method constructor <init>(Lcom/google/ads/ac;Lcom/google/ads/z;)V
     .registers 3
 
-    .prologue
-    .line 30
+    iput-object p1, p0, Lcom/google/ads/ae;->b:Lcom/google/ads/ac;
+
+    iput-object p2, p0, Lcom/google/ads/ae;->a:Lcom/google/ads/z;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/google/ads/ae;->a:Ljava/lang/ref/WeakReference;
-
-    .line 32
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .registers 2
+.method public final run()V
+    .registers 3
 
-    .prologue
-    .line 44
-    iget-object v0, p0, Lcom/google/ads/ae;->a:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/google/ads/ae;->b:Lcom/google/ads/ac;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/google/ads/ac;->c(Lcom/google/ads/ac;)Lcom/google/ads/a/r;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/ads/internal/d;
+    iget-object v1, p0, Lcom/google/ads/ae;->a:Lcom/google/ads/z;
 
-    .line 45
-    if-nez v0, :cond_10
+    invoke-virtual {v0, v1}, Lcom/google/ads/a/r;->b(Lcom/google/ads/z;)V
 
-    .line 46
-    const-string v0, "The ad must be gone, so cancelling the refresh timer."
-
-    invoke-static {v0}, Lcom/google/ads/util/b;->a(Ljava/lang/String;)V
-
-    .line 50
-    :goto_f
     return-void
-
-    .line 49
-    :cond_10
-    invoke-virtual {v0}, Lcom/google/ads/internal/d;->y()V
-
-    goto :goto_f
 .end method

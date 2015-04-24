@@ -5,7 +5,7 @@
 # static fields
 .field static a:Ljava/util/Hashtable;
 
-.field static b:Lnet/youmi/android/eo;
+.field static b:Lnet/youmi/android/el;
 
 
 # direct methods
@@ -17,7 +17,7 @@
     return-void
 .end method
 
-.method static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lnet/youmi/android/bw;
+.method static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lnet/youmi/android/bv;
     .registers 11
 
     :try_start_0
@@ -33,35 +33,35 @@
 
     if-eqz v0, :cond_6c
 
-    new-instance v1, Lnet/youmi/android/bw;
+    new-instance v1, Lnet/youmi/android/bv;
 
-    invoke-direct {v1}, Lnet/youmi/android/bw;-><init>()V
+    invoke-direct {v1}, Lnet/youmi/android/bv;-><init>()V
 
-    iput-object p5, v1, Lnet/youmi/android/bw;->a:Ljava/lang/String;
+    iput-object p5, v1, Lnet/youmi/android/bv;->a:Ljava/lang/String;
 
-    iput-object p2, v1, Lnet/youmi/android/bw;->b:Ljava/lang/String;
+    iput-object p2, v1, Lnet/youmi/android/bv;->b:Ljava/lang/String;
 
-    iput-object p4, v1, Lnet/youmi/android/bw;->d:Ljava/lang/String;
+    iput-object p4, v1, Lnet/youmi/android/bv;->d:Ljava/lang/String;
 
-    iput-object p3, v1, Lnet/youmi/android/bw;->c:Ljava/lang/String;
+    iput-object p3, v1, Lnet/youmi/android/bv;->c:Ljava/lang/String;
 
-    new-instance v2, Lnet/youmi/android/ct;
+    new-instance v2, Lnet/youmi/android/cq;
 
-    invoke-direct {v2}, Lnet/youmi/android/ct;-><init>()V
+    invoke-direct {v2}, Lnet/youmi/android/cq;-><init>()V
 
     iget-object v3, v0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    iput-object v3, v2, Lnet/youmi/android/ct;->a:Ljava/lang/String;
+    iput-object v3, v2, Lnet/youmi/android/cq;->a:Ljava/lang/String;
 
     iget v3, v0, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    iput v3, v2, Lnet/youmi/android/ct;->c:I
+    iput v3, v2, Lnet/youmi/android/cq;->c:I
 
     iget-object v3, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
-    iput-object v3, v2, Lnet/youmi/android/ct;->b:Ljava/lang/String;
+    iput-object v3, v2, Lnet/youmi/android/cq;->b:Ljava/lang/String;
 
-    iput-object v2, v1, Lnet/youmi/android/bw;->f:Lnet/youmi/android/ct;
+    iput-object v2, v1, Lnet/youmi/android/bv;->f:Lnet/youmi/android/cq;
     :try_end_2b
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_2b} :catch_6b
 
@@ -80,23 +80,23 @@
 
     if-eqz v2, :cond_4b
 
-    new-instance v3, Lnet/youmi/android/ct;
+    new-instance v3, Lnet/youmi/android/cq;
 
-    invoke-direct {v3}, Lnet/youmi/android/ct;-><init>()V
+    invoke-direct {v3}, Lnet/youmi/android/cq;-><init>()V
 
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    iput-object v4, v3, Lnet/youmi/android/ct;->a:Ljava/lang/String;
+    iput-object v4, v3, Lnet/youmi/android/cq;->a:Ljava/lang/String;
 
     iget v4, v2, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    iput v4, v3, Lnet/youmi/android/ct;->c:I
+    iput v4, v3, Lnet/youmi/android/cq;->c:I
 
     iget-object v2, v2, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
-    iput-object v2, v3, Lnet/youmi/android/ct;->b:Ljava/lang/String;
+    iput-object v2, v3, Lnet/youmi/android/cq;->b:Ljava/lang/String;
 
-    iput-object v3, v1, Lnet/youmi/android/bw;->e:Lnet/youmi/android/ct;
+    iput-object v3, v1, Lnet/youmi/android/bv;->e:Lnet/youmi/android/cq;
     :try_end_4b
     .catch Ljava/lang/Exception; {:try_start_2b .. :try_end_4b} :catch_6e
 
@@ -172,18 +172,18 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    sget-object v1, Lnet/youmi/android/k;->b:Lnet/youmi/android/eo;
+    sget-object v1, Lnet/youmi/android/k;->b:Lnet/youmi/android/el;
 
     if-nez v1, :cond_1c
 
-    new-instance v1, Lnet/youmi/android/eo;
+    new-instance v1, Lnet/youmi/android/el;
 
-    invoke-direct {v1}, Lnet/youmi/android/eo;-><init>()V
+    invoke-direct {v1}, Lnet/youmi/android/el;-><init>()V
 
-    sput-object v1, Lnet/youmi/android/k;->b:Lnet/youmi/android/eo;
+    sput-object v1, Lnet/youmi/android/k;->b:Lnet/youmi/android/el;
 
     :cond_1c
-    sget-object v1, Lnet/youmi/android/k;->b:Lnet/youmi/android/eo;
+    sget-object v1, Lnet/youmi/android/k;->b:Lnet/youmi/android/el;
 
     invoke-virtual {p0, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
     :try_end_21
@@ -212,8 +212,8 @@
     :try_start_7
     sget-object v0, Lnet/youmi/android/k;->a:Ljava/util/Hashtable;
     :try_end_9
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_9} :catch_65
-    .catchall {:try_start_7 .. :try_end_9} :catchall_6f
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_9} :catch_6a
+    .catchall {:try_start_7 .. :try_end_9} :catchall_74
 
     if-nez v0, :cond_d
 
@@ -239,24 +239,24 @@
 
     move-result-object v0
 
-    check-cast v0, Lnet/youmi/android/bw;
+    check-cast v0, Lnet/youmi/android/bv;
     :try_end_1d
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_1d} :catch_65
-    .catchall {:try_start_d .. :try_end_1d} :catchall_6f
+    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_1d} :catch_6a
+    .catchall {:try_start_d .. :try_end_1d} :catchall_74
 
-    if-eqz v0, :cond_5d
+    if-eqz v0, :cond_62
 
     :try_start_1f
     const-string v2, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {p2, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_24
-    .catch Ljava/lang/Exception; {:try_start_1f .. :try_end_24} :catch_5c
-    .catchall {:try_start_1f .. :try_end_24} :catchall_6f
+    .catch Ljava/lang/Exception; {:try_start_1f .. :try_end_24} :catch_61
+    .catchall {:try_start_1f .. :try_end_24} :catchall_74
 
     move-result v2
 
-    if-eqz v2, :cond_5d
+    if-eqz v2, :cond_62
 
     :try_start_27
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -271,30 +271,30 @@
 
     if-eqz v2, :cond_49
 
-    new-instance v3, Lnet/youmi/android/ct;
+    new-instance v3, Lnet/youmi/android/cq;
 
-    invoke-direct {v3}, Lnet/youmi/android/ct;-><init>()V
+    invoke-direct {v3}, Lnet/youmi/android/cq;-><init>()V
 
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    iput-object v4, v3, Lnet/youmi/android/ct;->a:Ljava/lang/String;
+    iput-object v4, v3, Lnet/youmi/android/cq;->a:Ljava/lang/String;
 
     iget v4, v2, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    iput v4, v3, Lnet/youmi/android/ct;->c:I
+    iput v4, v3, Lnet/youmi/android/cq;->c:I
 
     iget-object v2, v2, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
-    iput-object v2, v3, Lnet/youmi/android/ct;->b:Ljava/lang/String;
+    iput-object v2, v3, Lnet/youmi/android/cq;->b:Ljava/lang/String;
 
-    iput-object v3, v0, Lnet/youmi/android/bw;->g:Lnet/youmi/android/ct;
+    iput-object v3, v0, Lnet/youmi/android/bv;->g:Lnet/youmi/android/cq;
 
     const/4 v2, 0x4
 
-    invoke-static {p0, v0, v2}, Lnet/youmi/android/k;->a(Landroid/content/Context;Lnet/youmi/android/bw;I)V
+    invoke-static {p0, v0, v2}, Lnet/youmi/android/k;->a(Landroid/content/Context;Lnet/youmi/android/bv;I)V
     :try_end_49
-    .catch Ljava/lang/Exception; {:try_start_27 .. :try_end_49} :catch_57
-    .catchall {:try_start_27 .. :try_end_49} :catchall_6f
+    .catch Ljava/lang/Exception; {:try_start_27 .. :try_end_49} :catch_5c
+    .catchall {:try_start_27 .. :try_end_49} :catchall_74
 
     :cond_49
     :goto_49
@@ -307,56 +307,49 @@
 
     move-result-object v0
 
+    const/high16 v2, 0x10000000
+
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
     invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_54
-    .catch Ljava/lang/Exception; {:try_start_49 .. :try_end_54} :catch_55
-    .catchall {:try_start_49 .. :try_end_54} :catchall_6f
+    :try_end_59
+    .catch Ljava/lang/Exception; {:try_start_49 .. :try_end_59} :catch_5a
+    .catchall {:try_start_49 .. :try_end_59} :catchall_74
 
     goto :goto_b
 
-    :catch_55
+    :catch_5a
     move-exception v0
 
     goto :goto_b
-
-    :catch_57
-    move-exception v0
-
-    :try_start_58
-    invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
-    :try_end_5b
-    .catch Ljava/lang/Exception; {:try_start_58 .. :try_end_5b} :catch_5c
-    .catchall {:try_start_58 .. :try_end_5b} :catchall_6f
-
-    goto :goto_49
 
     :catch_5c
     move-exception v0
 
-    :cond_5d
     :try_start_5d
+    invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
+    :try_end_60
+    .catch Ljava/lang/Exception; {:try_start_5d .. :try_end_60} :catch_61
+    .catchall {:try_start_5d .. :try_end_60} :catchall_74
+
+    goto :goto_49
+
+    :catch_61
+    move-exception v0
+
+    :cond_62
+    :try_start_62
     sget-object v0, Lnet/youmi/android/k;->a:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_62
-    .catch Ljava/lang/Exception; {:try_start_5d .. :try_end_62} :catch_63
-    .catchall {:try_start_5d .. :try_end_62} :catchall_6f
+    :try_end_67
+    .catch Ljava/lang/Exception; {:try_start_62 .. :try_end_67} :catch_68
+    .catchall {:try_start_62 .. :try_end_67} :catchall_74
 
     goto :goto_b
 
-    :catch_63
+    :catch_68
     move-exception v0
-
-    goto :goto_b
-
-    :catch_65
-    move-exception v0
-
-    :try_start_66
-    invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
-    :try_end_69
-    .catch Ljava/lang/Exception; {:try_start_66 .. :try_end_69} :catch_6a
-    .catchall {:try_start_66 .. :try_end_69} :catchall_6f
 
     goto :goto_b
 
@@ -366,11 +359,22 @@
     :try_start_6b
     invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
     :try_end_6e
-    .catchall {:try_start_6b .. :try_end_6e} :catchall_6f
+    .catch Ljava/lang/Exception; {:try_start_6b .. :try_end_6e} :catch_6f
+    .catchall {:try_start_6b .. :try_end_6e} :catchall_74
 
     goto :goto_b
 
-    :catchall_6f
+    :catch_6f
+    move-exception v0
+
+    :try_start_70
+    invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
+    :try_end_73
+    .catchall {:try_start_70 .. :try_end_73} :catchall_74
+
+    goto :goto_b
+
+    :catchall_74
     move-exception v0
 
     monitor-exit v1
@@ -378,15 +382,15 @@
     throw v0
 .end method
 
-.method static a(Landroid/content/Context;Lnet/youmi/android/bw;I)V
+.method static a(Landroid/content/Context;Lnet/youmi/android/bv;I)V
     .registers 5
 
     :try_start_0
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lnet/youmi/android/es;
+    new-instance v1, Lnet/youmi/android/ep;
 
-    invoke-direct {v1, p0, p1, p2}, Lnet/youmi/android/es;-><init>(Landroid/content/Context;Lnet/youmi/android/bw;I)V
+    invoke-direct {v1, p0, p1, p2}, Lnet/youmi/android/ep;-><init>(Landroid/content/Context;Lnet/youmi/android/bv;I)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -405,7 +409,7 @@
     goto :goto_d
 .end method
 
-.method static b(Landroid/content/Context;Lnet/youmi/android/bw;I)V
+.method static b(Landroid/content/Context;Lnet/youmi/android/bv;I)V
     .registers 19
 
     const/4 v1, 0x2
@@ -418,7 +422,7 @@
     :cond_4
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->f:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->f:Lnet/youmi/android/cq;
 
     move-object v2, v0
 
@@ -426,7 +430,7 @@
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->e:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->e:Lnet/youmi/android/cq;
 
     move-object v1, v0
 
@@ -445,7 +449,7 @@
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->e:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->e:Lnet/youmi/android/cq;
 
     move-object v5, v0
 
@@ -453,27 +457,27 @@
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->e:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->e:Lnet/youmi/android/cq;
 
     move-object v1, v0
 
-    iget v1, v1, Lnet/youmi/android/ct;->c:I
+    iget v1, v1, Lnet/youmi/android/cq;->c:I
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->e:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->e:Lnet/youmi/android/cq;
 
     move-object v2, v0
 
-    iget-object v2, v2, Lnet/youmi/android/ct;->b:Ljava/lang/String;
+    iget-object v2, v2, Lnet/youmi/android/cq;->b:Ljava/lang/String;
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->e:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->e:Lnet/youmi/android/cq;
 
     move-object v4, v0
 
-    iget-object v4, v4, Lnet/youmi/android/ct;->a:Ljava/lang/String;
+    iget-object v4, v4, Lnet/youmi/android/cq;->a:Ljava/lang/String;
 
     move-object v9, v2
 
@@ -490,7 +494,7 @@
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->f:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->f:Lnet/youmi/android/cq;
 
     move-object v6, v0
 
@@ -498,27 +502,27 @@
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->f:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->f:Lnet/youmi/android/cq;
 
     move-object v1, v0
 
-    iget v1, v1, Lnet/youmi/android/ct;->c:I
+    iget v1, v1, Lnet/youmi/android/cq;->c:I
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->f:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->f:Lnet/youmi/android/cq;
 
     move-object v2, v0
 
-    iget-object v2, v2, Lnet/youmi/android/ct;->b:Ljava/lang/String;
+    iget-object v2, v2, Lnet/youmi/android/cq;->b:Ljava/lang/String;
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->f:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->f:Lnet/youmi/android/cq;
 
     move-object v5, v0
 
-    iget-object v5, v5, Lnet/youmi/android/ct;->a:Ljava/lang/String;
+    iget-object v5, v5, Lnet/youmi/android/cq;->a:Ljava/lang/String;
 
     move-object v10, v2
 
@@ -535,7 +539,7 @@
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->g:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->g:Lnet/youmi/android/cq;
 
     move-object v7, v0
 
@@ -543,27 +547,27 @@
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->g:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->g:Lnet/youmi/android/cq;
 
     move-object v1, v0
 
-    iget v1, v1, Lnet/youmi/android/ct;->c:I
+    iget v1, v1, Lnet/youmi/android/cq;->c:I
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->g:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->g:Lnet/youmi/android/cq;
 
     move-object v2, v0
 
-    iget-object v2, v2, Lnet/youmi/android/ct;->b:Ljava/lang/String;
+    iget-object v2, v2, Lnet/youmi/android/cq;->b:Ljava/lang/String;
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->g:Lnet/youmi/android/ct;
+    iget-object v0, v0, Lnet/youmi/android/bv;->g:Lnet/youmi/android/cq;
 
     move-object v6, v0
 
-    iget-object v6, v6, Lnet/youmi/android/ct;->a:Ljava/lang/String;
+    iget-object v6, v6, Lnet/youmi/android/cq;->a:Ljava/lang/String;
 
     move-object v11, v2
 
@@ -574,25 +578,25 @@
     :goto_7a
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->a:Ljava/lang/String;
+    iget-object v0, v0, Lnet/youmi/android/bv;->a:Ljava/lang/String;
 
     move-object v7, v0
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->c:Ljava/lang/String;
+    iget-object v0, v0, Lnet/youmi/android/bv;->c:Ljava/lang/String;
 
     move-object v12, v0
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->d:Ljava/lang/String;
+    iget-object v0, v0, Lnet/youmi/android/bv;->d:Ljava/lang/String;
 
     move-object v13, v0
 
     move-object/from16 v0, p1
 
-    iget-object v0, v0, Lnet/youmi/android/bw;->b:Ljava/lang/String;
+    iget-object v0, v0, Lnet/youmi/android/bv;->b:Ljava/lang/String;
 
     move-object v14, v0
 
@@ -600,7 +604,7 @@
 
     move/from16 v2, p2
 
-    invoke-static/range {v1 .. v14}, Lnet/youmi/android/av;->a(Landroid/content/Context;IIIIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v1 .. v14}, Lnet/youmi/android/at;->b(Landroid/content/Context;IIIIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_3
 

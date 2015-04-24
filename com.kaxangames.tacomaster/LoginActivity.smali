@@ -171,12 +171,18 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 57
-    sget v0, Lcom/facebook/android/R$layout;->com_facebook_login_activity_layout:I
+    const-string v0, "com_facebook_login_activity_layout"
+
+    const-string v1, "layout"
+
+    invoke-static {v0, v1}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
 
     invoke-virtual {p0, v0}, Lcom/facebook/LoginActivity;->setContentView(I)V
 
     .line 59
-    if-eqz p1, :cond_36
+    if-eqz p1, :cond_3c
 
     .line 60
     const-string v0, "callingPackage"
@@ -199,7 +205,7 @@
     iput-object v0, p0, Lcom/facebook/LoginActivity;->authorizationClient:Lcom/facebook/AuthorizationClient;
 
     .line 68
-    :goto_1c
+    :goto_22
     iget-object v0, p0, Lcom/facebook/LoginActivity;->authorizationClient:Lcom/facebook/AuthorizationClient;
 
     invoke-virtual {v0, p0}, Lcom/facebook/AuthorizationClient;->setContext(Landroid/app/Activity;)V
@@ -226,7 +232,7 @@
     return-void
 
     .line 63
-    :cond_36
+    :cond_3c
     invoke-virtual {p0}, Lcom/facebook/LoginActivity;->getCallingPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -255,7 +261,7 @@
 
     iput-object v0, p0, Lcom/facebook/LoginActivity;->request:Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
-    goto :goto_1c
+    goto :goto_22
 .end method
 
 .method public onPause()V
@@ -271,7 +277,13 @@
     invoke-virtual {v0}, Lcom/facebook/AuthorizationClient;->cancelCurrentHandler()V
 
     .line 125
-    sget v0, Lcom/facebook/android/R$id;->com_facebook_login_activity_progress_bar:I
+    const-string v0, "com_facebook_login_activity_progress_bar"
+
+    const-string v1, "id"
+
+    invoke-static {v0, v1}, Lcom/prime31/FacebookPluginBase;->idForResource(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
 
     invoke-virtual {p0, v0}, Lcom/facebook/LoginActivity;->findViewById(I)Landroid/view/View;
 

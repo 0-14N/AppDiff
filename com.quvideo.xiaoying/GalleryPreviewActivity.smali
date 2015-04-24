@@ -233,65 +233,65 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->Z:Landroid/os/Handler;
 
     .line 324
-    new-instance v0, Lazz;
+    new-instance v0, Latf;
 
-    invoke-direct {v0, p0}, Lazz;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Latf;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->aa:Landroid/view/View$OnClickListener;
 
     .line 381
-    new-instance v0, Lbad;
+    new-instance v0, Latj;
 
-    invoke-direct {v0, p0}, Lbad;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Latj;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->ab:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     .line 705
-    new-instance v0, Lbae;
+    new-instance v0, Latk;
 
-    invoke-direct {v0, p0}, Lbae;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Latk;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->ac:Landroid/media/MediaPlayer$OnCompletionListener;
 
     .line 714
-    new-instance v0, Lbaf;
+    new-instance v0, Latl;
 
-    invoke-direct {v0, p0}, Lbaf;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Latl;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->ad:Landroid/media/MediaPlayer$OnPreparedListener;
 
     .line 723
-    new-instance v0, Lbag;
+    new-instance v0, Latm;
 
-    invoke-direct {v0, p0}, Lbag;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Latm;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->ae:Landroid/media/MediaPlayer$OnErrorListener;
 
     .line 733
-    new-instance v0, Lbah;
+    new-instance v0, Latn;
 
-    invoke-direct {v0, p0}, Lbah;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Latn;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->af:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 
     .line 830
-    new-instance v0, Lbai;
+    new-instance v0, Lato;
 
-    invoke-direct {v0, p0}, Lbai;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Lato;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->ag:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     .line 1407
-    new-instance v0, Lbaj;
+    new-instance v0, Latp;
 
-    invoke-direct {v0, p0}, Lbaj;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Latp;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->n:Landroid/content/DialogInterface$OnDismissListener;
 
     .line 1416
-    new-instance v0, Lbak;
+    new-instance v0, Latq;
 
-    invoke-direct {v0, p0}, Lbak;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Latq;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->ah:Lcom/quvideo/xiaoying/videoeditor/util/MultiVideoExportUtils$OnExportListener;
 
@@ -817,9 +817,9 @@
     move-result-object v1
 
     .line 1550
-    new-instance v2, Lbac;
+    new-instance v2, Lati;
 
-    invoke-direct {v2, p0}, Lbac;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v2, p0}, Lati;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     .line 1559
     new-instance v3, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
@@ -1841,9 +1841,9 @@
 
     .line 232
     :goto_11
-    new-instance v0, Lbaa;
+    new-instance v0, Latg;
 
-    invoke-direct {v0, p0}, Lbaa;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Latg;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     .line 238
     invoke-virtual {p0}, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->getApplicationContext()Landroid/content/Context;
@@ -2734,9 +2734,9 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 688
-    new-instance v0, Lbab;
+    new-instance v0, Lath;
 
-    invoke-direct {v0, p0}, Lbab;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
+    invoke-direct {v0, p0}, Lath;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;)V
 
     .line 695
     iget-object v1, p0, Lcom/quvideo/xiaoying/videoeditor/simpleedit/GalleryPreviewActivity;->O:Landroid/widget/RelativeLayout;

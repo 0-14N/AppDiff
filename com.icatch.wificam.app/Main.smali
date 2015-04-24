@@ -10,6 +10,7 @@
         Lcom/icatch/wificam/app/Activity/Main$DatePickerFragment;,
         Lcom/icatch/wificam/app/Activity/Main$MainHandler;,
         Lcom/icatch/wificam/app/Activity/Main$MyTimerHandler;,
+        Lcom/icatch/wificam/app/Activity/Main$RefreshAeromodellingInfo;,
         Lcom/icatch/wificam/app/Activity/Main$TimePickerFragment;,
         Lcom/icatch/wificam/app/Activity/Main$WifiSSReceiver;
     }
@@ -31,6 +32,10 @@
 
 
 # instance fields
+.field private AeromodellingHandler:Landroid/os/Handler;
+
+.field private aeromodellingtThread:Ljava/lang/Thread;
+
 .field private allowClickButtoms:Z
 
 .field private batteryStatus:Landroid/widget/ImageView;
@@ -189,56 +194,63 @@
 
 # direct methods
 .method public constructor <init>()V
-    .registers 5
+    .registers 6
 
     .prologue
-    const/4 v3, 0x1
-
-    const/4 v1, 0x0
-
-    const/high16 v2, 0x3f800000    # 1.0f
+    const/4 v4, 0x1
 
     const/4 v0, 0x0
 
-    .line 69
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    const/4 v2, 0x0
+
+    .line 68
     invoke-direct {p0}, Landroid/support/v4/app/FragmentActivity;-><init>()V
 
-    .line 103
-    iput-boolean v1, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimerLamp:Z
-
-    .line 118
-    iput-boolean v1, p0, Lcom/icatch/wificam/app/Activity/Main;->intentLock:Z
+    .line 102
+    iput-boolean v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimerLamp:Z
 
     .line 119
-    iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->toastRecording:Landroid/widget/Toast;
+    iput-boolean v0, p0, Lcom/icatch/wificam/app/Activity/Main;->intentLock:Z
 
     .line 120
-    iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->toastCapturing:Landroid/widget/Toast;
+    iput-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->toastRecording:Landroid/widget/Toast;
 
     .line 121
-    iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->toastWaitCapture:Landroid/widget/Toast;
+    iput-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->toastCapturing:Landroid/widget/Toast;
 
     .line 122
+    iput-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->toastWaitCapture:Landroid/widget/Toast;
+
+    .line 123
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/icatch/wificam/app/Activity/Main;->lastCilckTime:J
 
-    .line 124
-    iput-boolean v3, p0, Lcom/icatch/wificam/app/Activity/Main;->allowClickButtoms:Z
-
     .line 125
+    iput-boolean v4, p0, Lcom/icatch/wificam/app/Activity/Main;->allowClickButtoms:Z
+
+    .line 126
     new-instance v0, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     invoke-direct {v0}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;-><init>()V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
-    .line 126
+    .line 127
     new-instance v0, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     invoke-direct {v0}, Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;-><init>()V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
+
+    .line 129
+    invoke-static {}, Lcom/icatch/wificam/app/controller/UIDisplayResource;->getinstance()Lcom/icatch/wificam/app/controller/UIDisplayResource;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
 
     .line 131
     new-instance v0, Lcom/icatch/wificam/app/controller/sdkApi/CameraState;
@@ -255,25 +267,35 @@
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->previewStream:Lcom/icatch/wificam/app/controller/sdkApi/PreviewStream;
 
     .line 156
-    iput v2, p0, Lcom/icatch/wificam/app/Activity/Main;->scaleWidth:F
+    iput v3, p0, Lcom/icatch/wificam/app/Activity/Main;->scaleWidth:F
 
-    iput v2, p0, Lcom/icatch/wificam/app/Activity/Main;->scaleHeight:F
+    iput v3, p0, Lcom/icatch/wificam/app/Activity/Main;->scaleHeight:F
 
-    .line 1134
+    .line 157
+    iput-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->aeromodellingtThread:Ljava/lang/Thread;
+
+    .line 1130
     new-instance v0, Ljava/util/Timer;
 
-    invoke-direct {v0, v3}, Ljava/util/Timer;-><init>(Z)V
+    invoke-direct {v0, v4}, Ljava/util/Timer;-><init>(Z)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->quitTimer:Ljava/util/Timer;
 
-    .line 1135
+    .line 1131
     new-instance v0, Lcom/icatch/wificam/app/Activity/Main$1;
 
     invoke-direct {v0, p0}, Lcom/icatch/wificam/app/Activity/Main$1;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->quitTask:Ljava/util/TimerTask;
 
-    .line 69
+    .line 1497
+    new-instance v0, Lcom/icatch/wificam/app/Activity/Main$2;
+
+    invoke-direct {v0, p0}, Lcom/icatch/wificam/app/Activity/Main$2;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
+
+    iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->AeromodellingHandler:Landroid/os/Handler;
+
+    .line 68
     return-void
 .end method
 
@@ -281,110 +303,108 @@
     .registers 2
 
     .prologue
-    .line 897
+    .line 900
     invoke-direct {p0, p1}, Lcom/icatch/wificam/app/Activity/Main;->sendOkMsg(I)V
 
     return-void
 .end method
 
-.method static synthetic access$1(Lcom/icatch/wificam/app/Activity/Main;)Z
-    .registers 2
+.method static synthetic access$1(Lcom/icatch/wificam/app/Activity/Main;)V
+    .registers 1
 
     .prologue
-    .line 1180
-    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->stopMediaStream()Z
+    .line 1425
+    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->updateAeromodellingInfo()V
 
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method static synthetic access$10(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
+.method static synthetic access$10(Lcom/icatch/wificam/app/Activity/Main;)Ljava/util/Timer;
     .registers 2
 
     .prologue
-    .line 126
+    .line 100
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
+
+    return-object v0
+.end method
+
+.method static synthetic access$11(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
+    .registers 2
+
+    .prologue
+    .line 127
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraAction:Lcom/icatch/wificam/app/controller/sdkApi/CameraAction;
 
     return-object v0
 .end method
 
-.method static synthetic access$11(Lcom/icatch/wificam/app/Activity/Main;)Z
+.method static synthetic access$12(Lcom/icatch/wificam/app/Activity/Main;)Z
     .registers 2
 
     .prologue
-    .line 103
+    .line 102
     iget-boolean v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimerLamp:Z
 
     return v0
 .end method
 
-.method static synthetic access$12(Lcom/icatch/wificam/app/Activity/Main;Z)V
+.method static synthetic access$13(Lcom/icatch/wificam/app/Activity/Main;Z)V
     .registers 2
 
     .prologue
-    .line 103
+    .line 102
     iput-boolean p1, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimerLamp:Z
 
     return-void
 .end method
 
-.method static synthetic access$13(Lcom/icatch/wificam/app/Activity/Main;II)V
+.method static synthetic access$14(Lcom/icatch/wificam/app/Activity/Main;II)V
     .registers 3
 
     .prologue
-    .line 901
+    .line 904
     invoke-direct {p0, p1, p2}, Lcom/icatch/wificam/app/Activity/Main;->sendTimerMsg(II)V
 
     return-void
 .end method
 
-.method static synthetic access$14(Lcom/icatch/wificam/app/Activity/Main;Ljava/util/Timer;)V
+.method static synthetic access$15(Lcom/icatch/wificam/app/Activity/Main;Ljava/util/Timer;)V
     .registers 2
 
     .prologue
-    .line 101
+    .line 100
     iput-object p1, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
 
     return-void
 .end method
 
-.method static synthetic access$15(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/ImageView;
+.method static synthetic access$16(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/ImageView;
     .registers 2
 
     .prologue
-    .line 86
+    .line 85
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->burst_status:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method static synthetic access$16(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/TextView;
+.method static synthetic access$17(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/TextView;
     .registers 2
 
     .prologue
-    .line 87
+    .line 86
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->delay_capture_txt:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$17(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/ImageView;
+.method static synthetic access$18(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/ImageView;
     .registers 2
 
     .prologue
-    .line 85
+    .line 84
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wb_status:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$18(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/Button;
-    .registers 2
-
-    .prologue
-    .line 83
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_btn:Landroid/widget/Button;
 
     return-object v0
 .end method
@@ -393,100 +413,102 @@
     .registers 2
 
     .prologue
-    .line 84
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_btn:Landroid/widget/Button;
+    .line 82
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_btn:Landroid/widget/Button;
 
     return-object v0
 .end method
 
-.method static synthetic access$2(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/TextView;
+.method static synthetic access$2(Lcom/icatch/wificam/app/Activity/Main;)Z
     .registers 2
 
     .prologue
-    .line 88
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_txt:Landroid/widget/TextView;
+    .line 1171
+    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->stopMediaStream()Z
 
-    return-object v0
+    move-result v0
+
+    return v0
 .end method
 
-.method static synthetic access$20(Lcom/icatch/wificam/app/Activity/Main;)V
-    .registers 1
+.method static synthetic access$20(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/Button;
+    .registers 2
 
     .prologue
-    .line 680
-    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->showDatePickerFragemnt()V
+    .line 83
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_btn:Landroid/widget/Button;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$21(Lcom/icatch/wificam/app/Activity/Main;)V
     .registers 1
 
     .prologue
-    .line 685
+    .line 686
+    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->showDatePickerFragemnt()V
+
+    return-void
+.end method
+
+.method static synthetic access$22(Lcom/icatch/wificam/app/Activity/Main;)V
+    .registers 1
+
+    .prologue
+    .line 691
     invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->showTimePickerFragemnt()V
 
     return-void
 .end method
 
-.method static synthetic access$22(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/ImageView;
+.method static synthetic access$23(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/ImageView;
     .registers 2
 
     .prologue
-    .line 90
+    .line 89
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wifiStatus:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method static synthetic access$23(Lcom/icatch/wificam/app/Activity/Main;)Z
+.method static synthetic access$24(Lcom/icatch/wificam/app/Activity/Main;)Landroid/os/Handler;
     .registers 2
 
     .prologue
-    .line 124
+    .line 1497
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->AeromodellingHandler:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method static synthetic access$25(Lcom/icatch/wificam/app/Activity/Main;)Z
+    .registers 2
+
+    .prologue
+    .line 125
     iget-boolean v0, p0, Lcom/icatch/wificam/app/Activity/Main;->allowClickButtoms:Z
 
     return v0
 .end method
 
-.method static synthetic access$24(Lcom/icatch/wificam/app/Activity/Main;Z)V
+.method static synthetic access$26(Lcom/icatch/wificam/app/Activity/Main;Z)V
     .registers 2
 
     .prologue
-    .line 124
+    .line 125
     iput-boolean p1, p0, Lcom/icatch/wificam/app/Activity/Main;->allowClickButtoms:Z
 
     return-void
 .end method
 
-.method static synthetic access$25(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/controller/SDKEvent;
+.method static synthetic access$27(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/controller/SDKEvent;
     .registers 2
 
     .prologue
-    .line 115
+    .line 116
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
 
     return-object v0
-.end method
-
-.method static synthetic access$26(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/Toast;
-    .registers 2
-
-    .prologue
-    .line 119
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->toastRecording:Landroid/widget/Toast;
-
-    return-object v0
-.end method
-
-.method static synthetic access$27(Lcom/icatch/wificam/app/Activity/Main;Landroid/widget/Toast;)V
-    .registers 2
-
-    .prologue
-    .line 119
-    iput-object p1, p0, Lcom/icatch/wificam/app/Activity/Main;->toastRecording:Landroid/widget/Toast;
-
-    return-void
 .end method
 
 .method static synthetic access$28(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/Toast;
@@ -494,7 +516,7 @@
 
     .prologue
     .line 120
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->toastCapturing:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->toastRecording:Landroid/widget/Toast;
 
     return-object v0
 .end method
@@ -504,12 +526,122 @@
 
     .prologue
     .line 120
+    iput-object p1, p0, Lcom/icatch/wificam/app/Activity/Main;->toastRecording:Landroid/widget/Toast;
+
+    return-void
+.end method
+
+.method static synthetic access$3(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/TextView;
+    .registers 2
+
+    .prologue
+    .line 87
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_txt:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$30(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/Toast;
+    .registers 2
+
+    .prologue
+    .line 121
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->toastCapturing:Landroid/widget/Toast;
+
+    return-object v0
+.end method
+
+.method static synthetic access$31(Lcom/icatch/wificam/app/Activity/Main;Landroid/widget/Toast;)V
+    .registers 2
+
+    .prologue
+    .line 121
     iput-object p1, p0, Lcom/icatch/wificam/app/Activity/Main;->toastCapturing:Landroid/widget/Toast;
 
     return-void
 .end method
 
-.method static synthetic access$3(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/controller/UIDisplayResource;
+.method static synthetic access$32(Lcom/icatch/wificam/app/Activity/Main;)J
+    .registers 3
+
+    .prologue
+    .line 123
+    iget-wide v0, p0, Lcom/icatch/wificam/app/Activity/Main;->lastCilckTime:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$33(Lcom/icatch/wificam/app/Activity/Main;J)V
+    .registers 3
+
+    .prologue
+    .line 123
+    iput-wide p1, p0, Lcom/icatch/wificam/app/Activity/Main;->lastCilckTime:J
+
+    return-void
+.end method
+
+.method static synthetic access$34(Lcom/icatch/wificam/app/Activity/Main;Z)V
+    .registers 2
+
+    .prologue
+    .line 118
+    iput-boolean p1, p0, Lcom/icatch/wificam/app/Activity/Main;->sdCardFullWarning:Z
+
+    return-void
+.end method
+
+.method static synthetic access$35(Lcom/icatch/wificam/app/Activity/Main;)Landroid/media/MediaPlayer;
+    .registers 2
+
+    .prologue
+    .line 95
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureStartBeep:Landroid/media/MediaPlayer;
+
+    return-object v0
+.end method
+
+.method static synthetic access$36(Lcom/icatch/wificam/app/Activity/Main;)Ljava/util/concurrent/ExecutorService;
+    .registers 2
+
+    .prologue
+    .line 97
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->executor:Ljava/util/concurrent/ExecutorService;
+
+    return-object v0
+.end method
+
+.method static synthetic access$37(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/Activity/Main$MainHandler;
+    .registers 2
+
+    .prologue
+    .line 99
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->mainHandler:Lcom/icatch/wificam/app/Activity/Main$MainHandler;
+
+    return-object v0
+.end method
+
+.method static synthetic access$38(Lcom/icatch/wificam/app/Activity/Main;Ljava/util/concurrent/Future;)V
+    .registers 2
+
+    .prologue
+    .line 98
+    iput-object p1, p0, Lcom/icatch/wificam/app/Activity/Main;->future:Ljava/util/concurrent/Future;
+
+    return-void
+.end method
+
+.method static synthetic access$39(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/ListView;
+    .registers 2
+
+    .prologue
+    .line 72
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->mainMenuList:Landroid/widget/ListView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$4(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/controller/UIDisplayResource;
     .registers 2
 
     .prologue
@@ -519,97 +651,17 @@
     return-object v0
 .end method
 
-.method static synthetic access$30(Lcom/icatch/wificam/app/Activity/Main;)J
-    .registers 3
-
-    .prologue
-    .line 122
-    iget-wide v0, p0, Lcom/icatch/wificam/app/Activity/Main;->lastCilckTime:J
-
-    return-wide v0
-.end method
-
-.method static synthetic access$31(Lcom/icatch/wificam/app/Activity/Main;J)V
-    .registers 3
-
-    .prologue
-    .line 122
-    iput-wide p1, p0, Lcom/icatch/wificam/app/Activity/Main;->lastCilckTime:J
-
-    return-void
-.end method
-
-.method static synthetic access$32(Lcom/icatch/wificam/app/Activity/Main;Z)V
+.method static synthetic access$40(Lcom/icatch/wificam/app/Activity/Main;Lcom/icatch/wificam/app/fuction/SettingView;)V
     .registers 2
 
     .prologue
-    .line 117
-    iput-boolean p1, p0, Lcom/icatch/wificam/app/Activity/Main;->sdCardFullWarning:Z
-
-    return-void
-.end method
-
-.method static synthetic access$33(Lcom/icatch/wificam/app/Activity/Main;)Landroid/media/MediaPlayer;
-    .registers 2
-
-    .prologue
-    .line 96
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureStartBeep:Landroid/media/MediaPlayer;
-
-    return-object v0
-.end method
-
-.method static synthetic access$34(Lcom/icatch/wificam/app/Activity/Main;)Ljava/util/concurrent/ExecutorService;
-    .registers 2
-
-    .prologue
-    .line 98
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->executor:Ljava/util/concurrent/ExecutorService;
-
-    return-object v0
-.end method
-
-.method static synthetic access$35(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/Activity/Main$MainHandler;
-    .registers 2
-
-    .prologue
-    .line 100
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->mainHandler:Lcom/icatch/wificam/app/Activity/Main$MainHandler;
-
-    return-object v0
-.end method
-
-.method static synthetic access$36(Lcom/icatch/wificam/app/Activity/Main;Ljava/util/concurrent/Future;)V
-    .registers 2
-
-    .prologue
-    .line 99
-    iput-object p1, p0, Lcom/icatch/wificam/app/Activity/Main;->future:Ljava/util/concurrent/Future;
-
-    return-void
-.end method
-
-.method static synthetic access$37(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/ListView;
-    .registers 2
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->mainMenuList:Landroid/widget/ListView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$38(Lcom/icatch/wificam/app/Activity/Main;Lcom/icatch/wificam/app/fuction/SettingView;)V
-    .registers 2
-
-    .prologue
-    .line 127
+    .line 128
     iput-object p1, p0, Lcom/icatch/wificam/app/Activity/Main;->settingView:Lcom/icatch/wificam/app/fuction/SettingView;
 
     return-void
 .end method
 
-.method static synthetic access$39(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/TextView;
+.method static synthetic access$41(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/TextView;
     .registers 2
 
     .prologue
@@ -619,41 +671,31 @@
     return-object v0
 .end method
 
-.method static synthetic access$4(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/TextView;
+.method static synthetic access$42(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/fuction/SettingView;
     .registers 2
 
     .prologue
-    .line 89
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_txt:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$40(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/fuction/SettingView;
-    .registers 2
-
-    .prologue
-    .line 127
+    .line 128
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->settingView:Lcom/icatch/wificam/app/fuction/SettingView;
 
     return-object v0
 .end method
 
-.method static synthetic access$41(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/RelativeLayout;
+.method static synthetic access$43(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/RelativeLayout;
     .registers 2
 
     .prologue
-    .line 72
+    .line 71
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->setupMainMenu:Landroid/widget/RelativeLayout;
 
     return-object v0
 .end method
 
-.method static synthetic access$42(Lcom/icatch/wificam/app/Activity/Main;Lcom/icatch/wificam/customer/type/ICatchPreviewMode;)Z
+.method static synthetic access$44(Lcom/icatch/wificam/app/Activity/Main;Lcom/icatch/wificam/customer/type/ICatchPreviewMode;)Z
     .registers 3
 
     .prologue
-    .line 1146
+    .line 1142
     invoke-direct {p0, p1}, Lcom/icatch/wificam/app/Activity/Main;->changeCameraMode(Lcom/icatch/wificam/customer/type/ICatchPreviewMode;)Z
 
     move-result v0
@@ -661,82 +703,84 @@
     return v0
 .end method
 
-.method static synthetic access$43(Lcom/icatch/wificam/app/Activity/Main;)V
+.method static synthetic access$45(Lcom/icatch/wificam/app/Activity/Main;)V
     .registers 1
 
     .prologue
-    .line 1335
+    .line 1326
     invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->initUiInterface()V
 
     return-void
 .end method
 
-.method static synthetic access$44(Lcom/icatch/wificam/app/Activity/Main;)Landroid/media/MediaPlayer;
+.method static synthetic access$46(Lcom/icatch/wificam/app/Activity/Main;)Landroid/media/MediaPlayer;
     .registers 2
 
     .prologue
-    .line 97
+    .line 96
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->modeSwitchBeep:Landroid/media/MediaPlayer;
 
     return-object v0
 .end method
 
-.method static synthetic access$5(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/ExtendComponent/Preview;
+.method static synthetic access$5(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/TextView;
     .registers 2
 
     .prologue
-    .line 71
+    .line 88
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_txt:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$6(Lcom/icatch/wificam/app/Activity/Main;)Lcom/icatch/wificam/app/ExtendComponent/Preview;
+    .registers 2
+
+    .prologue
+    .line 70
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->preview:Lcom/icatch/wificam/app/ExtendComponent/Preview;
 
     return-object v0
 .end method
 
-.method static synthetic access$6(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/Button;
+.method static synthetic access$7(Lcom/icatch/wificam/app/Activity/Main;)Landroid/widget/Button;
     .registers 2
 
     .prologue
-    .line 74
+    .line 73
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->captureBtn:Landroid/widget/Button;
 
     return-object v0
 .end method
 
-.method static synthetic access$7(Lcom/icatch/wificam/app/Activity/Main;I)V
+.method static synthetic access$8(Lcom/icatch/wificam/app/Activity/Main;I)V
     .registers 2
 
     .prologue
-    .line 93
+    .line 92
     iput p1, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
     return-void
 .end method
 
-.method static synthetic access$8(Lcom/icatch/wificam/app/Activity/Main;)I
+.method static synthetic access$9(Lcom/icatch/wificam/app/Activity/Main;)I
     .registers 2
 
     .prologue
-    .line 93
+    .line 92
     iget v0, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
     return v0
 .end method
 
-.method static synthetic access$9(Lcom/icatch/wificam/app/Activity/Main;)Ljava/util/Timer;
-    .registers 2
-
-    .prologue
-    .line 101
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
-
-    return-object v0
-.end method
-
 .method private changeCameraMode(Lcom/icatch/wificam/customer/type/ICatchPreviewMode;)Z
-    .registers 10
+    .registers 11
     .param p1, "previewMode"    # Lcom/icatch/wificam/customer/type/ICatchPreviewMode;
 
     .prologue
-    .line 1147
+    const/4 v8, -0x1
+
+    .line 1143
     const-string v5, "[Normal] -- Main: "
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -755,135 +799,64 @@
 
     invoke-static {v5, v6}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1151
+    .line 1147
     const/16 v4, 0x280
 
     .local v4, "width":I
     const/16 v1, 0x168
 
-    .line 1153
+    .line 1148
     .local v1, "height":I
-    invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getProductId()I
-
-    move-result v5
-
-    const/4 v6, 0x1
-
-    if-ne v5, v6, :cond_73
-
-    .line 1154
     iget-object v5, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
 
     invoke-virtual {v5}, Lcom/icatch/wificam/app/controller/UIDisplayResource;->getFrameWidth()I
 
     move-result v4
 
-    .line 1155
+    .line 1149
     iget-object v5, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
 
     invoke-virtual {v5}, Lcom/icatch/wificam/app/controller/UIDisplayResource;->getFrameHeight()I
 
     move-result v1
 
-    .line 1156
-    const-string v5, "changeCameraMode"
+    .line 1150
+    if-eq v4, v8, :cond_29
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    if-ne v1, v8, :cond_2d
 
-    const-string v7, "width="
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, "height"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1157
-    const/16 v5, 0x140
-
-    if-lt v4, v5, :cond_51
-
-    const/16 v5, 0xb8
-
-    if-ge v1, v5, :cond_73
-
-    .line 1158
-    :cond_51
-    const-string v5, "changeCameraMode"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "width="
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, "height"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1159
+    .line 1151
+    :cond_29
     const/16 v4, 0x280
 
-    .line 1160
+    .line 1152
     const/16 v1, 0x168
 
-    .line 1163
-    :cond_73
+    .line 1154
+    :cond_2d
     new-instance v3, Lcom/icatch/wificam/customer/type/ICatchMJPGStreamParam;
 
     invoke-direct {v3, v4, v1}, Lcom/icatch/wificam/customer/type/ICatchMJPGStreamParam;-><init>(II)V
 
-    .line 1165
+    .line 1156
     .local v3, "param":Lcom/icatch/wificam/customer/type/ICatchMJPGStreamParam;
     const/4 v0, 0x0
 
-    .line 1166
+    .line 1157
     .local v0, "b":Z
     const/4 v2, 0x0
 
-    .line 1167
+    .line 1158
     .local v2, "ii":I
-    :goto_7a
-    if-nez v0, :cond_7f
+    :goto_34
+    if-nez v0, :cond_39
 
     const/4 v5, 0x3
 
-    if-lt v2, v5, :cond_94
+    if-lt v2, v5, :cond_4e
 
-    .line 1173
-    :cond_7f
+    .line 1164
+    :cond_39
     const-string v5, "[Normal] -- Main: "
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -902,25 +875,25 @@
 
     invoke-static {v5, v6}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1174
+    .line 1165
     return v0
 
-    .line 1168
-    :cond_94
+    .line 1159
+    :cond_4e
     const-string v5, "[Normal] -- Main: "
 
     const-string v6, "begin start media stream"
 
     invoke-static {v5, v6}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1169
+    .line 1160
     iget-object v5, p0, Lcom/icatch/wificam/app/Activity/Main;->previewStream:Lcom/icatch/wificam/app/controller/sdkApi/PreviewStream;
 
     invoke-virtual {v5, v3, p1}, Lcom/icatch/wificam/app/controller/sdkApi/PreviewStream;->startMediaStream(Lcom/icatch/wificam/customer/type/ICatchMJPGStreamParam;Lcom/icatch/wificam/customer/type/ICatchPreviewMode;)Z
 
     move-result v0
 
-    .line 1170
+    .line 1161
     const-string v5, "[Normal] -- Main: "
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -939,10 +912,10 @@
 
     invoke-static {v5, v6}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1171
+    .line 1162
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_7a
+    goto :goto_34
 .end method
 
 .method private hideAeromodellingInfo()V
@@ -951,107 +924,107 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 1411
+    .line 1402
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_battery:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1412
+    .line 1403
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_flytime:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1413
+    .line 1404
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_height:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1414
+    .line 1405
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_distance:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1415
+    .line 1406
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_speed:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1416
+    .line 1407
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_latilongi:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1417
+    .line 1408
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_mode:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1418
+    .line 1409
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_num:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1419
+    .line 1410
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_flip_angle:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1420
+    .line 1411
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_frame:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1421
+    .line 1412
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_home:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1422
+    .line 1413
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_start_direction:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1424
+    .line 1415
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_battery:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1425
+    .line 1416
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_flytime:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1426
+    .line 1417
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_height:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1427
+    .line 1418
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_distance:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1428
+    .line 1419
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_speed:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1429
+    .line 1420
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_latilongi:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1430
+    .line 1421
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_mode:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1431
+    .line 1422
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_num:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1432
+    .line 1423
     return-void
 .end method
 
@@ -1059,33 +1032,33 @@
     .registers 3
 
     .prologue
-    .line 692
+    .line 698
     const-string v0, "[Normal] -- Main: "
 
     const-string v1, "initStatus"
 
     invoke-static {v0, v1}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 693
+    .line 699
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdCardFullWarning:Z
 
-    .line 694
+    .line 700
     invoke-static {}, Lcom/icatch/wificam/app/common/ExitApp;->getInstance()Lcom/icatch/wificam/app/common/ExitApp;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/icatch/wificam/app/common/ExitApp;->addActivity(Landroid/app/Activity;)V
 
-    .line 695
+    .line 701
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->executor:Ljava/util/concurrent/ExecutorService;
 
-    .line 697
+    .line 703
     new-instance v0, Lcom/icatch/wificam/app/Activity/Main$MyTimerHandler;
 
     const/4 v1, 0x0
@@ -1094,14 +1067,14 @@
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->mainTimerHandler:Landroid/os/Handler;
 
-    .line 698
+    .line 704
     invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getInstance()Lcom/icatch/wificam/app/common/GlobalApp;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->globalApp:Lcom/icatch/wificam/app/common/GlobalApp;
 
-    .line 699
+    .line 705
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->globalApp:Lcom/icatch/wificam/app/common/GlobalApp;
 
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->getApplicationContext()Landroid/content/Context;
@@ -1110,47 +1083,40 @@
 
     invoke-virtual {v0, v1}, Lcom/icatch/wificam/app/common/GlobalApp;->setAppContext(Landroid/content/Context;)V
 
-    .line 700
+    .line 706
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->globalApp:Lcom/icatch/wificam/app/common/GlobalApp;
 
     invoke-virtual {v0, p0}, Lcom/icatch/wificam/app/common/GlobalApp;->setCurrentApp(Landroid/app/Activity;)V
 
-    .line 705
-    invoke-static {}, Lcom/icatch/wificam/app/controller/UIDisplayResource;->getinstance()Lcom/icatch/wificam/app/controller/UIDisplayResource;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
-
-    .line 707
+    .line 708
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     invoke-virtual {v0}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasVideoRecordFuction()Z
 
     move-result v0
 
-    if-nez v0, :cond_73
+    if-nez v0, :cond_6d
 
-    .line 708
+    .line 709
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoToggle:Landroid/widget/Button;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 709
+    .line 710
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
-    .line 713
-    :goto_4b
+    .line 714
+    :goto_45
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->setBatteryLevelIcon()V
 
-    .line 714
+    .line 715
     invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->initUiInterface()V
 
-    .line 715
+    .line 716
     new-instance v0, Lcom/icatch/wificam/app/controller/SDKEvent;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->mainHandler:Lcom/icatch/wificam/app/Activity/Main$MainHandler;
@@ -1159,40 +1125,40 @@
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
 
-    .line 716
+    .line 717
     new-instance v0, Lcom/icatch/wificam/app/fuction/WifiCheck;
 
     invoke-direct {v0}, Lcom/icatch/wificam/app/fuction/WifiCheck;-><init>()V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wifiTool:Lcom/icatch/wificam/app/fuction/WifiCheck;
 
-    .line 717
+    .line 718
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wifiTool:Lcom/icatch/wificam/app/fuction/WifiCheck;
 
     invoke-virtual {v0}, Lcom/icatch/wificam/app/fuction/WifiCheck;->openConnectCheck()V
 
-    .line 720
+    .line 721
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wifiTool:Lcom/icatch/wificam/app/fuction/WifiCheck;
 
     invoke-virtual {v0}, Lcom/icatch/wificam/app/fuction/WifiCheck;->checkWifiPolicy()V
 
-    .line 721
+    .line 722
     const-string v0, "[Normal] -- Main: "
 
     const-string v1, "end initStatus"
 
     invoke-static {v0, v1}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 722
+    .line 723
     return-void
 
-    .line 711
-    :cond_73
+    .line 712
+    :cond_6d
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
-    goto :goto_4b
+    goto :goto_45
 .end method
 
 .method private initUiInterface()V
@@ -1205,35 +1171,35 @@
 
     const/4 v3, 0x0
 
-    .line 1336
+    .line 1327
     iget v0, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_b8
 
-    .line 1337
+    .line 1328
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->captureBtn:Landroid/widget/Button;
 
     const v1, 0x7f020018
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 1338
+    .line 1329
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->stillToggle:Landroid/widget/Button;
 
     const v1, 0x7f020017
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 1339
+    .line 1330
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoToggle:Landroid/widget/Button;
 
     const v1, 0x7f02005f
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 1340
+    .line 1331
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     const/16 v1, 0x5012
@@ -1244,12 +1210,12 @@
 
     if-eqz v0, :cond_5a
 
-    .line 1341
+    .line 1332
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->delay_captue_status:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 1342
+    .line 1333
     const-string v0, "tigertiger"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1276,7 +1242,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1343
+    .line 1334
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->delay_capture_txt:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
@@ -1289,7 +1255,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1345
+    .line 1336
     :cond_5a
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -1301,12 +1267,12 @@
 
     if-eqz v0, :cond_81
 
-    .line 1346
+    .line 1337
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_status:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 1347
+    .line 1338
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_txt:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
@@ -1317,7 +1283,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1348
+    .line 1339
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_btn:Landroid/widget/Button;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
@@ -1330,7 +1296,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1350
+    .line 1341
     :cond_81
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -1342,12 +1308,12 @@
 
     if-eqz v0, :cond_9d
 
-    .line 1351
+    .line 1342
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->burst_status:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1352
+    .line 1343
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->burst_status:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
@@ -1360,7 +1326,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 1354
+    .line 1345
     :cond_9d
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -1370,7 +1336,7 @@
 
     if-eqz v0, :cond_b2
 
-    .line 1355
+    .line 1346
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wb_status:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
@@ -1383,18 +1349,18 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 1357
+    .line 1348
     :cond_b2
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_status:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 1374
+    .line 1365
     :cond_b7
     :goto_b7
     return-void
 
-    .line 1358
+    .line 1349
     :cond_b8
     iget v0, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
@@ -1402,43 +1368,43 @@
 
     if-ne v0, v1, :cond_b7
 
-    .line 1359
+    .line 1350
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->captureBtn:Landroid/widget/Button;
 
     const v1, 0x7f020063
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 1360
+    .line 1351
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->stillToggle:Landroid/widget/Button;
 
     const v1, 0x7f020015
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 1361
+    .line 1352
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoToggle:Landroid/widget/Button;
 
     const v1, 0x7f020062
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 1362
+    .line 1353
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->delay_captue_status:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 1363
+    .line 1354
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_status:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 1364
+    .line 1355
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->burst_status:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1365
+    .line 1356
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     const v1, 0xd605
@@ -1449,12 +1415,12 @@
 
     if-eqz v0, :cond_10c
 
-    .line 1366
+    .line 1357
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_status:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 1367
+    .line 1358
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_txt:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
@@ -1465,7 +1431,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1368
+    .line 1359
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_btn:Landroid/widget/Button;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
@@ -1478,7 +1444,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1370
+    .line 1361
     :cond_10c
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
@@ -1488,7 +1454,7 @@
 
     if-eqz v0, :cond_b7
 
-    .line 1371
+    .line 1362
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wb_status:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
@@ -1509,7 +1475,7 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 898
+    .line 901
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->mainHandler:Lcom/icatch/wificam/app/Activity/Main$MainHandler;
 
     invoke-virtual {v0, p1}, Lcom/icatch/wificam/app/Activity/Main$MainHandler;->obtainMessage(I)Landroid/os/Message;
@@ -1518,7 +1484,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 899
+    .line 902
     return-void
 .end method
 
@@ -1528,7 +1494,7 @@
     .param p2, "arg1"    # I
 
     .prologue
-    .line 902
+    .line 905
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->mainTimerHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
@@ -1539,117 +1505,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 903
-    return-void
-.end method
-
-.method private showAeromodellingInfo()V
-    .registers 3
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 1435
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_battery:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1436
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_flytime:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1437
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_height:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1438
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_distance:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1439
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_speed:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1440
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_latilongi:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1441
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_mode:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1442
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_num:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1443
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_flip_angle:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1444
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_frame:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1445
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_home:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1446
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->image_start_direction:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1448
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_battery:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1449
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_flytime:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1450
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_height:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1451
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_distance:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1452
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_speed:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1453
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_latilongi:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1454
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_mode:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1455
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->text_num:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1456
+    .line 906
     return-void
 .end method
 
@@ -1657,14 +1513,12 @@
     .registers 4
 
     .prologue
-    .line 681
+    .line 687
     new-instance v0, Lcom/icatch/wificam/app/Activity/Main$DatePickerFragment;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, p0}, Lcom/icatch/wificam/app/Activity/Main$DatePickerFragment;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
 
-    invoke-direct {v0, p0, v1}, Lcom/icatch/wificam/app/Activity/Main$DatePickerFragment;-><init>(Lcom/icatch/wificam/app/Activity/Main;Lcom/icatch/wificam/app/Activity/Main$DatePickerFragment;)V
-
-    .line 682
+    .line 688
     .local v0, "fragment":Landroid/app/DialogFragment;
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->getFragmentManager()Landroid/app/FragmentManager;
 
@@ -1674,7 +1528,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
-    .line 683
+    .line 689
     return-void
 .end method
 
@@ -1682,14 +1536,12 @@
     .registers 4
 
     .prologue
-    .line 686
+    .line 692
     new-instance v0, Lcom/icatch/wificam/app/Activity/Main$TimePickerFragment;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, p0}, Lcom/icatch/wificam/app/Activity/Main$TimePickerFragment;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
 
-    invoke-direct {v0, p0, v1}, Lcom/icatch/wificam/app/Activity/Main$TimePickerFragment;-><init>(Lcom/icatch/wificam/app/Activity/Main;Lcom/icatch/wificam/app/Activity/Main$TimePickerFragment;)V
-
-    .line 687
+    .line 693
     .local v0, "fragment":Landroid/app/DialogFragment;
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->getFragmentManager()Landroid/app/FragmentManager;
 
@@ -1699,7 +1551,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
-    .line 688
+    .line 694
     return-void
 .end method
 
@@ -1708,23 +1560,23 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1295
+    .line 1286
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_9
 
-    .line 1296
+    .line 1287
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1298
+    .line 1289
     :cond_9
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1299
+    .line 1290
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
     const v1, 0x7f020066
 
@@ -1738,39 +1590,39 @@
 
     move-result-object v1
 
-    const v2, 0x7f09007c
+    const v2, 0x7f09007a
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1300
-    const v1, 0x7f090069
+    .line 1291
+    const v1, 0x7f090067
 
-    new-instance v2, Lcom/icatch/wificam/app/Activity/Main$14;
+    new-instance v2, Lcom/icatch/wificam/app/Activity/Main$15;
 
-    invoke-direct {v2, p0}, Lcom/icatch/wificam/app/Activity/Main$14;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
+    invoke-direct {v2, p0}, Lcom/icatch/wificam/app/Activity/Main$15;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1308
+    .line 1299
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
-    .line 1309
+    .line 1300
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
-    .line 1310
+    .line 1301
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 1311
+    .line 1302
     return-void
 .end method
 
@@ -1778,14 +1630,14 @@
     .registers 6
 
     .prologue
-    .line 1181
+    .line 1172
     const/4 v0, 0x0
 
-    .line 1182
+    .line 1173
     .local v0, "b":Z
     const/4 v1, 0x0
 
-    .line 1183
+    .line 1174
     .local v1, "ii":I
     :goto_2
     if-nez v0, :cond_7
@@ -1794,7 +1646,7 @@
 
     if-lt v1, v2, :cond_1c
 
-    .line 1189
+    .line 1180
     :cond_7
     const-string v2, "[Normal] -- Main: "
 
@@ -1814,10 +1666,10 @@
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1190
+    .line 1181
     return v0
 
-    .line 1184
+    .line 1175
     :cond_1c
     const-string v2, "[Normal] -- Main: "
 
@@ -1825,14 +1677,14 @@
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1185
+    .line 1176
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->previewStream:Lcom/icatch/wificam/app/controller/sdkApi/PreviewStream;
 
     invoke-virtual {v2}, Lcom/icatch/wificam/app/controller/sdkApi/PreviewStream;->stopMediaStream()Z
 
     move-result v0
 
-    .line 1186
+    .line 1177
     const-string v2, "[Normal] -- Main: "
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1851,7 +1703,7 @@
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1187
+    .line 1178
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
@@ -1861,31 +1713,31 @@
     .registers 1
 
     .prologue
-    .line 1459
+    .line 1426
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->setAeromodellingBatteryLevel()V
 
-    .line 1460
+    .line 1427
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->setAeromodellingFlyTime()V
 
-    .line 1461
+    .line 1428
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->setAeromodellingHeight()V
 
-    .line 1462
+    .line 1429
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->setAeromodellingDistance()V
 
-    .line 1463
+    .line 1430
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->setAeromodellingSpeed()V
 
-    .line 1464
+    .line 1431
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->setAeromodellingLatitudeLongitude()V
 
-    .line 1465
+    .line 1432
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->setAeromodellingMode()V
 
-    .line 1466
+    .line 1433
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->setAeromodellingSatelliteNum()V
 
-    .line 1467
+    .line 1434
     return-void
 .end method
 
@@ -1897,7 +1749,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1197
+    .line 1188
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     invoke-virtual {v1}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getRemainImageNum()I
@@ -1906,18 +1758,18 @@
 
     if-ge v1, v0, :cond_11
 
-    .line 1198
+    .line 1189
     const-string v1, "[Normal] -- Main: "
 
     const-string v2, "forbidePhotoCapture return true"
 
     invoke-static {v1, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1202
+    .line 1193
     :goto_10
     return v0
 
-    .line 1201
+    .line 1192
     :cond_11
     const-string v0, "[Normal] -- Main: "
 
@@ -1925,7 +1777,7 @@
 
     invoke-static {v0, v1}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1202
+    .line 1193
     const/4 v0, 0x0
 
     goto :goto_10
@@ -1936,13 +1788,13 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/16 v13, 0x80
+    const/16 v12, 0x80
 
     const/4 v6, 0x1
 
-    const/4 v12, 0x4
-
     const/4 v1, 0x0
+
+    const/4 v13, 0x4
 
     .line 161
     invoke-super {p0, p1}, Landroid/support/v4/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
@@ -1959,7 +1811,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v13, v13}, Landroid/view/Window;->setFlags(II)V
+    invoke-virtual {v2, v12, v12}, Landroid/view/Window;->setFlags(II)V
 
     .line 169
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->getWindow()Landroid/view/Window;
@@ -2483,40 +2335,44 @@
     .line 227
     invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->initStatus()V
 
-    .line 230
-    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->hideAeromodellingInfo()V
-
     .line 232
+    const-string v2, "mainmain"
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    const-string v12, "getProductId="
+
+    invoke-direct {v11, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getProductId()I
+
+    move-result v12
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v2, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 233
     invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getProductId()I
 
     move-result v2
 
-    if-ne v2, v6, :cond_2e9
-
-    .line 233
-    iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
-
-    iget-object v11, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
-
-    invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const v11, 0xd70d
-
-    invoke-virtual {v2, v11}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_23f
+    if-ne v2, v6, :cond_2ee
 
     .line 234
     invoke-virtual {p0, v1}, Lcom/icatch/wificam/app/Activity/Main;->setRequestedOrientation(I)V
 
-    .line 238
-    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->showAeromodellingInfo()V
+    .line 237
+    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->hideAeromodellingInfo()V
 
-    .line 248
-    :cond_23f
-    :goto_23f
+    .line 253
+    :goto_244
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -2527,29 +2383,29 @@
 
     move-result-object v0
 
-    .line 249
+    .line 254
     .local v0, "bitmapOrg":Landroid/graphics/Bitmap;
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 250
+    .line 255
     .local v3, "width":I
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
 
-    .line 251
+    .line 256
     .local v4, "height":I
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 252
+    .line 257
     .local v5, "matrix":Landroid/graphics/Matrix;
     const-wide/high16 v9, 0x3ff0000000000000L    # 1.0
 
-    .line 253
+    .line 258
     .local v9, "scale":D
     iget v2, p0, Lcom/icatch/wificam/app/Activity/Main;->scaleWidth:F
 
@@ -2561,7 +2417,7 @@
 
     iput v2, p0, Lcom/icatch/wificam/app/Activity/Main;->scaleWidth:F
 
-    .line 254
+    .line 259
     iget v2, p0, Lcom/icatch/wificam/app/Activity/Main;->scaleHeight:F
 
     float-to-double v11, v2
@@ -2572,26 +2428,26 @@
 
     iput v2, p0, Lcom/icatch/wificam/app/Activity/Main;->scaleHeight:F
 
-    .line 255
+    .line 260
     iget v2, p0, Lcom/icatch/wificam/app/Activity/Main;->scaleWidth:F
 
     iget v11, p0, Lcom/icatch/wificam/app/Activity/Main;->scaleHeight:F
 
     invoke-virtual {v5, v2, v11}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 256
+    .line 261
     const/high16 v2, 0x42340000    # 45.0f
 
     invoke-virtual {v5, v2}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     move v2, v1
 
-    .line 257
+    .line 262
     invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object v8
 
-    .line 259
+    .line 264
     .local v8, "resizedBitmap":Landroid/graphics/Bitmap;
     new-instance v7, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -2601,23 +2457,23 @@
 
     invoke-direct {v7, v1, v8}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 260
+    .line 265
     .local v7, "bmd":Landroid/graphics/drawable/BitmapDrawable;
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->image_flip_angle:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v7}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 267
+    .line 272
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     invoke-virtual {v1}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->isSDCardExist()Z
 
     move-result v1
 
-    if-nez v1, :cond_298
+    if-nez v1, :cond_29d
 
-    .line 268
-    const v1, 0x7f090065
+    .line 273
+    const v1, 0x7f090063
 
     invoke-virtual {p0, v1}, Lcom/icatch/wificam/app/Activity/Main;->getString(I)Ljava/lang/String;
 
@@ -2625,18 +2481,9 @@
 
     invoke-virtual {p0, v1}, Lcom/icatch/wificam/app/Activity/Main;->sdCardIsNotReadyAlert(Ljava/lang/String;)V
 
-    .line 271
-    :cond_298
+    .line 276
+    :cond_29d
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->pbBtn:Landroid/widget/Button;
-
-    new-instance v2, Lcom/icatch/wificam/app/Activity/Main$2;
-
-    invoke-direct {v2, p0}, Lcom/icatch/wificam/app/Activity/Main$2;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
-
-    invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 335
-    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->captureBtn:Landroid/widget/Button;
 
     new-instance v2, Lcom/icatch/wificam/app/Activity/Main$3;
 
@@ -2644,8 +2491,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 438
-    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->setupBtn:Landroid/widget/Button;
+    .line 342
+    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->captureBtn:Landroid/widget/Button;
 
     new-instance v2, Lcom/icatch/wificam/app/Activity/Main$4;
 
@@ -2653,8 +2500,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 485
-    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->stillToggle:Landroid/widget/Button;
+    .line 441
+    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->setupBtn:Landroid/widget/Button;
 
     new-instance v2, Lcom/icatch/wificam/app/Activity/Main$5;
 
@@ -2662,8 +2509,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 520
-    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->videoToggle:Landroid/widget/Button;
+    .line 487
+    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->stillToggle:Landroid/widget/Button;
 
     new-instance v2, Lcom/icatch/wificam/app/Activity/Main$6;
 
@@ -2671,8 +2518,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 553
-    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_btn:Landroid/widget/Button;
+    .line 522
+    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->videoToggle:Landroid/widget/Button;
 
     new-instance v2, Lcom/icatch/wificam/app/Activity/Main$7;
 
@@ -2680,8 +2527,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 579
-    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_btn:Landroid/widget/Button;
+    .line 555
+    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_btn:Landroid/widget/Button;
 
     new-instance v2, Lcom/icatch/wificam/app/Activity/Main$8;
 
@@ -2689,8 +2536,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 607
-    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->delay_capture_btn:Landroid/widget/Button;
+    .line 581
+    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_btn:Landroid/widget/Button;
 
     new-instance v2, Lcom/icatch/wificam/app/Activity/Main$9;
 
@@ -2698,10 +2545,19 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 632
+    .line 609
+    iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->delay_capture_btn:Landroid/widget/Button;
+
+    new-instance v2, Lcom/icatch/wificam/app/Activity/Main$10;
+
+    invoke-direct {v2, p0}, Lcom/icatch/wificam/app/Activity/Main$10;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
+
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 634
     return-void
 
-    .line 240
+    .line 238
     .end local v0    # "bitmapOrg":Landroid/graphics/Bitmap;
     .end local v3    # "width":I
     .end local v4    # "height":I
@@ -2709,67 +2565,85 @@
     .end local v7    # "bmd":Landroid/graphics/drawable/BitmapDrawable;
     .end local v8    # "resizedBitmap":Landroid/graphics/Bitmap;
     .end local v9    # "scale":D
-    :cond_2e9
+    :cond_2ee
     invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getProductId()I
 
     move-result v2
 
     const/4 v11, 0x2
 
-    if-ne v2, v11, :cond_23f
+    if-ne v2, v11, :cond_309
 
-    .line 241
+    .line 239
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->captureBtn:Landroid/widget/Button;
 
-    invoke-virtual {v2, v12}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v2, v13}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 242
+    .line 240
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->videoToggle:Landroid/widget/Button;
 
-    invoke-virtual {v2, v12}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v2, v13}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 243
+    .line 241
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->stillToggle:Landroid/widget/Button;
 
-    invoke-virtual {v2, v12}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v2, v13}, Landroid/widget/Button;->setVisibility(I)V
 
-    goto/16 :goto_23f
+    .line 242
+    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->hideAeromodellingInfo()V
+
+    goto/16 :goto_244
+
+    .line 243
+    :cond_309
+    invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getProductId()I
+
+    move-result v2
+
+    const/4 v11, 0x3
+
+    if-ne v2, v11, :cond_31f
+
+    .line 244
+    iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->videoToggle:Landroid/widget/Button;
+
+    invoke-virtual {v2, v13}, Landroid/widget/Button;->setVisibility(I)V
+
+    .line 245
+    iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->stillToggle:Landroid/widget/Button;
+
+    invoke-virtual {v2, v13}, Landroid/widget/Button;->setVisibility(I)V
+
+    .line 246
+    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->hideAeromodellingInfo()V
+
+    goto/16 :goto_244
+
+    .line 248
+    :cond_31f
+    invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->hideAeromodellingInfo()V
+
+    goto/16 :goto_244
 .end method
 
 .method protected onDestroy()V
     .registers 3
 
     .prologue
-    .line 907
+    .line 910
     const-string v0, "[Normal] -- Main: "
 
     const-string v1, "main:onDestroy"
 
     invoke-static {v0, v1}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 908
+    .line 911
     invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onDestroy()V
 
-    .line 909
+    .line 912
     invoke-direct {p0}, Lcom/icatch/wificam/app/Activity/Main;->stopMediaStream()Z
 
-    .line 910
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
-
-    if-eqz v0, :cond_19
-
-    .line 911
-    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
-
-    invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
-
-    .line 912
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
-
-    .line 914
-    :cond_19
+    .line 913
     return-void
 .end method
 
@@ -2779,7 +2653,7 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    const v8, 0xd70d
+    const v8, 0x7f090018
 
     const/4 v7, 0x2
 
@@ -2809,21 +2683,21 @@
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1025
-    sparse-switch p1, :sswitch_data_f8
+    sparse-switch p1, :sswitch_data_d6
 
-    .line 1082
+    .line 1078
     const-string v1, "[Normal] -- Main: "
 
     const-string v2, "default"
 
     invoke-static {v1, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1083
+    .line 1079
     invoke-super {p0, p1, p2}, Landroid/support/v4/app/FragmentActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v1
 
-    .line 1085
+    .line 1081
     :cond_2a
     :goto_2a
     return v1
@@ -2843,7 +2717,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_5e
+    if-nez v2, :cond_4e
 
     .line 1029
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->setupMainMenu:Landroid/widget/RelativeLayout;
@@ -2853,9 +2727,7 @@
     .line 1030
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->text_title:Landroid/widget/TextView;
 
-    const v3, 0x7f090018
-
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {v2, v8}, Landroid/widget/TextView;->setText(I)V
 
     .line 1031
     invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getProductId()I
@@ -2865,35 +2737,22 @@
     if-ne v2, v1, :cond_2a
 
     .line 1032
-    iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
-
-    iget-object v3, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2, v8}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2a
-
-    .line 1033
     invoke-virtual {p0, v5}, Lcom/icatch/wificam/app/Activity/Main;->setRequestedOrientation(I)V
 
     goto :goto_2a
 
-    .line 1039
-    :cond_5e
+    .line 1037
+    :cond_4e
     iget v2, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
-    if-ne v2, v7, :cond_83
+    if-ne v2, v7, :cond_73
 
-    .line 1040
+    .line 1038
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->toastWaitCapture:Landroid/widget/Toast;
 
-    if-nez v2, :cond_75
+    if-nez v2, :cond_65
 
-    .line 1041
+    .line 1039
     const v2, 0x7f090028
 
     invoke-static {p0, v2, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
@@ -2902,40 +2761,40 @@
 
     iput-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->toastWaitCapture:Landroid/widget/Toast;
 
-    .line 1046
-    :goto_6f
+    .line 1044
+    :goto_5f
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->toastWaitCapture:Landroid/widget/Toast;
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
     goto :goto_2a
 
-    .line 1043
-    :cond_75
+    .line 1041
+    :cond_65
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->toastWaitCapture:Landroid/widget/Toast;
 
     const v3, 0x7f090028
 
     invoke-virtual {v2, v3}, Landroid/widget/Toast;->setText(I)V
 
-    .line 1044
+    .line 1042
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->toastWaitCapture:Landroid/widget/Toast;
 
     invoke-virtual {v2, v5}, Landroid/widget/Toast;->setDuration(I)V
 
-    goto :goto_6f
+    goto :goto_5f
 
-    .line 1050
-    :cond_83
+    .line 1048
+    :cond_73
     new-instance v0, Landroid/app/ProgressDialog;
 
     invoke-direct {v0, p0}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    .line 1051
+    .line 1049
     .local v0, "progressDialog":Landroid/app/ProgressDialog;
     invoke-virtual {v0, v5}, Landroid/app/ProgressDialog;->setProgressStyle(I)V
 
-    .line 1052
+    .line 1050
     const v2, 0x7f09002a
 
     invoke-virtual {p0, v2}, Lcom/icatch/wificam/app/Activity/Main;->getString(I)Ljava/lang/String;
@@ -2944,13 +2803,13 @@
 
     invoke-virtual {v0, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 1053
+    .line 1051
     invoke-virtual {v0, v5}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
-    .line 1054
+    .line 1052
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
-    .line 1056
+    .line 1054
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->quitTimer:Ljava/util/Timer;
 
     iget-object v3, p0, Lcom/icatch/wificam/app/Activity/Main;->quitTask:Ljava/util/TimerTask;
@@ -2961,16 +2820,16 @@
 
     goto :goto_2a
 
-    .line 1061
+    .line 1059
     .end local v0    # "progressDialog":Landroid/app/ProgressDialog;
-    :sswitch_a5
+    :sswitch_95
     const-string v2, "[Normal] -- Main: "
 
     const-string v3, "KEYCODE_HOME"
 
     invoke-static {v2, v3}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1062
+    .line 1060
     const v2, 0x7f09000b
 
     invoke-static {p0, v2, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
@@ -2979,13 +2838,13 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
-    .line 1063
+    .line 1061
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->finish()V
 
-    goto/16 :goto_2a
+    goto :goto_2a
 
-    .line 1066
-    :sswitch_bb
+    .line 1064
+    :sswitch_aa
     iget v2, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
     if-eq v2, v7, :cond_2a
@@ -2994,55 +2853,40 @@
 
     if-eq v2, v6, :cond_2a
 
-    .line 1069
+    .line 1067
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->setupMainMenu:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v2}, Landroid/widget/RelativeLayout;->getVisibility()I
 
     move-result v2
 
-    if-ne v2, v6, :cond_d2
+    if-ne v2, v6, :cond_c1
 
-    .line 1070
+    .line 1068
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->setupMainMenu:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v2, v5}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     goto/16 :goto_2a
 
-    .line 1072
-    :cond_d2
+    .line 1070
+    :cond_c1
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->text_title:Landroid/widget/TextView;
 
-    const v3, 0x7f090018
+    invoke-virtual {v2, v8}, Landroid/widget/TextView;->setText(I)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
-
-    .line 1073
+    .line 1071
     invoke-static {}, Lcom/icatch/wificam/app/common/GlobalApp;->getProductId()I
 
     move-result v2
 
-    if-ne v2, v1, :cond_f0
+    if-ne v2, v1, :cond_cf
 
-    .line 1074
-    iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
-
-    iget-object v3, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2, v8}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->hasFuction(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_f0
-
-    .line 1075
+    .line 1072
     invoke-virtual {p0, v5}, Lcom/icatch/wificam/app/Activity/Main;->setRequestedOrientation(I)V
 
-    .line 1078
-    :cond_f0
+    .line 1074
+    :cond_cf
     iget-object v2, p0, Lcom/icatch/wificam/app/Activity/Main;->setupMainMenu:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v2, v6}, Landroid/widget/RelativeLayout;->setVisibility(I)V
@@ -3050,13 +2894,11 @@
     goto/16 :goto_2a
 
     .line 1025
-    nop
-
-    :sswitch_data_f8
+    :sswitch_data_d6
     .sparse-switch
-        0x3 -> :sswitch_a5
+        0x3 -> :sswitch_95
         0x4 -> :sswitch_2b
-        0x52 -> :sswitch_bb
+        0x52 -> :sswitch_aa
     .end sparse-switch
 .end method
 
@@ -3079,19 +2921,7 @@
     .line 998
     invoke-static {p0}, Lcom/icatch/wificam/app/common/SystemCheckTools;->isApplicationSentToBackground(Landroid/content/Context;)Z
 
-    move-result v0
-
-    if-eqz v0, :cond_19
-
-    .line 999
-    invoke-static {}, Lcom/icatch/wificam/app/common/ExitApp;->getInstance()Lcom/icatch/wificam/app/common/ExitApp;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/icatch/wificam/app/common/ExitApp;->exit()V
-
     .line 1001
-    :cond_19
     invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onPause()V
 
     .line 1002
@@ -3168,17 +2998,17 @@
 
     const/4 v5, 0x1
 
-    .line 918
+    .line 917
     invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onStart()V
 
-    .line 919
+    .line 918
     const-string v0, "[Normal] -- Main: "
 
     const-string v4, "onStart"
 
     invoke-static {v0, v4}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 920
+    .line 919
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->globalApp:Lcom/icatch/wificam/app/common/GlobalApp;
 
     invoke-virtual {p0}, Lcom/icatch/wificam/app/Activity/Main;->getApplicationContext()Landroid/content/Context;
@@ -3187,19 +3017,19 @@
 
     invoke-virtual {v0, v4}, Lcom/icatch/wificam/app/common/GlobalApp;->setAppContext(Landroid/content/Context;)V
 
-    .line 921
+    .line 920
     iput-boolean v7, p0, Lcom/icatch/wificam/app/Activity/Main;->sdCardFullWarning:Z
 
-    .line 922
+    .line 921
     iput-wide v2, p0, Lcom/icatch/wificam/app/Activity/Main;->lastCilckTime:J
 
-    .line 923
+    .line 922
     iput-boolean v5, p0, Lcom/icatch/wificam/app/Activity/Main;->allowClickButtoms:Z
 
-    .line 924
+    .line 923
     iput-boolean v7, p0, Lcom/icatch/wificam/app/Activity/Main;->intentLock:Z
 
-    .line 925
+    .line 924
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->photo_hd_txt:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
@@ -3210,7 +3040,7 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 926
+    .line 925
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->video_hd_txt:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcom/icatch/wificam/app/Activity/Main;->uiDisplayResource:Lcom/icatch/wificam/app/controller/UIDisplayResource;
@@ -3221,45 +3051,45 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 927
+    .line 926
     new-instance v0, Lcom/icatch/wificam/app/Activity/Main$MyTimerHandler;
 
     invoke-direct {v0, p0, v8}, Lcom/icatch/wificam/app/Activity/Main$MyTimerHandler;-><init>(Lcom/icatch/wificam/app/Activity/Main;Lcom/icatch/wificam/app/Activity/Main$MyTimerHandler;)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->mainTimerHandler:Landroid/os/Handler;
 
-    .line 929
+    .line 928
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraState:Lcom/icatch/wificam/app/controller/sdkApi/CameraState;
 
     invoke-virtual {v0}, Lcom/icatch/wificam/app/controller/sdkApi/CameraState;->isMovieRecording()Z
 
     move-result v0
 
-    if-eqz v0, :cond_c0
+    if-eqz v0, :cond_c7
 
-    .line 932
+    .line 931
     const-string v0, "[Normal] -- Main: "
 
     const-string v4, "state.isMovieRecording() == true"
 
     invoke-static {v0, v4}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 933
+    .line 932
     const/16 v0, 0x8
 
     iput v0, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
-    .line 934
+    .line 933
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchPreviewMode;->ICATCH_VIDEO_PREVIEW_MODE:Lcom/icatch/wificam/customer/type/ICatchPreviewMode;
 
     invoke-direct {p0, v0}, Lcom/icatch/wificam/app/Activity/Main;->changeCameraMode(Lcom/icatch/wificam/customer/type/ICatchPreviewMode;)Z
 
-    .line 935
-    new-instance v1, Lcom/icatch/wificam/app/Activity/Main$10;
+    .line 934
+    new-instance v1, Lcom/icatch/wificam/app/Activity/Main$11;
 
-    invoke-direct {v1, p0}, Lcom/icatch/wificam/app/Activity/Main$10;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
+    invoke-direct {v1, p0}, Lcom/icatch/wificam/app/Activity/Main$11;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
 
-    .line 948
+    .line 947
     .local v1, "task":Ljava/util/TimerTask;
     new-instance v0, Lcom/icatch/wificam/app/Activity/Main$MyTimerHandler;
 
@@ -3267,21 +3097,21 @@
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->mainTimerHandler:Landroid/os/Handler;
 
-    .line 949
+    .line 948
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0, v5}, Ljava/util/Timer;-><init>(Z)V
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
 
-    .line 950
+    .line 949
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
 
     const-wide/16 v4, 0x3e8
 
     invoke-virtual/range {v0 .. v5}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;JJ)V
 
-    .line 959
+    .line 958
     .end local v1    # "task":Ljava/util/TimerTask;
     :cond_6f
     :goto_6f
@@ -3289,14 +3119,14 @@
 
     invoke-virtual {v0}, Lcom/icatch/wificam/app/ExtendComponent/Preview;->start()V
 
-    .line 961
+    .line 960
     new-instance v6, Landroid/content/IntentFilter;
 
     const-string v0, "android.net.wifi.RSSI_CHANGED"
 
     invoke-direct {v6, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 962
+    .line 961
     .local v6, "wifiSSFilter":Landroid/content/IntentFilter;
     new-instance v0, Lcom/icatch/wificam/app/Activity/Main$WifiSSReceiver;
 
@@ -3304,61 +3134,61 @@
 
     iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wifiSSReceiver:Lcom/icatch/wificam/app/Activity/Main$WifiSSReceiver;
 
-    .line 963
+    .line 962
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wifiSSReceiver:Lcom/icatch/wificam/app/Activity/Main$WifiSSReceiver;
 
     invoke-virtual {p0, v0, v6}, Lcom/icatch/wificam/app/Activity/Main;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 965
+    .line 964
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
 
     sget-object v2, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_FULL:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/SDKEvent;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V
 
-    .line 966
+    .line 965
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
 
     sget-object v2, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_BATTERY_LEVEL_CHANGED:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/SDKEvent;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V
 
-    .line 967
+    .line 966
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
 
     sget-object v2, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_VIDEO_OFF:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/SDKEvent;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V
 
-    .line 968
+    .line 967
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
 
     sget-object v2, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_VIDEO_ON:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/SDKEvent;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V
 
-    .line 969
+    .line 968
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
 
     sget-object v2, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_CAPTURE_COMPLETE:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/SDKEvent;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V
 
-    .line 970
+    .line 969
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
 
     sget-object v2, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_FILE_ADDED:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/SDKEvent;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V
 
-    .line 971
+    .line 970
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
 
     sget-object v2, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_CONNECTION_DISCONNECTED:Lcom/icatch/wificam/customer/type/ICatchEventID;
 
     invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/SDKEvent;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V
 
-    .line 973
+    .line 972
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
 
     sget-object v2, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_ERROR:Lcom/icatch/wificam/customer/type/ICatchEventID;
@@ -3366,45 +3196,52 @@
     invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/SDKEvent;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V
 
     .line 974
+    iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->sdkEvent:Lcom/icatch/wificam/app/controller/SDKEvent;
+
+    sget-object v2, Lcom/icatch/wificam/customer/type/ICatchEventID;->ICATCH_EVENT_SDCARD_ERROR:Lcom/icatch/wificam/customer/type/ICatchEventID;
+
+    invoke-virtual {v0, v2}, Lcom/icatch/wificam/app/controller/SDKEvent;->addEventListener(Lcom/icatch/wificam/customer/type/ICatchEventID;)V
+
+    .line 975
     return-void
 
-    .line 951
+    .line 950
     .end local v6    # "wifiSSFilter":Landroid/content/IntentFilter;
-    :cond_c0
+    :cond_c7
     iget v0, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
     const/4 v2, 0x4
 
-    if-ne v0, v2, :cond_d2
+    if-ne v0, v2, :cond_d9
 
-    .line 952
+    .line 951
     const-string v0, "[Normal] -- Main: "
 
     const-string v2, "curMode == APP_STATE_VIDEO_PREVIEW"
 
     invoke-static {v0, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 953
+    .line 952
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchPreviewMode;->ICATCH_VIDEO_PREVIEW_MODE:Lcom/icatch/wificam/customer/type/ICatchPreviewMode;
 
     invoke-direct {p0, v0}, Lcom/icatch/wificam/app/Activity/Main;->changeCameraMode(Lcom/icatch/wificam/customer/type/ICatchPreviewMode;)Z
 
     goto :goto_6f
 
-    .line 955
-    :cond_d2
+    .line 954
+    :cond_d9
     iget v0, p0, Lcom/icatch/wificam/app/Activity/Main;->curMode:I
 
     if-ne v0, v5, :cond_6f
 
-    .line 956
+    .line 955
     const-string v0, "[Normal] -- Main: "
 
     const-string v2, "curMode == ICATCH_STILL_PREVIEW_MODE"
 
     invoke-static {v0, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 957
+    .line 956
     sget-object v0, Lcom/icatch/wificam/customer/type/ICatchPreviewMode;->ICATCH_STILL_PREVIEW_MODE:Lcom/icatch/wificam/customer/type/ICatchPreviewMode;
 
     invoke-direct {p0, v0}, Lcom/icatch/wificam/app/Activity/Main;->changeCameraMode(Lcom/icatch/wificam/customer/type/ICatchPreviewMode;)Z
@@ -3416,44 +3253,44 @@
     .registers 3
 
     .prologue
-    .line 978
+    .line 979
     invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onStop()V
 
-    .line 979
+    .line 980
     const-string v0, "[Normal] -- Main: "
 
     const-string v1, "onStop"
 
     invoke-static {v0, v1}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 980
+    .line 981
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wifiSSReceiver:Lcom/icatch/wificam/app/Activity/Main$WifiSSReceiver;
 
     if-eqz v0, :cond_13
 
-    .line 981
+    .line 982
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->wifiSSReceiver:Lcom/icatch/wificam/app/Activity/Main$WifiSSReceiver;
 
     invoke-virtual {p0, v0}, Lcom/icatch/wificam/app/Activity/Main;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 983
+    .line 984
     :cond_13
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
 
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_1c
 
-    .line 984
+    .line 985
     iget-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
 
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
 
-    .line 985
+    .line 987
+    :cond_1c
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->videoCaptureTimer:Ljava/util/Timer;
+    iput-object v0, p0, Lcom/icatch/wificam/app/Activity/Main;->aeromodellingtThread:Ljava/lang/Thread;
 
     .line 991
-    :cond_1f
     return-void
 .end method
 
@@ -3463,14 +3300,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1236
+    .line 1227
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1237
+    .line 1228
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    const v1, 0x7f090064
+    const v1, 0x7f090062
 
     invoke-virtual {p0, v1}, Lcom/icatch/wificam/app/Activity/Main;->getString(I)Ljava/lang/String;
 
@@ -3478,26 +3315,26 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 1238
+    .line 1229
     const-string v1, "OK"
 
-    new-instance v2, Lcom/icatch/wificam/app/Activity/Main$12;
+    new-instance v2, Lcom/icatch/wificam/app/Activity/Main$13;
 
-    invoke-direct {v2, p0}, Lcom/icatch/wificam/app/Activity/Main$12;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
+    invoke-direct {v2, p0}, Lcom/icatch/wificam/app/Activity/Main$13;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1245
+    .line 1236
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_23
 
-    .line 1246
+    .line 1237
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1248
+    .line 1239
     :cond_23
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
@@ -3505,27 +3342,27 @@
 
     iput-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
-    .line 1249
+    .line 1240
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1, v3}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
-    .line 1250
+    .line 1241
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 1251
+    .line 1242
     iput-boolean v3, p0, Lcom/icatch/wificam/app/Activity/Main;->sdCardFullWarning:Z
 
-    .line 1252
+    .line 1243
     const-string v1, "[Normal] -- Main: "
 
     const-string v2, "end show sdCardIsFullAlert"
 
     invoke-static {v1, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1253
+    .line 1244
     return-void
 .end method
 
@@ -3535,31 +3372,31 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1209
+    .line 1200
     const-string v1, "[Normal] -- Main: "
 
     const-string v2, "begin show sdCardIsFullAlert"
 
     invoke-static {v1, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1210
+    .line 1201
     iget-boolean v1, p0, Lcom/icatch/wificam/app/Activity/Main;->sdCardFullWarning:Z
 
     if-eqz v1, :cond_d
 
-    .line 1230
+    .line 1221
     :goto_c
     return-void
 
-    .line 1213
+    .line 1204
     :cond_d
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1214
+    .line 1205
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    const v1, 0x7f090063
+    const v1, 0x7f090061
 
     invoke-virtual {p0, v1}, Lcom/icatch/wificam/app/Activity/Main;->getString(I)Ljava/lang/String;
 
@@ -3567,26 +3404,26 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 1215
+    .line 1206
     const-string v1, "OK"
 
-    new-instance v2, Lcom/icatch/wificam/app/Activity/Main$11;
+    new-instance v2, Lcom/icatch/wificam/app/Activity/Main$12;
 
-    invoke-direct {v2, p0}, Lcom/icatch/wificam/app/Activity/Main$11;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
+    invoke-direct {v2, p0}, Lcom/icatch/wificam/app/Activity/Main$12;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1222
+    .line 1213
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_2f
 
-    .line 1223
+    .line 1214
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1225
+    .line 1216
     :cond_2f
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
@@ -3594,20 +3431,20 @@
 
     iput-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
-    .line 1226
+    .line 1217
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1, v3}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
-    .line 1227
+    .line 1218
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->dialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 1228
+    .line 1219
     iput-boolean v3, p0, Lcom/icatch/wificam/app/Activity/Main;->sdCardFullWarning:Z
 
-    .line 1229
+    .line 1220
     const-string v1, "[Normal] -- Main: "
 
     const-string v2, "end show sdCardIsFullAlert"
@@ -3622,39 +3459,39 @@
     .param p1, "errorInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 1259
+    .line 1250
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1260
+    .line 1251
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
     invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 1261
+    .line 1252
     const-string v2, "OK"
 
-    new-instance v3, Lcom/icatch/wificam/app/Activity/Main$13;
+    new-instance v3, Lcom/icatch/wificam/app/Activity/Main$14;
 
-    invoke-direct {v3, p0}, Lcom/icatch/wificam/app/Activity/Main$13;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
+    invoke-direct {v3, p0}, Lcom/icatch/wificam/app/Activity/Main$14;-><init>(Lcom/icatch/wificam/app/Activity/Main;)V
 
     invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1268
+    .line 1259
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
-    .line 1269
+    .line 1260
     .local v1, "dialog":Landroid/app/AlertDialog;
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
-    .line 1270
+    .line 1261
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 1271
+    .line 1262
     return-void
 .end method
 
@@ -3662,14 +3499,14 @@
     .registers 5
 
     .prologue
-    .line 1471
+    .line 1438
     const/16 v0, 0x32
 
-    .line 1472
+    .line 1439
     .local v0, "batlvl":I
     if-nez v0, :cond_1d
 
-    .line 1474
+    .line 1441
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->text_battery:Landroid/widget/TextView;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3692,11 +3529,11 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1478
+    .line 1445
     :goto_1c
     return-void
 
-    .line 1476
+    .line 1443
     :cond_1d
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->text_battery:Landroid/widget/TextView;
 
@@ -3727,10 +3564,10 @@
     .registers 5
 
     .prologue
-    .line 1494
+    .line 1461
     const/16 v0, 0xc8
 
-    .line 1495
+    .line 1462
     .local v0, "distance":I
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->text_distance:Landroid/widget/TextView;
 
@@ -3754,7 +3591,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1496
+    .line 1463
     return-void
 .end method
 
@@ -3762,10 +3599,10 @@
     .registers 5
 
     .prologue
-    .line 1482
+    .line 1449
     const/16 v0, 0x32
 
-    .line 1483
+    .line 1450
     .local v0, "flytime":I
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->text_flytime:Landroid/widget/TextView;
 
@@ -3783,7 +3620,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1484
+    .line 1451
     return-void
 .end method
 
@@ -3791,10 +3628,10 @@
     .registers 5
 
     .prologue
-    .line 1488
+    .line 1455
     const/16 v0, 0x64
 
-    .line 1489
+    .line 1456
     .local v0, "height":I
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->text_height:Landroid/widget/TextView;
 
@@ -3818,7 +3655,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1490
+    .line 1457
     return-void
 .end method
 
@@ -3826,14 +3663,14 @@
     .registers 8
 
     .prologue
-    .line 1507
+    .line 1474
     const-wide v0, 0x405ed495fb1407f5L    # 123.3216541
 
-    .line 1508
+    .line 1475
     .local v0, "latitude":D
     const-wide v2, 0x4063794339706416L    # 155.7894561
 
-    .line 1509
+    .line 1476
     .local v2, "longitude":D
     iget-object v4, p0, Lcom/icatch/wificam/app/Activity/Main;->text_latilongi:Landroid/widget/TextView;
 
@@ -3861,7 +3698,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1510
+    .line 1477
     return-void
 .end method
 
@@ -3869,33 +3706,33 @@
     .registers 4
 
     .prologue
-    .line 1514
+    .line 1481
     const/4 v0, 0x3
 
-    .line 1515
+    .line 1482
     .local v0, "mode":I
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_c
 
-    .line 1516
+    .line 1483
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->text_mode:Landroid/widget/TextView;
 
     const-string v2, "Rate"
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1522
+    .line 1489
     :goto_b
     return-void
 
-    .line 1517
+    .line 1484
     :cond_c
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_17
 
-    .line 1518
+    .line 1485
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->text_mode:Landroid/widget/TextView;
 
     const-string v2, "Attitude"
@@ -3904,7 +3741,7 @@
 
     goto :goto_b
 
-    .line 1520
+    .line 1487
     :cond_17
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->text_mode:Landroid/widget/TextView;
 
@@ -3919,10 +3756,10 @@
     .registers 5
 
     .prologue
-    .line 1526
+    .line 1493
     const/4 v0, 0x6
 
-    .line 1527
+    .line 1494
     .local v0, "num":I
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->text_num:Landroid/widget/TextView;
 
@@ -3940,7 +3777,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1528
+    .line 1495
     return-void
 .end method
 
@@ -3948,10 +3785,10 @@
     .registers 5
 
     .prologue
-    .line 1500
+    .line 1467
     const/16 v0, 0x64
 
-    .line 1501
+    .line 1468
     .local v0, "speed":I
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->text_speed:Landroid/widget/TextView;
 
@@ -3975,7 +3812,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1502
+    .line 1469
     return-void
 .end method
 
@@ -3985,14 +3822,14 @@
     .prologue
     const/16 v4, 0x21
 
-    .line 1277
+    .line 1268
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->cameraProperties:Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;
 
     invoke-virtual {v1}, Lcom/icatch/wificam/app/controller/sdkApi/CameraProperties;->getBatteryElectric()I
 
     move-result v0
 
-    .line 1278
+    .line 1269
     .local v0, "current":I
     const-string v1, "[Normal] -- Main: "
 
@@ -4012,31 +3849,31 @@
 
     invoke-static {v1, v2}, Lcom/icatch/wificam/app/common/WriteLogToDevice;->writeLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1279
+    .line 1270
     if-ge v0, v4, :cond_2c
 
     if-ltz v0, :cond_2c
 
-    .line 1280
+    .line 1271
     invoke-direct {p0, p0}, Lcom/icatch/wificam/app/Activity/Main;->showWarningDlg(Landroid/content/Context;)V
 
-    .line 1281
+    .line 1272
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->batteryStatus:Landroid/widget/ImageView;
 
     const v2, 0x7f020009
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1289
+    .line 1280
     :cond_2b
     :goto_2b
     return-void
 
-    .line 1282
+    .line 1273
     :cond_2c
     if-ne v0, v4, :cond_37
 
-    .line 1283
+    .line 1274
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->batteryStatus:Landroid/widget/ImageView;
 
     const v2, 0x7f02000a
@@ -4045,13 +3882,13 @@
 
     goto :goto_2b
 
-    .line 1284
+    .line 1275
     :cond_37
     const/16 v1, 0x42
 
     if-ne v0, v1, :cond_44
 
-    .line 1285
+    .line 1276
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->batteryStatus:Landroid/widget/ImageView;
 
     const v2, 0x7f02000b
@@ -4060,13 +3897,13 @@
 
     goto :goto_2b
 
-    .line 1286
+    .line 1277
     :cond_44
     const/16 v1, 0x64
 
     if-ne v0, v1, :cond_2b
 
-    .line 1287
+    .line 1278
     iget-object v1, p0, Lcom/icatch/wificam/app/Activity/Main;->batteryStatus:Landroid/widget/ImageView;
 
     const v2, 0x7f02000c

@@ -7,15 +7,6 @@
 
 # static fields
 .field public static CATEGORIES:Ljava/util/List; = null
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/common/Category;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private static final COMMA:Ljava/lang/String; = ","
 
@@ -46,15 +37,6 @@
 .field viewPager:Landroid/support/v4/view/ViewPager;
 
 .field private viewedTabId:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -120,19 +102,6 @@
 
 .method private filterCategories(Ljava/util/List;)Ljava/util/List;
     .registers 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/common/Category;",
-            ">;)",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/common/Category;",
-            ">;"
-        }
-    .end annotation
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -219,15 +188,6 @@
 
 .method private isNotTaobaoWall(Ljava/util/List;)Z
     .registers 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/common/Category;",
-            ">;)Z"
-        }
-    .end annotation
 
     const/4 v1, 0x1
 
@@ -316,15 +276,6 @@
 
 .method private setupTabs(Ljava/util/List;)V
     .registers 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/common/Category;",
-            ">;)V"
-        }
-    .end annotation
 
     const/16 v4, 0x8
 
@@ -426,19 +377,6 @@
 
 .method public static start(Landroid/content/Context;Lcom/taobao/newxp/view/handler/umwall/b;Ljava/util/List;Lcom/taobao/newxp/view/handler/umwall/e$a;)V
     .registers 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Lcom/taobao/newxp/view/handler/umwall/b;",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/common/Category;",
-            ">;",
-            "Lcom/taobao/newxp/view/handler/umwall/e$a;",
-            ")V"
-        }
-    .end annotation
 
     sput-object p1, Lcom/taobao/newxp/view/handler/umwall/AlimamaWall;->SERVICE_ZYGOTE:Lcom/taobao/newxp/view/handler/umwall/b;
 
@@ -459,15 +397,6 @@
 
 .method private updateContent(Ljava/util/List;)V
     .registers 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/common/Category;",
-            ">;)V"
-        }
-    .end annotation
 
     const/16 v3, 0x2b
 
@@ -633,11 +562,6 @@
 
 .method private wrapTabAdMAP()[Ljava/lang/String;
     .registers 11
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/util/NoSuchElementException;
-        }
-    .end annotation
 
     const/4 v9, 0x2
 
@@ -791,15 +715,6 @@
 # virtual methods
 .method public dataReceived(ILjava/util/List;)V
     .registers 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/Promoter;",
-            ">;)V"
-        }
-    .end annotation
 
     const/4 v4, 0x1
 

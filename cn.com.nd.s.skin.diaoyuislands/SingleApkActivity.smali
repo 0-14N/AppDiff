@@ -18,7 +18,7 @@
     .registers 1
 
     .prologue
-    .line 69
+    .line 66
     invoke-direct {p0}, Lcn/com/nd/skin/SingleApkActivity;->installOneKeyLockApk()V
 
     return-void
@@ -30,7 +30,7 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 119
+    .line 116
     :try_start_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -56,29 +56,29 @@
 
     move-result-object v0
 
-    .line 120
+    .line 117
     .local v0, "command":Ljava/lang/String;
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v2
 
-    .line 121
+    .line 118
     .local v2, "runtime":Ljava/lang/Runtime;
     invoke-virtual {v2, v0}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
     :try_end_20
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_20} :catch_21
 
-    .line 125
+    .line 122
     .end local v0    # "command":Ljava/lang/String;
     .end local v2    # "runtime":Ljava/lang/Runtime;
     :goto_20
     return-void
 
-    .line 122
+    .line 119
     :catch_21
     move-exception v1
 
-    .line 123
+    .line 120
     .local v1, "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
@@ -89,12 +89,12 @@
     .registers 6
 
     .prologue
-    .line 70
+    .line 67
     invoke-virtual {p0}, Lcn/com/nd/skin/SingleApkActivity;->getCacheDir()Ljava/io/File;
 
     move-result-object v0
 
-    .line 71
+    .line 68
     .local v0, "cacheDir":Ljava/io/File;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -108,43 +108,43 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 72
+    .line 69
     const-string v4, "/91zns.apk"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 71
+    .line 68
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 75
+    .line 72
     .local v1, "cachePath":Ljava/lang/String;
     const-string v3, "91zns.apk"
 
     invoke-virtual {p0, p0, v3, v1}, Lcn/com/nd/skin/SingleApkActivity;->retrieveApkFromAssets(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 78
+    .line 75
     const-string v3, "777"
 
     invoke-static {v3, v1}, Lcn/com/nd/skin/SingleApkActivity;->chmod(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
+    .line 77
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.VIEW"
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 81
+    .line 78
     .local v2, "intent":Landroid/content/Intent;
     const/high16 v3, 0x10000000
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 82
+    .line 79
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "file://"
@@ -163,16 +163,16 @@
 
     move-result-object v3
 
-    .line 83
+    .line 80
     const-string v4, "application/vnd.android.package-archive"
 
-    .line 82
+    .line 79
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 84
+    .line 81
     invoke-virtual {p0, v2}, Lcn/com/nd/skin/SingleApkActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 85
+    .line 82
     return-void
 .end method
 
@@ -182,17 +182,17 @@
     .param p1, "packet"    # Ljava/lang/String;
 
     .prologue
-    .line 47
+    .line 44
     const/4 v2, 0x1
 
-    .line 49
+    .line 46
     .local v2, "result":Z
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 50
+    .line 47
     .local v1, "pm":Landroid/content/pm/PackageManager;
     const/4 v3, 0x1
 
@@ -200,20 +200,20 @@
     :try_end_9
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_9} :catch_a
 
-    .line 56
+    .line 53
     .end local v1    # "pm":Landroid/content/pm/PackageManager;
     :goto_9
     return v2
 
-    .line 51
+    .line 48
     :catch_a
     move-exception v0
 
-    .line 52
+    .line 49
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
-    .line 53
+    .line 50
     const/4 v2, 0x0
 
     goto :goto_9
@@ -257,10 +257,10 @@
     .registers 3
 
     .prologue
-    .line 61
+    .line 58
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 62
+    .line 59
     const-string v0, "cn.com.nd.s"
 
     invoke-static {p0, v0}, Lcn/com/nd/skin/SingleApkActivity;->isPacketExit(Landroid/content/Context;Ljava/lang/String;)Z
@@ -269,10 +269,10 @@
 
     if-eqz v0, :cond_1b
 
-    .line 63
+    .line 60
     invoke-virtual {p0}, Lcn/com/nd/skin/SingleApkActivity;->viewOption()V
 
-    .line 64
+    .line 61
     const-string v0, "\u8bf7\u8fdb\u5165\u7f8e\u5316\u8bbe\u7f6e,\u66f4\u6539\u9501\u5c4f\u4e3b\u9898"
 
     const/4 v1, 0x0
@@ -283,10 +283,10 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 65
+    .line 62
     invoke-virtual {p0}, Lcn/com/nd/skin/SingleApkActivity;->finish()V
 
-    .line 67
+    .line 64
     :cond_1b
     return-void
 .end method
@@ -298,10 +298,10 @@
     .param p3, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 90
+    .line 87
     const/4 v0, 0x0
 
-    .line 93
+    .line 90
     .local v0, "bRet":Z
     :try_start_1
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
@@ -312,32 +312,32 @@
 
     move-result-object v5
 
-    .line 95
+    .line 92
     .local v5, "is":Ljava/io/InputStream;
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 96
+    .line 93
     .local v2, "file":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
 
-    .line 97
+    .line 94
     new-instance v3, Ljava/io/FileOutputStream;
 
     invoke-direct {v3, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 99
+    .line 96
     .local v3, "fos":Ljava/io/FileOutputStream;
     const/16 v7, 0x400
 
     new-array v6, v7, [B
 
-    .line 100
+    .line 97
     .local v6, "temp":[B
     const/4 v4, 0x0
 
-    .line 101
+    .line 98
     .local v4, "i":I
     :goto_1b
     invoke-virtual {v5, v6}, Ljava/io/InputStream;->read([B)I
@@ -346,16 +346,16 @@
 
     if-gtz v4, :cond_29
 
-    .line 105
+    .line 102
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
 
-    .line 106
+    .line 103
     invoke-virtual {v5}, Ljava/io/InputStream;->close()V
 
-    .line 108
+    .line 105
     const/4 v0, 0x1
 
-    .line 114
+    .line 111
     .end local v2    # "file":Ljava/io/File;
     .end local v3    # "fos":Ljava/io/FileOutputStream;
     .end local v4    # "i":I
@@ -364,7 +364,7 @@
     :goto_28
     return v0
 
-    .line 102
+    .line 99
     .restart local v2    # "file":Ljava/io/File;
     .restart local v3    # "fos":Ljava/io/FileOutputStream;
     .restart local v4    # "i":I
@@ -379,7 +379,7 @@
 
     goto :goto_1b
 
-    .line 110
+    .line 107
     .end local v2    # "file":Ljava/io/File;
     .end local v3    # "fos":Ljava/io/FileOutputStream;
     .end local v4    # "i":I
@@ -388,7 +388,7 @@
     :catch_2e
     move-exception v1
 
-    .line 111
+    .line 108
     .local v1, "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
@@ -422,24 +422,8 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 40
-    const-string v1, "action_change_theme"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 42
-    const-string v1, "packet_name"
-
-    invoke-virtual {p0}, Lcn/com/nd/skin/SingleApkActivity;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v2
-
-    iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 43
     invoke-virtual {p0, v0}, Lcn/com/nd/skin/SingleApkActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 44
+    .line 41
     return-void
 .end method

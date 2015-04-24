@@ -32,7 +32,7 @@
     .line 98
     iget-object v0, p0, Lcom/zarosun/zxht_saler/widget/f;->a:Lcom/zarosun/zxht_saler/widget/PhotoSelectActivity_;
 
-    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/widget/PhotoSelectActivity_;->cancel()V
+    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/widget/PhotoSelectActivity_;->selectLocalPhotos()V
 
     .line 99
     return-void

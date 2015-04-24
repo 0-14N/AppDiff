@@ -203,9 +203,9 @@
 
     invoke-virtual {v0, v3}, Lbiz/nicenight/nicenight/logic/k;->a(Z)V
 
-    new-instance v2, Lbiz/nicenight/nicenight/ui/au;
+    new-instance v2, Lbiz/nicenight/nicenight/ui/av;
 
-    invoke-direct {v2, p0}, Lbiz/nicenight/nicenight/ui/au;-><init>(Lbiz/nicenight/nicenight/ui/ViewPicActivity;)V
+    invoke-direct {v2, p0}, Lbiz/nicenight/nicenight/ui/av;-><init>(Lbiz/nicenight/nicenight/ui/ViewPicActivity;)V
 
     invoke-virtual {v0, v1, v3, v2}, Lbiz/nicenight/nicenight/logic/k;->a(Ljava/lang/String;ZLbiz/nicenight/nicenight/logic/n;)V
 

@@ -44,13 +44,13 @@
 
 .field public static API_HEADER_SECERT_VALUE:Ljava/lang/String; = null
 
-.field public static final API_INDEX_BANNER_URL:Ljava/lang/String; = "https://api.mabelle.com/1/admin/GetBanner?language=%s&countrycode=HK&location=mainAndroid&isLogin=%s&Accttype=%s"
+.field public static final API_INDEX_BANNER_URL:Ljava/lang/String; = "https://api.mabelle.com/1/admin/GetBanner?language=%s&countrycode=CN&location=mainAndroid&isLogin=%s&Accttype=%s"
 
 .field public static API_INDEX_INFO_BU:Ljava/lang/String; = null
 
 .field public static API_INDEX_INFO_URL:Ljava/lang/String; = null
 
-.field public static final API_INDEX_PROMO_URL:Ljava/lang/String; = "https://api.mabelle.com/1/admin/GetBanner?language=%s&countrycode=HK&location=bottomAndroid"
+.field public static final API_INDEX_PROMO_URL:Ljava/lang/String; = "https://api.mabelle.com/1/admin/GetBanner?language=%s&countrycode=CN&location=bottomAndroid"
 
 .field public static API_LOGIN_URL:Ljava/lang/String; = null
 
@@ -100,7 +100,7 @@
 
 .field public static API_UPDATE_INFO_URL:Ljava/lang/String; = null
 
-.field public static final API_UPDATE_ORDER_STATUS:Ljava/lang/String;
+.field public static final API_UPDATE_ORDER_STATUS:Ljava/lang/String; = "https://api.mabelle.com/1/shipping/UpdateOrderStatus?orderID=%s&transactionStatus=1&version=CN"
 
 .field public static API_USER_INFO_URL:Ljava/lang/String; = null
 
@@ -119,6 +119,8 @@
 .field public static final LISTING_GRID_SIZE_KEY:Ljava/lang/String; = "listingGridSize"
 
 .field public static final LOGIN_FORGOT_URL:Ljava/lang/String; = "mabellefanshare://forgot"
+
+.field public static final PAYMENT_ALIPAY_RETURN_URL:Ljava/lang/String; = "http://fanshare.hk/alipay/payresult.aspx"
 
 .field public static final PAYMENT_CANCEL_URL:Ljava/lang/String; = "mabellefanshare://cancel"
 
@@ -188,8 +190,6 @@
 
 .field public static final TWITTER_TWEET_URL:Ljava/lang/String; = "https://twitter.com/intent/tweet?text=%s"
 
-.field public static final WEEKLY_PREPAID_URL:Ljava/lang/String; = "WeeklyResult.aspx?ispay="
-
 .field public static final WEIBO_APP_KEY:Ljava/lang/String; = "541981347"
 
 .field public static final WEIBO_REDIRECT_URL:Ljava/lang/String; = "http://fanshare.hk"
@@ -247,111 +247,52 @@
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->GOOGLE_ANALYTICS_CODE:Ljava/lang/String;
 
-    .line 106
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "https://api.mabelle.com/1/shipping/UpdateOrderStatus?orderID=%s&transactionStatus=1&version="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->VERSION:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_UPDATE_ORDER_STATUS:Ljava/lang/String;
-
-    .line 184
+    .line 185
     const-string v0, "http://dii.hk/c/mabelle/front_page.php"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_INDEX_INFO_BU:Ljava/lang/String;
 
-    .line 185
+    .line 186
     const-string v0, "http://dii.hk/c/mabelle/F01552R.php"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_PRODUCT_DETAIL_BU:Ljava/lang/String;
 
-    .line 187
+    .line 188
     const-string v0, "http://dii.hk/c/mabelle/category.php"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_CATEGORY_BU:Ljava/lang/String;
 
-    .line 194
-    const-string v0, "https://api.mabelle.com/1/account/login?shopName=%s&password=%s&macaddress=%s&ostype=Android"
+    .line 195
+    const-string v0, "https://api.mabelle.com/1/account/login?shopName=%s&password=%s&macaddress=%s&ostype=Android_CN"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_LOGIN_URL:Ljava/lang/String;
 
-    .line 200
+    .line 201
     const-string v0, "https://api.mabelle.com/1/account/token?code=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_ACCESSTOKEN_URL:Ljava/lang/String;
 
-    .line 206
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "https://api.mabelle.com/1/products?language=%s&category=%s&Accttype=%s&Currency=%s&SortBy=%s&Keyword=%s&PriceFrom=%d&PriceTo=%d&ClassCode=%s&vipcode=%s&version="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->VERSION:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    .line 207
+    const-string v0, "https://api.mabelle.com/1/products?language=%s&category=%s&Accttype=%s&Currency=%s&SortBy=%s&Keyword=%s&PriceFrom=%d&PriceTo=%d&ClassCode=%s&vipcode=%s&version=CN"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_CATEGORY_URL:Ljava/lang/String;
 
-    .line 225
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "https://api.mabelle.com/1/products/%s?language=%s&AcctType=%s&Currency=%s&ClassCode=%s&vipcode=%s&version="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->VERSION:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    .line 230
+    const-string v0, "https://api.mabelle.com/1/products/%s?language=%s&AcctType=%s&Currency=%s&ClassCode=%s&vipcode=%s&version=CN"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_PRODUCT_DETAIL_URL:Ljava/lang/String;
 
-    .line 233
+    .line 238
     const-string v0, "https://api.mabelle.com/1/shipping/orderCreate?language=%s&ShippingName=%s&ShippingAddress=%s&ShippingDistrict=%s&ShippingCity=test&ShippingProvince=test&ShippingZipCode=852&ShippingCountryCode=852&ShippingPhoneNumber=12345678&BillingName=test&BillingAddress=test&BillingDistrict=test&BillingCity=test&BillingProvince=test&BillingZipCode=1221&BillingCountryCode=HK&BillingPhoneNumber=21212112&ShippingProviderCode&ShippingCode=HK&CurrencyID=1&CurrencyRate=1&Subtotal=200&ShippingCharge=0&DeductSubtotal=0&DeductShipping=0&PaymentMethod=payDollar&TransactionStatus=3&OrderStatus=1&PaymentStatus=3&LocationCode=HK001&GuestEmail=1221%401221.com&CouponCode&Insurance=0&ShopName"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_CREATE_ORDER_API:Ljava/lang/String;
 
-    .line 280
+    .line 285
     const-string v0, "https://www.paydollar.com/b2c2/eng/payment/payForm.jsp?merchantId="
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_PAYMENT_URL:Ljava/lang/String;
 
-    .line 315
+    .line 369
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -368,7 +309,7 @@
 
     move-result-object v0
 
-    const-string v1, "&redirect_url=http://api.mabelle.com&language=%s&macaddress=%s&ostype=Android"
+    const-string v1, "&redirect_url=http://api.mabelle.com&language=%s&macaddress=%s&ostype=Android_CN"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -380,128 +321,128 @@
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_LOGIN_WEB_URL:Ljava/lang/String;
 
-    .line 322
+    .line 378
     const-string v0, "https://api.mabelle.com/1/admin/MyCoupon?fid=%s&language=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_MY_COUPON_URL:Ljava/lang/String;
 
-    .line 328
+    .line 384
     const-string v0, "https://api.mabelle.com/1/admin/MyCustomers?RefStaffCode=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_MY_CUSTOMER_URL:Ljava/lang/String;
 
-    .line 334
+    .line 390
     const-string v0, "https://api.mabelle.com/1/admin/MyMessageCustomer?fid=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_FID_TO_REG_ID_URL:Ljava/lang/String;
 
-    .line 341
+    .line 397
     const-string v0, "https://api.mabelle.com/1/admin/contactus?"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_CONTACT_US__URL:Ljava/lang/String;
 
-    .line 358
+    .line 414
     const-string v0, "https://api.mabelle.com/1/admin/MyCommission?fid=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_MY_COMISSION_URL:Ljava/lang/String;
 
-    .line 364
+    .line 420
     const-string v0, "https://api.mabelle.com/1/admin/MyCommissionPayoutDetails?fid=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_PAYOUT_DETAILS_URL:Ljava/lang/String;
 
-    .line 370
+    .line 426
     const-string v0, "https://api.mabelle.com/1/admin/MyTransaction?Shopname=%s&Status=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_TRANSACTION_URL:Ljava/lang/String;
 
-    .line 376
+    .line 432
     const-string v0, "https://api.mabelle.com/1/admin/myorderdetails?orderid=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_TRANSACTION_DETAIL_URL:Ljava/lang/String;
 
-    .line 382
+    .line 438
     const-string v0, "https://api.mabelle.com/1/admin/myorder?fid=%s&status=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_ORDER_URL:Ljava/lang/String;
 
-    .line 388
+    .line 444
     const-string v0, "https://api.mabelle.com/1/admin/MyShippingInfo?fid=%s&status=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_SHIPPING_URL:Ljava/lang/String;
 
-    .line 394
+    .line 450
     const-string v0, "https://api.mabelle.com/1/admin/AddMessage?Fid=%s&Shopname=%s&Staffcode=%s&Receivedshopname=%s&Receivedshopid=%s&Message=%s&title=fanShare Notification&Type=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_ADD_MESSAGE_URL:Ljava/lang/String;
 
-    .line 418
+    .line 474
     const-string v0, "https://api.mabelle.com/1/admin/forgotpassword?type=email&email=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_FORGOT_EMAIL_URL:Ljava/lang/String;
 
-    .line 424
+    .line 480
     const-string v0, "https://api.mabelle.com/1/admin/forgotpassword?type=S&countrycode=%s&mobile=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_FORGOT_SMS_URL:Ljava/lang/String;
 
-    .line 430
+    .line 486
     const-string v0, "https://api.mabelle.com/1/admin/MyMessage?fid=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_NOTIFICATION_URL:Ljava/lang/String;
 
-    .line 436
+    .line 492
     const-string v0, "https://api.mabelle.com/1/admin/updateUserDetails?%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_UPDATE_INFO_URL:Ljava/lang/String;
 
-    .line 453
+    .line 509
     const-string v0, "https://api.mabelle.com/1/shipping/Shippingmethod?language=%s&zoneid=%s&ttlprice=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_SHIPPING_METHOD_URL:Ljava/lang/String;
 
-    .line 459
+    .line 515
     const-string v0, "https://api.mabelle.com/1/admin/AddCommission?fid=%s&shopname=%s&payout=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_PAYOUT_REQUEST_URL:Ljava/lang/String;
 
-    .line 588
+    .line 645
     const-string v0, "https://api.mabelle.com/1/products/GetProductDesc?mountno=%s&language=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_REFRESH_PRODUCT_INFO_URL:Ljava/lang/String;
 
-    .line 594
+    .line 651
     const-string v0, "https://api.mabelle.com/1/products/weeklyProduct?nowdate=%s&language=%s&eventcode=WeeklyPromo"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_WEEKLY_PROMO_URL:Ljava/lang/String;
 
-    .line 603
+    .line 660
     const-string v0, "https://api.mabelle.com/1/products/CheckWeeklyUserReg?shopid=%s&Eventcode=%s&PromoCode=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_WEEKLY_JOINED_URL:Ljava/lang/String;
 
-    .line 609
+    .line 666
     const-string v0, "https://api.mabelle.com/1/products/AddWeeklyUserReg?"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_WEEKLY_ADD_URL:Ljava/lang/String;
 
-    .line 628
+    .line 669
     const-string v0, "https://api.mabelle.com/1/products/AddSocialShareEvent?"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_WEEKLY_INVITE_FD_URL:Ljava/lang/String;
 
-    .line 658
+    .line 672
     const-string v0, "https://api.mabelle.com/1/shipping/GetCouponDiscount?language=%s&couponcode=%s&mountno=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_COUPON_DETAIL_URL:Ljava/lang/String;
 
-    .line 675
+    .line 689
     const-string v0, "https://api.mabelle.com/1/shipping/GetCouponAutoDiscount?language=%s&fid=%s&mountno=%s"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_AUTO_COUPON_URL:Ljava/lang/String;
 
-    .line 793
-    const-string v0, "https://api.mabelle.com/1/admin/GetBanner?language=%s&countrycode=HK&location=popupAndroid"
+    .line 810
+    const-string v0, "https://api.mabelle.com/1/admin/GetBanner?language=%s&countrycode=CN&location=popupAndroid"
 
     sput-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_POPUP_MESSAGE_URL:Ljava/lang/String;
 
@@ -512,7 +453,7 @@
     .registers 1
 
     .prologue
-    .line 23
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -523,7 +464,7 @@
     .param p0, "code"    # Ljava/lang/String;
 
     .prologue
-    .line 203
+    .line 204
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_ACCESSTOKEN_URL:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -549,12 +490,12 @@
     .param p3, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 398
+    .line 454
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    .line 399
+    .line 455
     .local v1, "params":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
@@ -566,7 +507,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 400
+    .line 456
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Shopname"
@@ -577,7 +518,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 401
+    .line 457
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Staffcode"
@@ -588,7 +529,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 402
+    .line 458
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Receivedshopname"
@@ -597,7 +538,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 403
+    .line 459
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Receivedshopid"
@@ -606,7 +547,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 404
+    .line 460
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Message"
@@ -615,7 +556,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 405
+    .line 461
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "title"
@@ -626,7 +567,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 406
+    .line 462
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Type"
@@ -635,14 +576,14 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 408
+    .line 464
     const-string v3, "utf-8"
 
     invoke-static {v1, v3}, Lorg/apache/http/client/utils/URLEncodedUtils;->format(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 410
+    .line 466
     .local v0, "paramString":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -662,7 +603,7 @@
 
     move-result-object v2
 
-    .line 412
+    .line 468
     .local v2, "url":Ljava/lang/String;
     return-object v2
 .end method
@@ -675,36 +616,36 @@
     .param p3, "product"    # Lcom/cccdi/mabellefanshare/mabelleobj/MabelleProductDetail;
 
     .prologue
-    .line 136
+    .line 137
     invoke-virtual/range {p3 .. p3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleProductDetail;->getMountNo()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 137
+    .line 138
     .local v2, "mountNo":Ljava/lang/String;
     invoke-virtual/range {p3 .. p3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleProductDetail;->getTitle()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 138
+    .line 139
     .local v5, "productName":Ljava/lang/String;
     invoke-virtual/range {p3 .. p3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleProductDetail;->getSelectedSize()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 140
+    .line 141
     .local v6, "productSize":Ljava/lang/String;
     invoke-virtual/range {p3 .. p3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleProductDetail;->getRawPrice()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 142
+    .line 143
     .local v9, "unitPrice":Ljava/lang/String;
     invoke-virtual/range {p3 .. p3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleProductDetail;->getRawSpecialPrice()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 144
+    .line 145
     .local v8, "totalPrice":Ljava/lang/String;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -738,19 +679,19 @@
 
     move-result-object v1
 
-    .line 145
+    .line 146
     .local v1, "less":Ljava/lang/String;
     invoke-virtual/range {p3 .. p3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleProductDetail;->getDiamondTotalWeight()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 147
+    .line 148
     .local v7, "stoneWeight":Ljava/lang/String;
     new-instance v4, Ljava/util/LinkedList;
 
     invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
 
-    .line 149
+    .line 150
     .local v4, "params":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
     new-instance v10, Lorg/apache/http/message/BasicNameValuePair;
 
@@ -762,7 +703,7 @@
 
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 150
+    .line 151
     new-instance v10, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v11, "mountNo"
@@ -771,7 +712,7 @@
 
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 151
+    .line 152
     new-instance v10, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v11, "sKUNo"
@@ -782,7 +723,7 @@
 
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 152
+    .line 153
     new-instance v10, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v11, "itemPriority"
@@ -809,7 +750,7 @@
 
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 153
+    .line 154
     new-instance v10, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v11, "productName"
@@ -818,7 +759,7 @@
 
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 154
+    .line 155
     new-instance v10, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v11, "productSize"
@@ -827,7 +768,7 @@
 
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 155
+    .line 156
     new-instance v10, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v11, "unitPrice"
@@ -836,7 +777,7 @@
 
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 156
+    .line 157
     new-instance v10, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v11, "less"
@@ -845,7 +786,7 @@
 
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 157
+    .line 158
     new-instance v10, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v11, "totalPrice"
@@ -854,7 +795,7 @@
 
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 159
+    .line 160
     new-instance v11, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v12, "isFreeGift"
@@ -874,7 +815,7 @@
 
     invoke-interface {v4, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 160
+    .line 161
     new-instance v10, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v11, "stoneWeight"
@@ -883,14 +824,14 @@
 
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 163
+    .line 164
     const-string v10, "utf-8"
 
     invoke-static {v4, v10}, Lorg/apache/http/client/utils/URLEncodedUtils;->format(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 164
+    .line 165
     .local v3, "paramString":Ljava/lang/String;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -912,7 +853,7 @@
 
     return-object v10
 
-    .line 159
+    .line 160
     .end local v3    # "paramString":Ljava/lang/String;
     :cond_e6
     const-string v10, "F"
@@ -920,12 +861,173 @@
     goto :goto_bc
 .end method
 
+.method public static getAlipayPaymentURL()Ljava/lang/String;
+    .registers 30
+
+    .prologue
+    .line 325
+    const-string v4, "https://www.alipay.com/cooperate/gateway.do?"
+
+    .line 327
+    .local v4, "gateway":Ljava/lang/String;
+    const-string v5, "create_forex_trade"
+
+    .line 328
+    .local v5, "service":Ljava/lang/String;
+    const-string v6, "2088001845249151"
+
+    .line 329
+    .local v6, "partner":Ljava/lang/String;
+    const-string v7, "MD5"
+
+    .line 330
+    .local v7, "sign_type":Ljava/lang/String;
+    const-string v9, "MaBelle Order"
+
+    .line 331
+    .local v9, "subject":Ljava/lang/String;
+    invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getOrderNum()Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 332
+    .local v8, "out_trade_no":Ljava/lang/String;
+    const-string v10, "MaBelle Order"
+
+    .line 333
+    .local v10, "body":Ljava/lang/String;
+    sget-object v11, Lcom/cccdi/mabellefanshare/AppApplication;->currentCurrency:Ljava/lang/String;
+
+    .line 337
+    .local v11, "currency":Ljava/lang/String;
+    invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getSubtotal()D
+
+    move-result-wide v25
+
+    .line 338
+    .local v25, "subtotal":D
+    invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getDeductSubtotal()D
+
+    move-result-wide v16
+
+    .line 339
+    .local v16, "deductSubtotal":D
+    invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInsurance()D
+
+    move-result-wide v19
+
+    .line 340
+    .local v19, "insurance":D
+    invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getShippingCharge()D
+
+    move-result-wide v23
+
+    .line 343
+    .local v23, "shippingCharge":D
+    add-double v28, v25, v16
+
+    add-double v28, v28, v19
+
+    add-double v21, v28, v23
+
+    .line 345
+    .local v21, "payAmount":D
+    invoke-static/range {v21 .. v22}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
+
+    move-result-object v12
+
+    .line 348
+    .local v12, "totalAmount":Ljava/lang/String;
+    const-string v3, "HKD"
+
+    invoke-virtual {v11, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_61
+
+    .line 349
+    const-string v11, "HKD"
+
+    .line 351
+    new-instance v18, Ljava/text/DecimalFormat;
+
+    const-string v3, "###.##"
+
+    move-object/from16 v0, v18
+
+    invoke-direct {v0, v3}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    .line 353
+    .local v18, "formatter":Ljava/text/DecimalFormat;
+    invoke-static {}, Lcom/cccdi/mabellefanshare/AppApplication;->getRealCurrencyRate()D
+
+    move-result-wide v28
+
+    mul-double v28, v28, v21
+
+    move-object/from16 v0, v18
+
+    move-wide/from16 v1, v28
+
+    invoke-virtual {v0, v1, v2}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v12
+
+    .line 358
+    .end local v18    # "formatter":Ljava/text/DecimalFormat;
+    :cond_61
+    const-string v13, "5hrcl0amr11i5fm8372fzgkik5i7ukpj"
+
+    .line 360
+    .local v13, "key":Ljava/lang/String;
+    const-string v15, "http://fanshare.hk/product/payment/shop_alipay_notify.aspx"
+
+    .line 361
+    .local v15, "notify_url":Ljava/lang/String;
+    const-string v14, "http://fanshare.hk/alipay/payresult.aspx"
+
+    .line 363
+    .local v14, "return_url":Ljava/lang/String;
+    new-instance v3, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleAlipay;
+
+    invoke-direct {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleAlipay;-><init>()V
+
+    invoke-virtual/range {v3 .. v15}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleAlipay;->createURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v27
+
+    .line 365
+    .local v27, "url":Ljava/lang/String;
+    return-object v27
+.end method
+
 .method public static getAllCustomerByFid(Ljava/lang/String;)Ljava/lang/String;
     .registers 4
     .param p0, "fid"    # Ljava/lang/String;
 
     .prologue
-    .line 337
+    .line 393
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_FID_TO_REG_ID_URL:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -947,10 +1049,10 @@
     .registers 6
 
     .prologue
-    .line 716
+    .line 730
     const-string v0, "https://api.mabelle.com/1/products/GetStampGift?language=%s&nowdate=%s&GiftType=%s"
 
-    .line 718
+    .line 732
     .local v0, "baseURL":Ljava/lang/String;
     new-instance v2, Ljava/text/SimpleDateFormat;
 
@@ -958,7 +1060,7 @@
 
     invoke-direct {v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 719
+    .line 733
     .local v2, "sdf":Ljava/text/SimpleDateFormat;
     new-instance v3, Ljava/util/Date;
 
@@ -968,7 +1070,7 @@
 
     move-result-object v1
 
-    .line 721
+    .line 735
     .local v1, "currentDate":Ljava/lang/String;
     const/4 v3, 0x3
 
@@ -1004,7 +1106,7 @@
     .param p0, "code"    # Ljava/lang/String;
 
     .prologue
-    .line 119
+    .line 120
     const-string v0, "https://api.mabelle.com/1/shipping/GetCouponDiscount?language=%s&couponcode=%s"
 
     const/4 v1, 0x2
@@ -1035,8 +1137,8 @@
     .param p0, "orderId"    # Ljava/lang/String;
 
     .prologue
-    .line 109
-    sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_UPDATE_ORDER_STATUS:Ljava/lang/String;
+    .line 110
+    const-string v0, "https://api.mabelle.com/1/shipping/UpdateOrderStatus?orderID=%s&transactionStatus=1&version=CN"
 
     const/4 v1, 0x1
 
@@ -1057,10 +1159,10 @@
     .registers 6
 
     .prologue
-    .line 679
+    .line 693
     const-string v1, ""
 
-    .line 681
+    .line 695
     .local v1, "mountNo":Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -1074,7 +1176,7 @@
 
     if-ge v0, v2, :cond_48
 
-    .line 682
+    .line 696
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1103,7 +1205,7 @@
 
     move-result-object v1
 
-    .line 684
+    .line 698
     add-int/lit8 v2, v0, 0x1
 
     sget-object v3, Lcom/cccdi/mabellefanshare/AppApplication;->shoppingCartList:Ljava/util/ArrayList;
@@ -1114,7 +1216,7 @@
 
     if-eq v2, v3, :cond_45
 
-    .line 685
+    .line 699
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1133,13 +1235,13 @@
 
     move-result-object v1
 
-    .line 681
+    .line 695
     :cond_45
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 690
+    .line 704
     :cond_48
     sget-object v2, Lcom/cccdi/mabellefanshare/Constant;->API_AUTO_COUPON_URL:Ljava/lang/String;
 
@@ -1179,7 +1281,7 @@
     .param p2, "descending"    # Z
 
     .prologue
-    .line 180
+    .line 181
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_PRODUCT_DETAIL_BU:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -1200,7 +1302,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 214
+    .line 217
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_CATEGORY_URL:Ljava/lang/String;
 
     const/16 v1, 0xa
@@ -1225,7 +1327,7 @@
 
     const/4 v2, 0x3
 
-    sget-object v3, Lcom/cccdi/mabellefanshare/AppApplication;->currentCurrency:Ljava/lang/String;
+    const-string v3, "HKD"
 
     aput-object v3, v1, v2
 
@@ -1286,7 +1388,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 210
+    .line 212
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_CATEGORY_URL:Ljava/lang/String;
 
     const/16 v1, 0xa
@@ -1311,7 +1413,7 @@
 
     const/4 v2, 0x3
 
-    sget-object v3, Lcom/cccdi/mabellefanshare/AppApplication;->currentCurrency:Ljava/lang/String;
+    const-string v3, "HKD"
 
     aput-object v3, v1, v2
 
@@ -1370,12 +1472,12 @@
     .param p3, "country"    # Ljava/lang/String;
 
     .prologue
-    .line 344
+    .line 400
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    .line 345
+    .line 401
     .local v1, "params":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
@@ -1385,7 +1487,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 346
+    .line 402
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v3, "email"
@@ -1394,7 +1496,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 347
+    .line 403
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v3, "question"
@@ -1403,7 +1505,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 348
+    .line 404
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v3, "country"
@@ -1412,7 +1514,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 349
+    .line 405
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v3, "source"
@@ -1423,38 +1525,15 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 351
+    .line 407
     const-string v2, "utf-8"
 
     invoke-static {v1, v2}, Lorg/apache/http/client/utils/URLEncodedUtils;->format(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 354
+    .line 411
     .local v0, "paramString":Ljava/lang/String;
-    const-string v2, "BOOKER"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v4, Lcom/cccdi/mabellefanshare/Constant;->API_CONTACT_US__URL:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 355
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1480,7 +1559,7 @@
     .registers 4
 
     .prologue
-    .line 89
+    .line 90
     const-string v0, "https://api.mabelle.com/1/shipping/shippingCountry?language=%s&CountryCode="
 
     const/4 v1, 0x1
@@ -1507,10 +1586,10 @@
     .param p0, "coupondCode"    # Ljava/lang/String;
 
     .prologue
-    .line 661
+    .line 675
     const-string v1, ""
 
-    .line 663
+    .line 677
     .local v1, "mountNo":Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -1524,7 +1603,7 @@
 
     if-ge v0, v2, :cond_48
 
-    .line 664
+    .line 678
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1553,7 +1632,7 @@
 
     move-result-object v1
 
-    .line 666
+    .line 680
     add-int/lit8 v2, v0, 0x1
 
     sget-object v3, Lcom/cccdi/mabellefanshare/AppApplication;->shoppingCartList:Ljava/util/ArrayList;
@@ -1564,7 +1643,7 @@
 
     if-eq v2, v3, :cond_45
 
-    .line 667
+    .line 681
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1583,13 +1662,13 @@
 
     move-result-object v1
 
-    .line 663
+    .line 677
     :cond_45
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 672
+    .line 686
     :cond_48
     sget-object v2, Lcom/cccdi/mabellefanshare/Constant;->API_COUPON_DETAIL_URL:Ljava/lang/String;
 
@@ -1630,16 +1709,16 @@
 
     const/4 v3, 0x0
 
-    .line 483
+    .line 539
     const-string v0, "http://fanshare.hk/myaccount/memberfanshareer.aspx?type=E&fid=%s&defaultlanguage=%s&ismobile=ios"
 
-    .line 485
+    .line 541
     .local v0, "baseURL":Ljava/lang/String;
     sget v1, Lcom/cccdi/mabellefanshare/AppApplication;->currentLanguage:I
 
     packed-switch v1, :pswitch_data_38
 
-    .line 488
+    .line 544
     new-array v1, v2, [Ljava/lang/Object;
 
     sget-object v2, Lcom/cccdi/mabellefanshare/AppApplication;->userInfoFid:Ljava/lang/String;
@@ -1654,11 +1733,11 @@
 
     move-result-object v1
 
-    .line 494
+    .line 550
     :goto_18
     return-object v1
 
-    .line 491
+    .line 547
     :pswitch_19
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -1676,7 +1755,7 @@
 
     goto :goto_18
 
-    .line 494
+    .line 550
     :pswitch_28
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -1694,7 +1773,7 @@
 
     goto :goto_18
 
-    .line 485
+    .line 541
     nop
 
     :pswitch_data_38
@@ -1714,16 +1793,16 @@
 
     const/4 v3, 0x0
 
-    .line 499
+    .line 555
     const-string v0, "http://fanshare.hk/myaccount/Congratulations.aspx?fid=%s&defaultlanguage=%s&ismobile=ios"
 
-    .line 501
+    .line 557
     .local v0, "baseURL":Ljava/lang/String;
     sget v1, Lcom/cccdi/mabellefanshare/AppApplication;->currentLanguage:I
 
     packed-switch v1, :pswitch_data_38
 
-    .line 504
+    .line 560
     new-array v1, v2, [Ljava/lang/Object;
 
     sget-object v2, Lcom/cccdi/mabellefanshare/AppApplication;->userInfoFid:Ljava/lang/String;
@@ -1738,11 +1817,11 @@
 
     move-result-object v1
 
-    .line 510
+    .line 566
     :goto_18
     return-object v1
 
-    .line 507
+    .line 563
     :pswitch_19
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -1760,7 +1839,7 @@
 
     goto :goto_18
 
-    .line 510
+    .line 566
     :pswitch_28
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -1778,7 +1857,7 @@
 
     goto :goto_18
 
-    .line 501
+    .line 557
     nop
 
     :pswitch_data_38
@@ -1793,7 +1872,7 @@
     .param p0, "email"    # Ljava/lang/String;
 
     .prologue
-    .line 421
+    .line 477
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_FORGOT_EMAIL_URL:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -1817,7 +1896,7 @@
     .param p1, "mobile"    # Ljava/lang/String;
 
     .prologue
-    .line 427
+    .line 483
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_FORGOT_SMS_URL:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -1843,7 +1922,7 @@
     .registers 6
 
     .prologue
-    .line 548
+    .line 604
     invoke-static {}, Lcom/cccdi/mabellefanshare/AppApplication;->isFanShareLogin()Z
 
     move-result v2
@@ -1852,12 +1931,12 @@
 
     const-string v1, "Y"
 
-    .line 550
+    .line 606
     .local v1, "isLogin":Ljava/lang/String;
     :goto_8
     const-string v0, ""
 
-    .line 552
+    .line 608
     .local v0, "acctType":Ljava/lang/String;
     invoke-static {}, Lcom/cccdi/mabellefanshare/AppApplication;->isFanShareLogin()Z
 
@@ -1865,12 +1944,12 @@
 
     if-eqz v2, :cond_12
 
-    .line 553
+    .line 609
     sget-object v0, Lcom/cccdi/mabellefanshare/AppApplication;->userInfoAcctType:Ljava/lang/String;
 
-    .line 556
+    .line 612
     :cond_12
-    const-string v2, "https://api.mabelle.com/1/admin/GetBanner?language=%s&countrycode=HK&location=mainAndroid&isLogin=%s&Accttype=%s"
+    const-string v2, "https://api.mabelle.com/1/admin/GetBanner?language=%s&countrycode=CN&location=mainAndroid&isLogin=%s&Accttype=%s"
 
     const/4 v3, 0x3
 
@@ -1898,7 +1977,7 @@
 
     return-object v2
 
-    .line 548
+    .line 604
     .end local v0    # "acctType":Ljava/lang/String;
     .end local v1    # "isLogin":Ljava/lang/String;
     :cond_29
@@ -1915,16 +1994,16 @@
 
     const/4 v3, 0x0
 
-    .line 560
-    const-string v0, "http://fanshare.hk/app/android/Newmainbanner_%s.txt"
+    .line 617
+    const-string v0, "http://fanshare.hk/app/CNandroid/Newmainbanner_%s.txt"
 
-    .line 562
+    .line 619
     .local v0, "baseURL":Ljava/lang/String;
     sget v1, Lcom/cccdi/mabellefanshare/AppApplication;->currentLanguage:I
 
     packed-switch v1, :pswitch_data_2a
 
-    .line 565
+    .line 622
     new-array v1, v2, [Ljava/lang/Object;
 
     const-string v2, "ENG"
@@ -1935,11 +2014,11 @@
 
     move-result-object v1
 
-    .line 569
+    .line 626
     :goto_13
     return-object v1
 
-    .line 567
+    .line 624
     :pswitch_14
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -1953,7 +2032,7 @@
 
     goto :goto_13
 
-    .line 569
+    .line 626
     :pswitch_1f
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -1967,7 +2046,7 @@
 
     goto :goto_13
 
-    .line 562
+    .line 619
     :pswitch_data_2a
     .packed-switch 0x1
         :pswitch_14
@@ -1980,7 +2059,7 @@
     .param p0, "lang"    # I
 
     .prologue
-    .line 175
+    .line 176
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_INDEX_INFO_BU:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -2004,7 +2083,7 @@
     .registers 4
 
     .prologue
-    .line 170
+    .line 171
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_INDEX_INFO_URL:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -2030,8 +2109,8 @@
     .registers 4
 
     .prologue
-    .line 584
-    const-string v0, "https://api.mabelle.com/1/admin/GetBanner?language=%s&countrycode=HK&location=bottomAndroid"
+    .line 641
+    const-string v0, "https://api.mabelle.com/1/admin/GetBanner?language=%s&countrycode=CN&location=bottomAndroid"
 
     const/4 v1, 0x1
 
@@ -2059,7 +2138,7 @@
     .param p2, "macAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 197
+    .line 198
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_LOGIN_URL:Ljava/lang/String;
 
     const/4 v1, 0x3
@@ -2089,7 +2168,7 @@
     .registers 4
 
     .prologue
-    .line 319
+    .line 375
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_LOGIN_WEB_URL:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -2106,7 +2185,13 @@
 
     const/4 v2, 0x1
 
-    sget-object v3, Lcom/cccdi/mabellefanshare/AppApplication;->regID:Ljava/lang/String;
+    invoke-static {}, Lcom/cccdi/mabellefanshare/AppApplication;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcn/jpush/android/api/JPushInterface;->getRegistrationID(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v3
 
     aput-object v3, v1, v2
 
@@ -2121,7 +2206,7 @@
     .registers 4
 
     .prologue
-    .line 361
+    .line 417
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_MY_COMISSION_URL:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -2145,7 +2230,7 @@
     .registers 4
 
     .prologue
-    .line 325
+    .line 381
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_MY_COUPON_URL:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -2178,7 +2263,7 @@
     .param p0, "RefStaffCode"    # Ljava/lang/String;
 
     .prologue
-    .line 331
+    .line 387
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_MY_CUSTOMER_URL:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -2200,7 +2285,7 @@
     .registers 4
 
     .prologue
-    .line 433
+    .line 489
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_NOTIFICATION_URL:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -2225,7 +2310,7 @@
     .param p0, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 385
+    .line 441
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_ORDER_URL:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -2253,17 +2338,17 @@
     .registers 1
 
     .prologue
-    .line 767
+    .line 781
     const-string v0, "https://api.mabelle.com/1/products/GetConfigValue?configname=ShopRedeemPwd&type=Android"
 
     return-object v0
 .end method
 
 .method public static getPaymentURL()Ljava/lang/String;
-    .registers 13
+    .registers 15
 
     .prologue
-    .line 290
+    .line 297
     invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
 
     move-result-object v11
@@ -2272,7 +2357,7 @@
 
     move-result-wide v8
 
-    .line 291
+    .line 298
     .local v8, "subtotal":D
     invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
 
@@ -2282,7 +2367,7 @@
 
     move-result-wide v0
 
-    .line 292
+    .line 299
     .local v0, "deductSubtotal":D
     invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
 
@@ -2292,7 +2377,7 @@
 
     move-result-wide v2
 
-    .line 293
+    .line 300
     .local v2, "insurance":D
     invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
 
@@ -2302,15 +2387,21 @@
 
     move-result-wide v6
 
-    .line 296
+    .line 304
     .local v6, "shippingCharge":D
     add-double v11, v8, v0
 
     add-double/2addr v11, v2
 
-    add-double v4, v11, v6
+    add-double/2addr v11, v6
 
-    .line 298
+    invoke-static {}, Lcom/cccdi/mabellefanshare/AppApplication;->getRealCurrencyRate()D
+
+    move-result-wide v13
+
+    mul-double v4, v11, v13
+
+    .line 307
     .local v4, "payAmount":D
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -2422,7 +2513,7 @@
 
     move-result-object v10
 
-    .line 310
+    .line 319
     .local v10, "url":Ljava/lang/String;
     return-object v10
 .end method
@@ -2431,7 +2522,7 @@
     .registers 4
 
     .prologue
-    .line 367
+    .line 423
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_PAYOUT_DETAILS_URL:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -2456,7 +2547,7 @@
     .param p0, "amount"    # Ljava/lang/String;
 
     .prologue
-    .line 462
+    .line 518
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_PAYOUT_REQUEST_URL:Ljava/lang/String;
 
     const/4 v1, 0x3
@@ -2490,7 +2581,7 @@
     .registers 4
 
     .prologue
-    .line 796
+    .line 813
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_POPUP_MESSAGE_URL:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -2518,7 +2609,7 @@
     .param p1, "productCode"    # Ljava/lang/String;
 
     .prologue
-    .line 190
+    .line 191
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_CATEGORY_BU:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2537,7 +2628,7 @@
     .param p0, "productCode"    # Ljava/lang/String;
 
     .prologue
-    .line 229
+    .line 234
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_PRODUCT_DETAIL_URL:Ljava/lang/String;
 
     const/4 v1, 0x6
@@ -2592,7 +2683,7 @@
     .param p0, "countryCode"    # Ljava/lang/String;
 
     .prologue
-    .line 95
+    .line 96
     const-string v0, "https://api.mabelle.com/1/shipping/shippingCountryProvince?language=%s&CountryCode=%s"
 
     const/4 v1, 0x2
@@ -2622,7 +2713,7 @@
     .registers 4
 
     .prologue
-    .line 790
+    .line 807
     const-string v0, "https://api.mabelle.com/1/admin/PushMessageUpdateToRead?idx=%s"
 
     const/4 v1, 0x1
@@ -2647,10 +2738,10 @@
     .param p0, "redeemID"    # Ljava/lang/String;
 
     .prologue
-    .line 755
+    .line 769
     const-string v0, "https://api.mabelle.com/1/products/GetGiftUserRedeemDetails?Language=%s&RedeemID=%s"
 
-    .line 757
+    .line 771
     .local v0, "baseURL":Ljava/lang/String;
     const/4 v1, 0x2
 
@@ -2680,10 +2771,10 @@
     .param p0, "redeemID"    # Ljava/lang/String;
 
     .prologue
-    .line 761
+    .line 775
     const-string v0, "https://api.mabelle.com/1/products/UpdateRedeemStatus?RedeemID=%s"
 
-    .line 763
+    .line 777
     .local v0, "baseURL":Ljava/lang/String;
     const/4 v1, 0x1
 
@@ -2712,16 +2803,16 @@
     .param p7, "shippingCountryStr"    # Ljava/lang/String;
 
     .prologue
-    .line 725
+    .line 739
     const-string v0, "https://api.mabelle.com/1/products/UpdateGiftStock?"
 
-    .line 727
+    .line 741
     .local v0, "baseURL":Ljava/lang/String;
     new-instance v2, Ljava/util/LinkedList;
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    .line 729
+    .line 743
     .local v2, "params":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
@@ -2733,7 +2824,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 730
+    .line 744
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Fid"
@@ -2744,7 +2835,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 731
+    .line 745
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Stampuse"
@@ -2773,7 +2864,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 732
+    .line 746
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Gifttype"
@@ -2784,7 +2875,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 733
+    .line 747
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Firstname"
@@ -2793,7 +2884,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 734
+    .line 748
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Lastname"
@@ -2802,7 +2893,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 735
+    .line 749
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Email"
@@ -2811,7 +2902,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 736
+    .line 750
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "Phone"
@@ -2820,7 +2911,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 737
+    .line 751
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "PickUpLocation"
@@ -2829,7 +2920,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 738
+    .line 752
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "ShippingAddress"
@@ -2838,7 +2929,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 739
+    .line 753
     new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v4, "ShippingCountry"
@@ -2847,14 +2938,14 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 741
+    .line 755
     const-string v3, "utf-8"
 
     invoke-static {v2, v3}, Lorg/apache/http/client/utils/URLEncodedUtils;->format(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 746
+    .line 760
     .local v1, "paramString":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2880,10 +2971,10 @@
     .param p0, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 750
+    .line 764
     const-string v0, "https://api.mabelle.com/1/products/GetGiftUserRedeem?Language=%s&Fid=%s&isRedeem=%s"
 
-    .line 751
+    .line 765
     .local v0, "baseURL":Ljava/lang/String;
     const/4 v1, 0x3
 
@@ -2919,7 +3010,7 @@
     .param p0, "mountNo"    # Ljava/lang/String;
 
     .prologue
-    .line 591
+    .line 648
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_REFRESH_PRODUCT_INFO_URL:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -2950,10 +3041,10 @@
     .param p0, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 532
+    .line 588
     const-string v0, "https://api.mabelle.com/1/account/Addmobileaddress?macaddress=%s&type=android"
 
-    .line 534
+    .line 590
     .local v0, "baseURL":Ljava/lang/String;
     const/4 v1, 0x1
 
@@ -2978,16 +3069,16 @@
 
     const/4 v3, 0x0
 
-    .line 515
+    .line 571
     const-string v0, "http://fanshare.hk/myaccount/memberReg.aspx?defaultlanguage=%s&ismobile=ios"
 
-    .line 517
+    .line 573
     .local v0, "baseURL":Ljava/lang/String;
     sget v1, Lcom/cccdi/mabellefanshare/AppApplication;->currentLanguage:I
 
     packed-switch v1, :pswitch_data_2a
 
-    .line 520
+    .line 576
     new-array v1, v2, [Ljava/lang/Object;
 
     const-string v2, "eng"
@@ -2998,11 +3089,11 @@
 
     move-result-object v1
 
-    .line 526
+    .line 582
     :goto_13
     return-object v1
 
-    .line 523
+    .line 579
     :pswitch_14
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -3016,7 +3107,7 @@
 
     goto :goto_13
 
-    .line 526
+    .line 582
     :pswitch_1f
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -3030,7 +3121,7 @@
 
     goto :goto_13
 
-    .line 517
+    .line 573
     :pswitch_data_2a
     .packed-switch 0x1
         :pswitch_14
@@ -3046,7 +3137,7 @@
     .param p3, "to"    # I
 
     .prologue
-    .line 222
+    .line 227
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_CATEGORY_URL:Ljava/lang/String;
 
     const/16 v1, 0xa
@@ -3073,7 +3164,7 @@
 
     const/4 v2, 0x3
 
-    sget-object v3, Lcom/cccdi/mabellefanshare/AppApplication;->currentCurrency:Ljava/lang/String;
+    const-string v3, "HKD"
 
     aput-object v3, v1, v2
 
@@ -3131,7 +3222,7 @@
     .param p4, "to"    # I
 
     .prologue
-    .line 218
+    .line 222
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_CATEGORY_URL:Ljava/lang/String;
 
     const/16 v1, 0xa
@@ -3158,7 +3249,7 @@
 
     const/4 v2, 0x3
 
-    sget-object v3, Lcom/cccdi/mabellefanshare/AppApplication;->currentCurrency:Ljava/lang/String;
+    const-string v3, "HKD"
 
     aput-object v3, v1, v2
 
@@ -3211,7 +3302,7 @@
     .param p1, "totalAmount"    # Ljava/lang/String;
 
     .prologue
-    .line 456
+    .line 512
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_SHIPPING_METHOD_URL:Ljava/lang/String;
 
     const/4 v1, 0x3
@@ -3246,7 +3337,7 @@
     .param p0, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 391
+    .line 447
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_SHIPPING_URL:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -3275,7 +3366,7 @@
     .param p0, "countryCode"    # Ljava/lang/String;
 
     .prologue
-    .line 101
+    .line 102
     const-string v0, "https://api.mabelle.com/1/shipping/shoplocation?language=%s&countrycode=%s"
 
     const/4 v1, 0x2
@@ -3309,16 +3400,16 @@
 
     const/4 v3, 0x0
 
-    .line 467
+    .line 523
     const-string v0, "http://fanshare.hk/myaccount/memberReg.aspx?defaultlanguage=%s&ismobile=ios"
 
-    .line 469
+    .line 525
     .local v0, "baseURL":Ljava/lang/String;
     sget v1, Lcom/cccdi/mabellefanshare/AppApplication;->currentLanguage:I
 
     packed-switch v1, :pswitch_data_2a
 
-    .line 472
+    .line 528
     new-array v1, v2, [Ljava/lang/Object;
 
     const-string v2, "eng"
@@ -3329,11 +3420,11 @@
 
     move-result-object v1
 
-    .line 478
+    .line 534
     :goto_13
     return-object v1
 
-    .line 475
+    .line 531
     :pswitch_14
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -3347,7 +3438,7 @@
 
     goto :goto_13
 
-    .line 478
+    .line 534
     :pswitch_1f
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -3361,7 +3452,7 @@
 
     goto :goto_13
 
-    .line 469
+    .line 525
     :pswitch_data_2a
     .packed-switch 0x1
         :pswitch_14
@@ -3374,7 +3465,7 @@
     .param p0, "mountNo"    # Ljava/lang/String;
 
     .prologue
-    .line 113
+    .line 114
     const-string v0, "https://api.mabelle.com/1/shipping/GetProductSku?language=%s&mountNo=%s&isFreeGift=N"
 
     const/4 v1, 0x2
@@ -3408,16 +3499,16 @@
 
     const/4 v3, 0x0
 
-    .line 771
+    .line 785
     const-string v0, "http://fanshare.hk/images/android/stamp_%s.png"
 
-    .line 773
+    .line 787
     .local v0, "baseURL":Ljava/lang/String;
     sget v1, Lcom/cccdi/mabellefanshare/AppApplication;->currentLanguage:I
 
     packed-switch v1, :pswitch_data_2a
 
-    .line 778
+    .line 792
     :pswitch_9
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -3429,11 +3520,11 @@
 
     move-result-object v1
 
-    .line 780
+    .line 794
     :goto_13
     return-object v1
 
-    .line 775
+    .line 789
     :pswitch_14
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -3447,7 +3538,7 @@
 
     goto :goto_13
 
-    .line 780
+    .line 794
     :pswitch_1f
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -3461,7 +3552,7 @@
 
     goto :goto_13
 
-    .line 773
+    .line 787
     :pswitch_data_2a
     .packed-switch 0x0
         :pswitch_14
@@ -3475,7 +3566,7 @@
     .param p0, "orderID"    # Ljava/lang/String;
 
     .prologue
-    .line 379
+    .line 435
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_TRANSACTION_DETAIL_URL:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -3498,7 +3589,7 @@
     .param p0, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 373
+    .line 429
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_TRANSACTION_URL:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -3526,7 +3617,7 @@
     .registers 4
 
     .prologue
-    .line 786
+    .line 803
     const-string v0, "https://api.mabelle.com/1/admin/GetGetPushMessageNewTotal?fid=%s"
 
     const/4 v1, 0x1
@@ -3555,12 +3646,12 @@
     .param p4, "gender"    # Ljava/lang/String;
 
     .prologue
-    .line 440
+    .line 496
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    .line 441
+    .line 497
     .local v1, "params":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
@@ -3572,7 +3663,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 442
+    .line 498
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v3, "FirstName"
@@ -3581,7 +3672,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 443
+    .line 499
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v3, "LastName"
@@ -3590,7 +3681,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 444
+    .line 500
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v3, "Email"
@@ -3599,7 +3690,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 445
+    .line 501
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v3, "Mobile"
@@ -3608,7 +3699,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 446
+    .line 502
     new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v3, "Gender"
@@ -3617,14 +3708,14 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 448
+    .line 504
     const-string v2, "utf-8"
 
     invoke-static {v1, v2}, Lorg/apache/http/client/utils/URLEncodedUtils;->format(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 450
+    .line 506
     .local v0, "paramString":Ljava/lang/String;
     sget-object v2, Lcom/cccdi/mabellefanshare/Constant;->API_UPDATE_INFO_URL:Ljava/lang/String;
 
@@ -3647,10 +3738,10 @@
     .registers 4
 
     .prologue
-    .line 710
+    .line 724
     const-string v0, "https://api.mabelle.com/1/products/GetStampUserTotal?Fid=%s"
 
-    .line 712
+    .line 726
     .local v0, "baseURL":Ljava/lang/String;
     const/4 v1, 0x1
 
@@ -3669,407 +3760,13 @@
     return-object v1
 .end method
 
-.method public static getWeeklyAddURL(Lcom/sromku/simple/fb/entities/Profile;Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;)Ljava/lang/String;
-    .registers 8
-    .param p0, "fbProfile"    # Lcom/sromku/simple/fb/entities/Profile;
-    .param p1, "promo"    # Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;
-
-    .prologue
-    .line 612
-    new-instance v1, Ljava/util/LinkedList;
-
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
-
-    .line 614
-    .local v1, "params":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v3, "MountNo"
-
-    invoke-virtual {p1}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;->getMountNo()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 615
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v3, "PromoCode"
-
-    invoke-virtual {p1}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;->getPromoCode()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 616
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v3, "EventCode"
-
-    invoke-virtual {p1}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;->getEventCode()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 617
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v3, "Shopid"
-
-    sget-object v4, Lcom/cccdi/mabellefanshare/AppApplication;->userInfoFid:Ljava/lang/String;
-
-    invoke-direct {v2, v3, v4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 618
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v3, "FBid"
-
-    invoke-virtual {p0}, Lcom/sromku/simple/fb/entities/Profile;->getId()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 619
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v3, "Name"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Lcom/sromku/simple/fb/entities/Profile;->getFirstName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, " "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {p0}, Lcom/sromku/simple/fb/entities/Profile;->getLastName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 620
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v3, "Email"
-
-    invoke-virtual {p0}, Lcom/sromku/simple/fb/entities/Profile;->getEmail()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 621
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v3, "Phone"
-
-    const-string v4, "12345678"
-
-    invoke-direct {v2, v3, v4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 622
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v3, "Gender"
-
-    invoke-virtual {p0}, Lcom/sromku/simple/fb/entities/Profile;->getGender()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 624
-    const-string v2, "utf-8"
-
-    invoke-static {v1, v2}, Lorg/apache/http/client/utils/URLEncodedUtils;->format(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 626
-    .local v0, "paramString":Ljava/lang/String;
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v3, Lcom/cccdi/mabellefanshare/Constant;->API_WEEKLY_ADD_URL:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    return-object v2
-.end method
-
-.method public static getWeeklyInviteURL(Lcom/sromku/simple/fb/entities/Profile;Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;Ljava/util/List;)Ljava/lang/String;
-    .registers 11
-    .param p0, "fbProfile"    # Lcom/sromku/simple/fb/entities/Profile;
-    .param p1, "promo"    # Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/sromku/simple/fb/entities/Profile;",
-            "Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;)",
-            "Ljava/lang/String;"
-        }
-    .end annotation
-
-    .prologue
-    .line 631
-    .local p2, "fdList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    new-instance v3, Ljava/util/LinkedList;
-
-    invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
-
-    .line 633
-    .local v3, "params":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
-    const-string v4, ""
-
-    .line 635
-    .local v4, "share_fbid":Ljava/lang/String;
-    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    .local v1, "i$":Ljava/util/Iterator;
-    :goto_b
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3c
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 636
-    .local v0, "fdId":Ljava/lang/String;
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 637
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string v6, ","
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    goto :goto_b
-
-    .line 640
-    .end local v0    # "fdId":Ljava/lang/String;
-    :cond_3c
-    const/4 v5, 0x0
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v6
-
-    add-int/lit8 v6, v6, -0x2
-
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 642
-    new-instance v5, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v6, "eventcode"
-
-    invoke-virtual {p1}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;->getEventCode()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v5, v6, v7}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 643
-    new-instance v5, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v6, "promocode"
-
-    invoke-virtual {p1}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;->getPromoCode()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v5, v6, v7}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 644
-    new-instance v5, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v6, "fid"
-
-    sget-object v7, Lcom/cccdi/mabellefanshare/AppApplication;->userInfoFid:Ljava/lang/String;
-
-    invoke-direct {v5, v6, v7}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 645
-    new-instance v5, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v6, "fbid"
-
-    sget-object v7, Lcom/cccdi/mabellefanshare/AppApplication;->fbProfile:Lcom/sromku/simple/fb/entities/Profile;
-
-    invoke-virtual {v7}, Lcom/sromku/simple/fb/entities/Profile;->getId()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v5, v6, v7}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 646
-    new-instance v5, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v6, "share_fbid"
-
-    const-string v7, "SHAREFBID"
-
-    invoke-direct {v5, v6, v7}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 647
-    new-instance v5, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v6, "scnetwork"
-
-    const-string v7, "Facebook"
-
-    invoke-direct {v5, v6, v7}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 649
-    const-string v5, "utf-8"
-
-    invoke-static {v3, v5}, Lorg/apache/http/client/utils/URLEncodedUtils;->format(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 651
-    .local v2, "paramString":Ljava/lang/String;
-    const-string v5, "SHAREFBID"
-
-    invoke-virtual {v2, v5, v4}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 655
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v6, Lcom/cccdi/mabellefanshare/Constant;->API_WEEKLY_INVITE_FD_URL:Ljava/lang/String;
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    return-object v5
-.end method
-
 .method public static getWeeklyJoinedURL(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .registers 6
     .param p0, "eventCode"    # Ljava/lang/String;
     .param p1, "promoCode"    # Ljava/lang/String;
 
     .prologue
-    .line 606
+    .line 663
     sget-object v0, Lcom/cccdi/mabellefanshare/Constant;->API_WEEKLY_JOINED_URL:Ljava/lang/String;
 
     const/4 v1, 0x3
@@ -4101,10 +3798,10 @@
     .registers 4
 
     .prologue
-    .line 694
+    .line 708
     const-string v0, "https://api.mabelle.com/1/products/GetEventDesc?Language=%s&Eventcode=OfferTNC"
 
-    .line 706
+    .line 720
     .local v0, "baseURL":Ljava/lang/String;
     const/4 v1, 0x1
 
@@ -4129,14 +3826,14 @@
     .registers 6
 
     .prologue
-    .line 597
+    .line 654
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     const-string v2, "yyyy/MM/dd"
 
     invoke-direct {v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 598
+    .line 655
     .local v1, "sdf":Ljava/text/SimpleDateFormat;
     new-instance v2, Ljava/util/Date;
 
@@ -4146,7 +3843,7 @@
 
     move-result-object v0
 
-    .line 600
+    .line 657
     .local v0, "currentDate":Ljava/lang/String;
     sget-object v2, Lcom/cccdi/mabellefanshare/Constant;->API_WEEKLY_PROMO_URL:Ljava/lang/String;
 

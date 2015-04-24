@@ -36,7 +36,7 @@
 
     move-result-object v1
 
-    const-string v2, "my_pre"
+    const-string v2, "my_login"
 
     invoke-static {v1, v2}, Lcom/umeng/a/a;->a(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -44,11 +44,9 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/guangjieba/share/ui/user/ProfileActivity_;->a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/ProfileActivity_$IntentBuilder_;
+    const-class v1, Lcom/guangjieba/share/ui/user/LoginActivity_;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/ProfileActivity_$IntentBuilder_;->a()V
+    invoke-static {v0, v1}, Lcom/guangjieba/share/ui/user/LoginActivity;->a(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 143
     return-void

@@ -11,16 +11,32 @@
 
 .field d:Landroid/widget/TextView;
 
-.field private e:Landroid/widget/LinearLayout;
+.field private e:Ljava/lang/String;
+
+.field private f:Lcom/feiwoone/banner/AdBanner;
+
+.field private g:Landroid/widget/LinearLayout;
 
 
 # direct methods
 .method public constructor <init>()V
-    .registers 1
+    .registers 2
 
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
+    const-string v0, "PomEjS4O3qTG5C3xzP2urk9H"
+
+    iput-object v0, p0, Lcom/wuchun/exercisetools/ResultActivity;->e:Ljava/lang/String;
+
     return-void
+.end method
+
+.method static synthetic a(Lcom/wuchun/exercisetools/ResultActivity;)Landroid/widget/LinearLayout;
+    .registers 2
+
+    iget-object v0, p0, Lcom/wuchun/exercisetools/ResultActivity;->g:Landroid/widget/LinearLayout;
+
+    return-object v0
 .end method
 
 .method private a(Ljava/lang/String;F)Ljava/lang/String;
@@ -194,7 +210,39 @@
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    iput-object v2, p0, Lcom/wuchun/exercisetools/ResultActivity;->e:Landroid/widget/LinearLayout;
+    iput-object v2, p0, Lcom/wuchun/exercisetools/ResultActivity;->g:Landroid/widget/LinearLayout;
+
+    new-instance v2, Lcom/feiwoone/banner/AdBanner;
+
+    invoke-direct {v2, p0}, Lcom/feiwoone/banner/AdBanner;-><init>(Landroid/content/Context;)V
+
+    iput-object v2, p0, Lcom/wuchun/exercisetools/ResultActivity;->f:Lcom/feiwoone/banner/AdBanner;
+
+    iget-object v2, p0, Lcom/wuchun/exercisetools/ResultActivity;->g:Landroid/widget/LinearLayout;
+
+    iget-object v3, p0, Lcom/wuchun/exercisetools/ResultActivity;->f:Lcom/feiwoone/banner/AdBanner;
+
+    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    iget-object v2, p0, Lcom/wuchun/exercisetools/ResultActivity;->f:Lcom/feiwoone/banner/AdBanner;
+
+    iget-object v3, p0, Lcom/wuchun/exercisetools/ResultActivity;->e:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lcom/feiwoone/banner/AdBanner;->setAppKey(Ljava/lang/String;)V
+
+    new-instance v2, Lcom/wuchun/exercisetools/h;
+
+    invoke-direct {v2, p0}, Lcom/wuchun/exercisetools/h;-><init>(Lcom/wuchun/exercisetools/ResultActivity;)V
+
+    iget-object v3, p0, Lcom/wuchun/exercisetools/ResultActivity;->f:Lcom/feiwoone/banner/AdBanner;
+
+    invoke-virtual {v3, v2}, Lcom/feiwoone/banner/AdBanner;->setRecevieAdListener(Lcom/feiwoone/banner/RecevieAdListener;)V
+
+    iget-object v2, p0, Lcom/wuchun/exercisetools/ResultActivity;->e:Ljava/lang/String;
+
+    invoke-static {p0, v2}, Lcom/feiwofour/coverscreen/CoverAdComponent;->init(Landroid/content/Context;Ljava/lang/String;)Lcom/feiwofour/coverscreen/CoverAdComponent;
+
+    invoke-static {p0}, Lcom/feiwofour/coverscreen/CoverAdComponent;->showAd(Landroid/content/Context;)I
 
     invoke-virtual {p0}, Lcom/wuchun/exercisetools/ResultActivity;->getIntent()Landroid/content/Intent;
 
@@ -354,7 +402,7 @@
 
     cmpl-double v0, v2, v4
 
-    if-lez v0, :cond_11c
+    if-lez v0, :cond_143
 
     iget-object v0, p0, Lcom/wuchun/exercisetools/ResultActivity;->a:Lcom/wuchun/exercisetools/b;
 
@@ -392,16 +440,16 @@
 
     cmpg-double v0, v2, v4
 
-    if-gtz v0, :cond_11c
+    if-gtz v0, :cond_143
 
     const-string v0, "\u60a8\u7684\u4f53\u91cd\u504f\u80d6"
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :goto_11b
+    :goto_142
     return-void
 
-    :cond_11c
+    :cond_143
     iget-object v0, p0, Lcom/wuchun/exercisetools/ResultActivity;->a:Lcom/wuchun/exercisetools/b;
 
     invoke-virtual {v0}, Lcom/wuchun/exercisetools/b;->c()I
@@ -440,7 +488,7 @@
 
     cmpg-double v0, v2, v4
 
-    if-gez v0, :cond_16b
+    if-gez v0, :cond_192
 
     iget-object v0, p0, Lcom/wuchun/exercisetools/ResultActivity;->a:Lcom/wuchun/exercisetools/b;
 
@@ -478,15 +526,15 @@
 
     cmpl-double v0, v2, v4
 
-    if-ltz v0, :cond_16b
+    if-ltz v0, :cond_192
 
     const-string v0, "\u60a8\u7684\u4f53\u91cd\u504f\u7626"
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_11b
+    goto :goto_142
 
-    :cond_16b
+    :cond_192
     iget-object v0, p0, Lcom/wuchun/exercisetools/ResultActivity;->a:Lcom/wuchun/exercisetools/b;
 
     invoke-virtual {v0}, Lcom/wuchun/exercisetools/b;->c()I
@@ -523,15 +571,15 @@
 
     cmpl-double v0, v2, v4
 
-    if-lez v0, :cond_193
+    if-lez v0, :cond_1ba
 
     const-string v0, "\u60a8\u7684\u4f53\u91cd\u80a5\u80d6"
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_11b
+    goto :goto_142
 
-    :cond_193
+    :cond_1ba
     iget-object v0, p0, Lcom/wuchun/exercisetools/ResultActivity;->a:Lcom/wuchun/exercisetools/b;
 
     invoke-virtual {v0}, Lcom/wuchun/exercisetools/b;->c()I
@@ -568,18 +616,18 @@
 
     cmpg-double v0, v2, v4
 
-    if-gez v0, :cond_1bc
+    if-gez v0, :cond_1e3
 
     const-string v0, "\u60a8\u7684\u4f53\u91cd\u6d88\u7626"
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_11b
+    goto/16 :goto_142
 
-    :cond_1bc
+    :cond_1e3
     const-string v0, "\u60a8\u7684\u4f53\u91cd\u6b63\u5e38"
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_11b
+    goto/16 :goto_142
 .end method

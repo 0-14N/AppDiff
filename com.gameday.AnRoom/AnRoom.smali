@@ -62,6 +62,8 @@
     .line 42
     invoke-super {p0, p1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 44
     invoke-virtual {p0}, Lcom/gameday/AnRoom/AnRoom;->getWindow()Landroid/view/Window;
 
@@ -92,13 +94,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_24
+    if-eqz v1, :cond_27
 
     .line 77
     invoke-virtual {p0}, Lcom/gameday/AnRoom/AnRoom;->runLVL()V
 
     .line 80
-    :cond_24
+    :cond_27
     const/high16 v1, 0x7f030000
 
     invoke-virtual {p0, v1}, Lcom/gameday/AnRoom/AnRoom;->setContentView(I)V

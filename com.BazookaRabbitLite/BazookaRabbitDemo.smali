@@ -22,6 +22,8 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .registers 4
 
+    invoke-static {p0}, Lcom/google/android/GoogleManager;->initGoogle(Landroid/content/Context;)V
+
     const/16 v1, 0x400
 
     const/4 v0, 0x1
@@ -52,7 +54,7 @@
 
     invoke-virtual {v0, v1, v1}, Landroid/view/Window;->setFlags(II)V
 
-    if-nez p1, :cond_32
+    if-nez p1, :cond_35
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -66,10 +68,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_31
+    :goto_34
     return-void
 
-    :cond_32
+    :cond_35
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -82,7 +84,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_31
+    goto :goto_34
 .end method
 
 .method protected onDestroy()V

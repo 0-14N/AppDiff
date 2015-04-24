@@ -2605,9 +2605,9 @@
     invoke-virtual {v0, v2}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 964
-    new-instance v0, Laok;
+    new-instance v0, Lahq;
 
-    invoke-direct {v0, p0}, Laok;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
+    invoke-direct {v0, p0}, Lahq;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -2981,9 +2981,9 @@
 
     .line 730
     :goto_a1
-    new-instance v2, Laof;
+    new-instance v2, Lahl;
 
-    invoke-direct {v2, p0}, Laof;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
+    invoke-direct {v2, p0}, Lahl;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
 
     invoke-virtual {p2, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -3008,9 +3008,9 @@
     invoke-virtual {v2, v3}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 745
-    new-instance v2, Laog;
+    new-instance v2, Lahm;
 
-    invoke-direct {v2, p0}, Laog;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
+    invoke-direct {v2, p0}, Lahm;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -3317,9 +3317,9 @@
     invoke-virtual {v2, v3}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 847
-    new-instance v2, Laoi;
+    new-instance v2, Laho;
 
-    invoke-direct {v2, p0}, Laoi;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
+    invoke-direct {v2, p0}, Laho;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -3477,9 +3477,9 @@
     invoke-virtual {v0, v2}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 890
-    new-instance v0, Laoj;
+    new-instance v0, Lahp;
 
-    invoke-direct {v0, p0}, Laoj;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
+    invoke-direct {v0, p0}, Lahp;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -3653,9 +3653,9 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/RotateTextView;->setDegree(I)V
 
     .line 1019
-    new-instance v1, Laoc;
+    new-instance v1, Lahi;
 
-    invoke-direct {v1, p0}, Laoc;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
+    invoke-direct {v1, p0}, Lahi;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/RotateTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -3774,9 +3774,9 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 599
-    new-instance v1, Laob;
+    new-instance v1, Lahh;
 
-    invoke-direct {v1, p0}, Laob;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
+    invoke-direct {v1, p0}, Lahh;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -3910,9 +3910,9 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/RotateTextView;->setDegree(I)V
 
     .line 638
-    new-instance v1, Laod;
+    new-instance v1, Lahj;
 
-    invoke-direct {v1, p0}, Laod;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
+    invoke-direct {v1, p0}, Lahj;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/RotateTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -3989,9 +3989,9 @@
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 666
-    new-instance v0, Laoe;
+    new-instance v0, Lahk;
 
-    invoke-direct {v0, p0}, Laoe;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
+    invoke-direct {v0, p0}, Lahk;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -4110,9 +4110,9 @@
     invoke-virtual {v0, v2}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 802
-    new-instance v0, Laoh;
+    new-instance v0, Lahn;
 
-    invoke-direct {v0, p0}, Laoh;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
+    invoke-direct {v0, p0}, Lahn;-><init>(Lcom/quvideo/xiaoying/help/NewHelpMgr;)V
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

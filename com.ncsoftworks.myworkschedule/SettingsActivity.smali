@@ -237,9 +237,23 @@
 
     new-instance v10, Ljava/lang/StringBuilder;
 
-    const-string v11, "Preset "
+    const v11, 0x7f050017
+
+    invoke-virtual {p0, v11}, Lcom/ncsoftworks/myworkschedule/SettingsActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v11}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v11
 
     invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v11, " "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
 
     add-int/lit8 v11, v3, 0x1
 
@@ -281,9 +295,23 @@
     .line 140
     new-instance v8, Ljava/lang/StringBuilder;
 
-    const-string v9, "Preset "
+    const v9, 0x7f050017
+
+    invoke-virtual {p0, v9}, Lcom/ncsoftworks/myworkschedule/SettingsActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v9}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v9
 
     invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v9, " "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
 
     add-int/lit8 v9, v3, 0x1
 
@@ -298,7 +326,11 @@
     invoke-virtual {v2, v8}, Landroid/preference/EditTextPreference;->setDefaultValue(Ljava/lang/Object;)V
 
     .line 141
-    const-string v8, "Touch to modify"
+    const v8, 0x7f050018
+
+    invoke-virtual {p0, v8}, Lcom/ncsoftworks/myworkschedule/SettingsActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v8
 
     invoke-virtual {v2, v8}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
@@ -308,17 +340,29 @@
     invoke-virtual {v2, v8}, Landroid/preference/EditTextPreference;->setPersistent(Z)V
 
     .line 143
-    const-string v8, "Enter time e.g. 8 to 4"
+    const v8, 0x7f050019
+
+    invoke-virtual {p0, v8}, Lcom/ncsoftworks/myworkschedule/SettingsActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v8
 
     invoke-virtual {v2, v8}, Landroid/preference/EditTextPreference;->setDialogMessage(Ljava/lang/CharSequence;)V
 
     .line 144
-    const-string v8, "Type options, click ok"
+    const v8, 0x7f05001a
+
+    invoke-virtual {p0, v8}, Lcom/ncsoftworks/myworkschedule/SettingsActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v8
 
     invoke-virtual {v2, v8}, Landroid/preference/EditTextPreference;->setDialogTitle(Ljava/lang/CharSequence;)V
 
     .line 145
-    const-string v8, "Touch to modify"
+    const v8, 0x7f050018
+
+    invoke-virtual {p0, v8}, Lcom/ncsoftworks/myworkschedule/SettingsActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v8
 
     invoke-virtual {v2, v8}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -333,5 +377,5 @@
     .line 134
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_55
+    goto/16 :goto_55
 .end method

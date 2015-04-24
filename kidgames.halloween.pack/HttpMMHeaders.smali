@@ -19,6 +19,8 @@
     .end annotation
 .end field
 
+.field private static final HEADER_MM_ACID:Ljava/lang/String; = "X-MM-ACID"
+
 .field private static final HEADER_MM_CUSTOM_CLOSE:Ljava/lang/String; = "X-MM-USE-CUSTOM-CLOSE"
 
 .field private static final HEADER_MM_ENABLE_HARDWARE_ACCEL:Ljava/lang/String; = "X-MM-ENABLE-HARDWARE-ACCELERATION"
@@ -33,6 +35,8 @@
 
 
 # instance fields
+.field acid:Ljava/lang/String;
+
 .field enableHardwareAccel:Z
 
 .field isTransparent:Z
@@ -49,7 +53,7 @@
     .registers 1
 
     .prologue
-    .line 121
+    .line 134
     new-instance v0, Lcom/millennialmedia/android/HttpMMHeaders$1;
 
     invoke-direct {v0}, Lcom/millennialmedia/android/HttpMMHeaders$1;-><init>()V
@@ -64,70 +68,77 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 41
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
+    .line 48
     const/4 v2, 0x3
 
     :try_start_4
     new-array v0, v2, [Z
 
-    .line 45
+    .line 49
     .local v0, "booleanValues":[Z
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBooleanArray([Z)V
 
-    .line 46
+    .line 50
     const/4 v2, 0x0
 
     aget-boolean v2, v0, v2
 
     iput-boolean v2, p0, Lcom/millennialmedia/android/HttpMMHeaders;->isTransparent:Z
 
-    .line 47
+    .line 51
     const/4 v2, 0x1
 
     aget-boolean v2, v0, v2
 
     iput-boolean v2, p0, Lcom/millennialmedia/android/HttpMMHeaders;->useCustomClose:Z
 
-    .line 48
+    .line 52
     const/4 v2, 0x2
 
     aget-boolean v2, v0, v2
 
     iput-boolean v2, p0, Lcom/millennialmedia/android/HttpMMHeaders;->enableHardwareAccel:Z
 
-    .line 49
+    .line 53
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/millennialmedia/android/HttpMMHeaders;->transition:Ljava/lang/String;
 
-    .line 50
+    .line 54
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/millennialmedia/android/HttpMMHeaders;->acid:Ljava/lang/String;
+
+    .line 55
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/millennialmedia/android/HttpMMHeaders;->transitionTimeInMillis:J
-    :try_end_24
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_24} :catch_25
+    :try_end_2a
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_2a} :catch_2b
 
-    .line 56
+    .line 61
     .end local v0    # "booleanValues":[Z
-    :goto_24
+    :goto_2a
     return-void
 
-    .line 52
-    :catch_25
+    .line 57
+    :catch_2b
     move-exception v1
 
-    .line 54
+    .line 59
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_24
+    goto :goto_2a
 .end method
 
 .method public constructor <init>([Lorg/apache/http/Header;)V
@@ -135,10 +146,10 @@
     .param p1, "allHeaders"    # [Lorg/apache/http/Header;
 
     .prologue
-    .line 29
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
+    .line 33
     move-object v0, p1
 
     .local v0, "arr$":[Lorg/apache/http/Header;
@@ -149,34 +160,67 @@
 
     .local v2, "i$":I
     :goto_6
-    if-ge v2, v3, :cond_1c
+    if-ge v2, v3, :cond_1f
 
     aget-object v1, v0, v2
 
-    .line 32
+    .line 35
     .local v1, "header":Lorg/apache/http/Header;
     invoke-direct {p0, v1}, Lcom/millennialmedia/android/HttpMMHeaders;->checkTransparent(Lorg/apache/http/Header;)V
 
-    .line 33
+    .line 36
     invoke-direct {p0, v1}, Lcom/millennialmedia/android/HttpMMHeaders;->checkTransition(Lorg/apache/http/Header;)V
 
-    .line 34
+    .line 37
     invoke-direct {p0, v1}, Lcom/millennialmedia/android/HttpMMHeaders;->checkTransitionDuration(Lorg/apache/http/Header;)V
 
-    .line 35
+    .line 38
     invoke-direct {p0, v1}, Lcom/millennialmedia/android/HttpMMHeaders;->checkUseCustomClose(Lorg/apache/http/Header;)V
 
-    .line 36
+    .line 39
     invoke-direct {p0, v1}, Lcom/millennialmedia/android/HttpMMHeaders;->checkEnableHardwareAccel(Lorg/apache/http/Header;)V
 
-    .line 30
+    .line 40
+    invoke-direct {p0, v1}, Lcom/millennialmedia/android/HttpMMHeaders;->checkAcid(Lorg/apache/http/Header;)V
+
+    .line 33
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_6
 
-    .line 38
+    .line 42
     .end local v1    # "header":Lorg/apache/http/Header;
-    :cond_1c
+    :cond_1f
+    return-void
+.end method
+
+.method private checkAcid(Lorg/apache/http/Header;)V
+    .registers 4
+    .param p1, "header"    # Lorg/apache/http/Header;
+
+    .prologue
+    .line 112
+    const-string v0, "X-MM-ACID"
+
+    invoke-interface {p1}, Lorg/apache/http/Header;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    .line 114
+    invoke-interface {p1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/millennialmedia/android/HttpMMHeaders;->acid:Ljava/lang/String;
+
+    .line 116
+    :cond_12
     return-void
 .end method
 
@@ -185,7 +229,7 @@
     .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
-    .line 100
+    .line 105
     const-string v0, "X-MM-ENABLE-HARDWARE-ACCELERATION"
 
     invoke-interface {p1}, Lorg/apache/http/Header;->getName()Ljava/lang/String;
@@ -198,7 +242,7 @@
 
     if-eqz v0, :cond_16
 
-    .line 102
+    .line 107
     invoke-interface {p1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
     move-result-object v0
@@ -209,7 +253,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/HttpMMHeaders;->enableHardwareAccel:Z
 
-    .line 104
+    .line 109
     :cond_16
     return-void
 .end method
@@ -219,7 +263,7 @@
     .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
-    .line 72
+    .line 77
     const-string v0, "X-MM-TRANSITION"
 
     invoke-interface {p1}, Lorg/apache/http/Header;->getName()Ljava/lang/String;
@@ -232,14 +276,14 @@
 
     if-eqz v0, :cond_12
 
-    .line 74
+    .line 79
     invoke-interface {p1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/millennialmedia/android/HttpMMHeaders;->transition:Ljava/lang/String;
 
-    .line 76
+    .line 81
     :cond_12
     return-void
 .end method
@@ -249,7 +293,7 @@
     .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
-    .line 80
+    .line 85
     const-string v1, "X-MM-TRANSITION-DURATION"
 
     invoke-interface {p1}, Lorg/apache/http/Header;->getName()Ljava/lang/String;
@@ -262,16 +306,16 @@
 
     if-eqz v1, :cond_1c
 
-    .line 82
+    .line 87
     invoke-interface {p1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 83
+    .line 88
     .local v0, "value":Ljava/lang/String;
     if-eqz v0, :cond_1c
 
-    .line 85
+    .line 90
     invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v1
@@ -284,7 +328,7 @@
 
     iput-wide v1, p0, Lcom/millennialmedia/android/HttpMMHeaders;->transitionTimeInMillis:J
 
-    .line 88
+    .line 93
     .end local v0    # "value":Ljava/lang/String;
     :cond_1c
     return-void
@@ -295,7 +339,7 @@
     .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
-    .line 60
+    .line 65
     const-string v1, "X-MM-TRANSPARENT"
 
     invoke-interface {p1}, Lorg/apache/http/Header;->getName()Ljava/lang/String;
@@ -308,23 +352,23 @@
 
     if-eqz v1, :cond_18
 
-    .line 62
+    .line 67
     invoke-interface {p1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 63
+    .line 68
     .local v0, "value":Ljava/lang/String;
     if-eqz v0, :cond_18
 
-    .line 65
+    .line 70
     invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/millennialmedia/android/HttpMMHeaders;->isTransparent:Z
 
-    .line 68
+    .line 73
     .end local v0    # "value":Ljava/lang/String;
     :cond_18
     return-void
@@ -335,7 +379,7 @@
     .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
-    .line 92
+    .line 97
     const-string v0, "X-MM-USE-CUSTOM-CLOSE"
 
     invoke-interface {p1}, Lorg/apache/http/Header;->getName()Ljava/lang/String;
@@ -348,7 +392,7 @@
 
     if-eqz v0, :cond_16
 
-    .line 94
+    .line 99
     invoke-interface {p1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
     move-result-object v0
@@ -359,7 +403,7 @@
 
     iput-boolean v0, p0, Lcom/millennialmedia/android/HttpMMHeaders;->useCustomClose:Z
 
-    .line 96
+    .line 101
     :cond_16
     return-void
 .end method
@@ -370,7 +414,7 @@
     .registers 2
 
     .prologue
-    .line 109
+    .line 121
     const/4 v0, 0x0
 
     return v0
@@ -390,7 +434,7 @@
     .end annotation
 
     .prologue
-    .line 138
+    .line 151
     .local p1, "arguments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "transparent"
 
@@ -402,7 +446,7 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 139
+    .line 152
     const-string v0, "transition"
 
     iget-object v1, p0, Lcom/millennialmedia/android/HttpMMHeaders;->transition:Ljava/lang/String;
@@ -413,7 +457,18 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 140
+    .line 153
+    const-string v0, "acid"
+
+    iget-object v1, p0, Lcom/millennialmedia/android/HttpMMHeaders;->acid:Ljava/lang/String;
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 154
     const-string v0, "transitionDuration"
 
     iget-wide v1, p0, Lcom/millennialmedia/android/HttpMMHeaders;->transitionTimeInMillis:J
@@ -424,7 +479,7 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 141
+    .line 155
     const-string v0, "useCustomClose"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/HttpMMHeaders;->useCustomClose:Z
@@ -435,7 +490,7 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 142
+    .line 156
     const-string v0, "enableHardwareAccel"
 
     iget-boolean v1, p0, Lcom/millennialmedia/android/HttpMMHeaders;->enableHardwareAccel:Z
@@ -446,7 +501,7 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 143
+    .line 157
     return-void
 .end method
 
@@ -456,7 +511,7 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 115
+    .line 127
     const/4 v1, 0x3
 
     new-array v0, v1, [Z
@@ -479,20 +534,25 @@
 
     aput-boolean v2, v0, v1
 
-    .line 116
+    .line 128
     .local v0, "booleanValues":[Z
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBooleanArray([Z)V
 
-    .line 117
+    .line 129
     iget-object v1, p0, Lcom/millennialmedia/android/HttpMMHeaders;->transition:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 118
+    .line 130
+    iget-object v1, p0, Lcom/millennialmedia/android/HttpMMHeaders;->acid:Ljava/lang/String;
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 131
     iget-wide v1, p0, Lcom/millennialmedia/android/HttpMMHeaders;->transitionTimeInMillis:J
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 119
+    .line 132
     return-void
 .end method

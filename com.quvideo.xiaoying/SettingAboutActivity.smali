@@ -132,9 +132,9 @@
     if-eqz v0, :cond_22
 
     .line 501
-    new-instance v1, Lxu;
+    new-instance v1, Lrb;
 
-    invoke-direct {v1, p0}, Lxu;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
+    invoke-direct {v1, p0}, Lrb;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
 
     invoke-virtual {v0, p1, p0, v1}, Lcom/quvideo/xiaoying/sns/AbstractSNSMgr;->auth(ILandroid/app/Activity;Lcom/quvideo/xiaoying/sns/SnsListener;)V
 
@@ -171,18 +171,18 @@
     new-instance v0, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;
 
     .line 324
-    const v1, 0x7f0a02fe
+    const v1, 0x7f0a02db
 
     .line 325
-    new-instance v2, Lxp;
+    new-instance v2, Lqw;
 
-    invoke-direct {v2, p0}, Lxp;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
+    invoke-direct {v2, p0}, Lqw;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
 
     .line 323
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/app/setting/ComDescDialog$OnDescDialogClickListener;)V
 
     .line 335
-    const v1, 0x7f0a02fb
+    const v1, 0x7f0a02d8
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -191,7 +191,7 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;->setDialogTitle(Ljava/lang/Object;)V
 
     .line 336
-    const v1, 0x7f0a0301
+    const v1, 0x7f0a02de
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;->setButtonText(I)V
 
@@ -225,9 +225,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lxv;
+    new-instance v1, Lrc;
 
-    invoke-direct {v1, p0}, Lxv;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
+    invoke-direct {v1, p0}, Lrc;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
 
     invoke-virtual {v0, v1, p1}, Lcom/quvideo/xiaoying/sns/AbstractSNSMgr;->showFriendShip(Lcom/quvideo/xiaoying/sns/SnsFriendsListener;I)V
 
@@ -292,18 +292,18 @@
     new-instance v0, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;
 
     .line 344
-    const v1, 0x7f0a02ff
+    const v1, 0x7f0a02dc
 
     .line 345
-    new-instance v2, Lxq;
+    new-instance v2, Lqx;
 
-    invoke-direct {v2, p0}, Lxq;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
+    invoke-direct {v2, p0}, Lqx;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
 
     .line 343
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/app/setting/ComDescDialog$OnDescDialogClickListener;)V
 
     .line 355
-    const v1, 0x7f0a02fc
+    const v1, 0x7f0a02d9
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -312,7 +312,7 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;->setDialogTitle(Ljava/lang/Object;)V
 
     .line 356
-    const v1, 0x7f0a0302
+    const v1, 0x7f0a02df
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;->setButtonText(I)V
 
@@ -336,18 +336,18 @@
     new-instance v0, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;
 
     .line 364
-    const v1, 0x7f0a0300
+    const v1, 0x7f0a02dd
 
     .line 365
-    new-instance v2, Lxr;
+    new-instance v2, Lqy;
 
-    invoke-direct {v2, p0}, Lxr;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
+    invoke-direct {v2, p0}, Lqy;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
 
     .line 363
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/app/setting/ComDescDialog$OnDescDialogClickListener;)V
 
     .line 375
-    const v1, 0x7f0a02fd
+    const v1, 0x7f0a02da
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -356,7 +356,7 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;->setDialogTitle(Ljava/lang/Object;)V
 
     .line 376
-    const v1, 0x7f0a0303
+    const v1, 0x7f0a02e0
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;->setButtonText(I)V
 
@@ -492,18 +492,18 @@
     new-instance v0, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;
 
     .line 415
-    const v1, 0x7f0a038a
+    const v1, 0x7f0a0367
 
     .line 416
-    new-instance v2, Lxs;
+    new-instance v2, Lqz;
 
-    invoke-direct {v2, p0}, Lxs;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
+    invoke-direct {v2, p0}, Lqz;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
 
     .line 414
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/app/setting/ComDescDialog$OnDescDialogClickListener;)V
 
     .line 426
-    const v1, 0x7f0a0386
+    const v1, 0x7f0a0363
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -512,7 +512,7 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;->setDialogTitle(Ljava/lang/Object;)V
 
     .line 427
-    const v1, 0x7f0a038c
+    const v1, 0x7f0a0369
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;->setButtonText(I)V
 
@@ -593,18 +593,18 @@
     new-instance v0, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;
 
     .line 446
-    const v1, 0x7f0a038b
+    const v1, 0x7f0a0368
 
     .line 447
-    new-instance v2, Lxt;
+    new-instance v2, Lra;
 
-    invoke-direct {v2, p0}, Lxt;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
+    invoke-direct {v2, p0}, Lra;-><init>(Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;)V
 
     .line 445
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/app/setting/ComDescDialog$OnDescDialogClickListener;)V
 
     .line 467
-    const v1, 0x7f0a0387
+    const v1, 0x7f0a0364
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -613,7 +613,7 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;->setDialogTitle(Ljava/lang/Object;)V
 
     .line 468
-    const v1, 0x7f0a038d
+    const v1, 0x7f0a036a
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/setting/ComDescDialog;->setButtonText(I)V
 
@@ -971,7 +971,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 193
-    const v0, 0x7f060549
+    const v0, 0x7f060534
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -987,7 +987,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 196
-    const v0, 0x7f060547
+    const v0, 0x7f060532
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1008,7 +1008,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 200
-    const v0, 0x7f060548
+    const v0, 0x7f060533
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1030,7 +1030,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->o:Landroid/widget/ImageView;
 
     .line 203
-    const v0, 0x7f06054b
+    const v0, 0x7f060536
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1041,7 +1041,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->u:Landroid/widget/RelativeLayout;
 
     .line 204
-    const v0, 0x7f06054e
+    const v0, 0x7f060539
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1052,7 +1052,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->v:Landroid/widget/RelativeLayout;
 
     .line 205
-    const v0, 0x7f060551
+    const v0, 0x7f06053c
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1063,7 +1063,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->w:Landroid/widget/RelativeLayout;
 
     .line 206
-    const v0, 0x7f060554
+    const v0, 0x7f06053f
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1094,7 +1094,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 213
-    const v0, 0x7f06054c
+    const v0, 0x7f060537
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1105,7 +1105,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->y:Landroid/widget/ImageView;
 
     .line 214
-    const v0, 0x7f06054f
+    const v0, 0x7f06053a
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1116,7 +1116,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->z:Landroid/widget/ImageView;
 
     .line 215
-    const v0, 0x7f060552
+    const v0, 0x7f06053d
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1127,7 +1127,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->A:Landroid/widget/ImageView;
 
     .line 217
-    const v0, 0x7f06054d
+    const v0, 0x7f060538
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1138,7 +1138,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->B:Landroid/widget/TextView;
 
     .line 218
-    const v0, 0x7f060550
+    const v0, 0x7f06053b
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1149,7 +1149,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->C:Landroid/widget/TextView;
 
     .line 219
-    const v0, 0x7f060553
+    const v0, 0x7f06053e
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->findViewById(I)Landroid/view/View;
 
@@ -1176,7 +1176,7 @@
     .line 224
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->n:Landroid/widget/ImageView;
 
-    const v1, 0x7f02059f
+    const v1, 0x7f020581
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1204,21 +1204,21 @@
     .line 228
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->B:Landroid/widget/TextView;
 
-    const v1, 0x7f0a02fb
+    const v1, 0x7f0a02d8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 229
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->C:Landroid/widget/TextView;
 
-    const v1, 0x7f0a02fc
+    const v1, 0x7f0a02d9
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 230
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->D:Landroid/widget/TextView;
 
-    const v1, 0x7f0a02fd
+    const v1, 0x7f0a02da
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -1272,21 +1272,21 @@
     .line 237
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->B:Landroid/widget/TextView;
 
-    const v1, 0x7f0a0386
+    const v1, 0x7f0a0363
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 238
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->C:Landroid/widget/TextView;
 
-    const v1, 0x7f0a0387
+    const v1, 0x7f0a0364
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 239
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/setting/SettingAboutActivity;->D:Landroid/widget/TextView;
 
-    const v1, 0x7f0a02c1
+    const v1, 0x7f0a029e
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -1362,7 +1362,7 @@
     invoke-static {}, Lcom/quvideo/xiaoying/common/DialogueUtils;->cancelModalProgressDialogue()V
 
     .line 597
-    const v0, 0x7f0a02dc
+    const v0, 0x7f0a02b9
 
     const/4 v1, 0x0
 
@@ -1517,7 +1517,7 @@
     move-result-object v0
 
     .line 266
-    const v1, 0x7f0a02fa
+    const v1, 0x7f0a02d7
 
     const/4 v2, 0x1
 

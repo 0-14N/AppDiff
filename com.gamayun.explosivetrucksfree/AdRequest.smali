@@ -17,7 +17,7 @@
 
 .field public static final TEST_EMULATOR:Ljava/lang/String;
 
-.field public static final VERSION:Ljava/lang/String; = "6.2.1"
+.field public static final VERSION:Ljava/lang/String; = "6.0.1"
 
 .field private static final a:Ljava/text/SimpleDateFormat;
 
@@ -54,7 +54,7 @@
     .end annotation
 .end field
 
-.field private final h:Ljava/util/Map;
+.field private h:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -92,7 +92,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 49
+    .line 47
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "yyyyMMdd"
@@ -101,13 +101,13 @@
 
     sput-object v0, Lcom/google/ads/AdRequest;->a:Ljava/text/SimpleDateFormat;
 
-    .line 154
+    .line 152
     sput-object v2, Lcom/google/ads/AdRequest;->b:Ljava/lang/reflect/Method;
 
-    .line 155
+    .line 153
     sput-object v2, Lcom/google/ads/AdRequest;->c:Ljava/lang/reflect/Method;
 
-    .line 160
+    .line 158
     :try_start_e
     const-string v0, "com.google.analytics.tracking.android.AdMobInfo"
 
@@ -115,7 +115,7 @@
 
     move-result-object v0
 
-    .line 161
+    .line 159
     invoke-virtual {v0}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -129,7 +129,7 @@
 
     aget-object v3, v1, v0
 
-    .line 162
+    .line 160
     invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -150,17 +150,17 @@
 
     if-nez v4, :cond_36
 
-    .line 164
+    .line 162
     sput-object v3, Lcom/google/ads/AdRequest;->b:Ljava/lang/reflect/Method;
 
-    .line 161
+    .line 159
     :cond_33
     :goto_33
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1a
 
-    .line 165
+    .line 163
     :cond_36
     invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -182,7 +182,7 @@
 
     if-nez v4, :cond_33
 
-    .line 167
+    .line 165
     sput-object v3, Lcom/google/ads/AdRequest;->c:Ljava/lang/reflect/Method;
     :try_end_4b
     .catch Ljava/lang/ClassNotFoundException; {:try_start_e .. :try_end_4b} :catch_4c
@@ -190,16 +190,16 @@
 
     goto :goto_33
 
-    .line 176
+    .line 174
     :catch_4c
     move-exception v0
 
-    .line 177
+    .line 175
     const-string v0, "No Google Analytics: Library Not Found."
 
     invoke-static {v0}, Lcom/google/ads/util/b;->a(Ljava/lang/String;)V
 
-    .line 217
+    .line 215
     :cond_52
     :goto_52
     const-string v0, "emulator"
@@ -212,7 +212,7 @@
 
     return-void
 
-    .line 171
+    .line 169
     :cond_5b
     :try_start_5b
     sget-object v0, Lcom/google/ads/AdRequest;->b:Ljava/lang/reflect/Method;
@@ -223,18 +223,18 @@
 
     if-nez v0, :cond_52
 
-    .line 172
+    .line 170
     :cond_63
     const/4 v0, 0x0
 
     sput-object v0, Lcom/google/ads/AdRequest;->b:Ljava/lang/reflect/Method;
 
-    .line 173
+    .line 171
     const/4 v0, 0x0
 
     sput-object v0, Lcom/google/ads/AdRequest;->c:Ljava/lang/reflect/Method;
 
-    .line 174
+    .line 172
     const-string v0, "No Google Analytics: Library Incompatible."
 
     invoke-static {v0}, Lcom/google/ads/util/b;->e(Ljava/lang/String;)V
@@ -244,11 +244,11 @@
 
     goto :goto_52
 
-    .line 178
+    .line 176
     :catch_6f
     move-exception v0
 
-    .line 179
+    .line 177
     const-string v0, "No Google Analytics: Error Loading Library"
 
     invoke-static {v0}, Lcom/google/ads/util/b;->a(Ljava/lang/String;)V
@@ -264,38 +264,38 @@
 
     const/4 v1, 0x0
 
-    .line 39
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 185
+    .line 183
     iput-object v1, p0, Lcom/google/ads/AdRequest;->d:Lcom/google/ads/AdRequest$Gender;
 
-    .line 188
+    .line 186
     iput-object v1, p0, Lcom/google/ads/AdRequest;->e:Ljava/util/Date;
 
-    .line 191
+    .line 189
     iput-object v1, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
-    .line 194
+    .line 192
     iput-object v1, p0, Lcom/google/ads/AdRequest;->g:Ljava/util/Map;
 
-    .line 197
+    .line 195
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/ads/AdRequest;->h:Ljava/util/Map;
 
-    .line 201
+    .line 199
     iput-object v1, p0, Lcom/google/ads/AdRequest;->i:Landroid/location/Location;
 
-    .line 204
+    .line 202
     iput-boolean v2, p0, Lcom/google/ads/AdRequest;->j:Z
 
-    .line 207
+    .line 205
     iput-boolean v2, p0, Lcom/google/ads/AdRequest;->k:Z
 
-    .line 220
+    .line 218
     iput-object v1, p0, Lcom/google/ads/AdRequest;->l:Ljava/util/Set;
 
     return-void
@@ -305,7 +305,7 @@
     .registers 2
 
     .prologue
-    .line 415
+    .line 413
     monitor-enter p0
 
     :try_start_1
@@ -317,14 +317,14 @@
 
     if-nez v0, :cond_11
 
-    .line 416
+    .line 414
     new-instance v0, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
     invoke-direct {v0}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;-><init>()V
 
     invoke-virtual {p0, v0}, Lcom/google/ads/AdRequest;->setNetworkExtras(Lcom/google/ads/mediation/NetworkExtras;)Lcom/google/ads/AdRequest;
 
-    .line 419
+    .line 417
     :cond_11
     const-class v0, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
@@ -340,7 +340,7 @@
 
     return-object v0
 
-    .line 415
+    .line 413
     :catchall_1b
     move-exception v0
 
@@ -359,26 +359,26 @@
     .end annotation
 
     .prologue
-    .line 452
+    .line 450
     invoke-direct {p0}, Lcom/google/ads/AdRequest;->a()Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
     move-result-object v0
 
-    .line 453
+    .line 451
     invoke-virtual {v0}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->getExtras()Ljava/util/Map;
 
     move-result-object v1
 
     if-nez v1, :cond_12
 
-    .line 454
+    .line 452
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     invoke-virtual {v0, v1}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->setExtras(Ljava/util/Map;)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
-    .line 457
+    .line 455
     :cond_12
     invoke-virtual {v0}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->getExtras()Ljava/util/Map;
 
@@ -386,7 +386,7 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 458
+    .line 456
     return-object p0
 .end method
 
@@ -395,25 +395,25 @@
     .param p1, "keyword"    # Ljava/lang/String;
 
     .prologue
-    .line 367
+    .line 365
     iget-object v0, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
     if-nez v0, :cond_b
 
-    .line 368
+    .line 366
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
-    .line 371
+    .line 369
     :cond_b
     iget-object v0, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 372
+    .line 370
     return-object p0
 .end method
 
@@ -431,26 +431,26 @@
     .end annotation
 
     .prologue
-    .line 385
+    .line 383
     .local p1, "keywords":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
     if-nez v0, :cond_b
 
-    .line 386
+    .line 384
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
-    .line 389
+    .line 387
     :cond_b
     iget-object v0, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 390
+    .line 388
     return-object p0
 .end method
 
@@ -460,25 +460,25 @@
     .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 524
+    .line 522
     iget-object v0, p0, Lcom/google/ads/AdRequest;->g:Ljava/util/Map;
 
     if-nez v0, :cond_b
 
-    .line 525
+    .line 523
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/ads/AdRequest;->g:Ljava/util/Map;
 
-    .line 528
+    .line 526
     :cond_b
     iget-object v0, p0, Lcom/google/ads/AdRequest;->g:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 529
+    .line 527
     return-object p0
 .end method
 
@@ -487,25 +487,25 @@
     .param p1, "testDevice"    # Ljava/lang/String;
 
     .prologue
-    .line 687
+    .line 673
     iget-object v0, p0, Lcom/google/ads/AdRequest;->l:Ljava/util/Set;
 
     if-nez v0, :cond_b
 
-    .line 688
+    .line 674
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/ads/AdRequest;->l:Ljava/util/Set;
 
-    .line 691
+    .line 677
     :cond_b
     iget-object v0, p0, Lcom/google/ads/AdRequest;->l:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 692
+    .line 678
     return-object p0
 .end method
 
@@ -513,12 +513,12 @@
     .registers 2
 
     .prologue
-    .line 309
+    .line 307
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/ads/AdRequest;->e:Ljava/util/Date;
 
-    .line 310
+    .line 308
     return-object p0
 .end method
 
@@ -526,7 +526,7 @@
     .registers 2
 
     .prologue
-    .line 301
+    .line 299
     iget-object v0, p0, Lcom/google/ads/AdRequest;->e:Ljava/util/Date;
 
     return-object v0
@@ -536,7 +536,7 @@
     .registers 2
 
     .prologue
-    .line 237
+    .line 235
     iget-object v0, p0, Lcom/google/ads/AdRequest;->d:Lcom/google/ads/AdRequest$Gender;
 
     return-object v0
@@ -555,15 +555,15 @@
     .end annotation
 
     .prologue
-    .line 401
+    .line 399
     iget-object v0, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
     if-nez v0, :cond_6
 
-    .line 402
+    .line 400
     const/4 v0, 0x0
 
-    .line 405
+    .line 403
     :goto_5
     return-object v0
 
@@ -581,7 +581,7 @@
     .registers 2
 
     .prologue
-    .line 549
+    .line 547
     iget-object v0, p0, Lcom/google/ads/AdRequest;->i:Landroid/location/Location;
 
     return-object v0
@@ -600,7 +600,7 @@
     .end annotation
 
     .prologue
-    .line 496
+    .line 494
     .local p1, "extrasClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Lcom/google/ads/AdRequest;->h:Ljava/util/Map;
 
@@ -617,7 +617,7 @@
     .end annotation
 
     .prologue
-    .line 341
+    .line 339
     invoke-direct {p0}, Lcom/google/ads/AdRequest;->a()Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
     move-result-object v0
@@ -650,30 +650,30 @@
 
     const/4 v1, 0x1
 
-    .line 576
+    .line 574
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 579
+    .line 577
     iget-object v0, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
     if-eqz v0, :cond_12
 
-    .line 580
+    .line 578
     const-string v0, "kw"
 
     iget-object v4, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
     invoke-interface {v3, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 584
+    .line 582
     :cond_12
     iget-object v0, p0, Lcom/google/ads/AdRequest;->d:Lcom/google/ads/AdRequest$Gender;
 
     if-eqz v0, :cond_25
 
-    .line 585
+    .line 583
     const-string v0, "cust_gender"
 
     iget-object v4, p0, Lcom/google/ads/AdRequest;->d:Lcom/google/ads/AdRequest$Gender;
@@ -688,13 +688,13 @@
 
     invoke-interface {v3, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 589
+    .line 587
     :cond_25
     iget-object v0, p0, Lcom/google/ads/AdRequest;->e:Ljava/util/Date;
 
     if-eqz v0, :cond_36
 
-    .line 590
+    .line 588
     const-string v0, "cust_age"
 
     sget-object v4, Lcom/google/ads/AdRequest;->a:Ljava/text/SimpleDateFormat;
@@ -707,13 +707,13 @@
 
     invoke-interface {v3, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 594
+    .line 592
     :cond_36
     iget-object v0, p0, Lcom/google/ads/AdRequest;->i:Landroid/location/Location;
 
     if-eqz v0, :cond_45
 
-    .line 595
+    .line 593
     const-string v0, "uule"
 
     iget-object v4, p0, Lcom/google/ads/AdRequest;->i:Landroid/location/Location;
@@ -724,13 +724,13 @@
 
     invoke-interface {v3, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 598
+    .line 596
     :cond_45
     iget-boolean v0, p0, Lcom/google/ads/AdRequest;->j:Z
 
     if-eqz v0, :cond_52
 
-    .line 599
+    .line 597
     const-string v0, "testing"
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -739,22 +739,22 @@
 
     invoke-interface {v3, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 602
+    .line 600
     :cond_52
     invoke-virtual {p0, p1}, Lcom/google/ads/AdRequest;->isTestDevice(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_de
+    if-eqz v0, :cond_c5
 
-    .line 603
+    .line 601
     const-string v0, "adtest"
 
     const-string v4, "on"
 
     invoke-interface {v3, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 618
+    .line 616
     :cond_5f
     :goto_5f
     const-class v0, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
@@ -765,16 +765,16 @@
 
     check-cast v0, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
-    .line 620
-    if-eqz v0, :cond_128
+    .line 618
+    if-eqz v0, :cond_10f
 
     invoke-virtual {v0}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->getPlusOneOptOut()Z
 
     move-result v4
 
-    if-eqz v4, :cond_128
+    if-eqz v4, :cond_10f
 
-    .line 621
+    .line 619
     const-string v2, "pto"
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -783,87 +783,56 @@
 
     invoke-interface {v3, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 628
+    .line 626
     :goto_78
-    const-class v1, Lcom/google/ads/doubleclick/DfpExtras;
+    if-eqz v0, :cond_93
 
-    invoke-virtual {p0, v1}, Lcom/google/ads/AdRequest;->getNetworkExtras(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->getExtras()Ljava/util/Map;
 
     move-result-object v1
 
-    check-cast v1, Lcom/google/ads/doubleclick/DfpExtras;
+    if-eqz v1, :cond_93
 
-    .line 629
-    if-eqz v1, :cond_13b
+    invoke-virtual {v0}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->getExtras()Ljava/util/Map;
 
-    invoke-virtual {v1}, Lcom/google/ads/doubleclick/DfpExtras;->getExtras()Ljava/util/Map;
+    move-result-object v1
 
-    move-result-object v2
-
-    if-eqz v2, :cond_13b
-
-    invoke-virtual {v1}, Lcom/google/ads/doubleclick/DfpExtras;->getExtras()Ljava/util/Map;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_13b
-
-    .line 632
-    const-string v0, "extras"
-
-    invoke-virtual {v1}, Lcom/google/ads/doubleclick/DfpExtras;->getExtras()Ljava/util/Map;
-
-    move-result-object v2
-
-    invoke-interface {v3, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 639
-    :cond_9b
-    :goto_9b
-    if-eqz v1, :cond_ac
-
-    .line 640
-    invoke-virtual {v1}, Lcom/google/ads/doubleclick/DfpExtras;->getPublisherProvidedId()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 641
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-interface {v1}, Ljava/util/Map;->size()I
 
     move-result v1
 
-    if-nez v1, :cond_ac
+    if-lez v1, :cond_93
 
-    .line 642
-    const-string v1, "ppid"
+    .line 629
+    const-string v1, "extras"
+
+    invoke-virtual {v0}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->getExtras()Ljava/util/Map;
+
+    move-result-object v0
 
     invoke-interface {v3, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 646
-    :cond_ac
+    .line 632
+    :cond_93
     iget-object v0, p0, Lcom/google/ads/AdRequest;->g:Ljava/util/Map;
 
-    if-eqz v0, :cond_b7
+    if-eqz v0, :cond_9e
 
-    .line 647
+    .line 633
     const-string v0, "mediation_extras"
 
     iget-object v1, p0, Lcom/google/ads/AdRequest;->g:Ljava/util/Map;
 
     invoke-interface {v3, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 652
-    :cond_b7
-    :try_start_b7
+    .line 638
+    :cond_9e
+    :try_start_9e
     sget-object v0, Lcom/google/ads/AdRequest;->b:Ljava/lang/reflect/Method;
 
-    if-eqz v0, :cond_dd
+    if-eqz v0, :cond_c4
 
-    .line 653
+    .line 639
     sget-object v0, Lcom/google/ads/AdRequest;->b:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -876,7 +845,7 @@
 
     move-result-object v0
 
-    .line 654
+    .line 640
     sget-object v1, Lcom/google/ads/AdRequest;->c:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
@@ -887,48 +856,48 @@
 
     move-result-object v0
 
-    .line 657
+    .line 643
     check-cast v0, Ljava/util/Map;
 
-    .line 658
-    if-eqz v0, :cond_dd
+    .line 644
+    if-eqz v0, :cond_c4
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_dd
+    if-lez v1, :cond_c4
 
-    .line 659
+    .line 645
     const-string v1, "analytics_join_id"
 
     invoke-interface {v3, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_dd
-    .catch Ljava/lang/Throwable; {:try_start_b7 .. :try_end_dd} :catch_158
+    :try_end_c4
+    .catch Ljava/lang/Throwable; {:try_start_9e .. :try_end_c4} :catch_122
 
-    .line 666
-    :cond_dd
-    :goto_dd
+    .line 652
+    :cond_c4
+    :goto_c4
     return-object v3
 
-    .line 605
-    :cond_de
+    .line 603
+    :cond_c5
     iget-boolean v0, p0, Lcom/google/ads/AdRequest;->k:Z
 
     if-nez v0, :cond_5f
 
-    .line 607
+    .line 605
     invoke-static {}, Lcom/google/ads/util/AdUtil;->c()Z
 
     move-result v0
 
-    if-eqz v0, :cond_10a
+    if-eqz v0, :cond_f1
 
-    .line 608
+    .line 606
     const-string v0, "AdRequest.TEST_EMULATOR"
 
-    .line 612
-    :goto_ea
+    .line 610
+    :goto_d1
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -955,13 +924,13 @@
 
     invoke-static {v0}, Lcom/google/ads/util/b;->c(Ljava/lang/String;)V
 
-    .line 614
+    .line 612
     iput-boolean v1, p0, Lcom/google/ads/AdRequest;->k:Z
 
     goto/16 :goto_5f
 
-    .line 610
-    :cond_10a
+    .line 608
+    :cond_f1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -990,19 +959,19 @@
 
     move-result-object v0
 
-    goto :goto_ea
+    goto :goto_d1
 
-    .line 623
-    :cond_128
+    .line 621
+    :cond_10f
     const-string v4, "cipa"
 
-    invoke-static {p1}, Lcom/google/ads/ah;->a(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/google/ads/af;->a(Landroid/content/Context;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_139
+    if-eqz v5, :cond_120
 
-    :goto_130
+    :goto_117
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1011,52 +980,21 @@
 
     goto/16 :goto_78
 
-    :cond_139
+    :cond_120
     move v1, v2
 
-    goto :goto_130
+    goto :goto_117
 
-    .line 633
-    :cond_13b
-    if-eqz v0, :cond_9b
-
-    invoke-virtual {v0}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->getExtras()Ljava/util/Map;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_9b
-
-    invoke-virtual {v0}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->getExtras()Ljava/util/Map;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_9b
-
-    .line 636
-    const-string v2, "extras"
-
-    invoke-virtual {v0}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->getExtras()Ljava/util/Map;
-
-    move-result-object v0
-
-    invoke-interface {v3, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto/16 :goto_9b
-
-    .line 662
-    :catch_158
+    .line 648
+    :catch_122
     move-exception v0
 
-    .line 663
+    .line 649
     const-string v1, "Internal Analytics Error:"
 
     invoke-static {v1, v0}, Lcom/google/ads/util/b;->c(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto/16 :goto_dd
+    goto :goto_c4
 .end method
 
 .method public isTestDevice(Landroid/content/Context;)Z
@@ -1066,25 +1004,25 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 721
+    .line 707
     iget-object v1, p0, Lcom/google/ads/AdRequest;->l:Ljava/util/Set;
 
     if-eqz v1, :cond_b
 
-    .line 722
+    .line 708
     invoke-static {p1}, Lcom/google/ads/util/AdUtil;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 724
+    .line 710
     if-nez v1, :cond_c
 
-    .line 733
+    .line 719
     :cond_b
     :goto_b
     return v0
 
-    .line 728
+    .line 714
     :cond_c
     iget-object v2, p0, Lcom/google/ads/AdRequest;->l:Ljava/util/Set;
 
@@ -1094,7 +1032,7 @@
 
     if-eqz v1, :cond_b
 
-    .line 729
+    .line 715
     const/4 v0, 0x1
 
     goto :goto_b
@@ -1112,13 +1050,13 @@
     .end annotation
 
     .prologue
-    .line 485
+    .line 483
     .local p1, "extrasClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/google/ads/AdRequest;->h:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 486
+    .line 484
     return-object p0
 .end method
 
@@ -1131,22 +1069,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 250
+    .line 248
     const-string v0, ""
 
     if-eq p1, v0, :cond_7
 
     if-nez p1, :cond_a
 
-    .line 251
+    .line 249
     :cond_7
     iput-object v1, p0, Lcom/google/ads/AdRequest;->e:Ljava/util/Date;
 
-    .line 262
+    .line 260
     :goto_9
     return-object p0
 
-    .line 254
+    .line 252
     :cond_a
     :try_start_a
     sget-object v0, Lcom/google/ads/AdRequest;->a:Ljava/text/SimpleDateFormat;
@@ -1161,16 +1099,16 @@
 
     goto :goto_9
 
-    .line 255
+    .line 253
     :catch_13
     move-exception v0
 
-    .line 256
+    .line 254
     const-string v0, "Birthday format invalid.  Expected \'YYYYMMDD\' where \'YYYY\' is a 4 digit year, \'MM\' is a two digit month, and \'DD\' is a two digit day.  Birthday value ignored"
 
     invoke-static {v0}, Lcom/google/ads/util/b;->b(Ljava/lang/String;)V
 
-    .line 258
+    .line 256
     iput-object v1, p0, Lcom/google/ads/AdRequest;->e:Ljava/util/Date;
 
     goto :goto_9
@@ -1181,19 +1119,19 @@
     .param p1, "calendar"    # Ljava/util/Calendar;
 
     .prologue
-    .line 287
+    .line 285
     if-nez p1, :cond_6
 
-    .line 288
+    .line 286
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/ads/AdRequest;->e:Ljava/util/Date;
 
-    .line 293
+    .line 291
     :goto_5
     return-object p0
 
-    .line 290
+    .line 288
     :cond_6
     invoke-virtual {p1}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
@@ -1209,19 +1147,19 @@
     .param p1, "birthday"    # Ljava/util/Date;
 
     .prologue
-    .line 271
+    .line 269
     if-nez p1, :cond_6
 
-    .line 272
+    .line 270
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/ads/AdRequest;->e:Ljava/util/Date;
 
-    .line 277
+    .line 275
     :goto_5
     return-object p0
 
-    .line 274
+    .line 272
     :cond_6
     new-instance v0, Ljava/util/Date;
 
@@ -1254,7 +1192,7 @@
     .end annotation
 
     .prologue
-    .line 434
+    .line 432
     .local p1, "extras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct {p0}, Lcom/google/ads/AdRequest;->a()Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
@@ -1262,7 +1200,7 @@
 
     invoke-virtual {v0, p1}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->setExtras(Ljava/util/Map;)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
-    .line 435
+    .line 433
     return-object p0
 .end method
 
@@ -1271,10 +1209,10 @@
     .param p1, "gender"    # Lcom/google/ads/AdRequest$Gender;
 
     .prologue
-    .line 228
+    .line 226
     iput-object p1, p0, Lcom/google/ads/AdRequest;->d:Lcom/google/ads/AdRequest$Gender;
 
-    .line 229
+    .line 227
     return-object p0
 .end method
 
@@ -1292,11 +1230,11 @@
     .end annotation
 
     .prologue
-    .line 353
+    .line 351
     .local p1, "keywords":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
-    .line 354
+    .line 352
     return-object p0
 .end method
 
@@ -1305,10 +1243,10 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 540
+    .line 538
     iput-object p1, p0, Lcom/google/ads/AdRequest;->i:Landroid/location/Location;
 
-    .line 541
+    .line 539
     return-object p0
 .end method
 
@@ -1327,11 +1265,11 @@
     .end annotation
 
     .prologue
-    .line 509
+    .line 507
     .local p1, "mediationExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     iput-object p1, p0, Lcom/google/ads/AdRequest;->g:Ljava/util/Map;
 
-    .line 510
+    .line 508
     return-object p0
 .end method
 
@@ -1340,10 +1278,10 @@
     .param p1, "extras"    # Lcom/google/ads/mediation/NetworkExtras;
 
     .prologue
-    .line 472
+    .line 470
     if-eqz p1, :cond_b
 
-    .line 473
+    .line 471
     iget-object v0, p0, Lcom/google/ads/AdRequest;->h:Ljava/util/Map;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1352,7 +1290,7 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 475
+    .line 473
     :cond_b
     return-object p0
 .end method
@@ -1364,14 +1302,14 @@
     .end annotation
 
     .prologue
-    .line 327
+    .line 325
     invoke-direct {p0}, Lcom/google/ads/AdRequest;->a()Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->setPlusOneOptOut(Z)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
-    .line 328
+    .line 326
     return-object p0
 .end method
 
@@ -1389,11 +1327,11 @@
     .end annotation
 
     .prologue
-    .line 705
+    .line 691
     .local p1, "testDevices":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/google/ads/AdRequest;->l:Ljava/util/Set;
 
-    .line 706
+    .line 692
     return-object p0
 .end method
 
@@ -1404,9 +1342,9 @@
     .end annotation
 
     .prologue
-    .line 564
+    .line 562
     iput-boolean p1, p0, Lcom/google/ads/AdRequest;->j:Z
 
-    .line 565
+    .line 563
     return-object p0
 .end method

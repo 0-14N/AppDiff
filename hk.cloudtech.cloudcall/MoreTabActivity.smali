@@ -73,15 +73,6 @@
 .field private g:Lhk/cloudcall/adv/a;
 
 .field private final h:Ljava/util/concurrent/atomic/AtomicReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/atomic/AtomicReference",
-            "<",
-            "Ljava/util/Date;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private i:Landroid/widget/ImageView;
 
@@ -414,7 +405,7 @@
     if-nez v1, :cond_2b
 
     :cond_d
-    invoke-interface {v0}, Lhk/cloudcall/adv/i;->g()Z
+    invoke-interface {v0}, Lhk/cloudcall/adv/i;->a()Z
 
     move-result v0
 
@@ -446,7 +437,7 @@
     goto :goto_1d
 
     :cond_2b
-    invoke-interface {v0}, Lhk/cloudcall/adv/i;->i()[Ljava/lang/String;
+    invoke-interface {v0}, Lhk/cloudcall/adv/i;->c()[Ljava/lang/String;
 
     move-result-object v1
 
@@ -491,7 +482,7 @@
 
     if-nez v1, :cond_64
 
-    invoke-interface {v0}, Lhk/cloudcall/adv/i;->g()Z
+    invoke-interface {v0}, Lhk/cloudcall/adv/i;->a()Z
 
     move-result v0
 
@@ -2733,7 +2724,7 @@
 
     check-cast v0, Lhk/cloudcall/adv/h;
 
-    invoke-interface {v0}, Lhk/cloudcall/adv/h;->f()Z
+    invoke-interface {v0}, Lhk/cloudcall/adv/h;->a()Z
 
     move-result v1
 
@@ -2795,7 +2786,7 @@
 
     check-cast v0, Lhk/cloudcall/adv/h;
 
-    invoke-interface {v0}, Lhk/cloudcall/adv/h;->f()Z
+    invoke-interface {v0}, Lhk/cloudcall/adv/h;->a()Z
 
     move-result v1
 
@@ -3312,7 +3303,7 @@
 
     check-cast v0, Lhk/cloudcall/adv/i;
 
-    invoke-interface {v0}, Lhk/cloudcall/adv/i;->h()Z
+    invoke-interface {v0}, Lhk/cloudcall/adv/i;->b()Z
 
     move-result v1
 
@@ -3404,7 +3395,7 @@
     goto/16 :goto_4c
 
     :cond_eb
-    invoke-interface {v0}, Lhk/cloudcall/adv/i;->i()[Ljava/lang/String;
+    invoke-interface {v0}, Lhk/cloudcall/adv/i;->c()[Ljava/lang/String;
 
     move-result-object v0
 

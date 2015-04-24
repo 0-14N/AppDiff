@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/wacai365/setting/ck;->a:Lcom/wacai365/setting/ManualBookActivity_;
 
-    invoke-virtual {v0}, Lcom/wacai365/setting/ManualBookActivity_;->e()V
+    invoke-virtual {v0}, Lcom/wacai365/setting/ManualBookActivity_;->c()V
 
     return-void
 .end method

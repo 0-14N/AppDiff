@@ -26,7 +26,7 @@
     .registers 1
 
     .prologue
-    .line 14
+    .line 12
     invoke-direct {p0}, Lcom/hy/vipphone/vipphoneactive;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
     .registers 1
 
     .prologue
-    .line 100
+    .line 94
     invoke-direct {p0}, Lcom/hy/vipphone/MainActive;->openFk()V
 
     return-void
@@ -46,7 +46,7 @@
     .registers 1
 
     .prologue
-    .line 108
+    .line 102
     invoke-direct {p0}, Lcom/hy/vipphone/MainActive;->openVipsf()V
 
     return-void
@@ -56,7 +56,7 @@
     .registers 1
 
     .prologue
-    .line 104
+    .line 98
     invoke-direct {p0}, Lcom/hy/vipphone/MainActive;->openCz()V
 
     return-void
@@ -66,7 +66,7 @@
     .registers 1
 
     .prologue
-    .line 112
+    .line 106
     invoke-direct {p0}, Lcom/hy/vipphone/MainActive;->openPtsf()V
 
     return-void
@@ -76,7 +76,7 @@
     .registers 1
 
     .prologue
-    .line 116
+    .line 110
     invoke-direct {p0}, Lcom/hy/vipphone/MainActive;->openCxkp()V
 
     return-void
@@ -86,7 +86,7 @@
     .registers 1
 
     .prologue
-    .line 120
+    .line 114
     invoke-direct {p0}, Lcom/hy/vipphone/MainActive;->openSftj()V
 
     return-void
@@ -96,7 +96,7 @@
     .registers 1
 
     .prologue
-    .line 124
+    .line 118
     invoke-direct {p0}, Lcom/hy/vipphone/MainActive;->openAbout()V
 
     return-void
@@ -106,7 +106,7 @@
     .registers 1
 
     .prologue
-    .line 128
+    .line 122
     invoke-direct {p0}, Lcom/hy/vipphone/MainActive;->openLxwm()V
 
     return-void
@@ -116,10 +116,10 @@
     .registers 1
 
     .prologue
-    .line 126
+    .line 120
     invoke-virtual {p0}, Lcom/hy/vipphone/MainActive;->openabout()V
 
-    .line 127
+    .line 121
     return-void
 .end method
 
@@ -127,10 +127,10 @@
     .registers 1
 
     .prologue
-    .line 118
+    .line 112
     invoke-virtual {p0}, Lcom/hy/vipphone/MainActive;->opencxkp()V
 
-    .line 119
+    .line 113
     return-void
 .end method
 
@@ -138,10 +138,10 @@
     .registers 1
 
     .prologue
-    .line 106
+    .line 100
     invoke-virtual {p0}, Lcom/hy/vipphone/MainActive;->opencz()V
 
-    .line 107
+    .line 101
     return-void
 .end method
 
@@ -149,10 +149,10 @@
     .registers 1
 
     .prologue
-    .line 102
+    .line 96
     invoke-virtual {p0}, Lcom/hy/vipphone/MainActive;->openfk()V
 
-    .line 103
+    .line 97
     return-void
 .end method
 
@@ -160,10 +160,10 @@
     .registers 1
 
     .prologue
-    .line 130
+    .line 124
     invoke-virtual {p0}, Lcom/hy/vipphone/MainActive;->openlxwm()V
 
-    .line 131
+    .line 125
     return-void
 .end method
 
@@ -171,10 +171,10 @@
     .registers 1
 
     .prologue
-    .line 114
+    .line 108
     invoke-virtual {p0}, Lcom/hy/vipphone/MainActive;->openptsf()V
 
-    .line 115
+    .line 109
     return-void
 .end method
 
@@ -182,10 +182,10 @@
     .registers 1
 
     .prologue
-    .line 122
+    .line 116
     invoke-virtual {p0}, Lcom/hy/vipphone/MainActive;->opensftj()V
 
-    .line 123
+    .line 117
     return-void
 .end method
 
@@ -193,207 +193,188 @@
     .registers 1
 
     .prologue
-    .line 110
+    .line 104
     invoke-virtual {p0}, Lcom/hy/vipphone/MainActive;->openvipsf()V
 
-    .line 111
+    .line 105
     return-void
 .end method
 
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 6
+    .registers 4
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 25
+    .line 23
     invoke-super {p0, p1}, Lcom/hy/vipphone/vipphoneactive;->onCreate(Landroid/os/Bundle;)V
 
+    .line 24
+    const v0, 0x7f030007
+
+    invoke-virtual {p0, v0}, Lcom/hy/vipphone/MainActive;->setContentView(I)V
+
     .line 26
-    const v2, 0x7f030007
+    const v0, 0x7f060020
 
-    invoke-virtual {p0, v2}, Lcom/hy/vipphone/MainActive;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
 
-    .line 28
-    new-instance v0, Lcom/google/ads/AdRequest;
+    move-result-object v0
 
-    invoke-direct {v0}, Lcom/google/ads/AdRequest;-><init>()V
+    check-cast v0, Landroid/widget/Button;
 
-    .line 29
-    .local v0, "ad":Lcom/google/ads/AdRequest;
-    const v2, 0x7f060028
+    iput-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuFk:Landroid/widget/Button;
 
-    invoke-virtual {p0, v2}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
+    .line 27
+    iget-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuFk:Landroid/widget/Button;
 
-    move-result-object v1
+    new-instance v1, Lcom/hy/vipphone/MainActive$1;
 
-    check-cast v1, Lcom/google/ads/AdView;
+    invoke-direct {v1, p0}, Lcom/hy/vipphone/MainActive$1;-><init>(Lcom/hy/vipphone/MainActive;)V
 
-    .line 30
-    .local v1, "adView":Lcom/google/ads/AdView;
-    invoke-virtual {v1, v0}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 32
-    const v2, 0x7f060020
+    .line 34
+    const v0, 0x7f060021
 
-    invoke-virtual {p0, v2}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuFk:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuVipsf:Landroid/widget/Button;
 
-    .line 33
-    iget-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuFk:Landroid/widget/Button;
+    .line 35
+    iget-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuVipsf:Landroid/widget/Button;
 
-    new-instance v3, Lcom/hy/vipphone/MainActive$1;
+    new-instance v1, Lcom/hy/vipphone/MainActive$2;
 
-    invoke-direct {v3, p0}, Lcom/hy/vipphone/MainActive$1;-><init>(Lcom/hy/vipphone/MainActive;)V
+    invoke-direct {v1, p0}, Lcom/hy/vipphone/MainActive$2;-><init>(Lcom/hy/vipphone/MainActive;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 40
-    const v2, 0x7f060021
+    .line 42
+    const v0, 0x7f060022
 
-    invoke-virtual {p0, v2}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuVipsf:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuCz:Landroid/widget/Button;
 
-    .line 41
-    iget-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuVipsf:Landroid/widget/Button;
+    .line 43
+    iget-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuCz:Landroid/widget/Button;
 
-    new-instance v3, Lcom/hy/vipphone/MainActive$2;
+    new-instance v1, Lcom/hy/vipphone/MainActive$3;
 
-    invoke-direct {v3, p0}, Lcom/hy/vipphone/MainActive$2;-><init>(Lcom/hy/vipphone/MainActive;)V
+    invoke-direct {v1, p0}, Lcom/hy/vipphone/MainActive$3;-><init>(Lcom/hy/vipphone/MainActive;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 48
-    const v2, 0x7f060022
+    .line 50
+    const v0, 0x7f060023
 
-    invoke-virtual {p0, v2}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuCz:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuPtsf:Landroid/widget/Button;
 
-    .line 49
-    iget-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuCz:Landroid/widget/Button;
+    .line 51
+    iget-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuPtsf:Landroid/widget/Button;
 
-    new-instance v3, Lcom/hy/vipphone/MainActive$3;
+    new-instance v1, Lcom/hy/vipphone/MainActive$4;
 
-    invoke-direct {v3, p0}, Lcom/hy/vipphone/MainActive$3;-><init>(Lcom/hy/vipphone/MainActive;)V
+    invoke-direct {v1, p0}, Lcom/hy/vipphone/MainActive$4;-><init>(Lcom/hy/vipphone/MainActive;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 56
-    const v2, 0x7f060023
+    .line 58
+    const v0, 0x7f060024
 
-    invoke-virtual {p0, v2}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuPtsf:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuCxkp:Landroid/widget/Button;
 
-    .line 57
-    iget-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuPtsf:Landroid/widget/Button;
+    .line 59
+    iget-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuCxkp:Landroid/widget/Button;
 
-    new-instance v3, Lcom/hy/vipphone/MainActive$4;
+    new-instance v1, Lcom/hy/vipphone/MainActive$5;
 
-    invoke-direct {v3, p0}, Lcom/hy/vipphone/MainActive$4;-><init>(Lcom/hy/vipphone/MainActive;)V
+    invoke-direct {v1, p0}, Lcom/hy/vipphone/MainActive$5;-><init>(Lcom/hy/vipphone/MainActive;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 64
-    const v2, 0x7f060024
+    .line 66
+    const v0, 0x7f060025
 
-    invoke-virtual {p0, v2}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuCxkp:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuSftj:Landroid/widget/Button;
 
-    .line 65
-    iget-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuCxkp:Landroid/widget/Button;
+    .line 67
+    iget-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuSftj:Landroid/widget/Button;
 
-    new-instance v3, Lcom/hy/vipphone/MainActive$5;
+    new-instance v1, Lcom/hy/vipphone/MainActive$6;
 
-    invoke-direct {v3, p0}, Lcom/hy/vipphone/MainActive$5;-><init>(Lcom/hy/vipphone/MainActive;)V
+    invoke-direct {v1, p0}, Lcom/hy/vipphone/MainActive$6;-><init>(Lcom/hy/vipphone/MainActive;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 72
-    const v2, 0x7f060025
+    .line 74
+    const v0, 0x7f060026
 
-    invoke-virtual {p0, v2}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuSftj:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuAbout:Landroid/widget/Button;
 
-    .line 73
-    iget-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuSftj:Landroid/widget/Button;
+    .line 75
+    iget-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuAbout:Landroid/widget/Button;
 
-    new-instance v3, Lcom/hy/vipphone/MainActive$6;
+    new-instance v1, Lcom/hy/vipphone/MainActive$7;
 
-    invoke-direct {v3, p0}, Lcom/hy/vipphone/MainActive$6;-><init>(Lcom/hy/vipphone/MainActive;)V
+    invoke-direct {v1, p0}, Lcom/hy/vipphone/MainActive$7;-><init>(Lcom/hy/vipphone/MainActive;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 80
-    const v2, 0x7f060026
+    .line 82
+    const v0, 0x7f060027
 
-    invoke-virtual {p0, v2}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Landroid/widget/Button;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuAbout:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuLxwm:Landroid/widget/Button;
 
-    .line 81
-    iget-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuAbout:Landroid/widget/Button;
+    .line 83
+    iget-object v0, p0, Lcom/hy/vipphone/MainActive;->mBuLxwm:Landroid/widget/Button;
 
-    new-instance v3, Lcom/hy/vipphone/MainActive$7;
+    new-instance v1, Lcom/hy/vipphone/MainActive$8;
 
-    invoke-direct {v3, p0}, Lcom/hy/vipphone/MainActive$7;-><init>(Lcom/hy/vipphone/MainActive;)V
+    invoke-direct {v1, p0}, Lcom/hy/vipphone/MainActive$8;-><init>(Lcom/hy/vipphone/MainActive;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 88
-    const v2, 0x7f060027
-
-    invoke-virtual {p0, v2}, Lcom/hy/vipphone/MainActive;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/Button;
-
-    iput-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuLxwm:Landroid/widget/Button;
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 89
-    iget-object v2, p0, Lcom/hy/vipphone/MainActive;->mBuLxwm:Landroid/widget/Button;
-
-    new-instance v3, Lcom/hy/vipphone/MainActive$8;
-
-    invoke-direct {v3, p0}, Lcom/hy/vipphone/MainActive$8;-><init>(Lcom/hy/vipphone/MainActive;)V
-
-    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 95
     return-void
 .end method

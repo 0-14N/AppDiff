@@ -434,10 +434,8 @@
     move-result-object v0
 
     .line 64
-    .local v0, "adRequest":Lcom/google/android/gms/ads/AdRequest;
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/ads/AdView;->loadAd(Lcom/google/android/gms/ads/AdRequest;)V
-
     .line 68
+    .local v0, "adRequest":Lcom/google/android/gms/ads/AdRequest;
     invoke-virtual {p0}, Lcom/brunoschalch/timeuntil/WidgetConfiguration;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
@@ -450,7 +448,7 @@
 
     .line 70
     .local v2, "extras":Landroid/os/Bundle;
-    if-eqz v2, :cond_8e
+    if-eqz v2, :cond_8b
 
     .line 71
     const-string v6, "appWidgetId"
@@ -466,7 +464,7 @@
     iput v6, p0, Lcom/brunoschalch/timeuntil/WidgetConfiguration;->awID:I
 
     .line 78
-    :goto_85
+    :goto_82
     iget-object v6, p0, Lcom/brunoschalch/timeuntil/WidgetConfiguration;->cont:Landroid/content/Context;
 
     invoke-static {v6}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
@@ -479,8 +477,8 @@
     return-void
 
     .line 76
-    :cond_8e
+    :cond_8b
     invoke-virtual {p0}, Lcom/brunoschalch/timeuntil/WidgetConfiguration;->finish()V
 
-    goto :goto_85
+    goto :goto_82
 .end method

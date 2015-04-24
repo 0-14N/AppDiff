@@ -130,9 +130,9 @@
 
     iget-object v0, p0, Lcn/dxy/idxyer/activity/SelectUserActivity;->f:Landroid/widget/ListView;
 
-    new-instance v1, Lcn/dxy/idxyer/activity/T;
+    new-instance v1, Lcn/dxy/idxyer/activity/S;
 
-    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/T;-><init>(Lcn/dxy/idxyer/activity/SelectUserActivity;)V
+    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/S;-><init>(Lcn/dxy/idxyer/activity/SelectUserActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
@@ -166,17 +166,17 @@
 
     iget-object v0, p0, Lcn/dxy/idxyer/activity/SelectUserActivity;->h:Landroid/widget/EditText;
 
-    new-instance v1, Lcn/dxy/idxyer/activity/U;
+    new-instance v1, Lcn/dxy/idxyer/activity/T;
 
-    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/U;-><init>(Lcn/dxy/idxyer/activity/SelectUserActivity;)V
+    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/T;-><init>(Lcn/dxy/idxyer/activity/SelectUserActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     iget-object v0, p0, Lcn/dxy/idxyer/activity/SelectUserActivity;->h:Landroid/widget/EditText;
 
-    new-instance v1, Lcn/dxy/idxyer/activity/V;
+    new-instance v1, Lcn/dxy/idxyer/activity/U;
 
-    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/V;-><init>(Lcn/dxy/idxyer/activity/SelectUserActivity;)V
+    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/U;-><init>(Lcn/dxy/idxyer/activity/SelectUserActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 

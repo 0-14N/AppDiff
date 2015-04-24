@@ -92,16 +92,16 @@
     iput-boolean v1, p0, Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;->A:Z
 
     .line 77
-    new-instance v0, Lxl;
+    new-instance v0, Lqs;
 
-    invoke-direct {v0, p0}, Lxl;-><init>(Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;)V
+    invoke-direct {v0, p0}, Lqs;-><init>(Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;->n:Landroid/os/Handler;
 
     .line 98
-    new-instance v0, Lxm;
+    new-instance v0, Lqt;
 
-    invoke-direct {v0, p0}, Lxm;-><init>(Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;)V
+    invoke-direct {v0, p0}, Lqt;-><init>(Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;->o:Landroid/widget/AbsListView$OnScrollListener;
 
@@ -731,7 +731,7 @@
 
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;->C:Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;
 
-    const v2, 0x7f0205ef
+    const v2, 0x7f0205cf
 
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListAdapter;-><init>(Landroid/content/Context;Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;I)V
 
@@ -745,7 +745,7 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListAdapter;->setHandler(Landroid/os/Handler;)V
 
     .line 189
-    const v0, 0x7f060588
+    const v0, 0x7f060573
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;->findViewById(I)Landroid/view/View;
 
@@ -980,9 +980,9 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 134
-    new-instance v1, Lxn;
+    new-instance v1, Lqu;
 
-    invoke-direct {v1, p0}, Lxn;-><init>(Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;)V
+    invoke-direct {v1, p0}, Lqu;-><init>(Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;)V
 
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;->z:Landroid/content/BroadcastReceiver;
 
@@ -1019,7 +1019,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 168
-    const v0, 0x7f060587
+    const v0, 0x7f060572
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/recommendapp/RecommendAppListActivity;->findViewById(I)Landroid/view/View;
 

@@ -22,6 +22,8 @@
 
     invoke-super {p0, p1}, Lcom/pinkpointer/boxtopplebase/bu;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     const-string v0, "http://boxtopple.pinkpointer.com/modules/android/crash.php"
 
     invoke-static {p0, v0}, Landroid/crashreport/b;->a(Landroid/content/Context;Ljava/lang/String;)V

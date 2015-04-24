@@ -76,7 +76,7 @@
 
     const-string v1, "\u6211\u7684\u559c\u6b22"
 
-    invoke-virtual {v0, v1}, Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;->a(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;
+    invoke-virtual {v0, v1}, Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;->c(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;
 
     move-result-object v0
 

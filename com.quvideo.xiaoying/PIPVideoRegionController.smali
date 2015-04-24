@@ -86,16 +86,16 @@
     iput-boolean v1, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/PIPVideoRegionController;->k:Z
 
     .line 121
-    new-instance v0, Lbfs;
+    new-instance v0, Layy;
 
-    invoke-direct {v0, p0}, Lbfs;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/PIPVideoRegionController;)V
+    invoke-direct {v0, p0}, Layy;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/PIPVideoRegionController;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/PIPVideoRegionController;->n:Landroid/view/View$OnTouchListener;
 
     .line 209
-    new-instance v0, Lbft;
+    new-instance v0, Layz;
 
-    invoke-direct {v0, p0}, Lbft;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/PIPVideoRegionController;)V
+    invoke-direct {v0, p0}, Layz;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/PIPVideoRegionController;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/PIPVideoRegionController;->o:Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
 

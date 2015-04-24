@@ -29,6 +29,9 @@
     invoke-static {p0, p1, p2}, Lorg/dayup/gnotes/d/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
+    invoke-static {p0, p1, p2}, Lorg/dayup/gnotes/d/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 45
     return-void
 .end method
 

@@ -15,7 +15,7 @@
     .registers 2
 
     .prologue
-    .line 166
+    .line 180
     iput-object p1, p0, Lcom/guangjieba/share/model/h/ak;->a:Lcom/guangjieba/share/model/h/af;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,11 +29,11 @@
     .registers 2
 
     .prologue
-    .line 171
+    .line 185
     iget-object v0, p0, Lcom/guangjieba/share/model/h/ak;->a:Lcom/guangjieba/share/model/h/af;
 
-    invoke-static {v0}, Lcom/guangjieba/share/model/h/af;->b(Lcom/guangjieba/share/model/h/af;)V
+    invoke-static {v0}, Lcom/guangjieba/share/model/h/af;->c(Lcom/guangjieba/share/model/h/af;)V
 
-    .line 172
+    .line 186
     return-void
 .end method

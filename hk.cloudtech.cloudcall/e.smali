@@ -10,15 +10,6 @@
 .field public a:Lcom/taobao/newxp/controller/ExchangeDataService;
 
 .field private c:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/Promoter;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private d:Landroid/content/Context;
 
@@ -120,15 +111,6 @@
 
 .method private a(Ljava/util/List;ZI)V
     .registers 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/Promoter;",
-            ">;ZI)V"
-        }
-    .end annotation
 
     sget-object v0, Lcom/taobao/newxp/controller/e;->b:Ljava/lang/String;
 
@@ -222,11 +204,6 @@
 # virtual methods
 .method public a(Ljava/lang/String;Ljava/lang/String;)I
     .registers 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Throwable;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 
@@ -312,15 +289,6 @@
 
 .method public a()Ljava/util/List;
     .registers 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/Promoter;",
-            ">;"
-        }
-    .end annotation
 
     const/4 v3, -0x1
 
@@ -623,15 +591,6 @@
 
 .method public declared-synchronized a(Ljava/lang/Class;)V
     .registers 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Class",
-            "<+",
-            "Lcom/taobao/newxp/Promoter;",
-            ">;)V"
-        }
-    .end annotation
 
     monitor-enter p0
 
@@ -683,15 +642,6 @@
 
 .method public a(Ljava/util/Collection;)V
     .registers 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Collection",
-            "<",
-            "Lcom/taobao/newxp/Promoter;",
-            ">;)V"
-        }
-    .end annotation
 
     if-eqz p1, :cond_d
 
@@ -711,15 +661,6 @@
 
 .method public declared-synchronized a(Ljava/util/List;)V
     .registers 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/Promoter;",
-            ">;)V"
-        }
-    .end annotation
 
     monitor-enter p0
 
@@ -744,15 +685,6 @@
 
 .method public declared-synchronized a(Ljava/util/List;I)V
     .registers 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/taobao/newxp/Promoter;",
-            ">;I)V"
-        }
-    .end annotation
 
     const/4 v2, 0x1
 

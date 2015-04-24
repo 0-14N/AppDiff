@@ -208,6 +208,8 @@
     .line 68
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/basyatw/bcpawsen/DaywtanActivity;->Tawo(Landroid/content/Context;)V
+
     .line 70
     invoke-static {p0}, Lcom/crashlytics/android/Crashlytics;->start(Landroid/content/Context;)V
 

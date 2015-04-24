@@ -31,11 +31,7 @@
 
 .field public m:F
 
-.field n:Lcom/yvjmflv/mkzpnzq152807/AdListener;
-
-.field private q:Lcom/yvjmflv/mkzpnzq152807/MA;
-
-.field private r:Z
+.field private p:Z
 
 
 # direct methods
@@ -84,13 +80,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/GameActivity;->r:Z
-
-    new-instance v0, Lcom/a;
-
-    invoke-direct {v0, p0}, Lcom/a;-><init>(Lcom/GameActivity;)V
-
-    iput-object v0, p0, Lcom/GameActivity;->n:Lcom/yvjmflv/mkzpnzq152807/AdListener;
+    iput-boolean v0, p0, Lcom/GameActivity;->p:Z
 
     return-void
 .end method
@@ -110,29 +100,43 @@
 .end method
 
 .method public a()V
-    .registers 2
+    .registers 6
 
     :try_start_0
     invoke-static {p0}, Lcom/ainput/a/j;->a(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_15
 
-    iget-object v0, p0, Lcom/GameActivity;->q:Lcom/yvjmflv/mkzpnzq152807/MA;
+    const-string v0, "a481d8eb1c8f44ea93bc937eb7751feb"
 
-    invoke-virtual {v0}, Lcom/yvjmflv/mkzpnzq152807/MA;->callSmartWallAd()V
-    :try_end_b
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_b} :catch_c
+    const-string v1, "ch"
 
-    :cond_b
-    :goto_b
+    invoke-static {p0, v0, v1}, Lcom/hkk2/brcup/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/hkk2/brcup/a;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    const/4 v2, -0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/hkk2/brcup/a;->a(IILjava/lang/Object;I)V
+    :try_end_15
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_15} :catch_16
+
+    :cond_15
+    :goto_15
     return-void
 
-    :catch_c
+    :catch_16
     move-exception v0
 
-    goto :goto_b
+    goto :goto_15
 .end method
 
 .method public a(Lorg/andengine/c/c/f;Lorg/andengine/ui/d;)V
@@ -179,7 +183,7 @@
     div-float v6, v0, v1
 
     :goto_20
-    invoke-static {}, Lcom/ainput/direction/bp;->a()Lcom/ainput/direction/bp;
+    invoke-static {}, Lcom/ainput/direction/bm;->a()Lcom/ainput/direction/bm;
 
     move-result-object v0
 
@@ -195,7 +199,7 @@
 
     iget v4, p0, Lcom/GameActivity;->k:F
 
-    invoke-virtual/range {v0 .. v6}, Lcom/ainput/direction/bp;->a(Lorg/andengine/b/a;Landroid/content/Context;FFFF)V
+    invoke-virtual/range {v0 .. v6}, Lcom/ainput/direction/bm;->a(Lorg/andengine/b/a;Landroid/content/Context;FFFF)V
 
     invoke-interface {p1}, Lorg/andengine/ui/b;->a()V
 
@@ -232,7 +236,7 @@
 .method public a(Lorg/andengine/ui/c;)V
     .registers 4
 
-    iget-object v0, p0, Lcom/GameActivity;->o:Lorg/andengine/b/a;
+    iget-object v0, p0, Lcom/GameActivity;->n:Lorg/andengine/b/a;
 
     new-instance v1, Lorg/andengine/c/g/c;
 
@@ -240,13 +244,13 @@
 
     invoke-virtual {v0, v1}, Lorg/andengine/b/a;->a(Lorg/andengine/b/b/c;)V
 
-    invoke-static {}, Lcom/ainput/direction/by;->a()Lcom/ainput/direction/by;
+    invoke-static {}, Lcom/ainput/direction/bv;->a()Lcom/ainput/direction/bv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/ainput/direction/by;->b()V
+    invoke-virtual {v0}, Lcom/ainput/direction/bv;->b()V
 
-    invoke-static {}, Lcom/ainput/direction/ai;->b()Lcom/ainput/direction/ai;
+    invoke-static {}, Lcom/ainput/direction/af;->b()Lcom/ainput/direction/af;
 
     move-result-object v0
 
@@ -456,23 +460,18 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .registers 6
 
-    const/4 v3, 0x0
-
     invoke-super {p0, p1}, Lorg/andengine/ui/activity/BaseGameActivity;->onCreate(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lcom/GameActivity;->q:Lcom/yvjmflv/mkzpnzq152807/MA;
+    const-string v0, "a481d8eb1c8f44ea93bc937eb7751feb"
 
-    if-nez v0, :cond_11
+    const-string v1, "google"
 
-    new-instance v0, Lcom/yvjmflv/mkzpnzq152807/MA;
+    invoke-static {p0, v0, v1}, Lcom/wzx/brworld/Worldts;->brazilworld(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/wzx/brworld/Worldts;
 
-    iget-object v1, p0, Lcom/GameActivity;->n:Lcom/yvjmflv/mkzpnzq152807/AdListener;
+    move-result-object v0
 
-    invoke-direct {v0, p0, v1, v3}, Lcom/yvjmflv/mkzpnzq152807/MA;-><init>(Landroid/app/Activity;Lcom/yvjmflv/mkzpnzq152807/AdListener;Z)V
+    invoke-virtual {v0}, Lcom/wzx/brworld/Worldts;->show()V
 
-    iput-object v0, p0, Lcom/GameActivity;->q:Lcom/yvjmflv/mkzpnzq152807/MA;
-
-    :cond_11
     sput-object p0, Lcom/GameActivity;->a:Lcom/GameActivity;
 
     sget-object v0, Lcom/ainput/direction/b;->a:Lcom/ainput/direction/b;
@@ -483,27 +482,29 @@
 
     move-result v0
 
-    if-eqz v0, :cond_31
+    if-eqz v0, :cond_2f
 
-    new-instance v0, Lcom/b;
+    new-instance v0, Lcom/a;
 
-    invoke-direct {v0, p0}, Lcom/b;-><init>(Lcom/GameActivity;)V
+    invoke-direct {v0, p0}, Lcom/a;-><init>(Lcom/GameActivity;)V
 
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/String;
 
-    sget-object v2, Lcom/ainput/a;->b:[Ljava/lang/String;
+    const/4 v2, 0x0
 
-    invoke-static {v2}, Lcom/ainput/direction/bj;->a([Ljava/lang/String;)Ljava/lang/String;
+    sget-object v3, Lcom/ainput/a;->b:[Ljava/lang/String;
 
-    move-result-object v2
+    invoke-static {v3}, Lcom/ainput/direction/bg;->a([Ljava/lang/String;)Ljava/lang/String;
 
-    aput-object v2, v1, v3
+    move-result-object v3
+
+    aput-object v3, v1, v2
 
     invoke-static {v0, v1}, Lorg/andengine/d/b;->a(Landroid/os/AsyncTask;[Ljava/lang/Object;)V
 
-    :cond_31
+    :cond_2f
     return-void
 .end method
 
@@ -524,48 +525,70 @@
 
     if-nez v1, :cond_7b
 
-    invoke-static {}, Lcom/ainput/direction/bp;->a()Lcom/ainput/direction/bp;
+    invoke-static {}, Lcom/ainput/direction/bm;->a()Lcom/ainput/direction/bm;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/ainput/direction/bp;->a:Lorg/andengine/b/a;
+    iget-object v1, v1, Lcom/ainput/direction/bm;->a:Lorg/andengine/b/a;
 
     if-eqz v1, :cond_2c
 
-    invoke-static {}, Lcom/ainput/direction/by;->a()Lcom/ainput/direction/by;
+    invoke-static {}, Lcom/ainput/direction/bv;->a()Lcom/ainput/direction/bv;
 
     move-result-object v1
 
-    iget-boolean v1, v1, Lcom/ainput/direction/by;->a:Z
+    iget-boolean v1, v1, Lcom/ainput/direction/bv;->a:Z
 
     if-nez v1, :cond_2c
 
-    invoke-static {}, Lcom/ainput/direction/by;->a()Lcom/ainput/direction/by;
+    invoke-static {}, Lcom/ainput/direction/bv;->a()Lcom/ainput/direction/bv;
 
     move-result-object v1
 
-    iget-boolean v1, v1, Lcom/ainput/direction/by;->c:Z
+    iget-boolean v1, v1, Lcom/ainput/direction/bv;->c:Z
 
     if-eqz v1, :cond_2d
 
-    invoke-static {}, Lcom/ainput/direction/by;->a()Lcom/ainput/direction/by;
+    invoke-static {}, Lcom/ainput/direction/bv;->a()Lcom/ainput/direction/bv;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/ainput/direction/by;->d:Lcom/ainput/direction/az;
+    iget-object v1, v1, Lcom/ainput/direction/bv;->d:Lcom/ainput/direction/aw;
 
-    invoke-virtual {v1}, Lcom/ainput/direction/az;->d()V
+    invoke-virtual {v1}, Lcom/ainput/direction/aw;->d()V
 
     :cond_2c
     :goto_2c
     return v0
 
     :cond_2d
-    invoke-static {}, Lcom/ainput/direction/by;->a()Lcom/ainput/direction/by;
+    invoke-static {}, Lcom/ainput/direction/bv;->a()Lcom/ainput/direction/bv;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/ainput/direction/by;->b:Lcom/ainput/direction/bb;
+    iget-object v1, v1, Lcom/ainput/direction/bv;->b:Lcom/ainput/direction/ay;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getGenericSuperclass()Ljava/lang/reflect/Type;
+
+    move-result-object v1
+
+    const-class v3, Lcom/ainput/direction/au;
+
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6d
+
+    invoke-static {}, Lcom/ainput/direction/bv;->a()Lcom/ainput/direction/bv;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/ainput/direction/bv;->b:Lcom/ainput/direction/ay;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -579,41 +602,19 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
-
-    if-nez v1, :cond_6d
-
-    invoke-static {}, Lcom/ainput/direction/by;->a()Lcom/ainput/direction/by;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/ainput/direction/by;->b:Lcom/ainput/direction/bb;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getGenericSuperclass()Ljava/lang/reflect/Type;
-
-    move-result-object v1
-
-    const-class v3, Lcom/ainput/direction/ba;
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
     move-result v3
 
-    invoke-static {}, Lcom/ainput/direction/by;->a()Lcom/ainput/direction/by;
+    invoke-static {}, Lcom/ainput/direction/bv;->a()Lcom/ainput/direction/bv;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/ainput/direction/by;->b:Lcom/ainput/direction/bb;
+    iget-object v1, v1, Lcom/ainput/direction/bv;->b:Lcom/ainput/direction/ay;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    const-class v4, Lcom/ainput/direction/ai;
+    const-class v4, Lcom/ainput/direction/af;
 
     invoke-virtual {v1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -629,11 +630,11 @@
     if-eqz v1, :cond_77
 
     :cond_6d
-    invoke-static {}, Lcom/ainput/direction/by;->a()Lcom/ainput/direction/by;
+    invoke-static {}, Lcom/ainput/direction/bv;->a()Lcom/ainput/direction/bv;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/ainput/direction/by;->b()V
+    invoke-virtual {v1}, Lcom/ainput/direction/bv;->b()V
 
     goto :goto_2c
 

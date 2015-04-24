@@ -65,9 +65,12 @@
     invoke-super {p0}, Lcom/actionbarsherlock/app/SherlockListActivity;->onPause()V
 
     .line 25
+    invoke-static {p0}, Lorg/dayup/gnotes/d/f;->b(Landroid/content/Context;)V
+
+    .line 26
     iget-object v0, p0, Lorg/dayup/activities/BaseListAcitivity;->a:Lorg/dayup/gnotes/GNotesApplication;
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_12
 
     .line 27
     iget-object v0, p0, Lorg/dayup/activities/BaseListAcitivity;->a:Lorg/dayup/gnotes/GNotesApplication;
@@ -79,7 +82,7 @@
     iput v1, v0, Lorg/dayup/gnotes/GNotesApplication;->c:I
 
     .line 29
-    :cond_f
+    :cond_12
     return-void
 .end method
 
@@ -91,9 +94,12 @@
     invoke-super {p0}, Lcom/actionbarsherlock/app/SherlockListActivity;->onResume()V
 
     .line 34
+    invoke-static {p0}, Lorg/dayup/gnotes/d/f;->a(Landroid/content/Context;)V
+
+    .line 35
     iget-object v0, p0, Lorg/dayup/activities/BaseListAcitivity;->a:Lorg/dayup/gnotes/GNotesApplication;
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_12
 
     .line 36
     iget-object v0, p0, Lorg/dayup/activities/BaseListAcitivity;->a:Lorg/dayup/gnotes/GNotesApplication;
@@ -105,7 +111,7 @@
     iput v1, v0, Lorg/dayup/gnotes/GNotesApplication;->c:I
 
     .line 38
-    :cond_f
+    :cond_12
     return-void
 .end method
 

@@ -444,8 +444,6 @@
     .local v0, "request":Lcom/google/android/gms/ads/AdRequest;
     iget-object v1, p0, Lcom/rastergrid/AdMobHelper;->mAdView:Lcom/google/android/gms/ads/AdView;
 
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/ads/AdView;->loadAd(Lcom/google/android/gms/ads/AdRequest;)V
-
     .line 259
     return-void
 .end method

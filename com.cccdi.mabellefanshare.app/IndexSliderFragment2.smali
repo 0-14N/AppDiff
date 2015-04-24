@@ -29,42 +29,42 @@
     .line 32
     invoke-direct {p0}, Landroid/support/v4/app/Fragment;-><init>()V
 
-    .line 75
+    .line 74
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$1;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$1;-><init>(Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;)V
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;->onBannerClick:Landroid/view/View$OnClickListener;
 
-    .line 95
+    .line 94
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$2;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$2;-><init>(Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;)V
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;->promoWebOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 105
+    .line 104
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$3;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$3;-><init>(Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;)V
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;->promoInAppOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 122
+    .line 119
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$4;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$4;-><init>(Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;)V
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;->promoProductOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 132
+    .line 129
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$5;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$5;-><init>(Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;)V
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;->promoEventOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 142
+    .line 139
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$6;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2$6;-><init>(Lcom/cccdi/mabellefanshare/fragment/IndexSliderFragment2;)V
@@ -170,10 +170,10 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 67
+    .line 66
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onAttach(Landroid/app/Activity;)V
 
-    .line 68
+    .line 67
     return-void
 .end method
 
@@ -197,7 +197,7 @@
 
     .prologue
     .line 44
-    const v3, 0x7f030060
+    const v3, 0x7f030051
 
     const/4 v4, 0x0
 
@@ -207,7 +207,7 @@
 
     .line 45
     .local v2, "v":Landroid/view/View;
-    const v3, 0x7f09017e
+    const v3, 0x7f09013a
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -221,7 +221,7 @@
 
     if-nez v3, :cond_16
 
-    .line 62
+    .line 61
     :goto_15
     return-object v2
 
@@ -287,9 +287,9 @@
     .registers 1
 
     .prologue
-    .line 72
+    .line 71
     invoke-super {p0}, Landroid/support/v4/app/Fragment;->onDetach()V
 
-    .line 73
+    .line 72
     return-void
 .end method

@@ -235,17 +235,31 @@
 .end method
 
 .method private a(Z)V
-    .registers 3
+    .registers 4
 
     const v0, 0x7f06005c
 
     invoke-virtual {p0, v0}, LaMao/apkManager/ApkInstallActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
+    if-eqz p1, :cond_12
+
+    sget-boolean v0, LaMao/manager/d;->c:Z
+
+    if-eqz v0, :cond_12
+
+    const/4 v0, 0x0
+
+    :goto_e
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
+
+    :cond_12
+    const/16 v0, 0x8
+
+    goto :goto_e
 .end method
 
 .method static synthetic a(LaMao/apkManager/ApkInstallActivity;ILjava/lang/String;)Z
@@ -1997,7 +2011,7 @@
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_60
+    packed-switch v0, :pswitch_data_6c
 
     :goto_8
     return-void
@@ -2021,7 +2035,7 @@
 
     iget-object v0, v0, LaMao/apkManager/p;->a:Ljava/util/ArrayList;
 
-    if-nez v0, :cond_32
+    if-nez v0, :cond_3d
 
     :cond_1b
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2033,7 +2047,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_5a
+    if-nez v0, :cond_65
 
     const/16 v0, 0xc9
 
@@ -2046,9 +2060,19 @@
 
     invoke-virtual {p0, v0}, LaMao/apkManager/ApkInstallActivity;->a(I)V
 
+    invoke-static {}, LaMao/apkManager/ApkInstallActivity;->d()Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-direct {p0, v0}, LaMao/apkManager/ApkInstallActivity;->a(Z)V
+
     goto :goto_8
 
-    :cond_32
+    :cond_3d
     sget-object v0, LaMao/apkManager/ApkInstallActivity;->n:LaMao/apkManager/p;
 
     iget-object v0, v0, LaMao/apkManager/p;->a:Ljava/util/ArrayList;
@@ -2059,8 +2083,8 @@
 
     move v1, v2
 
-    :goto_3b
-    if-ge v1, v3, :cond_54
+    :goto_46
+    if-ge v1, v3, :cond_5f
 
     sget-object v0, LaMao/apkManager/ApkInstallActivity;->n:LaMao/apkManager/p;
 
@@ -2074,7 +2098,7 @@
 
     iget-boolean v0, v0, LaMao/b/a;->m:Z
 
-    if-nez v0, :cond_50
+    if-nez v0, :cond_5b
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -2082,14 +2106,14 @@
 
     goto :goto_1f
 
-    :cond_50
+    :cond_5b
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
-    goto :goto_3b
+    goto :goto_46
 
-    :cond_54
+    :cond_5f
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2098,14 +2122,16 @@
 
     goto :goto_1f
 
-    :cond_5a
+    :cond_65
     const/16 v0, 0xca
 
     invoke-direct {p0, v0}, LaMao/apkManager/ApkInstallActivity;->b(I)V
 
     goto :goto_2a
 
-    :pswitch_data_60
+    nop
+
+    :pswitch_data_6c
     .packed-switch 0x7f060010
         :pswitch_9
         :pswitch_11
@@ -2229,17 +2255,13 @@
 
     iput-object v0, p0, LaMao/apkManager/ApkInstallActivity;->A:Landroid/widget/LinearLayout;
 
-    sget-object v2, LaMao/apkManager/ApkInstallActivity;->q:Landroid/app/Activity;
+    sget-object v0, LaMao/apkManager/ApkInstallActivity;->q:Landroid/app/Activity;
 
     const v0, 0x7f06000c
 
     invoke-virtual {p0, v0}, LaMao/apkManager/ApkInstallActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    invoke-static {v2, v0}, LaMao/a/a;->a(Landroid/content/Context;Landroid/widget/LinearLayout;)V
+    invoke-static {}, LaMao/a/a;->d()V
 
     const v0, 0x7f060010
 
@@ -2297,11 +2319,11 @@
 
     sget-boolean v0, LaMao/manager/d;->c:Z
 
-    if-eqz v0, :cond_e1
+    if-eqz v0, :cond_de
 
     move v0, v1
 
-    :goto_b1
+    :goto_ae
     invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
     invoke-virtual {p0, v4}, LaMao/apkManager/ApkInstallActivity;->findViewById(I)Landroid/view/View;
@@ -2334,7 +2356,7 @@
 
     sget-boolean v0, LaMao/apkManager/apkService;->a:Z
 
-    if-eqz v0, :cond_e3
+    if-eqz v0, :cond_e0
 
     sget-object v0, LaMao/apkManager/ApkInstallActivity;->k:Landroid/widget/ListView;
 
@@ -2342,21 +2364,21 @@
 
     invoke-virtual {v0}, LaMao/pullToRefesh/MyListView;->a()V
 
-    :cond_e0
-    :goto_e0
+    :cond_dd
+    :goto_dd
     return-void
 
-    :cond_e1
+    :cond_de
     const/4 v0, 0x4
 
-    goto :goto_b1
+    goto :goto_ae
 
-    :cond_e3
+    :cond_e0
     invoke-static {}, LaMao/appbackup/appbackupActivity;->d()I
 
     move-result v0
 
-    if-gtz v0, :cond_f5
+    if-gtz v0, :cond_f2
 
     sget-object v0, LaMao/apkManager/ApkInstallActivity;->p:Landroid/content/Context;
 
@@ -2368,7 +2390,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    :cond_f5
+    :cond_f2
     invoke-direct {p0}, LaMao/apkManager/ApkInstallActivity;->m()V
 
     sget-object v0, LaMao/apkManager/ApkInstallActivity;->a:Ljava/lang/Boolean;
@@ -2377,17 +2399,17 @@
 
     move-result v0
 
-    if-eqz v0, :cond_108
+    if-eqz v0, :cond_105
 
     sget-object v0, LaMao/apkManager/ApkInstallActivity;->n:LaMao/apkManager/p;
 
-    if-nez v0, :cond_e0
+    if-nez v0, :cond_dd
 
     invoke-virtual {p0}, LaMao/apkManager/ApkInstallActivity;->b()V
 
-    goto :goto_e0
+    goto :goto_dd
 
-    :cond_108
+    :cond_105
     iget-object v0, p0, LaMao/apkManager/ApkInstallActivity;->D:Landroid/os/Handler;
 
     const/16 v1, 0x6b
@@ -2396,7 +2418,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    goto :goto_e0
+    goto :goto_dd
 .end method
 
 .method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V

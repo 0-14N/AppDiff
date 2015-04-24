@@ -312,7 +312,7 @@
 
     .prologue
     .line 702
-    const v0, 0x7f060009
+    const v0, 0x7f070009
 
     .line 703
     new-instance v1, Lcom/wei/android/apis/ui/bd;
@@ -495,7 +495,7 @@
     if-eqz v0, :cond_63
 
     .line 866
-    const v0, 0x7f08004d
+    const v0, 0x7f09004d
 
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->a(I)V
 
@@ -548,7 +548,7 @@
     if-eqz v0, :cond_b9
 
     .line 874
-    const v0, 0x7f08000b
+    const v0, 0x7f09000b
 
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->a(I)V
 
@@ -556,7 +556,7 @@
 
     .line 876
     :cond_b9
-    const v0, 0x7f080009
+    const v0, 0x7f090009
 
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->a(I)V
 
@@ -741,7 +741,7 @@
     aput-object v3, v2, v7
 
     .line 199
-    sget-object v3, Lcom/wei/android/apis/b/f;->l:Ljava/lang/String;
+    sget-object v3, Lcom/wei/android/apis/b/g;->l:Ljava/lang/String;
 
     new-array v4, v7, [Ljava/lang/String;
 
@@ -1152,7 +1152,7 @@
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 685
-    const v2, 0x7f080026
+    const v2, 0x7f090026
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -1199,7 +1199,7 @@
 
     .prologue
     .line 732
-    const v0, 0x7f06000a
+    const v0, 0x7f07000a
 
     .line 733
     new-instance v1, Lcom/wei/android/apis/ui/h;
@@ -1224,7 +1224,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1, p0}, Lcom/wei/android/apis/c/e;->a(JLandroid/content/Context;)I
+    invoke-static {v0, v1, p0}, Lcom/wei/android/apis/c/f;->a(JLandroid/content/Context;)I
 
     .line 721
     iget-object v0, p0, Lcom/wei/android/apis/ui/FunctionActivity;->D:Lcom/wei/android/apis/ui/c/f;
@@ -1748,7 +1748,7 @@
 
     move-result-wide v0
 
-    invoke-static {p0, v0, v1}, Lcom/wei/android/apis/c/f;->a(Landroid/content/Context;J)I
+    invoke-static {p0, v0, v1}, Lcom/wei/android/apis/c/g;->a(Landroid/content/Context;J)I
 
     .line 774
     iget-object v0, p0, Lcom/wei/android/apis/ui/FunctionActivity;->D:Lcom/wei/android/apis/ui/c/f;
@@ -1790,7 +1790,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/FunctionActivity;->m:Landroid/view/animation/Animation;
 
     .line 402
-    const v0, 0x7f0b0070
+    const v0, 0x7f0c0070
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1801,7 +1801,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/FunctionActivity;->l:Landroid/widget/RelativeLayout;
 
     .line 403
-    const v0, 0x7f0b0072
+    const v0, 0x7f0c0072
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1812,7 +1812,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/FunctionActivity;->n:Landroid/widget/ImageView;
 
     .line 404
-    const v0, 0x7f0b0073
+    const v0, 0x7f0c0073
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1823,7 +1823,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/FunctionActivity;->o:Landroid/widget/TextView;
 
     .line 405
-    const v0, 0x7f0b0074
+    const v0, 0x7f0c0074
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1834,7 +1834,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/FunctionActivity;->p:Landroid/widget/TextView;
 
     .line 406
-    const v0, 0x7f0b0076
+    const v0, 0x7f0c0076
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1850,7 +1850,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 408
-    const v0, 0x7f0b0077
+    const v0, 0x7f0c0077
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1866,7 +1866,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 410
-    const v0, 0x7f0b0078
+    const v0, 0x7f0c0078
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1882,7 +1882,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 412
-    const v0, 0x7f0b007a
+    const v0, 0x7f0c007a
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1898,7 +1898,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 414
-    const v0, 0x7f0b007c
+    const v0, 0x7f0c007c
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1914,7 +1914,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 416
-    const v0, 0x7f0b007d
+    const v0, 0x7f0c007d
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1930,7 +1930,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 418
-    const v0, 0x7f0b0079
+    const v0, 0x7f0c0079
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1946,7 +1946,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 420
-    const v0, 0x7f0b007b
+    const v0, 0x7f0c007b
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1962,7 +1962,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 422
-    const v0, 0x7f0b007f
+    const v0, 0x7f0c007f
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -1973,7 +1973,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/FunctionActivity;->q:Landroid/widget/RelativeLayout;
 
     .line 423
-    const v0, 0x7f0b0075
+    const v0, 0x7f0c0075
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/FunctionActivity;->findViewById(I)Landroid/view/View;
 
@@ -2388,7 +2388,7 @@
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 
     .line 526
-    const v1, 0x7f080001
+    const v1, 0x7f090001
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -2398,7 +2398,7 @@
     move-result-object v1
 
     .line 528
-    const v2, 0x7f080082
+    const v2, 0x7f090082
 
     .line 527
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -2630,17 +2630,17 @@
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 657
-    const v1, 0x7f080001
+    const v1, 0x7f090001
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 658
-    const v1, 0x7f08000a
+    const v1, 0x7f09000a
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 659
-    const v1, 0x7f080047
+    const v1, 0x7f090047
 
     .line 660
     new-instance v2, Lcom/wei/android/apis/ui/bc;
@@ -2687,7 +2687,7 @@
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 783
-    const v1, 0x7f080026
+    const v1, 0x7f090026
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -2775,7 +2775,7 @@
     .line 818
     iget-object v0, p0, Lcom/wei/android/apis/ui/FunctionActivity;->k:Landroid/app/ProgressDialog;
 
-    const v1, 0x7f080001
+    const v1, 0x7f090001
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setTitle(I)V
 
@@ -2787,7 +2787,7 @@
     move-result-object v1
 
     .line 820
-    const v2, 0x7f080083
+    const v2, 0x7f090083
 
     .line 819
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -2858,10 +2858,10 @@
 
     .prologue
     .line 830
-    const v0, 0x7f080001
+    const v0, 0x7f090001
 
     .line 831
-    const v1, 0x7f08004d
+    const v1, 0x7f09004d
 
     .line 830
     invoke-static {p0, v0, v1}, Lcom/wei/android/apis/a/w;->a(Landroid/content/Context;II)V
@@ -2902,7 +2902,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lcom/wei/android/apis/c/e;->a(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v0, p0}, Lcom/wei/android/apis/c/f;->a(Ljava/lang/String;Landroid/content/Context;)V
 
     goto :goto_7
 
@@ -2916,7 +2916,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lcom/wei/android/apis/c/f;->b(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v0, p0}, Lcom/wei/android/apis/c/g;->b(Ljava/lang/String;Landroid/content/Context;)V
 
     goto :goto_7
 
@@ -3081,12 +3081,12 @@
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 
     .line 323
-    const v1, 0x7f08000f
+    const v1, 0x7f09000f
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 324
-    const v1, 0x7f080011
+    const v1, 0x7f090011
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -3127,7 +3127,7 @@
 
     .line 274
     :pswitch_data_ce
-    .packed-switch 0x7f0b0075
+    .packed-switch 0x7f0c0075
         :pswitch_c9
         :pswitch_8
         :pswitch_14
@@ -3221,7 +3221,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0003
+    const v1, 0x7f0b0003
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
@@ -3313,12 +3313,12 @@
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 
     .line 162
-    const v1, 0x7f08000f
+    const v1, 0x7f09000f
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 163
-    const v1, 0x7f080085
+    const v1, 0x7f090085
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -3355,7 +3355,7 @@
     nop
 
     :pswitch_data_3c
-    .packed-switch 0x7f0b00e7
+    .packed-switch 0x7f0c00e7
         :pswitch_9
     .end packed-switch
 .end method

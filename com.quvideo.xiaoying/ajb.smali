@@ -7,30 +7,22 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/quvideo/xiaoying/clip/adapter/ClipItem;
+.field final synthetic a:Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;
 
-.field private final synthetic b:Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$ExtMediaItem;
-
-.field private final synthetic c:I
-
-.field private final synthetic d:I
+.field private final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/quvideo/xiaoying/clip/adapter/ClipItem;Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$ExtMediaItem;II)V
-    .registers 5
+.method public constructor <init>(Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;I)V
+    .registers 3
 
     .prologue
     .line 1
-    iput-object p1, p0, Lajb;->a:Lcom/quvideo/xiaoying/clip/adapter/ClipItem;
+    iput-object p1, p0, Lajb;->a:Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;
 
-    iput-object p2, p0, Lajb;->b:Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$ExtMediaItem;
+    iput p2, p0, Lajb;->b:I
 
-    iput p3, p0, Lajb;->c:I
-
-    iput p4, p0, Lajb;->d:I
-
-    .line 143
+    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,140 +31,56 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .registers 11
+    .registers 7
 
     .prologue
-    const/16 v8, 0x1001
+    .line 142
+    iget-object v0, p0, Lajb;->a:Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;
 
-    const/4 v1, 0x1
+    iget-boolean v0, v0, Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;->isDeleteAnimComplete:Z
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_7
 
-    const-wide/16 v6, 0x0
-
-    .line 147
-    iget-object v0, p0, Lajb;->a:Lcom/quvideo/xiaoying/clip/adapter/ClipItem;
-
-    invoke-static {v0}, Lcom/quvideo/xiaoying/clip/adapter/ClipItem;->a(Lcom/quvideo/xiaoying/clip/adapter/ClipItem;)Lcom/quvideo/xiaoying/clip/adapter/ClipItem$a;
-
-    move-result-object v0
-
-    iget-object v3, v0, Lcom/quvideo/xiaoying/clip/adapter/ClipItem$a;->d:Landroid/widget/CheckBox;
-
-    iget-object v0, p0, Lajb;->b:Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$ExtMediaItem;
-
-    iget-wide v4, v0, Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$ExtMediaItem;->lFlag:J
-
-    cmp-long v0, v4, v6
-
-    if-eqz v0, :cond_4d
-
-    move v0, v1
-
-    :goto_17
-    invoke-virtual {v3, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
-
-    .line 148
-    iget-object v0, p0, Lajb;->b:Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$ExtMediaItem;
-
-    iget-wide v3, v0, Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$ExtMediaItem;->lFlag:J
-
-    cmp-long v0, v3, v6
-
-    if-nez v0, :cond_4f
-
-    .line 150
-    iget-object v0, p0, Lajb;->a:Lcom/quvideo/xiaoying/clip/adapter/ClipItem;
-
-    invoke-static {v0}, Lcom/quvideo/xiaoying/clip/adapter/ClipItem;->b(Lcom/quvideo/xiaoying/clip/adapter/ClipItem;)Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;
-
-    move-result-object v0
-
-    iget v2, p0, Lajb;->c:I
-
-    iget v3, p0, Lajb;->d:I
-
-    const-wide/16 v4, 0x1
-
-    invoke-virtual {v0, v2, v3, v4, v5}, Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;->setMediaItemFlag(IIJ)V
-
-    .line 151
-    iget-object v0, p0, Lajb;->a:Lcom/quvideo/xiaoying/clip/adapter/ClipItem;
-
-    invoke-static {v0}, Lcom/quvideo/xiaoying/clip/adapter/ClipItem;->c(Lcom/quvideo/xiaoying/clip/adapter/ClipItem;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lajb;->a:Lcom/quvideo/xiaoying/clip/adapter/ClipItem;
-
-    invoke-static {v2}, Lcom/quvideo/xiaoying/clip/adapter/ClipItem;->c(Lcom/quvideo/xiaoying/clip/adapter/ClipItem;)Landroid/os/Handler;
-
-    move-result-object v2
-
-    iget v3, p0, Lajb;->c:I
-
-    iget v4, p0, Lajb;->d:I
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v8, v3, v4, v1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    .line 157
-    :goto_4c
+    .line 149
+    :cond_6
+    :goto_6
     return-void
 
-    :cond_4d
-    move v0, v2
+    .line 145
+    :cond_7
+    iget-object v0, p0, Lajb;->a:Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;
+
+    iget v1, p0, Lajb;->b:I
+
+    iput v1, v0, Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;->nDelIndex:I
+
+    .line 146
+    iget-object v0, p0, Lajb;->a:Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;
+
+    iget-object v0, v0, Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;->mHandler:Landroid/os/Handler;
+
+    if-eqz v0, :cond_6
 
     .line 147
-    goto :goto_17
+    iget-object v0, p0, Lajb;->a:Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;
 
-    .line 154
-    :cond_4f
-    iget-object v0, p0, Lajb;->a:Lcom/quvideo/xiaoying/clip/adapter/ClipItem;
+    iget-object v0, v0, Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;->mHandler:Landroid/os/Handler;
 
-    invoke-static {v0}, Lcom/quvideo/xiaoying/clip/adapter/ClipItem;->b(Lcom/quvideo/xiaoying/clip/adapter/ClipItem;)Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;
+    iget-object v1, p0, Lajb;->a:Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;
 
-    move-result-object v0
+    iget-object v1, v1, Lcom/quvideo/xiaoying/storyboard/widget/ClipEffectGridAdapter;->mHandler:Landroid/os/Handler;
 
-    iget v1, p0, Lajb;->c:I
+    const/16 v2, 0x3002
 
-    iget v3, p0, Lajb;->d:I
+    iget v3, p0, Lajb;->b:I
 
-    invoke-virtual {v0, v1, v3, v6, v7}, Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;->setMediaItemFlag(IIJ)V
+    const/4 v4, 0x0
 
-    .line 155
-    iget-object v0, p0, Lajb;->a:Lcom/quvideo/xiaoying/clip/adapter/ClipItem;
-
-    invoke-static {v0}, Lcom/quvideo/xiaoying/clip/adapter/ClipItem;->c(Lcom/quvideo/xiaoying/clip/adapter/ClipItem;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lajb;->a:Lcom/quvideo/xiaoying/clip/adapter/ClipItem;
-
-    invoke-static {v1}, Lcom/quvideo/xiaoying/clip/adapter/ClipItem;->c(Lcom/quvideo/xiaoying/clip/adapter/ClipItem;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    iget v3, p0, Lajb;->c:I
-
-    iget v4, p0, Lajb;->d:I
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v8, v3, v4, v2}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    goto :goto_4c
+    goto :goto_6
 .end method

@@ -167,9 +167,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/community/user/ContactsPage;->t:Ljava/util/ArrayList;
 
     .line 409
-    new-instance v0, Lrm;
+    new-instance v0, Lkt;
 
-    invoke-direct {v0, p0}, Lrm;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPage;)V
+    invoke-direct {v0, p0}, Lkt;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPage;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/ContactsPage;->u:Landroid/widget/AbsListView$OnScrollListener;
 
@@ -235,9 +235,9 @@
     move-result-object v0
 
     .line 299
-    new-instance v1, Lrn;
+    new-instance v1, Lku;
 
-    invoke-direct {v1, p0, p1}, Lrn;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPage;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lku;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPage;Ljava/lang/String;)V
 
     .line 298
     invoke-virtual {v0, p1, v1}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -468,7 +468,7 @@
     :pswitch_b
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/ContactsPage;->g:Landroid/widget/TextView;
 
-    const v1, 0x7f0a034b
+    const v1, 0x7f0a0328
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -494,7 +494,7 @@
     :pswitch_25
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/ContactsPage;->g:Landroid/widget/TextView;
 
-    const v1, 0x7f0a034c
+    const v1, 0x7f0a0329
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -546,9 +546,9 @@
     .line 327
     const-string/jumbo v1, "follow.add"
 
-    new-instance v2, Lro;
+    new-instance v2, Lkv;
 
-    invoke-direct {v2, p0}, Lro;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPage;)V
+    invoke-direct {v2, p0}, Lkv;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPage;)V
 
     .line 326
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -561,9 +561,9 @@
     .line 361
     const-string/jumbo v1, "follow.remove"
 
-    new-instance v2, Lrp;
+    new-instance v2, Lkw;
 
-    invoke-direct {v2, p0}, Lrp;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPage;)V
+    invoke-direct {v2, p0}, Lkw;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPage;)V
 
     .line 360
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -890,7 +890,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/ContactsPage;->g:Landroid/widget/TextView;
 
     .line 198
-    const v0, 0x7f060445
+    const v0, 0x7f060430
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/user/ContactsPage;->findViewById(I)Landroid/view/View;
 
@@ -904,7 +904,7 @@
     invoke-direct {p0}, Lcom/quvideo/xiaoying/app/community/user/ContactsPage;->b()V
 
     .line 202
-    const v0, 0x7f0604a3
+    const v0, 0x7f06048e
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/user/ContactsPage;->findViewById(I)Landroid/view/View;
 
@@ -915,7 +915,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/ContactsPage;->h:Landroid/widget/TextView;
 
     .line 203
-    const v0, 0x7f0604a2
+    const v0, 0x7f06048d
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/user/ContactsPage;->findViewById(I)Landroid/view/View;
 

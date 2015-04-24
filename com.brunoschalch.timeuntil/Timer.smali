@@ -3112,7 +3112,7 @@
 
     .line 2624
     .local v80, "since":Landroid/widget/TextView;
-    const-string v96, "Time Since"
+    const-string v96, "\u65f6\u95f4\u8de8\u5ea6"
 
     move-object/from16 v0, v80
 
@@ -3123,7 +3123,7 @@
     .line 2630
     .end local v80    # "since":Landroid/widget/TextView;
     :cond_18a
-    const-string v96, "Timer"
+    const-string v96, "\u8ba1\u65f6\u5668"
 
     sget-boolean v97, Lcom/brunoschalch/timeuntil/Timer;->defdateformat:Z
 
@@ -3139,7 +3139,7 @@
 
     .line 2631
     .local v16, "dateformatconfig":Z
-    const-string v96, "Seconds"
+    const-string v96, "\u79d2"
 
     sget-boolean v97, Lcom/brunoschalch/timeuntil/Timer;->defseconds:Z
 
@@ -3155,7 +3155,7 @@
 
     .line 2632
     .local v75, "secondsconfig":Z
-    const-string v96, "Minutes"
+    const-string v96, "\u5206\u949f"
 
     sget-boolean v97, Lcom/brunoschalch/timeuntil/Timer;->defminutes:Z
 
@@ -3171,7 +3171,7 @@
 
     .line 2633
     .local v58, "minutesconfig":Z
-    const-string v96, "Hours"
+    const-string v96, "\u5c0f\u65f6"
 
     sget-boolean v97, Lcom/brunoschalch/timeuntil/Timer;->defhours:Z
 
@@ -3187,7 +3187,7 @@
 
     .line 2634
     .local v44, "hoursconfig":Z
-    const-string v96, "Days"
+    const-string v96, "\u5929"
 
     sget-boolean v97, Lcom/brunoschalch/timeuntil/Timer;->defdays:Z
 
@@ -3203,7 +3203,7 @@
 
     .line 2635
     .local v24, "daysconfig":Z
-    const-string v96, "Working Days"
+    const-string v96, "\u5de5\u4f5c\u65e5"
 
     sget-boolean v97, Lcom/brunoschalch/timeuntil/Timer;->defweekday:Z
 
@@ -3219,7 +3219,7 @@
 
     .line 2636
     .local v90, "weekdayconfig":Z
-    const-string v96, "Weeks"
+    const-string v96, "\u661f\u671f"
 
     sget-boolean v97, Lcom/brunoschalch/timeuntil/Timer;->defweeks:Z
 
@@ -3235,7 +3235,7 @@
 
     .line 2637
     .local v91, "weeksconfig":Z
-    const-string v96, "Months"
+    const-string v96, "\u6708"
 
     sget-boolean v97, Lcom/brunoschalch/timeuntil/Timer;->defmonths:Z
 
@@ -3251,7 +3251,7 @@
 
     .line 2638
     .local v62, "monthsconfig":Z
-    const-string v96, "Years"
+    const-string v96, "\u5e74"
 
     sget-boolean v97, Lcom/brunoschalch/timeuntil/Timer;->defyears:Z
 
@@ -5151,7 +5151,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 3101
-    const-string v96, "Share"
+    const-string v96, "\u5206\u4eab"
 
     move-object/from16 v0, v79
 
@@ -5343,7 +5343,7 @@
     if-ne v0, v1, :cond_91f
 
     .line 2711
-    const-string v96, "This minute\n"
+    const-string v96, "\u8fd9\u4e00\u5206\u949f\n"
 
     invoke-static/range {v96 .. v96}, Landroid/text/SpannableString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannableString;
 
@@ -5354,7 +5354,7 @@
 
     .line 2716
     :cond_91f
-    const-string v96, "Less than a minute\n"
+    const-string v96, "\u5c11\u4e8e\u4e00\u5206\u949f\n"
 
     invoke-static/range {v96 .. v96}, Landroid/text/SpannableString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannableString;
 
@@ -5407,7 +5407,7 @@
 
     .line 2745
     :cond_94b
-    const-string v96, "Less than an hour\n"
+    const-string v96, "\u5c11\u4e8e\u4e00\u5206\u949f\n"
 
     invoke-static/range {v96 .. v96}, Landroid/text/SpannableString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannableString;
 
@@ -5460,7 +5460,7 @@
 
     .line 2773
     :cond_977
-    const-string v96, "Less than a day\n"
+    const-string v96, "\u5c11\u4e8e\u4e00\u5929\n"
 
     invoke-static/range {v96 .. v96}, Landroid/text/SpannableString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannableString;
 
@@ -5513,7 +5513,7 @@
 
     .line 2800
     :cond_9a3
-    const-string v96, "Less than a week\n"
+    const-string v96, "\u5c11\u4e8e\u4e00\u661f\u671f\n"
 
     invoke-static/range {v96 .. v96}, Landroid/text/SpannableString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannableString;
 
@@ -5580,7 +5580,7 @@
 
     .line 2833
     :cond_9d9
-    const-string v96, "Less than a month\n"
+    const-string v96, "\u5c11\u4e8e\u4e00\u4e2a\u6708\n"
 
     invoke-static/range {v96 .. v96}, Landroid/text/SpannableString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannableString;
 
@@ -5635,7 +5635,7 @@
 
     .line 2861
     :cond_a05
-    const-string v96, "Less than a year\n"
+    const-string v96, "\u5c11\u4e8e\u4e00\u5e74\n"
 
     invoke-static/range {v96 .. v96}, Landroid/text/SpannableString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannableString;
 
@@ -5767,7 +5767,7 @@
     .end local v94    # "wochenendetag":Landroid/text/SpannableString;
     .end local v95    # "yearsconfig":Z
     :cond_a56
-    const-string v96, "Done"
+    const-string v96, "\u5df2\u7ed3\u675f"
 
     move-object/from16 v0, v84
 
@@ -6440,7 +6440,7 @@
 
     move/from16 v0, v18
 
-    if-lt v0, v2, :cond_25e
+    if-lt v0, v2, :cond_25b
 
     .line 312
     const-string v2, "lastcreatedid"
@@ -6508,7 +6508,7 @@
 
     move/from16 v0, v18
 
-    if-lt v0, v2, :cond_289
+    if-lt v0, v2, :cond_286
 
     .line 406
     const v2, 0x7f060013
@@ -6700,8 +6700,6 @@
     .local v10, "adRequest":Lcom/google/android/gms/ads/AdRequest;
     sget-object v2, Lcom/brunoschalch/timeuntil/Timer;->adView:Lcom/google/android/gms/ads/AdView;
 
-    invoke-virtual {v2, v10}, Lcom/google/android/gms/ads/AdView;->loadAd(Lcom/google/android/gms/ads/AdRequest;)V
-
     .line 458
     sget-object v2, Lcom/brunoschalch/timeuntil/Timer;->adView:Lcom/google/android/gms/ads/AdView;
 
@@ -6718,7 +6716,7 @@
     .line 296
     .end local v10    # "adRequest":Lcom/google/android/gms/ads/AdRequest;
     .end local v28    # "showthead":Z
-    :cond_25e
+    :cond_25b
     const-string v13, ""
 
     .line 297
@@ -6728,14 +6726,14 @@
     aget-object v13, v2, v18
 
     .line 301
-    :try_start_264
+    :try_start_261
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_27a
+    if-eqz v2, :cond_277
 
     .line 303
     move-object/from16 v0, p0
@@ -6751,18 +6749,18 @@
     add-int/lit8 v3, v3, -0x2
 
     invoke-virtual {v2, v3}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
-    :try_end_27a
-    .catch Ljava/lang/Exception; {:try_start_264 .. :try_end_27a} :catch_27e
+    :try_end_277
+    .catch Ljava/lang/Exception; {:try_start_261 .. :try_end_277} :catch_27b
 
     .line 294
-    :cond_27a
-    :goto_27a
+    :cond_277
+    :goto_277
     add-int/lit8 v18, v18, 0x1
 
     goto/16 :goto_154
 
     .line 307
-    :catch_27e
+    :catch_27b
     move-exception v17
 
     .line 308
@@ -6775,13 +6773,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_27a
+    goto :goto_277
 
     .line 393
     .end local v13    # "comparar":Ljava/lang/String;
     .end local v17    # "e":Ljava/lang/Exception;
     .restart local v28    # "showthead":Z
-    :cond_289
+    :cond_286
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v21
@@ -6800,7 +6798,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_2a7
+    if-nez v2, :cond_2a4
 
     .line 397
     invoke-static {v9}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
@@ -6815,14 +6813,14 @@
     .local v23, "millisdearray":J
     cmp-long v2, v23, v21
 
-    if-lez v2, :cond_2a7
+    if-lez v2, :cond_2a4
 
     .line 399
     const/16 v28, 0x0
 
     .line 392
     .end local v23    # "millisdearray":J
-    :cond_2a7
+    :cond_2a4
     add-int/lit8 v18, v18, 0x1
 
     goto/16 :goto_18f
@@ -7574,7 +7572,7 @@
     invoke-direct/range {p0 .. p0}, Lcom/brunoschalch/timeuntil/Timer;->precargarenram()V
 
     .line 900
-    const-string v34, "Countdown Deleted"
+    const-string v34, "\u5012\u8ba1\u65f6\u5df2\u88ab\u5220\u9664"
 
     const/16 v35, 0x0
 

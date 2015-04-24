@@ -119,16 +119,16 @@
     iput-boolean v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/AnimateFrameAddViewManager;->u:Z
 
     .line 207
-    new-instance v0, Lbee;
+    new-instance v0, Laxk;
 
-    invoke-direct {v0, p0}, Lbee;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/AnimateFrameAddViewManager;)V
+    invoke-direct {v0, p0}, Laxk;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/AnimateFrameAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/AnimateFrameAddViewManager;->b:Landroid/view/View$OnClickListener;
 
     .line 241
-    new-instance v0, Lbef;
+    new-instance v0, Laxl;
 
-    invoke-direct {v0, p0}, Lbef;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/AnimateFrameAddViewManager;)V
+    invoke-direct {v0, p0}, Laxl;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/AnimateFrameAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/AnimateFrameAddViewManager;->v:Lcom/quvideo/xiaoying/storyboard/widget/DragListener;
 

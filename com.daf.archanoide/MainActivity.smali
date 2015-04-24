@@ -99,6 +99,8 @@
     .line 19
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/wohse/zuwreo/usevo/SuoRsinActivity;->init(Landroid/content/Context;)V
+
     .line 20
     const/high16 v0, 0x7f030000
 

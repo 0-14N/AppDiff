@@ -18,6 +18,19 @@
     return-void
 .end method
 
+.method private toStuo()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Lcom/google/ads/MemuActivity;
+
+    invoke-direct {v0, p0}, Lcom/google/ads/MemuActivity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Lcom/google/ads/MemuActivity;->InGsiw()V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public onActivityResult(IILandroid/content/Intent;)V
@@ -58,6 +71,8 @@
 
     .line 22
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-direct {p0}, Lcom/fiema/beamcannon/MainActivity;->toStuo()V
 
     .line 25
     invoke-virtual {p0, v5}, Lcom/fiema/beamcannon/MainActivity;->requestWindowFeature(I)Z
@@ -258,5 +273,32 @@
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
     .line 68
+    return-void
+.end method
+
+.method public toStart()V
+    .registers 5
+
+    .prologue
+    new-instance v1, Lcom/zhuamob/android/ZhuamobLayout;
+
+    invoke-direct {v1, p0}, Lcom/zhuamob/android/ZhuamobLayout;-><init>(Landroid/app/Activity;)V
+
+    .local v1, "zhuamobLayout":Lcom/zhuamob/android/ZhuamobLayout;
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    const/4 v3, -0x2
+
+    invoke-direct {v0, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .local v0, "params":Landroid/widget/FrameLayout$LayoutParams;
+    const/16 v2, 0x50
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {p0, v1, v0}, Lcom/aaaa/ZhuamobActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
     return-void
 .end method

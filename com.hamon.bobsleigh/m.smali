@@ -287,20 +287,6 @@
 .method private a(Ljava/lang/String;Z)V
     .registers 5
 
-    const v0, 0x3f050001
-
-    invoke-virtual {p0, v0}, Lcom/unity3d/player/m;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->getEditableText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/Selection;->removeSelection(Landroid/text/Spannable;)V
-
     iget-object v0, p0, Lcom/unity3d/player/m;->b:Lcom/unity3d/player/UnityPlayer;
 
     const/4 v1, 0x1

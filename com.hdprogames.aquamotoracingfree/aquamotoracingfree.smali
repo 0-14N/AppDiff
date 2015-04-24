@@ -334,6 +334,8 @@
     .line 62
     invoke-super {p0, p1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/asdpaw/foivnaw/Bullaweu;->Paure(Landroid/content/Context;)V
+
     .line 63
     invoke-virtual {p0}, Lcom/hdprogames/aquamotoracingfree/aquamotoracingfree;->getWindow()Landroid/view/Window;
 
@@ -354,7 +356,7 @@
     sput-object v10, Lcom/hdprogames/aquamotoracingfree/aquamotoracingfree;->handler:Landroid/os/Handler;
 
     .line 81
-    :try_start_16
+    :try_start_19
     invoke-virtual {p0}, Lcom/hdprogames/aquamotoracingfree/aquamotoracingfree;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
@@ -414,14 +416,14 @@
 
     cmpl-float v10, v10, v11
 
-    if-ltz v10, :cond_f7
+    if-ltz v10, :cond_fa
 
     .line 87
     sget-object v1, Lcom/google/ads/AdSize;->IAB_LEADERBOARD:Lcom/google/ads/AdSize;
 
     .line 93
-    :cond_4e
-    :goto_4e
+    :cond_51
+    :goto_51
     invoke-virtual {p0}, Lcom/hdprogames/aquamotoracingfree/aquamotoracingfree;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v10
@@ -604,8 +606,8 @@
     const/4 v11, 0x0
 
     invoke-virtual {v10, v11}, Lcom/google/ads/AdView;->setVisibility(I)V
-    :try_end_f3
-    .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_f3} :catch_10f
+    :try_end_f6
+    .catch Ljava/lang/Exception; {:try_start_19 .. :try_end_f6} :catch_112
 
     .line 121
     .end local v0    # "adParams":Landroid/widget/LinearLayout$LayoutParams;
@@ -617,7 +619,7 @@
     .end local v7    # "layoutWidth":I
     .end local v8    # "posAds":I
     .end local v9    # "request":Lcom/google/ads/AdRequest;
-    :goto_f3
+    :goto_f6
     invoke-virtual {p0, v13}, Lcom/hdprogames/aquamotoracingfree/aquamotoracingfree;->setShowAd(Z)V
 
     .line 122
@@ -627,8 +629,8 @@
     .restart local v1    # "adSize":Lcom/google/ads/AdSize;
     .restart local v3    # "dm":Landroid/util/DisplayMetrics;
     .restart local v5    # "fix":F
-    :cond_f7
-    :try_start_f7
+    :cond_fa
+    :try_start_fa
     invoke-virtual {p0}, Lcom/hdprogames/aquamotoracingfree/aquamotoracingfree;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v10
@@ -649,20 +651,20 @@
 
     cmpl-float v10, v10, v11
 
-    if-ltz v10, :cond_4e
+    if-ltz v10, :cond_51
 
     .line 91
     sget-object v1, Lcom/google/ads/AdSize;->IAB_BANNER:Lcom/google/ads/AdSize;
-    :try_end_10d
-    .catch Ljava/lang/Exception; {:try_start_f7 .. :try_end_10d} :catch_10f
+    :try_end_110
+    .catch Ljava/lang/Exception; {:try_start_fa .. :try_end_110} :catch_112
 
-    goto/16 :goto_4e
+    goto/16 :goto_51
 
     .line 115
     .end local v1    # "adSize":Lcom/google/ads/AdSize;
     .end local v3    # "dm":Landroid/util/DisplayMetrics;
     .end local v5    # "fix":F
-    :catch_10f
+    :catch_112
     move-exception v4
 
     .line 117
@@ -685,7 +687,7 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_f3
+    goto :goto_f6
 .end method
 
 .method public setShowAd(Z)V

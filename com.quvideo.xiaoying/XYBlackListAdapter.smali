@@ -67,16 +67,16 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter;->e:Landroid/util/SparseBooleanArray;
 
     .line 122
-    new-instance v0, Lse;
+    new-instance v0, Lll;
 
-    invoke-direct {v0, p0}, Lse;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter;)V
+    invoke-direct {v0, p0}, Lll;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter;->f:Landroid/view/View$OnClickListener;
 
     .line 135
-    new-instance v0, Lsf;
+    new-instance v0, Llm;
 
-    invoke-direct {v0, p0}, Lsf;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter;)V
+    invoke-direct {v0, p0}, Llm;-><init>(Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter;->g:Landroid/view/View$OnClickListener;
 
@@ -112,7 +112,7 @@
     const/16 v2, 0x8
 
     .line 109
-    const v0, 0x7f0604a5
+    const v0, 0x7f060490
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 111
-    const v1, 0x7f0604a6
+    const v1, 0x7f060491
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -138,7 +138,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     .line 113
-    const v1, 0x7f0604a4
+    const v1, 0x7f06048f
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -153,7 +153,7 @@
     if-eqz p1, :cond_30
 
     .line 116
-    const v1, 0x7f0a03c1
+    const v1, 0x7f0a039e
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -163,7 +163,7 @@
 
     .line 118
     :cond_30
-    const v1, 0x7f0a03c0
+    const v1, 0x7f0a039d
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -331,7 +331,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter$a;->a:Landroid/widget/ImageView;
 
     .line 85
-    const v0, 0x7f060486
+    const v0, 0x7f060471
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -342,7 +342,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter$a;->b:Landroid/widget/ImageView;
 
     .line 86
-    const v0, 0x7f060488
+    const v0, 0x7f060473
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -353,7 +353,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/XYBlackListAdapter$a;->c:Landroid/widget/TextView;
 
     .line 87
-    const v0, 0x7f060487
+    const v0, 0x7f060472
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

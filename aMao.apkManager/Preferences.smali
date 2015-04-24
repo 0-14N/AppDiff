@@ -71,6 +71,25 @@
     goto :goto_f
 .end method
 
+.method private a(Ljava/lang/String;)V
+    .registers 4
+
+    invoke-virtual {p0, p1}, LaMao/apkManager/Preferences;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_d
+
+    invoke-virtual {p0}, LaMao/apkManager/Preferences;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+
+    :cond_d
+    return-void
+.end method
+
 .method private a()Z
     .registers 5
 
@@ -212,29 +231,49 @@
 
     move-result v0
 
-    if-nez v0, :cond_69
+    if-nez v0, :cond_60
 
     invoke-virtual {p0}, LaMao/apkManager/Preferences;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
+    const-string v0, "mark"
+
+    invoke-direct {p0, v0}, LaMao/apkManager/Preferences;->a(Ljava/lang/String;)V
+
+    const-string v0, "more_app"
+
+    invoke-direct {p0, v0}, LaMao/apkManager/Preferences;->a(Ljava/lang/String;)V
+
+    :cond_60
+    invoke-static {p0}, LaMao/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
+
     move-result-object v0
 
-    const-string v1, "mark"
+    const-string v1, "amazon"
 
-    invoke-virtual {p0, v1}, LaMao/apkManager/Preferences;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result-object v1
+    move-result v0
 
-    invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    if-nez v0, :cond_78
 
-    const-string v1, "more_app"
+    invoke-static {p0}, LaMao/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, LaMao/apkManager/Preferences;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "samsung"
 
-    invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    :cond_69
+    move-result v0
+
+    if-eqz v0, :cond_7d
+
+    :cond_78
+    const-string v0, "more_app"
+
+    invoke-direct {p0, v0}, LaMao/apkManager/Preferences;->a(Ljava/lang/String;)V
+
+    :cond_7d
     return-void
 .end method
 
@@ -433,7 +472,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_97
+    if-eqz v0, :cond_d0
 
     invoke-static {p0}, LaMao/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
 
@@ -487,7 +526,19 @@
     goto :goto_31
 
     :cond_90
-    const-string v0, "market://details?id=aMao.apkManager"
+    invoke-static {p0}, LaMao/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "amazon"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a3
+
+    const-string v0, "http://www.amazon.com/gp/mas/dl/android?p=aMao.apkManager"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -495,7 +546,55 @@
 
     goto :goto_83
 
-    :cond_97
+    :cond_a3
+    invoke-static {p0}, LaMao/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "samsung"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b6
+
+    const-string v0, "samsungapps://ProductDetail/aMao.apkManager"
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    goto :goto_83
+
+    :cond_b6
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "market://details?id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, LaMao/apkManager/Preferences;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v1
+
+    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    goto :goto_83
+
+    :cond_d0
     const-string v0, "more_app"
 
     invoke-virtual {p2}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
@@ -506,7 +605,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_b8
+    if-eqz v0, :cond_f1
 
     const-string v0, "market://search?q=pub:lihywh"
 
@@ -520,19 +619,19 @@
 
     invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    :try_start_b0
+    :try_start_e9
     invoke-virtual {p0, v1}, LaMao/apkManager/Preferences;->startActivity(Landroid/content/Intent;)V
-    :try_end_b3
-    .catch Ljava/lang/Exception; {:try_start_b0 .. :try_end_b3} :catch_b5
+    :try_end_ec
+    .catch Ljava/lang/Exception; {:try_start_e9 .. :try_end_ec} :catch_ee
 
     goto/16 :goto_31
 
-    :catch_b5
+    :catch_ee
     move-exception v0
 
     goto/16 :goto_31
 
-    :cond_b8
+    :cond_f1
     const-string v0, "version_name"
 
     invoke-virtual {p2}, Landroid/preference/Preference;->getKey()Ljava/lang/String;

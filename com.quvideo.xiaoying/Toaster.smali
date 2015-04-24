@@ -83,9 +83,9 @@
     .line 37
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lbdt;
+    new-instance v1, Lawz;
 
-    invoke-direct {v1, p0}, Lbdt;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/Toaster;)V
+    invoke-direct {v1, p0}, Lawz;-><init>(Lcom/quvideo/xiaoying/videoeditor/util/Toaster;)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 

@@ -7,65 +7,76 @@
 
 
 # instance fields
-.field final synthetic a:Lorg/gdb/android/client/TestActivity;
+.field final synthetic a:Lorg/gdb/android/client/UseCouponActivity;
+
+.field private b:Lorg/gdb/android/client/vo/CouponVO;
 
 
 # direct methods
-.method constructor <init>(Lorg/gdb/android/client/TestActivity;)V
+.method public constructor <init>(Lorg/gdb/android/client/UseCouponActivity;Lorg/gdb/android/client/vo/CouponVO;)V
+    .registers 3
+
+    .prologue
+    .line 142
+    iput-object p1, p0, Lorg/gdb/android/client/ne;->a:Lorg/gdb/android/client/UseCouponActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 143
+    iput-object p2, p0, Lorg/gdb/android/client/ne;->b:Lorg/gdb/android/client/vo/CouponVO;
+
+    .line 144
+    return-void
+.end method
+
+.method static synthetic a(Lorg/gdb/android/client/ne;)Lorg/gdb/android/client/vo/CouponVO;
     .registers 2
 
     .prologue
-    .line 1
-    iput-object p1, p0, Lorg/gdb/android/client/ne;->a:Lorg/gdb/android/client/TestActivity;
+    .line 140
+    iget-object v0, p0, Lorg/gdb/android/client/ne;->b:Lorg/gdb/android/client/vo/CouponVO;
 
-    .line 128
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .registers 4
+    .registers 5
 
     .prologue
-    .line 132
-    iget-object v0, p0, Lorg/gdb/android/client/ne;->a:Lorg/gdb/android/client/TestActivity;
+    .line 149
+    new-instance v0, Lorg/gdb/android/client/widget/ConfirmDialog;
 
-    invoke-static {v0}, Lorg/gdb/android/client/TestActivity;->a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lorg/gdb/android/client/ne;->a:Lorg/gdb/android/client/UseCouponActivity;
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lorg/gdb/android/client/widget/ConfirmDialog;-><init>(Landroid/content/Context;)V
 
-    if-eqz v0, :cond_21
+    .line 150
+    invoke-virtual {v0}, Lorg/gdb/android/client/widget/ConfirmDialog;->show()V
 
-    .line 133
-    iget-object v0, p0, Lorg/gdb/android/client/ne;->a:Lorg/gdb/android/client/TestActivity;
+    .line 151
+    iget-object v1, p0, Lorg/gdb/android/client/ne;->a:Lorg/gdb/android/client/UseCouponActivity;
 
-    invoke-static {v0}, Lorg/gdb/android/client/TestActivity;->a(Lorg/gdb/android/client/TestActivity;)Landroid/content/SharedPreferences;
+    const v2, 0x7f0800c9
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Lorg/gdb/android/client/UseCouponActivity;->getString(I)Ljava/lang/String;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/widget/ConfirmDialog;->a(Ljava/lang/String;)V
 
-    .line 134
-    const-string v1, "clicked_fave_shops_item"
+    .line 152
+    invoke-virtual {v0}, Lorg/gdb/android/client/widget/ConfirmDialog;->a()Landroid/widget/Button;
 
-    invoke-interface {v0, v1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    move-result-object v1
 
-    .line 135
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    new-instance v2, Lorg/gdb/android/client/nf;
 
-    .line 136
-    iget-object v0, p0, Lorg/gdb/android/client/ne;->a:Lorg/gdb/android/client/TestActivity;
+    invoke-direct {v2, p0, v0}, Lorg/gdb/android/client/nf;-><init>(Lorg/gdb/android/client/ne;Lorg/gdb/android/client/widget/ConfirmDialog;)V
 
-    const-string v1, "cleared fave item footprint success!"
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-static {v0, v1}, Lorg/gdb/android/client/utils/v;->d(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 138
-    :cond_21
+    .line 160
     return-void
 .end method

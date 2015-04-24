@@ -18,10 +18,10 @@
     .registers 2
 
     .prologue
-    .line 14
-    invoke-static {p0}, Lcom/ztapps/saverdoctor/h/b;->b(Landroid/content/Context;)Lcom/ztapps/saverdoctor/h/b;
+    .line 12
+    new-instance v0, Lcom/ztapps/saverdoctor/h/b;
 
-    move-result-object v0
+    invoke-direct {v0}, Lcom/ztapps/saverdoctor/h/b;-><init>()V
 
     return-object v0
 .end method

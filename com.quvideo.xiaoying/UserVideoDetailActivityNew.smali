@@ -200,16 +200,16 @@
     iput-boolean v2, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->T:Z
 
     .line 652
-    new-instance v0, Lmy;
+    new-instance v0, Lgf;
 
-    invoke-direct {v0, p0}, Lmy;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;)V
+    invoke-direct {v0, p0}, Lgf;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->U:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     .line 668
-    new-instance v0, Lmz;
+    new-instance v0, Lgg;
 
-    invoke-direct {v0, p0}, Lmz;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;)V
+    invoke-direct {v0, p0}, Lgg;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->V:Landroid/widget/AbsListView$OnScrollListener;
 
@@ -241,7 +241,7 @@
     .line 788
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->t:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0604a4
+    const v1, 0x7f06048f
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -252,7 +252,7 @@
     .line 789
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->t:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f0604a5
+    const v2, 0x7f060490
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -264,7 +264,7 @@
     if-nez p1, :cond_48
 
     .line 791
-    const v2, 0x7f0a034d
+    const v2, 0x7f0a032a
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -290,7 +290,7 @@
     .line 798
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->t:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f020565
+    const v1, 0x7f02054b
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
@@ -548,7 +548,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 407
-    const v0, 0x7f060443
+    const v0, 0x7f06042e
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -733,9 +733,9 @@
     const-string/jumbo v2, "user.info"
 
     .line 442
-    new-instance v3, Lna;
+    new-instance v3, Lgh;
 
-    invoke-direct {v3, p0}, Lna;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;)V
+    invoke-direct {v3, p0}, Lgh;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;)V
 
     .line 440
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -785,7 +785,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 481
-    const v0, 0x7f060445
+    const v0, 0x7f060430
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -796,7 +796,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->M:Landroid/widget/LinearLayout;
 
     .line 483
-    const v0, 0x7f060444
+    const v0, 0x7f06042f
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -907,9 +907,9 @@
     .line 602
     const-string/jumbo v1, "follow.add"
 
-    new-instance v2, Lnb;
+    new-instance v2, Lgi;
 
-    invoke-direct {v2, p0}, Lnb;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;)V
+    invoke-direct {v2, p0}, Lgi;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;)V
 
     .line 601
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -941,7 +941,7 @@
     .line 813
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->t:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0604a4
+    const v1, 0x7f06048f
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -952,7 +952,7 @@
     .line 814
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->t:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f0604a5
+    const v2, 0x7f060490
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -961,7 +961,7 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 815
-    const v2, 0x7f0a034e
+    const v2, 0x7f0a032b
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -987,7 +987,7 @@
     .line 819
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->t:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f020564
+    const v1, 0x7f02054a
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
@@ -1004,9 +1004,9 @@
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->setAnimation(Landroid/view/animation/Animation;)V
 
     .line 822
-    new-instance v1, Lnc;
+    new-instance v1, Lgj;
 
-    invoke-direct {v1, p0}, Lnc;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;)V
+    invoke-direct {v1, p0}, Lgj;-><init>(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -1778,7 +1778,7 @@
     .line 358
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityNew;->s:Landroid/widget/TextView;
 
-    const v1, 0x7f0a0365
+    const v1, 0x7f0a0342
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

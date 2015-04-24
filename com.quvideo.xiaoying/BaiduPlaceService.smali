@@ -147,9 +147,9 @@
 
     const-string/jumbo v2, "app.location.list"
 
-    new-instance v3, Lvo;
+    new-instance v3, Lov;
 
-    invoke-direct {v3, p0, v0, p6}, Lvo;-><init>(Lcom/quvideo/xiaoying/app/location/BaiduPlaceService;Ljava/util/ArrayList;Lcom/quvideo/xiaoying/app/location/PlaceListener;)V
+    invoke-direct {v3, p0, v0, p6}, Lov;-><init>(Lcom/quvideo/xiaoying/app/location/BaiduPlaceService;Ljava/util/ArrayList;Lcom/quvideo/xiaoying/app/location/PlaceListener;)V
 
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 

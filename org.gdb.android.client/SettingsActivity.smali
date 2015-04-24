@@ -26,7 +26,7 @@
 
 .field private j:Landroid/content/SharedPreferences;
 
-.field private k:Lorg/gdb/android/client/kr;
+.field private k:Lorg/gdb/android/client/ko;
 
 .field private l:Lorg/gdb/android/client/remote/y;
 
@@ -38,7 +38,7 @@
     .registers 1
 
     .prologue
-    .line 48
+    .line 35
     const-class v0, Lorg/gdb/android/client/SettingsActivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -47,7 +47,7 @@
 
     sput-object v0, Lorg/gdb/android/client/SettingsActivity;->a:Ljava/lang/String;
 
-    .line 46
+    .line 33
     return-void
 .end method
 
@@ -55,52 +55,75 @@
     .registers 2
 
     .prologue
-    .line 46
+    .line 33
     invoke-direct {p0}, Lorg/gdb/android/client/NullImageActivity;-><init>()V
 
-    .line 65
+    .line 52
     new-instance v0, Lorg/gdb/android/client/kb;
 
     invoke-direct {v0, p0}, Lorg/gdb/android/client/kb;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->l:Lorg/gdb/android/client/remote/y;
 
-    .line 86
-    new-instance v0, Lorg/gdb/android/client/kh;
+    .line 73
+    new-instance v0, Lorg/gdb/android/client/ke;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/kh;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/ke;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->m:Lorg/gdb/android/client/remote/x;
 
-    .line 46
+    .line 33
     return-void
 .end method
 
-.method static synthetic a()Ljava/lang/String;
-    .registers 1
+.method static synthetic a(Lorg/gdb/android/client/SettingsActivity;)Lorg/gdb/android/client/ko;
+    .registers 2
 
     .prologue
-    .line 48
-    sget-object v0, Lorg/gdb/android/client/SettingsActivity;->a:Ljava/lang/String;
+    .line 50
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/ko;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lorg/gdb/android/client/SettingsActivity;)Lorg/gdb/android/client/kr;
-    .registers 2
+.method private a()V
+    .registers 4
 
     .prologue
-    .line 63
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/kr;
+    const/4 v2, 0x0
 
-    return-object v0
+    .line 248
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->f:Landroid/widget/TextView;
+
+    const v1, 0x7f020053
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
+
+    .line 250
+    invoke-virtual {p0}, Lorg/gdb/android/client/SettingsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0a004b
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    .line 251
+    iget-object v1, p0, Lorg/gdb/android/client/SettingsActivity;->f:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0, v2, v0, v2}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    .line 252
+    return-void
 .end method
 
 .method static synthetic a(Lorg/gdb/android/client/SettingsActivity;I)V
     .registers 5
 
     .prologue
-    .line 79
+    .line 66
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lorg/gdb/android/client/CheckInSuccessActivity;
@@ -126,61 +149,13 @@
     return-void
 .end method
 
-.method private b()V
-    .registers 4
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 260
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->f:Landroid/widget/TextView;
-
-    const v1, 0x7f020053
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
-
-    .line 262
-    invoke-virtual {p0}, Lorg/gdb/android/client/SettingsActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0a004b
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    .line 263
-    iget-object v1, p0, Lorg/gdb/android/client/SettingsActivity;->f:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0, v2, v0, v2}, Landroid/widget/TextView;->setPadding(IIII)V
-
-    .line 264
-    return-void
-.end method
-
 .method static synthetic b(Lorg/gdb/android/client/SettingsActivity;)V
     .registers 1
 
     .prologue
-    .line 254
-    invoke-direct {p0}, Lorg/gdb/android/client/SettingsActivity;->b()V
+    .line 242
+    invoke-direct {p0}, Lorg/gdb/android/client/SettingsActivity;->a()V
 
-    return-void
-.end method
-
-.method private c()V
-    .registers 2
-
-    .prologue
-    .line 322
-    new-instance v0, Lorg/gdb/android/client/kg;
-
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/kg;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
-
-    invoke-static {p0, v0}, Lnet/youmi/android/appoffers/YoumiOffersManager;->checkStatus(Landroid/content/Context;Lnet/youmi/android/appoffers/CheckStatusNotifier;)Z
-
-    .line 338
     return-void
 .end method
 
@@ -188,7 +163,7 @@
     .registers 3
 
     .prologue
-    .line 316
+    .line 304
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lorg/gdb/android/client/InviteFriendActivity;
@@ -201,34 +176,10 @@
 .end method
 
 .method static synthetic d(Lorg/gdb/android/client/SettingsActivity;)V
-    .registers 3
-
-    .prologue
-    .line 278
-    invoke-static {}, Lorg/gdb/android/client/vo/UserVO;->getCurrentId()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lnet/youmi/android/appoffers/YoumiPointsManager;->setUserID(Ljava/lang/String;)V
-
-    invoke-direct {p0}, Lorg/gdb/android/client/SettingsActivity;->c()V
-
-    const/4 v0, 0x0
-
-    new-instance v1, Lorg/gdb/android/client/kf;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/kf;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
-
-    invoke-static {p0, v0, v1}, Lnet/youmi/android/appoffers/YoumiOffersManager;->showOffers(Landroid/content/Context;ILnet/youmi/android/appoffers/EarnedPointsNotifier;)Z
-
-    return-void
-.end method
-
-.method static synthetic e(Lorg/gdb/android/client/SettingsActivity;)V
     .registers 4
 
     .prologue
-    .line 274
+    .line 262
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "market://details?id="
@@ -283,16 +234,6 @@
     goto :goto_21
 .end method
 
-.method static synthetic f(Lorg/gdb/android/client/SettingsActivity;)V
-    .registers 1
-
-    .prologue
-    .line 321
-    invoke-direct {p0}, Lorg/gdb/android/client/SettingsActivity;->c()V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
@@ -301,54 +242,54 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 95
+    .line 82
     invoke-super {p0, p1}, Lorg/gdb/android/client/NullImageActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 96
+    .line 83
     const v0, 0x7f030043
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/SettingsActivity;->setContentView(I)V
 
-    .line 97
-    new-instance v0, Lorg/gdb/android/client/kr;
+    .line 84
+    new-instance v0, Lorg/gdb/android/client/ko;
 
-    invoke-direct {v0, v5}, Lorg/gdb/android/client/kr;-><init>(B)V
+    invoke-direct {v0, v5}, Lorg/gdb/android/client/ko;-><init>(B)V
 
-    iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/kr;
+    iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/ko;
 
-    .line 98
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/kr;
+    .line 85
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/ko;
 
     iget-object v1, p0, Lorg/gdb/android/client/SettingsActivity;->l:Lorg/gdb/android/client/remote/y;
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/kr;->b(Lorg/gdb/android/client/remote/y;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ko;->b(Lorg/gdb/android/client/remote/y;)V
 
-    .line 99
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/kr;
+    .line 86
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/ko;
 
     iget-object v1, p0, Lorg/gdb/android/client/SettingsActivity;->m:Lorg/gdb/android/client/remote/x;
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/kr;->b(Lorg/gdb/android/client/remote/x;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ko;->b(Lorg/gdb/android/client/remote/x;)V
 
-    .line 100
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/kr;
+    .line 87
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/ko;
 
-    new-instance v1, Lorg/gdb/android/client/ki;
+    new-instance v1, Lorg/gdb/android/client/kf;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/ki;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/kf;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/kr;->a(Lorg/gdb/android/client/remote/y;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ko;->a(Lorg/gdb/android/client/remote/y;)V
 
-    .line 124
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/kr;
+    .line 111
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/ko;
 
-    new-instance v1, Lorg/gdb/android/client/kj;
+    new-instance v1, Lorg/gdb/android/client/kg;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/kj;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/kg;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/kr;->a(Lorg/gdb/android/client/remote/x;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/ko;->a(Lorg/gdb/android/client/remote/x;)V
 
-    .line 131
+    .line 118
     invoke-virtual {p0}, Lorg/gdb/android/client/SettingsActivity;->getApplication()Landroid/app/Application;
 
     invoke-static {}, Lorg/gdb/android/client/GDBApplication;->e()Landroid/content/SharedPreferences;
@@ -357,7 +298,7 @@
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->j:Landroid/content/SharedPreferences;
 
-    .line 132
+    .line 119
     const v0, 0x7f0b0167
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/SettingsActivity;->findViewById(I)Landroid/view/View;
@@ -368,7 +309,7 @@
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->b:Landroid/widget/TextView;
 
-    .line 133
+    .line 120
     const v0, 0x7f0b0168
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/SettingsActivity;->findViewById(I)Landroid/view/View;
@@ -379,7 +320,7 @@
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->c:Landroid/widget/TextView;
 
-    .line 134
+    .line 121
     const v0, 0x7f0b0169
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/SettingsActivity;->findViewById(I)Landroid/view/View;
@@ -390,7 +331,14 @@
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->d:Landroid/widget/TextView;
 
-    .line 135
+    .line 122
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->d:Landroid/widget/TextView;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 123
     const v0, 0x7f0b016a
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/SettingsActivity;->findViewById(I)Landroid/view/View;
@@ -401,7 +349,7 @@
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->e:Landroid/widget/TextView;
 
-    .line 137
+    .line 125
     const v0, 0x7f0b016e
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/SettingsActivity;->findViewById(I)Landroid/view/View;
@@ -412,7 +360,7 @@
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->f:Landroid/widget/TextView;
 
-    .line 138
+    .line 126
     const v0, 0x7f0b016b
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/SettingsActivity;->findViewById(I)Landroid/view/View;
@@ -423,7 +371,7 @@
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->g:Landroid/widget/TextView;
 
-    .line 139
+    .line 127
     iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->g:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -440,7 +388,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 140
+    .line 128
     const v2, 0x7f080177
 
     const/4 v3, 0x1
@@ -465,10 +413,10 @@
 
     move-result-object v1
 
-    .line 139
+    .line 127
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 141
+    .line 129
     const v0, 0x7f0b016d
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/SettingsActivity;->findViewById(I)Landroid/view/View;
@@ -479,7 +427,7 @@
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->h:Landroid/widget/TextView;
 
-    .line 142
+    .line 130
     const v0, 0x7f0b016c
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/SettingsActivity;->findViewById(I)Landroid/view/View;
@@ -490,17 +438,26 @@
 
     iput-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->i:Landroid/widget/TextView;
 
-    .line 144
+    .line 132
     iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->b:Landroid/widget/TextView;
 
-    new-instance v1, Lorg/gdb/android/client/kk;
+    new-instance v1, Lorg/gdb/android/client/kh;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/kk;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/kh;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 152
+    .line 140
     iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->c:Landroid/widget/TextView;
+
+    new-instance v1, Lorg/gdb/android/client/ki;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/ki;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 172
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->e:Landroid/widget/TextView;
 
     new-instance v1, Lorg/gdb/android/client/kl;
 
@@ -508,35 +465,26 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 176
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->d:Landroid/widget/TextView;
-
-    new-instance v1, Lorg/gdb/android/client/ko;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/ko;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 184
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->e:Landroid/widget/TextView;
-
-    new-instance v1, Lorg/gdb/android/client/kp;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/kp;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 192
+    .line 180
     iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->f:Landroid/widget/TextView;
 
-    new-instance v1, Lorg/gdb/android/client/kq;
+    new-instance v1, Lorg/gdb/android/client/km;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/kq;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/km;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 202
+    .line 190
     iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->g:Landroid/widget/TextView;
+
+    new-instance v1, Lorg/gdb/android/client/kn;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/kn;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 199
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->h:Landroid/widget/TextView;
 
     new-instance v1, Lorg/gdb/android/client/kc;
 
@@ -544,8 +492,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 211
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->h:Landroid/widget/TextView;
+    .line 209
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->i:Landroid/widget/TextView;
 
     new-instance v1, Lorg/gdb/android/client/kd;
 
@@ -553,16 +501,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 221
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->i:Landroid/widget/TextView;
-
-    new-instance v1, Lorg/gdb/android/client/ke;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/ke;-><init>(Lorg/gdb/android/client/SettingsActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 246
+    .line 234
     return-void
 .end method
 
@@ -570,20 +509,20 @@
     .registers 2
 
     .prologue
-    .line 268
+    .line 256
     invoke-super {p0}, Lorg/gdb/android/client/NullImageActivity;->onDestroy()V
 
-    .line 269
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/kr;
+    .line 257
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/ko;
 
     if-eqz v0, :cond_c
 
-    .line 270
-    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/kr;
+    .line 258
+    iget-object v0, p0, Lorg/gdb/android/client/SettingsActivity;->k:Lorg/gdb/android/client/ko;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/kr;->b()V
+    invoke-virtual {v0}, Lorg/gdb/android/client/ko;->b()V
 
-    .line 272
+    .line 260
     :cond_c
     return-void
 .end method
@@ -592,12 +531,12 @@
     .registers 1
 
     .prologue
-    .line 250
+    .line 238
     invoke-super {p0}, Lorg/gdb/android/client/NullImageActivity;->onResume()V
 
-    .line 251
-    invoke-direct {p0}, Lorg/gdb/android/client/SettingsActivity;->b()V
+    .line 239
+    invoke-direct {p0}, Lorg/gdb/android/client/SettingsActivity;->a()V
 
-    .line 252
+    .line 240
     return-void
 .end method

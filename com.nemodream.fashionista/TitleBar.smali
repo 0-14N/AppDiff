@@ -51,7 +51,7 @@
     iput-object p1, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->mActivity:Landroid/app/Activity;
 
     .line 27
-    const v0, 0x7f080036
+    const v0, 0x7f08003c
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -62,7 +62,7 @@
     iput-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->backImgBtn:Landroid/widget/ImageButton;
 
     .line 28
-    const v0, 0x7f080039
+    const v0, 0x7f08003f
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -73,7 +73,7 @@
     iput-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->femaleImgBtn:Landroid/widget/ImageButton;
 
     .line 29
-    const v0, 0x7f080038
+    const v0, 0x7f08003e
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -84,7 +84,7 @@
     iput-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->maleImgBtn:Landroid/widget/ImageButton;
 
     .line 30
-    const v0, 0x7f080037
+    const v0, 0x7f08003d
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -95,7 +95,7 @@
     iput-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->listImgBtn:Landroid/widget/ImageButton;
 
     .line 32
-    const v0, 0x7f080035
+    const v0, 0x7f08003b
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -214,14 +214,14 @@
     .registers 3
 
     .prologue
-    .line 163
+    .line 170
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->backImgBtn:Landroid/widget/ImageButton;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 164
+    .line 171
     return-void
 .end method
 
@@ -229,14 +229,14 @@
     .registers 3
 
     .prologue
-    .line 171
+    .line 178
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->femaleImgBtn:Landroid/widget/ImageButton;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 172
+    .line 179
     return-void
 .end method
 
@@ -244,14 +244,14 @@
     .registers 3
 
     .prologue
-    .line 187
+    .line 194
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->listImgBtn:Landroid/widget/ImageButton;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 188
+    .line 195
     return-void
 .end method
 
@@ -259,14 +259,14 @@
     .registers 3
 
     .prologue
-    .line 179
+    .line 186
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->maleImgBtn:Landroid/widget/ImageButton;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 180
+    .line 187
     return-void
 .end method
 
@@ -275,12 +275,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 155
+    .line 162
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->titleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 156
+    .line 163
     return-void
 .end method
 
@@ -288,14 +288,14 @@
     .registers 3
 
     .prologue
-    .line 159
+    .line 166
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->backImgBtn:Landroid/widget/ImageButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 160
+    .line 167
     return-void
 .end method
 
@@ -305,27 +305,27 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 131
+    .line 138
     invoke-virtual {p0}, Lcom/nemodream/fashionista/customUi/TitleBar;->showBackBtn()V
 
-    .line 132
+    .line 139
     invoke-virtual {p0}, Lcom/nemodream/fashionista/customUi/TitleBar;->hideFeMaleBtn()V
 
-    .line 133
+    .line 140
     invoke-virtual {p0}, Lcom/nemodream/fashionista/customUi/TitleBar;->hideMaleBtn()V
 
-    .line 134
+    .line 141
     if-nez p2, :cond_28
 
     invoke-virtual {p0}, Lcom/nemodream/fashionista/customUi/TitleBar;->showListBtn()V
 
-    .line 136
+    .line 143
     :goto_e
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->titleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 137
+    .line 144
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->backImgBtn:Landroid/widget/ImageButton;
 
     new-instance v1, Lcom/nemodream/fashionista/customUi/TitleBar$7;
@@ -334,7 +334,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 143
+    .line 150
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->listImgBtn:Landroid/widget/ImageButton;
 
     new-instance v1, Lcom/nemodream/fashionista/customUi/TitleBar$8;
@@ -343,10 +343,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 151
+    .line 158
     return-void
 
-    .line 135
+    .line 142
     :cond_28
     invoke-virtual {p0}, Lcom/nemodream/fashionista/customUi/TitleBar;->hideListBtn()V
 
@@ -358,15 +358,15 @@
     .param p1, "title"    # Ljava/lang/String;
 
     .prologue
-    .line 98
+    .line 105
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->titleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 99
+    .line 106
     invoke-virtual {p0}, Lcom/nemodream/fashionista/customUi/TitleBar;->showBackBtn()V
 
-    .line 100
+    .line 107
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->backImgBtn:Landroid/widget/ImageButton;
 
     new-instance v1, Lcom/nemodream/fashionista/customUi/TitleBar$4;
@@ -375,7 +375,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 106
+    .line 113
     return-void
 .end method
 
@@ -383,14 +383,14 @@
     .registers 3
 
     .prologue
-    .line 90
+    .line 97
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->titleTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f060022
+    const v1, 0x7f060023
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 91
+    .line 98
     return-void
 .end method
 
@@ -398,14 +398,14 @@
     .registers 3
 
     .prologue
-    .line 167
+    .line 174
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->femaleImgBtn:Landroid/widget/ImageButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 168
+    .line 175
     return-void
 .end method
 
@@ -413,14 +413,14 @@
     .registers 3
 
     .prologue
-    .line 183
+    .line 190
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->listImgBtn:Landroid/widget/ImageButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 184
+    .line 191
     return-void
 .end method
 
@@ -428,14 +428,14 @@
     .registers 3
 
     .prologue
-    .line 175
+    .line 182
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->maleImgBtn:Landroid/widget/ImageButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 176
+    .line 183
     return-void
 .end method
 
@@ -443,14 +443,14 @@
     .registers 3
 
     .prologue
-    .line 94
+    .line 101
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->titleTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f060023
+    const v1, 0x7f060024
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 95
+    .line 102
     return-void
 .end method
 
@@ -476,7 +476,7 @@
 
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->titleTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f06001f
+    const v1, 0x7f060020
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -490,7 +490,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 67
+    .line 70
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->maleImgBtn:Landroid/widget/ImageButton;
 
     new-instance v1, Lcom/nemodream/fashionista/customUi/TitleBar$3;
@@ -499,14 +499,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 79
+    .line 86
     return-void
 
     .line 53
     :cond_2b
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->titleTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f06001e
+    const v1, 0x7f06001f
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -517,14 +517,14 @@
     .registers 3
 
     .prologue
-    .line 82
+    .line 89
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->titleTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f060020
+    const v1, 0x7f060021
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 83
+    .line 90
     return-void
 .end method
 
@@ -533,31 +533,31 @@
     .param p1, "title"    # Ljava/lang/String;
 
     .prologue
-    .line 109
+    .line 116
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->titleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 110
+    .line 117
     invoke-virtual {p0}, Lcom/nemodream/fashionista/customUi/TitleBar;->showBackBtn()V
 
-    .line 111
+    .line 118
     invoke-virtual {p0}, Lcom/nemodream/fashionista/customUi/TitleBar;->hideFeMaleBtn()V
 
-    .line 112
+    .line 119
     invoke-virtual {p0}, Lcom/nemodream/fashionista/customUi/TitleBar;->hideMaleBtn()V
 
-    .line 113
+    .line 120
     invoke-virtual {p0}, Lcom/nemodream/fashionista/customUi/TitleBar;->showListBtn()V
 
-    .line 114
+    .line 121
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->listImgBtn:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0200c3
+    const v1, 0x7f0200d8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
-    .line 115
+    .line 122
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->listImgBtn:Landroid/widget/ImageButton;
 
     new-instance v1, Lcom/nemodream/fashionista/customUi/TitleBar$5;
@@ -566,7 +566,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 122
+    .line 129
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->backImgBtn:Landroid/widget/ImageButton;
 
     new-instance v1, Lcom/nemodream/fashionista/customUi/TitleBar$6;
@@ -575,7 +575,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 128
+    .line 135
     return-void
 .end method
 
@@ -583,13 +583,13 @@
     .registers 3
 
     .prologue
-    .line 86
+    .line 93
     iget-object v0, p0, Lcom/nemodream/fashionista/customUi/TitleBar;->titleTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f060021
+    const v1, 0x7f060022
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 87
+    .line 94
     return-void
 .end method

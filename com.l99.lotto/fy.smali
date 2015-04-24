@@ -157,7 +157,7 @@
     .local v0, "code":I
     const/16 v4, 0x2719
 
-    if-ne v0, v4, :cond_32
+    if-ne v0, v4, :cond_37
 
     .line 45
     invoke-static {}, Lcom/l99/lotto/b;->getInstance()Lcom/l99/lotto/b;
@@ -168,9 +168,14 @@
 
     invoke-virtual {v4, v5}, Lcom/l99/lotto/b;->logout(I)V
 
-    .line 50
+    .line 49
     :cond_24
     :goto_24
+    const-string v4, "roi_l99"
+
+    invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 50
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
@@ -187,14 +192,14 @@
     .end local v0    # "code":I
     .end local v2    # "jsonString":Ljava/lang/String;
     .end local v3    # "object":Lorg/json/JSONObject;
-    :goto_31
+    :goto_36
     return-object v4
 
     .line 46
     .restart local v0    # "code":I
     .restart local v2    # "jsonString":Ljava/lang/String;
     .restart local v3    # "object":Lorg/json/JSONObject;
-    :cond_32
+    :cond_37
     const/16 v4, 0x2720
 
     if-ne v0, v4, :cond_24
@@ -207,10 +212,10 @@
     const/4 v5, 0x2
 
     invoke-virtual {v4, v5}, Lcom/l99/lotto/b;->logout(I)V
-    :try_end_3e
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_3e} :catch_3f
-    .catch Lbf; {:try_start_0 .. :try_end_3e} :catch_4a
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_3e} :catch_55
+    :try_end_43
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_43} :catch_44
+    .catch Lbf; {:try_start_0 .. :try_end_43} :catch_4f
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_43} :catch_5a
 
     goto :goto_24
 
@@ -218,7 +223,7 @@
     .end local v0    # "code":I
     .end local v2    # "jsonString":Ljava/lang/String;
     .end local v3    # "object":Lorg/json/JSONObject;
-    :catch_3f
+    :catch_44
     move-exception v1
 
     .line 52
@@ -231,11 +236,11 @@
 
     move-result-object v4
 
-    goto :goto_31
+    goto :goto_36
 
     .line 53
     .end local v1    # "e":Ljava/io/UnsupportedEncodingException;
-    :catch_4a
+    :catch_4f
     move-exception v1
 
     .line 54
@@ -248,11 +253,11 @@
 
     move-result-object v4
 
-    goto :goto_31
+    goto :goto_36
 
     .line 55
     .end local v1    # "e":Lbf;
-    :catch_55
+    :catch_5a
     move-exception v1
 
     .line 56
@@ -265,5 +270,5 @@
 
     move-result-object v4
 
-    goto :goto_31
+    goto :goto_36
 .end method

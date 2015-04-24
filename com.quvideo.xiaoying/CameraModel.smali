@@ -214,9 +214,9 @@
     iput-boolean v2, p0, Lcom/quvideo/xiaoying/camera/framework/CameraModel;->z:Z
 
     .line 184
-    new-instance v0, Laef;
+    new-instance v0, Lxl;
 
-    invoke-direct {v0, p0}, Laef;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraModel;)V
+    invoke-direct {v0, p0}, Lxl;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraModel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/framework/CameraModel;->A:Landroid/view/SurfaceHolder$Callback;
 
@@ -2980,9 +2980,9 @@
     if-le v0, v1, :cond_3d
 
     .line 760
-    new-instance v0, Laeg;
+    new-instance v0, Lxm;
 
-    invoke-direct {v0, p0}, Laeg;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraModel;)V
+    invoke-direct {v0, p0}, Lxm;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraModel;)V
 
     invoke-static {v3, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 

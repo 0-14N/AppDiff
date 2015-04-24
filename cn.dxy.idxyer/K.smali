@@ -29,51 +29,40 @@
 
     iget-object v1, p0, Lcn/dxy/idxyer/activity/K;->a:Lcn/dxy/idxyer/activity/ProfileActivity;
 
-    const-class v2, Lcn/dxy/idxyer/activity/dynamic/DynamicWriteActivity;
+    const-class v2, Lcn/dxy/idxyer/activity/message/MessageWriteActivity;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iget-object v1, p0, Lcn/dxy/idxyer/activity/K;->a:Lcn/dxy/idxyer/activity/ProfileActivity;
+    const-string v1, "userName"
 
-    invoke-static {v1}, Lcn/dxy/idxyer/activity/ProfileActivity;->e(Lcn/dxy/idxyer/activity/ProfileActivity;)I
+    iget-object v2, p0, Lcn/dxy/idxyer/activity/K;->a:Lcn/dxy/idxyer/activity/ProfileActivity;
 
-    move-result v1
-
-    if-eqz v1, :cond_33
-
-    const-string v1, "user"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "@"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Lcn/dxy/idxyer/activity/ProfileActivity;->a(Lcn/dxy/idxyer/activity/ProfileActivity;)Lcn/dxy/idxyer/api/model/User;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcn/dxy/idxyer/activity/K;->a:Lcn/dxy/idxyer/activity/ProfileActivity;
-
-    invoke-static {v3}, Lcn/dxy/idxyer/activity/ProfileActivity;->a(Lcn/dxy/idxyer/activity/ProfileActivity;)Lcn/dxy/idxyer/api/model/User;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcn/dxy/idxyer/api/model/User;->getInfoUsername()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lcn/dxy/idxyer/api/model/User;->getInfoUsername()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    :cond_33
+    const-string v1, "userAvatar"
+
+    iget-object v2, p0, Lcn/dxy/idxyer/activity/K;->a:Lcn/dxy/idxyer/activity/ProfileActivity;
+
+    invoke-static {v2}, Lcn/dxy/idxyer/activity/ProfileActivity;->a(Lcn/dxy/idxyer/activity/ProfileActivity;)Lcn/dxy/idxyer/api/model/User;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/dxy/idxyer/activity/K;->a:Lcn/dxy/idxyer/activity/ProfileActivity;
+
+    invoke-virtual {v2, v3}, Lcn/dxy/idxyer/api/model/User;->getInfoAvatar120(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
     iget-object v1, p0, Lcn/dxy/idxyer/activity/K;->a:Lcn/dxy/idxyer/activity/ProfileActivity;
 
     invoke-virtual {v1, v0}, Lcn/dxy/idxyer/activity/ProfileActivity;->startActivity(Landroid/content/Intent;)V

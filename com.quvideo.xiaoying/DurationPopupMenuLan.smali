@@ -149,9 +149,9 @@
     .line 70
     iget-object v0, p0, Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenuLan;->f:Landroid/widget/PopupWindow;
 
-    new-instance v1, Laey;
+    new-instance v1, Lye;
 
-    invoke-direct {v1, p0}, Laey;-><init>(Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenuLan;)V
+    invoke-direct {v1, p0}, Lye;-><init>(Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenuLan;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
 
@@ -258,9 +258,9 @@
     .line 194
     iget-object v0, p0, Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenuLan;->f:Landroid/widget/PopupWindow;
 
-    new-instance v1, Laez;
+    new-instance v1, Lyf;
 
-    invoke-direct {v1, p0}, Laez;-><init>(Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenuLan;)V
+    invoke-direct {v1, p0}, Lyf;-><init>(Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenuLan;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
 

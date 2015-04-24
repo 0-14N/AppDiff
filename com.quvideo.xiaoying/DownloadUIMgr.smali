@@ -143,7 +143,7 @@
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
     .line 102
-    new-instance v0, Laks;
+    new-instance v0, Lady;
 
     iget-object v1, p0, Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;->h:Landroid/os/HandlerThread;
 
@@ -151,7 +151,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Laks;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;Landroid/os/Looper;)V
+    invoke-direct {v0, p0, v1}, Lady;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;->f:Landroid/os/Handler;
 
@@ -910,7 +910,7 @@
 
     const-string/jumbo v9, "template.down"
 
-    new-instance v0, Lakw;
+    new-instance v0, Laec;
 
     move-object v1, p0
 
@@ -924,7 +924,7 @@
 
     move-object v6, p4
 
-    invoke-direct/range {v0 .. v6}, Lakw;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Laec;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v8, v9, v0}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -1290,13 +1290,13 @@
 
     const-string/jumbo v3, "template.item.info"
 
-    new-instance v4, Lakv;
+    new-instance v4, Laeb;
 
     move/from16 v0, p3
 
     move-object/from16 v1, p4
 
-    invoke-direct {v4, p0, v0, v1}, Lakv;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;ILandroid/os/Bundle;)V
+    invoke-direct {v4, p0, v0, v1}, Laeb;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;ILandroid/os/Bundle;)V
 
     invoke-virtual {v2, v3, v4}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -1575,9 +1575,9 @@
 
     const-string/jumbo v1, "template.item.info"
 
-    new-instance v2, Laku;
+    new-instance v2, Laea;
 
-    invoke-direct {v2, p0, p3, p4}, Laku;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;ILandroid/os/Bundle;)V
+    invoke-direct {v2, p0, p3, p4}, Laea;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;ILandroid/os/Bundle;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -1638,9 +1638,9 @@
 
     const-string/jumbo v2, "template.item.info"
 
-    new-instance v3, Lakt;
+    new-instance v3, Ladz;
 
-    invoke-direct {v3, p0, p3}, Lakt;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;Landroid/os/Bundle;)V
+    invoke-direct {v3, p0, p3}, Ladz;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;Landroid/os/Bundle;)V
 
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -1805,7 +1805,7 @@
     .line 928
     :cond_7
     :try_start_7
-    new-instance v0, Lakx;
+    new-instance v0, Laed;
 
     move-object v1, p0
 
@@ -1817,7 +1817,7 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v0 .. v5}, Lakx;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Laed;-><init>(Lcom/quvideo/xiaoying/common/ui/DownloadUIMgr;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -1828,7 +1828,7 @@
     .line 997
     aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1}, Lakx;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Laed;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
     :try_end_1a
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_1a} :catch_1b
 

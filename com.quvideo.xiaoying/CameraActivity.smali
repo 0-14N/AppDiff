@@ -566,16 +566,16 @@
     iput-boolean v3, p0, Lcom/quvideo/xiaoying/camera/framework/CameraActivity;->aX:Z
 
     .line 388
-    new-instance v0, Ladr;
+    new-instance v0, Lwx;
 
-    invoke-direct {v0, p0}, Ladr;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
+    invoke-direct {v0, p0}, Lwx;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/framework/CameraActivity;->aY:Lcom/quvideo/xiaoying/camera/engine/MediaRecorderEngine$CameraDirectionCustomCallback;
 
     .line 5088
-    new-instance v0, Ladv;
+    new-instance v0, Lxb;
 
-    invoke-direct {v0, p0}, Ladv;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
+    invoke-direct {v0, p0}, Lxb;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/framework/CameraActivity;->aZ:Lcom/quvideo/xiaoying/camera/framework/CameraMusicMgr$MusicListener;
 
@@ -1018,9 +1018,9 @@
 
     .prologue
     .line 4658
-    new-instance v0, Laea;
+    new-instance v0, Lxg;
 
-    invoke-direct {v0, p0}, Laea;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
+    invoke-direct {v0, p0}, Lxg;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
 
     invoke-static {p0, v0}, Lcom/quvideo/xiaoying/common/DialogueUtils;->showAdjustCameraDialog(Landroid/content/Context;Landroid/view/View$OnClickListener;)V
 
@@ -1043,9 +1043,9 @@
 
     .prologue
     .line 4717
-    new-instance v0, Laeb;
+    new-instance v0, Lxh;
 
-    invoke-direct {v0, p0}, Laeb;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
+    invoke-direct {v0, p0}, Lxh;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
 
     invoke-static {p0, v0}, Lcom/quvideo/xiaoying/common/DialogueUtils;->showAdjustCameraTipDialog(Landroid/content/Context;Landroid/view/View$OnClickListener;)V
 
@@ -1200,9 +1200,9 @@
     .line 4796
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_com_msg_save_draft_ask:I
 
-    new-instance v2, Laec;
+    new-instance v2, Lxi;
 
-    invoke-direct {v2, p0}, Laec;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
+    invoke-direct {v2, p0}, Lxi;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
 
     .line 4795
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -1240,9 +1240,9 @@
 
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_com_dialog_cancel_ask:I
 
-    new-instance v2, Lads;
+    new-instance v2, Lwy;
 
-    invoke-direct {v2, p0}, Lads;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
+    invoke-direct {v2, p0}, Lwy;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
 
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -1280,9 +1280,9 @@
     .line 4923
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_com_dialog_cancel_ask:I
 
-    new-instance v2, Ladt;
+    new-instance v2, Lwz;
 
-    invoke-direct {v2, p0}, Ladt;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
+    invoke-direct {v2, p0}, Lwz;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
 
     .line 4922
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -6239,9 +6239,9 @@
     :cond_14
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Ladw;
+    new-instance v1, Lxc;
 
-    invoke-direct {v1, p0}, Ladw;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
+    invoke-direct {v1, p0}, Lxc;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -7642,9 +7642,9 @@
     invoke-direct {v0, p0}, Lcom/quvideo/xiaoying/videoeditor/simpleedit/ProjectExportVideoMgr;-><init>(Landroid/app/Activity;)V
 
     .line 5255
-    new-instance v1, Ladu;
+    new-instance v1, Lxa;
 
-    invoke-direct {v1, p0, p1}, Ladu;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;Z)V
+    invoke-direct {v1, p0, p1}, Lxa;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;Z)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/videoeditor/simpleedit/ProjectExportVideoMgr;->setExportListener(Lcom/quvideo/xiaoying/videoeditor/simpleedit/ProjectExportVideoMgr$ExportListener;)V
 
@@ -11263,13 +11263,13 @@
 
     .line 2508
     :cond_5
-    new-instance v0, Ladx;
+    new-instance v0, Lxd;
 
     invoke-virtual {p0}, Lcom/quvideo/xiaoying/camera/framework/CameraActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Ladx;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;Landroid/content/Context;)V
+    invoke-direct {v0, p0, v1}, Lxd;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/framework/CameraActivity;->S:Landroid/view/OrientationEventListener;
 
@@ -15006,9 +15006,9 @@
     sget v2, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_com_msg_intent_send_cancel_tip:I
 
     .line 2985
-    new-instance v3, Lady;
+    new-instance v3, Lxe;
 
-    invoke-direct {v3, p0}, Lady;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
+    invoke-direct {v3, p0}, Lxe;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;)V
 
     .line 2983
     invoke-direct {v1, p0, v2, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -16525,9 +16525,9 @@
     .line 4115
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_cam_uncompleted_pip_ask:I
 
-    new-instance v2, Ladz;
+    new-instance v2, Lxf;
 
-    invoke-direct {v2, p0, p1, p2}, Ladz;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;II)V
+    invoke-direct {v2, p0, p1, p2}, Lxf;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraActivity;II)V
 
     .line 4114
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V

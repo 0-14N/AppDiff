@@ -176,9 +176,9 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/al;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/am;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/al;-><init>(Lbiz/nicenight/nicenight/ui/NoticePeopleActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/am;-><init>(Lbiz/nicenight/nicenight/ui/NoticePeopleActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -194,9 +194,9 @@
 
     iget-object v0, p0, Lbiz/nicenight/nicenight/ui/NoticePeopleActivity;->e:Lthird/pulltorefresh/RefreshableView;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/am;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/an;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/am;-><init>(Lbiz/nicenight/nicenight/ui/NoticePeopleActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/an;-><init>(Lbiz/nicenight/nicenight/ui/NoticePeopleActivity;)V
 
     const/4 v2, 0x3
 
@@ -214,9 +214,9 @@
 
     iget-object v0, p0, Lbiz/nicenight/nicenight/ui/NoticePeopleActivity;->a:Landroid/widget/ListView;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/an;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/ao;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/an;-><init>(Lbiz/nicenight/nicenight/ui/NoticePeopleActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/ao;-><init>(Lbiz/nicenight/nicenight/ui/NoticePeopleActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 

@@ -6,22 +6,22 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/cungo/callrecorder/CGRecordingMonitor;
+.field final synthetic a:Lcom/cungu/lib/callrecorder/w;
 
-.field final synthetic b:Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;
+.field final synthetic b:Lcom/cungu/lib/callrecorder/w;
 
 .field final synthetic c:Lcom/cungo/callrecorder/ui/ActivityUsage_;
 
 
 # direct methods
-.method constructor <init>(Lcom/cungo/callrecorder/ui/ActivityUsage_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V
+.method constructor <init>(Lcom/cungo/callrecorder/ui/ActivityUsage_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V
     .registers 4
 
     iput-object p1, p0, Lcom/cungo/callrecorder/ui/mo;->c:Lcom/cungo/callrecorder/ui/ActivityUsage_;
 
-    iput-object p2, p0, Lcom/cungo/callrecorder/ui/mo;->a:Lcom/cungo/callrecorder/CGRecordingMonitor;
+    iput-object p2, p0, Lcom/cungo/callrecorder/ui/mo;->a:Lcom/cungu/lib/callrecorder/w;
 
-    iput-object p3, p0, Lcom/cungo/callrecorder/ui/mo;->b:Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;
+    iput-object p3, p0, Lcom/cungo/callrecorder/ui/mo;->b:Lcom/cungu/lib/callrecorder/w;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,11 +36,11 @@
     :try_start_0
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/mo;->c:Lcom/cungo/callrecorder/ui/ActivityUsage_;
 
-    iget-object v1, p0, Lcom/cungo/callrecorder/ui/mo;->a:Lcom/cungo/callrecorder/CGRecordingMonitor;
+    iget-object v1, p0, Lcom/cungo/callrecorder/ui/mo;->a:Lcom/cungu/lib/callrecorder/w;
 
-    iget-object v2, p0, Lcom/cungo/callrecorder/ui/mo;->b:Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;
+    iget-object v2, p0, Lcom/cungo/callrecorder/ui/mo;->b:Lcom/cungu/lib/callrecorder/w;
 
-    invoke-static {v0, v1, v2}, Lcom/cungo/callrecorder/ui/ActivityUsage_;->a(Lcom/cungo/callrecorder/ui/ActivityUsage_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V
+    invoke-static {v0, v1, v2}, Lcom/cungo/callrecorder/ui/ActivityUsage_;->a(Lcom/cungo/callrecorder/ui/ActivityUsage_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V
     :try_end_9
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_9} :catch_a
 

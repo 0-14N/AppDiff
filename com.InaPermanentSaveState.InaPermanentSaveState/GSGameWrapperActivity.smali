@@ -38,6 +38,8 @@
     .local v0, "_userId":Ljava/lang/String;
     invoke-static {p0}, Lcom/gamesalad/player/GSMetrics;->onCreate(Landroid/content/Context;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 24
     invoke-super {p0, p1}, Lcom/gamesalad/common/GSPlayerActivity;->onCreate(Landroid/os/Bundle;)V
 

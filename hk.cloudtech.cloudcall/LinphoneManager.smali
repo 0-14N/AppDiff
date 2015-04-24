@@ -23,28 +23,10 @@
 .field private static sLastProximitySensorValueNearby:Z
 
 .field private static sProximityDependentActivities:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set",
-            "<",
-            "Landroid/app/Activity;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private static sProximitySensorListener:Landroid/hardware/SensorEventListener;
 
 .field private static simpleListeners:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lorg/linphone/LinphoneSimpleListener;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
@@ -434,11 +416,6 @@
 
 .method private copyAssetsFromPackage(Lhk/cloudcall/sipstack/a;)V
     .registers 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     invoke-interface {p1}, Lhk/cloudcall/sipstack/a;->a()I
 
@@ -501,11 +478,6 @@
 
 .method private copyFromPackage(ILjava/lang/String;)V
     .registers 9
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     const/4 v5, 0x0
 
@@ -550,11 +522,6 @@
 
 .method private copyIfNotExist(ILjava/lang/String;)V
     .registers 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     new-instance v0, Ljava/io/File;
 
@@ -775,11 +742,6 @@
 
 .method private enableDisableAudioCodec(Ljava/lang/String;III)V
     .registers 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/core/LinphoneCoreException;
-        }
-    .end annotation
 
     iget-object v0, p0, Lorg/linphone/LinphoneManager;->mLc:Lorg/linphone/core/LinphoneCore;
 
@@ -805,11 +767,6 @@
 
 .method private enableDisableAudioCodec(Ljava/lang/String;IIZ)V
     .registers 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/core/LinphoneCoreException;
-        }
-    .end annotation
 
     iget-object v0, p0, Lorg/linphone/LinphoneManager;->mLc:Lorg/linphone/core/LinphoneCore;
 
@@ -829,11 +786,6 @@
 
 .method private enableDisableVideoCodecs(Lorg/linphone/core/PayloadType;)V
     .registers 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/core/LinphoneCoreException;
-        }
-    .end annotation
 
     iget-object v0, p0, Lorg/linphone/LinphoneManager;->mLc:Lorg/linphone/core/LinphoneCore;
 
@@ -1095,17 +1047,6 @@
 
 .method private getSimpleListeners(Ljava/lang/Class;)Ljava/util/List;
     .registers 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/lang/Class",
-            "<TT;>;)",
-            "Ljava/util/List",
-            "<TT;>;"
-        }
-    .end annotation
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1231,11 +1172,6 @@
 
 .method private initAccount(ZLjava/lang/String;IZ)V
     .registers 11
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/core/LinphoneCoreException;
-        }
-    .end annotation
 
     const/4 v5, 0x1
 
@@ -1427,11 +1363,6 @@
 
 .method private initConnect(Lhk/cloudcall/sipstack/b/a;Ljava/lang/String;Z)V
     .registers 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/core/LinphoneCoreException;
-        }
-    .end annotation
 
     iget-object v0, p0, Lorg/linphone/LinphoneManager;->mLc:Lorg/linphone/core/LinphoneCore;
 
@@ -1704,11 +1635,6 @@
 
 .method private readAndSetAudioAndVideoPorts()V
     .registers 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/NumberFormatException;
-        }
-    .end annotation
 
     iget-object v0, p0, Lorg/linphone/LinphoneManager;->mSipSetting:Lhk/cloudcall/sipstack/a;
 
@@ -2914,11 +2840,6 @@
 
 .method public acceptCallIfIncomingPending()Z
     .registers 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/core/LinphoneCoreException;
-        }
-    .end annotation
 
     iget-object v0, p0, Lorg/linphone/LinphoneManager;->mLc:Lorg/linphone/core/LinphoneCore;
 
@@ -3913,11 +3834,6 @@
 
 .method public getUserAgent()Ljava/lang/String;
     .registers 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/pm/PackageManager$NameNotFoundException;
-        }
-    .end annotation
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4092,11 +4008,6 @@
 
 .method public initFromConf(Landroid/content/Context;Lhk/cloudcall/sipstack/b/a;Z)V
     .registers 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/LinphoneManager$LinphoneConfigException;
-        }
-    .end annotation
 
     const/4 v0, 0x0
 
@@ -4107,11 +4018,6 @@
 
 .method public initFromConf(Landroid/content/Context;Lhk/cloudcall/sipstack/b/a;ZLjava/lang/String;)V
     .registers 11
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/LinphoneManager$LinphoneConfigException;
-        }
-    .end annotation
 
     const/4 v2, 0x0
 
@@ -4928,11 +4834,6 @@
 
 .method public startEcCalibration(Lorg/linphone/LinphoneManager$EcCalibrationListener;)V
     .registers 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/linphone/core/LinphoneCoreException;
-        }
-    .end annotation
 
     const/4 v3, 0x0
 

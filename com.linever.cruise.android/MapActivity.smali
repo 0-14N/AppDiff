@@ -129,24 +129,24 @@
     .registers 2
 
     .prologue
-    .line 53
+    .line 50
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 606
+    .line 579
     new-instance v0, Lcom/linever/cruise/android/MapActivity$1;
 
     invoke-direct {v0, p0}, Lcom/linever/cruise/android/MapActivity$1;-><init>(Lcom/linever/cruise/android/MapActivity;)V
 
     iput-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mapAddressLoaderCallback:Landroid/app/LoaderManager$LoaderCallbacks;
 
-    .line 648
+    .line 621
     new-instance v0, Lcom/linever/cruise/android/MapActivity$2;
 
     invoke-direct {v0, p0}, Lcom/linever/cruise/android/MapActivity$2;-><init>(Lcom/linever/cruise/android/MapActivity;)V
 
     iput-object v0, p0, Lcom/linever/cruise/android/MapActivity;->searchAddressListCallbacks:Landroid/app/LoaderManager$LoaderCallbacks;
 
-    .line 53
+    .line 50
     return-void
 .end method
 
@@ -154,7 +154,7 @@
     .registers 2
 
     .prologue
-    .line 58
+    .line 55
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
 
     return-object v0
@@ -164,7 +164,7 @@
     .registers 2
 
     .prologue
-    .line 73
+    .line 70
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->txMsg:Landroid/widget/TextView;
 
     return-object v0
@@ -174,7 +174,7 @@
     .registers 2
 
     .prologue
-    .line 65
+    .line 62
     iget-boolean v0, p0, Lcom/linever/cruise/android/MapActivity;->mScopeLock:Z
 
     return v0
@@ -184,7 +184,7 @@
     .registers 2
 
     .prologue
-    .line 69
+    .line 66
     iget v0, p0, Lcom/linever/cruise/android/MapActivity;->mMapSizeDp:I
 
     return v0
@@ -194,7 +194,7 @@
     .registers 2
 
     .prologue
-    .line 60
+    .line 57
     iget v0, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
 
     return v0
@@ -204,7 +204,7 @@
     .registers 2
 
     .prologue
-    .line 59
+    .line 56
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mOrgScope:Lcom/linever/cruise/android/Scope;
 
     return-object v0
@@ -214,7 +214,7 @@
     .registers 2
 
     .prologue
-    .line 56
+    .line 53
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mLoaderManager:Landroid/app/LoaderManager;
 
     return-object v0
@@ -224,7 +224,7 @@
     .registers 2
 
     .prologue
-    .line 606
+    .line 579
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mapAddressLoaderCallback:Landroid/app/LoaderManager$LoaderCallbacks;
 
     return-object v0
@@ -234,7 +234,7 @@
     .registers 2
 
     .prologue
-    .line 65
+    .line 62
     iput-boolean p1, p0, Lcom/linever/cruise/android/MapActivity;->mScopeLock:Z
 
     return-void
@@ -244,7 +244,7 @@
     .registers 2
 
     .prologue
-    .line 87
+    .line 84
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mTakePicMarker:Lcom/google/android/gms/maps/model/Marker;
 
     return-object v0
@@ -254,7 +254,7 @@
     .registers 2
 
     .prologue
-    .line 55
+    .line 52
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
     return-object v0
@@ -264,7 +264,7 @@
     .registers 3
 
     .prologue
-    .line 62
+    .line 59
     iget-wide v0, p0, Lcom/linever/cruise/android/MapActivity;->mLMarkId:J
 
     return-wide v0
@@ -274,7 +274,7 @@
     .registers 2
 
     .prologue
-    .line 79
+    .line 76
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->btnLMSave:Landroid/widget/Button;
 
     return-object v0
@@ -284,7 +284,7 @@
     .registers 3
 
     .prologue
-    .line 63
+    .line 60
     iget-wide v0, p0, Lcom/linever/cruise/android/MapActivity;->mLMChipId:J
 
     return-wide v0
@@ -294,7 +294,7 @@
     .registers 2
 
     .prologue
-    .line 83
+    .line 80
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->edTitle:Landroid/widget/EditText;
 
     return-object v0
@@ -304,7 +304,7 @@
     .registers 2
 
     .prologue
-    .line 64
+    .line 61
     iput-object p1, p0, Lcom/linever/cruise/android/MapActivity;->mLMTitle:Ljava/lang/String;
 
     return-void
@@ -314,7 +314,7 @@
     .registers 2
 
     .prologue
-    .line 64
+    .line 61
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mLMTitle:Ljava/lang/String;
 
     return-object v0
@@ -324,7 +324,7 @@
     .registers 2
 
     .prologue
-    .line 410
+    .line 397
     invoke-direct {p0, p1}, Lcom/linever/cruise/android/MapActivity;->changeView(I)V
 
     return-void
@@ -334,7 +334,7 @@
     .registers 2
 
     .prologue
-    .line 61
+    .line 58
     iget v0, p0, Lcom/linever/cruise/android/MapActivity;->mPreMode:I
 
     return v0
@@ -344,7 +344,7 @@
     .registers 2
 
     .prologue
-    .line 72
+    .line 69
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
     return-object v0
@@ -354,7 +354,7 @@
     .registers 2
 
     .prologue
-    .line 591
+    .line 564
     invoke-direct {p0, p1}, Lcom/linever/cruise/android/MapActivity;->moveMap(Lcom/linever/cruise/android/Scope;)V
 
     return-void
@@ -364,7 +364,7 @@
     .registers 2
 
     .prologue
-    .line 67
+    .line 64
     iget-boolean v0, p0, Lcom/linever/cruise/android/MapActivity;->isPointButnPush:Z
 
     return v0
@@ -374,7 +374,7 @@
     .registers 2
 
     .prologue
-    .line 78
+    .line 75
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mMapCenterPoint:Landroid/widget/ImageView;
 
     return-object v0
@@ -384,7 +384,7 @@
     .registers 2
 
     .prologue
-    .line 75
+    .line 72
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
 
     return-object v0
@@ -394,7 +394,7 @@
     .registers 2
 
     .prologue
-    .line 67
+    .line 64
     iput-boolean p1, p0, Lcom/linever/cruise/android/MapActivity;->isPointButnPush:Z
 
     return-void
@@ -404,376 +404,338 @@
     .registers 2
 
     .prologue
-    .line 74
+    .line 71
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mScopeBar:Landroid/widget/SeekBar;
 
     return-object v0
 .end method
 
 .method private changeView(I)V
-    .registers 11
+    .registers 10
     .param p1, "mode"    # I
 
     .prologue
-    const-wide v4, 0x4066800000000000L    # 180.0
+    const-wide v3, 0x4066800000000000L    # 180.0
 
-    const/4 v8, 0x4
+    const/4 v7, 0x4
 
-    const/16 v7, 0x8
+    const/16 v6, 0x8
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    .line 413
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->app:Lcom/linever/cruise/android/CruiseApp;
+    .line 398
+    packed-switch p1, :pswitch_data_126
 
-    sget-object v3, Lcom/linever/cruise/android/CruiseApp$TrackerName;->APP_TRACKER:Lcom/linever/cruise/android/CruiseApp$TrackerName;
+    .line 434
+    iput v5, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
 
-    invoke-virtual {v2, v3}, Lcom/linever/cruise/android/CruiseApp;->getTracker(Lcom/linever/cruise/android/CruiseApp$TrackerName;)Lcom/google/android/gms/analytics/Tracker;
+    .line 435
+    invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
-    .line 415
-    .local v1, "t":Lcom/google/android/gms/analytics/Tracker;
-    packed-switch p1, :pswitch_data_14a
+    const v2, 0x7f0900ce
 
-    .line 456
-    iput v6, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
-
-    .line 457
-    invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v2
-
-    const v3, 0x7f0900ce
-
-    invoke-virtual {v2, v3}, Landroid/app/ActionBar;->setTitle(I)V
-
-    .line 458
-    invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->invalidateOptionsMenu()V
-
-    .line 459
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v8}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 460
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mMapCenterPoint:Landroid/widget/ImageView;
-
-    invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 461
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->loSccopeBarFrame:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 462
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
-
-    const v3, 0x7f0900f4
-
-    invoke-virtual {v2, v3}, Landroid/widget/Button;->setText(I)V
-
-    .line 463
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
-
-    invoke-virtual {v2, v6}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 464
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->loLocMarkForms:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 466
-    const-string v2, "CRUISE Map View (from Picture View)"
-
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/analytics/Tracker;->setScreenName(Ljava/lang/String;)V
-
-    .line 470
-    :goto_49
-    new-instance v2, Lcom/google/android/gms/analytics/HitBuilders$AppViewBuilder;
-
-    invoke-direct {v2}, Lcom/google/android/gms/analytics/HitBuilders$AppViewBuilder;-><init>()V
-
-    invoke-virtual {v2}, Lcom/google/android/gms/analytics/HitBuilders$AppViewBuilder;->build()Ljava/util/Map;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/analytics/Tracker;->send(Ljava/util/Map;)V
-
-    .line 472
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
-
-    iget-object v2, v2, Lcom/linever/cruise/android/Scope;->mAddress:Ljava/lang/String;
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_11c
-
-    .line 473
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->txMsg:Landroid/widget/TextView;
-
-    iget-object v3, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
-
-    invoke-static {p0, v3}, Lcom/linever/cruise/android/ScopeHelper;->toString(Landroid/content/Context;Lcom/linever/cruise/android/Scope;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 474
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->txMsg:Landroid/widget/TextView;
-
-    invoke-virtual {v2}, Landroid/widget/TextView;->requestFocus()Z
-
-    .line 483
-    :cond_6f
-    :goto_6f
-    return-void
-
-    .line 417
-    :pswitch_70
-    const/4 v2, 0x1
-
-    iput v2, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
-
-    .line 418
-    invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v2
-
-    const v3, 0x7f0900cc
-
-    invoke-virtual {v2, v3}, Landroid/app/ActionBar;->setTitle(I)V
-
-    .line 419
-    invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->invalidateOptionsMenu()V
-
-    .line 420
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
-
-    iget-wide v2, v2, Lcom/linever/cruise/android/Scope;->mRDegree:D
-
-    cmpl-double v2, v2, v4
-
-    if-nez v2, :cond_af
-
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v8}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 422
-    :goto_8d
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mMapCenterPoint:Landroid/widget/ImageView;
-
-    invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 423
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->loSccopeBarFrame:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 424
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->loLocMarkForms:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 425
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
-
-    const v3, 0x7f0900f3
-
-    invoke-virtual {v2, v3}, Landroid/widget/Button;->setText(I)V
-
-    .line 426
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
-
-    invoke-virtual {v2, v6}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 429
-    const-string v2, "CRUISE Map View (from Cruise Gallery)"
-
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/analytics/Tracker;->setScreenName(Ljava/lang/String;)V
-
-    goto :goto_49
-
-    .line 421
-    :cond_af
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    goto :goto_8d
-
-    .line 433
-    :pswitch_b5
-    const/4 v2, 0x2
-
-    iput v2, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
-
-    .line 434
-    invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v2
-
-    const v3, 0x7f0900cd
-
-    invoke-virtual {v2, v3}, Landroid/app/ActionBar;->setTitle(I)V
-
-    .line 435
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
-
-    iget-wide v2, v2, Lcom/linever/cruise/android/Scope;->mRDegree:D
-
-    cmpl-double v2, v2, v4
-
-    if-nez v2, :cond_10b
-
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v8}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 437
-    :goto_cf
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mMapCenterPoint:Landroid/widget/ImageView;
-
-    invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 438
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->loSccopeBarFrame:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 439
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
-
-    invoke-virtual {v2, v7}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 440
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->loLocMarkForms:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 441
-    iget-wide v2, p0, Lcom/linever/cruise/android/MapActivity;->mLMarkId:J
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v2, v2, v4
-
-    if-lez v2, :cond_111
-
-    .line 442
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->divMapBtn:Landroid/view/View;
-
-    invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
-
-    .line 443
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnLMDelete:Landroid/widget/Button;
-
-    invoke-virtual {v2, v6}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 449
-    :goto_f5
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mLMTitle:Ljava/lang/String;
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_104
-
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->edTitle:Landroid/widget/EditText;
-
-    iget-object v3, p0, Lcom/linever/cruise/android/MapActivity;->mLMTitle:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 451
-    :cond_104
-    const-string v2, "CRUISE Map View (from Location Mark View)"
-
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/analytics/Tracker;->setScreenName(Ljava/lang/String;)V
-
-    goto/16 :goto_49
+    invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setTitle(I)V
 
     .line 436
-    :cond_10b
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
+    invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->invalidateOptionsMenu()V
 
-    invoke-virtual {v2, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    .line 437
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
 
-    goto :goto_cf
+    invoke-virtual {v1, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 438
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mMapCenterPoint:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 439
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->loSccopeBarFrame:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 440
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
+
+    const v2, 0x7f0900f4
+
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
+
+    .line 441
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
+
+    invoke-virtual {v1, v5}, Landroid/widget/Button;->setVisibility(I)V
+
+    .line 442
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->loLocMarkForms:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 445
+    :cond_3c
+    :goto_3c
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
+
+    iget-object v1, v1, Lcom/linever/cruise/android/Scope;->mAddress:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_f9
 
     .line 446
-    :cond_111
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnLMDelete:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->txMsg:Landroid/widget/TextView;
 
-    invoke-virtual {v2, v7}, Landroid/widget/Button;->setVisibility(I)V
+    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
+
+    invoke-static {p0, v2}, Lcom/linever/cruise/android/ScopeHelper;->toString(Landroid/content/Context;Lcom/linever/cruise/android/Scope;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 447
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->divMapBtn:Landroid/view/View;
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->txMsg:Landroid/widget/TextView;
 
-    invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1}, Landroid/widget/TextView;->requestFocus()Z
 
-    goto :goto_f5
+    .line 456
+    :cond_56
+    :goto_56
+    return-void
 
-    .line 476
-    :cond_11c
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mLoaderManager:Landroid/app/LoaderManager;
+    .line 400
+    :pswitch_57
+    const/4 v1, 0x1
 
-    if-eqz v2, :cond_6f
+    iput v1, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
 
-    .line 477
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnLMSave:Landroid/widget/Button;
+    .line 401
+    invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getActionBar()Landroid/app/ActionBar;
 
-    invoke-virtual {v2, v6}, Landroid/widget/Button;->setEnabled(Z)V
+    move-result-object v1
 
-    .line 478
+    const v2, 0x7f0900cc
+
+    invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setTitle(I)V
+
+    .line 402
+    invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->invalidateOptionsMenu()V
+
+    .line 403
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
+
+    iget-wide v1, v1, Lcom/linever/cruise/android/Scope;->mRDegree:D
+
+    cmpl-double v1, v1, v3
+
+    if-nez v1, :cond_91
+
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 405
+    :goto_74
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mMapCenterPoint:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 406
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->loSccopeBarFrame:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 407
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->loLocMarkForms:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 408
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
+
+    const v2, 0x7f0900f3
+
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
+
+    .line 409
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
+
+    invoke-virtual {v1, v5}, Landroid/widget/Button;->setVisibility(I)V
+
+    goto :goto_3c
+
+    .line 404
+    :cond_91
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    goto :goto_74
+
+    .line 413
+    :pswitch_97
+    const/4 v1, 0x2
+
+    iput v1, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
+
+    .line 414
+    invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v1
+
+    const v2, 0x7f0900cd
+
+    invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setTitle(I)V
+
+    .line 415
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
+
+    iget-wide v1, v1, Lcom/linever/cruise/android/Scope;->mRDegree:D
+
+    cmpl-double v1, v1, v3
+
+    if-nez v1, :cond_e8
+
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 417
+    :goto_b1
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mMapCenterPoint:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 418
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->loSccopeBarFrame:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 419
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
+
+    invoke-virtual {v1, v6}, Landroid/widget/Button;->setVisibility(I)V
+
+    .line 420
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->loLocMarkForms:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 421
+    iget-wide v1, p0, Lcom/linever/cruise/android/MapActivity;->mLMarkId:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-lez v1, :cond_ee
+
+    .line 422
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->divMapBtn:Landroid/view/View;
+
+    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
+
+    .line 423
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->btnLMDelete:Landroid/widget/Button;
+
+    invoke-virtual {v1, v5}, Landroid/widget/Button;->setVisibility(I)V
+
+    .line 429
+    :goto_d7
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mLMTitle:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3c
+
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->edTitle:Landroid/widget/EditText;
+
+    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mLMTitle:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_3c
+
+    .line 416
+    :cond_e8
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    goto :goto_b1
+
+    .line 426
+    :cond_ee
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->btnLMDelete:Landroid/widget/Button;
+
+    invoke-virtual {v1, v6}, Landroid/widget/Button;->setVisibility(I)V
+
+    .line 427
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->divMapBtn:Landroid/view/View;
+
+    invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_d7
+
+    .line 449
+    :cond_f9
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mLoaderManager:Landroid/app/LoaderManager;
+
+    if-eqz v1, :cond_56
+
+    .line 450
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->btnLMSave:Landroid/widget/Button;
+
+    invoke-virtual {v1, v5}, Landroid/widget/Button;->setEnabled(Z)V
+
+    .line 451
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 479
+    .line 452
     .local v0, "bundle":Landroid/os/Bundle;
-    const-string v2, "lat"
+    const-string v1, "lat"
 
-    iget-object v3, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
+    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
 
-    iget-wide v3, v3, Lcom/linever/cruise/android/Scope;->mCenterLat:D
+    iget-wide v2, v2, Lcom/linever/cruise/android/Scope;->mCenterLat:D
 
-    invoke-virtual {v0, v2, v3, v4}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
-    .line 480
-    const-string v2, "lng"
+    .line 453
+    const-string v1, "lng"
 
-    iget-object v3, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
+    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
 
-    iget-wide v3, v3, Lcom/linever/cruise/android/Scope;->mCenterLng:D
+    iget-wide v2, v2, Lcom/linever/cruise/android/Scope;->mCenterLng:D
 
-    invoke-virtual {v0, v2, v3, v4}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
-    .line 481
-    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mLoaderManager:Landroid/app/LoaderManager;
+    .line 454
+    iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mLoaderManager:Landroid/app/LoaderManager;
 
-    iget-object v3, p0, Lcom/linever/cruise/android/MapActivity;->mapAddressLoaderCallback:Landroid/app/LoaderManager$LoaderCallbacks;
+    iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mapAddressLoaderCallback:Landroid/app/LoaderManager$LoaderCallbacks;
 
-    invoke-virtual {v2, v8, v0, v3}, Landroid/app/LoaderManager;->restartLoader(ILandroid/os/Bundle;Landroid/app/LoaderManager$LoaderCallbacks;)Landroid/content/Loader;
+    invoke-virtual {v1, v7, v0, v2}, Landroid/app/LoaderManager;->restartLoader(ILandroid/os/Bundle;Landroid/app/LoaderManager$LoaderCallbacks;)Landroid/content/Loader;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Landroid/content/Loader;->forceLoad()V
+    invoke-virtual {v1}, Landroid/content/Loader;->forceLoad()V
 
-    goto/16 :goto_6f
+    goto/16 :goto_56
 
-    .line 415
-    nop
-
-    :pswitch_data_14a
+    .line 398
+    :pswitch_data_126
     .packed-switch 0x1
-        :pswitch_70
-        :pswitch_b5
+        :pswitch_57
+        :pswitch_97
     .end packed-switch
 .end method
 
@@ -784,16 +746,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 399
+    .line 386
     if-nez p1, :cond_5
 
     move v0, v1
 
-    .line 407
+    .line 394
     :goto_4
     return v0
 
-    .line 400
+    .line 387
     :cond_5
     const-string v0, "mapview_mode"
 
@@ -803,7 +765,7 @@
 
     iput v0, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
 
-    .line 401
+    .line 388
     const-string v0, "locMarkId"
 
     const-wide/16 v2, -0x1
@@ -814,7 +776,7 @@
 
     iput-wide v2, p0, Lcom/linever/cruise/android/MapActivity;->mLMarkId:J
 
-    .line 402
+    .line 389
     const-string v0, "locMarkChipId"
 
     const-wide/16 v2, 0x0
@@ -825,7 +787,7 @@
 
     iput-wide v2, p0, Lcom/linever/cruise/android/MapActivity;->mLMChipId:J
 
-    .line 403
+    .line 390
     const-string v0, "scopeData"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -836,7 +798,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mOrgScope:Lcom/linever/cruise/android/Scope;
 
-    .line 404
+    .line 391
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mOrgScope:Lcom/linever/cruise/android/Scope;
 
     invoke-virtual {v0}, Lcom/linever/cruise/android/Scope;->clone()Lcom/linever/cruise/android/Scope;
@@ -845,7 +807,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
 
-    .line 405
+    .line 392
     const-string v0, "scopeTitle"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -854,7 +816,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mLMTitle:Ljava/lang/String;
 
-    .line 406
+    .line 393
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
 
     if-eqz v0, :cond_45
@@ -870,7 +832,7 @@
 
     goto :goto_4
 
-    .line 407
+    .line 394
     :cond_47
     const/4 v0, 0x1
 
@@ -884,17 +846,17 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 592
+    .line 565
     iput-boolean v2, p0, Lcom/linever/cruise/android/MapActivity;->mInitMap:Z
 
-    .line 593
+    .line 566
     if-eqz p1, :cond_9
 
     iget-boolean v1, p1, Lcom/linever/cruise/android/Scope;->mEnabled:Z
 
     if-nez v1, :cond_11
 
-    .line 594
+    .line 567
     :cond_9
     const-string v1, "MapActivity moveMap"
 
@@ -902,15 +864,15 @@
 
     invoke-static {v1, v2}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 601
+    .line 574
     :goto_10
     return-void
 
-    .line 597
+    .line 570
     :cond_11
     iput-boolean v2, p0, Lcom/linever/cruise/android/MapActivity;->mScopeLock:Z
 
-    .line 598
+    .line 571
     invoke-static {p1}, Lcom/linever/cruise/android/ScopeHelper;->getCenter(Lcom/linever/cruise/android/Scope;)Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v1
@@ -925,13 +887,13 @@
 
     move-result-object v0
 
-    .line 599
+    .line 572
     .local v0, "cu":Lcom/google/android/gms/maps/CameraUpdate;
     iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
 
-    .line 600
+    .line 573
     iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mScopeBar:Landroid/widget/SeekBar;
 
     invoke-static {p1}, Lcom/linever/cruise/android/ScopeHelper;->getProgress(Lcom/linever/cruise/android/Scope;)I
@@ -952,18 +914,18 @@
     .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
-    .line 372
+    .line 369
     packed-switch p1, :pswitch_data_2a
 
-    .line 384
+    .line 381
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 386
+    .line 383
     :cond_6
     :goto_6
     return-void
 
-    .line 374
+    .line 371
     :pswitch_7
     const/4 v1, -0x1
 
@@ -971,7 +933,7 @@
 
     if-eqz p3, :cond_6
 
-    .line 376
+    .line 373
     const-string v1, "scope"
 
     invoke-virtual {p3, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -980,7 +942,7 @@
 
     check-cast v0, Lcom/linever/cruise/android/Scope;
 
-    .line 377
+    .line 374
     .local v0, "ck":Lcom/linever/cruise/android/Scope;
     if-eqz v0, :cond_6
 
@@ -988,7 +950,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 378
+    .line 375
     const-string v1, "scope"
 
     invoke-virtual {p3, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -999,14 +961,14 @@
 
     iput-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
 
-    .line 379
+    .line 376
     iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
 
     invoke-direct {p0, v1}, Lcom/linever/cruise/android/MapActivity;->moveMap(Lcom/linever/cruise/android/Scope;)V
 
     goto :goto_6
 
-    .line 372
+    .line 369
     :pswitch_data_2a
     .packed-switch 0x3e8
         :pswitch_7
@@ -1024,18 +986,18 @@
 
     const/4 v5, 0x0
 
-    .line 110
+    .line 107
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 111
-    const v2, 0x7f030005
+    .line 108
+    const v2, 0x7f030006
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->setContentView(I)V
 
-    .line 112
+    .line 109
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/MapActivity;->setResult(I)V
 
-    .line 115
+    .line 112
     if-nez p1, :cond_23
 
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getIntent()Landroid/content/Intent;
@@ -1046,7 +1008,7 @@
 
     move-result-object v0
 
-    .line 116
+    .line 113
     .local v0, "bundle":Landroid/os/Bundle;
     :goto_19
     invoke-direct {p0, v0}, Lcom/linever/cruise/android/MapActivity;->loadParam(Landroid/os/Bundle;)Z
@@ -1055,10 +1017,10 @@
 
     if-nez v2, :cond_25
 
-    .line 117
+    .line 114
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->finish()V
 
-    .line 344
+    .line 341
     :goto_22
     return-void
 
@@ -1066,10 +1028,10 @@
     :cond_23
     move-object v0, p1
 
-    .line 115
+    .line 112
     goto :goto_19
 
-    .line 121
+    .line 118
     .restart local v0    # "bundle":Landroid/os/Bundle;
     :cond_25
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getApplication()Landroid/app/Application;
@@ -1080,8 +1042,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
-    .line 124
-    const v2, 0x7f060023
+    .line 121
+    const v2, 0x7f060014
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1091,10 +1053,10 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
-    .line 125
+    .line 122
     iget-object v4, p0, Lcom/linever/cruise/android/MapActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
-    const v2, 0x7f06002a
+    const v2, 0x7f060015
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1102,7 +1064,7 @@
 
     check-cast v2, Lcom/linever/cruise/android/BaselayerLinearLayout;
 
-    const v3, 0x7f06005f
+    const v3, 0x7f060060
 
     invoke-virtual {p0, v3}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1112,8 +1074,8 @@
 
     invoke-virtual {v4, p0, v2, v3}, Lcom/linever/cruise/android/LocationOverlayLayout;->setLayer(Landroid/app/Activity;Landroid/view/ViewGroup;Landroid/widget/LinearLayout;)V
 
-    .line 128
-    const v2, 0x7f060030
+    .line 125
+    const v2, 0x7f06001b
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1123,8 +1085,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->txMsg:Landroid/widget/TextView;
 
-    .line 129
-    const v2, 0x7f060033
+    .line 126
+    const v2, 0x7f06001e
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1134,8 +1096,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mScopeBar:Landroid/widget/SeekBar;
 
-    .line 130
-    const v2, 0x7f06002c
+    .line 127
+    const v2, 0x7f060016
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1145,8 +1107,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mScopeFrame:Landroid/widget/LinearLayout;
 
-    .line 131
-    const v2, 0x7f06002e
+    .line 128
+    const v2, 0x7f060018
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1156,8 +1118,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mSqFrame:Lcom/linever/cruise/android/SquareFrameLayout;
 
-    .line 132
-    const v2, 0x7f060035
+    .line 129
+    const v2, 0x7f060020
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1167,8 +1129,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
 
-    .line 133
-    const v2, 0x7f060036
+    .line 130
+    const v2, 0x7f060021
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1178,8 +1140,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->loLocMarkForms:Landroid/widget/LinearLayout;
 
-    .line 134
-    const v2, 0x7f060031
+    .line 131
+    const v2, 0x7f06001c
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1189,8 +1151,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->loSccopeBarFrame:Landroid/widget/LinearLayout;
 
-    .line 135
-    const v2, 0x7f06003b
+    .line 132
+    const v2, 0x7f060026
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1200,8 +1162,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnLMSave:Landroid/widget/Button;
 
-    .line 136
-    const v2, 0x7f060038
+    .line 133
+    const v2, 0x7f060023
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1211,8 +1173,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnLMDelete:Landroid/widget/Button;
 
-    .line 137
-    const v2, 0x7f06003a
+    .line 134
+    const v2, 0x7f060025
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1222,8 +1184,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnLMCancel:Landroid/widget/Button;
 
-    .line 138
-    const v2, 0x7f060039
+    .line 135
+    const v2, 0x7f060024
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1231,8 +1193,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->divMapBtn:Landroid/view/View;
 
-    .line 139
-    const v2, 0x7f060037
+    .line 136
+    const v2, 0x7f060022
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1242,8 +1204,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->edTitle:Landroid/widget/EditText;
 
-    .line 140
-    const v2, 0x7f060032
+    .line 137
+    const v2, 0x7f06001d
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1253,8 +1215,8 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mPinPoint:Landroid/widget/ImageView;
 
-    .line 141
-    const v2, 0x7f060034
+    .line 138
+    const v2, 0x7f06001f
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1264,7 +1226,7 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mWorld:Landroid/widget/ImageView;
 
-    .line 143
+    .line 140
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->txMsg:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/linever/cruise/android/MapActivity;->mOrgScope:Lcom/linever/cruise/android/Scope;
@@ -1273,7 +1235,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 144
+    .line 141
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mScopeBar:Landroid/widget/SeekBar;
 
     new-instance v3, Lcom/linever/cruise/android/MapActivity$3;
@@ -1282,7 +1244,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    .line 171
+    .line 168
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mPinPoint:Landroid/widget/ImageView;
 
     new-instance v3, Lcom/linever/cruise/android/MapActivity$4;
@@ -1291,7 +1253,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 178
+    .line 175
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mWorld:Landroid/widget/ImageView;
 
     new-instance v3, Lcom/linever/cruise/android/MapActivity$5;
@@ -1300,14 +1262,14 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 187
+    .line 184
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getLoaderManager()Landroid/app/LoaderManager;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mLoaderManager:Landroid/app/LoaderManager;
 
-    .line 188
+    .line 185
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mLoaderManager:Landroid/app/LoaderManager;
 
     const/4 v3, 0x4
@@ -1316,15 +1278,15 @@
 
     invoke-virtual {v2, v3, v7, v4}, Landroid/app/LoaderManager;->initLoader(ILandroid/os/Bundle;Landroid/app/LoaderManager$LoaderCallbacks;)Landroid/content/Loader;
 
-    .line 192
+    .line 189
     invoke-static {p0}, Lcom/google/android/gms/maps/MapsInitializer;->initialize(Landroid/content/Context;)I
 
-    .line 194
+    .line 191
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
-    const v3, 0x7f06002b
+    const v3, 0x7f06003c
 
     invoke-virtual {v2, v3}, Landroid/app/FragmentManager;->findFragmentById(I)Landroid/app/Fragment;
 
@@ -1338,7 +1300,7 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
-    .line 195
+    .line 192
     const/high16 v2, 0x40800000    # 4.0f
 
     iget-object v3, p0, Lcom/linever/cruise/android/MapActivity;->app:Lcom/linever/cruise/android/CruiseApp;
@@ -1349,13 +1311,13 @@
 
     float-to-int v1, v2
 
-    .line 196
+    .line 193
     .local v1, "fpx":I
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v2, v1, v1, v1, v1}, Lcom/google/android/gms/maps/GoogleMap;->setPadding(IIII)V
 
-    .line 197
+    .line 194
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v3, Lcom/linever/cruise/android/MapActivity$6;
@@ -1364,7 +1326,7 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/gms/maps/GoogleMap;->setOnCameraChangeListener(Lcom/google/android/gms/maps/GoogleMap$OnCameraChangeListener;)V
 
-    .line 225
+    .line 222
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v3, Lcom/linever/cruise/android/MapActivity$7;
@@ -1373,8 +1335,8 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/gms/maps/GoogleMap;->setOnMarkerClickListener(Lcom/google/android/gms/maps/GoogleMap$OnMarkerClickListener;)V
 
-    .line 241
-    const v2, 0x7f06002f
+    .line 238
+    const v2, 0x7f06001a
 
     invoke-virtual {p0, v2}, Lcom/linever/cruise/android/MapActivity;->findViewById(I)Landroid/view/View;
 
@@ -1384,7 +1346,7 @@
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mMapCenterPoint:Landroid/widget/ImageView;
 
-    .line 243
+    .line 240
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnCruise:Landroid/widget/Button;
 
     new-instance v3, Lcom/linever/cruise/android/MapActivity$8;
@@ -1393,7 +1355,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 268
+    .line 265
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnLMSave:Landroid/widget/Button;
 
     new-instance v3, Lcom/linever/cruise/android/MapActivity$9;
@@ -1402,7 +1364,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 305
+    .line 302
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnLMDelete:Landroid/widget/Button;
 
     new-instance v3, Lcom/linever/cruise/android/MapActivity$10;
@@ -1411,7 +1373,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 315
+    .line 312
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->btnLMCancel:Landroid/widget/Button;
 
     new-instance v3, Lcom/linever/cruise/android/MapActivity$11;
@@ -1420,33 +1382,33 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 329
+    .line 326
     iput-boolean v5, p0, Lcom/linever/cruise/android/MapActivity;->mInitMap:Z
 
-    .line 330
+    .line 327
     iput-boolean v5, p0, Lcom/linever/cruise/android/MapActivity;->isPointButnPush:Z
 
-    .line 331
+    .line 328
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
     invoke-virtual {v2, v6}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 333
+    .line 330
     iget v2, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
 
     if-nez v2, :cond_1ca
 
-    .line 334
+    .line 331
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
-    .line 335
+    .line 332
     new-instance v3, Lcom/google/android/gms/maps/model/MarkerOptions;
 
     invoke-direct {v3}, Lcom/google/android/gms/maps/model/MarkerOptions;-><init>()V
 
-    .line 336
+    .line 333
     iget-object v4, p0, Lcom/linever/cruise/android/MapActivity;->mOrgScope:Lcom/linever/cruise/android/Scope;
 
     invoke-static {v4}, Lcom/linever/cruise/android/ScopeHelper;->getCenter(Lcom/linever/cruise/android/Scope;)Lcom/google/android/gms/maps/model/LatLng;
@@ -1457,7 +1419,7 @@
 
     move-result-object v3
 
-    .line 337
+    .line 334
     const v4, 0x7f02008a
 
     invoke-static {v4}, Lcom/google/android/gms/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/google/android/gms/maps/model/BitmapDescriptor;
@@ -1468,14 +1430,14 @@
 
     move-result-object v3
 
-    .line 334
+    .line 331
     invoke-virtual {v2, v3}, Lcom/google/android/gms/maps/GoogleMap;->addMarker(Lcom/google/android/gms/maps/model/MarkerOptions;)Lcom/google/android/gms/maps/model/Marker;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mTakePicMarker:Lcom/google/android/gms/maps/model/Marker;
 
-    .line 339
+    .line 336
     iget-object v2, p0, Lcom/linever/cruise/android/MapActivity;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v2}, Lcom/google/android/gms/maps/GoogleMap;->getUiSettings()Lcom/google/android/gms/maps/UiSettings;
@@ -1484,20 +1446,20 @@
 
     invoke-virtual {v2, v6}, Lcom/google/android/gms/maps/UiSettings;->setZoomControlsEnabled(Z)V
 
-    .line 342
+    .line 339
     :goto_1c0
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/linever/cruise/android/MapActivity;->mPreMode:I
 
-    .line 343
+    .line 340
     iget v2, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
 
     invoke-direct {p0, v2}, Lcom/linever/cruise/android/MapActivity;->changeView(I)V
 
     goto/16 :goto_22
 
-    .line 341
+    .line 338
     :cond_1ca
     iput-object v7, p0, Lcom/linever/cruise/android/MapActivity;->mTakePicMarker:Lcom/google/android/gms/maps/model/Marker;
 
@@ -1511,18 +1473,18 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 487
+    .line 460
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
 
-    .line 488
+    .line 461
     .local v0, "inflater":Landroid/view/MenuInflater;
     iget v5, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
 
     packed-switch v5, :pswitch_data_74
 
-    .line 556
+    .line 529
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     move-result v4
@@ -1530,14 +1492,14 @@
     :goto_e
     return v4
 
-    .line 491
+    .line 464
     :pswitch_f
     const v5, 0x7f0d0004
 
     invoke-virtual {v0, v5, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    .line 493
-    const v5, 0x7f060129
+    .line 466
+    const v5, 0x7f06012a
 
     invoke-interface {p1, v5}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -1545,12 +1507,12 @@
 
     iput-object v5, p0, Lcom/linever/cruise/android/MapActivity;->mMenuSearchItem:Landroid/view/MenuItem;
 
-    .line 494
+    .line 467
     iget-object v5, p0, Lcom/linever/cruise/android/MapActivity;->mMenuSearchItem:Landroid/view/MenuItem;
 
     invoke-interface {v5}, Landroid/view/MenuItem;->expandActionView()Z
 
-    .line 495
+    .line 468
     iget-object v5, p0, Lcom/linever/cruise/android/MapActivity;->mMenuSearchItem:Landroid/view/MenuItem;
 
     new-instance v6, Lcom/linever/cruise/android/MapActivity$12;
@@ -1559,7 +1521,7 @@
 
     invoke-interface {v5, v6}, Landroid/view/MenuItem;->setOnActionExpandListener(Landroid/view/MenuItem$OnActionExpandListener;)Landroid/view/MenuItem;
 
-    .line 509
+    .line 482
     const-string v5, "search"
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/MapActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1568,7 +1530,7 @@
 
     check-cast v1, Landroid/app/SearchManager;
 
-    .line 511
+    .line 484
     .local v1, "searchManager":Landroid/app/SearchManager;
     iget-object v5, p0, Lcom/linever/cruise/android/MapActivity;->mMenuSearchItem:Landroid/view/MenuItem;
 
@@ -1578,7 +1540,7 @@
 
     check-cast v2, Landroid/widget/SearchView;
 
-    .line 513
+    .line 486
     .local v2, "searchView":Landroid/widget/SearchView;
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getComponentName()Landroid/content/ComponentName;
 
@@ -1588,19 +1550,19 @@
 
     move-result-object v3
 
-    .line 515
+    .line 488
     .local v3, "searchableInfo":Landroid/app/SearchableInfo;
     invoke-virtual {v2, v3}, Landroid/widget/SearchView;->setSearchableInfo(Landroid/app/SearchableInfo;)V
 
-    .line 517
+    .line 490
     invoke-virtual {v2, v4}, Landroid/widget/SearchView;->setIconifiedByDefault(Z)V
 
-    .line 519
+    .line 492
     const/4 v5, 0x0
 
     invoke-virtual {v2, v5}, Landroid/widget/SearchView;->setSubmitButtonEnabled(Z)V
 
-    .line 521
+    .line 494
     const v5, 0x7f09011a
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/MapActivity;->getString(I)Ljava/lang/String;
@@ -1609,26 +1571,26 @@
 
     invoke-virtual {v2, v5}, Landroid/widget/SearchView;->setQueryHint(Ljava/lang/CharSequence;)V
 
-    .line 522
+    .line 495
     new-instance v5, Lcom/linever/cruise/android/MapActivity$13;
 
     invoke-direct {v5, p0}, Lcom/linever/cruise/android/MapActivity$13;-><init>(Lcom/linever/cruise/android/MapActivity;)V
 
     invoke-virtual {v2, v5}, Landroid/widget/SearchView;->setOnQueryTextListener(Landroid/widget/SearchView$OnQueryTextListener;)V
 
-    .line 533
+    .line 506
     new-instance v5, Lcom/linever/cruise/android/MapActivity$14;
 
     invoke-direct {v5, p0, v2}, Lcom/linever/cruise/android/MapActivity$14;-><init>(Lcom/linever/cruise/android/MapActivity;Landroid/widget/SearchView;)V
 
     invoke-virtual {v2, v5}, Landroid/widget/SearchView;->setOnSuggestionListener(Landroid/widget/SearchView$OnSuggestionListener;)V
 
-    .line 547
+    .line 520
     invoke-virtual {v2}, Landroid/widget/SearchView;->clearFocus()V
 
     goto :goto_e
 
-    .line 552
+    .line 525
     .end local v1    # "searchManager":Landroid/app/SearchManager;
     .end local v2    # "searchView":Landroid/widget/SearchView;
     .end local v3    # "searchableInfo":Landroid/app/SearchableInfo;
@@ -1639,7 +1601,7 @@
 
     goto :goto_e
 
-    .line 488
+    .line 461
     :pswitch_data_74
     .packed-switch 0x0
         :pswitch_6d
@@ -1653,15 +1615,15 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 348
+    .line 345
     invoke-super {p0, p1}, Landroid/app/Activity;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 349
+    .line 346
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 350
+    .line 347
     .local v1, "bundle":Landroid/os/Bundle;
     const-string v4, "query"
 
@@ -1669,45 +1631,45 @@
 
     move-result-object v2
 
-    .line 351
+    .line 348
     .local v2, "queryString":Ljava/lang/String;
     const-string v4, "MapActivity onNewIntent"
 
     invoke-static {v4, v2}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 352
+    .line 349
     if-eqz v2, :cond_39
 
-    .line 354
+    .line 351
     new-instance v3, Landroid/provider/SearchRecentSuggestions;
 
-    .line 355
+    .line 352
     const-string v4, "com.linever.cruise.android.CruiseSearchSuggestionProvider"
 
-    .line 356
+    .line 353
     const/4 v5, 0x1
 
-    .line 354
+    .line 351
     invoke-direct {v3, p0, v4, v5}, Landroid/provider/SearchRecentSuggestions;-><init>(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 357
+    .line 354
     .local v3, "suggestions":Landroid/provider/SearchRecentSuggestions;
     const/4 v4, 0x0
 
     invoke-virtual {v3, v2, v4}, Landroid/provider/SearchRecentSuggestions;->saveRecentQuery(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 359
+    .line 356
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 360
+    .line 357
     .local v0, "args":Landroid/os/Bundle;
     const-string v4, "QUERY_STRING"
 
     invoke-virtual {v0, v4, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 361
+    .line 358
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->getLoaderManager()Landroid/app/LoaderManager;
 
     move-result-object v4
@@ -1722,17 +1684,17 @@
 
     invoke-virtual {v4}, Landroid/content/Loader;->forceLoad()V
 
-    .line 368
+    .line 365
     .end local v0    # "args":Landroid/os/Bundle;
     .end local v3    # "suggestions":Landroid/provider/SearchRecentSuggestions;
     :goto_38
     return-void
 
-    .line 364
+    .line 361
     :cond_39
     invoke-virtual {p0, p1}, Lcom/linever/cruise/android/MapActivity;->setIntent(Landroid/content/Intent;)V
 
-    .line 365
+    .line 362
     invoke-direct {p0, v1}, Lcom/linever/cruise/android/MapActivity;->loadParam(Landroid/os/Bundle;)Z
 
     move-result v4
@@ -1745,7 +1707,7 @@
 
     goto :goto_38
 
-    .line 366
+    .line 363
     :cond_48
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->finish()V
 
@@ -1759,14 +1721,14 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 563
+    .line 536
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v1
 
     sparse-switch v1, :sswitch_data_24
 
-    .line 575
+    .line 548
     invoke-super {p0, p1}, Landroid/app/Activity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -1774,42 +1736,42 @@
     :goto_c
     return v0
 
-    .line 565
+    .line 538
     :sswitch_d
     invoke-virtual {p0}, Lcom/linever/cruise/android/MapActivity;->finish()V
 
     goto :goto_c
 
-    .line 568
+    .line 541
     :sswitch_11
     const/4 v1, 0x0
 
     invoke-interface {p1, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    .line 569
+    .line 542
     iget v1, p0, Lcom/linever/cruise/android/MapActivity;->mMode:I
 
     iput v1, p0, Lcom/linever/cruise/android/MapActivity;->mPreMode:I
 
-    .line 570
+    .line 543
     iget-object v1, p0, Lcom/linever/cruise/android/MapActivity;->mOrgScope:Lcom/linever/cruise/android/Scope;
 
     invoke-direct {p0, v1}, Lcom/linever/cruise/android/MapActivity;->moveMap(Lcom/linever/cruise/android/Scope;)V
 
-    .line 571
+    .line 544
     const/4 v1, 0x2
 
     invoke-direct {p0, v1}, Lcom/linever/cruise/android/MapActivity;->changeView(I)V
 
     goto :goto_c
 
-    .line 563
+    .line 536
     nop
 
     :sswitch_data_24
     .sparse-switch
         0x102002c -> :sswitch_d
-        0x7f060128 -> :sswitch_11
+        0x7f060129 -> :sswitch_11
     .end sparse-switch
 .end method
 
@@ -1818,15 +1780,15 @@
     .param p1, "address"    # Landroid/location/Address;
 
     .prologue
-    .line 635
+    .line 608
     const-string v0, "MapActivity onSelectLocation"
 
     invoke-static {v0, p1}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 636
+    .line 609
     if-nez p1, :cond_14
 
-    .line 637
+    .line 610
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->txMsg:Landroid/widget/TextView;
 
     const v1, 0x7f090149
@@ -1837,11 +1799,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 643
+    .line 616
     :goto_13
     return-void
 
-    .line 640
+    .line 613
     :cond_14
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
 
@@ -1867,7 +1829,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/linever/cruise/android/ScopeHelper;->setCenterDistance(Lcom/linever/cruise/android/Scope;Ljava/lang/Double;Ljava/lang/Double;F)Z
 
-    .line 641
+    .line 614
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
 
     invoke-direct {p0, v0}, Lcom/linever/cruise/android/MapActivity;->moveMap(Lcom/linever/cruise/android/Scope;)V
@@ -1875,44 +1837,22 @@
     goto :goto_13
 .end method
 
-.method protected onStart()V
-    .registers 1
-
-    .prologue
-    .line 390
-    invoke-super {p0}, Landroid/app/Activity;->onStart()V
-
-    .line 391
-    return-void
-.end method
-
-.method protected onStop()V
-    .registers 1
-
-    .prologue
-    .line 395
-    invoke-super {p0}, Landroid/app/Activity;->onStop()V
-
-    .line 396
-    return-void
-.end method
-
 .method public onWindowFocusChanged(Z)V
     .registers 4
     .param p1, "hasFocus"    # Z
 
     .prologue
-    .line 581
+    .line 554
     invoke-super {p0, p1}, Landroid/app/Activity;->onWindowFocusChanged(Z)V
 
-    .line 582
+    .line 555
     if-eqz p1, :cond_1f
 
     iget-boolean v0, p0, Lcom/linever/cruise/android/MapActivity;->mInitMap:Z
 
     if-nez v0, :cond_1f
 
-    .line 583
+    .line 556
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mSqFrame:Lcom/linever/cruise/android/SquareFrameLayout;
 
     invoke-virtual {v0}, Lcom/linever/cruise/android/SquareFrameLayout;->getWidth()I
@@ -1933,12 +1873,12 @@
 
     iput v0, p0, Lcom/linever/cruise/android/MapActivity;->mMapSizeDp:I
 
-    .line 584
+    .line 557
     iget-object v0, p0, Lcom/linever/cruise/android/MapActivity;->mNewScope:Lcom/linever/cruise/android/Scope;
 
     invoke-direct {p0, v0}, Lcom/linever/cruise/android/MapActivity;->moveMap(Lcom/linever/cruise/android/Scope;)V
 
-    .line 586
+    .line 559
     :cond_1f
     return-void
 .end method

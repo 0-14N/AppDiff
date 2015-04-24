@@ -12,13 +12,9 @@
 
 .field private fbInviteBtn:Landroid/view/View;
 
-.field private fbprofileListener:Lcom/sromku/simple/fb/listeners/OnProfileListener;
-
 .field private img:Landroid/widget/ImageView;
 
 .field private onFbInviteBtnClickListener:Landroid/view/View$OnClickListener;
-
-.field private onInviteListener:Lcom/sromku/simple/fb/listeners/OnInviteListener;
 
 .field private origPrice:Landroid/widget/TextView;
 
@@ -34,54 +30,18 @@
     .registers 2
 
     .prologue
-    .line 57
+    .line 45
     invoke-direct {p0}, Landroid/support/v4/app/Fragment;-><init>()V
 
-    .line 126
+    .line 114
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment$1;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment$1;-><init>(Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;)V
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->onFbInviteBtnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 200
-    new-instance v0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment$3;
-
-    invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment$3;-><init>(Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;)V
-
-    iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->fbprofileListener:Lcom/sromku/simple/fb/listeners/OnProfileListener;
-
-    .line 212
-    new-instance v0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment$4;
-
-    invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment$4;-><init>(Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;)V
-
-    iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->onInviteListener:Lcom/sromku/simple/fb/listeners/OnInviteListener;
-
-    .line 59
+    .line 47
     return-void
-.end method
-
-.method static synthetic access$000(Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;)Lcom/sromku/simple/fb/listeners/OnProfileListener;
-    .registers 2
-    .param p0, "x0"    # Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->fbprofileListener:Lcom/sromku/simple/fb/listeners/OnProfileListener;
-
-    return-object v0
-.end method
-
-.method static synthetic access$100(Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;)Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;
-    .registers 2
-    .param p0, "x0"    # Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->data:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;
-
-    return-object v0
 .end method
 
 .method public static newInstance(Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;)Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;
@@ -89,16 +49,16 @@
     .param p0, "mwp"    # Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;
 
     .prologue
-    .line 52
+    .line 40
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;
 
     invoke-direct {v0}, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;-><init>()V
 
-    .line 53
+    .line 41
     .local v0, "f":Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;
     iput-object p0, v0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->data:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;
 
-    .line 54
+    .line 42
     return-object v0
 .end method
 
@@ -108,7 +68,7 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 109
+    .line 97
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->data:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;
 
     iget-object v3, v3, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;->eventDesc:Ljava/lang/String;
@@ -121,13 +81,13 @@
 
     move-result-object v2
 
-    .line 111
+    .line 99
     .local v2, "titleStr":Ljava/lang/String;
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->title:Landroid/widget/TextView;
 
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 113
+    .line 101
     new-instance v0, Ljava/text/DecimalFormat;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -158,7 +118,7 @@
 
     invoke-direct {v0, v3}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    .line 115
+    .line 103
     .local v0, "myFormatter":Ljava/text/DecimalFormat;
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->discountedPrice:Landroid/widget/TextView;
 
@@ -180,14 +140,14 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 116
+    .line 104
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->origPrice:Landroid/widget/TextView;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v5, 0x7f0d01e8
+    const v5, 0x7f0d01b5
 
     invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->getString(I)Ljava/lang/String;
 
@@ -217,7 +177,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 118
+    .line 106
     new-instance v1, Landroid/text/SpannableString;
 
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->origPrice:Landroid/widget/TextView;
@@ -228,7 +188,7 @@
 
     invoke-direct {v1, v3}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 119
+    .line 107
     .local v1, "temp":Landroid/text/SpannableString;
     new-instance v3, Landroid/text/style/StrikethroughSpan;
 
@@ -240,12 +200,12 @@
 
     invoke-virtual {v1, v3, v8, v4, v8}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
-    .line 120
+    .line 108
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->origPrice:Landroid/widget/TextView;
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 122
+    .line 110
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->discountPercentage:Landroid/widget/TextView;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -278,88 +238,18 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 124
+    .line 112
     return-void
 .end method
 
 
 # virtual methods
 .method public invite()V
-    .registers 5
+    .registers 1
 
     .prologue
-    .line 163
-    invoke-static {}, Lcom/sromku/simple/fb/SimpleFacebook;->getInstance()Lcom/sromku/simple/fb/SimpleFacebook;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/sromku/simple/fb/SimpleFacebook;->getGrantedPermissions()Ljava/util/List;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/sromku/simple/fb/Permission;->PUBLIC_PROFILE:Lcom/sromku/simple/fb/Permission;
-
-    invoke-virtual {v1}, Lcom/sromku/simple/fb/Permission;->getValue()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_30
-
-    .line 164
-    sget-object v0, Lcom/cccdi/mabellefanshare/AppApplication;->fbProfile:Lcom/sromku/simple/fb/entities/Profile;
-
-    if-eqz v0, :cond_26
-
-    .line 165
-    invoke-static {}, Lcom/sromku/simple/fb/SimpleFacebook;->getInstance()Lcom/sromku/simple/fb/SimpleFacebook;
-
-    move-result-object v0
-
-    const-string v1, "INVITE FD TO JOIN"
-
-    iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->onInviteListener:Lcom/sromku/simple/fb/listeners/OnInviteListener;
-
-    const-string v3, "INVITE DATA"
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/sromku/simple/fb/SimpleFacebook;->invite(Ljava/lang/String;Lcom/sromku/simple/fb/listeners/OnInviteListener;Ljava/lang/String;)V
-
-    .line 198
-    :goto_25
+    .line 124
     return-void
-
-    .line 167
-    :cond_26
-    invoke-static {}, Lcom/sromku/simple/fb/SimpleFacebook;->getInstance()Lcom/sromku/simple/fb/SimpleFacebook;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->fbprofileListener:Lcom/sromku/simple/fb/listeners/OnProfileListener;
-
-    invoke-virtual {v0, v1}, Lcom/sromku/simple/fb/SimpleFacebook;->getProfile(Lcom/sromku/simple/fb/listeners/OnProfileListener;)V
-
-    goto :goto_25
-
-    .line 172
-    :cond_30
-    invoke-static {}, Lcom/sromku/simple/fb/SimpleFacebook;->getInstance()Lcom/sromku/simple/fb/SimpleFacebook;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->permissions:[Lcom/sromku/simple/fb/Permission;
-
-    const/4 v2, 0x1
-
-    new-instance v3, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment$2;
-
-    invoke-direct {v3, p0}, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment$2;-><init>(Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;)V
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/sromku/simple/fb/SimpleFacebook;->requestNewPermissions([Lcom/sromku/simple/fb/Permission;ZLcom/sromku/simple/fb/listeners/OnNewPermissionsListener;)V
-
-    goto :goto_25
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
@@ -367,10 +257,10 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 73
+    .line 61
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 75
+    .line 63
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
@@ -379,7 +269,7 @@
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->userGreetingListener:Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;
 
-    .line 76
+    .line 64
     return-void
 .end method
 
@@ -392,16 +282,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 81
-    const v2, 0x7f030069
+    .line 69
+    const v2, 0x7f03005a
 
     invoke-virtual {p1, v2, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
-    .line 83
+    .line 71
     .local v0, "v":Landroid/view/View;
-    const v2, 0x7f0901a3
+    const v2, 0x7f09015f
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -411,7 +301,7 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->img:Landroid/widget/ImageView;
 
-    .line 84
+    .line 72
     sget-object v3, Lcom/cccdi/mabellefanshare/AppApplication;->imageLoader:Lcom/android/volley/toolbox/ImageLoader;
 
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->data:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;
@@ -434,8 +324,8 @@
 
     invoke-virtual {v3, v2, v4}, Lcom/android/volley/toolbox/ImageLoader;->get(Ljava/lang/String;Lcom/android/volley/toolbox/ImageLoader$ImageListener;)Lcom/android/volley/toolbox/ImageLoader$ImageContainer;
 
-    .line 86
-    const v2, 0x7f0901a0
+    .line 74
+    const v2, 0x7f09015c
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -445,8 +335,8 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->title:Landroid/widget/TextView;
 
-    .line 87
-    const v2, 0x7f090333
+    .line 75
+    const v2, 0x7f0902f7
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -456,8 +346,8 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->discountedPrice:Landroid/widget/TextView;
 
-    .line 88
-    const v2, 0x7f090334
+    .line 76
+    const v2, 0x7f0902f8
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -467,8 +357,8 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->origPrice:Landroid/widget/TextView;
 
-    .line 89
-    const v2, 0x7f090335
+    .line 77
+    const v2, 0x7f0902f9
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -478,11 +368,11 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->discountPercentage:Landroid/widget/TextView;
 
-    .line 91
+    .line 79
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->updateInformation()V
 
-    .line 93
-    const v2, 0x7f0901a2
+    .line 81
+    const v2, 0x7f09015e
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -490,15 +380,15 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->fbInviteBtn:Landroid/view/View;
 
-    .line 94
+    .line 82
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->fbInviteBtn:Landroid/view/View;
 
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->onFbInviteBtnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 96
-    const v2, 0x7f0901a4
+    .line 84
+    const v2, 0x7f090160
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -508,7 +398,7 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->warning:Landroid/widget/TextView;
 
-    .line 98
+    .line 86
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->data:Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;
 
     invoke-virtual {v2}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;->getCompleteDesc()Ljava/lang/String;
@@ -523,7 +413,7 @@
 
     move-result-object v1
 
-    .line 100
+    .line 88
     .local v1, "warningStr":Ljava/lang/String;
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->warning:Landroid/widget/TextView;
 
@@ -533,7 +423,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 101
+    .line 89
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->warning:Landroid/widget/TextView;
 
     invoke-static {}, Landroid/text/method/LinkMovementMethod;->getInstance()Landroid/text/method/MovementMethod;
@@ -542,11 +432,11 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    .line 103
+    .line 91
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->userGreetingListener:Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;
 
     invoke-interface {v2, v0}, Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;->updateUserGreeting(Landroid/view/View;)V
 
-    .line 105
+    .line 93
     return-object v0
 .end method

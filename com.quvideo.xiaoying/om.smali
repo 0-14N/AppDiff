@@ -7,22 +7,22 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/quvideo/xiaoying/app/activity/VideoItem;
+.field final synthetic a:Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;
 
-.field private final synthetic b:Lcom/quvideo/xiaoying/common/VideoDetailInfo;
+.field private final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/quvideo/xiaoying/app/activity/VideoItem;Lcom/quvideo/xiaoying/common/VideoDetailInfo;)V
+.method public constructor <init>(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;I)V
     .registers 3
 
     .prologue
     .line 1
-    iput-object p1, p0, Lom;->a:Lcom/quvideo/xiaoying/app/activity/VideoItem;
+    iput-object p1, p0, Lom;->a:Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;
 
-    iput-object p2, p0, Lom;->b:Lcom/quvideo/xiaoying/common/VideoDetailInfo;
+    iput p2, p0, Lom;->b:I
 
-    .line 121
+    .line 225
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,32 +31,36 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .registers 6
+    .registers 5
 
     .prologue
-    .line 125
-    iget-object v0, p0, Lom;->a:Lcom/quvideo/xiaoying/app/activity/VideoItem;
+    .line 230
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/quvideo/xiaoying/app/activity/VideoItem;->a(Lcom/quvideo/xiaoying/app/activity/VideoItem;)Landroid/os/Handler;
+    iget-object v1, p0, Lom;->a:Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lom;->a:Lcom/quvideo/xiaoying/app/activity/VideoItem;
-
-    invoke-static {v1}, Lcom/quvideo/xiaoying/app/activity/VideoItem;->a(Lcom/quvideo/xiaoying/app/activity/VideoItem;)Landroid/os/Handler;
+    invoke-static {v1}, Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;->c(Lcom/quvideo/xiaoying/app/im/view/ChatMessageAdapter;)Landroid/app/Activity;
 
     move-result-object v1
 
-    const/16 v2, 0x1001
+    const-class v2, Landroid/app/AlertDialog;
 
-    iget-object v3, p0, Lom;->b:Lcom/quvideo/xiaoying/common/VideoDetailInfo;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {v1, v2, v3}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    .line 233
+    const-string/jumbo v1, "cancel"
 
-    move-result-object v1
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 126
+    .line 234
+    const-string/jumbo v1, "position"
+
+    iget v2, p0, Lom;->b:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 239
     return-void
 .end method

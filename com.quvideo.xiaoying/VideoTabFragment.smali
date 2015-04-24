@@ -194,16 +194,16 @@
     iput v1, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->aD:I
 
     .line 197
-    new-instance v0, Ladc;
+    new-instance v0, Lwi;
 
-    invoke-direct {v0, p0}, Ladc;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;)V
+    invoke-direct {v0, p0}, Lwi;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->aE:Landroid/view/View$OnClickListener;
 
     .line 527
-    new-instance v0, Ladd;
+    new-instance v0, Lwj;
 
-    invoke-direct {v0, p0}, Ladd;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;)V
+    invoke-direct {v0, p0}, Lwj;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->aF:Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment$TitleBarActionListener;
 
@@ -726,7 +726,7 @@
     .line 159
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f06044b
+    const v1, 0x7f060436
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -739,7 +739,7 @@
     .line 160
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605f2
+    const v1, 0x7f0605dd
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -752,7 +752,7 @@
     .line 161
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605f7
+    const v1, 0x7f0605e2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -765,7 +765,7 @@
     .line 162
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605f4
+    const v1, 0x7f0605df
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -778,7 +778,7 @@
     .line 164
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605f3
+    const v1, 0x7f0605de
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -791,7 +791,7 @@
     .line 165
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605f8
+    const v1, 0x7f0605e3
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -804,7 +804,7 @@
     .line 166
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605f5
+    const v1, 0x7f0605e0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -817,7 +817,7 @@
     .line 167
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f06044c
+    const v1, 0x7f060437
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -830,7 +830,7 @@
     .line 168
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605f1
+    const v1, 0x7f0605dc
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -843,7 +843,7 @@
     .line 169
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605f6
+    const v1, 0x7f0605e1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -856,7 +856,7 @@
     .line 171
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605ee
+    const v1, 0x7f0605d9
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -894,7 +894,7 @@
     .line 179
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605eb
+    const v1, 0x7f0605d6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -907,7 +907,7 @@
     .line 180
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0605ef
+    const v1, 0x7f0605da
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1018,7 +1018,7 @@
     .line 220
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0604d3
+    const v1, 0x7f0604be
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1164,7 +1164,7 @@
     .line 338
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->am:Landroid/view/View;
 
-    const v1, 0x7f0604d6
+    const v1, 0x7f0604c1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1568,9 +1568,9 @@
     invoke-direct {v0, v2, v2, v1, v2}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
     .line 549
-    new-instance v1, Ladf;
+    new-instance v1, Lwl;
 
-    invoke-direct {v1, p0}, Ladf;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;)V
+    invoke-direct {v1, p0}, Lwl;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -1635,9 +1635,9 @@
     invoke-direct {v0, v2, v2, v2, v1}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
     .line 582
-    new-instance v1, Ladg;
+    new-instance v1, Lwm;
 
-    invoke-direct {v1, p0}, Ladg;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;)V
+    invoke-direct {v1, p0}, Lwm;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -1855,7 +1855,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07005a
+    const v1, 0x7f070043
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1870,7 +1870,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070041
+    const v1, 0x7f07002a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1954,9 +1954,9 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 143
-    new-instance v1, Lade;
+    new-instance v1, Lwk;
 
-    invoke-direct {v1, p0}, Lade;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;)V
+    invoke-direct {v1, p0}, Lwk;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;)V
 
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoTabFragment;->ax:Landroid/content/BroadcastReceiver;
 

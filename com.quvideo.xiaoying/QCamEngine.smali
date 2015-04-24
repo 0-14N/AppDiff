@@ -86,17 +86,17 @@
 
     iput-object v0, p0, Lcom/mediarecorder/engine/QCamEngine;->l:Ljava/lang/Object;
 
-    new-instance v0, Ljz;
+    new-instance v0, Lcz;
 
-    invoke-direct {v0, p0}, Ljz;-><init>(Lcom/mediarecorder/engine/QCamEngine;)V
+    invoke-direct {v0, p0}, Lcz;-><init>(Lcom/mediarecorder/engine/QCamEngine;)V
 
     iput-object v0, p0, Lcom/mediarecorder/engine/QCamEngine;->m:Landroid/hardware/Camera$PreviewCallback;
 
     iput-object v1, p0, Lcom/mediarecorder/engine/QCamEngine;->n:Lcom/mediarecorder/utils/WorkThread;
 
-    new-instance v0, Lka;
+    new-instance v0, Lda;
 
-    invoke-direct {v0, p0}, Lka;-><init>(Lcom/mediarecorder/engine/QCamEngine;)V
+    invoke-direct {v0, p0}, Lda;-><init>(Lcom/mediarecorder/engine/QCamEngine;)V
 
     iput-object v0, p0, Lcom/mediarecorder/engine/QCamEngine;->o:Lcom/mediarecorder/utils/WorkThread$WorkThreadCB;
 
@@ -723,9 +723,9 @@
 
     new-instance v0, Lcom/mediarecorder/utils/WorkThread;
 
-    new-instance v1, Lkb;
+    new-instance v1, Ldb;
 
-    invoke-direct {v1, p0}, Lkb;-><init>(Lcom/mediarecorder/engine/QCamEngine;)V
+    invoke-direct {v1, p0}, Ldb;-><init>(Lcom/mediarecorder/engine/QCamEngine;)V
 
     const-string/jumbo v2, "V2CameraThread"
 

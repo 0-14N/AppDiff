@@ -30,7 +30,7 @@
 .method static synthetic a(Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
 
     return-void
 .end method
@@ -62,13 +62,113 @@
 .method static synthetic b(Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
 
     return-void
 .end method
 
 .method private g()V
     .registers 2
+
+    const v0, 0x7f0e008e
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->s:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0e0095
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RadioButton;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->q:Landroid/widget/RadioButton;
+
+    const v0, 0x7f0e0093
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->u:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0e008f
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RadioButton;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->o:Landroid/widget/RadioButton;
+
+    const v0, 0x7f0e0090
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->t:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0e008a
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RadioButton;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->x:Landroid/widget/RadioButton;
+
+    const v0, 0x7f0e0089
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RadioButton;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->w:Landroid/widget/RadioButton;
+
+    const v0, 0x7f0e0097
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->y:Landroid/widget/TextView;
+
+    const v0, 0x7f0e0088
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RadioGroup;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->v:Landroid/widget/RadioGroup;
+
+    const v0, 0x7f0e008c
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RadioButton;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->n:Landroid/widget/RadioButton;
 
     const v0, 0x7f0e008b
 
@@ -89,106 +189,6 @@
     check-cast v0, Landroid/widget/RadioButton;
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->p:Landroid/widget/RadioButton;
-
-    const v0, 0x7f0e0090
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->t:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0e008c
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RadioButton;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->n:Landroid/widget/RadioButton;
-
-    const v0, 0x7f0e008e
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->s:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0e0089
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RadioButton;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->w:Landroid/widget/RadioButton;
-
-    const v0, 0x7f0e0088
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RadioGroup;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->v:Landroid/widget/RadioGroup;
-
-    const v0, 0x7f0e0097
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->y:Landroid/widget/TextView;
-
-    const v0, 0x7f0e008a
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RadioButton;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->x:Landroid/widget/RadioButton;
-
-    const v0, 0x7f0e0093
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->u:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0e0095
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RadioButton;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->q:Landroid/widget/RadioButton;
-
-    const v0, 0x7f0e008f
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RadioButton;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->o:Landroid/widget/RadioButton;
 
     invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->u()V
 
@@ -228,9 +228,9 @@
 .method public o()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/ir;
+    new-instance v0, Lcom/cungo/callrecorder/ui/iq;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/ir;-><init>(Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/iq;-><init>(Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -248,12 +248,12 @@
     return-void
 
     :sswitch_7
-    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->f(I)V
+    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->a(I)V
 
     goto :goto_6
 
     :sswitch_b
-    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->a(I)V
+    invoke-virtual {p0, p2}, Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;->f(I)V
 
     goto :goto_6
 
@@ -266,9 +266,9 @@
 
     :sswitch_data_14
     .sparse-switch
-        0x1 -> :sswitch_b
+        0x1 -> :sswitch_7
         0x2766 -> :sswitch_f
-        0xfffd -> :sswitch_7
+        0xfffd -> :sswitch_b
     .end sparse-switch
 .end method
 
@@ -320,9 +320,9 @@
 .method public p()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/iq;
+    new-instance v0, Lcom/cungo/callrecorder/ui/ir;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/iq;-><init>(Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/ir;-><init>(Lcom/cungo/callrecorder/ui/ActivityRecordModeSelect_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 

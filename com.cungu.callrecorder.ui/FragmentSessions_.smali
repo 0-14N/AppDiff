@@ -26,16 +26,6 @@
 .method private U()V
     .registers 2
 
-    const v0, 0x7f0e00ea
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/FragmentSessions_;->g(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/cungo/callrecorder/ui/BottomCaller;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/FragmentSessions_;->Q:Lcom/cungo/callrecorder/ui/BottomCaller;
-
     const v0, 0x7f0e004a
 
     invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/FragmentSessions_;->g(I)Landroid/view/View;
@@ -45,6 +35,16 @@
     check-cast v0, Lcom/cungo/callrecorder/ui/CGSessionListView;
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/FragmentSessions_;->P:Lcom/cungo/callrecorder/ui/CGSessionListView;
+
+    const v0, 0x7f0e00ea
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/FragmentSessions_;->g(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/cungo/callrecorder/ui/BottomCaller;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/FragmentSessions_;->Q:Lcom/cungo/callrecorder/ui/BottomCaller;
 
     invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/FragmentSessions_;->L()V
 
@@ -62,7 +62,7 @@
 .method static synthetic a(Lcom/cungo/callrecorder/ui/FragmentSessions_;I)V
     .registers 2
 
-    invoke-super {p0, p1}, Lcom/cungo/callrecorder/ui/FragmentSessions;->f(I)V
+    invoke-super {p0, p1}, Lcom/cungo/callrecorder/ui/FragmentSessions;->e(I)V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
 .method static synthetic b(Lcom/cungo/callrecorder/ui/FragmentSessions_;I)V
     .registers 2
 
-    invoke-super {p0, p1}, Lcom/cungo/callrecorder/ui/FragmentSessions;->e(I)V
+    invoke-super {p0, p1}, Lcom/cungo/callrecorder/ui/FragmentSessions;->f(I)V
 
     return-void
 .end method
@@ -94,9 +94,9 @@
 .method public S()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/rz;
+    new-instance v0, Lcom/cungo/callrecorder/ui/sa;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/rz;-><init>(Lcom/cungo/callrecorder/ui/FragmentSessions_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/sa;-><init>(Lcom/cungo/callrecorder/ui/FragmentSessions_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -145,9 +145,9 @@
 .method public a(Ljava/util/List;Z)V
     .registers 4
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/sa;
+    new-instance v0, Lcom/cungo/callrecorder/ui/rz;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/cungo/callrecorder/ui/sa;-><init>(Lcom/cungo/callrecorder/ui/FragmentSessions_;Ljava/util/List;Z)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/cungo/callrecorder/ui/rz;-><init>(Lcom/cungo/callrecorder/ui/FragmentSessions_;Ljava/util/List;Z)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -169,9 +169,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/FragmentSessions_;->S:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/ry;
+    new-instance v1, Lcom/cungo/callrecorder/ui/rx;
 
-    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/ry;-><init>(Lcom/cungo/callrecorder/ui/FragmentSessions_;I)V
+    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/rx;-><init>(Lcom/cungo/callrecorder/ui/FragmentSessions_;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -183,9 +183,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/FragmentSessions_;->S:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/rx;
+    new-instance v1, Lcom/cungo/callrecorder/ui/ry;
 
-    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/rx;-><init>(Lcom/cungo/callrecorder/ui/FragmentSessions_;I)V
+    invoke-direct {v1, p0, p1}, Lcom/cungo/callrecorder/ui/ry;-><init>(Lcom/cungo/callrecorder/ui/FragmentSessions_;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

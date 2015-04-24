@@ -1,367 +1,472 @@
 .class public Lcom/movesky/webapp/Activity_WebView;
 .super Landroid/app/Activity;
+.source "Activity_WebView.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/movesky/webapp/Activity_WebView$MyWebViewDownLoadListener;
+    }
+.end annotation
 
 
 # instance fields
-.field a:Landroid/content/Context;
+.field final f_urlBase:Ljava/lang/String;
 
-.field private b:Landroid/webkit/WebView;
+.field m_WebView:Landroid/webkit/WebView;
 
-.field private c:Ljava/lang/String;
+.field m_ct:Landroid/content/Context;
 
-.field private d:Ljava/lang/String;
+.field m_jsonMap:Lorg/json/JSONObject;
+
+.field m_proDialog:Landroid/app/ProgressDialog;
+
+.field m_url:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
     .registers 2
 
+    .prologue
+    .line 41
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
+    .line 46
     const-string v0, "file:///android_asset/"
 
-    iput-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->c:Ljava/lang/String;
+    iput-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->f_urlBase:Ljava/lang/String;
 
+    .line 41
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/io/File;)V
+.method public DeletePath(Ljava/io/File;)V
     .registers 7
+    .param p1, "path"    # Ljava/io/File;
 
+    .prologue
+    .line 55
     if-eqz p1, :cond_16
 
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_16
+    if-eqz v1, :cond_16
 
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_16
+    if-eqz v1, :cond_16
 
+    .line 56
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
-    move-result-object v0
+    move-result-object v1
 
-    array-length v1, v0
+    array-length v2, v1
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     :goto_14
-    if-lt v2, v1, :cond_17
+    if-lt v3, v2, :cond_17
 
+    .line 65
     :cond_16
     return-void
 
+    .line 56
     :cond_17
-    aget-object v3, v0, v2
+    aget-object v0, v1, v3
 
-    invoke-virtual {v3}, Ljava/io/File;->isFile()Z
+    .line 57
+    .local v0, "item":Ljava/io/File;
+    invoke-virtual {v0}, Ljava/io/File;->isFile()Z
 
     move-result v4
 
     if-eqz v4, :cond_25
 
-    invoke-virtual {v3}, Ljava/io/File;->delete()Z
+    .line 58
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
+    .line 56
     :goto_22
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_14
 
+    .line 61
     :cond_25
-    invoke-virtual {p0, v3}, Lcom/movesky/webapp/Activity_WebView;->a(Ljava/io/File;)V
+    invoke-virtual {p0, v0}, Lcom/movesky/webapp/Activity_WebView;->DeletePath(Ljava/io/File;)V
 
     goto :goto_22
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 8
+    .registers 9
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
+
+    .prologue
+    const/4 v6, 0x0
 
     const/4 v5, 0x1
 
-    const/4 v4, 0x0
-
+    .line 69
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-static {}, Lcom/a/a/b;->a()V
+    .line 70
+    invoke-static {v5}, Lcom/zrd/common/ZrdCommon$ZrdLog;->SetLevel(I)V
 
-    const-string v0, "**************Start**********************"
+    .line 71
+    const-string v3, "**************Start**********************"
 
-    invoke-static {v0}, Lcom/a/a/b;->a(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/zrd/common/ZrdCommon$ZrdLog;->Log(Ljava/lang/String;)V
 
-    const v0, 0x7f030004
+    .line 73
+    const v3, 0x7f030004
 
-    invoke-virtual {p0, v0}, Lcom/movesky/webapp/Activity_WebView;->setContentView(I)V
+    invoke-virtual {p0, v3}, Lcom/movesky/webapp/Activity_WebView;->setContentView(I)V
 
-    invoke-static {p0}, Lcom/movesky/webapp/ad;->a(Landroid/content/Context;)Z
+    .line 74
+    invoke-static {p0}, Lcom/movesky/webapp/YSWeChat;->regToWx(Landroid/content/Context;)Z
 
-    iput-object p0, p0, Lcom/movesky/webapp/Activity_WebView;->a:Landroid/content/Context;
+    .line 75
+    invoke-static {p0}, Lcom/movesky/ad/ADScore;->GoogleCheck(Landroid/content/Context;)I
 
-    const-string v0, "file:///android_asset/release/code/html/indexAndroid.html"
+    .line 77
+    iput-object p0, p0, Lcom/movesky/webapp/Activity_WebView;->m_ct:Landroid/content/Context;
 
-    iput-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->d:Ljava/lang/String;
+    .line 85
+    const-string v3, "file:///android_asset/release/code/html/indexAndroid.html"
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->a:Landroid/content/Context;
+    iput-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_url:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    .line 87
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_ct:Landroid/content/Context;
 
-    move-result-object v0
+    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/movesky/webapp/u;->a(Ljava/lang/String;)V
+    move-result-object v3
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->a:Landroid/content/Context;
+    invoke-static {v3}, Lcom/movesky/webapp/YSHtml;->SetWokdPath(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/movesky/a/b;->a(Landroid/content/Context;)V
+    .line 88
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_ct:Landroid/content/Context;
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->a:Landroid/content/Context;
+    const v4, 0x7f08001e
 
-    const-string v1, "release/res/jsmap"
+    invoke-static {v3, v4}, Lcom/movesky/ad/Advert;->SetAdvertLayoutHeight(Landroid/content/Context;I)V
 
-    invoke-static {v0, v1}, Lcom/movesky/webapp/u;->a(Landroid/content/Context;Ljava/lang/String;)Z
+    .line 90
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_ct:Landroid/content/Context;
 
-    const v0, 0x7f08001f
+    const-string v4, "release/res/jsmap"
 
-    invoke-virtual {p0, v0}, Lcom/movesky/webapp/Activity_WebView;->findViewById(I)Landroid/view/View;
+    invoke-static {v3, v4}, Lcom/movesky/webapp/YSHtml;->AppDecodeFile(Landroid/content/Context;Ljava/lang/String;)Z
 
-    move-result-object v0
+    .line 96
+    const v3, 0x7f08001f
 
-    check-cast v0, Landroid/webkit/WebView;
+    invoke-virtual {p0, v3}, Lcom/movesky/webapp/Activity_WebView;->findViewById(I)Landroid/view/View;
 
-    iput-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    move-result-object v3
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    check-cast v3, Landroid/webkit/WebView;
 
-    invoke-virtual {v0}, Landroid/webkit/WebView;->requestFocusFromTouch()Z
+    iput-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    .line 97
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
 
-    invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+    invoke-virtual {v3}, Landroid/webkit/WebView;->requestFocusFromTouch()Z
 
-    move-result-object v0
+    .line 101
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
 
-    const-wide/32 v1, 0x800000
-
-    invoke-virtual {v0, v1, v2}, Landroid/webkit/WebSettings;->setAppCacheMaxSize(J)V
-
-    invoke-virtual {p0}, Lcom/movesky/webapp/Activity_WebView;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-string v2, "cache"
-
-    invoke-virtual {v1, v2, v4}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setAppCachePath(Ljava/lang/String;)V
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "AppCachePath:"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/a/a/b;->a(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v5}, Landroid/webkit/WebSettings;->setJavaScriptCanOpenWindowsAutomatically(Z)V
-
-    invoke-virtual {v0, v5}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
-
-    invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
-
-    invoke-virtual {v0, v5}, Landroid/webkit/WebSettings;->setAllowFileAccess(Z)V
-
-    invoke-virtual {v0, v5}, Landroid/webkit/WebSettings;->setGeolocationEnabled(Z)V
-
-    invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setSavePassword(Z)V
-
-    invoke-virtual {v0, v5}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
-
-    invoke-virtual {v0, v5}, Landroid/webkit/WebSettings;->setDatabaseEnabled(Z)V
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setCacheMode(I)V
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "/data/data/"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/movesky/webapp/Activity_WebView;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v3}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 103
+    .local v2, "ws":Landroid/webkit/WebSettings;
+    const-wide/32 v3, 0x800000
 
-    move-result-object v1
+    invoke-virtual {v2, v3, v4}, Landroid/webkit/WebSettings;->setAppCacheMaxSize(J)V
 
-    const-string v2, "/databases/"
+    .line 104
+    invoke-virtual {p0}, Lcom/movesky/webapp/Activity_WebView;->getApplicationContext()Landroid/content/Context;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    move-result-object v1
+    const-string v4, "cache"
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3, v4, v6}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setDatabasePath(Ljava/lang/String;)V
+    invoke-virtual {v3}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    sget-object v1, Landroid/webkit/WebSettings$RenderPriority;->HIGH:Landroid/webkit/WebSettings$RenderPriority;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setRenderPriority(Landroid/webkit/WebSettings$RenderPriority;)V
+    .line 105
+    .local v0, "appCacheDir":Ljava/lang/String;
+    invoke-virtual {v2, v0}, Landroid/webkit/WebSettings;->setAppCachePath(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    .line 106
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v4}, Landroid/webkit/WebView;->setVerticalScrollBarEnabled(Z)V
+    const-string v4, "AppCachePath:"
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v4}, Landroid/webkit/WebView;->setHorizontalScrollBarEnabled(Z)V
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    move-result-object v3
 
-    new-instance v1, Lcom/movesky/webapp/av;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {v1, p0}, Lcom/movesky/webapp/av;-><init>(Lcom/movesky/webapp/Activity_WebView;)V
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setDownloadListener(Landroid/webkit/DownloadListener;)V
+    invoke-static {v3}, Lcom/zrd/common/ZrdCommon$ZrdLog;->Log(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    .line 108
+    invoke-virtual {v2, v5}, Landroid/webkit/WebSettings;->setJavaScriptCanOpenWindowsAutomatically(Z)V
 
-    invoke-virtual {v0, v4}, Landroid/webkit/WebView;->setScrollBarStyle(I)V
+    .line 109
+    invoke-virtual {v2, v5}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    .line 110
+    invoke-virtual {v2, v6}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
 
-    new-instance v1, Lcom/movesky/webapp/ac;
+    .line 111
+    invoke-virtual {v2, v5}, Landroid/webkit/WebSettings;->setAllowFileAccess(Z)V
 
-    invoke-direct {v1, p0}, Lcom/movesky/webapp/ac;-><init>(Lcom/movesky/webapp/Activity_WebView;)V
+    .line 112
+    invoke-virtual {v2, v5}, Landroid/webkit/WebSettings;->setGeolocationEnabled(Z)V
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
+    .line 114
+    invoke-virtual {v2, v6}, Landroid/webkit/WebSettings;->setSavePassword(Z)V
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    .line 116
+    invoke-virtual {v2, v5}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
 
-    new-instance v1, Lcom/movesky/webapp/z;
+    .line 117
+    invoke-virtual {v2, v5}, Landroid/webkit/WebSettings;->setDatabaseEnabled(Z)V
 
-    invoke-direct {v1, p0}, Lcom/movesky/webapp/z;-><init>(Lcom/movesky/webapp/Activity_WebView;)V
+    .line 119
+    const/4 v3, 0x2
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
+    invoke-virtual {v2, v3}, Landroid/webkit/WebSettings;->setCacheMode(I)V
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    .line 122
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    new-instance v1, Lcom/movesky/webapp/aa;
+    const-string v4, "/data/data/"
 
-    invoke-direct {v1, p0}, Lcom/movesky/webapp/aa;-><init>(Lcom/movesky/webapp/Activity_WebView;)V
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v2, "android"
+    invoke-virtual {p0}, Lcom/movesky/webapp/Activity_WebView;->getPackageName()Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v4
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Lcom/movesky/webapp/y;
+    move-result-object v3
 
-    invoke-direct {v1, p0}, Lcom/movesky/webapp/y;-><init>(Lcom/movesky/webapp/Activity_WebView;)V
+    const-string v4, "/databases/"
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :try_start_f0
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    move-result-object v3
 
-    iget-object v1, p0, Lcom/movesky/webapp/Activity_WebView;->d:Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
-    :try_end_f7
-    .catch Ljava/lang/Exception; {:try_start_f0 .. :try_end_f7} :catch_f8
+    move-result-object v3
 
-    :goto_f7
+    invoke-virtual {v2, v3}, Landroid/webkit/WebSettings;->setDatabasePath(Ljava/lang/String;)V
+
+    .line 124
+    sget-object v3, Landroid/webkit/WebSettings$RenderPriority;->HIGH:Landroid/webkit/WebSettings$RenderPriority;
+
+    invoke-virtual {v2, v3}, Landroid/webkit/WebSettings;->setRenderPriority(Landroid/webkit/WebSettings$RenderPriority;)V
+
+    .line 126
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v3, v6}, Landroid/webkit/WebView;->setVerticalScrollBarEnabled(Z)V
+
+    .line 127
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v3, v6}, Landroid/webkit/WebView;->setHorizontalScrollBarEnabled(Z)V
+
+    .line 130
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
+
+    new-instance v4, Lcom/movesky/webapp/Activity_WebView$MyWebViewDownLoadListener;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, p0, v5}, Lcom/movesky/webapp/Activity_WebView$MyWebViewDownLoadListener;-><init>(Lcom/movesky/webapp/Activity_WebView;Lcom/movesky/webapp/Activity_WebView$MyWebViewDownLoadListener;)V
+
+    invoke-virtual {v3, v4}, Landroid/webkit/WebView;->setDownloadListener(Landroid/webkit/DownloadListener;)V
+
+    .line 131
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v3, v6}, Landroid/webkit/WebView;->setScrollBarStyle(I)V
+
+    .line 132
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
+
+    new-instance v4, Lcom/movesky/webapp/Activity_WebView$1;
+
+    invoke-direct {v4, p0}, Lcom/movesky/webapp/Activity_WebView$1;-><init>(Lcom/movesky/webapp/Activity_WebView;)V
+
+    invoke-virtual {v3, v4}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
+
+    .line 168
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
+
+    new-instance v4, Lcom/movesky/webapp/Activity_WebView$2;
+
+    invoke-direct {v4, p0}, Lcom/movesky/webapp/Activity_WebView$2;-><init>(Lcom/movesky/webapp/Activity_WebView;)V
+
+    invoke-virtual {v3, v4}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
+
+    .line 202
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
+
+    new-instance v4, Lcom/movesky/webapp/Activity_WebView$3;
+
+    invoke-direct {v4, p0}, Lcom/movesky/webapp/Activity_WebView$3;-><init>(Lcom/movesky/webapp/Activity_WebView;)V
+
+    .line 207
+    const-string v5, "android"
+
+    .line 202
+    invoke-virtual {v3, v4, v5}, Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 209
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
+
+    new-instance v4, Lcom/movesky/webapp/Activity_WebView$4;
+
+    invoke-direct {v4, p0}, Lcom/movesky/webapp/Activity_WebView$4;-><init>(Lcom/movesky/webapp/Activity_WebView;)V
+
+    invoke-virtual {v3, v4}, Landroid/webkit/WebView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+
+    .line 236
+    :try_start_f7
+    iget-object v3, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
+
+    iget-object v4, p0, Lcom/movesky/webapp/Activity_WebView;->m_url:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    :try_end_fe
+    .catch Ljava/lang/Exception; {:try_start_f7 .. :try_end_fe} :catch_ff
+
+    .line 241
+    :goto_fe
     return-void
 
-    :catch_f8
-    move-exception v0
+    .line 237
+    :catch_ff
+    move-exception v3
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    move-object v1, v3
 
-    goto :goto_f7
+    .line 238
+    .local v1, "ex":Ljava/lang/Exception;
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_fe
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .registers 7
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
+    .prologue
     const/4 v3, 0x3
 
     const/4 v2, 0x1
 
-    const/16 v0, 0x18
+    .line 246
+    const/16 v1, 0x18
 
-    if-ne p1, v0, :cond_14
+    if-ne p1, v1, :cond_14
 
-    const-string v0, "audio"
+    .line 248
+    const-string v1, "audio"
 
-    invoke-virtual {p0, v0}, Lcom/movesky/webapp/Activity_WebView;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/movesky/webapp/Activity_WebView;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 247
     check-cast v0, Landroid/media/AudioManager;
 
+    .line 249
+    .local v0, "m_AudioManager":Landroid/media/AudioManager;
     invoke-virtual {p0, v3}, Lcom/movesky/webapp/Activity_WebView;->setVolumeControlStream(I)V
 
+    .line 250
     invoke-virtual {v0, v3, v2, v2}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
+    .line 254
+    .end local v0    # "m_AudioManager":Landroid/media/AudioManager;
     :cond_14
-    const/16 v0, 0x19
+    const/16 v1, 0x19
 
-    if-ne p1, v0, :cond_27
+    if-ne p1, v1, :cond_27
 
-    const-string v0, "audio"
+    .line 256
+    const-string v1, "audio"
 
-    invoke-virtual {p0, v0}, Lcom/movesky/webapp/Activity_WebView;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/movesky/webapp/Activity_WebView;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 255
     check-cast v0, Landroid/media/AudioManager;
 
+    .line 257
+    .restart local v0    # "m_AudioManager":Landroid/media/AudioManager;
     invoke-virtual {p0, v3}, Lcom/movesky/webapp/Activity_WebView;->setVolumeControlStream(I)V
 
+    .line 259
     const/4 v1, -0x1
 
+    .line 258
     invoke-virtual {v0, v3, v1, v2}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
+    .line 261
+    .end local v0    # "m_AudioManager":Landroid/media/AudioManager;
     :cond_27
-    const/4 v0, 0x4
+    const/4 v1, 0x4
 
-    if-ne p1, v0, :cond_35
+    if-ne p1, v1, :cond_35
 
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_35
+    if-nez v1, :cond_35
 
-    iget-object v0, p0, Lcom/movesky/webapp/Activity_WebView;->b:Landroid/webkit/WebView;
+    .line 263
+    iget-object v1, p0, Lcom/movesky/webapp/Activity_WebView;->m_WebView:Landroid/webkit/WebView;
 
-    invoke-static {v0}, Lcom/movesky/webapp/u;->a(Landroid/webkit/WebView;)V
+    invoke-static {v1}, Lcom/movesky/webapp/YSHtml;->CallHtmlGoBack(Landroid/webkit/WebView;)V
 
+    .line 267
     :cond_35
     return v2
 .end method

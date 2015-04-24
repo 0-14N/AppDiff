@@ -168,11 +168,11 @@
 
     if-lez v0, :cond_49
 
-    new-instance v0, Lakb;
+    new-instance v0, Ladh;
 
     iget v1, p2, Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageCache$ImageCacheParams;->memCacheSize:I
 
-    invoke-direct {v0, v1}, Lakb;-><init>(I)V
+    invoke-direct {v0, v1}, Ladh;-><init>(I)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageCache;->mMemoryCache:Landroid/support/v4/util/LruCache;
 

@@ -83,23 +83,23 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor;->f:Ljava/util/HashMap;
 
     .line 256
-    new-instance v0, Latn;
+    new-instance v0, Lamt;
 
-    invoke-direct {v0, p0}, Latn;-><init>(Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor;)V
+    invoke-direct {v0, p0}, Lamt;-><init>(Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor;->m_ClickListener:Landroid/view/View$OnClickListener;
 
     .line 267
-    new-instance v0, Lato;
+    new-instance v0, Lamu;
 
-    invoke-direct {v0, p0}, Lato;-><init>(Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor;)V
+    invoke-direct {v0, p0}, Lamu;-><init>(Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor;->mLongClickListener:Landroid/view/View$OnLongClickListener;
 
     .line 392
-    new-instance v0, Latp;
+    new-instance v0, Lamv;
 
-    invoke-direct {v0, p0}, Latp;-><init>(Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor;)V
+    invoke-direct {v0, p0}, Lamv;-><init>(Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor;->g:Lcom/quvideo/xiaoying/scenenavigator/QGallery$OnLayoutListener;
 

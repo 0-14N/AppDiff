@@ -30,7 +30,7 @@
 .method static synthetic a(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityLoading;->d()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityLoading;->e()V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 .method static synthetic b(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityLoading;->e()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityLoading;->d()V
 
     return-void
 .end method
@@ -88,9 +88,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLoading_;->b:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/fe;
+    new-instance v1, Lcom/cungo/callrecorder/ui/ff;
 
-    invoke-direct {v1, p0}, Lcom/cungo/callrecorder/ui/fe;-><init>(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V
+    invoke-direct {v1, p0}, Lcom/cungo/callrecorder/ui/ff;-><init>(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V
 
     const-wide/16 v2, 0x3e8
 
@@ -104,9 +104,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityLoading_;->b:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/ff;
+    new-instance v1, Lcom/cungo/callrecorder/ui/fe;
 
-    invoke-direct {v1, p0}, Lcom/cungo/callrecorder/ui/ff;-><init>(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V
+    invoke-direct {v1, p0}, Lcom/cungo/callrecorder/ui/fe;-><init>(Lcom/cungo/callrecorder/ui/ActivityLoading_;)V
 
     const-wide/16 v2, 0x1f4
 

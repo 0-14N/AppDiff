@@ -651,16 +651,16 @@
 
     .line 182
     :goto_4a
-    new-instance v1, Lage;
+    new-instance v1, Lzk;
 
-    invoke-direct {v1, p0}, Lage;-><init>(Lcom/quvideo/xiaoying/camera/ui/TopIndicator;)V
+    invoke-direct {v1, p0}, Lzk;-><init>(Lcom/quvideo/xiaoying/camera/ui/TopIndicator;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenu;->setOnItemSelectedListener(Lcom/quvideo/xiaoying/camera/ui/CameraPopupMenuBase$OnItemSelectedListener;)V
 
     .line 194
-    new-instance v1, Lagf;
+    new-instance v1, Lzl;
 
-    invoke-direct {v1, p0}, Lagf;-><init>(Lcom/quvideo/xiaoying/camera/ui/TopIndicator;)V
+    invoke-direct {v1, p0}, Lzl;-><init>(Lcom/quvideo/xiaoying/camera/ui/TopIndicator;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/camera/ui/DurationPopupMenu;->setOnMenuDismissListener(Lcom/quvideo/xiaoying/camera/ui/CameraPopupMenuBase$OnMenuDismissListener;)V
 

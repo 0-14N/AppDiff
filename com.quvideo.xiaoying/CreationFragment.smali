@@ -119,9 +119,9 @@
     iput-object v3, p0, Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;->ac:Landroid/app/AlertDialog;
 
     .line 450
-    new-instance v0, Labv;
+    new-instance v0, Lvc;
 
-    invoke-direct {v0, p0}, Labv;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;)V
+    invoke-direct {v0, p0}, Lvc;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;->ae:Landroid/view/View$OnClickListener;
 
@@ -140,10 +140,10 @@
     .line 64
     :array_30
     .array-data 4
-        0x7f0a0304
-        0x7f0a02e9
-        0x7f0a0305
-        0x7f0a0306
+        0x7f0a02e1
+        0x7f0a02c6
+        0x7f0a02e2
+        0x7f0a02e3
     .end array-data
 .end method
 
@@ -161,9 +161,9 @@
     .registers 8
 
     .prologue
-    const v5, 0x7f0604bb
+    const v5, 0x7f0604a6
 
-    const v4, 0x7f0604ba
+    const v4, 0x7f0604a5
 
     const/4 v0, 0x2
 
@@ -217,7 +217,7 @@
     :goto_2f
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;->ac:Landroid/app/AlertDialog;
 
-    const v1, 0x7f0604bf
+    const v1, 0x7f0604aa
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
 
@@ -276,7 +276,7 @@
     .line 426
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;->ac:Landroid/app/AlertDialog;
 
-    const v1, 0x7f0604c0
+    const v1, 0x7f0604ab
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
 
@@ -339,7 +339,7 @@
     .line 438
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;->ac:Landroid/app/AlertDialog;
 
-    const v1, 0x7f0604c1
+    const v1, 0x7f0604ac
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
 
@@ -348,9 +348,9 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 439
-    new-instance v1, Labx;
+    new-instance v1, Lve;
 
-    invoke-direct {v1, p0}, Labx;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;)V
+    invoke-direct {v1, p0}, Lve;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -463,7 +463,7 @@
     .line 166
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;->Z:Landroid/view/View;
 
-    const v1, 0x7f0604c2
+    const v1, 0x7f0604ad
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -478,7 +478,7 @@
 
     const v1, 0x7f0300ee
 
-    const v2, 0x7f0604bc
+    const v2, 0x7f0604a7
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/common/ui/widgets/GridViewPager;->setViewPagerLayout(II)Landroid/view/View;
 
@@ -524,7 +524,7 @@
     .line 177
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;->Z:Landroid/view/View;
 
-    const v1, 0x7f0604c3
+    const v1, 0x7f0604ae
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -537,7 +537,7 @@
     .line 178
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;->Z:Landroid/view/View;
 
-    const v1, 0x7f0604c4
+    const v1, 0x7f0604af
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -550,7 +550,7 @@
     .line 180
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;->Z:Landroid/view/View;
 
-    const v1, 0x7f0604c5
+    const v1, 0x7f0604b0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -574,9 +574,9 @@
 
     .prologue
     .line 375
-    new-instance v0, Labw;
+    new-instance v0, Lvd;
 
-    invoke-direct {v0, p0}, Labw;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;)V
+    invoke-direct {v0, p0}, Lvd;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/CreationFragment;)V
 
     .line 394
     new-instance v1, Lcom/quvideo/xiaoying/app/activity/HomeHelpManager;

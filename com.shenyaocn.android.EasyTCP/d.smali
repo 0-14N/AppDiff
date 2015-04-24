@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/five/adwoad/d;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/five/adwoad/dw;->g(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/five/adwoad/ct;->g(Landroid/content/Context;)V
 
     return-void
 .end method

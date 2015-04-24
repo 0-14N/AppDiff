@@ -95,16 +95,16 @@
     iput v1, p0, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;->k:I
 
     .line 234
-    new-instance v0, Lrq;
+    new-instance v0, Lkx;
 
-    invoke-direct {v0, p0}, Lrq;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;)V
+    invoke-direct {v0, p0}, Lkx;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;->l:Landroid/view/View$OnClickListener;
 
     .line 250
-    new-instance v0, Lrr;
+    new-instance v0, Lky;
 
-    invoke-direct {v0, p0}, Lrr;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;)V
+    invoke-direct {v0, p0}, Lky;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;->m:Landroid/view/View$OnClickListener;
 
@@ -185,11 +185,11 @@
 
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;->a:Landroid/content/Context;
 
-    const v2, 0x7f0a0378
+    const v2, 0x7f0a0355
 
-    new-instance v3, Lrt;
+    new-instance v3, Lla;
 
-    invoke-direct {v3, p0, p1, p2}, Lrt;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;Landroid/view/View;Lcom/quvideo/xiaoying/app/community/user/ContactsInfoMgr$ContactsInfo;)V
+    invoke-direct {v3, p0, p1, p2}, Lla;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;Landroid/view/View;Lcom/quvideo/xiaoying/app/community/user/ContactsInfoMgr$ContactsInfo;)V
 
     invoke-direct {v0, v1, v2, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -462,7 +462,7 @@
     invoke-direct {v1, p0, v2}, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;)V
 
     .line 118
-    const v0, 0x7f06049c
+    const v0, 0x7f060487
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -473,7 +473,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->a:Lcom/quvideo/xiaoying/common/ui/custom/RoundImageView;
 
     .line 119
-    const v0, 0x7f06049e
+    const v0, 0x7f060489
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -484,7 +484,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->b:Landroid/widget/TextView;
 
     .line 120
-    const v0, 0x7f06049d
+    const v0, 0x7f060488
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -495,7 +495,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->c:Landroid/widget/RelativeLayout;
 
     .line 121
-    const v0, 0x7f0604a5
+    const v0, 0x7f060490
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -506,7 +506,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->d:Landroid/widget/TextView;
 
     .line 122
-    const v0, 0x7f0604a4
+    const v0, 0x7f06048f
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -517,7 +517,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->e:Landroid/widget/ImageView;
 
     .line 124
-    const v0, 0x7f0604a1
+    const v0, 0x7f06048c
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -528,7 +528,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->f:Landroid/widget/ImageView;
 
     .line 125
-    const v0, 0x7f06049f
+    const v0, 0x7f06048a
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -539,7 +539,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->g:Landroid/widget/ImageView;
 
     .line 126
-    const v0, 0x7f0604a0
+    const v0, 0x7f06048b
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -550,7 +550,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->h:Landroid/widget/TextView;
 
     .line 127
-    const v0, 0x7f0604a6
+    const v0, 0x7f060491
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -570,9 +570,9 @@
     invoke-virtual {p2, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 134
-    new-instance v0, Lrs;
+    new-instance v0, Lkz;
 
-    invoke-direct {v0, p0, p1}, Lrs;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;I)V
+    invoke-direct {v0, p0, p1}, Lkz;-><init>(Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter;I)V
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -726,14 +726,14 @@
     .line 169
     iget-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->d:Landroid/widget/TextView;
 
-    const v2, 0x7f0a034d
+    const v2, 0x7f0a032a
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     .line 170
     iget-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->e:Landroid/widget/ImageView;
 
-    const v2, 0x7f020689
+    const v2, 0x7f020669
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -749,7 +749,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f07005a
+    const v2, 0x7f070043
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -765,7 +765,7 @@
     :goto_135
     iget-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->c:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f02068a
+    const v2, 0x7f02066a
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
@@ -798,7 +798,7 @@
     .line 175
     iget-object v0, v1, Lcom/quvideo/xiaoying/app/community/user/ContactsPageAdapter$a;->d:Landroid/widget/TextView;
 
-    const v2, 0x7f0a034e
+    const v2, 0x7f0a032b
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -814,7 +814,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f07005c
+    const v2, 0x7f070045
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -916,7 +916,7 @@
 
     .line 221
     :pswitch_5
-    const v0, 0x7f020657
+    const v0, 0x7f020637
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -927,7 +927,7 @@
 
     .line 225
     :pswitch_f
-    const v0, 0x7f020656
+    const v0, 0x7f020636
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 

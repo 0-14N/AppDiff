@@ -97,43 +97,46 @@
     return-void
 .end method
 
-.method static synthetic access$0(Lcom/zxcx/blst/act/MyMessageAct;)V
-    .registers 1
+.method static synthetic access$0(Lcom/zxcx/blst/act/MyMessageAct;Z)V
+    .registers 2
 
     .prologue
     .line 171
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyMessageAct;->getPeopleList()V
+    invoke-direct {p0, p1}, Lcom/zxcx/blst/act/MyMessageAct;->getPeopleList(Z)V
 
     return-void
 .end method
 
-.method private getPeopleList()V
-    .registers 3
+.method private getPeopleList(Z)V
+    .registers 4
+    .param p1, "isPull"    # Z
 
     .prologue
     .line 173
     new-instance v0, Lcom/zxcx/blst/act/MyMessageAct$4;
 
-    invoke-direct {v0, p0}, Lcom/zxcx/blst/act/MyMessageAct$4;-><init>(Lcom/zxcx/blst/act/MyMessageAct;)V
+    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/MyMessageAct$4;-><init>(Lcom/zxcx/blst/act/MyMessageAct;Z)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 254
+    .line 250
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/MyMessageAct$4;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 255
+    .line 251
     return-void
 .end method
 
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .registers 3
+    .registers 4
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
+    const/4 v1, 0x0
+
     .line 134
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -142,20 +145,18 @@
     packed-switch v0, :pswitch_data_18
 
     .line 147
-    :goto_7
+    :goto_8
     return-void
 
     .line 136
-    :pswitch_8
+    :pswitch_9
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyMessageAct;->finish()V
 
-    goto :goto_7
+    goto :goto_8
 
     .line 139
-    :pswitch_c
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/zxcx/blst/act/MyMessageAct;->page:I
+    :pswitch_d
+    iput v1, p0, Lcom/zxcx/blst/act/MyMessageAct;->page:I
 
     .line 140
     iget-object v0, p0, Lcom/zxcx/blst/act/MyMessageAct;->peopleList:Ljava/util/ArrayList;
@@ -163,15 +164,15 @@
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 141
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyMessageAct;->getPeopleList()V
+    invoke-direct {p0, v1}, Lcom/zxcx/blst/act/MyMessageAct;->getPeopleList(Z)V
 
-    goto :goto_7
+    goto :goto_8
 
     .line 134
     :pswitch_data_18
-    .packed-switch 0x7f080167
-        :pswitch_c
-        :pswitch_8
+    .packed-switch 0x7f090180
+        :pswitch_d
+        :pswitch_9
     .end packed-switch
 .end method
 
@@ -184,7 +185,7 @@
     invoke-super {p0, p1}, Lcom/zxcx/blst/act/BaseAct;->onCreate(Landroid/os/Bundle;)V
 
     .line 73
-    const v1, 0x7f03004b
+    const v1, 0x7f030051
 
     invoke-virtual {p0, v1}, Lcom/zxcx/blst/act/MyMessageAct;->setContentView(I)V
 
@@ -211,25 +212,25 @@
 .end method
 
 .method protected onResume()V
-    .registers 1
+    .registers 2
 
     .prologue
     .line 127
     invoke-super {p0}, Lcom/zxcx/blst/act/BaseAct;->onResume()V
 
     .line 128
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyMessageAct;->getPeopleList()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/zxcx/blst/act/MyMessageAct;->getPeopleList(Z)V
 
     .line 129
     return-void
 .end method
 
 .method public setupView()V
-    .registers 4
+    .registers 3
 
     .prologue
-    const/4 v2, 0x0
-
     .line 81
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyMessageAct;->getLayoutInflater()Landroid/view/LayoutInflater;
 
@@ -238,7 +239,7 @@
     iput-object v0, p0, Lcom/zxcx/blst/act/MyMessageAct;->inflater:Landroid/view/LayoutInflater;
 
     .line 83
-    const v0, 0x7f080166
+    const v0, 0x7f09017f
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyMessageAct;->findViewById(I)Landroid/view/View;
 
@@ -257,7 +258,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 86
-    const v0, 0x7f080168
+    const v0, 0x7f090181
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyMessageAct;->findViewById(I)Landroid/view/View;
 
@@ -269,7 +270,7 @@
     iput-object v0, p0, Lcom/zxcx/blst/act/MyMessageAct;->iv_title_bar_left:Landroid/widget/ImageButton;
 
     .line 88
-    const v0, 0x7f080167
+    const v0, 0x7f090180
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyMessageAct;->findViewById(I)Landroid/view/View;
 
@@ -283,7 +284,9 @@
     .line 89
     iget-object v0, p0, Lcom/zxcx/blst/act/MyMessageAct;->iv_title_bar_right:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setVisibility(I)V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
     .line 90
     iget-object v0, p0, Lcom/zxcx/blst/act/MyMessageAct;->iv_title_bar_left:Landroid/widget/ImageButton;
@@ -296,7 +299,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 93
-    const v0, 0x7f0800ef
+    const v0, 0x7f0900fe
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyMessageAct;->findViewById(I)Landroid/view/View;
 
@@ -307,7 +310,7 @@
     iput-object v0, p0, Lcom/zxcx/blst/act/MyMessageAct;->ll_content1:Landroid/widget/LinearLayout;
 
     .line 96
-    const v0, 0x7f080115
+    const v0, 0x7f090127
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyMessageAct;->findViewById(I)Landroid/view/View;
 
@@ -343,11 +346,6 @@
     invoke-direct {v1, p0}, Lcom/zxcx/blst/act/MyMessageAct$3;-><init>(Lcom/zxcx/blst/act/MyMessageAct;)V
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnRefreshListener;)V
-
-    .line 117
-    iget-object v0, p0, Lcom/zxcx/blst/act/MyMessageAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
-
-    invoke-virtual {v0, v2}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setCanPullRefresh(Z)V
 
     .line 118
     new-instance v0, Lcom/zxcx/blst/adapter/MyMessageActLvAdapter;

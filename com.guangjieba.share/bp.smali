@@ -32,23 +32,15 @@
     .line 95
     iget-object v0, p0, Lcom/guangjieba/share/ui/user/bp;->a:Lcom/guangjieba/share/ui/user/SettingsActivity_;
 
-    invoke-static {v0}, Lcom/guangjieba/share/ui/goods/MultiTabActivity_;->a(Landroid/content/Context;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;
+    const-string v1, "my_update"
+
+    invoke-static {v0, v1}, Lcom/umeng/a/a;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-static {v0}, Lcom/guangjieba/share/ui/user/UpdataActivity_;->a(Landroid/content/Context;)Lcom/guangjieba/share/ui/user/UpdataActivity_$IntentBuilder_;
 
     move-result-object v0
 
-    const-string v1, "\u5173\u4e8e\u6211\u4eec"
-
-    invoke-virtual {v0, v1}, Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;->a(Ljava/lang/String;)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;
-
-    move-result-object v0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;->a(I)Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/guangjieba/share/ui/goods/MultiTabActivity_$IntentBuilder_;->a()V
+    invoke-virtual {v0}, Lcom/guangjieba/share/ui/user/UpdataActivity_$IntentBuilder_;->a()V
 
     .line 96
     return-void

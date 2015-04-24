@@ -1,5 +1,5 @@
 .class public Lcom/cccdi/mabellefanshare/MainActivity;
-.super Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;
+.super Landroid/support/v4/app/FragmentActivity;
 .source "MainActivity.java"
 
 # interfaces
@@ -64,17 +64,6 @@
 
 .field public static final PAYMENT_SUCCESS_FRAGMENT:I = 0x1f4
 
-.field private static final PERMISSIONS:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field public static final POPUP_MESSAGE:I = 0x22b
 
 .field public static final PRODUCT_FRAGMENT:I = 0xd2
@@ -115,8 +104,6 @@
 
 .field private mContext:Landroid/content/Context;
 
-.field private mSF:Lcom/sromku/simple/fb/SimpleFacebook;
-
 .field private mSsoHandler:Lcom/sina/weibo/sdk/auth/sso/SsoHandler;
 
 .field private mWeiboAuth:Lcom/sina/weibo/sdk/auth/WeiboAuth;
@@ -129,88 +116,44 @@
 
 .field private myChartBtn:Landroid/widget/RelativeLayout;
 
-.field onLoginListener:Lcom/sromku/simple/fb/listeners/OnLoginListener;
-
-.field onPublishListener:Lcom/sromku/simple/fb/listeners/OnPublishListener;
-
 .field private progressDialog:Landroid/app/ProgressDialog;
 
-.field private statusCallback:Lcom/facebook/Session$StatusCallback;
-
-.field private uiHelper:Lcom/facebook/UiLifecycleHelper;
+.field private response:Lcom/sina/weibo/sdk/api/share/IWeiboHandler$Response;
 
 .field private wechatAPI:Lcom/tencent/mm/sdk/openapi/IWXAPI;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .registers 3
-
-    .prologue
-    .line 176
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    const-string v2, "publish_actions"
-
-    aput-object v2, v0, v1
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/cccdi/mabellefanshare/MainActivity;->PERMISSIONS:Ljava/util/List;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .registers 2
 
     .prologue
-    .line 101
-    invoke-direct {p0}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;-><init>()V
+    .line 97
+    invoke-direct {p0}, Landroid/support/v4/app/FragmentActivity;-><init>()V
 
-    .line 131
+    .line 127
     sget-object v0, Lcom/cccdi/mabellefanshare/MainActivity$MenuState;->HIDDEN:Lcom/cccdi/mabellefanshare/MainActivity$MenuState;
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentMenuState:Lcom/cccdi/mabellefanshare/MainActivity$MenuState;
 
-    .line 181
+    .line 173
     const-string v0, "wx2fd4ef1a44c0423b"
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->WECHAT_APP_ID:Ljava/lang/String;
 
-    .line 352
-    new-instance v0, Lcom/cccdi/mabellefanshare/MainActivity$5;
-
-    invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/MainActivity$5;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
-
-    iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->statusCallback:Lcom/facebook/Session$StatusCallback;
-
-    .line 1332
+    .line 1242
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->consumeIntent:Z
 
+    .line 1254
+    new-instance v0, Lcom/cccdi/mabellefanshare/MainActivity$9;
+
+    invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/MainActivity$9;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+
+    iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->response:Lcom/sina/weibo/sdk/api/share/IWeiboHandler$Response;
+
     .line 1628
-    new-instance v0, Lcom/cccdi/mabellefanshare/MainActivity$16;
-
-    invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/MainActivity$16;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
-
-    iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->onLoginListener:Lcom/sromku/simple/fb/listeners/OnLoginListener;
-
-    .line 1674
-    new-instance v0, Lcom/cccdi/mabellefanshare/MainActivity$17;
-
-    invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/MainActivity$17;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
-
-    iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->onPublishListener:Lcom/sromku/simple/fb/listeners/OnPublishListener;
-
-    .line 1699
     return-void
 .end method
 
@@ -219,7 +162,7 @@
     .param p0, "x0"    # Lcom/cccdi/mabellefanshare/MainActivity;
 
     .prologue
-    .line 101
+    .line 97
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentMenuState:Lcom/cccdi/mabellefanshare/MainActivity$MenuState;
 
     return-object v0
@@ -231,7 +174,7 @@
     .param p1, "x1"    # Lcom/cccdi/mabellefanshare/MainActivity$MenuState;
 
     .prologue
-    .line 101
+    .line 97
     iput-object p1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentMenuState:Lcom/cccdi/mabellefanshare/MainActivity$MenuState;
 
     return-object p1
@@ -242,7 +185,7 @@
     .param p0, "x0"    # Lcom/cccdi/mabellefanshare/MainActivity;
 
     .prologue
-    .line 101
+    .line 97
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->toggleMenu()V
 
     return-void
@@ -254,7 +197,7 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 101
+    .line 97
     invoke-direct {p0, p1}, Lcom/cccdi/mabellefanshare/MainActivity;->anonymousMenuHandler(I)V
 
     return-void
@@ -266,40 +209,52 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 101
-    invoke-direct {p0, p1}, Lcom/cccdi/mabellefanshare/MainActivity;->unifyMenuHandler(I)V
+    .line 97
+    invoke-direct {p0, p1}, Lcom/cccdi/mabellefanshare/MainActivity;->generalMenuHandler(I)V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/cccdi/mabellefanshare/MainActivity;)Landroid/widget/LinearLayout$LayoutParams;
+.method static synthetic access$400(Lcom/cccdi/mabellefanshare/MainActivity;I)V
+    .registers 2
+    .param p0, "x0"    # Lcom/cccdi/mabellefanshare/MainActivity;
+    .param p1, "x1"    # I
+
+    .prologue
+    .line 97
+    invoke-direct {p0, p1}, Lcom/cccdi/mabellefanshare/MainActivity;->adminMenuHandler(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$500(Lcom/cccdi/mabellefanshare/MainActivity;)Landroid/widget/LinearLayout$LayoutParams;
     .registers 2
     .param p0, "x0"    # Lcom/cccdi/mabellefanshare/MainActivity;
 
     .prologue
-    .line 101
+    .line 97
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mainContentParams:Landroid/widget/LinearLayout$LayoutParams;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/cccdi/mabellefanshare/MainActivity;)Landroid/widget/RelativeLayout;
+.method static synthetic access$600(Lcom/cccdi/mabellefanshare/MainActivity;)Landroid/widget/RelativeLayout;
     .registers 2
     .param p0, "x0"    # Lcom/cccdi/mabellefanshare/MainActivity;
 
     .prologue
-    .line 101
+    .line 97
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mainContent:Landroid/widget/RelativeLayout;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/cccdi/mabellefanshare/MainActivity;)Landroid/view/View;
+.method static synthetic access$700(Lcom/cccdi/mabellefanshare/MainActivity;)Landroid/view/View;
     .registers 2
     .param p0, "x0"    # Lcom/cccdi/mabellefanshare/MainActivity;
 
     .prologue
-    .line 101
+    .line 97
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->contentScrim:Landroid/view/View;
 
     return-object v0
@@ -310,54 +265,54 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 668
-    const/4 v8, 0x0
+    .line 570
+    const/4 v7, 0x0
 
-    .line 669
-    .local v8, "ADMIN_PROFILE":I
-    const/4 v2, 0x1
+    .line 571
+    .local v7, "ADMIN_PROFILE":I
+    const/4 v1, 0x1
 
-    .line 670
-    .local v2, "ADMIN_INDEX":I
-    const/4 v9, 0x2
+    .line 572
+    .local v1, "ADMIN_INDEX":I
+    const/4 v8, 0x2
 
-    .line 671
-    .local v9, "ADMIN_SEARCH":I
+    .line 573
+    .local v8, "ADMIN_SEARCH":I
     const/4 v6, 0x3
 
-    .line 672
+    .line 574
     .local v6, "ADMIN_NOTIFICATION":I
     const/4 v0, 0x4
 
-    .line 674
+    .line 576
     .local v0, "ADMIN_CONTACT":I
-    const/4 v3, 0x5
+    const/4 v2, 0x5
 
-    .line 675
-    .local v3, "ADMIN_LANGUAGE":I
-    const/4 v1, 0x6
+    .line 579
+    .local v2, "ADMIN_LANGUAGE":I
+    const/4 v5, 0x6
 
-    .line 676
-    .local v1, "ADMIN_CURRENCY":I
-    const/4 v7, 0x7
+    .line 580
+    .local v5, "ADMIN_MY_COUPON":I
+    const/4 v4, 0x7
 
-    .line 677
-    .local v7, "ADMIN_ORDER_HISTROY":I
-    const/16 v5, 0x8
+    .line 581
+    .local v4, "ADMIN_MY_ACCOUNT":I
+    const/16 v9, 0x8
 
-    .line 678
-    .local v5, "ADMIN_MY_ACCOUNT":I
-    const/16 v4, 0x9
+    .line 582
+    .local v9, "ADMIN_STAMP":I
+    const/16 v3, 0x9
 
-    .line 680
-    .local v4, "ADMIN_LOGOUT":I
+    .line 584
+    .local v3, "ADMIN_LOGOUT":I
     packed-switch p1, :pswitch_data_4a
 
-    .line 722
+    .line 635
     :goto_f
     return-void
 
-    .line 682
+    .line 586
     :pswitch_10
     const/16 v10, 0x190
 
@@ -365,7 +320,7 @@
 
     goto :goto_f
 
-    .line 686
+    .line 590
     :pswitch_16
     const/16 v10, 0x64
 
@@ -373,7 +328,7 @@
 
     goto :goto_f
 
-    .line 690
+    .line 594
     :pswitch_1c
     const/16 v10, 0x78
 
@@ -381,7 +336,7 @@
 
     goto :goto_f
 
-    .line 694
+    .line 598
     :pswitch_22
     const/16 v10, 0x82
 
@@ -389,7 +344,7 @@
 
     goto :goto_f
 
-    .line 698
+    .line 602
     :pswitch_28
     const/16 v10, 0x96
 
@@ -397,7 +352,7 @@
 
     goto :goto_f
 
-    .line 703
+    .line 607
     :pswitch_2e
     const/16 v10, 0xa1
 
@@ -405,37 +360,37 @@
 
     goto :goto_f
 
-    .line 706
+    .line 615
     :pswitch_34
-    const/16 v10, 0xa2
-
-    invoke-virtual {p0, v10}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
-
-    goto :goto_f
-
-    .line 710
-    :pswitch_3a
     const/16 v10, 0x1b8
 
     invoke-virtual {p0, v10}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
     goto :goto_f
 
-    .line 714
-    :pswitch_40
-    const/16 v10, 0x1a4
+    .line 623
+    :pswitch_3a
+    const/16 v10, 0x1cc
 
     invoke-virtual {p0, v10}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
     goto :goto_f
 
-    .line 718
+    .line 627
+    :pswitch_40
+    const/16 v10, 0x1d6
+
+    invoke-virtual {p0, v10}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
+
+    goto :goto_f
+
+    .line 631
     :pswitch_46
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->logoutHandler()V
 
     goto :goto_f
 
-    .line 680
+    .line 584
     :pswitch_data_4a
     .packed-switch 0x0
         :pswitch_10
@@ -444,106 +399,95 @@
         :pswitch_22
         :pswitch_28
         :pswitch_2e
+        :pswitch_3a
         :pswitch_34
         :pswitch_40
-        :pswitch_3a
         :pswitch_46
     .end packed-switch
 .end method
 
 .method private anonymousMenuHandler(I)V
-    .registers 9
+    .registers 8
     .param p1, "position"    # I
 
     .prologue
-    .line 565
-    const/4 v4, 0x0
+    .line 472
+    const/4 v3, 0x0
 
-    .line 566
-    .local v4, "ANONYMOUS_LOGIN":I
-    const/4 v2, 0x1
+    .line 473
+    .local v3, "ANONYMOUS_LOGIN":I
+    const/4 v1, 0x1
 
-    .line 567
-    .local v2, "ANONYMOUS_INDEX":I
-    const/4 v5, 0x2
+    .line 474
+    .local v1, "ANONYMOUS_INDEX":I
+    const/4 v4, 0x2
 
-    .line 568
-    .local v5, "ANONYMOUS_SEARCH":I
+    .line 475
+    .local v4, "ANONYMOUS_SEARCH":I
     const/4 v0, 0x3
 
-    .line 570
+    .line 477
     .local v0, "ANONYMOUS_CONTACT":I
-    const/4 v3, 0x4
+    const/4 v2, 0x4
 
-    .line 571
-    .local v3, "ANONYMOUS_LANGUAGE":I
-    const/4 v1, 0x5
+    .line 480
+    .local v2, "ANONYMOUS_LANGUAGE":I
+    packed-switch p1, :pswitch_data_28
 
-    .line 573
-    .local v1, "ANONYMOUS_CURRENCY":I
-    packed-switch p1, :pswitch_data_2e
-
-    .line 598
-    :goto_9
+    .line 505
+    :goto_8
     return-void
 
-    .line 575
-    :pswitch_a
-    const/16 v6, 0x6e
+    .line 482
+    :pswitch_9
+    const/16 v5, 0x6e
 
-    invoke-virtual {p0, v6}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
+    invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
-    goto :goto_9
+    goto :goto_8
 
-    .line 579
-    :pswitch_10
-    const/16 v6, 0x64
+    .line 486
+    :pswitch_f
+    const/16 v5, 0x64
 
-    invoke-virtual {p0, v6}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
+    invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
-    goto :goto_9
+    goto :goto_8
 
-    .line 583
-    :pswitch_16
-    const/16 v6, 0x78
+    .line 490
+    :pswitch_15
+    const/16 v5, 0x78
 
-    invoke-virtual {p0, v6}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
+    invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
-    goto :goto_9
+    goto :goto_8
 
-    .line 587
-    :pswitch_1c
-    const/16 v6, 0x96
+    .line 494
+    :pswitch_1b
+    const/16 v5, 0x96
 
-    invoke-virtual {p0, v6}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
+    invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
-    goto :goto_9
+    goto :goto_8
 
-    .line 591
-    :pswitch_22
-    const/16 v6, 0xa1
+    .line 498
+    :pswitch_21
+    const/16 v5, 0xa1
 
-    invoke-virtual {p0, v6}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
+    invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
-    goto :goto_9
+    goto :goto_8
 
-    .line 595
-    :pswitch_28
-    const/16 v6, 0xa2
+    .line 480
+    nop
 
-    invoke-virtual {p0, v6}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
-
-    goto :goto_9
-
-    .line 573
-    :pswitch_data_2e
+    :pswitch_data_28
     .packed-switch 0x0
-        :pswitch_a
-        :pswitch_10
-        :pswitch_16
-        :pswitch_1c
-        :pswitch_22
-        :pswitch_28
+        :pswitch_9
+        :pswitch_f
+        :pswitch_15
+        :pswitch_1b
+        :pswitch_21
     .end packed-switch
 .end method
 
@@ -552,50 +496,50 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 725
-    const/4 v7, 0x0
+    .line 638
+    const/4 v6, 0x0
 
-    .line 726
-    .local v7, "ADMIN_PROFILE":I
-    const/4 v2, 0x1
+    .line 639
+    .local v6, "ADMIN_PROFILE":I
+    const/4 v1, 0x1
 
-    .line 727
-    .local v2, "ADMIN_INDEX":I
-    const/4 v8, 0x2
+    .line 640
+    .local v1, "ADMIN_INDEX":I
+    const/4 v7, 0x2
 
-    .line 728
-    .local v8, "ADMIN_SEARCH":I
+    .line 641
+    .local v7, "ADMIN_SEARCH":I
     const/4 v0, 0x3
 
-    .line 731
+    .line 644
     .local v0, "ADMIN_CONTACT":I
-    const/4 v3, 0x4
+    const/4 v2, 0x4
 
-    .line 732
-    .local v3, "ADMIN_LANGUAGE":I
-    const/4 v1, 0x5
+    .line 648
+    .local v2, "ADMIN_LANGUAGE":I
+    const/4 v5, 0x5
 
-    .line 734
-    .local v1, "ADMIN_CURRENCY":I
-    const/4 v6, 0x6
+    .line 649
+    .local v5, "ADMIN_MY_COUPON":I
+    const/4 v4, 0x6
 
-    .line 735
-    .local v6, "ADMIN_ORDER_HISTROY":I
-    const/4 v5, 0x7
+    .line 651
+    .local v4, "ADMIN_MY_ACCOUNT":I
+    const/4 v8, 0x7
 
-    .line 736
-    .local v5, "ADMIN_MY_ACCOUNT":I
-    const/16 v4, 0x8
+    .line 653
+    .local v8, "ADMIN_STAMP":I
+    const/16 v3, 0x8
 
-    .line 738
-    .local v4, "ADMIN_LOGOUT":I
+    .line 655
+    .local v3, "ADMIN_LOGOUT":I
     packed-switch p1, :pswitch_data_42
 
-    .line 776
+    .line 701
     :goto_d
     return-void
 
-    .line 740
+    .line 657
     :pswitch_e
     const/16 v9, 0x190
 
@@ -603,7 +547,7 @@
 
     goto :goto_d
 
-    .line 744
+    .line 661
     :pswitch_14
     const/16 v9, 0x64
 
@@ -611,7 +555,7 @@
 
     goto :goto_d
 
-    .line 748
+    .line 665
     :pswitch_1a
     const/16 v9, 0x78
 
@@ -619,7 +563,7 @@
 
     goto :goto_d
 
-    .line 752
+    .line 669
     :pswitch_20
     const/16 v9, 0x96
 
@@ -627,7 +571,7 @@
 
     goto :goto_d
 
-    .line 756
+    .line 673
     :pswitch_26
     const/16 v9, 0xa1
 
@@ -635,37 +579,37 @@
 
     goto :goto_d
 
-    .line 760
+    .line 685
     :pswitch_2c
-    const/16 v9, 0xa2
+    const/16 v9, 0x1cc
 
     invoke-virtual {p0, v9}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
     goto :goto_d
 
-    .line 764
+    .line 689
     :pswitch_32
-    const/16 v9, 0x1a4
-
-    invoke-virtual {p0, v9}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
-
-    goto :goto_d
-
-    .line 768
-    :pswitch_38
     const/16 v9, 0x1b8
 
     invoke-virtual {p0, v9}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
     goto :goto_d
 
-    .line 772
+    .line 693
+    :pswitch_38
+    const/16 v9, 0x1d6
+
+    invoke-virtual {p0, v9}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
+
+    goto :goto_d
+
+    .line 697
     :pswitch_3e
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->logoutHandler()V
 
     goto :goto_d
 
-    .line 738
+    .line 655
     :pswitch_data_42
     .packed-switch 0x0
         :pswitch_e
@@ -684,7 +628,7 @@
     .registers 6
 
     .prologue
-    .line 883
+    .line 1660
     new-instance v0, Lcom/cccdi/mabellefanshare/request/MabelleJsonObjectRequest;
 
     invoke-static {}, Lcom/cccdi/mabellefanshare/Constant;->getUnreadMessageURL()Ljava/lang/String;
@@ -693,23 +637,23 @@
 
     const/4 v2, 0x0
 
-    new-instance v3, Lcom/cccdi/mabellefanshare/MainActivity$11;
+    new-instance v3, Lcom/cccdi/mabellefanshare/MainActivity$13;
 
-    invoke-direct {v3, p0}, Lcom/cccdi/mabellefanshare/MainActivity$11;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v3, p0}, Lcom/cccdi/mabellefanshare/MainActivity$13;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
-    new-instance v4, Lcom/cccdi/mabellefanshare/MainActivity$12;
+    new-instance v4, Lcom/cccdi/mabellefanshare/MainActivity$14;
 
-    invoke-direct {v4, p0}, Lcom/cccdi/mabellefanshare/MainActivity$12;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v4, p0}, Lcom/cccdi/mabellefanshare/MainActivity$14;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/cccdi/mabellefanshare/request/MabelleJsonObjectRequest;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 903
+    .line 1680
     .local v0, "unreadMsgRequest":Lcom/cccdi/mabellefanshare/request/MabelleJsonObjectRequest;
     sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->volleyQueue:Lcom/android/volley/RequestQueue;
 
     invoke-virtual {v1, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
-    .line 905
+    .line 1682
     return-void
 .end method
 
@@ -717,8 +661,8 @@
     .registers 5
 
     .prologue
-    .line 780
-    const v2, 0x7f09005b
+    .line 705
+    const v2, 0x7f090043
 
     invoke-virtual {p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -726,12 +670,12 @@
 
     check-cast v0, Lcom/cccdi/mabellefanshare/ui/OverlayImageView;
 
-    .line 781
+    .line 706
     .local v0, "menuBtn":Lcom/cccdi/mabellefanshare/ui/OverlayImageView;
     invoke-virtual {v0, p0}, Lcom/cccdi/mabellefanshare/ui/OverlayImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 782
-    const v2, 0x7f09005c
+    .line 707
+    const v2, 0x7f090044
 
     invoke-virtual {p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -741,16 +685,16 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->myChartBtn:Landroid/widget/RelativeLayout;
 
-    .line 783
+    .line 708
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->myChartBtn:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v2, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 785
+    .line 710
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->updateShoppingCartCount()V
 
-    .line 787
-    const v2, 0x7f090054
+    .line 712
+    const v2, 0x7f09003c
 
     invoke-virtual {p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -760,13 +704,13 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->flyInMenu:Landroid/widget/RelativeLayout;
 
-    .line 791
+    .line 716
     sget-boolean v2, Lcom/cccdi/mabellefanshare/AppApplication;->isLandscape:Z
 
     if-nez v2, :cond_67
 
-    .line 792
-    const v2, 0x7f090058
+    .line 717
+    const v2, 0x7f090040
 
     invoke-virtual {p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -776,7 +720,7 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mainContent:Landroid/widget/RelativeLayout;
 
-    .line 793
+    .line 718
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mainContent:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v2}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -787,7 +731,7 @@
 
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mainContentParams:Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 794
+    .line 719
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mainContentParams:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getWindowManager()Landroid/view/WindowManager;
@@ -804,7 +748,7 @@
 
     iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    .line 795
+    .line 720
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mainContentParams:Landroid/widget/LinearLayout$LayoutParams;
 
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->flyInMenu:Landroid/widget/RelativeLayout;
@@ -819,16 +763,16 @@
 
     iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    .line 796
+    .line 721
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mainContent:Landroid/widget/RelativeLayout;
 
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mainContentParams:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 799
+    .line 724
     :cond_67
-    const v2, 0x7f090059
+    const v2, 0x7f090041
 
     invoke-virtual {p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -836,7 +780,7 @@
 
     check-cast v1, Landroid/widget/RelativeLayout;
 
-    .line 801
+    .line 726
     .local v1, "navigationBar":Landroid/widget/RelativeLayout;
     return-void
 .end method
@@ -845,16 +789,16 @@
     .registers 4
 
     .prologue
-    .line 555
+    .line 462
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 556
+    .line 463
     .local v0, "data":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "title"
 
-    const v2, 0x7f0d00f6
+    const v2, 0x7f0d00c3
 
     invoke-virtual {p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity;->getString(I)Ljava/lang/String;
 
@@ -862,10 +806,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 557
+    .line 464
     const-string v1, "message"
 
-    const v2, 0x7f0d00f4
+    const v2, 0x7f0d00c1
 
     invoke-virtual {p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity;->getString(I)Ljava/lang/String;
 
@@ -873,10 +817,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 558
+    .line 465
     const-string v1, "positive"
 
-    const v2, 0x7f0d00f5
+    const v2, 0x7f0d00c2
 
     invoke-virtual {p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity;->getString(I)Ljava/lang/String;
 
@@ -884,10 +828,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 559
+    .line 466
     const-string v1, "negative"
 
-    const v2, 0x7f0d00f3
+    const v2, 0x7f0d00c0
 
     invoke-virtual {p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity;->getString(I)Ljava/lang/String;
 
@@ -895,12 +839,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 561
+    .line 468
     iget-object v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v0}, Lcom/cccdi/mabellefanshare/widget/CustomeDialog;->showAlertDialogWithTwoButton(Landroid/content/Context;Ljava/util/HashMap;)V
 
-    .line 562
+    .line 469
     return-void
 .end method
 
@@ -908,7 +852,7 @@
     .registers 5
 
     .prologue
-    .line 320
+    .line 267
     new-instance v0, Lcom/sina/weibo/sdk/auth/WeiboAuth;
 
     const-string v1, "541981347"
@@ -921,7 +865,7 @@
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mWeiboAuth:Lcom/sina/weibo/sdk/auth/WeiboAuth;
 
-    .line 322
+    .line 269
     new-instance v0, Lcom/sina/weibo/sdk/auth/sso/SsoHandler;
 
     iget-object v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mWeiboAuth:Lcom/sina/weibo/sdk/auth/WeiboAuth;
@@ -930,7 +874,7 @@
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mSsoHandler:Lcom/sina/weibo/sdk/auth/sso/SsoHandler;
 
-    .line 324
+    .line 271
     const-string v0, "541981347"
 
     invoke-static {p0, v0}, Lcom/sina/weibo/sdk/api/share/WeiboShareSDK;->createWeiboAPI(Landroid/content/Context;Ljava/lang/String;)Lcom/sina/weibo/sdk/api/share/IWeiboShareAPI;
@@ -939,7 +883,7 @@
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mWeiboShareAPI:Lcom/sina/weibo/sdk/api/share/IWeiboShareAPI;
 
-    .line 326
+    .line 273
     return-void
 .end method
 
@@ -947,7 +891,7 @@
     .registers 3
 
     .prologue
-    .line 343
+    .line 290
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->WECHAT_APP_ID:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -958,14 +902,14 @@
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->wechatAPI:Lcom/tencent/mm/sdk/openapi/IWXAPI;
 
-    .line 345
+    .line 292
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->wechatAPI:Lcom/tencent/mm/sdk/openapi/IWXAPI;
 
     iget-object v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->WECHAT_APP_ID:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/sdk/openapi/IWXAPI;->registerApp(Ljava/lang/String;)Z
 
-    .line 346
+    .line 293
     return-void
 .end method
 
@@ -973,28 +917,28 @@
     .registers 5
 
     .prologue
-    .line 390
+    .line 336
     new-instance v0, Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;
 
     const-string v1, "https://api.mabelle.com/1/currency/"
 
-    new-instance v2, Lcom/cccdi/mabellefanshare/MainActivity$6;
+    new-instance v2, Lcom/cccdi/mabellefanshare/MainActivity$4;
 
-    invoke-direct {v2, p0}, Lcom/cccdi/mabellefanshare/MainActivity$6;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v2, p0}, Lcom/cccdi/mabellefanshare/MainActivity$4;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
-    new-instance v3, Lcom/cccdi/mabellefanshare/MainActivity$7;
+    new-instance v3, Lcom/cccdi/mabellefanshare/MainActivity$5;
 
-    invoke-direct {v3, p0}, Lcom/cccdi/mabellefanshare/MainActivity$7;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v3, p0}, Lcom/cccdi/mabellefanshare/MainActivity$5;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
     invoke-direct {v0, v1, v2, v3}, Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;-><init>(Ljava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 410
+    .line 356
     .local v0, "currencyReq":Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;
     sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->volleyQueue:Lcom/android/volley/RequestQueue;
 
     invoke-virtual {v1, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
-    .line 453
+    .line 359
     return-void
 .end method
 
@@ -1002,35 +946,35 @@
     .registers 5
 
     .prologue
-    .line 278
+    .line 224
     sget v1, Lcom/cccdi/mabellefanshare/AppApplication;->userType:I
 
     if-nez v1, :cond_1c
 
-    .line 279
+    .line 225
     new-instance v0, Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;
 
     invoke-static {}, Lcom/cccdi/mabellefanshare/Constant;->getPopupURL()Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/cccdi/mabellefanshare/MainActivity$3;
+    new-instance v2, Lcom/cccdi/mabellefanshare/MainActivity$2;
 
-    invoke-direct {v2, p0}, Lcom/cccdi/mabellefanshare/MainActivity$3;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v2, p0}, Lcom/cccdi/mabellefanshare/MainActivity$2;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
-    new-instance v3, Lcom/cccdi/mabellefanshare/MainActivity$4;
+    new-instance v3, Lcom/cccdi/mabellefanshare/MainActivity$3;
 
-    invoke-direct {v3, p0}, Lcom/cccdi/mabellefanshare/MainActivity$4;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v3, p0}, Lcom/cccdi/mabellefanshare/MainActivity$3;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
     invoke-direct {v0, v1, v2, v3}, Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;-><init>(Ljava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 312
+    .line 258
     .local v0, "popupRequest":Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;
     sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->volleyQueue:Lcom/android/volley/RequestQueue;
 
     invoke-virtual {v1, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
-    .line 316
+    .line 262
     .end local v0    # "popupRequest":Lcom/cccdi/mabellefanshare/request/MabelleJsonArrayRequest;
     :cond_1c
     return-void
@@ -1042,21 +986,21 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 821
+    .line 746
     sget-boolean v3, Lcom/cccdi/mabellefanshare/AppApplication;->isLandscape:Z
 
     if-eqz v3, :cond_6
 
-    .line 880
+    .line 804
     :cond_5
     :goto_5
     return-void
 
-    .line 824
+    .line 749
     :cond_6
     const/4 v0, 0x0
 
-    .line 827
+    .line 752
     .local v0, "fromX":I
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentMenuState:Lcom/cccdi/mabellefanshare/MainActivity$MenuState;
 
@@ -1064,10 +1008,10 @@
 
     if-ne v3, v4, :cond_35
 
-    .line 829
+    .line 754
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getUnreadMessage()V
 
-    .line 831
+    .line 756
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->flyInMenu:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1076,7 +1020,7 @@
 
     iget v2, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 839
+    .line 763
     .local v2, "toX":I
     :goto_18
     new-instance v1, Landroid/view/animation/TranslateAnimation;
@@ -1085,32 +1029,32 @@
 
     invoke-direct {v1, v5, v3, v5, v5}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 840
+    .line 764
     .local v1, "slide":Landroid/view/animation/TranslateAnimation;
     const-wide/16 v3, 0x12c
 
     invoke-virtual {v1, v3, v4}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 841
+    .line 765
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Landroid/view/animation/TranslateAnimation;->setFillEnabled(Z)V
 
-    .line 842
-    new-instance v3, Lcom/cccdi/mabellefanshare/MainActivity$10;
+    .line 766
+    new-instance v3, Lcom/cccdi/mabellefanshare/MainActivity$8;
 
-    invoke-direct {v3, p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity$10;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;I)V
+    invoke-direct {v3, p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity$8;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;I)V
 
     invoke-virtual {v1, v3}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 879
+    .line 803
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mainContent:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v1}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
     goto :goto_5
 
-    .line 832
+    .line 757
     .end local v1    # "slide":Landroid/view/animation/TranslateAnimation;
     .end local v2    # "toX":I
     :cond_35
@@ -1120,7 +1064,7 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 834
+    .line 758
     iget-object v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->flyInMenu:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1140,58 +1084,58 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 601
+    .line 508
     const/4 v9, 0x0
 
-    .line 602
+    .line 509
     .local v9, "ADMIN_PROFILE":I
     const/4 v2, 0x1
 
-    .line 603
+    .line 510
     .local v2, "ADMIN_INDEX":I
     const/4 v10, 0x2
 
-    .line 604
+    .line 511
     .local v10, "ADMIN_SEARCH":I
-    const/4 v8, 0x3
+    const/4 v7, 0x3
 
-    .line 605
-    .local v8, "ADMIN_NOTIFICATION":I
+    .line 512
+    .local v7, "ADMIN_NOTIFICATION":I
     const/4 v0, 0x4
 
-    .line 607
+    .line 514
     .local v0, "ADMIN_CONTACT":I
     const/4 v3, 0x5
 
-    .line 608
+    .line 515
     .local v3, "ADMIN_LANGUAGE":I
     const/4 v1, 0x6
 
-    .line 610
+    .line 516
     .local v1, "ADMIN_CURRENCY":I
-    const/4 v6, 0x7
+    const/4 v8, 0x7
 
-    .line 611
-    .local v6, "ADMIN_MY_COUPON":I
+    .line 517
+    .local v8, "ADMIN_ORDER_HISTROY":I
     const/16 v5, 0x8
 
-    .line 612
+    .line 518
     .local v5, "ADMIN_MY_ACCOUNT":I
-    const/16 v7, 0x9
+    const/16 v6, 0x9
 
-    .line 613
-    .local v7, "ADMIN_MY_STAMP":I
+    .line 519
+    .local v6, "ADMIN_MY_STAMP":I
     const/16 v4, 0xa
 
-    .line 615
+    .line 521
     .local v4, "ADMIN_LOGOUT":I
     packed-switch p1, :pswitch_data_52
 
-    .line 665
+    .line 567
     :goto_11
     return-void
 
-    .line 617
+    .line 523
     :pswitch_12
     const/16 v11, 0x190
 
@@ -1199,7 +1143,7 @@
 
     goto :goto_11
 
-    .line 621
+    .line 527
     :pswitch_18
     const/16 v11, 0x64
 
@@ -1207,7 +1151,7 @@
 
     goto :goto_11
 
-    .line 625
+    .line 531
     :pswitch_1e
     const/16 v11, 0x78
 
@@ -1215,7 +1159,7 @@
 
     goto :goto_11
 
-    .line 629
+    .line 535
     :pswitch_24
     const/16 v11, 0x82
 
@@ -1223,7 +1167,7 @@
 
     goto :goto_11
 
-    .line 633
+    .line 539
     :pswitch_2a
     const/16 v11, 0x96
 
@@ -1231,7 +1175,7 @@
 
     goto :goto_11
 
-    .line 638
+    .line 544
     :pswitch_30
     const/16 v11, 0xa1
 
@@ -1239,7 +1183,7 @@
 
     goto :goto_11
 
-    .line 641
+    .line 547
     :pswitch_36
     const/16 v11, 0xa2
 
@@ -1247,7 +1191,7 @@
 
     goto :goto_11
 
-    .line 645
+    .line 551
     :pswitch_3c
     const/16 v11, 0x1b8
 
@@ -1255,15 +1199,15 @@
 
     goto :goto_11
 
-    .line 653
+    .line 555
     :pswitch_42
-    const/16 v11, 0x1cc
+    const/16 v11, 0x1a4
 
     invoke-virtual {p0, v11}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
     goto :goto_11
 
-    .line 657
+    .line 559
     :pswitch_48
     const/16 v11, 0x1d6
 
@@ -1271,13 +1215,13 @@
 
     goto :goto_11
 
-    .line 661
+    .line 563
     :pswitch_4e
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->logoutHandler()V
 
     goto :goto_11
 
-    .line 615
+    .line 521
     :pswitch_data_52
     .packed-switch 0x0
         :pswitch_12
@@ -1296,46 +1240,12 @@
 
 
 # virtual methods
-.method public checkPermissions()Z
-    .registers 4
-
-    .prologue
-    .line 1597
-    invoke-static {}, Lcom/facebook/Session;->getActiveSession()Lcom/facebook/Session;
-
-    move-result-object v0
-
-    .line 1598
-    .local v0, "s":Lcom/facebook/Session;
-    if-eqz v0, :cond_11
-
-    .line 1599
-    invoke-virtual {v0}, Lcom/facebook/Session;->getPermissions()Ljava/util/List;
-
-    move-result-object v1
-
-    const-string v2, "publish_actions"
-
-    invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    .line 1601
-    :goto_10
-    return v1
-
-    :cond_11
-    const/4 v1, 0x0
-
-    goto :goto_10
-.end method
-
 .method public dismissProgressBar()V
     .registers 3
 
     .prologue
-    .line 369
-    const v0, 0x7f09005e
+    .line 305
+    const v0, 0x7f090046
 
     invoke-virtual {p0, v0}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1345,7 +1255,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 370
+    .line 306
     return-void
 .end method
 
@@ -1353,12 +1263,12 @@
     .registers 2
 
     .prologue
-    .line 382
+    .line 318
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->progressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_11
 
-    .line 383
+    .line 319
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
@@ -1367,36 +1277,26 @@
 
     if-eqz v0, :cond_11
 
-    .line 384
+    .line 320
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 386
+    .line 322
     :cond_11
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->progressDialog:Landroid/app/ProgressDialog;
 
-    .line 387
+    .line 323
     return-void
-.end method
-
-.method public getUiLifeCycleHelper()Lcom/facebook/UiLifecycleHelper;
-    .registers 2
-
-    .prologue
-    .line 1593
-    iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->uiHelper:Lcom/facebook/UiLifecycleHelper;
-
-    return-object v0
 .end method
 
 .method public getWeChatAPI()Lcom/tencent/mm/sdk/openapi/IWXAPI;
     .registers 2
 
     .prologue
-    .line 349
+    .line 296
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->wechatAPI:Lcom/tencent/mm/sdk/openapi/IWXAPI;
 
     return-object v0
@@ -1406,7 +1306,7 @@
     .registers 2
 
     .prologue
-    .line 334
+    .line 281
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mWeiboShareAPI:Lcom/sina/weibo/sdk/api/share/IWeiboShareAPI;
 
     return-object v0
@@ -1416,7 +1316,7 @@
     .registers 2
 
     .prologue
-    .line 338
+    .line 285
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mSsoHandler:Lcom/sina/weibo/sdk/auth/sso/SsoHandler;
 
     return-object v0
@@ -1430,10 +1330,10 @@
 
     const/4 v9, -0x1
 
-    const v8, 0x7f090056
+    const v8, 0x7f09003e
 
-    .line 466
-    const v5, 0x7f090055
+    .line 372
+    const v5, 0x7f09003d
 
     invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1441,16 +1341,16 @@
 
     check-cast v3, Landroid/widget/ListView;
 
-    .line 467
+    .line 373
     .local v3, "menuList":Landroid/widget/ListView;
     invoke-virtual {v3, v10}, Landroid/widget/ListView;->setDividerHeight(I)V
 
-    .line 472
+    .line 378
     sget v5, Lcom/cccdi/mabellefanshare/AppApplication;->userType:I
 
     if-nez v5, :cond_6c
 
-    .line 473
+    .line 379
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -1461,7 +1361,7 @@
 
     move-result-object v4
 
-    .line 474
+    .line 380
     .local v4, "menuTitle":[Ljava/lang/String;
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getResources()Landroid/content/res/Resources;
 
@@ -1473,14 +1373,14 @@
 
     move-result-object v1
 
-    .line 488
+    .line 394
     .local v1, "menuDrawable":Landroid/content/res/TypedArray;
     :goto_2b
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 490
+    .line 396
     .local v2, "menuItems":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/cccdi/mabellefanshare/MainActivity$FlyInMenuItem;>;"
     const/4 v0, 0x0
 
@@ -1488,16 +1388,16 @@
     :goto_31
     array-length v5, v4
 
-    if-ge v0, v5, :cond_92
+    if-ge v0, v5, :cond_b3
 
-    .line 492
+    .line 398
     sget v5, Lcom/cccdi/mabellefanshare/AppApplication;->userType:I
 
-    if-eqz v5, :cond_83
+    if-eqz v5, :cond_a4
 
-    if-nez v0, :cond_83
+    if-nez v0, :cond_a4
 
-    .line 493
+    .line 399
     new-instance v5, Lcom/cccdi/mabellefanshare/MainActivity$FlyInMenuItem;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1542,35 +1442,49 @@
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 490
+    .line 396
     :goto_69
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_31
 
-    .line 483
+    .line 381
     .end local v0    # "i":I
     .end local v1    # "menuDrawable":Landroid/content/res/TypedArray;
     .end local v2    # "menuItems":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/cccdi/mabellefanshare/MainActivity$FlyInMenuItem;>;"
     .end local v4    # "menuTitle":[Ljava/lang/String;
     :cond_6c
+    sget v5, Lcom/cccdi/mabellefanshare/AppApplication;->userType:I
+
+    const/4 v6, 0x2
+
+    if-eq v5, v6, :cond_76
+
+    sget v5, Lcom/cccdi/mabellefanshare/AppApplication;->userType:I
+
+    const/4 v6, 0x3
+
+    if-ne v5, v6, :cond_8d
+
+    .line 382
+    :cond_76
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x7f060012
+    const v6, 0x7f06000a
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 484
+    .line 383
     .restart local v4    # "menuTitle":[Ljava/lang/String;
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x7f06000f
+    const v6, 0x7f060009
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
@@ -1579,10 +1493,39 @@
     .restart local v1    # "menuDrawable":Landroid/content/res/TypedArray;
     goto :goto_2b
 
-    .line 495
+    .line 385
+    .end local v1    # "menuDrawable":Landroid/content/res/TypedArray;
+    .end local v4    # "menuTitle":[Ljava/lang/String;
+    :cond_8d
+    invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    const v6, 0x7f06000e
+
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 386
+    .restart local v4    # "menuTitle":[Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    const v6, 0x7f06000d
+
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
+
+    move-result-object v1
+
+    .restart local v1    # "menuDrawable":Landroid/content/res/TypedArray;
+    goto :goto_2b
+
+    .line 401
     .restart local v0    # "i":I
     .restart local v2    # "menuItems":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/cccdi/mabellefanshare/MainActivity$FlyInMenuItem;>;"
-    :cond_83
+    :cond_a4
     new-instance v5, Lcom/cccdi/mabellefanshare/MainActivity$FlyInMenuItem;
 
     aget-object v6, v4, v0
@@ -1597,50 +1540,50 @@
 
     goto :goto_69
 
-    .line 499
-    :cond_92
+    .line 405
+    :cond_b3
     new-instance v5, Lcom/cccdi/mabellefanshare/adapter/MenuAdapter;
 
     invoke-direct {v5, p0, v2}, Lcom/cccdi/mabellefanshare/adapter/MenuAdapter;-><init>(Landroid/content/Context;Ljava/util/ArrayList;)V
 
     invoke-virtual {v3, v5}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 500
-    new-instance v5, Lcom/cccdi/mabellefanshare/MainActivity$8;
+    .line 406
+    new-instance v5, Lcom/cccdi/mabellefanshare/MainActivity$6;
 
-    invoke-direct {v5, p0}, Lcom/cccdi/mabellefanshare/MainActivity$8;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v5, p0}, Lcom/cccdi/mabellefanshare/MainActivity$6;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
     invoke-virtual {v3, v5}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 527
+    .line 434
     sget v5, Lcom/cccdi/mabellefanshare/AppApplication;->userType:I
 
-    if-nez v5, :cond_ba
+    if-nez v5, :cond_db
 
-    .line 528
+    .line 435
     invoke-virtual {p0, v8}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
     invoke-virtual {v5, v10}, Landroid/view/View;->setVisibility(I)V
 
-    .line 529
+    .line 436
     invoke-virtual {p0, v8}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
-    new-instance v6, Lcom/cccdi/mabellefanshare/MainActivity$9;
+    new-instance v6, Lcom/cccdi/mabellefanshare/MainActivity$7;
 
-    invoke-direct {v6, p0}, Lcom/cccdi/mabellefanshare/MainActivity$9;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v6, p0}, Lcom/cccdi/mabellefanshare/MainActivity$7;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 551
-    :goto_b9
+    .line 458
+    :goto_da
     return-void
 
-    .line 546
-    :cond_ba
+    .line 453
+    :cond_db
     invoke-virtual {p0, v8}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
@@ -1649,7 +1592,7 @@
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setVisibility(I)V
 
-    goto :goto_b9
+    goto :goto_da
 .end method
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
@@ -1661,30 +1604,36 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 1352
-    iget-object v4, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mSF:Lcom/sromku/simple/fb/SimpleFacebook;
+    .line 1328
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/FragmentActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    invoke-virtual {v4, p0, p1, p2, p3}, Lcom/sromku/simple/fb/SimpleFacebook;->onActivityResult(Landroid/app/Activity;IILandroid/content/Intent;)Z
+    .line 1330
+    iget-object v4, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mSsoHandler:Lcom/sina/weibo/sdk/auth/sso/SsoHandler;
 
-    .line 1354
-    invoke-super {p0, p1, p2, p3}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onActivityResult(IILandroid/content/Intent;)V
+    if-eqz v4, :cond_d
 
-    .line 1388
+    .line 1331
+    iget-object v4, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mSsoHandler:Lcom/sina/weibo/sdk/auth/sso/SsoHandler;
+
+    invoke-virtual {v4, p1, p2, p3}, Lcom/sina/weibo/sdk/auth/sso/SsoHandler;->authorizeCallBack(IILandroid/content/Intent;)V
+
+    .line 1334
+    :cond_d
     const/16 v4, 0x29a
 
-    if-ne p1, v4, :cond_28
+    if-ne p1, v4, :cond_2c
 
-    .line 1389
-    if-ne p2, v5, :cond_28
+    .line 1335
+    if-ne p2, v5, :cond_2c
 
-    .line 1390
+    .line 1336
     sget-object v4, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;->INTENT_ACTION:Ljava/lang/String;
 
     invoke-virtual {p3, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1391
+    .line 1337
     .local v0, "action":Ljava/lang/String;
     sget-object v4, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;->INTENT_VALUE:Ljava/lang/String;
 
@@ -1692,43 +1641,43 @@
 
     move-result-object v3
 
-    .line 1393
+    .line 1339
     .local v3, "value":Ljava/lang/String;
     new-instance v2, Landroid/view/View;
 
     invoke-direct {v2, p0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 1395
+    .line 1341
     .local v2, "emptyView":Landroid/view/View;
     new-instance v1, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;
 
     invoke-direct {v1, p0}, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;-><init>(Landroid/app/Activity;)V
 
-    .line 1396
+    .line 1342
     .local v1, "bcm":Lcom/cccdi/mabellefanshare/listener/BannerClickManager;
     invoke-virtual {v1, v2, v0, v3}, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;->performClickAction(Landroid/view/View;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1401
+    .line 1347
     .end local v0    # "action":Ljava/lang/String;
     .end local v1    # "bcm":Lcom/cccdi/mabellefanshare/listener/BannerClickManager;
     .end local v2    # "emptyView":Landroid/view/View;
     .end local v3    # "value":Ljava/lang/String;
-    :cond_28
+    :cond_2c
     const/16 v4, 0x22b
 
-    if-ne p1, v4, :cond_47
+    if-ne p1, v4, :cond_4b
 
-    .line 1402
-    if-ne p2, v5, :cond_47
+    .line 1348
+    if-ne p2, v5, :cond_4b
 
-    .line 1403
+    .line 1349
     sget-object v4, Lcom/cccdi/mabellefanshare/FullScreenPopupActivity;->ACTION:Ljava/lang/String;
 
     invoke-virtual {p3, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1404
+    .line 1350
     .restart local v0    # "action":Ljava/lang/String;
     sget-object v4, Lcom/cccdi/mabellefanshare/FullScreenPopupActivity;->VALUE:Ljava/lang/String;
 
@@ -1736,28 +1685,28 @@
 
     move-result-object v3
 
-    .line 1406
+    .line 1352
     .restart local v3    # "value":Ljava/lang/String;
     new-instance v2, Landroid/view/View;
 
     invoke-direct {v2, p0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 1408
+    .line 1354
     .restart local v2    # "emptyView":Landroid/view/View;
     new-instance v1, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;
 
     invoke-direct {v1, p0}, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;-><init>(Landroid/app/Activity;)V
 
-    .line 1409
+    .line 1355
     .restart local v1    # "bcm":Lcom/cccdi/mabellefanshare/listener/BannerClickManager;
     invoke-virtual {v1, v2, v0, v3}, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;->performClickAction(Landroid/view/View;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1415
+    .line 1360
     .end local v0    # "action":Ljava/lang/String;
     .end local v1    # "bcm":Lcom/cccdi/mabellefanshare/listener/BannerClickManager;
     .end local v2    # "emptyView":Landroid/view/View;
     .end local v3    # "value":Ljava/lang/String;
-    :cond_47
+    :cond_4b
     return-void
 .end method
 
@@ -1765,21 +1714,21 @@
     .registers 5
 
     .prologue
-    .line 909
+    .line 808
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentMenuState:Lcom/cccdi/mabellefanshare/MainActivity$MenuState;
 
     sget-object v1, Lcom/cccdi/mabellefanshare/MainActivity$MenuState;->SHOWN:Lcom/cccdi/mabellefanshare/MainActivity$MenuState;
 
     if-ne v0, v1, :cond_a
 
-    .line 910
+    .line 809
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->toggleMenu()V
 
-    .line 929
+    .line 828
     :goto_9
     return-void
 
-    .line 914
+    .line 813
     :cond_a
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
@@ -1791,12 +1740,12 @@
 
     if-lez v0, :cond_18
 
-    .line 915
-    invoke-super {p0}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onBackPressed()V
+    .line 814
+    invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onBackPressed()V
 
     goto :goto_9
 
-    .line 920
+    .line 819
     :cond_18
     iget-wide v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mBackPressedTime:J
 
@@ -1812,14 +1761,14 @@
 
     if-lez v0, :cond_29
 
-    .line 921
-    invoke-super {p0}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onBackPressed()V
+    .line 820
+    invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onBackPressed()V
 
     goto :goto_9
 
-    .line 925
+    .line 824
     :cond_29
-    const v0, 0x7f0d006f
+    const v0, 0x7f0d0055
 
     invoke-virtual {p0, v0}, Lcom/cccdi/mabellefanshare/MainActivity;->getString(I)Ljava/lang/String;
 
@@ -1827,7 +1776,7 @@
 
     invoke-static {p0, v0}, Lcom/cccdi/mabellefanshare/AppApplication;->easyToast(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 928
+    .line 827
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1842,54 +1791,52 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 805
+    .line 730
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_10
 
-    .line 818
+    .line 743
     :goto_7
     return-void
 
-    .line 808
+    .line 733
     :pswitch_8
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->toggleMenu()V
 
     goto :goto_7
 
-    .line 814
+    .line 739
     :pswitch_c
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->showShoppingCart()V
 
     goto :goto_7
 
-    .line 805
+    .line 730
     :pswitch_data_10
-    .packed-switch 0x7f09005b
+    .packed-switch 0x7f090043
         :pswitch_8
         :pswitch_c
     .end packed-switch
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 6
+    .registers 5
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/4 v3, 0x1
+    .line 186
+    invoke-super {p0, p1}, Landroid/support/v4/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 196
-    invoke-super {p0, p1}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onCreate(Landroid/os/Bundle;)V
-
-    .line 197
+    .line 187
     const v1, 0x7f030018
 
     invoke-virtual {p0, v1}, Lcom/cccdi/mabellefanshare/MainActivity;->setContentView(I)V
 
-    .line 200
-    const v1, 0x7f09005b
+    .line 189
+    const v1, 0x7f090043
 
     invoke-virtual {p0, v1}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1901,32 +1848,34 @@
 
     const/16 v2, 0x8
 
-    if-ne v1, v2, :cond_85
+    if-ne v1, v2, :cond_1f
 
-    .line 201
-    const/16 v1, 0xb
+    .line 190
+    const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/cccdi/mabellefanshare/MainActivity;->setRequestedOrientation(I)V
 
-    .line 202
-    sput-boolean v3, Lcom/cccdi/mabellefanshare/AppApplication;->isLandscape:Z
+    .line 191
+    const/4 v1, 0x1
 
-    .line 207
-    :goto_20
+    sput-boolean v1, Lcom/cccdi/mabellefanshare/AppApplication;->isLandscape:Z
+
+    .line 194
+    :cond_1f
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->regToWx()V
 
-    .line 208
+    .line 195
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->regToWeibo()V
 
-    .line 211
+    .line 198
     iput-object p0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mContext:Landroid/content/Context;
 
-    .line 213
+    .line 200
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 214
+    .line 201
     .local v0, "dm":Landroid/util/DisplayMetrics;
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getWindowManager()Landroid/view/WindowManager;
 
@@ -1938,35 +1887,27 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 216
+    .line 203
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     sput v1, Lcom/cccdi/mabellefanshare/AppApplication;->screenWidth:I
 
-    .line 218
+    .line 205
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->init_component()V
 
-    .line 219
+    .line 206
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->init_menu()V
 
-    .line 221
+    .line 208
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->retrieveInfo()V
 
-    .line 223
-    if-eqz p1, :cond_89
-
-    .line 224
-    const-string v1, "current_fragment"
-
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v1
+    .line 209
+    const/16 v1, 0x64
 
     invoke-virtual {p0, v1}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
-    .line 231
-    :goto_50
-    const v1, 0x7f09005f
+    .line 211
+    const v1, 0x7f090047
 
     invoke-virtual {p0, v1}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1974,7 +1915,7 @@
 
     iput-object v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->contentScrim:Landroid/view/View;
 
-    .line 232
+    .line 212
     iget-object v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->contentScrim:Landroid/view/View;
 
     new-instance v2, Lcom/cccdi/mabellefanshare/MainActivity$1;
@@ -1983,77 +1924,26 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 240
-    new-instance v1, Lcom/facebook/UiLifecycleHelper;
-
-    iget-object v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->statusCallback:Lcom/facebook/Session$StatusCallback;
-
-    invoke-direct {v1, p0, v2}, Lcom/facebook/UiLifecycleHelper;-><init>(Landroid/app/Activity;Lcom/facebook/Session$StatusCallback;)V
-
-    iput-object v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->uiHelper:Lcom/facebook/UiLifecycleHelper;
-
-    .line 242
-    iget-object v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->uiHelper:Lcom/facebook/UiLifecycleHelper;
-
-    invoke-virtual {v1, p1}, Lcom/facebook/UiLifecycleHelper;->onCreate(Landroid/os/Bundle;)V
-
-    .line 250
-    invoke-static {p0}, Lcom/sromku/simple/fb/SimpleFacebook;->getInstance(Landroid/app/Activity;)Lcom/sromku/simple/fb/SimpleFacebook;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mSF:Lcom/sromku/simple/fb/SimpleFacebook;
-
-    .line 252
-    iget-object v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mSF:Lcom/sromku/simple/fb/SimpleFacebook;
-
-    new-instance v2, Lcom/cccdi/mabellefanshare/MainActivity$2;
-
-    invoke-direct {v2, p0}, Lcom/cccdi/mabellefanshare/MainActivity$2;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
-
-    invoke-virtual {v1, v2}, Lcom/sromku/simple/fb/SimpleFacebook;->logout(Lcom/sromku/simple/fb/listeners/OnLogoutListener;)V
-
-    .line 274
+    .line 220
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->retrievePopupMessage()V
 
-    .line 275
+    .line 221
     return-void
-
-    .line 204
-    .end local v0    # "dm":Landroid/util/DisplayMetrics;
-    :cond_85
-    invoke-virtual {p0, v3}, Lcom/cccdi/mabellefanshare/MainActivity;->setRequestedOrientation(I)V
-
-    goto :goto_20
-
-    .line 226
-    .restart local v0    # "dm":Landroid/util/DisplayMetrics;
-    :cond_89
-    const/16 v1, 0x64
-
-    invoke-virtual {p0, v1}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
-
-    goto :goto_50
 .end method
 
 .method protected onDestroy()V
     .registers 2
 
     .prologue
-    .line 1277
-    invoke-super {p0}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onDestroy()V
+    .line 1289
+    invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onDestroy()V
 
-    .line 1279
+    .line 1291
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mContext:Landroid/content/Context;
 
-    .line 1281
-    iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->uiHelper:Lcom/facebook/UiLifecycleHelper;
-
-    invoke-virtual {v0}, Lcom/facebook/UiLifecycleHelper;->onDestroy()V
-
-    .line 1282
+    .line 1293
     return-void
 .end method
 
@@ -2061,10 +1951,10 @@
     .registers 2
 
     .prologue
-    .line 1263
+    .line 1275
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->init_menu()V
 
-    .line 1265
+    .line 1277
     sget-object v0, Lcom/cccdi/mabellefanshare/AppApplication;->shoppingCartList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -2073,14 +1963,14 @@
 
     if-lez v0, :cond_12
 
-    .line 1266
+    .line 1278
     invoke-static {}, Lcom/cccdi/mabellefanshare/util/RefreshRequestExecutor;->getInstance()Lcom/cccdi/mabellefanshare/util/RefreshRequestExecutor;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/cccdi/mabellefanshare/util/RefreshRequestExecutor;->execute(Landroid/content/Context;)V
 
-    .line 1267
+    .line 1279
     :cond_12
     return-void
 .end method
@@ -2090,12 +1980,12 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1256
+    .line 1155
     const/16 v0, 0x64
 
     invoke-virtual {p0, v0}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
-    .line 1259
+    .line 1240
     return-void
 .end method
 
@@ -2103,43 +1993,48 @@
     .registers 1
 
     .prologue
-    .line 1555
+    .line 1589
     return-void
 .end method
 
 .method protected onNewIntent(Landroid/content/Intent;)V
-    .registers 3
+    .registers 4
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1336
-    invoke-super {p0, p1}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onNewIntent(Landroid/content/Intent;)V
+    .line 1246
+    invoke-super {p0, p1}, Landroid/support/v4/app/FragmentActivity;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 1338
+    .line 1247
+    iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mWeiboShareAPI:Lcom/sina/weibo/sdk/api/share/IWeiboShareAPI;
+
+    iget-object v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->response:Lcom/sina/weibo/sdk/api/share/IWeiboHandler$Response;
+
+    invoke-interface {v0, p1, v1}, Lcom/sina/weibo/sdk/api/share/IWeiboShareAPI;->handleWeiboResponse(Landroid/content/Intent;Lcom/sina/weibo/sdk/api/share/IWeiboHandler$Response;)Z
+
+    .line 1249
     invoke-virtual {p0, p1}, Lcom/cccdi/mabellefanshare/MainActivity;->setIntent(Landroid/content/Intent;)V
 
-    .line 1340
+    .line 1251
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->consumeIntent:Z
 
-    .line 1341
+    .line 1252
     return-void
 .end method
 
 .method protected onPause()V
-    .registers 2
+    .registers 1
 
     .prologue
-    .line 1345
-    invoke-super {p0}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onPause()V
+    .line 1321
+    invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onPause()V
 
-    .line 1347
-    iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->uiHelper:Lcom/facebook/UiLifecycleHelper;
+    .line 1323
+    invoke-static {p0}, Lcn/jpush/android/api/JPushInterface;->onPause(Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Lcom/facebook/UiLifecycleHelper;->onPause()V
-
-    .line 1348
+    .line 1324
     return-void
 .end method
 
@@ -2147,10 +2042,10 @@
     .registers 1
 
     .prologue
-    .line 1525
+    .line 1559
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->switchToPaymentFail()V
 
-    .line 1526
+    .line 1560
     return-void
 .end method
 
@@ -2158,10 +2053,10 @@
     .registers 1
 
     .prologue
-    .line 1519
+    .line 1553
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->switchToPaymentFail()V
 
-    .line 1520
+    .line 1554
     return-void
 .end method
 
@@ -2169,10 +2064,10 @@
     .registers 1
 
     .prologue
-    .line 1512
+    .line 1546
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->switchToPaymentFail()V
 
-    .line 1513
+    .line 1547
     return-void
 .end method
 
@@ -2180,10 +2075,10 @@
     .registers 7
 
     .prologue
-    .line 1484
+    .line 1518
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->showProgressDialog()V
 
-    .line 1487
+    .line 1521
     invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
 
     move-result-object v1
@@ -2196,7 +2091,7 @@
 
     move-result-object v2
 
-    .line 1488
+    .line 1522
     .local v2, "mUrl":Ljava/lang/String;
     new-instance v0, Lcom/cccdi/mabellefanshare/request/MabelleJsonObjectRequest;
 
@@ -2204,23 +2099,23 @@
 
     const/4 v3, 0x0
 
-    new-instance v4, Lcom/cccdi/mabellefanshare/MainActivity$14;
+    new-instance v4, Lcom/cccdi/mabellefanshare/MainActivity$11;
 
-    invoke-direct {v4, p0}, Lcom/cccdi/mabellefanshare/MainActivity$14;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v4, p0}, Lcom/cccdi/mabellefanshare/MainActivity$11;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
-    new-instance v5, Lcom/cccdi/mabellefanshare/MainActivity$15;
+    new-instance v5, Lcom/cccdi/mabellefanshare/MainActivity$12;
 
-    invoke-direct {v5, p0}, Lcom/cccdi/mabellefanshare/MainActivity$15;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v5, p0}, Lcom/cccdi/mabellefanshare/MainActivity$12;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
     invoke-direct/range {v0 .. v5}, Lcom/cccdi/mabellefanshare/request/MabelleJsonObjectRequest;-><init>(ILjava/lang/String;Lorg/json/JSONObject;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 1506
+    .line 1540
     .local v0, "accessTokenRequest":Lcom/cccdi/mabellefanshare/request/MabelleJsonObjectRequest;
     sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->volleyQueue:Lcom/android/volley/RequestQueue;
 
     invoke-virtual {v1, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
-    .line 1507
+    .line 1541
     return-void
 .end method
 
@@ -2228,10 +2123,10 @@
     .registers 1
 
     .prologue
-    .line 1475
+    .line 1509
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->switchToPaymentFail()V
 
-    .line 1476
+    .line 1510
     return-void
 .end method
 
@@ -2239,29 +2134,29 @@
     .registers 6
 
     .prologue
-    .line 1532
+    .line 1566
     const/4 v3, 0x0
 
     sput v3, Lcom/cccdi/mabellefanshare/AppApplication;->userType:I
 
-    .line 1533
+    .line 1567
     invoke-static {}, Lcom/cccdi/mabellefanshare/AppApplication;->clearUserInfo()V
 
-    .line 1534
+    .line 1568
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->init_menu()V
 
-    .line 1537
+    .line 1571
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v0
 
-    .line 1538
+    .line 1572
     .local v0, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v1
 
-    .line 1540
+    .line 1574
     .local v1, "ft":Landroid/support/v4/app/FragmentTransaction;
     const/4 v2, 0x0
 
@@ -2273,22 +2168,22 @@
 
     if-ge v2, v3, :cond_1e
 
-    .line 1541
+    .line 1575
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManager;->popBackStack()V
 
-    .line 1540
+    .line 1574
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_12
 
-    .line 1544
+    .line 1578
     :cond_1e
     const/16 v3, 0x1003
 
     invoke-virtual {v1, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1545
-    const v3, 0x7f09005d
+    .line 1579
+    const v3, 0x7f090045
 
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/IndexFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/IndexFragment;
 
@@ -2296,15 +2191,15 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/support/v4/app/FragmentTransaction;->replace(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1546
+    .line 1580
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 1548
+    .line 1582
     const/16 v3, 0x64
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1550
+    .line 1584
     return-void
 .end method
 
@@ -2312,208 +2207,85 @@
     .registers 1
 
     .prologue
-    .line 1271
+    .line 1283
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->init_menu()V
 
-    .line 1272
+    .line 1284
     return-void
 .end method
 
 .method protected onResume()V
-    .registers 11
+    .registers 4
 
     .prologue
-    .line 1288
-    invoke-super {p0}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onResume()V
+    .line 1297
+    invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->onResume()V
 
-    .line 1290
+    .line 1299
+    invoke-static {p0}, Lcn/jpush/android/api/JPushInterface;->onResume(Landroid/content/Context;)V
+
+    .line 1301
     invoke-static {}, Lcom/cccdi/mabellefanshare/AppApplication;->getAccessToken()Ljava/lang/String;
-
-    move-result-object v8
-
-    if-eqz v8, :cond_c
-
-    .line 1291
-    invoke-static {p0}, Lcom/cccdi/mabellefanshare/AppApplication;->retrieveUserInfo(Lcom/cccdi/mabellefanshare/AppApplication$OnProfileLoadListener;)V
-
-    .line 1294
-    :cond_c
-    iget-object v8, p0, Lcom/cccdi/mabellefanshare/MainActivity;->uiHelper:Lcom/facebook/UiLifecycleHelper;
-
-    invoke-virtual {v8}, Lcom/facebook/UiLifecycleHelper;->onResume()V
-
-    .line 1296
-    invoke-static {p0}, Lcom/sromku/simple/fb/SimpleFacebook;->getInstance(Landroid/app/Activity;)Lcom/sromku/simple/fb/SimpleFacebook;
-
-    move-result-object v8
-
-    iput-object v8, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mSF:Lcom/sromku/simple/fb/SimpleFacebook;
-
-    .line 1298
-    invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 1300
-    .local v2, "data":Landroid/content/Intent;
-    if-eqz v2, :cond_47
+    if-eqz v2, :cond_f
 
-    .line 1301
-    const-string v8, "fromNotification"
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v2, v8, v9}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v5
-
-    .line 1303
-    .local v5, "isFromNotification":Z
-    if-eqz v5, :cond_47
+    .line 1302
+    invoke-static {p0}, Lcom/cccdi/mabellefanshare/AppApplication;->retrieveUserInfo(Lcom/cccdi/mabellefanshare/AppApplication$OnProfileLoadListener;)V
 
     .line 1304
-    const-string v8, "notification_action"
+    :cond_f
+    iget-boolean v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->consumeIntent:Z
 
-    invoke-virtual {v2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    if-nez v2, :cond_29
+
+    .line 1305
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lcom/cccdi/mabellefanshare/MainActivity;->consumeIntent:Z
+
+    .line 1307
+    invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 1305
-    .local v0, "action":Ljava/lang/String;
-    const-string v8, "notification_value"
-
-    invoke-virtual {v2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 1307
-    .local v7, "value":Ljava/lang/String;
-    new-instance v3, Landroid/view/View;
-
-    invoke-direct {v3, p0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
     .line 1309
-    .local v3, "emptyView":Landroid/view/View;
-    new-instance v1, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;
-
-    invoke-direct {v1, p0}, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;-><init>(Landroid/app/Activity;)V
+    .local v0, "i":Landroid/content/Intent;
+    if-eqz v0, :cond_29
 
     .line 1310
-    .local v1, "bcm":Lcom/cccdi/mabellefanshare/listener/BannerClickManager;
-    invoke-virtual {v1, v3, v0, v7}, Lcom/cccdi/mabellefanshare/listener/BannerClickManager;->performClickAction(Landroid/view/View;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+
+    move-result-object v1
 
     .line 1312
-    new-instance v8, Landroid/content/Intent;
+    .local v1, "uri":Landroid/net/Uri;
+    if-eqz v1, :cond_29
 
-    invoke-direct {v8}, Landroid/content/Intent;-><init>()V
+    .line 1313
+    invoke-virtual {v1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
-    invoke-virtual {p0, v8}, Lcom/cccdi/mabellefanshare/MainActivity;->setIntent(Landroid/content/Intent;)V
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/cccdi/mabellefanshare/MainActivity;->switchToProductFragment(Ljava/lang/String;)V
 
     .line 1317
-    .end local v0    # "action":Ljava/lang/String;
-    .end local v1    # "bcm":Lcom/cccdi/mabellefanshare/listener/BannerClickManager;
-    .end local v3    # "emptyView":Landroid/view/View;
-    .end local v5    # "isFromNotification":Z
-    .end local v7    # "value":Ljava/lang/String;
-    :cond_47
-    iget-boolean v8, p0, Lcom/cccdi/mabellefanshare/MainActivity;->consumeIntent:Z
-
-    if-nez v8, :cond_61
-
-    .line 1318
-    const/4 v8, 0x1
-
-    iput-boolean v8, p0, Lcom/cccdi/mabellefanshare/MainActivity;->consumeIntent:Z
-
-    .line 1320
-    invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v4
-
-    .line 1322
-    .local v4, "i":Landroid/content/Intent;
-    if-eqz v4, :cond_61
-
-    .line 1323
-    invoke-virtual {v4}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
-    move-result-object v6
-
-    .line 1325
-    .local v6, "uri":Landroid/net/Uri;
-    if-eqz v6, :cond_61
-
-    .line 1326
-    invoke-virtual {v6}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {p0, v8}, Lcom/cccdi/mabellefanshare/MainActivity;->switchToProductFragment(Ljava/lang/String;)V
-
-    .line 1330
-    .end local v4    # "i":Landroid/content/Intent;
-    .end local v6    # "uri":Landroid/net/Uri;
-    :cond_61
+    .end local v0    # "i":Landroid/content/Intent;
+    .end local v1    # "uri":Landroid/net/Uri;
+    :cond_29
     return-void
 .end method
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
-    .registers 4
+    .registers 2
     .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1419
-    invoke-super {p0, p1}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
+    .line 1364
+    invoke-super {p0, p1}, Landroid/support/v4/app/FragmentActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 1420
-    iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->uiHelper:Lcom/facebook/UiLifecycleHelper;
-
-    invoke-virtual {v0, p1}, Lcom/facebook/UiLifecycleHelper;->onSaveInstanceState(Landroid/os/Bundle;)V
-
-    .line 1422
-    const-string v0, "current_fragment"
-
-    iget v1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 1423
-    return-void
-.end method
-
-.method protected onStart()V
-    .registers 2
-
-    .prologue
-    .line 1613
-    invoke-super {p0}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onStart()V
-
-    .line 1615
-    invoke-static {p0}, Lcom/google/android/gms/analytics/GoogleAnalytics;->getInstance(Landroid/content/Context;)Lcom/google/android/gms/analytics/GoogleAnalytics;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/google/android/gms/analytics/GoogleAnalytics;->reportActivityStart(Landroid/app/Activity;)V
-
-    .line 1616
-    return-void
-.end method
-
-.method protected onStop()V
-    .registers 2
-
-    .prologue
-    .line 1620
-    invoke-super {p0}, Lcom/cccdi/mabellefanshare/gcm/GcmFragmentActivity;->onStop()V
-
-    .line 1622
-    invoke-static {p0}, Lcom/google/android/gms/analytics/GoogleAnalytics;->getInstance(Landroid/content/Context;)Lcom/google/android/gms/analytics/GoogleAnalytics;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/google/android/gms/analytics/GoogleAnalytics;->reportActivityStop(Landroid/app/Activity;)V
-
-    .line 1623
+    .line 1365
     return-void
 .end method
 
@@ -2521,74 +2293,245 @@
     .registers 2
 
     .prologue
-    .line 933
+    .line 832
     const v0, 0x98967f
 
     iput v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 934
+    .line 833
     const/16 v0, 0x64
 
     invoke-virtual {p0, v0}, Lcom/cccdi/mabellefanshare/MainActivity;->switchFragment(I)V
 
-    .line 935
-    return-void
-.end method
-
-.method public requestPermissions()V
-    .registers 4
-
-    .prologue
-    .line 1605
-    invoke-static {}, Lcom/facebook/Session;->getActiveSession()Lcom/facebook/Session;
-
-    move-result-object v0
-
-    .line 1606
-    .local v0, "s":Lcom/facebook/Session;
-    if-eqz v0, :cond_10
-
-    .line 1607
-    new-instance v1, Lcom/facebook/Session$NewPermissionsRequest;
-
-    sget-object v2, Lcom/cccdi/mabellefanshare/MainActivity;->PERMISSIONS:Ljava/util/List;
-
-    invoke-direct {v1, p0, v2}, Lcom/facebook/Session$NewPermissionsRequest;-><init>(Landroid/app/Activity;Ljava/util/List;)V
-
-    invoke-virtual {v0, v1}, Lcom/facebook/Session;->requestNewPublishPermissions(Lcom/facebook/Session$NewPermissionsRequest;)V
-
-    .line 1609
-    :cond_10
+    .line 834
     return-void
 .end method
 
 .method public showPaymentDialog()V
-    .registers 3
+    .registers 31
 
     .prologue
+    .line 1462
+    const-string v4, "https://www.alipay.com/cooperate/gateway.do?"
+
+    .line 1463
+    .local v4, "gateway":Ljava/lang/String;
+    const-string v5, "create_forex_trade"
+
+    .line 1464
+    .local v5, "service":Ljava/lang/String;
+    const-string v6, "2088001845249151"
+
     .line 1465
+    .local v6, "partner":Ljava/lang/String;
+    const-string v7, "MD5"
+
+    .line 1466
+    .local v7, "sign_type":Ljava/lang/String;
+    const-string v9, "MaBelle Order"
+
+    .line 1467
+    .local v9, "subject":Ljava/lang/String;
+    invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getOrderNum()Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 1468
+    .local v8, "out_trade_no":Ljava/lang/String;
+    const-string v10, "MaBelle Order"
+
+    .line 1469
+    .local v10, "body":Ljava/lang/String;
+    sget-object v11, Lcom/cccdi/mabellefanshare/AppApplication;->currentCurrency:Ljava/lang/String;
+
+    .line 1473
+    .local v11, "currency":Ljava/lang/String;
+    invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getSubtotal()D
+
+    move-result-wide v25
+
+    .line 1474
+    .local v25, "subtotal":D
+    invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getDeductSubtotal()D
+
+    move-result-wide v16
+
+    .line 1475
+    .local v16, "deductSubtotal":D
+    invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInsurance()D
+
+    move-result-wide v19
+
+    .line 1476
+    .local v19, "insurance":D
+    invoke-static {}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getInstance()Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleOrder;->getShippingCharge()D
+
+    move-result-wide v23
+
+    .line 1479
+    .local v23, "shippingCharge":D
+    add-double v28, v25, v16
+
+    add-double v28, v28, v19
+
+    add-double v21, v28, v23
+
+    .line 1481
+    .local v21, "payAmount":D
+    invoke-static/range {v21 .. v22}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
+
+    move-result-object v12
+
+    .line 1484
+    .local v12, "totalAmount":Ljava/lang/String;
+    const-string v3, "HKD"
+
+    invoke-virtual {v11, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_61
+
+    .line 1485
+    const-string v11, "HKD"
+
+    .line 1487
+    new-instance v18, Ljava/text/DecimalFormat;
+
+    const-string v3, "###.##"
+
+    move-object/from16 v0, v18
+
+    invoke-direct {v0, v3}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    .line 1489
+    .local v18, "formatter":Ljava/text/DecimalFormat;
+    invoke-static {}, Lcom/cccdi/mabellefanshare/AppApplication;->getRealCurrencyRate()D
+
+    move-result-wide v28
+
+    mul-double v28, v28, v21
+
+    move-object/from16 v0, v18
+
+    move-wide/from16 v1, v28
+
+    invoke-virtual {v0, v1, v2}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v12
+
+    .line 1492
+    .end local v18    # "formatter":Ljava/text/DecimalFormat;
+    :cond_61
+    const-string v13, "5hrcl0amr11i5fm8372fzgkik5i7ukpj"
+
+    .line 1494
+    .local v13, "key":Ljava/lang/String;
+    const-string v15, "http://cccdi.hk"
+
+    .line 1495
+    .local v15, "notify_url":Ljava/lang/String;
+    const-string v14, "http://cccdi.hk"
+
+    .line 1497
+    .local v14, "return_url":Ljava/lang/String;
+    new-instance v3, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleAlipay;
+
+    invoke-direct {v3}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleAlipay;-><init>()V
+
+    invoke-virtual/range {v3 .. v15}, Lcom/cccdi/mabellefanshare/mabelleobj/MabelleAlipay;->createURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v27
+
+    .line 1503
+    .local v27, "url":Ljava/lang/String;
+    new-instance v3, Lcom/cccdi/mabellefanshare/widget/PaymentWebDialog;
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v27
+
+    move-object/from16 v2, p0
+
+    invoke-direct {v3, v0, v1, v2}, Lcom/cccdi/mabellefanshare/widget/PaymentWebDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/cccdi/mabellefanshare/widget/PaymentWebDialog$OnPaymentDialogCloseListener;)V
+
+    invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/widget/PaymentWebDialog;->show()V
+
+    .line 1504
+    return-void
+.end method
+
+.method public showPaymentDialog(I)V
+    .registers 4
+    .param p1, "type"    # I
+
+    .prologue
+    .line 1407
+    const-string v0, ""
+
+    .line 1408
+    .local v0, "url":Ljava/lang/String;
+    packed-switch p1, :pswitch_data_18
+
+    .line 1411
     invoke-static {}, Lcom/cccdi/mabellefanshare/Constant;->getPaymentURL()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1469
-    .local v0, "url":Ljava/lang/String;
+    .line 1456
+    :goto_9
     new-instance v1, Lcom/cccdi/mabellefanshare/widget/PaymentWebDialog;
 
     invoke-direct {v1, p0, v0, p0}, Lcom/cccdi/mabellefanshare/widget/PaymentWebDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/cccdi/mabellefanshare/widget/PaymentWebDialog$OnPaymentDialogCloseListener;)V
 
     invoke-virtual {v1}, Lcom/cccdi/mabellefanshare/widget/PaymentWebDialog;->show()V
 
-    .line 1470
+    .line 1457
     return-void
+
+    .line 1452
+    :pswitch_12
+    invoke-static {}, Lcom/cccdi/mabellefanshare/Constant;->getAlipayPaymentURL()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_9
+
+    .line 1408
+    nop
+
+    :pswitch_data_18
+    .packed-switch 0x0
+        :pswitch_12
+    .end packed-switch
 .end method
 
 .method public showProgressBar()V
     .registers 3
 
     .prologue
-    .line 365
-    const v0, 0x7f09005e
+    .line 301
+    const v0, 0x7f090046
 
     invoke-virtual {p0, v0}, Lcom/cccdi/mabellefanshare/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -2598,7 +2541,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 366
+    .line 302
     return-void
 .end method
 
@@ -2606,12 +2549,12 @@
     .registers 3
 
     .prologue
-    .line 373
+    .line 309
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->progressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_11
 
-    .line 374
+    .line 310
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
@@ -2620,16 +2563,16 @@
 
     if-eqz v0, :cond_11
 
-    .line 375
+    .line 311
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 377
+    .line 313
     :cond_11
     const-string v0, ""
 
-    const v1, 0x7f0d0163
+    const v1, 0x7f0d0130
 
     invoke-virtual {p0, v1}, Lcom/cccdi/mabellefanshare/MainActivity;->getString(I)Ljava/lang/String;
 
@@ -2641,7 +2584,7 @@
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->progressDialog:Landroid/app/ProgressDialog;
 
-    .line 379
+    .line 315
     return-void
 .end method
 
@@ -2649,18 +2592,18 @@
     .registers 4
 
     .prologue
-    .line 1225
+    .line 1124
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v0
 
-    .line 1226
+    .line 1125
     .local v0, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v0}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v1
 
-    .line 1228
+    .line 1127
     .local v1, "ft":Landroid/support/v4/app/FragmentTransaction;
     const-string v2, "SHOPPING_CART"
 
@@ -2670,11 +2613,11 @@
 
     if-eqz v2, :cond_11
 
-    .line 1234
+    .line 1133
     :goto_10
     return-void
 
-    .line 1233
+    .line 1132
     :cond_11
     new-instance v2, Lcom/cccdi/mabellefanshare/widget/ShoppingCartDialog;
 
@@ -2690,26 +2633,26 @@
     .param p1, "fragment"    # I
 
     .prologue
-    .line 1131
+    .line 1030
     iget v4, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
     if-eq v4, p1, :cond_21
 
-    .line 1132
+    .line 1031
     iput p1, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1137
+    .line 1036
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1138
+    .line 1037
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 1140
+    .line 1039
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     const/4 v3, 0x0
 
@@ -2721,27 +2664,27 @@
 
     if-ge v3, v4, :cond_1b
 
-    .line 1141
+    .line 1040
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->popBackStack()V
 
-    .line 1140
+    .line 1039
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_f
 
-    .line 1145
+    .line 1044
     :cond_1b
     const/4 v0, 0x0
 
-    .line 1147
+    .line 1046
     .local v0, "f":Landroid/support/v4/app/Fragment;
     sparse-switch p1, :sswitch_data_86
 
-    .line 1214
+    .line 1113
     :goto_1f
     if-nez v0, :cond_77
 
-    .line 1222
+    .line 1121
     .end local v0    # "f":Landroid/support/v4/app/Fragment;
     .end local v1    # "fm":Landroid/support/v4/app/FragmentManager;
     .end local v2    # "ft":Landroid/support/v4/app/FragmentTransaction;
@@ -2750,7 +2693,7 @@
     :goto_21
     return-void
 
-    .line 1149
+    .line 1048
     .restart local v0    # "f":Landroid/support/v4/app/Fragment;
     .restart local v1    # "fm":Landroid/support/v4/app/FragmentManager;
     .restart local v2    # "ft":Landroid/support/v4/app/FragmentTransaction;
@@ -2760,55 +2703,55 @@
 
     move-result-object v0
 
-    .line 1150
+    .line 1049
     goto :goto_1f
 
-    .line 1153
+    .line 1052
     :sswitch_27
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/LoginFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/LoginFragment;
 
     move-result-object v0
 
-    .line 1154
+    .line 1053
     goto :goto_1f
 
-    .line 1157
+    .line 1056
     :sswitch_2c
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/SearchFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/SearchFragment;
 
     move-result-object v0
 
-    .line 1158
+    .line 1057
     goto :goto_1f
 
-    .line 1161
+    .line 1060
     :sswitch_31
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;
 
     move-result-object v0
 
-    .line 1162
+    .line 1061
     goto :goto_1f
 
-    .line 1165
+    .line 1064
     :sswitch_36
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;
 
     move-result-object v0
 
-    .line 1166
+    .line 1065
     goto :goto_1f
 
-    .line 1169
+    .line 1068
     :sswitch_3b
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/SettingFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/SettingFragment;
 
     move-result-object v0
 
-    .line 1170
+    .line 1069
     goto :goto_1f
 
-    .line 1173
+    .line 1072
     :sswitch_40
     const/16 v4, 0xa2
 
@@ -2816,10 +2759,10 @@
 
     move-result-object v0
 
-    .line 1174
+    .line 1073
     goto :goto_1f
 
-    .line 1177
+    .line 1076
     :sswitch_47
     const/16 v4, 0xa1
 
@@ -2827,55 +2770,55 @@
 
     move-result-object v0
 
-    .line 1178
+    .line 1077
     goto :goto_1f
 
-    .line 1181
+    .line 1080
     :sswitch_4e
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/ContactFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/ContactFragment;
 
     move-result-object v0
 
-    .line 1182
+    .line 1081
     goto :goto_1f
 
-    .line 1186
+    .line 1085
     :sswitch_53
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/MyAccFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/MyAccFragment;
 
     move-result-object v0
 
-    .line 1187
+    .line 1086
     goto :goto_1f
 
-    .line 1190
+    .line 1089
     :sswitch_58
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/MyAccInfoFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/MyAccInfoFragment;
 
     move-result-object v0
 
-    .line 1191
+    .line 1090
     goto :goto_1f
 
-    .line 1193
+    .line 1092
     :sswitch_5d
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/MyAccTransactionFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/MyAccTransactionFragment;
 
     move-result-object v0
 
-    .line 1194
+    .line 1093
     goto :goto_1f
 
-    .line 1196
+    .line 1095
     :sswitch_62
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/MyAccMyOrderFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/MyAccMyOrderFragment;
 
     move-result-object v0
 
-    .line 1197
+    .line 1096
     goto :goto_1f
 
-    .line 1199
+    .line 1098
     :sswitch_67
     const/4 v4, 0x0
 
@@ -2883,19 +2826,19 @@
 
     move-result-object v0
 
-    .line 1200
+    .line 1099
     goto :goto_1f
 
-    .line 1203
+    .line 1102
     :sswitch_6d
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/MyAccMyCouponFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/MyAccMyCouponFragment;
 
     move-result-object v0
 
-    .line 1204
+    .line 1103
     goto :goto_1f
 
-    .line 1207
+    .line 1106
     :sswitch_72
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/MyAccStampFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/MyAccStampFragment;
 
@@ -2903,23 +2846,23 @@
 
     goto :goto_1f
 
-    .line 1217
+    .line 1116
     :cond_77
-    const v4, 0x7f09005d
+    const v4, 0x7f090045
 
     invoke-virtual {v2, v4, v0}, Landroid/support/v4/app/FragmentTransaction;->replace(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1218
+    .line 1117
     const/16 v4, 0x1003
 
     invoke-virtual {v2, v4}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1220
+    .line 1119
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     goto :goto_21
 
-    .line 1147
+    .line 1046
     :sswitch_data_86
     .sparse-switch
         0x64 -> :sswitch_22
@@ -2946,48 +2889,48 @@
     .param p1, "customer"    # Lcom/cccdi/mabellefanshare/mabelleobj/MabelleMyCustomer;
 
     .prologue
-    .line 1078
+    .line 977
     const/16 v3, 0x1cc
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1080
+    .line 979
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1081
+    .line 980
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 1083
+    .line 982
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     invoke-static {p1}, Lcom/cccdi/mabellefanshare/fragment/CouponListFragment;->newInstance(Lcom/cccdi/mabellefanshare/mabelleobj/MabelleMyCustomer;)Lcom/cccdi/mabellefanshare/fragment/CouponListFragment;
 
     move-result-object v0
 
-    .line 1085
+    .line 984
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1086
+    .line 985
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1087
+    .line 986
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1088
+    .line 987
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 1089
+    .line 988
     return-void
 .end method
 
@@ -2996,22 +2939,22 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 1572
+    .line 1606
     const/4 v0, 0x0
 
-    .line 1574
+    .line 1608
     .local v0, "f":Landroid/support/v4/app/Fragment;
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1575
+    .line 1609
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 1578
+    .line 1612
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     const-string v3, "WEEKLY"
 
@@ -3021,39 +2964,39 @@
 
     if-eqz v3, :cond_19
 
-    .line 1579
+    .line 1613
     const/16 v3, 0x258
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1581
+    .line 1615
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/WeeklyFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/WeeklyFragment;
 
     move-result-object v0
 
-    .line 1584
+    .line 1618
     :cond_19
     if-eqz v0, :cond_2d
 
-    .line 1585
-    const v3, 0x7f09005d
+    .line 1619
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1586
+    .line 1620
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1587
+    .line 1621
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1588
+    .line 1622
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 1590
+    .line 1624
     :cond_2d
     return-void
 .end method
@@ -3064,55 +3007,55 @@
     .param p2, "addToBackStack"    # Z
 
     .prologue
-    .line 1110
+    .line 1009
     const/16 v3, 0x259
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1112
+    .line 1011
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1113
+    .line 1012
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 1117
+    .line 1016
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     invoke-static {p1}, Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;->newInstance(Lcom/cccdi/mabellefanshare/mabelleobj/MabelleWeeklyPromo;)Lcom/cccdi/mabellefanshare/fragment/WeeklyCompleteFragment;
 
     move-result-object v0
 
-    .line 1119
+    .line 1018
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1120
+    .line 1019
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1122
+    .line 1021
     if-eqz p2, :cond_25
 
-    .line 1123
+    .line 1022
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1127
+    .line 1026
     :goto_21
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 1128
+    .line 1027
     return-void
 
-    .line 1125
+    .line 1024
     :cond_25
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->popBackStack()V
 
@@ -3123,48 +3066,48 @@
     .registers 5
 
     .prologue
-    .line 980
+    .line 879
     const/16 v3, 0x140
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 982
+    .line 881
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 983
+    .line 882
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 985
+    .line 884
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/FanRegisterFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/FanRegisterFragment;
 
     move-result-object v0
 
-    .line 987
+    .line 886
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 988
+    .line 887
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 989
+    .line 888
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 990
+    .line 889
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 991
+    .line 890
     return-void
 .end method
 
@@ -3172,48 +3115,48 @@
     .registers 5
 
     .prologue
-    .line 1558
+    .line 1592
     const/16 v3, 0x6f
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1560
+    .line 1594
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1561
+    .line 1595
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 1563
+    .line 1597
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/ForgotPasswordFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/ForgotPasswordFragment;
 
     move-result-object v0
 
-    .line 1565
+    .line 1599
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1566
+    .line 1600
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1567
+    .line 1601
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1568
+    .line 1602
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 1569
+    .line 1603
     return-void
 .end method
 
@@ -3222,48 +3165,48 @@
     .param p1, "cat"    # Ljava/lang/String;
 
     .prologue
-    .line 938
+    .line 837
     const/16 v3, 0xc8
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 940
+    .line 839
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 941
+    .line 840
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 943
+    .line 842
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     invoke-static {p1}, Lcom/cccdi/mabellefanshare/fragment/ListingFragment;->newInstance(Ljava/lang/String;)Lcom/cccdi/mabellefanshare/fragment/ListingFragment;
 
     move-result-object v0
 
-    .line 945
+    .line 844
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 946
+    .line 845
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 947
+    .line 846
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 948
+    .line 847
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 949
+    .line 848
     return-void
 .end method
 
@@ -3272,48 +3215,48 @@
     .param p1, "customer"    # Lcom/cccdi/mabellefanshare/mabelleobj/MabelleMyCustomer;
 
     .prologue
-    .line 1057
+    .line 956
     const/16 v3, 0x1c2
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1059
+    .line 958
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1060
+    .line 959
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 1068
+    .line 967
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     invoke-static {p1}, Lcom/cccdi/mabellefanshare/fragment/MyAccMesssengerFragment;->newInstance(Lcom/cccdi/mabellefanshare/mabelleobj/MabelleMyCustomer;)Lcom/cccdi/mabellefanshare/fragment/MyAccMesssengerFragment;
 
     move-result-object v0
 
-    .line 1071
+    .line 970
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1072
+    .line 971
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1073
+    .line 972
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1074
+    .line 973
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 1075
+    .line 974
     return-void
 .end method
 
@@ -3321,23 +3264,23 @@
     .registers 6
 
     .prologue
-    .line 1092
+    .line 991
     const/16 v4, 0x1fe
 
     iput v4, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1094
+    .line 993
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1095
+    .line 994
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 1097
+    .line 996
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     const/4 v3, 0x0
 
@@ -3349,40 +3292,40 @@
 
     if-ge v3, v4, :cond_19
 
-    .line 1098
+    .line 997
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->popBackStack()V
 
-    .line 1097
+    .line 996
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_d
 
-    .line 1101
+    .line 1000
     :cond_19
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/PaymentFailFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/PaymentFailFragment;
 
     move-result-object v0
 
-    .line 1103
+    .line 1002
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v4, 0x7f09005d
+    const v4, 0x7f090045
 
     invoke-virtual {v2, v4, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1104
+    .line 1003
     const/16 v4, 0x1003
 
     invoke-virtual {v2, v4}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1105
+    .line 1004
     const/4 v4, 0x0
 
     invoke-virtual {v2, v4}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1106
+    .line 1005
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 1107
+    .line 1006
     return-void
 .end method
 
@@ -3390,23 +3333,23 @@
     .registers 6
 
     .prologue
-    .line 1038
+    .line 937
     const/16 v4, 0x1f4
 
     iput v4, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1040
+    .line 939
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1041
+    .line 940
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 1043
+    .line 942
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     const/4 v3, 0x0
 
@@ -3418,40 +3361,40 @@
 
     if-ge v3, v4, :cond_19
 
-    .line 1044
+    .line 943
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->popBackStack()V
 
-    .line 1043
+    .line 942
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_d
 
-    .line 1048
+    .line 947
     :cond_19
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/PaymentSuccessFragment2;->newInstance()Lcom/cccdi/mabellefanshare/fragment/PaymentSuccessFragment2;
 
     move-result-object v0
 
-    .line 1050
+    .line 949
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v4, 0x7f09005d
+    const v4, 0x7f090045
 
     invoke-virtual {v2, v4, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1051
+    .line 950
     const/16 v4, 0x1003
 
     invoke-virtual {v2, v4}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1052
+    .line 951
     const/4 v4, 0x0
 
     invoke-virtual {v2, v4}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1053
+    .line 952
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 1054
+    .line 953
     return-void
 .end method
 
@@ -3460,48 +3403,48 @@
     .param p1, "cat"    # Ljava/lang/String;
 
     .prologue
-    .line 952
+    .line 851
     const/16 v3, 0xd2
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 954
+    .line 853
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 955
+    .line 854
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 957
+    .line 856
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     invoke-static {p1}, Lcom/cccdi/mabellefanshare/fragment/ProductFragment;->newInstance(Ljava/lang/String;)Lcom/cccdi/mabellefanshare/fragment/ProductFragment;
 
     move-result-object v0
 
-    .line 959
+    .line 858
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 960
+    .line 859
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 961
+    .line 860
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 962
+    .line 861
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 963
+    .line 862
     return-void
 .end method
 
@@ -3510,48 +3453,48 @@
     .param p1, "cat"    # Ljava/lang/String;
 
     .prologue
-    .line 966
+    .line 865
     const/16 v3, 0x137
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 968
+    .line 867
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 969
+    .line 868
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 971
+    .line 870
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     invoke-static {p1}, Lcom/cccdi/mabellefanshare/fragment/RegFinFragment;->newInstance(Ljava/lang/String;)Lcom/cccdi/mabellefanshare/fragment/RegFinFragment;
 
     move-result-object v0
 
-    .line 973
+    .line 872
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 974
+    .line 873
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 975
+    .line 874
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 976
+    .line 875
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 977
+    .line 876
     return-void
 .end method
 
@@ -3559,48 +3502,48 @@
     .registers 5
 
     .prologue
-    .line 998
+    .line 897
     const/16 v3, 0x140
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1000
+    .line 899
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1001
+    .line 900
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 1005
+    .line 904
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;
 
     move-result-object v0
 
-    .line 1007
+    .line 906
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     invoke-virtual {v2, v3, v0}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1008
+    .line 907
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1009
+    .line 908
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1010
+    .line 909
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 1011
+    .line 910
     return-void
 .end method
 
@@ -3608,7 +3551,7 @@
     .registers 6
 
     .prologue
-    .line 1014
+    .line 913
     sget-object v3, Lcom/cccdi/mabellefanshare/AppApplication;->shoppingCartList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -3617,7 +3560,7 @@
 
     if-gtz v3, :cond_12
 
-    .line 1015
+    .line 914
     new-instance v3, Lcom/cccdi/mabellefanshare/widget/SimpleDialog;
 
     const/4 v4, 0x7
@@ -3626,24 +3569,24 @@
 
     invoke-virtual {v3}, Lcom/cccdi/mabellefanshare/widget/SimpleDialog;->show()V
 
-    .line 1035
+    .line 934
     :cond_11
     :goto_11
     return-void
 
-    .line 1019
+    .line 918
     :cond_12
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/MainActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
     move-result-object v1
 
-    .line 1020
+    .line 919
     .local v1, "fm":Landroid/support/v4/app/FragmentManager;
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v2
 
-    .line 1022
+    .line 921
     .local v2, "ft":Landroid/support/v4/app/FragmentTransaction;
     const-string v3, "SHOPPING_CART"
 
@@ -3653,35 +3596,35 @@
 
     if-nez v3, :cond_11
 
-    .line 1027
+    .line 926
     const/16 v3, 0x14a
 
     iput v3, p0, Lcom/cccdi/mabellefanshare/MainActivity;->currentPage:I
 
-    .line 1029
+    .line 928
     invoke-static {}, Lcom/cccdi/mabellefanshare/fragment/ShoppingCartDetailFragment;->newInstance()Lcom/cccdi/mabellefanshare/fragment/ShoppingCartDetailFragment;
 
     move-result-object v0
 
-    .line 1031
+    .line 930
     .local v0, "f":Landroid/support/v4/app/Fragment;
-    const v3, 0x7f09005d
+    const v3, 0x7f090045
 
     const-string v4, "SHOPPING_CART"
 
     invoke-virtual {v2, v3, v0, v4}, Landroid/support/v4/app/FragmentTransaction;->add(ILandroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1032
+    .line 931
     const/16 v3, 0x1003
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->setTransition(I)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1033
+    .line 932
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;
 
-    .line 1034
+    .line 933
     invoke-virtual {v2}, Landroid/support/v4/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     goto :goto_11
@@ -3691,13 +3634,13 @@
     .registers 6
 
     .prologue
-    const v1, 0x7f0902f1
+    const v1, 0x7f0902b4
 
     const/high16 v4, 0x40000000    # 2.0f
 
-    const v3, 0x7f0902f3
+    const v3, 0x7f0902b6
 
-    .line 1237
+    .line 1136
     sget-object v0, Lcom/cccdi/mabellefanshare/AppApplication;->shoppingCartList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -3706,7 +3649,7 @@
 
     if-nez v0, :cond_1b
 
-    .line 1238
+    .line 1137
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->myChartBtn:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -3717,11 +3660,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1253
+    .line 1152
     :goto_1a
     return-void
 
-    .line 1240
+    .line 1139
     :cond_1b
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->myChartBtn:Landroid/widget/RelativeLayout;
 
@@ -3733,7 +3676,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1242
+    .line 1141
     sget-object v0, Lcom/cccdi/mabellefanshare/AppApplication;->shoppingCartList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -3744,7 +3687,7 @@
 
     if-ge v0, v1, :cond_6b
 
-    .line 1243
+    .line 1142
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->myChartBtn:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -3757,7 +3700,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0050
+    const v2, 0x7f0a0036
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -3767,7 +3710,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1244
+    .line 1143
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->myChartBtn:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -3804,7 +3747,7 @@
 
     goto :goto_1a
 
-    .line 1245
+    .line 1144
     :cond_6b
     sget-object v0, Lcom/cccdi/mabellefanshare/AppApplication;->shoppingCartList:Ljava/util/ArrayList;
 
@@ -3816,7 +3759,7 @@
 
     if-ge v0, v1, :cond_b2
 
-    .line 1246
+    .line 1145
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->myChartBtn:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -3829,7 +3772,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0052
+    const v2, 0x7f0a0038
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -3839,7 +3782,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1247
+    .line 1146
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->myChartBtn:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -3876,7 +3819,7 @@
 
     goto/16 :goto_1a
 
-    .line 1249
+    .line 1148
     :cond_b2
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->myChartBtn:Landroid/widget/RelativeLayout;
 
@@ -3890,7 +3833,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0051
+    const v2, 0x7f0a0037
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -3900,7 +3843,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 1250
+    .line 1149
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->myChartBtn:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -3921,56 +3864,56 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    const v6, 0x7f09032f
+    const v6, 0x7f0902f2
 
     const/4 v9, 0x0
 
-    .line 1427
+    .line 1369
     if-nez p1, :cond_7
 
-    .line 1462
+    .line 1404
     :goto_6
     return-void
 
-    .line 1431
+    .line 1373
     :cond_7
     sget v5, Lcom/cccdi/mabellefanshare/AppApplication;->userType:I
 
     if-nez v5, :cond_4c
 
-    .line 1432
+    .line 1374
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 1433
+    .line 1375
     .local v3, "tv":Landroid/widget/TextView;
     invoke-virtual {v3, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1435
-    const v5, 0x7f0d01cf
+    .line 1377
+    const v5, 0x7f0d019d
 
     invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/MainActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1436
+    .line 1378
     .local v1, "greetingTxt":Ljava/lang/String;
-    const v5, 0x7f0d01ce
+    const v5, 0x7f0d019c
 
     invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/MainActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1438
+    .line 1380
     .local v0, "boldStr":Ljava/lang/String;
     new-instance v2, Landroid/text/SpannableString;
 
     invoke-direct {v2, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1439
+    .line 1381
     .local v2, "s":Landroid/text/Spannable;
     new-instance v5, Lcom/cccdi/mabellefanshare/ui/CustomTypefaceSpan;
 
@@ -3996,19 +3939,19 @@
 
     invoke-interface {v2, v5, v6, v7, v9}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 1440
+    .line 1382
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1442
-    new-instance v5, Lcom/cccdi/mabellefanshare/MainActivity$13;
+    .line 1384
+    new-instance v5, Lcom/cccdi/mabellefanshare/MainActivity$10;
 
-    invoke-direct {v5, p0}, Lcom/cccdi/mabellefanshare/MainActivity$13;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
+    invoke-direct {v5, p0}, Lcom/cccdi/mabellefanshare/MainActivity$10;-><init>(Lcom/cccdi/mabellefanshare/MainActivity;)V
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     goto :goto_6
 
-    .line 1451
+    .line 1393
     .end local v0    # "boldStr":Ljava/lang/String;
     .end local v1    # "greetingTxt":Ljava/lang/String;
     .end local v2    # "s":Landroid/text/Spannable;
@@ -4020,11 +3963,11 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 1452
+    .line 1394
     .restart local v3    # "tv":Landroid/widget/TextView;
     invoke-virtual {v3, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1454
+    .line 1396
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -4051,9 +3994,9 @@
 
     move-result-object v4
 
-    .line 1456
+    .line 1398
     .local v4, "userName":Ljava/lang/String;
-    const v5, 0x7f0d01d0
+    const v5, 0x7f0d019e
 
     invoke-virtual {p0, v5}, Lcom/cccdi/mabellefanshare/MainActivity;->getString(I)Ljava/lang/String;
 
@@ -4069,13 +4012,13 @@
 
     move-result-object v1
 
-    .line 1458
+    .line 1400
     .restart local v1    # "greetingTxt":Ljava/lang/String;
     new-instance v2, Landroid/text/SpannableString;
 
     invoke-direct {v2, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1459
+    .line 1401
     .restart local v2    # "s":Landroid/text/Spannable;
     new-instance v5, Lcom/cccdi/mabellefanshare/ui/CustomTypefaceSpan;
 
@@ -4101,7 +4044,7 @@
 
     invoke-interface {v2, v5, v6, v7, v9}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 1460
+    .line 1402
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_6
@@ -4111,7 +4054,7 @@
     .registers 3
 
     .prologue
-    .line 330
+    .line 277
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/MainActivity;->mSsoHandler:Lcom/sina/weibo/sdk/auth/sso/SsoHandler;
 
     new-instance v1, Lcom/cccdi/mabellefanshare/MainActivity$AuthListener;
@@ -4120,6 +4063,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sina/weibo/sdk/auth/sso/SsoHandler;->authorize(Lcom/sina/weibo/sdk/auth/WeiboAuthListener;)V
 
-    .line 331
+    .line 278
     return-void
 .end method

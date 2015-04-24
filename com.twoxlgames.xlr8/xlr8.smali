@@ -272,6 +272,17 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .registers 7
 
+    const/4 v0, 0x1
+
+    const-string v1, "apkmania.com"
+
+    invoke-static {p0, v1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    .prologue
     .prologue
     const/4 v4, 0x1
 
@@ -286,14 +297,14 @@
 
     move-result v0
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_17
 
     .line 234
-    :goto_c
+    :goto_16
     return-void
 
     .line 199
-    :cond_d
+    :cond_17
     invoke-static {}, Lcom/twoxlgames/xlr8/GameApplication;->c()Ljava/lang/String;
 
     .line 202
@@ -313,11 +324,11 @@
 
     move-result v2
 
-    if-ne v2, v0, :cond_23
+    if-ne v2, v0, :cond_2d
 
-    if-nez v2, :cond_30
+    if-nez v2, :cond_3a
 
-    :cond_23
+    :cond_2d
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
@@ -330,7 +341,7 @@
 
     invoke-static {v0}, Lcom/twoxlgames/tech/AndroidUtils;->a(Landroid/content/SharedPreferences$Editor;)V
 
-    :cond_30
+    :cond_3a
     const-string v0, "first_run_date"
 
     invoke-static {v0}, Lcom/twoxlgames/tech/AndroidUtils;->a(Ljava/lang/String;)Z
@@ -374,7 +385,7 @@
     .line 219
     sget-object v0, Lcom/twoxlgames/xlr8/xlr8;->d:LaD;
 
-    if-nez v0, :cond_80
+    if-nez v0, :cond_8a
 
     .line 221
     new-instance v0, LaD;
@@ -384,7 +395,7 @@
     sput-object v0, Lcom/twoxlgames/xlr8/xlr8;->d:LaD;
 
     .line 229
-    :goto_63
+    :goto_6d
     const-string v0, "sensor"
 
     invoke-virtual {p0, v0}, Lcom/twoxlgames/xlr8/xlr8;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -415,15 +426,15 @@
 
     iput-object v0, p0, Lcom/twoxlgames/xlr8/xlr8;->g:Landroid/location/LocationManager;
 
-    goto :goto_c
+    goto :goto_16
 
     .line 225
-    :cond_80
+    :cond_8a
     sget-object v0, Lcom/twoxlgames/xlr8/xlr8;->d:LaD;
 
     invoke-virtual {v0, p0}, LaD;->a(Lcom/twoxlgames/xlr8/xlr8;)V
 
-    goto :goto_63
+    goto :goto_6d
 .end method
 
 .method protected onDestroy()V

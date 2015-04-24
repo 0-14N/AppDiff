@@ -32,6 +32,17 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .registers 6
 
+    const/4 v0, 0x1
+
+    const-string v1, "Boerse.BZ"
+
+    invoke-static {p0, v1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    .prologue
     const/16 v3, 0x400
 
     const/4 v2, 0x1
@@ -78,7 +89,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3b
+    if-eqz v0, :cond_45
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerNativeActivity;->getWindow()Landroid/view/Window;
 
@@ -86,7 +97,7 @@
 
     invoke-virtual {v0, v3, v3}, Landroid/view/Window;->setFlags(II)V
 
-    :cond_3b
+    :cond_45
     iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
 
     invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->getSettings()Landroid/os/Bundle;

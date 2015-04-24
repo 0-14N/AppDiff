@@ -52,9 +52,9 @@
     .line 64
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/banner/CommonWebPage;->n:Landroid/webkit/WebView;
 
-    new-instance v1, Lpx;
+    new-instance v1, Lje;
 
-    invoke-direct {v1, p0}, Lpx;-><init>(Lcom/quvideo/xiaoying/app/banner/CommonWebPage;)V
+    invoke-direct {v1, p0}, Lje;-><init>(Lcom/quvideo/xiaoying/app/banner/CommonWebPage;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 

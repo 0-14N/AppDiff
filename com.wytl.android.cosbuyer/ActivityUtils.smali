@@ -29,6 +29,8 @@
 
 .field static itemParams:Landroid/widget/LinearLayout$LayoutParams;
 
+.field static mailScrrolY:F
+
 .field public static mainStack:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -83,59 +85,63 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 23
+    .line 28
     const/4 v0, 0x0
 
     sput v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->state:I
 
-    .line 24
+    .line 29
     const/4 v0, 0x0
 
     sput-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
 
-    .line 26
+    .line 31
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->shouStack:Ljava/util/ArrayList;
 
-    .line 28
+    .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->carStack:Ljava/util/ArrayList;
 
-    .line 30
+    .line 35
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->searchStack:Ljava/util/ArrayList;
 
-    .line 32
+    .line 37
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->mainStack:Ljava/util/ArrayList;
 
-    .line 34
+    .line 39
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->personStack:Ljava/util/ArrayList;
 
-    .line 36
+    .line 41
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v0, v1, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     sput-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->itemParams:Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 15
+    .line 44
+    const/4 v0, 0x0
+
+    sput v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->mailScrrolY:F
+
     return-void
 .end method
 
@@ -143,10 +149,10 @@
     .registers 1
 
     .prologue
-    .line 38
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
+    .line 48
     return-void
 .end method
 
@@ -155,12 +161,12 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 141
+    .line 149
     sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->carStack:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 142
+    .line 150
     return-void
 .end method
 
@@ -169,12 +175,12 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 186
+    .line 212
     sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->mainStack:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 187
+    .line 213
     return-void
 .end method
 
@@ -183,12 +189,12 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 137
+    .line 145
     sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->personStack:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 138
+    .line 146
     return-void
 .end method
 
@@ -197,12 +203,12 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 129
+    .line 137
     sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->searchStack:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 130
+    .line 138
     return-void
 .end method
 
@@ -211,12 +217,12 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 133
+    .line 141
     sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->shouStack:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 134
+    .line 142
     return-void
 .end method
 
@@ -224,7 +230,7 @@
     .registers 2
 
     .prologue
-    .line 153
+    .line 171
     sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->carStack:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->carStack:Ljava/util/ArrayList;
@@ -245,12 +251,28 @@
 .end method
 
 .method public static getNowMainView()Landroid/view/View;
-    .registers 2
+    .registers 6
 
     .prologue
-    .line 149
-    sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->mainStack:Ljava/util/ArrayList;
+    .line 157
+    sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->mainStack:Ljava/util/ArrayList;
 
+    sget-object v2, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->mainStack:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    .line 159
+    .local v0, "v":Landroid/view/View;
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->mainStack:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -259,12 +281,46 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    if-nez v1, :cond_39
+
+    .line 160
+    sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
+
+    invoke-virtual {v1}, Landroid/app/ActivityGroup;->getLocalActivityManager()Landroid/app/LocalActivityManager;
+
+    move-result-object v1
+
+    .line 161
+    const-string v2, "Module2"
+
+    .line 162
+    new-instance v3, Landroid/content/Intent;
+
+    sget-object v4, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
+
+    const-class v5, Lcom/wytl/android/cosbuyer/activity/SearchActivity;
+
+    invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 163
+    const/high16 v4, 0x4000000
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    move-result-object v3
+
+    .line 160
+    invoke-virtual {v1, v2, v3}, Landroid/app/LocalActivityManager;->startActivity(Ljava/lang/String;Landroid/content/Intent;)Landroid/view/Window;
+
+    move-result-object v1
+
+    .line 164
+    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/View;
-
+    .line 167
+    :cond_39
     return-object v0
 .end method
 
@@ -272,7 +328,7 @@
     .registers 2
 
     .prologue
-    .line 157
+    .line 175
     sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->personStack:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->personStack:Ljava/util/ArrayList;
@@ -296,7 +352,7 @@
     .registers 2
 
     .prologue
-    .line 111
+    .line 119
     sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->searchStack:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->searchStack:Ljava/util/ArrayList;
@@ -320,7 +376,7 @@
     .registers 2
 
     .prologue
-    .line 161
+    .line 179
     sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->shouStack:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->shouStack:Ljava/util/ArrayList;
@@ -345,10 +401,10 @@
     .param p0, "grou"    # Landroid/app/ActivityGroup;
 
     .prologue
-    .line 43
+    .line 51
     sput-object p0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
 
-    .line 44
+    .line 52
     return-void
 .end method
 
@@ -361,7 +417,7 @@
     .param p4, "pos"    # I
 
     .prologue
-    .line 73
+    .line 81
     invoke-virtual {p0}, Landroid/app/Activity;->getParent()Landroid/app/Activity;
 
     move-result-object v2
@@ -376,28 +432,28 @@
 
     move-result-object v0
 
-    .line 74
+    .line 82
     .local v0, "subActivity":Landroid/view/Window;
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v1
 
-    .line 75
+    .line 83
     .local v1, "view":Landroid/view/View;
     packed-switch p3, :pswitch_data_1a
 
-    .line 89
+    .line 97
     :goto_15
     :pswitch_15
     return-void
 
-    .line 83
+    .line 91
     :pswitch_16
     invoke-static {p4, v1}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->insertCarView(ILandroid/view/View;)V
 
     goto :goto_15
 
-    .line 75
+    .line 83
     :pswitch_data_1a
     .packed-switch 0x0
         :pswitch_15
@@ -413,12 +469,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 145
+    .line 153
     sget-object v0, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->carStack:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 146
+    .line 154
     return-void
 .end method
 
@@ -426,7 +482,7 @@
     .registers 4
 
     .prologue
-    .line 179
+    .line 205
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->carStack:Ljava/util/ArrayList;
 
     sget-object v2, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->carStack:Ljava/util/ArrayList;
@@ -445,7 +501,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 180
+    .line 206
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
 
     invoke-virtual {v1}, Landroid/app/ActivityGroup;->getWindow()Landroid/view/Window;
@@ -460,18 +516,18 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    .line 181
+    .line 207
     .local v0, "container":Landroid/widget/LinearLayout;
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 182
+    .line 208
     invoke-static {}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->getNowCarView()Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 183
+    .line 209
     return-void
 .end method
 
@@ -480,44 +536,44 @@
     .param p0, "page"    # I
 
     .prologue
-    .line 92
+    .line 100
     packed-switch p0, :pswitch_data_18
 
-    .line 109
+    .line 117
     :goto_3
     return-void
 
-    .line 94
+    .line 102
     :pswitch_4
     invoke-static {}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->removeNowView()V
 
     goto :goto_3
 
-    .line 97
+    .line 105
     :pswitch_8
     invoke-static {}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->removeNowSearchView()V
 
     goto :goto_3
 
-    .line 100
+    .line 108
     :pswitch_c
     invoke-static {}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->removeCarView()V
 
     goto :goto_3
 
-    .line 103
+    .line 111
     :pswitch_10
     invoke-static {}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->removePersonView()V
 
     goto :goto_3
 
-    .line 106
+    .line 114
     :pswitch_14
     invoke-static {}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->removeShouView()V
 
     goto :goto_3
 
-    .line 92
+    .line 100
     :pswitch_data_18
     .packed-switch 0x0
         :pswitch_4
@@ -532,7 +588,7 @@
     .registers 4
 
     .prologue
-    .line 115
+    .line 123
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->searchStack:Ljava/util/ArrayList;
 
     sget-object v2, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->searchStack:Ljava/util/ArrayList;
@@ -551,7 +607,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 116
+    .line 124
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
 
     invoke-virtual {v1}, Landroid/app/ActivityGroup;->getWindow()Landroid/view/Window;
@@ -566,26 +622,31 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    .line 117
+    .line 125
     .local v0, "container":Landroid/widget/LinearLayout;
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 118
+    .line 126
     invoke-static {}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->getNowSearchView()Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 119
+    .line 127
     return-void
 .end method
 
 .method public static removeNowView()V
     .registers 4
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
 
     .prologue
-    .line 165
+    .line 191
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->mainStack:Ljava/util/ArrayList;
 
     sget-object v2, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->mainStack:Ljava/util/ArrayList;
@@ -604,7 +665,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 166
+    .line 192
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
 
     invoke-virtual {v1}, Landroid/app/ActivityGroup;->getWindow()Landroid/view/Window;
@@ -619,18 +680,18 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    .line 167
+    .line 193
     .local v0, "container":Landroid/widget/LinearLayout;
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 168
+    .line 194
     invoke-static {}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->getNowMainView()Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 169
+    .line 195
     return-void
 .end method
 
@@ -638,7 +699,7 @@
     .registers 4
 
     .prologue
-    .line 122
+    .line 130
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->personStack:Ljava/util/ArrayList;
 
     sget-object v2, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->personStack:Ljava/util/ArrayList;
@@ -657,7 +718,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 123
+    .line 131
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
 
     invoke-virtual {v1}, Landroid/app/ActivityGroup;->getWindow()Landroid/view/Window;
@@ -672,18 +733,18 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    .line 124
+    .line 132
     .local v0, "container":Landroid/widget/LinearLayout;
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 125
+    .line 133
     invoke-static {}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->getNowPersonView()Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 126
+    .line 134
     return-void
 .end method
 
@@ -691,7 +752,7 @@
     .registers 4
 
     .prologue
-    .line 172
+    .line 198
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->shouStack:Ljava/util/ArrayList;
 
     sget-object v2, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->shouStack:Ljava/util/ArrayList;
@@ -710,7 +771,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 173
+    .line 199
     sget-object v1, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
 
     invoke-virtual {v1}, Landroid/app/ActivityGroup;->getWindow()Landroid/view/Window;
@@ -725,18 +786,18 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    .line 174
+    .line 200
     .local v0, "container":Landroid/widget/LinearLayout;
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 175
+    .line 201
     invoke-static {}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->getNowShouView()Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 176
+    .line 202
     return-void
 .end method
 
@@ -748,7 +809,7 @@
     .param p3, "page"    # I
 
     .prologue
-    .line 47
+    .line 55
     sget-object v3, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
 
     invoke-virtual {v3}, Landroid/app/ActivityGroup;->getWindow()Landroid/view/Window;
@@ -763,11 +824,11 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    .line 48
+    .line 56
     .local v0, "container":Landroid/widget/LinearLayout;
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 49
+    .line 57
     sget-object v3, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->group:Landroid/app/ActivityGroup;
 
     invoke-virtual {v3}, Landroid/app/ActivityGroup;->getLocalActivityManager()Landroid/app/LocalActivityManager;
@@ -778,56 +839,56 @@
 
     move-result-object v1
 
-    .line 50
+    .line 58
     .local v1, "subActivity":Landroid/view/Window;
     invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v2
 
-    .line 51
+    .line 59
     .local v2, "view":Landroid/view/View;
     sget-object v3, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->itemParams:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v0, v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 52
+    .line 60
     packed-switch p3, :pswitch_data_3e
 
-    .line 70
+    .line 78
     :goto_28
     return-void
 
-    .line 54
+    .line 62
     :pswitch_29
     invoke-static {v2}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->addMainView(Landroid/view/View;)V
 
     goto :goto_28
 
-    .line 57
+    .line 65
     :pswitch_2d
     invoke-static {v2}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->addSearchView(Landroid/view/View;)V
 
     goto :goto_28
 
-    .line 60
+    .line 68
     :pswitch_31
     invoke-static {v2}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->addShouView(Landroid/view/View;)V
 
     goto :goto_28
 
-    .line 63
+    .line 71
     :pswitch_35
     invoke-static {v2}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->addCarView(Landroid/view/View;)V
 
     goto :goto_28
 
-    .line 66
+    .line 74
     :pswitch_39
     invoke-static {v2}, Lcom/wytl/android/cosbuyer/util/ActivityUtils;->addPersonView(Landroid/view/View;)V
 
     goto :goto_28
 
-    .line 52
+    .line 60
     nop
 
     :pswitch_data_3e

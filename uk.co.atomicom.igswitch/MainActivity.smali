@@ -116,16 +116,18 @@
 
     invoke-super {p0, p1}, Luk/co/atomicom/android/AtomicomActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     iget-boolean v0, p0, Luk/co/atomicom/igswitch/MainActivity;->h:Z
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_12
 
     const v0, 0x7f030013
 
     invoke-virtual {p0, v0}, Luk/co/atomicom/igswitch/MainActivity;->setContentView(I)V
 
-    :cond_f
-    :try_start_f
+    :cond_12
+    :try_start_12
     new-instance v0, Landroid/os/StrictMode$ThreadPolicy$Builder;
 
     invoke-direct {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;-><init>()V
@@ -139,13 +141,13 @@
     move-result-object v0
 
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
-    :try_end_1f
-    .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_1f} :catch_10d
+    :try_end_22
+    .catch Ljava/lang/Throwable; {:try_start_12 .. :try_end_22} :catch_110
 
-    :goto_1f
+    :goto_22
     iget-boolean v0, p0, Luk/co/atomicom/igswitch/MainActivity;->f:Z
 
-    if-eqz v0, :cond_60
+    if-eqz v0, :cond_63
 
     const-string v0, "Allan"
 
@@ -165,7 +167,7 @@
 
     sput-object v0, Lcom/its/Library/b;->d:Lcom/its/API/j;
 
-    :try_start_37
+    :try_start_3a
     const-string v0, "Allan"
 
     const-string v1, "Quiet login - Before"
@@ -183,10 +185,10 @@
     const-string v1, "Quiet login - After"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_4b
-    .catch Ljava/lang/Throwable; {:try_start_37 .. :try_end_4b} :catch_117
+    :try_end_4e
+    .catch Ljava/lang/Throwable; {:try_start_3a .. :try_end_4e} :catch_11a
 
-    :goto_4b
+    :goto_4e
     const-string v0, "Allan"
 
     const-string v1, "InfinitGame - initialise - Before"
@@ -205,7 +207,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_60
+    :cond_63
     new-instance v0, Luk/co/atomicom/android/AtomicomRamPakLoaderModule;
 
     const-string v1, "switch.midi"
@@ -234,7 +236,7 @@
 
     iget-boolean v0, p0, Luk/co/atomicom/igswitch/MainActivity;->i:Z
 
-    if-eqz v0, :cond_99
+    if-eqz v0, :cond_9c
 
     const-string v0, "ATOMICOM"
 
@@ -258,10 +260,10 @@
 
     invoke-virtual/range {v0 .. v5}, Luk/co/atomicom/android/AtomicomOpenFeintModule;->a(Luk/co/atomicom/android/AtomicomActivity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_99
+    :cond_9c
     iget-boolean v0, p0, Luk/co/atomicom/igswitch/MainActivity;->g:Z
 
-    if-eqz v0, :cond_ad
+    if-eqz v0, :cond_b0
 
     const-string v0, "ATOMICOM"
 
@@ -277,10 +279,10 @@
 
     invoke-virtual {v0, p0, v1}, Luk/co/atomicom/android/AtomicomPocketChangeModule;->a(Luk/co/atomicom/android/AtomicomActivity;Ljava/lang/String;)V
 
-    :cond_ad
+    :cond_b0
     iget-boolean v0, p0, Luk/co/atomicom/igswitch/MainActivity;->j:Z
 
-    if-eqz v0, :cond_f6
+    if-eqz v0, :cond_f9
 
     const-string v0, "ATOMICOM"
 
@@ -340,10 +342,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setEnabled(Z)V
 
-    :cond_f6
+    :cond_f9
     iget-boolean v0, p0, Luk/co/atomicom/igswitch/MainActivity;->h:Z
 
-    if-eqz v0, :cond_124
+    if-eqz v0, :cond_127
 
     const-string v0, "ATOMICOM"
 
@@ -361,10 +363,10 @@
 
     invoke-virtual {v0, p0, v1, v2}, Luk/co/atomicom/android/c;->a(Luk/co/atomicom/android/AtomicomActivity;Ljava/lang/String;[B)V
 
-    :goto_10c
+    :goto_10f
     return-void
 
-    :catch_10d
+    :catch_110
     move-exception v0
 
     const-string v0, "StrictMode"
@@ -373,9 +375,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_1f
+    goto/16 :goto_22
 
-    :catch_117
+    :catch_11a
     move-exception v0
 
     const-string v1, "Allan"
@@ -386,12 +388,12 @@
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    goto/16 :goto_4b
+    goto/16 :goto_4e
 
-    :cond_124
+    :cond_127
     invoke-virtual {p0}, Luk/co/atomicom/igswitch/MainActivity;->a()V
 
-    goto :goto_10c
+    goto :goto_10f
 .end method
 
 .method protected onCreateDialog(I)Landroid/app/Dialog;
@@ -423,18 +425,20 @@
 
     invoke-super {p0}, Luk/co/atomicom/android/AtomicomActivity;->onDestroy()V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+
     iget-boolean v0, p0, Luk/co/atomicom/igswitch/MainActivity;->i:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_10
 
     invoke-static {}, Luk/co/atomicom/android/AtomicomOpenFeintModule;->a()Luk/co/atomicom/android/AtomicomOpenFeintModule;
 
     invoke-static {}, Luk/co/atomicom/android/AtomicomOpenFeintModule;->d()V
 
-    :cond_d
+    :cond_10
     iget-boolean v0, p0, Luk/co/atomicom/igswitch/MainActivity;->h:Z
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_1b
 
     invoke-static {}, Luk/co/atomicom/android/c;->a()Luk/co/atomicom/android/c;
 
@@ -442,7 +446,7 @@
 
     invoke-virtual {v0}, Luk/co/atomicom/android/c;->b()V
 
-    :cond_18
+    :cond_1b
     return-void
 .end method
 

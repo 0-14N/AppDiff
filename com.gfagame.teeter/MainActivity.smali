@@ -353,6 +353,8 @@
     .line 56
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 57
     const/high16 v6, 0x7f030000
 
@@ -440,7 +442,7 @@
     .local v2, "gmWidth":I
     iget v6, v4, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    if-le v2, v6, :cond_53
+    if-le v2, v6, :cond_56
 
     .line 77
     iget v2, v4, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -453,7 +455,7 @@
     float-to-int v1, v6
 
     .line 83
-    :cond_53
+    :cond_56
     const v6, 0x7f070004
 
     invoke-virtual {p0, v6}, Lcom/gfagame/teeter/MainActivity;->findViewById(I)Landroid/view/View;
@@ -635,6 +637,17 @@
     invoke-virtual {p0}, Lcom/gfagame/teeter/MainActivity;->AdmobADD()V
 
     .line 121
+    return-void
+.end method
+
+.method protected onDestroy()V
+    .registers 1
+
+    .prologue
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
+
     return-void
 .end method
 

@@ -8,20 +8,20 @@
 # instance fields
 .field final synthetic a:I
 
-.field final synthetic b:Lcom/a/g;
+.field final synthetic b:Lcom/a/d;
 
 .field final synthetic c:Lcom/hy/minifetion/ui/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/hy/minifetion/ui/i;ILcom/a/g;)V
+.method constructor <init>(Lcom/hy/minifetion/ui/i;ILcom/a/d;)V
     .registers 4
 
     iput-object p1, p0, Lcom/hy/minifetion/ui/j;->c:Lcom/hy/minifetion/ui/i;
 
     iput p2, p0, Lcom/hy/minifetion/ui/j;->a:I
 
-    iput-object p3, p0, Lcom/hy/minifetion/ui/j;->b:Lcom/a/g;
+    iput-object p3, p0, Lcom/hy/minifetion/ui/j;->b:Lcom/a/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,17 +37,17 @@
 
     if-nez v0, :cond_25
 
-    new-instance v0, Lcom/a/l;
+    new-instance v0, Lcom/a/h;
 
     iget-object v1, p0, Lcom/hy/minifetion/ui/j;->c:Lcom/hy/minifetion/ui/i;
 
     iget-object v1, v1, Lcom/hy/minifetion/ui/i;->c:Lcom/hy/minifetion/ui/AppDialog;
 
-    iget-object v2, p0, Lcom/hy/minifetion/ui/j;->b:Lcom/a/g;
+    iget-object v2, p0, Lcom/hy/minifetion/ui/j;->b:Lcom/a/d;
 
-    invoke-direct {v0, v1, v2}, Lcom/a/l;-><init>(Landroid/content/Context;Lcom/a/g;)V
+    invoke-direct {v0, v1, v2}, Lcom/a/h;-><init>(Landroid/content/Context;Lcom/a/d;)V
 
-    invoke-virtual {v0}, Lcom/a/l;->a()V
+    invoke-virtual {v0}, Lcom/a/h;->a()V
 
     :cond_12
     :goto_12
@@ -73,9 +73,9 @@
     return-void
 
     :cond_25
-    iget-object v0, p0, Lcom/hy/minifetion/ui/j;->b:Lcom/a/g;
+    iget-object v0, p0, Lcom/hy/minifetion/ui/j;->b:Lcom/a/d;
 
-    invoke-virtual {v0}, Lcom/a/g;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/a/d;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -89,9 +89,9 @@
 
     const-string v1, "android.intent.action.VIEW"
 
-    iget-object v2, p0, Lcom/hy/minifetion/ui/j;->b:Lcom/a/g;
+    iget-object v2, p0, Lcom/hy/minifetion/ui/j;->b:Lcom/a/d;
 
-    invoke-virtual {v2}, Lcom/a/g;->e()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/a/d;->e()Ljava/lang/String;
 
     move-result-object v2
 

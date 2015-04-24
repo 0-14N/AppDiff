@@ -32,7 +32,7 @@
     .line 97
     iget-object v0, p0, Lcom/zarosun/zxht_saler/ui/info/setting/w;->a:Lcom/zarosun/zxht_saler/ui/info/setting/InfoSettingActivity_;
 
-    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/info/setting/InfoSettingActivity_;->b()V
+    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/info/setting/InfoSettingActivity_;->k()V
 
     .line 98
     return-void

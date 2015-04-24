@@ -30,7 +30,7 @@
     .line 134
     iget-object v0, p0, Lcom/wei/android/apis/ui/cs;->a:Lcom/wei/android/apis/ui/CallLogActivity;
 
-    invoke-static {v0}, Lcom/wei/android/apis/c/e;->c(Landroid/content/Context;)I
+    invoke-static {v0}, Lcom/wei/android/apis/c/f;->c(Landroid/content/Context;)I
 
     .line 135
     return-void

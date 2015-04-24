@@ -32,7 +32,7 @@
     .line 91
     iget-object v0, p0, Lcom/zarosun/zxht_saler/ui/account/x;->a:Lcom/zarosun/zxht_saler/ui/account/ForgetPasswordActivity_;
 
-    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/account/ForgetPasswordActivity_;->e()V
+    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/account/ForgetPasswordActivity_;->b()V
 
     .line 92
     return-void

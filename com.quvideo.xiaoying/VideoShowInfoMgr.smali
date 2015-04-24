@@ -735,16 +735,16 @@
     .prologue
     .line 100
     :try_start_0
-    new-instance v0, Lada;
+    new-instance v0, Lwg;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lada;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowInfoMgr;Landroid/content/Context;ILcom/quvideo/xiaoying/app/v3/fregment/VideoShowInfoMgr$QueryDataListener;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lwg;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowInfoMgr;Landroid/content/Context;ILcom/quvideo/xiaoying/app/v3/fregment/VideoShowInfoMgr$QueryDataListener;)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
     .line 158
-    invoke-virtual {v0, v1}, Lada;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Lwg;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_b} :catch_c
 

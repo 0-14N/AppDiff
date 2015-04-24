@@ -46,28 +46,28 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 61
+    .line 52
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/BaseOtherActivity;-><init>()V
 
-    .line 67
+    .line 58
     iput-boolean v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mInProgress:Z
 
-    .line 73
+    .line 64
     iput v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->degree:I
 
-    .line 75
+    .line 66
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateDegree:D
 
-    .line 239
+    .line 230
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->handler:Landroid/os/Handler;
 
-    .line 61
+    .line 52
     return-void
 .end method
 
@@ -75,7 +75,7 @@
     .registers 2
 
     .prologue
-    .line 73
+    .line 64
     iput p1, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->degree:I
 
     return-void
@@ -85,7 +85,7 @@
     .registers 2
 
     .prologue
-    .line 79
+    .line 70
     iput-boolean p1, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->confirmLocation:Z
 
     return-void
@@ -95,7 +95,7 @@
     .registers 2
 
     .prologue
-    .line 530
+    .line 521
     invoke-direct {p0, p1}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->setThumbnailImage(Landroid/graphics/Bitmap;)V
 
     return-void
@@ -105,7 +105,7 @@
     .registers 3
 
     .prologue
-    .line 197
+    .line 188
     const v1, 0x7f050052
 
     invoke-virtual {p0, v1}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->findViewById(I)Landroid/view/View;
@@ -116,23 +116,23 @@
 
     iput-object v1, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->surfaceView:Landroid/view/SurfaceView;
 
-    .line 198
+    .line 189
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->surfaceView:Landroid/view/SurfaceView;
 
     invoke-virtual {v1}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
-    .line 200
+    .line 191
     .local v0, "holder":Landroid/view/SurfaceHolder;
     invoke-interface {v0, p0}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
-    .line 201
+    .line 192
     const/4 v1, 0x3
 
     invoke-interface {v0, v1}, Landroid/view/SurfaceHolder;->setType(I)V
 
-    .line 202
+    .line 193
     return-void
 .end method
 
@@ -143,7 +143,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 360
+    .line 351
     const/4 v4, 0x1
 
     new-array v1, v4, [Ljava/lang/String;
@@ -152,26 +152,26 @@
 
     aput-object v4, v1, v3
 
-    .line 362
+    .line 353
     .local v1, "exceptionModels":[Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 363
+    .line 354
     .local v2, "isExceptionModel":Z
     array-length v4, v1
 
     :goto_a
     if-lt v3, v4, :cond_d
 
-    .line 370
+    .line 361
     :goto_c
     return v2
 
-    .line 363
+    .line 354
     :cond_d
     aget-object v0, v1, v3
 
-    .line 364
+    .line 355
     .local v0, "exceptionModel":Ljava/lang/String;
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -179,13 +179,13 @@
 
     if-eqz v5, :cond_17
 
-    .line 365
+    .line 356
     const/4 v2, 0x1
 
-    .line 366
+    .line 357
     goto :goto_c
 
-    .line 363
+    .line 354
     :cond_17
     add-int/lit8 v3, v3, 0x1
 
@@ -196,12 +196,12 @@
     .registers 5
 
     .prologue
-    .line 562
+    .line 553
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 563
+    .line 554
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v2, "extra_is_insert_image"
 
@@ -209,44 +209,44 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 564
+    .line 555
     const-string v2, "extra_selected_pictures_count"
 
     iget v3, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->picturesCountInPreviewMode:I
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 565
+    .line 556
     const-string v2, "pre_activity"
 
     const-string v3, "Make250Activity"
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 567
+    .line 558
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/kia/android/moviesns/ui/activity/make/Make250Activity;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 568
+    .line 559
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v2, 0x20000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 569
+    .line 560
     const-string v2, "extra_bundle"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 571
+    .line 562
     const/16 v2, 0x3e9
 
     invoke-virtual {p0, v1, v2}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 572
+    .line 563
     return-void
 .end method
 
@@ -255,7 +255,7 @@
     .param p1, "rotateDegree2"    # D
 
     .prologue
-    .line 588
+    .line 579
     iget-boolean v1, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mInProgress:Z
 
     if-nez v1, :cond_17
@@ -264,25 +264,25 @@
 
     if-eqz v1, :cond_17
 
-    .line 589
+    .line 580
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v1}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
 
     move-result-object v0
 
-    .line 590
+    .line 581
     .local v0, "parameters":Landroid/hardware/Camera$Parameters;
     double-to-int v1, p1
 
     invoke-virtual {v0, v1}, Landroid/hardware/Camera$Parameters;->setRotation(I)V
 
-    .line 591
+    .line 582
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v1, v0}, Landroid/hardware/Camera;->setParameters(Landroid/hardware/Camera$Parameters;)V
 
-    .line 593
+    .line 584
     .end local v0    # "parameters":Landroid/hardware/Camera$Parameters;
     :cond_17
     return-void
@@ -292,7 +292,7 @@
     .registers 3
 
     .prologue
-    .line 246
+    .line 237
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->handler:Landroid/os/Handler;
 
     new-instance v1, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity$6;
@@ -301,7 +301,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 271
+    .line 262
     return-void
 .end method
 
@@ -310,7 +310,7 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 536
+    .line 527
     return-void
 .end method
 
@@ -318,7 +318,7 @@
     .registers 3
 
     .prologue
-    .line 578
+    .line 569
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -327,7 +327,7 @@
 
     invoke-static {v0, v1}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 579
+    .line 570
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     if-eqz v0, :cond_28
@@ -336,24 +336,24 @@
 
     if-nez v0, :cond_28
 
-    .line 580
+    .line 571
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateLayout:Lcom/kia/android/moviesns/ui/view/RotateButtonLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/kia/android/moviesns/ui/view/RotateButtonLayout;->setChildCanRotate(Z)V
 
-    .line 581
+    .line 572
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mInProgress:Z
 
-    .line 582
+    .line 573
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v0, p0}, Landroid/hardware/Camera;->autoFocus(Landroid/hardware/Camera$AutoFocusCallback;)V
 
-    .line 583
+    .line 574
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -362,7 +362,7 @@
 
     invoke-static {v0, v1}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 585
+    .line 576
     :cond_28
     return-void
 .end method
@@ -378,23 +378,23 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 597
+    .line 588
     invoke-super {p0, p1, p2, p3}, Lcom/kia/android/moviesns/ui/activity/BaseOtherActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 603
+    .line 594
     if-ne p2, v0, :cond_d
 
-    .line 604
+    .line 595
     invoke-virtual {p0, v0, p3}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->setResult(ILandroid/content/Intent;)V
 
-    .line 605
+    .line 596
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->finish()V
 
-    .line 609
+    .line 600
     :goto_c
     return-void
 
-    .line 607
+    .line 598
     :cond_d
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->onBackPressed()V
 
@@ -407,17 +407,17 @@
     .param p2, "camera"    # Landroid/hardware/Camera;
 
     .prologue
-    .line 348
+    .line 339
     if-eqz p1, :cond_8
 
-    .line 349
+    .line 340
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p0, v1, p0}, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V
 
-    .line 351
+    .line 342
     :cond_8
     return-void
 .end method
@@ -427,42 +427,42 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 539
+    .line 530
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_18
 
-    .line 555
+    .line 546
     :goto_7
     return-void
 
-    .line 541
+    .line 532
     :pswitch_8
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->onBackPressed()V
 
     goto :goto_7
 
-    .line 544
+    .line 535
     :pswitch_c
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->takePhoto()V
 
     goto :goto_7
 
-    .line 548
+    .line 539
     :pswitch_10
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->takePhoto()V
 
     goto :goto_7
 
-    .line 552
+    .line 543
     :pswitch_14
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->moveToGallery()V
 
     goto :goto_7
 
-    .line 539
+    .line 530
     :pswitch_data_18
     .packed-switch 0x7f050054
         :pswitch_10
@@ -477,10 +477,10 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 90
+    .line 81
     invoke-super {p0, p1}, Lcom/kia/android/moviesns/ui/activity/BaseOtherActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 92
+    .line 83
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v11
@@ -493,7 +493,7 @@
 
     iput-object v11, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->nextStepBunlde:Landroid/os/Bundle;
 
-    .line 96
+    .line 87
     const-string v11, "window"
 
     invoke-virtual {p0, v11}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -502,40 +502,40 @@
 
     check-cast v10, Landroid/view/WindowManager;
 
-    .line 97
+    .line 88
     .local v10, "wm":Landroid/view/WindowManager;
     invoke-interface {v10}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v7
 
-    .line 99
+    .line 90
     .local v7, "display":Landroid/view/Display;
     invoke-virtual {v7}, Landroid/view/Display;->getWidth()I
 
     move-result v1
 
-    .line 100
+    .line 91
     .local v1, "DISPLAY_W":I
     invoke-virtual {v7}, Landroid/view/Display;->getHeight()I
 
     move-result v0
 
-    .line 102
+    .line 93
     .local v0, "DISPLAY_H":I
     const/16 v11, 0x500
 
-    if-ne v1, v11, :cond_e2
+    if-ne v1, v11, :cond_e4
 
     const/16 v11, 0x320
 
-    if-ne v0, v11, :cond_e2
+    if-ne v0, v11, :cond_e4
 
-    .line 103
+    .line 94
     const v11, 0x7f03000b
 
     invoke-virtual {p0, v11}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->setContentView(I)V
 
-    .line 108
+    .line 99
     :goto_31
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->getIntent()Landroid/content/Intent;
 
@@ -547,11 +547,11 @@
 
     move-result-object v6
 
-    .line 110
+    .line 101
     .local v6, "bundle":Landroid/os/Bundle;
     if-eqz v6, :cond_4f
 
-    .line 111
+    .line 102
     const-string v11, "extra_selected_pictures_count"
 
     const/4 v12, 0x0
@@ -562,7 +562,7 @@
 
     iput v11, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->picturesCountInPreviewMode:I
 
-    .line 112
+    .line 103
     const-string v11, "extra_is_insert_image"
 
     const/4 v12, 0x0
@@ -573,7 +573,7 @@
 
     iput-boolean v11, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->isInsert:Z
 
-    .line 115
+    .line 106
     :cond_4f
     const v11, 0x7f050016
 
@@ -583,11 +583,11 @@
 
     check-cast v8, Landroid/view/ViewGroup;
 
-    .line 116
+    .line 107
     .local v8, "group":Landroid/view/ViewGroup;
     invoke-static {v8, p0}, Lcom/kia/android/moviesns/util/Utils;->setOnclickListener(Landroid/view/ViewGroup;Landroid/view/View$OnClickListener;)V
 
-    .line 117
+    .line 108
     iget-object v11, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     invoke-virtual {v11}, Lcom/kia/android/moviesns/ApplicationImpl;->getTypeFace()Landroid/graphics/Typeface;
@@ -596,7 +596,7 @@
 
     invoke-static {v8, v11}, Lcom/kia/android/moviesns/util/Utils;->setTypeface(Landroid/view/ViewGroup;Landroid/graphics/Typeface;)V
 
-    .line 122
+    .line 113
     const-string v11, "location"
 
     invoke-virtual {p0, v11}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -607,10 +607,10 @@
 
     iput-object v11, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->locationManager:Landroid/location/LocationManager;
 
-    .line 124
+    .line 115
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->initSurfaceView()V
 
-    .line 126
+    .line 117
     const v11, 0x7f050053
 
     invoke-virtual {p0, v11}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->findViewById(I)Landroid/view/View;
@@ -621,14 +621,14 @@
 
     iput-object v11, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateLayout:Lcom/kia/android/moviesns/ui/view/RotateButtonLayout;
 
-    .line 128
+    .line 119
     new-instance v11, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity$1;
 
     invoke-direct {v11, p0, p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity$1;-><init>(Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;Landroid/content/Context;)V
 
     iput-object v11, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->a:Landroid/view/OrientationEventListener;
 
-    .line 140
+    .line 131
     const v11, 0x7f050055
 
     invoke-virtual {p0, v11}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->findViewById(I)Landroid/view/View;
@@ -641,12 +641,12 @@
 
     invoke-virtual {v11, v12}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 150
+    .line 141
     const/4 v11, 0x1
 
     iput-boolean v11, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->confirmLocation:Z
 
-    .line 151
+    .line 142
     iget-object v11, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->locationManager:Landroid/location/LocationManager;
 
     const-string v12, "gps"
@@ -655,7 +655,7 @@
 
     move-result v2
 
-    .line 153
+    .line 144
     .local v2, "RealStatusOfGPS":Z
     const/4 v11, 0x0
 
@@ -663,7 +663,7 @@
 
     move-result-object v9
 
-    .line 154
+    .line 145
     .local v9, "sharedPref":Landroid/content/SharedPreferences;
     const-string v11, "agreePhotoGPS"
 
@@ -673,24 +673,24 @@
 
     move-result v3
 
-    .line 155
+    .line 146
     .local v3, "agreeGPS":Z
     if-eqz v3, :cond_ad
 
-    if-nez v2, :cond_e1
+    if-nez v2, :cond_e3
 
-    .line 156
+    .line 147
     :cond_ad
     const/4 v11, 0x0
 
     iput-boolean v11, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->confirmLocation:Z
 
-    .line 158
+    .line 149
     new-instance v5, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v5, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 159
+    .line 150
     .local v5, "alert_confirm":Landroid/app/AlertDialog$Builder;
     const v11, 0x7f080079
 
@@ -704,52 +704,52 @@
 
     move-result-object v11
 
-    const-string v12, "Confirm"
+    const v12, 0x7f080042
 
     new-instance v13, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity$3;
 
     invoke-direct {v13, p0, v2}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity$3;-><init>(Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;Z)V
 
-    invoke-virtual {v11, v12, v13}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v11, v12, v13}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v11
 
-    .line 175
-    const-string v12, "Cancel"
+    .line 166
+    const v12, 0x7f080043
 
     new-instance v13, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity$4;
 
     invoke-direct {v13, p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity$4;-><init>(Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;)V
 
-    invoke-virtual {v11, v12, v13}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v11, v12, v13}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 183
+    .line 174
     invoke-virtual {v5}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v4
 
-    .line 184
+    .line 175
     .local v4, "alert":Landroid/app/AlertDialog;
     const/4 v11, 0x1
 
     invoke-virtual {p0, v11}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->setRequestedOrientation(I)V
 
-    .line 185
+    .line 176
     invoke-virtual {v4}, Landroid/app/AlertDialog;->show()V
 
-    .line 191
+    .line 182
     .end local v4    # "alert":Landroid/app/AlertDialog;
     .end local v5    # "alert_confirm":Landroid/app/AlertDialog$Builder;
-    :cond_e1
+    :cond_e3
     return-void
 
-    .line 105
+    .line 96
     .end local v2    # "RealStatusOfGPS":Z
     .end local v3    # "agreeGPS":Z
     .end local v6    # "bundle":Landroid/os/Bundle;
     .end local v8    # "group":Landroid/view/ViewGroup;
     .end local v9    # "sharedPref":Landroid/content/SharedPreferences;
-    :cond_e2
+    :cond_e4
     const v11, 0x7f03000a
 
     invoke-virtual {p0, v11}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->setContentView(I)V
@@ -761,22 +761,22 @@
     .registers 3
 
     .prologue
-    .line 234
+    .line 225
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->locationManager:Landroid/location/LocationManager;
 
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->locationListener:Landroid/location/LocationListener;
 
     invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
-    .line 235
+    .line 226
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->a:Landroid/view/OrientationEventListener;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->disable()V
 
-    .line 236
+    .line 227
     invoke-super {p0}, Lcom/kia/android/moviesns/ui/activity/BaseOtherActivity;->onPause()V
 
-    .line 237
+    .line 228
     return-void
 .end method
 
@@ -786,10 +786,10 @@
     .param p2, "camera"    # Landroid/hardware/Camera;
 
     .prologue
-    .line 379
+    .line 370
     if-eqz p1, :cond_16a
 
-    .line 380
+    .line 371
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -818,7 +818,7 @@
 
     invoke-static {v4, v5}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 381
+    .line 372
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
@@ -827,7 +827,7 @@
 
     move-result-object v19
 
-    .line 382
+    .line 373
     .local v19, "path":Ljava/lang/String;
     const-string v4, "%s.jpg"
 
@@ -849,7 +849,7 @@
 
     move-result-object v13
 
-    .line 383
+    .line 374
     .local v13, "fileName":Ljava/lang/String;
     const-string v4, "%s/%s"
 
@@ -869,7 +869,7 @@
 
     move-result-object v20
 
-    .line 384
+    .line 375
     .local v20, "savePath":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -895,7 +895,7 @@
 
     invoke-static {v4, v5}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 386
+    .line 377
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -938,16 +938,16 @@
 
     invoke-static {v4, v5}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 388
+    .line 379
     sget-object v16, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    .line 389
+    .line 380
     .local v16, "modelName":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 390
+    .line 381
     const-string v6, "device model name : %s, %s, %s"
 
     const/4 v4, 0x3
@@ -986,10 +986,10 @@
 
     move-result-object v4
 
-    .line 389
+    .line 380
     invoke-static {v5, v4}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 393
+    .line 384
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -998,7 +998,7 @@
 
     invoke-static {v4, v5}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 395
+    .line 386
     move-object/from16 v0, v20
 
     move-object/from16 v1, p1
@@ -1009,7 +1009,7 @@
 
     if-eqz v4, :cond_19c
 
-    .line 396
+    .line 387
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -1018,7 +1018,7 @@
 
     invoke-static {v4, v5}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 441
+    .line 432
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -1027,10 +1027,10 @@
 
     invoke-static {v4, v5}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 444
+    .line 435
     const/4 v10, 0x0
 
-    .line 445
+    .line 436
     .local v10, "degree":I
     :try_start_d4
     new-instance v12, Landroid/media/ExifInterface;
@@ -1039,7 +1039,7 @@
 
     invoke-direct {v12, v0}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
-    .line 446
+    .line 437
     .local v12, "exif":Landroid/media/ExifInterface;
     const-string v4, "Orientation"
 
@@ -1049,11 +1049,11 @@
 
     move-result v18
 
-    .line 447
+    .line 438
     .local v18, "orientation":I
     packed-switch v18, :pswitch_data_1b2
 
-    .line 461
+    .line 452
     :goto_e5
     :pswitch_e5
     new-instance v17, Landroid/graphics/BitmapFactory$Options;
@@ -1062,7 +1062,7 @@
     :try_end_ea
     .catch Ljava/lang/Exception; {:try_start_d4 .. :try_end_ea} :catch_187
 
-    .line 464
+    .line 455
     .local v17, "options":Landroid/graphics/BitmapFactory$Options;
     :try_start_ea
     move-object/from16 v0, v20
@@ -1076,7 +1076,7 @@
 
     move-result-object v3
 
-    .line 470
+    .line 461
     .local v3, "image":Landroid/graphics/Bitmap;
     :goto_f2
     :try_start_f2
@@ -1084,7 +1084,7 @@
 
     invoke-direct {v8}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 471
+    .line 462
     .local v8, "m":Landroid/graphics/Matrix;
     int-to-float v4, v10
 
@@ -1110,7 +1110,7 @@
 
     invoke-virtual {v8, v4, v5, v6}, Landroid/graphics/Matrix;->setRotate(FFF)V
 
-    .line 473
+    .line 464
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -1129,7 +1129,7 @@
 
     move-result-object v3
 
-    .line 475
+    .line 466
     new-instance v14, Ljava/io/FileOutputStream;
 
     new-instance v4, Ljava/io/File;
@@ -1140,7 +1140,7 @@
 
     invoke-direct {v14, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 476
+    .line 467
     .local v14, "fos":Ljava/io/FileOutputStream;
     sget-object v4, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -1148,23 +1148,23 @@
 
     invoke-virtual {v3, v4, v5, v14}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 477
+    .line 468
     invoke-virtual {v14}, Ljava/io/FileOutputStream;->close()V
 
-    .line 479
+    .line 470
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 480
+    .line 471
     const/4 v3, 0x0
 
-    .line 481
+    .line 472
     move-object/from16 v0, p0
 
     iget-boolean v4, v0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->confirmLocation:Z
 
     if-eqz v4, :cond_161
 
-    .line 482
+    .line 473
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->locationManager:Landroid/location/LocationManager;
@@ -1175,7 +1175,7 @@
 
     move-result-object v15
 
-    .line 483
+    .line 474
     .local v15, "lastKnownLocation":Landroid/location/Location;
     const-string v4, "GPSLatitude"
 
@@ -1189,7 +1189,7 @@
 
     invoke-virtual {v12, v4, v5}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 484
+    .line 475
     const-string v4, "GPSLongitude"
 
     invoke-virtual {v15}, Landroid/location/Location;->getLongitude()D
@@ -1202,12 +1202,12 @@
 
     invoke-virtual {v12, v4, v5}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 485
+    .line 476
     invoke-virtual {v12}, Landroid/media/ExifInterface;->saveAttributes()V
     :try_end_161
     .catch Ljava/lang/Exception; {:try_start_f2 .. :try_end_161} :catch_187
 
-    .line 492
+    .line 483
     .end local v3    # "image":Landroid/graphics/Bitmap;
     .end local v8    # "m":Landroid/graphics/Matrix;
     .end local v12    # "exif":Landroid/media/ExifInterface;
@@ -1225,7 +1225,7 @@
 
     invoke-virtual {v0, v1, v2, v13}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->setSaveImageInfo([BLjava/lang/String;Ljava/lang/String;)V
 
-    .line 502
+    .line 493
     .end local v10    # "degree":I
     .end local v13    # "fileName":Ljava/lang/String;
     .end local v16    # "modelName":Ljava/lang/String;
@@ -1235,7 +1235,7 @@
     :goto_16a
     return-void
 
-    .line 451
+    .line 442
     .restart local v10    # "degree":I
     .restart local v12    # "exif":Landroid/media/ExifInterface;
     .restart local v13    # "fileName":Ljava/lang/String;
@@ -1246,28 +1246,28 @@
     :pswitch_16b
     const/16 v10, 0xb4
 
-    .line 452
+    .line 443
     goto/16 :goto_e5
 
-    .line 454
+    .line 445
     :pswitch_16f
     const/16 v10, 0x10e
 
-    .line 455
+    .line 446
     goto/16 :goto_e5
 
-    .line 457
+    .line 448
     :pswitch_173
     const/16 v10, 0x5a
 
     goto/16 :goto_e5
 
-    .line 465
+    .line 456
     .restart local v17    # "options":Landroid/graphics/BitmapFactory$Options;
     :catch_177
     move-exception v11
 
-    .line 466
+    .line 457
     .local v11, "e":Ljava/lang/OutOfMemoryError;
     const/4 v4, 0x4
 
@@ -1276,7 +1276,7 @@
 
     iput v4, v0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 467
+    .line 458
     move-object/from16 v0, v20
 
     move-object/from16 v1, v17
@@ -1290,7 +1290,7 @@
     .restart local v3    # "image":Landroid/graphics/Bitmap;
     goto/16 :goto_f2
 
-    .line 487
+    .line 478
     .end local v3    # "image":Landroid/graphics/Bitmap;
     .end local v11    # "e":Ljava/lang/OutOfMemoryError;
     .end local v12    # "exif":Landroid/media/ExifInterface;
@@ -1299,7 +1299,7 @@
     :catch_187
     move-exception v11
 
-    .line 489
+    .line 480
     .local v11, "e":Ljava/lang/Exception;
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1323,7 +1323,7 @@
 
     goto :goto_161
 
-    .line 497
+    .line 488
     .end local v10    # "degree":I
     .end local v11    # "e":Ljava/lang/Exception;
     :cond_19c
@@ -1333,14 +1333,14 @@
 
     invoke-virtual {v4}, Landroid/hardware/Camera;->startPreview()V
 
-    .line 498
+    .line 489
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mInProgress:Z
 
-    .line 499
+    .line 490
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateLayout:Lcom/kia/android/moviesns/ui/view/RotateButtonLayout;
@@ -1351,7 +1351,7 @@
 
     goto :goto_16a
 
-    .line 447
+    .line 438
     nop
 
     :pswitch_data_1b2
@@ -1371,14 +1371,14 @@
     .registers 7
 
     .prologue
-    .line 206
+    .line 197
     new-instance v0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity$5;
 
     invoke-direct {v0, p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity$5;-><init>(Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;)V
 
     iput-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->locationListener:Landroid/location/LocationListener;
 
-    .line 223
+    .line 214
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->locationManager:Landroid/location/LocationManager;
 
     const-string v1, "network"
@@ -1391,18 +1391,18 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
-    .line 225
+    .line 216
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->a:Landroid/view/OrientationEventListener;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->enable()V
 
-    .line 227
+    .line 218
     invoke-direct {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->setLastestImage()V
 
-    .line 229
+    .line 220
     invoke-super {p0}, Lcom/kia/android/moviesns/ui/activity/BaseOtherActivity;->onResume()V
 
-    .line 230
+    .line 221
     return-void
 .end method
 
@@ -1410,7 +1410,7 @@
     .registers 1
 
     .prologue
-    .line 340
+    .line 331
     return-void
 .end method
 
@@ -1426,7 +1426,7 @@
 
     const/16 v1, 0x2d
 
-    .line 277
+    .line 268
     iget v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->degree:I
 
     if-ge v0, v4, :cond_10
@@ -1435,13 +1435,13 @@
 
     if-ge v0, v1, :cond_27
 
-    .line 278
+    .line 269
     :cond_10
     const-wide v0, 0x4056800000000000L    # 90.0
 
     iput-wide v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateDegree:D
 
-    .line 287
+    .line 278
     :cond_17
     :goto_17
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateLayout:Lcom/kia/android/moviesns/ui/view/RotateButtonLayout;
@@ -1454,15 +1454,15 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kia/android/moviesns/ui/view/RotateButtonLayout;->setRotateDegree(D)V
 
-    .line 288
+    .line 279
     iget-wide v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateDegree:D
 
     invoke-direct {p0, v0, v1}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->setImageRotate(D)V
 
-    .line 289
+    .line 280
     return-void
 
-    .line 279
+    .line 270
     :cond_27
     iget v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->degree:I
 
@@ -1472,14 +1472,14 @@
 
     if-ge v0, v2, :cond_37
 
-    .line 280
+    .line 271
     const-wide v0, 0x4066800000000000L    # 180.0
 
     iput-wide v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateDegree:D
 
     goto :goto_17
 
-    .line 281
+    .line 272
     :cond_37
     iget v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->degree:I
 
@@ -1489,14 +1489,14 @@
 
     if-ge v0, v3, :cond_47
 
-    .line 282
+    .line 273
     const-wide v0, 0x4070e00000000000L    # 270.0
 
     iput-wide v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateDegree:D
 
     goto :goto_17
 
-    .line 283
+    .line 274
     :cond_47
     iget v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->degree:I
 
@@ -1506,7 +1506,7 @@
 
     if-gt v0, v4, :cond_17
 
-    .line 284
+    .line 275
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateDegree:D
@@ -1521,7 +1521,7 @@
     .param p3, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 520
+    .line 511
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1530,10 +1530,10 @@
 
     invoke-static {v0, v1}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 521
+    .line 512
     invoke-static {p0, p3, p2}, Lcom/kia/android/moviesns/util/ImageUtils;->addToTouchActiveAlbum(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 522
+    .line 513
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1542,27 +1542,27 @@
 
     invoke-static {v0, v1}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 524
+    .line 515
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Landroid/hardware/Camera;->startPreview()V
 
-    .line 525
+    .line 516
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mInProgress:Z
 
-    .line 526
+    .line 517
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateLayout:Lcom/kia/android/moviesns/ui/view/RotateButtonLayout;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/kia/android/moviesns/ui/view/RotateButtonLayout;->setChildCanRotate(Z)V
 
-    .line 527
+    .line 518
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateControllButton()V
 
-    .line 528
+    .line 519
     return-void
 .end method
 
@@ -1574,7 +1574,7 @@
     .param p4, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 506
+    .line 497
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1583,10 +1583,10 @@
 
     invoke-static {v0, v1}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 507
+    .line 498
     invoke-static {p0, p4, p3}, Lcom/kia/android/moviesns/util/ImageUtils;->addToTouchActiveAlbum(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 508
+    .line 499
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1595,30 +1595,30 @@
 
     invoke-static {v0, v1}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 510
+    .line 501
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Landroid/hardware/Camera;->startPreview()V
 
-    .line 511
+    .line 502
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mInProgress:Z
 
-    .line 512
+    .line 503
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateLayout:Lcom/kia/android/moviesns/ui/view/RotateButtonLayout;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/kia/android/moviesns/ui/view/RotateButtonLayout;->setChildCanRotate(Z)V
 
-    .line 513
+    .line 504
     iput p2, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->degree:I
 
-    .line 514
+    .line 505
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->rotateControllButton()V
 
-    .line 515
+    .line 506
     return-void
 .end method
 
@@ -1630,24 +1630,24 @@
     .param p4, "height"    # I
 
     .prologue
-    .line 293
+    .line 284
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v5}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
 
     move-result-object v0
 
-    .line 294
+    .line 285
     .local v0, "parameters":Landroid/hardware/Camera$Parameters;
     invoke-virtual {v0}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewSizes()Ljava/util/List;
 
     move-result-object v3
 
-    .line 296
+    .line 287
     .local v3, "previewSizes":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Size;>;"
     const/4 v2, 0x0
 
-    .line 297
+    .line 288
     .local v2, "previewSize":Landroid/hardware/Camera$Size;
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1661,12 +1661,12 @@
 
     if-nez v6, :cond_b0
 
-    .line 308
+    .line 299
     invoke-virtual {v0}, Landroid/hardware/Camera$Parameters;->getSupportedPictureSizes()Ljava/util/List;
 
     move-result-object v1
 
-    .line 309
+    .line 300
     .local v1, "picutreSizes":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Size;>;"
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1700,7 +1700,7 @@
 
     invoke-static {v5, v6}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 310
+    .line 301
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
@@ -1737,7 +1737,7 @@
 
     invoke-static {v5, v6}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 311
+    .line 302
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v6
@@ -1790,14 +1790,14 @@
 
     invoke-static {v6, v5}, Lcom/kia/android/moviesns/util/Utils;->logD(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 313
+    .line 304
     iget v5, v2, Landroid/hardware/Camera$Size;->width:I
 
     iget v6, v2, Landroid/hardware/Camera$Size;->height:I
 
     invoke-virtual {v0, v5, v6}, Landroid/hardware/Camera$Parameters;->setPreviewSize(II)V
 
-    .line 314
+    .line 305
     const/4 v5, 0x0
 
     invoke-interface {v1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1820,20 +1820,20 @@
 
     invoke-virtual {v0, v6, v5}, Landroid/hardware/Camera$Parameters;->setPictureSize(II)V
 
-    .line 315
+    .line 306
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v5, v0}, Landroid/hardware/Camera;->setParameters(Landroid/hardware/Camera$Parameters;)V
 
-    .line 316
+    .line 307
     iget-object v5, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v5}, Landroid/hardware/Camera;->startPreview()V
 
-    .line 317
+    .line 308
     return-void
 
-    .line 297
+    .line 288
     .end local v1    # "picutreSizes":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Size;>;"
     :cond_b0
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -1842,17 +1842,17 @@
 
     check-cast v4, Landroid/hardware/Camera$Size;
 
-    .line 298
+    .line 289
     .local v4, "size":Landroid/hardware/Camera$Size;
     if-nez v2, :cond_bb
 
-    .line 299
+    .line 290
     move-object v2, v4
 
-    .line 300
+    .line 291
     goto/16 :goto_f
 
-    .line 302
+    .line 293
     :cond_bb
     iget v6, v2, Landroid/hardware/Camera$Size;->width:I
 
@@ -1890,7 +1890,7 @@
 
     if-le v6, v7, :cond_f
 
-    .line 303
+    .line 294
     :cond_df
     move-object v2, v4
 
@@ -1902,14 +1902,14 @@
     .param p1, "holder"    # Landroid/view/SurfaceHolder;
 
     .prologue
-    .line 320
+    .line 311
     invoke-static {}, Landroid/hardware/Camera;->open()Landroid/hardware/Camera;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
-    .line 322
+    .line 313
     :try_start_6
     iget-object v1, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
@@ -1917,15 +1917,15 @@
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_b} :catch_c
 
-    .line 326
+    .line 317
     :goto_b
     return-void
 
-    .line 323
+    .line 314
     :catch_c
     move-exception v0
 
-    .line 324
+    .line 315
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1945,16 +1945,16 @@
     .param p1, "holder"    # Landroid/view/SurfaceHolder;
 
     .prologue
-    .line 329
+    .line 320
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Landroid/hardware/Camera;->release()V
 
-    .line 330
+    .line 321
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kia/android/moviesns/ui/activity/make/Make200Activity;->mCamera:Landroid/hardware/Camera;
 
-    .line 331
+    .line 322
     return-void
 .end method

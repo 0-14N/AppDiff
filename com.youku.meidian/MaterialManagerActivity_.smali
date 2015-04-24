@@ -50,7 +50,7 @@
 .method static synthetic a(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialManagerActivity;->g()V
+    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialManagerActivity;->e()V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 .method static synthetic c(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialManagerActivity;->h()V
+    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialManagerActivity;->d()V
 
     return-void
 .end method
@@ -82,7 +82,7 @@
 .method static synthetic d(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialManagerActivity;->d()V
+    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialManagerActivity;->h()V
 
     return-void
 .end method
@@ -90,7 +90,7 @@
 .method static synthetic e(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialManagerActivity;->e()V
+    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialManagerActivity;->g()V
 
     return-void
 .end method
@@ -111,9 +111,9 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->t:Landroid/os/Handler;
 
-    new-instance v1, Lcom/youku/meidian/activity/cp;
+    new-instance v1, Lcom/youku/meidian/activity/cq;
 
-    invoke-direct {v1, p0, p1}, Lcom/youku/meidian/activity/cp;-><init>(Lcom/youku/meidian/activity/MaterialManagerActivity_;Ljava/util/ArrayList;)V
+    invoke-direct {v1, p0, p1}, Lcom/youku/meidian/activity/cq;-><init>(Lcom/youku/meidian/activity/MaterialManagerActivity_;Ljava/util/ArrayList;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -122,16 +122,6 @@
 
 .method public final a(Lorg/a/a/b/a;)V
     .registers 4
-
-    const v0, 0x7f09009e
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/youku/meidian/customUi/PullAndLoadListView;
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->r:Lcom/youku/meidian/customUi/PullAndLoadListView;
 
     const v0, 0x7f090068
 
@@ -152,6 +142,16 @@
     check-cast v0, Landroid/widget/ImageView;
 
     iput-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->q:Landroid/widget/ImageView;
+
+    const v0, 0x7f09009e
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/youku/meidian/customUi/PullAndLoadListView;
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->r:Lcom/youku/meidian/customUi/PullAndLoadListView;
 
     const v0, 0x7f0900d1
 
@@ -214,9 +214,9 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->t:Landroid/os/Handler;
 
-    new-instance v1, Lcom/youku/meidian/activity/cs;
+    new-instance v1, Lcom/youku/meidian/activity/cr;
 
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/cs;-><init>(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/cr;-><init>(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -224,34 +224,6 @@
 .end method
 
 .method public final e()V
-    .registers 3
-
-    iget-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->t:Landroid/os/Handler;
-
-    new-instance v1, Lcom/youku/meidian/activity/ct;
-
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/ct;-><init>(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final f()V
-    .registers 3
-
-    iget-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->t:Landroid/os/Handler;
-
-    new-instance v1, Lcom/youku/meidian/activity/cq;
-
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/cq;-><init>(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final g()V
     .registers 3
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->t:Landroid/os/Handler;
@@ -265,14 +237,42 @@
     return-void
 .end method
 
+.method public final f()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->t:Landroid/os/Handler;
+
+    new-instance v1, Lcom/youku/meidian/activity/cp;
+
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/cp;-><init>(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final g()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->t:Landroid/os/Handler;
+
+    new-instance v1, Lcom/youku/meidian/activity/ct;
+
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/ct;-><init>(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
 .method public final h()V
     .registers 3
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MaterialManagerActivity_;->t:Landroid/os/Handler;
 
-    new-instance v1, Lcom/youku/meidian/activity/cr;
+    new-instance v1, Lcom/youku/meidian/activity/cs;
 
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/cr;-><init>(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/cs;-><init>(Lcom/youku/meidian/activity/MaterialManagerActivity_;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

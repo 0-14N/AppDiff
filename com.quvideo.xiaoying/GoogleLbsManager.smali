@@ -419,9 +419,9 @@
 
     .line 93
     :cond_44
-    new-instance v0, Lvq;
+    new-instance v0, Lox;
 
-    invoke-direct {v0, p0}, Lvq;-><init>(Lcom/quvideo/xiaoying/app/location/GoogleLbsManager;)V
+    invoke-direct {v0, p0}, Lox;-><init>(Lcom/quvideo/xiaoying/app/location/GoogleLbsManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/location/GoogleLbsManager;->d:Landroid/location/LocationListener;
 

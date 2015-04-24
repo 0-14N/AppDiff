@@ -64,6 +64,12 @@
 
     invoke-virtual {p0, v0}, Lcom/unicom/dcLoader/MainActivity;->setRequestedOrientation(I)V
 
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string v1, "--------------------->onCreate"
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
     invoke-static {}, Lcom/unicom/dcLoader/Utils;->getInstances()Lcom/unicom/dcLoader/Utils;
 
     move-result-object v0

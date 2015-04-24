@@ -160,6 +160,9 @@
     invoke-super {p0}, Lcom/actionbarsherlock/app/SherlockPreferenceActivity;->onPause()V
 
     .line 91
+    invoke-static {p0}, Lorg/dayup/gnotes/d/f;->b(Landroid/content/Context;)V
+
+    .line 92
     return-void
 .end method
 
@@ -171,6 +174,9 @@
     invoke-super {p0}, Lcom/actionbarsherlock/app/SherlockPreferenceActivity;->onResume()V
 
     .line 85
+    invoke-static {p0}, Lorg/dayup/gnotes/d/f;->a(Landroid/content/Context;)V
+
+    .line 86
     return-void
 .end method
 

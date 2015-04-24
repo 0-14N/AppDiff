@@ -359,7 +359,7 @@
 
     move-result v0
 
-    if-lez v0, :cond_114
+    if-lez v0, :cond_110
 
     new-instance v0, Landroid/os/Handler;
 
@@ -381,7 +381,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_f1
+    if-nez v0, :cond_ed
 
     const-string v0, "init_setting"
 
@@ -461,16 +461,11 @@
     if-lt v0, v1, :cond_ed
 
     invoke-static {p0}, Lcom/hy/minifetion/aa;->b(Landroid/content/Context;)Z
+    :try_end_ed
+    .catch Ljava/lang/Throwable; {:try_start_96 .. :try_end_ed} :catch_114
 
     :cond_ed
-    const/4 v0, 0x0
-
-    invoke-static {p0, v0}, Lcom/a/a;->a(Landroid/content/Context;Z)V
-    :try_end_f1
-    .catch Ljava/lang/Throwable; {:try_start_96 .. :try_end_f1} :catch_119
-
-    :cond_f1
-    :goto_f1
+    :goto_ed
     const-string v0, "com.hy.minifetion"
 
     invoke-virtual {p0}, Lcom/hy/minifetion/ui/LoginActivity;->getPackageName()Ljava/lang/String;
@@ -481,13 +476,13 @@
 
     move-result v0
 
-    if-nez v0, :cond_102
+    if-nez v0, :cond_fe
 
     invoke-static {p0}, Lcom/hy/util/h;->a(Landroid/app/Activity;)V
 
     iput-boolean v4, p0, Lcom/hy/minifetion/ui/LoginActivity;->q:Z
 
-    :cond_102
+    :cond_fe
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "minifetion.APP_UPDATE"
@@ -504,17 +499,17 @@
 
     return-void
 
-    :cond_114
+    :cond_110
     invoke-virtual {p0, v2}, Lcom/hy/minifetion/ui/LoginActivity;->b(Z)V
 
-    goto/16 :goto_96
+    goto :goto_96
 
-    :catch_119
+    :catch_114
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    goto :goto_f1
+    goto :goto_ed
 .end method
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z

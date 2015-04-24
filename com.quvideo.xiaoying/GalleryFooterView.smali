@@ -121,9 +121,9 @@
     .line 53
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/ui/GalleryFooterView;->b:Landroid/widget/Button;
 
-    new-instance v1, Lala;
+    new-instance v1, Laeg;
 
-    invoke-direct {v1, p0}, Lala;-><init>(Lcom/quvideo/xiaoying/common/ui/GalleryFooterView;)V
+    invoke-direct {v1, p0}, Laeg;-><init>(Lcom/quvideo/xiaoying/common/ui/GalleryFooterView;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

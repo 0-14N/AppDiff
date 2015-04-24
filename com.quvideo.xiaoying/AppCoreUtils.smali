@@ -286,9 +286,9 @@
     move-result-object v5
 
     .line 57
-    new-instance v6, Latj;
+    new-instance v6, Lamp;
 
-    invoke-direct {v6, p0, p1, p4}, Latj;-><init>(Landroid/app/Activity;ZLjava/lang/String;)V
+    invoke-direct {v6, p0, p1, p4}, Lamp;-><init>(Landroid/app/Activity;ZLjava/lang/String;)V
 
     .line 55
     invoke-static/range {v0 .. v6}, Lcom/quvideo/xiaoying/common/DialogueUtils;->showComDialog(Landroid/content/Context;ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Landroid/view/View$OnClickListener;)V

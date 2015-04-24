@@ -14,11 +14,11 @@
 
 .field d:Landroid/content/Intent;
 
-.field e:I
+.field private e:Ljava/lang/String;
 
-.field private f:Landroid/widget/LinearLayout;
+.field private f:Lcom/feiwoone/banner/AdBanner;
 
-.field private g:Lcom/baidu/mobads/InterstitialAd;
+.field private g:Landroid/widget/LinearLayout;
 
 
 # direct methods
@@ -27,17 +27,17 @@
 
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    const/4 v0, 0x0
+    const-string v0, "PomEjS4O3qTG5C3xzP2urk9H"
 
-    iput v0, p0, Lcom/wuchun/exercisetools/MainActivity;->e:I
+    iput-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->e:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/wuchun/exercisetools/MainActivity;)Lcom/baidu/mobads/InterstitialAd;
+.method static synthetic a(Lcom/wuchun/exercisetools/MainActivity;)Landroid/widget/LinearLayout;
     .registers 2
 
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
+    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
@@ -51,7 +51,7 @@
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_6e
+    packed-switch v0, :pswitch_data_3e
 
     :goto_7
     return-void
@@ -65,32 +65,15 @@
 
     iput-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->d:Landroid/content/Intent;
 
+    invoke-static {p0}, Lcom/feiwo/appwall/AppWallManager;->showAppWall(Landroid/content/Context;)V
+
     iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->d:Landroid/content/Intent;
 
     invoke-virtual {p0, v0}, Lcom/wuchun/exercisetools/MainActivity;->startActivity(Landroid/content/Intent;)V
 
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0}, Lcom/baidu/mobads/InterstitialAd;->isAdReady()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_24
-
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0, p0}, Lcom/baidu/mobads/InterstitialAd;->showAd(Landroid/app/Activity;)V
-
     goto :goto_7
 
-    :cond_24
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0}, Lcom/baidu/mobads/InterstitialAd;->loadAd()V
-
-    goto :goto_7
-
-    :pswitch_2a
+    :pswitch_1a
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/wuchun/exercisetools/Pacecount;
@@ -99,32 +82,15 @@
 
     iput-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->d:Landroid/content/Intent;
 
+    invoke-static {p0}, Lcom/feiwo/appwall/AppWallManager;->showAppWall(Landroid/content/Context;)V
+
     iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->d:Landroid/content/Intent;
 
     invoke-virtual {p0, v0}, Lcom/wuchun/exercisetools/MainActivity;->startActivity(Landroid/content/Intent;)V
 
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0}, Lcom/baidu/mobads/InterstitialAd;->isAdReady()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_46
-
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0, p0}, Lcom/baidu/mobads/InterstitialAd;->showAd(Landroid/app/Activity;)V
-
     goto :goto_7
 
-    :cond_46
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0}, Lcom/baidu/mobads/InterstitialAd;->loadAd()V
-
-    goto :goto_7
-
-    :pswitch_4c
+    :pswitch_2c
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/wuchun/exercisetools/StopWatch;
@@ -133,36 +99,19 @@
 
     iput-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->d:Landroid/content/Intent;
 
+    invoke-static {p0}, Lcom/feiwo/appwall/AppWallManager;->showAppWall(Landroid/content/Context;)V
+
     iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->d:Landroid/content/Intent;
 
     invoke-virtual {p0, v0}, Lcom/wuchun/exercisetools/MainActivity;->startActivity(Landroid/content/Intent;)V
 
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0}, Lcom/baidu/mobads/InterstitialAd;->isAdReady()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_68
-
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0, p0}, Lcom/baidu/mobads/InterstitialAd;->showAd(Landroid/app/Activity;)V
-
     goto :goto_7
 
-    :cond_68
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0}, Lcom/baidu/mobads/InterstitialAd;->loadAd()V
-
-    goto :goto_7
-
-    :pswitch_data_6e
+    :pswitch_data_3e
     .packed-switch 0x7f0a0001
         :pswitch_8
-        :pswitch_2a
-        :pswitch_4c
+        :pswitch_1a
+        :pswitch_2c
     .end packed-switch
 .end method
 
@@ -225,39 +174,43 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->f:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Landroid/widget/LinearLayout;
 
-    new-instance v0, Lcom/baidu/mobads/AdView;
+    new-instance v0, Lcom/feiwoone/banner/AdBanner;
 
-    invoke-direct {v0, p0}, Lcom/baidu/mobads/AdView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/feiwoone/banner/AdBanner;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Lcom/wuchun/exercisetools/c;
+    iput-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->f:Lcom/feiwoone/banner/AdBanner;
 
-    invoke-direct {v1, p0}, Lcom/wuchun/exercisetools/c;-><init>(Lcom/wuchun/exercisetools/MainActivity;)V
+    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v1}, Lcom/baidu/mobads/AdView;->setListener(Lcom/baidu/mobads/AdViewListener;)V
+    iget-object v1, p0, Lcom/wuchun/exercisetools/MainActivity;->f:Lcom/feiwoone/banner/AdBanner;
 
-    iget-object v1, p0, Lcom/wuchun/exercisetools/MainActivity;->f:Landroid/widget/LinearLayout;
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->f:Lcom/feiwoone/banner/AdBanner;
 
-    new-instance v0, Lcom/baidu/mobads/InterstitialAd;
+    iget-object v1, p0, Lcom/wuchun/exercisetools/MainActivity;->e:Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lcom/baidu/mobads/InterstitialAd;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/feiwoone/banner/AdBanner;->setAppKey(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
+    new-instance v0, Lcom/wuchun/exercisetools/c;
 
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
+    invoke-direct {v0, p0}, Lcom/wuchun/exercisetools/c;-><init>(Lcom/wuchun/exercisetools/MainActivity;)V
 
-    new-instance v1, Lcom/wuchun/exercisetools/d;
+    iget-object v1, p0, Lcom/wuchun/exercisetools/MainActivity;->f:Lcom/feiwoone/banner/AdBanner;
 
-    invoke-direct {v1, p0}, Lcom/wuchun/exercisetools/d;-><init>(Lcom/wuchun/exercisetools/MainActivity;)V
+    invoke-virtual {v1, v0}, Lcom/feiwoone/banner/AdBanner;->setRecevieAdListener(Lcom/feiwoone/banner/RecevieAdListener;)V
 
-    invoke-virtual {v0, v1}, Lcom/baidu/mobads/InterstitialAd;->setListener(Lcom/baidu/mobads/InterstitialAdListener;)V
+    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->e:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->g:Lcom/baidu/mobads/InterstitialAd;
+    invoke-static {p0, v0}, Lcom/feiwo/appwall/AppWallManager;->init(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/baidu/mobads/InterstitialAd;->loadAd()V
+    iget-object v0, p0, Lcom/wuchun/exercisetools/MainActivity;->e:Ljava/lang/String;
+
+    invoke-static {p0, v0}, Lcom/feiwofour/coverscreen/CoverAdComponent;->init(Landroid/content/Context;Ljava/lang/String;)Lcom/feiwofour/coverscreen/CoverAdComponent;
+
+    invoke-static {p0}, Lcom/feiwofour/coverscreen/CoverAdComponent;->showAd(Landroid/content/Context;)I
 
     return-void
 .end method

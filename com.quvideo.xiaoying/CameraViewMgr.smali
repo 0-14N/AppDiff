@@ -136,23 +136,23 @@
     iput-boolean v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewMgr;->i:Z
 
     .line 483
-    new-instance v0, Lahl;
+    new-instance v0, Laar;
 
-    invoke-direct {v0, p0}, Lahl;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewMgr;)V
+    invoke-direct {v0, p0}, Laar;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewMgr;->j:Lcom/quvideo/xiaoying/camera/mode/ModeChooserView$ModeChooseListener;
 
     .line 508
-    new-instance v0, Lahm;
+    new-instance v0, Laas;
 
-    invoke-direct {v0, p0}, Lahm;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewMgr;)V
+    invoke-direct {v0, p0}, Laas;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewMgr;->k:Lcom/quvideo/xiaoying/camera/ui/MusicChooseView$OnMusicViewOpListener;
 
     .line 520
-    new-instance v0, Lahn;
+    new-instance v0, Laat;
 
-    invoke-direct {v0, p0}, Lahn;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewMgr;)V
+    invoke-direct {v0, p0}, Laat;-><init>(Lcom/quvideo/xiaoying/camera/view/CameraViewMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/camera/view/CameraViewMgr;->l:Lcom/quvideo/xiaoying/videoeditor/explorer/MusicExplorer$OnMusicExplorerListener;
 

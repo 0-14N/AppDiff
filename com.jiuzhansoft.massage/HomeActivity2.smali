@@ -48,7 +48,7 @@
 
 .field private height:F
 
-.field private homeback:Landroid/widget/ImageButton;
+.field private homeback:Landroid/widget/Button;
 
 .field private isFlag:Z
 
@@ -78,7 +78,7 @@
 
 .field private timetv:Landroid/widget/TextView;
 
-.field private view:Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;
+.field private view:Landroid/view/View;
 
 .field private whichToAnim:[Ljava/lang/Integer;
 
@@ -100,10 +100,10 @@
 
     const/4 v3, 0x0
 
-    .line 64
+    .line 63
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;-><init>()V
 
-    .line 75
+    .line 74
     new-array v0, v7, [I
 
     const/16 v1, 0x32
@@ -116,39 +116,40 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentFrequency:[I
 
-    .line 77
+    .line 76
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getPosition:I
 
-    .line 78
+    .line 77
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->retPosition:I
 
-    .line 80
+    .line 79
     iput-boolean v3, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->isFlag:Z
 
-    .line 87
+    .line 86
     new-array v0, v4, [Landroid/widget/Button;
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
 
-    .line 93
+    .line 92
     iput v3, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
-    .line 109
+    .line 108
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getIndexFromCenter:I
 
-    .line 111
+    .line 110
     iput-boolean v3, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->dialogShow:Z
 
-    .line 113
+    .line 112
     new-array v0, v4, [Ljava/lang/Integer;
 
-    const v1, 0x7f02006b
+    .line 113
+    const v1, 0x7f020049
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -156,7 +157,8 @@
 
     aput-object v1, v0, v3
 
-    const v1, 0x7f020070
+    .line 114
+    const v1, 0x7f02004e
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -164,7 +166,8 @@
 
     aput-object v1, v0, v5
 
-    const v1, 0x7f020075
+    .line 115
+    const v1, 0x7f020053
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -172,7 +175,8 @@
 
     aput-object v1, v0, v6
 
-    const v1, 0x7f02007a
+    .line 116
+    const v1, 0x7f020058
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -182,7 +186,8 @@
 
     const/4 v1, 0x4
 
-    const v2, 0x7f02007f
+    .line 117
+    const v2, 0x7f02005d
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -192,7 +197,8 @@
 
     const/4 v1, 0x5
 
-    const v2, 0x7f020084
+    .line 118
+    const v2, 0x7f020062
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -202,7 +208,8 @@
 
     const/4 v1, 0x6
 
-    const v2, 0x7f020089
+    .line 119
+    const v2, 0x7f020067
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -212,10 +219,11 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getAllId:[Ljava/lang/Integer;
 
-    .line 115
+    .line 122
     new-array v0, v4, [Ljava/lang/Integer;
 
-    const v1, 0x7f02006f
+    .line 123
+    const v1, 0x7f02004d
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -223,7 +231,8 @@
 
     aput-object v1, v0, v3
 
-    const v1, 0x7f020074
+    .line 124
+    const v1, 0x7f020052
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -231,7 +240,8 @@
 
     aput-object v1, v0, v5
 
-    const v1, 0x7f020079
+    .line 125
+    const v1, 0x7f020057
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -239,7 +249,8 @@
 
     aput-object v1, v0, v6
 
-    const v1, 0x7f02007e
+    .line 126
+    const v1, 0x7f02005c
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -249,7 +260,8 @@
 
     const/4 v1, 0x4
 
-    const v2, 0x7f020083
+    .line 127
+    const v2, 0x7f020061
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -259,8 +271,8 @@
 
     const/4 v1, 0x5
 
-    .line 116
-    const v2, 0x7f020088
+    .line 128
+    const v2, 0x7f020066
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -270,7 +282,8 @@
 
     const/4 v1, 0x6
 
-    const v2, 0x7f02008d
+    .line 129
+    const v2, 0x7f02006b
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -280,18 +293,19 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->changeSelectBg:[Ljava/lang/Integer;
 
-    .line 118
+    .line 132
     new-array v0, v4, [S
 
     fill-array-data v0, :array_148
 
-    .line 119
+    .line 139
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentzl:[S
 
-    .line 121
+    .line 142
     new-array v0, v4, [Ljava/lang/Integer;
 
-    const v1, 0x7f0d00c6
+    .line 143
+    const v1, 0x7f0900a6
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -299,7 +313,8 @@
 
     aput-object v1, v0, v3
 
-    const v1, 0x7f0d00c5
+    .line 144
+    const v1, 0x7f0900a5
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -307,7 +322,8 @@
 
     aput-object v1, v0, v5
 
-    const v1, 0x7f0d00c3
+    .line 145
+    const v1, 0x7f0900a3
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -315,7 +331,8 @@
 
     aput-object v1, v0, v6
 
-    const v1, 0x7f0d00c4
+    .line 146
+    const v1, 0x7f0900a4
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -325,7 +342,8 @@
 
     const/4 v1, 0x4
 
-    const v2, 0x7f0d00c7
+    .line 147
+    const v2, 0x7f0900a7
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -335,8 +353,8 @@
 
     const/4 v1, 0x5
 
-    .line 122
-    const v2, 0x7f0d00c8
+    .line 148
+    const v2, 0x7f0900a8
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -346,7 +364,8 @@
 
     const/4 v1, 0x6
 
-    const v2, 0x7f0d00c9
+    .line 149
+    const v2, 0x7f0900a9
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -356,10 +375,11 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->names:[Ljava/lang/Integer;
 
-    .line 861
+    .line 954
     new-array v0, v4, [Ljava/lang/Integer;
 
-    const v1, 0x7f0200a3
+    .line 955
+    const v1, 0x7f02007b
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -367,7 +387,8 @@
 
     aput-object v1, v0, v3
 
-    const v1, 0x7f02014d
+    .line 956
+    const v1, 0x7f0200c2
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -375,7 +396,8 @@
 
     aput-object v1, v0, v5
 
-    const v1, 0x7f0200e8
+    .line 957
+    const v1, 0x7f02008f
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -383,6 +405,7 @@
 
     aput-object v1, v0, v6
 
+    .line 958
     const v1, 0x7f020001
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -393,7 +416,8 @@
 
     const/4 v1, 0x4
 
-    const v2, 0x7f02014e
+    .line 959
+    const v2, 0x7f0200c3
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -403,7 +427,8 @@
 
     const/4 v1, 0x5
 
-    const v2, 0x7f0201b9
+    .line 960
+    const v2, 0x7f0200de
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -413,8 +438,8 @@
 
     const/4 v1, 0x6
 
-    .line 862
-    const v2, 0x7f020032
+    .line 961
+    const v2, 0x7f02002e
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -424,10 +449,10 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->whichToAnim:[Ljava/lang/Integer;
 
-    .line 64
+    .line 63
     return-void
 
-    .line 118
+    .line 132
     nop
 
     :array_148
@@ -446,18 +471,18 @@
     .registers 2
 
     .prologue
-    .line 99
+    .line 98
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->timetv:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$1(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;)Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;
+.method static synthetic access$1(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;)Landroid/view/View;
     .registers 2
 
     .prologue
-    .line 100
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->view:Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;
+    .line 99
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->view:Landroid/view/View;
 
     return-object v0
 .end method
@@ -466,7 +491,7 @@
     .registers 1
 
     .prologue
-    .line 860
+    .line 952
     sget v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->oldAngle:F
 
     return v0
@@ -476,7 +501,7 @@
     .registers 2
 
     .prologue
-    .line 111
+    .line 110
     iput-boolean p1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->dialogShow:Z
 
     return-void
@@ -486,7 +511,7 @@
     .registers 2
 
     .prologue
-    .line 77
+    .line 76
     iget v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getPosition:I
 
     return v0
@@ -516,7 +541,7 @@
     .registers 2
 
     .prologue
-    .line 103
+    .line 102
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currenttv:Landroid/widget/TextView;
 
     return-object v0
@@ -536,7 +561,7 @@
     .registers 1
 
     .prologue
-    .line 74
+    .line 73
     sput p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentState:I
 
     return-void
@@ -546,7 +571,7 @@
     .registers 2
 
     .prologue
-    .line 105
+    .line 104
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
 
     return-object v0
@@ -556,7 +581,7 @@
     .registers 1
 
     .prologue
-    .line 74
+    .line 73
     sget v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentState:I
 
     return v0
@@ -566,7 +591,7 @@
     .registers 2
 
     .prologue
-    .line 88
+    .line 87
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -577,7 +602,7 @@
     .param p1, "mycommandId"    # S
 
     .prologue
-    .line 885
+    .line 984
     invoke-static {}, Lcom/jiuzhansoft/massage/bluetooth/BlueToothInfo;->isconnect()Ljava/lang/Boolean;
 
     move-result-object v1
@@ -588,31 +613,31 @@
 
     if-eqz v1, :cond_1a
 
-    .line 886
+    .line 985
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    .line 887
+    .line 986
     .local v0, "handler":Landroid/os/Handler;
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$12;
 
     invoke-direct {v1, p0, p1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$12;-><init>(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;S)V
 
-    .line 908
+    .line 1014
     const-wide/16 v2, 0x0
 
-    .line 887
+    .line 986
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 926
+    .line 1032
     :goto_19
     return-void
 
-    .line 911
+    .line 1017
     .end local v0    # "handler":Landroid/os/Handler;
     :cond_1a
-    const v1, 0x7f0d00b5
+    const v1, 0x7f090096
 
     invoke-virtual {p0, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getString(I)Ljava/lang/String;
 
@@ -626,21 +651,21 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 913
+    .line 1019
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    .line 914
+    .line 1020
     .restart local v0    # "handler":Landroid/os/Handler;
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$13;
 
     invoke-direct {v1, p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$13;-><init>(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;)V
 
-    .line 924
+    .line 1030
     const-wide/16 v2, 0x3
 
-    .line 914
+    .line 1020
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_19
@@ -650,7 +675,7 @@
     .registers 4
 
     .prologue
-    .line 525
+    .line 570
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jianiv:Landroid/widget/ImageButton;
 
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$3;
@@ -659,7 +684,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 558
+    .line 606
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jiaiv:Landroid/widget/ImageButton;
 
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$4;
@@ -668,7 +693,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 591
+    .line 642
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
 
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentFrequency:[I
@@ -679,14 +704,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setMax(I)V
 
-    .line 592
+    .line 643
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
 
     sget v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentState:I
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 593
+    .line 644
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
 
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$5;
@@ -695,7 +720,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    .line 645
+    .line 705
     return-void
 .end method
 
@@ -705,10 +730,10 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 988
+    .line 1108
     const/4 v0, -0x1
 
-    .line 989
+    .line 1109
     .local v0, "getCurrentI":I
     const/4 v1, 0x0
 
@@ -720,26 +745,26 @@
 
     if-lt v1, v2, :cond_14
 
-    .line 995
+    .line 1115
     :goto_8
     if-eq v0, v5, :cond_13
 
-    .line 996
+    .line 1116
     iget v2, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getIndexFromCenter:I
 
     if-eq v2, v5, :cond_3d
 
-    .line 997
+    .line 1117
     iget v2, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getIndexFromCenter:I
 
     invoke-direct {p0, v2}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->handlerwho(I)V
 
-    .line 1001
+    .line 1121
     :cond_13
     :goto_13
     return-void
 
-    .line 990
+    .line 1110
     :cond_14
     iget-object v2, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
 
@@ -777,19 +802,19 @@
 
     if-eqz v2, :cond_3a
 
-    .line 991
+    .line 1111
     move v0, v1
 
-    .line 992
+    .line 1112
     goto :goto_8
 
-    .line 989
+    .line 1109
     :cond_3a
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
 
-    .line 999
+    .line 1119
     :cond_3d
     add-int/lit8 v2, v0, 0x1
 
@@ -803,28 +828,30 @@
     .param p1, "currentindex"    # I
 
     .prologue
-    .line 929
-    add-int/lit8 v0, p1, -0x1
+    .line 1035
+    const/4 v0, 0x1
+
+    sub-int v0, p1, v0
 
     add-int/lit8 v0, v0, 0x7
 
     rem-int/lit8 p1, v0, 0x7
 
-    .line 930
+    .line 1036
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
 
     aget-object v0, v0, p1
 
     invoke-direct {p0, v0, p1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->which2changeBg(Landroid/widget/Button;I)V
 
-    .line 931
+    .line 1037
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentzl:[S
 
     aget-short v0, v0, p1
 
     invoke-direct {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->connect2Bluetooth(S)V
 
-    .line 932
+    .line 1038
     return-void
 .end method
 
@@ -832,32 +859,32 @@
     .registers 2
 
     .prologue
-    .line 127
+    .line 154
     const/16 v0, 0x32
 
     sput v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentState:I
 
-    .line 128
+    .line 155
     const-string v0, ""
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->message:Ljava/lang/String;
 
-    .line 129
+    .line 156
     const/16 v0, 0x10
 
     iput-short v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->maxStrength:S
 
-    .line 130
+    .line 157
     const/4 v0, 0x4
 
     sput-short v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentStrength:S
 
-    .line 132
+    .line 159
     const/16 v0, 0xf
 
     iput-short v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentTime:S
 
-    .line 133
+    .line 160
     return-void
 .end method
 
@@ -865,7 +892,7 @@
     .registers 57
 
     .prologue
-    .line 137
+    .line 164
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v48
@@ -890,7 +917,7 @@
 
     iput v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
 
-    .line 138
+    .line 165
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v48
@@ -915,7 +942,7 @@
 
     iput v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->height:F
 
-    .line 139
+    .line 166
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -942,7 +969,7 @@
 
     move/from16 v31, v0
 
-    .line 141
+    .line 168
     .local v31, "r":F
     move-object/from16 v0, p0
 
@@ -966,8 +993,8 @@
 
     iput v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
 
-    .line 142
-    const v48, 0x7f070262
+    .line 169
+    const v48, 0x7f0800f3
 
     move-object/from16 v0, p0
 
@@ -975,24 +1002,28 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->findViewById(I)Landroid/view/View;
 
-    move-result-object v48
+    move-result-object v4
 
-    check-cast v48, Landroid/widget/TextView;
+    check-cast v4, Landroid/widget/TextView;
 
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v49
+    move-result-object v48
 
-    const v50, 0x7f0d00cb
+    const v49, 0x7f0900ab
 
-    invoke-virtual/range {v49 .. v50}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual/range {v48 .. v49}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v49
+    move-result-object v48
 
-    invoke-virtual/range {v48 .. v49}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-object v0, v4
 
-    .line 143
-    const v48, 0x7f070263
+    move-object/from16 v1, v48
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 170
+    const v48, 0x7f0800f4
 
     move-object/from16 v0, p0
 
@@ -1000,20 +1031,20 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->findViewById(I)Landroid/view/View;
 
-    move-result-object v48
+    move-result-object v4
 
-    check-cast v48, Landroid/widget/ImageButton;
+    check-cast v4, Landroid/widget/Button;
 
-    move-object/from16 v0, v48
+    move-object v0, v4
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->homeback:Landroid/widget/ImageButton;
+    iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->homeback:Landroid/widget/Button;
 
-    .line 144
+    .line 171
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->homeback:Landroid/widget/ImageButton;
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->homeback:Landroid/widget/Button;
 
     move-object/from16 v48, v0
 
@@ -1021,10 +1052,10 @@
 
     move-object/from16 v1, p0
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 146
-    const v48, 0x7f070169
+    .line 173
+    const v48, 0x7f08008f
 
     move-object/from16 v0, p0
 
@@ -1032,17 +1063,17 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->findViewById(I)Landroid/view/View;
 
-    move-result-object v48
+    move-result-object v4
 
-    check-cast v48, Landroid/widget/RelativeLayout;
+    check-cast v4, Landroid/widget/RelativeLayout;
 
-    move-object/from16 v0, v48
+    move-object v0, v4
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jmrl:Landroid/widget/RelativeLayout;
 
-    .line 148
+    .line 175
     new-instance v25, Landroid/widget/ImageView;
 
     move-object/from16 v0, v25
@@ -1051,10 +1082,11 @@
 
     invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 149
+    .line 177
     .local v25, "mycenteriv":Landroid/widget/ImageView;
     new-instance v5, Landroid/widget/RelativeLayout$LayoutParams;
 
+    .line 178
     const/high16 v48, 0x40000000    # 2.0f
 
     mul-float v48, v48, v31
@@ -1127,36 +1159,43 @@
 
     move/from16 v49, v0
 
-    move/from16 v0, v48
+    .line 177
+    move-object v0, v5
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-direct {v5, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    move/from16 v2, v49
 
-    .line 150
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    .line 179
     .local v5, "centerivrl":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0xe
 
     const/16 v49, -0x1
 
-    move/from16 v0, v48
+    move-object v0, v5
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-virtual {v5, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    move/from16 v2, v49
 
-    .line 151
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 180
     const/16 v48, 0x6
 
     const/16 v49, -0x1
 
-    move/from16 v0, v48
+    move-object v0, v5
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-virtual {v5, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    move/from16 v2, v49
 
-    .line 152
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 181
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -1199,19 +1238,23 @@
 
     move/from16 v0, v48
 
-    iput v0, v5, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+    move-object v1, v5
 
-    .line 153
+    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+
+    .line 182
     move-object/from16 v0, v25
 
-    invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-object v1, v5
 
-    .line 154
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 183
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v48
 
-    const v49, 0x7f0200a4
+    const v49, 0x7f02007c
 
     invoke-static/range {v48 .. v49}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1223,7 +1266,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 156
+    .line 185
     new-instance v48, Landroid/widget/Button;
 
     move-object/from16 v0, v48
@@ -1238,7 +1281,7 @@
 
     iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
 
-    .line 157
+    .line 187
     new-instance v26, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/high16 v48, 0x40000000    # 2.0f
@@ -1329,7 +1372,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 158
+    .line 188
     .local v26, "mycenterrl":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0xe
 
@@ -1343,7 +1386,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 159
+    .line 189
     const/16 v48, 0x6
 
     const/16 v49, -0x1
@@ -1356,7 +1399,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 160
+    .line 190
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -1407,7 +1450,7 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 161
+    .line 191
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
@@ -1420,7 +1463,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 162
+    .line 192
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
@@ -1431,7 +1474,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
 
-    .line 163
+    .line 193
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
@@ -1442,7 +1485,7 @@
 
     move-result-object v49
 
-    const v50, 0x7f0d00ca
+    const v50, 0x7f0900aa
 
     invoke-virtual/range {v49 .. v50}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1450,7 +1493,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 164
+    .line 194
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
@@ -1461,7 +1504,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setTextColor(I)V
 
-    .line 165
+    .line 195
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
@@ -1472,7 +1515,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setGravity(I)V
 
-    .line 166
+    .line 196
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
@@ -1527,18 +1570,18 @@
 
     invoke-virtual/range {v48 .. v52}, Landroid/widget/Button;->setPadding(IIII)V
 
-    .line 167
+    .line 197
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
 
     move-object/from16 v48, v0
 
-    const v49, 0x7f020032
+    const v49, 0x7f02002e
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 168
+    .line 198
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
@@ -1551,7 +1594,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 170
+    .line 200
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jmrl:Landroid/widget/RelativeLayout;
@@ -1564,7 +1607,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 171
+    .line 201
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jmrl:Landroid/widget/RelativeLayout;
@@ -1579,8 +1622,8 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 173
-    const v48, 0x7f07016a
+    .line 203
+    const v48, 0x7f080090
 
     move-object/from16 v0, p0
 
@@ -1588,17 +1631,17 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->findViewById(I)Landroid/view/View;
 
-    move-result-object v48
+    move-result-object v4
 
-    check-cast v48, Landroid/widget/RelativeLayout;
+    check-cast v4, Landroid/widget/RelativeLayout;
 
-    move-object/from16 v0, v48
+    move-object v0, v4
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
 
-    .line 174
+    .line 204
     new-instance v23, Landroid/widget/RelativeLayout$LayoutParams;
 
     move-object/from16 v0, p0
@@ -1623,6 +1666,7 @@
 
     move/from16 v48, v0
 
+    .line 205
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -1645,6 +1689,7 @@
 
     move/from16 v49, v0
 
+    .line 204
     move-object/from16 v0, v23
 
     move/from16 v1, v48
@@ -1653,7 +1698,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 175
+    .line 206
     .local v23, "layoutP":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0xe
 
@@ -1667,7 +1712,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 176
+    .line 207
     const/16 v48, 0xa
 
     const/16 v49, -0x1
@@ -1680,7 +1725,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 177
+    .line 208
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -1709,7 +1754,7 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 179
+    .line 210
     new-instance v19, Landroid/widget/ImageView;
 
     move-object/from16 v0, v19
@@ -1718,7 +1763,7 @@
 
     invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 180
+    .line 211
     .local v19, "iv":Landroid/widget/ImageView;
     const/16 v48, 0xa
 
@@ -1728,14 +1773,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setId(I)V
 
-    .line 182
+    .line 213
     move-object/from16 v0, v19
 
     move-object/from16 v1, v23
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 184
+    .line 215
     new-instance v48, Landroid/widget/Button;
 
     move-object/from16 v0, v48
@@ -1750,43 +1795,49 @@
 
     iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->centerBtn:Landroid/widget/Button;
 
-    .line 185
+    .line 217
     new-instance v4, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/16 v48, 0x28
 
     const/16 v49, 0x28
 
-    move/from16 v0, v48
+    move-object v0, v4
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-direct {v4, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    move/from16 v2, v49
 
-    .line 187
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    .line 219
     .local v4, "centerParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0xe
 
     const/16 v49, -0x1
 
-    move/from16 v0, v48
+    move-object v0, v4
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-virtual {v4, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    move/from16 v2, v49
 
-    .line 188
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 220
     const/16 v48, 0x8
 
     const/16 v49, 0xa
 
-    move/from16 v0, v48
+    move-object v0, v4
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-virtual {v4, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    move/from16 v2, v49
 
-    .line 189
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 221
     const/high16 v48, 0x41a00000    # 20.0f
 
     sub-float v48, v31, v48
@@ -1809,9 +1860,11 @@
 
     move/from16 v0, v48
 
-    iput v0, v4, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
+    move-object v1, v4
 
-    .line 190
+    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
+
+    .line 222
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->centerBtn:Landroid/widget/Button;
@@ -1820,9 +1873,11 @@
 
     move-object/from16 v0, v48
 
-    invoke-virtual {v0, v4}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-object v1, v4
 
-    .line 191
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 223
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->centerBtn:Landroid/widget/Button;
@@ -1833,7 +1888,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
 
-    .line 197
+    .line 228
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -1852,7 +1907,7 @@
 
     aput-object v50, v48, v49
 
-    .line 198
+    .line 230
     new-instance v38, Landroid/widget/RelativeLayout$LayoutParams;
 
     move-object/from16 v0, p0
@@ -1875,7 +1930,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 199
+    .line 231
     .local v38, "rlp8":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x8
 
@@ -1889,7 +1944,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 200
+    .line 232
     const/16 v48, 0xe
 
     const/16 v49, -0x1
@@ -1902,7 +1957,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 201
+    .line 233
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -1919,7 +1974,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 202
+    .line 234
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -1934,7 +1989,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
 
-    .line 203
+    .line 235
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -1949,7 +2004,7 @@
 
     move-result-object v49
 
-    const v50, 0x7f02008d
+    const v50, 0x7f02006b
 
     invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1957,7 +2012,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 205
+    .line 237
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -1974,7 +2029,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 208
+    .line 240
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -1993,7 +2048,7 @@
 
     aput-object v50, v48, v49
 
-    .line 209
+    .line 242
     new-instance v32, Landroid/widget/RelativeLayout$LayoutParams;
 
     move-object/from16 v0, p0
@@ -2016,7 +2071,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 210
+    .line 243
     .local v32, "rlp1":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x6
 
@@ -2030,7 +2085,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 211
+    .line 244
     const/16 v48, 0x7
 
     const/16 v49, 0x9
@@ -2043,7 +2098,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 212
+    .line 245
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
@@ -2110,7 +2165,7 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 213
+    .line 246
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
@@ -2177,7 +2232,7 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
 
-    .line 214
+    .line 247
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -2194,7 +2249,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 215
+    .line 248
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -2209,7 +2264,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
 
-    .line 216
+    .line 249
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -2224,7 +2279,7 @@
 
     move-result-object v49
 
-    const v50, 0x7f02006b
+    const v50, 0x7f020049
 
     invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -2232,7 +2287,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 217
+    .line 250
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -2249,7 +2304,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 220
+    .line 253
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -2268,7 +2323,7 @@
 
     aput-object v50, v48, v49
 
-    .line 221
+    .line 255
     new-instance v33, Landroid/widget/RelativeLayout$LayoutParams;
 
     move-object/from16 v0, p0
@@ -2291,7 +2346,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 222
+    .line 256
     .local v33, "rlp2":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x8
 
@@ -2305,7 +2360,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 223
+    .line 257
     const/16 v48, 0x7
 
     const/16 v49, 0x9
@@ -2318,7 +2373,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 224
+    .line 258
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
@@ -2385,7 +2440,7 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 225
+    .line 259
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
@@ -2452,7 +2507,7 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
 
-    .line 226
+    .line 260
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -2469,7 +2524,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 227
+    .line 261
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -2484,7 +2539,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
 
-    .line 228
+    .line 262
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -2499,7 +2554,7 @@
 
     move-result-object v49
 
-    const v50, 0x7f020070
+    const v50, 0x7f02004e
 
     invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -2507,7 +2562,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 229
+    .line 263
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -2524,7 +2579,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 232
+    .line 266
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -2543,7 +2598,7 @@
 
     aput-object v50, v48, v49
 
-    .line 233
+    .line 268
     new-instance v34, Landroid/widget/RelativeLayout$LayoutParams;
 
     move-object/from16 v0, p0
@@ -2566,7 +2621,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 234
+    .line 269
     .local v34, "rlp3":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x8
 
@@ -2580,7 +2635,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 235
+    .line 270
     const/16 v48, 0x7
 
     const/16 v49, 0x9
@@ -2593,830 +2648,72 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 236
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v48, v0
-
-    div-int/lit8 v48, v48, 0x2
-
-    move/from16 v0, v48
-
-    int-to-float v0, v0
-
-    move/from16 v48, v0
-
-    sub-float v48, v31, v48
-
-    move/from16 v0, v48
-
-    float-to-double v0, v0
-
-    move-wide/from16 v48, v0
-
-    const-wide v50, 0x3fdcb91f3bbba140L    # 0.4487989505128276
-
-    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v50
-
-    mul-double v48, v48, v50
-
-    const-wide/high16 v50, 0x4034000000000000L    # 20.0
-
-    add-double v48, v48, v50
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v50, v0
-
-    div-int/lit8 v50, v50, 0x2
-
-    move/from16 v0, v50
-
-    int-to-double v0, v0
-
-    move-wide/from16 v50, v0
-
-    sub-double v48, v48, v50
-
-    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
-
-    add-double v48, v48, v50
-
-    move-wide/from16 v0, v48
-
-    double-to-int v0, v0
-
-    move/from16 v48, v0
-
-    move/from16 v0, v48
-
-    move-object/from16 v1, v34
-
-    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
-
-    .line 237
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v48, v0
-
-    div-int/lit8 v48, v48, 0x2
-
-    move/from16 v0, v48
-
-    int-to-float v0, v0
-
-    move/from16 v48, v0
-
-    sub-float v48, v31, v48
-
-    move/from16 v0, v48
-
-    float-to-double v0, v0
-
-    move-wide/from16 v48, v0
-
-    const-wide v50, 0x3fdcb91f3bbba140L    # 0.4487989505128276
-
-    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v50
-
-    mul-double v48, v48, v50
-
-    const-wide/high16 v50, 0x4034000000000000L    # 20.0
-
-    add-double v48, v48, v50
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v50, v0
-
-    div-int/lit8 v50, v50, 0x2
-
-    move/from16 v0, v50
-
-    int-to-double v0, v0
-
-    move-wide/from16 v50, v0
-
-    sub-double v48, v48, v50
-
-    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
-
-    add-double v48, v48, v50
-
-    move-wide/from16 v0, v48
-
-    double-to-int v0, v0
-
-    move/from16 v48, v0
-
-    move/from16 v0, v48
-
-    move-object/from16 v1, v34
-
-    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
-
-    .line 238
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x2
-
-    aget-object v48, v48, v49
-
-    move-object/from16 v0, v48
-
-    move-object/from16 v1, v34
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 239
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x2
-
-    aget-object v48, v48, v49
-
-    const/16 v49, 0x3
-
-    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
-
-    .line 240
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x2
-
-    aget-object v48, v48, v49
-
-    invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v49
-
-    const v50, 0x7f020075
-
-    invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v49
-
-    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 241
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x2
-
-    aget-object v48, v48, v49
-
-    move-object/from16 v0, v48
-
-    move-object/from16 v1, p0
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 244
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x3
-
-    new-instance v50, Landroid/widget/Button;
-
-    move-object/from16 v0, v50
-
-    move-object/from16 v1, p0
-
-    invoke-direct {v0, v1}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
-
-    aput-object v50, v48, v49
-
-    .line 245
-    new-instance v35, Landroid/widget/RelativeLayout$LayoutParams;
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v48, v0
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v49, v0
-
-    move-object/from16 v0, v35
-
-    move/from16 v1, v48
-
-    move/from16 v2, v49
-
-    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    .line 246
-    .local v35, "rlp4":Landroid/widget/RelativeLayout$LayoutParams;
-    const/16 v48, 0x8
-
-    const/16 v49, 0x9
-
-    move-object/from16 v0, v35
-
-    move/from16 v1, v48
-
-    move/from16 v2, v49
-
-    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
-
-    .line 247
-    const/16 v48, 0x5
-
-    const/16 v49, 0x9
-
-    move-object/from16 v0, v35
-
-    move/from16 v1, v48
-
-    move/from16 v2, v49
-
-    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
-
-    .line 248
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v48, v0
-
-    div-int/lit8 v48, v48, 0x2
-
-    move/from16 v0, v48
-
-    int-to-float v0, v0
-
-    move/from16 v48, v0
-
-    sub-float v48, v31, v48
-
-    move/from16 v0, v48
-
-    float-to-double v0, v0
-
-    move-wide/from16 v48, v0
-
-    const-wide v50, 0x3fdcb91f3bbba140L    # 0.4487989505128276
-
-    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v50
-
-    mul-double v48, v48, v50
-
-    const-wide/high16 v50, 0x4034000000000000L    # 20.0
-
-    add-double v48, v48, v50
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v50, v0
-
-    div-int/lit8 v50, v50, 0x2
-
-    move/from16 v0, v50
-
-    int-to-double v0, v0
-
-    move-wide/from16 v50, v0
-
-    sub-double v48, v48, v50
-
-    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
-
-    add-double v48, v48, v50
-
-    move-wide/from16 v0, v48
-
-    double-to-int v0, v0
-
-    move/from16 v48, v0
-
-    move/from16 v0, v48
-
-    move-object/from16 v1, v35
-
-    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
-
-    .line 249
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v48, v0
-
-    div-int/lit8 v48, v48, 0x2
-
-    move/from16 v0, v48
-
-    int-to-float v0, v0
-
-    move/from16 v48, v0
-
-    sub-float v48, v31, v48
-
-    move/from16 v0, v48
-
-    float-to-double v0, v0
-
-    move-wide/from16 v48, v0
-
-    const-wide v50, 0x3fdcb91f3bbba140L    # 0.4487989505128276
-
-    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v50
-
-    mul-double v48, v48, v50
-
-    const-wide/high16 v50, 0x4034000000000000L    # 20.0
-
-    add-double v48, v48, v50
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v50, v0
-
-    div-int/lit8 v50, v50, 0x2
-
-    move/from16 v0, v50
-
-    int-to-double v0, v0
-
-    move-wide/from16 v50, v0
-
-    sub-double v48, v48, v50
-
-    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
-
-    add-double v48, v48, v50
-
-    move-wide/from16 v0, v48
-
-    double-to-int v0, v0
-
-    move/from16 v48, v0
-
-    move/from16 v0, v48
-
-    move-object/from16 v1, v35
-
-    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
-
-    .line 250
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x3
-
-    aget-object v48, v48, v49
-
-    move-object/from16 v0, v48
-
-    move-object/from16 v1, v35
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 251
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x3
-
-    aget-object v48, v48, v49
-
-    const/16 v49, 0x4
-
-    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
-
-    .line 252
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x3
-
-    aget-object v48, v48, v49
-
-    invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v49
-
-    const v50, 0x7f02007a
-
-    invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v49
-
-    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 253
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x3
-
-    aget-object v48, v48, v49
-
-    move-object/from16 v0, v48
-
-    move-object/from16 v1, p0
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 256
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x4
-
-    new-instance v50, Landroid/widget/Button;
-
-    move-object/from16 v0, v50
-
-    move-object/from16 v1, p0
-
-    invoke-direct {v0, v1}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
-
-    aput-object v50, v48, v49
-
-    .line 257
-    new-instance v36, Landroid/widget/RelativeLayout$LayoutParams;
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v48, v0
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v49, v0
-
-    move-object/from16 v0, v36
-
-    move/from16 v1, v48
-
-    move/from16 v2, v49
-
-    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    .line 258
-    .local v36, "rlp5":Landroid/widget/RelativeLayout$LayoutParams;
-    const/16 v48, 0x8
-
-    const/16 v49, 0x9
-
-    move-object/from16 v0, v36
-
-    move/from16 v1, v48
-
-    move/from16 v2, v49
-
-    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
-
-    .line 259
-    const/16 v48, 0x5
-
-    const/16 v49, 0x9
-
-    move-object/from16 v0, v36
-
-    move/from16 v1, v48
-
-    move/from16 v2, v49
-
-    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
-
-    .line 260
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v48, v0
-
-    div-int/lit8 v48, v48, 0x2
-
-    move/from16 v0, v48
-
-    int-to-float v0, v0
-
-    move/from16 v48, v0
-
-    sub-float v48, v31, v48
-
-    move/from16 v0, v48
-
-    float-to-double v0, v0
-
-    move-wide/from16 v48, v0
-
-    const-wide v50, 0x3fccb91f3bbba140L    # 0.2243994752564138
-
-    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v50
-
-    mul-double v48, v48, v50
-
-    const-wide/high16 v50, 0x4034000000000000L    # 20.0
-
-    add-double v48, v48, v50
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v50, v0
-
-    div-int/lit8 v50, v50, 0x2
-
-    move/from16 v0, v50
-
-    int-to-double v0, v0
-
-    move-wide/from16 v50, v0
-
-    sub-double v48, v48, v50
-
-    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
-
-    add-double v48, v48, v50
-
-    move-wide/from16 v0, v48
-
-    double-to-int v0, v0
-
-    move/from16 v48, v0
-
-    move/from16 v0, v48
-
-    move-object/from16 v1, v36
-
-    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
-
-    .line 261
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v48, v0
-
-    div-int/lit8 v48, v48, 0x2
-
-    move/from16 v0, v48
-
-    int-to-float v0, v0
-
-    move/from16 v48, v0
-
-    sub-float v48, v31, v48
-
-    move/from16 v0, v48
-
-    float-to-double v0, v0
-
-    move-wide/from16 v48, v0
-
-    const-wide v50, 0x3fccb91f3bbba140L    # 0.2243994752564138
-
-    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v50
-
-    mul-double v48, v48, v50
-
-    const-wide/high16 v50, 0x4034000000000000L    # 20.0
-
-    add-double v48, v48, v50
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v50, v0
-
-    div-int/lit8 v50, v50, 0x2
-
-    move/from16 v0, v50
-
-    int-to-double v0, v0
-
-    move-wide/from16 v50, v0
-
-    sub-double v48, v48, v50
-
-    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
-
-    add-double v48, v48, v50
-
-    move-wide/from16 v0, v48
-
-    double-to-int v0, v0
-
-    move/from16 v48, v0
-
-    move/from16 v0, v48
-
-    move-object/from16 v1, v36
-
-    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
-
-    .line 262
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x4
-
-    aget-object v48, v48, v49
-
-    move-object/from16 v0, v48
-
-    move-object/from16 v1, v36
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 263
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x4
-
-    aget-object v48, v48, v49
-
-    const/16 v49, 0x5
-
-    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
-
-    .line 264
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x4
-
-    aget-object v48, v48, v49
-
-    invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v49
-
-    const v50, 0x7f02007f
-
-    invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v49
-
-    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 265
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x4
-
-    aget-object v48, v48, v49
-
-    move-object/from16 v0, v48
-
-    move-object/from16 v1, p0
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 268
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
-
-    move-object/from16 v48, v0
-
-    const/16 v49, 0x5
-
-    new-instance v50, Landroid/widget/Button;
-
-    move-object/from16 v0, v50
-
-    move-object/from16 v1, p0
-
-    invoke-direct {v0, v1}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
-
-    aput-object v50, v48, v49
-
-    .line 269
-    new-instance v37, Landroid/widget/RelativeLayout$LayoutParams;
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v48, v0
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
-
-    move/from16 v49, v0
-
-    move-object/from16 v0, v37
-
-    move/from16 v1, v48
-
-    move/from16 v2, v49
-
-    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    .line 270
-    .local v37, "rlp6":Landroid/widget/RelativeLayout$LayoutParams;
-    const/16 v48, 0x6
-
-    const/16 v49, 0x9
-
-    move-object/from16 v0, v37
-
-    move/from16 v1, v48
-
-    move/from16 v2, v49
-
-    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
-
     .line 271
-    const/16 v48, 0x5
+    move-object/from16 v0, p0
 
-    const/16 v49, 0x9
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
 
-    move-object/from16 v0, v37
+    move/from16 v48, v0
 
-    move/from16 v1, v48
+    div-int/lit8 v48, v48, 0x2
 
-    move/from16 v2, v49
+    move/from16 v0, v48
 
-    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    int-to-float v0, v0
+
+    move/from16 v48, v0
+
+    sub-float v48, v31, v48
+
+    move/from16 v0, v48
+
+    float-to-double v0, v0
+
+    move-wide/from16 v48, v0
+
+    const-wide v50, 0x3fdcb91f3bbba140L    # 0.4487989505128276
+
+    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v50
+
+    mul-double v48, v48, v50
+
+    const-wide/high16 v50, 0x4034000000000000L    # 20.0
+
+    add-double v48, v48, v50
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v50, v0
+
+    div-int/lit8 v50, v50, 0x2
+
+    move/from16 v0, v50
+
+    int-to-double v0, v0
+
+    move-wide/from16 v50, v0
+
+    sub-double v48, v48, v50
+
+    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
+
+    add-double v48, v48, v50
+
+    move-wide/from16 v0, v48
+
+    double-to-int v0, v0
+
+    move/from16 v48, v0
+
+    move/from16 v0, v48
+
+    move-object/from16 v1, v34
+
+    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
     .line 272
     move-object/from16 v0, p0
@@ -3441,6 +2738,764 @@
 
     move-wide/from16 v48, v0
 
+    const-wide v50, 0x3fdcb91f3bbba140L    # 0.4487989505128276
+
+    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v50
+
+    mul-double v48, v48, v50
+
+    const-wide/high16 v50, 0x4034000000000000L    # 20.0
+
+    add-double v48, v48, v50
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v50, v0
+
+    div-int/lit8 v50, v50, 0x2
+
+    move/from16 v0, v50
+
+    int-to-double v0, v0
+
+    move-wide/from16 v50, v0
+
+    sub-double v48, v48, v50
+
+    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
+
+    add-double v48, v48, v50
+
+    move-wide/from16 v0, v48
+
+    double-to-int v0, v0
+
+    move/from16 v48, v0
+
+    move/from16 v0, v48
+
+    move-object/from16 v1, v34
+
+    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
+
+    .line 273
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x2
+
+    aget-object v48, v48, v49
+
+    move-object/from16 v0, v48
+
+    move-object/from16 v1, v34
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 274
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x2
+
+    aget-object v48, v48, v49
+
+    const/16 v49, 0x3
+
+    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
+
+    .line 275
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x2
+
+    aget-object v48, v48, v49
+
+    invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v49
+
+    const v50, 0x7f020053
+
+    invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v49
+
+    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 276
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x2
+
+    aget-object v48, v48, v49
+
+    move-object/from16 v0, v48
+
+    move-object/from16 v1, p0
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 279
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x3
+
+    new-instance v50, Landroid/widget/Button;
+
+    move-object/from16 v0, v50
+
+    move-object/from16 v1, p0
+
+    invoke-direct {v0, v1}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
+
+    aput-object v50, v48, v49
+
+    .line 281
+    new-instance v35, Landroid/widget/RelativeLayout$LayoutParams;
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v48, v0
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v49, v0
+
+    move-object/from16 v0, v35
+
+    move/from16 v1, v48
+
+    move/from16 v2, v49
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    .line 282
+    .local v35, "rlp4":Landroid/widget/RelativeLayout$LayoutParams;
+    const/16 v48, 0x8
+
+    const/16 v49, 0x9
+
+    move-object/from16 v0, v35
+
+    move/from16 v1, v48
+
+    move/from16 v2, v49
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 283
+    const/16 v48, 0x5
+
+    const/16 v49, 0x9
+
+    move-object/from16 v0, v35
+
+    move/from16 v1, v48
+
+    move/from16 v2, v49
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 284
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v48, v0
+
+    div-int/lit8 v48, v48, 0x2
+
+    move/from16 v0, v48
+
+    int-to-float v0, v0
+
+    move/from16 v48, v0
+
+    sub-float v48, v31, v48
+
+    move/from16 v0, v48
+
+    float-to-double v0, v0
+
+    move-wide/from16 v48, v0
+
+    const-wide v50, 0x3fdcb91f3bbba140L    # 0.4487989505128276
+
+    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v50
+
+    mul-double v48, v48, v50
+
+    const-wide/high16 v50, 0x4034000000000000L    # 20.0
+
+    add-double v48, v48, v50
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v50, v0
+
+    div-int/lit8 v50, v50, 0x2
+
+    move/from16 v0, v50
+
+    int-to-double v0, v0
+
+    move-wide/from16 v50, v0
+
+    sub-double v48, v48, v50
+
+    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
+
+    add-double v48, v48, v50
+
+    move-wide/from16 v0, v48
+
+    double-to-int v0, v0
+
+    move/from16 v48, v0
+
+    move/from16 v0, v48
+
+    move-object/from16 v1, v35
+
+    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
+
+    .line 285
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v48, v0
+
+    div-int/lit8 v48, v48, 0x2
+
+    move/from16 v0, v48
+
+    int-to-float v0, v0
+
+    move/from16 v48, v0
+
+    sub-float v48, v31, v48
+
+    move/from16 v0, v48
+
+    float-to-double v0, v0
+
+    move-wide/from16 v48, v0
+
+    const-wide v50, 0x3fdcb91f3bbba140L    # 0.4487989505128276
+
+    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v50
+
+    mul-double v48, v48, v50
+
+    const-wide/high16 v50, 0x4034000000000000L    # 20.0
+
+    add-double v48, v48, v50
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v50, v0
+
+    div-int/lit8 v50, v50, 0x2
+
+    move/from16 v0, v50
+
+    int-to-double v0, v0
+
+    move-wide/from16 v50, v0
+
+    sub-double v48, v48, v50
+
+    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
+
+    add-double v48, v48, v50
+
+    move-wide/from16 v0, v48
+
+    double-to-int v0, v0
+
+    move/from16 v48, v0
+
+    move/from16 v0, v48
+
+    move-object/from16 v1, v35
+
+    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
+
+    .line 286
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x3
+
+    aget-object v48, v48, v49
+
+    move-object/from16 v0, v48
+
+    move-object/from16 v1, v35
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 287
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x3
+
+    aget-object v48, v48, v49
+
+    const/16 v49, 0x4
+
+    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
+
+    .line 288
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x3
+
+    aget-object v48, v48, v49
+
+    invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v49
+
+    const v50, 0x7f020058
+
+    invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v49
+
+    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 289
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x3
+
+    aget-object v48, v48, v49
+
+    move-object/from16 v0, v48
+
+    move-object/from16 v1, p0
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 292
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x4
+
+    new-instance v50, Landroid/widget/Button;
+
+    move-object/from16 v0, v50
+
+    move-object/from16 v1, p0
+
+    invoke-direct {v0, v1}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
+
+    aput-object v50, v48, v49
+
+    .line 294
+    new-instance v36, Landroid/widget/RelativeLayout$LayoutParams;
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v48, v0
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v49, v0
+
+    move-object/from16 v0, v36
+
+    move/from16 v1, v48
+
+    move/from16 v2, v49
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    .line 295
+    .local v36, "rlp5":Landroid/widget/RelativeLayout$LayoutParams;
+    const/16 v48, 0x8
+
+    const/16 v49, 0x9
+
+    move-object/from16 v0, v36
+
+    move/from16 v1, v48
+
+    move/from16 v2, v49
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 296
+    const/16 v48, 0x5
+
+    const/16 v49, 0x9
+
+    move-object/from16 v0, v36
+
+    move/from16 v1, v48
+
+    move/from16 v2, v49
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 297
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v48, v0
+
+    div-int/lit8 v48, v48, 0x2
+
+    move/from16 v0, v48
+
+    int-to-float v0, v0
+
+    move/from16 v48, v0
+
+    sub-float v48, v31, v48
+
+    move/from16 v0, v48
+
+    float-to-double v0, v0
+
+    move-wide/from16 v48, v0
+
+    const-wide v50, 0x3fccb91f3bbba140L    # 0.2243994752564138
+
+    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v50
+
+    mul-double v48, v48, v50
+
+    const-wide/high16 v50, 0x4034000000000000L    # 20.0
+
+    add-double v48, v48, v50
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v50, v0
+
+    div-int/lit8 v50, v50, 0x2
+
+    move/from16 v0, v50
+
+    int-to-double v0, v0
+
+    move-wide/from16 v50, v0
+
+    sub-double v48, v48, v50
+
+    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
+
+    add-double v48, v48, v50
+
+    move-wide/from16 v0, v48
+
+    double-to-int v0, v0
+
+    move/from16 v48, v0
+
+    move/from16 v0, v48
+
+    move-object/from16 v1, v36
+
+    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+
+    .line 298
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v48, v0
+
+    div-int/lit8 v48, v48, 0x2
+
+    move/from16 v0, v48
+
+    int-to-float v0, v0
+
+    move/from16 v48, v0
+
+    sub-float v48, v31, v48
+
+    move/from16 v0, v48
+
+    float-to-double v0, v0
+
+    move-wide/from16 v48, v0
+
+    const-wide v50, 0x3fccb91f3bbba140L    # 0.2243994752564138
+
+    invoke-static/range {v50 .. v51}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v50
+
+    mul-double v48, v48, v50
+
+    const-wide/high16 v50, 0x4034000000000000L    # 20.0
+
+    add-double v48, v48, v50
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v50, v0
+
+    div-int/lit8 v50, v50, 0x2
+
+    move/from16 v0, v50
+
+    int-to-double v0, v0
+
+    move-wide/from16 v50, v0
+
+    sub-double v48, v48, v50
+
+    const-wide/high16 v50, 0x3fe0000000000000L    # 0.5
+
+    add-double v48, v48, v50
+
+    move-wide/from16 v0, v48
+
+    double-to-int v0, v0
+
+    move/from16 v48, v0
+
+    move/from16 v0, v48
+
+    move-object/from16 v1, v36
+
+    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
+
+    .line 299
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x4
+
+    aget-object v48, v48, v49
+
+    move-object/from16 v0, v48
+
+    move-object/from16 v1, v36
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 300
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x4
+
+    aget-object v48, v48, v49
+
+    const/16 v49, 0x5
+
+    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
+
+    .line 301
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x4
+
+    aget-object v48, v48, v49
+
+    invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v49
+
+    const v50, 0x7f02005d
+
+    invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v49
+
+    invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 302
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x4
+
+    aget-object v48, v48, v49
+
+    move-object/from16 v0, v48
+
+    move-object/from16 v1, p0
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 305
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
+
+    move-object/from16 v48, v0
+
+    const/16 v49, 0x5
+
+    new-instance v50, Landroid/widget/Button;
+
+    move-object/from16 v0, v50
+
+    move-object/from16 v1, p0
+
+    invoke-direct {v0, v1}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
+
+    aput-object v50, v48, v49
+
+    .line 307
+    new-instance v37, Landroid/widget/RelativeLayout$LayoutParams;
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v48, v0
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v49, v0
+
+    move-object/from16 v0, v37
+
+    move/from16 v1, v48
+
+    move/from16 v2, v49
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    .line 308
+    .local v37, "rlp6":Landroid/widget/RelativeLayout$LayoutParams;
+    const/16 v48, 0x6
+
+    const/16 v49, 0x9
+
+    move-object/from16 v0, v37
+
+    move/from16 v1, v48
+
+    move/from16 v2, v49
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 309
+    const/16 v48, 0x5
+
+    const/16 v49, 0x9
+
+    move-object/from16 v0, v37
+
+    move/from16 v1, v48
+
+    move/from16 v2, v49
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 310
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
+
+    move/from16 v48, v0
+
+    div-int/lit8 v48, v48, 0x2
+
+    move/from16 v0, v48
+
+    int-to-float v0, v0
+
+    move/from16 v48, v0
+
+    sub-float v48, v31, v48
+
+    move/from16 v0, v48
+
+    float-to-double v0, v0
+
+    move-wide/from16 v48, v0
+
     const-wide v50, 0x3fecb91f3bbba140L    # 0.8975979010256552
 
     invoke-static/range {v50 .. v51}, Ljava/lang/Math;->cos(D)D
@@ -3485,7 +3540,7 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 273
+    .line 311
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btnWidth:I
@@ -3552,7 +3607,7 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    .line 274
+    .line 312
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -3569,7 +3624,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 275
+    .line 313
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -3584,7 +3639,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setId(I)V
 
-    .line 276
+    .line 314
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -3599,7 +3654,7 @@
 
     move-result-object v49
 
-    const v50, 0x7f020084
+    const v50, 0x7f020062
 
     invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -3607,7 +3662,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 277
+    .line 315
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
@@ -3624,17 +3679,20 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 295
+    .line 330
     new-instance v6, Landroid/widget/ImageView;
 
-    move-object/from16 v0, p0
+    move-object v0, v6
 
-    invoke-direct {v6, v0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    move-object/from16 v1, p0
 
-    .line 296
+    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    .line 332
     .local v6, "circleiv":Landroid/widget/ImageView;
     new-instance v7, Landroid/widget/RelativeLayout$LayoutParams;
 
+    .line 333
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -3679,36 +3737,43 @@
 
     move/from16 v49, v0
 
-    move/from16 v0, v48
+    .line 332
+    move-object v0, v7
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-direct {v7, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    move/from16 v2, v49
 
-    .line 297
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    .line 334
     .local v7, "circlerl":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0xe
 
     const/16 v49, -0x1
 
-    move/from16 v0, v48
+    move-object v0, v7
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-virtual {v7, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    move/from16 v2, v49
 
-    .line 298
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 335
     const/16 v48, 0x6
 
     const/16 v49, -0x1
 
-    move/from16 v0, v48
+    move-object v0, v7
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-virtual {v7, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    move/from16 v2, v49
 
-    .line 299
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 336
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -3737,27 +3802,31 @@
 
     move/from16 v0, v48
 
-    iput v0, v7, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+    move-object v1, v7
 
-    .line 300
+    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+
+    .line 337
     invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 301
+    .line 338
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v48
 
-    const v49, 0x7f0200a1
+    const v49, 0x7f020079
 
     invoke-static/range {v48 .. v49}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v48
 
-    move-object/from16 v0, v48
+    move-object v0, v6
 
-    invoke-virtual {v6, v0}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    move-object/from16 v1, v48
 
-    .line 303
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 340
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
@@ -3766,9 +3835,11 @@
 
     move-object/from16 v0, v48
 
-    invoke-virtual {v0, v6}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+    move-object v1, v6
 
-    .line 304
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+
+    .line 341
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
@@ -3781,7 +3852,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 305
+    .line 342
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
@@ -3796,7 +3867,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 306
+    .line 343
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
@@ -3815,7 +3886,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 307
+    .line 344
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
@@ -3834,7 +3905,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 308
+    .line 345
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
@@ -3853,7 +3924,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 309
+    .line 346
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
@@ -3872,7 +3943,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 310
+    .line 347
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
@@ -3891,7 +3962,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 311
+    .line 348
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
@@ -3910,7 +3981,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 312
+    .line 349
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
@@ -3929,7 +4000,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 315
+    .line 352
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -3956,9 +4027,9 @@
 
     move/from16 v46, v0
 
-    .line 316
+    .line 353
     .local v46, "timewidth":I
-    const v48, 0x7f07016b
+    const v48, 0x7f080091
 
     move-object/from16 v0, p0
 
@@ -3966,17 +4037,18 @@
 
     invoke-virtual {v0, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->findViewById(I)Landroid/view/View;
 
-    move-result-object v48
+    move-result-object v4
 
-    check-cast v48, Landroid/widget/RelativeLayout;
+    .end local v4    # "centerParams":Landroid/widget/RelativeLayout$LayoutParams;
+    check-cast v4, Landroid/widget/RelativeLayout;
 
-    move-object/from16 v0, v48
+    move-object v0, v4
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layoutbottom:Landroid/widget/RelativeLayout;
 
-    .line 317
+    .line 354
     new-instance v45, Landroid/widget/RelativeLayout;
 
     move-object/from16 v0, v45
@@ -3985,7 +4057,7 @@
 
     invoke-direct {v0, v1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 318
+    .line 355
     .local v45, "timerl":Landroid/widget/RelativeLayout;
     const/16 v48, 0xb
 
@@ -3995,7 +4067,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setId(I)V
 
-    .line 319
+    .line 357
     new-instance v39, Landroid/widget/RelativeLayout$LayoutParams;
 
     add-int/lit8 v48, v46, 0x2
@@ -4010,7 +4082,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 320
+    .line 358
     .local v39, "rlpll":Landroid/widget/RelativeLayout$LayoutParams;
     move-object/from16 v0, v45
 
@@ -4018,12 +4090,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 321
+    .line 359
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v48
 
-    const v49, 0x7f0201d7
+    const v49, 0x7f0200f5
 
     invoke-static/range {v48 .. v49}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -4035,7 +4107,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 322
+    .line 360
     new-instance v16, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$1;
 
     move-object/from16 v0, v16
@@ -4044,7 +4116,7 @@
 
     invoke-direct {v0, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$1;-><init>(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;)V
 
-    .line 334
+    .line 373
     .local v16, "handler":Landroid/os/Handler;
     new-instance v48, Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;
 
@@ -4068,12 +4140,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->view:Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;
+    iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->view:Landroid/view/View;
 
-    .line 335
+    .line 374
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->view:Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->view:Landroid/view/View;
 
     move-object/from16 v48, v0
 
@@ -4085,9 +4157,9 @@
 
     invoke-direct {v0, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$2;-><init>(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;)V
 
-    invoke-virtual/range {v48 .. v49}, Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual/range {v48 .. v49}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 347
+    .line 386
     new-instance v48, Landroid/widget/TextView;
 
     move-object/from16 v0, v48
@@ -4102,7 +4174,7 @@
 
     iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->timetv:Landroid/widget/TextView;
 
-    .line 348
+    .line 388
     new-instance v47, Landroid/widget/RelativeLayout$LayoutParams;
 
     move-object/from16 v0, p0
@@ -4131,7 +4203,7 @@
 
     invoke-direct/range {v47 .. v49}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 351
+    .line 390
     .local v47, "tvrlp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x3
 
@@ -4139,7 +4211,7 @@
 
     invoke-virtual/range {v47 .. v49}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 352
+    .line 391
     invoke-virtual/range {v45 .. v45}, Landroid/widget/RelativeLayout;->getWidth()I
 
     move-result v48
@@ -4170,7 +4242,7 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    .line 353
+    .line 392
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->timetv:Landroid/widget/TextView;
@@ -4183,7 +4255,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 354
+    .line 393
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->timetv:Landroid/widget/TextView;
@@ -4194,18 +4266,18 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 357
+    .line 395
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->timetv:Landroid/widget/TextView;
 
     move-object/from16 v48, v0
 
-    const v49, 0x7f0201cd
+    const v49, 0x7f0200ed
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 358
+    .line 396
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->timetv:Landroid/widget/TextView;
@@ -4218,7 +4290,7 @@
 
     move-result-object v50
 
-    const v51, 0x7f0d00d0
+    const v51, 0x7f0900b0
 
     invoke-virtual/range {v50 .. v51}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4230,6 +4302,7 @@
 
     invoke-direct/range {v49 .. v50}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 397
     const-string v50, " "
 
     invoke-virtual/range {v49 .. v50}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -4238,11 +4311,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->view:Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->view:Landroid/view/View;
 
-    move-object/from16 v50, v0
+    move-object v4, v0
 
-    invoke-virtual/range {v50 .. v50}, Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;->currentTime()I
+    check-cast v4, Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;
+
+    invoke-virtual {v4}, Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;->currentTime()I
 
     move-result v50
 
@@ -4254,7 +4329,7 @@
 
     move-result-object v50
 
-    const v51, 0x7f0d00da
+    const v51, 0x7f0900b9
 
     invoke-virtual/range {v50 .. v51}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4268,9 +4343,10 @@
 
     move-result-object v49
 
+    .line 396
     invoke-virtual/range {v48 .. v49}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 359
+    .line 398
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->timetv:Landroid/widget/TextView;
@@ -4291,10 +4367,10 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 360
+    .line 399
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->view:Lcom/jiuzhansoft/massage/subActivity/homeview/MyTimeView;
+    iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->view:Landroid/view/View;
 
     move-object/from16 v48, v0
 
@@ -4308,7 +4384,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;II)V
 
-    .line 363
+    .line 402
     new-instance v41, Landroid/widget/RelativeLayout;
 
     move-object/from16 v0, v41
@@ -4317,7 +4393,7 @@
 
     invoke-direct {v0, v1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 364
+    .line 404
     .local v41, "strengthRl":Landroid/widget/RelativeLayout;
     new-instance v42, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -4333,7 +4409,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 367
+    .line 406
     .local v42, "strrlp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x1
 
@@ -4347,7 +4423,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 368
+    .line 407
     const/16 v48, 0x6
 
     const/16 v49, 0xb
@@ -4360,7 +4436,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 369
+    .line 408
     const/16 v48, 0xa
 
     move/from16 v0, v48
@@ -4369,7 +4445,7 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    .line 371
+    .line 410
     const/16 v48, 0x19
 
     move/from16 v0, v48
@@ -4378,10 +4454,10 @@
 
     iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 372
+    .line 411
     invoke-virtual/range {v41 .. v42}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 373
+    .line 412
     const/16 v48, 0xd
 
     move-object/from16 v0, v41
@@ -4390,7 +4466,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setId(I)V
 
-    .line 375
+    .line 414
     new-instance v43, Landroid/widget/TextView;
 
     move-object/from16 v0, v43
@@ -4399,7 +4475,7 @@
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 376
+    .line 415
     .local v43, "strtv":Landroid/widget/TextView;
     const/16 v48, 0xc
 
@@ -4409,7 +4485,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setId(I)V
 
-    .line 377
+    .line 417
     new-instance v44, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/16 v48, -0x1
@@ -4424,16 +4500,16 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 378
+    .line 418
     .local v44, "strtvrlp":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual/range {v43 .. v44}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 379
+    .line 419
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getResources()Landroid/content/res/Resources;
 
     move-result-object v48
 
-    const v49, 0x7f0d00ce
+    const v49, 0x7f0900ae
 
     invoke-virtual/range {v48 .. v49}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4445,7 +4521,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 380
+    .line 420
     const/16 v48, 0xff
 
     const/16 v49, 0x0
@@ -4464,14 +4540,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 381
+    .line 421
     move-object/from16 v0, v41
 
     move-object/from16 v1, v43
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 383
+    .line 423
     new-instance v48, Landroid/widget/ImageButton;
 
     move-object/from16 v0, v48
@@ -4486,7 +4562,7 @@
 
     iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jianiv:Landroid/widget/ImageButton;
 
-    .line 384
+    .line 424
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -4509,7 +4585,7 @@
 
     move/from16 v21, v0
 
-    .line 387
+    .line 427
     .local v21, "jianW":I
     new-instance v22, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -4521,7 +4597,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 388
+    .line 428
     .local v22, "jianivrlp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x3
 
@@ -4535,7 +4611,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 389
+    .line 429
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jianiv:Landroid/widget/ImageButton;
@@ -4548,7 +4624,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 390
+    .line 430
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jianiv:Landroid/widget/ImageButton;
@@ -4559,7 +4635,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/ImageButton;->setId(I)V
 
-    .line 391
+    .line 431
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jianiv:Landroid/widget/ImageButton;
@@ -4570,7 +4646,7 @@
 
     move-result-object v49
 
-    const v50, 0x7f0201da
+    const v50, 0x7f0200f8
 
     invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -4578,7 +4654,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/ImageButton;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 393
+    .line 433
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jianiv:Landroid/widget/ImageButton;
@@ -4591,7 +4667,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 395
+    .line 435
     new-instance v48, Landroid/widget/TextView;
 
     move-object/from16 v0, v48
@@ -4606,7 +4682,7 @@
 
     iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currenttv:Landroid/widget/TextView;
 
-    .line 396
+    .line 436
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -4625,42 +4701,52 @@
 
     move-wide/from16 v0, v48
 
-    double-to-int v8, v0
+    double-to-int v0, v0
 
-    .line 397
+    move v8, v0
+
+    .line 438
     .local v8, "currentTvW":I
     new-instance v9, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/16 v48, -0x2
 
-    move/from16 v0, v48
+    move-object v0, v9
 
-    invoke-direct {v9, v8, v0}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    move v1, v8
 
-    .line 398
+    move/from16 v2, v48
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    .line 439
     .local v9, "currenttvrlp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x3
 
     const/16 v49, 0xc
 
-    move/from16 v0, v48
+    move-object v0, v9
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-virtual {v9, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    move/from16 v2, v49
 
-    .line 399
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 440
     const/16 v48, 0x1
 
     const/16 v49, 0xe
 
-    move/from16 v0, v48
+    move-object v0, v9
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-virtual {v9, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    move/from16 v2, v49
 
-    .line 400
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 441
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currenttv:Landroid/widget/TextView;
@@ -4669,9 +4755,11 @@
 
     move-object/from16 v0, v48
 
-    invoke-virtual {v0, v9}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-object v1, v9
 
-    .line 401
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 442
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currenttv:Landroid/widget/TextView;
@@ -4682,18 +4770,18 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/TextView;->setId(I)V
 
-    .line 402
+    .line 443
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currenttv:Landroid/widget/TextView;
 
     move-object/from16 v48, v0
 
-    const v49, 0x7f0201cd
+    const v49, 0x7f0200ed
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 403
+    .line 444
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currenttv:Landroid/widget/TextView;
@@ -4722,7 +4810,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 404
+    .line 445
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currenttv:Landroid/widget/TextView;
@@ -4733,7 +4821,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 405
+    .line 446
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currenttv:Landroid/widget/TextView;
@@ -4750,7 +4838,7 @@
 
     invoke-virtual/range {v48 .. v52}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 406
+    .line 447
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currenttv:Landroid/widget/TextView;
@@ -4761,7 +4849,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 407
+    .line 448
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currenttv:Landroid/widget/TextView;
@@ -4774,7 +4862,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 409
+    .line 450
     new-instance v48, Landroid/widget/ImageButton;
 
     move-object/from16 v0, v48
@@ -4789,7 +4877,7 @@
 
     iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jiaiv:Landroid/widget/ImageButton;
 
-    .line 410
+    .line 452
     new-instance v20, Landroid/widget/RelativeLayout$LayoutParams;
 
     move-object/from16 v0, v20
@@ -4800,7 +4888,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 411
+    .line 453
     .local v20, "jiaivrlp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x3
 
@@ -4814,7 +4902,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 412
+    .line 454
     const/16 v48, 0x1
 
     const/16 v49, 0xf
@@ -4827,7 +4915,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 413
+    .line 455
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jiaiv:Landroid/widget/ImageButton;
@@ -4840,7 +4928,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 414
+    .line 456
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jiaiv:Landroid/widget/ImageButton;
@@ -4851,7 +4939,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/ImageButton;->setId(I)V
 
-    .line 415
+    .line 457
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jiaiv:Landroid/widget/ImageButton;
@@ -4862,7 +4950,7 @@
 
     move-result-object v49
 
-    const v50, 0x7f0201d9
+    const v50, 0x7f0200f7
 
     invoke-static/range {v49 .. v50}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -4870,7 +4958,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/ImageButton;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 417
+    .line 459
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->jiaiv:Landroid/widget/ImageButton;
@@ -4883,14 +4971,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 420
+    .line 462
     new-instance v13, Landroid/widget/RelativeLayout;
 
-    move-object/from16 v0, p0
+    move-object v0, v13
 
-    invoke-direct {v13, v0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+    move-object/from16 v1, p0
 
-    .line 421
+    invoke-direct {v0, v1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+
+    .line 464
     .local v13, "frequencyRl":Landroid/widget/RelativeLayout;
     new-instance v14, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -4898,60 +4988,72 @@
 
     const/16 v49, -0x2
 
-    move/from16 v0, v48
+    move-object v0, v14
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-direct {v14, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    move/from16 v2, v49
 
-    .line 424
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    .line 467
     .local v14, "frerlp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x3
 
     const/16 v49, 0xe
 
-    move/from16 v0, v48
+    move-object v0, v14
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-virtual {v14, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    move/from16 v2, v49
 
-    .line 425
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 468
     const/16 v48, 0x5
 
     const/16 v49, 0xf
 
-    move/from16 v0, v48
+    move-object v0, v14
 
-    move/from16 v1, v49
+    move/from16 v1, v48
 
-    invoke-virtual {v14, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    move/from16 v2, v49
 
-    .line 426
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    .line 469
     const/16 v48, 0x14
 
     move/from16 v0, v48
 
-    iput v0, v14, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+    move-object v1, v14
 
-    .line 427
+    iput v0, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+
+    .line 470
     invoke-virtual {v13, v14}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 428
+    .line 471
     const/16 v48, 0x11
 
-    move/from16 v0, v48
+    move-object v0, v13
 
-    invoke-virtual {v13, v0}, Landroid/widget/RelativeLayout;->setId(I)V
+    move/from16 v1, v48
 
-    .line 430
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setId(I)V
+
+    .line 473
     new-instance v15, Landroid/widget/TextView;
 
-    move-object/from16 v0, p0
+    move-object v0, v15
 
-    invoke-direct {v15, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    move-object/from16 v1, p0
 
-    .line 431
+    invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 474
     .local v15, "fretv":Landroid/widget/TextView;
     new-instance v48, Landroid/view/ViewGroup$LayoutParams;
 
@@ -4961,26 +5063,30 @@
 
     invoke-direct/range {v48 .. v50}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    move-object/from16 v0, v48
+    move-object v0, v15
 
-    invoke-virtual {v15, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-object/from16 v1, v48
 
-    .line 432
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 475
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getResources()Landroid/content/res/Resources;
 
     move-result-object v48
 
-    const v49, 0x7f0d00d1
+    const v49, 0x7f0900b1
 
     invoke-virtual/range {v48 .. v49}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v48
 
-    move-object/from16 v0, v48
+    move-object v0, v15
 
-    invoke-virtual {v15, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-object/from16 v1, v48
 
-    .line 433
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 476
     const/16 v48, 0xff
 
     const/16 v49, 0x0
@@ -4993,18 +5099,22 @@
 
     move-result v48
 
-    move/from16 v0, v48
+    move-object v0, v15
 
-    invoke-virtual {v15, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    move/from16 v1, v48
 
-    .line 434
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 477
     const/16 v48, 0x12
 
-    move/from16 v0, v48
+    move-object v0, v15
 
-    invoke-virtual {v15, v0}, Landroid/widget/TextView;->setId(I)V
+    move/from16 v1, v48
 
-    .line 436
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setId(I)V
+
+    .line 479
     new-instance v48, Landroid/widget/SeekBar;
 
     move-object/from16 v0, v48
@@ -5019,18 +5129,20 @@
 
     iput-object v0, v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
 
-    .line 437
+    .line 481
     new-instance v40, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/16 v48, -0x2
 
     move-object/from16 v0, v40
 
-    move/from16 v1, v48
+    move v1, v8
 
-    invoke-direct {v0, v8, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    move/from16 v2, v48
 
-    .line 438
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    .line 482
     .local v40, "seekbarrlp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x3
 
@@ -5044,7 +5156,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 439
+    .line 483
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
@@ -5057,7 +5169,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 440
+    .line 484
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
@@ -5068,7 +5180,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/SeekBar;->setId(I)V
 
-    .line 443
+    .line 486
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
@@ -5091,7 +5203,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/SeekBar;->setThumb(Landroid/graphics/drawable/Drawable;)V
 
-    .line 444
+    .line 487
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
@@ -5102,7 +5214,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/SeekBar;->setThumbOffset(I)V
 
-    .line 445
+    .line 488
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
@@ -5115,7 +5227,7 @@
 
     check-cast v30, Landroid/graphics/drawable/LayerDrawable;
 
-    .line 446
+    .line 489
     .local v30, "progressDrawable":Landroid/graphics/drawable/LayerDrawable;
     invoke-virtual/range {v30 .. v30}, Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
 
@@ -5127,12 +5239,12 @@
 
     move-object/from16 v28, v0
 
-    .line 447
+    .line 490
     .local v28, "outDrawables":[Landroid/graphics/drawable/Drawable;
     const/16 v18, 0x0
 
     .local v18, "i":I
-    :goto_106f
+    :goto_1092
     invoke-virtual/range {v30 .. v30}, Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
 
     move-result v48
@@ -5141,9 +5253,9 @@
 
     move/from16 v1, v48
 
-    if-lt v0, v1, :cond_117f
+    if-lt v0, v1, :cond_11af
 
-    .line 466
+    .line 509
     new-instance v30, Landroid/graphics/drawable/LayerDrawable;
 
     .end local v30    # "progressDrawable":Landroid/graphics/drawable/LayerDrawable;
@@ -5153,7 +5265,7 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
-    .line 467
+    .line 510
     .restart local v30    # "progressDrawable":Landroid/graphics/drawable/LayerDrawable;
     move-object/from16 v0, p0
 
@@ -5167,14 +5279,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 469
+    .line 512
     new-instance v12, Landroid/widget/TextView;
 
-    move-object/from16 v0, p0
+    move-object v0, v12
 
-    invoke-direct {v12, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    move-object/from16 v1, p0
 
-    .line 470
+    invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 514
     .local v12, "freltv":Landroid/widget/TextView;
     new-instance v24, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -5190,7 +5304,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 471
+    .line 515
     .local v24, "ltvrlp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x3
 
@@ -5204,48 +5318,58 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 472
-    move-object/from16 v0, v24
+    .line 516
+    move-object v0, v12
 
-    invoke-virtual {v12, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-object/from16 v1, v24
 
-    .line 473
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 517
     const/16 v48, 0x14
 
-    move/from16 v0, v48
+    move-object v0, v12
 
-    invoke-virtual {v12, v0}, Landroid/widget/TextView;->setId(I)V
+    move/from16 v1, v48
 
-    .line 474
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setId(I)V
+
+    .line 518
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getResources()Landroid/content/res/Resources;
 
     move-result-object v48
 
-    const v49, 0x7f0d00db
+    const v49, 0x7f0900ba
 
     invoke-virtual/range {v48 .. v49}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v48
 
-    move-object/from16 v0, v48
+    move-object v0, v12
 
-    invoke-virtual {v12, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-object/from16 v1, v48
 
-    .line 475
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 519
     const/16 v48, -0x1
 
-    move/from16 v0, v48
+    move-object v0, v12
 
-    invoke-virtual {v12, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    move/from16 v1, v48
 
-    .line 477
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 521
     new-instance v11, Landroid/widget/TextView;
 
-    move-object/from16 v0, p0
+    move-object v0, v11
 
-    invoke-direct {v11, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    move-object/from16 v1, p0
 
-    .line 478
+    invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 523
     .local v11, "frehtv":Landroid/widget/TextView;
     new-instance v17, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -5261,7 +5385,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 479
+    .line 524
     .local v17, "htvrlp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v48, 0x3
 
@@ -5275,7 +5399,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 480
+    .line 525
     const/16 v48, 0x1
 
     const/16 v49, 0x14
@@ -5288,7 +5412,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 481
+    .line 526
     const/16 v48, 0x7
 
     const/16 v49, 0x13
@@ -5301,73 +5425,87 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 482
-    move-object/from16 v0, v17
+    .line 527
+    move-object v0, v11
 
-    invoke-virtual {v11, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-object/from16 v1, v17
 
-    .line 483
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 528
     const/16 v48, 0x5
 
-    move/from16 v0, v48
+    move-object v0, v11
 
-    invoke-virtual {v11, v0}, Landroid/widget/TextView;->setGravity(I)V
+    move/from16 v1, v48
 
-    .line 484
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
+
+    .line 529
     const/16 v48, 0x15
 
-    move/from16 v0, v48
+    move-object v0, v11
 
-    invoke-virtual {v11, v0}, Landroid/widget/TextView;->setId(I)V
+    move/from16 v1, v48
 
-    .line 485
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setId(I)V
+
+    .line 530
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getResources()Landroid/content/res/Resources;
 
     move-result-object v48
 
-    const v49, 0x7f0d00dc
+    const v49, 0x7f0900bb
 
     invoke-virtual/range {v48 .. v49}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v48
 
-    move-object/from16 v0, v48
+    move-object v0, v11
 
-    invoke-virtual {v11, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-object/from16 v1, v48
 
-    .line 486
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 531
     const/16 v48, -0x1
 
-    move/from16 v0, v48
+    move-object v0, v11
 
-    invoke-virtual {v11, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    move/from16 v1, v48
 
-    .line 487
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 532
     invoke-virtual {v13, v15}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 488
+    .line 533
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->freseekbar:Landroid/widget/SeekBar;
 
     move-object/from16 v48, v0
 
-    move-object/from16 v0, v48
+    move-object v0, v13
 
-    invoke-virtual {v13, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+    move-object/from16 v1, v48
 
-    .line 489
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+
+    .line 534
     invoke-virtual {v13, v12}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 490
+    .line 535
     invoke-virtual {v13, v11}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 492
+    .line 537
     move-object/from16 v0, v41
 
-    invoke-virtual {v0, v13}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+    move-object v1, v13
 
-    .line 495
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+
+    .line 540
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layoutbottom:Landroid/widget/RelativeLayout;
@@ -5380,7 +5518,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 496
+    .line 541
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layoutbottom:Landroid/widget/RelativeLayout;
@@ -5395,7 +5533,7 @@
 
     invoke-virtual/range {v48 .. v49}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 497
+    .line 542
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layoutbottom:Landroid/widget/RelativeLayout;
@@ -5408,15 +5546,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 498
+    .line 543
     return-void
 
-    .line 448
+    .line 491
     .end local v11    # "frehtv":Landroid/widget/TextView;
     .end local v12    # "freltv":Landroid/widget/TextView;
     .end local v17    # "htvrlp":Landroid/widget/RelativeLayout$LayoutParams;
     .end local v24    # "ltvrlp":Landroid/widget/RelativeLayout$LayoutParams;
-    :cond_117f
+    :cond_11af
     move-object/from16 v0, v30
 
     move/from16 v1, v18
@@ -5425,21 +5563,21 @@
 
     move-result v48
 
-    sparse-switch v48, :sswitch_data_11dc
+    sparse-switch v48, :sswitch_data_120e
 
-    .line 447
-    :goto_118a
+    .line 490
+    :goto_11ba
     add-int/lit8 v18, v18, 0x1
 
-    goto/16 :goto_106f
+    goto/16 :goto_1092
 
-    .line 450
-    :sswitch_118e
+    .line 493
+    :sswitch_11be
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v48
 
-    const v49, 0x7f0201c2
+    const v49, 0x7f0200e5
 
     invoke-static/range {v48 .. v49}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -5447,15 +5585,15 @@
 
     aput-object v48, v28, v18
 
-    goto :goto_118a
+    goto :goto_11ba
 
-    .line 453
-    :sswitch_119c
+    .line 496
+    :sswitch_11cc
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v48
 
-    const v49, 0x7f0201c2
+    const v49, 0x7f0200e5
 
     invoke-static/range {v48 .. v49}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -5463,10 +5601,10 @@
 
     aput-object v48, v28, v18
 
-    goto :goto_118a
+    goto :goto_11ba
 
-    .line 456
-    :sswitch_11aa
+    .line 499
+    :sswitch_11da
     move-object/from16 v0, v30
 
     move/from16 v1, v18
@@ -5477,19 +5615,19 @@
 
     check-cast v27, Landroid/graphics/drawable/ClipDrawable;
 
-    .line 457
+    .line 500
     .local v27, "oidDrawable":Landroid/graphics/drawable/ClipDrawable;
     invoke-virtual/range {p0 .. p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v48
 
-    const v49, 0x7f0201c2
+    const v49, 0x7f0200e5
 
     invoke-static/range {v48 .. v49}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->readDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v10
 
-    .line 458
+    .line 501
     .local v10, "drawable":Landroid/graphics/drawable/Drawable;
     new-instance v29, Landroid/graphics/drawable/ClipDrawable;
 
@@ -5499,13 +5637,15 @@
 
     move-object/from16 v0, v29
 
-    move/from16 v1, v48
+    move-object v1, v10
 
-    move/from16 v2, v49
+    move/from16 v2, v48
 
-    invoke-direct {v0, v10, v1, v2}, Landroid/graphics/drawable/ClipDrawable;-><init>(Landroid/graphics/drawable/Drawable;II)V
+    move/from16 v3, v49
 
-    .line 459
+    invoke-direct {v0, v1, v2, v3}, Landroid/graphics/drawable/ClipDrawable;-><init>(Landroid/graphics/drawable/Drawable;II)V
+
+    .line 502
     .local v29, "proDrawable":Landroid/graphics/drawable/ClipDrawable;
     invoke-virtual/range {v27 .. v27}, Landroid/graphics/drawable/ClipDrawable;->getLevel()I
 
@@ -5517,17 +5657,19 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/ClipDrawable;->setLevel(I)Z
 
-    .line 460
+    .line 503
     aput-object v29, v28, v18
 
-    goto :goto_118a
+    goto :goto_11ba
 
-    .line 448
-    :sswitch_data_11dc
+    .line 491
+    nop
+
+    :sswitch_data_120e
     .sparse-switch
-        0x1020000 -> :sswitch_118e
-        0x102000d -> :sswitch_11aa
-        0x102000f -> :sswitch_119c
+        0x1020000 -> :sswitch_11be
+        0x102000d -> :sswitch_11da
+        0x102000f -> :sswitch_11cc
     .end sparse-switch
 .end method
 
@@ -5537,7 +5679,7 @@
     .param p2, "getIndex"    # I
 
     .prologue
-    .line 875
+    .line 974
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -5548,7 +5690,7 @@
 
     if-lt v0, v1, :cond_2e
 
-    .line 879
+    .line 978
     const-string v1, "getIndex"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5567,7 +5709,7 @@
 
     invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 880
+    .line 979
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -5586,10 +5728,10 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 882
+    .line 981
     return-void
 
-    .line 876
+    .line 975
     :cond_2e
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
 
@@ -5613,7 +5755,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 877
+    .line 976
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->btn:[Landroid/widget/Button;
 
     aget-object v1, v1, v0
@@ -5622,7 +5764,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 875
+    .line 974
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -5635,13 +5777,15 @@
     .param p3, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 866
+    .line 966
     invoke-virtual {p1, p3}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 867
+    .line 967
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->whichToAnim:[Ljava/lang/Integer;
 
-    add-int/lit8 v1, p2, -0x1
+    const/4 v1, 0x1
+
+    sub-int v1, p2, v1
 
     add-int/lit8 v1, v1, 0x7
 
@@ -5655,7 +5799,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 870
+    .line 969
     invoke-virtual {p1}, Landroid/widget/Button;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -5664,12 +5808,12 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->animDrawable:Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 871
+    .line 970
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->animDrawable:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 872
+    .line 971
     return-void
 .end method
 
@@ -5681,14 +5825,14 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 696
+    .line 783
     const-string v7, "massagecode"
 
     invoke-virtual {p0, v7, v8}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getBooleanFromPreference(Ljava/lang/String;Z)Z
 
     move-result v3
 
-    .line 697
+    .line 784
     .local v3, "isVerification":Z
     if-nez v3, :cond_6c
 
@@ -5696,49 +5840,49 @@
 
     if-nez v7, :cond_6c
 
-    .line 698
+    .line 785
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->dialogShow:Z
 
-    .line 699
+    .line 786
     const-string v7, "pin"
 
     invoke-virtual {p0, v7}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getStringFromPreference(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 700
+    .line 787
     .local v2, "getUserId":Ljava/lang/String;
     new-instance v1, Landroid/app/Dialog;
 
-    const v7, 0x7f0c0017
+    const v7, 0x7f0a0011
 
     invoke-direct {v1, p0, v7}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    .line 701
+    .line 788
     .local v1, "dialog":Landroid/app/Dialog;
     invoke-virtual {v1, v8}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 702
+    .line 789
     invoke-virtual {v1, v8}, Landroid/app/Dialog;->setCancelable(Z)V
 
-    .line 703
+    .line 790
     invoke-virtual {v1}, Landroid/app/Dialog;->show()V
 
-    .line 704
+    .line 791
     invoke-virtual {v1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v6
 
-    .line 705
+    .line 792
     .local v6, "window":Landroid/view/Window;
-    const v7, 0x7f030011
+    const v7, 0x7f030003
 
     invoke-virtual {v6, v7}, Landroid/view/Window;->setContentView(I)V
 
-    .line 709
-    const v7, 0x7f0700d9
+    .line 795
+    const v7, 0x7f080040
 
     invoke-virtual {v6, v7}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -5746,9 +5890,9 @@
 
     check-cast v4, Landroid/widget/EditText;
 
-    .line 711
+    .line 797
     .local v4, "numet":Landroid/widget/EditText;
-    const v7, 0x7f0700da
+    const v7, 0x7f080041
 
     invoke-virtual {v6, v7}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -5756,7 +5900,7 @@
 
     check-cast v5, Landroid/widget/Button;
 
-    .line 712
+    .line 798
     .local v5, "okbtn":Landroid/widget/Button;
     new-instance v7, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$7;
 
@@ -5764,15 +5908,15 @@
 
     invoke-virtual {v4, v7}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 732
+    .line 819
     new-instance v7, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$8;
 
     invoke-direct {v7, p0, v4, v2, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$8;-><init>(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;Landroid/widget/EditText;Ljava/lang/String;Landroid/app/Dialog;)V
 
     invoke-virtual {v5, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 745
-    const v7, 0x7f0700db
+    .line 835
+    const v7, 0x7f080042
 
     invoke-virtual {v6, v7}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
@@ -5780,7 +5924,7 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 746
+    .line 836
     .local v0, "cancelbtn":Landroid/widget/Button;
     new-instance v7, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$9;
 
@@ -5788,14 +5932,14 @@
 
     invoke-virtual {v0, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 755
+    .line 845
     new-instance v7, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$10;
 
     invoke-direct {v7, p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$10;-><init>(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;)V
 
     invoke-virtual {v1, v7}, Landroid/app/Dialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
 
-    .line 765
+    .line 856
     .end local v0    # "cancelbtn":Landroid/widget/Button;
     .end local v1    # "dialog":Landroid/app/Dialog;
     .end local v2    # "getUserId":Ljava/lang/String;
@@ -5810,7 +5954,7 @@
     .registers 1
 
     .prologue
-    .line 858
+    .line 950
     return-void
 .end method
 
@@ -5823,27 +5967,27 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 503
+    .line 548
     if-nez p3, :cond_4
 
-    .line 521
+    .line 566
     :cond_3
     :goto_3
     return-void
 
-    .line 505
+    .line 550
     :cond_4
     if-eq p2, v2, :cond_8
 
     if-ne p1, v2, :cond_3
 
-    .line 506
+    .line 551
     :cond_8
     invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 509
+    .line 554
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "getPosition"
 
@@ -5853,7 +5997,7 @@
 
     iput v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->retPosition:I
 
-    .line 510
+    .line 555
     const-string v1, "isFlag"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -5862,12 +6006,12 @@
 
     iput-boolean v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->isFlag:Z
 
-    .line 512
+    .line 557
     iget v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->retPosition:I
 
     if-eq v1, v2, :cond_3
 
-    .line 514
+    .line 559
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
 
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getApplicationContext()Landroid/content/Context;
@@ -5890,28 +6034,29 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 515
+    .line 560
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
 
     invoke-virtual {v1}, Landroid/widget/Button;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Landroid/graphics/drawable/AnimationDrawable;
+    .end local v0    # "bundle":Landroid/os/Bundle;
+    check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
 
-    iput-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->animDrawable:Landroid/graphics/drawable/AnimationDrawable;
+    iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->animDrawable:Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 516
+    .line 561
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->animDrawable:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 517
+    .line 562
     iget-boolean v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->isFlag:Z
 
     if-nez v1, :cond_3
 
-    .line 518
+    .line 563
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->currentzl:[S
 
     iget v2, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->retPosition:I
@@ -5930,28 +6075,28 @@
     .prologue
     const/16 v2, 0x3e8
 
-    .line 1006
+    .line 1126
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->isVerification()Z
 
     move-result v0
 
     if-nez v0, :cond_9
 
-    .line 1065
+    .line 1183
     :goto_8
     return-void
 
-    .line 1008
+    .line 1128
     :cond_9
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    sparse-switch v0, :sswitch_data_112
+    sparse-switch v0, :sswitch_data_11c
 
     goto :goto_8
 
-    .line 1010
+    .line 1130
     :sswitch_11
     iget v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
@@ -5959,7 +6104,7 @@
 
     iput v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
-    .line 1011
+    .line 1131
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
 
     iget v3, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -5982,7 +6127,7 @@
 
     goto :goto_8
 
-    .line 1014
+    .line 1134
     :sswitch_2c
     iget v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
@@ -5990,7 +6135,7 @@
 
     iput v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
-    .line 1015
+    .line 1135
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
 
     iget v3, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -6013,7 +6158,7 @@
 
     goto :goto_8
 
-    .line 1018
+    .line 1138
     :sswitch_47
     iget v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
@@ -6021,7 +6166,7 @@
 
     iput v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
-    .line 1019
+    .line 1139
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
 
     iget v3, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -6044,7 +6189,7 @@
 
     goto :goto_8
 
-    .line 1022
+    .line 1142
     :sswitch_62
     iget v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
@@ -6052,7 +6197,7 @@
 
     iput v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
-    .line 1023
+    .line 1143
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
 
     iget v3, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -6075,7 +6220,7 @@
 
     goto :goto_8
 
-    .line 1026
+    .line 1146
     :sswitch_7d
     iget v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
@@ -6083,7 +6228,7 @@
 
     iput v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
-    .line 1027
+    .line 1147
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
 
     iget v3, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -6106,7 +6251,7 @@
 
     goto/16 :goto_8
 
-    .line 1030
+    .line 1150
     :sswitch_99
     iget v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
@@ -6114,7 +6259,7 @@
 
     iput v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
-    .line 1031
+    .line 1151
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
 
     iget v3, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -6137,7 +6282,7 @@
 
     goto/16 :goto_8
 
-    .line 1034
+    .line 1154
     :sswitch_b5
     iget v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
@@ -6145,7 +6290,7 @@
 
     iput v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->num:I
 
-    .line 1035
+    .line 1155
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
 
     iget v3, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->width:F
@@ -6168,7 +6313,7 @@
 
     goto/16 :goto_8
 
-    .line 1041
+    .line 1159
     :sswitch_cf
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->mycenter:Landroid/widget/Button;
 
@@ -6180,17 +6325,17 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->animDrawable:Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 1042
+    .line 1160
     iget-object v0, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->animDrawable:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 1043
+    .line 1161
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->handlerCenterBtn()V
 
     goto/16 :goto_8
 
-    .line 1046
+    .line 1164
     :sswitch_e3
     const-string v0, "com.jiuzhansoft.massage.service.MusicService"
 
@@ -6200,56 +6345,67 @@
 
     if-eqz v0, :cond_10c
 
-    .line 1047
+    .line 1165
     sget-object v0, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
     if-eqz v0, :cond_f8
 
-    .line 1048
+    .line 1166
     sget-object v0, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/media/audiofx/Visualizer;->setEnabled(Z)I
 
-    .line 1049
+    .line 1167
     const/4 v0, 0x0
 
     sput-object v0, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
-    .line 1051
+    .line 1169
     :cond_f8
     new-instance v9, Landroid/content/Intent;
 
     invoke-direct {v9}, Landroid/content/Intent;-><init>()V
 
-    .line 1052
+    .line 1170
     .local v9, "intent":Landroid/content/Intent;
     const-class v0, Lcom/jiuzhansoft/massage/service/MusicService;
 
     invoke-virtual {v9, p0, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 1053
+    .line 1171
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "******\u670d\u52a1\u505c\u6b62\u4e862***"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1054
+    .line 1172
     invoke-virtual {p0, v9}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->stopService(Landroid/content/Intent;)Z
 
-    .line 1060
+    .line 1175
     .end local v9    # "intent":Landroid/content/Intent;
     :cond_10c
+    new-instance v9, Landroid/content/Intent;
+
+    const-class v0, Lcom/jiuzhansoft/massage/subActivity/MainMenuActivity;
+
+    invoke-direct {v9, p0, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 1177
+    .restart local v9    # "intent":Landroid/content/Intent;
+    invoke-virtual {p0, v9}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->startActivity(Landroid/content/Intent;)V
+
+    .line 1178
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->finish()V
 
     goto/16 :goto_8
 
-    .line 1008
+    .line 1128
     nop
 
-    :sswitch_data_112
+    :sswitch_data_11c
     .sparse-switch
         0x1 -> :sswitch_11
         0x2 -> :sswitch_2c
@@ -6259,7 +6415,7 @@
         0x6 -> :sswitch_99
         0x7 -> :sswitch_b5
         0x1e -> :sswitch_cf
-        0x7f070263 -> :sswitch_e3
+        0x7f0800f4 -> :sswitch_e3
     .end sparse-switch
 .end method
 
@@ -6268,61 +6424,59 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 687
+    .line 750
     invoke-super {p0, p1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 688
-    const v0, 0x7f030038
+    .line 751
+    const v0, 0x7f03001d
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->setContentView(I)V
 
-    .line 689
+    .line 752
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->initData()V
 
-    .line 690
+    .line 753
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->initView()V
 
-    .line 691
+    .line 754
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->handleClickEvent()V
 
-    .line 692
+    .line 779
     const-string v0, "myhometest"
 
     const-string v1, "onCreate"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 693
+    .line 780
     return-void
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .registers 7
+    .registers 6
     .param p1, "keyCode"    # I
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    const/4 v3, 0x0
-
-    .line 830
+    .line 919
     sget-boolean v1, Lcom/massage/utils/log/Log;->D:Z
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_b
 
-    .line 831
+    .line 920
     const-string v1, "HomeActivity"
 
     const-string v2, "onKeyDown"
 
     invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 834
-    :cond_c
+    .line 923
+    :cond_b
     const/4 v1, 0x4
 
     if-ne p1, v1, :cond_46
 
-    .line 836
+    .line 925
     const-string v1, "com.jiuzhansoft.massage.service.MusicService"
 
     invoke-static {p0, v1}, Lcom/jiuzhansoft/massage/service/MusicService;->isServiceRunning(Landroid/content/Context;Ljava/lang/String;)Z
@@ -6331,63 +6485,66 @@
 
     if-eqz v1, :cond_37
 
-    .line 837
+    .line 926
     sget-object v1, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
     if-eqz v1, :cond_23
 
-    .line 838
+    .line 927
     sget-object v1, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
-    invoke-virtual {v1, v3}, Landroid/media/audiofx/Visualizer;->setEnabled(Z)I
+    const/4 v2, 0x0
 
-    .line 839
+    invoke-virtual {v1, v2}, Landroid/media/audiofx/Visualizer;->setEnabled(Z)I
+
+    .line 928
     const/4 v1, 0x0
 
     sput-object v1, Lcom/jiuzhansoft/massage/service/MusicService;->mVisualizer:Landroid/media/audiofx/Visualizer;
 
-    .line 841
+    .line 930
     :cond_23
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 842
+    .line 931
     .local v0, "intent":Landroid/content/Intent;
     const-class v1, Lcom/jiuzhansoft/massage/service/MusicService;
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 843
+    .line 932
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v2, "******\u670d\u52a1\u505c\u6b62\u4e862***"
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 844
+    .line 933
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->stopService(Landroid/content/Intent;)Z
 
-    .line 846
+    .line 936
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_37
-    sput v3, Lcom/jiuzhansoft/massage/activity/DisplaySplashScreenActivity;->reportIndex:I
+    new-instance v0, Landroid/content/Intent;
 
-    .line 847
-    invoke-static {}, Lcom/jiuzhansoft/massage/application/JiuZhanApplication;->getInstance()Lcom/jiuzhansoft/massage/application/JiuZhanApplication;
+    const-class v1, Lcom/jiuzhansoft/massage/subActivity/MainMenuActivity;
 
-    move-result-object v1
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {v1}, Lcom/jiuzhansoft/massage/application/JiuZhanApplication;->getMainActivity()Lcom/jiuzhansoft/massage/activity/MainActivity;
+    .line 938
+    .restart local v0    # "intent":Landroid/content/Intent;
+    invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->startActivity(Landroid/content/Intent;)V
 
-    move-result-object v1
+    .line 939
+    invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->finish()V
 
-    invoke-virtual {v1}, Lcom/jiuzhansoft/massage/activity/MainActivity;->setToIndexHomeActivity()V
-
-    .line 848
+    .line 940
     const/4 v1, 0x1
 
-    .line 850
+    .line 942
+    .end local v0    # "intent":Landroid/content/Intent;
     :goto_45
     return v1
 
@@ -6405,10 +6562,10 @@
     .prologue
     const/high16 v5, 0x40000000    # 2.0f
 
-    .line 650
+    .line 712
     invoke-super {p0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onResume()V
 
-    .line 651
+    .line 713
     new-instance v0, Landroid/view/animation/RotateAnimation;
 
     const/4 v1, 0x0
@@ -6425,30 +6582,30 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/view/animation/RotateAnimation;-><init>(FFFF)V
 
-    .line 652
+    .line 714
     .local v0, "animation":Landroid/view/animation/Animation;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 653
+    .line 715
     const-wide/16 v1, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 654
+    .line 716
     iget-object v1, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->layout1:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 655
+    .line 717
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$6;
 
     invoke-direct {v1, p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$6;-><init>(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 682
+    .line 745
     return-void
 .end method
 
@@ -6464,41 +6621,43 @@
     .param p8, "index"    # I
 
     .prologue
-    .line 936
+    .line 1043
     const/4 v0, 0x0
 
-    .line 937
+    .line 1044
     .local v0, "animation":Landroid/view/animation/Animation;
     const/4 v1, 0x1
 
-    if-ne p5, v1, :cond_55
+    if-ne p5, v1, :cond_56
 
-    .line 938
+    .line 1045
     const/4 v1, 0x0
 
     cmpl-float v1, p4, v1
 
     if-nez v1, :cond_d
 
-    .line 939
+    .line 1046
     invoke-direct {p0, p8}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->handlerwho(I)V
 
-    .line 985
+    .line 1105
     :goto_c
     return-void
 
-    .line 942
+    .line 1050
     :cond_d
     sput p4, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->oldAngle:F
 
-    .line 943
+    .line 1051
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->names:[Ljava/lang/Integer;
 
-    add-int/lit8 v3, p8, -0x1
+    const/4 v3, 0x1
+
+    sub-int v3, p8, v3
 
     aget-object v2, v2, v3
 
@@ -6512,7 +6671,7 @@
 
     invoke-direct {p0, p7, p8, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->which2changeBg(Landroid/widget/Button;ILjava/lang/String;)V
 
-    .line 944
+    .line 1052
     new-instance v0, Landroid/view/animation/RotateAnimation;
 
     .end local v0    # "animation":Landroid/view/animation/Animation;
@@ -6530,41 +6689,41 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/view/animation/RotateAnimation;-><init>(FFFF)V
 
-    .line 951
+    .line 1070
     .restart local v0    # "animation":Landroid/view/animation/Animation;
-    :goto_34
+    :goto_35
     iput p8, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getIndexFromCenter:I
 
-    .line 952
+    .line 1071
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 953
+    .line 1072
     int-to-long v1, p2
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 954
+    .line 1073
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 955
+    .line 1074
     invoke-direct {p0, p8}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->handlerwho(I)V
 
-    .line 956
+    .line 1075
     const/4 v1, 0x1
 
-    if-eq p5, v1, :cond_4c
+    if-eq p5, v1, :cond_4d
 
-    .line 957
+    .line 1076
     sget v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->oldAngle:F
 
     add-float/2addr v1, p4
 
     sput v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->oldAngle:F
 
-    .line 958
-    :cond_4c
+    .line 1077
+    :cond_4d
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$14;
 
     invoke-direct {v1, p0, p1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$14;-><init>(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;Landroid/view/ViewGroup;)V
@@ -6573,8 +6732,8 @@
 
     goto :goto_c
 
-    .line 947
-    :cond_55
+    .line 1055
+    :cond_56
     int-to-float v1, p8
 
     sget v2, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->oldAngle:F
@@ -6603,14 +6762,16 @@
 
     float-to-int p8, v1
 
-    .line 948
+    .line 1056
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->names:[Ljava/lang/Integer;
 
-    add-int/lit8 v3, p8, -0x1
+    const/4 v3, 0x1
+
+    sub-int v3, p8, v3
 
     add-int/lit8 v3, v3, 0x7
 
@@ -6628,7 +6789,7 @@
 
     invoke-direct {p0, p7, p8, v1}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->which2changeBg(Landroid/widget/Button;ILjava/lang/String;)V
 
-    .line 949
+    .line 1057
     new-instance v0, Landroid/view/animation/RotateAnimation;
 
     .end local v0    # "animation":Landroid/view/animation/Animation;
@@ -6649,41 +6810,35 @@
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/view/animation/RotateAnimation;-><init>(FFFF)V
 
     .restart local v0    # "animation":Landroid/view/animation/Animation;
-    goto :goto_34
+    goto :goto_35
 .end method
 
-.method public verificationCode(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .registers 9
+.method public verificationCode(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    .registers 8
     .param p1, "userPin"    # Ljava/lang/String;
     .param p2, "code"    # I
     .param p3, "serialNum"    # Ljava/lang/String;
     .param p4, "thecode"    # Ljava/lang/String;
-    .param p5, "clientCode"    # Ljava/lang/String;
 
     .prologue
-    .line 769
+    .line 860
     new-instance v0, Lcom/massage/utils/http/HttpSetting;
 
     invoke-direct {v0}, Lcom/massage/utils/http/HttpSetting;-><init>()V
 
-    .line 770
+    .line 861
     .local v0, "httpsetting":Lcom/massage/utils/http/HttpSetting;
     const-string v1, "equipment.serialNum"
 
     invoke-virtual {v0, v1}, Lcom/massage/utils/http/HttpSetting;->setFunctionId(Ljava/lang/String;)V
 
-    .line 771
+    .line 862
     const-string v1, "userPin"
 
     invoke-virtual {v0, v1, p1}, Lcom/massage/utils/http/HttpSetting;->putJsonParam(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 772
-    const-string v1, "client_code"
-
-    invoke-virtual {v0, v1, p5}, Lcom/massage/utils/http/HttpSetting;->putJsonParam(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 773
-    const-string v1, "equipment_code"
+    .line 863
+    const-string v1, "code"
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6691,30 +6846,30 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/massage/utils/http/HttpSetting;->putJsonParam(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 774
+    .line 864
     const-string v1, "serialNum"
 
     invoke-virtual {v0, v1, p3}, Lcom/massage/utils/http/HttpSetting;->putJsonParam(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 775
+    .line 865
     new-instance v1, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$11;
 
     invoke-direct {v1, p0, p4}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2$11;-><init>(Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/massage/utils/http/HttpSetting;->setListener(Lcom/massage/utils/http/HttpGroup$HttpTaskListener;)V
 
-    .line 823
+    .line 912
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/massage/utils/http/HttpSetting;->setNotifyUser(Z)V
 
-    .line 824
+    .line 913
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/subActivity/HomeActivity2;->getHttpGroupaAsynPool()Lcom/massage/utils/http/HttpGroup;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/massage/utils/http/HttpGroup;->add(Lcom/massage/utils/http/HttpSetting;)Lcom/massage/utils/http/HttpRequest;
 
-    .line 825
+    .line 914
     return-void
 .end method

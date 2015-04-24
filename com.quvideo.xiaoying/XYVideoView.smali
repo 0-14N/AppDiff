@@ -364,7 +364,7 @@
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->setBackgroundColor(I)V
 
     .line 109
-    const v0, 0x7f060619
+    const v0, 0x7f060604
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->findViewById(I)Landroid/view/View;
 
@@ -375,7 +375,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->e:Landroid/widget/RelativeLayout;
 
     .line 110
-    const v0, 0x7f06061c
+    const v0, 0x7f060607
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->findViewById(I)Landroid/view/View;
 
@@ -397,7 +397,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->g:Landroid/widget/Button;
 
     .line 112
-    const v0, 0x7f06061a
+    const v0, 0x7f060605
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->findViewById(I)Landroid/view/View;
 
@@ -408,7 +408,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->h:Landroid/widget/RelativeLayout;
 
     .line 113
-    const v0, 0x7f06045a
+    const v0, 0x7f060445
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->findViewById(I)Landroid/view/View;
 
@@ -419,7 +419,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->i:Landroid/widget/ImageView;
 
     .line 114
-    const v0, 0x7f06045d
+    const v0, 0x7f060448
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->findViewById(I)Landroid/view/View;
 
@@ -430,7 +430,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->j:Landroid/widget/TextView;
 
     .line 115
-    const v0, 0x7f06061b
+    const v0, 0x7f060606
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->findViewById(I)Landroid/view/View;
 
@@ -659,9 +659,9 @@
     iget-object v2, p0, Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;->b:Landroid/content/Context;
 
     .line 306
-    new-instance v3, Ladh;
+    new-instance v3, Lwn;
 
-    invoke-direct {v3, p0}, Ladh;-><init>(Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;)V
+    invoke-direct {v3, p0}, Lwn;-><init>(Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;)V
 
     .line 305
     invoke-direct {v1, v2, v0, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -852,9 +852,9 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
     .line 391
-    new-instance v1, Ladi;
+    new-instance v1, Lwo;
 
-    invoke-direct {v1, p0, p1}, Ladi;-><init>(Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;[I)V
+    invoke-direct {v1, p0, p1}, Lwo;-><init>(Lcom/quvideo/xiaoying/app/videoplayer/XYVideoView;[I)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 

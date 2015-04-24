@@ -816,56 +816,16 @@
 .end method
 
 .method protected onResume()V
-    .registers 4
+    .registers 1
 
     .prologue
     .line 240
-    const-string v1, "Tag"
-
-    const-string v2, "123"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 241
-    sget-object v1, Lcom/globalmarket/utils/MyApplication;->app:Lcom/globalmarket/utils/MyApplication;
-
-    iget-object v1, v1, Lcom/globalmarket/utils/MyApplication;->helper:Lcom/globalmarket/utils/MyApplicationHelper;
-
-    invoke-virtual {v1}, Lcom/globalmarket/utils/MyApplicationHelper;->getAtNum()I
-
-    move-result v1
-
-    if-lez v1, :cond_23
-
-    .line 242
-    sget-object v1, Lcom/globalmarket/utils/MyApplication;->app:Lcom/globalmarket/utils/MyApplication;
-
-    iget-object v1, v1, Lcom/globalmarket/utils/MyApplication;->helper:Lcom/globalmarket/utils/MyApplicationHelper;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lcom/globalmarket/utils/MyApplicationHelper;->setAtNum(I)V
-
-    .line 243
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lcom/globalmarket/activity/AtMeActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 244
-    .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {p0, v0}, Lcom/globalmarket/activity/MainActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 250
-    .end local v0    # "intent":Landroid/content/Intent;
-    :cond_23
     invoke-super {p0}, Landroid/support/v7/app/ActionBarActivity;->onResume()V
 
-    .line 251
+    .line 241
     invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onResume(Landroid/content/Context;)V
 
-    .line 252
+    .line 242
     return-void
 .end method
 
@@ -873,17 +833,17 @@
     .registers 3
 
     .prologue
-    .line 256
+    .line 246
     const-string v0, "hello"
 
     const-string v1, "wwww"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
+    .line 247
     invoke-super {p0}, Landroid/support/v7/app/ActionBarActivity;->onStart()V
 
-    .line 258
+    .line 248
     return-void
 .end method
 

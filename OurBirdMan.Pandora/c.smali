@@ -6,9 +6,9 @@
 .method public static a(Landroid/content/Context;)Z
     .registers 9
 
-    const/4 v2, 0x0
-
     const/4 v0, 0x0
+
+    const/4 v2, 0x0
 
     :try_start_2
     const-string v3, "Dreams.xml1"
@@ -21,7 +21,7 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, LOurBirdMan/Pandora/UI/p;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, LOurBirdMan/Pandora/UI/x;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -54,7 +54,7 @@
     :try_start_24
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, LOurBirdMan/Pandora/UI/p;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, LOurBirdMan/Pandora/UI/x;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -86,14 +86,14 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v1
 
     :goto_47
-    invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
-    move-result v1
+    move-result v3
 
-    if-nez v1, :cond_c2
+    if-nez v3, :cond_c2
 
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -143,7 +143,7 @@
     :try_start_74
     new-instance v4, Ljava/io/File;
 
-    invoke-static {p0}, LOurBirdMan/Pandora/UI/p;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, LOurBirdMan/Pandora/UI/x;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -237,97 +237,58 @@
 
     :cond_c2
     :try_start_c2
-    new-instance v4, LOurBirdMan/Pandora/a/a;
+    new-instance v3, LOurBirdMan/Pandora/a/a;
 
-    invoke-direct {v4}, LOurBirdMan/Pandora/a/a;-><init>()V
+    invoke-direct {v3}, LOurBirdMan/Pandora/a/a;-><init>()V
 
-    const-string v1, "keyword"
+    const-string v4, "keyword"
 
-    invoke-interface {v3, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v1
+    move-result v4
 
-    invoke-interface {v3, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
     const-string v5, "\u3001"
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    iput-object v1, v4, LOurBirdMan/Pandora/a/a;->a:[Ljava/lang/String;
+    iput-object v4, v3, LOurBirdMan/Pandora/a/a;->a:[Ljava/lang/String;
 
-    const-string v1, "desc"
+    const-string v4, "desc"
 
-    invoke-interface {v3, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v1
+    move-result v4
 
-    invoke-interface {v3, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    iput-object v1, v4, LOurBirdMan/Pandora/a/a;->b:Ljava/lang/String;
+    iput-object v4, v3, LOurBirdMan/Pandora/a/a;->b:Ljava/lang/String;
 
-    const-string v1, "sort"
+    const-string v4, "sort"
 
-    invoke-interface {v3, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v1
+    move-result v4
 
-    invoke-interface {v3, v1}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v1
+    move-result v4
 
-    iput v1, v4, LOurBirdMan/Pandora/a/a;->c:I
+    iput v4, v3, LOurBirdMan/Pandora/a/a;->c:I
 
-    sget-boolean v1, LOurBirdMan/Pandora/UI/MyApp;->b:Z
+    sget-object v4, LOurBirdMan/Pandora/UI/MyApp;->a:Ljava/util/List;
 
-    if-eqz v1, :cond_103
-
-    move v1, v0
-
-    :goto_f6
-    iget-object v5, v4, LOurBirdMan/Pandora/a/a;->a:[Ljava/lang/String;
-
-    array-length v5, v5
-
-    if-lt v1, v5, :cond_10a
-
-    iget-object v1, v4, LOurBirdMan/Pandora/a/a;->b:Ljava/lang/String;
-
-    invoke-static {v1}, LOurBirdMan/Pandora/b/c;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v4, LOurBirdMan/Pandora/a/a;->b:Ljava/lang/String;
-
-    :cond_103
-    sget-object v1, LOurBirdMan/Pandora/UI/MyApp;->a:Ljava/util/List;
-
-    invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_f6
+    .catch Ljava/lang/Exception; {:try_start_c2 .. :try_end_f6} :catch_a7
+    .catchall {:try_start_c2 .. :try_end_f6} :catchall_bb
 
     goto/16 :goto_47
-
-    :cond_10a
-    iget-object v5, v4, LOurBirdMan/Pandora/a/a;->a:[Ljava/lang/String;
-
-    iget-object v6, v4, LOurBirdMan/Pandora/a/a;->a:[Ljava/lang/String;
-
-    aget-object v6, v6, v1
-
-    invoke-static {v6}, LOurBirdMan/Pandora/b/c;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    aput-object v6, v5, v1
-    :try_end_116
-    .catch Ljava/lang/Exception; {:try_start_c2 .. :try_end_116} :catch_a7
-    .catchall {:try_start_c2 .. :try_end_116} :catchall_bb
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_f6
 .end method

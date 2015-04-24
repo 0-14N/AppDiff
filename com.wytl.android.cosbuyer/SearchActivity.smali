@@ -71,6 +71,8 @@
 
 .field private dm:Landroid/util/DisplayMetrics;
 
+.field firstVisiblePosition:I
+
 .field private foota:Landroid/widget/FrameLayout;
 
 .field goodsList:Lcom/wytl/android/cosbuyer/myviews/PullList;
@@ -139,104 +141,107 @@
 
     const/4 v1, 0x0
 
-    .line 65
+    .line 67
     invoke-direct {p0}, Lcom/wytl/android/cosbuyer/activity/BaseActivity;-><init>()V
 
-    .line 77
+    .line 79
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->adapter:Lcom/wytl/android/cosbuyer/adapter/JingPinGoodsItemAdapter;
 
-    .line 81
+    .line 83
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->voiceButton:Landroid/widget/ImageView;
 
-    .line 83
+    .line 85
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->imageview:Landroid/widget/LinearLayout;
 
-    .line 85
+    .line 87
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->loderListView:Landroid/widget/LinearLayout;
 
-    .line 87
+    .line 89
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->loader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$InitialDataLoader;
 
-    .line 89
+    .line 91
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->listLoader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
-    .line 91
+    .line 93
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->imageTrun:Lcom/wytl/android/cosbuyer/views/ImageTurnsView;
 
-    .line 93
+    .line 95
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->data:Lcom/wytl/android/cosbuyer/datamodle/InitData;
 
-    .line 95
+    .line 97
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->rightButton:Landroid/widget/Button;
 
-    .line 97
+    .line 99
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->leftButton:Landroid/widget/Button;
 
-    .line 99
+    .line 101
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->kindButton:Landroid/widget/Button;
 
-    .line 101
+    .line 103
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->cxButton:Landroid/widget/Button;
 
-    .line 103
+    .line 105
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->phButton:Landroid/widget/Button;
 
-    .line 105
+    .line 107
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->pinPaiButton:Landroid/widget/Button;
 
-    .line 107
+    .line 109
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->tiaoMaButton:Landroid/widget/Button;
 
-    .line 109
+    .line 111
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->cursor:Landroid/widget/ImageView;
 
-    .line 111
+    .line 113
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->cursor1:Landroid/widget/ImageView;
 
-    .line 113
+    .line 115
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->goodsList:Lcom/wytl/android/cosbuyer/myviews/PullList;
 
-    .line 115
+    .line 117
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->lib:Lcom/wytl/android/cosbuyer/lib/WebApi;
 
-    .line 117
+    .line 119
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->left:Landroid/widget/TextView;
 
-    .line 118
+    .line 120
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->center:Landroid/widget/TextView;
 
-    .line 119
+    .line 121
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->right:Landroid/widget/TextView;
 
-    .line 121
+    .line 123
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->bigView:Lcom/wytl/android/cosbuyer/views/BigKindView;
 
-    .line 123
+    .line 125
     iput v2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->current:I
 
-    .line 125
+    .line 127
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->listChoose:Ljava/util/HashMap;
 
-    .line 126
+    .line 128
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currentChoose:Ljava/util/HashMap;
 
-    .line 128
+    .line 130
     iput v2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->start:I
 
-    .line 130
+    .line 132
     iput v2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->offset:I
 
-    .line 131
+    .line 133
     iput v2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currIndex:I
 
-    .line 139
+    .line 141
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->animation:Landroid/view/animation/Animation;
 
-    .line 65
+    .line 1237
+    iput v2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->firstVisiblePosition:I
+
+    .line 67
     return-void
 .end method
 
@@ -244,7 +249,7 @@
     .registers 6
 
     .prologue
-    .line 1217
+    .line 1220
     const v3, 0x7f09012d
 
     invoke-virtual {p0, v3}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -255,7 +260,7 @@
 
     iput-object v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->cursor:Landroid/widget/ImageView;
 
-    .line 1218
+    .line 1221
     const v3, 0x7f09012e
 
     invoke-virtual {p0, v3}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -266,7 +271,7 @@
 
     iput-object v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->cursor1:Landroid/widget/ImageView;
 
-    .line 1219
+    .line 1222
     invoke-virtual {p0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -277,20 +282,20 @@
 
     move-result-object v3
 
-    .line 1220
+    .line 1223
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 1219
+    .line 1222
     iput v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->bmpW:I
 
-    .line 1221
+    .line 1224
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 1222
+    .line 1225
     .local v0, "dm":Landroid/util/DisplayMetrics;
     invoke-virtual {p0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->getWindowManager()Landroid/view/WindowManager;
 
@@ -302,10 +307,10 @@
 
     invoke-virtual {v3, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 1223
+    .line 1226
     iget v2, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 1224
+    .line 1227
     .local v2, "screenW":I
     div-int/lit8 v3, v2, 0x3
 
@@ -317,7 +322,7 @@
 
     iput v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->offset:I
 
-    .line 1225
+    .line 1228
     iget v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->bmpW:I
 
     mul-int/lit8 v3, v3, 0x3
@@ -328,12 +333,12 @@
 
     iput v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->offset:I
 
-    .line 1226
+    .line 1229
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 1227
+    .line 1230
     .local v1, "matrix":Landroid/graphics/Matrix;
     iget v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->offset:I
 
@@ -343,17 +348,17 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 1228
+    .line 1231
     iget-object v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->cursor:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 1229
+    .line 1232
     iget-object v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->cursor1:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 1230
+    .line 1233
     iget v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->offset:I
 
     iget v4, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->bmpW:I
@@ -362,14 +367,14 @@
 
     iput v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->one:I
 
-    .line 1231
+    .line 1234
     iget v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->one:I
 
     mul-int/lit8 v3, v3, 0x2
 
     iput v3, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->two:I
 
-    .line 1232
+    .line 1235
     return-void
 .end method
 
@@ -377,7 +382,7 @@
     .registers 1
 
     .prologue
-    .line 959
+    .line 962
     invoke-direct {p0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->initListData()V
 
     return-void
@@ -387,7 +392,7 @@
     .registers 2
 
     .prologue
-    .line 123
+    .line 125
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->current:I
 
     return v0
@@ -397,7 +402,7 @@
     .registers 3
 
     .prologue
-    .line 1098
+    .line 1101
     invoke-direct {p0, p1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->getChooseUrl(Ljava/util/HashMap;)Ljava/util/HashMap;
 
     move-result-object v0
@@ -409,7 +414,7 @@
     .registers 1
 
     .prologue
-    .line 1123
+    .line 1126
     invoke-direct {p0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->closeLoader()V
 
     return-void
@@ -419,7 +424,7 @@
     .registers 2
 
     .prologue
-    .line 964
+    .line 967
     invoke-direct {p0, p1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->setButton(I)V
 
     return-void
@@ -429,7 +434,7 @@
     .registers 2
 
     .prologue
-    .line 109
+    .line 111
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->cursor:Landroid/widget/ImageView;
 
     return-object v0
@@ -439,7 +444,7 @@
     .registers 2
 
     .prologue
-    .line 111
+    .line 113
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->cursor1:Landroid/widget/ImageView;
 
     return-object v0
@@ -449,7 +454,7 @@
     .registers 2
 
     .prologue
-    .line 131
+    .line 133
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currIndex:I
 
     return v0
@@ -459,7 +464,7 @@
     .registers 2
 
     .prologue
-    .line 130
+    .line 132
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->offset:I
 
     return v0
@@ -469,7 +474,7 @@
     .registers 2
 
     .prologue
-    .line 141
+    .line 143
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->one:I
 
     return v0
@@ -479,7 +484,7 @@
     .registers 2
 
     .prologue
-    .line 143
+    .line 145
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->two:I
 
     return v0
@@ -489,14 +494,14 @@
     .registers 3
 
     .prologue
-    .line 1124
+    .line 1127
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->loderListView:Landroid/widget/LinearLayout;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1125
+    .line 1128
     return-void
 .end method
 
@@ -521,19 +526,19 @@
     .end annotation
 
     .prologue
-    .line 1100
+    .line 1103
     .local p1, "hash":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     invoke-virtual {p1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v6
 
-    .line 1102
+    .line 1105
     .local v6, "set":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 1104
+    .line 1107
     .local v3, "result":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -547,10 +552,10 @@
 
     if-nez v8, :cond_14
 
-    .line 1116
+    .line 1119
     return-object v3
 
-    .line 1104
+    .line 1107
     :cond_14
     invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -558,7 +563,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 1105
+    .line 1108
     .local v4, "s":Ljava/lang/String;
     invoke-virtual {p1, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -566,7 +571,7 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 1106
+    .line 1109
     .local v1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -574,18 +579,18 @@
 
     if-eqz v8, :cond_d
 
-    .line 1108
+    .line 1111
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 1109
+    .line 1112
     .local v5, "sb":Ljava/lang/StringBuffer;
     const-string v8, "["
 
     invoke-virtual {v5, v8}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1110
+    .line 1113
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -597,7 +602,7 @@
 
     if-nez v9, :cond_5c
 
-    .line 1113
+    .line 1116
     new-instance v8, Ljava/lang/StringBuilder;
 
     const/4 v9, 0x0
@@ -628,13 +633,13 @@
 
     move-result-object v2
 
-    .line 1114
+    .line 1117
     .local v2, "res":Ljava/lang/String;
     invoke-virtual {v3, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_d
 
-    .line 1110
+    .line 1113
     .end local v2    # "res":Ljava/lang/String;
     :cond_5c
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -643,7 +648,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1111
+    .line 1114
     .local v0, "id":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -680,7 +685,7 @@
     .registers 4
 
     .prologue
-    .line 1002
+    .line 1005
     const v1, 0x7f090065
 
     invoke-virtual {p0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -691,7 +696,7 @@
 
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->leftButton:Landroid/widget/Button;
 
-    .line 1005
+    .line 1008
     const v1, 0x7f09006f
 
     invoke-virtual {p0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -702,7 +707,7 @@
 
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->loderListView:Landroid/widget/LinearLayout;
 
-    .line 1006
+    .line 1009
     const v1, 0x7f09000f
 
     invoke-virtual {p0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -713,7 +718,7 @@
 
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->rightButton:Landroid/widget/Button;
 
-    .line 1007
+    .line 1010
     const v1, 0x7f0900e7
 
     invoke-virtual {p0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -724,7 +729,7 @@
 
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->left:Landroid/widget/TextView;
 
-    .line 1008
+    .line 1011
     const v1, 0x7f0900e8
 
     invoke-virtual {p0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -735,7 +740,7 @@
 
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->center:Landroid/widget/TextView;
 
-    .line 1009
+    .line 1012
     const v1, 0x7f0900ca
 
     invoke-virtual {p0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -746,7 +751,7 @@
 
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->right:Landroid/widget/TextView;
 
-    .line 1010
+    .line 1013
     const v1, 0x7f09005c
 
     invoke-virtual {p0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -757,7 +762,7 @@
 
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->goodsList:Lcom/wytl/android/cosbuyer/myviews/PullList;
 
-    .line 1011
+    .line 1014
     const v1, 0x7f090067
 
     invoke-virtual {p0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->findViewById(I)Landroid/view/View;
@@ -768,7 +773,7 @@
 
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->imageview:Landroid/widget/LinearLayout;
 
-    .line 1012
+    .line 1015
     iget-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->goodsList:Lcom/wytl/android/cosbuyer/myviews/PullList;
 
     new-instance v2, Lcom/wytl/android/cosbuyer/activity/SearchActivity$5;
@@ -777,14 +782,14 @@
 
     invoke-virtual {v1, v2}, Lcom/wytl/android/cosbuyer/myviews/PullList;->setPullListener(Lcom/wytl/android/cosbuyer/myviews/PullList$OnPullListener;)V
 
-    .line 1031
+    .line 1034
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->dm:Landroid/util/DisplayMetrics;
 
-    .line 1032
+    .line 1035
     invoke-virtual {p0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v1
@@ -797,18 +802,18 @@
 
     invoke-virtual {v1, v2}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 1033
+    .line 1036
     iget-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->dm:Landroid/util/DisplayMetrics;
 
     iget v0, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 1034
+    .line 1037
     .local v0, "w":I
     const/16 v1, 0x140
 
     if-eq v0, v1, :cond_7e
 
-    .line 1043
+    .line 1046
     :cond_7e
     const v1, 0x7f030040
 
@@ -818,7 +823,7 @@
 
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->imageTrun:Lcom/wytl/android/cosbuyer/views/ImageTurnsView;
 
-    .line 1048
+    .line 1051
     return-void
 .end method
 
@@ -826,7 +831,7 @@
     .registers 3
 
     .prologue
-    .line 960
+    .line 963
     new-instance v0, Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
     const/4 v1, 0x0
@@ -835,7 +840,7 @@
 
     iput-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->listLoader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
-    .line 961
+    .line 964
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->listLoader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
     const/4 v1, 0x0
@@ -844,7 +849,7 @@
 
     invoke-virtual {v0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 962
+    .line 965
     return-void
 .end method
 
@@ -855,36 +860,36 @@
     .prologue
     const v2, 0x7f070025
 
-    .line 965
+    .line 968
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->left:Landroid/widget/TextView;
 
     const v1, 0x7f02016e
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 966
+    .line 969
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->center:Landroid/widget/TextView;
 
     const v1, 0x7f020119
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 967
+    .line 970
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->right:Landroid/widget/TextView;
 
     const v1, 0x7f0201bf
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 968
+    .line 971
     packed-switch p1, :pswitch_data_52
 
-    .line 985
+    .line 988
     :goto_1e
     :pswitch_1e
     return-void
 
-    .line 970
+    .line 973
     :pswitch_1f
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->left:Landroid/widget/TextView;
 
@@ -892,19 +897,19 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 971
+    .line 974
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->left:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 972
+    .line 975
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->current:I
 
     goto :goto_1e
 
-    .line 975
+    .line 978
     :pswitch_30
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->center:Landroid/widget/TextView;
 
@@ -912,19 +917,19 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 976
+    .line 979
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->center:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 977
+    .line 980
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->current:I
 
     goto :goto_1e
 
-    .line 980
+    .line 983
     :pswitch_41
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->right:Landroid/widget/TextView;
 
@@ -932,19 +937,19 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 981
+    .line 984
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->right:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 982
+    .line 985
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->current:I
 
     goto :goto_1e
 
-    .line 968
+    .line 971
     :pswitch_data_52
     .packed-switch 0x0
         :pswitch_1f
@@ -959,14 +964,14 @@
     .registers 3
 
     .prologue
-    .line 1120
+    .line 1123
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->loderListView:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1121
+    .line 1124
     return-void
 .end method
 
@@ -976,7 +981,7 @@
     .registers 1
 
     .prologue
-    .line 1084
+    .line 1087
     return-void
 .end method
 
@@ -984,17 +989,17 @@
     .registers 2
 
     .prologue
-    .line 1077
+    .line 1080
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->goodsList:Lcom/wytl/android/cosbuyer/myviews/PullList;
 
     invoke-virtual {v0}, Lcom/wytl/android/cosbuyer/myviews/PullList;->onLoadingEnd()V
 
-    .line 1078
+    .line 1081
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->goodsList:Lcom/wytl/android/cosbuyer/myviews/PullList;
 
     invoke-virtual {v0}, Lcom/wytl/android/cosbuyer/myviews/PullList;->onRefreshEnd()V
 
-    .line 1079
+    .line 1082
     return-void
 .end method
 
@@ -1002,7 +1007,7 @@
     .registers 3
 
     .prologue
-    .line 955
+    .line 958
     new-instance v0, Lcom/wytl/android/cosbuyer/activity/SearchActivity$InitialDataLoader;
 
     const/4 v1, 0x0
@@ -1011,7 +1016,7 @@
 
     iput-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->loader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$InitialDataLoader;
 
-    .line 956
+    .line 959
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->loader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$InitialDataLoader;
 
     const/4 v1, 0x0
@@ -1020,7 +1025,7 @@
 
     invoke-virtual {v0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity$InitialDataLoader;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 957
+    .line 960
     return-void
 .end method
 
@@ -1037,22 +1042,22 @@
     .end annotation
 
     .prologue
-    .line 1087
+    .line 1090
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1088
+    .line 1091
     .local v0, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->data:Lcom/wytl/android/cosbuyer/datamodle/InitData;
 
     if-nez v2, :cond_a
 
-    .line 1095
+    .line 1098
     :cond_9
     return-object v0
 
-    .line 1090
+    .line 1093
     :cond_a
     iget-object v2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->data:Lcom/wytl/android/cosbuyer/datamodle/InitData;
 
@@ -1076,7 +1081,7 @@
 
     check-cast v1, Lcom/wytl/android/cosbuyer/datamodle/ImageData;
 
-    .line 1091
+    .line 1094
     .local v1, "s":Lcom/wytl/android/cosbuyer/datamodle/ImageData;
     iget-object v3, v1, Lcom/wytl/android/cosbuyer/datamodle/ImageData;->name:Ljava/lang/String;
 
@@ -1088,7 +1093,7 @@
 
     if-nez v3, :cond_12
 
-    .line 1093
+    .line 1096
     iget-object v3, v1, Lcom/wytl/android/cosbuyer/datamodle/ImageData;->imgUrl:Ljava/lang/String;
 
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1103,21 +1108,21 @@
     .param p3, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1053
+    .line 1056
     packed-switch p2, :pswitch_data_2c
 
-    .line 1067
+    .line 1070
     :goto_3
     :pswitch_3
     return-void
 
-    .line 1055
+    .line 1058
     :pswitch_4
     invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1056
+    .line 1059
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v2, "data"
 
@@ -1125,14 +1130,14 @@
 
     move-result-object v1
 
-    .line 1057
+    .line 1060
     .local v1, "data":Ljava/io/Serializable;
     check-cast v1, Ljava/util/HashMap;
 
     .end local v1    # "data":Ljava/io/Serializable;
     iput-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currentChoose:Ljava/util/HashMap;
 
-    .line 1058
+    .line 1061
     new-instance v2, Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
     const/4 v3, 0x0
@@ -1141,7 +1146,7 @@
 
     iput-object v2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->listLoader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
-    .line 1059
+    .line 1062
     iget-object v2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->listLoader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
     const/4 v3, 0x1
@@ -1162,7 +1167,7 @@
 
     goto :goto_3
 
-    .line 1053
+    .line 1056
     :pswitch_data_2c
     .packed-switch -0x1
         :pswitch_4
@@ -1175,42 +1180,49 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 147
+    .line 149
     invoke-super {p0, p1}, Lcom/wytl/android/cosbuyer/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 148
+    .line 150
     const v0, 0x7f03004c
 
     invoke-virtual {p0, v0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->setContentView(I)V
 
-    .line 149
+    .line 151
     invoke-static {p0}, Lcom/tendcloud/tenddata/TCAgent;->init(Landroid/content/Context;)V
 
-    .line 150
+    .line 152
     const/4 v0, 0x1
 
     invoke-static {v0}, Lcom/tendcloud/tenddata/TCAgent;->setReportUncaughtExceptions(Z)V
 
-    .line 151
+    .line 153
     invoke-virtual {p0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->registerBoradcastReceiver()V
 
-    .line 152
+    .line 154
     new-instance v0, Lcom/wytl/android/cosbuyer/lib/WebApi;
 
     invoke-direct {v0}, Lcom/wytl/android/cosbuyer/lib/WebApi;-><init>()V
 
     iput-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->lib:Lcom/wytl/android/cosbuyer/lib/WebApi;
 
-    .line 153
+    .line 155
     invoke-direct {p0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->initLayout()V
 
-    .line 154
+    .line 156
     invoke-virtual {p0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->initData()V
 
-    .line 155
+    .line 157
     invoke-direct {p0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->InitImageView()V
 
-    .line 169
+    .line 158
+    const-string v0, "cosbuyer"
+
+    const-string v1, "SearchActivity onCreate"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 172
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->left:Landroid/widget/TextView;
 
     new-instance v1, Lcom/wytl/android/cosbuyer/activity/SearchActivity$1;
@@ -1219,7 +1231,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 181
+    .line 184
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->center:Landroid/widget/TextView;
 
     new-instance v1, Lcom/wytl/android/cosbuyer/activity/SearchActivity$2;
@@ -1228,7 +1240,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 193
+    .line 196
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->right:Landroid/widget/TextView;
 
     new-instance v1, Lcom/wytl/android/cosbuyer/activity/SearchActivity$3;
@@ -1237,7 +1249,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 205
+    .line 208
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->rightButton:Landroid/widget/Button;
 
     new-instance v1, Lcom/wytl/android/cosbuyer/activity/SearchActivity$4;
@@ -1246,7 +1258,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 230
+    .line 233
     return-void
 .end method
 
@@ -1254,17 +1266,17 @@
     .registers 3
 
     .prologue
-    .line 1071
+    .line 1074
     invoke-super {p0}, Lcom/wytl/android/cosbuyer/activity/BaseActivity;->onDestroy()V
 
-    .line 1072
-    const-string v0, "onDestroy"
+    .line 1075
+    const-string v0, "cosbuyer"
 
     const-string v1, " SearchActivity onDestroy"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1074
+    .line 1077
     return-void
 .end method
 
@@ -1274,16 +1286,16 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1257
+    .line 1266
     packed-switch p1, :pswitch_data_1c
 
-    .line 1288
+    .line 1297
     :goto_3
     const/4 v0, 0x1
 
     return v0
 
-    .line 1259
+    .line 1268
     :pswitch_5
     const-string v0, "onkeydonw"
 
@@ -1291,7 +1303,7 @@
 
     invoke-static {v0, v1}, Lcom/wytl/android/cosbuyer/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1260
+    .line 1269
     const v0, 0x7f0b0093
 
     const v1, 0x7f0b0094
@@ -1304,7 +1316,7 @@
 
     goto :goto_3
 
-    .line 1257
+    .line 1266
     nop
 
     :pswitch_data_1c
@@ -1317,41 +1329,69 @@
     .registers 3
 
     .prologue
-    .line 1236
+    .line 1240
     invoke-super {p0}, Lcom/wytl/android/cosbuyer/activity/BaseActivity;->onPause()V
 
-    .line 1237
-    const-string v0, "tcagent"
+    .line 1241
+    const-string v0, "cosbuyer"
 
     const-string v1, "search on Pause"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1238
+    .line 1243
+    iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->goodsList:Lcom/wytl/android/cosbuyer/myviews/PullList;
+
+    invoke-virtual {v0}, Lcom/wytl/android/cosbuyer/myviews/PullList;->getScrollY()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->firstVisiblePosition:I
+
+    .line 1244
     invoke-static {p0}, Lcom/tendcloud/tenddata/TCAgent;->onPause(Landroid/app/Activity;)V
 
-    .line 1239
+    .line 1245
     return-void
 .end method
 
 .method protected onResume()V
-    .registers 3
+    .registers 4
 
     .prologue
-    .line 1243
+    .line 1249
     invoke-super {p0}, Lcom/wytl/android/cosbuyer/activity/BaseActivity;->onResume()V
 
-    .line 1244
-    const-string v0, "tcagent"
+    .line 1250
+    const-string v0, "cosbuyer"
 
-    const-string v1, "search onResume"
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "search onResume : "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->firstVisiblePosition:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1245
+    .line 1253
+    iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->goodsList:Lcom/wytl/android/cosbuyer/myviews/PullList;
+
+    invoke-virtual {v0}, Lcom/wytl/android/cosbuyer/myviews/PullList;->setPosBefore()V
+
+    .line 1254
     invoke-static {p0}, Lcom/tendcloud/tenddata/TCAgent;->onResume(Landroid/app/Activity;)V
 
-    .line 1246
+    .line 1255
     return-void
 .end method
 
@@ -1359,7 +1399,7 @@
     .registers 3
 
     .prologue
-    .line 1211
+    .line 1214
     new-instance v0, Lcom/wytl/android/cosbuyer/activity/SearchActivity$AddressLoader;
 
     const/4 v1, 0x0
@@ -1372,7 +1412,7 @@
 
     invoke-virtual {v0, v1}, Lcom/wytl/android/cosbuyer/activity/SearchActivity$AddressLoader;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 1212
+    .line 1215
     return-void
 .end method
 
@@ -1400,7 +1440,7 @@
 
     const/4 v3, 0x0
 
-    .line 1136
+    .line 1139
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->listLoader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
     if-eqz v0, :cond_14
@@ -1413,16 +1453,16 @@
 
     if-eqz v0, :cond_14
 
-    .line 1137
+    .line 1140
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->listLoader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
     invoke-virtual {v0, v4}, Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;->cancel(Z)Z
 
-    .line 1138
+    .line 1141
     :cond_14
     iput-object p1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currentChoose:Ljava/util/HashMap;
 
-    .line 1139
+    .line 1142
     new-instance v0, Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
     const/4 v1, 0x0
@@ -1431,27 +1471,27 @@
 
     iput-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->listLoader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
-    .line 1140
+    .line 1143
     packed-switch p2, :pswitch_data_b8
 
-    .line 1166
+    .line 1169
     :cond_21
     :goto_21
     iput p2, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currIndex:I
 
-    .line 1167
+    .line 1170
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->animation:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v4}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 1168
+    .line 1171
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->animation:Landroid/view/animation/Animation;
 
     const-wide/16 v1, 0x12c
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 1169
+    .line 1172
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->animation:Landroid/view/animation/Animation;
 
     new-instance v1, Lcom/wytl/android/cosbuyer/activity/SearchActivity$6;
@@ -1460,24 +1500,24 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1207
+    .line 1210
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->cursor:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->animation:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1208
+    .line 1211
     :goto_40
     return-void
 
-    .line 1142
+    .line 1145
     :pswitch_41
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currIndex:I
 
     if-ne v0, v4, :cond_50
 
-    .line 1143
+    .line 1146
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     iget v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->one:I
@@ -1490,13 +1530,13 @@
 
     goto :goto_21
 
-    .line 1144
+    .line 1147
     :cond_50
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currIndex:I
 
     if-ne v0, v2, :cond_21
 
-    .line 1145
+    .line 1148
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     iget v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->two:I
@@ -1509,13 +1549,13 @@
 
     goto :goto_21
 
-    .line 1149
+    .line 1152
     :pswitch_5f
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currIndex:I
 
     if-nez v0, :cond_71
 
-    .line 1150
+    .line 1153
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     iget v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->offset:I
@@ -1532,13 +1572,13 @@
 
     goto :goto_21
 
-    .line 1151
+    .line 1154
     :cond_71
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currIndex:I
 
     if-ne v0, v2, :cond_21
 
-    .line 1152
+    .line 1155
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     iget v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->two:I
@@ -1555,13 +1595,13 @@
 
     goto :goto_21
 
-    .line 1156
+    .line 1159
     :pswitch_83
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currIndex:I
 
     if-nez v0, :cond_95
 
-    .line 1157
+    .line 1160
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     iget v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->offset:I
@@ -1578,13 +1618,13 @@
 
     goto :goto_21
 
-    .line 1158
+    .line 1161
     :cond_95
     iget v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->currIndex:I
 
     if-ne v0, v4, :cond_21
 
-    .line 1159
+    .line 1162
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     iget v1, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->one:I
@@ -1601,7 +1641,7 @@
 
     goto/16 :goto_21
 
-    .line 1163
+    .line 1166
     :pswitch_a8
     iget-object v0, p0, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->listLoader:Lcom/wytl/android/cosbuyer/activity/SearchActivity$ListDataLoader;
 
@@ -1619,7 +1659,7 @@
 
     goto :goto_40
 
-    .line 1140
+    .line 1143
     nop
 
     :pswitch_data_b8
@@ -1635,30 +1675,30 @@
     .registers 3
 
     .prologue
-    .line 1249
+    .line 1258
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1250
+    .line 1259
     .local v0, "myIntentFilter":Landroid/content/IntentFilter;
     const-string v1, "com.wytl.android.buyer.choose"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1251
+    .line 1260
     const-string v1, "com.wytl.android.buyer.choose.address"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1252
+    .line 1261
     new-instance v1, Lcom/wytl/android/cosbuyer/broadcast/SearchBroadCast;
 
     invoke-direct {v1, p0}, Lcom/wytl/android/cosbuyer/broadcast/SearchBroadCast;-><init>(Landroid/app/Activity;)V
 
     invoke-virtual {p0, v1, v0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1253
+    .line 1262
     return-void
 .end method
 
@@ -1667,29 +1707,29 @@
     .param p1, "barcode"    # Ljava/lang/String;
 
     .prologue
-    .line 1128
+    .line 1131
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/wytl/android/cosbuyer/activity/GoodsInfoActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 1129
+    .line 1132
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "barcode"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1130
+    .line 1133
     const-string v1, "from"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1131
+    .line 1134
     invoke-virtual {p0, v0}, Lcom/wytl/android/cosbuyer/activity/SearchActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1132
+    .line 1135
     return-void
 .end method

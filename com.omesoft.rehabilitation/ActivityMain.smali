@@ -20,6 +20,8 @@
 
 
 # instance fields
+.field private adView:Lcom/wooboo/adlib_android/WoobooAdView;
+
 .field private b:Z
 
 .field private bar:Landroid/widget/SeekBar;
@@ -55,28 +57,15 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 5
+    .registers 1
 
     .prologue
-    .line 43
+    .line 42
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/omesoft/rehabilitation/ActivityMain;->isShow:Z
 
-    .line 352
-    const-string v0, "8339c914f30166ec"
-
-    const-string v1, "a1b04e6a83aacc2e"
-
-    const/16 v2, 0x1e
-
-    const/4 v3, 0x0
-
-    const-string v4, "1.1"
-
-    invoke-static {v0, v1, v2, v3, v4}, Lnet/youmi/android/AdManager;->init(Ljava/lang/String;Ljava/lang/String;IZLjava/lang/String;)V
-
-    .line 29
+    .line 28
     return-void
 .end method
 
@@ -84,7 +73,7 @@
     .registers 2
 
     .prologue
-    .line 29
+    .line 28
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 46
@@ -106,14 +95,14 @@
 
     iput-boolean v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->b:Z
 
-    .line 318
+    .line 326
     new-instance v0, Lcom/omesoft/rehabilitation/ActivityMain$3;
 
     invoke-direct {v0, p0}, Lcom/omesoft/rehabilitation/ActivityMain$3;-><init>(Lcom/omesoft/rehabilitation/ActivityMain;)V
 
     iput-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->seekListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
-    .line 29
+    .line 28
     return-void
 .end method
 
@@ -131,7 +120,7 @@
     .registers 2
 
     .prologue
-    .line 39
+    .line 38
     iput-object p1, p0, Lcom/omesoft/rehabilitation/ActivityMain;->service:Lcom/omesoft/rehabilitation/IPlayback;
 
     return-void
@@ -151,8 +140,18 @@
     .registers 2
 
     .prologue
-    .line 39
+    .line 38
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->service:Lcom/omesoft/rehabilitation/IPlayback;
+
+    return-object v0
+.end method
+
+.method static synthetic access$4(Lcom/omesoft/rehabilitation/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+    .registers 2
+
+    .prologue
+    .line 44
+    iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->adView:Lcom/wooboo/adlib_android/WoobooAdView;
 
     return-object v0
 .end method
@@ -162,14 +161,14 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 226
+    .line 234
     new-instance v0, Lcom/omesoft/rehabilitation/ActivityMain$11;
 
     invoke-direct {v0, p0}, Lcom/omesoft/rehabilitation/ActivityMain$11;-><init>(Lcom/omesoft/rehabilitation/ActivityMain;)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 269
+    .line 277
     return-void
 .end method
 
@@ -178,6 +177,17 @@
 
     .prologue
     .line 133
+    const/high16 v0, 0x7f070000
+
+    invoke-virtual {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/wooboo/adlib_android/WoobooAdView;
+
+    iput-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->adView:Lcom/wooboo/adlib_android/WoobooAdView;
+
+    .line 134
     const v0, 0x7f070001
 
     invoke-virtual {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -188,7 +198,7 @@
 
     iput-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
-    .line 134
+    .line 135
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -199,12 +209,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 135
+    .line 136
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 136
+    .line 137
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/rehabilitation/ActivityMain$4;
@@ -213,7 +223,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 145
+    .line 147
     const v0, 0x7f070002
 
     invoke-virtual {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -224,7 +234,7 @@
 
     iput-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
-    .line 146
+    .line 148
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
     const/4 v1, 0x2
@@ -235,12 +245,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 147
+    .line 149
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 148
+    .line 150
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/rehabilitation/ActivityMain$5;
@@ -249,7 +259,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 157
+    .line 160
     const v0, 0x7f070003
 
     invoke-virtual {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -260,7 +270,7 @@
 
     iput-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnSet:Landroid/widget/TextView;
 
-    .line 158
+    .line 161
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnSet:Landroid/widget/TextView;
 
     const/4 v1, 0x3
@@ -271,12 +281,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 159
+    .line 162
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnSet:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 160
+    .line 163
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnSet:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/rehabilitation/ActivityMain$6;
@@ -285,7 +295,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 168
+    .line 172
     const v0, 0x7f070004
 
     invoke-virtual {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -296,7 +306,7 @@
 
     iput-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
-    .line 169
+    .line 173
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
     const/4 v1, 0x4
@@ -307,12 +317,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 170
+    .line 174
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 171
+    .line 175
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/rehabilitation/ActivityMain$7;
@@ -321,7 +331,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 179
+    .line 184
     const v0, 0x7f070005
 
     invoke-virtual {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -332,7 +342,7 @@
 
     iput-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->play:Landroid/widget/Button;
 
-    .line 180
+    .line 185
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->play:Landroid/widget/Button;
 
     const/4 v1, 0x5
@@ -343,12 +353,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    .line 181
+    .line 186
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->play:Landroid/widget/Button;
 
     invoke-direct {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 182
+    .line 187
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->play:Landroid/widget/Button;
 
     new-instance v1, Lcom/omesoft/rehabilitation/ActivityMain$8;
@@ -357,7 +367,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 195
+    .line 201
     const v0, 0x7f070006
 
     invoke-virtual {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -368,7 +378,7 @@
 
     iput-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->pause:Landroid/widget/Button;
 
-    .line 196
+    .line 202
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->pause:Landroid/widget/Button;
 
     const/4 v1, 0x6
@@ -379,12 +389,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    .line 197
+    .line 203
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->pause:Landroid/widget/Button;
 
     invoke-direct {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 198
+    .line 204
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->pause:Landroid/widget/Button;
 
     new-instance v1, Lcom/omesoft/rehabilitation/ActivityMain$9;
@@ -393,7 +403,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 210
+    .line 217
     const v0, 0x7f070007
 
     invoke-virtual {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -404,7 +414,7 @@
 
     iput-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->stop:Landroid/widget/Button;
 
-    .line 211
+    .line 218
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->stop:Landroid/widget/Button;
 
     const/4 v1, 0x7
@@ -415,12 +425,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    .line 212
+    .line 219
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->stop:Landroid/widget/Button;
 
     invoke-direct {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 213
+    .line 220
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->stop:Landroid/widget/Button;
 
     new-instance v1, Lcom/omesoft/rehabilitation/ActivityMain$10;
@@ -429,7 +439,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 224
+    .line 232
     return-void
 .end method
 
@@ -773,20 +783,20 @@
     .registers 3
 
     .prologue
-    .line 344
+    .line 352
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 345
+    .line 353
     iget-object v0, p0, Lcom/omesoft/rehabilitation/ActivityMain;->connection:Landroid/content/ServiceConnection;
 
     invoke-virtual {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 346
+    .line 354
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/omesoft/rehabilitation/ActivityMain;->isShow:Z
 
-    .line 347
+    .line 355
     sget v0, Lcom/omesoft/rehabilitation/MusicService;->state:I
 
     const/4 v1, 0x2
@@ -799,7 +809,7 @@
 
     if-ne v0, v1, :cond_1f
 
-    .line 348
+    .line 356
     :cond_15
     new-instance v0, Landroid/content/Intent;
 
@@ -809,7 +819,7 @@
 
     invoke-virtual {p0, v0}, Lcom/omesoft/rehabilitation/ActivityMain;->stopService(Landroid/content/Intent;)Z
 
-    .line 350
+    .line 358
     :cond_1f
     return-void
 .end method
@@ -818,9 +828,9 @@
     .registers 1
 
     .prologue
-    .line 339
+    .line 347
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 340
+    .line 348
     return-void
 .end method

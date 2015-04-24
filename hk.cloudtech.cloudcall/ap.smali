@@ -10,15 +10,6 @@
 .field private C:Z
 
 .field private final D:Ljava/util/Collection;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Collection",
-            "<",
-            "Lorg/b/a/o;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private E:Z
 
@@ -88,11 +79,6 @@
 
 .method private B()V
     .registers 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/b/a/aq;
-        }
-    .end annotation
 
     const/4 v0, 0x1
 
@@ -363,11 +349,6 @@
 
 .method private C()V
     .registers 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/b/a/aq;
-        }
-    .end annotation
 
     :try_start_0
     iget-object v0, p0, Lorg/b/a/ap;->p:Lorg/b/a/a/a;
@@ -563,11 +544,6 @@
 
 .method private a(Lorg/b/a/g;)V
     .registers 13
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/b/a/aq;
-        }
-    .end annotation
 
     const/4 v4, 0x1
 
@@ -861,11 +837,6 @@
 # virtual methods
 .method public A()V
     .registers 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/b/a/aq;
-        }
-    .end annotation
 
     invoke-virtual {p0}, Lorg/b/a/ap;->l()V
 
@@ -990,11 +961,6 @@
 
 .method public declared-synchronized a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .registers 12
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/b/a/aq;
-        }
-    .end annotation
 
     monitor-enter p0
 
@@ -1796,11 +1762,6 @@
 
 .method public i()V
     .registers 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/b/a/aq;
-        }
-    .end annotation
 
     iget-object v0, p0, Lorg/b/a/ap;->o:Lorg/b/a/g;
 
@@ -1868,15 +1829,6 @@
 
 .method r()Ljava/util/Collection;
     .registers 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Collection",
-            "<",
-            "Lorg/b/a/o;",
-            ">;"
-        }
-    .end annotation
 
     iget-object v0, p0, Lorg/b/a/ap;->D:Ljava/util/Collection;
 
@@ -1885,11 +1837,6 @@
 
 .method public declared-synchronized s()V
     .registers 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/b/a/aq;
-        }
-    .end annotation
 
     monitor-enter p0
 
@@ -2101,11 +2048,6 @@
 
 .method w()V
     .registers 10
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
 
     const/4 v8, 0x1
 
@@ -2514,11 +2456,6 @@
 
 .method x()V
     .registers 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
 
     const/4 v0, 0x1
 

@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/d;->a:Lcom/cungo/callrecorder/ui/ActivityAbout_;
 
-    invoke-virtual {v0}, Lcom/cungo/callrecorder/ui/ActivityAbout_;->h()V
+    invoke-virtual {v0}, Lcom/cungo/callrecorder/ui/ActivityAbout_;->i()V
 
     return-void
 .end method

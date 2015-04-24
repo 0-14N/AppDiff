@@ -281,14 +281,14 @@
 
     .line 67
     :cond_6d
-    const v1, 0x7f080001
+    const v1, 0x7f090001
 
     .line 68
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f08008a
+    const v3, 0x7f09008a
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -614,7 +614,7 @@
 
     .line 99
     .local v0, "alertDialog":Landroid/app/AlertDialog$Builder;
-    const v2, 0x7f080027
+    const v2, 0x7f090027
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -622,12 +622,12 @@
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
     .line 101
-    const v2, 0x7f080047
+    const v2, 0x7f090047
 
     .line 102
-    new-instance v3, Lcom/wei/android/apis/c/h;
+    new-instance v3, Lcom/wei/android/apis/c/i;
 
-    invoke-direct {v3, v1, p0, p1}, Lcom/wei/android/apis/c/h;-><init>(Landroid/widget/EditText;Landroid/content/Context;Landroid/app/Dialog;)V
+    invoke-direct {v3, v1, p0, p1}, Lcom/wei/android/apis/c/i;-><init>(Landroid/widget/EditText;Landroid/content/Context;Landroid/app/Dialog;)V
 
     .line 101
     invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -636,9 +636,9 @@
     const/high16 v2, 0x1040000
 
     .line 108
-    new-instance v3, Lcom/wei/android/apis/c/g;
+    new-instance v3, Lcom/wei/android/apis/c/h;
 
-    invoke-direct {v3, p1}, Lcom/wei/android/apis/c/g;-><init>(Landroid/app/Dialog;)V
+    invoke-direct {v3, p1}, Lcom/wei/android/apis/c/h;-><init>(Landroid/app/Dialog;)V
 
     .line 107
     invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -771,7 +771,7 @@
     .param p2, "dialog"    # Landroid/app/Dialog;
 
     .prologue
-    const v2, 0x7f080001
+    const v2, 0x7f090001
 
     .line 75
     invoke-static {p0}, Lcom/wei/android/apis/a/k;->a(Landroid/widget/EditText;)Z
@@ -781,7 +781,7 @@
     if-eqz v1, :cond_13
 
     .line 77
-    const v1, 0x7f080028
+    const v1, 0x7f090028
 
     .line 76
     invoke-static {p1, v2, v1}, Lcom/wei/android/apis/a/w;->a(Landroid/content/Context;II)V
@@ -812,7 +812,7 @@
     if-nez v1, :cond_2b
 
     .line 84
-    const v1, 0x7f080029
+    const v1, 0x7f090029
 
     .line 83
     invoke-static {p1, v2, v1}, Lcom/wei/android/apis/a/w;->a(Landroid/content/Context;II)V

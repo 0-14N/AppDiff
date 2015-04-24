@@ -16,7 +16,7 @@
     invoke-direct {v1, p0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 87
-    invoke-virtual {v1}, Ljava/io/File;->length()J
+    invoke-static {v1}, Lxlr8;->length(Ljava/io/File;)J
 
     move-result-wide v2
 

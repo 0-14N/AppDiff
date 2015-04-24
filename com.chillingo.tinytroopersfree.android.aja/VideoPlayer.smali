@@ -50,12 +50,6 @@
 
 .field private s:Landroid/os/PowerManager$WakeLock;
 
-.field private t:Z
-
-.field private u:Z
-
-.field private v:Z
-
 
 # direct methods
 .method static constructor <clinit>()V
@@ -65,67 +59,30 @@
 .end method
 
 .method public constructor <init>()V
-    .registers 3
+    .registers 2
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    iput-boolean v1, p0, Lcom/unity3d/player/VideoPlayer;->m:Z
+    iput-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->m:Z
 
-    iput-boolean v1, p0, Lcom/unity3d/player/VideoPlayer;->n:Z
+    iput-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->n:Z
 
-    iput v1, p0, Lcom/unity3d/player/VideoPlayer;->p:I
+    iput v0, p0, Lcom/unity3d/player/VideoPlayer;->p:I
 
-    iput-boolean v1, p0, Lcom/unity3d/player/VideoPlayer;->q:Z
+    iput-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->q:Z
 
-    iput v1, p0, Lcom/unity3d/player/VideoPlayer;->r:I
+    iput v0, p0, Lcom/unity3d/player/VideoPlayer;->r:I
 
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/unity3d/player/VideoPlayer;->s:Landroid/os/PowerManager$WakeLock;
 
-    iput-boolean v1, p0, Lcom/unity3d/player/VideoPlayer;->t:Z
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->u:Z
-
-    iput-boolean v1, p0, Lcom/unity3d/player/VideoPlayer;->v:Z
-
     return-void
 .end method
 
 .method private a()V
-    .registers 2
-
-    iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->t:Z
-
-    if-eqz v0, :cond_c
-
-    iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->u:Z
-
-    if-nez v0, :cond_c
-
-    iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->v:Z
-
-    if-eqz v0, :cond_d
-
-    :cond_c
-    :goto_c
-    return-void
-
-    :cond_d
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->v:Z
-
-    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->c()V
-
-    goto :goto_c
-.end method
-
-.method private b()V
     .registers 3
 
     const/4 v1, 0x0
@@ -154,40 +111,32 @@
     return-void
 .end method
 
-.method private c()V
+.method private b()V
     .registers 2
 
-    iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->n:Z
-
-    if-eqz v0, :cond_8
-
-    iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->m:Z
-
-    if-nez v0, :cond_9
-
-    :cond_8
-    :goto_8
-    return-void
-
-    :cond_9
     invoke-virtual {p0}, Lcom/unity3d/player/VideoPlayer;->isPlaying()Z
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-eqz v0, :cond_7
 
-    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->d()V
+    :cond_6
+    :goto_6
+    return-void
+
+    :cond_7
+    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->c()V
 
     iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->q:Z
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_6
 
     invoke-virtual {p0}, Lcom/unity3d/player/VideoPlayer;->start()V
 
-    goto :goto_8
+    goto :goto_6
 .end method
 
-.method private d()V
+.method private c()V
     .registers 6
 
     const-string v0, "window"
@@ -487,7 +436,7 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->d()V
+    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->c()V
 
     return-void
 .end method
@@ -555,7 +504,7 @@
 
     if-nez v3, :cond_3f
 
-    if-ne v2, v0, :cond_4a
+    if-ne v2, v0, :cond_91
 
     :cond_3f
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -569,7 +518,7 @@
     :cond_47
     invoke-virtual {p0, v0}, Lcom/unity3d/player/VideoPlayer;->setRequestedOrientation(I)V
 
-    :cond_4a
+    :goto_4a
     const-string v0, "wakeLock"
 
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -635,13 +584,18 @@
 
     move-result v5
 
-    if-nez v5, :cond_91
+    if-nez v5, :cond_95
 
     invoke-virtual {p0}, Lcom/unity3d/player/VideoPlayer;->finish()V
 
     goto :goto_1d
 
     :cond_91
+    invoke-virtual {p0, v2}, Lcom/unity3d/player/VideoPlayer;->setRequestedOrientation(I)V
+
+    goto :goto_4a
+
+    :cond_95
     new-instance v5, Landroid/widget/FrameLayout;
 
     invoke-direct {v5, p0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -702,7 +656,7 @@
 
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->b()V
+    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->a()V
 
     iget-object v0, p0, Lcom/unity3d/player/VideoPlayer;->s:Landroid/os/PowerManager$WakeLock;
 
@@ -792,30 +746,24 @@
 .end method
 
 .method protected onPause()V
-    .registers 3
-
-    const/4 v1, 0x0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->u:Z
-
-    iput-boolean v1, p0, Lcom/unity3d/player/VideoPlayer;->v:Z
+    .registers 2
 
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->q:Z
 
-    if-nez v0, :cond_12
+    if-nez v0, :cond_d
 
     invoke-virtual {p0}, Lcom/unity3d/player/VideoPlayer;->pause()V
 
-    iput-boolean v1, p0, Lcom/unity3d/player/VideoPlayer;->q:Z
+    const/4 v0, 0x0
 
-    :cond_12
+    iput-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->q:Z
+
+    :cond_d
     iget-object v0, p0, Lcom/unity3d/player/VideoPlayer;->e:Landroid/media/MediaPlayer;
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_19
 
     iget-object v0, p0, Lcom/unity3d/player/VideoPlayer;->e:Landroid/media/MediaPlayer;
 
@@ -825,7 +773,7 @@
 
     iput v0, p0, Lcom/unity3d/player/VideoPlayer;->r:I
 
-    :cond_1e
+    :cond_19
     return-void
 .end method
 
@@ -836,22 +784,32 @@
 
     iput-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->n:Z
 
-    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->c()V
+    iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->n:Z
 
+    if-eqz v0, :cond_e
+
+    iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->m:Z
+
+    if-eqz v0, :cond_e
+
+    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->b()V
+
+    :cond_e
     return-void
 .end method
 
 .method protected onResume()V
     .registers 2
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->u:Z
-
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->a()V
+    iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->q:Z
 
+    if-nez v0, :cond_a
+
+    invoke-virtual {p0}, Lcom/unity3d/player/VideoPlayer;->start()V
+
+    :cond_a
     return-void
 .end method
 
@@ -922,19 +880,17 @@
 
     iput p3, p0, Lcom/unity3d/player/VideoPlayer;->d:I
 
-    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->c()V
+    iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->n:Z
+
+    if-eqz v0, :cond_4
+
+    iget-boolean v0, p0, Lcom/unity3d/player/VideoPlayer;->m:Z
+
+    if-eqz v0, :cond_4
+
+    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->b()V
 
     goto :goto_4
-.end method
-
-.method public onWindowFocusChanged(Z)V
-    .registers 2
-
-    iput-boolean p1, p0, Lcom/unity3d/player/VideoPlayer;->t:Z
-
-    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->a()V
-
-    return-void
 .end method
 
 .method public pause()V
@@ -1014,7 +970,7 @@
 
     const/4 v7, 0x1
 
-    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->b()V
+    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->a()V
 
     :try_start_4
     new-instance v0, Landroid/media/MediaPlayer;
@@ -1192,7 +1148,7 @@
 .method public surfaceDestroyed(Landroid/view/SurfaceHolder;)V
     .registers 2
 
-    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->b()V
+    invoke-direct {p0}, Lcom/unity3d/player/VideoPlayer;->a()V
 
     return-void
 .end method

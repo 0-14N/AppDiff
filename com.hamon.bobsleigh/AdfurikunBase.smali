@@ -3,7 +3,7 @@
 .source "AdfurikunBase.java"
 
 # interfaces
-.implements Ljp/tjkapp/adfurikunsdk/AdfurikunConstants;
+.implements Ljp/tjkapp/adfurikunsdk/Constants;
 
 
 # instance fields
@@ -21,7 +21,7 @@
 
 .field private mFirstTime:Z
 
-.field protected mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;
+.field protected mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;
 
 .field private mInAnimation:Landroid/view/animation/Animation;
 
@@ -31,7 +31,7 @@
 
 .field protected mIsLog:Z
 
-.field protected mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+.field protected mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
 .field private mOutAnimation:Landroid/view/animation/Animation;
 
@@ -288,13 +288,13 @@
 
     .line 313
     :cond_42
-    iget-object v1, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v1, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const-string v2, "adfurikun"
 
     const-string v3, ">>>>>>>>>>>>>>>>>nolist!!"
 
-    invoke-virtual {v1, v2, v3}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->debug(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Ljp/tjkapp/adfurikunsdk/LogUtil;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_39
 .end method
@@ -309,21 +309,21 @@
     iput-boolean v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mIsLoading:Z
 
     .line 257
-    iget-object v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;
+    iget-object v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;
 
     if-eqz v0, :cond_10
 
     .line 258
-    iget-object v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;
+    iget-object v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;->cancel(Z)Z
+    invoke-virtual {v0, v1}, Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;->cancel(Z)Z
 
     .line 259
     const/4 v0, 0x0
 
-    iput-object v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;
+    iput-object v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;
 
     .line 261
     :cond_10
@@ -911,7 +911,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Ljp/tjkapp/adfurikunsdk/AdfurikunApiAccessUtil;->loadStringFile(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Ljp/tjkapp/adfurikunsdk/ApiAccessUtil;->loadStringFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -919,11 +919,11 @@
     .local v1, "get_info":Ljava/lang/String;
     iget-object v2, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mAppID:Ljava/lang/String;
 
-    iget-object v3, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v3, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const/4 v4, 0x1
 
-    invoke-static {p1, v2, v1, v3, v4}, Ljp/tjkapp/adfurikunsdk/AdfurikunApiAccessUtil;->stringToInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;Z)Ljp/tjkapp/adfurikunsdk/AdfurikunInfo;
+    invoke-static {p1, v2, v1, v3, v4}, Ljp/tjkapp/adfurikunsdk/ApiAccessUtil;->stringToInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljp/tjkapp/adfurikunsdk/LogUtil;Z)Ljp/tjkapp/adfurikunsdk/AdfurikunInfo;
 
     move-result-object v2
 
@@ -967,7 +967,7 @@
     .line 322
     .local v7, "is_main":Z
     :goto_16
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;
 
     new-instance v1, Ljp/tjkapp/adfurikunsdk/AdfurikunBase$3;
 
@@ -988,24 +988,24 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v5, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     iget-object v6, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mUserAgent:Ljava/lang/String;
 
-    invoke-direct/range {v0 .. v7}, Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;-><init>(Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask$OnLoadListener;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;Ljava/lang/String;Z)V
+    invoke-direct/range {v0 .. v7}, Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;-><init>(Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask$OnLoadListener;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljp/tjkapp/adfurikunsdk/LogUtil;Ljava/lang/String;Z)V
 
     .line 322
-    iput-object v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;
+    iput-object v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;
 
     .line 380
     iput-boolean v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mIsLoading:Z
 
     .line 381
-    iget-object v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;
+    iget-object v0, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;
 
     new-array v1, v8, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 383
     .end local v7    # "is_main":Z
@@ -1307,11 +1307,11 @@
     invoke-virtual {p0, v10}, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->setClickable(Z)V
 
     .line 76
-    new-instance v10, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    new-instance v10, Ljp/tjkapp/adfurikunsdk/LogUtil;
 
-    invoke-direct {v10}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;-><init>()V
+    invoke-direct {v10}, Ljp/tjkapp/adfurikunsdk/LogUtil;-><init>()V
 
-    iput-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iput-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     .line 77
     const/4 v10, 0x0
@@ -1321,7 +1321,7 @@
     .line 78
     const/4 v10, 0x0
 
-    iput-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfurikunGetInfoTask;
+    iput-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mGetInfoTask:Ljp/tjkapp/adfurikunsdk/AdfuriGetInfoTask;
 
     .line 79
     const/4 v10, 0x0
@@ -1455,11 +1455,11 @@
     if-ne v8, v10, :cond_e4
 
     .line 109
-    iget-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     iget-boolean v11, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mIsLog:Z
 
-    invoke-virtual {v10, v11}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->setIsDebugable(Z)V
+    invoke-virtual {v10, v11}, Ljp/tjkapp/adfurikunsdk/LogUtil;->setIsDebugable(Z)V
 
     .line 110
     iget-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mAppID:Ljava/lang/String;
@@ -1475,7 +1475,7 @@
     if-lez v10, :cond_df
 
     .line 111
-    iget-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const-string v11, "adfurikun"
 
@@ -1501,7 +1501,7 @@
 
     move-result-object v12
 
-    invoke-virtual {v10, v11, v12}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v10, v11, v12}, Ljp/tjkapp/adfurikunsdk/LogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 125
     :goto_a0
@@ -1595,11 +1595,11 @@
 
     .line 103
     .local v4, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
-    iget-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const-string v11, "adfurikun"
 
-    invoke-virtual {v10, v11, v4}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->debug_e(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-virtual {v10, v11, v4}, Ljp/tjkapp/adfurikunsdk/LogUtil;->debug_e(Ljava/lang/String;Ljava/lang/Exception;)V
 
     goto :goto_5e
 
@@ -1625,11 +1625,11 @@
 
     .line 122
     :goto_e9
-    iget-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v10, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     iget-boolean v11, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mIsLog:Z
 
-    invoke-virtual {v10, v11}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->setIsDebugable(Z)V
+    invoke-virtual {v10, v11}, Ljp/tjkapp/adfurikunsdk/LogUtil;->setIsDebugable(Z)V
 
     goto :goto_a0
 
@@ -1653,9 +1653,9 @@
 
     iget-object v11, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mAppID:Ljava/lang/String;
 
-    iget-object v12, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v12, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
-    invoke-direct {v0, v10, v11, v12}, Ljp/tjkapp/adfurikunsdk/AdfurikunWebView;-><init>(Landroid/content/Context;Ljava/lang/String;Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;)V
+    invoke-direct {v0, v10, v11, v12}, Ljp/tjkapp/adfurikunsdk/AdfurikunWebView;-><init>(Landroid/content/Context;Ljava/lang/String;Ljp/tjkapp/adfurikunsdk/LogUtil;)V
 
     .line 130
     .local v0, "adfurikunWebView":Ljp/tjkapp/adfurikunsdk/AdfurikunWebView;
@@ -1667,7 +1667,11 @@
     invoke-virtual {p0, v0, v6}, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 132
-    invoke-virtual {v0}, Ljp/tjkapp/adfurikunsdk/AdfurikunWebView;->getUserAgent()Ljava/lang/String;
+    invoke-virtual {v0}, Ljp/tjkapp/adfurikunsdk/AdfurikunWebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Landroid/webkit/WebSettings;->getUserAgentString()Ljava/lang/String;
 
     move-result-object v10
 
@@ -1891,16 +1895,16 @@
     if-eqz p1, :cond_d4
 
     .line 403
-    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const-string v10, "adfurikun"
 
     const-string v11, "---------------------------------------------------------"
 
-    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/LogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 407
-    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const-string v10, "adfurikun"
 
@@ -1920,7 +1924,7 @@
 
     move-result-object v11
 
-    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/LogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 410
     invoke-virtual {p0}, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->getDisplayedChild()I
@@ -2004,7 +2008,7 @@
     if-eqz v2, :cond_83
 
     .line 431
-    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const-string v10, "adfurikun"
 
@@ -2024,7 +2028,7 @@
 
     move-result-object v11
 
-    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/LogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 437
     :cond_83
@@ -2037,7 +2041,7 @@
     if-eqz v6, :cond_a2
 
     .line 445
-    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const-string v10, "adfurikun"
 
@@ -2057,18 +2061,18 @@
 
     move-result-object v11
 
-    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/LogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 464
     :cond_a2
     :goto_a2
-    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const-string v10, "adfurikun"
 
     const-string v11, "---------------------------------------------------------"
 
-    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/LogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 465
     if-nez v6, :cond_d4
@@ -2150,7 +2154,7 @@
     if-eqz v4, :cond_a2
 
     .line 456
-    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const-string v10, "adfurikun"
 
@@ -2170,7 +2174,7 @@
 
     move-result-object v11
 
-    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v9, v10, v11}, Ljp/tjkapp/adfurikunsdk/LogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 458
     iget-boolean v9, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mIsIntersAd:Z
@@ -2268,7 +2272,7 @@
     iput-object p1, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mAppID:Ljava/lang/String;
 
     .line 199
-    iget-object v2, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;
+    iget-object v2, p0, Ljp/tjkapp/adfurikunsdk/AdfurikunBase;->mLog:Ljp/tjkapp/adfurikunsdk/LogUtil;
 
     const-string v3, "adfurikun"
 
@@ -2294,7 +2298,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Ljp/tjkapp/adfurikunsdk/AdfurikunLogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, v4}, Ljp/tjkapp/adfurikunsdk/LogUtil;->debug_i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 200
     const/4 v1, 0x0

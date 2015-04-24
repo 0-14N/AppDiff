@@ -23,11 +23,27 @@
 
 # virtual methods
 .method public run()V
-    .registers 2
+    .registers 3
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->nManager:Landroid/app/NotificationManager;
+    const-string v0, ""
 
-    invoke-virtual {v0}, Landroid/app/NotificationManager;->cancelAll()V
+    const-string v1, "TencentLogin -------------- "
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {}, Lcom/trinitigame/android/g;->c()Lcom/trinitigame/android/Triniti2DActivity;
+
+    move-result-object v0
+
+    const-string v1, "-1"
+
+    iput-object v1, v0, Lcom/trinitigame/android/Triniti2DActivity;->mTencentLoginState:Ljava/lang/String;
+
+    invoke-static {}, Lcom/trinitigame/android/g;->c()Lcom/trinitigame/android/Triniti2DActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/trinitigame/android/Triniti2DActivity;->onClickLogin()V
 
     return-void
 .end method

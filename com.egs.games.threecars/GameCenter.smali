@@ -285,18 +285,9 @@
 .end method
 
 .method public static onStart()V
-    .registers 2
+    .registers 0
 
     .prologue
-    .line 170
-    invoke-static {}, Lcom/enjoygame/tool/gamecenter/GameCenter;->getGameHelper()Lcom/enjoygame/tool/gamecenter/GameHelper;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/enjoygame/tool/gamecenter/GameCenter;->activity:Lorg/cocos2dx/lib/Cocos2dxActivity;
-
-    invoke-virtual {v0, v1}, Lcom/enjoygame/tool/gamecenter/GameHelper;->onStart(Landroid/app/Activity;)V
-
     .line 171
     return-void
 .end method
@@ -308,21 +299,11 @@
     .line 175
     sget-object v0, Lcom/enjoygame/tool/gamecenter/GameCenter;->mHelper:Lcom/enjoygame/tool/gamecenter/GameHelper;
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_4
 
     .line 180
-    :goto_4
+    :cond_4
     return-void
-
-    .line 179
-    :cond_5
-    invoke-static {}, Lcom/enjoygame/tool/gamecenter/GameCenter;->getGameHelper()Lcom/enjoygame/tool/gamecenter/GameHelper;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/enjoygame/tool/gamecenter/GameHelper;->onStop()V
-
-    goto :goto_4
 .end method
 
 .method public static postAchievement(Ljava/lang/String;I)V

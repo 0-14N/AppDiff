@@ -271,16 +271,16 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->P:Landroid/widget/ImageView;
 
     .line 279
-    new-instance v0, Labf;
+    new-instance v0, Lum;
 
-    invoke-direct {v0, p0}, Labf;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lum;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->Q:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 
     .line 308
-    new-instance v0, Labg;
+    new-instance v0, Lun;
 
-    invoke-direct {v0, p0}, Labg;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lun;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->R:Landroid/view/View$OnClickListener;
 
@@ -288,9 +288,9 @@
     iput v2, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->S:I
 
     .line 765
-    new-instance v0, Labh;
+    new-instance v0, Luo;
 
-    invoke-direct {v0, p0}, Labh;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Luo;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->T:Ljava/lang/Runnable;
 
@@ -298,9 +298,9 @@
     iput v2, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->U:I
 
     .line 784
-    new-instance v0, Labi;
+    new-instance v0, Lup;
 
-    invoke-direct {v0, p0}, Labi;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lup;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->V:Ljava/lang/Runnable;
 
@@ -463,16 +463,16 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->P:Landroid/widget/ImageView;
 
     .line 279
-    new-instance v0, Labf;
+    new-instance v0, Lum;
 
-    invoke-direct {v0, p0}, Labf;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lum;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->Q:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 
     .line 308
-    new-instance v0, Labg;
+    new-instance v0, Lun;
 
-    invoke-direct {v0, p0}, Labg;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lun;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->R:Landroid/view/View$OnClickListener;
 
@@ -480,9 +480,9 @@
     iput v2, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->S:I
 
     .line 765
-    new-instance v0, Labh;
+    new-instance v0, Luo;
 
-    invoke-direct {v0, p0}, Labh;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Luo;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->T:Ljava/lang/Runnable;
 
@@ -490,9 +490,9 @@
     iput v2, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->U:I
 
     .line 784
-    new-instance v0, Labi;
+    new-instance v0, Lup;
 
-    invoke-direct {v0, p0}, Labi;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lup;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->V:Ljava/lang/Runnable;
 
@@ -654,16 +654,16 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->P:Landroid/widget/ImageView;
 
     .line 279
-    new-instance v0, Labf;
+    new-instance v0, Lum;
 
-    invoke-direct {v0, p0}, Labf;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lum;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->Q:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 
     .line 308
-    new-instance v0, Labg;
+    new-instance v0, Lun;
 
-    invoke-direct {v0, p0}, Labg;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lun;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->R:Landroid/view/View$OnClickListener;
 
@@ -671,9 +671,9 @@
     iput v2, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->S:I
 
     .line 765
-    new-instance v0, Labh;
+    new-instance v0, Luo;
 
-    invoke-direct {v0, p0}, Labh;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Luo;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->T:Ljava/lang/Runnable;
 
@@ -681,9 +681,9 @@
     iput v2, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->U:I
 
     .line 784
-    new-instance v0, Labi;
+    new-instance v0, Lup;
 
-    invoke-direct {v0, p0}, Labi;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lup;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->V:Ljava/lang/Runnable;
 
@@ -864,16 +864,16 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->P:Landroid/widget/ImageView;
 
     .line 279
-    new-instance v0, Labf;
+    new-instance v0, Lum;
 
-    invoke-direct {v0, p0}, Labf;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lum;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->Q:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 
     .line 308
-    new-instance v0, Labg;
+    new-instance v0, Lun;
 
-    invoke-direct {v0, p0}, Labg;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lun;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->R:Landroid/view/View$OnClickListener;
 
@@ -881,9 +881,9 @@
     iput v2, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->S:I
 
     .line 765
-    new-instance v0, Labh;
+    new-instance v0, Luo;
 
-    invoke-direct {v0, p0}, Labh;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Luo;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->T:Ljava/lang/Runnable;
 
@@ -891,9 +891,9 @@
     iput v2, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->U:I
 
     .line 784
-    new-instance v0, Labi;
+    new-instance v0, Lup;
 
-    invoke-direct {v0, p0}, Labi;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
+    invoke-direct {v0, p0}, Lup;-><init>(Lcom/quvideo/xiaoying/app/studio/UserInfoView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/UserInfoView;->V:Ljava/lang/Runnable;
 
@@ -2398,7 +2398,7 @@
 
     .line 633
     :pswitch_22
-    const v0, 0x7f020657
+    const v0, 0x7f020637
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2409,7 +2409,7 @@
 
     .line 637
     :pswitch_2c
-    const v0, 0x7f020656
+    const v0, 0x7f020636
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 

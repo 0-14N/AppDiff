@@ -29,7 +29,7 @@
 
 .field private adCount:I
 
-.field public alertDialog:Landroid/app/AlertDialog;
+.field private alertDialog:Landroid/app/AlertDialog;
 
 .field private appKey:I
 
@@ -105,7 +105,7 @@
     .end annotation
 
     .prologue
-    .line 196
+    .line 194
     new-instance v5, Landroid/widget/ScrollView;
 
     sget-object v19, Lnd/adLink/adDialog;->ctx:Landroid/content/Context;
@@ -114,7 +114,7 @@
 
     invoke-direct {v5, v0}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
 
-    .line 197
+    .line 195
     .local v5, "Sv":Landroid/widget/ScrollView;
     new-instance v10, Landroid/widget/LinearLayout;
 
@@ -124,7 +124,7 @@
 
     invoke-direct {v10, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 198
+    .line 196
     .local v10, "llay":Landroid/widget/LinearLayout;
     new-instance v19, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -138,14 +138,14 @@
 
     invoke-virtual {v10, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 199
+    .line 197
     const/16 v19, 0x1
 
     move/from16 v0, v19
 
     invoke-virtual {v10, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 200
+    .line 198
     const/16 v19, 0xf
 
     const/16 v20, 0xf
@@ -160,10 +160,10 @@
 
     invoke-virtual {v10, v0}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 201
+    .line 199
     invoke-virtual {v5, v10}, Landroid/widget/ScrollView;->addView(Landroid/view/View;)V
 
-    .line 203
+    .line 201
     new-instance v17, Landroid/widget/TextView;
 
     sget-object v19, Lnd/adLink/adDialog;->ctx:Landroid/content/Context;
@@ -174,7 +174,7 @@
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 204
+    .line 202
     .local v17, "tv":Landroid/widget/TextView;
     move-object/from16 v0, p0
 
@@ -190,7 +190,7 @@
 
     move-result-object v16
 
-    .line 205
+    .line 203
     .local v16, "strMessage":Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -198,7 +198,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 206
+    .line 204
     const/high16 v19, 0x41700000    # 15.0f
 
     move-object/from16 v0, v17
@@ -207,7 +207,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 207
+    .line 205
     const/16 v19, 0xc8
 
     const/16 v20, 0xc8
@@ -224,7 +224,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 208
+    .line 206
     const/16 v19, 0xa
 
     const/16 v20, 0x0
@@ -245,12 +245,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 209
+    .line 207
     move-object/from16 v0, v17
 
     invoke-virtual {v10, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 212
+    .line 210
     move-object/from16 v0, p0
 
     iget v0, v0, Lnd/adLink/adDialog;->totalCount:I
@@ -261,7 +261,7 @@
 
     new-array v11, v0, [Landroid/widget/LinearLayout;
 
-    .line 213
+    .line 211
     .local v11, "llayArr":[Landroid/widget/LinearLayout;
     move-object/from16 v0, p0
 
@@ -275,7 +275,7 @@
 
     move-object/from16 v18, v0
 
-    .line 214
+    .line 212
     .local v18, "tvArr":[Landroid/widget/TextView;
     move-object/from16 v0, p0
 
@@ -287,7 +287,7 @@
 
     new-array v6, v0, [Landroid/widget/CheckBox;
 
-    .line 215
+    .line 213
     .local v6, "cboxArr":[Landroid/widget/CheckBox;
     move-object/from16 v0, p0
 
@@ -299,7 +299,7 @@
 
     new-array v8, v0, [Landroid/widget/ImageView;
 
-    .line 217
+    .line 215
     .local v8, "imgArr":[Landroid/widget/ImageView;
     move-object/from16 v0, p0
 
@@ -311,7 +311,7 @@
 
     new-array v12, v0, [Landroid/widget/LinearLayout;
 
-    .line 219
+    .line 217
     .local v12, "llayLineArr":[Landroid/widget/LinearLayout;
     move-object/from16 v0, p0
 
@@ -329,7 +329,7 @@
 
     iput v0, v1, Lnd/adLink/adDialog;->adCount:I
 
-    .line 220
+    .line 218
     const/4 v7, 0x0
 
     .local v7, "i":I
@@ -348,10 +348,10 @@
 
     if-lt v7, v0, :cond_e1
 
-    .line 294
+    .line 292
     return-object v5
 
-    .line 221
+    .line 219
     :cond_e1
     new-instance v19, Landroid/widget/LinearLayout;
 
@@ -361,7 +361,7 @@
 
     aput-object v19, v11, v7
 
-    .line 222
+    .line 220
     aget-object v19, v11, v7
 
     new-instance v20, Landroid/widget/LinearLayout$LayoutParams;
@@ -374,14 +374,14 @@
 
     invoke-virtual/range {v19 .. v20}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 223
+    .line 221
     aget-object v19, v11, v7
 
     const/16 v20, 0x0
 
     invoke-virtual/range {v19 .. v20}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 224
+    .line 222
     aget-object v19, v11, v7
 
     const/16 v20, 0x5
@@ -394,7 +394,7 @@
 
     invoke-virtual/range {v19 .. v23}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 227
+    .line 225
     new-instance v19, Landroid/widget/CheckBox;
 
     sget-object v20, Lnd/adLink/adDialog;->ctx:Landroid/content/Context;
@@ -403,7 +403,7 @@
 
     aput-object v19, v6, v7
 
-    .line 228
+    .line 226
     aget-object v20, v6, v7
 
     move-object/from16 v0, p0
@@ -430,7 +430,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 229
+    .line 227
     aget-object v19, v6, v7
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -439,7 +439,7 @@
 
     invoke-virtual/range {v19 .. v20}, Landroid/widget/CheckBox;->setTag(Ljava/lang/Object;)V
 
-    .line 230
+    .line 228
     aget-object v19, v6, v7
 
     const/16 v20, 0x0
@@ -452,14 +452,14 @@
 
     invoke-virtual/range {v19 .. v23}, Landroid/widget/CheckBox;->setPadding(IIII)V
 
-    .line 232
+    .line 230
     aget-object v19, v11, v7
 
     aget-object v20, v6, v7
 
     invoke-virtual/range {v19 .. v20}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 234
+    .line 232
     aget-object v19, v6, v7
 
     new-instance v20, Lnd/adLink/adDialog$2;
@@ -472,7 +472,7 @@
 
     invoke-virtual/range {v19 .. v20}, Landroid/widget/CheckBox;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 260
+    .line 258
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lnd/adLink/adDialog;->notiType:Ljava/lang/String;
@@ -487,7 +487,7 @@
 
     if-eqz v19, :cond_1e3
 
-    .line 261
+    .line 259
     new-instance v19, Landroid/widget/ImageView;
 
     sget-object v20, Lnd/adLink/adDialog;->ctx:Landroid/content/Context;
@@ -496,12 +496,12 @@
 
     aput-object v19, v8, v7
 
-    .line 264
+    .line 262
     new-instance v13, Landroid/util/DisplayMetrics;
 
     invoke-direct {v13}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 265
+    .line 263
     .local v13, "outMetrics":Landroid/util/DisplayMetrics;
     sget-object v19, Lnd/adLink/adDialog;->ctx:Landroid/content/Context;
 
@@ -519,7 +519,7 @@
 
     invoke-virtual {v0, v13}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 267
+    .line 265
     const/high16 v19, 0x42200000    # 40.0f
 
     iget v0, v13, Landroid/util/DisplayMetrics;->density:F
@@ -532,7 +532,7 @@
 
     float-to-int v14, v0
 
-    .line 269
+    .line 267
     .local v14, "pixel":I
     new-instance v20, Ljava/lang/StringBuilder;
 
@@ -578,7 +578,7 @@
 
     move-result-object v9
 
-    .line 270
+    .line 268
     .local v9, "linkAdImage":Landroid/graphics/Bitmap;
     const/16 v19, 0x1
 
@@ -588,7 +588,7 @@
 
     move-result-object v15
 
-    .line 271
+    .line 269
     .local v15, "resize":Landroid/graphics/Bitmap;
     aget-object v19, v8, v7
 
@@ -596,7 +596,7 @@
 
     invoke-virtual {v0, v15}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 273
+    .line 271
     aget-object v19, v8, v7
 
     const/16 v20, 0x0
@@ -609,14 +609,14 @@
 
     invoke-virtual/range {v19 .. v23}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 274
+    .line 272
     aget-object v19, v11, v7
 
     aget-object v20, v8, v7
 
     invoke-virtual/range {v19 .. v20}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 277
+    .line 275
     .end local v9    # "linkAdImage":Landroid/graphics/Bitmap;
     .end local v13    # "outMetrics":Landroid/util/DisplayMetrics;
     .end local v14    # "pixel":I
@@ -630,7 +630,7 @@
 
     aput-object v19, v18, v7
 
-    .line 278
+    .line 276
     aget-object v20, v18, v7
 
     move-object/from16 v0, p0
@@ -657,7 +657,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 279
+    .line 277
     aget-object v19, v18, v7
 
     const/16 v20, 0xa
@@ -670,7 +670,7 @@
 
     invoke-virtual/range {v19 .. v23}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 280
+    .line 278
     aget-object v19, v18, v7
 
     const/16 v20, 0xc8
@@ -685,14 +685,14 @@
 
     invoke-virtual/range {v19 .. v20}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 281
+    .line 279
     aget-object v19, v11, v7
 
     aget-object v20, v18, v7
 
     invoke-virtual/range {v19 .. v20}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 284
+    .line 282
     new-instance v19, Landroid/widget/LinearLayout;
 
     sget-object v20, Lnd/adLink/adDialog;->ctx:Landroid/content/Context;
@@ -701,7 +701,7 @@
 
     aput-object v19, v12, v7
 
-    .line 285
+    .line 283
     aget-object v19, v12, v7
 
     new-instance v20, Landroid/widget/LinearLayout$LayoutParams;
@@ -714,14 +714,14 @@
 
     invoke-virtual/range {v19 .. v20}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 286
+    .line 284
     aget-object v19, v12, v7
 
     const v20, -0xbbbbbc
 
     invoke-virtual/range {v19 .. v20}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 287
+    .line 285
     aget-object v19, v12, v7
 
     const/16 v20, 0x0
@@ -734,21 +734,21 @@
 
     invoke-virtual/range {v19 .. v23}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 289
+    .line 287
     aget-object v19, v12, v7
 
     move-object/from16 v0, v19
 
     invoke-virtual {v10, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 290
+    .line 288
     aget-object v19, v11, v7
 
     move-object/from16 v0, v19
 
     invoke-virtual {v10, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 220
+    .line 218
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_d2
@@ -764,17 +764,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1()Landroid/content/Context;
-    .registers 1
-
-    .prologue
-    .line 56
-    sget-object v0, Lnd/adLink/adDialog;->ctx:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2(Lnd/adLink/adDialog;)Ljava/util/ArrayList;
+.method static synthetic access$1(Lnd/adLink/adDialog;)Ljava/util/ArrayList;
     .registers 2
 
     .prologue
@@ -784,7 +774,17 @@
     return-object v0
 .end method
 
-.method static synthetic access$3(Lnd/adLink/adDialog;)Landroid/os/Handler;
+.method static synthetic access$10(Lnd/adLink/adDialog;I)V
+    .registers 2
+
+    .prologue
+    .line 58
+    iput p1, p0, Lnd/adLink/adDialog;->adCount:I
+
+    return-void
+.end method
+
+.method static synthetic access$2(Lnd/adLink/adDialog;)Landroid/os/Handler;
     .registers 2
 
     .prologue
@@ -794,12 +794,22 @@
     return-object v0
 .end method
 
+.method static synthetic access$3()Landroid/content/Context;
+    .registers 1
+
+    .prologue
+    .line 56
+    sget-object v0, Lnd/adLink/adDialog;->ctx:Landroid/content/Context;
+
+    return-object v0
+.end method
+
 .method static synthetic access$4(Lnd/adLink/adDialog;)I
     .registers 2
 
     .prologue
-    .line 46
-    iget v0, p0, Lnd/adLink/adDialog;->mode:I
+    .line 45
+    iget v0, p0, Lnd/adLink/adDialog;->appKey:I
 
     return v0
 .end method
@@ -808,8 +818,8 @@
     .registers 2
 
     .prologue
-    .line 45
-    iget v0, p0, Lnd/adLink/adDialog;->appKey:I
+    .line 46
+    iget v0, p0, Lnd/adLink/adDialog;->mode:I
 
     return v0
 .end method
@@ -824,7 +834,17 @@
     return-object v0
 .end method
 
-.method static synthetic access$7(Lnd/adLink/adDialog;)I
+.method static synthetic access$7(Lnd/adLink/adDialog;Landroid/app/AlertDialog;)V
+    .registers 2
+
+    .prologue
+    .line 57
+    iput-object p1, p0, Lnd/adLink/adDialog;->alertDialog:Landroid/app/AlertDialog;
+
+    return-void
+.end method
+
+.method static synthetic access$8(Lnd/adLink/adDialog;)I
     .registers 2
 
     .prologue
@@ -834,7 +854,7 @@
     return v0
 .end method
 
-.method static synthetic access$8(Lnd/adLink/adDialog;)I
+.method static synthetic access$9(Lnd/adLink/adDialog;)I
     .registers 2
 
     .prologue
@@ -842,16 +862,6 @@
     iget v0, p0, Lnd/adLink/adDialog;->baseInstallCnt:I
 
     return v0
-.end method
-
-.method static synthetic access$9(Lnd/adLink/adDialog;I)V
-    .registers 2
-
-    .prologue
-    .line 58
-    iput p1, p0, Lnd/adLink/adDialog;->adCount:I
-
-    return-void
 .end method
 
 

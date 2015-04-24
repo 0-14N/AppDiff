@@ -18,6 +18,8 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/pbera/cuo/drare/UarcaNawren;->nvcisoewa(Landroid/content/Context;)V
+
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/unity3d/player/UnityPlayerNativeActivity;
@@ -36,11 +38,11 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_1c
+    if-eqz v1, :cond_1f
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    :cond_1c
+    :cond_1f
     invoke-virtual {p0, v0}, Lcom/unity3d/player/UnityPlayerProxyActivity;->startActivity(Landroid/content/Intent;)V
 
     return-void

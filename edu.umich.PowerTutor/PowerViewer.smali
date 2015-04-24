@@ -316,7 +316,7 @@
 
     .line 270
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    packed-switch p1, :pswitch_data_34
+    packed-switch p1, :pswitch_data_3e
 
     .line 296
     const/4 v1, 0x0
@@ -326,12 +326,12 @@
 
     .line 272
     :pswitch_a
-    const-string v1, "Select History Size"
+    const v1, 0x7f060026
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 273
-    const/high16 v1, 0x7f040000
+    const/high16 v1, 0x7f050000
 
     new-instance v2, Ledu/umich/PowerTutor/ui/PowerViewer$1;
 
@@ -347,19 +347,27 @@
     goto :goto_9
 
     .line 284
-    :pswitch_1e
-    const-string v1, "Select window type"
+    :pswitch_1f
+    const v1, 0x7f060028
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 285
-    const v1, 0x7f040003
+    invoke-virtual {p0}, Ledu/umich/PowerTutor/ui/PowerViewer;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f050003
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v1
 
     new-instance v2, Ledu/umich/PowerTutor/ui/PowerViewer$2;
 
     invoke-direct {v2, p0}, Ledu/umich/PowerTutor/ui/PowerViewer$2;-><init>(Ledu/umich/PowerTutor/ui/PowerViewer;)V
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 294
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
@@ -371,10 +379,10 @@
     .line 270
     nop
 
-    :pswitch_data_34
+    :pswitch_data_3e
     .packed-switch 0x0
         :pswitch_a
-        :pswitch_1e
+        :pswitch_1f
     .end packed-switch
 .end method
 
@@ -388,14 +396,14 @@
     const/4 v2, 0x0
 
     .line 227
-    const-string v0, "Set History Size"
+    const v0, 0x7f060026
 
-    invoke-interface {p1, v2, v2, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    invoke-interface {p1, v2, v2, v2, v0}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
     .line 228
-    const-string v0, "Magnify Recent Data"
+    const v0, 0x7f060027
 
-    invoke-interface {p1, v2, v3, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    invoke-interface {p1, v2, v3, v2, v0}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
     .line 229
     const/4 v0, 0x2
@@ -661,21 +669,21 @@
 
     iget-boolean v2, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->collecting:Z
 
-    if-eqz v2, :cond_28
+    if-eqz v2, :cond_29
 
-    const-string v2, "Pause"
+    const v2, 0x7f060029
 
-    :goto_24
-    invoke-interface {v1, v2}, Landroid/view/MenuItem;->setTitle(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+    :goto_25
+    invoke-interface {v1, v2}, Landroid/view/MenuItem;->setTitle(I)Landroid/view/MenuItem;
 
     .line 240
     return v3
 
     .line 238
-    :cond_28
-    const-string v2, "Resume"
+    :cond_29
+    const v2, 0x7f06002a
 
-    goto :goto_24
+    goto :goto_25
 .end method
 
 .method protected onResume()V
@@ -759,7 +767,7 @@
     .line 80
     iget-object v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->counterService:Ledu/umich/PowerTutor/service/ICounterService;
 
-    if-nez v7, :cond_17
+    if-nez v7, :cond_18
 
     .line 81
     new-instance v2, Landroid/widget/TextView;
@@ -768,9 +776,9 @@
 
     .line 82
     .local v2, "loadingText":Landroid/widget/TextView;
-    const-string v7, "Waiting for profiler service..."
+    const v7, 0x7f060022
 
-    invoke-virtual {v2, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v7}, Landroid/widget/TextView;->setText(I)V
 
     .line 83
     const/16 v7, 0x11
@@ -782,11 +790,11 @@
 
     .line 141
     .end local v2    # "loadingText":Landroid/widget/TextView;
-    :goto_16
+    :goto_17
     return-void
 
     .line 88
-    :cond_17
+    :cond_18
     new-instance v7, Lcom/artfulbits/aiCharts/ChartView;
 
     invoke-direct {v7, p0}, Lcom/artfulbits/aiCharts/ChartView;-><init>(Landroid/content/Context;)V
@@ -798,7 +806,7 @@
 
     const/4 v8, -0x1
 
-    if-ne v7, v8, :cond_26
+    if-ne v7, v8, :cond_27
 
     .line 94
     const/4 v7, 0x0
@@ -806,7 +814,7 @@
     iput v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->noUidMask:I
 
     .line 96
-    :cond_26
+    :cond_27
     const/4 v7, 0x0
 
     iput v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->components:I
@@ -815,12 +823,12 @@
     const/4 v1, 0x0
 
     .local v1, "i":I
-    :goto_2a
+    :goto_2b
     iget-object v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->componentNames:[Ljava/lang/String;
 
     array-length v7, v7
 
-    if-ge v1, v7, :cond_3f
+    if-ge v1, v7, :cond_40
 
     .line 98
     iget v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->noUidMask:I
@@ -831,7 +839,7 @@
 
     and-int/2addr v7, v8
 
-    if-nez v7, :cond_3c
+    if-nez v7, :cond_3d
 
     .line 99
     iget v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->components:I
@@ -841,13 +849,13 @@
     iput v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->components:I
 
     .line 97
-    :cond_3c
+    :cond_3d
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_2a
+    goto :goto_2b
 
     .line 102
-    :cond_3f
+    :cond_40
     iget v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->components:I
 
     new-array v7, v7, [Ledu/umich/PowerTutor/ui/PowerViewer$ValueCollector;
@@ -861,12 +869,12 @@
     .local v4, "pos":I
     const/4 v1, 0x0
 
-    :goto_47
+    :goto_48
     iget-object v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->componentNames:[Ljava/lang/String;
 
     array-length v7, v7
 
-    if-ge v1, v7, :cond_10b
+    if-ge v1, v7, :cond_10c
 
     .line 106
     iget v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->noUidMask:I
@@ -877,16 +885,16 @@
 
     and-int/2addr v7, v8
 
-    if-eqz v7, :cond_56
+    if-eqz v7, :cond_57
 
     .line 105
-    :goto_53
+    :goto_54
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_47
+    goto :goto_48
 
     .line 109
-    :cond_56
+    :cond_57
     iget-object v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->componentNames:[Ljava/lang/String;
 
     aget-object v3, v7, v1
@@ -1053,7 +1061,7 @@
     .line 127
     iget-object v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->handler:Landroid/os/Handler;
 
-    if-eqz v7, :cond_107
+    if-eqz v7, :cond_108
 
     .line 128
     iget-object v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->handler:Landroid/os/Handler;
@@ -1065,16 +1073,16 @@
     invoke-virtual {v7, v8}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 130
-    :cond_107
+    :cond_108
     add-int/lit8 v4, v4, 0x1
 
-    goto/16 :goto_53
+    goto/16 :goto_54
 
     .line 136
     .end local v0    # "area":Lcom/artfulbits/aiCharts/Base/ChartArea;
     .end local v3    # "name":Ljava/lang/String;
     .end local v6    # "series":Lcom/artfulbits/aiCharts/Base/ChartSeries;
-    :cond_10b
+    :cond_10c
     iget-object v7, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->chartView:Lcom/artfulbits/aiCharts/ChartView;
 
     iget v8, p0, Ledu/umich/PowerTutor/ui/PowerViewer;->components:I
@@ -1097,5 +1105,5 @@
     .line 140
     invoke-virtual {p0, v5}, Ledu/umich/PowerTutor/ui/PowerViewer;->setContentView(Landroid/view/View;)V
 
-    goto/16 :goto_16
+    goto/16 :goto_17
 .end method

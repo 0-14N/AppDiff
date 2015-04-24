@@ -393,6 +393,8 @@
     .line 43
     invoke-super {p0, p1}, Landroid/app/ActivityGroup;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     .line 44
     sput-object p0, Lcom/hg/android/cocos2dx/hgext/Main;->instance:Lcom/hg/android/cocos2dx/hgext/Main;
 
@@ -407,15 +409,15 @@
     invoke-static {v10}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     .line 50
-    :try_start_f
+    :try_start_12
     const-string v10, "box2d"
 
     invoke-static {v10}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_14
-    .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_14} :catch_8a
+    :try_end_17
+    .catch Ljava/lang/Throwable; {:try_start_12 .. :try_end_17} :catch_8d
 
     .line 56
-    :goto_14
+    :goto_17
     const-string v10, "main"
 
     invoke-static {v10}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
@@ -440,7 +442,7 @@
 
     move-result v10
 
-    if-eqz v10, :cond_93
+    if-eqz v10, :cond_96
 
     .line 62
     const/4 v10, 0x1
@@ -448,7 +450,7 @@
     sput v10, Lcom/hg/android/cocos2dx/hgext/Main;->gameOrientation:I
 
     .line 70
-    :goto_2d
+    :goto_30
     const/4 v10, 0x3
 
     invoke-virtual {p0, v10}, Lcom/hg/android/cocos2dx/hgext/Main;->setVolumeControlStream(I)V
@@ -481,7 +483,7 @@
 
     move-result v10
 
-    if-eqz v10, :cond_bc
+    if-eqz v10, :cond_bf
 
     .line 80
     invoke-virtual {p0}, Lcom/hg/android/cocos2dx/hgext/Main;->getLocalActivityManager()Landroid/app/LocalActivityManager;
@@ -512,7 +514,7 @@
     .local v9, "w":Landroid/view/Window;
     iget-boolean v10, p0, Lcom/hg/android/cocos2dx/hgext/Main;->switchedStartingActivity:Z
 
-    if-nez v10, :cond_6c
+    if-nez v10, :cond_6f
 
     .line 83
     invoke-virtual {v9}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -523,19 +525,19 @@
 
     .line 124
     .end local v9    # "w":Landroid/view/Window;
-    :cond_6c
-    :goto_6c
+    :cond_6f
+    :goto_6f
     invoke-static {}, Lcom/hg/android/cocos2dx/hgutil/Configuration;->hasFacebook()Z
 
     move-result v10
 
-    if-eqz v10, :cond_75
+    if-eqz v10, :cond_78
 
     .line 125
     invoke-static {p0, p1}, Lcom/hg/android/cocos2dx/hgext/CCFacebook;->onCreate(Landroid/app/Activity;Landroid/os/Bundle;)V
 
     .line 128
-    :cond_75
+    :cond_78
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Lcom/hg/android/cocos2dx/hgext/Main;->isActivityStarting:Z
@@ -543,7 +545,7 @@
     .line 129
     iget-object v10, p0, Lcom/hg/android/cocos2dx/hgext/Main;->pendingIntent:Landroid/content/Intent;
 
-    if-eqz v10, :cond_89
+    if-eqz v10, :cond_8c
 
     .line 130
     sget v10, Lcom/hg/android/cocos2dx/hgext/Main;->gameOrientation:I
@@ -561,13 +563,13 @@
     iput-object v10, p0, Lcom/hg/android/cocos2dx/hgext/Main;->pendingIntent:Landroid/content/Intent;
 
     .line 136
-    :cond_89
+    :cond_8c
     return-void
 
     .line 52
     .end local v4    # "gameOrientationStr":Ljava/lang/String;
     .end local v7    # "packageName":Ljava/lang/String;
-    :catch_8a
+    :catch_8d
     move-exception v8
 
     .line 53
@@ -578,29 +580,29 @@
 
     invoke-static {v10, v11, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_14
+    goto :goto_17
 
     .line 63
     .end local v8    # "t":Ljava/lang/Throwable;
     .restart local v4    # "gameOrientationStr":Ljava/lang/String;
-    :cond_93
+    :cond_96
     const-string v10, "landscape"
 
     invoke-virtual {v10, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v10
 
-    if-eqz v10, :cond_9f
+    if-eqz v10, :cond_a2
 
     .line 64
     const/4 v10, 0x0
 
     sput v10, Lcom/hg/android/cocos2dx/hgext/Main;->gameOrientation:I
 
-    goto :goto_2d
+    goto :goto_30
 
     .line 66
-    :cond_9f
+    :cond_a2
     const-string v10, "MoreGames"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -628,11 +630,11 @@
 
     sput v10, Lcom/hg/android/cocos2dx/hgext/Main;->gameOrientation:I
 
-    goto/16 :goto_2d
+    goto/16 :goto_30
 
     .line 87
     .restart local v7    # "packageName":Ljava/lang/String;
-    :cond_bc
+    :cond_bf
     const/4 v6, 0x0
 
     .line 88
@@ -655,10 +657,10 @@
 
     move-result v10
 
-    if-nez v10, :cond_d9
+    if-nez v10, :cond_dc
 
     .line 92
-    :try_start_cf
+    :try_start_d2
     invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -671,26 +673,26 @@
 
     .end local v6    # "mgListener":Lcom/hg/android/cocos2dx/moregames/MoreGamesActivityListener;
     check-cast v6, Lcom/hg/android/cocos2dx/moregames/MoreGamesActivityListener;
-    :try_end_d9
-    .catch Ljava/lang/Exception; {:try_start_cf .. :try_end_d9} :catch_e0
+    :try_end_dc
+    .catch Ljava/lang/Exception; {:try_start_d2 .. :try_end_dc} :catch_e3
 
     .line 99
     .end local v2    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/hg/android/cocos2dx/moregames/MoreGamesActivityListener;>;"
     .restart local v6    # "mgListener":Lcom/hg/android/cocos2dx/moregames/MoreGamesActivityListener;
-    :cond_d9
-    :goto_d9
-    if-eqz v6, :cond_e3
+    :cond_dc
+    :goto_dc
+    if-eqz v6, :cond_e6
 
     .line 100
     const/4 v10, 0x0
 
     invoke-interface {v6, v10}, Lcom/hg/android/cocos2dx/moregames/MoreGamesActivityListener;->onWebviewButton(Lcom/hg/android/cocos2dx/moregames/MoreGamesWebActivity;)Z
 
-    goto :goto_6c
+    goto :goto_6f
 
     .line 94
     .end local v6    # "mgListener":Lcom/hg/android/cocos2dx/moregames/MoreGamesActivityListener;
-    :catch_e0
+    :catch_e3
     move-exception v3
 
     .line 95
@@ -698,11 +700,11 @@
     const/4 v6, 0x0
 
     .restart local v6    # "mgListener":Lcom/hg/android/cocos2dx/moregames/MoreGamesActivityListener;
-    goto :goto_d9
+    goto :goto_dc
 
     .line 102
     .end local v3    # "e":Ljava/lang/Exception;
-    :cond_e3
+    :cond_e6
     const/4 v0, 0x0
 
     .line 103
@@ -725,26 +727,26 @@
 
     move-result v10
 
-    if-nez v10, :cond_fa
+    if-nez v10, :cond_fd
 
     .line 106
-    :try_start_f6
+    :try_start_f9
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-    :try_end_f9
-    .catch Ljava/lang/Exception; {:try_start_f6 .. :try_end_f9} :catch_122
+    :try_end_fc
+    .catch Ljava/lang/Exception; {:try_start_f9 .. :try_end_fc} :catch_125
 
     move-result-object v0
 
     .line 112
-    :cond_fa
-    :goto_fa
-    if-nez v0, :cond_fe
+    :cond_fd
+    :goto_fd
+    if-nez v0, :cond_101
 
     .line 113
     sget-object v0, Lcom/hg/android/cocos2dx/hgext/Main;->gameActivityClass:Ljava/lang/Class;
 
     .line 116
-    :cond_fe
+    :cond_101
     invoke-virtual {p0}, Lcom/hg/android/cocos2dx/hgext/Main;->getLocalActivityManager()Landroid/app/LocalActivityManager;
 
     move-result-object v10
@@ -771,7 +773,7 @@
     .restart local v9    # "w":Landroid/view/Window;
     iget-boolean v10, p0, Lcom/hg/android/cocos2dx/hgext/Main;->switchedStartingActivity:Z
 
-    if-nez v10, :cond_6c
+    if-nez v10, :cond_6f
 
     .line 118
     invoke-virtual {v9}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -780,18 +782,18 @@
 
     invoke-direct {p0, v10}, Lcom/hg/android/cocos2dx/hgext/Main;->registerContentView(Landroid/view/View;)V
 
-    goto/16 :goto_6c
+    goto/16 :goto_6f
 
     .line 107
     .end local v9    # "w":Landroid/view/Window;
-    :catch_122
+    :catch_125
     move-exception v3
 
     .line 108
     .restart local v3    # "e":Ljava/lang/Exception;
     const/4 v0, 0x0
 
-    goto :goto_fa
+    goto :goto_fd
 .end method
 
 .method protected onDestroy()V

@@ -132,33 +132,34 @@
     return-void
 .end method
 
-.method static synthetic access$0(Lcom/zxcx/blst/act/MyCollectAct;)V
-    .registers 1
+.method static synthetic access$0(Lcom/zxcx/blst/act/MyCollectAct;Z)V
+    .registers 2
 
     .prologue
     .line 192
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyCollectAct;->getDateList()V
+    invoke-direct {p0, p1}, Lcom/zxcx/blst/act/MyCollectAct;->getDateList(Z)V
 
     return-void
 .end method
 
-.method private getDateList()V
-    .registers 3
+.method private getDateList(Z)V
+    .registers 4
+    .param p1, "isPull"    # Z
 
     .prologue
     .line 193
     new-instance v0, Lcom/zxcx/blst/act/MyCollectAct$4;
 
-    invoke-direct {v0, p0}, Lcom/zxcx/blst/act/MyCollectAct$4;-><init>(Lcom/zxcx/blst/act/MyCollectAct;)V
+    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/MyCollectAct$4;-><init>(Lcom/zxcx/blst/act/MyCollectAct;Z)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 300
+    .line 301
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/MyCollectAct$4;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 301
+    .line 302
     return-void
 .end method
 
@@ -206,7 +207,7 @@
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 145
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyCollectAct;->getDateList()V
+    invoke-direct {p0, v1}, Lcom/zxcx/blst/act/MyCollectAct;->getDateList(Z)V
 
     goto :goto_8
 
@@ -214,7 +215,7 @@
     nop
 
     :pswitch_data_20
-    .packed-switch 0x7f080167
+    .packed-switch 0x7f090180
         :pswitch_d
         :pswitch_9
     .end packed-switch
@@ -229,7 +230,7 @@
     invoke-super {p0, p1}, Lcom/zxcx/blst/act/BaseAct;->onCreate(Landroid/os/Bundle;)V
 
     .line 75
-    const v0, 0x7f030048
+    const v0, 0x7f03004e
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyCollectAct;->setContentView(I)V
 
@@ -237,18 +238,18 @@
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyCollectAct;->setupView()V
 
     .line 77
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyCollectAct;->getDateList()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/zxcx/blst/act/MyCollectAct;->getDateList(Z)V
 
     .line 78
     return-void
 .end method
 
 .method public setupView()V
-    .registers 5
+    .registers 4
 
     .prologue
-    const/4 v3, 0x0
-
     .line 81
     new-instance v1, Landroid/app/ProgressDialog;
 
@@ -279,7 +280,7 @@
     iput-object v1, p0, Lcom/zxcx/blst/act/MyCollectAct;->somebodyId:Ljava/lang/String;
 
     .line 87
-    const v1, 0x7f080168
+    const v1, 0x7f090181
 
     invoke-virtual {p0, v1}, Lcom/zxcx/blst/act/MyCollectAct;->findViewById(I)Landroid/view/View;
 
@@ -290,7 +291,7 @@
     iput-object v1, p0, Lcom/zxcx/blst/act/MyCollectAct;->iv_title_bar_left:Landroid/widget/ImageButton;
 
     .line 88
-    const v1, 0x7f080166
+    const v1, 0x7f09017f
 
     invoke-virtual {p0, v1}, Lcom/zxcx/blst/act/MyCollectAct;->findViewById(I)Landroid/view/View;
 
@@ -301,7 +302,7 @@
     iput-object v1, p0, Lcom/zxcx/blst/act/MyCollectAct;->tv_title_bar_center:Landroid/widget/TextView;
 
     .line 89
-    const v1, 0x7f080167
+    const v1, 0x7f090180
 
     invoke-virtual {p0, v1}, Lcom/zxcx/blst/act/MyCollectAct;->findViewById(I)Landroid/view/View;
 
@@ -314,12 +315,14 @@
     .line 90
     iget-object v1, p0, Lcom/zxcx/blst/act/MyCollectAct;->iv_title_bar_right:Landroid/widget/ImageButton;
 
-    invoke-virtual {v1, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageButton;->setVisibility(I)V
 
     .line 91
     iget-object v1, p0, Lcom/zxcx/blst/act/MyCollectAct;->somebodyId:Ljava/lang/String;
 
-    if-eqz v1, :cond_9a
+    if-eqz v1, :cond_95
 
     .line 92
     iget-object v1, p0, Lcom/zxcx/blst/act/MyCollectAct;->tv_title_bar_center:Landroid/widget/TextView;
@@ -340,7 +343,7 @@
     invoke-virtual {v1, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 99
-    const v1, 0x7f0800f6
+    const v1, 0x7f090105
 
     invoke-virtual {p0, v1}, Lcom/zxcx/blst/act/MyCollectAct;->findViewById(I)Landroid/view/View;
 
@@ -367,11 +370,6 @@
     invoke-direct {v2, p0}, Lcom/zxcx/blst/act/MyCollectAct$3;-><init>(Lcom/zxcx/blst/act/MyCollectAct;)V
 
     invoke-virtual {v1, v2}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnRefreshListener;)V
-
-    .line 118
-    iget-object v1, p0, Lcom/zxcx/blst/act/MyCollectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
-
-    invoke-virtual {v1, v3}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setCanPullRefresh(Z)V
 
     .line 119
     iget-object v1, p0, Lcom/zxcx/blst/act/MyCollectAct;->mListView:Lcom/zxcx/blst/custom/widget/RefreshableListView;
@@ -409,7 +407,7 @@
     return-void
 
     .line 94
-    :cond_9a
+    :cond_95
     iget-object v1, p0, Lcom/zxcx/blst/act/MyCollectAct;->tv_title_bar_center:Landroid/widget/TextView;
 
     const-string v2, "\u6211\u7684\u6536\u85cf"

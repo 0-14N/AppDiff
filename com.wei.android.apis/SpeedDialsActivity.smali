@@ -69,7 +69,7 @@
 
     .prologue
     .line 98
-    const v0, 0x7f0b00ce
+    const v0, 0x7f0c00ce
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -80,7 +80,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/SpeedDialsActivity;->d:Landroid/widget/RelativeLayout;
 
     .line 99
-    const v0, 0x7f0b00cf
+    const v0, 0x7f0c00cf
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -91,7 +91,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/SpeedDialsActivity;->e:Landroid/widget/ImageView;
 
     .line 100
-    const v0, 0x7f0b00d0
+    const v0, 0x7f0c00d0
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -102,7 +102,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/SpeedDialsActivity;->a:Landroid/widget/TextView;
 
     .line 101
-    const v0, 0x7f0b00d1
+    const v0, 0x7f0c00d1
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -113,7 +113,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/SpeedDialsActivity;->b:Landroid/widget/TextView;
 
     .line 102
-    const v0, 0x7f0b0001
+    const v0, 0x7f0c0001
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -126,12 +126,12 @@
     .line 103
     iget-object v0, p0, Lcom/wei/android/apis/ui/SpeedDialsActivity;->c:Landroid/widget/TextView;
 
-    const v1, 0x7f080068
+    const v1, 0x7f090068
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 104
-    const v0, 0x7f0b005d
+    const v0, 0x7f0c005d
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->a(Landroid/widget/Button;)V
 
     .line 105
-    const v0, 0x7f0b005e
+    const v0, 0x7f0c005e
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -153,7 +153,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->a(Landroid/widget/Button;)V
 
     .line 106
-    const v0, 0x7f0b005f
+    const v0, 0x7f0c005f
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -164,7 +164,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->a(Landroid/widget/Button;)V
 
     .line 107
-    const v0, 0x7f0b0060
+    const v0, 0x7f0c0060
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -175,7 +175,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->a(Landroid/widget/Button;)V
 
     .line 108
-    const v0, 0x7f0b0061
+    const v0, 0x7f0c0061
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -186,7 +186,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->a(Landroid/widget/Button;)V
 
     .line 109
-    const v0, 0x7f0b0062
+    const v0, 0x7f0c0062
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -197,7 +197,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->a(Landroid/widget/Button;)V
 
     .line 110
-    const v0, 0x7f0b0063
+    const v0, 0x7f0c0063
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -208,7 +208,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->a(Landroid/widget/Button;)V
 
     .line 111
-    const v0, 0x7f0b0064
+    const v0, 0x7f0c0064
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -219,7 +219,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->a(Landroid/widget/Button;)V
 
     .line 112
-    const v0, 0x7f0b0065
+    const v0, 0x7f0c0065
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/SpeedDialsActivity;->findViewById(I)Landroid/view/View;
 
@@ -510,7 +510,7 @@
     return-object v2
 
     :cond_14
-    invoke-static {p0, v1}, Lcom/wei/android/apis/c/e;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lcom/wei/android/apis/c/f;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -557,7 +557,7 @@
     move-result-object v1
 
     .line 206
-    const/high16 v2, 0x7f060000
+    const/high16 v2, 0x7f070000
 
     .line 205
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
@@ -578,7 +578,7 @@
     move-result-object v1
 
     .line 220
-    const v2, 0x7f080069
+    const v2, 0x7f090069
 
     .line 219
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -749,7 +749,7 @@
 
     .line 64
     :pswitch_1d
-    invoke-static {p0}, Lcom/wei/android/apis/c/e;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/wei/android/apis/c/f;->a(Landroid/content/Context;)V
 
     goto :goto_1c
 
@@ -764,7 +764,7 @@
     nop
 
     :pswitch_data_26
-    .packed-switch 0x7f0b005d
+    .packed-switch 0x7f0c005d
         :pswitch_1d
     .end packed-switch
 .end method
@@ -846,7 +846,7 @@
 
     .line 80
     :pswitch_24
-    invoke-static {p0}, Lcom/wei/android/apis/c/e;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/wei/android/apis/c/f;->a(Landroid/content/Context;)V
 
     goto :goto_22
 
@@ -860,7 +860,7 @@
 
     .line 78
     :pswitch_data_2c
-    .packed-switch 0x7f0b005d
+    .packed-switch 0x7f0c005d
         :pswitch_24
     .end packed-switch
 .end method

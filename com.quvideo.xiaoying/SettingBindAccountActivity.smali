@@ -102,9 +102,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lyh;
+    new-instance v1, Lro;
 
-    invoke-direct {v1, p0, p1}, Lyh;-><init>(Lcom/quvideo/xiaoying/app/setting/sns/SettingBindAccountActivity;I)V
+    invoke-direct {v1, p0, p1}, Lro;-><init>(Lcom/quvideo/xiaoying/app/setting/sns/SettingBindAccountActivity;I)V
 
     invoke-virtual {v0, v1, p1}, Lcom/quvideo/xiaoying/sns/AbstractSNSMgr;->showFriendShip(Lcom/quvideo/xiaoying/sns/SnsFriendsListener;I)V
 
@@ -1063,7 +1063,7 @@
 
     const-string/jumbo v20, "user.reg"
 
-    new-instance v2, Lyi;
+    new-instance v2, Lrp;
 
     move-object/from16 v3, p0
 
@@ -1079,7 +1079,7 @@
 
     move-object/from16 v14, p2
 
-    invoke-direct/range {v2 .. v16}, Lyi;-><init>(Lcom/quvideo/xiaoying/app/setting/sns/SettingBindAccountActivity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v16}, Lrp;-><init>(Lcom/quvideo/xiaoying/app/setting/sns/SettingBindAccountActivity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)V
 
     move-object/from16 v0, v19
 
@@ -1257,7 +1257,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 108
-    const v0, 0x7f060558
+    const v0, 0x7f060543
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/sns/SettingBindAccountActivity;->findViewById(I)Landroid/view/View;
 
@@ -1268,7 +1268,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/setting/sns/SettingBindAccountActivity;->p:Landroid/widget/Button;
 
     .line 109
-    const v0, 0x7f060559
+    const v0, 0x7f060544
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/sns/SettingBindAccountActivity;->findViewById(I)Landroid/view/View;
 
@@ -1289,7 +1289,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 113
-    const v0, 0x7f06055a
+    const v0, 0x7f060545
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/sns/SettingBindAccountActivity;->findViewById(I)Landroid/view/View;
 
@@ -1306,7 +1306,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const v1, 0x7f0a0338
+    const v1, 0x7f0a0315
 
     invoke-virtual {p0, v1}, Lcom/quvideo/xiaoying/app/setting/sns/SettingBindAccountActivity;->getString(I)Ljava/lang/String;
 

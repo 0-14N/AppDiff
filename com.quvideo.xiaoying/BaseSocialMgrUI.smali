@@ -388,13 +388,13 @@
     new-instance v3, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 277
-    new-instance v4, Laph;
+    new-instance v4, Lain;
 
     move-object/from16 v0, p0
 
     move/from16 v1, p1
 
-    invoke-direct {v4, v0, v1}, Laph;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v4, v0, v1}, Lain;-><init>(Landroid/content/Context;I)V
 
     .line 276
     move-object/from16 v0, p0
@@ -2407,9 +2407,9 @@
     .line 88
     sget v1, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_com_msg_network_3g_not_allow:I
 
-    new-instance v2, Lapg;
+    new-instance v2, Laim;
 
-    invoke-direct {v2, p0}, Lapg;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Laim;-><init>(Landroid/content/Context;)V
 
     .line 87
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V

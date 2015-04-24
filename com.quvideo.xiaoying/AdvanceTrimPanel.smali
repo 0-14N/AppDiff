@@ -103,16 +103,16 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvanceTrimPanel;->q:Landroid/os/Handler;
 
     .line 308
-    new-instance v0, Lbfq;
+    new-instance v0, Layw;
 
-    invoke-direct {v0, p0}, Lbfq;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvanceTrimPanel;)V
+    invoke-direct {v0, p0}, Layw;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvanceTrimPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvanceTrimPanel;->r:Lcom/quvideo/xiaoying/videoeditor2/manager/PIPTrimGalleryDecorator$OnGalleryMoveListener;
 
     .line 361
-    new-instance v0, Lbfr;
+    new-instance v0, Layx;
 
-    invoke-direct {v0, p0}, Lbfr;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvanceTrimPanel;)V
+    invoke-direct {v0, p0}, Layx;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/AdvanceTrimPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/AdvanceTrimPanel;->s:Lcom/quvideo/xiaoying/videoeditor/ui/TrimMaskView4Import$OnOperationListener;
 

@@ -1,71 +1,139 @@
-.class public final Lcom/adwo/adsdk/X;
-.super Landroid/app/AlertDialog;
+.class final Lcom/adwo/adsdk/X;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field private a:Lcom/adwo/adsdk/V;
+.field protected a:D
 
-.field private b:I
+.field protected b:Ljava/lang/String;
 
-.field private c:I
+.field protected c:Ljava/lang/String;
 
-.field private d:I
+.field protected d:I
 
-.field private e:Landroid/view/ViewGroup$LayoutParams;
+.field protected e:Ljava/lang/String;
 
 
-# virtual methods
-.method public final dismiss()V
-    .registers 2
+# direct methods
+.method constructor <init>()V
+    .registers 4
 
     .prologue
-    .line 40
-    invoke-super {p0}, Landroid/app/AlertDialog;->dismiss()V
+    const/4 v2, 0x0
 
-    .line 42
-    const/4 v0, 0x0
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/adwo/adsdk/X;->a:Lcom/adwo/adsdk/V;
+    .line 5
+    const-wide/16 v0, 0x0
 
-    .line 46
+    iput-wide v0, p0, Lcom/adwo/adsdk/X;->a:D
+
+    .line 6
+    iput-object v2, p0, Lcom/adwo/adsdk/X;->b:Ljava/lang/String;
+
+    .line 7
+    iput-object v2, p0, Lcom/adwo/adsdk/X;->c:Ljava/lang/String;
+
+    .line 8
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/adwo/adsdk/X;->d:I
+
+    .line 9
+    iput-object v2, p0, Lcom/adwo/adsdk/X;->e:Ljava/lang/String;
+
+    .line 4
     return-void
 .end method
 
-.method protected final onCreate(Landroid/os/Bundle;)V
+
+# virtual methods
+.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
     .registers 6
 
     .prologue
-    .line 49
+    .line 1
+    check-cast p1, Lcom/adwo/adsdk/X;
+
+    iget-wide v0, p0, Lcom/adwo/adsdk/X;->a:D
+
+    iget-wide v2, p1, Lcom/adwo/adsdk/X;->a:D
+
+    cmpl-double v0, v0, v2
+
+    if-lez v0, :cond_c
+
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/adwo/adsdk/X;->requestWindowFeature(I)Z
+    :goto_b
+    return v0
 
-    .line 50
-    invoke-super {p0, p1}, Landroid/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
+    :cond_c
+    iget-wide v0, p0, Lcom/adwo/adsdk/X;->a:D
 
-    .line 52
-    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
+    iget-wide v2, p1, Lcom/adwo/adsdk/X;->a:D
 
-    iget v1, p0, Lcom/adwo/adsdk/X;->b:I
+    cmpg-double v0, v0, v2
 
-    iget v2, p0, Lcom/adwo/adsdk/X;->c:I
+    if-gez v0, :cond_16
 
-    iget v3, p0, Lcom/adwo/adsdk/X;->d:I
+    const/4 v0, -0x1
 
-    add-int/2addr v2, v3
+    goto :goto_b
 
-    invoke-direct {v0, v1, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    iput-object v0, p0, Lcom/adwo/adsdk/X;->e:Landroid/view/ViewGroup$LayoutParams;
-
-    .line 53
+    :cond_16
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcom/adwo/adsdk/X;->e:Landroid/view/ViewGroup$LayoutParams;
+    goto :goto_b
+.end method
 
-    invoke-virtual {p0, v0, v1}, Lcom/adwo/adsdk/X;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+.method public final toString()Ljava/lang/String;
+    .registers 4
 
-    .line 54
-    return-void
+    .prologue
+    .line 22
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lcom/adwo/adsdk/X;->a:D
+
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v1, ":"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/adwo/adsdk/X;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ":"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/adwo/adsdk/X;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

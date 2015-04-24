@@ -254,7 +254,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_32
+    if-nez v2, :cond_2b
 
     iget-object v0, p0, Lcom/google/android/gms/internal/r;->ee:Lcom/google/android/gms/internal/r$a;
 
@@ -262,7 +262,7 @@
 
     iget-boolean v0, v0, Lcom/google/android/gms/internal/x;->eG:Z
 
-    if-nez v0, :cond_31
+    if-eqz v0, :cond_2a
 
     iget-object v0, p0, Lcom/google/android/gms/internal/r;->ee:Lcom/google/android/gms/internal/r$a;
 
@@ -272,16 +272,10 @@
 
     iget-object v2, v2, Lcom/google/android/gms/internal/r$a;->em:Lcom/google/android/gms/internal/x;
 
-    const-string v3, "Missing internet permission in AndroidManifest.xml."
-
-    const-string v4, "Missing internet permission in AndroidManifest.xml. You must have the following declaration: <uses-permission android:name=\"android.permission.INTERNET\" />"
-
-    invoke-static {v0, v2, v3, v4}, Lcom/google/android/gms/internal/cr;->a(Landroid/view/ViewGroup;Lcom/google/android/gms/internal/x;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_31
+    :cond_2a
     move v0, v1
 
-    :cond_32
+    :cond_2b
     iget-object v2, p0, Lcom/google/android/gms/internal/r;->ee:Lcom/google/android/gms/internal/r$a;
 
     iget-object v2, v2, Lcom/google/android/gms/internal/r$a;->eh:Landroid/content/Context;
@@ -290,7 +284,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_54
+    if-nez v2, :cond_46
 
     iget-object v0, p0, Lcom/google/android/gms/internal/r;->ee:Lcom/google/android/gms/internal/r$a;
 
@@ -298,7 +292,7 @@
 
     iget-boolean v0, v0, Lcom/google/android/gms/internal/x;->eG:Z
 
-    if-nez v0, :cond_53
+    if-eqz v0, :cond_45
 
     iget-object v0, p0, Lcom/google/android/gms/internal/r;->ee:Lcom/google/android/gms/internal/r$a;
 
@@ -308,17 +302,11 @@
 
     iget-object v2, v2, Lcom/google/android/gms/internal/r$a;->em:Lcom/google/android/gms/internal/x;
 
-    const-string v3, "Missing AdActivity with android:configChanges in AndroidManifest.xml."
-
-    const-string v4, "Missing AdActivity with android:configChanges in AndroidManifest.xml. You must have the following declaration within the <application> element: <activity android:name=\"com.google.android.gms.ads.AdActivity\" android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" />"
-
-    invoke-static {v0, v2, v3, v4}, Lcom/google/android/gms/internal/cr;->a(Landroid/view/ViewGroup;Lcom/google/android/gms/internal/x;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_53
+    :cond_45
     move v0, v1
 
-    :cond_54
-    if-nez v0, :cond_65
+    :cond_46
+    if-nez v0, :cond_57
 
     iget-object v2, p0, Lcom/google/android/gms/internal/r;->ee:Lcom/google/android/gms/internal/r$a;
 
@@ -326,7 +314,7 @@
 
     iget-boolean v2, v2, Lcom/google/android/gms/internal/x;->eG:Z
 
-    if-nez v2, :cond_65
+    if-nez v2, :cond_57
 
     iget-object v2, p0, Lcom/google/android/gms/internal/r;->ee:Lcom/google/android/gms/internal/r$a;
 
@@ -334,7 +322,7 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/ViewSwitcher;->setVisibility(I)V
 
-    :cond_65
+    :cond_57
     return v0
 .end method
 

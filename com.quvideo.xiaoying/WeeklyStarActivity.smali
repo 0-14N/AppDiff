@@ -44,9 +44,9 @@
     .line 55
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/WeeklyStarActivity;->o:Landroid/webkit/WebView;
 
-    new-instance v1, Lsc;
+    new-instance v1, Llj;
 
-    invoke-direct {v1, p0}, Lsc;-><init>(Lcom/quvideo/xiaoying/app/community/user/WeeklyStarActivity;)V
+    invoke-direct {v1, p0}, Llj;-><init>(Lcom/quvideo/xiaoying/app/community/user/WeeklyStarActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
@@ -64,9 +64,9 @@
     .line 65
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/WeeklyStarActivity;->o:Landroid/webkit/WebView;
 
-    new-instance v1, Lsd;
+    new-instance v1, Llk;
 
-    invoke-direct {v1, p0, p0}, Lsd;-><init>(Lcom/quvideo/xiaoying/app/community/user/WeeklyStarActivity;Landroid/app/Activity;)V
+    invoke-direct {v1, p0, p0}, Llk;-><init>(Lcom/quvideo/xiaoying/app/community/user/WeeklyStarActivity;Landroid/app/Activity;)V
 
     .line 72
     const-string/jumbo v2, "JSCaller"
@@ -134,7 +134,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/user/WeeklyStarActivity;->n:Landroid/view/View;
 
     .line 37
-    const v0, 0x7f0604b6
+    const v0, 0x7f0604a1
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/user/WeeklyStarActivity;->findViewById(I)Landroid/view/View;
 

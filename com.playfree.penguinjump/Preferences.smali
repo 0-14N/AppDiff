@@ -1,6 +1,14 @@
 .class public Lru/magoga/Pingvin/Preferences;
 .super Landroid/preference/PreferenceActivity;
-.source "SourceFile"
+.source "Preferences.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lru/magoga/Pingvin/Preferences$MyEditTextPreference;
+    }
+.end annotation
 
 
 # direct methods
@@ -14,131 +22,119 @@
     return-void
 .end method
 
-
-# virtual methods
-.method protected onCreate(Landroid/os/Bundle;)V
-    .registers 9
+.method private createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
+    .registers 10
 
     .prologue
-    .line 22
-    invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V
-
-    .line 23
+    .line 70
     invoke-virtual {p0}, Lru/magoga/Pingvin/Preferences;->getPreferenceManager()Landroid/preference/PreferenceManager;
 
-    move-result-object v0
+    move-result-object v8
 
-    invoke-virtual {v0, p0}, Landroid/preference/PreferenceManager;->createPreferenceScreen(Landroid/content/Context;)Landroid/preference/PreferenceScreen;
+    invoke-virtual {v8, p0}, Landroid/preference/PreferenceManager;->createPreferenceScreen(Landroid/content/Context;)Landroid/preference/PreferenceScreen;
+
+    move-result-object v6
+
+    .line 77
+    .local v6, "root":Landroid/preference/PreferenceScreen;
+    sget-object v8, Lru/magoga/GameEngine/CVar;->sCVars:Ljava/util/Map;
+
+    invoke-interface {v8}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v7
+
+    .line 78
+    .local v7, "val":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Lru/magoga/GameEngine/CVar;>;>;"
+    invoke-interface {v7}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    sget-object v0, Lru/magoga/GameEngine/p;->i:Ljava/util/Map;
+    .line 79
+    .local v3, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lru/magoga/GameEngine/CVar;>;>;"
+    const/4 v4, 0x1
 
-    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    .line 80
+    .local v4, "n":I
+    :goto_13
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object v0
+    move-result v8
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    if-nez v8, :cond_1a
 
-    move-result-object v4
+    .line 89
+    return-object v6
 
-    const/4 v0, 0x1
+    .line 81
+    :cond_1a
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move v1, v0
+    move-result-object v2
 
-    :goto_17
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v2, Ljava/util/Map$Entry;
 
-    move-result v0
-
-    if-nez v0, :cond_21
-
-    invoke-virtual {p0, v3}, Lru/magoga/Pingvin/Preferences;->setPreferenceScreen(Landroid/preference/PreferenceScreen;)V
-
-    .line 24
-    return-void
-
-    .line 23
-    :cond_21
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 82
+    .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lru/magoga/GameEngine/CVar;>;"
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Map$Entry;
+    check-cast v0, Lru/magoga/GameEngine/CVar;
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    .line 84
+    .local v0, "cvar":Lru/magoga/GameEngine/CVar;
+    new-instance v1, Lru/magoga/Pingvin/Preferences$MyEditTextPreference;
 
-    move-result-object v0
+    invoke-direct {v1, p0}, Lru/magoga/Pingvin/Preferences$MyEditTextPreference;-><init>(Landroid/content/Context;)V
 
-    check-cast v0, Lru/magoga/GameEngine/p;
+    .line 85
+    .local v1, "edit":Landroid/preference/EditTextPreference;
+    add-int/lit8 v5, v4, 0x1
 
-    new-instance v5, Lru/magoga/Pingvin/at;
+    .end local v4    # "n":I
+    .local v5, "n":I
+    invoke-direct {p0, v4, v1, v0}, Lru/magoga/Pingvin/Preferences;->fillPreference(ILandroid/preference/EditTextPreference;Lru/magoga/GameEngine/CVar;)V
 
-    invoke-direct {v5, p0}, Lru/magoga/Pingvin/at;-><init>(Landroid/content/Context;)V
+    .line 86
+    invoke-virtual {v6, v1}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
-    add-int/lit8 v2, v1, 0x1
+    move v4, v5
 
-    const/4 v6, 0x0
+    .end local v5    # "n":I
+    .restart local v4    # "n":I
+    goto :goto_13
+.end method
 
-    invoke-virtual {v5, v6}, Landroid/preference/EditTextPreference;->setPersistent(Z)V
+.method private fillPreference(ILandroid/preference/EditTextPreference;Lru/magoga/GameEngine/CVar;)V
+    .registers 6
+    .param p1, "n"    # I
+    .param p2, "edit"    # Landroid/preference/EditTextPreference;
+    .param p3, "cvar"    # Lru/magoga/GameEngine/CVar;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    .prologue
+    .line 94
+    const/4 v0, 0x0
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {p2, v0}, Landroid/preference/EditTextPreference;->setPersistent(Z)V
+
+    .line 95
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v6, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v1, ". "
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v6, v0, Lru/magoga/GameEngine/p;->a:Ljava/lang/String;
+    iget-object v1, p3, Lru/magoga/GameEngine/CVar;->name:Ljava/lang/String;
 
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v5, v1}, Landroid/preference/EditTextPreference;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v1, v0, Lru/magoga/GameEngine/p;->a:Ljava/lang/String;
-
-    invoke-virtual {v5, v1}, Landroid/preference/EditTextPreference;->setDialogTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v1, v0, Lru/magoga/GameEngine/p;->f:Ljava/lang/String;
-
-    invoke-virtual {v5, v1}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget v6, v0, Lru/magoga/GameEngine/p;->b:F
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v5, v1}, Landroid/preference/EditTextPreference;->setKey(Ljava/lang/String;)V
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget v0, v0, Lru/magoga/GameEngine/p;->b:F
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -146,13 +142,75 @@
 
     move-result-object v0
 
-    invoke-virtual {v5, v0}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Landroid/preference/EditTextPreference;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v3, v5}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
+    .line 96
+    iget-object v0, p3, Lru/magoga/GameEngine/CVar;->name:Ljava/lang/String;
 
-    move v1, v2
+    invoke-virtual {p2, v0}, Landroid/preference/EditTextPreference;->setDialogTitle(Ljava/lang/CharSequence;)V
 
-    goto :goto_17
+    .line 97
+    iget-object v0, p3, Lru/magoga/GameEngine/CVar;->summary:Ljava/lang/String;
+
+    invoke-virtual {p2, v0}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
+
+    .line 98
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v1, p3, Lru/magoga/GameEngine/CVar;->fval:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/preference/EditTextPreference;->setKey(Ljava/lang/String;)V
+
+    .line 99
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v1, p3, Lru/magoga/GameEngine/CVar;->fval:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
+
+    .line 100
+    return-void
+.end method
+
+
+# virtual methods
+.method protected onCreate(Landroid/os/Bundle;)V
+    .registers 3
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
+
+    .prologue
+    .line 22
+    invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V
+
+    .line 23
+    invoke-direct {p0}, Lru/magoga/Pingvin/Preferences;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lru/magoga/Pingvin/Preferences;->setPreferenceScreen(Landroid/preference/PreferenceScreen;)V
+
+    .line 24
+    return-void
 .end method
 
 .method protected onPause()V

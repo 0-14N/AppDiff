@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/ads/internal/d;->t()V
+    invoke-virtual {v0}, Lcom/google/ads/internal/d;->u()V
 
     return-void
 .end method

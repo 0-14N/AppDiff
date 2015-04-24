@@ -1581,7 +1581,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "2"
+    const-string v3, "4"
 
     aput-object v3, v1, v2
 
@@ -1590,8 +1590,8 @@
     .line 186
     invoke-virtual {p0}, Lcom/arthisoft/catbeautysalon/catbeautysalon;->setuoLocalNotification()V
 
-    .line 187
-    invoke-virtual {p0}, Lcom/arthisoft/catbeautysalon/catbeautysalon;->setupAdmob()V
+    .line 189
+    invoke-virtual {p0}, Lcom/arthisoft/catbeautysalon/catbeautysalon;->setupInMobi()V
 
     .line 201
     new-instance v0, Lcom/arthisoft/catbeautysalon/catbeautysalon$2;

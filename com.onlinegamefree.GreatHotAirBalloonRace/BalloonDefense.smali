@@ -2,9 +2,6 @@
 .super Landroid/app/Activity;
 .source "BalloonDefense.java"
 
-# interfaces
-.implements Lcom/google/ads/AdListener;
-
 
 # instance fields
 .field WL:Landroid/os/PowerManager$WakeLock;
@@ -28,210 +25,185 @@
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 16
+    .registers 14
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/16 v13, 0x400
+    const/16 v8, 0x400
 
-    const/4 v12, -0x2
+    const/4 v11, -0x2
 
-    const/4 v11, 0x1
+    const/4 v10, 0x1
 
-    const/4 v10, 0x0
+    const/4 v9, 0x0
 
     .line 33
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 36
-    new-instance v8, Lcom/google/ads/InterstitialAd;
-
-    const-string v9, "ca-app-pub-8330870097785227/2000892108"
-
-    invoke-direct {v8, p0, v9}, Lcom/google/ads/InterstitialAd;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
-
-    iput-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->interstitial:Lcom/google/ads/InterstitialAd;
-
-    .line 39
-    new-instance v2, Lcom/google/ads/AdRequest;
-
-    invoke-direct {v2}, Lcom/google/ads/AdRequest;-><init>()V
-
-    .line 42
-    .local v2, "adRequest":Lcom/google/ads/AdRequest;
-    iget-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->interstitial:Lcom/google/ads/InterstitialAd;
-
-    invoke-virtual {v8, v2}, Lcom/google/ads/InterstitialAd;->loadAd(Lcom/google/ads/AdRequest;)V
-
-    .line 45
-    iget-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->interstitial:Lcom/google/ads/InterstitialAd;
-
-    invoke-virtual {v8, p0}, Lcom/google/ads/InterstitialAd;->setAdListener(Lcom/google/ads/AdListener;)V
-
-    .line 48
-    invoke-virtual {p0, v11}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->requestWindowFeature(I)Z
-
     .line 49
+    invoke-virtual {p0, v10}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->requestWindowFeature(I)Z
+
+    .line 50
     invoke-virtual {p0}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->getWindow()Landroid/view/Window;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-virtual {v8, v13, v13}, Landroid/view/Window;->setFlags(II)V
-
-    .line 52
-    new-instance v1, Lcom/google/ads/AdView;
-
-    sget-object v8, Lcom/google/ads/AdSize;->SMART_BANNER:Lcom/google/ads/AdSize;
-
-    const-string v9, "ca-app-pub-8330870097785227/8047425702"
-
-    invoke-direct {v1, p0, v8, v9}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+    invoke-virtual {v7, v8, v8}, Landroid/view/Window;->setFlags(II)V
 
     .line 53
+    new-instance v1, Lcom/google/ads/AdView;
+
+    sget-object v7, Lcom/google/ads/AdSize;->SMART_BANNER:Lcom/google/ads/AdSize;
+
+    const-string v8, "ca-app-pub-8330870097785227/8047425702"
+
+    invoke-direct {v1, p0, v7, v8}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
+
+    .line 54
     .local v1, "ad":Lcom/google/ads/AdView;
-    new-instance v4, Landroid/widget/RelativeLayout;
+    new-instance v3, Landroid/widget/RelativeLayout;
 
-    invoke-direct {v4, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 56
-    .local v4, "layout":Landroid/widget/RelativeLayout;
-    new-instance v8, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
+    .line 57
+    .local v3, "layout":Landroid/widget/RelativeLayout;
+    new-instance v7, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
 
-    invoke-direct {v8, p0, p0}, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;-><init>(Landroid/content/Context;Landroid/app/Activity;)V
+    invoke-direct {v7, p0, p0}, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;-><init>(Landroid/content/Context;Landroid/app/Activity;)V
 
-    iput-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
-
-    .line 58
-    new-instance v5, Landroid/widget/RelativeLayout$LayoutParams;
-
-    invoke-direct {v5, v12, v12}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    iput-object v7, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
 
     .line 59
-    .local v5, "params1":Landroid/widget/RelativeLayout$LayoutParams;
-    const/16 v8, 0xc
+    new-instance v4, Landroid/widget/RelativeLayout$LayoutParams;
 
-    invoke-virtual {v5, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    invoke-direct {v4, v11, v11}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 60
-    const/16 v8, 0x9
+    .local v4, "params1":Landroid/widget/RelativeLayout$LayoutParams;
+    const/16 v7, 0xc
 
-    invoke-virtual {v5, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    invoke-virtual {v4, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 61
-    invoke-virtual {v1, v5}, Lcom/google/ads/AdView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    const/16 v7, 0x9
 
-    .line 63
-    iget-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
+    invoke-virtual {v4, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    invoke-virtual {v4, v8}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+    .line 62
+    invoke-virtual {v1, v4}, Lcom/google/ads/AdView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 64
-    invoke-virtual {v4, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+    iget-object v7, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
+
+    invoke-virtual {v3, v7}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
     .line 65
-    invoke-virtual {p0, v4}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->setContentView(Landroid/view/View;)V
+    invoke-virtual {v3, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 68
-    new-instance v6, Lcom/google/ads/AdRequest;
-
-    invoke-direct {v6}, Lcom/google/ads/AdRequest;-><init>()V
+    .line 66
+    invoke-virtual {p0, v3}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->setContentView(Landroid/view/View;)V
 
     .line 69
-    .local v6, "request":Lcom/google/ads/AdRequest;
-    invoke-virtual {v1, v6}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
+    new-instance v5, Lcom/google/ads/AdRequest;
 
-    .line 72
-    const-string v8, "power"
+    invoke-direct {v5}, Lcom/google/ads/AdRequest;-><init>()V
 
-    invoke-virtual {p0, v8}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 70
+    .local v5, "request":Lcom/google/ads/AdRequest;
+    invoke-virtual {v1, v5}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
+
+    .line 73
+    const-string v7, "power"
+
+    invoke-virtual {p0, v7}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 73
-    .local v0, "PM":Landroid/os/PowerManager;
-    const/16 v8, 0x1a
-
-    const-string v9, "Graphics"
-
-    invoke-virtual {v0, v8, v9}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object v8
-
-    iput-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->WL:Landroid/os/PowerManager$WakeLock;
-
     .line 74
-    iget-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->WL:Landroid/os/PowerManager$WakeLock;
+    .local v0, "PM":Landroid/os/PowerManager;
+    const/16 v7, 0x1a
 
-    invoke-virtual {v8}, Landroid/os/PowerManager$WakeLock;->acquire()V
+    const-string v8, "Graphics"
 
-    .line 76
-    invoke-virtual {p0, v10}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->setRequestedOrientation(I)V
+    invoke-virtual {v0, v7, v8}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
-    .line 78
-    const-string v8, "window"
+    move-result-object v7
 
-    invoke-virtual {p0, v8}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iput-object v7, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->WL:Landroid/os/PowerManager$WakeLock;
 
-    move-result-object v8
+    .line 75
+    iget-object v7, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->WL:Landroid/os/PowerManager$WakeLock;
 
-    check-cast v8, Landroid/view/WindowManager;
+    invoke-virtual {v7}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    invoke-interface {v8}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
-    move-result-object v3
+    .line 77
+    invoke-virtual {p0, v9}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->setRequestedOrientation(I)V
 
     .line 79
-    .local v3, "display":Landroid/view/Display;
-    invoke-virtual {v3}, Landroid/view/Display;->getRotation()I
+    const-string v7, "window"
 
-    move-result v7
+    invoke-virtual {p0, v7}, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/view/WindowManager;
+
+    invoke-interface {v7}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v2
 
     .line 80
-    .local v7, "rotation":I
-    if-nez v7, :cond_94
+    .local v2, "display":Landroid/view/Display;
+    invoke-virtual {v2}, Landroid/view/Display;->getRotation()I
+
+    move-result v6
 
     .line 81
-    iget-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
-
-    iput-boolean v11, v8, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->default_lanscape:Z
+    .local v6, "rotation":I
+    if-nez v6, :cond_7c
 
     .line 82
-    :cond_94
-    const/16 v8, 0xb4
+    iget-object v7, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
 
-    if-ne v7, v8, :cond_9c
+    iput-boolean v10, v7, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->default_lanscape:Z
 
     .line 83
-    iget-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
+    :cond_7c
+    const/16 v7, 0xb4
 
-    iput-boolean v11, v8, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->default_lanscape:Z
+    if-ne v6, v7, :cond_84
 
     .line 84
-    :cond_9c
-    const/16 v8, 0x5a
+    iget-object v7, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
 
-    if-ne v7, v8, :cond_a4
+    iput-boolean v10, v7, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->default_lanscape:Z
 
     .line 85
-    iget-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
+    :cond_84
+    const/16 v7, 0x5a
 
-    iput-boolean v10, v8, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->default_lanscape:Z
+    if-ne v6, v7, :cond_8c
 
     .line 86
-    :cond_a4
-    const/16 v8, 0x10e
+    iget-object v7, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
 
-    if-ne v7, v8, :cond_ac
+    iput-boolean v9, v7, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->default_lanscape:Z
 
     .line 87
-    iget-object v8, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
+    :cond_8c
+    const/16 v7, 0x10e
 
-    iput-boolean v10, v8, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->default_lanscape:Z
+    if-ne v6, v7, :cond_94
 
     .line 88
-    :cond_ac
+    iget-object v7, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
+
+    iput-boolean v9, v7, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->default_lanscape:Z
+
+    .line 89
+    :cond_94
     return-void
 .end method
 
@@ -239,34 +211,15 @@
     .registers 2
 
     .prologue
-    .line 129
+    .line 130
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 130
+    .line 131
     iget-object v0, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->WL:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 132
-    return-void
-.end method
-
-.method public onDismissScreen(Lcom/google/ads/Ad;)V
-    .registers 2
-    .param p1, "arg0"    # Lcom/google/ads/Ad;
-
-    .prologue
-    .line 148
-    return-void
-.end method
-
-.method public onFailedToReceiveAd(Lcom/google/ads/Ad;Lcom/google/ads/AdRequest$ErrorCode;)V
-    .registers 3
-    .param p1, "arg0"    # Lcom/google/ads/Ad;
-    .param p2, "arg1"    # Lcom/google/ads/AdRequest$ErrorCode;
-
-    .prologue
-    .line 153
+    .line 133
     return-void
 .end method
 
@@ -278,80 +231,42 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 91
+    .line 92
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
-    .line 92
+    .line 93
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_c
 
-    .line 93
+    .line 94
     iget-object v0, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
 
     invoke-virtual {v0}, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->back()V
 
-    .line 97
+    .line 98
     :cond_c
     return v1
-.end method
-
-.method public onLeaveApplication(Lcom/google/ads/Ad;)V
-    .registers 2
-    .param p1, "arg0"    # Lcom/google/ads/Ad;
-
-    .prologue
-    .line 158
-    return-void
 .end method
 
 .method protected onPause()V
     .registers 2
 
     .prologue
-    .line 115
+    .line 116
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 116
+    .line 117
     iget-object v0, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
 
     invoke-virtual {v0}, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->pause()V
 
-    .line 117
+    .line 118
     iget-object v0, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->WL:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 119
-    return-void
-.end method
-
-.method public onPresentScreen(Lcom/google/ads/Ad;)V
-    .registers 2
-    .param p1, "arg0"    # Lcom/google/ads/Ad;
-
-    .prologue
-    .line 163
-    return-void
-.end method
-
-.method public onReceiveAd(Lcom/google/ads/Ad;)V
-    .registers 3
-    .param p1, "ad"    # Lcom/google/ads/Ad;
-
-    .prologue
-    .line 138
-    iget-object v0, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->interstitial:Lcom/google/ads/InterstitialAd;
-
-    if-ne p1, v0, :cond_9
-
-    .line 139
-    iget-object v0, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->interstitial:Lcom/google/ads/InterstitialAd;
-
-    invoke-virtual {v0}, Lcom/google/ads/InterstitialAd;->show()V
-
-    .line 141
-    :cond_9
+    .line 120
     return-void
 .end method
 
@@ -359,20 +274,20 @@
     .registers 2
 
     .prologue
-    .line 122
+    .line 123
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 123
+    .line 124
     iget-object v0, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->view:Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;
 
     invoke-virtual {v0}, Lcom/onlinegamefree/GreatHotAirBalloonRace/Surface;->resume()V
 
-    .line 124
+    .line 125
     iget-object v0, p0, Lcom/onlinegamefree/GreatHotAirBalloonRace/BalloonDefense;->WL:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 125
+    .line 126
     return-void
 .end method
 
@@ -380,17 +295,17 @@
     .registers 2
 
     .prologue
-    .line 104
+    .line 105
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
-    .line 105
+    .line 106
     invoke-static {p0}, Lcom/google/analytics/tracking/android/EasyTracker;->getInstance(Landroid/content/Context;)Lcom/google/analytics/tracking/android/EasyTracker;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/google/analytics/tracking/android/EasyTracker;->activityStart(Landroid/app/Activity;)V
 
-    .line 106
+    .line 107
     return-void
 .end method
 
@@ -398,16 +313,16 @@
     .registers 2
 
     .prologue
-    .line 110
+    .line 111
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    .line 111
+    .line 112
     invoke-static {p0}, Lcom/google/analytics/tracking/android/EasyTracker;->getInstance(Landroid/content/Context;)Lcom/google/analytics/tracking/android/EasyTracker;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/google/analytics/tracking/android/EasyTracker;->activityStop(Landroid/app/Activity;)V
 
-    .line 112
+    .line 113
     return-void
 .end method

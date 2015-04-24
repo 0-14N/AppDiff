@@ -1788,6 +1788,12 @@
     .registers 10
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
+    invoke-virtual {p0}, Lcom/kiwi/shipwrecked/AndroidGame;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/mitc/manage/f;->a(Landroid/content/Context;)V
+
     .prologue
     const/4 v7, 0x1
 
@@ -1799,7 +1805,7 @@
     .line 129
     sget-boolean v1, Lcom/kiwi/animaltown/Config;->START_METHOD_PROFILING:Z
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_15
 
     .line 130
     const-string v1, "brightwood"
@@ -1807,7 +1813,7 @@
     invoke-static {v1}, Landroid/os/Debug;->startMethodTracing(Ljava/lang/String;)V
 
     .line 132
-    :cond_e
+    :cond_15
     invoke-virtual {p0}, Lcom/kiwi/shipwrecked/AndroidGame;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1871,20 +1877,20 @@
 
     sget-object v2, Lcom/kiwi/animaltown/backend/ServerConfig$IntegratedServer;->PROD:Lcom/kiwi/animaltown/backend/ServerConfig$IntegratedServer;
 
-    if-eq v1, v2, :cond_51
+    if-eq v1, v2, :cond_58
 
     sget-object v1, Lcom/kiwi/animaltown/backend/ServerConfig;->usedServer:Lcom/kiwi/animaltown/backend/ServerConfig$IntegratedServer;
 
     sget-object v2, Lcom/kiwi/animaltown/backend/ServerConfig$IntegratedServer;->PROD_NO_BI:Lcom/kiwi/animaltown/backend/ServerConfig$IntegratedServer;
 
-    if-ne v1, v2, :cond_54
+    if-ne v1, v2, :cond_5b
 
     .line 141
-    :cond_51
+    :cond_58
     invoke-static {}, Lcom/kiwi/animaltown/backend/ServerConfig;->updateAssetURLForProd()V
 
     .line 143
-    :cond_54
+    :cond_5b
     iget-object v1, p0, Lcom/kiwi/shipwrecked/AndroidGame;->buildEnvHelper:Lcom/kiwi/util/BuildEnvHelper;
 
     invoke-virtual {v1}, Lcom/kiwi/util/BuildEnvHelper;->getMarketIntentPrefix()Ljava/lang/String;
@@ -2103,7 +2109,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_12f
+    if-eqz v1, :cond_136
 
     .line 180
     invoke-virtual {p0}, Lcom/kiwi/shipwrecked/AndroidGame;->getApplication()Landroid/app/Application;
@@ -2119,7 +2125,7 @@
     invoke-static {v1, v2, v3}, Lcom/kiwi/crashreport/AndroidCustomLogger;->init(Landroid/app/Application;Ljava/lang/String;Lcom/kiwi/crashreport/ICustomExceptionHandler;)V
 
     .line 183
-    :cond_12f
+    :cond_136
     invoke-direct {p0}, Lcom/kiwi/shipwrecked/AndroidGame;->initStorage()V
 
     .line 185

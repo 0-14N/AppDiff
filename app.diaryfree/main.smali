@@ -255,7 +255,7 @@
 
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 344
+    .line 343
     iget-object v7, p0, Lapp/diaryfree/main;->totlaRecords:Landroid/widget/TextView;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -291,20 +291,6 @@
     move-result-object v9
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    const-string v9, "/"
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v2}, Lapp/diary/db/record_collection;->GetTotalRecordCount()I
-
-    move-result v9
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
@@ -574,15 +560,15 @@
 
 # virtual methods
 .method public FirstTimeInsert()V
-    .registers 16
+    .registers 15
 
     .prologue
     .line 466
     sget-object v0, Lapp/diaryfree/main;->settings:Landroid/content/SharedPreferences;
 
-    sget-object v3, Lapp/diaryfree/main;->IsFirstLunch:Ljava/lang/String;
+    sget-object v1, Lapp/diaryfree/main;->IsFirstLunch:Ljava/lang/String;
 
-    invoke-interface {v0, v3}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+    invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -591,11 +577,11 @@
     .line 467
     sget-object v0, Lapp/diaryfree/main;->settings:Landroid/content/SharedPreferences;
 
-    sget-object v3, Lapp/diaryfree/main;->IsFirstLunch:Ljava/lang/String;
+    sget-object v1, Lapp/diaryfree/main;->IsFirstLunch:Ljava/lang/String;
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    invoke-interface {v0, v3, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -729,10 +715,11 @@
 
     move-result-object v11
 
-    const v14, 0x7f050030
+    const v12, 0x7f050030
 
-    invoke-virtual {v11, v14}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
+    .end local v12    # "c":Ljava/util/Calendar;
     move-result-object v11
 
     .line 480
@@ -741,11 +728,12 @@
     .line 487
     iget-object v0, p0, Lapp/diaryfree/main;->PrefEditor:Landroid/content/SharedPreferences$Editor;
 
-    sget-object v3, Lapp/diaryfree/main;->IsFirstLunch:Ljava/lang/String;
+    sget-object v1, Lapp/diaryfree/main;->IsFirstLunch:Ljava/lang/String;
 
-    const/4 v4, 0x1
+    .end local v1    # "totalTime":J
+    const/4 v2, 0x1
 
-    invoke-interface {v0, v3, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 488
     iget-object v0, p0, Lapp/diaryfree/main;->PrefEditor:Landroid/content/SharedPreferences$Editor;
@@ -753,8 +741,6 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 491
-    .end local v1    # "totalTime":J
-    .end local v12    # "c":Ljava/util/Calendar;
     .end local v13    # "date_":Ljava/util/Date;
     :cond_a0
     return-void
@@ -790,8 +776,6 @@
     .prologue
     const/4 v10, 0x1
 
-    const/4 v9, 0x0
-
     .line 365
     .line 366
     invoke-interface {p1}, Landroid/view/MenuItem;->getMenuInfo()Landroid/view/ContextMenu$ContextMenuInfo;
@@ -825,7 +809,7 @@
 
     .line 371
     .local v6, "record_id":I
-    if-nez v4, :cond_6a
+    if-nez v4, :cond_69
 
     .line 373
     new-instance v7, Landroid/app/AlertDialog$Builder;
@@ -906,8 +890,8 @@
 
     .line 391
     .end local v0    # "alertDialog":Landroid/app/AlertDialog;
-    :cond_6a
-    if-ne v4, v10, :cond_7e
+    :cond_69
+    if-ne v4, v10, :cond_7d
 
     .line 393
     new-instance v3, Landroid/content/Intent;
@@ -930,21 +914,17 @@
 
     .line 399
     .end local v3    # "intent":Landroid/content/Intent;
-    :cond_7e
+    :cond_7d
     const/4 v7, 0x2
 
-    if-ne v4, v7, :cond_d1
+    if-ne v4, v7, :cond_cd
 
     .line 401
     new-instance v5, Lapp/diary/db/record;
 
     iget-object v7, p0, Lapp/diaryfree/main;->dba:Lapp/diary/db/dbinterface;
 
-    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v8
-
-    invoke-direct {v5, v7, v6, v8}, Lapp/diary/db/record;-><init>(Lapp/diary/db/dbinterface;ILjava/lang/Boolean;)V
+    invoke-direct {v5, v7, v6}, Lapp/diary/db/record;-><init>(Lapp/diary/db/dbinterface;I)V
 
     .line 403
     .local v5, "record_":Lapp/diary/db/record;
@@ -963,7 +943,9 @@
     .line 405
     const-string v7, "android.intent.extra.EMAIL"
 
-    new-array v8, v9, [Ljava/lang/String;
+    const/4 v8, 0x0
+
+    new-array v8, v8, [Ljava/lang/String;
 
     invoke-virtual {v1, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
@@ -1019,7 +1001,7 @@
     .line 411
     .end local v1    # "emailIntent":Landroid/content/Intent;
     .end local v5    # "record_":Lapp/diary/db/record;
-    :cond_d1
+    :cond_cd
     return v10
 .end method
 
@@ -1087,7 +1069,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1fa
+    if-nez v0, :cond_1f8
 
     .line 90
     new-instance v8, Landroid/content/Intent;
@@ -1229,7 +1211,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_208
+    if-nez v0, :cond_206
 
     .line 118
     :cond_ba
@@ -1244,7 +1226,7 @@
 
     move-result v0
 
-    add-int/lit8 v0, v0, -0x1
+    sub-int/2addr v0, v5
 
     iput v0, p0, Lapp/diaryfree/main;->cmonth:I
 
@@ -1253,7 +1235,7 @@
 
     const/4 v1, -0x1
 
-    if-ne v0, v1, :cond_d7
+    if-ne v0, v1, :cond_d5
 
     .line 121
     const/16 v0, 0xb
@@ -1263,21 +1245,21 @@
     .line 122
     iget v0, p0, Lapp/diaryfree/main;->cyear:I
 
-    add-int/lit8 v0, v0, -0x1
+    sub-int/2addr v0, v5
 
     iput v0, p0, Lapp/diaryfree/main;->cyear:I
 
     .line 124
-    :cond_d7
+    :cond_d5
     iput v5, p0, Lapp/diaryfree/main;->cday:I
 
     .line 133
-    :goto_d9
+    :goto_d7
     iget v0, p0, Lapp/diaryfree/main;->cday:I
 
     const/16 v1, 0xa
 
-    if-ge v0, v1, :cond_228
+    if-ge v0, v1, :cond_226
 
     .line 134
     iget-object v0, p0, Lapp/diaryfree/main;->TopTextViewDate:Landroid/widget/TextView;
@@ -1305,7 +1287,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 137
-    :goto_f9
+    :goto_f7
     sget-object v0, Lapp/diaryfree/main;->month:[Ljava/lang/String;
 
     iget v1, p0, Lapp/diaryfree/main;->cmonth:I
@@ -1316,7 +1298,7 @@
 
     move-result v0
 
-    if-ge v0, v6, :cond_235
+    if-ge v0, v6, :cond_233
 
     .line 138
     iget-object v0, p0, Lapp/diaryfree/main;->TopTextViewMonth:Landroid/widget/TextView;
@@ -1330,7 +1312,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 141
-    :goto_110
+    :goto_10e
     iget-object v0, p0, Lapp/diaryfree/main;->TopTextViewYear:Landroid/widget/TextView;
 
     iget v1, p0, Lapp/diaryfree/main;->cyear:I
@@ -1400,7 +1382,7 @@
 
     const/16 v1, 0xa
 
-    if-ge v0, v1, :cond_259
+    if-ge v0, v1, :cond_257
 
     .line 152
     iget-object v0, p0, Lapp/diaryfree/main;->TopTextViewDate2:Landroid/widget/TextView;
@@ -1428,7 +1410,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 155
-    :goto_16e
+    :goto_16c
     sget-object v0, Lapp/diaryfree/main;->month:[Ljava/lang/String;
 
     iget v1, p0, Lapp/diaryfree/main;->cmonth2:I
@@ -1439,7 +1421,7 @@
 
     move-result v0
 
-    if-ge v0, v6, :cond_266
+    if-ge v0, v6, :cond_264
 
     .line 156
     iget-object v0, p0, Lapp/diaryfree/main;->TopTextViewMonth2:Landroid/widget/TextView;
@@ -1453,7 +1435,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 159
-    :goto_185
+    :goto_183
     iget-object v0, p0, Lapp/diaryfree/main;->TopTextViewYear2:Landroid/widget/TextView;
 
     iget v1, p0, Lapp/diaryfree/main;->cyear2:I
@@ -1574,7 +1556,7 @@
 
     .line 98
     .end local v7    # "c":Ljava/util/Calendar;
-    :cond_1fa
+    :cond_1f8
     iget-object v0, p0, Lapp/diaryfree/main;->PrefEditor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "IsLogin"
@@ -1590,7 +1572,7 @@
 
     .line 128
     .restart local v7    # "c":Ljava/util/Calendar;
-    :cond_208
+    :cond_206
     sget-object v0, Lapp/diaryfree/main;->settings:Landroid/content/SharedPreferences;
 
     const-string v1, "PERIOD_START_YEAR"
@@ -1623,10 +1605,10 @@
 
     iput v0, p0, Lapp/diaryfree/main;->cday:I
 
-    goto/16 :goto_d9
+    goto/16 :goto_d7
 
     .line 136
-    :cond_228
+    :cond_226
     iget-object v0, p0, Lapp/diaryfree/main;->TopTextViewDate:Landroid/widget/TextView;
 
     iget v1, p0, Lapp/diaryfree/main;->cday:I
@@ -1637,10 +1619,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_f9
+    goto/16 :goto_f7
 
     .line 140
-    :cond_235
+    :cond_233
     iget-object v0, p0, Lapp/diaryfree/main;->TopTextViewMonth:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1673,10 +1655,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_110
+    goto/16 :goto_10e
 
     .line 154
-    :cond_259
+    :cond_257
     iget-object v0, p0, Lapp/diaryfree/main;->TopTextViewDate2:Landroid/widget/TextView;
 
     iget v1, p0, Lapp/diaryfree/main;->cday2:I
@@ -1687,10 +1669,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_16e
+    goto/16 :goto_16c
 
     .line 158
-    :cond_266
+    :cond_264
     iget-object v0, p0, Lapp/diaryfree/main;->TopTextViewMonth2:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1723,7 +1705,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_185
+    goto/16 :goto_183
 .end method
 
 .method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
@@ -1921,20 +1903,25 @@
 
     move-result v2
 
-    packed-switch v2, :pswitch_data_2a
+    packed-switch v2, :pswitch_data_2e
+
+    move v2, v4
 
     .line 444
-    :goto_8
-    return v4
+    :goto_9
+    return v2
 
     .line 432
-    :pswitch_9
+    :pswitch_a
     invoke-virtual {p0}, Lapp/diaryfree/main;->finish()V
 
-    goto :goto_8
+    move v2, v4
+
+    .line 433
+    goto :goto_9
 
     .line 435
-    :pswitch_d
+    :pswitch_f
     new-instance v1, Landroid/content/Intent;
 
     invoke-virtual {p0}, Lapp/diaryfree/main;->getBaseContext()Landroid/content/Context;
@@ -1949,11 +1936,14 @@
     .local v1, "settingsActivity":Landroid/content/Intent;
     invoke-virtual {p0, v1}, Lapp/diaryfree/main;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_8
+    move v2, v4
+
+    .line 437
+    goto :goto_9
 
     .line 439
     .end local v1    # "settingsActivity":Landroid/content/Intent;
-    :pswitch_1c
+    :pswitch_1f
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -1967,14 +1957,17 @@
     .line 441
     invoke-virtual {p0, v0}, Lapp/diaryfree/main;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_8
+    move v2, v4
+
+    .line 442
+    goto :goto_9
 
     .line 430
-    :pswitch_data_2a
-    .packed-switch 0x7f080033
-        :pswitch_d
-        :pswitch_9
-        :pswitch_1c
+    :pswitch_data_2e
+    .packed-switch 0x7f080032
+        :pswitch_f
+        :pswitch_a
+        :pswitch_1f
     .end packed-switch
 .end method
 

@@ -2,120 +2,118 @@
 .super Landroid/widget/FrameLayout;
 
 # interfaces
+.implements Landroid/hardware/Camera$PreviewCallback;
 .implements Landroid/opengl/GLSurfaceView$Renderer;
-.implements Lcom/unity3d/player/a$a;
 
 
 # static fields
-.field private static S:Lcom/unity3d/player/b;
+.field private static R:Lcom/unity3d/player/b;
 
 .field public static currentActivity:Landroid/app/Activity;
 
-.field private static r:Z
+.field private static p:Z
 
-.field private static s:Z
+.field private static q:Z
 
 
 # instance fields
-.field private A:Z
+.field private final A:Lcom/unity3d/player/h;
 
-.field private final B:Lcom/unity3d/player/p;
+.field private B:I
 
-.field private C:I
+.field private C:Ljava/lang/String;
 
-.field private D:Ljava/lang/String;
+.field private D:Landroid/net/NetworkInfo;
 
-.field private E:Landroid/net/NetworkInfo;
+.field private E:Lcom/unity3d/player/a/e;
 
-.field private F:Lcom/unity3d/player/a/e;
+.field private F:Z
 
 .field private G:Z
 
 .field private H:Z
 
-.field private I:Z
+.field private I:Landroid/os/Bundle;
 
-.field private J:Landroid/os/Bundle;
+.field private J:Ljava/util/Map;
 
-.field private K:Ljava/util/List;
+.field private K:Z
 
 .field private L:Z
 
 .field private M:Z
 
-.field private N:Z
+.field private N:Ljava/lang/Runnable;
 
-.field private O:Ljava/lang/Runnable;
+.field private O:Landroid/widget/ProgressBar;
 
-.field private P:Landroid/widget/ProgressBar;
+.field private P:Ljava/lang/Runnable;
 
 .field private Q:Ljava/lang/Runnable;
 
-.field private R:Ljava/lang/Runnable;
+.field private S:F
 
 .field private T:F
 
-.field private U:F
+.field private U:Ljava/lang/reflect/Method;
 
-.field private V:Ljava/lang/reflect/Method;
+.field private V:Ljava/util/LinkedHashMap;
 
-.field private W:Ljava/util/LinkedHashMap;
+.field private W:Landroid/content/BroadcastReceiver;
 
-.field private Z:Landroid/content/BroadcastReceiver;
+.field private Z:Z
 
-.field a:Lcom/unity3d/player/x;
+.field a:Lcom/unity3d/player/p;
 
-.field private aa:Z
+.field private aa:I
 
-.field private ab:I
-
-.field private ac:Z
+.field private ab:Z
 
 .field private b:Z
 
 .field private c:Z
 
-.field private final d:Lcom/unity3d/player/h;
+.field private final d:Lcom/unity3d/player/e;
 
-.field private final e:Lcom/unity3d/player/y;
+.field private e:Z
 
-.field private f:Z
+.field private f:Landroid/os/Bundle;
 
-.field private g:Landroid/os/Bundle;
+.field private g:Landroid/content/SharedPreferences;
 
-.field private h:Landroid/content/SharedPreferences;
+.field private h:Landroid/content/ContextWrapper;
 
-.field private i:Landroid/content/ContextWrapper;
+.field private i:Z
 
-.field private j:Z
+.field private j:Lcom/unity3d/player/UnityGL;
 
-.field private k:Lcom/unity3d/player/UnityGL;
+.field private k:Landroid/os/PowerManager$WakeLock;
 
-.field private l:Lcom/unity3d/player/o;
+.field private l:Landroid/hardware/SensorManager;
 
-.field private m:Landroid/os/PowerManager$WakeLock;
+.field private m:Landroid/view/WindowManager;
 
-.field private n:Landroid/hardware/SensorManager;
+.field private n:Lorg/fmod/FMODAudioDevice;
 
-.field private o:Landroid/view/WindowManager;
+.field private o:Landroid/os/Vibrator;
 
-.field private p:Lorg/fmod/FMODAudioDevice;
+.field private r:Z
 
-.field private q:Landroid/os/Vibrator;
+.field private s:Z
 
-.field private t:Z
+.field private t:I
 
-.field private u:Z
+.field private u:I
 
 .field private v:I
 
 .field private w:I
 
-.field private x:I
+.field private x:Z
 
 .field private y:I
 
-.field private z:I
+.field private z:Z
 
 
 # direct methods
@@ -128,19 +126,19 @@
 
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/unity3d/player/UnityPlayer;->r:Z
+    sput-boolean v0, Lcom/unity3d/player/UnityPlayer;->p:Z
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/unity3d/player/UnityPlayer;->s:Z
+    sput-boolean v0, Lcom/unity3d/player/UnityPlayer;->q:Z
 
-    sput-object v1, Lcom/unity3d/player/UnityPlayer;->S:Lcom/unity3d/player/b;
+    sput-object v1, Lcom/unity3d/player/UnityPlayer;->R:Lcom/unity3d/player/b;
 
     new-instance v0, Lcom/unity3d/player/b;
 
     invoke-direct {v0}, Lcom/unity3d/player/b;-><init>()V
 
-    sput-object v0, Lcom/unity3d/player/UnityPlayer;->S:Lcom/unity3d/player/b;
+    sput-object v0, Lcom/unity3d/player/UnityPlayer;->R:Lcom/unity3d/player/b;
 
     return-void
 .end method
@@ -152,9 +150,9 @@
 
     const/4 v4, 0x0
 
-    const/4 v1, 0x1
-
     const/4 v0, 0x0
+
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
@@ -164,114 +162,110 @@
 
     iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->c:Z
 
-    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->f:Z
+    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->e:Z
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->g:Landroid/os/Bundle;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->f:Landroid/os/Bundle;
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->g:Landroid/content/SharedPreferences;
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->q:Landroid/os/Vibrator;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->o:Landroid/os/Vibrator;
 
-    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->t:Z
+    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->r:Z
 
-    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->u:Z
+    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->s:Z
 
-    iput v2, p0, Lcom/unity3d/player/UnityPlayer;->x:I
+    iput v2, p0, Lcom/unity3d/player/UnityPlayer;->v:I
 
-    iput v2, p0, Lcom/unity3d/player/UnityPlayer;->y:I
+    iput v2, p0, Lcom/unity3d/player/UnityPlayer;->w:I
 
-    iput v6, p0, Lcom/unity3d/player/UnityPlayer;->z:I
+    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->x:Z
 
-    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->A:Z
+    iput v6, p0, Lcom/unity3d/player/UnityPlayer;->y:I
 
-    iput v2, p0, Lcom/unity3d/player/UnityPlayer;->C:I
+    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->z:Z
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->D:Ljava/lang/String;
+    iput v2, p0, Lcom/unity3d/player/UnityPlayer;->B:I
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->E:Landroid/net/NetworkInfo;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->C:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->F:Lcom/unity3d/player/a/e;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->D:Landroid/net/NetworkInfo;
+
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->E:Lcom/unity3d/player/a/e;
+
+    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->F:Z
 
     iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->G:Z
 
     iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->H:Z
 
-    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->I:Z
-
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->J:Landroid/os/Bundle;
+    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->I:Landroid/os/Bundle;
 
-    new-instance v3, Ljava/util/ArrayList;
+    new-instance v3, Ljava/util/HashMap;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->K:Ljava/util/List;
+    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->J:Ljava/util/Map;
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->a:Lcom/unity3d/player/x;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->a:Lcom/unity3d/player/p;
 
-    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->L:Z
+    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->K:Z
+
+    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->L:Z
 
     iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->M:Z
 
-    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->N:Z
+    new-instance v3, Lcom/unity3d/player/r;
 
-    new-instance v3, Lcom/unity3d/player/aa;
+    invoke-direct {v3, p0}, Lcom/unity3d/player/r;-><init>(Lcom/unity3d/player/UnityPlayer;)V
 
-    invoke-direct {v3, p0}, Lcom/unity3d/player/aa;-><init>(Lcom/unity3d/player/UnityPlayer;)V
+    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->N:Ljava/lang/Runnable;
 
-    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->O:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->O:Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->P:Landroid/widget/ProgressBar;
+    new-instance v3, Lcom/unity3d/player/s;
 
-    new-instance v3, Lcom/unity3d/player/ab;
+    invoke-direct {v3, p0}, Lcom/unity3d/player/s;-><init>(Lcom/unity3d/player/UnityPlayer;)V
 
-    invoke-direct {v3, p0}, Lcom/unity3d/player/ab;-><init>(Lcom/unity3d/player/UnityPlayer;)V
+    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->P:Ljava/lang/Runnable;
+
+    new-instance v3, Lcom/unity3d/player/t;
+
+    invoke-direct {v3, p0}, Lcom/unity3d/player/t;-><init>(Lcom/unity3d/player/UnityPlayer;)V
 
     iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->Q:Ljava/lang/Runnable;
 
-    new-instance v3, Lcom/unity3d/player/ac;
-
-    invoke-direct {v3, p0}, Lcom/unity3d/player/ac;-><init>(Lcom/unity3d/player/UnityPlayer;)V
-
-    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->R:Ljava/lang/Runnable;
+    iput v4, p0, Lcom/unity3d/player/UnityPlayer;->S:F
 
     iput v4, p0, Lcom/unity3d/player/UnityPlayer;->T:F
 
-    iput v4, p0, Lcom/unity3d/player/UnityPlayer;->U:F
-
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/lang/reflect/Method;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->U:Ljava/lang/reflect/Method;
 
     new-instance v3, Lcom/unity3d/player/UnityPlayer$18;
 
     invoke-direct {v3, p0}, Lcom/unity3d/player/UnityPlayer$18;-><init>(Lcom/unity3d/player/UnityPlayer;)V
 
-    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->Z:Landroid/content/BroadcastReceiver;
+    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->W:Landroid/content/BroadcastReceiver;
 
-    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->aa:Z
+    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->Z:Z
 
-    iput v1, p0, Lcom/unity3d/player/UnityPlayer;->ab:I
+    iput v1, p0, Lcom/unity3d/player/UnityPlayer;->aa:I
 
-    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->ac:Z
+    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->ab:Z
 
-    new-instance v3, Lcom/unity3d/player/y;
+    iput-object p1, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
-    invoke-direct {v3, p0}, Lcom/unity3d/player/y;-><init>(Landroid/widget/FrameLayout;)V
-
-    iput-object v3, p0, Lcom/unity3d/player/UnityPlayer;->e:Lcom/unity3d/player/y;
-
-    iput-object p1, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
-
-    :try_start_77
+    :try_start_72
     const-string v3, "android.app.NativeActivity"
 
     invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v4, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -281,25 +275,25 @@
 
     move-result v3
 
-    iput-boolean v3, p0, Lcom/unity3d/player/UnityPlayer;->j:Z
-    :try_end_89
-    .catch Ljava/lang/Exception; {:try_start_77 .. :try_end_89} :catch_14a
+    iput-boolean v3, p0, Lcom/unity3d/player/UnityPlayer;->i:Z
+    :try_end_84
+    .catch Ljava/lang/Exception; {:try_start_72 .. :try_end_84} :catch_16b
 
-    :goto_89
+    :goto_84
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x9
 
-    if-lt v3, v4, :cond_94
+    if-lt v3, v4, :cond_8f
 
     new-instance v0, Lcom/unity3d/player/c;
 
     invoke-direct {v0, p1}, Lcom/unity3d/player/c;-><init>(Landroid/content/ContextWrapper;)V
 
-    :cond_94
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    :cond_8f
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
@@ -307,7 +301,7 @@
 
     instance-of v0, p1, Landroid/app/Activity;
 
-    if-eqz v0, :cond_c8
+    if-eqz v0, :cond_c3
 
     move-object v0, p1
 
@@ -325,7 +319,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->g:Landroid/os/Bundle;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->f:Landroid/os/Bundle;
 
     const/4 v0, 0x3
 
@@ -351,20 +345,30 @@
 
     invoke-static {p1, v0}, Lcom/unity3d/player/UnityPlayerProxyActivity;->copyPlayerPrefs(Landroid/content/Context;[Ljava/lang/String;)V
 
-    :cond_c8
+    :cond_c3
     invoke-virtual {p1, v3, v2}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->g:Landroid/content/SharedPreferences;
 
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->b()V
+
+    const-string v0, "apk"
+
+    iget-object v3, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
+
+    invoke-virtual {v3}, Landroid/content/ContextWrapper;->getPackageCodePath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Ljava/lang/System;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     const-string v0, "mono"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    sget-object v0, Lcom/unity3d/player/UnityPlayer;->S:Lcom/unity3d/player/b;
+    sget-object v0, Lcom/unity3d/player/UnityPlayer;->R:Lcom/unity3d/player/b;
 
     invoke-virtual {v0}, Lcom/unity3d/player/b;->a()I
 
@@ -372,25 +376,25 @@
 
     and-int/lit8 v3, v0, 0x2
 
-    if-eqz v3, :cond_121
+    if-eqz v3, :cond_142
 
     and-int/lit16 v3, v0, 0x80
 
-    if-eqz v3, :cond_e8
+    if-eqz v3, :cond_ee
 
     and-int/lit8 v0, v0, 0x8
 
-    if-nez v0, :cond_121
+    if-nez v0, :cond_142
 
-    :cond_e8
+    :cond_ee
     const/4 v0, 0x6
 
     const-string v3, "CPU features not supported! (no ARMv6+ / VFP)"
 
-    invoke-static {v0, v3}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
-    :goto_ee
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    :goto_f4
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getPackageCodePath()Ljava/lang/String;
 
@@ -398,23 +402,52 @@
 
     invoke-direct {p0, v0}, Lcom/unity3d/player/UnityPlayer;->nativeFile(Ljava/lang/String;)V
 
-    new-instance v0, Lcom/unity3d/player/p;
+    new-instance v0, Lcom/unity3d/player/h;
 
-    invoke-direct {v0, p1, p0}, Lcom/unity3d/player/p;-><init>(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V
+    invoke-direct {v0, p1, p0}, Lcom/unity3d/player/h;-><init>(Landroid/content/Context;Lcom/unity3d/player/UnityPlayer;)V
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
 
-    const/16 v3, 0x8
+    const-string v3, "blaze"
 
-    if-lt v0, v3, :cond_106
+    invoke-virtual {v0, v3}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
-    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->f:Z
+    move-result v0
 
-    :cond_106
-    :try_start_106
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    if-nez v0, :cond_165
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "kindle"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_165
+
+    move v0, v1
+
+    :goto_11d
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x8
+
+    if-lt v3, v4, :cond_127
+
+    if-nez v0, :cond_127
+
+    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->e:Z
+
+    :cond_127
+    :try_start_127
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     new-instance v3, Ljava/lang/String;
 
@@ -434,31 +467,31 @@
 
     move-result v0
 
-    if-ne v6, v0, :cond_144
+    if-ne v6, v0, :cond_13f
 
-    move v0, v1
+    move v2, v1
 
-    :goto_11e
-    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->I:Z
-    :try_end_120
-    .catch Ljava/lang/Exception; {:try_start_106 .. :try_end_120} :catch_146
+    :cond_13f
+    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->H:Z
+    :try_end_141
+    .catch Ljava/lang/Exception; {:try_start_127 .. :try_end_141} :catch_167
 
-    :goto_120
+    :goto_141
     return-void
 
-    :cond_121
-    sput-boolean v1, Lcom/unity3d/player/UnityPlayer;->r:Z
+    :cond_142
+    sput-boolean v1, Lcom/unity3d/player/UnityPlayer;->p:Z
 
-    :try_start_123
+    :try_start_144
     const-string v0, "unity"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_128
-    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_123 .. :try_end_128} :catch_129
+    :try_end_149
+    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_144 .. :try_end_149} :catch_14a
 
-    goto :goto_ee
+    goto :goto_f4
 
-    :catch_129
+    :catch_14a
     move-exception v0
 
     const/4 v3, 0x5
@@ -481,28 +514,28 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
-    sput-boolean v2, Lcom/unity3d/player/UnityPlayer;->r:Z
+    sput-boolean v2, Lcom/unity3d/player/UnityPlayer;->p:Z
 
-    goto :goto_ee
+    goto :goto_f4
 
-    :cond_144
+    :cond_165
     move v0, v2
 
-    goto :goto_11e
+    goto :goto_11d
 
-    :catch_146
+    :catch_167
     move-exception v0
 
-    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->I:Z
+    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->H:Z
 
-    goto :goto_120
+    goto :goto_141
 
-    :catch_14a
+    :catch_16b
     move-exception v3
 
-    goto/16 :goto_89
+    goto/16 :goto_84
 .end method
 
 .method public static native UnitySendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -511,7 +544,7 @@
 .method static synthetic a(Lcom/unity3d/player/UnityPlayer;I)I
     .registers 2
 
-    iput p1, p0, Lcom/unity3d/player/UnityPlayer;->z:I
+    iput p1, p0, Lcom/unity3d/player/UnityPlayer;->y:I
 
     return p1
 .end method
@@ -519,7 +552,7 @@
 .method static synthetic a(Lcom/unity3d/player/UnityPlayer;Landroid/widget/ProgressBar;)Landroid/widget/ProgressBar;
     .registers 2
 
-    iput-object p1, p0, Lcom/unity3d/player/UnityPlayer;->P:Landroid/widget/ProgressBar;
+    iput-object p1, p0, Lcom/unity3d/player/UnityPlayer;->O:Landroid/widget/ProgressBar;
 
     return-object p1
 .end method
@@ -531,7 +564,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     const-string v2, "android.permission.WRITE_EXTERNAL_STORAGE"
 
@@ -573,7 +606,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v2}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
@@ -626,19 +659,19 @@
 
     const/4 v7, 0x1
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Z
 
     if-eqz v0, :cond_15
 
-    new-instance v1, Lcom/unity3d/player/m;
+    new-instance v1, Lcom/unity3d/player/g;
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     check-cast v0, Landroid/app/Activity;
 
-    invoke-direct {v1, v0}, Lcom/unity3d/player/m;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, v0}, Lcom/unity3d/player/g;-><init>(Landroid/app/Activity;)V
 
-    invoke-virtual {v1}, Lcom/unity3d/player/m;->a()Z
+    invoke-virtual {v1}, Lcom/unity3d/player/g;->a()Z
 
     move-result v0
 
@@ -649,7 +682,7 @@
 
     const-string v0, "power"
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v1, v0}, Landroid/content/ContextWrapper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -665,11 +698,11 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->m:Landroid/os/PowerManager$WakeLock;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Landroid/os/PowerManager$WakeLock;
 
     new-instance v0, Lcom/unity3d/player/PlayerPrefs;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->g:Landroid/content/SharedPreferences;
 
     invoke-direct {v0, v1}, Lcom/unity3d/player/PlayerPrefs;-><init>(Landroid/content/SharedPreferences;)V
 
@@ -677,13 +710,13 @@
 
     invoke-direct {p0, v0}, Lcom/unity3d/player/UnityPlayer;->nativeInitWWW(Ljava/lang/Class;)V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     if-nez v0, :cond_59
 
     new-instance v0, Lcom/unity3d/player/UnityPlayer$17;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     const/4 v5, 0x0
 
@@ -697,66 +730,27 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/unity3d/player/UnityPlayer$17;-><init>(Lcom/unity3d/player/UnityPlayer;Landroid/content/Context;IZZLandroid/view/View;)V
 
-    sget-boolean v1, Lcom/unity3d/player/n;->a:Z
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-eqz v1, :cond_51
+    const/16 v2, 0xb
 
-    sget-object v1, Lcom/unity3d/player/n;->b:Lcom/unity3d/player/j;
+    if-lt v1, v2, :cond_51
 
-    invoke-virtual {v0, v7}, Landroid/opengl/GLSurfaceView;->setPreserveEGLContextOnPause(Z)V
+    invoke-virtual {v0, v7}, Lcom/unity3d/player/q;->setPreserveEGLContextOnPause(Z)V
 
     :cond_51
-    invoke-virtual {v0, v7}, Lcom/unity3d/player/z;->setFocusable(Z)V
+    invoke-virtual {v0, v7}, Lcom/unity3d/player/q;->setFocusable(Z)V
 
-    invoke-virtual {v0, v7}, Lcom/unity3d/player/z;->setFocusableInTouchMode(Z)V
+    invoke-virtual {v0, v7}, Lcom/unity3d/player/q;->setFocusableInTouchMode(Z)V
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     :cond_59
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     invoke-interface {v0, p0}, Lcom/unity3d/player/UnityGL;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
 
-    sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
-
-    const-string v1, "blaze"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-nez v0, :cond_86
-
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "kindle"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_86
-
-    new-instance v0, Lcom/unity3d/player/o;
-
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
-
-    invoke-direct {v0, v1}, Lcom/unity3d/player/o;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Lcom/unity3d/player/o;
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->e:Lcom/unity3d/player/y;
-
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->l:Lcom/unity3d/player/o;
-
-    invoke-virtual {v0, v1}, Lcom/unity3d/player/y;->a(Landroid/view/View;)V
-
-    :cond_86
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     const-string v1, "sensor"
 
@@ -766,9 +760,9 @@
 
     check-cast v0, Landroid/hardware/SensorManager;
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     const-string v1, "window"
 
@@ -778,7 +772,7 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->o:Landroid/view/WindowManager;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->m:Landroid/view/WindowManager;
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->getSettings()Landroid/os/Bundle;
 
@@ -790,7 +784,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     new-instance v2, Lcom/unity3d/player/UnityPlayer$19;
 
@@ -798,25 +792,25 @@
 
     invoke-interface {v1, v2}, Lcom/unity3d/player/UnityGL;->queueEvent(Ljava/lang/Runnable;)V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->g:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->f:Landroid/os/Bundle;
 
     invoke-direct {p0, v0}, Lcom/unity3d/player/UnityPlayer;->nativeSetExtras(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
-    if-eqz v0, :cond_d2
+    if-eqz v0, :cond_aa
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Z
 
-    if-eqz v0, :cond_d2
+    if-eqz v0, :cond_aa
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
-    invoke-interface {v0}, Lcom/unity3d/player/h;->b()Landroid/graphics/RectF;
+    invoke-interface {v0}, Lcom/unity3d/player/e;->b()Landroid/graphics/RectF;
 
     move-result-object v0
 
-    if-eqz v0, :cond_d2
+    if-eqz v0, :cond_aa
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
 
@@ -828,7 +822,7 @@
 
     invoke-direct {p0, v1, v0}, Lcom/unity3d/player/UnityPlayer;->nativeEnableTouchpad(FF)V
 
-    :cond_d2
+    :cond_aa
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->resume()V
 
     invoke-virtual {p0, v7}, Lcom/unity3d/player/UnityPlayer;->windowFocusChanged(Z)V
@@ -927,13 +921,13 @@
 .method private a(Ljava/lang/Runnable;)V
     .registers 4
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     instance-of v0, v0, Landroid/app/Activity;
 
     if-eqz v0, :cond_e
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     check-cast v0, Landroid/app/Activity;
 
@@ -947,7 +941,7 @@
 
     const-string v1, "Not running Unity from an Activity; ignored..."
 
-    invoke-static {v0, v1}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
     goto :goto_d
 .end method
@@ -963,7 +957,7 @@
 
     const/4 v3, 0x4
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->aa:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->Z:Z
 
     if-nez v0, :cond_c
 
@@ -973,70 +967,70 @@
     :cond_c
     if-eqz p1, :cond_4b
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
     invoke-virtual {v2, v3}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v2
 
-    iget v3, p0, Lcom/unity3d/player/UnityPlayer;->ab:I
+    iget v3, p0, Lcom/unity3d/player/UnityPlayer;->aa:I
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
     invoke-virtual {v2, v4}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v2
 
-    iget v3, p0, Lcom/unity3d/player/UnityPlayer;->ab:I
+    iget v3, p0, Lcom/unity3d/player/UnityPlayer;->aa:I
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
     invoke-virtual {v2, v5}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v2
 
-    iget v3, p0, Lcom/unity3d/player/UnityPlayer;->ab:I
+    iget v3, p0, Lcom/unity3d/player/UnityPlayer;->aa:I
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
     invoke-virtual {v2, v6}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v2
 
-    iget v3, p0, Lcom/unity3d/player/UnityPlayer;->ab:I
+    iget v3, p0, Lcom/unity3d/player/UnityPlayer;->aa:I
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
     goto :goto_b
 
     :cond_4b
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
     invoke-virtual {v2, v3}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
@@ -1044,11 +1038,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
     invoke-virtual {v2, v4}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
@@ -1056,11 +1050,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
     invoke-virtual {v2, v5}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
@@ -1068,11 +1062,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
     invoke-virtual {v2, v6}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
@@ -1088,7 +1082,7 @@
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/unity3d/player/UnityPlayer;->r:Z
+    sput-boolean v0, Lcom/unity3d/player/UnityPlayer;->p:Z
 
     return v0
 .end method
@@ -1096,66 +1090,59 @@
 .method private a(ILandroid/view/KeyEvent;)Z
     .registers 11
 
-    const/4 v1, 0x4
-
     const/4 v4, 0x0
 
     const/4 v7, 0x1
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->t:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->r:Z
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_7
 
-    if-ne p1, v1, :cond_c
-
-    invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->kill()V
-
-    :cond_c
-    :goto_c
+    :goto_6
     return v7
 
-    :cond_d
-    invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->isFinishing()Z
+    :cond_7
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->x:Z
 
-    move-result v0
-
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_d
 
     move v7, v4
 
-    goto :goto_c
+    goto :goto_6
 
-    :cond_15
+    :cond_d
     const/16 v0, 0x19
 
-    if-eq p1, v0, :cond_1d
+    if-eq p1, v0, :cond_15
 
     const/16 v0, 0x18
 
-    if-ne p1, v0, :cond_2d
+    if-ne p1, v0, :cond_25
 
-    :cond_1d
+    :cond_15
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v0
 
-    if-nez v0, :cond_28
+    if-nez v0, :cond_20
 
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v7
 
-    goto :goto_c
+    goto :goto_6
 
-    :cond_28
+    :cond_20
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
     move-result v7
 
-    goto :goto_c
+    goto :goto_6
 
-    :cond_2d
-    if-ne p1, v1, :cond_5a
+    :cond_25
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_53
 
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getMetaState()I
 
@@ -1163,13 +1150,13 @@
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_5a
+    if-ne v0, v1, :cond_53
 
     const/16 p1, 0x65
 
     move v2, p1
 
-    :goto_39
+    :goto_32
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getMetaState()I
 
     move-result v0
@@ -1182,11 +1169,11 @@
 
     move-result v0
 
-    if-nez v0, :cond_48
+    if-nez v0, :cond_41
 
     move v4, v7
 
-    :cond_48
+    :cond_41
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getScanCode()I
 
     move-result v5
@@ -1203,18 +1190,18 @@
 
     invoke-virtual {p0, v0}, Lcom/unity3d/player/UnityPlayer;->queueEvent(Ljava/lang/Runnable;)V
 
-    goto :goto_c
+    goto :goto_6
 
-    :cond_5a
+    :cond_53
     move v2, p1
 
-    goto :goto_39
+    goto :goto_32
 .end method
 
 .method private a(Landroid/view/MotionEvent;)Z
     .registers 15
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Z
 
     if-eqz v0, :cond_6
 
@@ -1258,9 +1245,9 @@
 
     move-result v5
 
-    iget v6, p0, Lcom/unity3d/player/UnityPlayer;->T:F
+    iget v6, p0, Lcom/unity3d/player/UnityPlayer;->S:F
 
-    iget v7, p0, Lcom/unity3d/player/UnityPlayer;->U:F
+    iget v7, p0, Lcom/unity3d/player/UnityPlayer;->T:F
 
     const/4 v1, 0x0
 
@@ -1271,7 +1258,7 @@
     if-lt v0, v3, :cond_85
 
     :try_start_2f
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/lang/reflect/Method;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->U:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_4c
 
@@ -1301,14 +1288,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/lang/reflect/Method;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->U:Ljava/lang/reflect/Method;
 
     :cond_4c
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/lang/reflect/Method;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->U:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_8a
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/lang/reflect/Method;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->U:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x2
 
@@ -1358,9 +1345,9 @@
 
     invoke-virtual {p0, v0}, Lcom/unity3d/player/UnityPlayer;->queueEvent(Ljava/lang/Runnable;)V
 
-    iput v4, p0, Lcom/unity3d/player/UnityPlayer;->T:F
+    iput v4, p0, Lcom/unity3d/player/UnityPlayer;->S:F
 
-    iput v5, p0, Lcom/unity3d/player/UnityPlayer;->U:F
+    iput v5, p0, Lcom/unity3d/player/UnityPlayer;->T:F
 
     :cond_7e
     add-int/lit8 v0, v9, 0x1
@@ -1396,7 +1383,7 @@
 .method static synthetic a(Lcom/unity3d/player/UnityPlayer;Z)Z
     .registers 2
 
-    iput-boolean p1, p0, Lcom/unity3d/player/UnityPlayer;->A:Z
+    iput-boolean p1, p0, Lcom/unity3d/player/UnityPlayer;->z:Z
 
     return p1
 .end method
@@ -1404,7 +1391,7 @@
 .method static synthetic b(Lcom/unity3d/player/UnityPlayer;)I
     .registers 2
 
-    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->z:I
+    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->y:I
 
     return v0
 .end method
@@ -1417,7 +1404,7 @@
     const/4 v2, 0x0
 
     :try_start_2
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getAssets()Landroid/content/res/AssetManager;
 
@@ -1535,7 +1522,7 @@
 
     if-eqz v0, :cond_71
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->I:Landroid/os/Bundle;
 
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
@@ -1562,7 +1549,7 @@
 
     if-eqz v0, :cond_a3
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->I:Landroid/os/Bundle;
 
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
@@ -1601,7 +1588,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->c()V
 
@@ -1618,7 +1605,7 @@
 
     if-eqz v0, :cond_b9
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->I:Landroid/os/Bundle;
 
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
@@ -1641,7 +1628,7 @@
 
     if-eqz v0, :cond_6f
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->I:Landroid/os/Bundle;
 
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
@@ -1671,7 +1658,7 @@
 
     const/4 v3, 0x2
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->ac:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->ab:Z
 
     if-nez v0, :cond_6
 
@@ -1681,11 +1668,11 @@
     :cond_6
     if-eqz p1, :cond_17
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
     invoke-virtual {v2, v3}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
@@ -1698,11 +1685,11 @@
     goto :goto_5
 
     :cond_17
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
     invoke-virtual {v2, v3}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
@@ -1718,7 +1705,7 @@
 
     const/4 v5, 0x1
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Z
 
     if-eqz v0, :cond_6
 
@@ -1733,7 +1720,7 @@
 
     if-lt v0, v1, :cond_5
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/lang/reflect/Method;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->U:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_29
 
@@ -1764,7 +1751,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/lang/reflect/Method;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->U:Ljava/lang/reflect/Method;
     :try_end_29
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_29} :catch_32
 
@@ -1788,14 +1775,14 @@
 .method static synthetic b(Lcom/unity3d/player/UnityPlayer;I)[Ljava/lang/Integer;
     .registers 4
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->W:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/util/LinkedHashMap;
 
     if-nez v0, :cond_7
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->getConnectedJoysticks()[I
 
     :cond_7
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->W:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/util/LinkedHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1816,7 +1803,7 @@
     :cond_16
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->getConnectedJoysticks()[I
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->W:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/util/LinkedHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1838,7 +1825,7 @@
 .method static synthetic c(Lcom/unity3d/player/UnityPlayer;)Landroid/os/Bundle;
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->I:Landroid/os/Bundle;
 
     return-object v0
 .end method
@@ -1846,13 +1833,13 @@
 .method private c()V
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     instance-of v0, v0, Landroid/app/Activity;
 
     if-eqz v0, :cond_17
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     check-cast v0, Landroid/app/Activity;
 
@@ -1862,7 +1849,7 @@
 
     if-nez v0, :cond_17
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     check-cast v0, Landroid/app/Activity;
 
@@ -1875,7 +1862,7 @@
 .method static synthetic c(Lcom/unity3d/player/UnityPlayer;Z)Z
     .registers 2
 
-    iput-boolean p1, p0, Lcom/unity3d/player/UnityPlayer;->G:Z
+    iput-boolean p1, p0, Lcom/unity3d/player/UnityPlayer;->F:Z
 
     return p1
 .end method
@@ -1885,15 +1872,15 @@
 
     const/4 v1, 0x1
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->N:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->M:Z
 
     if-eqz v0, :cond_d
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->L:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->K:Z
 
     if-nez v0, :cond_d
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->M:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->L:Z
 
     if-eqz v0, :cond_e
 
@@ -1902,13 +1889,13 @@
     return-void
 
     :cond_e
-    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->M:Z
+    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->L:Z
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->f:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->e:Z
 
-    if-nez v0, :cond_62
+    if-nez v0, :cond_54
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     check-cast v0, Landroid/view/View;
 
@@ -1918,33 +1905,31 @@
 
     const/4 v2, -0x1
 
-    if-ne v0, v2, :cond_60
+    if-ne v0, v2, :cond_52
 
     move v0, v1
 
     :goto_20
-    if-eqz v0, :cond_31
+    if-eqz v0, :cond_2f
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
-    instance-of v0, v0, Lcom/unity3d/player/z;
+    instance-of v0, v0, Lcom/unity3d/player/q;
 
-    if-eqz v0, :cond_31
+    if-eqz v0, :cond_2f
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->e:Lcom/unity3d/player/y;
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     check-cast v0, Landroid/view/View;
 
-    invoke-virtual {v1, v0}, Lcom/unity3d/player/y;->d(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Lcom/unity3d/player/UnityPlayer;->addView(Landroid/view/View;)V
 
-    :cond_31
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->t:Z
+    :cond_2f
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->r:Z
 
-    if-eqz v0, :cond_3f
+    if-eqz v0, :cond_3d
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     new-instance v1, Lcom/unity3d/player/UnityPlayer$22;
 
@@ -1952,46 +1937,33 @@
 
     invoke-interface {v0, v1}, Lcom/unity3d/player/UnityGL;->queueEvent(Ljava/lang/Runnable;)V
 
-    :cond_3f
-    sget-boolean v0, Lcom/unity3d/player/UnityPlayer;->s:Z
+    :cond_3d
+    sget-boolean v0, Lcom/unity3d/player/UnityPlayer;->q:Z
 
-    if-eqz v0, :cond_4e
+    if-eqz v0, :cond_d
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->p:Lorg/fmod/FMODAudioDevice;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Lorg/fmod/FMODAudioDevice;
 
-    if-nez v0, :cond_4e
+    if-nez v0, :cond_d
 
     new-instance v0, Lorg/fmod/FMODAudioDevice;
 
     invoke-direct {v0}, Lorg/fmod/FMODAudioDevice;-><init>()V
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->p:Lorg/fmod/FMODAudioDevice;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Lorg/fmod/FMODAudioDevice;
 
-    :cond_4e
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->p:Lorg/fmod/FMODAudioDevice;
-
-    if-eqz v0, :cond_d
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->p:Lorg/fmod/FMODAudioDevice;
-
-    invoke-virtual {v0}, Lorg/fmod/FMODAudioDevice;->isRunning()Z
-
-    move-result v0
-
-    if-nez v0, :cond_d
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->p:Lorg/fmod/FMODAudioDevice;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Lorg/fmod/FMODAudioDevice;
 
     invoke-virtual {v0}, Lorg/fmod/FMODAudioDevice;->start()V
 
     goto :goto_d
 
-    :cond_60
+    :cond_52
     const/4 v0, 0x0
 
     goto :goto_20
 
-    :cond_62
+    :cond_54
     move v0, v1
 
     goto :goto_20
@@ -2010,7 +1982,7 @@
 .method static synthetic d(Lcom/unity3d/player/UnityPlayer;)Z
     .registers 2
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->A:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->z:Z
 
     return v0
 .end method
@@ -2031,26 +2003,7 @@
     return p1
 .end method
 
-.method static synthetic f(Lcom/unity3d/player/UnityPlayer;)V
-    .registers 4
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Lcom/unity3d/player/o;
-
-    if-eqz v0, :cond_d
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Lcom/unity3d/player/o;
-
-    iget v1, p0, Lcom/unity3d/player/UnityPlayer;->v:I
-
-    iget v2, p0, Lcom/unity3d/player/UnityPlayer;->w:I
-
-    invoke-virtual {v0, v1, v2}, Lcom/unity3d/player/o;->a(II)V
-
-    :cond_d
-    return-void
-.end method
-
-.method static synthetic g(Lcom/unity3d/player/UnityPlayer;)Z
+.method static synthetic f(Lcom/unity3d/player/UnityPlayer;)Z
     .registers 2
 
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->nativePause()Z
@@ -2060,7 +2013,7 @@
     return v0
 .end method
 
-.method static synthetic h(Lcom/unity3d/player/UnityPlayer;)V
+.method static synthetic g(Lcom/unity3d/player/UnityPlayer;)V
     .registers 1
 
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->nativeResume()V
@@ -2068,36 +2021,36 @@
     return-void
 .end method
 
-.method static synthetic i(Lcom/unity3d/player/UnityPlayer;)Z
+.method static synthetic h(Lcom/unity3d/player/UnityPlayer;)Z
     .registers 2
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->N:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->M:Z
 
     return v0
+.end method
+
+.method static synthetic i(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/UnityGL;
+    .registers 2
+
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
+
+    return-object v0
 .end method
 
 .method private final native initJni()V
 .end method
 
-.method static synthetic j(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/UnityGL;
-    .registers 2
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
-
-    return-object v0
-.end method
-
-.method static synthetic k(Lcom/unity3d/player/UnityPlayer;)Z
+.method static synthetic j(Lcom/unity3d/player/UnityPlayer;)Z
     .registers 2
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->H:Z
+    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->G:Z
 
     return v0
 .end method
 
-.method static synthetic l(Lcom/unity3d/player/UnityPlayer;)I
+.method static synthetic k(Lcom/unity3d/player/UnityPlayer;)I
     .registers 2
 
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->nativeActivityIndicatorStyle()I
@@ -2107,20 +2060,28 @@
     return v0
 .end method
 
-.method static synthetic m(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;
+.method static synthetic l(Lcom/unity3d/player/UnityPlayer;)Landroid/widget/ProgressBar;
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->P:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->O:Landroid/widget/ProgressBar;
 
     return-object v0
 .end method
 
-.method static synthetic n(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;
+.method static synthetic m(Lcom/unity3d/player/UnityPlayer;)Landroid/content/ContextWrapper;
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     return-object v0
+.end method
+
+.method static synthetic n(Lcom/unity3d/player/UnityPlayer;)I
+    .registers 2
+
+    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->u:I
+
+    return v0
 .end method
 
 .method private final native nativeActivityIndicatorStyle()I
@@ -2216,23 +2177,15 @@
 .method private final native nativeVideoFrameCallback(I[BII)V
 .end method
 
-.method static synthetic o(Lcom/unity3d/player/UnityPlayer;)I
+.method static synthetic o(Lcom/unity3d/player/UnityPlayer;)Ljava/lang/reflect/Method;
     .registers 2
 
-    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->w:I
-
-    return v0
-.end method
-
-.method static synthetic p(Lcom/unity3d/player/UnityPlayer;)Ljava/lang/reflect/Method;
-    .registers 2
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/lang/reflect/Method;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->U:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
 
-.method static synthetic q(Lcom/unity3d/player/UnityPlayer;)Z
+.method static synthetic p(Lcom/unity3d/player/UnityPlayer;)Z
     .registers 2
 
     iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->b:Z
@@ -2240,7 +2193,7 @@
     return v0
 .end method
 
-.method static synthetic r(Lcom/unity3d/player/UnityPlayer;)Z
+.method static synthetic q(Lcom/unity3d/player/UnityPlayer;)Z
     .registers 2
 
     iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->c:Z
@@ -2248,12 +2201,20 @@
     return v0
 .end method
 
-.method static synthetic s(Lcom/unity3d/player/UnityPlayer;)V
+.method static synthetic r(Lcom/unity3d/player/UnityPlayer;)V
     .registers 1
 
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->nativeSoftInputClosed()V
 
     return-void
+.end method
+
+.method static synthetic s(Lcom/unity3d/player/UnityPlayer;)Z
+    .registers 2
+
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->x:Z
+
+    return v0
 .end method
 
 .method private final native unityAndroidInit(Ljava/lang/String;Ljava/lang/String;)V
@@ -2267,9 +2228,9 @@
 .method protected Location_IsServiceEnabledByUser()Z
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    invoke-virtual {v0}, Lcom/unity3d/player/p;->a()Z
+    invoke-virtual {v0}, Lcom/unity3d/player/h;->a()Z
 
     move-result v0
 
@@ -2279,9 +2240,9 @@
 .method protected Location_SetDesiredAccuracy(F)V
     .registers 3
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    invoke-virtual {v0, p1}, Lcom/unity3d/player/p;->b(F)V
+    invoke-virtual {v0, p1}, Lcom/unity3d/player/h;->b(F)V
 
     return-void
 .end method
@@ -2289,9 +2250,9 @@
 .method protected Location_SetDistanceFilter(F)V
     .registers 3
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    invoke-virtual {v0, p1}, Lcom/unity3d/player/p;->a(F)V
+    invoke-virtual {v0, p1}, Lcom/unity3d/player/h;->a(F)V
 
     return-void
 .end method
@@ -2299,9 +2260,9 @@
 .method protected Location_StartUpdatingLocation()V
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    invoke-virtual {v0}, Lcom/unity3d/player/p;->b()V
+    invoke-virtual {v0}, Lcom/unity3d/player/h;->b()V
 
     return-void
 .end method
@@ -2309,9 +2270,9 @@
 .method protected Location_StopUpdatingLocation()V
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    invoke-virtual {v0}, Lcom/unity3d/player/p;->c()V
+    invoke-virtual {v0}, Lcom/unity3d/player/h;->c()V
 
     return-void
 .end method
@@ -2319,7 +2280,7 @@
 .method protected canUse32bitDisplayBuffer()Z
     .registers 2
 
-    invoke-static {}, Lcom/unity3d/player/z;->b()Z
+    invoke-static {}, Lcom/unity3d/player/q;->b()Z
 
     move-result v0
 
@@ -2329,18 +2290,22 @@
 .method protected closeCamera(I)V
     .registers 5
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->K:Ljava/util/List;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Ljava/util/Map;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    :cond_6
+    :cond_a
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_20
+    if-eqz v0, :cond_28
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2348,32 +2313,36 @@
 
     check-cast v0, Lcom/unity3d/player/a;
 
-    invoke-virtual {v0}, Lcom/unity3d/player/a;->c()I
+    invoke-virtual {v0}, Lcom/unity3d/player/a;->e()I
 
     move-result v2
 
-    if-ne v2, p1, :cond_6
+    if-ne v2, p1, :cond_a
 
-    invoke-virtual {v0}, Lcom/unity3d/player/a;->d()V
+    invoke-virtual {v0}, Lcom/unity3d/player/a;->f()V
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->K:Ljava/util/List;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->J:Ljava/util/Map;
 
-    invoke-interface {v1, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lcom/unity3d/player/a;->a()Landroid/hardware/Camera;
 
-    :cond_20
+    move-result-object v0
+
+    invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_28
     return-void
 .end method
 
 .method public configurationChanged(Landroid/content/res/Configuration;)V
     .registers 5
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     instance-of v0, v0, Landroid/view/SurfaceView;
 
     if-eqz v0, :cond_11
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     check-cast v0, Landroid/view/SurfaceView;
 
@@ -2394,7 +2363,7 @@
 
     if-ne v0, v1, :cond_29
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     const-string v1, "input_method"
 
@@ -2417,7 +2386,7 @@
 .method protected dispatchTouchEvent(IIIFFJI)Z
     .registers 18
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->t:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->r:Z
 
     if-nez v0, :cond_6
 
@@ -2427,7 +2396,7 @@
     return v0
 
     :cond_6
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Z
 
     if-nez v0, :cond_23
 
@@ -2476,13 +2445,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    iget-object v1, v0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
     if-eqz v1, :cond_2d
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    iget-object v1, v0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
     move-wide/from16 v2, p1
 
@@ -2516,7 +2485,7 @@
 
     move-object/from16 v19, p18
 
-    invoke-interface/range {v1 .. v19}, Lcom/unity3d/player/h;->a(JJII[I[FIFFIIIII[J[F)V
+    invoke-interface/range {v1 .. v19}, Lcom/unity3d/player/e;->a(JJII[I[FIFFIIIII[J[F)V
 
     :cond_2d
     return-void
@@ -2525,7 +2494,7 @@
 .method protected getCPUType()Ljava/lang/String;
     .registers 2
 
-    sget-object v0, Lcom/unity3d/player/UnityPlayer;->S:Lcom/unity3d/player/b;
+    sget-object v0, Lcom/unity3d/player/UnityPlayer;->R:Lcom/unity3d/player/b;
 
     invoke-virtual {v0}, Lcom/unity3d/player/b;->b()Ljava/lang/String;
 
@@ -2539,7 +2508,7 @@
 
     const-string v0, "/cache"
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v1}, Landroid/content/ContextWrapper;->getCacheDir()Ljava/io/File;
 
@@ -2757,7 +2726,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->W:Ljava/util/LinkedHashMap;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/util/LinkedHashMap;
 
     array-length v4, v5
 
@@ -2812,7 +2781,7 @@
     goto :goto_bb
 
     :cond_cb
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->W:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->V:Ljava/util/LinkedHashMap;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2851,7 +2820,7 @@
 
     const/4 v1, 0x1
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->o:Landroid/view/WindowManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->m:Landroid/view/WindowManager;
 
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -2957,11 +2926,11 @@
     .registers 3
 
     :try_start_0
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->D:Ljava/lang/String;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->C:Ljava/lang/String;
 
     if-nez v0, :cond_14
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     const-string v1, "phone"
 
@@ -2975,10 +2944,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->D:Ljava/lang/String;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->C:Ljava/lang/String;
 
     :cond_14
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->D:Ljava/lang/String;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->C:Ljava/lang/String;
 
     if-eqz v0, :cond_26
 
@@ -3000,10 +2969,10 @@
 
     const-string v1, "android.permission.READ_PHONE_STATE not available?"
 
-    invoke-static {v0, v1}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
     :cond_26
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3023,7 +2992,7 @@
 
     const-string v0, "/files"
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v1}, Landroid/content/ContextWrapper;->getFilesDir()Ljava/io/File;
 
@@ -3039,7 +3008,7 @@
 .method protected getGyroUpdateDelay()I
     .registers 2
 
-    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->ab:I
+    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->aa:I
 
     return v0
 .end method
@@ -3050,11 +3019,11 @@
     const/4 v1, 0x0
 
     :try_start_1
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->E:Landroid/net/NetworkInfo;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->D:Landroid/net/NetworkInfo;
 
     if-nez v0, :cond_15
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     const-string v2, "connectivity"
 
@@ -3068,10 +3037,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->E:Landroid/net/NetworkInfo;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->D:Landroid/net/NetworkInfo;
 
     :cond_15
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->E:Landroid/net/NetworkInfo;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->D:Landroid/net/NetworkInfo;
 
     if-nez v0, :cond_1b
 
@@ -3109,7 +3078,7 @@
 
     const-string v2, "android.permission.ACCESS_NETWORK_STATE not available?"
 
-    invoke-static {v0, v2}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
     move v0, v1
 
@@ -3119,7 +3088,7 @@
 .method protected getIsGyroAvailable()Z
     .registers 3
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -3137,7 +3106,7 @@
 .method protected getIsGyroEnabled()Z
     .registers 2
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->aa:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->Z:Z
 
     return v0
 .end method
@@ -3458,13 +3427,13 @@
 .method protected getNumCameras()I
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
-    invoke-interface {v0}, Lcom/unity3d/player/h;->a()I
+    invoke-interface {v0}, Lcom/unity3d/player/e;->a()I
 
     move-result v0
 
@@ -3480,7 +3449,7 @@
 .method protected getOrientation()I
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     instance-of v0, v0, Landroid/app/Activity;
 
@@ -3492,7 +3461,7 @@
     return v0
 
     :cond_8
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     check-cast v0, Landroid/app/Activity;
 
@@ -3506,7 +3475,7 @@
 .method protected getPackageName()Ljava/lang/String;
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
@@ -3518,7 +3487,7 @@
 .method protected getScreenDPI()F
     .registers 3
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     instance-of v0, v0, Landroid/app/Activity;
 
@@ -3530,7 +3499,7 @@
     return v0
 
     :cond_8
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     check-cast v0, Landroid/app/Activity;
 
@@ -3564,7 +3533,7 @@
 .method protected getScreenTimeout()I
     .registers 4
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3586,7 +3555,7 @@
 .method public getSettings()Landroid/os/Bundle;
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->I:Landroid/os/Bundle;
 
     return-object v0
 .end method
@@ -3594,7 +3563,7 @@
 .method protected getTotalMemory()I
     .registers 2
 
-    sget-object v0, Lcom/unity3d/player/UnityPlayer;->S:Lcom/unity3d/player/b;
+    sget-object v0, Lcom/unity3d/player/UnityPlayer;->R:Lcom/unity3d/player/b;
 
     invoke-virtual {v0}, Lcom/unity3d/player/b;->c()I
 
@@ -3612,7 +3581,7 @@
 .method protected hasWakeLock()Z
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->m:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
@@ -3638,13 +3607,13 @@
 
     const/4 v3, 0x0
 
-    sget-boolean v0, Lcom/unity3d/player/UnityPlayer;->r:Z
+    sget-boolean v0, Lcom/unity3d/player/UnityPlayer;->p:Z
 
     if-nez v0, :cond_2e
 
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -3698,7 +3667,7 @@
 
     if-ge v0, v1, :cond_73
 
-    sget-object v0, Lcom/unity3d/player/UnityPlayer;->S:Lcom/unity3d/player/b;
+    sget-object v0, Lcom/unity3d/player/UnityPlayer;->R:Lcom/unity3d/player/b;
 
     invoke-virtual {v0}, Lcom/unity3d/player/b;->a()I
 
@@ -3708,11 +3677,11 @@
 
     if-eqz v0, :cond_73
 
-    sput-boolean v3, Lcom/unity3d/player/UnityPlayer;->r:Z
+    sput-boolean v3, Lcom/unity3d/player/UnityPlayer;->p:Z
 
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -3757,16 +3726,28 @@
 .method protected initCamera(IIII)[I
     .registers 9
 
+    :try_start_0
     new-instance v1, Lcom/unity3d/player/a;
 
     invoke-direct {v1, p1, p2, p3, p4}, Lcom/unity3d/player/a;-><init>(IIII)V
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_5} :catch_2a
 
-    :try_start_5
-    invoke-virtual {v1, p0}, Lcom/unity3d/player/a;->a(Lcom/unity3d/player/a$a;)V
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Ljava/util/Map;
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->K:Ljava/util/List;
+    invoke-virtual {v1}, Lcom/unity3d/player/a;->a()Landroid/hardware/Camera;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result-object v2
+
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1, p0}, Lcom/unity3d/player/a;->a(Landroid/hardware/Camera$PreviewCallback;)V
+
+    invoke-virtual {v1}, Lcom/unity3d/player/a;->a()Landroid/hardware/Camera;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/hardware/Camera;->startPreview()V
 
     const/4 v0, 0x2
 
@@ -3774,7 +3755,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1}, Lcom/unity3d/player/a;->a()I
+    invoke-virtual {v1}, Lcom/unity3d/player/a;->c()I
 
     move-result v3
 
@@ -3782,21 +3763,17 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1}, Lcom/unity3d/player/a;->b()I
+    invoke-virtual {v1}, Lcom/unity3d/player/a;->d()I
 
-    move-result v3
+    move-result v1
 
-    aput v3, v0, v2
-    :try_end_1e
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_1e} :catch_1f
+    aput v1, v0, v2
 
-    :goto_1e
+    :goto_29
     return-object v0
 
-    :catch_1f
+    :catch_2a
     move-exception v0
-
-    invoke-virtual {v1}, Lcom/unity3d/player/a;->d()V
 
     const/4 v1, 0x6
 
@@ -3810,7 +3787,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getLocalizedMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3822,23 +3799,23 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
     const/4 v0, 0x0
 
-    goto :goto_1e
+    goto :goto_29
 .end method
 
 .method protected isCameraFrontFacing(I)Z
     .registers 3
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
-    invoke-interface {v0, p1}, Lcom/unity3d/player/h;->a(I)Z
+    invoke-interface {v0, p1}, Lcom/unity3d/player/e;->a(I)Z
 
     move-result v0
 
@@ -3854,7 +3831,7 @@
 .method protected isCompassAvailable()Z
     .registers 3
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -3872,51 +3849,9 @@
 .method protected isCompassEnabled()Z
     .registers 2
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->ac:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->ab:Z
 
     return v0
-.end method
-
-.method protected isFinishing()Z
-    .registers 2
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
-
-    instance-of v0, v0, Landroid/app/Activity;
-
-    if-eqz v0, :cond_12
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
-
-    check-cast v0, Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_12
-
-    const/4 v0, 0x1
-
-    :goto_11
-    return v0
-
-    :cond_12
-    const/4 v0, 0x0
-
-    goto :goto_11
-.end method
-
-.method protected kill()V
-    .registers 2
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v0
-
-    invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
-
-    return-void
 .end method
 
 .method protected loadLibrary(Ljava/lang/String;)Z
@@ -3958,7 +3893,7 @@
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v4, v1}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
     goto :goto_6
 
@@ -3983,7 +3918,7 @@
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v4, v1}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
     goto :goto_6
 .end method
@@ -4021,46 +3956,6 @@
 .method protected native nativeSetLocationStatus(I)V
 .end method
 
-.method public onCameraFrame(Lcom/unity3d/player/a;[B)V
-    .registers 10
-
-    invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->isFinishing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    :goto_6
-    return-void
-
-    :cond_7
-    invoke-virtual {p1}, Lcom/unity3d/player/a;->a()I
-
-    move-result v4
-
-    invoke-virtual {p1}, Lcom/unity3d/player/a;->b()I
-
-    move-result v5
-
-    invoke-virtual {p1}, Lcom/unity3d/player/a;->c()I
-
-    move-result v2
-
-    new-instance v0, Lcom/unity3d/player/UnityPlayer$11;
-
-    move-object v1, p0
-
-    move-object v3, p2
-
-    move-object v6, p1
-
-    invoke-direct/range {v0 .. v6}, Lcom/unity3d/player/UnityPlayer$11;-><init>(Lcom/unity3d/player/UnityPlayer;I[BIILcom/unity3d/player/a;)V
-
-    invoke-virtual {p0, v0}, Lcom/unity3d/player/UnityPlayer;->queueEvent(Ljava/lang/Runnable;)V
-
-    goto :goto_6
-.end method
-
 .method public onDrawFrame(Ljavax/microedition/khronos/opengles/GL10;)V
     .registers 11
 
@@ -4068,30 +3963,28 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->isFinishing()Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->x:Z
 
-    move-result v0
+    if-eqz v0, :cond_7
 
-    if-eqz v0, :cond_9
-
-    :cond_8
-    :goto_8
+    :cond_6
+    :goto_6
     return-void
 
-    :cond_9
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->I:Z
+    :cond_7
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->H:Z
 
-    if-nez v0, :cond_4b
+    if-nez v0, :cond_49
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->F:Lcom/unity3d/player/a/e;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->E:Lcom/unity3d/player/a/e;
 
-    if-nez v0, :cond_4b
+    if-nez v0, :cond_49
 
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->nativeGetGLContext()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_4b
+    if-eqz v0, :cond_49
 
     new-instance v1, Ljava/lang/String;
 
@@ -4101,7 +3994,7 @@
 
     new-instance v4, Lcom/unity3d/player/a/i;
 
-    iget-object v5, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v5, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     new-instance v6, Lcom/unity3d/player/a/a;
 
@@ -4109,7 +4002,7 @@
 
     move-result-object v1
 
-    iget-object v7, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v7, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v7}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
 
@@ -4123,62 +4016,64 @@
 
     invoke-direct {v4, v5, v6}, Lcom/unity3d/player/a/i;-><init>(Landroid/content/Context;Lcom/unity3d/player/a/h;)V
 
-    :try_start_38
+    :try_start_36
     new-instance v1, Lcom/unity3d/player/a/e;
 
-    iget-object v5, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v5, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-direct {v1, v5, v4, v0}, Lcom/unity3d/player/a/e;-><init>(Landroid/content/Context;Lcom/unity3d/player/a/i;Ljava/lang/String;)V
 
-    iput-object v1, p0, Lcom/unity3d/player/UnityPlayer;->F:Lcom/unity3d/player/a/e;
+    iput-object v1, p0, Lcom/unity3d/player/UnityPlayer;->E:Lcom/unity3d/player/a/e;
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->F:Lcom/unity3d/player/a/e;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->E:Lcom/unity3d/player/a/e;
 
     new-instance v1, Lcom/unity3d/player/UnityPlayer$2;
 
     invoke-direct {v1, p0}, Lcom/unity3d/player/UnityPlayer$2;-><init>(Lcom/unity3d/player/UnityPlayer;)V
 
     invoke-virtual {v0, v1}, Lcom/unity3d/player/a/e;->a(Lcom/unity3d/player/a/f;)V
-    :try_end_4b
-    .catch Ljava/lang/Exception; {:try_start_38 .. :try_end_4b} :catch_55
+    :try_end_49
+    .catch Ljava/lang/Exception; {:try_start_36 .. :try_end_49} :catch_55
 
-    :cond_4b
-    :goto_4b
+    :cond_49
+    :goto_49
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->nativeRender()Z
 
     move-result v0
 
     if-nez v0, :cond_59
 
+    iput-boolean v3, p0, Lcom/unity3d/player/UnityPlayer;->x:Z
+
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->c()V
 
-    goto :goto_8
+    goto :goto_6
 
     :catch_55
     move-exception v0
 
-    iput-boolean v3, p0, Lcom/unity3d/player/UnityPlayer;->I:Z
+    iput-boolean v3, p0, Lcom/unity3d/player/UnityPlayer;->H:Z
 
-    goto :goto_4b
+    goto :goto_49
 
     :cond_59
-    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->C:I
+    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->B:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/unity3d/player/UnityPlayer;->C:I
+    iput v0, p0, Lcom/unity3d/player/UnityPlayer;->B:I
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->t:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->r:Z
 
     if-nez v0, :cond_a0
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->u:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->s:Z
 
     if-eqz v0, :cond_6a
 
-    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->u:Z
+    iput-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->s:Z
 
-    goto :goto_8
+    goto :goto_6
 
     :cond_6a
     const-string v0, "assets/bin/"
@@ -4187,7 +4082,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v4, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v4, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v4}, Landroid/content/ContextWrapper;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
@@ -4211,17 +4106,17 @@
 
     invoke-direct {p0, v0, v1}, Lcom/unity3d/player/UnityPlayer;->unityAndroidInit(Ljava/lang/String;Ljava/lang/String;)V
 
+    iput-boolean v3, p0, Lcom/unity3d/player/UnityPlayer;->r:Z
+
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->unityAndroidPrepareGameLoop()V
 
-    iput-boolean v3, p0, Lcom/unity3d/player/UnityPlayer;->t:Z
+    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->t:I
 
-    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->v:I
+    iget v1, p0, Lcom/unity3d/player/UnityPlayer;->u:I
 
-    iget v1, p0, Lcom/unity3d/player/UnityPlayer;->w:I
+    iget v4, p0, Lcom/unity3d/player/UnityPlayer;->t:I
 
-    iget v4, p0, Lcom/unity3d/player/UnityPlayer;->v:I
-
-    iget v5, p0, Lcom/unity3d/player/UnityPlayer;->w:I
+    iget v5, p0, Lcom/unity3d/player/UnityPlayer;->u:I
 
     invoke-direct {p0, v0, v1, v4, v5}, Lcom/unity3d/player/UnityPlayer;->nativeResize(IIII)V
 
@@ -4230,11 +4125,11 @@
     invoke-virtual {p0, v3}, Lcom/unity3d/player/UnityPlayer;->windowFocusChanged(Z)V
 
     :cond_a0
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
-    instance-of v0, v0, Lcom/unity3d/player/z;
+    instance-of v0, v0, Lcom/unity3d/player/q;
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_6
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->canUse32bitDisplayBuffer()Z
 
@@ -4253,45 +4148,45 @@
 
     move-result v0
 
-    iget v4, p0, Lcom/unity3d/player/UnityPlayer;->z:I
+    iget v4, p0, Lcom/unity3d/player/UnityPlayer;->y:I
 
     if-eq v4, v0, :cond_c5
 
-    iput v0, p0, Lcom/unity3d/player/UnityPlayer;->z:I
+    iput v0, p0, Lcom/unity3d/player/UnityPlayer;->y:I
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
-    check-cast v0, Lcom/unity3d/player/z;
+    check-cast v0, Lcom/unity3d/player/q;
 
-    iget v2, p0, Lcom/unity3d/player/UnityPlayer;->z:I
+    iget v2, p0, Lcom/unity3d/player/UnityPlayer;->y:I
 
-    invoke-virtual {v0, v2}, Lcom/unity3d/player/z;->a(I)V
+    invoke-virtual {v0, v2}, Lcom/unity3d/player/q;->a(I)V
 
     move v2, v3
 
     :cond_c5
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->A:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->z:Z
 
     if-eq v0, v1, :cond_df
 
-    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Z
+    iput-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->z:Z
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
-    check-cast v0, Lcom/unity3d/player/z;
+    check-cast v0, Lcom/unity3d/player/q;
 
-    iget-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Z
+    iget-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->z:Z
 
-    invoke-virtual {v0, v1}, Lcom/unity3d/player/z;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/unity3d/player/q;->a(Z)V
 
     :goto_d4
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_6
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->O:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->N:Ljava/lang/Runnable;
 
     invoke-direct {p0, v0}, Lcom/unity3d/player/UnityPlayer;->a(Ljava/lang/Runnable;)V
 
-    goto/16 :goto_8
+    goto/16 :goto_6
 
     :cond_dd
     move v1, v2
@@ -4384,47 +4279,108 @@
     return v1
 .end method
 
+.method public onPreviewFrame([BLandroid/hardware/Camera;)V
+    .registers 10
+
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->x:Z
+
+    if-eqz v0, :cond_5
+
+    :cond_4
+    :goto_4
+    return-void
+
+    :cond_5
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Ljava/util/Map;
+
+    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v6, v0
+
+    check-cast v6, Lcom/unity3d/player/a;
+
+    if-eqz v6, :cond_4
+
+    invoke-virtual {v6}, Lcom/unity3d/player/a;->c()I
+
+    move-result v4
+
+    invoke-virtual {v6}, Lcom/unity3d/player/a;->d()I
+
+    move-result v5
+
+    invoke-virtual {v6}, Lcom/unity3d/player/a;->e()I
+
+    move-result v2
+
+    new-instance v0, Lcom/unity3d/player/UnityPlayer$11;
+
+    move-object v1, p0
+
+    move-object v3, p1
+
+    invoke-direct/range {v0 .. v5}, Lcom/unity3d/player/UnityPlayer$11;-><init>(Lcom/unity3d/player/UnityPlayer;I[BII)V
+
+    invoke-virtual {p0, v0}, Lcom/unity3d/player/UnityPlayer;->queueEvent(Ljava/lang/Runnable;)V
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x8
+
+    if-lt v0, v1, :cond_4
+
+    invoke-virtual {v6}, Lcom/unity3d/player/a;->b()[B
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/hardware/Camera;->addCallbackBuffer([B)V
+
+    goto :goto_4
+.end method
+
 .method public onSurfaceChanged(Ljavax/microedition/khronos/opengles/GL10;II)V
     .registers 8
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     instance-of v0, v0, Landroid/view/SurfaceView;
 
     if-eqz v0, :cond_1d
 
-    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->x:I
+    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->v:I
 
     if-nez v0, :cond_e
 
-    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->y:I
+    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->w:I
 
     if-eqz v0, :cond_1d
 
     :cond_e
-    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->x:I
+    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->v:I
 
     if-ne v0, p2, :cond_16
 
-    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->y:I
+    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->w:I
 
     if-eq v0, p3, :cond_1d
 
     :cond_16
-    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->x:I
+    iget v0, p0, Lcom/unity3d/player/UnityPlayer;->v:I
 
-    iget v1, p0, Lcom/unity3d/player/UnityPlayer;->y:I
+    iget v1, p0, Lcom/unity3d/player/UnityPlayer;->w:I
 
     invoke-virtual {p0, v0, v1}, Lcom/unity3d/player/UnityPlayer;->setScreenSize(II)V
 
     :cond_1d
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     instance-of v0, v0, Landroid/view/View;
 
     if-eqz v0, :cond_69
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     check-cast v0, Landroid/view/View;
 
@@ -4432,7 +4388,7 @@
 
     move-result v1
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     check-cast v0, Landroid/view/View;
 
@@ -4441,13 +4397,13 @@
     move-result v0
 
     :goto_33
-    iput p2, p0, Lcom/unity3d/player/UnityPlayer;->v:I
+    iput p2, p0, Lcom/unity3d/player/UnityPlayer;->t:I
 
-    iput p3, p0, Lcom/unity3d/player/UnityPlayer;->w:I
+    iput p3, p0, Lcom/unity3d/player/UnityPlayer;->u:I
 
     invoke-direct {p0, p2, p3, v1, v0}, Lcom/unity3d/player/UnityPlayer;->nativeResize(IIII)V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     instance-of v0, v0, Landroid/app/Activity;
 
@@ -4469,7 +4425,7 @@
 
     if-nez v1, :cond_65
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     check-cast v0, Landroid/app/Activity;
 
@@ -4520,7 +4476,7 @@
 
     const/4 v9, 0x1
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->t:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->r:Z
 
     if-nez v0, :cond_8
 
@@ -4530,7 +4486,7 @@
     return v0
 
     :cond_8
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Z
 
     if-eqz v0, :cond_e
 
@@ -4539,13 +4495,13 @@
     goto :goto_7
 
     :cond_e
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
     if-eqz v0, :cond_21
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/h;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->d:Lcom/unity3d/player/e;
 
-    invoke-interface {v0, p1}, Lcom/unity3d/player/h;->a(Landroid/view/MotionEvent;)I
+    invoke-interface {v0, p1}, Lcom/unity3d/player/e;->a(Landroid/view/MotionEvent;)I
 
     move-result v8
 
@@ -4698,7 +4654,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
     :cond_2c
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     invoke-virtual {v1, v0}, Landroid/content/ContextWrapper;->startActivity(Landroid/content/Intent;)V
 
@@ -4710,7 +4666,7 @@
 
     const/4 v4, 0x0
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->L:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->K:Z
 
     if-eqz v0, :cond_6
 
@@ -4719,64 +4675,80 @@
     return-void
 
     :cond_6
-    sget-boolean v0, Lcom/unity3d/player/UnityPlayer;->r:Z
+    sget-boolean v0, Lcom/unity3d/player/UnityPlayer;->p:Z
 
     if-eqz v0, :cond_5
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->L:Z
+    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->K:Z
 
-    iput-boolean v4, p0, Lcom/unity3d/player/UnityPlayer;->M:Z
+    iput-boolean v4, p0, Lcom/unity3d/player/UnityPlayer;->L:Z
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->K:Ljava/util/List;
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->x:Z
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    if-nez v0, :cond_33
+
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    :goto_15
+    :goto_1d
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_25
+    if-eqz v0, :cond_33
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
     check-cast v0, Lcom/unity3d/player/a;
 
-    invoke-virtual {v0}, Lcom/unity3d/player/a;->d()V
+    invoke-virtual {v0}, Lcom/unity3d/player/a;->f()V
 
-    goto :goto_15
+    goto :goto_1d
 
-    :cond_25
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->p:Lorg/fmod/FMODAudioDevice;
+    :cond_33
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Lorg/fmod/FMODAudioDevice;
 
-    if-eqz v0, :cond_2e
+    if-eqz v0, :cond_3f
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->p:Lorg/fmod/FMODAudioDevice;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Lorg/fmod/FMODAudioDevice;
 
     invoke-virtual {v0}, Lorg/fmod/FMODAudioDevice;->stop()V
 
-    :cond_2e
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->t:Z
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_57
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Lorg/fmod/FMODAudioDevice;
+
+    :cond_3f
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->r:Z
+
+    if-eqz v0, :cond_66
 
     new-instance v0, Ljava/util/concurrent/Semaphore;
 
     invoke-direct {v0, v4}, Ljava/util/concurrent/Semaphore;-><init>(I)V
 
-    invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->isFinishing()Z
+    iget-boolean v1, p0, Lcom/unity3d/player/UnityPlayer;->x:Z
 
-    move-result v1
+    if-eqz v1, :cond_9a
 
-    if-eqz v1, :cond_96
-
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     new-instance v2, Lcom/unity3d/player/UnityPlayer$20;
 
@@ -4784,61 +4756,50 @@
 
     invoke-interface {v1, v2}, Lcom/unity3d/player/UnityGL;->queueEvent(Ljava/lang/Runnable;)V
 
-    :goto_47
+    :goto_56
     const-wide/16 v1, 0xa
 
-    :try_start_49
+    :try_start_58
     sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/Semaphore;->tryAcquire(JLjava/util/concurrent/TimeUnit;)Z
-    :try_end_4e
-    .catch Ljava/lang/InterruptedException; {:try_start_49 .. :try_end_4e} :catch_a1
+    :try_end_5d
+    .catch Ljava/lang/InterruptedException; {:try_start_58 .. :try_end_5d} :catch_a5
 
-    :goto_4e
+    :goto_5d
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->drainPermits()I
 
     move-result v0
 
-    if-lez v0, :cond_57
+    if-lez v0, :cond_66
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->quit()V
 
-    :cond_57
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    :cond_66
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->Z:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->W:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->f:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->e:Z
 
-    if-eqz v0, :cond_7a
+    if-eqz v0, :cond_7e
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
-    instance-of v0, v0, Lcom/unity3d/player/z;
+    instance-of v0, v0, Lcom/unity3d/player/q;
 
-    if-eqz v0, :cond_7a
+    if-eqz v0, :cond_7e
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Lcom/unity3d/player/o;
-
-    if-eqz v0, :cond_71
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Lcom/unity3d/player/o;
-
-    invoke-virtual {v0}, Lcom/unity3d/player/o;->a()V
-
-    :cond_71
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->e:Lcom/unity3d/player/y;
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     check-cast v0, Landroid/view/View;
 
-    invoke-virtual {v1, v0}, Lcom/unity3d/player/y;->e(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Lcom/unity3d/player/UnityPlayer;->removeView(Landroid/view/View;)V
 
-    :cond_7a
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    :cond_7e
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     invoke-interface {v0}, Lcom/unity3d/player/UnityGL;->onPause()V
 
@@ -4848,20 +4809,20 @@
 
     invoke-direct {p0, v4}, Lcom/unity3d/player/UnityPlayer;->b(Z)V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    invoke-virtual {v0}, Lcom/unity3d/player/p;->d()V
+    invoke-virtual {v0}, Lcom/unity3d/player/h;->d()V
 
     goto/16 :goto_5
 
-    :cond_96
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    :cond_9a
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     new-instance v2, Lcom/unity3d/player/UnityPlayer$21;
 
@@ -4869,18 +4830,18 @@
 
     invoke-interface {v1, v2}, Lcom/unity3d/player/UnityGL;->queueEvent(Ljava/lang/Runnable;)V
 
-    goto :goto_47
+    goto :goto_56
 
-    :catch_a1
+    :catch_a5
     move-exception v1
 
-    goto :goto_4e
+    goto :goto_5d
 .end method
 
 .method protected queueEvent(Ljava/lang/Runnable;)V
     .registers 4
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->t:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->r:Z
 
     if-nez v0, :cond_5
 
@@ -4889,13 +4850,11 @@
     return-void
 
     :cond_5
-    invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->isFinishing()Z
-
-    move-result v0
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->x:Z
 
     if-nez v0, :cond_4
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     new-instance v1, Lcom/unity3d/player/UnityPlayer$15;
 
@@ -4909,31 +4868,35 @@
 .method public quit()V
     .registers 2
 
-    sget-boolean v0, Lcom/unity3d/player/UnityPlayer;->r:Z
+    sget-boolean v0, Lcom/unity3d/player/UnityPlayer;->p:Z
 
     if-eqz v0, :cond_c
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->removeAllViews()V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     invoke-interface {v0}, Lcom/unity3d/player/UnityGL;->a()V
 
     :cond_c
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->F:Lcom/unity3d/player/a/e;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->E:Lcom/unity3d/player/a/e;
 
     if-eqz v0, :cond_15
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->F:Lcom/unity3d/player/a/e;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->E:Lcom/unity3d/player/a/e;
 
     invoke-virtual {v0}, Lcom/unity3d/player/a/e;->a()V
 
     :cond_15
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->F:Lcom/unity3d/player/a/e;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->E:Lcom/unity3d/player/a/e;
 
-    invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayer;->kill()V
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v0
+
+    invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
 
     return-void
 .end method
@@ -4958,13 +4921,13 @@
 .end method
 
 .method public resume()V
-    .registers 8
+    .registers 7
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->L:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->K:Z
 
     if-nez v0, :cond_7
 
@@ -4973,79 +4936,67 @@
     return-void
 
     :cond_7
-    sget-boolean v0, Lcom/unity3d/player/UnityPlayer;->r:Z
+    sget-boolean v0, Lcom/unity3d/player/UnityPlayer;->p:Z
 
     if-eqz v0, :cond_6
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->L:Z
+    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->K:Z
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->K:Ljava/util/List;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->J:Ljava/util/Map;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    :goto_14
+    new-instance v2, Ljava/util/HashMap;
+
+    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+
+    :goto_1d
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_41
+    if-eqz v0, :cond_3a
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
     check-cast v0, Lcom/unity3d/player/a;
 
-    :try_start_20
-    invoke-virtual {v0, p0}, Lcom/unity3d/player/a;->a(Lcom/unity3d/player/a$a;)V
-    :try_end_23
-    .catch Ljava/lang/Exception; {:try_start_20 .. :try_end_23} :catch_24
+    invoke-virtual {v0, p0}, Lcom/unity3d/player/a;->b(Landroid/hardware/Camera$PreviewCallback;)V
 
-    goto :goto_14
-
-    :catch_24
-    move-exception v0
-
-    const/4 v2, 0x6
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Camera failed to open: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lcom/unity3d/player/a;->a()Landroid/hardware/Camera;
 
     move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-interface {v2, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    goto :goto_1d
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_3a
+    iput-object v2, p0, Lcom/unity3d/player/UnityPlayer;->J:Ljava/util/Map;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
-
-    goto :goto_14
-
-    :cond_41
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     invoke-interface {v0}, Lcom/unity3d/player/UnityGL;->onResume()V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->Z:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->W:Landroid/content/BroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -5055,31 +5006,31 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v1, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->n:Landroid/hardware/SensorManager;
+    iget-object v2, p0, Lcom/unity3d/player/UnityPlayer;->l:Landroid/hardware/SensorManager;
 
-    invoke-virtual {v2, v5}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+    invoke-virtual {v2, v4}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2, v5}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
+    invoke-virtual {v0, v1, v2, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    invoke-direct {p0, v5}, Lcom/unity3d/player/UnityPlayer;->a(Z)V
+    invoke-direct {p0, v4}, Lcom/unity3d/player/UnityPlayer;->a(Z)V
 
-    invoke-direct {p0, v5}, Lcom/unity3d/player/UnityPlayer;->b(Z)V
+    invoke-direct {p0, v4}, Lcom/unity3d/player/UnityPlayer;->b(Z)V
 
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->d()V
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->B:Lcom/unity3d/player/p;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->A:Lcom/unity3d/player/h;
 
-    invoke-virtual {v0}, Lcom/unity3d/player/p;->e()V
+    invoke-virtual {v0}, Lcom/unity3d/player/h;->e()V
 
-    iput-object v6, p0, Lcom/unity3d/player/UnityPlayer;->D:Ljava/lang/String;
+    iput-object v5, p0, Lcom/unity3d/player/UnityPlayer;->C:Ljava/lang/String;
 
-    iput-object v6, p0, Lcom/unity3d/player/UnityPlayer;->E:Landroid/net/NetworkInfo;
+    iput-object v5, p0, Lcom/unity3d/player/UnityPlayer;->D:Landroid/net/NetworkInfo;
 
     goto :goto_6
 .end method
@@ -5091,7 +5042,7 @@
 
     const/4 v0, 0x0
 
-    iget-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->ac:Z
+    iget-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->ab:Z
 
     if-ne v2, p1, :cond_7
 
@@ -5112,7 +5063,7 @@
     move v0, v1
 
     :cond_12
-    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->ac:Z
+    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->ab:Z
 
     invoke-direct {p0, v1}, Lcom/unity3d/player/UnityPlayer;->b(Z)V
 
@@ -5121,7 +5072,7 @@
     :cond_18
     invoke-direct {p0, v0}, Lcom/unity3d/player/UnityPlayer;->b(Z)V
 
-    iput-boolean p1, p0, Lcom/unity3d/player/UnityPlayer;->ac:Z
+    iput-boolean p1, p0, Lcom/unity3d/player/UnityPlayer;->ab:Z
 
     new-instance v0, Lcom/unity3d/player/UnityPlayer$14;
 
@@ -5139,7 +5090,7 @@
 
     const/4 v0, 0x0
 
-    iget-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->aa:Z
+    iget-boolean v2, p0, Lcom/unity3d/player/UnityPlayer;->Z:Z
 
     if-ne v2, p1, :cond_7
 
@@ -5160,7 +5111,7 @@
     move v0, v1
 
     :cond_12
-    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->aa:Z
+    iput-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->Z:Z
 
     invoke-direct {p0, v1}, Lcom/unity3d/player/UnityPlayer;->a(Z)V
 
@@ -5169,7 +5120,7 @@
     :cond_18
     invoke-direct {p0, v0}, Lcom/unity3d/player/UnityPlayer;->a(Z)V
 
-    iput-boolean p1, p0, Lcom/unity3d/player/UnityPlayer;->aa:Z
+    iput-boolean p1, p0, Lcom/unity3d/player/UnityPlayer;->Z:Z
 
     new-instance v0, Lcom/unity3d/player/UnityPlayer$13;
 
@@ -5183,7 +5134,7 @@
 .method protected setGyroUpdateDelay(I)V
     .registers 2
 
-    iput p1, p0, Lcom/unity3d/player/UnityPlayer;->ab:I
+    iput p1, p0, Lcom/unity3d/player/UnityPlayer;->aa:I
 
     return-void
 .end method
@@ -5201,7 +5152,7 @@
 
     const/16 v2, 0x9
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     instance-of v0, v0, Landroid/app/Activity;
 
@@ -5212,7 +5163,7 @@
     return-void
 
     :cond_9
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     check-cast v0, Landroid/app/Activity;
 
@@ -5245,7 +5196,7 @@
 
     const/4 v2, 0x0
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     instance-of v0, v0, Landroid/view/SurfaceView;
 
@@ -5255,13 +5206,13 @@
 
     const-string v1, "setScreenSize: Unable to retrieve surface holder"
 
-    invoke-static {v0, v1}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
     :goto_e
     return-void
 
     :cond_f
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     check-cast v0, Landroid/view/SurfaceView;
 
@@ -5294,9 +5245,9 @@
     :goto_2b
     if-eqz v1, :cond_3c
 
-    iput v2, p0, Lcom/unity3d/player/UnityPlayer;->x:I
+    iput v2, p0, Lcom/unity3d/player/UnityPlayer;->v:I
 
-    iput v2, p0, Lcom/unity3d/player/UnityPlayer;->y:I
+    iput v2, p0, Lcom/unity3d/player/UnityPlayer;->w:I
 
     :goto_31
     new-instance v2, Lcom/unity3d/player/UnityPlayer$7;
@@ -5313,9 +5264,9 @@
     goto :goto_2b
 
     :cond_3c
-    iput p1, p0, Lcom/unity3d/player/UnityPlayer;->x:I
+    iput p1, p0, Lcom/unity3d/player/UnityPlayer;->v:I
 
-    iput p2, p0, Lcom/unity3d/player/UnityPlayer;->y:I
+    iput p2, p0, Lcom/unity3d/player/UnityPlayer;->w:I
 
     goto :goto_31
 .end method
@@ -5336,7 +5287,7 @@
     :cond_7
     if-eqz p1, :cond_f
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->m:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
@@ -5345,7 +5296,7 @@
     :cond_f
     if-nez p1, :cond_6
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->m:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
@@ -5355,7 +5306,7 @@
 .method protected showBuildSetup()Z
     .registers 2
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->G:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->F:Z
 
     return v0
 .end method
@@ -5363,7 +5314,7 @@
 .method protected showRuntimeSetup()Z
     .registers 2
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->H:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->G:Z
 
     return v0
 .end method
@@ -5403,7 +5354,7 @@
 
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     const-class v2, Lcom/unity3d/player/VideoPlayer;
 
@@ -5429,13 +5380,13 @@
 
     invoke-virtual {v1, v0, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     instance-of v0, v0, Landroid/app/Activity;
 
     if-eqz v0, :cond_55
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     check-cast v0, Landroid/app/Activity;
 
@@ -5495,7 +5446,7 @@
 .method protected startActivityIndicator()V
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->Q:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->P:Ljava/lang/Runnable;
 
     invoke-direct {p0, v0}, Lcom/unity3d/player/UnityPlayer;->a(Ljava/lang/Runnable;)V
 
@@ -5505,7 +5456,7 @@
 .method protected stopActivityIndicator()V
     .registers 2
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->R:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->Q:Ljava/lang/Runnable;
 
     invoke-direct {p0, v0}, Lcom/unity3d/player/UnityPlayer;->a(Ljava/lang/Runnable;)V
 
@@ -5515,11 +5466,11 @@
 .method protected vibrate(I)V
     .registers 5
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->q:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->o:Landroid/os/Vibrator;
 
     if-nez v0, :cond_10
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->i:Landroid/content/ContextWrapper;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->h:Landroid/content/ContextWrapper;
 
     const-string v1, "vibrator"
 
@@ -5529,13 +5480,13 @@
 
     check-cast v0, Landroid/os/Vibrator;
 
-    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->q:Landroid/os/Vibrator;
+    iput-object v0, p0, Lcom/unity3d/player/UnityPlayer;->o:Landroid/os/Vibrator;
 
     :cond_10
     if-nez p1, :cond_18
 
     :try_start_12
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->q:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->o:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V
 
@@ -5543,7 +5494,7 @@
     return-void
 
     :cond_18
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->q:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->o:Landroid/os/Vibrator;
 
     int-to-long v1, p1
 
@@ -5560,7 +5511,7 @@
 
     const-string v1, "android.permission.VIBRATE not available?"
 
-    invoke-static {v0, v1}, Lcom/unity3d/player/l;->Log(ILjava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/unity3d/player/f;->Log(ILjava/lang/String;)V
 
     goto :goto_17
 .end method
@@ -5568,32 +5519,13 @@
 .method public windowFocusChanged(Z)V
     .registers 4
 
-    iput-boolean p1, p0, Lcom/unity3d/player/UnityPlayer;->N:Z
+    iput-boolean p1, p0, Lcom/unity3d/player/UnityPlayer;->M:Z
 
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->N:Z
+    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->r:Z
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_10
 
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->a:Lcom/unity3d/player/x;
-
-    if-eqz v0, :cond_14
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->a:Lcom/unity3d/player/x;
-
-    invoke-virtual {v0}, Lcom/unity3d/player/x;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Lcom/unity3d/player/UnityPlayer;->reportSoftInputStr(Ljava/lang/String;I)V
-
-    :cond_14
-    iget-boolean v0, p0, Lcom/unity3d/player/UnityPlayer;->t:Z
-
-    if-eqz v0, :cond_22
-
-    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->k:Lcom/unity3d/player/UnityGL;
+    iget-object v0, p0, Lcom/unity3d/player/UnityPlayer;->j:Lcom/unity3d/player/UnityGL;
 
     new-instance v1, Lcom/unity3d/player/UnityPlayer$23;
 
@@ -5601,7 +5533,7 @@
 
     invoke-interface {v0, v1}, Lcom/unity3d/player/UnityGL;->queueEvent(Ljava/lang/Runnable;)V
 
-    :cond_22
+    :cond_10
     invoke-direct {p0}, Lcom/unity3d/player/UnityPlayer;->d()V
 
     return-void

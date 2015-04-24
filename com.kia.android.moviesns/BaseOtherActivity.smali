@@ -15,7 +15,7 @@
     .registers 1
 
     .prologue
-    .line 17
+    .line 18
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 22
+    .line 23
     invoke-virtual {p0}, Lcom/kia/android/moviesns/ui/activity/BaseOtherActivity;->getApplication()Landroid/app/Application;
 
     move-result-object v0
@@ -40,10 +40,10 @@
 
     iput-object v0, p0, Lcom/kia/android/moviesns/ui/activity/BaseOtherActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
-    .line 23
+    .line 24
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 24
+    .line 25
     return-void
 .end method
 
@@ -51,17 +51,20 @@
     .registers 3
 
     .prologue
-    .line 32
+    .line 36
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/BaseOtherActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/kia/android/moviesns/ApplicationImpl;->setStatus(I)V
 
-    .line 33
+    .line 37
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 34
+    .line 40
+    invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onPause(Landroid/content/Context;)V
+
+    .line 41
     return-void
 .end method
 
@@ -69,16 +72,19 @@
     .registers 3
 
     .prologue
-    .line 27
+    .line 28
     iget-object v0, p0, Lcom/kia/android/moviesns/ui/activity/BaseOtherActivity;->app:Lcom/kia/android/moviesns/ApplicationImpl;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/kia/android/moviesns/ApplicationImpl;->setStatus(I)V
 
-    .line 28
+    .line 29
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 29
+    .line 32
+    invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onResume(Landroid/content/Context;)V
+
+    .line 33
     return-void
 .end method

@@ -8,29 +8,20 @@
 
 .field private static sOnAdfurikunIntersAdFinishListener:Ljp/tjkapp/adfurikunsdk/OnAdfurikunIntersAdFinishListener;
 
-.field private static sOnAdfurikunWallAdFinishListener:Ljp/tjkapp/adfurikunsdk/OnAdfurikunWallAdFinishListener;
-
 
 # direct methods
 .method static constructor <clinit>()V
     .registers 1
 
     .prologue
-    .line 244
+    .line 245
     new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$1;
 
     invoke-direct {v0}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$1;-><init>()V
 
     sput-object v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController;->sOnAdfurikunIntersAdFinishListener:Ljp/tjkapp/adfurikunsdk/OnAdfurikunIntersAdFinishListener;
 
-    .line 304
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$2;
-
-    invoke-direct {v0}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$2;-><init>()V
-
-    sput-object v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController;->sOnAdfurikunWallAdFinishListener:Ljp/tjkapp/adfurikunsdk/OnAdfurikunWallAdFinishListener;
-
-    .line 322
+    .line 283
     return-void
 .end method
 
@@ -38,7 +29,7 @@
     .registers 1
 
     .prologue
-    .line 13
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,7 +39,7 @@
     .registers 3
 
     .prologue
-    .line 27
+    .line 26
     invoke-static {p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController;->getAdfurikunUnityLayout(Landroid/app/Activity;Z)Ljp/tjkapp/adfurikunsdk/AdfurikunUnityLayout;
 
     move-result-object v0
@@ -60,18 +51,8 @@
     .registers 1
 
     .prologue
-    .line 244
+    .line 245
     sget-object v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController;->sOnAdfurikunIntersAdFinishListener:Ljp/tjkapp/adfurikunsdk/OnAdfurikunIntersAdFinishListener;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2()Ljp/tjkapp/adfurikunsdk/OnAdfurikunWallAdFinishListener;
-    .registers 1
-
-    .prologue
-    .line 304
-    sget-object v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController;->sOnAdfurikunWallAdFinishListener:Ljp/tjkapp/adfurikunsdk/OnAdfurikunWallAdFinishListener;
 
     return-object v0
 .end method
@@ -85,8 +66,8 @@
     .param p4, "visible"    # Z
 
     .prologue
-    .line 74
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$6;
+    .line 75
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$5;
 
     move-object v1, p0
 
@@ -98,11 +79,11 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$6;-><init>(Landroid/app/Activity;Ljava/lang/String;IIZ)V
+    invoke-direct/range {v0 .. v5}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$5;-><init>(Landroid/app/Activity;Ljava/lang/String;IIZ)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 82
+    .line 83
     return-void
 .end method
 
@@ -118,8 +99,8 @@
     .param p7, "visible"    # Z
 
     .prologue
-    .line 143
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$12;
+    .line 144
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$11;
 
     move-object v1, p0
 
@@ -137,11 +118,11 @@
 
     move/from16 v8, p7
 
-    invoke-direct/range {v0 .. v8}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$12;-><init>(Landroid/app/Activity;Ljava/lang/String;FFFFIZ)V
+    invoke-direct/range {v0 .. v8}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$11;-><init>(Landroid/app/Activity;Ljava/lang/String;FFFFIZ)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 151
+    .line 152
     return-void
 .end method
 
@@ -156,8 +137,8 @@
     .param p6, "custom_button_name"    # Ljava/lang/String;
 
     .prologue
-    .line 212
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$18;
+    .line 213
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$17;
 
     move-object v1, p0
 
@@ -173,11 +154,11 @@
 
     move-object v7, p6
 
-    invoke-direct/range {v0 .. v7}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$18;-><init>(Landroid/app/Activity;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v7}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$17;-><init>(Landroid/app/Activity;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 220
+    .line 221
     return-void
 .end method
 
@@ -187,14 +168,14 @@
     .param p1, "test_mode"    # I
 
     .prologue
-    .line 17
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$3;
+    .line 16
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$2;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$3;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$2;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 25
+    .line 24
     return-void
 .end method
 
@@ -203,14 +184,14 @@
     .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 234
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$20;
+    .line 235
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$19;
 
-    invoke-direct {v0, p0}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$20;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$19;-><init>(Landroid/app/Activity;)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 242
+    .line 243
     return-void
 .end method
 
@@ -222,7 +203,7 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 28
+    .line 27
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v4
@@ -231,7 +212,7 @@
 
     move-result-object v3
 
-    .line 29
+    .line 28
     .local v3, "view":Landroid/view/View;
     const-string v4, "AdfurikunUnityLayout"
 
@@ -239,11 +220,11 @@
 
     move-result-object v2
 
-    .line 30
+    .line 29
     .local v2, "root":Landroid/view/View;
     const/4 v0, 0x0
 
-    .line 31
+    .line 30
     .local v0, "adfurikunUnityLayout":Ljp/tjkapp/adfurikunsdk/AdfurikunUnityLayout;
     if-eqz v2, :cond_1a
 
@@ -253,37 +234,37 @@
 
     move-object v0, v2
 
-    .line 32
+    .line 31
     check-cast v0, Ljp/tjkapp/adfurikunsdk/AdfurikunUnityLayout;
 
-    .line 41
+    .line 40
     :cond_19
     :goto_19
     return-object v0
 
-    .line 34
+    .line 33
     :cond_1a
     if-eqz p1, :cond_19
 
-    .line 35
+    .line 34
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v1, v5, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 36
+    .line 35
     .local v1, "matchParams":Landroid/widget/FrameLayout$LayoutParams;
     new-instance v0, Ljp/tjkapp/adfurikunsdk/AdfurikunUnityLayout;
 
     .end local v0    # "adfurikunUnityLayout":Ljp/tjkapp/adfurikunsdk/AdfurikunUnityLayout;
     invoke-direct {v0, p0}, Ljp/tjkapp/adfurikunsdk/AdfurikunUnityLayout;-><init>(Landroid/content/Context;)V
 
-    .line 37
+    .line 36
     .restart local v0    # "adfurikunUnityLayout":Ljp/tjkapp/adfurikunsdk/AdfurikunUnityLayout;
     const-string v4, "AdfurikunUnityLayout"
 
     invoke-virtual {v0, v4}, Ljp/tjkapp/adfurikunsdk/AdfurikunUnityLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 38
+    .line 37
     invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_19
@@ -295,14 +276,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 96
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$8;
+    .line 97
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$7;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$8;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$7;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 104
+    .line 105
     return-void
 .end method
 
@@ -312,32 +293,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 165
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$14;
+    .line 166
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$13;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$14;-><init>(Landroid/app/Activity;I)V
-
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    .line 173
-    return-void
-.end method
-
-.method public static initializeWallAdSetting(Landroid/app/Activity;Ljava/lang/String;I)V
-    .registers 4
-    .param p0, "activity"    # Landroid/app/Activity;
-    .param p1, "app_id"    # Ljava/lang/String;
-    .param p2, "theme"    # I
-
-    .prologue
-    .line 288
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$21;
-
-    invoke-direct {v0, p0, p1, p2}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$21;-><init>(Landroid/app/Activity;Ljava/lang/String;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$13;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 294
+    .line 174
     return-void
 .end method
 
@@ -347,14 +310,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 129
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$11;
+    .line 130
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$10;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$11;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$10;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 137
+    .line 138
     return-void
 .end method
 
@@ -364,14 +327,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 198
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$17;
+    .line 199
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$16;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$17;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$16;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 206
+    .line 207
     return-void
 .end method
 
@@ -380,14 +343,14 @@
     .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 60
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$5;
+    .line 59
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$4;
 
-    invoke-direct {v0, p0}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$5;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$4;-><init>(Landroid/app/Activity;)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 68
+    .line 69
     return-void
 .end method
 
@@ -397,14 +360,14 @@
     .param p1, "pause"    # Z
 
     .prologue
-    .line 45
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$4;
+    .line 44
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$3;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$4;-><init>(Landroid/app/Activity;Z)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$3;-><init>(Landroid/app/Activity;Z)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 57
+    .line 56
     return-void
 .end method
 
@@ -414,14 +377,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 118
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$10;
+    .line 119
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$9;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$10;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$9;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 126
+    .line 127
     return-void
 .end method
 
@@ -431,14 +394,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 187
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$16;
+    .line 188
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$15;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$16;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$15;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 195
+    .line 196
     return-void
 .end method
 
@@ -448,14 +411,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 85
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$7;
+    .line 86
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$6;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$7;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$6;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 93
+    .line 94
     return-void
 .end method
 
@@ -465,14 +428,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 154
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$13;
+    .line 155
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$12;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$13;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$12;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 162
+    .line 163
     return-void
 .end method
 
@@ -482,30 +445,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 223
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$19;
+    .line 224
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$18;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$19;-><init>(Landroid/app/Activity;I)V
-
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    .line 231
-    return-void
-.end method
-
-.method public static showWallAd(Landroid/app/Activity;)V
-    .registers 2
-    .param p0, "activity"    # Landroid/app/Activity;
-
-    .prologue
-    .line 297
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$22;
-
-    invoke-direct {v0, p0}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$22;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$18;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 302
+    .line 232
     return-void
 .end method
 
@@ -515,14 +462,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 107
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$9;
+    .line 108
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$8;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$9;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$8;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 115
+    .line 116
     return-void
 .end method
 
@@ -532,13 +479,13 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 176
-    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$15;
+    .line 177
+    new-instance v0, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$14;
 
-    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$15;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0, p1}, Ljp/tjkapp/adfurikunsdk/unity/AdfurikunController$14;-><init>(Landroid/app/Activity;I)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 184
+    .line 185
     return-void
 .end method

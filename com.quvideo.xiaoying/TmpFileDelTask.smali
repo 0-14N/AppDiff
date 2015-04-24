@@ -41,9 +41,9 @@
     sget-object v0, Lcom/quvideo/xiaoying/common/CommonConfigure;->APP_DATA_PATH_INNER:Ljava/lang/String;
 
     .line 20
-    new-instance v1, Lbbx;
+    new-instance v1, Lavd;
 
-    invoke-direct {v1, p0}, Lbbx;-><init>(Lcom/quvideo/xiaoying/videoeditor/tasks/TmpFileDelTask;)V
+    invoke-direct {v1, p0}, Lavd;-><init>(Lcom/quvideo/xiaoying/videoeditor/tasks/TmpFileDelTask;)V
 
     .line 19
     invoke-static {v0, v1}, Lcom/quvideo/xiaoying/common/FileUtils;->deleteFolderSubFiles(Ljava/lang/String;Ljava/io/FilenameFilter;)V

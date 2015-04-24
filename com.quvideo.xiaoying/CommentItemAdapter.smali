@@ -75,16 +75,16 @@
     iput v1, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;->g:I
 
     .line 225
-    new-instance v0, Lpy;
+    new-instance v0, Ljf;
 
-    invoke-direct {v0, p0}, Lpy;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;)V
+    invoke-direct {v0, p0}, Ljf;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;->h:Landroid/view/View$OnClickListener;
 
     .line 247
-    new-instance v0, Lpz;
+    new-instance v0, Ljg;
 
-    invoke-direct {v0, p0}, Lpz;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;)V
+    invoke-direct {v0, p0}, Ljg;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;->i:Landroid/view/View$OnTouchListener;
 
@@ -202,7 +202,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070056
+    const v1, 0x7f07003f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -319,7 +319,7 @@
     .line 205
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;->a:Landroid/content/Context;
 
-    const v1, 0x7f0a0360
+    const v1, 0x7f0a033d
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -377,16 +377,16 @@
 
     move-result-object v0
 
-    const v4, 0x7f070057
+    const v4, 0x7f070040
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v4
 
     .line 210
-    new-instance v5, Lqa;
+    new-instance v5, Ljh;
 
-    invoke-direct {v5, p0, p2}, Lqa;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;Lcom/quvideo/xiaoying/app/community/comment/CommentInfoMgr$CommentInfo;)V
+    invoke-direct {v5, p0, p2}, Ljh;-><init>(Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;Lcom/quvideo/xiaoying/app/community/comment/CommentInfoMgr$CommentInfo;)V
 
     move-object v0, p1
 
@@ -499,7 +499,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter$a;->a:Lcom/quvideo/xiaoying/common/ui/custom/RoundImageView;
 
     .line 96
-    const v0, 0x7f0604b3
+    const v0, 0x7f06049e
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -510,7 +510,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter$a;->b:Landroid/widget/TextView;
 
     .line 97
-    const v0, 0x7f0604b0
+    const v0, 0x7f06049b
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -532,7 +532,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter$a;->d:Landroid/widget/TextView;
 
     .line 100
-    const v0, 0x7f0604b4
+    const v0, 0x7f06049f
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -543,7 +543,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter$a;->e:Lcom/quvideo/xiaoying/app/v3/ui/common/SpannableTextView;
 
     .line 101
-    const v0, 0x7f0604b2
+    const v0, 0x7f06049d
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -554,7 +554,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter$a;->f:Landroid/widget/RelativeLayout;
 
     .line 102
-    const v0, 0x7f0604ad
+    const v0, 0x7f060498
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -565,7 +565,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter$a;->g:Landroid/widget/TextView;
 
     .line 103
-    const v0, 0x7f0604b5
+    const v0, 0x7f0604a0
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -635,7 +635,7 @@
     .line 119
     iget-object v2, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;->a:Landroid/content/Context;
 
-    const v3, 0x7f0a035d
+    const v3, 0x7f0a033a
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -711,7 +711,7 @@
     :cond_e5
     iget-object v2, p0, Lcom/quvideo/xiaoying/app/community/comment/CommentItemAdapter;->a:Landroid/content/Context;
 
-    const v3, 0x7f0a035e
+    const v3, 0x7f0a033b
 
     new-array v4, v4, [Ljava/lang/Object;
 

@@ -107,16 +107,16 @@
     iput-object v2, p0, Lcom/quvideo/xiaoying/app/im/ChatActivity;->H:Lcom/quvideo/xiaoying/app/im/ChatActivity$b;
 
     .line 249
-    new-instance v0, Ltd;
+    new-instance v0, Lmk;
 
-    invoke-direct {v0, p0}, Ltd;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v0, p0}, Lmk;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatActivity;->I:Lcom/quvideo/xiaoying/app/im/IMContactMgr$ChatContactUpdateListener;
 
     .line 264
-    new-instance v0, Ltr;
+    new-instance v0, Lmy;
 
-    invoke-direct {v0, p0}, Ltr;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v0, p0}, Lmy;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatActivity;->J:Lcom/quvideo/xiaoying/im/IMListener;
 
@@ -188,7 +188,7 @@
 
     .line 430
     :sswitch_10
-    const v0, 0x7f0a03b0
+    const v0, 0x7f0a038d
 
     const/4 v1, 0x0
 
@@ -387,9 +387,9 @@
 
     const-string/jumbo v1, "user.get.relationship"
 
-    new-instance v2, Ltt;
+    new-instance v2, Lna;
 
-    invoke-direct {v2, p0}, Ltt;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v2, p0}, Lna;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -429,7 +429,7 @@
 
     .prologue
     .line 322
-    const v0, 0x7f0604e9
+    const v0, 0x7f0604d4
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/ChatActivity;->findViewById(I)Landroid/view/View;
 
@@ -440,7 +440,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatActivity;->n:Landroid/widget/ListView;
 
     .line 323
-    const v0, 0x7f0604eb
+    const v0, 0x7f0604d6
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/ChatActivity;->findViewById(I)Landroid/view/View;
 
@@ -451,7 +451,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatActivity;->w:Landroid/widget/EditText;
 
     .line 324
-    const v0, 0x7f0604ea
+    const v0, 0x7f0604d5
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/ChatActivity;->findViewById(I)Landroid/view/View;
 
@@ -490,7 +490,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 329
-    const v0, 0x7f0604e7
+    const v0, 0x7f0604d2
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/ChatActivity;->findViewById(I)Landroid/view/View;
 
@@ -519,9 +519,9 @@
     .line 334
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatActivity;->w:Landroid/widget/EditText;
 
-    new-instance v1, Ltx;
+    new-instance v1, Lne;
 
-    invoke-direct {v1, p0}, Ltx;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v1, p0}, Lne;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -586,9 +586,9 @@
 
     const-string/jumbo v1, "user.in_blacklist"
 
-    new-instance v2, Ltw;
+    new-instance v2, Lnd;
 
-    invoke-direct {v2, p0}, Ltw;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v2, p0}, Lnd;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -769,9 +769,9 @@
     :cond_8c
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatActivity;->n:Landroid/widget/ListView;
 
-    new-instance v1, Lty;
+    new-instance v1, Lnf;
 
-    invoke-direct {v1, p0}, Lty;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v1, p0}, Lnf;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -867,7 +867,7 @@
     if-eqz v0, :cond_2a
 
     .line 521
-    const v0, 0x7f0a0384
+    const v0, 0x7f0a0361
 
     const/4 v1, 0x1
 
@@ -917,9 +917,9 @@
     .line 532
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatActivity;->r:Lcom/quvideo/xiaoying/im/IMConversationInfo;
 
-    new-instance v1, Ltz;
+    new-instance v1, Lng;
 
-    invoke-direct {v1, p0}, Ltz;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v1, p0}, Lng;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     invoke-virtual {v0, p1, v1}, Lcom/quvideo/xiaoying/im/IMConversationInfo;->sendText(Ljava/lang/String;Lcom/quvideo/xiaoying/im/IMCallback;)V
 
@@ -987,9 +987,9 @@
     :goto_a
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
-    new-instance v2, Luc;
+    new-instance v2, Lnj;
 
-    invoke-direct {v2, p0}, Luc;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v2, p0}, Lnj;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     invoke-direct {v1, p0, v0, v2}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
 
@@ -1010,17 +1010,17 @@
     .line 641
     :array_1e
     .array-data 4
-        0x7f0a03b3
-        0x7f0a03ac
-        0x7f0a03a3
+        0x7f0a0390
+        0x7f0a0389
+        0x7f0a0380
     .end array-data
 
     .line 646
     :array_28
     .array-data 4
-        0x7f0a03b3
-        0x7f0a03a2
-        0x7f0a03a3
+        0x7f0a0390
+        0x7f0a037f
+        0x7f0a0380
     .end array-data
 .end method
 
@@ -1035,9 +1035,9 @@
 
     const-string/jumbo v1, "user.report"
 
-    new-instance v2, Lth;
+    new-instance v2, Lmo;
 
-    invoke-direct {v2, p0}, Lth;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v2, p0}, Lmo;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -1058,20 +1058,20 @@
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 688
-    const v1, 0x7f0a03a4
+    const v1, 0x7f0a0381
 
     .line 689
-    new-instance v2, Lud;
+    new-instance v2, Lnk;
 
-    invoke-direct {v2, p0}, Lud;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v2, p0}, Lnk;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     .line 687
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
     .line 696
-    new-instance v1, Lte;
+    new-instance v1, Lml;
 
-    invoke-direct {v1, p0}, Lte;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v1, p0}, Lml;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -1098,9 +1098,9 @@
 
     const-string/jumbo v1, "balcklist.add"
 
-    new-instance v2, Ltk;
+    new-instance v2, Lmr;
 
-    invoke-direct {v2, p0, p1}, Ltk;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Lmr;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -1139,18 +1139,18 @@
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 710
-    const v1, 0x7f0a03a5
+    const v1, 0x7f0a0382
 
     .line 711
-    new-instance v2, Ltf;
+    new-instance v2, Lmm;
 
-    invoke-direct {v2, p0}, Ltf;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v2, p0}, Lmm;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     .line 709
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
     .line 729
-    const v1, 0x7f0a03a2
+    const v1, 0x7f0a037f
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1185,9 +1185,9 @@
 
     const-string/jumbo v1, "balcklist.remove"
 
-    new-instance v2, Ltn;
+    new-instance v2, Lmu;
 
-    invoke-direct {v2, p0, p1}, Ltn;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Lmu;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -1216,18 +1216,18 @@
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 737
-    const v1, 0x7f0a03a6
+    const v1, 0x7f0a0383
 
     .line 738
-    new-instance v2, Ltg;
+    new-instance v2, Lmn;
 
-    invoke-direct {v2, p0}, Ltg;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
+    invoke-direct {v2, p0}, Lmn;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;)V
 
     .line 736
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
     .line 751
-    const v1, 0x7f0a03a3
+    const v1, 0x7f0a0380
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1705,16 +1705,16 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0a036c
+    const v2, 0x7f0a0349
 
     aput v2, v0, v1
 
     .line 849
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
-    new-instance v2, Ltq;
+    new-instance v2, Lmx;
 
-    invoke-direct {v2, p0, p2, p1}, Ltq;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;Lcom/quvideo/xiaoying/im/IMMessage;I)V
+    invoke-direct {v2, p0, p2, p1}, Lmx;-><init>(Lcom/quvideo/xiaoying/app/im/ChatActivity;Lcom/quvideo/xiaoying/im/IMMessage;I)V
 
     invoke-direct {v1, p0, v0, v2}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
 

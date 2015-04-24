@@ -233,65 +233,65 @@
     iput-object v3, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;->S:Lxiaoying/engine/QEngine;
 
     .line 701
-    new-instance v0, Lbfb;
+    new-instance v0, Layh;
 
-    invoke-direct {v0, p0}, Lbfb;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
+    invoke-direct {v0, p0}, Layh;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;->b:Lcom/quvideo/xiaoying/dialog/ComTextEditDialog$OnEditDialogClickListener;
 
     .line 726
-    new-instance v0, Lbfd;
+    new-instance v0, Layj;
 
-    invoke-direct {v0, p0}, Lbfd;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
+    invoke-direct {v0, p0}, Layj;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;->c:Lcom/quvideo/xiaoying/dialog/ComTextEditDialog$OnEditContentCheckListener;
 
     .line 738
-    new-instance v0, Lbfe;
+    new-instance v0, Layk;
 
-    invoke-direct {v0, p0}, Lbfe;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
+    invoke-direct {v0, p0}, Layk;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;->T:Lcom/quvideo/xiaoying/common/ui/widgets/scalewidget/ScaleRotateHighlightView$OnDrawableClickListener;
 
     .line 809
-    new-instance v0, Lbff;
+    new-instance v0, Layl;
 
-    invoke-direct {v0, p0}, Lbff;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
+    invoke-direct {v0, p0}, Layl;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;->U:Lcom/quvideo/xiaoying/common/ui/widgets/scalewidget/ScaleRotateView$OnGestureListener;
 
     .line 877
-    new-instance v0, Lbfg;
+    new-instance v0, Laym;
 
-    invoke-direct {v0, p0}, Lbfg;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
+    invoke-direct {v0, p0}, Laym;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;->d:Landroid/view/View$OnClickListener;
 
     .line 920
-    new-instance v0, Lbfh;
+    new-instance v0, Layn;
 
-    invoke-direct {v0, p0}, Lbfh;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
+    invoke-direct {v0, p0}, Layn;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;->V:Lcom/quvideo/xiaoying/videoeditor/widget/VeTextPositionAdjustDialog$OnPositionClickedLister;
 
     .line 989
-    new-instance v0, Lbfi;
+    new-instance v0, Layo;
 
-    invoke-direct {v0, p0}, Lbfi;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
+    invoke-direct {v0, p0}, Layo;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;->W:Lcom/quvideo/xiaoying/storyboard/widget/DragListener;
 
     .line 1065
-    new-instance v0, Lbfj;
+    new-instance v0, Layp;
 
-    invoke-direct {v0, p0}, Lbfj;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
+    invoke-direct {v0, p0}, Layp;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;->X:Lcom/quvideo/xiaoying/storyboard/widget/DragListener;
 
     .line 1126
-    new-instance v0, Lbfk;
+    new-instance v0, Layq;
 
-    invoke-direct {v0, p0}, Lbfk;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
+    invoke-direct {v0, p0}, Layq;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;->Y:Lcom/quvideo/xiaoying/storyboard/widget/DragListener;
 
@@ -2693,9 +2693,9 @@
     .line 574
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
-    new-instance v3, Lbfc;
+    new-instance v3, Layi;
 
-    invoke-direct {v3, p0, v2, v0}, Lbfc;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;ZZ)V
+    invoke-direct {v3, p0, v2, v0}, Layi;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/SubtitleAddViewManager;ZZ)V
 
     invoke-direct {v1, v4, v6, v3}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[Ljava/lang/Object;Lcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
 

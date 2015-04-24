@@ -319,9 +319,9 @@
 
     .line 166
     :try_start_15
-    new-instance v0, Lpv;
+    new-instance v0, Ljc;
 
-    invoke-direct {v0, p0}, Lpv;-><init>(Lcom/quvideo/xiaoying/app/banner/BannerMgr;)V
+    invoke-direct {v0, p0}, Ljc;-><init>(Lcom/quvideo/xiaoying/app/banner/BannerMgr;)V
 
     const/4 v1, 0x1
 
@@ -332,7 +332,7 @@
     .line 199
     aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1}, Lpv;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Ljc;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     move-result-object v0
 

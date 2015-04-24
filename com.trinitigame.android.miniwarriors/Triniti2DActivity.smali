@@ -23,7 +23,7 @@
 
 .field protected static additionalSkuList:Ljava/util/ArrayList;
 
-.field private static backgroundMusicPlayer:Lcom/trinitigame/android/as;
+.field private static backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
 .field private static complete:Z
 
@@ -37,6 +37,8 @@
 
 .field public static mPurchase:Lcom/trinitigame/android/c/r;
 
+.field public static mQQAuth:Lcom/tencent/connect/auth/QQAuth;
+
 .field public static nManager:Landroid/app/NotificationManager;
 
 .field private static notifyEvent:Lcom/trinitigame/android/g;
@@ -47,7 +49,7 @@
 
 .field private static progressDialog:Landroid/app/ProgressDialog;
 
-.field private static soundPlayer:Lcom/trinitigame/android/at;
+.field private static soundPlayer:Lcom/trinitigame/android/aw;
 
 .field public static state:Lcom/trinitigame/android/c/p;
 
@@ -63,7 +65,7 @@
 
 .field public mConsumeFinishedListener:Lcom/trinitigame/android/c/k;
 
-.field public mGLView:Lcom/trinitigame/android/ax;
+.field public mGLView:Lcom/trinitigame/android/ba;
 
 .field public mGotInventoryListener:Lcom/trinitigame/android/c/o;
 
@@ -75,11 +77,9 @@
 
 .field public mPurchaseFinishedListener:Lcom/trinitigame/android/c/m;
 
+.field public mTencent:Lcom/tencent/tauth/Tencent;
+
 .field public mTencentLoginState:Ljava/lang/String;
-
-.field public m_purchasing:Z
-
-.field public platform:Ljava/lang/String;
 
 .field public qihooAuthorizationCode:Ljava/lang/String;
 
@@ -124,6 +124,10 @@
 .field public tencentUserKey:Ljava/lang/String;
 
 .field public tencentZoneId:Ljava/lang/String;
+
+.field public unipayAPI:Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;
+
+.field unipayStubCallBack:Lcom/tencent/unipay/plugsdk/IUnipayServiceCallBack$Stub;
 
 
 # direct methods
@@ -176,31 +180,27 @@
 .method public constructor <init>()V
     .registers 5
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    const-string v0, "google"
+    iput-object v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->relativeLayout:Landroid/widget/RelativeLayout;
 
-    iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->platform:Ljava/lang/String;
-
-    iput-object v3, p0, Lcom/trinitigame/android/Triniti2DActivity;->relativeLayout:Landroid/widget/RelativeLayout;
-
-    iput v2, p0, Lcom/trinitigame/android/Triniti2DActivity;->glViewID:I
+    iput v3, p0, Lcom/trinitigame/android/Triniti2DActivity;->glViewID:I
 
     const-string v0, "triniti activity"
 
     iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->TAG:Ljava/lang/String;
 
-    iput-boolean v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->m_purchasing:Z
-
     const-string v0, "-1"
 
     iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mTencentLoginState:Ljava/lang/String;
+
+    iput-object v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->unipayAPI:Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;
 
     const-string v0, ""
 
@@ -246,13 +246,13 @@
 
     iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->tencentTokenUrl:Ljava/lang/String;
 
-    iput-boolean v2, p0, Lcom/trinitigame/android/Triniti2DActivity;->tencentIsCanChange:Z
+    iput-boolean v3, p0, Lcom/trinitigame/android/Triniti2DActivity;->tencentIsCanChange:Z
 
     const-string v0, "-1"
 
     iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->tencentResId:Ljava/lang/String;
 
-    iput-object v3, p0, Lcom/trinitigame/android/Triniti2DActivity;->tencentAppResData:[B
+    iput-object v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->tencentAppResData:[B
 
     const-string v0, "-1"
 
@@ -276,31 +276,37 @@
 
     iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->qihooPay:Lcom/trinitigame/android/b/a;
 
-    iput-boolean v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->chartboostkey:Z
+    iput-boolean v2, p0, Lcom/trinitigame/android/Triniti2DActivity;->chartboostkey:Z
 
-    iput-boolean v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->tapjoykey:Z
+    iput-boolean v2, p0, Lcom/trinitigame/android/Triniti2DActivity;->tapjoykey:Z
 
     new-instance v0, Lcom/trinitigame/android/p;
 
     invoke-direct {v0, p0}, Lcom/trinitigame/android/p;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
 
+    iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->unipayStubCallBack:Lcom/tencent/unipay/plugsdk/IUnipayServiceCallBack$Stub;
+
+    new-instance v0, Lcom/trinitigame/android/w;
+
+    invoke-direct {v0, p0}, Lcom/trinitigame/android/w;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
+
     iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mObbListener:Lcom/trinitigame/android/o;
 
-    new-instance v0, Lcom/trinitigame/android/t;
+    new-instance v0, Lcom/trinitigame/android/x;
 
-    invoke-direct {v0, p0}, Lcom/trinitigame/android/t;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
+    invoke-direct {v0, p0}, Lcom/trinitigame/android/x;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
 
     iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGotInventoryListener:Lcom/trinitigame/android/c/o;
 
-    new-instance v0, Lcom/trinitigame/android/u;
+    new-instance v0, Lcom/trinitigame/android/y;
 
-    invoke-direct {v0, p0}, Lcom/trinitigame/android/u;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
+    invoke-direct {v0, p0}, Lcom/trinitigame/android/y;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
 
     iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mPurchaseFinishedListener:Lcom/trinitigame/android/c/m;
 
-    new-instance v0, Lcom/trinitigame/android/v;
+    new-instance v0, Lcom/trinitigame/android/z;
 
-    invoke-direct {v0, p0}, Lcom/trinitigame/android/v;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
+    invoke-direct {v0, p0}, Lcom/trinitigame/android/z;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
 
     iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mConsumeFinishedListener:Lcom/trinitigame/android/c/k;
 
@@ -320,9 +326,9 @@
 .method public static ShowActivityIndicator()V
     .registers 2
 
-    new-instance v0, Lcom/trinitigame/android/ad;
+    new-instance v0, Lcom/trinitigame/android/q;
 
-    invoke-direct {v0}, Lcom/trinitigame/android/ad;-><init>()V
+    invoke-direct {v0}, Lcom/trinitigame/android/q;-><init>()V
 
     new-instance v1, Ljava/lang/Thread;
 
@@ -384,9 +390,9 @@
 .method public static deleteBackgroundMusic(Ljava/lang/String;)V
     .registers 2
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/as;->f()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/av;->f()V
 
     return-void
 .end method
@@ -412,9 +418,9 @@
 
     iput-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mPaused:Z
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/ax;->a()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/ba;->a()V
 
     return-void
 .end method
@@ -426,9 +432,9 @@
 
     iput-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mPaused:Z
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/ax;->b()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/ba;->b()V
 
     return-void
 .end method
@@ -436,9 +442,9 @@
 .method public static end()V
     .registers 1
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/at;->b()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/aw;->b()V
 
     return-void
 .end method
@@ -446,9 +452,9 @@
 .method public static getBackgroundMusicVolume()F
     .registers 1
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/as;->g()F
+    invoke-virtual {v0}, Lcom/trinitigame/android/av;->g()F
 
     move-result v0
 
@@ -458,9 +464,9 @@
 .method public static getEffectsVolume()F
     .registers 1
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/at;->a()F
+    invoke-virtual {v0}, Lcom/trinitigame/android/aw;->a()F
 
     move-result v0
 
@@ -470,9 +476,9 @@
 .method public static isBackgroundMusicPlaying()Z
     .registers 1
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/as;->e()Z
+    invoke-virtual {v0}, Lcom/trinitigame/android/av;->e()Z
 
     move-result v0
 
@@ -523,9 +529,9 @@
 .method public static loadEffect(Ljava/lang/String;)I
     .registers 2
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    invoke-virtual {v0, p0}, Lcom/trinitigame/android/at;->a(Ljava/lang/String;)I
+    invoke-virtual {v0, p0}, Lcom/trinitigame/android/aw;->a(Ljava/lang/String;)I
 
     move-result v0
 
@@ -553,9 +559,9 @@
 
     sput-boolean v0, Lcom/trinitigame/android/Triniti2DActivity;->complete:Z
 
-    new-instance v0, Lcom/trinitigame/android/y;
+    new-instance v0, Lcom/trinitigame/android/ad;
 
-    invoke-direct {v0, p0}, Lcom/trinitigame/android/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Lcom/trinitigame/android/ad;-><init>(Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/Thread;
 
@@ -682,9 +688,9 @@
 .method public static pauseBackgroundMusic()V
     .registers 1
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/as;->b()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/av;->b()V
 
     return-void
 .end method
@@ -692,9 +698,9 @@
 .method public static pauseEffect(I)V
     .registers 2
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    invoke-virtual {v0, p0}, Lcom/trinitigame/android/at;->b(I)V
+    invoke-virtual {v0, p0}, Lcom/trinitigame/android/aw;->b(I)V
 
     return-void
 .end method
@@ -702,9 +708,9 @@
 .method public static playBackgroundMusic(Ljava/lang/String;Z)V
     .registers 3
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    invoke-virtual {v0, p0, p1}, Lcom/trinitigame/android/as;->a(Ljava/lang/String;Z)V
+    invoke-virtual {v0, p0, p1}, Lcom/trinitigame/android/av;->a(Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -712,9 +718,9 @@
 .method public static playEffect(Ljava/lang/String;Z)I
     .registers 3
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    invoke-virtual {v0, p0, p1}, Lcom/trinitigame/android/at;->a(Ljava/lang/String;Z)I
+    invoke-virtual {v0, p0, p1}, Lcom/trinitigame/android/aw;->a(Ljava/lang/String;Z)I
 
     move-result v0
 
@@ -736,9 +742,9 @@
 .method public static resumeBackgroundMusic()V
     .registers 1
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/as;->c()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/av;->c()V
 
     return-void
 .end method
@@ -746,9 +752,9 @@
 .method public static resumeEffect(I)V
     .registers 2
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    invoke-virtual {v0, p0}, Lcom/trinitigame/android/at;->c(I)V
+    invoke-virtual {v0, p0}, Lcom/trinitigame/android/aw;->c(I)V
 
     return-void
 .end method
@@ -756,9 +762,9 @@
 .method public static rewindBackgroundMusic()V
     .registers 1
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/as;->d()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/av;->d()V
 
     return-void
 .end method
@@ -766,9 +772,9 @@
 .method public static setBackgroundMusicVolume(F)V
     .registers 2
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    invoke-virtual {v0, p0}, Lcom/trinitigame/android/as;->a(F)V
+    invoke-virtual {v0, p0}, Lcom/trinitigame/android/av;->a(F)V
 
     return-void
 .end method
@@ -776,9 +782,9 @@
 .method public static setEffectsVolume(Ljava/lang/String;F)V
     .registers 3
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    invoke-virtual {v0, p0, p1}, Lcom/trinitigame/android/at;->a(Ljava/lang/String;F)V
+    invoke-virtual {v0, p0, p1}, Lcom/trinitigame/android/aw;->a(Ljava/lang/String;F)V
 
     return-void
 .end method
@@ -786,9 +792,9 @@
 .method public static setSpeed(F)V
     .registers 2
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    invoke-virtual {v0, p0}, Lcom/trinitigame/android/at;->a(F)V
+    invoke-virtual {v0, p0}, Lcom/trinitigame/android/aw;->a(F)V
 
     return-void
 .end method
@@ -808,17 +814,17 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/trinitigame/android/r;
+    new-instance v1, Lcom/trinitigame/android/u;
 
-    invoke-direct {v1, p0}, Lcom/trinitigame/android/r;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
+    invoke-direct {v1, p0}, Lcom/trinitigame/android/u;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
 
     invoke-virtual {v0, p3, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    new-instance v1, Lcom/trinitigame/android/s;
+    new-instance v1, Lcom/trinitigame/android/v;
 
-    invoke-direct {v1, p0}, Lcom/trinitigame/android/s;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
+    invoke-direct {v1, p0}, Lcom/trinitigame/android/v;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
 
     invoke-virtual {v0, p4, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -874,9 +880,9 @@
 .method public static stopBackgroundMusic()V
     .registers 1
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/as;->a()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/av;->a()V
 
     return-void
 .end method
@@ -884,9 +890,9 @@
 .method public static stopEffect(I)V
     .registers 2
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    invoke-virtual {v0, p0}, Lcom/trinitigame/android/at;->a(I)V
+    invoke-virtual {v0, p0}, Lcom/trinitigame/android/aw;->a(I)V
 
     return-void
 .end method
@@ -894,9 +900,9 @@
 .method public static unloadEffect(Ljava/lang/String;)V
     .registers 2
 
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    invoke-virtual {v0, p0}, Lcom/trinitigame/android/at;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, p0}, Lcom/trinitigame/android/aw;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -906,46 +912,37 @@
 .method public AndroidQuit()V
     .registers 4
 
-    const-string v0, ""
+    new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    const-string v1, "----------   AndroidQuit    -------------- enter"
+    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v1, ""
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xe
-
-    if-lt v0, v1, :cond_33
-
-    const/4 v0, 0x5
-
-    :goto_e
-    new-instance v1, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v1, p0, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
-
-    const-string v0, "Confirm to exit to background?"
-
-    invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const-string v1, "Confirm"
+    const-string v1, "\u662f\u5426\u786e\u5b9a\u8981\u9000\u51fa\u6e38\u620f?"
 
-    new-instance v2, Lcom/trinitigame/android/af;
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    invoke-direct {v2, p0}, Lcom/trinitigame/android/af;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
+    move-result-object v0
+
+    const-string v1, "\u786e\u5b9a"
+
+    new-instance v2, Lcom/trinitigame/android/s;
+
+    invoke-direct {v2, p0}, Lcom/trinitigame/android/s;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const-string v1, "Cancel"
+    const-string v1, "\u53d6\u6d88"
 
-    new-instance v2, Lcom/trinitigame/android/q;
+    new-instance v2, Lcom/trinitigame/android/t;
 
-    invoke-direct {v2, p0}, Lcom/trinitigame/android/q;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
+    invoke-direct {v2, p0}, Lcom/trinitigame/android/t;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -954,22 +951,6 @@
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
     return-void
-
-    :cond_33
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_3b
-
-    const/4 v0, 0x2
-
-    goto :goto_e
-
-    :cond_3b
-    const/4 v0, 0x1
-
-    goto :goto_e
 .end method
 
 .method protected InitBilling(Ljava/lang/String;Ljava/util/ArrayList;)V
@@ -997,9 +978,9 @@
 
     sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->mHelper:Lcom/trinitigame/android/c/d;
 
-    new-instance v1, Lcom/trinitigame/android/x;
+    new-instance v1, Lcom/trinitigame/android/ac;
 
-    invoke-direct {v1, p0, p2}, Lcom/trinitigame/android/x;-><init>(Lcom/trinitigame/android/Triniti2DActivity;Ljava/util/ArrayList;)V
+    invoke-direct {v1, p0, p2}, Lcom/trinitigame/android/ac;-><init>(Lcom/trinitigame/android/Triniti2DActivity;Ljava/util/ArrayList;)V
 
     invoke-virtual {v0, v1}, Lcom/trinitigame/android/c/d;->a(Lcom/trinitigame/android/c/n;)V
 
@@ -1008,7 +989,7 @@
 .end method
 
 .method protected InitChartboost(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 4
+    .registers 5
 
     const/4 v0, 0x1
 
@@ -1016,21 +997,15 @@
 
     iget-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->chartboostkey:Z
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_e
 
-    invoke-static {p0, p1, p2}, Lcom/chartboost/sdk/Chartboost;->startWithAppId(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+    const-string v0, ""
 
-    sget-object v0, Lcom/chartboost/sdk/Libraries/CBLogging$Level;->ALL:Lcom/chartboost/sdk/Libraries/CBLogging$Level;
+    const-string v1, "----------------------chartboost init "
 
-    invoke-static {v0}, Lcom/chartboost/sdk/Chartboost;->setLoggingLevel(Lcom/chartboost/sdk/Libraries/CBLogging$Level;)V
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget-object v0, Lcom/trinitigame/android/g;->c:Lcom/chartboost/sdk/ChartboostDelegate;
-
-    invoke-static {v0}, Lcom/chartboost/sdk/Chartboost;->setDelegate(Lcom/chartboost/sdk/ChartboostDelegate;)V
-
-    invoke-static {p0}, Lcom/chartboost/sdk/Chartboost;->onCreate(Landroid/app/Activity;)V
-
-    :cond_17
+    :cond_e
     return-void
 .end method
 
@@ -1041,15 +1016,6 @@
 
     iput-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->tapjoykey:Z
 
-    iget-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->tapjoykey:Z
-
-    if-eqz v0, :cond_c
-
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->acc:Landroid/content/Context;
-
-    invoke-static {v0, p1, p2}, Lcom/tapjoy/TapjoyConnect;->requestTapjoyConnect(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
-
-    :cond_c
     return-void
 .end method
 
@@ -1260,6 +1226,31 @@
     return-void
 .end method
 
+.method public onClickLogin()V
+    .registers 4
+
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
+
+    invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->isSessionValid()Z
+
+    move-result v0
+
+    if-nez v0, :cond_14
+
+    new-instance v0, Lcom/trinitigame/android/ab;
+
+    invoke-direct {v0, p0}, Lcom/trinitigame/android/ab;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
+
+    iget-object v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->mTencent:Lcom/tencent/tauth/Tencent;
+
+    const-string v2, "get_user_info"
+
+    invoke-virtual {v1, p0, v2, v0}, Lcom/tencent/tauth/Tencent;->login(Landroid/app/Activity;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)I
+
+    :cond_14
+    return-void
+.end method
+
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .registers 4
 
@@ -1322,17 +1313,17 @@
 
     sput-object v0, Lcom/trinitigame/android/Triniti2DActivity;->accelerometer:Lcom/trinitigame/android/Triniti2DAccelermeter;
 
-    new-instance v0, Lcom/trinitigame/android/at;
+    new-instance v0, Lcom/trinitigame/android/aw;
 
-    invoke-direct {v0, p0}, Lcom/trinitigame/android/at;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/trinitigame/android/aw;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/at;
+    sput-object v0, Lcom/trinitigame/android/Triniti2DActivity;->soundPlayer:Lcom/trinitigame/android/aw;
 
-    new-instance v0, Lcom/trinitigame/android/as;
+    new-instance v0, Lcom/trinitigame/android/av;
 
-    invoke-direct {v0, p0}, Lcom/trinitigame/android/as;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/trinitigame/android/av;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
+    sput-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
     new-instance v0, Lcom/trinitigame/android/g;
 
@@ -1340,29 +1331,43 @@
 
     sput-object v0, Lcom/trinitigame/android/Triniti2DActivity;->notifyEvent:Lcom/trinitigame/android/g;
 
-    new-instance v0, Lcom/trinitigame/android/ax;
+    new-instance v0, Lcom/trinitigame/android/ba;
 
-    invoke-direct {v0, p0}, Lcom/trinitigame/android/ax;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/trinitigame/android/ba;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
     iget v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->glViewID:I
 
-    invoke-virtual {v0, v1}, Lcom/trinitigame/android/ax;->setId(I)V
+    invoke-virtual {v0, v1}, Lcom/trinitigame/android/ba;->setId(I)V
 
     iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->relativeLayout:Landroid/widget/RelativeLayout;
 
-    iget-object v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    iget-object v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->platform:Ljava/lang/String;
+    const-string v0, "1101820352"
 
-    const-string v1, "tencent"
+    invoke-virtual {p0}, Lcom/trinitigame/android/Triniti2DActivity;->getApplicationContext()Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/connect/auth/QQAuth;->createInstance(Ljava/lang/String;Landroid/content/Context;)Lcom/tencent/connect/auth/QQAuth;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/trinitigame/android/Triniti2DActivity;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
+
+    const-string v0, "1101820352"
+
+    invoke-static {v0, p0}, Lcom/tencent/tauth/Tencent;->createInstance(Ljava/lang/String;Landroid/content/Context;)Lcom/tencent/tauth/Tencent;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mTencent:Lcom/tencent/tauth/Tencent;
 
     const-string v0, "notification"
 
@@ -1376,7 +1381,7 @@
 
     const/4 v1, 0x1
 
-    :try_start_59
+    :try_start_66
     invoke-virtual {p0}, Lcom/trinitigame/android/Triniti2DActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -1392,11 +1397,11 @@
     move-result-object v0
 
     iget v0, v0, Landroid/content/pm/PackageInfo;->versionCode:I
-    :try_end_68
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_59 .. :try_end_68} :catch_102
+    :try_end_75
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_66 .. :try_end_75} :catch_10f
 
-    :goto_68
-    :try_start_68
+    :goto_75
+    :try_start_75
     const-string v1, "/Android/obb/"
 
     invoke-virtual {p0}, Lcom/trinitigame/android/Triniti2DActivity;->getPackageName()Ljava/lang/String;
@@ -1482,10 +1487,10 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->expansionFile:Ljava/lang/String;
-    :try_end_c1
-    .catch Ljava/lang/Exception; {:try_start_68 .. :try_end_c1} :catch_109
+    :try_end_ce
+    .catch Ljava/lang/Exception; {:try_start_75 .. :try_end_ce} :catch_116
 
-    :goto_c1
+    :goto_ce
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -1536,49 +1541,40 @@
 
     sput-object v0, Lcom/trinitigame/android/Triniti2DActivity;->outputtext:Ljava/lang/String;
 
-    new-instance v0, Lcom/trinitigame/android/w;
+    new-instance v0, Lcom/trinitigame/android/aa;
 
-    invoke-direct {v0, p0}, Lcom/trinitigame/android/w;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
+    invoke-direct {v0, p0}, Lcom/trinitigame/android/aa;-><init>(Lcom/trinitigame/android/Triniti2DActivity;)V
 
     sput-object v0, Lcom/trinitigame/android/Triniti2DActivity;->handler:Landroid/os/Handler;
 
     return-void
 
-    :catch_102
+    :catch_10f
     move-exception v0
 
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     move v0, v1
 
-    goto/16 :goto_68
+    goto/16 :goto_75
 
-    :catch_109
+    :catch_116
     move-exception v0
 
-    goto :goto_c1
+    goto :goto_ce
 .end method
 
 .method protected onDestroy()V
     .registers 3
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->platform:Ljava/lang/String;
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->unipayAPI:Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;
 
-    const-string v1, "tencent"
+    invoke-virtual {v0}, Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;->unbindUnipayService()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    invoke-virtual {v0}, Lcom/trinitigame/android/ba;->d()V
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/ax;->d()V
-
-    iget-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->chartboostkey:Z
-
-    if-eqz v0, :cond_13
-
-    invoke-static {p0}, Lcom/chartboost/sdk/Chartboost;->onDestroy(Landroid/app/Activity;)V
-
-    :cond_13
     const-string v0, ""
 
     invoke-static {v0}, Lcom/trinitigame/android/g;->I(Ljava/lang/String;)Ljava/lang/String;
@@ -1591,22 +1587,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2d
+    if-eqz v0, :cond_24
 
     sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->mHelper:Lcom/trinitigame/android/c/d;
 
-    if-eqz v0, :cond_2a
+    if-eqz v0, :cond_21
 
     sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->mHelper:Lcom/trinitigame/android/c/d;
 
     invoke-virtual {v0}, Lcom/trinitigame/android/c/d;->a()V
 
-    :cond_2a
+    :cond_21
     const/4 v0, 0x0
 
     sput-object v0, Lcom/trinitigame/android/Triniti2DActivity;->mHelper:Lcom/trinitigame/android/c/d;
 
-    :cond_2d
+    :cond_24
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     invoke-static {}, Landroid/os/Process;->myPid()I
@@ -1625,11 +1621,11 @@
 
     if-ne p1, v0, :cond_c
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
     const-string v1, "KEYCODE_BACK"
 
-    invoke-virtual {v0, p1, v1}, Lcom/trinitigame/android/ax;->a(ILjava/lang/String;)V
+    invoke-virtual {v0, p1, v1}, Lcom/trinitigame/android/ba;->a(ILjava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -1645,144 +1641,94 @@
 .end method
 
 .method protected onPause()V
-    .registers 3
+    .registers 2
 
-    const-string v0, ""
-
-    const-string v1, "android onPause"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     sget-boolean v0, Lcom/trinitigame/android/Triniti2DActivity;->accelerometerEnabled:Z
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_c
 
     sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->accelerometer:Lcom/trinitigame/android/Triniti2DAccelermeter;
 
     invoke-virtual {v0}, Lcom/trinitigame/android/Triniti2DAccelermeter;->b()V
 
-    :cond_10
+    :cond_c
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/ax;->a()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/ba;->a()V
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/ax;->e()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/ba;->e()V
 
-    iget-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->chartboostkey:Z
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    if-eqz v0, :cond_24
+    invoke-virtual {v0}, Lcom/trinitigame/android/av;->b()V
 
-    invoke-static {p0}, Lcom/chartboost/sdk/Chartboost;->onPause(Landroid/app/Activity;)V
-
-    :cond_24
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
-
-    invoke-virtual {v0}, Lcom/trinitigame/android/as;->b()V
-
-    iget-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->tapjoykey:Z
-
-    if-eqz v0, :cond_34
-
-    invoke-static {}, Lcom/tapjoy/TapjoyConnect;->getTapjoyConnectInstance()Lcom/tapjoy/TapjoyConnect;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tapjoy/TapjoyConnect;->appPause()V
-
-    :cond_34
     return-void
 .end method
 
 .method public onResume()V
-    .registers 3
-
-    const-string v0, ""
-
-    const-string v1, "android onResume"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    .registers 2
 
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     sget-boolean v0, Lcom/trinitigame/android/Triniti2DActivity;->accelerometerEnabled:Z
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_c
 
     sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->accelerometer:Lcom/trinitigame/android/Triniti2DAccelermeter;
 
     invoke-virtual {v0}, Lcom/trinitigame/android/Triniti2DAccelermeter;->a()V
 
-    :cond_13
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    :cond_c
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/ax;->b()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/ba;->b()V
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
-    invoke-virtual {v0}, Lcom/trinitigame/android/ax;->f()V
+    invoke-virtual {v0}, Lcom/trinitigame/android/ba;->f()V
 
-    iget-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->chartboostkey:Z
+    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/av;
 
-    if-eqz v0, :cond_24
+    invoke-virtual {v0}, Lcom/trinitigame/android/av;->c()V
 
-    invoke-static {p0}, Lcom/chartboost/sdk/Chartboost;->onResume(Landroid/app/Activity;)V
-
-    :cond_24
-    sget-object v0, Lcom/trinitigame/android/Triniti2DActivity;->backgroundMusicPlayer:Lcom/trinitigame/android/as;
-
-    invoke-virtual {v0}, Lcom/trinitigame/android/as;->c()V
-
-    iget-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->tapjoykey:Z
-
-    if-eqz v0, :cond_34
-
-    invoke-static {}, Lcom/tapjoy/TapjoyConnect;->getTapjoyConnectInstance()Lcom/tapjoy/TapjoyConnect;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tapjoy/TapjoyConnect;->appResume()V
-
-    :cond_34
     return-void
 .end method
 
 .method protected onStart()V
     .registers 3
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->platform:Ljava/lang/String;
+    new-instance v0, Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;
 
-    const-string v1, "tencent"
+    invoke-direct {v0, p0}, Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->unipayAPI:Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;
+
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->unipayAPI:Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;
+
+    iget-object v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->unipayStubCallBack:Lcom/tencent/unipay/plugsdk/IUnipayServiceCallBack$Stub;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;->setCallBack(Lcom/tencent/unipay/plugsdk/IUnipayServiceCallBack;)V
+
+    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->unipayAPI:Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;
+
+    invoke-virtual {v0}, Lcom/tencent/unipay/plugsdk/UnipayPlugAPI;->bindUnipayService()V
 
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
-    iget-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->chartboostkey:Z
-
-    if-eqz v0, :cond_11
-
-    invoke-static {p0}, Lcom/chartboost/sdk/Chartboost;->onStart(Landroid/app/Activity;)V
-
-    :cond_11
     return-void
 .end method
 
 .method protected onStop()V
-    .registers 2
+    .registers 1
 
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    iget-boolean v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->chartboostkey:Z
-
-    if-eqz v0, :cond_a
-
-    invoke-static {p0}, Lcom/chartboost/sdk/Chartboost;->onStop(Landroid/app/Activity;)V
-
-    :cond_a
     return-void
 .end method
 
@@ -1854,11 +1800,11 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ax;
+    iget-object v1, p0, Lcom/trinitigame/android/Triniti2DActivity;->mGLView:Lcom/trinitigame/android/ba;
 
     iget-object v2, p0, Lcom/trinitigame/android/Triniti2DActivity;->expansionFile:Ljava/lang/String;
 
-    invoke-virtual {v1, v2, v0}, Lcom/trinitigame/android/ax;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v0}, Lcom/trinitigame/android/ba;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 

@@ -4,12 +4,6 @@
 
 
 # instance fields
-.field private JFQButton:Landroid/widget/Button;
-
-.field private ScrollRunnable:Ljava/lang/Runnable;
-
-.field private Titleview:Landroid/widget/TextView;
-
 .field private code:Ljava/lang/String;
 
 .field private content:Ljava/lang/String;
@@ -21,12 +15,6 @@
 .field private keys:[Ljava/lang/String;
 
 .field private keyss:[Ljava/lang/String;
-
-.field private mHandler:Landroid/os/Handler;
-
-.field private mlayout:Landroid/widget/LinearLayout;
-
-.field private sc:Landroid/widget/ScrollView;
 
 .field private tbNo:I
 
@@ -42,10 +30,10 @@
     .registers 4
 
     .prologue
-    .line 27
+    .line 16
     invoke-direct {p0}, Landroid/app/ListActivity;-><init>()V
 
-    .line 35
+    .line 24
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -70,59 +58,15 @@
 
     iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->keyss:[Ljava/lang/String;
 
-    .line 40
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->mHandler:Landroid/os/Handler;
-
-    .line 88
-    new-instance v0, Lcom/omesoft/strokefaq/TempList$1;
-
-    invoke-direct {v0, p0}, Lcom/omesoft/strokefaq/TempList$1;-><init>(Lcom/omesoft/strokefaq/TempList;)V
-
-    iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->ScrollRunnable:Ljava/lang/Runnable;
-
-    .line 27
+    .line 16
     return-void
-.end method
-
-.method static synthetic access$0(Lcom/omesoft/strokefaq/TempList;)Landroid/widget/LinearLayout;
-    .registers 2
-
-    .prologue
-    .line 39
-    iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->mlayout:Landroid/widget/LinearLayout;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1(Lcom/omesoft/strokefaq/TempList;)Landroid/widget/ScrollView;
-    .registers 2
-
-    .prologue
-    .line 38
-    iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->sc:Landroid/widget/ScrollView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2(Lcom/omesoft/strokefaq/TempList;)Landroid/os/Handler;
-    .registers 2
-
-    .prologue
-    .line 40
-    iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->mHandler:Landroid/os/Handler;
-
-    return-object v0
 .end method
 
 .method private init()V
     .registers 7
 
     .prologue
-    .line 114
+    .line 39
     invoke-virtual {p0}, Lcom/omesoft/strokefaq/TempList;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -131,11 +75,11 @@
 
     move-result-object v0
 
-    .line 115
+    .line 40
     .local v0, "bundle":Landroid/os/Bundle;
-    if-eqz v0, :cond_7e
+    if-eqz v0, :cond_7c
 
-    .line 116
+    .line 41
     const-string v1, "code"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -144,7 +88,7 @@
 
     iput-object v1, p0, Lcom/omesoft/strokefaq/TempList;->code:Ljava/lang/String;
 
-    .line 117
+    .line 42
     const-string v1, "keys"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
@@ -153,7 +97,7 @@
 
     iput-object v1, p0, Lcom/omesoft/strokefaq/TempList;->keys:[Ljava/lang/String;
 
-    .line 118
+    .line 43
     const-string v1, "title"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -162,7 +106,7 @@
 
     iput-object v1, p0, Lcom/omesoft/strokefaq/TempList;->title:Ljava/lang/String;
 
-    .line 119
+    .line 44
     const-string v1, "content"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -171,7 +115,7 @@
 
     iput-object v1, p0, Lcom/omesoft/strokefaq/TempList;->content:Ljava/lang/String;
 
-    .line 121
+    .line 46
     const-string v1, "table"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -180,21 +124,19 @@
 
     iput v1, p0, Lcom/omesoft/strokefaq/TempList;->tbNo:I
 
-    .line 122
+    .line 47
     iget v1, p0, Lcom/omesoft/strokefaq/TempList;->tbNo:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/omesoft/strokefaq/TempList;->tbNo:I
 
-    .line 123
-    iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->Titleview:Landroid/widget/TextView;
+    .line 48
+    iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->title:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/omesoft/strokefaq/TempList;->title:Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/omesoft/strokefaq/TempList;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 124
+    .line 50
     iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->dbhelper:Lcom/omesoft/strokefaq/DBHelper;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -241,10 +183,10 @@
 
     iput-object v1, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
-    .line 125
+    .line 51
     iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
-    if-eqz v1, :cond_7f
+    if-eqz v1, :cond_7d
 
     iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
@@ -252,18 +194,18 @@
 
     move-result v1
 
-    if-lez v1, :cond_7f
+    if-lez v1, :cond_7d
 
-    .line 126
+    .line 52
     invoke-virtual {p0}, Lcom/omesoft/strokefaq/TempList;->doList()V
 
-    .line 132
-    :cond_7e
-    :goto_7e
+    .line 58
+    :cond_7c
+    :goto_7c
     return-void
 
-    .line 128
-    :cond_7f
+    .line 54
+    :cond_7d
     iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->dbhelper:Lcom/omesoft/strokefaq/DBHelper;
 
     const-string v2, "StrokePrevention"
@@ -296,10 +238,10 @@
 
     iput-object v1, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
-    .line 129
+    .line 55
     invoke-virtual {p0}, Lcom/omesoft/strokefaq/TempList;->doList()V
 
-    goto :goto_7e
+    goto :goto_7c
 .end method
 
 
@@ -310,7 +252,7 @@
     .param p2, "code"    # Ljava/lang/String;
 
     .prologue
-    .line 135
+    .line 61
     iget-object v3, p0, Lcom/omesoft/strokefaq/TempList;->dbhelper:Lcom/omesoft/strokefaq/DBHelper;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -351,7 +293,7 @@
 
     move-result-object v1
 
-    .line 137
+    .line 63
     .local v1, "cursor":Landroid/database/Cursor;
     if-eqz v1, :cond_78
 
@@ -361,10 +303,10 @@
 
     if-lez v3, :cond_78
 
-    .line 138
+    .line 64
     iput-object v1, p0, Lcom/omesoft/strokefaq/TempList;->tempcursor:Landroid/database/Cursor;
 
-    .line 143
+    .line 69
     :goto_34
     iget-object v3, p0, Lcom/omesoft/strokefaq/TempList;->tempcursor:Landroid/database/Cursor;
 
@@ -378,25 +320,25 @@
 
     if-lez v3, :cond_98
 
-    .line 145
+    .line 71
     iget-object v3, p0, Lcom/omesoft/strokefaq/TempList;->tempcursor:Landroid/database/Cursor;
 
     iput-object v3, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
-    .line 146
+    .line 72
     new-instance v2, Landroid/content/Intent;
 
     const-class v3, Lcom/omesoft/strokefaq/TempList;
 
     invoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 147
+    .line 73
     .local v2, "intent":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 149
+    .line 75
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v3, "keys"
 
@@ -404,43 +346,43 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 150
+    .line 76
     const-string v3, "code"
 
     invoke-virtual {v0, v3, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 151
+    .line 77
     const-string v3, "table"
 
     iget v4, p0, Lcom/omesoft/strokefaq/TempList;->tbNo:I
 
     invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 152
+    .line 78
     const-string v3, "title"
 
     iget-object v4, p0, Lcom/omesoft/strokefaq/TempList;->title:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 153
+    .line 79
     const-string v3, "content"
 
     iget-object v4, p0, Lcom/omesoft/strokefaq/TempList;->content:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 154
+    .line 80
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 155
+    .line 81
     invoke-virtual {p0, v2}, Lcom/omesoft/strokefaq/TempList;->startActivity(Landroid/content/Intent;)V
 
-    .line 166
+    .line 92
     :goto_77
     return-void
 
-    .line 140
+    .line 66
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v2    # "intent":Landroid/content/Intent;
     :cond_78
@@ -476,7 +418,7 @@
 
     goto :goto_34
 
-    .line 157
+    .line 83
     :cond_98
     new-instance v2, Landroid/content/Intent;
 
@@ -484,13 +426,13 @@
 
     invoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 158
+    .line 84
     .restart local v2    # "intent":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 159
+    .line 85
     .restart local v0    # "bundle":Landroid/os/Bundle;
     const-string v3, "title"
 
@@ -498,24 +440,24 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 160
+    .line 86
     const-string v3, "content"
 
     iget-object v4, p0, Lcom/omesoft/strokefaq/TempList;->content:Ljava/lang/String;
 
     invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 161
+    .line 87
     const-string v3, "_id"
 
     iget-object v4, p0, Lcom/omesoft/strokefaq/TempList;->id1:Ljava/lang/String;
 
     invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
+    .line 89
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 164
+    .line 90
     invoke-virtual {p0, v2}, Lcom/omesoft/strokefaq/TempList;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_77
@@ -525,27 +467,27 @@
     .registers 10
 
     .prologue
-    .line 168
+    .line 94
     iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
     iput-object v1, p0, Lcom/omesoft/strokefaq/TempList;->tempcursor:Landroid/database/Cursor;
 
-    .line 169
+    .line 95
     iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
     invoke-virtual {p0, v1}, Lcom/omesoft/strokefaq/TempList;->startManagingCursor(Landroid/database/Cursor;)V
 
-    .line 170
+    .line 96
     const/4 v7, 0x0
 
-    .line 172
+    .line 98
     .local v7, "sAdapter":Landroid/widget/SimpleCursorAdapter;
     :try_start_a
     new-instance v0, Landroid/widget/SimpleCursorAdapter;
 
-    const v2, 0x7f030007
+    const v2, 0x7f030006
 
-    .line 173
+    .line 99
     iget-object v3, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
     const/4 v1, 0x1
@@ -570,21 +512,21 @@
 
     move-object v1, p0
 
-    .line 172
+    .line 98
     invoke-direct/range {v0 .. v5}, Landroid/widget/SimpleCursorAdapter;-><init>(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[I)V
     :try_end_26
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_26} :catch_2a
 
-    .line 177
+    .line 103
     .end local v7    # "sAdapter":Landroid/widget/SimpleCursorAdapter;
     .local v0, "sAdapter":Landroid/widget/SimpleCursorAdapter;
     :goto_26
     invoke-virtual {p0, v0}, Lcom/omesoft/strokefaq/TempList;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 178
+    .line 104
     return-void
 
-    .line 174
+    .line 100
     .end local v0    # "sAdapter":Landroid/widget/SimpleCursorAdapter;
     .restart local v7    # "sAdapter":Landroid/widget/SimpleCursorAdapter;
     :catch_2a
@@ -592,7 +534,7 @@
 
     move-object v6, v1
 
-    .line 175
+    .line 101
     .local v6, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -604,25 +546,18 @@
 .end method
 
 .method public finish()V
-    .registers 3
+    .registers 2
 
     .prologue
-    .line 202
-    iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->mHandler:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->ScrollRunnable:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 203
+    .line 128
     iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->dbhelper:Lcom/omesoft/strokefaq/DBHelper;
 
     invoke-virtual {v0}, Lcom/omesoft/strokefaq/DBHelper;->close()V
 
-    .line 204
+    .line 129
     invoke-super {p0}, Landroid/app/ListActivity;->finish()V
 
-    .line 205
+    .line 130
     return-void
 .end method
 
@@ -633,144 +568,51 @@
     .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
-    .line 209
+    .line 134
     invoke-super {p0, p1, p2, p3}, Landroid/app/ListActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 211
+    .line 136
     return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 5
+    .registers 4
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/4 v2, 0x7
-
-    .line 44
+    .line 28
     invoke-super {p0, p1}, Landroid/app/ListActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 45
-    invoke-virtual {p0, v2}, Lcom/omesoft/strokefaq/TempList;->requestWindowFeature(I)Z
-
-    .line 46
-    const v0, 0x7f030003
+    .line 29
+    const v0, 0x7f030002
 
     invoke-virtual {p0, v0}, Lcom/omesoft/strokefaq/TempList;->setContentView(I)V
 
-    .line 47
-    invoke-virtual {p0}, Lcom/omesoft/strokefaq/TempList;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    const v1, 0x7f030008
-
-    invoke-virtual {v0, v2, v1}, Landroid/view/Window;->setFeatureInt(II)V
-
-    .line 48
-    const v0, 0x7f080007
-
-    invoke-virtual {p0, v0}, Lcom/omesoft/strokefaq/TempList;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ScrollView;
-
-    iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->sc:Landroid/widget/ScrollView;
-
-    .line 50
-    const v0, 0x7f080004
-
-    invoke-virtual {p0, v0}, Lcom/omesoft/strokefaq/TempList;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->mlayout:Landroid/widget/LinearLayout;
-
-    .line 51
-    const v0, 0x7f080008
-
-    invoke-virtual {p0, v0}, Lcom/omesoft/strokefaq/TempList;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->Titleview:Landroid/widget/TextView;
-
-    .line 53
+    .line 30
     new-instance v0, Lcom/omesoft/strokefaq/DBHelper;
 
     invoke-direct {v0, p0}, Lcom/omesoft/strokefaq/DBHelper;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->dbhelper:Lcom/omesoft/strokefaq/DBHelper;
 
-    .line 54
+    .line 31
     invoke-direct {p0}, Lcom/omesoft/strokefaq/TempList;->init()V
 
-    .line 58
+    .line 33
     invoke-virtual {p0}, Lcom/omesoft/strokefaq/TempList;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    .line 59
+    .line 34
     const/4 v1, 0x3
 
-    .line 58
+    .line 33
     invoke-virtual {v0, v1}, Landroid/view/Window;->setSoftInputMode(I)V
 
-    .line 61
-    const v0, 0x7f08000a
-
-    invoke-virtual {p0, v0}, Lcom/omesoft/strokefaq/TempList;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->JFQButton:Landroid/widget/Button;
-
-    .line 63
-    iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->JFQButton:Landroid/widget/Button;
-
-    new-instance v1, Lcom/omesoft/strokefaq/TempList$2;
-
-    invoke-direct {v1, p0}, Lcom/omesoft/strokefaq/TempList$2;-><init>(Lcom/omesoft/strokefaq/TempList;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 69
-    iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->JFQButton:Landroid/widget/Button;
-
-    new-instance v1, Lcom/omesoft/strokefaq/TempList$3;
-
-    invoke-direct {v1, p0}, Lcom/omesoft/strokefaq/TempList$3;-><init>(Lcom/omesoft/strokefaq/TempList;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    .line 82
-    invoke-static {p0}, Lnet/youmi/android/appoffers/AppOffersManager;->getPoints(Landroid/content/Context;)I
-
-    move-result v0
-
-    const/16 v1, 0x2a8
-
-    if-ge v0, v1, :cond_7b
-
-    .line 83
+    .line 35
     invoke-static {p0}, Lcom/omesoft/strokefaq/AdControl;->addAD(Landroid/app/Activity;)V
 
-    .line 84
-    iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->mHandler:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->ScrollRunnable:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 86
-    :cond_7b
+    .line 37
     return-void
 .end method
 
@@ -779,18 +621,18 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 214
+    .line 139
     invoke-virtual {p0}, Lcom/omesoft/strokefaq/TempList;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
 
-    .line 215
+    .line 140
     .local v0, "inflater":Landroid/view/MenuInflater;
-    const/high16 v1, 0x7f070000
+    const/high16 v1, 0x7f060000
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    .line 216
+    .line 141
     const/4 v1, 0x1
 
     return v1
@@ -806,10 +648,10 @@
     .prologue
     const/4 v2, 0x4
 
-    .line 182
+    .line 108
     invoke-super/range {p0 .. p5}, Landroid/app/ListActivity;->onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
 
-    .line 184
+    .line 110
     iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->code:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -818,7 +660,7 @@
 
     if-le v0, v2, :cond_15
 
-    .line 185
+    .line 111
     iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->code:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -829,7 +671,7 @@
 
     iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->code:Ljava/lang/String;
 
-    .line 187
+    .line 113
     :cond_15
     add-int/lit8 v0, p3, 0x1
 
@@ -837,7 +679,7 @@
 
     if-ge v0, v1, :cond_70
 
-    .line 188
+    .line 114
     iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->code:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -866,7 +708,7 @@
 
     iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->code:Ljava/lang/String;
 
-    .line 193
+    .line 119
     :goto_38
     iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
@@ -884,7 +726,7 @@
 
     iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->title:Ljava/lang/String;
 
-    .line 194
+    .line 120
     iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
     iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
@@ -901,7 +743,7 @@
 
     iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->content:Ljava/lang/String;
 
-    .line 195
+    .line 121
     iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
 
     iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->tbcursor:Landroid/database/Cursor;
@@ -918,17 +760,17 @@
 
     iput-object v0, p0, Lcom/omesoft/strokefaq/TempList;->id1:Ljava/lang/String;
 
-    .line 196
+    .line 122
     iget v0, p0, Lcom/omesoft/strokefaq/TempList;->tbNo:I
 
     iget-object v1, p0, Lcom/omesoft/strokefaq/TempList;->code:Ljava/lang/String;
 
     invoke-virtual {p0, v0, v1}, Lcom/omesoft/strokefaq/TempList;->ShowList(ILjava/lang/String;)V
 
-    .line 198
+    .line 124
     return-void
 
-    .line 190
+    .line 116
     :cond_70
     iget-object v0, p0, Lcom/omesoft/strokefaq/TempList;->code:Ljava/lang/String;
 
@@ -964,22 +806,22 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 220
+    .line 145
     invoke-interface/range {p1 .. p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v7
 
-    .line 221
+    .line 146
     .local v7, "item_id":I
-    packed-switch v7, :pswitch_data_ae
+    packed-switch v7, :pswitch_data_a4
 
-    .line 259
+    .line 178
     :goto_7
     const/4 v11, 0x1
 
     return v11
 
-    .line 223
+    .line 148
     :pswitch_9
     new-instance v5, Landroid/content/Intent;
 
@@ -987,13 +829,13 @@
 
     invoke-direct {v5, p0, v11}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 224
+    .line 149
     .local v5, "intent":Landroid/content/Intent;
     invoke-virtual {p0, v5}, Lcom/omesoft/strokefaq/TempList;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_7
 
-    .line 228
+    .line 153
     .end local v5    # "intent":Landroid/content/Intent;
     :pswitch_14
     iget-object v11, p0, Lcom/omesoft/strokefaq/TempList;->dbhelper:Lcom/omesoft/strokefaq/DBHelper;
@@ -1012,7 +854,7 @@
 
     move-result-object v9
 
-    .line 229
+    .line 154
     .local v9, "tbcursorBookMark":Landroid/database/Cursor;
     new-instance v6, Landroid/content/Intent;
 
@@ -1020,17 +862,17 @@
 
     invoke-direct {v6, p0, v11}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 230
+    .line 155
     .local v6, "intent1":Landroid/content/Intent;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 231
+    .line 156
     .local v1, "bundle":Landroid/os/Bundle;
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 232
+    .line 157
     const-string v11, "rid"
 
     invoke-interface {v9, v11}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -1041,7 +883,7 @@
 
     move-result v8
 
-    .line 233
+    .line 158
     .local v8, "rid1":I
     const-string v11, "title"
 
@@ -1053,7 +895,7 @@
 
     move-result-object v0
 
-    .line 234
+    .line 159
     .local v0, "booktitle":Ljava/lang/String;
     iget-object v11, p0, Lcom/omesoft/strokefaq/TempList;->dbhelper:Lcom/omesoft/strokefaq/DBHelper;
 
@@ -1069,11 +911,11 @@
 
     move-result-object v3
 
-    .line 235
+    .line 160
     .local v3, "cursor":Landroid/database/Cursor;
     invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 236
+    .line 161
     const-string v11, "content"
 
     invoke-interface {v3, v11}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -1084,7 +926,7 @@
 
     move-result-object v2
 
-    .line 237
+    .line 162
     .local v2, "content1":Ljava/lang/String;
     const-string v11, "title"
 
@@ -1096,7 +938,7 @@
 
     move-result-object v10
 
-    .line 238
+    .line 163
     .local v10, "title1":Ljava/lang/String;
     const-string v11, "\u4e66\u7b7e"
 
@@ -1106,7 +948,7 @@
 
     if-eqz v11, :cond_84
 
-    .line 239
+    .line 164
     const-string v11, "\u6ca1\u6709\u4e66\u7b7e"
 
     const/4 v12, 0x0
@@ -1117,16 +959,16 @@
 
     invoke-virtual {v11}, Landroid/widget/Toast;->show()V
 
-    .line 248
+    .line 173
     :goto_7d
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 249
+    .line 174
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
     goto :goto_7
 
-    .line 241
+    .line 166
     :cond_84
     const-string v11, "_id"
 
@@ -1138,57 +980,34 @@
 
     move-result-object v4
 
-    .line 242
+    .line 167
     .local v4, "id1":Ljava/lang/String;
     const-string v11, "title"
 
     invoke-virtual {v1, v11, v10}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 243
+    .line 168
     const-string v11, "content"
 
     invoke-virtual {v1, v11, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 244
+    .line 169
     const-string v11, "_id"
 
     invoke-virtual {v1, v11, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 245
+    .line 170
     invoke-virtual {v6, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 246
+    .line 171
     invoke-virtual {p0, v6}, Lcom/omesoft/strokefaq/TempList;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_7d
 
-    .line 252
-    .end local v0    # "booktitle":Ljava/lang/String;
-    .end local v1    # "bundle":Landroid/os/Bundle;
-    .end local v2    # "content1":Ljava/lang/String;
-    .end local v3    # "cursor":Landroid/database/Cursor;
-    .end local v4    # "id1":Ljava/lang/String;
-    .end local v6    # "intent1":Landroid/content/Intent;
-    .end local v8    # "rid1":I
-    .end local v9    # "tbcursorBookMark":Landroid/database/Cursor;
-    .end local v10    # "title1":Ljava/lang/String;
-    :pswitch_a4
-    invoke-static {p0}, Lcom/omesoft/strokefaq/JFQ;->JF(Landroid/app/Activity;)V
-
-    goto/16 :goto_7
-
-    .line 255
-    :pswitch_a9
-    invoke-static {p0}, Lcom/omesoft/strokefaq/JFQ;->JFQs(Landroid/app/Activity;)V
-
-    goto/16 :goto_7
-
-    .line 221
-    :pswitch_data_ae
-    .packed-switch 0x7f08000c
+    .line 146
+    :pswitch_data_a4
+    .packed-switch 0x7f070008
         :pswitch_9
         :pswitch_14
-        :pswitch_a4
-        :pswitch_a9
     .end packed-switch
 .end method

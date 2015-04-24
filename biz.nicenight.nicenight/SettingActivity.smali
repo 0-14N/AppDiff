@@ -14,9 +14,9 @@
 
     invoke-direct {p0}, Lbiz/nicenight/nicenight/ui/ah;-><init>()V
 
-    new-instance v0, Lbiz/nicenight/nicenight/ui/ap;
+    new-instance v0, Lbiz/nicenight/nicenight/ui/aq;
 
-    invoke-direct {v0, p0}, Lbiz/nicenight/nicenight/ui/ap;-><init>(Lbiz/nicenight/nicenight/ui/SettingActivity;)V
+    invoke-direct {v0, p0}, Lbiz/nicenight/nicenight/ui/aq;-><init>(Lbiz/nicenight/nicenight/ui/SettingActivity;)V
 
     iput-object v0, p0, Lbiz/nicenight/nicenight/ui/SettingActivity;->b:Landroid/os/Handler;
 
@@ -148,9 +148,9 @@
 
     iget-object v0, p0, Lbiz/nicenight/nicenight/ui/SettingActivity;->a:Landroid/widget/ListView;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/ao;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/ap;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/ao;-><init>(Lbiz/nicenight/nicenight/ui/SettingActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/ap;-><init>(Lbiz/nicenight/nicenight/ui/SettingActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 

@@ -97,9 +97,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->w:Lcom/quvideo/xiaoying/app/community/search/SearchPage$a;
 
     .line 237
-    new-instance v0, Lqp;
+    new-instance v0, Ljw;
 
-    invoke-direct {v0, p0}, Lqp;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchPage;)V
+    invoke-direct {v0, p0}, Ljw;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchPage;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->x:Lcom/quvideo/xiaoying/app/community/search/SearchViewPager$SearchEventCallback;
 
@@ -142,7 +142,7 @@
 
     .prologue
     .line 101
-    const v0, 0x7f0604a8
+    const v0, 0x7f060493
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->findViewById(I)Landroid/view/View;
 
@@ -153,7 +153,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->o:Landroid/widget/ImageView;
 
     .line 102
-    const v0, 0x7f0604a9
+    const v0, 0x7f060494
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->findViewById(I)Landroid/view/View;
 
@@ -164,7 +164,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->p:Landroid/widget/Button;
 
     .line 103
-    const v0, 0x7f0604ab
+    const v0, 0x7f060496
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->findViewById(I)Landroid/view/View;
 
@@ -180,7 +180,7 @@
     invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
 
     .line 105
-    const v0, 0x7f0604aa
+    const v0, 0x7f060495
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->findViewById(I)Landroid/view/View;
 
@@ -220,18 +220,18 @@
     .line 113
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->q:Landroid/widget/EditText;
 
-    new-instance v1, Lqq;
+    new-instance v1, Ljx;
 
-    invoke-direct {v1, p0}, Lqq;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchPage;)V
+    invoke-direct {v1, p0}, Ljx;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchPage;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     .line 128
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->q:Landroid/widget/EditText;
 
-    new-instance v1, Lqr;
+    new-instance v1, Ljy;
 
-    invoke-direct {v1, p0}, Lqr;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchPage;)V
+    invoke-direct {v1, p0}, Ljy;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchPage;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -244,7 +244,7 @@
 
     .prologue
     .line 156
-    const v0, 0x7f0604ac
+    const v0, 0x7f060497
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/community/search/SearchPage;->findViewById(I)Landroid/view/View;
 
@@ -359,7 +359,7 @@
 
     .line 184
     :cond_3d
-    const v0, 0x7f0a0398
+    const v0, 0x7f0a0375
 
     const/4 v1, 0x0
 

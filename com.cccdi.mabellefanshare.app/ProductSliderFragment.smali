@@ -24,54 +24,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 51
+    .line 49
     invoke-direct {p0}, Landroid/support/v4/app/Fragment;-><init>()V
 
-    .line 46
+    .line 44
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->image:Z
 
-    .line 47
+    .line 45
     iput-object v1, p0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->imageURL:Ljava/lang/String;
 
-    .line 48
+    .line 46
     iput-object v1, p0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->mountNo:Ljava/lang/String;
 
-    .line 49
+    .line 47
     iput-object v1, p0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->largeImageURL:Ljava/lang/String;
 
-    .line 111
+    .line 109
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment$1;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment$1;-><init>(Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;)V
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->onProductDetailImageClicked:Landroid/view/View$OnClickListener;
 
-    .line 53
+    .line 51
     return-void
-.end method
-
-.method static synthetic access$000(Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;)Ljava/lang/String;
-    .registers 2
-    .param p0, "x0"    # Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;
-
-    .prologue
-    .line 27
-    iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->mountNo:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$100(Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;)Ljava/lang/String;
-    .registers 2
-    .param p0, "x0"    # Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;
-
-    .prologue
-    .line 27
-    iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->imageURL:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method public static newInstance(ILjava/lang/String;Ljava/lang/String;)Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;
@@ -81,22 +59,22 @@
     .param p2, "imageURL"    # Ljava/lang/String;
 
     .prologue
-    .line 29
+    .line 27
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;
 
     invoke-direct {v0}, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;-><init>()V
 
-    .line 30
+    .line 28
     .local v0, "fragment":Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;
     iput p0, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->id:I
 
-    .line 31
+    .line 29
     iput-object p1, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->mountNo:Ljava/lang/String;
 
-    .line 32
+    .line 30
     iput-object p2, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->imageURL:Ljava/lang/String;
 
-    .line 33
+    .line 31
     return-object v0
 .end method
 
@@ -108,25 +86,25 @@
     .param p3, "image"    # Z
 
     .prologue
-    .line 37
+    .line 35
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;
 
     invoke-direct {v0}, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;-><init>()V
 
-    .line 38
+    .line 36
     .local v0, "fragment":Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;
     iput p0, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->id:I
 
-    .line 39
+    .line 37
     iput-object p1, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->imageURL:Ljava/lang/String;
 
-    .line 40
+    .line 38
     iput-object p2, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->largeImageURL:Ljava/lang/String;
 
-    .line 41
+    .line 39
     iput-boolean p3, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->image:Z
 
-    .line 42
+    .line 40
     return-object v0
 .end method
 
@@ -137,10 +115,10 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 248
+    .line 222
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onAttach(Landroid/app/Activity;)V
 
-    .line 249
+    .line 223
     return-void
 .end method
 
@@ -149,10 +127,10 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 57
+    .line 55
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 58
+    .line 56
     return-void
 .end method
 
@@ -163,8 +141,29 @@
     .param p3, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 63
-    const v13, 0x7f030060
+    .line 61
+    const v13, 0x7f030051
+
+    const/4 v14, 0x0
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, p2
+
+    invoke-virtual {v0, v13, v1, v14}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v12
+
+    .line 64
+    .local v12, "v":Landroid/view/View;
+    move-object/from16 v0, p0
+
+    iget-boolean v13, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->image:Z
+
+    if-nez v13, :cond_e4
+
+    .line 65
+    const v13, 0x7f030090
 
     const/4 v14, 0x0
 
@@ -177,28 +176,7 @@
     move-result-object v12
 
     .line 66
-    .local v12, "v":Landroid/view/View;
-    move-object/from16 v0, p0
-
-    iget-boolean v13, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->image:Z
-
-    if-nez v13, :cond_e4
-
-    .line 67
-    const v13, 0x7f03009e
-
-    const/4 v14, 0x0
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, p2
-
-    invoke-virtual {v0, v13, v1, v14}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v12
-
-    .line 68
-    const v13, 0x7f0902d6
+    const v13, 0x7f09029b
 
     invoke-virtual {v12, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -206,7 +184,7 @@
 
     check-cast v11, Landroid/widget/ImageView;
 
-    .line 69
+    .line 67
     .local v11, "pWtBtn":Landroid/widget/ImageView;
     move-object/from16 v0, p0
 
@@ -214,8 +192,8 @@
 
     invoke-virtual {v11, v13}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 70
-    const v13, 0x7f0902d7
+    .line 68
+    const v13, 0x7f09029c
 
     invoke-virtual {v12, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -223,7 +201,7 @@
 
     check-cast v5, Landroid/widget/ImageView;
 
-    .line 71
+    .line 69
     .local v5, "pLineBtn":Landroid/widget/ImageView;
     move-object/from16 v0, p0
 
@@ -231,8 +209,8 @@
 
     invoke-virtual {v5, v13}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 72
-    const v13, 0x7f0902d8
+    .line 70
+    const v13, 0x7f09029d
 
     invoke-virtual {v12, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -240,7 +218,7 @@
 
     check-cast v3, Landroid/widget/ImageView;
 
-    .line 73
+    .line 71
     .local v3, "pFbBtn":Landroid/widget/ImageView;
     move-object/from16 v0, p0
 
@@ -248,8 +226,8 @@
 
     invoke-virtual {v3, v13}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 74
-    const v13, 0x7f0902d9
+    .line 72
+    const v13, 0x7f09029e
 
     invoke-virtual {v12, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -257,7 +235,7 @@
 
     check-cast v10, Landroid/widget/ImageView;
 
-    .line 75
+    .line 73
     .local v10, "pWcBtn":Landroid/widget/ImageView;
     move-object/from16 v0, p0
 
@@ -265,8 +243,8 @@
 
     invoke-virtual {v10, v13}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 76
-    const v13, 0x7f0902da
+    .line 74
+    const v13, 0x7f09029f
 
     invoke-virtual {v12, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -274,7 +252,7 @@
 
     check-cast v4, Landroid/widget/ImageView;
 
-    .line 77
+    .line 75
     .local v4, "pIgBtn":Landroid/widget/ImageView;
     move-object/from16 v0, p0
 
@@ -282,8 +260,8 @@
 
     invoke-virtual {v4, v13}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 78
-    const v13, 0x7f0902db
+    .line 76
+    const v13, 0x7f0902a0
 
     invoke-virtual {v12, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -291,7 +269,7 @@
 
     check-cast v9, Landroid/widget/ImageView;
 
-    .line 79
+    .line 77
     .local v9, "pTwBtn":Landroid/widget/ImageView;
     move-object/from16 v0, p0
 
@@ -299,8 +277,8 @@
 
     invoke-virtual {v9, v13}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 80
-    const v13, 0x7f0902dc
+    .line 78
+    const v13, 0x7f0902a1
 
     invoke-virtual {v12, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -308,7 +286,7 @@
 
     check-cast v7, Landroid/widget/ImageView;
 
-    .line 81
+    .line 79
     .local v7, "pMsBtn":Landroid/widget/ImageView;
     move-object/from16 v0, p0
 
@@ -316,8 +294,8 @@
 
     invoke-virtual {v7, v13}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 82
-    const v13, 0x7f0902dd
+    .line 80
+    const v13, 0x7f0902a2
 
     invoke-virtual {v12, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -325,7 +303,7 @@
 
     check-cast v6, Landroid/widget/ImageView;
 
-    .line 83
+    .line 81
     .local v6, "pLkBtn":Landroid/widget/ImageView;
     move-object/from16 v0, p0
 
@@ -333,8 +311,8 @@
 
     invoke-virtual {v6, v13}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 84
-    const v13, 0x7f0902de
+    .line 82
+    const v13, 0x7f0902a3
 
     invoke-virtual {v12, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -342,7 +320,7 @@
 
     check-cast v8, Landroid/widget/ImageView;
 
-    .line 85
+    .line 83
     .local v8, "pOtBtn":Landroid/widget/ImageView;
     move-object/from16 v0, p0
 
@@ -350,7 +328,7 @@
 
     invoke-virtual {v8, v13}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 86
+    .line 84
     move-object/from16 v0, p0
 
     iget v13, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->id:I
@@ -359,22 +337,22 @@
 
     if-ne v13, v14, :cond_c5
 
-    .line 88
+    .line 86
     const/16 v13, 0x8
 
     invoke-virtual {v7, v13}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 89
+    .line 87
     const/16 v13, 0x8
 
     invoke-virtual {v6, v13}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 91
+    .line 89
     const/16 v13, 0x8
 
     invoke-virtual {v8, v13}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 108
+    .line 106
     .end local v3    # "pFbBtn":Landroid/widget/ImageView;
     .end local v4    # "pIgBtn":Landroid/widget/ImageView;
     .end local v5    # "pLineBtn":Landroid/widget/ImageView;
@@ -387,7 +365,7 @@
     :goto_c4
     return-object v12
 
-    .line 93
+    .line 91
     .restart local v3    # "pFbBtn":Landroid/widget/ImageView;
     .restart local v4    # "pIgBtn":Landroid/widget/ImageView;
     .restart local v5    # "pLineBtn":Landroid/widget/ImageView;
@@ -402,34 +380,34 @@
 
     invoke-virtual {v11, v13}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 94
+    .line 92
     const/16 v13, 0x8
 
     invoke-virtual {v5, v13}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 95
+    .line 93
     const/16 v13, 0x8
 
     invoke-virtual {v3, v13}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 96
+    .line 94
     const/16 v13, 0x8
 
     invoke-virtual {v10, v13}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 97
+    .line 95
     const/16 v13, 0x8
 
     invoke-virtual {v4, v13}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 98
+    .line 96
     const/16 v13, 0x8
 
     invoke-virtual {v9, v13}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_c4
 
-    .line 102
+    .line 100
     .end local v3    # "pFbBtn":Landroid/widget/ImageView;
     .end local v4    # "pIgBtn":Landroid/widget/ImageView;
     .end local v5    # "pLineBtn":Landroid/widget/ImageView;
@@ -440,7 +418,7 @@
     .end local v10    # "pWcBtn":Landroid/widget/ImageView;
     .end local v11    # "pWtBtn":Landroid/widget/ImageView;
     :cond_e4
-    const v13, 0x7f09017e
+    const v13, 0x7f09013a
 
     invoke-virtual {v12, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -448,7 +426,7 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    .line 103
+    .line 101
     .local v2, "iv":Landroid/widget/ImageView;
     sget-object v13, Lcom/cccdi/mabellefanshare/AppApplication;->imageLoader:Lcom/android/volley/toolbox/ImageLoader;
 
@@ -462,12 +440,12 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/volley/toolbox/ImageLoader;->get(Ljava/lang/String;Lcom/android/volley/toolbox/ImageLoader$ImageListener;)Lcom/android/volley/toolbox/ImageLoader$ImageContainer;
 
-    .line 104
+    .line 102
     sget-object v13, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v2, v13}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 105
+    .line 103
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/cccdi/mabellefanshare/fragment/ProductSliderFragment;->onProductDetailImageClicked:Landroid/view/View$OnClickListener;
@@ -481,9 +459,9 @@
     .registers 1
 
     .prologue
-    .line 253
+    .line 227
     invoke-super {p0}, Landroid/support/v4/app/Fragment;->onDetach()V
 
-    .line 254
+    .line 228
     return-void
 .end method

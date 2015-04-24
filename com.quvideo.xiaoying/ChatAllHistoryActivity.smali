@@ -74,23 +74,23 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;->s:Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;
 
     .line 101
-    new-instance v0, Lue;
+    new-instance v0, Lnl;
 
-    invoke-direct {v0, p0}, Lue;-><init>(Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;)V
+    invoke-direct {v0, p0}, Lnl;-><init>(Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;->u:Lcom/quvideo/xiaoying/app/im/IMContactMgr$ChatContactUpdateListener;
 
     .line 109
-    new-instance v0, Luf;
+    new-instance v0, Lnm;
 
-    invoke-direct {v0, p0}, Luf;-><init>(Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;)V
+    invoke-direct {v0, p0}, Lnm;-><init>(Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;->v:Lcom/quvideo/xiaoying/im/IMListener;
 
     .line 203
-    new-instance v0, Luh;
+    new-instance v0, Lno;
 
-    invoke-direct {v0, p0}, Luh;-><init>(Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;)V
+    invoke-direct {v0, p0}, Lno;-><init>(Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;->w:Landroid/widget/AdapterView$OnItemLongClickListener;
 
@@ -119,16 +119,16 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0a036c
+    const v2, 0x7f0a0349
 
     aput v2, v0, v1
 
     .line 216
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
-    new-instance v2, Lui;
+    new-instance v2, Lnp;
 
-    invoke-direct {v2, p0, p1}, Lui;-><init>(Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;I)V
+    invoke-direct {v2, p0, p1}, Lnp;-><init>(Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;I)V
 
     invoke-direct {v1, p0, v0, v2}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
 
@@ -215,9 +215,9 @@
 
     .prologue
     .line 259
-    new-instance v0, Luj;
+    new-instance v0, Lnq;
 
-    invoke-direct {v0, p0}, Luj;-><init>(Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;)V
+    invoke-direct {v0, p0}, Lnq;-><init>(Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;)V
 
     invoke-static {p1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -230,7 +230,7 @@
 
     .prologue
     .line 191
-    const v0, 0x7f0604e9
+    const v0, 0x7f0604d4
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/im/ChatAllHistoryActivity;->findViewById(I)Landroid/view/View;
 

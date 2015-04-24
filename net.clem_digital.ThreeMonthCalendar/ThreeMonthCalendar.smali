@@ -50,14 +50,14 @@
 
     const/4 v4, 0x2
 
-    .line 53
+    .line 55
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     sput-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->c:Ljava/util/Calendar;
 
-    .line 54
+    .line 56
     sget-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->c:Ljava/util/Calendar;
 
     invoke-virtual {v0, v7}, Ljava/util/Calendar;->get(I)I
@@ -66,7 +66,7 @@
 
     sput v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->year:I
 
-    .line 55
+    .line 57
     sget-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->c:Ljava/util/Calendar;
 
     invoke-virtual {v0, v4}, Ljava/util/Calendar;->get(I)I
@@ -77,7 +77,7 @@
 
     sput v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->month:I
 
-    .line 56
+    .line 58
     sget-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->c:Ljava/util/Calendar;
 
     invoke-virtual {v0, v8}, Ljava/util/Calendar;->get(I)I
@@ -86,12 +86,12 @@
 
     sput v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->day:I
 
-    .line 57
+    .line 59
     new-array v0, v4, [[I
 
     const/4 v1, 0x0
 
-    .line 58
+    .line 60
     const/16 v2, 0xd
 
     new-array v2, v2, [I
@@ -142,7 +142,7 @@
 
     aput-object v2, v0, v1
 
-    .line 59
+    .line 61
     const/16 v1, 0xd
 
     new-array v1, v1, [I
@@ -193,10 +193,10 @@
 
     aput-object v1, v0, v7
 
-    .line 57
+    .line 59
     sput-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->daysInMonth:[[I
 
-    .line 61
+    .line 63
     const/16 v0, 0xd
 
     new-array v0, v0, [Ljava/lang/String;
@@ -223,7 +223,7 @@
 
     const/4 v1, 0x4
 
-    .line 62
+    .line 64
     const-string v2, "APRIL"
 
     aput-object v2, v0, v1
@@ -264,7 +264,7 @@
 
     const/16 v1, 0xb
 
-    .line 63
+    .line 65
     const-string v2, "NOVEMBER"
 
     aput-object v2, v0, v1
@@ -275,10 +275,10 @@
 
     aput-object v2, v0, v1
 
-    .line 61
+    .line 63
     sput-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->monthName:[Ljava/lang/String;
 
-    .line 65
+    .line 67
     const/16 v0, 0xa
 
     new-array v0, v0, [[I
@@ -309,7 +309,7 @@
 
     aput-object v2, v0, v1
 
-    .line 66
+    .line 68
     new-array v1, v4, [I
 
     aput-object v1, v0, v8
@@ -338,10 +338,10 @@
 
     aput-object v2, v0, v1
 
-    .line 65
+    .line 67
     sput-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
-    .line 26
+    .line 24
     return-void
 .end method
 
@@ -349,7 +349,7 @@
     .registers 1
 
     .prologue
-    .line 26
+    .line 24
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -359,7 +359,7 @@
     .registers 2
 
     .prologue
-    .line 297
+    .line 294
     iput-object p1, p0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->myGestureDetector:Landroid/view/GestureDetector;
 
     return-void
@@ -370,14 +370,14 @@
     .param p0, "year"    # I
 
     .prologue
-    .line 87
+    .line 89
     const/16 v0, 0xa
 
     new-array v3, v0, [[I
 
     const/4 v0, 0x0
 
-    .line 88
+    .line 90
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -398,7 +398,7 @@
 
     const/4 v0, 0x1
 
-    .line 89
+    .line 91
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -409,7 +409,7 @@
 
     const/4 v0, 0x2
 
-    .line 90
+    .line 92
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -420,7 +420,7 @@
 
     const/4 v0, 0x3
 
-    .line 91
+    .line 93
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -431,7 +431,7 @@
 
     const/4 v0, 0x4
 
-    .line 92
+    .line 94
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -452,7 +452,7 @@
 
     const/4 v0, 0x5
 
-    .line 93
+    .line 95
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -463,7 +463,7 @@
 
     const/4 v0, 0x6
 
-    .line 94
+    .line 96
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -474,7 +474,7 @@
 
     const/4 v0, 0x7
 
-    .line 95
+    .line 97
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -495,7 +495,7 @@
 
     const/16 v0, 0x8
 
-    .line 96
+    .line 98
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -506,7 +506,7 @@
 
     const/16 v0, 0x9
 
-    .line 97
+    .line 99
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -525,18 +525,18 @@
 
     aput-object v1, v3, v0
 
-    .line 100
+    .line 102
     .local v3, "holidayList":[[I
     const/16 v0, 0xa
 
     sput v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->numberHolidays:I
 
-    .line 101
+    .line 103
     const/16 v0, 0x7bf
 
     if-ge p0, v0, :cond_84
 
-    .line 102
+    .line 104
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -545,14 +545,14 @@
 
     if-lt v0, v1, :cond_8e
 
-    .line 106
+    .line 108
     .end local v0    # "i":I
     :cond_84
     const/16 v0, 0x7b3
 
     if-ge p0, v0, :cond_aa
 
-    .line 107
+    .line 109
     const/4 p0, 0x0
 
     .local p0, "i":I
@@ -561,12 +561,12 @@
 
     if-lt p0, v0, :cond_97
 
-    .line 155
+    .line 157
     .end local p0    # "i":I
     :cond_8d
     return-void
 
-    .line 103
+    .line 105
     .restart local v0    # "i":I
     .local p0, "year":I
     :cond_8e
@@ -578,12 +578,12 @@
 
     aput v2, v1, v0
 
-    .line 102
+    .line 104
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_81
 
-    .line 108
+    .line 110
     .end local v0    # "i":I
     .local p0, "i":I
     :cond_97
@@ -597,7 +597,7 @@
 
     aput v2, v0, v1
 
-    .line 109
+    .line 111
     sget-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
     aget-object v0, v0, p0
@@ -608,12 +608,12 @@
 
     aput v2, v0, v1
 
-    .line 107
+    .line 109
     add-int/lit8 p0, p0, 0x1
 
     goto :goto_89
 
-    .line 114
+    .line 116
     .local p0, "year":I
     :cond_aa
     const/4 v1, 0x0
@@ -630,7 +630,7 @@
     .local v2, "fourth":I
     const/4 v0, 0x0
 
-    .line 115
+    .line 117
     .local v0, "fifth":I
     const/4 v4, 0x0
 
@@ -640,7 +640,7 @@
 
     if-ge v4, v7, :cond_8d
 
-    .line 116
+    .line 118
     aget-object v7, v3, v4
 
     const/4 v8, 0x0
@@ -649,7 +649,7 @@
 
     if-nez v7, :cond_d6
 
-    .line 117
+    .line 119
     sget-object v7, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
     aget-object v7, v7, v4
@@ -664,7 +664,7 @@
 
     aput v9, v7, v8
 
-    .line 118
+    .line 120
     sget-object v7, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
     aget-object v7, v7, v4
@@ -679,13 +679,13 @@
 
     aput v9, v7, v8
 
-    .line 115
+    .line 117
     :goto_d3
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_b0
 
-    .line 121
+    .line 123
     :cond_d6
     aget-object v0, v3, v4
 
@@ -712,7 +712,7 @@
 
     long-to-int v2, v5
 
-    .line 122
+    .line 124
     .local v2, "firstDay":I
     aget-object v0, v3, v4
 
@@ -720,27 +720,27 @@
 
     aget v0, v0, v5
 
-    .line 123
+    .line 125
     .local v0, "dayOfWeek":I
     if-ge v2, v0, :cond_f2
 
-    .line 124
+    .line 126
     sub-int v1, v0, v2
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 125
+    .line 127
     :cond_f2
     if-ne v2, v0, :cond_f5
 
-    .line 126
+    .line 128
     const/4 v1, 0x1
 
-    .line 127
+    .line 129
     :cond_f5
     if-le v2, v0, :cond_fe
 
-    .line 128
+    .line 130
     const/16 v1, 0x9
 
     sub-int/2addr v1, v2
@@ -755,25 +755,25 @@
     .local v0, "first":I
     move v1, v0
 
-    .line 129
+    .line 131
     .end local v0    # "first":I
     .end local v2    # "firstDay":I
     .restart local v1    # "first":I
     :cond_fe
     add-int/lit8 v5, v1, 0x7
 
-    .line 130
+    .line 132
     .restart local v5    # "second":I
     add-int/lit8 v6, v5, 0x7
 
-    .line 131
+    .line 133
     add-int/lit8 v2, v6, 0x7
 
-    .line 132
+    .line 134
     .local v2, "fourth":I
     add-int/lit8 v0, v2, 0x7
 
-    .line 133
+    .line 135
     .local v0, "fifth":I
     sget-object v7, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->daysInMonth:[[I
 
@@ -793,10 +793,10 @@
 
     if-le v0, v7, :cond_118
 
-    .line 134
+    .line 136
     move v0, v2
 
-    .line 135
+    .line 137
     :cond_118
     sget-object v7, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
@@ -812,7 +812,7 @@
 
     aput v9, v7, v8
 
-    .line 136
+    .line 138
     aget-object v7, v3, v4
 
     const/4 v8, 0x2
@@ -823,7 +823,7 @@
 
     goto :goto_d3
 
-    .line 138
+    .line 140
     :pswitch_12d
     sget-object v7, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
@@ -835,7 +835,7 @@
 
     goto :goto_d3
 
-    .line 141
+    .line 143
     :pswitch_135
     sget-object v7, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
@@ -847,7 +847,7 @@
 
     goto :goto_d3
 
-    .line 144
+    .line 146
     :pswitch_13d
     sget-object v7, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
@@ -859,7 +859,7 @@
 
     goto :goto_d3
 
-    .line 147
+    .line 149
     :pswitch_145
     sget-object v7, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
@@ -871,7 +871,7 @@
 
     goto :goto_d3
 
-    .line 150
+    .line 152
     :pswitch_14d
     sget-object v7, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
@@ -883,7 +883,7 @@
 
     goto/16 :goto_d3
 
-    .line 89
+    .line 91
     :array_156
     .array-data 4
         0x1
@@ -892,7 +892,7 @@
         0x1
     .end array-data
 
-    .line 90
+    .line 92
     :array_162
     .array-data 4
         0x1
@@ -901,7 +901,7 @@
         0x1
     .end array-data
 
-    .line 91
+    .line 93
     :array_16e
     .array-data 4
         0x1
@@ -910,7 +910,7 @@
         0x1
     .end array-data
 
-    .line 93
+    .line 95
     :array_17a
     .array-data 4
         0x1
@@ -919,7 +919,7 @@
         0x1
     .end array-data
 
-    .line 94
+    .line 96
     :array_186
     .array-data 4
         0x1
@@ -928,7 +928,7 @@
         0x1
     .end array-data
 
-    .line 96
+    .line 98
     :array_192
     .array-data 4
         0x1
@@ -937,7 +937,7 @@
         0x4
     .end array-data
 
-    .line 136
+    .line 138
     :pswitch_data_19e
     .packed-switch 0x1
         :pswitch_12d
@@ -958,7 +958,7 @@
 
     const/4 v2, 0x0
 
-    .line 158
+    .line 160
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -969,11 +969,11 @@
 
     move v1, v2
 
-    .line 162
+    .line 164
     :goto_8
     return v1
 
-    .line 159
+    .line 161
     :cond_9
     sget-object v1, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->holidayArray:[[I
 
@@ -993,10 +993,10 @@
 
     move v1, v3
 
-    .line 160
+    .line 162
     goto :goto_8
 
-    .line 158
+    .line 160
     :cond_1b
     add-int/lit8 v0, v0, 0x1
 
@@ -1008,37 +1008,37 @@
     .param p0, "year"    # I
 
     .prologue
-    .line 193
+    .line 195
     const/4 v0, 0x0
 
-    .line 195
+    .line 197
     .local v0, "leapYear":I
     rem-int/lit8 v1, p0, 0x4
 
     if-nez v1, :cond_6
 
-    .line 196
+    .line 198
     const/4 v0, 0x1
 
-    .line 197
+    .line 199
     :cond_6
     rem-int/lit8 v1, p0, 0x64
 
     if-nez v1, :cond_b
 
-    .line 198
+    .line 200
     const/4 v0, 0x0
 
-    .line 199
+    .line 201
     :cond_b
     rem-int/lit16 v1, p0, 0x190
 
     if-nez v1, :cond_10
 
-    .line 200
+    .line 202
     const/4 v0, 0x1
 
-    .line 201
+    .line 203
     :cond_10
     return v0
 .end method
@@ -1050,37 +1050,37 @@
     .param p2, "day"    # I
 
     .prologue
-    .line 167
+    .line 169
     const-wide/32 v0, 0x8fc1d
 
-    .line 170
+    .line 172
     .local v0, "IGREG":J
     if-nez p0, :cond_6
 
-    .line 171
+    .line 173
     const/4 p0, 0x1
 
-    .line 173
+    .line 175
     :cond_6
     if-gez p0, :cond_a
 
-    .line 174
+    .line 176
     add-int/lit8 p0, p0, 0x1
 
-    .line 176
+    .line 178
     :cond_a
     const/4 v7, 0x2
 
     if-le p1, v7, :cond_48
 
-    .line 177
+    .line 179
     move v6, p0
 
-    .line 178
+    .line 180
     .local v6, "jYear":I
     add-int/lit8 v5, p1, 0x1
 
-    .line 184
+    .line 186
     .local v5, "jMonth":I
     :goto_10
     const-wide v7, 0x4076d40000000000L    # 365.25
@@ -1109,7 +1109,7 @@
 
     int-to-long v3, v7
 
-    .line 185
+    .line 187
     .local v3, "jDay":J
     mul-int/lit8 v7, p0, 0xc
 
@@ -1125,7 +1125,7 @@
 
     if-ltz v7, :cond_47
 
-    .line 186
+    .line 188
     const-wide v7, 0x3f847ae147ae147bL    # 0.01
 
     int-to-double v9, v6
@@ -1134,7 +1134,7 @@
 
     double-to-int v2, v7
 
-    .line 187
+    .line 189
     .local v2, "jAdjust":I
     const-wide/16 v7, 0x2
 
@@ -1156,12 +1156,12 @@
 
     add-long v3, v7, v9
 
-    .line 189
+    .line 191
     .end local v2    # "jAdjust":I
     :cond_47
     return-wide v3
 
-    .line 181
+    .line 183
     .end local v3    # "jDay":J
     .end local v5    # "jMonth":I
     .end local v6    # "jYear":I
@@ -1170,7 +1170,7 @@
 
     sub-int v6, p0, v7
 
-    .line 182
+    .line 184
     .restart local v6    # "jYear":I
     add-int/lit8 v5, p1, 0xd
 
@@ -1184,7 +1184,7 @@
     .param p1, "month"    # I
 
     .prologue
-    .line 205
+    .line 207
     const/16 v0, 0x8
 
     new-array v4, v0, [[[Ljava/lang/String;
@@ -1339,7 +1339,7 @@
 
     const/4 v0, 0x1
 
-    .line 206
+    .line 208
     const/4 v1, 0x7
 
     new-array v1, v1, [[Ljava/lang/String;
@@ -1488,7 +1488,7 @@
 
     const/4 v0, 0x2
 
-    .line 207
+    .line 209
     const/4 v1, 0x7
 
     new-array v1, v1, [[Ljava/lang/String;
@@ -1637,7 +1637,7 @@
 
     const/4 v0, 0x3
 
-    .line 208
+    .line 210
     const/4 v1, 0x7
 
     new-array v1, v1, [[Ljava/lang/String;
@@ -1786,7 +1786,7 @@
 
     const/4 v0, 0x4
 
-    .line 209
+    .line 211
     const/4 v1, 0x7
 
     new-array v1, v1, [[Ljava/lang/String;
@@ -1935,7 +1935,7 @@
 
     const/4 v0, 0x5
 
-    .line 210
+    .line 212
     const/4 v1, 0x7
 
     new-array v1, v1, [[Ljava/lang/String;
@@ -2084,7 +2084,7 @@
 
     const/4 v0, 0x6
 
-    .line 211
+    .line 213
     const/4 v1, 0x7
 
     new-array v1, v1, [[Ljava/lang/String;
@@ -2233,7 +2233,7 @@
 
     const/4 v0, 0x7
 
-    .line 212
+    .line 214
     const/4 v1, 0x7
 
     new-array v1, v1, [[Ljava/lang/String;
@@ -2380,27 +2380,27 @@
 
     aput-object v1, v4, v0
 
-    .line 214
+    .line 216
     .local v4, "data":[[[Ljava/lang/String;
     const/4 v1, 0x1
 
-    .line 215
+    .line 217
     .local v1, "count":I
     invoke-static {p0}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->isLeapYear(I)I
 
     move-result v5
 
-    .line 219
+    .line 221
     .local v5, "daysInMonthRow":I
     const/4 v6, 0x0
 
-    .line 220
+    .line 222
     .local v6, "highLightToday":Z
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 221
+    .line 223
     .local v0, "c":Ljava/util/Calendar;
     const/4 v2, 0x1
 
@@ -2408,7 +2408,7 @@
 
     move-result v3
 
-    .line 222
+    .line 224
     .local v3, "currentYear":I
     const/4 v2, 0x2
 
@@ -2418,7 +2418,7 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 223
+    .line 225
     .local v2, "currentMonth":I
     const/4 v7, 0x5
 
@@ -2426,20 +2426,20 @@
 
     move-result v0
 
-    .line 224
+    .line 226
     .local v0, "currentDay":I
     if-ne v3, p0, :cond_4a4
 
     if-ne v2, p1, :cond_4a4
 
-    .line 225
+    .line 227
     const/4 v2, 0x1
 
     .end local v6    # "highLightToday":Z
     .local v2, "highLightToday":Z
     move v3, v2
 
-    .line 226
+    .line 228
     .end local v2    # "highLightToday":Z
     .local v3, "highLightToday":Z
     :goto_3d5
@@ -2459,13 +2459,13 @@
 
     long-to-int p0, v6
 
-    .line 228
+    .line 230
     .local p0, "dayOfWeek":I
     sget-object v2, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->monthName:[Ljava/lang/String;
 
     aget-object v2, v2, p1
 
-    .line 229
+    .line 231
     .local v2, "header":Ljava/lang/String;
     const/4 v6, 0x0
 
@@ -2508,7 +2508,7 @@
 
     aput-object v2, v6, v7
 
-    .line 231
+    .line 233
     const/4 v2, 0x2
 
     .local v2, "i":I
@@ -2529,10 +2529,10 @@
 
     if-lt v2, v6, :cond_411
 
-    .line 255
+    .line 257
     return-object v4
 
-    .line 232
+    .line 234
     :cond_411
     move v1, v1
 
@@ -2542,23 +2542,23 @@
 
     if-lt v1, v6, :cond_419
 
-    .line 253
+    .line 255
     const/4 v1, 0x0
 
-    .line 231
+    .line 233
     .local v1, "dayOfWeek":I
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_40c
 
-    .line 233
+    .line 235
     .local v1, "j":I
     :cond_419
     const/16 v6, 0xa
 
     if-ge p0, v6, :cond_469
 
-    .line 234
+    .line 236
     aget-object v6, v4, v2
 
     aget-object v6, v6, v1
@@ -2587,14 +2587,14 @@
 
     aput-object v8, v6, v7
 
-    .line 235
+    .line 237
     invoke-static {p1, p0}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->isHoliday(II)Z
 
     move-result v6
 
     if-eqz v6, :cond_448
 
-    .line 236
+    .line 238
     aget-object v6, v4, v2
 
     aget-object v6, v6, v1
@@ -2605,13 +2605,13 @@
 
     aput-object v8, v6, v7
 
-    .line 237
+    .line 239
     :cond_448
     if-eqz v3, :cond_455
 
     if-ne p0, v0, :cond_455
 
-    .line 238
+    .line 240
     aget-object v6, v4, v2
 
     aget-object v6, v6, v1
@@ -2622,12 +2622,12 @@
 
     aput-object v8, v6, v7
 
-    .line 247
+    .line 249
     :cond_455
     :goto_455
     add-int/lit8 p0, p0, 0x1
 
-    .line 248
+    .line 250
     sget-object v6, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->daysInMonth:[[I
 
     aget-object v6, v6, v5
@@ -2636,15 +2636,15 @@
 
     if-le p0, v6, :cond_4a0
 
-    .line 249
+    .line 251
     const/16 v2, 0x8
 
-    .line 250
+    .line 252
     .end local v1    # "j":I
     .local v2, "j":I
     const/16 v1, 0x9
 
-    .line 232
+    .line 234
     .local v1, "i":I
     :goto_463
     add-int/lit8 v2, v2, 0x1
@@ -2663,7 +2663,7 @@
     .local v1, "j":I
     goto :goto_412
 
-    .line 241
+    .line 243
     :cond_469
     aget-object v6, v4, v2
 
@@ -2691,14 +2691,14 @@
 
     aput-object v8, v6, v7
 
-    .line 242
+    .line 244
     invoke-static {p1, p0}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->isHoliday(II)Z
 
     move-result v6
 
     if-eqz v6, :cond_492
 
-    .line 243
+    .line 245
     aget-object v6, v4, v2
 
     aget-object v6, v6, v1
@@ -2709,13 +2709,13 @@
 
     aput-object v8, v6, v7
 
-    .line 244
+    .line 246
     :cond_492
     if-eqz v3, :cond_455
 
     if-ne p0, v0, :cond_455
 
-    .line 245
+    .line 247
     aget-object v6, v4, v2
 
     aget-object v6, v6, v1
@@ -2765,15 +2765,15 @@
     .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
-    .line 293
+    .line 290
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 294
+    .line 291
     iget-object v0, p0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->layout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {p0, v0}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->setContentView(Landroid/view/View;)V
 
-    .line 295
+    .line 292
     return-void
 .end method
 
@@ -2784,15 +2784,20 @@
     .prologue
     const/4 v6, -0x2
 
-    .line 31
+    .line 29
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 33
+    .line 31
+    const/4 v4, 0x1
+
+    invoke-virtual {p0, v4}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->requestWindowFeature(I)Z
+
+    .line 35
     new-instance v1, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar$threeMonthView;
 
     invoke-direct {v1, p0, p0}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar$threeMonthView;-><init>(Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;Landroid/content/Context;)V
 
-    .line 35
+    .line 37
     .local v1, "nowDisplay":Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar$threeMonthView;
     new-instance v0, Lcom/google/ads/AdView;
 
@@ -2802,7 +2807,7 @@
 
     invoke-direct {v0, p0, v4, v5}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
 
-    .line 37
+    .line 39
     .local v0, "adView":Lcom/google/ads/AdView;
     new-instance v4, Landroid/widget/RelativeLayout;
 
@@ -2810,52 +2815,52 @@
 
     iput-object v4, p0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->layout:Landroid/widget/RelativeLayout;
 
-    .line 38
+    .line 40
     iget-object v4, p0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->layout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v4, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 40
+    .line 42
     new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v2, v6, v6}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 42
+    .line 44
     .local v2, "params":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v4, 0xa
 
     invoke-virtual {v2, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 43
+    .line 45
     const/16 v4, 0x9
 
     invoke-virtual {v2, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 44
+    .line 46
     iget-object v4, p0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->layout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v4, v0, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 46
+    .line 48
     iget-object v4, p0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->layout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {p0, v4}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->setContentView(Landroid/view/View;)V
 
-    .line 48
+    .line 50
     new-instance v3, Lcom/google/ads/AdRequest;
 
     invoke-direct {v3}, Lcom/google/ads/AdRequest;-><init>()V
 
-    .line 49
+    .line 51
     .local v3, "request":Lcom/google/ads/AdRequest;
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Lcom/google/ads/AdRequest;->setTesting(Z)V
 
-    .line 50
+    .line 52
     invoke-virtual {v0, v3}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
 
-    .line 51
+    .line 53
     return-void
 .end method
 
@@ -2864,21 +2869,21 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 260
+    .line 262
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 261
+    .line 263
     invoke-virtual {p0}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
 
-    .line 262
+    .line 264
     .local v0, "inflater":Landroid/view/MenuInflater;
     const/high16 v1, 0x7f060000
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    .line 263
+    .line 265
     const/4 v1, 0x1
 
     return v1
@@ -2891,14 +2896,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 268
+    .line 270
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_58
+    packed-switch v0, :pswitch_data_3e
 
-    .line 288
+    .line 285
     :goto_8
     :pswitch_8
     const/4 v0, 0x0
@@ -2906,7 +2911,7 @@
     :goto_9
     return v0
 
-    .line 270
+    .line 272
     :pswitch_a
     new-instance v0, Landroid/content/Intent;
 
@@ -2918,44 +2923,11 @@
 
     move v0, v2
 
-    .line 271
-    goto :goto_9
-
     .line 273
-    :pswitch_16
-    sget-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->c:Ljava/util/Calendar;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    sput v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->month:I
-
-    .line 274
-    sget-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->c:Ljava/util/Calendar;
-
-    invoke-virtual {v0, v2}, Ljava/util/Calendar;->get(I)I
-
-    move-result v0
-
-    sput v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->year:I
+    goto :goto_9
 
     .line 275
-    iget-object v0, p0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->layout:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {p0, v0}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->setContentView(Landroid/view/View;)V
-
-    move v0, v2
-
-    .line 276
-    goto :goto_9
-
-    .line 278
-    :pswitch_30
+    :pswitch_16
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lnet/clem_digital/ThreeMonthCalendar/Entry;
@@ -2966,11 +2938,11 @@
 
     move v0, v2
 
-    .line 279
+    .line 276
     goto :goto_9
 
-    .line 281
-    :pswitch_3c
+    .line 278
+    :pswitch_22
     sget-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->c:Ljava/util/Calendar;
 
     invoke-virtual {v0, v2}, Ljava/util/Calendar;->get(I)I
@@ -2979,18 +2951,18 @@
 
     sput v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->year:I
 
-    .line 282
+    .line 279
     iget-object v0, p0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->layout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {p0, v0}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->setContentView(Landroid/view/View;)V
 
     move v0, v2
 
-    .line 283
+    .line 280
     goto :goto_9
 
-    .line 285
-    :pswitch_4b
+    .line 282
+    :pswitch_31
     sget-object v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->c:Ljava/util/Calendar;
 
     invoke-virtual {v0, v2}, Ljava/util/Calendar;->get(I)I
@@ -2999,22 +2971,21 @@
 
     sput v0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->year:I
 
-    .line 286
+    .line 283
     invoke-virtual {p0}, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->finish()V
 
     goto :goto_8
 
-    .line 268
+    .line 270
     nop
 
-    :pswitch_data_58
+    :pswitch_data_3e
     .packed-switch 0x7f070003
-        :pswitch_30
+        :pswitch_16
         :pswitch_8
         :pswitch_a
-        :pswitch_16
-        :pswitch_3c
-        :pswitch_4b
+        :pswitch_22
+        :pswitch_31
     .end packed-switch
 .end method
 
@@ -3023,7 +2994,7 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 301
+    .line 298
     iget-object v0, p0, Lnet/clem_digital/ThreeMonthCalendar/ThreeMonthCalendar;->myGestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z

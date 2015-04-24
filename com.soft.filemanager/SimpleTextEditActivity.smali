@@ -114,12 +114,12 @@
 .method static synthetic a(Lcom/soft/filemanager/activities/SimpleTextEditActivity;)V
     .registers 1
 
-    invoke-direct {p0}, Lcom/soft/filemanager/activities/SimpleTextEditActivity;->l()V
+    invoke-direct {p0}, Lcom/soft/filemanager/activities/SimpleTextEditActivity;->k()V
 
     return-void
 .end method
 
-.method private l()V
+.method private k()V
     .registers 4
 
     iget v0, p0, Lcom/soft/filemanager/activities/SimpleTextEditActivity;->s:I
@@ -436,7 +436,7 @@
     invoke-virtual {v0, v3}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_35
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/SimpleTextEditActivity;->h()V
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/SimpleTextEditActivity;->g()V
 
     const v0, 0x7f0a002e
 
@@ -554,7 +554,7 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    invoke-direct {p0}, Lcom/soft/filemanager/activities/SimpleTextEditActivity;->l()V
+    invoke-direct {p0}, Lcom/soft/filemanager/activities/SimpleTextEditActivity;->k()V
 
     :cond_b4
     iget-object v0, p0, Lcom/soft/filemanager/activities/SimpleTextEditActivity;->w:Landroid/widget/EditText;

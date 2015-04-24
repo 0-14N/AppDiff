@@ -26,16 +26,6 @@
 .field private j:Z
 
 .field private k:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/taobao/munion/base/caches/i;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private l:Ljava/io/RandomAccessFile;
 
@@ -1132,11 +1122,6 @@
 
 .method protected finalize()V
     .registers 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Throwable;
-        }
-    .end annotation
 
     iget-object v0, p0, Lcom/taobao/munion/base/caches/g;->p:Ljava/nio/channels/FileLock;
 

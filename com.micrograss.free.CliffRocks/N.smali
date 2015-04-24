@@ -6,20 +6,16 @@
 
 
 # instance fields
-.field private a:Ljava/lang/String;
-
-.field private synthetic b:Lcom/adsmogo/adapters/api/PublicCustomAdapter;
+.field private a:Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;
 
 
 # direct methods
-.method public constructor <init>(Lcom/adsmogo/adapters/api/PublicCustomAdapter;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;)V
     .registers 3
-
-    iput-object p1, p0, Lcom/adsmogo/adapters/api/N;->b:Lcom/adsmogo/adapters/api/PublicCustomAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/adsmogo/adapters/api/N;->a:Ljava/lang/String;
+    iput-object p2, p0, Lcom/adsmogo/adapters/api/N;->a:Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;
 
     return-void
 .end method
@@ -27,13 +23,11 @@
 
 # virtual methods
 .method public final run()V
-    .registers 3
+    .registers 2
 
-    iget-object v0, p0, Lcom/adsmogo/adapters/api/N;->b:Lcom/adsmogo/adapters/api/PublicCustomAdapter;
+    iget-object v0, p0, Lcom/adsmogo/adapters/api/N;->a:Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;
 
-    iget-object v1, p0, Lcom/adsmogo/adapters/api/N;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/adsmogo/adapters/api/PublicCustomAdapter;->a(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcom/adsmogo/adapters/api/WXeXiXQXiXaXnAPIAdapter;->a()V
 
     return-void
 .end method

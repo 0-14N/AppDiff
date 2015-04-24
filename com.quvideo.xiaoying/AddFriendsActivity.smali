@@ -511,7 +511,7 @@
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;->setContentView(I)V
 
     .line 70
-    const v0, 0x7f0605af
+    const v0, 0x7f06059a
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;->findViewById(I)Landroid/view/View;
 
@@ -522,7 +522,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;->r:Landroid/widget/TextView;
 
     .line 71
-    const v0, 0x7f0605b0
+    const v0, 0x7f06059b
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;->findViewById(I)Landroid/view/View;
 
@@ -564,7 +564,7 @@
 
     .line 78
     :cond_72
-    const v0, 0x7f0605ad
+    const v0, 0x7f060598
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;->findViewById(I)Landroid/view/View;
 
@@ -575,7 +575,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;->q:Lcom/quvideo/xiaoying/app/setting/sns/SnsIconLayout;
 
     .line 87
-    const v0, 0x7f0605ab
+    const v0, 0x7f060596
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;->findViewById(I)Landroid/view/View;
 
@@ -588,9 +588,9 @@
     .line 88
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;->p:Landroid/widget/EditText;
 
-    new-instance v1, Lwn;
+    new-instance v1, Lpu;
 
-    invoke-direct {v1, p0}, Lwn;-><init>(Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;)V
+    invoke-direct {v1, p0}, Lpu;-><init>(Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -698,9 +698,9 @@
     invoke-virtual/range {v0 .. v6}, Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;->init([Ljava/lang/String;IILandroid/support/v4/view/PagerAdapter;IZ)V
 
     .line 135
-    new-instance v0, Lwo;
+    new-instance v0, Lpv;
 
-    invoke-direct {v0, p0}, Lwo;-><init>(Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;)V
+    invoke-direct {v0, p0}, Lpv;-><init>(Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;)V
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/AddFriendsActivity;->setListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
 

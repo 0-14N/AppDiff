@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/app/LoaderManager$LoaderCallbacks;
-.implements Lcom/linever/cruise/android/GPSLib$MyLocationChangeListener;
 .implements Lcom/linever/cruise/android/LocationOverlayLayout$LocationSearchListener;
+.implements Lcom/linever/cruise/baidu/GPSBase$MyLocationChangeListener;
 .implements Lcom/o1soft/lib/datetimepicker/date/DatePickerDialog$OnDateSetListener;
 .implements Lcom/o1soft/lib/datetimepicker/time/TimePickerDialog$OnTimeSetListener;
 
@@ -14,7 +14,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroid/app/Activity;",
-        "Lcom/linever/cruise/android/GPSLib$MyLocationChangeListener;",
+        "Lcom/linever/cruise/baidu/GPSBase$MyLocationChangeListener;",
         "Lcom/linever/cruise/android/LocationOverlayLayout$LocationSearchListener;",
         "Landroid/app/LoaderManager$LoaderCallbacks",
         "<",
@@ -89,7 +89,7 @@
 
 .field private mGalleryId:J
 
-.field private mGpsLib:Lcom/linever/cruise/android/GPSLib;
+.field private mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
 .field private mLocationFlag:Z
 
@@ -162,14 +162,14 @@
     .line 77
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 1184
+    .line 1169
     new-instance v0, Lcom/linever/cruise/android/ShareActivity$1;
 
     invoke-direct {v0, p0}, Lcom/linever/cruise/android/ShareActivity$1;-><init>(Lcom/linever/cruise/android/ShareActivity;)V
 
     iput-object v0, p0, Lcom/linever/cruise/android/ShareActivity;->mapAddressLoaderCallback:Landroid/app/LoaderManager$LoaderCallbacks;
 
-    .line 1209
+    .line 1194
     new-instance v0, Lcom/linever/cruise/android/ShareActivity$2;
 
     invoke-direct {v0, p0}, Lcom/linever/cruise/android/ShareActivity$2;-><init>(Lcom/linever/cruise/android/ShareActivity;)V
@@ -190,12 +190,12 @@
     return-object v0
 .end method
 
-.method static synthetic access$10(Lcom/linever/cruise/android/ShareActivity;J)Landroid/location/Location;
+.method static synthetic access$10(Lcom/linever/cruise/android/ShareActivity;J)Lcom/linever/cruise/baidu/GPSBase$CruLocation;
     .registers 4
 
     .prologue
-    .line 762
-    invoke-direct {p0, p1, p2}, Lcom/linever/cruise/android/ShareActivity;->getNearLocation(J)Landroid/location/Location;
+    .line 747
+    invoke-direct {p0, p1, p2}, Lcom/linever/cruise/android/ShareActivity;->getNearLocation(J)Lcom/linever/cruise/baidu/GPSBase$CruLocation;
 
     move-result-object v0
 
@@ -212,12 +212,12 @@
     return v0
 .end method
 
-.method static synthetic access$12(Lcom/linever/cruise/android/ShareActivity;)Lcom/linever/cruise/android/GPSLib;
+.method static synthetic access$12(Lcom/linever/cruise/android/ShareActivity;)Lcom/linever/cruise/baidu/GPSBase;
     .registers 2
 
     .prologue
     .line 144
-    iget-object v0, p0, Lcom/linever/cruise/android/ShareActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    iget-object v0, p0, Lcom/linever/cruise/android/ShareActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
     return-object v0
 .end method
@@ -246,7 +246,7 @@
     .registers 2
 
     .prologue
-    .line 735
+    .line 720
     invoke-direct {p0, p1}, Lcom/linever/cruise/android/ShareActivity;->setupExecButton(Z)V
 
     return-void
@@ -266,7 +266,7 @@
     .registers 2
 
     .prologue
-    .line 831
+    .line 816
     invoke-direct {p0, p1}, Lcom/linever/cruise/android/ShareActivity;->sharePicture(I)V
 
     return-void
@@ -306,7 +306,7 @@
     .registers 5
 
     .prologue
-    .line 876
+    .line 861
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/linever/cruise/android/ShareActivity;->deletePicture(JJ)V
 
     return-void
@@ -316,7 +316,7 @@
     .registers 2
 
     .prologue
-    .line 1184
+    .line 1169
     iget-object v0, p0, Lcom/linever/cruise/android/ShareActivity;->mapAddressLoaderCallback:Landroid/app/LoaderManager$LoaderCallbacks;
 
     return-object v0
@@ -400,20 +400,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 879
+    .line 864
     sget-object v1, Lcom/linever/cruise/android/SharedData;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v1, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v6
 
-    .line 880
+    .line 865
     .local v6, "uri":Landroid/net/Uri;
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
-    .line 881
+    .line 866
     .local v7, "values":Landroid/content/ContentValues;
     const-string v1, "up_status"
 
@@ -425,14 +425,14 @@
 
     invoke-virtual {v7, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 882
+    .line 867
     invoke-virtual {p0}, Lcom/linever/cruise/android/ShareActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
     invoke-virtual {v1, v6, v7, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 885
+    .line 870
     new-instance v0, Lcom/linever/cruise/android/ShareActivity$16;
 
     invoke-virtual {p0}, Lcom/linever/cruise/android/ShareActivity;->getApplicationContext()Landroid/content/Context;
@@ -447,7 +447,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/linever/cruise/android/ShareActivity$16;-><init>(Lcom/linever/cruise/android/ShareActivity;Landroid/content/Context;IJ)V
 
-    .line 923
+    .line 908
     .local v0, "apiDelete":Lcom/linever/cruise/android/ApiCruiseDelete;
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
@@ -465,7 +465,7 @@
 
     move-result-object v1
 
-    .line 924
+    .line 909
     iget-object v2, p0, Lcom/linever/cruise/android/ShareActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
     iget-object v2, v2, Lcom/linever/cruise/android/CruiseApp;->rqueue:Lcom/android/volley/RequestQueue;
@@ -480,7 +480,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/linever/cruise/android/ApiCruiseDelete;->exec(Lcom/android/volley/RequestQueue;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 926
+    .line 911
     return-void
 .end method
 
@@ -494,27 +494,27 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 930
+    .line 915
     const-wide/16 v1, 0x0
 
     cmp-long v1, p4, v1
 
     if-lez v1, :cond_44
 
-    .line 932
+    .line 917
     sget-object v1, Lcom/linever/cruise/android/SharedData;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v1, p2, p3}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v7
 
-    .line 933
+    .line 918
     .local v7, "uri":Landroid/net/Uri;
     new-instance v8, Landroid/content/ContentValues;
 
     invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
-    .line 934
+    .line 919
     .local v8, "values":Landroid/content/ContentValues;
     const-string v1, "up_status"
 
@@ -526,10 +526,10 @@
 
     invoke-virtual {v8, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 935
+    .line 920
     invoke-virtual {p1, v7, v8, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 938
+    .line 923
     new-instance v0, Lcom/linever/cruise/android/ShareActivity$17;
 
     invoke-virtual {p0}, Lcom/linever/cruise/android/CruiseApp;->getApplicationContext()Landroid/content/Context;
@@ -546,7 +546,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/linever/cruise/android/ShareActivity$17;-><init>(Landroid/content/Context;IJLandroid/content/ContentResolver;Lcom/linever/cruise/android/CruiseApp;)V
 
-    .line 967
+    .line 952
     .local v0, "apiDelete":Lcom/linever/cruise/android/ApiCruiseDelete;
     iget-object v1, p0, Lcom/linever/cruise/android/CruiseApp;->lineverId:Ljava/lang/String;
 
@@ -560,7 +560,7 @@
 
     move-result-object v1
 
-    .line 968
+    .line 953
     iget-object v2, p0, Lcom/linever/cruise/android/CruiseApp;->rqueue:Lcom/android/volley/RequestQueue;
 
     iget-object v3, p0, Lcom/linever/cruise/android/CruiseApp;->token:Ljava/lang/String;
@@ -571,13 +571,13 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/linever/cruise/android/ApiCruiseDelete;->exec(Lcom/android/volley/RequestQueue;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 974
+    .line 959
     .end local v0    # "apiDelete":Lcom/linever/cruise/android/ApiCruiseDelete;
     .end local v8    # "values":Landroid/content/ContentValues;
     :goto_43
     return-void
 
-    .line 971
+    .line 956
     .end local v7    # "uri":Landroid/net/Uri;
     :cond_44
     sget-object v1, Lcom/linever/cruise/android/SharedData;->CONTENT_URI:Landroid/net/Uri;
@@ -586,7 +586,7 @@
 
     move-result-object v7
 
-    .line 972
+    .line 957
     .restart local v7    # "uri":Landroid/net/Uri;
     invoke-virtual {p1, v7, v3, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
@@ -597,23 +597,23 @@
     .registers 6
 
     .prologue
-    .line 745
-    iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    .line 730
+    iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
-    invoke-virtual {v1}, Lcom/linever/cruise/android/GPSLib;->getCurrentLocation()Landroid/location/Location;
+    invoke-virtual {v1}, Lcom/linever/cruise/baidu/GPSBase;->getCurrentLocation()Lcom/linever/cruise/baidu/GPSBase$CruLocation;
 
     move-result-object v0
 
-    .line 746
-    .local v0, "location":Landroid/location/Location;
+    .line 731
+    .local v0, "location":Lcom/linever/cruise/baidu/GPSBase$CruLocation;
     if-eqz v0, :cond_21
 
-    .line 747
+    .line 732
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    invoke-virtual {v0}, Landroid/location/Location;->getTime()J
+    invoke-virtual {v0}, Lcom/linever/cruise/baidu/GPSBase$CruLocation;->getTime()J
 
     move-result-wide v3
 
@@ -625,8 +625,8 @@
 
     if-gtz v1, :cond_21
 
-    .line 748
-    invoke-virtual {v0}, Landroid/location/Location;->getAccuracy()F
+    .line 733
+    invoke-virtual {v0}, Lcom/linever/cruise/baidu/GPSBase$CruLocation;->getAccuracy()F
 
     move-result v1
 
@@ -636,64 +636,64 @@
 
     if-lez v1, :cond_35
 
-    .line 749
+    .line 734
     :cond_21
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
-    iget-object v2, p0, Lcom/linever/cruise/android/ShareActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    iget-object v2, p0, Lcom/linever/cruise/android/ShareActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
-    invoke-virtual {v2}, Lcom/linever/cruise/android/GPSLib;->getEnableLocationService()I
+    invoke-virtual {v2}, Lcom/linever/cruise/baidu/GPSBase;->getEnableLocationService()I
 
     move-result v2
 
-    invoke-virtual {v1, v2, p0}, Lcom/linever/cruise/android/LocationOverlayLayout;->showLocationWaitScreen(ILcom/linever/cruise/android/GPSLib$MyLocationChangeListener;)Z
+    invoke-virtual {v1, v2, p0}, Lcom/linever/cruise/android/LocationOverlayLayout;->showLocationWaitScreen(ILcom/linever/cruise/baidu/GPSBase$MyLocationChangeListener;)Z
 
     move-result v1
 
     if-eqz v1, :cond_34
 
-    .line 750
-    iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    .line 735
+    iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
-    invoke-virtual {v1, p0}, Lcom/linever/cruise/android/GPSLib;->reqNewLocation(Lcom/linever/cruise/android/GPSLib$MyLocationChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/linever/cruise/baidu/GPSBase;->reqNewLocation(Lcom/linever/cruise/baidu/GPSBase$MyLocationChangeListener;)V
 
-    .line 756
+    .line 741
     :cond_34
     :goto_34
     return-void
 
-    .line 754
+    .line 739
     :cond_35
-    invoke-virtual {p0, v0}, Lcom/linever/cruise/android/ShareActivity;->onMyLocationChange(Landroid/location/Location;)V
+    invoke-virtual {p0, v0}, Lcom/linever/cruise/android/ShareActivity;->onMyLocationChange(Lcom/linever/cruise/baidu/GPSBase$CruLocation;)V
 
     goto :goto_34
 .end method
 
-.method private getNearLocation(J)Landroid/location/Location;
+.method private getNearLocation(J)Lcom/linever/cruise/baidu/GPSBase$CruLocation;
     .registers 26
     .param p1, "dateTaken"    # J
 
     .prologue
-    .line 763
+    .line 748
     const/4 v14, 0x0
 
-    .line 765
+    .line 750
     .local v14, "loc":Landroid/location/Location;
     const-wide/32 v20, 0x5265c00
 
-    .line 766
+    .line 751
     .local v20, "range":J
     const-wide/32 v2, 0x5265c00
 
     sub-long v18, p1, v2
 
-    .line 767
+    .line 752
     .local v18, "min_range":J
     const-wide/32 v2, 0x5265c00
 
     add-long v16, p1, v2
 
-    .line 768
+    .line 753
     .local v16, "max_range":J
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -745,7 +745,7 @@
 
     move-result-object v5
 
-    .line 769
+    .line 754
     .local v5, "selection":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -785,7 +785,7 @@
 
     move-result-object v22
 
-    .line 770
+    .line 755
     .local v22, "timeRange":Ljava/lang/String;
     const/4 v2, 0x3
 
@@ -807,15 +807,15 @@
 
     aput-object v22, v4, v2
 
-    .line 771
+    .line 756
     .local v4, "projection":[Ljava/lang/String;
     const-string v7, "F_RANGE"
 
-    .line 772
+    .line 757
     .local v7, "order":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 774
+    .line 759
     .local v8, "cursor":Landroid/database/Cursor;
     :try_start_7b
     invoke-virtual/range {p0 .. p0}, Lcom/linever/cruise/android/ShareActivity;->getContentResolver()Landroid/content/ContentResolver;
@@ -830,7 +830,7 @@
 
     move-result-object v8
 
-    .line 775
+    .line 760
     if-eqz v8, :cond_b2
 
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
@@ -839,14 +839,14 @@
 
     if-eqz v2, :cond_b2
 
-    .line 776
+    .line 761
     const/4 v2, 0x0
 
     invoke-interface {v8, v2}, Landroid/database/Cursor;->getDouble(I)D
 
     move-result-wide v10
 
-    .line 777
+    .line 762
     .local v10, "lat":D
     const/4 v2, 0x1
 
@@ -854,7 +854,7 @@
 
     move-result-wide v12
 
-    .line 778
+    .line 763
     .local v12, "lng":D
     const-wide/16 v2, 0x0
 
@@ -868,7 +868,7 @@
 
     if-eqz v2, :cond_b2
 
-    .line 779
+    .line 764
     :cond_a4
     new-instance v15, Landroid/location/Location;
 
@@ -876,24 +876,24 @@
 
     invoke-direct {v15, v2}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
     :try_end_ab
-    .catch Ljava/lang/Exception; {:try_start_7b .. :try_end_ab} :catch_b8
-    .catchall {:try_start_7b .. :try_end_ab} :catchall_c3
+    .catch Ljava/lang/Exception; {:try_start_7b .. :try_end_ab} :catch_bc
+    .catchall {:try_start_7b .. :try_end_ab} :catchall_c7
 
-    .line 780
+    .line 765
     .end local v14    # "loc":Landroid/location/Location;
     .local v15, "loc":Landroid/location/Location;
     :try_start_ab
     invoke-virtual {v15, v10, v11}, Landroid/location/Location;->setLatitude(D)V
 
-    .line 781
+    .line 766
     invoke-virtual {v15, v12, v13}, Landroid/location/Location;->setLongitude(D)V
     :try_end_b1
-    .catch Ljava/lang/Exception; {:try_start_ab .. :try_end_b1} :catch_cd
-    .catchall {:try_start_ab .. :try_end_b1} :catchall_ca
+    .catch Ljava/lang/Exception; {:try_start_ab .. :try_end_b1} :catch_d1
+    .catchall {:try_start_ab .. :try_end_b1} :catchall_ce
 
     move-object v14, v15
 
-    .line 790
+    .line 775
     .end local v10    # "lat":D
     .end local v12    # "lng":D
     .end local v15    # "loc":Landroid/location/Location;
@@ -903,73 +903,77 @@
 
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 792
+    .line 777
     :cond_b7
     :goto_b7
-    return-object v14
+    invoke-static {v14}, Lcom/linever/cruise/baidu/GPSBase$CruLocation;->getCruLocation(Landroid/location/Location;)Lcom/linever/cruise/baidu/GPSBase$CruLocation;
 
-    .line 785
-    :catch_b8
+    move-result-object v2
+
+    return-object v2
+
+    .line 770
+    :catch_bc
     move-exception v9
 
-    .line 786
+    .line 771
     .local v9, "e":Ljava/lang/Exception;
-    :goto_b9
-    :try_start_b9
+    :goto_bd
+    :try_start_bd
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_bc
-    .catchall {:try_start_b9 .. :try_end_bc} :catchall_c3
+    :try_end_c0
+    .catchall {:try_start_bd .. :try_end_c0} :catchall_c7
 
-    .line 787
+    .line 772
     const/4 v14, 0x0
 
-    .line 790
+    .line 775
     if-eqz v8, :cond_b7
 
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     goto :goto_b7
 
-    .line 789
+    .line 774
     .end local v9    # "e":Ljava/lang/Exception;
-    :catchall_c3
+    :catchall_c7
     move-exception v2
 
-    .line 790
-    :goto_c4
-    if-eqz v8, :cond_c9
+    .line 775
+    :goto_c8
+    if-eqz v8, :cond_cd
 
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 791
-    :cond_c9
+    .line 776
+    :cond_cd
     throw v2
 
-    .line 789
+    .line 774
     .end local v14    # "loc":Landroid/location/Location;
     .restart local v10    # "lat":D
     .restart local v12    # "lng":D
     .restart local v15    # "loc":Landroid/location/Location;
-    :catchall_ca
+    :catchall_ce
     move-exception v2
 
     move-object v14, v15
 
     .end local v15    # "loc":Landroid/location/Location;
     .restart local v14    # "loc":Landroid/location/Location;
-    goto :goto_c4
+    goto :goto_c8
 
-    .line 785
+    .line 770
     .end local v14    # "loc":Landroid/location/Location;
     .restart local v15    # "loc":Landroid/location/Location;
-    :catch_cd
+    :catch_d1
     move-exception v9
 
     move-object v14, v15
 
     .end local v15    # "loc":Landroid/location/Location;
     .restart local v14    # "loc":Landroid/location/Location;
-    goto :goto_b9
+    goto :goto_bd
 .end method
 
 .method private loadParam(Landroid/os/Bundle;)Z
@@ -985,15 +989,15 @@
 
     const/4 v4, 0x0
 
-    .line 679
+    .line 664
     if-nez p1, :cond_9
 
-    .line 729
+    .line 714
     :cond_8
     :goto_8
     return v4
 
-    .line 682
+    .line 667
     :cond_9
     const v6, 0x7f090183
 
@@ -1007,7 +1011,7 @@
 
     iput-wide v6, p0, Lcom/linever/cruise/android/ShareActivity;->mGalleryId:J
 
-    .line 683
+    .line 668
     const v6, 0x7f090189
 
     invoke-virtual {p0, v6}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -1020,7 +1024,7 @@
 
     iput v6, p0, Lcom/linever/cruise/android/ShareActivity;->mOrientation:I
 
-    .line 684
+    .line 669
     const-string v6, "SHARE_ID"
 
     invoke-virtual {p1, v6, v10, v11}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
@@ -1029,7 +1033,7 @@
 
     iput-wide v6, p0, Lcom/linever/cruise/android/ShareActivity;->mShareId:J
 
-    .line 685
+    .line 670
     const-string v6, "CRUISE_CHIP_ID"
 
     invoke-virtual {p1, v6, v10, v11}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
@@ -1038,7 +1042,7 @@
 
     iput-wide v6, p0, Lcom/linever/cruise/android/ShareActivity;->mCruiseChipId:J
 
-    .line 686
+    .line 671
     const-string v6, "MY_CHIP_ID"
 
     invoke-virtual {p1, v6, v10, v11}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
@@ -1047,7 +1051,7 @@
 
     iput-wide v6, p0, Lcom/linever/cruise/android/ShareActivity;->mMyChipId:J
 
-    .line 687
+    .line 672
     const-string v6, "PICTURE_PATH"
 
     const-string v7, ""
@@ -1058,7 +1062,7 @@
 
     iput-object v6, p0, Lcom/linever/cruise/android/ShareActivity;->mPath:Ljava/lang/String;
 
-    .line 688
+    .line 673
     const-string v6, "SMALL_PATH"
 
     const-string v7, ""
@@ -1069,7 +1073,7 @@
 
     iput-object v6, p0, Lcom/linever/cruise/android/ShareActivity;->mSmallPath:Ljava/lang/String;
 
-    .line 689
+    .line 674
     const v6, 0x7f090184
 
     invoke-virtual {p0, v6}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -1086,7 +1090,7 @@
 
     iput-wide v6, p0, Lcom/linever/cruise/android/ShareActivity;->mDateTaken:J
 
-    .line 690
+    .line 675
     const v6, 0x7f090187
 
     invoke-virtual {p0, v6}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -1101,7 +1105,7 @@
 
     iput-object v6, p0, Lcom/linever/cruise/android/ShareActivity;->mComment:Ljava/lang/String;
 
-    .line 691
+    .line 676
     const-string v6, "MODE"
 
     invoke-virtual {p1, v6, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
@@ -1110,7 +1114,7 @@
 
     iput v6, p0, Lcom/linever/cruise/android/ShareActivity;->mMode:I
 
-    .line 692
+    .line 677
     const-string v6, "ORG_LOCATION"
 
     invoke-virtual {p1, v6, v5}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
@@ -1119,7 +1123,7 @@
 
     iput-boolean v6, p0, Lcom/linever/cruise/android/ShareActivity;->mLocationFlag:Z
 
-    .line 694
+    .line 679
     const v6, 0x7f090185
 
     invoke-virtual {p0, v6}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -1130,7 +1134,7 @@
 
     move-result-wide v0
 
-    .line 695
+    .line 680
     .local v0, "lat":D
     const v6, 0x7f090186
 
@@ -1142,7 +1146,7 @@
 
     move-result-wide v2
 
-    .line 696
+    .line 681
     .local v2, "lng":D
     cmpl-double v6, v0, v12
 
@@ -1152,21 +1156,21 @@
 
     if-nez v6, :cond_b2
 
-    .line 697
+    .line 682
     iput-boolean v4, p0, Lcom/linever/cruise/android/ShareActivity;->mLocationFlag:Z
 
-    .line 698
+    .line 683
     iget-object v6, p0, Lcom/linever/cruise/android/ShareActivity;->mScope:Lcom/linever/cruise/android/Scope;
 
     invoke-virtual {v6}, Lcom/linever/cruise/android/Scope;->clear()V
 
-    .line 703
+    .line 688
     :goto_a4
     iget v6, p0, Lcom/linever/cruise/android/ShareActivity;->mMode:I
 
     packed-switch v6, :pswitch_data_116
 
-    .line 720
+    .line 705
     const-string v5, "loadParam"
 
     const-string v6, "default false"
@@ -1175,7 +1179,7 @@
 
     goto/16 :goto_8
 
-    .line 700
+    .line 685
     :cond_b2
     iget-object v6, p0, Lcom/linever/cruise/android/ShareActivity;->mScope:Lcom/linever/cruise/android/Scope;
 
@@ -1195,7 +1199,7 @@
 
     goto :goto_a4
 
-    .line 705
+    .line 690
     :pswitch_c4
     const-string v6, "loadParam mPath"
 
@@ -1203,7 +1207,7 @@
 
     invoke-static {v6, v7}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 706
+    .line 691
     iget-object v6, p0, Lcom/linever/cruise/android/ShareActivity;->mPath:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1212,7 +1216,7 @@
 
     if-nez v6, :cond_8
 
-    .line 724
+    .line 709
     :cond_d3
     iget-object v6, p0, Lcom/linever/cruise/android/ShareActivity;->mScope:Lcom/linever/cruise/android/Scope;
 
@@ -1220,10 +1224,10 @@
 
     if-nez v6, :cond_db
 
-    .line 725
+    .line 710
     iput-boolean v4, p0, Lcom/linever/cruise/android/ShareActivity;->mLocationFlag:Z
 
-    .line 728
+    .line 713
     :cond_db
     const-string v4, "loadParam"
 
@@ -1233,10 +1237,10 @@
 
     move v4, v5
 
-    .line 729
+    .line 714
     goto/16 :goto_8
 
-    .line 709
+    .line 694
     :pswitch_e5
     const-string v6, "loadParam mGalleryId"
 
@@ -1248,7 +1252,7 @@
 
     invoke-static {v6, v7}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 710
+    .line 695
     iget-wide v6, p0, Lcom/linever/cruise/android/ShareActivity;->mGalleryId:J
 
     cmp-long v6, v6, v10
@@ -1257,7 +1261,7 @@
 
     goto/16 :goto_8
 
-    .line 713
+    .line 698
     :pswitch_f8
     const-string v6, "loadParam mShareId"
 
@@ -1269,7 +1273,7 @@
 
     invoke-static {v6, v7}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 714
+    .line 699
     iget-wide v6, p0, Lcom/linever/cruise/android/ShareActivity;->mShareId:J
 
     cmp-long v6, v6, v10
@@ -1278,7 +1282,7 @@
 
     goto/16 :goto_8
 
-    .line 717
+    .line 702
     :pswitch_10b
     iget-object v6, p0, Lcom/linever/cruise/android/ShareActivity;->mPath:Ljava/lang/String;
 
@@ -1290,7 +1294,7 @@
 
     goto/16 :goto_8
 
-    .line 703
+    .line 688
     nop
 
     :pswitch_data_116
@@ -1307,17 +1311,17 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 581
+    .line 566
     const-string v17, "ShareActivity"
 
     const-string v18, "Receive Intent"
 
     invoke-static/range {v17 .. v18}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 583
+    .line 568
     const/4 v12, 0x0
 
-    .line 585
+    .line 570
     .local v12, "result":Z
     const-string v17, "android.intent.extra.STREAM"
 
@@ -1331,17 +1335,17 @@
 
     check-cast v16, Landroid/net/Uri;
 
-    .line 586
+    .line 571
     .local v16, "uri":Landroid/net/Uri;
     if-nez v16, :cond_19
 
     const/16 v17, 0x0
 
-    .line 644
+    .line 629
     :goto_18
     return v17
 
-    .line 588
+    .line 573
     :cond_19
     const-string v17, "android.intent.extra.TEXT"
 
@@ -1353,13 +1357,13 @@
 
     move-result-object v15
 
-    .line 589
+    .line 574
     .local v15, "txt":Ljava/lang/CharSequence;
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 590
+    .line 575
     .local v3, "bundle":Landroid/os/Bundle;
     invoke-static {v15}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1387,7 +1391,7 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 593
+    .line 578
     :cond_44
     const/16 v17, 0x5
 
@@ -1397,40 +1401,40 @@
 
     const/16 v17, 0x0
 
-    .line 594
+    .line 579
     const-string v18, "_id"
 
     aput-object v18, v11, v17
 
     const/16 v17, 0x1
 
-    .line 595
+    .line 580
     const-string v18, "datetaken"
 
     aput-object v18, v11, v17
 
     const/16 v17, 0x2
 
-    .line 596
+    .line 581
     const-string v18, "latitude"
 
     aput-object v18, v11, v17
 
     const/16 v17, 0x3
 
-    .line 597
+    .line 582
     const-string v18, "longitude"
 
     aput-object v18, v11, v17
 
     const/16 v17, 0x4
 
-    .line 598
+    .line 583
     const-string v18, "orientation"
 
     aput-object v18, v11, v17
 
-    .line 600
+    .line 585
     .local v11, "projection":[Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/linever/cruise/android/ShareActivity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1444,7 +1448,7 @@
 
     move-result-object v4
 
-    .line 601
+    .line 586
     .local v4, "c":Landroid/database/Cursor;
     if-eqz v4, :cond_12a
 
@@ -1454,7 +1458,7 @@
 
     if-eqz v17, :cond_12a
 
-    .line 602
+    .line 587
     const v17, 0x7f090183
 
     move-object/from16 v0, p0
@@ -1479,7 +1483,7 @@
 
     invoke-virtual {v3, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 603
+    .line 588
     const v17, 0x7f090184
 
     move-object/from16 v0, p0
@@ -1504,7 +1508,7 @@
 
     invoke-virtual {v3, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 604
+    .line 589
     const v17, 0x7f090185
 
     move-object/from16 v0, p0
@@ -1529,7 +1533,7 @@
 
     invoke-virtual {v3, v0, v1, v2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
-    .line 605
+    .line 590
     const v17, 0x7f090186
 
     move-object/from16 v0, p0
@@ -1554,7 +1558,7 @@
 
     invoke-virtual {v3, v0, v1, v2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
-    .line 606
+    .line 591
     const v17, 0x7f090189
 
     move-object/from16 v0, p0
@@ -1579,7 +1583,7 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 607
+    .line 592
     const-string v17, "MODE"
 
     const/16 v18, 0x0
@@ -1590,14 +1594,14 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 608
+    .line 593
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/linever/cruise/android/ShareActivity;->loadParam(Landroid/os/Bundle;)Z
 
     move-result v12
 
-    .line 639
+    .line 624
     :goto_10f
     const-string v17, "ShareActivity"
 
@@ -1605,10 +1609,10 @@
 
     invoke-static/range {v17 .. v18}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 640
+    .line 625
     if-eqz v12, :cond_126
 
-    .line 641
+    .line 626
     new-instance v7, Landroid/content/Intent;
 
     const-string v17, "com.linever.cruise.android.ACTION_EXIST_CHECK"
@@ -1617,7 +1621,7 @@
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 642
+    .line 627
     .local v7, "exintent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -1627,10 +1631,10 @@
     :cond_126
     move/from16 v17, v12
 
-    .line 644
+    .line 629
     goto/16 :goto_18
 
-    .line 612
+    .line 597
     :cond_12a
     invoke-virtual/range {p0 .. p0}, Lcom/linever/cruise/android/ShareActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -1644,7 +1648,7 @@
 
     move-result-object v10
 
-    .line 613
+    .line 598
     .local v10, "path":Ljava/lang/String;
     const-string v17, "PICTURE_PATH"
 
@@ -1652,28 +1656,28 @@
 
     invoke-virtual {v3, v0, v10}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 615
+    .line 600
     const-wide/16 v13, 0x0
 
-    .line 617
+    .line 602
     .local v13, "time":J
     :try_start_13f
     new-instance v6, Landroid/media/ExifInterface;
 
     invoke-direct {v6, v10}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
-    .line 618
+    .line 603
     .local v6, "exif":Landroid/media/ExifInterface;
     if-eqz v6, :cond_182
 
-    .line 619
+    .line 604
     const/16 v17, 0x2
 
     move/from16 v0, v17
 
     new-array v9, v0, [D
 
-    .line 620
+    .line 605
     .local v9, "loc":[D
     invoke-static {v6, v9}, Lcom/o1soft/lib/base/MediaUtils326;->exifLatLng(Landroid/media/ExifInterface;[D)Z
 
@@ -1681,7 +1685,7 @@
 
     if-eqz v17, :cond_17e
 
-    .line 621
+    .line 606
     const v17, 0x7f090185
 
     move-object/from16 v0, p0
@@ -1702,7 +1706,7 @@
 
     invoke-virtual {v3, v0, v1, v2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
-    .line 622
+    .line 607
     const v17, 0x7f090186
 
     move-object/from16 v0, p0
@@ -1723,7 +1727,7 @@
 
     invoke-virtual {v3, v0, v1, v2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
-    .line 624
+    .line 609
     :cond_17e
     invoke-static {v6}, Lcom/o1soft/lib/base/MediaUtils326;->exifGpsDateTime(Landroid/media/ExifInterface;)J
     :try_end_181
@@ -1731,7 +1735,7 @@
 
     move-result-wide v13
 
-    .line 630
+    .line 615
     .end local v6    # "exif":Landroid/media/ExifInterface;
     .end local v9    # "loc":[D
     :cond_182
@@ -1742,18 +1746,18 @@
 
     if-nez v17, :cond_191
 
-    .line 631
+    .line 616
     new-instance v8, Ljava/io/File;
 
     invoke-direct {v8, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 632
+    .line 617
     .local v8, "f":Ljava/io/File;
     invoke-virtual {v8}, Ljava/io/File;->lastModified()J
 
     move-result-wide v13
 
-    .line 634
+    .line 619
     .end local v8    # "f":Ljava/io/File;
     :cond_191
     const v17, 0x7f090184
@@ -1770,7 +1774,7 @@
 
     invoke-virtual {v3, v0, v13, v14}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 635
+    .line 620
     const-string v17, "MODE"
 
     const/16 v18, 0x3
@@ -1781,7 +1785,7 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 636
+    .line 621
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/linever/cruise/android/ShareActivity;->loadParam(Landroid/os/Bundle;)Z
@@ -1790,11 +1794,11 @@
 
     goto/16 :goto_10f
 
-    .line 626
+    .line 611
     :catch_1b4
     move-exception v5
 
-    .line 627
+    .line 612
     .local v5, "e":Ljava/io/IOException;
     invoke-virtual {v5}, Ljava/io/IOException;->printStackTrace()V
 
@@ -1806,17 +1810,17 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 736
+    .line 721
     iget-object v0, p0, Lcom/linever/cruise/android/ShareActivity;->mBtnShare:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 737
+    .line 722
     iget-object v0, p0, Lcom/linever/cruise/android/ShareActivity;->mBtnSave:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 738
+    .line 723
     return-void
 .end method
 
@@ -1829,19 +1833,19 @@
 
     const/4 v6, 0x1
 
-    .line 834
+    .line 819
     iget-object v4, p0, Lcom/linever/cruise/android/ShareActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
     invoke-virtual {v4}, Lcom/linever/cruise/android/LocationOverlayLayout;->clear()Lcom/linever/cruise/android/OverlayLayout;
 
     move-result-object v4
 
-    .line 835
+    .line 820
     invoke-virtual {v4, v6}, Lcom/linever/cruise/android/OverlayLayout;->setType(I)Lcom/linever/cruise/android/OverlayLayout;
 
     move-result-object v4
 
-    .line 836
+    .line 821
     const v5, 0x7f0900df
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -1852,7 +1856,7 @@
 
     move-result-object v4
 
-    .line 837
+    .line 822
     const v5, 0x7f09014a
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -1863,55 +1867,55 @@
 
     move-result-object v4
 
-    .line 838
+    .line 823
     invoke-virtual {v4, v6}, Lcom/linever/cruise/android/OverlayLayout;->setKeepOnScreen(Z)Lcom/linever/cruise/android/OverlayLayout;
 
     move-result-object v4
 
-    .line 839
+    .line 824
     invoke-virtual {v4}, Lcom/linever/cruise/android/OverlayLayout;->show()V
 
-    .line 842
+    .line 827
     new-instance v3, Lcom/linever/cruise/android/SharedData;
 
     invoke-direct {v3}, Lcom/linever/cruise/android/SharedData;-><init>()V
 
-    .line 843
+    .line 828
     .local v3, "sd":Lcom/linever/cruise/android/SharedData;
     iget-wide v4, p0, Lcom/linever/cruise/android/ShareActivity;->mShareId:J
 
     iput-wide v4, v3, Lcom/linever/cruise/android/SharedData;->mId:J
 
-    .line 844
+    .line 829
     iget-wide v4, p0, Lcom/linever/cruise/android/ShareActivity;->mGalleryId:J
 
     iput-wide v4, v3, Lcom/linever/cruise/android/SharedData;->mGalleryId:J
 
-    .line 845
+    .line 830
     iget-object v4, p0, Lcom/linever/cruise/android/ShareActivity;->mPath:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/linever/cruise/android/SharedData;->mDevSrcPath:Ljava/lang/String;
 
-    .line 846
+    .line 831
     iget-object v4, p0, Lcom/linever/cruise/android/ShareActivity;->mScope:Lcom/linever/cruise/android/Scope;
 
     iget-wide v4, v4, Lcom/linever/cruise/android/Scope;->mCenterLat:D
 
     iput-wide v4, v3, Lcom/linever/cruise/android/SharedData;->mLatitude:D
 
-    .line 847
+    .line 832
     iget-object v4, p0, Lcom/linever/cruise/android/ShareActivity;->mScope:Lcom/linever/cruise/android/Scope;
 
     iget-wide v4, v4, Lcom/linever/cruise/android/Scope;->mCenterLng:D
 
     iput-wide v4, v3, Lcom/linever/cruise/android/SharedData;->mLongitude:D
 
-    .line 848
+    .line 833
     iget-wide v4, p0, Lcom/linever/cruise/android/ShareActivity;->mDateTaken:J
 
     iput-wide v4, v3, Lcom/linever/cruise/android/SharedData;->mMarkDate:J
 
-    .line 849
+    .line 834
     iget-object v4, p0, Lcom/linever/cruise/android/ShareActivity;->edComment:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -1924,29 +1928,29 @@
 
     iput-object v4, p0, Lcom/linever/cruise/android/ShareActivity;->mComment:Ljava/lang/String;
 
-    .line 850
+    .line 835
     iget-object v4, p0, Lcom/linever/cruise/android/ShareActivity;->mComment:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/linever/cruise/android/SharedData;->mComment:Ljava/lang/String;
 
-    .line 851
+    .line 836
     if-ne p1, v7, :cond_98
 
-    .line 852
+    .line 837
     const-wide/16 v4, 0x0
 
     iput-wide v4, p0, Lcom/linever/cruise/android/ShareActivity;->mSendDate:J
 
-    .line 853
+    .line 838
     iput v7, v3, Lcom/linever/cruise/android/SharedData;->mUpStatus:I
 
-    .line 859
+    .line 844
     :goto_62
     iget-wide v4, p0, Lcom/linever/cruise/android/ShareActivity;->mSendDate:J
 
     iput-wide v4, v3, Lcom/linever/cruise/android/SharedData;->mCreateDate:J
 
-    .line 862
+    .line 847
     iget-object v4, p0, Lcom/linever/cruise/android/ShareActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
     iget-object v4, v4, Lcom/linever/cruise/android/CruiseApp;->appPictDir:Ljava/io/File;
@@ -1955,33 +1959,33 @@
 
     move-result-object v2
 
-    .line 863
+    .line 848
     .local v2, "savePath":Ljava/lang/String;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 864
+    .line 849
     .local v1, "list":Ljava/util/List;, "Ljava/util/List<Lcom/linever/cruise/android/SharedData;>;"
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 866
+    .line 851
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 867
+    .line 852
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v4, "mode"
 
     invoke-virtual {v0, v4, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 868
+    .line 853
     const-string v4, "savepath"
 
     invoke-virtual {v0, v4, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 869
+    .line 854
     const-string v4, "sharelist"
 
     check-cast v1, Ljava/util/ArrayList;
@@ -1989,7 +1993,7 @@
     .end local v1    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/linever/cruise/android/SharedData;>;"
     invoke-virtual {v0, v4, v1}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 870
+    .line 855
     invoke-virtual {p0}, Lcom/linever/cruise/android/ShareActivity;->getLoaderManager()Landroid/app/LoaderManager;
 
     move-result-object v4
@@ -2000,10 +2004,10 @@
 
     invoke-virtual {v4}, Landroid/content/Loader;->forceLoad()V
 
-    .line 871
+    .line 856
     return-void
 
-    .line 856
+    .line 841
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v2    # "savePath":Ljava/lang/String;
     :cond_98
@@ -2013,7 +2017,7 @@
 
     iput-wide v4, p0, Lcom/linever/cruise/android/ShareActivity;->mSendDate:J
 
-    .line 857
+    .line 842
     iput v6, v3, Lcom/linever/cruise/android/SharedData;->mUpStatus:I
 
     goto :goto_62
@@ -2115,7 +2119,7 @@
     invoke-super/range {p0 .. p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 152
-    const v2, 0x7f030008
+    const v2, 0x7f030009
 
     move-object/from16 v0, p0
 
@@ -2176,13 +2180,13 @@
 
     move-result-object v5
 
-    invoke-static {v2, v5}, Lcom/linever/cruise/android/GPSLib;->getNewInstance(Landroid/content/Context;Ljava/util/Locale;)Lcom/linever/cruise/android/GPSLib;
+    invoke-static {v2, v5}, Lcom/linever/cruise/baidu/GPSUtil;->getNewInstance(Landroid/content/Context;Ljava/util/Locale;)Lcom/linever/cruise/baidu/GPSBase;
 
     move-result-object v2
 
     move-object/from16 v0, p0
 
-    iput-object v2, v0, Lcom/linever/cruise/android/ShareActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    iput-object v2, v0, Lcom/linever/cruise/android/ShareActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
     .line 165
     new-instance v2, Lcom/linever/cruise/android/Scope;
@@ -2244,7 +2248,7 @@
     invoke-virtual {v0, v2, v5, v6}, Landroid/app/LoaderManager;->initLoader(ILandroid/os/Bundle;Landroid/app/LoaderManager$LoaderCallbacks;)Landroid/content/Loader;
 
     .line 175
-    const v2, 0x7f060023
+    const v2, 0x7f060014
 
     move-object/from16 v0, p0
 
@@ -2263,7 +2267,7 @@
 
     iget-object v6, v0, Lcom/linever/cruise/android/ShareActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
-    const v2, 0x7f06002a
+    const v2, 0x7f060015
 
     move-object/from16 v0, p0
 
@@ -2273,7 +2277,7 @@
 
     check-cast v2, Lcom/linever/cruise/android/BaselayerLinearLayout;
 
-    const v5, 0x7f06005f
+    const v5, 0x7f060060
 
     move-object/from16 v0, p0
 
@@ -2354,7 +2358,6 @@
 
     move-result v13
 
-    .line 189
     .restart local v13    # "ck":Z
     goto :goto_ae
 
@@ -2371,7 +2374,6 @@
 
     move-result v13
 
-    .line 194
     .restart local v13    # "ck":Z
     goto :goto_ae
 
@@ -2429,7 +2431,7 @@
     .local v4, "bmp":Landroid/graphics/Bitmap;
     :cond_105
     :goto_105
-    const v2, 0x7f060047
+    const v2, 0x7f060048
 
     move-object/from16 v0, p0
 
@@ -2444,7 +2446,7 @@
     iput-object v2, v0, Lcom/linever/cruise/android/ShareActivity;->mThumbnail:Landroid/widget/ImageView;
 
     .line 223
-    const v2, 0x7f06004f
+    const v2, 0x7f060050
 
     move-object/from16 v0, p0
 
@@ -2473,7 +2475,7 @@
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 227
-    const v2, 0x7f06004d
+    const v2, 0x7f06004e
 
     move-object/from16 v0, p0
 
@@ -2488,7 +2490,7 @@
     iput-object v2, v0, Lcom/linever/cruise/android/ShareActivity;->txtMapAddress:Landroid/widget/TextView;
 
     .line 229
-    const v2, 0x7f060046
+    const v2, 0x7f060047
 
     move-object/from16 v0, p0
 
@@ -2500,7 +2502,7 @@
 
     .line 230
     .local v26, "txtSubTitle":Landroid/widget/TextView;
-    const v2, 0x7f060048
+    const v2, 0x7f060049
 
     move-object/from16 v0, p0
 
@@ -2512,7 +2514,7 @@
 
     .line 231
     .local v20, "loPosition":Landroid/widget/LinearLayout;
-    const v2, 0x7f06004a
+    const v2, 0x7f06004b
 
     move-object/from16 v0, p0
 
@@ -2527,7 +2529,7 @@
     iput-object v2, v0, Lcom/linever/cruise/android/ShareActivity;->txtShareAddress:Landroid/widget/TextView;
 
     .line 232
-    const v2, 0x7f06004c
+    const v2, 0x7f06004d
 
     move-object/from16 v0, p0
 
@@ -2539,7 +2541,7 @@
 
     .line 233
     .local v19, "loMapFrame":Landroid/widget/FrameLayout;
-    const v2, 0x7f060055
+    const v2, 0x7f060056
 
     move-object/from16 v0, p0
 
@@ -2652,7 +2654,7 @@
 
     .line 242
     .local v16, "dateStr":Ljava/lang/CharSequence;
-    const v2, 0x7f060051
+    const v2, 0x7f060052
 
     move-object/from16 v0, p0
 
@@ -2712,7 +2714,7 @@
 
     .line 271
     .local v25, "timeStr":Ljava/lang/CharSequence;
-    const v2, 0x7f060052
+    const v2, 0x7f060053
 
     move-object/from16 v0, p0
 
@@ -2790,7 +2792,7 @@
     invoke-virtual {v2, v5}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
     .line 306
-    const v2, 0x7f06004b
+    const v2, 0x7f06004c
 
     move-object/from16 v0, p0
 
@@ -2813,7 +2815,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 341
-    const v2, 0x7f060057
+    const v2, 0x7f060058
 
     move-object/from16 v0, p0
 
@@ -2841,7 +2843,7 @@
     invoke-virtual {v2, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 349
-    const v2, 0x7f06005b
+    const v2, 0x7f06005c
 
     move-object/from16 v0, p0
 
@@ -2869,7 +2871,7 @@
     invoke-virtual {v2, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 357
-    const v2, 0x7f06005a
+    const v2, 0x7f06005b
 
     move-object/from16 v0, p0
 
@@ -2892,7 +2894,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 365
-    const v2, 0x7f060059
+    const v2, 0x7f06005a
 
     move-object/from16 v0, p0
 
@@ -3000,7 +3002,7 @@
 
     move-result-object v2
 
-    const v5, 0x7f06002b
+    const v5, 0x7f06003c
 
     invoke-virtual {v2, v5}, Landroid/app/FragmentManager;->findFragmentById(I)Landroid/app/Fragment;
 
@@ -3107,7 +3109,7 @@
     invoke-virtual {v2, v5}, Landroid/app/ActionBar;->setTitle(I)V
 
     .line 414
-    const v2, 0x7f060045
+    const v2, 0x7f060046
 
     move-object/from16 v0, p0
 
@@ -3120,7 +3122,7 @@
     invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 415
-    const v2, 0x7f060048
+    const v2, 0x7f060049
 
     move-object/from16 v0, p0
 
@@ -3133,7 +3135,7 @@
     invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 416
-    const v2, 0x7f06004c
+    const v2, 0x7f06004d
 
     move-object/from16 v0, p0
 
@@ -3146,7 +3148,7 @@
     invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 417
-    const v2, 0x7f060056
+    const v2, 0x7f060057
 
     move-object/from16 v0, p0
 
@@ -3159,7 +3161,7 @@
     invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 418
-    const v2, 0x7f060058
+    const v2, 0x7f060059
 
     move-object/from16 v0, p0
 
@@ -3214,7 +3216,6 @@
 
     move-result-object v4
 
-    .line 211
     .restart local v4    # "bmp":Landroid/graphics/Bitmap;
     goto/16 :goto_105
 
@@ -3367,7 +3368,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     .line 425
-    const v2, 0x7f060056
+    const v2, 0x7f060057
 
     move-object/from16 v0, p0
 
@@ -3380,7 +3381,7 @@
     invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 426
-    const v2, 0x7f060058
+    const v2, 0x7f060059
 
     move-object/from16 v0, p0
 
@@ -3419,12 +3420,12 @@
     .end annotation
 
     .prologue
-    .line 1005
+    .line 990
     new-instance v0, Lcom/linever/cruise/android/ShareLocalSaver;
 
     invoke-direct {v0, p0, p2}, Lcom/linever/cruise/android/ShareLocalSaver;-><init>(Landroid/content/Context;Landroid/os/Bundle;)V
 
-    .line 1006
+    .line 991
     .local v0, "saver":Lcom/linever/cruise/android/ShareLocalSaver;
     return-object v0
 .end method
@@ -3470,7 +3471,7 @@
     invoke-virtual {v0, v5, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
     .line 442
-    const v5, 0x7f060129
+    const v5, 0x7f06012a
 
     invoke-interface {p1, v5}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -3570,12 +3571,12 @@
     .param p4, "day"    # I
 
     .prologue
-    .line 993
+    .line 978
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mCal:Ljava/util/Calendar;
 
     invoke-virtual {v1, p2, p3, p4}, Ljava/util/Calendar;->set(III)V
 
-    .line 994
+    .line 979
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mCal:Ljava/util/Calendar;
 
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
@@ -3584,20 +3585,20 @@
 
     iput-wide v1, p0, Lcom/linever/cruise/android/ShareActivity;->mDateTaken:J
 
-    .line 995
+    .line 980
     iget-wide v1, p0, Lcom/linever/cruise/android/ShareActivity;->mDateTaken:J
 
     invoke-static {v1, v2}, Lcom/o1soft/lib/base/FormatUtils326;->strMatchDate(J)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 996
+    .line 981
     .local v0, "dateStr":Ljava/lang/CharSequence;
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->txtEditDate:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 997
+    .line 982
     return-void
 .end method
 
@@ -3617,16 +3618,16 @@
     .end annotation
 
     .prologue
-    .line 1013
+    .line 998
     .local p1, "loader":Landroid/content/Loader;, "Landroid/content/Loader<Landroid/os/Bundle;>;"
     if-nez p2, :cond_2f
 
-    .line 1015
+    .line 1000
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/linever/cruise/android/ShareActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
-    .line 1016
+    .line 1001
     const v5, 0x7f09014c
 
     move-object/from16 v0, p0
@@ -3639,7 +3640,7 @@
 
     move-result-object v4
 
-    .line 1017
+    .line 1002
     const v5, 0x104000a
 
     move-object/from16 v0, p0
@@ -3652,7 +3653,7 @@
 
     move-result-object v4
 
-    .line 1018
+    .line 1003
     new-instance v5, Lcom/linever/cruise/android/ShareActivity$18;
 
     move-object/from16 v0, p0
@@ -3663,19 +3664,19 @@
 
     move-result-object v4
 
-    .line 1024
+    .line 1009
     invoke-virtual {v4}, Lcom/linever/cruise/android/OverlayLayout;->show()V
 
-    .line 1174
+    .line 1159
     :cond_2e
     :goto_2e
     return-void
 
-    .line 1028
+    .line 1013
     :cond_2f
     const/16 v23, 0x0
 
-    .line 1030
+    .line 1015
     .local v23, "errmsg":Ljava/lang/String;
     const-string v4, "mode"
 
@@ -3685,7 +3686,7 @@
 
     move-result v27
 
-    .line 1031
+    .line 1016
     .local v27, "mode":I
     const-string v4, "size"
 
@@ -3695,7 +3696,7 @@
 
     move-result v22
 
-    .line 1032
+    .line 1017
     .local v22, "dataCount":I
     const-string v4, "status"
 
@@ -3705,7 +3706,7 @@
 
     move-result v25
 
-    .line 1033
+    .line 1018
     .local v25, "makeStatus":I
     const-string v4, "sharedata"
 
@@ -3717,29 +3718,29 @@
 
     check-cast v9, Lcom/linever/cruise/android/SharedData;
 
-    .line 1034
+    .line 1019
     .local v9, "sd":Lcom/linever/cruise/android/SharedData;
     iget-wide v7, v9, Lcom/linever/cruise/android/SharedData;->mId:J
 
-    .line 1035
+    .line 1020
     .local v7, "shareId":J
     iget-object v0, v9, Lcom/linever/cruise/android/SharedData;->mDevSrcPath:Ljava/lang/String;
 
     move-object/from16 v30, v0
 
-    .line 1036
+    .line 1021
     .local v30, "srcPath":Ljava/lang/String;
     iget-object v0, v9, Lcom/linever/cruise/android/SharedData;->mDevThumbnailPath:Ljava/lang/String;
 
     move-object/from16 v29, v0
 
-    .line 1037
+    .line 1022
     .local v29, "smallPath":Ljava/lang/String;
     iget-object v0, v9, Lcom/linever/cruise/android/SharedData;->mDevMediumPath:Ljava/lang/String;
 
     move-object/from16 v26, v0
 
-    .line 1039
+    .line 1024
     .local v26, "mediumPath":Ljava/lang/String;
     const-string v4, "ShareActivity ShareLocalSaveCallbacks"
 
@@ -3759,7 +3760,7 @@
 
     invoke-static {v4, v5}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1040
+    .line 1025
     const-string v4, "ShareActivity ShareLocalSaveCallbacks"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3780,7 +3781,7 @@
 
     invoke-static {v4, v5}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1041
+    .line 1026
     const-string v4, "ShareActivity ShareLocalSaveCallbacks"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3801,7 +3802,7 @@
 
     invoke-static {v4, v5}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1042
+    .line 1027
     const-string v4, "ShareActivity ShareLocalSaveCallbacks"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3822,7 +3823,7 @@
 
     invoke-static {v4, v5}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1044
+    .line 1029
     const-wide/16 v4, 0x0
 
     cmp-long v4, v7, v4
@@ -3837,7 +3838,7 @@
 
     move-result-object v23
 
-    .line 1045
+    .line 1030
     :cond_c6
     const/4 v4, 0x1
 
@@ -3845,33 +3846,33 @@
 
     if-ne v0, v4, :cond_d2
 
-    .line 1046
+    .line 1031
     if-gtz v25, :cond_d2
 
-    .line 1047
+    .line 1032
     packed-switch v25, :pswitch_data_260
 
-    .line 1052
+    .line 1037
     const-string v23, "ERROR"
 
-    .line 1057
+    .line 1042
     :cond_d2
     :goto_d2
     if-eqz v23, :cond_123
 
-    .line 1058
+    .line 1043
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/linever/cruise/android/ShareActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
-    .line 1059
+    .line 1044
     move-object/from16 v0, v23
 
     invoke-virtual {v4, v0}, Lcom/linever/cruise/android/LocationOverlayLayout;->setMessage(Ljava/lang/String;)Lcom/linever/cruise/android/OverlayLayout;
 
     move-result-object v4
 
-    .line 1060
+    .line 1045
     const v5, 0x104000a
 
     move-object/from16 v0, p0
@@ -3884,7 +3885,7 @@
 
     move-result-object v4
 
-    .line 1061
+    .line 1046
     new-instance v5, Lcom/linever/cruise/android/ShareActivity$19;
 
     move-object/from16 v0, p0
@@ -3895,12 +3896,12 @@
 
     move-result-object v4
 
-    .line 1067
+    .line 1052
     invoke-virtual {v4}, Lcom/linever/cruise/android/OverlayLayout;->show()V
 
     goto/16 :goto_2e
 
-    .line 1048
+    .line 1033
     :pswitch_fb
     const v4, 0x7f090157
 
@@ -3912,7 +3913,7 @@
 
     goto :goto_d2
 
-    .line 1049
+    .line 1034
     :pswitch_105
     const v4, 0x7f090158
 
@@ -3924,7 +3925,7 @@
 
     goto :goto_d2
 
-    .line 1050
+    .line 1035
     :pswitch_10f
     const v4, 0x7f090159
 
@@ -3936,7 +3937,7 @@
 
     goto :goto_d2
 
-    .line 1051
+    .line 1036
     :pswitch_119
     const v4, 0x7f09015a
 
@@ -3948,7 +3949,7 @@
 
     goto :goto_d2
 
-    .line 1073
+    .line 1058
     :cond_123
     const/4 v4, 0x2
 
@@ -3956,7 +3957,7 @@
 
     if-ne v0, v4, :cond_1c4
 
-    .line 1078
+    .line 1063
     new-instance v3, Lcom/linever/cruise/android/ShareActivity$20;
 
     invoke-virtual/range {p0 .. p0}, Lcom/linever/cruise/android/ShareActivity;->getApplicationContext()Landroid/content/Context;
@@ -3969,7 +3970,7 @@
 
     invoke-direct/range {v3 .. v9}, Lcom/linever/cruise/android/ShareActivity$20;-><init>(Lcom/linever/cruise/android/ShareActivity;Landroid/content/Context;IJLcom/linever/cruise/android/SharedData;)V
 
-    .line 1128
+    .line 1113
     .local v3, "apiEditChip":Lcom/linever/lib/ApiEditChip;
     move-object/from16 v0, p0
 
@@ -3979,13 +3980,13 @@
 
     move-result-object v28
 
-    .line 1130
+    .line 1115
     .local v28, "rqTag":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/linever/cruise/android/ShareActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
-    .line 1131
+    .line 1116
     const v5, 0x7f0900e0
 
     move-object/from16 v0, p0
@@ -3998,7 +3999,7 @@
 
     move-result-object v4
 
-    .line 1132
+    .line 1117
     const v5, 0x7f09014b
 
     move-object/from16 v0, p0
@@ -4011,7 +4012,7 @@
 
     move-result-object v4
 
-    .line 1133
+    .line 1118
     const/high16 v5, 0x1040000
 
     move-object/from16 v0, p0
@@ -4024,7 +4025,7 @@
 
     move-result-object v4
 
-    .line 1134
+    .line 1119
     new-instance v5, Lcom/linever/cruise/android/ShareActivity$21;
 
     move-object/from16 v0, p0
@@ -4035,7 +4036,7 @@
 
     invoke-virtual {v4, v5}, Lcom/linever/cruise/android/OverlayLayout;->setCancelListener(Lcom/linever/cruise/android/OverlayLayout$OverlayCancelListener;)Lcom/linever/cruise/android/OverlayLayout;
 
-    .line 1144
+    .line 1129
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/linever/cruise/android/ShareActivity;->app:Lcom/linever/cruise/android/CruiseApp;
@@ -4062,7 +4063,7 @@
 
     move-result-object v10
 
-    .line 1145
+    .line 1130
     const/4 v11, 0x0
 
     const/4 v12, 0x0
@@ -4079,7 +4080,7 @@
 
     move-result-object v10
 
-    .line 1146
+    .line 1131
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/linever/cruise/android/ShareActivity;->mScope:Lcom/linever/cruise/android/Scope;
@@ -4104,7 +4105,7 @@
 
     move-result-object v4
 
-    .line 1147
+    .line 1132
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/linever/cruise/android/ShareActivity;->app:Lcom/linever/cruise/android/CruiseApp;
@@ -4123,7 +4124,7 @@
 
     goto/16 :goto_2e
 
-    .line 1154
+    .line 1139
     .end local v3    # "apiEditChip":Lcom/linever/lib/ApiEditChip;
     .end local v28    # "rqTag":Ljava/lang/String;
     :cond_1c4
@@ -4131,7 +4132,7 @@
 
     if-eqz v26, :cond_2e
 
-    .line 1156
+    .line 1141
     new-instance v4, Lcom/linever/cruise/android/ApiCruiseShare;
 
     invoke-virtual/range {p0 .. p0}, Lcom/linever/cruise/android/ShareActivity;->getApplicationContext()Landroid/content/Context;
@@ -4144,7 +4145,7 @@
 
     invoke-direct {v4, v5, v6, v10}, Lcom/linever/cruise/android/ApiCruiseShare;-><init>(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 1157
+    .line 1142
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/linever/cruise/android/ShareActivity;->app:Lcom/linever/cruise/android/CruiseApp;
@@ -4167,7 +4168,7 @@
 
     move-result-object v10
 
-    .line 1158
+    .line 1143
     move-object/from16 v0, p0
 
     iget-wide v13, v0, Lcom/linever/cruise/android/ShareActivity;->mDateTaken:J
@@ -4204,7 +4205,7 @@
 
     move-result-object v4
 
-    .line 1159
+    .line 1144
     move-object/from16 v0, v30
 
     move-object/from16 v1, v29
@@ -4215,10 +4216,10 @@
 
     move-result-object v4
 
-    .line 1160
+    .line 1145
     invoke-virtual {v4}, Lcom/linever/cruise/android/ApiCruiseShare;->execute()V
 
-    .line 1162
+    .line 1147
     invoke-virtual/range {p0 .. p0}, Lcom/linever/cruise/android/ShareActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
@@ -4233,7 +4234,7 @@
 
     invoke-virtual {v4}, Landroid/widget/Toast;->show()V
 
-    .line 1163
+    .line 1148
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/linever/cruise/android/ShareActivity;->mMode:I
@@ -4248,7 +4249,7 @@
 
     if-ne v4, v5, :cond_242
 
-    .line 1164
+    .line 1149
     :cond_237
     const/4 v4, -0x1
 
@@ -4256,12 +4257,12 @@
 
     invoke-virtual {v0, v4}, Lcom/linever/cruise/android/ShareActivity;->setResult(I)V
 
-    .line 1165
+    .line 1150
     invoke-virtual/range {p0 .. p0}, Lcom/linever/cruise/android/ShareActivity;->finish()V
 
     goto/16 :goto_2e
 
-    .line 1168
+    .line 1153
     :cond_242
     new-instance v24, Landroid/content/Intent;
 
@@ -4275,7 +4276,7 @@
 
     invoke-direct {v0, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 1169
+    .line 1154
     .local v24, "intent":Landroid/content/Intent;
     const-string v4, "MAIN_PAGE"
 
@@ -4285,7 +4286,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1170
+    .line 1155
     move-object/from16 v0, p0
 
     move-object/from16 v1, v24
@@ -4294,7 +4295,7 @@
 
     goto/16 :goto_2e
 
-    .line 1047
+    .line 1032
     :pswitch_data_260
     .packed-switch -0x3
         :pswitch_119
@@ -4331,7 +4332,7 @@
     .end annotation
 
     .prologue
-    .line 1178
+    .line 1163
     .local p1, "loader":Landroid/content/Loader;, "Landroid/content/Loader<Landroid/os/Bundle;>;"
     return-void
 .end method
@@ -4340,37 +4341,33 @@
     .registers 1
 
     .prologue
-    .line 809
+    .line 794
     return-void
 .end method
 
-.method public onMyLocationChange(Landroid/location/Location;)V
+.method public onMyLocationChange(Lcom/linever/cruise/baidu/GPSBase$CruLocation;)V
     .registers 7
-    .param p1, "location"    # Landroid/location/Location;
+    .param p1, "location"    # Lcom/linever/cruise/baidu/GPSBase$CruLocation;
 
     .prologue
-    .line 800
+    .line 785
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
     invoke-virtual {v1}, Lcom/linever/cruise/android/LocationOverlayLayout;->hide()V
 
-    .line 801
-    if-eqz p1, :cond_42
+    .line 786
+    if-eqz p1, :cond_3e
 
-    .line 802
+    .line 787
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mScope:Lcom/linever/cruise/android/Scope;
 
-    invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v2
+    iget-wide v2, p1, Lcom/linever/cruise/baidu/GPSBase$CruLocation;->latitude:D
 
     invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v3
+    iget-wide v3, p1, Lcom/linever/cruise/baidu/GPSBase$CruLocation;->longitude:D
 
     invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -4382,7 +4379,7 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/linever/cruise/android/ScopeHelper;->setCenterDistance(Lcom/linever/cruise/android/Scope;Ljava/lang/Double;Ljava/lang/Double;F)Z
 
-    .line 803
+    .line 788
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mScope:Lcom/linever/cruise/android/Scope;
 
     invoke-static {v1}, Lcom/linever/cruise/android/ScopeHelper;->getCenter(Lcom/linever/cruise/android/Scope;)Lcom/google/android/gms/maps/model/LatLng;
@@ -4415,15 +4412,15 @@
 
     move-result-object v0
 
-    .line 804
+    .line 789
     .local v0, "cu":Lcom/google/android/gms/maps/CameraUpdate;
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
 
-    .line 806
+    .line 791
     .end local v0    # "cu":Lcom/google/android/gms/maps/CameraUpdate;
-    :cond_42
+    :cond_3e
     return-void
 .end method
 
@@ -4618,8 +4615,8 @@
     :sswitch_data_2e
     .sparse-switch
         0x102002c -> :sswitch_d
-        0x7f06012a -> :sswitch_11
-        0x7f06012b -> :sswitch_15
+        0x7f06012b -> :sswitch_11
+        0x7f06012c -> :sswitch_15
     .end sparse-switch
 .end method
 
@@ -4627,10 +4624,10 @@
     .registers 1
 
     .prologue
-    .line 657
+    .line 642
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 658
+    .line 643
     return-void
 .end method
 
@@ -4638,15 +4635,15 @@
     .registers 2
 
     .prologue
-    .line 651
+    .line 636
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 652
+    .line 637
     iget-boolean v0, p0, Lcom/linever/cruise/android/ShareActivity;->mLocationFlag:Z
 
     invoke-direct {p0, v0}, Lcom/linever/cruise/android/ShareActivity;->setupExecButton(Z)V
 
-    .line 653
+    .line 638
     return-void
 .end method
 
@@ -4655,10 +4652,10 @@
     .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 662
+    .line 647
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 663
+    .line 648
     const v0, 0x7f090183
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -4669,7 +4666,7 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 664
+    .line 649
     const v0, 0x7f090189
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -4680,42 +4677,42 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 665
+    .line 650
     const-string v0, "SHARE_ID"
 
     iget-wide v1, p0, Lcom/linever/cruise/android/ShareActivity;->mShareId:J
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 666
+    .line 651
     const-string v0, "CRUISE_CHIP_ID"
 
     iget-wide v1, p0, Lcom/linever/cruise/android/ShareActivity;->mCruiseChipId:J
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 667
+    .line 652
     const-string v0, "MY_CHIP_ID"
 
     iget-wide v1, p0, Lcom/linever/cruise/android/ShareActivity;->mMyChipId:J
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 668
+    .line 653
     const-string v0, "PICTURE_PATH"
 
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mPath:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 669
+    .line 654
     const-string v0, "SMALL_PATH"
 
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mSmallPath:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 670
+    .line 655
     const v0, 0x7f090184
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -4726,7 +4723,7 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 671
+    .line 656
     const v0, 0x7f090185
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -4739,7 +4736,7 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
-    .line 672
+    .line 657
     const v0, 0x7f090186
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -4752,7 +4749,7 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
-    .line 673
+    .line 658
     const v0, 0x7f090187
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/ShareActivity;->getString(I)Ljava/lang/String;
@@ -4763,21 +4760,21 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 674
+    .line 659
     const-string v0, "MODE"
 
     iget v1, p0, Lcom/linever/cruise/android/ShareActivity;->mMode:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 675
+    .line 660
     const-string v0, "ORG_LOCATION"
 
     iget-boolean v1, p0, Lcom/linever/cruise/android/ShareActivity;->mLocationFlag:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 676
+    .line 661
     return-void
 .end method
 
@@ -4786,10 +4783,10 @@
     .param p1, "address"    # Landroid/location/Address;
 
     .prologue
-    .line 816
+    .line 801
     if-nez p1, :cond_f
 
-    .line 817
+    .line 802
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->txtMapAddress:Landroid/widget/TextView;
 
     const v2, 0x7f090149
@@ -4800,11 +4797,11 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 824
+    .line 809
     :goto_e
     return-void
 
-    .line 820
+    .line 805
     :cond_f
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mScope:Lcom/linever/cruise/android/Scope;
 
@@ -4830,7 +4827,7 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/linever/cruise/android/ScopeHelper;->setCenterDistance(Lcom/linever/cruise/android/Scope;Ljava/lang/Double;Ljava/lang/Double;F)Z
 
-    .line 821
+    .line 806
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mScope:Lcom/linever/cruise/android/Scope;
 
     invoke-static {v1}, Lcom/linever/cruise/android/ScopeHelper;->getCenter(Lcom/linever/cruise/android/Scope;)Lcom/google/android/gms/maps/model/LatLng;
@@ -4863,61 +4860,13 @@
 
     move-result-object v0
 
-    .line 822
+    .line 807
     .local v0, "cu":Lcom/google/android/gms/maps/CameraUpdate;
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
 
     goto :goto_e
-.end method
-
-.method protected onStart()V
-    .registers 4
-
-    .prologue
-    .line 565
-    invoke-super {p0}, Landroid/app/Activity;->onStart()V
-
-    .line 567
-    iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->app:Lcom/linever/cruise/android/CruiseApp;
-
-    sget-object v2, Lcom/linever/cruise/android/CruiseApp$TrackerName;->APP_TRACKER:Lcom/linever/cruise/android/CruiseApp$TrackerName;
-
-    invoke-virtual {v1, v2}, Lcom/linever/cruise/android/CruiseApp;->getTracker(Lcom/linever/cruise/android/CruiseApp$TrackerName;)Lcom/google/android/gms/analytics/Tracker;
-
-    move-result-object v0
-
-    .line 568
-    .local v0, "t":Lcom/google/android/gms/analytics/Tracker;
-    const-string v1, "CRUISE Share View"
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/analytics/Tracker;->setScreenName(Ljava/lang/String;)V
-
-    .line 569
-    new-instance v1, Lcom/google/android/gms/analytics/HitBuilders$AppViewBuilder;
-
-    invoke-direct {v1}, Lcom/google/android/gms/analytics/HitBuilders$AppViewBuilder;-><init>()V
-
-    invoke-virtual {v1}, Lcom/google/android/gms/analytics/HitBuilders$AppViewBuilder;->build()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/analytics/Tracker;->send(Ljava/util/Map;)V
-
-    .line 570
-    return-void
-.end method
-
-.method protected onStop()V
-    .registers 1
-
-    .prologue
-    .line 574
-    invoke-super {p0}, Landroid/app/Activity;->onStop()V
-
-    .line 575
-    return-void
 .end method
 
 .method public onTimeSet(Lcom/o1soft/lib/datetimepicker/time/RadialPickerLayout;II)V
@@ -4929,35 +4878,35 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 982
+    .line 967
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mCal:Ljava/util/Calendar;
 
     const/16 v2, 0xb
 
     invoke-virtual {v1, v2, p2}, Ljava/util/Calendar;->set(II)V
 
-    .line 983
+    .line 968
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mCal:Ljava/util/Calendar;
 
     const/16 v2, 0xc
 
     invoke-virtual {v1, v2, p3}, Ljava/util/Calendar;->set(II)V
 
-    .line 984
+    .line 969
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mCal:Ljava/util/Calendar;
 
     const/16 v2, 0xd
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->set(II)V
 
-    .line 985
+    .line 970
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mCal:Ljava/util/Calendar;
 
     const/16 v2, 0xe
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->set(II)V
 
-    .line 986
+    .line 971
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->mCal:Ljava/util/Calendar;
 
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
@@ -4966,19 +4915,19 @@
 
     iput-wide v1, p0, Lcom/linever/cruise/android/ShareActivity;->mDateTaken:J
 
-    .line 987
+    .line 972
     iget-wide v1, p0, Lcom/linever/cruise/android/ShareActivity;->mDateTaken:J
 
     invoke-static {v1, v2}, Lcom/o1soft/lib/base/FormatUtils326;->strMatchTime(J)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 988
+    .line 973
     .local v0, "timeStr":Ljava/lang/CharSequence;
     iget-object v1, p0, Lcom/linever/cruise/android/ShareActivity;->txtEditTime:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 989
+    .line 974
     return-void
 .end method

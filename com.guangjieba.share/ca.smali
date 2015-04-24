@@ -61,7 +61,7 @@
 
     const-string v2, "\u77e5\u9053\u5566"
 
-    invoke-virtual {v0, v2}, Lcom/guangjieba/share/widget/f;->c(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;
+    invoke-virtual {v0, v2}, Lcom/guangjieba/share/widget/f;->d(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     const-string v2, "\u5feb\u6765\u8f93\u5165\u793c\u54c1\u7f16\u53f7\u5427\uff5e"
 
-    invoke-virtual {v0, v2}, Lcom/guangjieba/share/widget/f;->a(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;
+    invoke-virtual {v0, v2}, Lcom/guangjieba/share/widget/f;->c(Ljava/lang/String;)Lcom/guangjieba/share/widget/f;
 
     move-result-object v0
 

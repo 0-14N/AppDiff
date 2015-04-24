@@ -299,37 +299,37 @@
     iput-boolean v3, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->aC:Z
 
     .line 1252
-    new-instance v0, Lach;
+    new-instance v0, Lvn;
 
-    invoke-direct {v0, p0}, Lach;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
+    invoke-direct {v0, p0}, Lvn;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->aD:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 
     .line 1319
-    new-instance v0, Laci;
+    new-instance v0, Lvo;
 
-    invoke-direct {v0, p0}, Laci;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
+    invoke-direct {v0, p0}, Lvo;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->aE:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/CustomScrollView$OnScrollListener;
 
     .line 1363
-    new-instance v0, Lacj;
+    new-instance v0, Lvp;
 
-    invoke-direct {v0, p0}, Lacj;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
+    invoke-direct {v0, p0}, Lvp;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->aF:Landroid/view/View$OnClickListener;
 
     .line 1464
-    new-instance v0, Lack;
+    new-instance v0, Lvq;
 
-    invoke-direct {v0, p0}, Lack;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
+    invoke-direct {v0, p0}, Lvq;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->aG:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     .line 1483
-    new-instance v0, Lacl;
+    new-instance v0, Lvr;
 
-    invoke-direct {v0, p0}, Lacl;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
+    invoke-direct {v0, p0}, Lvr;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->aH:Lcom/quvideo/xiaoying/app/studio/LikeVideoListViewManager$VideoListManagerCallback;
 
@@ -407,7 +407,7 @@
     .line 1357
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->ad:Landroid/widget/ImageView;
 
-    const v1, 0x7f020667
+    const v1, 0x7f020647
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -669,7 +669,7 @@
     check-cast v0, Landroid/view/View;
 
     .line 407
-    const v1, 0x7f0605cf
+    const v1, 0x7f0605ba
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -678,7 +678,7 @@
     check-cast v1, Landroid/widget/ListView;
 
     .line 408
-    const v2, 0x7f0605ce
+    const v2, 0x7f0605b9
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1876,7 +1876,7 @@
     .line 799
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->av:Landroid/view/View;
 
-    const v1, 0x7f060448
+    const v1, 0x7f060433
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2268,9 +2268,9 @@
     const v2, 0x7f0a01bf
 
     .line 1150
-    new-instance v3, Laco;
+    new-instance v3, Lvu;
 
-    invoke-direct {v3, p0}, Laco;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
+    invoke-direct {v3, p0}, Lvu;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
 
     .line 1148
     invoke-direct {v0, v1, v2, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -2324,9 +2324,9 @@
     .line 1386
     iget-object v2, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->aw:Landroid/app/Activity;
 
-    new-instance v3, Lacp;
+    new-instance v3, Lvv;
 
-    invoke-direct {v3, p0}, Lacp;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
+    invoke-direct {v3, p0}, Lvv;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
 
     .line 1385
     invoke-direct {v1, v2, v0, v3}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
@@ -2340,7 +2340,7 @@
     .line 1382
     :array_16
     .array-data 4
-        0x7f0a03b2
+        0x7f0a038f
         0x7f0a0261
     .end array-data
 .end method
@@ -2446,14 +2446,14 @@
 
     .line 1425
     :goto_53
-    const v2, 0x7f0a03b9
+    const v2, 0x7f0a0396
 
     invoke-virtual {p0, v2}, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     .line 1426
-    const v3, 0x7f0a03ba
+    const v3, 0x7f0a0397
 
     new-array v4, v6, [Ljava/lang/Object;
 
@@ -2641,7 +2641,7 @@
     .line 695
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->av:Landroid/view/View;
 
-    const v1, 0x7f0605cb
+    const v1, 0x7f0605b6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2656,7 +2656,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0205d0
+    const v1, 0x7f0205b2
 
     invoke-static {v0, v1}, Lcom/networkbench/agent/impl/instrumentation/NBSBitmapFactoryInstrumentation;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -2680,7 +2680,7 @@
     .line 698
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->i:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0605cc
+    const v1, 0x7f0605b7
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2693,7 +2693,7 @@
     .line 699
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->av:Landroid/view/View;
 
-    const v1, 0x7f060449
+    const v1, 0x7f060434
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2746,7 +2746,7 @@
     .line 711
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->aa:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0605cd
+    const v1, 0x7f0605b8
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2763,7 +2763,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020653
+    const v1, 0x7f020633
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2848,7 +2848,7 @@
     .line 721
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->av:Landroid/view/View;
 
-    const v1, 0x7f060446
+    const v1, 0x7f060431
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3012,9 +3012,9 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 760
-    new-instance v1, Lacm;
+    new-instance v1, Lvs;
 
-    invoke-direct {v1, p0}, Lacm;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
+    invoke-direct {v1, p0}, Lvs;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;)V
 
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->aB:Landroid/content/BroadcastReceiver;
 
@@ -3047,7 +3047,7 @@
     :cond_1d0
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/StudioFragmentNew;->av:Landroid/view/View;
 
-    const v1, 0x7f060447
+    const v1, 0x7f060432
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

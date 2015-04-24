@@ -73,36 +73,49 @@
     .line 32
     iget-boolean v2, p0, Lcom/tenromans/birthdaycake/Flavor;->isFreeVersion:Z
 
-    if-eqz v2, :cond_10
+    if-eqz v2, :cond_1d
 
     .line 33
+    invoke-virtual {p0}, Lcom/tenromans/birthdaycake/Flavor;->getApplication()Landroid/app/Application;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/tenromans/birthdaycake/BirthdayCakeApplication;
+
+    invoke-virtual {v2}, Lcom/tenromans/birthdaycake/BirthdayCakeApplication;->getGssdk()Lcom/greystripe/android/sdk/GSSDK;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p0}, Lcom/greystripe/android/sdk/GSSDK;->displayAd(Landroid/app/Activity;)Z
+
+    .line 34
     invoke-virtual {p0}, Lcom/tenromans/birthdaycake/Flavor;->showAd()V
 
-    .line 37
-    :cond_10
+    .line 38
+    :cond_1d
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
-    .line 36
+    .line 37
     iput-object v2, p0, Lcom/tenromans/birthdaycake/Flavor;->mSharedPreferences:Landroid/content/SharedPreferences;
 
-    .line 39
+    .line 40
     invoke-virtual {p0}, Lcom/tenromans/birthdaycake/Flavor;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/tenromans/birthdaycake/Flavor;->mResources:Landroid/content/res/Resources;
 
-    .line 40
+    .line 41
     const v2, 0x7f070001
 
     invoke-virtual {p0, v2}, Lcom/tenromans/birthdaycake/Flavor;->setImageNames(I)V
 
-    .line 41
+    .line 42
     invoke-virtual {p0}, Lcom/tenromans/birthdaycake/Flavor;->setImagesFromNames()V
 
-    .line 43
+    .line 44
     const v2, 0x7f0c0018
 
     invoke-virtual {p0, v2}, Lcom/tenromans/birthdaycake/Flavor;->findViewById(I)Landroid/view/View;
@@ -111,11 +124,11 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    const v3, 0x7f02004f
+    const v3, 0x7f020049
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 46
+    .line 47
     const v2, 0x7f0c001b
 
     invoke-virtual {p0, v2}, Lcom/tenromans/birthdaycake/Flavor;->findViewById(I)Landroid/view/View;
@@ -124,7 +137,7 @@
 
     check-cast v1, Landroid/widget/Gallery;
 
-    .line 48
+    .line 49
     .local v1, "g":Landroid/widget/Gallery;
     new-instance v2, Lcom/tenromans/birthdaycake/Flavor$ImageAdapter;
 
@@ -132,12 +145,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Gallery;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    .line 50
+    .line 51
     invoke-virtual {p0}, Lcom/tenromans/birthdaycake/Flavor;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 53
+    .line 54
     .local v0, "context":Landroid/content/Context;
     new-instance v2, Lcom/tenromans/birthdaycake/Flavor$1;
 
@@ -145,7 +158,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Gallery;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 68
+    .line 69
     return-void
 .end method
 
@@ -153,14 +166,14 @@
     .registers 2
 
     .prologue
-    .line 72
+    .line 73
     invoke-super {p0}, Lcom/tenromans/birthdaycake/BirthdayCakeActivity;->onStart()V
 
-    .line 73
+    .line 74
     const-string v0, "/Flavor"
 
     invoke-static {v0}, Lcom/tenromans/birthdaycake/Tracker;->trackPageView(Ljava/lang/String;)V
 
-    .line 74
+    .line 75
     return-void
 .end method

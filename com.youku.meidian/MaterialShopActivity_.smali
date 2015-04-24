@@ -50,7 +50,7 @@
 .method static synthetic a(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialShopActivity;->f()V
+    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialShopActivity;->g()V
 
     return-void
 .end method
@@ -58,7 +58,7 @@
 .method static synthetic b(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialShopActivity;->g()V
+    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialShopActivity;->d()V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 .method static synthetic d(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialShopActivity;->d()V
+    invoke-super {p0}, Lcom/youku/meidian/activity/MaterialShopActivity;->f()V
 
     return-void
 .end method
@@ -83,14 +83,6 @@
 # virtual methods
 .method public final a(Lorg/a/a/b/a;)V
     .registers 4
-
-    const v0, 0x7f0900d1
-
-    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->q:Landroid/view/View;
 
     const v0, 0x7f09009e
 
@@ -102,6 +94,14 @@
 
     iput-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->o:Lcom/youku/meidian/customUi/PullAndLoadListView;
 
+    const v0, 0x7f0900d1
+
+    invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->q:Landroid/view/View;
+
     const v0, 0x7f0900d7
 
     invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
@@ -112,32 +112,32 @@
 
     iput-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->p:Landroid/widget/ImageView;
 
+    iget-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->p:Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_2d
+
+    iget-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->p:Landroid/widget/ImageView;
+
+    new-instance v1, Lcom/youku/meidian/activity/cz;
+
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/cz;-><init>(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_2d
     const v0, 0x7f0900d3
 
     invoke-interface {p1, v0}, Lorg/a/a/b/a;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_30
-
-    new-instance v1, Lcom/youku/meidian/activity/cz;
-
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/cz;-><init>(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    :cond_30
-    iget-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->p:Landroid/widget/ImageView;
-
     if-eqz v0, :cond_3e
-
-    iget-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->p:Landroid/widget/ImageView;
 
     new-instance v1, Lcom/youku/meidian/activity/da;
 
     invoke-direct {v1, p0}, Lcom/youku/meidian/activity/da;-><init>(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_3e
     invoke-virtual {p0}, Lcom/youku/meidian/activity/MaterialShopActivity_;->c()V
@@ -150,9 +150,9 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->s:Landroid/os/Handler;
 
-    new-instance v1, Lcom/youku/meidian/activity/de;
+    new-instance v1, Lcom/youku/meidian/activity/dc;
 
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/de;-><init>(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/dc;-><init>(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -178,9 +178,9 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->s:Landroid/os/Handler;
 
-    new-instance v1, Lcom/youku/meidian/activity/db;
+    new-instance v1, Lcom/youku/meidian/activity/de;
 
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/db;-><init>(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/de;-><init>(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -192,9 +192,9 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/MaterialShopActivity_;->s:Landroid/os/Handler;
 
-    new-instance v1, Lcom/youku/meidian/activity/dc;
+    new-instance v1, Lcom/youku/meidian/activity/db;
 
-    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/dc;-><init>(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
+    invoke-direct {v1, p0}, Lcom/youku/meidian/activity/db;-><init>(Lcom/youku/meidian/activity/MaterialShopActivity_;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

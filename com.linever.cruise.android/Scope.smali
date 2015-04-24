@@ -21,29 +21,29 @@
 
 
 # instance fields
-.field mAddress:Ljava/lang/String;
+.field public mAddress:Ljava/lang/String;
 
-.field mCenterLat:D
+.field public mCenterLat:D
 
-.field mCenterLng:D
+.field public mCenterLng:D
 
-.field mDistanceEW:F
+.field public mDistanceEW:F
 
-.field mDistanceNS:F
+.field public mDistanceNS:F
 
-.field mEastLng:D
+.field public mEastLng:D
 
-.field mEnabled:Z
+.field public mEnabled:Z
 
-.field mNorthLat:D
+.field public mNorthLat:D
 
-.field mRDegree:D
+.field public mRDegree:D
 
-.field mSouthLat:D
+.field public mSouthLat:D
 
-.field mStartTime:J
+.field public mStartTime:J
 
-.field mWestLng:D
+.field public mWestLng:D
 
 
 # direct methods
@@ -51,28 +51,35 @@
     .registers 1
 
     .prologue
-    .line 82
+    .line 83
     new-instance v0, Lcom/linever/cruise/android/Scope$1;
 
     invoke-direct {v0}, Lcom/linever/cruise/android/Scope$1;-><init>()V
 
     sput-object v0, Lcom/linever/cruise/android/Scope;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 90
+    .line 6
     return-void
 .end method
 
 .method public constructor <init>()V
-    .registers 1
+    .registers 3
 
     .prologue
     .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 22
-    invoke-virtual {p0}, Lcom/linever/cruise/android/Scope;->clear()V
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/linever/cruise/android/Scope;->mEnabled:Z
 
     .line 23
+    sget-wide v0, Lcom/linever/cruise/android/CruiseConfig;->NULL_TIME:J
+
+    iput-wide v0, p0, Lcom/linever/cruise/android/Scope;->mStartTime:J
+
+    .line 24
     return-void
 .end method
 
@@ -81,103 +88,103 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 65
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 66
-    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
-
-    move-result-wide v1
-
-    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mCenterLat:D
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 67
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v1
 
-    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mCenterLng:D
+    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mCenterLat:D
 
     .line 68
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v1
 
-    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mNorthLat:D
+    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mCenterLng:D
 
     .line 69
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v1
 
-    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mSouthLat:D
+    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mNorthLat:D
 
     .line 70
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v1
 
-    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mEastLng:D
+    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mSouthLat:D
 
     .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v1
 
-    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mWestLng:D
+    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mEastLng:D
 
     .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v1
 
-    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mRDegree:D
+    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mWestLng:D
 
     .line 73
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
-    move-result v1
+    move-result-wide v1
 
-    iput v1, p0, Lcom/linever/cruise/android/Scope;->mDistanceEW:F
+    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mRDegree:D
 
     .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
-    iput v1, p0, Lcom/linever/cruise/android/Scope;->mDistanceNS:F
+    iput v1, p0, Lcom/linever/cruise/android/Scope;->mDistanceEW:F
 
     .line 75
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
+    move-result v1
+
+    iput v1, p0, Lcom/linever/cruise/android/Scope;->mDistanceNS:F
+
+    .line 76
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/linever/cruise/android/Scope;->mAddress:Ljava/lang/String;
 
-    .line 76
+    .line 77
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mStartTime:J
 
-    .line 77
+    .line 78
     const/4 v1, 0x1
 
     new-array v0, v1, [Z
 
-    .line 78
+    .line 79
     .local v0, "ba":[Z
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBooleanArray([Z)V
 
-    .line 79
+    .line 80
     const/4 v1, 0x0
 
     aget-boolean v1, v0, v1
 
     iput-boolean v1, p0, Lcom/linever/cruise/android/Scope;->mEnabled:Z
 
-    .line 80
+    .line 81
     return-void
 .end method
 
@@ -191,59 +198,57 @@
 
     const-wide/16 v1, 0x0
 
-    .line 26
+    .line 27
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/linever/cruise/android/Scope;->mEnabled:Z
 
-    .line 27
+    .line 28
     iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mCenterLat:D
 
-    .line 28
+    .line 29
     iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mCenterLng:D
 
-    .line 29
+    .line 30
     iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mNorthLat:D
 
-    .line 30
+    .line 31
     iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mSouthLat:D
 
-    .line 31
+    .line 32
     iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mEastLng:D
 
-    .line 32
+    .line 33
     iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mWestLng:D
 
-    .line 33
+    .line 34
     iput v3, p0, Lcom/linever/cruise/android/Scope;->mDistanceEW:F
 
-    .line 34
+    .line 35
     iput v3, p0, Lcom/linever/cruise/android/Scope;->mDistanceNS:F
 
-    .line 35
-    const-wide v0, 0x4066800000000000L    # 180.0
-
-    iput-wide v0, p0, Lcom/linever/cruise/android/Scope;->mRDegree:D
-
     .line 36
+    iput-wide v1, p0, Lcom/linever/cruise/android/Scope;->mRDegree:D
+
+    .line 37
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/linever/cruise/android/Scope;->mAddress:Ljava/lang/String;
 
-    .line 37
-    sget-wide v0, Lcom/linever/cruise/android/CruiseConfig;->NULL_TIME:J
+    .line 38
+    const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/linever/cruise/android/Scope;->mStartTime:J
 
-    .line 38
+    .line 39
     return-void
 .end method
 
-.method protected clone()Lcom/linever/cruise/android/Scope;
+.method public clone()Lcom/linever/cruise/android/Scope;
     .registers 3
 
     .prologue
-    .line 95
+    .line 96
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -253,25 +258,25 @@
     :try_end_6
     .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_6} :catch_7
 
-    .line 98
+    .line 99
     :goto_6
     return-object v1
 
-    .line 96
+    .line 97
     :catch_7
     move-exception v0
 
-    .line 97
+    .line 98
     .local v0, "e":Ljava/lang/CloneNotSupportedException;
     invoke-virtual {v0}, Ljava/lang/CloneNotSupportedException;->printStackTrace()V
 
-    .line 98
+    .line 99
     const/4 v1, 0x0
 
     goto :goto_6
 .end method
 
-.method protected bridge synthetic clone()Ljava/lang/Object;
+.method public bridge synthetic clone()Ljava/lang/Object;
     .registers 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -292,7 +297,7 @@
     .registers 2
 
     .prologue
-    .line 46
+    .line 47
     const/4 v0, 0x0
 
     return v0
@@ -304,62 +309,62 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 51
+    .line 52
     iget-wide v0, p0, Lcom/linever/cruise/android/Scope;->mCenterLat:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 52
+    .line 53
     iget-wide v0, p0, Lcom/linever/cruise/android/Scope;->mCenterLng:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 53
+    .line 54
     iget-wide v0, p0, Lcom/linever/cruise/android/Scope;->mNorthLat:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 54
+    .line 55
     iget-wide v0, p0, Lcom/linever/cruise/android/Scope;->mSouthLat:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 55
+    .line 56
     iget-wide v0, p0, Lcom/linever/cruise/android/Scope;->mEastLng:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 56
+    .line 57
     iget-wide v0, p0, Lcom/linever/cruise/android/Scope;->mWestLng:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 57
+    .line 58
     iget-wide v0, p0, Lcom/linever/cruise/android/Scope;->mRDegree:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 58
+    .line 59
     iget v0, p0, Lcom/linever/cruise/android/Scope;->mDistanceEW:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 59
+    .line 60
     iget v0, p0, Lcom/linever/cruise/android/Scope;->mDistanceNS:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 60
+    .line 61
     iget-object v0, p0, Lcom/linever/cruise/android/Scope;->mAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 61
+    .line 62
     iget-wide v0, p0, Lcom/linever/cruise/android/Scope;->mStartTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 62
+    .line 63
     const/4 v0, 0x1
 
     new-array v0, v0, [Z
@@ -372,6 +377,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBooleanArray([Z)V
 
-    .line 63
+    .line 64
     return-void
 .end method

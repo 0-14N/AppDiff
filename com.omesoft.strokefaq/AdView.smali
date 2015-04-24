@@ -5,31 +5,27 @@
 # instance fields
 .field private a:Lnet/youmi/android/a;
 
-.field private b:Lnet/youmi/android/fe;
+.field private b:Lnet/youmi/android/fb;
 
-.field private c:Landroid/app/Activity;
+.field private c:Landroid/os/Handler;
 
-.field private d:Lnet/youmi/android/ca;
+.field private d:Landroid/app/Activity;
 
-.field private e:I
+.field private e:Lnet/youmi/android/dt;
 
-.field private f:I
+.field private f:Lnet/youmi/android/bz;
 
 .field private g:I
 
-.field private h:Lnet/youmi/android/AdViewListener;
+.field private h:I
 
-.field private i:Lnet/youmi/android/cu;
+.field private i:I
 
-.field private j:Lnet/youmi/android/fa;
+.field private j:Lnet/youmi/android/AdViewListener;
 
-.field private k:Lnet/youmi/android/aa;
+.field private k:I
 
 .field private l:I
-
-.field private m:I
-
-.field private n:J
 
 
 # direct methods
@@ -46,6 +42,12 @@
 
     iput-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
 
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/os/Handler;
+
     const/16 v0, 0x40
 
     const/16 v1, 0x76
@@ -56,29 +58,19 @@
 
     move-result v0
 
-    iput v0, p0, Lnet/youmi/android/AdView;->e:I
+    iput v0, p0, Lnet/youmi/android/AdView;->g:I
 
     const/16 v0, 0xff
 
-    iput v0, p0, Lnet/youmi/android/AdView;->f:I
+    iput v0, p0, Lnet/youmi/android/AdView;->h:I
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lnet/youmi/android/AdView;->g:I
+    iput v0, p0, Lnet/youmi/android/AdView;->i:I
 
-    new-instance v0, Lnet/youmi/android/ce;
-
-    invoke-direct {v0, p0}, Lnet/youmi/android/ce;-><init>(Lnet/youmi/android/AdView;)V
-
-    iput-object v0, p0, Lnet/youmi/android/AdView;->k:Lnet/youmi/android/aa;
+    iput v3, p0, Lnet/youmi/android/AdView;->k:I
 
     iput v3, p0, Lnet/youmi/android/AdView;->l:I
-
-    iput v3, p0, Lnet/youmi/android/AdView;->m:I
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lnet/youmi/android/AdView;->n:J
 
     invoke-virtual {p0, p1}, Lnet/youmi/android/AdView;->a(Landroid/app/Activity;)V
 
@@ -98,6 +90,12 @@
 
     iput-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
 
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/os/Handler;
+
     const/16 v0, 0x40
 
     const/16 v1, 0x76
@@ -108,29 +106,19 @@
 
     move-result v0
 
-    iput v0, p0, Lnet/youmi/android/AdView;->e:I
+    iput v0, p0, Lnet/youmi/android/AdView;->g:I
 
     const/16 v0, 0xff
 
-    iput v0, p0, Lnet/youmi/android/AdView;->f:I
+    iput v0, p0, Lnet/youmi/android/AdView;->h:I
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lnet/youmi/android/AdView;->g:I
+    iput v0, p0, Lnet/youmi/android/AdView;->i:I
 
-    new-instance v0, Lnet/youmi/android/ce;
-
-    invoke-direct {v0, p0}, Lnet/youmi/android/ce;-><init>(Lnet/youmi/android/AdView;)V
-
-    iput-object v0, p0, Lnet/youmi/android/AdView;->k:Lnet/youmi/android/aa;
+    iput v3, p0, Lnet/youmi/android/AdView;->k:I
 
     iput v3, p0, Lnet/youmi/android/AdView;->l:I
-
-    iput v3, p0, Lnet/youmi/android/AdView;->m:I
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lnet/youmi/android/AdView;->n:J
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lnet/youmi/android/AdView;->a(Landroid/app/Activity;III)V
 
@@ -150,6 +138,12 @@
 
     iput-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
 
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/os/Handler;
+
     const/16 v0, 0x40
 
     const/16 v1, 0x76
@@ -160,29 +154,19 @@
 
     move-result v0
 
-    iput v0, p0, Lnet/youmi/android/AdView;->e:I
+    iput v0, p0, Lnet/youmi/android/AdView;->g:I
 
     const/16 v0, 0xff
 
-    iput v0, p0, Lnet/youmi/android/AdView;->f:I
+    iput v0, p0, Lnet/youmi/android/AdView;->h:I
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lnet/youmi/android/AdView;->g:I
+    iput v0, p0, Lnet/youmi/android/AdView;->i:I
 
-    new-instance v0, Lnet/youmi/android/ce;
-
-    invoke-direct {v0, p0}, Lnet/youmi/android/ce;-><init>(Lnet/youmi/android/AdView;)V
-
-    iput-object v0, p0, Lnet/youmi/android/AdView;->k:Lnet/youmi/android/aa;
+    iput v3, p0, Lnet/youmi/android/AdView;->k:I
 
     iput v3, p0, Lnet/youmi/android/AdView;->l:I
-
-    iput v3, p0, Lnet/youmi/android/AdView;->m:I
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lnet/youmi/android/AdView;->n:J
 
     check-cast p1, Landroid/app/Activity;
 
@@ -204,6 +188,12 @@
 
     iput-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
 
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/os/Handler;
+
     const/16 v0, 0x40
 
     const/16 v1, 0x76
@@ -214,43 +204,25 @@
 
     move-result v0
 
-    iput v0, p0, Lnet/youmi/android/AdView;->e:I
+    iput v0, p0, Lnet/youmi/android/AdView;->g:I
 
     const/16 v0, 0xff
 
-    iput v0, p0, Lnet/youmi/android/AdView;->f:I
+    iput v0, p0, Lnet/youmi/android/AdView;->h:I
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lnet/youmi/android/AdView;->g:I
+    iput v0, p0, Lnet/youmi/android/AdView;->i:I
 
-    new-instance v0, Lnet/youmi/android/ce;
-
-    invoke-direct {v0, p0}, Lnet/youmi/android/ce;-><init>(Lnet/youmi/android/AdView;)V
-
-    iput-object v0, p0, Lnet/youmi/android/AdView;->k:Lnet/youmi/android/aa;
+    iput v3, p0, Lnet/youmi/android/AdView;->k:I
 
     iput v3, p0, Lnet/youmi/android/AdView;->l:I
-
-    iput v3, p0, Lnet/youmi/android/AdView;->m:I
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lnet/youmi/android/AdView;->n:J
 
     check-cast p1, Landroid/app/Activity;
 
     invoke-virtual {p0, p1, p2, p3}, Lnet/youmi/android/AdView;->a(Landroid/app/Activity;Landroid/util/AttributeSet;I)V
 
     return-void
-.end method
-
-.method static synthetic a(Lnet/youmi/android/AdView;)Lnet/youmi/android/AdViewListener;
-    .registers 2
-
-    iget-object v0, p0, Lnet/youmi/android/AdView;->h:Lnet/youmi/android/AdViewListener;
-
-    return-object v0
 .end method
 
 
@@ -266,11 +238,11 @@
 .method a(Landroid/app/Activity;)V
     .registers 9
 
-    iget v4, p0, Lnet/youmi/android/AdView;->e:I
+    iget v4, p0, Lnet/youmi/android/AdView;->g:I
 
-    iget v6, p0, Lnet/youmi/android/AdView;->f:I
+    iget v6, p0, Lnet/youmi/android/AdView;->h:I
 
-    iget v5, p0, Lnet/youmi/android/AdView;->g:I
+    iget v5, p0, Lnet/youmi/android/AdView;->i:I
 
     const/4 v2, 0x0
 
@@ -310,11 +282,11 @@
 .method a(Landroid/app/Activity;Landroid/util/AttributeSet;)V
     .registers 10
 
-    iget v4, p0, Lnet/youmi/android/AdView;->e:I
+    iget v4, p0, Lnet/youmi/android/AdView;->g:I
 
-    iget v6, p0, Lnet/youmi/android/AdView;->f:I
+    iget v6, p0, Lnet/youmi/android/AdView;->h:I
 
-    iget v5, p0, Lnet/youmi/android/AdView;->g:I
+    iget v5, p0, Lnet/youmi/android/AdView;->i:I
 
     const/4 v3, 0x0
 
@@ -332,11 +304,11 @@
 .method a(Landroid/app/Activity;Landroid/util/AttributeSet;I)V
     .registers 11
 
-    iget v4, p0, Lnet/youmi/android/AdView;->e:I
+    iget v4, p0, Lnet/youmi/android/AdView;->g:I
 
-    iget v6, p0, Lnet/youmi/android/AdView;->f:I
+    iget v6, p0, Lnet/youmi/android/AdView;->h:I
 
-    iget v5, p0, Lnet/youmi/android/AdView;->g:I
+    iget v5, p0, Lnet/youmi/android/AdView;->i:I
 
     move-object v0, p0
 
@@ -356,16 +328,16 @@
 
     const/16 v4, 0xff
 
-    iput-object p1, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
+    iput-object p1, p0, Lnet/youmi/android/AdView;->d:Landroid/app/Activity;
 
     :try_start_4
-    iget-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->d:Landroid/app/Activity;
 
-    invoke-static {v0}, Lnet/youmi/android/ca;->a(Landroid/app/Activity;)Lnet/youmi/android/ca;
+    invoke-static {v0}, Lnet/youmi/android/bz;->a(Landroid/app/Activity;)Lnet/youmi/android/bz;
 
     move-result-object v0
 
-    iput-object v0, p0, Lnet/youmi/android/AdView;->d:Lnet/youmi/android/ca;
+    iput-object v0, p0, Lnet/youmi/android/AdView;->f:Lnet/youmi/android/bz;
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_c} :catch_50
 
@@ -435,11 +407,11 @@
 
     :cond_3c
     :goto_3c
-    iput v2, p0, Lnet/youmi/android/AdView;->g:I
+    iput v2, p0, Lnet/youmi/android/AdView;->i:I
 
-    iput v1, p0, Lnet/youmi/android/AdView;->e:I
+    iput v1, p0, Lnet/youmi/android/AdView;->g:I
 
-    iput v0, p0, Lnet/youmi/android/AdView;->f:I
+    iput v0, p0, Lnet/youmi/android/AdView;->h:I
 
     return-void
 
@@ -488,56 +460,10 @@
     goto :goto_36
 .end method
 
-.method a(Lnet/youmi/android/cu;)V
-    .registers 4
-
-    if-nez p1, :cond_3
-
-    :cond_2
-    :goto_2
-    return-void
-
-    :cond_3
-    iget-object v0, p0, Lnet/youmi/android/AdView;->i:Lnet/youmi/android/cu;
-
-    if-eqz v0, :cond_17
-
-    iget-object v0, p0, Lnet/youmi/android/AdView;->i:Lnet/youmi/android/cu;
-
-    invoke-virtual {v0}, Lnet/youmi/android/cu;->f()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lnet/youmi/android/cu;->f()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    :cond_17
-    iput-object p1, p0, Lnet/youmi/android/AdView;->i:Lnet/youmi/android/cu;
-
-    invoke-virtual {p0}, Lnet/youmi/android/AdView;->h()V
-
-    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
-
-    invoke-virtual {v0, p1}, Lnet/youmi/android/fe;->b(Lnet/youmi/android/cu;)V
-
-    goto :goto_2
-.end method
-
 .method public addView(Landroid/view/View;)V
     .registers 3
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
 
     if-ne v0, p1, :cond_7
 
@@ -550,7 +476,7 @@
 .method public addView(Landroid/view/View;I)V
     .registers 4
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
 
     if-ne v0, p1, :cond_7
 
@@ -563,7 +489,7 @@
 .method public addView(Landroid/view/View;II)V
     .registers 5
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
 
     if-ne p1, v0, :cond_7
 
@@ -576,7 +502,7 @@
 .method public addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
     .registers 5
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
 
     if-ne p1, v0, :cond_7
 
@@ -589,7 +515,7 @@
 .method public addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
     .registers 4
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
 
     if-ne p1, v0, :cond_7
 
@@ -602,7 +528,7 @@
 .method protected addViewInLayout(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Z
     .registers 5
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
 
     if-ne p1, v0, :cond_9
 
@@ -622,7 +548,7 @@
 .method protected addViewInLayout(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;Z)Z
     .registers 6
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
 
     if-ne p1, v0, :cond_9
 
@@ -639,31 +565,15 @@
     goto :goto_8
 .end method
 
-.method b()Lnet/youmi/android/ca;
+.method b()Lnet/youmi/android/bz;
     .registers 2
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->d:Lnet/youmi/android/ca;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->f:Lnet/youmi/android/bz;
 
     return-object v0
 .end method
 
-.method c()Lnet/youmi/android/cu;
-    .registers 2
-
-    iget-object v0, p0, Lnet/youmi/android/AdView;->i:Lnet/youmi/android/cu;
-
-    return-object v0
-.end method
-
-.method d()I
-    .registers 2
-
-    iget v0, p0, Lnet/youmi/android/AdView;->e:I
-
-    return v0
-.end method
-
-.method e()I
+.method c()I
     .registers 2
 
     iget v0, p0, Lnet/youmi/android/AdView;->g:I
@@ -671,14 +581,22 @@
     return v0
 .end method
 
-.method f()V
+.method d()I
     .registers 2
+
+    iget v0, p0, Lnet/youmi/android/AdView;->i:I
+
+    return v0
+.end method
+
+.method e()V
+    .registers 3
 
     invoke-virtual {p0}, Lnet/youmi/android/AdView;->getVisibility()I
 
     move-result v0
 
-    if-nez v0, :cond_17
+    if-nez v0, :cond_19
 
     iget-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
 
@@ -686,128 +604,39 @@
 
     move-result v0
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_19
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
+    :try_start_e
+    invoke-static {}, Lnet/youmi/android/ai;->a()Lnet/youmi/android/cr;
 
-    invoke-static {v0}, Lnet/youmi/android/cz;->a(Landroid/app/Activity;)I
+    move-result-object v0
 
-    move-result v0
+    if-eqz v0, :cond_19
 
-    packed-switch v0, :pswitch_data_60
+    iget-object v1, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
 
-    :cond_17
-    :goto_17
+    invoke-virtual {v1, v0}, Lnet/youmi/android/fb;->c(Lnet/youmi/android/cr;)V
+    :try_end_19
+    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_19} :catch_1a
+
+    :cond_19
+    :goto_19
     return-void
 
-    :pswitch_18
-    :try_start_18
-    iget-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
-
-    invoke-static {v0, p0}, Lnet/youmi/android/ak;->a(Landroid/app/Activity;Lnet/youmi/android/AdView;)V
-    :try_end_1d
-    .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_1d} :catch_1e
-
-    goto :goto_17
-
-    :catch_1e
+    :catch_1a
     move-exception v0
 
-    invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_17
-
-    :pswitch_23
-    :try_start_23
-    iget-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
-
-    invoke-static {v0}, Lnet/youmi/android/cz;->b(Landroid/app/Activity;)Lnet/youmi/android/cu;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lnet/youmi/android/AdView;->a(Lnet/youmi/android/cu;)V
-
-    goto :goto_17
-
-    :pswitch_2d
-    iget-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
-
-    invoke-static {v0}, Lnet/youmi/android/cz;->e(Landroid/app/Activity;)Lnet/youmi/android/cu;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lnet/youmi/android/AdView;->a(Lnet/youmi/android/cu;)V
-
-    goto :goto_17
-
-    :pswitch_37
-    iget-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
-
-    invoke-static {v0}, Lnet/youmi/android/cz;->c(Landroid/app/Activity;)Lnet/youmi/android/cu;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lnet/youmi/android/AdView;->a(Lnet/youmi/android/cu;)V
-
-    goto :goto_17
-
-    :pswitch_41
-    iget-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
-
-    invoke-static {v0}, Lnet/youmi/android/cz;->f(Landroid/app/Activity;)Lnet/youmi/android/cu;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lnet/youmi/android/AdView;->a(Lnet/youmi/android/cu;)V
-
-    goto :goto_17
-
-    :pswitch_4b
-    iget-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
-
-    invoke-static {v0}, Lnet/youmi/android/cz;->g(Landroid/app/Activity;)Lnet/youmi/android/cu;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lnet/youmi/android/AdView;->a(Lnet/youmi/android/cu;)V
-
-    goto :goto_17
-
-    :pswitch_55
-    iget-object v0, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
-
-    invoke-static {v0}, Lnet/youmi/android/cz;->d(Landroid/app/Activity;)Lnet/youmi/android/cu;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lnet/youmi/android/AdView;->a(Lnet/youmi/android/cu;)V
-    :try_end_5e
-    .catch Ljava/lang/Exception; {:try_start_23 .. :try_end_5e} :catch_1e
-
-    goto :goto_17
-
-    nop
-
-    :pswitch_data_60
-    .packed-switch 0x0
-        :pswitch_18
-        :pswitch_23
-        :pswitch_37
-        :pswitch_2d
-        :pswitch_41
-        :pswitch_4b
-        :pswitch_55
-    .end packed-switch
+    goto :goto_19
 .end method
 
-.method g()V
+.method f()V
     .registers 3
 
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lnet/youmi/android/ck;
+    new-instance v1, Lnet/youmi/android/ce;
 
-    invoke-direct {v1, p0}, Lnet/youmi/android/ck;-><init>(Lnet/youmi/android/AdView;)V
+    invoke-direct {v1, p0}, Lnet/youmi/android/ce;-><init>(Lnet/youmi/android/AdView;)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -816,15 +645,31 @@
     return-void
 .end method
 
-.method public getAdHeight()I
+.method g()V
     .registers 2
 
-    iget v0, p0, Lnet/youmi/android/AdView;->m:I
+    :try_start_0
+    iget-object v0, p0, Lnet/youmi/android/AdView;->j:Lnet/youmi/android/AdViewListener;
 
-    return v0
+    if-eqz v0, :cond_9
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->j:Lnet/youmi/android/AdViewListener;
+
+    invoke-interface {v0, p0}, Lnet/youmi/android/AdViewListener;->onAdViewSwitchedAd(Lnet/youmi/android/AdView;)V
+    :try_end_9
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_9} :catch_a
+
+    :cond_9
+    :goto_9
+    return-void
+
+    :catch_a
+    move-exception v0
+
+    goto :goto_9
 .end method
 
-.method public getAdWidth()I
+.method public getAdHeight()I
     .registers 2
 
     iget v0, p0, Lnet/youmi/android/AdView;->l:I
@@ -832,71 +677,51 @@
     return v0
 .end method
 
-.method h()V
-    .registers 3
+.method public getAdWidth()I
+    .registers 2
 
-    :try_start_0
-    invoke-virtual {p0}, Lnet/youmi/android/AdView;->getHandler()Landroid/os/Handler;
+    iget v0, p0, Lnet/youmi/android/AdView;->k:I
 
-    move-result-object v0
-
-    new-instance v1, Lnet/youmi/android/ch;
-
-    invoke-direct {v1, p0}, Lnet/youmi/android/ch;-><init>(Lnet/youmi/android/AdView;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-    :try_end_c
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_c} :catch_d
-
-    :goto_c
-    return-void
-
-    :catch_d
-    move-exception v0
-
-    goto :goto_c
+    return v0
 .end method
 
-.method i()V
-    .registers 3
+.method h()V
+    .registers 2
 
     :try_start_0
-    invoke-virtual {p0}, Lnet/youmi/android/AdView;->getHandler()Landroid/os/Handler;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->j:Lnet/youmi/android/AdViewListener;
 
-    move-result-object v0
+    if-eqz v0, :cond_9
 
-    new-instance v1, Lnet/youmi/android/cm;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->j:Lnet/youmi/android/AdViewListener;
 
-    invoke-direct {v1, p0}, Lnet/youmi/android/cm;-><init>(Lnet/youmi/android/AdView;)V
+    invoke-interface {v0, p0}, Lnet/youmi/android/AdViewListener;->onConnectFailed(Lnet/youmi/android/AdView;)V
+    :try_end_9
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_9} :catch_a
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-    :try_end_c
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_c} :catch_d
-
-    :goto_c
+    :cond_9
+    :goto_9
     return-void
 
-    :catch_d
+    :catch_a
     move-exception v0
 
-    goto :goto_c
+    goto :goto_9
 .end method
 
 .method protected onAttachedToWindow()V
     .registers 8
 
-    const/4 v3, -0x1
+    const/4 v3, -0x2
 
-    const/4 v2, -0x2
-
-    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
 
     if-nez v0, :cond_47
 
-    :try_start_6
-    iget-object v0, p0, Lnet/youmi/android/AdView;->d:Lnet/youmi/android/ca;
+    :try_start_5
+    iget-object v0, p0, Lnet/youmi/android/AdView;->f:Lnet/youmi/android/bz;
 
-    invoke-virtual {v0}, Lnet/youmi/android/ca;->a()Lnet/youmi/android/y;
+    invoke-virtual {v0}, Lnet/youmi/android/bz;->a()Lnet/youmi/android/y;
 
     move-result-object v0
 
@@ -904,17 +729,17 @@
 
     move-result v0
 
-    iput v0, p0, Lnet/youmi/android/AdView;->m:I
-    :try_end_12
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_12} :catch_55
+    iput v0, p0, Lnet/youmi/android/AdView;->l:I
+    :try_end_11
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_11} :catch_67
 
-    :goto_12
-    :try_start_12
+    :goto_11
+    :try_start_11
     invoke-virtual {p0}, Lnet/youmi/android/AdView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    if-eqz v0, :cond_78
+    if-eqz v0, :cond_8a
 
     const/4 v1, -0x2
 
@@ -922,245 +747,312 @@
 
     iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    if-ne v1, v3, :cond_5a
-
-    iget-object v0, p0, Lnet/youmi/android/AdView;->d:Lnet/youmi/android/ca;
-
-    invoke-virtual {v0}, Lnet/youmi/android/ca;->d()I
-
-    move-result v0
-
-    iput v0, p0, Lnet/youmi/android/AdView;->l:I
-    :try_end_27
-    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_27} :catch_67
-
-    :goto_27
-    :try_start_27
-    new-instance v0, Lnet/youmi/android/fe;
-
-    iget-object v1, p0, Lnet/youmi/android/AdView;->c:Landroid/app/Activity;
-
-    iget-object v3, p0, Lnet/youmi/android/AdView;->d:Lnet/youmi/android/ca;
-
-    iget v4, p0, Lnet/youmi/android/AdView;->e:I
-
-    iget v5, p0, Lnet/youmi/android/AdView;->g:I
-
-    iget v6, p0, Lnet/youmi/android/AdView;->f:I
-
-    move-object v2, p0
-
-    invoke-direct/range {v0 .. v6}, Lnet/youmi/android/fe;-><init>(Landroid/app/Activity;Lnet/youmi/android/AdView;Lnet/youmi/android/ca;III)V
-
-    iput-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
-
-    new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
-
-    iget v1, p0, Lnet/youmi/android/AdView;->l:I
-
-    iget v2, p0, Lnet/youmi/android/AdView;->m:I
-
-    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    iget-object v1, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fe;
-
-    invoke-virtual {p0, v1, v0}, Lnet/youmi/android/AdView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-    :try_end_47
-    .catch Ljava/lang/Exception; {:try_start_27 .. :try_end_47} :catch_81
-
-    :cond_47
-    :goto_47
-    :try_start_47
-    new-instance v0, Lnet/youmi/android/fa;
-
-    iget-object v1, p0, Lnet/youmi/android/AdView;->k:Lnet/youmi/android/aa;
-
     const/4 v2, -0x1
-
-    invoke-direct {v0, v1, v2}, Lnet/youmi/android/fa;-><init>(Lnet/youmi/android/aa;I)V
-
-    iput-object v0, p0, Lnet/youmi/android/AdView;->j:Lnet/youmi/android/fa;
-    :try_end_51
-    .catch Ljava/lang/Exception; {:try_start_47 .. :try_end_51} :catch_86
-
-    :goto_51
-    invoke-super {p0}, Landroid/widget/RelativeLayout;->onAttachedToWindow()V
-
-    return-void
-
-    :catch_55
-    move-exception v0
-
-    invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_12
-
-    :cond_5a
-    :try_start_5a
-    iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     if-ne v1, v2, :cond_6c
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->d:Lnet/youmi/android/ca;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->f:Lnet/youmi/android/bz;
 
-    invoke-virtual {v0}, Lnet/youmi/android/ca;->f()I
+    invoke-virtual {v0}, Lnet/youmi/android/bz;->d()I
 
     move-result v0
 
-    iput v0, p0, Lnet/youmi/android/AdView;->l:I
-    :try_end_66
-    .catch Ljava/lang/Exception; {:try_start_5a .. :try_end_66} :catch_67
+    iput v0, p0, Lnet/youmi/android/AdView;->k:I
+    :try_end_27
+    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_27} :catch_79
 
-    goto :goto_27
+    :goto_27
+    :try_start_27
+    new-instance v0, Lnet/youmi/android/fb;
+
+    iget-object v1, p0, Lnet/youmi/android/AdView;->d:Landroid/app/Activity;
+
+    iget-object v3, p0, Lnet/youmi/android/AdView;->f:Lnet/youmi/android/bz;
+
+    iget v4, p0, Lnet/youmi/android/AdView;->g:I
+
+    iget v5, p0, Lnet/youmi/android/AdView;->i:I
+
+    iget v6, p0, Lnet/youmi/android/AdView;->h:I
+
+    move-object v2, p0
+
+    invoke-direct/range {v0 .. v6}, Lnet/youmi/android/fb;-><init>(Landroid/app/Activity;Lnet/youmi/android/AdView;Lnet/youmi/android/bz;III)V
+
+    iput-object v0, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
+
+    new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
+
+    iget v1, p0, Lnet/youmi/android/AdView;->k:I
+
+    iget v2, p0, Lnet/youmi/android/AdView;->l:I
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    iget-object v1, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
+
+    invoke-virtual {p0, v1, v0}, Lnet/youmi/android/AdView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    :try_end_47
+    .catch Ljava/lang/Exception; {:try_start_27 .. :try_end_47} :catch_93
+
+    :cond_47
+    :goto_47
+    invoke-super {p0}, Landroid/widget/RelativeLayout;->onAttachedToWindow()V
+
+    :try_start_4a
+    iget-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
+
+    iget-boolean v0, v0, Lnet/youmi/android/a;->a:Z
+
+    if-nez v0, :cond_66
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
+
+    iget-boolean v0, v0, Lnet/youmi/android/a;->b:Z
+
+    if-nez v0, :cond_66
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    if-nez v0, :cond_98
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->d:Landroid/app/Activity;
+
+    iget-object v1, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
+
+    iget-object v2, p0, Lnet/youmi/android/AdView;->c:Landroid/os/Handler;
+
+    invoke-static {v0, v1, v2}, Lnet/youmi/android/dt;->a(Landroid/app/Activity;Lnet/youmi/android/ay;Landroid/os/Handler;)Lnet/youmi/android/dt;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+    :try_end_66
+    .catch Ljava/lang/Exception; {:try_start_4a .. :try_end_66} :catch_a9
+
+    :cond_66
+    :goto_66
+    return-void
 
     :catch_67
     move-exception v0
 
     invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
 
-    goto :goto_27
+    goto :goto_11
 
     :cond_6c
+    :try_start_6c
+    iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    if-ne v1, v3, :cond_7e
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->f:Lnet/youmi/android/bz;
+
+    invoke-virtual {v0}, Lnet/youmi/android/bz;->f()I
+
+    move-result v0
+
+    iput v0, p0, Lnet/youmi/android/AdView;->k:I
+    :try_end_78
+    .catch Ljava/lang/Exception; {:try_start_6c .. :try_end_78} :catch_79
+
+    goto :goto_27
+
+    :catch_79
+    move-exception v0
+
+    invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_27
+
+    :cond_7e
     const/4 v1, -0x2
 
-    :try_start_6d
+    :try_start_7f
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->d:Lnet/youmi/android/ca;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->f:Lnet/youmi/android/bz;
 
-    invoke-virtual {v0}, Lnet/youmi/android/ca;->f()I
-
-    move-result v0
-
-    iput v0, p0, Lnet/youmi/android/AdView;->l:I
-
-    goto :goto_27
-
-    :cond_78
-    iget-object v0, p0, Lnet/youmi/android/AdView;->d:Lnet/youmi/android/ca;
-
-    invoke-virtual {v0}, Lnet/youmi/android/ca;->d()I
+    invoke-virtual {v0}, Lnet/youmi/android/bz;->f()I
 
     move-result v0
 
-    iput v0, p0, Lnet/youmi/android/AdView;->l:I
-    :try_end_80
-    .catch Ljava/lang/Exception; {:try_start_6d .. :try_end_80} :catch_67
+    iput v0, p0, Lnet/youmi/android/AdView;->k:I
 
     goto :goto_27
 
-    :catch_81
+    :cond_8a
+    iget-object v0, p0, Lnet/youmi/android/AdView;->f:Lnet/youmi/android/bz;
+
+    invoke-virtual {v0}, Lnet/youmi/android/bz;->d()I
+
+    move-result v0
+
+    iput v0, p0, Lnet/youmi/android/AdView;->k:I
+    :try_end_92
+    .catch Ljava/lang/Exception; {:try_start_7f .. :try_end_92} :catch_79
+
+    goto :goto_27
+
+    :catch_93
     move-exception v0
 
     invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
 
     goto :goto_47
 
-    :catch_86
+    :cond_98
+    :try_start_98
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    invoke-virtual {v0}, Lnet/youmi/android/dt;->isCancelled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_66
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    invoke-virtual {v0}, Lnet/youmi/android/dt;->a()Lnet/youmi/android/dt;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+    :try_end_a8
+    .catch Ljava/lang/Exception; {:try_start_98 .. :try_end_a8} :catch_a9
+
+    goto :goto_66
+
+    :catch_a9
     move-exception v0
 
-    goto :goto_51
+    goto :goto_66
 .end method
 
 .method protected onDetachedFromWindow()V
-    .registers 2
+    .registers 3
 
-    :try_start_0
-    iget-object v0, p0, Lnet/youmi/android/AdView;->j:Lnet/youmi/android/fa;
-
-    invoke-virtual {v0}, Lnet/youmi/android/fa;->c()V
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_5} :catch_9
-
-    :goto_5
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onDetachedFromWindow()V
 
+    :try_start_3
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    if-eqz v0, :cond_d
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lnet/youmi/android/dt;->cancel(Z)Z
+    :try_end_d
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_d} :catch_e
+
+    :cond_d
+    :goto_d
     return-void
 
-    :catch_9
+    :catch_e
     move-exception v0
 
-    invoke-static {v0}, Lnet/youmi/android/f;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_5
+    goto :goto_d
 .end method
 
 .method public onWindowFocusChanged(Z)V
-    .registers 6
-
-    :try_start_0
-    iget-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
-
-    if-eqz p1, :cond_24
+    .registers 5
 
     const/4 v1, 0x0
+
+    :try_start_1
+    iget-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
+
+    if-eqz p1, :cond_23
 
     :goto_5
     iput-boolean v1, v0, Lnet/youmi/android/a;->a:Z
 
-    if-eqz p1, :cond_26
+    if-eqz p1, :cond_38
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->j:Lnet/youmi/android/fa;
+    iget-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
 
-    invoke-virtual {v0}, Lnet/youmi/android/fa;->b()V
+    iget-boolean v0, v0, Lnet/youmi/android/a;->b:Z
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    if-nez v0, :cond_1f
 
-    move-result-wide v0
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
 
-    iget-wide v2, p0, Lnet/youmi/android/AdView;->n:J
+    if-nez v0, :cond_25
 
-    sub-long/2addr v0, v2
+    iget-object v0, p0, Lnet/youmi/android/AdView;->d:Landroid/app/Activity;
 
-    invoke-static {}, Lnet/youmi/android/eh;->g()J
+    iget-object v1, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
 
-    move-result-wide v2
+    iget-object v2, p0, Lnet/youmi/android/AdView;->c:Landroid/os/Handler;
 
-    cmp-long v0, v0, v2
+    invoke-static {v0, v1, v2}, Lnet/youmi/android/dt;->a(Landroid/app/Activity;Lnet/youmi/android/ay;Landroid/os/Handler;)Lnet/youmi/android/dt;
 
-    if-ltz v0, :cond_20
+    move-result-object v0
 
-    invoke-virtual {p0}, Lnet/youmi/android/AdView;->refreshAd()V
-    :try_end_20
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_20} :catch_32
+    iput-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+    :try_end_1f
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1f} :catch_36
 
-    :cond_20
-    :goto_20
+    :cond_1f
+    :goto_1f
     invoke-super {p0, p1}, Landroid/widget/RelativeLayout;->onWindowFocusChanged(Z)V
 
     return-void
 
-    :cond_24
+    :cond_23
     const/4 v1, 0x1
 
     goto :goto_5
 
-    :cond_26
-    :try_start_26
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    :cond_25
+    :try_start_25
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
 
-    move-result-wide v0
+    invoke-virtual {v0}, Lnet/youmi/android/dt;->isCancelled()Z
 
-    iput-wide v0, p0, Lnet/youmi/android/AdView;->n:J
+    move-result v0
 
-    iget-object v0, p0, Lnet/youmi/android/AdView;->j:Lnet/youmi/android/fa;
+    if-eqz v0, :cond_1f
 
-    invoke-virtual {v0}, Lnet/youmi/android/fa;->a()V
-    :try_end_31
-    .catch Ljava/lang/Exception; {:try_start_26 .. :try_end_31} :catch_32
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
 
-    goto :goto_20
+    invoke-virtual {v0}, Lnet/youmi/android/dt;->a()Lnet/youmi/android/dt;
 
-    :catch_32
+    move-result-object v0
+
+    iput-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    goto :goto_1f
+
+    :catch_36
     move-exception v0
 
-    goto :goto_20
+    goto :goto_1f
+
+    :cond_38
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    if-eqz v0, :cond_1f
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lnet/youmi/android/dt;->cancel(Z)Z
+    :try_end_42
+    .catch Ljava/lang/Exception; {:try_start_25 .. :try_end_42} :catch_36
+
+    goto :goto_1f
 .end method
 
 .method public refreshAd()V
     .registers 1
 
-    invoke-virtual {p0}, Lnet/youmi/android/AdView;->g()V
+    invoke-virtual {p0}, Lnet/youmi/android/AdView;->f()V
 
     return-void
 .end method
@@ -1168,33 +1060,112 @@
 .method public setAdViewListener(Lnet/youmi/android/AdViewListener;)V
     .registers 2
 
-    iput-object p1, p0, Lnet/youmi/android/AdView;->h:Lnet/youmi/android/AdViewListener;
+    iput-object p1, p0, Lnet/youmi/android/AdView;->j:Lnet/youmi/android/AdViewListener;
 
     return-void
 .end method
 
 .method public setVisibility(I)V
-    .registers 4
+    .registers 5
 
     invoke-super {p0, p1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    if-nez p1, :cond_b
+    if-nez p1, :cond_34
 
+    :try_start_5
     iget-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lnet/youmi/android/a;->b:Z
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_a} :catch_46
 
-    :goto_a
+    :try_start_a
+    iget-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
+
+    iget-boolean v0, v0, Lnet/youmi/android/a;->a:Z
+
+    if-nez v0, :cond_20
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    if-nez v0, :cond_21
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->d:Landroid/app/Activity;
+
+    iget-object v1, p0, Lnet/youmi/android/AdView;->b:Lnet/youmi/android/fb;
+
+    iget-object v2, p0, Lnet/youmi/android/AdView;->c:Landroid/os/Handler;
+
+    invoke-static {v0, v1, v2}, Lnet/youmi/android/dt;->a(Landroid/app/Activity;Lnet/youmi/android/ay;Landroid/os/Handler;)Lnet/youmi/android/dt;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    :cond_20
+    :goto_20
     return-void
 
-    :cond_b
+    :cond_21
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    invoke-virtual {v0}, Lnet/youmi/android/dt;->isCancelled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_20
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    invoke-virtual {v0}, Lnet/youmi/android/dt;->a()Lnet/youmi/android/dt;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+    :try_end_31
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_31} :catch_32
+
+    goto :goto_20
+
+    :catch_32
+    move-exception v0
+
+    goto :goto_20
+
+    :cond_34
+    :try_start_34
     iget-object v0, p0, Lnet/youmi/android/AdView;->a:Lnet/youmi/android/a;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lnet/youmi/android/a;->b:Z
+    :try_end_39
+    .catch Ljava/lang/Exception; {:try_start_34 .. :try_end_39} :catch_46
 
-    goto :goto_a
+    :try_start_39
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    if-eqz v0, :cond_20
+
+    iget-object v0, p0, Lnet/youmi/android/AdView;->e:Lnet/youmi/android/dt;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lnet/youmi/android/dt;->cancel(Z)Z
+    :try_end_43
+    .catch Ljava/lang/Exception; {:try_start_39 .. :try_end_43} :catch_44
+
+    goto :goto_20
+
+    :catch_44
+    move-exception v0
+
+    goto :goto_20
+
+    :catch_46
+    move-exception v0
+
+    goto :goto_20
 .end method

@@ -1,4 +1,4 @@
-.class Lcom/umeng/common/net/q;
+.class final Lcom/umeng/common/net/q;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field private final synthetic a:Ljava/io/File;
+.field final synthetic a:Lcom/umeng/common/net/b;
 
 
 # direct methods
-.method constructor <init>(Ljava/io/File;)V
+.method constructor <init>(Lcom/umeng/common/net/b;)V
     .registers 2
 
-    iput-object p1, p0, Lcom/umeng/common/net/q;->a:Ljava/io/File;
+    iput-object p1, p0, Lcom/umeng/common/net/q;->a:Lcom/umeng/common/net/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,12 +22,36 @@
 
 
 # virtual methods
-.method public run()V
-    .registers 2
+.method public final run()V
+    .registers 4
 
-    iget-object v0, p0, Lcom/umeng/common/net/q;->a:Ljava/io/File;
+    iget-object v0, p0, Lcom/umeng/common/net/q;->a:Lcom/umeng/common/net/b;
 
-    invoke-static {v0}, Lcom/umeng/common/net/p;->a(Ljava/io/File;)V
+    invoke-static {v0}, Lcom/umeng/common/net/b;->b(Lcom/umeng/common/net/b;)Lcom/umeng/common/net/DownloadingService;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/umeng/common/net/q;->a:Lcom/umeng/common/net/b;
+
+    invoke-static {v1}, Lcom/umeng/common/net/b;->a(Lcom/umeng/common/net/b;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/umeng/common/c;->a(Landroid/content/Context;)Lcom/umeng/common/c;
+
+    const-string v1, "umeng_common_download_failed"
+
+    invoke-static {v1}, Lcom/umeng/common/c;->d(Ljava/lang/String;)I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     return-void
 .end method

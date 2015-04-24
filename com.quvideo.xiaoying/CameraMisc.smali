@@ -102,9 +102,9 @@
 
     .prologue
     .line 57
-    new-instance v0, Laee;
+    new-instance v0, Lxk;
 
-    invoke-direct {v0, p0}, Laee;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraMisc;)V
+    invoke-direct {v0, p0}, Lxk;-><init>(Lcom/quvideo/xiaoying/camera/framework/CameraMisc;)V
 
     .line 108
     const/4 v1, 0x0

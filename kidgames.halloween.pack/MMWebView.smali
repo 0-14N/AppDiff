@@ -6,7 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/millennialmedia/android/MMWebView$MyWebChromeClient;
+        Lcom/millennialmedia/android/MMWebView$MyWebChromeClient;,
+        Lcom/millennialmedia/android/MMWebView$WebGestureListener;,
+        Lcom/millennialmedia/android/MMWebView$WebTouchListener;
     }
 .end annotation
 
@@ -22,15 +24,25 @@
 
 
 # instance fields
+.field private _lastHeaders:Lcom/millennialmedia/android/HttpMMHeaders;
+
 .field creatorAdImplId:J
+
+.field currentColor:I
 
 .field currentUrl:Ljava/lang/String;
 
+.field hadFirstRecordingCreation:Z
+
+.field hadFirstSpeechKitCreation:Z
+
 .field volatile isExpanding:Z
+
+.field isSendingSize:Z
 
 .field volatile isUserClosedResize:Z
 
-.field private mWebChromeClient:Lcom/millennialmedia/android/MMWebView$MyWebChromeClient;
+.field volatile isVisible:Z
 
 .field volatile mraidState:Ljava/lang/String;
 
@@ -52,31 +64,34 @@
     .param p2, "internalId"    # J
 
     .prologue
-    const/16 v3, -0x32
+    const/16 v1, -0x32
 
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 55
+    .line 68
     invoke-direct {p0, p1}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
-    .line 379
-    new-instance v1, Lcom/millennialmedia/android/MMWebView$MyWebChromeClient;
+    .line 60
+    iput-boolean v6, p0, Lcom/millennialmedia/android/MMWebView;->isSendingSize:Z
 
-    const/4 v2, 0x0
+    .line 512
+    iput v1, p0, Lcom/millennialmedia/android/MMWebView;->oldHeight:I
 
-    invoke-direct {v1, p0, v2}, Lcom/millennialmedia/android/MMWebView$MyWebChromeClient;-><init>(Lcom/millennialmedia/android/MMWebView;Lcom/millennialmedia/android/MMWebView$1;)V
+    .line 513
+    iput v1, p0, Lcom/millennialmedia/android/MMWebView;->oldWidth:I
 
-    iput-object v1, p0, Lcom/millennialmedia/android/MMWebView;->mWebChromeClient:Lcom/millennialmedia/android/MMWebView$MyWebChromeClient;
+    .line 822
+    iput-boolean v5, p0, Lcom/millennialmedia/android/MMWebView;->isVisible:Z
 
-    .line 495
-    iput v3, p0, Lcom/millennialmedia/android/MMWebView;->oldHeight:I
+    .line 978
+    iput-boolean v5, p0, Lcom/millennialmedia/android/MMWebView;->hadFirstSpeechKitCreation:Z
 
-    .line 496
-    iput v3, p0, Lcom/millennialmedia/android/MMWebView;->oldWidth:I
+    .line 990
+    iput-boolean v5, p0, Lcom/millennialmedia/android/MMWebView;->hadFirstRecordingCreation:Z
 
-    .line 56
+    .line 69
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,31 +114,31 @@
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 57
+    .line 71
     invoke-virtual {p0, v5}, Lcom/millennialmedia/android/MMWebView;->setWillNotDraw(Z)V
 
-    .line 58
+    .line 72
     invoke-virtual {p0, v5}, Lcom/millennialmedia/android/MMWebView;->setHorizontalScrollBarEnabled(Z)V
 
-    .line 59
+    .line 73
     invoke-virtual {p0, v5}, Lcom/millennialmedia/android/MMWebView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 60
-    new-instance v1, Lcom/millennialmedia/android/MMWebView$1;
+    .line 74
+    new-instance v1, Lcom/millennialmedia/android/MMWebView$WebTouchListener;
 
-    invoke-direct {v1, p0}, Lcom/millennialmedia/android/MMWebView$1;-><init>(Lcom/millennialmedia/android/MMWebView;)V
+    invoke-direct {v1, p0}, Lcom/millennialmedia/android/MMWebView$WebTouchListener;-><init>(Lcom/millennialmedia/android/MMWebView;)V
 
     invoke-virtual {p0, v1}, Lcom/millennialmedia/android/MMWebView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 69
+    .line 75
     const-string v1, "loading"
 
     iput-object v1, p0, Lcom/millennialmedia/android/MMWebView;->mraidState:Ljava/lang/String;
 
-    .line 70
+    .line 76
     iput-wide p2, p0, Lcom/millennialmedia/android/MMWebView;->creatorAdImplId:J
 
-    .line 71
+    .line 77
     const-string v1, "Assigning WebView internal id: %d"
 
     new-array v2, v6, [Ljava/lang/Object;
@@ -138,7 +153,7 @@
 
     invoke-static {v1, v2}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 73
+    .line 79
     const-wide/16 v1, 0x3ad7
 
     iget-wide v3, p0, Lcom/millennialmedia/android/MMWebView;->creatorAdImplId:J
@@ -149,104 +164,88 @@
 
     invoke-virtual {p0, v1}, Lcom/millennialmedia/android/MMWebView;->setId(I)V
 
-    .line 75
-    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/millennialmedia/android/HandShake;->sharedHandShake(Landroid/content/Context;)Lcom/millennialmedia/android/HandShake;
+    .line 81
+    invoke-static {p1}, Lcom/millennialmedia/android/HandShake;->sharedHandShake(Landroid/content/Context;)Lcom/millennialmedia/android/HandShake;
 
     move-result-object v1
 
     iget-boolean v1, v1, Lcom/millennialmedia/android/HandShake;->hardwareAccelerationEnabled:Z
 
-    if-eqz v1, :cond_b0
-
-    .line 77
-    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->enableHardwareAcceleration()V
-
-    .line 81
-    :goto_69
-    invoke-virtual {p0, v5}, Lcom/millennialmedia/android/MMWebView;->setMediaPlaybackRequiresUserGesture(Z)V
+    if-eqz v1, :cond_a0
 
     .line 82
-    iget-object v1, p0, Lcom/millennialmedia/android/MMWebView;->mWebChromeClient:Lcom/millennialmedia/android/MMWebView$MyWebChromeClient;
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->enableHardwareAcceleration()V
+
+    .line 85
+    :goto_65
+    invoke-virtual {p0, v5}, Lcom/millennialmedia/android/MMWebView;->setMediaPlaybackRequiresUserGesture(Z)V
+
+    .line 86
+    new-instance v1, Lcom/millennialmedia/android/MMWebView$MyWebChromeClient;
+
+    invoke-direct {v1, p0}, Lcom/millennialmedia/android/MMWebView$MyWebChromeClient;-><init>(Lcom/millennialmedia/android/MMWebView;)V
 
     invoke-virtual {p0, v1}, Lcom/millennialmedia/android/MMWebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 83
+    .line 87
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
 
-    .line 84
+    .line 88
     .local v0, "webSettings":Landroid/webkit/WebSettings;
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getUserAgentString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/millennialmedia/android/MMWebView;->userAgent:Ljava/lang/String;
 
-    .line 85
+    .line 89
     invoke-virtual {v0, v6}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 86
+    .line 90
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setCacheMode(I)V
 
-    .line 87
+    .line 91
     const-string v1, "UTF-8"
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setDefaultTextEncodingName(Ljava/lang/String;)V
 
-    .line 88
+    .line 92
     invoke-virtual {v0, v6}, Landroid/webkit/WebSettings;->setLoadWithOverviewMode(Z)V
 
-    .line 89
+    .line 93
     invoke-virtual {v0, v6}, Landroid/webkit/WebSettings;->setGeolocationEnabled(Z)V
 
-    .line 90
+    .line 94
     invoke-virtual {v0, v6}, Landroid/webkit/WebSettings;->setJavaScriptCanOpenWindowsAutomatically(Z)V
 
-    .line 92
+    .line 97
     new-instance v1, Landroid/view/GestureDetector;
 
-    new-instance v2, Lcom/millennialmedia/android/MMWebView$2;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    invoke-direct {v2, p0, p1}, Lcom/millennialmedia/android/MMWebView$2;-><init>(Lcom/millennialmedia/android/MMWebView;Landroid/content/Context;)V
+    move-result-object v2
 
-    invoke-direct {v1, p1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
+    new-instance v3, Lcom/millennialmedia/android/MMWebView$WebGestureListener;
+
+    invoke-direct {v3, p0}, Lcom/millennialmedia/android/MMWebView$WebGestureListener;-><init>(Lcom/millennialmedia/android/MMWebView;)V
+
+    invoke-direct {v1, v2, v3}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
     iput-object v1, p0, Lcom/millennialmedia/android/MMWebView;->tapDetector:Landroid/view/GestureDetector;
 
-    .line 101
+    .line 99
     return-void
 
-    .line 80
+    .line 84
     .end local v0    # "webSettings":Landroid/webkit/WebSettings;
-    :cond_b0
+    :cond_a0
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->disableAllAcceleration()V
 
-    goto :goto_69
+    goto :goto_65
 .end method
 
 .method static synthetic access$000(Lcom/millennialmedia/android/MMWebView;)Z
@@ -254,37 +253,10 @@
     .param p0, "x0"    # Lcom/millennialmedia/android/MMWebView;
 
     .prologue
-    .line 37
-    invoke-direct {p0}, Lcom/millennialmedia/android/MMWebView;->canScroll()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$200(Lcom/millennialmedia/android/MMWebView;)Z
-    .registers 2
-    .param p0, "x0"    # Lcom/millennialmedia/android/MMWebView;
-
-    .prologue
-    .line 37
+    .line 43
     invoke-direct {p0}, Lcom/millennialmedia/android/MMWebView;->hasDefaultResizeParams()Z
 
     move-result v0
-
-    return v0
-.end method
-
-.method private canScroll()Z
-    .registers 2
-
-    .prologue
-    .line 507
-    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lcom/millennialmedia/android/MMAdView;
 
     return v0
 .end method
@@ -295,7 +267,7 @@
     .prologue
     const/16 v1, -0x32
 
-    .line 443
+    .line 463
     iget v0, p0, Lcom/millennialmedia/android/MMWebView;->oldWidth:I
 
     if-ne v0, v1, :cond_c
@@ -315,192 +287,333 @@
     goto :goto_b
 .end method
 
+.method private isInterstitial()Z
+    .registers 2
+
+    .prologue
+    .line 1007
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getBanner()Lcom/millennialmedia/android/MMAdView;
+
+    move-result-object v0
+
+    if-nez v0, :cond_8
+
+    const/4 v0, 0x1
+
+    :goto_7
+    return v0
+
+    :cond_8
+    const/4 v0, 0x0
+
+    goto :goto_7
+.end method
+
+.method private needsSamsungJBOpenGlFixNoAcceleration()Z
+    .registers 4
+
+    .prologue
+    .line 194
+    sget-object v1, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
+
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 195
+    .local v0, "version":I
+    const-string v1, "Nexus S"
+
+    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_24
+
+    const-string v1, "samsung"
+
+    sget-object v2, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_24
+
+    const/16 v1, 0x10
+
+    if-eq v0, v1, :cond_22
+
+    const/16 v1, 0x11
+
+    if-ne v0, v1, :cond_24
+
+    .line 196
+    :cond_22
+    const/4 v1, 0x1
+
+    .line 198
+    :goto_23
+    return v1
+
+    :cond_24
+    const/4 v1, 0x0
+
+    goto :goto_23
+.end method
+
 
 # virtual methods
+.method allowMicrophoneCreationCommands()Z
+    .registers 3
+
+    .prologue
+    const/4 v0, 0x1
+
+    .line 995
+    iget-boolean v1, p0, Lcom/millennialmedia/android/MMWebView;->hadFirstRecordingCreation:Z
+
+    if-eqz v1, :cond_a
+
+    .line 996
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->allowRecordingCommands()Z
+
+    move-result v0
+
+    .line 999
+    :cond_9
+    :goto_9
+    return v0
+
+    .line 998
+    :cond_a
+    iput-boolean v0, p0, Lcom/millennialmedia/android/MMWebView;->hadFirstRecordingCreation:Z
+
+    .line 999
+    invoke-direct {p0}, Lcom/millennialmedia/android/MMWebView;->isInterstitial()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_16
+
+    iget-boolean v1, p0, Lcom/millennialmedia/android/MMWebView;->isVisible:Z
+
+    if-nez v1, :cond_9
+
+    :cond_16
+    const/4 v0, 0x0
+
+    goto :goto_9
+.end method
+
+.method allowRecordingCommands()Z
+    .registers 2
+
+    .prologue
+    .line 1003
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->hasWindowFocus()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_e
+
+    invoke-direct {p0}, Lcom/millennialmedia/android/MMWebView;->isInterstitial()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_e
+
+    const/4 v0, 0x1
+
+    :goto_d
+    return v0
+
+    :cond_e
+    const/4 v0, 0x0
+
+    goto :goto_d
+.end method
+
+.method allowSpeechCreationCommands()Z
+    .registers 3
+
+    .prologue
+    const/4 v0, 0x1
+
+    .line 983
+    iget-boolean v1, p0, Lcom/millennialmedia/android/MMWebView;->hadFirstSpeechKitCreation:Z
+
+    if-eqz v1, :cond_a
+
+    .line 984
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->allowRecordingCommands()Z
+
+    move-result v0
+
+    .line 987
+    :cond_9
+    :goto_9
+    return v0
+
+    .line 986
+    :cond_a
+    iput-boolean v0, p0, Lcom/millennialmedia/android/MMWebView;->hadFirstSpeechKitCreation:Z
+
+    .line 987
+    invoke-direct {p0}, Lcom/millennialmedia/android/MMWebView;->isInterstitial()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_16
+
+    iget-boolean v1, p0, Lcom/millennialmedia/android/MMWebView;->isVisible:Z
+
+    if-nez v1, :cond_9
+
+    :cond_16
+    const/4 v0, 0x0
+
+    goto :goto_9
+.end method
+
 .method animateTransition(Lcom/millennialmedia/android/MMAdImpl;)V
-    .registers 5
+    .registers 4
     .param p1, "adImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 318
-    new-instance v1, Lcom/millennialmedia/android/MMWebView$5;
+    .line 360
+    new-instance v0, Ljava/util/concurrent/FutureTask;
 
-    invoke-direct {v1, p0, p1}, Lcom/millennialmedia/android/MMWebView$5;-><init>(Lcom/millennialmedia/android/MMWebView;Lcom/millennialmedia/android/MMAdImpl;)V
+    new-instance v1, Lcom/millennialmedia/android/MMWebView$3;
 
-    .line 345
-    .local v1, "r":Ljava/lang/Runnable;
-    :try_start_5
-    monitor-enter v1
-    :try_end_6
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_6} :catch_11
+    invoke-direct {v1, p0, p1}, Lcom/millennialmedia/android/MMWebView$3;-><init>(Lcom/millennialmedia/android/MMWebView;Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 347
-    :try_start_6
-    invoke-static {v1}, Lcom/millennialmedia/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
-    .line 348
-    invoke-virtual {v1}, Ljava/lang/Object;->wait()V
+    .line 379
+    .local v0, "future":Ljava/util/concurrent/FutureTask;, "Ljava/util/concurrent/FutureTask<Ljava/lang/Void;>;"
+    invoke-static {v0}, Lcom/millennialmedia/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 349
-    monitor-exit v1
+    .line 381
+    :try_start_d
+    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
+    :try_end_10
+    .catch Ljava/lang/InterruptedException; {:try_start_d .. :try_end_10} :catch_11
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_d .. :try_end_10} :catch_13
 
-    .line 355
-    :goto_d
+    .line 385
+    :goto_10
     return-void
 
-    .line 349
-    :catchall_e
-    move-exception v2
-
-    monitor-exit v1
-    :try_end_10
-    .catchall {:try_start_6 .. :try_end_10} :catchall_e
-
-    :try_start_10
-    throw v2
-    :try_end_11
-    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_11} :catch_11
-
-    .line 351
+    .line 382
     :catch_11
+    move-exception v1
+
+    goto :goto_10
+
+    .line 383
+    :catch_13
+    move-exception v1
+
+    goto :goto_10
+.end method
+
+.method canScroll()Z
+    .registers 2
+
+    .prologue
+    .line 518
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/millennialmedia/android/MMAdView;
+
+    return v0
+.end method
+
+.method public destroy()V
+    .registers 2
+
+    .prologue
+    .line 955
+    :try_start_0
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->resetSpeechKit()V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_3} :catch_7
+
+    .line 958
+    :goto_3
+    invoke-super {p0}, Landroid/webkit/WebView;->destroy()V
+
+    .line 959
+    return-void
+
+    .line 956
+    :catch_7
     move-exception v0
 
-    .line 353
-    .local v0, "e":Ljava/lang/Exception;
-    invoke-virtual {v1}, Ljava/lang/Object;->notify()V
-
-    goto :goto_d
+    goto :goto_3
 .end method
 
 .method disableAllAcceleration()V
     .registers 7
 
     .prologue
-    .line 153
-    :try_start_0
-    const-class v1, Landroid/webkit/WebView;
-
-    const-string v2, "setLayerType"
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Class;
-
-    const/4 v4, 0x0
-
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v5, v3, v4
-
-    const/4 v4, 0x1
-
-    const-class v5, Landroid/graphics/Paint;
-
-    aput-object v5, v3, v4
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    .line 154
-    .local v0, "method":Ljava/lang/reflect/Method;
-    const/4 v1, 0x2
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    aput-object v3, v1, v2
-
-    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 156
-    const-string v1, "Remove allAcceleration"
-
-    invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
-    :try_end_2c
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_2c} :catch_2d
-
-    .line 161
-    .end local v0    # "method":Ljava/lang/reflect/Method;
-    :goto_2c
-    return-void
-
-    .line 158
-    :catch_2d
-    move-exception v1
-
-    goto :goto_2c
-.end method
-
-.method enableHardwareAcceleration()V
-    .registers 7
-
-    .prologue
-    .line 182
-    :try_start_0
-    const-class v1, Landroid/webkit/WebView;
-
-    const-string v2, "setLayerType"
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Class;
-
-    const/4 v4, 0x0
-
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v5, v3, v4
-
-    const/4 v4, 0x1
-
-    const-class v5, Landroid/graphics/Paint;
-
-    aput-object v5, v3, v4
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
     .line 183
-    .local v0, "method":Ljava/lang/reflect/Method;
-    const/4 v1, 0x2
+    :try_start_0
+    const-class v1, Landroid/webkit/WebView;
 
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
+    const-string v2, "setLayerType"
 
     const/4 v3, 0x2
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v3, v3, [Ljava/lang/Class;
 
-    move-result-object v3
+    const/4 v4, 0x0
 
-    aput-object v3, v1, v2
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    const/4 v2, 0x1
+    aput-object v5, v3, v4
 
-    const/4 v3, 0x0
+    const/4 v4, 0x1
 
-    aput-object v3, v1, v2
+    const-class v5, Landroid/graphics/Paint;
 
-    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    aput-object v5, v3, v4
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
 
     .line 185
-    const-string v1, "Enabled hardwareAcceleration"
+    .local v0, "method":Ljava/lang/reflect/Method;
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    aput-object v3, v1, v2
+
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 187
+    const-string v1, "Remove allAcceleration"
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
     :try_end_2c
@@ -511,19 +624,26 @@
     :goto_2c
     return-void
 
-    .line 187
+    .line 188
     :catch_2d
     move-exception v1
 
     goto :goto_2c
 .end method
 
-.method enableSoftwareAcceleration()V
+.method enableHardwareAcceleration()V
     .registers 7
 
     .prologue
-    .line 167
-    :try_start_0
+    .line 216
+    invoke-direct {p0}, Lcom/millennialmedia/android/MMWebView;->needsSamsungJBOpenGlFixNoAcceleration()Z
+
+    move-result v1
+
+    if-nez v1, :cond_32
+
+    .line 218
+    :try_start_6
     const-class v1, Landroid/webkit/WebView;
 
     const-string v2, "setLayerType"
@@ -548,7 +668,101 @@
 
     move-result-object v0
 
-    .line 168
+    .line 220
+    .local v0, "method":Ljava/lang/reflect/Method;
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x2
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    aput-object v3, v1, v2
+
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 222
+    const-string v1, "Enabled hardwareAcceleration"
+
+    invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
+    :try_end_32
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_32} :catch_33
+
+    .line 226
+    .end local v0    # "method":Ljava/lang/reflect/Method;
+    :cond_32
+    :goto_32
+    return-void
+
+    .line 223
+    :catch_33
+    move-exception v1
+
+    goto :goto_32
+.end method
+
+.method enableSendingSize()V
+    .registers 2
+
+    .prologue
+    .line 1011
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/millennialmedia/android/MMWebView;->isSendingSize:Z
+
+    .line 1012
+    return-void
+.end method
+
+.method enableSoftwareAcceleration()V
+    .registers 7
+
+    .prologue
+    .line 202
+    invoke-direct {p0}, Lcom/millennialmedia/android/MMWebView;->needsSamsungJBOpenGlFixNoAcceleration()Z
+
+    move-result v1
+
+    if-nez v1, :cond_32
+
+    .line 204
+    :try_start_6
+    const-class v1, Landroid/webkit/WebView;
+
+    const-string v2, "setLayerType"
+
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/Class;
+
+    const/4 v4, 0x0
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v5, v3, v4
+
+    const/4 v4, 0x1
+
+    const-class v5, Landroid/graphics/Paint;
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    .line 206
     .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x2
 
@@ -572,30 +786,31 @@
 
     invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
-    const-string v1, "Remove allAcceleration"
+    .line 208
+    const-string v1, "Enable softwareAcceleration"
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
-    :try_end_2c
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_2c} :catch_2d
+    :try_end_32
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_32} :catch_33
 
-    .line 176
+    .line 213
     .end local v0    # "method":Ljava/lang/reflect/Method;
-    :goto_2c
+    :cond_32
+    :goto_32
     return-void
 
-    .line 172
-    :catch_2d
+    .line 209
+    :catch_33
     move-exception v1
 
-    goto :goto_2c
+    goto :goto_32
 .end method
 
 .method declared-synchronized getActivity()Landroid/app/Activity;
     .registers 4
 
     .prologue
-    .line 527
+    .line 538
     monitor-enter p0
 
     :try_start_1
@@ -603,7 +818,7 @@
 
     move-result-object v1
 
-    .line 528
+    .line 539
     .local v1, "parent":Landroid/view/ViewParent;
     if-eqz v1, :cond_1b
 
@@ -611,7 +826,7 @@
 
     if-eqz v2, :cond_1b
 
-    .line 530
+    .line 540
     check-cast v1, Landroid/view/ViewGroup;
 
     .end local v1    # "parent":Landroid/view/ViewParent;
@@ -619,7 +834,7 @@
 
     move-result-object v0
 
-    .line 531
+    .line 541
     .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_1b
 
@@ -627,12 +842,12 @@
 
     if-eqz v2, :cond_1b
 
-    .line 533
+    .line 542
     check-cast v0, Lcom/millennialmedia/android/MMActivity;
     :try_end_19
     .catchall {:try_start_1 .. :try_end_19} :catchall_1d
 
-    .line 536
+    .line 545
     .end local v0    # "context":Landroid/content/Context;
     :goto_19
     monitor-exit p0
@@ -644,7 +859,7 @@
 
     goto :goto_19
 
-    .line 527
+    .line 538
     :catchall_1d
     move-exception v2
 
@@ -653,11 +868,45 @@
     throw v2
 .end method
 
+.method getAdId()Ljava/lang/String;
+    .registers 2
+
+    .prologue
+    .line 972
+    iget-object v0, p0, Lcom/millennialmedia/android/MMWebView;->_lastHeaders:Lcom/millennialmedia/android/HttpMMHeaders;
+
+    if-eqz v0, :cond_13
+
+    iget-object v0, p0, Lcom/millennialmedia/android/MMWebView;->_lastHeaders:Lcom/millennialmedia/android/HttpMMHeaders;
+
+    iget-object v0, v0, Lcom/millennialmedia/android/HttpMMHeaders;->acid:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_13
+
+    .line 973
+    iget-object v0, p0, Lcom/millennialmedia/android/MMWebView;->_lastHeaders:Lcom/millennialmedia/android/HttpMMHeaders;
+
+    iget-object v0, v0, Lcom/millennialmedia/android/HttpMMHeaders;->acid:Ljava/lang/String;
+
+    .line 975
+    :goto_12
+    return-object v0
+
+    :cond_13
+    const-string v0, "DEFAULT_AD_ID"
+
+    goto :goto_12
+.end method
+
 .method declared-synchronized getAdViewOverlayView()Lcom/millennialmedia/android/AdViewOverlayView;
     .registers 3
 
     .prologue
-    .line 550
+    .line 576
     monitor-enter p0
 
     :try_start_1
@@ -665,7 +914,7 @@
 
     move-result-object v0
 
-    .line 551
+    .line 577
     .local v0, "parent":Landroid/view/ViewParent;
     if-eqz v0, :cond_f
 
@@ -673,12 +922,12 @@
 
     if-eqz v1, :cond_f
 
-    .line 553
+    .line 578
     check-cast v0, Lcom/millennialmedia/android/AdViewOverlayView;
     :try_end_d
     .catchall {:try_start_1 .. :try_end_d} :catchall_11
 
-    .line 555
+    .line 580
     .end local v0    # "parent":Landroid/view/ViewParent;
     :goto_d
     monitor-exit p0
@@ -691,7 +940,7 @@
 
     goto :goto_d
 
-    .line 550
+    .line 576
     .end local v0    # "parent":Landroid/view/ViewParent;
     :catchall_11
     move-exception v1
@@ -705,7 +954,7 @@
     .registers 3
 
     .prologue
-    .line 562
+    .line 587
     monitor-enter p0
 
     :try_start_1
@@ -713,7 +962,7 @@
 
     move-result-object v0
 
-    .line 563
+    .line 588
     .local v0, "parent":Landroid/view/ViewParent;
     if-eqz v0, :cond_f
 
@@ -721,12 +970,12 @@
 
     if-eqz v1, :cond_f
 
-    .line 565
+    .line 589
     check-cast v0, Lcom/millennialmedia/android/MMAdView;
     :try_end_d
     .catchall {:try_start_1 .. :try_end_d} :catchall_11
 
-    .line 567
+    .line 591
     .end local v0    # "parent":Landroid/view/ViewParent;
     :goto_d
     monitor-exit p0
@@ -739,7 +988,7 @@
 
     goto :goto_d
 
-    .line 562
+    .line 587
     .end local v0    # "parent":Landroid/view/ViewParent;
     :catchall_11
     move-exception v1
@@ -749,11 +998,21 @@
     throw v1
 .end method
 
+.method getLastHeaders()Lcom/millennialmedia/android/HttpMMHeaders;
+    .registers 2
+
+    .prologue
+    .line 968
+    iget-object v0, p0, Lcom/millennialmedia/android/MMWebView;->_lastHeaders:Lcom/millennialmedia/android/HttpMMHeaders;
+
+    return-object v0
+.end method
+
 .method getMMAdView()Lcom/millennialmedia/android/MMAdView;
     .registers 2
 
     .prologue
-    .line 512
+    .line 523
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -762,14 +1021,14 @@
 
     if-eqz v0, :cond_f
 
-    .line 513
+    .line 524
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Lcom/millennialmedia/android/MMAdView;
 
-    .line 514
+    .line 525
     :goto_e
     return-object v0
 
@@ -783,7 +1042,7 @@
     .registers 2
 
     .prologue
-    .line 519
+    .line 529
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -792,14 +1051,14 @@
 
     if-eqz v0, :cond_f
 
-    .line 520
+    .line 530
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Lcom/millennialmedia/android/MMLayout;
 
-    .line 521
+    .line 531
     :goto_e
     return-object v0
 
@@ -813,7 +1072,7 @@
     .registers 2
 
     .prologue
-    .line 359
+    .line 388
     iget-object v0, p0, Lcom/millennialmedia/android/MMWebView;->userAgent:Ljava/lang/String;
 
     return-object v0
@@ -826,21 +1085,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 852
+    .line 925
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 853
+    .line 926
     .local v0, "parent":Landroid/view/ViewParent;
     if-nez v0, :cond_8
 
-    .line 856
+    .line 930
     .end local v0    # "parent":Landroid/view/ViewParent;
     :goto_7
     return v2
 
-    .line 855
+    .line 928
     .restart local v0    # "parent":Landroid/view/ViewParent;
     :cond_8
     new-instance v1, Ljava/lang/StringBuilder;
@@ -881,7 +1140,7 @@
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->w(Ljava/lang/String;)V
 
-    .line 856
+    .line 930
     check-cast v0, Lcom/millennialmedia/android/MMLayout;
 
     .end local v0    # "parent":Landroid/view/ViewParent;
@@ -910,7 +1169,7 @@
     .registers 3
 
     .prologue
-    .line 872
+    .line 941
     const-string v0, "resized"
 
     iget-object v1, p0, Lcom/millennialmedia/android/MMWebView;->mraidState:Ljava/lang/String;
@@ -927,7 +1186,7 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 879
+    .line 948
     iget-object v0, p0, Lcom/millennialmedia/android/MMWebView;->currentUrl:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1005,25 +1264,25 @@
     .registers 3
 
     .prologue
-    .line 371
+    .line 400
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     if-eqz v1, :cond_f
 
-    .line 373
+    .line 401
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 374
+    .line 402
     .local v0, "viewGroup":Landroid/view/ViewGroup;
     instance-of v1, v0, Lcom/millennialmedia/android/MMAdView;
 
-    .line 376
+    .line 404
     .end local v0    # "viewGroup":Landroid/view/ViewGroup;
     :goto_e
     return v1
@@ -1043,13 +1302,13 @@
     .param p5, "historyUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 269
+    .line 304
     iput-object p1, p0, Lcom/millennialmedia/android/MMWebView;->currentUrl:Ljava/lang/String;
 
-    .line 270
+    .line 305
     invoke-super/range {p0 .. p5}, Landroid/webkit/WebView;->loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 271
+    .line 306
     return-void
 .end method
 
@@ -1058,20 +1317,32 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 542
+    .line 550
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    .line 570
+    :goto_6
+    return-void
+
+    .line 553
+    :cond_7
     const-string v0, "http"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_11
 
-    .line 543
+    .line 554
     iput-object p1, p0, Lcom/millennialmedia/android/MMWebView;->currentUrl:Ljava/lang/String;
 
-    .line 544
-    :cond_a
+    .line 555
+    :cond_11
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1092,11 +1363,36 @@
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;)V
 
-    .line 545
-    invoke-super {p0, p1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    .line 556
+    invoke-static {}, Lcom/millennialmedia/android/MMSDK;->isUiThread()Z
 
-    .line 546
-    return-void
+    move-result v0
+
+    if-eqz v0, :cond_33
+
+    .line 558
+    :try_start_2d
+    invoke-super {p0, p1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    :try_end_30
+    .catch Ljava/lang/Exception; {:try_start_2d .. :try_end_30} :catch_31
+
+    goto :goto_6
+
+    .line 559
+    :catch_31
+    move-exception v0
+
+    goto :goto_6
+
+    .line 563
+    :cond_33
+    new-instance v0, Lcom/millennialmedia/android/MMWebView$6;
+
+    invoke-direct {v0, p0, p1}, Lcom/millennialmedia/android/MMWebView$6;-><init>(Lcom/millennialmedia/android/MMWebView;Ljava/lang/String;)V
+
+    invoke-static {v0}, Lcom/millennialmedia/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    goto :goto_6
 .end method
 
 .method protected onMeasure(II)V
@@ -1107,216 +1403,378 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 118
+    .line 150
     invoke-super {p0, p1, p2}, Landroid/webkit/WebView;->onMeasure(II)V
 
-    .line 120
+    .line 152
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 121
+    .line 153
     .local v0, "heightSize":I
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v3
 
-    .line 123
+    .line 155
     .local v3, "widthSize":I
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getMeasuredHeight()I
 
     move-result v1
 
-    .line 124
+    .line 156
     .local v1, "measuredHeight":I
     if-nez v1, :cond_13
 
-    .line 125
+    .line 157
     move v1, v0
 
-    .line 126
+    .line 158
     :cond_13
     move v2, v3
 
-    .line 129
+    .line 162
     .local v2, "measuredWidth":I
     iget-boolean v4, p0, Lcom/millennialmedia/android/MMWebView;->requiresPreAdSizeFix:Z
 
     if-eqz v4, :cond_1c
 
-    .line 131
+    .line 163
     invoke-virtual {p0, v5, v5}, Lcom/millennialmedia/android/MMWebView;->setMeasuredDimension(II)V
 
-    .line 137
+    .line 168
     :goto_1b
     return-void
 
-    .line 135
+    .line 166
     :cond_1c
     invoke-virtual {p0, v2, v1}, Lcom/millennialmedia/android/MMWebView;->setMeasuredDimension(II)V
 
     goto :goto_1b
 .end method
 
-.method public onPauseWebViewVideo()V
-    .registers 5
+.method public onPauseWebView()V
+    .registers 6
 
     .prologue
-    .line 575
-    :try_start_0
-    const-class v1, Landroid/webkit/WebView;
+    .line 597
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-string v2, "onPause"
+    const/16 v3, 0xb
 
-    const/4 v3, 0x0
+    if-lt v2, v3, :cond_17
 
-    new-array v3, v3, [Ljava/lang/Class;
+    .line 599
+    :try_start_6
+    const-class v2, Landroid/webkit/WebView;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    const-string v3, "onPause"
 
-    move-result-object v0
+    const/4 v4, 0x0
 
-    .line 576
-    .local v0, "m":Ljava/lang/reflect/Method;
-    const/4 v1, 0x0
+    new-array v4, v4, [Ljava/lang/Class;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_11
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_11} :catch_12
+    move-result-object v1
 
-    .line 581
-    .end local v0    # "m":Ljava/lang/reflect/Method;
-    :goto_11
+    .line 600
+    .local v1, "m":Ljava/lang/reflect/Method;
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v1, p0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_17
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_17} :catch_18
+
+    .line 605
+    .end local v1    # "m":Ljava/lang/reflect/Method;
+    :cond_17
+    :goto_17
     return-void
 
-    .line 578
-    :catch_12
-    move-exception v1
+    .line 601
+    :catch_18
+    move-exception v0
 
-    goto :goto_11
+    .line 602
+    .local v0, "e":Ljava/lang/Exception;
+    const-string v2, "No onPause()"
+
+    invoke-static {v2}, Lcom/millennialmedia/android/MMSDK$Log;->w(Ljava/lang/String;)V
+
+    goto :goto_17
 .end method
 
-.method public onResumeWebViewVideo()V
-    .registers 5
+.method public onResumeWebView()V
+    .registers 6
 
     .prologue
-    .line 588
-    :try_start_0
-    const-class v1, Landroid/webkit/WebView;
+    .line 610
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-string v2, "onResume"
+    const/16 v3, 0xb
 
-    const/4 v3, 0x0
+    if-lt v2, v3, :cond_17
 
-    new-array v3, v3, [Ljava/lang/Class;
+    .line 612
+    :try_start_6
+    const-class v2, Landroid/webkit/WebView;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    const-string v3, "onResume"
 
-    move-result-object v0
+    const/4 v4, 0x0
 
-    .line 589
-    .local v0, "m":Ljava/lang/reflect/Method;
-    const/4 v1, 0x0
+    new-array v4, v4, [Ljava/lang/Class;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_11
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_11} :catch_12
+    move-result-object v1
 
-    .line 594
-    .end local v0    # "m":Ljava/lang/reflect/Method;
-    :goto_11
+    .line 613
+    .local v1, "m":Ljava/lang/reflect/Method;
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v1, p0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_17
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_17} :catch_18
+
+    .line 618
+    .end local v1    # "m":Ljava/lang/reflect/Method;
+    :cond_17
+    :goto_17
     return-void
 
-    .line 591
-    :catch_12
-    move-exception v1
+    .line 614
+    :catch_18
+    move-exception v0
 
-    goto :goto_11
+    .line 615
+    .local v0, "e":Ljava/lang/Exception;
+    const-string v2, "No onResume()"
+
+    invoke-static {v2}, Lcom/millennialmedia/android/MMSDK$Log;->w(Ljava/lang/String;)V
+
+    goto :goto_17
 .end method
 
 .method protected onSizeChanged(IIII)V
-    .registers 11
+    .registers 16
     .param p1, "w"    # I
     .param p2, "h"    # I
     .param p3, "oldw"    # I
     .param p4, "oldh"    # I
 
     .prologue
-    .line 836
-    const/4 v2, 0x2
+    const/4 v10, 0x1
 
-    new-array v1, v2, [I
+    .line 878
+    const/4 v8, 0x2
 
-    .line 837
-    .local v1, "location":[I
-    invoke-virtual {p0, v1}, Lcom/millennialmedia/android/MMWebView;->getLocationInWindow([I)V
+    new-array v3, v8, [I
 
-    .line 838
+    .line 879
+    .local v3, "location":[I
+    invoke-virtual {p0, v3}, Lcom/millennialmedia/android/MMWebView;->getLocationInWindow([I)V
+
+    .line 881
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getContext()Landroid/content/Context;
+
+    move-result-object v8
+
+    invoke-static {v8}, Lcom/millennialmedia/android/MMSDK;->getMetrics(Landroid/content/Context;)Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    .line 882
+    .local v4, "metrics":Landroid/util/DisplayMetrics;
+    if-eqz v4, :cond_84
+
+    .line 883
+    const/4 v8, 0x0
+
+    aget v8, v3, v8
+
+    int-to-float v8, v8
+
+    iget v9, v4, Landroid/util/DisplayMetrics;->density:F
+
+    div-float/2addr v8, v9
+
+    float-to-int v6, v8
+
+    .line 884
+    .local v6, "xLoc":I
+    aget v8, v3, v10
+
+    int-to-float v8, v8
+
+    iget v9, v4, Landroid/util/DisplayMetrics;->density:F
+
+    div-float/2addr v8, v9
+
+    float-to-int v7, v8
+
+    .line 885
+    .local v7, "yLoc":I
+    int-to-float v8, p1
+
+    iget v9, v4, Landroid/util/DisplayMetrics;->density:F
+
+    div-float/2addr v8, v9
+
+    float-to-int v5, v8
+
+    .line 886
+    .local v5, "width":I
+    int-to-float v8, p2
+
+    iget v9, v4, Landroid/util/DisplayMetrics;->density:F
+
+    div-float/2addr v8, v9
+
+    float-to-int v2, v8
+
+    .line 887
+    .local v2, "height":I
     new-instance v0, Lcom/millennialmedia/android/DTOAdViewLayout;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v6, v7, v5, v2}, Lcom/millennialmedia/android/DTOAdViewLayout;-><init>(IIII)V
 
-    aget v2, v1, v2
+    .line 890
+    .local v0, "dtoLayout":Lcom/millennialmedia/android/DTOAdViewLayout;
+    new-instance v8, Lcom/millennialmedia/google/gson/Gson;
 
-    const/4 v3, 0x1
+    invoke-direct {v8}, Lcom/millennialmedia/google/gson/Gson;-><init>()V
 
-    aget v3, v1, v3
+    invoke-virtual {v8, v0}, Lcom/millennialmedia/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 891
+    .local v1, "gsonAdSize":Ljava/lang/String;
+    iget-boolean v8, p0, Lcom/millennialmedia/android/MMWebView;->isSendingSize:Z
+
+    if-eqz v8, :cond_88
+
+    .line 892
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "javascript:MMJS.sdk.setAdSize("
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, ");"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {p0, v8}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
+
+    .line 893
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, " @@@ SENDING IT!!!@@@@@  adSize ! "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Lcom/millennialmedia/android/MMSDK$Log;->w(Ljava/lang/String;)V
+
+    .line 902
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getHeight()I
+
+    move-result v8
+
+    if-ne v8, v10, :cond_7a
 
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getWidth()I
 
-    move-result v4
+    move-result v8
 
-    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getHeight()I
+    if-eq v8, v10, :cond_84
 
-    move-result v5
+    .line 903
+    :cond_7a
+    new-instance v8, Lcom/millennialmedia/android/MMWebView$7;
 
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/millennialmedia/android/DTOAdViewLayout;-><init>(IIII)V
+    invoke-direct {v8, p0}, Lcom/millennialmedia/android/MMWebView$7;-><init>(Lcom/millennialmedia/android/MMWebView;)V
 
-    .line 840
-    .local v0, "dtoLayout":Lcom/millennialmedia/android/DTOAdViewLayout;
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-wide/16 v9, 0x320
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v8, v9, v10}, Lcom/millennialmedia/android/MMSDK;->runOnUiThreadDelayed(Ljava/lang/Runnable;J)V
 
-    const-string v3, "javascript:MMJS.sdk.setAdSize("
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    new-instance v3, Lcom/millennialmedia/google/gson/Gson;
-
-    invoke-direct {v3}, Lcom/millennialmedia/google/gson/Gson;-><init>()V
-
-    invoke-virtual {v3, v0}, Lcom/millennialmedia/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ");"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
-
-    .line 841
+    .line 915
+    .end local v0    # "dtoLayout":Lcom/millennialmedia/android/DTOAdViewLayout;
+    .end local v1    # "gsonAdSize":Ljava/lang/String;
+    .end local v2    # "height":I
+    .end local v5    # "width":I
+    .end local v6    # "xLoc":I
+    .end local v7    # "yLoc":I
+    :cond_84
+    :goto_84
     invoke-super {p0, p1, p2, p3, p4}, Landroid/webkit/WebView;->onSizeChanged(IIII)V
 
-    .line 842
+    .line 916
     return-void
+
+    .line 912
+    .restart local v0    # "dtoLayout":Lcom/millennialmedia/android/DTOAdViewLayout;
+    .restart local v1    # "gsonAdSize":Ljava/lang/String;
+    .restart local v2    # "height":I
+    .restart local v5    # "width":I
+    .restart local v6    # "xLoc":I
+    .restart local v7    # "yLoc":I
+    :cond_88
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, " @@@ Not sending adSize ! "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Lcom/millennialmedia/android/MMSDK$Log;->w(Ljava/lang/String;)V
+
+    goto :goto_84
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -1326,22 +1784,36 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 195
-    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->requestFocus()Z
-
-    .line 197
-    iget-object v0, p0, Lcom/millennialmedia/android/MMWebView;->tapDetector:Landroid/view/GestureDetector;
-
-    invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    .line 198
+    .line 230
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-ne v0, v4, :cond_37
+    if-nez v0, :cond_a
 
-    .line 200
+    .line 231
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->requestFocus()Z
+
+    .line 233
+    :cond_a
+    iget-object v0, p0, Lcom/millennialmedia/android/MMWebView;->tapDetector:Landroid/view/GestureDetector;
+
+    if-eqz v0, :cond_13
+
+    .line 234
+    iget-object v0, p0, Lcom/millennialmedia/android/MMWebView;->tapDetector:Landroid/view/GestureDetector;
+
+    invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    .line 235
+    :cond_13
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-ne v0, v4, :cond_41
+
+    .line 236
     const-string v0, "Ad clicked: action=%d x=%f y=%f"
 
     const/4 v1, 0x3
@@ -1384,8 +1856,8 @@
 
     invoke-static {v0, v1}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 202
-    :cond_37
+    .line 239
+    :cond_41
     invoke-super {p0, p1}, Landroid/webkit/WebView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -1397,7 +1869,7 @@
     .registers 3
 
     .prologue
-    .line 864
+    .line 935
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -1409,14 +1881,33 @@
 
     if-eqz v1, :cond_f
 
-    .line 866
+    .line 936
     check-cast v0, Landroid/view/ViewGroup;
 
     .end local v0    # "parent":Landroid/view/ViewParent;
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 868
+    .line 938
     :cond_f
+    return-void
+.end method
+
+.method resetSpeechKit()V
+    .registers 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 354
+    invoke-static {}, Lcom/millennialmedia/android/BridgeMMSpeechkit;->releaseSpeechKit()Z
+
+    .line 355
+    iput-boolean v0, p0, Lcom/millennialmedia/android/MMWebView;->hadFirstSpeechKitCreation:Z
+
+    .line 356
+    iput-boolean v0, p0, Lcom/millennialmedia/android/MMWebView;->hadFirstRecordingCreation:Z
+
+    .line 357
     return-void
 .end method
 
@@ -1425,10 +1916,10 @@
     .param p1, "adProperties"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 827
+    .line 870
     if-eqz p1, :cond_1e
 
-    .line 829
+    .line 871
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1455,7 +1946,7 @@
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 831
+    .line 874
     :cond_1e
     return-void
 .end method
@@ -1465,17 +1956,32 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 142
-    if-nez p1, :cond_5
+    .line 174
+    iput p1, p0, Lcom/millennialmedia/android/MMWebView;->currentColor:I
 
-    .line 144
+    .line 175
+    if-nez p1, :cond_7
+
+    .line 176
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->enableSoftwareAcceleration()V
 
-    .line 146
-    :cond_5
+    .line 178
+    :cond_7
     invoke-super {p0, p1}, Landroid/webkit/WebView;->setBackgroundColor(I)V
 
-    .line 147
+    .line 179
+    return-void
+.end method
+
+.method setLastHeaders(Lcom/millennialmedia/android/HttpMMHeaders;)V
+    .registers 2
+    .param p1, "lastHeaders"    # Lcom/millennialmedia/android/HttpMMHeaders;
+
+    .prologue
+    .line 964
+    iput-object p1, p0, Lcom/millennialmedia/android/MMWebView;->_lastHeaders:Lcom/millennialmedia/android/HttpMMHeaders;
+
+    .line 965
     return-void
 .end method
 
@@ -1484,7 +1990,7 @@
     .param p1, "requiresGesture"    # Z
 
     .prologue
-    .line 107
+    .line 141
     :try_start_0
     const-class v1, Landroid/webkit/WebView;
 
@@ -1504,7 +2010,7 @@
 
     move-result-object v0
 
-    .line 108
+    .line 143
     .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
@@ -1522,12 +2028,12 @@
     :try_end_1d
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_1d} :catch_1e
 
-    .line 113
+    .line 146
     .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_1d
     return-void
 
-    .line 110
+    .line 144
     :catch_1e
     move-exception v1
 
@@ -1538,25 +2044,32 @@
     .registers 2
 
     .prologue
-    .line 789
+    .line 812
     const-string v0, "javascript:MMJS.sdk.setState(\'default\')"
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 790
+    .line 813
     const-string v0, "default"
 
     iput-object v0, p0, Lcom/millennialmedia/android/MMWebView;->mraidState:Ljava/lang/String;
 
-    .line 791
+    .line 814
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/millennialmedia/android/MMWebView;->isSendingSize:Z
+
+    .line 815
     return-void
 .end method
 
 .method setMraidExpanded()V
-    .registers 4
+    .registers 5
 
     .prologue
-    .line 813
+    const/4 v3, 0x0
+
+    .line 852
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1599,17 +2112,28 @@
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 814
+    .line 855
     const-string v0, "javascript:MMJS.sdk.setState(\'expanded\');"
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 815
+    .line 856
     const-string v0, "expanded"
 
     iput-object v0, p0, Lcom/millennialmedia/android/MMWebView;->mraidState:Ljava/lang/String;
 
-    .line 816
+    .line 857
+    iput-boolean v3, p0, Lcom/millennialmedia/android/MMWebView;->hadFirstSpeechKitCreation:Z
+
+    .line 858
+    iput-boolean v3, p0, Lcom/millennialmedia/android/MMWebView;->hadFirstRecordingCreation:Z
+
+    .line 859
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/millennialmedia/android/MMWebView;->isSendingSize:Z
+
+    .line 860
     return-void
 .end method
 
@@ -1617,17 +2141,17 @@
     .registers 2
 
     .prologue
-    .line 795
+    .line 818
     const-string v0, "javascript:MMJS.sdk.setState(\'hidden\')"
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 796
+    .line 819
     const-string v0, "hidden"
 
     iput-object v0, p0, Lcom/millennialmedia/android/MMWebView;->mraidState:Ljava/lang/String;
 
-    .line 797
+    .line 820
     return-void
 .end method
 
@@ -1635,12 +2159,12 @@
     .registers 2
 
     .prologue
-    .line 784
+    .line 808
     const-string v0, "javascript:MMJS.sdk.setPlacementType(\'inline\');"
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 785
+    .line 809
     return-void
 .end method
 
@@ -1648,12 +2172,12 @@
     .registers 2
 
     .prologue
-    .line 779
+    .line 804
     const-string v0, "javascript:MMJS.sdk.setPlacementType(\'interstitial\');"
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 780
+    .line 805
     return-void
 .end method
 
@@ -1661,12 +2185,12 @@
     .registers 2
 
     .prologue
-    .line 822
+    .line 866
     const-string v0, "javascript:MMJS.sdk.ready();"
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 823
+    .line 867
     return-void
 .end method
 
@@ -1675,7 +2199,7 @@
     .param p1, "resizeParams"    # Lcom/millennialmedia/android/DTOResizeParameters;
 
     .prologue
-    .line 386
+    .line 413
     monitor-enter p0
 
     :try_start_1
@@ -1685,18 +2209,18 @@
 
     if-eqz v1, :cond_2e
 
-    .line 388
+    .line 414
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->getMMAdView()Lcom/millennialmedia/android/MMAdView;
 
     move-result-object v0
 
-    .line 389
+    .line 415
     .local v0, "adView":Lcom/millennialmedia/android/MMAdView;
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/millennialmedia/android/MMWebView;->isUserClosedResize:Z
 
-    .line 390
+    .line 416
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1717,26 +2241,26 @@
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 392
+    .line 418
     if-eqz v0, :cond_2e
 
-    .line 394
-    new-instance v1, Lcom/millennialmedia/android/MMWebView$6;
+    .line 419
+    new-instance v1, Lcom/millennialmedia/android/MMWebView$4;
 
-    invoke-direct {v1, p0, v0, p1}, Lcom/millennialmedia/android/MMWebView$6;-><init>(Lcom/millennialmedia/android/MMWebView;Lcom/millennialmedia/android/MMAdView;Lcom/millennialmedia/android/DTOResizeParameters;)V
+    invoke-direct {v1, p0, v0, p1}, Lcom/millennialmedia/android/MMWebView$4;-><init>(Lcom/millennialmedia/android/MMWebView;Lcom/millennialmedia/android/MMAdView;Lcom/millennialmedia/android/DTOResizeParameters;)V
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
     :try_end_2e
     .catchall {:try_start_1 .. :try_end_2e} :catchall_30
 
-    .line 439
+    .line 460
     .end local v0    # "adView":Lcom/millennialmedia/android/MMAdView;
     :cond_2e
     monitor-exit p0
 
     return-void
 
-    .line 386
+    .line 413
     :catchall_30
     move-exception v1
 
@@ -1749,12 +2273,17 @@
     .registers 2
 
     .prologue
-    .line 802
+    .line 829
     const-string v0, "javascript:MMJS.sdk.setViewable(false)"
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 803
+    .line 830
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/millennialmedia/android/MMWebView;->isVisible:Z
+
+    .line 831
     return-void
 .end method
 
@@ -1762,12 +2291,17 @@
     .registers 2
 
     .prologue
-    .line 808
+    .line 838
     const-string v0, "javascript:MMJS.sdk.setViewable(true)"
 
     invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 809
+    .line 839
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/millennialmedia/android/MMWebView;->isVisible:Z
+
+    .line 840
     return-void
 .end method
 
@@ -1780,17 +2314,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 275
+    .line 314
     if-eqz p1, :cond_5
 
     if-nez p2, :cond_6
 
-    .line 314
+    .line 351
     :cond_5
     :goto_5
     return-void
 
-    .line 278
+    .line 317
     :cond_6
     const-string v3, "/"
 
@@ -1804,15 +2338,39 @@
 
     move-result-object v1
 
-    .line 280
+    .line 319
     .local v1, "finalBaseUrl":Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->resetSpeechKit()V
+
+    .line 320
+    move-object v0, p1
+
+    .line 322
+    .local v0, "content":Ljava/lang/String;
+    invoke-static {p3}, Lcom/millennialmedia/android/MRaid;->hasMraidLocally(Landroid/content/Context;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3c
+
+    .line 323
+    invoke-static {p3, v0}, Lcom/millennialmedia/android/MRaid;->injectMraidJs(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 327
+    :goto_20
+    move-object v2, v0
+
+    .line 329
+    .local v2, "finalContent":Ljava/lang/String;
     sget v3, Lcom/millennialmedia/android/MMSDK;->logLevel:I
 
     const/4 v4, 0x5
 
-    if-lt v3, v4, :cond_24
+    if-lt v3, v4, :cond_33
 
-    .line 282
+    .line 330
     const-string v3, "Received ad with base url %s."
 
     const/4 v4, 0x1
@@ -1823,48 +2381,27 @@
 
     invoke-static {v3, v4}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 283
+    .line 331
     invoke-static {p1}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;)V
 
-    .line 286
-    :cond_24
-    move-object v0, p1
+    .line 336
+    :cond_33
+    new-instance v3, Lcom/millennialmedia/android/MMWebView$2;
 
-    .line 288
-    .local v0, "content":Ljava/lang/String;
-    invoke-static {p3}, Lcom/millennialmedia/android/MRaid;->hasMraidLocally(Landroid/content/Context;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_39
-
-    .line 290
-    invoke-static {p3, v0}, Lcom/millennialmedia/android/MRaid;->injectMraidJs(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 296
-    :goto_2f
-    move-object v2, v0
-
-    .line 298
-    .local v2, "finalContent":Ljava/lang/String;
-    new-instance v3, Lcom/millennialmedia/android/MMWebView$4;
-
-    invoke-direct {v3, p0, v1, v2}, Lcom/millennialmedia/android/MMWebView$4;-><init>(Lcom/millennialmedia/android/MMWebView;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, p0, v1, v2}, Lcom/millennialmedia/android/MMWebView$2;-><init>(Lcom/millennialmedia/android/MMWebView;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v3}, Lcom/millennialmedia/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     goto :goto_5
 
-    .line 294
+    .line 325
     .end local v2    # "finalContent":Ljava/lang/String;
-    :cond_39
+    :cond_3c
     const-string v3, "MMJS is not downloaded"
 
     invoke-static {v3}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;)V
 
-    goto :goto_2f
+    goto :goto_20
 .end method
 
 .method setWebViewContent(Ljava/lang/String;Ljava/lang/String;Lcom/millennialmedia/android/MMAdImpl;)V
@@ -1876,23 +2413,26 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 207
+    .line 244
     if-eqz p1, :cond_7
 
     if-eqz p2, :cond_7
 
     if-nez p3, :cond_8
 
-    .line 264
+    .line 299
     :cond_7
     :goto_7
     return-void
 
-    .line 209
+    .line 246
     :cond_8
     invoke-virtual {p0, p3}, Lcom/millennialmedia/android/MMWebView;->unresizeToDefault(Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 211
+    .line 249
+    invoke-virtual {p0}, Lcom/millennialmedia/android/MMWebView;->resetSpeechKit()V
+
+    .line 253
     const-string v3, "/"
 
     invoke-virtual {p2, v3}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
@@ -1905,15 +2445,15 @@
 
     move-result-object v0
 
-    .line 213
+    .line 255
     .local v0, "baseUrl":Ljava/lang/String;
     sget v3, Lcom/millennialmedia/android/MMSDK;->logLevel:I
 
     const/4 v4, 0x5
 
-    if-lt v3, v4, :cond_29
+    if-lt v3, v4, :cond_2c
 
-    .line 215
+    .line 256
     const-string v3, "Received ad with base url %s."
 
     const/4 v4, 0x1
@@ -1924,27 +2464,27 @@
 
     invoke-static {v3, v4}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 216
+    .line 257
     invoke-static {p1}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;)V
 
-    .line 219
-    :cond_29
+    .line 260
+    :cond_2c
     invoke-virtual {p3}, Lcom/millennialmedia/android/MMAdImpl;->isTransitionAnimated()Z
 
     move-result v3
 
-    if-eqz v3, :cond_32
+    if-eqz v3, :cond_35
 
-    .line 221
+    .line 261
     invoke-virtual {p0, p3}, Lcom/millennialmedia/android/MMWebView;->animateTransition(Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 224
-    :cond_32
+    .line 264
+    :cond_35
     iget-boolean v3, p3, Lcom/millennialmedia/android/MMAdImpl;->ignoreDensityScaling:Z
 
-    if-eqz v3, :cond_65
+    if-eqz v3, :cond_68
 
-    .line 226
+    .line 265
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1963,9 +2503,9 @@
 
     move-result-object v1
 
-    .line 233
+    .line 271
     .local v1, "content":Ljava/lang/String;
-    :goto_49
+    :goto_4c
     invoke-virtual {p3}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -1974,9 +2514,9 @@
 
     move-result v3
 
-    if-eqz v3, :cond_67
+    if-eqz v3, :cond_6a
 
-    .line 235
+    .line 272
     invoke-virtual {p3}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -1985,43 +2525,115 @@
 
     move-result-object v1
 
-    .line 241
-    :goto_5b
+    .line 276
+    :goto_5e
     move-object v2, v1
 
-    .line 243
+    .line 279
     .local v2, "finalContent":Ljava/lang/String;
-    new-instance v3, Lcom/millennialmedia/android/MMWebView$3;
+    new-instance v3, Lcom/millennialmedia/android/MMWebView$1;
 
-    invoke-direct {v3, p0, p3, v0, v2}, Lcom/millennialmedia/android/MMWebView$3;-><init>(Lcom/millennialmedia/android/MMWebView;Lcom/millennialmedia/android/MMAdImpl;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, p0, p3, v0, v2}, Lcom/millennialmedia/android/MMWebView$1;-><init>(Lcom/millennialmedia/android/MMWebView;Lcom/millennialmedia/android/MMAdImpl;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v3}, Lcom/millennialmedia/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     goto :goto_7
 
-    .line 230
+    .line 268
     .end local v1    # "content":Ljava/lang/String;
     .end local v2    # "finalContent":Ljava/lang/String;
-    :cond_65
+    :cond_68
     move-object v1, p1
 
     .restart local v1    # "content":Ljava/lang/String;
-    goto :goto_49
+    goto :goto_4c
 
-    .line 239
-    :cond_67
+    .line 274
+    :cond_6a
     const-string v3, "MMJS is not downloaded"
 
     invoke-static {v3}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;)V
 
-    goto :goto_5b
+    goto :goto_5e
+.end method
+
+.method setmicrophoneAudioLevelChange(D)V
+    .registers 5
+    .param p1, "level"    # D
+
+    .prologue
+    .line 844
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "javascript:MMJS.sdk.microphoneAudioLevelChange("
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
+
+    .line 845
+    return-void
+.end method
+
+.method setmicrophoneStateChange(Ljava/lang/String;)V
+    .registers 4
+    .param p1, "state"    # Ljava/lang/String;
+
+    .prologue
+    .line 848
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "javascript:MMJS.sdk.microphoneStateChange(\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\')"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
+
+    .line 849
+    return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .registers 4
 
     .prologue
-    .line 847
+    .line 920
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2056,6 +2668,14 @@
 
     move-result-object v0
 
+    invoke-super {p0}, Landroid/webkit/WebView;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -2068,7 +2688,7 @@
     .param p1, "adImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 450
+    .line 476
     monitor-enter p0
 
     :try_start_1
@@ -2084,43 +2704,43 @@
 
     if-eqz v3, :cond_26
 
-    .line 452
+    .line 477
     if-eqz p1, :cond_26
 
-    .line 454
+    .line 478
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getCallingAd()Lcom/millennialmedia/android/MMAd;
 
     move-result-object v1
 
-    .line 455
+    .line 479
     .local v1, "ad":Lcom/millennialmedia/android/MMAd;
     instance-of v3, v1, Lcom/millennialmedia/android/MMAdView;
 
     if-eqz v3, :cond_26
 
-    .line 457
+    .line 480
     move-object v0, v1
 
     check-cast v0, Lcom/millennialmedia/android/MMAdView;
 
     move-object v2, v0
 
-    .line 458
+    .line 481
     .local v2, "adView":Lcom/millennialmedia/android/MMAdView;
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/millennialmedia/android/MMWebView;->isUserClosedResize:Z
 
-    .line 459
-    new-instance v3, Lcom/millennialmedia/android/MMWebView$7;
+    .line 482
+    new-instance v3, Lcom/millennialmedia/android/MMWebView$5;
 
-    invoke-direct {v3, p0, v2}, Lcom/millennialmedia/android/MMWebView$7;-><init>(Lcom/millennialmedia/android/MMWebView;Lcom/millennialmedia/android/MMAdView;)V
+    invoke-direct {v3, p0, v2}, Lcom/millennialmedia/android/MMWebView$5;-><init>(Lcom/millennialmedia/android/MMWebView;Lcom/millennialmedia/android/MMAdView;)V
 
     invoke-static {v3}, Lcom/millennialmedia/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
     :try_end_26
     .catchall {:try_start_1 .. :try_end_26} :catchall_28
 
-    .line 493
+    .line 510
     .end local v1    # "ad":Lcom/millennialmedia/android/MMAd;
     .end local v2    # "adView":Lcom/millennialmedia/android/MMAdView;
     :cond_26
@@ -2128,7 +2748,7 @@
 
     return-void
 
-    .line 450
+    .line 476
     :catchall_28
     move-exception v3
 
@@ -2151,7 +2771,7 @@
     .end annotation
 
     .prologue
-    .line 364
+    .line 392
     .local p1, "arguments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "PROPERTY_BANNER_TYPE"
 
@@ -2166,14 +2786,14 @@
     :goto_a
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 365
+    .line 394
     const-string v0, "PROPERTY_STATE"
 
     iget-object v1, p0, Lcom/millennialmedia/android/MMWebView;->mraidState:Ljava/lang/String;
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 366
+    .line 395
     const-string v0, "PROPERTY_EXPANDING"
 
     iget-wide v1, p0, Lcom/millennialmedia/android/MMWebView;->creatorAdImplId:J
@@ -2184,10 +2804,10 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 367
+    .line 397
     return-void
 
-    .line 364
+    .line 392
     :cond_20
     const-string v0, "false"
 

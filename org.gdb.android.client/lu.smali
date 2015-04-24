@@ -7,105 +7,68 @@
 
 
 # instance fields
-.field final synthetic a:Lorg/gdb/android/client/lt;
+.field final synthetic a:Lorg/gdb/android/client/ShopDetailActivity;
 
-.field private final synthetic b:Lorg/gdb/android/client/widget/ConfirmDialog;
+.field private b:I
 
 
 # direct methods
-.method constructor <init>(Lorg/gdb/android/client/lt;Lorg/gdb/android/client/widget/ConfirmDialog;)V
+.method public constructor <init>(Lorg/gdb/android/client/ShopDetailActivity;I)V
     .registers 3
 
     .prologue
-    .line 1
-    iput-object p1, p0, Lorg/gdb/android/client/lu;->a:Lorg/gdb/android/client/lt;
+    .line 924
+    iput-object p1, p0, Lorg/gdb/android/client/lu;->a:Lorg/gdb/android/client/ShopDetailActivity;
 
-    iput-object p2, p0, Lorg/gdb/android/client/lu;->b:Lorg/gdb/android/client/widget/ConfirmDialog;
-
-    .line 960
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 925
+    iput p2, p0, Lorg/gdb/android/client/lu;->b:I
+
+    .line 926
     return-void
 .end method
 
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .registers 8
+    .registers 5
 
     .prologue
-    .line 964
-    iget-object v0, p0, Lorg/gdb/android/client/lu;->b:Lorg/gdb/android/client/widget/ConfirmDialog;
+    .line 930
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/widget/ConfirmDialog;->dismiss()V
+    iget-object v1, p0, Lorg/gdb/android/client/lu;->a:Lorg/gdb/android/client/ShopDetailActivity;
 
-    .line 965
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 931
+    const-class v2, Lorg/gdb/android/client/ProductDetailActivity;
 
-    const-string v1, "add="
+    .line 930
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 932
+    const-string v1, "shop"
 
-    .line 966
-    iget-object v1, p0, Lorg/gdb/android/client/lu;->a:Lorg/gdb/android/client/lt;
+    iget-object v2, p0, Lorg/gdb/android/client/lu;->a:Lorg/gdb/android/client/ShopDetailActivity;
 
-    iget-object v1, v1, Lorg/gdb/android/client/lt;->a:Lorg/gdb/android/client/ShopDetailActivity;
+    invoke-static {v2}, Lorg/gdb/android/client/ShopDetailActivity;->c(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/ShopVO;
 
-    invoke-static {v1}, Lorg/gdb/android/client/ShopDetailActivity;->c(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/vo/ShopVO;
+    move-result-object v2
 
-    move-result-object v1
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    invoke-virtual {v1}, Lorg/gdb/android/client/vo/ShopVO;->getBrand()Lorg/gdb/android/client/vo/BrandVO;
+    .line 933
+    const-string v1, "selectedIndex"
 
-    move-result-object v1
+    iget v2, p0, Lorg/gdb/android/client/lu;->b:I
 
-    invoke-virtual {v1}, Lorg/gdb/android/client/vo/BrandVO;->getId()Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    move-result-object v1
+    .line 934
+    iget-object v1, p0, Lorg/gdb/android/client/lu;->a:Lorg/gdb/android/client/ShopDetailActivity;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Lorg/gdb/android/client/ShopDetailActivity;->startActivity(Landroid/content/Intent;)V
 
-    move-result-object v0
-
-    .line 965
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 967
-    iget-object v1, p0, Lorg/gdb/android/client/lu;->a:Lorg/gdb/android/client/lt;
-
-    iget-object v1, v1, Lorg/gdb/android/client/lt;->a:Lorg/gdb/android/client/ShopDetailActivity;
-
-    invoke-static {v1}, Lorg/gdb/android/client/ShopDetailActivity;->d(Lorg/gdb/android/client/ShopDetailActivity;)Lorg/gdb/android/client/ma;
-
-    move-result-object v1
-
-    .line 968
-    iget-object v2, p0, Lorg/gdb/android/client/lu;->a:Lorg/gdb/android/client/lt;
-
-    iget-object v2, v2, Lorg/gdb/android/client/lt;->a:Lorg/gdb/android/client/ShopDetailActivity;
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/String;
-
-    const/4 v4, 0x0
-
-    .line 969
-    invoke-static {}, Lorg/gdb/android/client/vo/UserVO;->getCurrentId()Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    const/4 v4, 0x1
-
-    aput-object v0, v3, v4
-
-    .line 967
-    invoke-virtual {v1, v2, v3}, Lorg/gdb/android/client/ma;->b(Lorg/gdb/android/client/ShopDetailActivity;[Ljava/lang/String;)V
-
-    .line 970
+    .line 935
     return-void
 .end method

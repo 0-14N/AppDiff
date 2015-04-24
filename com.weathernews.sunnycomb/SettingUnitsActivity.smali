@@ -89,7 +89,7 @@
     .registers 1
 
     .prologue
-    .line 363
+    .line 361
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->setMyProfileParams()V
 
     return-void
@@ -109,7 +109,7 @@
     .registers 1
 
     .prologue
-    .line 383
+    .line 381
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->sendProfile()V
 
     return-void
@@ -206,7 +206,7 @@
     const v3, 0x7f02008e
 
     .line 109
-    const v0, 0x7f090179
+    const v0, 0x7f090176
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -217,7 +217,7 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->temperature_tv:Landroid/widget/TextView;
 
     .line 110
-    const v0, 0x7f09017d
+    const v0, 0x7f09017a
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -228,7 +228,7 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->wind_tv:Landroid/widget/TextView;
 
     .line 111
-    const v0, 0x7f090183
+    const v0, 0x7f090180
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -239,7 +239,7 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->prec_tv:Landroid/widget/TextView;
 
     .line 112
-    const v0, 0x7f09017b
+    const v0, 0x7f090178
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -250,7 +250,7 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempF:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     .line 113
-    const v0, 0x7f09017c
+    const v0, 0x7f090179
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -261,7 +261,7 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempC:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     .line 114
-    const v0, 0x7f09017f
+    const v0, 0x7f09017c
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -272,7 +272,7 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMile:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     .line 115
-    const v0, 0x7f090180
+    const v0, 0x7f09017d
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -283,7 +283,7 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKiro:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     .line 116
-    const v0, 0x7f090181
+    const v0, 0x7f09017e
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -294,7 +294,7 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMeter:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     .line 117
-    const v0, 0x7f090182
+    const v0, 0x7f09017f
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -305,7 +305,7 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKnot:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     .line 118
-    const v0, 0x7f090185
+    const v0, 0x7f090182
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -316,7 +316,7 @@
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureIn:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     .line 119
-    const v0, 0x7f090186
+    const v0, 0x7f090183
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -467,7 +467,7 @@
     invoke-virtual {v0, v1, v3}, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->setSettingUnitButtonLayout(II)V
 
     .line 138
-    const v0, 0x7f090187
+    const v0, 0x7f090184
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->findViewById(I)Landroid/view/View;
 
@@ -513,24 +513,24 @@
     .registers 9
 
     .prologue
-    .line 384
+    .line 382
     new-instance v2, Lcom/weathernews/libwniutil/UtilDevice;
 
     invoke-direct {v2, p0}, Lcom/weathernews/libwniutil/UtilDevice;-><init>(Landroid/content/Context;)V
 
-    .line 385
+    .line 383
     .local v2, "utilDevice":Lcom/weathernews/libwniutil/UtilDevice;
     new-instance v4, Lcom/weathernews/libwniutil/UtilTime;
 
     invoke-direct {v4, p0}, Lcom/weathernews/libwniutil/UtilTime;-><init>(Landroid/content/Context;)V
 
-    .line 386
+    .line 384
     .local v4, "utilTime":Lcom/weathernews/libwniutil/UtilTime;
     new-instance v3, Lcom/weathernews/sunnycomb/util/UtilProf;
 
     invoke-direct {v3, p0}, Lcom/weathernews/sunnycomb/util/UtilProf;-><init>(Landroid/content/Context;)V
 
-    .line 389
+    .line 387
     .local v3, "utilProf":Lcom/weathernews/sunnycomb/util/UtilProf;
     new-instance v5, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
@@ -544,10 +544,10 @@
 
     iput-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
-    .line 413
+    .line 411
     const-string v0, "http://g.sunnycomb.com/sunnycomb/api_prof_submit.cgi"
 
-    .line 416
+    .line 414
     .local v0, "apiUrl":Ljava/lang/String;
     :try_start_1f
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
@@ -562,7 +562,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 417
+    .line 415
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "locale"
@@ -577,7 +577,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 418
+    .line 416
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "tz"
@@ -588,7 +588,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 419
+    .line 417
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "network"
@@ -599,7 +599,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 420
+    .line 418
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "device"
@@ -610,7 +610,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 421
+    .line 419
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "gmail"
@@ -621,7 +621,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 422
+    .line 420
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "carrier"
@@ -632,7 +632,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 423
+    .line 421
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "os_ver"
@@ -643,7 +643,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 424
+    .line 422
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "app_ver"
@@ -656,7 +656,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 425
+    .line 423
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "name"
@@ -667,7 +667,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 426
+    .line 424
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "bio"
@@ -678,7 +678,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 427
+    .line 425
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "birthday"
@@ -689,7 +689,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 428
+    .line 426
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "gender"
@@ -700,7 +700,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 429
+    .line 427
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "units"
@@ -709,7 +709,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 430
+    .line 428
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "units_wind"
@@ -718,7 +718,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 431
+    .line 429
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "units_prec"
@@ -727,14 +727,14 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 432
+    .line 430
     invoke-virtual {v3}, Lcom/weathernews/sunnycomb/util/UtilProf;->getNotification()Z
 
     move-result v5
 
     if-eqz v5, :cond_11c
 
-    .line 433
+    .line 431
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "notification"
@@ -743,7 +743,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 436
+    .line 434
     :goto_e0
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
@@ -755,7 +755,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 437
+    .line 435
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "till"
@@ -766,7 +766,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setStringValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 438
+    .line 436
     new-instance v1, Ljava/io/File;
 
     invoke-virtual {v3}, Lcom/weathernews/sunnycomb/util/UtilProf;->getMyAvatorFilePath()Ljava/lang/String;
@@ -775,7 +775,7 @@
 
     invoke-direct {v1, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 439
+    .line 437
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -783,7 +783,7 @@
 
     if-eqz v5, :cond_110
 
-    .line 440
+    .line 438
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
     const-string v6, "prof_photo"
@@ -794,7 +794,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->setImageFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 441
+    .line 439
     :cond_110
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
@@ -808,12 +808,12 @@
 
     invoke-virtual {v5, v6}, Lcom/weathernews/libwnihttp/HttpPostMultipartTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 444
+    .line 442
     .end local v1    # "file":Ljava/io/File;
     :goto_11b
     return-void
 
-    .line 435
+    .line 433
     :cond_11c
     iget-object v5, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->httpPostTask:Lcom/weathernews/libwnihttp/HttpPostMultipartTask;
 
@@ -827,7 +827,7 @@
 
     goto :goto_e0
 
-    .line 442
+    .line 440
     :catch_126
     move-exception v5
 
@@ -895,7 +895,7 @@
     .registers 3
 
     .prologue
-    .line 364
+    .line 362
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strTempUnit:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -904,12 +904,12 @@
 
     if-eqz v0, :cond_25
 
-    .line 365
+    .line 363
     const-string v0, "F"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strTempUnit:Ljava/lang/String;
 
-    .line 369
+    .line 367
     :goto_c
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
@@ -919,12 +919,12 @@
 
     if-eqz v0, :cond_2d
 
-    .line 370
+    .line 368
     const-string v0, "MPH"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
-    .line 374
+    .line 372
     :goto_18
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strPrecUnit:Ljava/lang/String;
 
@@ -934,16 +934,16 @@
 
     if-eqz v0, :cond_35
 
-    .line 375
+    .line 373
     const-string v0, "in"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strPrecUnit:Ljava/lang/String;
 
-    .line 378
+    .line 376
     :goto_24
     return-void
 
-    .line 367
+    .line 365
     :cond_25
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
@@ -953,7 +953,7 @@
 
     goto :goto_c
 
-    .line 372
+    .line 370
     :cond_2d
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
@@ -963,7 +963,7 @@
 
     goto :goto_18
 
-    .line 377
+    .line 375
     :cond_35
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
@@ -982,7 +982,7 @@
 
     const/4 v2, 0x0
 
-    .line 450
+    .line 448
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/common/ProfileManager;->getTempUnits()Ljava/lang/String;
@@ -991,7 +991,7 @@
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strTempUnit:Ljava/lang/String;
 
-    .line 451
+    .line 449
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strTempUnit:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1000,7 +1000,7 @@
 
     if-nez v0, :cond_7a
 
-    .line 452
+    .line 450
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strTempUnit:Ljava/lang/String;
 
     const-string v1, "C"
@@ -1011,17 +1011,17 @@
 
     if-eqz v0, :cond_71
 
-    .line 453
+    .line 451
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempC:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v3, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 454
+    .line 452
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempF:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 463
+    .line 461
     :goto_24
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
@@ -1031,7 +1031,7 @@
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
-    .line 464
+    .line 462
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1040,7 +1040,7 @@
 
     if-nez v0, :cond_c6
 
-    .line 465
+    .line 463
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
     const-string v1, "MPH"
@@ -1051,27 +1051,27 @@
 
     if-eqz v0, :cond_7f
 
-    .line 466
+    .line 464
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMile:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v3, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 467
+    .line 465
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKiro:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 468
+    .line 466
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMeter:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 469
+    .line 467
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKnot:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 490
+    .line 488
     :goto_4e
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
@@ -1081,7 +1081,7 @@
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strPrecUnit:Ljava/lang/String;
 
-    .line 491
+    .line 489
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strPrecUnit:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1090,7 +1090,7 @@
 
     if-nez v0, :cond_d4
 
-    .line 492
+    .line 490
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strPrecUnit:Ljava/lang/String;
 
     const-string v1, "mm"
@@ -1101,34 +1101,34 @@
 
     if-eqz v0, :cond_cb
 
-    .line 493
+    .line 491
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureIn:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 494
+    .line 492
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureMm:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v3, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 502
+    .line 500
     :goto_70
     return-void
 
-    .line 456
+    .line 454
     :cond_71
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempC:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 457
+    .line 455
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempF:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v3, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
     goto :goto_24
 
-    .line 460
+    .line 458
     :cond_7a
     const-string v0, "F"
 
@@ -1136,7 +1136,7 @@
 
     goto :goto_24
 
-    .line 470
+    .line 468
     :cond_7f
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
@@ -1148,29 +1148,29 @@
 
     if-eqz v0, :cond_9a
 
-    .line 471
+    .line 469
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMile:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 472
+    .line 470
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKiro:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v3, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 473
+    .line 471
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMeter:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 474
+    .line 472
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKnot:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
     goto :goto_4e
 
-    .line 475
+    .line 473
     :cond_9a
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
@@ -1182,52 +1182,52 @@
 
     if-eqz v0, :cond_b5
 
-    .line 476
+    .line 474
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMile:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 477
+    .line 475
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKiro:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 478
+    .line 476
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMeter:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 479
+    .line 477
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKnot:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v3, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
     goto :goto_4e
 
-    .line 481
+    .line 479
     :cond_b5
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMile:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 482
+    .line 480
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKiro:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 483
+    .line 481
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMeter:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v3, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 484
+    .line 482
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKnot:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
     goto :goto_4e
 
-    .line 487
+    .line 485
     :cond_c6
     const-string v0, "MPH"
 
@@ -1235,20 +1235,20 @@
 
     goto :goto_4e
 
-    .line 496
+    .line 494
     :cond_cb
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureIn:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v3, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
-    .line 497
+    .line 495
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureMm:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iput-boolean v2, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
     goto :goto_70
 
-    .line 500
+    .line 498
     :cond_d4
     const-string v0, "in"
 
@@ -1598,24 +1598,24 @@
     .registers 2
 
     .prologue
-    .line 556
+    .line 554
     iget-boolean v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->isFromSideMenu:Z
 
     if-eqz v0, :cond_b
 
-    .line 557
+    .line 555
     sget-object v0, Lcom/weathernews/sunnycomb/sidemenu/MenuType;->SETTING:Lcom/weathernews/sunnycomb/sidemenu/MenuType;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/sidemenu/MenuType;->getIconResId()I
 
     move-result v0
 
-    .line 559
+    .line 557
     :goto_a
     return v0
 
     :cond_b
-    const v0, 0x7f02011b
+    const v0, 0x7f02011c
 
     goto :goto_a
 .end method
@@ -1634,19 +1634,19 @@
     .registers 2
 
     .prologue
-    .line 509
+    .line 507
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempF:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iget-boolean v0, v0, Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;->status:Z
 
     if-eqz v0, :cond_1f
 
-    .line 510
+    .line 508
     const-string v0, "F"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strTempUnit:Ljava/lang/String;
 
-    .line 515
+    .line 513
     :cond_a
     :goto_a
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMile:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
@@ -1655,12 +1655,12 @@
 
     if-eqz v0, :cond_2a
 
-    .line 516
+    .line 514
     const-string v0, "MPH"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
-    .line 525
+    .line 523
     :cond_14
     :goto_14
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureMm:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
@@ -1669,17 +1669,17 @@
 
     if-eqz v0, :cond_4b
 
-    .line 526
+    .line 524
     const-string v0, "mm"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strPrecUnit:Ljava/lang/String;
 
-    .line 530
+    .line 528
     :cond_1e
     :goto_1e
     return-void
 
-    .line 511
+    .line 509
     :cond_1f
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempC:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
@@ -1687,14 +1687,14 @@
 
     if-eqz v0, :cond_a
 
-    .line 512
+    .line 510
     const-string v0, "C"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strTempUnit:Ljava/lang/String;
 
     goto :goto_a
 
-    .line 517
+    .line 515
     :cond_2a
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKiro:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
@@ -1702,14 +1702,14 @@
 
     if-eqz v0, :cond_35
 
-    .line 518
+    .line 516
     const-string v0, "KPH"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
     goto :goto_14
 
-    .line 519
+    .line 517
     :cond_35
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMeter:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
@@ -1717,14 +1717,14 @@
 
     if-eqz v0, :cond_40
 
-    .line 520
+    .line 518
     const-string v0, "MPS"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
     goto :goto_14
 
-    .line 521
+    .line 519
     :cond_40
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKnot:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
@@ -1732,14 +1732,14 @@
 
     if-eqz v0, :cond_14
 
-    .line 522
+    .line 520
     const-string v0, "KNT"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strWindUnit:Ljava/lang/String;
 
     goto :goto_14
 
-    .line 527
+    .line 525
     :cond_4b
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureIn:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
@@ -1747,7 +1747,7 @@
 
     if-eqz v0, :cond_1e
 
-    .line 528
+    .line 526
     const-string v0, "in"
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->strPrecUnit:Ljava/lang/String;
@@ -1760,47 +1760,40 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 329
-    const-string v0, "MyApp"
-
-    const-string v1, "click"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 330
+    .line 328
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_60
+    packed-switch v0, :pswitch_data_58
 
-    .line 358
-    :goto_e
-    :pswitch_e
+    .line 356
+    :goto_7
+    :pswitch_7
     return-void
 
-    .line 332
-    :pswitch_f
+    .line 330
+    :pswitch_8
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempF:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempC:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     invoke-direct {p0, v0, v1}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->toggle2(Landroid/view/View;Landroid/view/View;)V
 
-    goto :goto_e
+    goto :goto_7
 
-    .line 335
-    :pswitch_17
+    .line 333
+    :pswitch_10
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempC:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->tempF:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     invoke-direct {p0, v0, v1}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->toggle2(Landroid/view/View;Landroid/view/View;)V
 
-    goto :goto_e
+    goto :goto_7
 
-    .line 338
-    :pswitch_1f
+    .line 336
+    :pswitch_18
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMile:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKiro:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
@@ -1811,10 +1804,10 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->toggle4(Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    goto :goto_e
+    goto :goto_7
 
-    .line 341
-    :pswitch_2b
+    .line 339
+    :pswitch_24
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKiro:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMile:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
@@ -1825,10 +1818,10 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->toggle4(Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    goto :goto_e
+    goto :goto_7
 
-    .line 344
-    :pswitch_37
+    .line 342
+    :pswitch_30
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMeter:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMile:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
@@ -1839,10 +1832,10 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->toggle4(Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    goto :goto_e
+    goto :goto_7
 
-    .line 347
-    :pswitch_43
+    .line 345
+    :pswitch_3c
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windKnot:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->windMile:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
@@ -1853,45 +1846,43 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->toggle4(Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    goto :goto_e
+    goto :goto_7
 
-    .line 350
-    :pswitch_4f
+    .line 348
+    :pswitch_48
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureIn:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureMm:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     invoke-direct {p0, v0, v1}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->toggle2(Landroid/view/View;Landroid/view/View;)V
 
-    goto :goto_e
+    goto :goto_7
 
-    .line 353
-    :pswitch_57
+    .line 351
+    :pswitch_50
     iget-object v0, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureMm:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->measureIn:Lcom/weathernews/sunnycomb/login/ProfileSettingUnitsCustomView;
 
     invoke-direct {p0, v0, v1}, Lcom/weathernews/sunnycomb/login/SettingUnitsActivity;->toggle2(Landroid/view/View;Landroid/view/View;)V
 
-    goto :goto_e
+    goto :goto_7
 
-    .line 330
-    nop
-
-    :pswitch_data_60
-    .packed-switch 0x7f09017b
-        :pswitch_f
-        :pswitch_17
-        :pswitch_e
-        :pswitch_e
-        :pswitch_1f
-        :pswitch_2b
-        :pswitch_37
-        :pswitch_43
-        :pswitch_e
-        :pswitch_e
-        :pswitch_4f
-        :pswitch_57
+    .line 328
+    :pswitch_data_58
+    .packed-switch 0x7f090178
+        :pswitch_8
+        :pswitch_10
+        :pswitch_7
+        :pswitch_7
+        :pswitch_18
+        :pswitch_24
+        :pswitch_30
+        :pswitch_3c
+        :pswitch_7
+        :pswitch_7
+        :pswitch_48
+        :pswitch_50
     .end packed-switch
 .end method
 

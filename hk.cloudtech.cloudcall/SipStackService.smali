@@ -27,15 +27,6 @@
 .field private connectionTryingCount:I
 
 .field private final lastBackServerTime:Ljava/util/concurrent/atomic/AtomicReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/atomic/AtomicReference",
-            "<",
-            "Ljava/util/Date;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private mCurrentIncallIconState:Lorg/linphone/SipStackService$IncallIconState;
 
@@ -50,15 +41,6 @@
 .field private registerHandler:Lorg/linphone/SipStackService$RegisterHandler;
 
 .field private final registerTime:Ljava/util/concurrent/atomic/AtomicReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/atomic/AtomicReference",
-            "<",
-            "Ljava/util/Date;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private timerHandler:Lorg/linphone/SipStackService$TimerHandler;
 

@@ -415,7 +415,7 @@
 
     .prologue
     .line 242
-    const v0, 0x7f060504
+    const v0, 0x7f0604ef
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -426,7 +426,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->p:Landroid/widget/RelativeLayout;
 
     .line 245
-    const v0, 0x7f060505
+    const v0, 0x7f0604f0
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -437,7 +437,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->q:Landroid/widget/Button;
 
     .line 246
-    const v0, 0x7f060507
+    const v0, 0x7f0604f2
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -448,7 +448,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->r:Landroid/widget/Button;
 
     .line 247
-    const v0, 0x7f060508
+    const v0, 0x7f0604f3
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -459,7 +459,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->s:Landroid/widget/Button;
 
     .line 248
-    const v0, 0x7f060509
+    const v0, 0x7f0604f4
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -470,7 +470,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->t:Landroid/widget/Button;
 
     .line 249
-    const v0, 0x7f060510
+    const v0, 0x7f0604fb
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -481,7 +481,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->v:Landroid/widget/Button;
 
     .line 250
-    const v0, 0x7f060511
+    const v0, 0x7f0604fc
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -492,7 +492,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->w:Landroid/widget/Button;
 
     .line 251
-    const v0, 0x7f06050b
+    const v0, 0x7f0604f6
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -503,7 +503,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->u:Landroid/widget/Button;
 
     .line 252
-    const v0, 0x7f06050f
+    const v0, 0x7f0604fa
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -514,7 +514,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->x:Landroid/widget/Button;
 
     .line 253
-    const v0, 0x7f06050d
+    const v0, 0x7f0604f8
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -525,7 +525,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->y:Landroid/widget/Button;
 
     .line 254
-    const v0, 0x7f06050c
+    const v0, 0x7f0604f7
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -558,7 +558,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->L:Landroid/widget/ImageButton;
 
     .line 259
-    const v0, 0x7f060502
+    const v0, 0x7f0604ed
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->findViewById(I)Landroid/view/View;
 
@@ -682,7 +682,7 @@
     if-nez v0, :cond_12
 
     .line 550
-    const v0, 0x7f0a02ed
+    const v0, 0x7f0a02ca
 
     invoke-static {p0, v0, v2}, Lcom/quvideo/xiaoying/videoeditor/util/ToastUtils;->show(Landroid/content/Context;II)V
 
@@ -854,9 +854,9 @@
 
     const v1, 0x7f0a0020
 
-    new-instance v2, Lws;
+    new-instance v2, Lpz;
 
-    invoke-direct {v2, p0}, Lws;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;)V
+    invoke-direct {v2, p0}, Lpz;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;)V
 
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -1174,9 +1174,9 @@
     invoke-static {v3, p0}, Lcom/quvideo/xiaoying/videoeditor/util/Utils;->controlBackLight(ZLandroid/app/Activity;)V
 
     .line 779
-    new-instance v2, Lwv;
+    new-instance v2, Lqc;
 
-    invoke-direct {v2, p0}, Lwv;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;)V
+    invoke-direct {v2, p0}, Lqc;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;)V
 
     .line 811
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->G:Lcom/quvideo/xiaoying/common/ProjectMgr;
@@ -1218,7 +1218,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a02ee
+    const v1, 0x7f0a02cb
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -1790,9 +1790,9 @@
     .line 950
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComGridDialog;
 
-    new-instance v3, Lww;
+    new-instance v3, Lqd;
 
-    invoke-direct {v3, p0, v1}, Lww;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;Ljava/util/List;)V
+    invoke-direct {v3, p0, v1}, Lqd;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;Ljava/util/List;)V
 
     invoke-direct {v0, p0, v2, v3}, Lcom/quvideo/xiaoying/dialog/ComGridDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;Lcom/quvideo/xiaoying/dialog/ComGridDialog$OnGridDialogClickListener;)V
 
@@ -1881,9 +1881,9 @@
     .line 990
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComGridDialog;
 
-    new-instance v3, Lwx;
+    new-instance v3, Lqe;
 
-    invoke-direct {v3, p0, v1}, Lwx;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;Ljava/util/List;)V
+    invoke-direct {v3, p0, v1}, Lqe;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;Ljava/util/List;)V
 
     invoke-direct {v0, p0, v2, v3}, Lcom/quvideo/xiaoying/dialog/ComGridDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;Lcom/quvideo/xiaoying/dialog/ComGridDialog$OnGridDialogClickListener;)V
 
@@ -2453,7 +2453,7 @@
     if-gtz v0, :cond_117
 
     .line 491
-    const v0, 0x7f0a02ed
+    const v0, 0x7f0a02ca
 
     invoke-static {p0, v0, v3}, Lcom/quvideo/xiaoying/videoeditor/util/ToastUtils;->show(Landroid/content/Context;II)V
 
@@ -3026,7 +3026,7 @@
     .line 217
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;->r:Landroid/widget/Button;
 
-    const v1, 0x7f0a02e3
+    const v1, 0x7f0a02c0
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
@@ -3476,9 +3476,9 @@
     .line 626
     const v1, 0x7f0a0086
 
-    new-instance v2, Lwu;
+    new-instance v2, Lqb;
 
-    invoke-direct {v2, p0}, Lwu;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;)V
+    invoke-direct {v2, p0}, Lqb;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;)V
 
     .line 625
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -3589,9 +3589,9 @@
 
     .prologue
     .line 607
-    new-instance v0, Lwt;
+    new-instance v0, Lqa;
 
-    invoke-direct {v0, p0}, Lwt;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;)V
+    invoke-direct {v0, p0}, Lqa;-><init>(Lcom/quvideo/xiaoying/app/publish/IntlPublishActivity;)V
 
     .line 615
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;

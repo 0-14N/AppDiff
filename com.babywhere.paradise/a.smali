@@ -40,11 +40,11 @@
 
     invoke-static {v0}, Lcom/babywhere/demo/HelloLua;->a(Lcom/babywhere/demo/HelloLua;)V
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/ads/AdView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Lcom/feiwo/banner/AdBanner;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
@@ -54,25 +54,25 @@
 
     iput v3, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v1
 
     const/16 v2, 0x53
 
-    invoke-virtual {v1, v2}, Lcom/google/ads/AdView;->setGravity(I)V
+    invoke-virtual {v1, v2}, Lcom/feiwo/banner/AdBanner;->setGravity(I)V
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/google/ads/AdView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v0}, Lcom/feiwo/banner/AdBanner;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Lcom/google/ads/AdView;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Lcom/feiwo/banner/AdBanner;->setVisibility(I)V
 
     :cond_33
     :goto_33
@@ -87,11 +87,11 @@
 
     invoke-static {v0}, Lcom/babywhere/demo/HelloLua;->a(Lcom/babywhere/demo/HelloLua;)V
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/ads/AdView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Lcom/feiwo/banner/AdBanner;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
@@ -101,25 +101,25 @@
 
     iput v3, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v1
 
     const/16 v2, 0x51
 
-    invoke-virtual {v1, v2}, Lcom/google/ads/AdView;->setGravity(I)V
+    invoke-virtual {v1, v2}, Lcom/feiwo/banner/AdBanner;->setGravity(I)V
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/google/ads/AdView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v0}, Lcom/feiwo/banner/AdBanner;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Lcom/google/ads/AdView;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Lcom/feiwo/banner/AdBanner;->setVisibility(I)V
 
     goto :goto_33
 
@@ -132,11 +132,11 @@
 
     invoke-static {v0}, Lcom/babywhere/demo/HelloLua;->a(Lcom/babywhere/demo/HelloLua;)V
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/ads/AdView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Lcom/feiwo/banner/AdBanner;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
@@ -146,25 +146,25 @@
 
     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v1
 
     const/16 v2, 0x33
 
-    invoke-virtual {v1, v2}, Lcom/google/ads/AdView;->setGravity(I)V
+    invoke-virtual {v1, v2}, Lcom/feiwo/banner/AdBanner;->setGravity(I)V
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/google/ads/AdView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v0}, Lcom/feiwo/banner/AdBanner;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Lcom/google/ads/AdView;->setVisibility(I)V
+    invoke-virtual {v0, v4}, Lcom/feiwo/banner/AdBanner;->setVisibility(I)V
 
     goto :goto_33
 
@@ -173,17 +173,17 @@
 
     if-ne v0, v1, :cond_a1
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v0
 
     if-eqz v0, :cond_33
 
-    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/google/ads/AdView;
+    invoke-static {}, Lcom/babywhere/demo/HelloLua;->a()Lcom/feiwo/banner/AdBanner;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5}, Lcom/google/ads/AdView;->setVisibility(I)V
+    invoke-virtual {v0, v5}, Lcom/feiwo/banner/AdBanner;->setVisibility(I)V
 
     goto :goto_33
 
@@ -206,13 +206,13 @@
 
     const-string v1, "android.intent.extra.SUBJECT"
 
-    const-string v2, "Share"
+    const-string v2, "\u5206\u4eab"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.TEXT"
 
-    const-string v2, "https://play.google.com/store/apps/details?id=com.babywhere.paradise"
+    const-string v2, "http://zhushou.360.cn/detail/index/soft_id/939756"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

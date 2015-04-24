@@ -40,9 +40,9 @@
     iput v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;->v:I
 
     .line 49
-    new-instance v0, Loq;
+    new-instance v0, Lhx;
 
-    invoke-direct {v0, p0}, Loq;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;)V
+    invoke-direct {v0, p0}, Lhx;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;->o:Landroid/os/Handler;
 
@@ -131,9 +131,9 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     .line 191
-    new-instance v0, Lot;
+    new-instance v0, Lia;
 
-    invoke-direct {v0, p0, p1, p2}, Lot;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;Landroid/webkit/WebView;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, p2}, Lia;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;Landroid/webkit/WebView;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroid/webkit/WebView;->post(Ljava/lang/Runnable;)Z
 
@@ -258,7 +258,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;->t:Landroid/widget/TextView;
 
     .line 78
-    const v0, 0x7f06042d
+    const v0, 0x7f060418
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;->findViewById(I)Landroid/view/View;
 
@@ -314,9 +314,9 @@
     .line 85
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;->n:Landroid/webkit/WebView;
 
-    new-instance v1, Lor;
+    new-instance v1, Lhy;
 
-    invoke-direct {v1, p0}, Lor;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;)V
+    invoke-direct {v1, p0}, Lhy;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
@@ -412,7 +412,7 @@
     .line 129
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;->t:Landroid/widget/TextView;
 
-    const v1, 0x7f0a032a
+    const v1, 0x7f0a0307
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -457,7 +457,7 @@
     :cond_c6
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;->t:Landroid/widget/TextView;
 
-    const v1, 0x7f0a031a
+    const v1, 0x7f0a02f7
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -520,9 +520,9 @@
 
     const-string/jumbo v1, "activity.detail"
 
-    new-instance v2, Los;
+    new-instance v2, Lhz;
 
-    invoke-direct {v2, p0}, Los;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;)V
+    invoke-direct {v2, p0}, Lhz;-><init>(Lcom/quvideo/xiaoying/app/activity/XYActivityDetailActivity;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 

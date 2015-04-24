@@ -17,7 +17,7 @@
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 8
+    .registers 9
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
@@ -63,7 +63,15 @@
 
     move-result-object v4
 
-    const-string v5, "Chart View"
+    invoke-virtual {p0}, Ledu/umich/PowerTutor/ui/PowerTabs;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    const v6, 0x7f06002c
+
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
 
     invoke-virtual {v4, v5}, Landroid/widget/TabHost$TabSpec;->setIndicator(Ljava/lang/CharSequence;)Landroid/widget/TabHost$TabSpec;
 
@@ -100,7 +108,15 @@
 
     move-result-object v4
 
-    const-string v5, "Pie View"
+    invoke-virtual {p0}, Ledu/umich/PowerTutor/ui/PowerTabs;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    const v6, 0x7f06002b
+
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
 
     invoke-virtual {v4, v5}, Landroid/widget/TabHost$TabSpec;->setIndicator(Ljava/lang/CharSequence;)Landroid/widget/TabHost$TabSpec;
 

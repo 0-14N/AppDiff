@@ -27,7 +27,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
+    invoke-static {}, LaMao/a/a;->e()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -47,7 +47,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {}, LaMao/a/a;->d()Landroid/app/Activity;
+    invoke-static {}, LaMao/a/a;->e()Landroid/app/Activity;
 
     move-result-object v0
 

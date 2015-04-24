@@ -858,7 +858,7 @@
     .line 177
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v1, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {v2, v1, v3}, Lxlr8;->getPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
     :try_end_f
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_f} :catch_11
 
@@ -924,7 +924,7 @@
     .line 220
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v0, v4}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {v3, v0, v4}, Lxlr8;->getPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v3
 

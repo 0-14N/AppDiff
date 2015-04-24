@@ -1,5 +1,5 @@
 .class public Lcom/mobile/core/entity/FileInfo;
-.super Ljava/util/Observable;
+.super Ljava/lang/Object;
 .source "FileInfo.java"
 
 
@@ -34,45 +34,45 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5
-    invoke-direct {p0}, Ljava/util/Observable;-><init>()V
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
+    .line 5
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/mobile/core/entity/FileInfo;->ratio:Ljava/lang/Integer;
 
-    .line 9
+    .line 7
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/mobile/core/entity/FileInfo;->version:Ljava/lang/Integer;
 
-    .line 11
+    .line 9
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/mobile/core/entity/FileInfo;->oldVersion:Ljava/lang/Integer;
 
-    .line 13
+    .line 11
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/mobile/core/entity/FileInfo;->errVersion:Ljava/lang/Integer;
 
-    .line 15
+    .line 13
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/mobile/core/entity/FileInfo;->totalSize:Ljava/lang/Integer;
 
-    .line 27
+    .line 25
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -87,12 +87,12 @@
     .param p0, "data"    # Lcom/mobile/core/entity/IData;
 
     .prologue
-    .line 78
+    .line 76
     new-instance v0, Lcom/mobile/core/entity/FileInfo;
 
     invoke-direct {v0}, Lcom/mobile/core/entity/FileInfo;-><init>()V
 
-    .line 79
+    .line 77
     .local v0, "fileInfo":Lcom/mobile/core/entity/FileInfo;
     invoke-interface {p0}, Lcom/mobile/core/entity/IData;->getString()Ljava/lang/String;
 
@@ -100,7 +100,7 @@
 
     invoke-static {v1, v0}, Lcom/mobile/core/entity/JsonUtil;->toBean(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 80
+    .line 78
     return-object v0
 .end method
 
@@ -110,7 +110,7 @@
     .registers 2
 
     .prologue
-    .line 62
+    .line 60
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->dir:Ljava/lang/String;
 
     return-object v0
@@ -120,7 +120,7 @@
     .registers 2
 
     .prologue
-    .line 54
+    .line 52
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->errVersion:Ljava/lang/Integer;
 
     return-object v0
@@ -130,7 +130,7 @@
     .registers 2
 
     .prologue
-    .line 92
+    .line 90
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->fileName:Ljava/lang/String;
 
     return-object v0
@@ -140,7 +140,7 @@
     .registers 2
 
     .prologue
-    .line 70
+    .line 68
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->length:Ljava/lang/String;
 
     return-object v0
@@ -150,7 +150,7 @@
     .registers 2
 
     .prologue
-    .line 46
+    .line 44
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->oldVersion:Ljava/lang/Integer;
 
     return-object v0
@@ -160,7 +160,7 @@
     .registers 2
 
     .prologue
-    .line 100
+    .line 98
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->ratio:Ljava/lang/Integer;
 
     return-object v0
@@ -170,7 +170,7 @@
     .registers 2
 
     .prologue
-    .line 30
+    .line 28
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->state:Ljava/lang/Integer;
 
     return-object v0
@@ -180,7 +180,7 @@
     .registers 2
 
     .prologue
-    .line 38
+    .line 36
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->totalSize:Ljava/lang/Integer;
 
     return-object v0
@@ -190,7 +190,7 @@
     .registers 2
 
     .prologue
-    .line 118
+    .line 114
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->updateTime:Ljava/lang/String;
 
     return-object v0
@@ -200,7 +200,7 @@
     .registers 2
 
     .prologue
-    .line 84
+    .line 82
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->url:Ljava/lang/String;
 
     return-object v0
@@ -210,7 +210,7 @@
     .registers 2
 
     .prologue
-    .line 110
+    .line 106
     iget-object v0, p0, Lcom/mobile/core/entity/FileInfo;->version:Ljava/lang/Integer;
 
     return-object v0
@@ -221,10 +221,10 @@
     .param p1, "dir"    # Ljava/lang/String;
 
     .prologue
-    .line 66
+    .line 64
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->dir:Ljava/lang/String;
 
-    .line 67
+    .line 65
     return-void
 .end method
 
@@ -233,10 +233,10 @@
     .param p1, "errVersion"    # Ljava/lang/Integer;
 
     .prologue
-    .line 58
+    .line 56
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->errVersion:Ljava/lang/Integer;
 
-    .line 59
+    .line 57
     return-void
 .end method
 
@@ -245,10 +245,10 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 96
+    .line 94
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->fileName:Ljava/lang/String;
 
-    .line 97
+    .line 95
     return-void
 .end method
 
@@ -257,10 +257,10 @@
     .param p1, "length"    # Ljava/lang/String;
 
     .prologue
-    .line 74
+    .line 72
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->length:Ljava/lang/String;
 
-    .line 75
+    .line 73
     return-void
 .end method
 
@@ -269,10 +269,10 @@
     .param p1, "oldVersion"    # Ljava/lang/Integer;
 
     .prologue
-    .line 50
+    .line 48
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->oldVersion:Ljava/lang/Integer;
 
-    .line 51
+    .line 49
     return-void
 .end method
 
@@ -281,16 +281,10 @@
     .param p1, "ratio"    # Ljava/lang/Integer;
 
     .prologue
-    .line 104
+    .line 102
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->ratio:Ljava/lang/Integer;
 
-    .line 105
-    invoke-virtual {p0}, Lcom/mobile/core/entity/FileInfo;->setChanged()V
-
-    .line 106
-    invoke-virtual {p0}, Lcom/mobile/core/entity/FileInfo;->notifyObservers()V
-
-    .line 107
+    .line 103
     return-void
 .end method
 
@@ -299,10 +293,10 @@
     .param p1, "state"    # Ljava/lang/Integer;
 
     .prologue
-    .line 34
+    .line 32
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->state:Ljava/lang/Integer;
 
-    .line 35
+    .line 33
     return-void
 .end method
 
@@ -311,10 +305,10 @@
     .param p1, "totalSize"    # Ljava/lang/Integer;
 
     .prologue
-    .line 42
+    .line 40
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->totalSize:Ljava/lang/Integer;
 
-    .line 43
+    .line 41
     return-void
 .end method
 
@@ -323,10 +317,10 @@
     .param p1, "updateTime"    # Ljava/lang/String;
 
     .prologue
-    .line 122
+    .line 118
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->updateTime:Ljava/lang/String;
 
-    .line 123
+    .line 119
     return-void
 .end method
 
@@ -335,10 +329,10 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 88
+    .line 86
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->url:Ljava/lang/String;
 
-    .line 89
+    .line 87
     return-void
 .end method
 
@@ -347,9 +341,9 @@
     .param p1, "version"    # Ljava/lang/Integer;
 
     .prologue
-    .line 114
+    .line 110
     iput-object p1, p0, Lcom/mobile/core/entity/FileInfo;->version:Ljava/lang/Integer;
 
-    .line 115
+    .line 111
     return-void
 .end method

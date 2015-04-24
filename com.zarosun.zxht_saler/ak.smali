@@ -32,7 +32,7 @@
     .line 137
     iget-object v0, p0, Lcom/zarosun/zxht_saler/ui/account/ak;->a:Lcom/zarosun/zxht_saler/ui/account/LoginActivity_;
 
-    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/account/LoginActivity_;->c()V
+    invoke-virtual {v0}, Lcom/zarosun/zxht_saler/ui/account/LoginActivity_;->b()V
 
     .line 138
     return-void

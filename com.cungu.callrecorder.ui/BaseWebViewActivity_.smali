@@ -30,7 +30,7 @@
 .method static synthetic a(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 .method static synthetic b(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
 
     return-void
 .end method
@@ -94,9 +94,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;->o:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/ni;
+    new-instance v1, Lcom/cungo/callrecorder/ui/nh;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/cungo/callrecorder/ui/ni;-><init>(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/cungo/callrecorder/ui/nh;-><init>(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;Lcom/cungo/callrecorder/CGRecordingMonitor;Lcom/cungo/callrecorder/CGRecordingMonitor$IRecordingResult;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -108,9 +108,9 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;->o:Landroid/os/Handler;
 
-    new-instance v1, Lcom/cungo/callrecorder/ui/nh;
+    new-instance v1, Lcom/cungo/callrecorder/ui/ni;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/cungo/callrecorder/ui/nh;-><init>(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/cungo/callrecorder/ui/ni;-><init>(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;Lcom/cungu/lib/callrecorder/w;Lcom/cungu/lib/callrecorder/w;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -120,9 +120,9 @@
 .method public o()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/nk;
+    new-instance v0, Lcom/cungo/callrecorder/ui/nj;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/nk;-><init>(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/nj;-><init>(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -206,9 +206,9 @@
 .method public p()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/nj;
+    new-instance v0, Lcom/cungo/callrecorder/ui/nk;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/nj;-><init>(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/nk;-><init>(Lcom/cungo/callrecorder/ui/BaseWebViewActivity_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 

@@ -268,7 +268,7 @@
     return-void
 
     :cond_12
-    invoke-interface {v0}, Lhk/cloudcall/adv/i;->i()[Ljava/lang/String;
+    invoke-interface {v0}, Lhk/cloudcall/adv/i;->c()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -1424,7 +1424,7 @@
 
     check-cast v0, Lhk/cloudcall/adv/h;
 
-    invoke-interface {v0}, Lhk/cloudcall/adv/h;->f()Z
+    invoke-interface {v0}, Lhk/cloudcall/adv/h;->a()Z
 
     move-result v1
 
@@ -1486,7 +1486,7 @@
 
     check-cast v0, Lhk/cloudcall/adv/h;
 
-    invoke-interface {v0}, Lhk/cloudcall/adv/h;->f()Z
+    invoke-interface {v0}, Lhk/cloudcall/adv/h;->a()Z
 
     move-result v1
 
@@ -1693,7 +1693,7 @@
 
     check-cast v0, Lhk/cloudcall/adv/i;
 
-    invoke-interface {v0}, Lhk/cloudcall/adv/i;->h()Z
+    invoke-interface {v0}, Lhk/cloudcall/adv/i;->b()Z
 
     move-result v1
 
@@ -1720,7 +1720,7 @@
     return-void
 
     :cond_96
-    invoke-interface {v0}, Lhk/cloudcall/adv/i;->i()[Ljava/lang/String;
+    invoke-interface {v0}, Lhk/cloudcall/adv/i;->c()[Ljava/lang/String;
 
     move-result-object v0
 

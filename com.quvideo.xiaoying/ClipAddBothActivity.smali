@@ -214,23 +214,23 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;->n:Landroid/os/Handler;
 
     .line 839
-    new-instance v0, Laho;
+    new-instance v0, Laau;
 
-    invoke-direct {v0, p0}, Laho;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
+    invoke-direct {v0, p0}, Laau;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;->o:Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;
 
     .line 1326
-    new-instance v0, Lahp;
+    new-instance v0, Laav;
 
-    invoke-direct {v0, p0}, Lahp;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
+    invoke-direct {v0, p0}, Laav;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;->p:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 1358
-    new-instance v0, Lahq;
+    new-instance v0, Laaw;
 
-    invoke-direct {v0, p0}, Lahq;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
+    invoke-direct {v0, p0}, Laaw;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;->ab:Lcom/quvideo/xiaoying/storyboard/widget/DragListener;
 
@@ -877,7 +877,7 @@
     invoke-direct {p0}, Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;->e()V
 
     .line 479
-    new-instance v0, Laht;
+    new-instance v0, Laaz;
 
     move-object v1, p0
 
@@ -885,7 +885,7 @@
 
     move v5, p2
 
-    invoke-direct/range {v0 .. v5}, Laht;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;JLcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$MediaGroupItem;I)V
+    invoke-direct/range {v0 .. v5}, Laaz;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;JLcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$MediaGroupItem;I)V
 
     new-array v1, v6, [Ljava/lang/Object;
 
@@ -898,7 +898,7 @@
 
     aput-object v2, v1, v7
 
-    invoke-virtual {v0, v1}, Laht;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Laaz;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     move-result-object v0
 
@@ -1931,9 +1931,9 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/GalleryFooterView;->setButtonText(I)V
 
     .line 286
-    new-instance v1, Lahr;
+    new-instance v1, Laax;
 
-    invoke-direct {v1, p0}, Lahr;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
+    invoke-direct {v1, p0}, Laax;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/GalleryFooterView;->setOnButtonClickListener(Lcom/quvideo/xiaoying/common/ui/GalleryFooterView$OnButtonClickListener;)V
 
@@ -2028,9 +2028,9 @@
     invoke-virtual {v2}, Lcom/quvideo/xiaoying/clip/adapter/SystemFolerListAdapter;->notifyDataSetChanged()V
 
     .line 316
-    new-instance v2, Lahs;
+    new-instance v2, Laay;
 
-    invoke-direct {v2, p0, v0, v1}, Lahs;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;J)V
+    invoke-direct {v2, p0, v0, v1}, Laay;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;J)V
 
     const/4 v0, 0x1
 
@@ -2047,7 +2047,7 @@
 
     aput-object v3, v0, v1
 
-    invoke-virtual {v2, v0}, Lahs;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v2, v0}, Laay;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     move-result-object v0
 
@@ -2866,16 +2866,16 @@
 
     .line 1430
     :cond_5
-    new-instance v0, Lahw;
+    new-instance v0, Labc;
 
-    invoke-direct {v0, p0}, Lahw;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
+    invoke-direct {v0, p0}, Labc;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
 
     .line 1469
-    invoke-virtual {v0, v1}, Lahw;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Labc;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
 
     move-result-object v0
 
@@ -4173,16 +4173,16 @@
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;->add(II)Lcom/quvideo/xiaoying/common/widget/popup/MenuItem;
 
     .line 761
-    new-instance v1, Lahu;
+    new-instance v1, Laba;
 
-    invoke-direct {v1, p0}, Lahu;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
+    invoke-direct {v1, p0}, Laba;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;->setOnItemSelectedListener(Lcom/quvideo/xiaoying/clip/GalleryPopupMenu$OnItemSelectedListener;)V
 
     .line 794
-    new-instance v1, Lahv;
+    new-instance v1, Labb;
 
-    invoke-direct {v1, p0}, Lahv;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
+    invoke-direct {v1, p0}, Labb;-><init>(Lcom/quvideo/xiaoying/clip/ClipAddBothActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;->setOnMenuDismissListener(Lcom/quvideo/xiaoying/clip/GalleryPopupMenu$OnMenuDismissListener;)V
 

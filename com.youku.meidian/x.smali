@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/youku/meidian/activity/x;->a:Lcom/youku/meidian/activity/CameraActivity_;
 
-    invoke-virtual {v0}, Lcom/youku/meidian/activity/CameraActivity_;->f()V
+    invoke-virtual {v0}, Lcom/youku/meidian/activity/CameraActivity_;->e()V
 
     return-void
 .end method

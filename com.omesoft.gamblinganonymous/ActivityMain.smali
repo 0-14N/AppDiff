@@ -20,6 +20,8 @@
 
 
 # instance fields
+.field private adView:Lcom/wooboo/adlib_android/WoobooAdView;
+
 .field private b:Z
 
 .field private bar:Landroid/widget/SeekBar;
@@ -55,28 +57,15 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 5
+    .registers 1
 
     .prologue
-    .line 43
+    .line 42
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/omesoft/gamblinganonymous/ActivityMain;->isShow:Z
 
-    .line 361
-    const-string v0, "7c6057e31c5117bf"
-
-    const-string v1, "7cdb3d762bbe495d"
-
-    const/16 v2, 0x1e
-
-    const/4 v3, 0x0
-
-    const-string v4, "1.1"
-
-    invoke-static {v0, v1, v2, v3, v4}, Lnet/youmi/android/AdManager;->init(Ljava/lang/String;Ljava/lang/String;IZLjava/lang/String;)V
-
-    .line 29
+    .line 28
     return-void
 .end method
 
@@ -84,7 +73,7 @@
     .registers 2
 
     .prologue
-    .line 29
+    .line 28
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 46
@@ -106,14 +95,14 @@
 
     iput-boolean v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->b:Z
 
-    .line 322
+    .line 330
     new-instance v0, Lcom/omesoft/gamblinganonymous/ActivityMain$3;
 
     invoke-direct {v0, p0}, Lcom/omesoft/gamblinganonymous/ActivityMain$3;-><init>(Lcom/omesoft/gamblinganonymous/ActivityMain;)V
 
     iput-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->seekListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
-    .line 29
+    .line 28
     return-void
 .end method
 
@@ -131,7 +120,7 @@
     .registers 2
 
     .prologue
-    .line 39
+    .line 38
     iput-object p1, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->service:Lcom/omesoft/gamblinganonymous/IPlayback;
 
     return-void
@@ -151,8 +140,18 @@
     .registers 2
 
     .prologue
-    .line 39
+    .line 38
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->service:Lcom/omesoft/gamblinganonymous/IPlayback;
+
+    return-object v0
+.end method
+
+.method static synthetic access$4(Lcom/omesoft/gamblinganonymous/ActivityMain;)Lcom/wooboo/adlib_android/WoobooAdView;
+    .registers 2
+
+    .prologue
+    .line 44
+    iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->adView:Lcom/wooboo/adlib_android/WoobooAdView;
 
     return-object v0
 .end method
@@ -162,14 +161,14 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 230
+    .line 238
     new-instance v0, Lcom/omesoft/gamblinganonymous/ActivityMain$11;
 
     invoke-direct {v0, p0}, Lcom/omesoft/gamblinganonymous/ActivityMain$11;-><init>(Lcom/omesoft/gamblinganonymous/ActivityMain;)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 273
+    .line 281
     return-void
 .end method
 
@@ -180,6 +179,17 @@
     const v2, -0x50178939
 
     .line 133
+    const/high16 v0, 0x7f070000
+
+    invoke-virtual {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/wooboo/adlib_android/WoobooAdView;
+
+    iput-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->adView:Lcom/wooboo/adlib_android/WoobooAdView;
+
+    .line 134
     const v0, 0x7f070001
 
     invoke-virtual {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -190,7 +200,7 @@
 
     iput-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
-    .line 134
+    .line 135
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -201,17 +211,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 135
+    .line 136
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 136
+    .line 137
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 137
+    .line 138
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnDHEA:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/gamblinganonymous/ActivityMain$4;
@@ -220,7 +230,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 146
+    .line 148
     const v0, 0x7f070002
 
     invoke-virtual {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -231,7 +241,7 @@
 
     iput-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
-    .line 147
+    .line 149
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
     const/4 v1, 0x2
@@ -242,17 +252,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 148
+    .line 150
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 149
+    .line 151
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 150
+    .line 152
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnBBT:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/gamblinganonymous/ActivityMain$5;
@@ -261,7 +271,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 159
+    .line 162
     const v0, 0x7f070003
 
     invoke-virtual {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -272,7 +282,7 @@
 
     iput-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnSet:Landroid/widget/TextView;
 
-    .line 160
+    .line 163
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnSet:Landroid/widget/TextView;
 
     const/4 v1, 0x3
@@ -283,17 +293,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 161
+    .line 164
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnSet:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 162
+    .line 165
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnSet:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 163
+    .line 166
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnSet:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/gamblinganonymous/ActivityMain$6;
@@ -302,7 +312,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 171
+    .line 175
     const v0, 0x7f070004
 
     invoke-virtual {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -313,7 +323,7 @@
 
     iput-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
-    .line 172
+    .line 176
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
     const/4 v1, 0x4
@@ -324,17 +334,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 173
+    .line 177
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 174
+    .line 178
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 175
+    .line 179
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->btnAbout:Landroid/widget/TextView;
 
     new-instance v1, Lcom/omesoft/gamblinganonymous/ActivityMain$7;
@@ -343,7 +353,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 183
+    .line 188
     const v0, 0x7f070005
 
     invoke-virtual {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -354,7 +364,7 @@
 
     iput-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->play:Landroid/widget/Button;
 
-    .line 184
+    .line 189
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->play:Landroid/widget/Button;
 
     const/4 v1, 0x5
@@ -365,12 +375,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    .line 185
+    .line 190
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->play:Landroid/widget/Button;
 
     invoke-direct {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 186
+    .line 191
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->play:Landroid/widget/Button;
 
     new-instance v1, Lcom/omesoft/gamblinganonymous/ActivityMain$8;
@@ -379,7 +389,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 199
+    .line 205
     const v0, 0x7f070006
 
     invoke-virtual {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -390,7 +400,7 @@
 
     iput-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->pause:Landroid/widget/Button;
 
-    .line 200
+    .line 206
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->pause:Landroid/widget/Button;
 
     const/4 v1, 0x6
@@ -401,12 +411,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    .line 201
+    .line 207
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->pause:Landroid/widget/Button;
 
     invoke-direct {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 202
+    .line 208
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->pause:Landroid/widget/Button;
 
     new-instance v1, Lcom/omesoft/gamblinganonymous/ActivityMain$9;
@@ -415,7 +425,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 214
+    .line 221
     const v0, 0x7f070007
 
     invoke-virtual {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->findViewById(I)Landroid/view/View;
@@ -426,7 +436,7 @@
 
     iput-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->stop:Landroid/widget/Button;
 
-    .line 215
+    .line 222
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->stop:Landroid/widget/Button;
 
     const/4 v1, 0x7
@@ -437,12 +447,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
-    .line 216
+    .line 223
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->stop:Landroid/widget/Button;
 
     invoke-direct {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->listenerTouch(Landroid/view/View;)V
 
-    .line 217
+    .line 224
     iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->stop:Landroid/widget/Button;
 
     new-instance v1, Lcom/omesoft/gamblinganonymous/ActivityMain$10;
@@ -451,7 +461,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 228
+    .line 236
     return-void
 .end method
 
@@ -792,64 +802,47 @@
 .end method
 
 .method protected onDestroy()V
-    .registers 4
+    .registers 3
 
     .prologue
-    .line 348
+    .line 356
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 349
-    iget-object v1, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->connection:Landroid/content/ServiceConnection;
-
-    invoke-virtual {p0, v1}, Lcom/omesoft/gamblinganonymous/ActivityMain;->unbindService(Landroid/content/ServiceConnection;)V
-
-    .line 350
-    const/4 v1, 0x0
-
-    sput-boolean v1, Lcom/omesoft/gamblinganonymous/ActivityMain;->isShow:Z
-
-    .line 351
-    sget v1, Lcom/omesoft/gamblinganonymous/MusicService;->state:I
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_15
-
-    sget v1, Lcom/omesoft/gamblinganonymous/MusicService;->state:I
-
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_1f
-
-    .line 352
-    :cond_15
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "com.omesoft.gamblinganonymous.TRACK_UPDATED"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v1}, Lcom/omesoft/gamblinganonymous/ActivityMain;->stopService(Landroid/content/Intent;)Z
-
-    .line 354
-    :cond_1f
-    const/high16 v1, 0x7f070000
-
-    invoke-virtual {p0, v1}, Lcom/omesoft/gamblinganonymous/ActivityMain;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lnet/youmi/android/AdView;
-
-    .line 356
-    .local v0, "adView":Lnet/youmi/android/AdView;
-    if-eqz v0, :cond_2c
-
     .line 357
-    invoke-virtual {v0}, Lnet/youmi/android/AdView;->onDestroy()V
+    iget-object v0, p0, Lcom/omesoft/gamblinganonymous/ActivityMain;->connection:Landroid/content/ServiceConnection;
+
+    invoke-virtual {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->unbindService(Landroid/content/ServiceConnection;)V
+
+    .line 358
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/omesoft/gamblinganonymous/ActivityMain;->isShow:Z
 
     .line 359
-    :cond_2c
+    sget v0, Lcom/omesoft/gamblinganonymous/MusicService;->state:I
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_15
+
+    sget v0, Lcom/omesoft/gamblinganonymous/MusicService;->state:I
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_1f
+
+    .line 360
+    :cond_15
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "com.omesoft.gamblinganonymous.TRACK_UPDATED"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/omesoft/gamblinganonymous/ActivityMain;->stopService(Landroid/content/Intent;)Z
+
+    .line 362
+    :cond_1f
     return-void
 .end method
 
@@ -857,9 +850,9 @@
     .registers 1
 
     .prologue
-    .line 343
+    .line 351
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 344
+    .line 352
     return-void
 .end method

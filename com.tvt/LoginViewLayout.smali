@@ -77,95 +77,95 @@
 
     const/4 v1, 0x0
 
-    .line 63
+    .line 57
     invoke-direct {p0, p2}, Lcom/tvt/skin/BaseAbsoluteLayout;-><init>(Landroid/content/Context;)V
 
-    .line 32
+    .line 26
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->context:Landroid/content/Context;
 
-    .line 33
+    .line 27
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->handler:Landroid/os/Handler;
 
-    .line 34
+    .line 28
     iput-boolean v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_bHttpConnected:Z
 
-    .line 35
+    .line 29
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->comeback:Ljava/lang/String;
 
-    .line 36
+    .line 30
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->pd:Landroid/app/ProgressDialog;
 
-    .line 37
+    .line 31
     iput-boolean v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_bremember:Z
 
-    .line 38
+    .line 32
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->linearremember:Landroid/widget/LinearLayout;
 
-    .line 43
+    .line 37
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_FileList:Ljava/util/ArrayList;
 
-    .line 44
+    .line 38
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_inflater:Landroid/view/LayoutInflater;
 
-    .line 45
+    .line 39
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_ivserverlist:Landroid/widget/ImageView;
 
-    .line 46
+    .line 40
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_context:Landroid/content/Context;
 
-    .line 47
+    .line 41
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_loginlayout:Lcom/tvt/ui/LoginViewLayout;
 
-    .line 48
+    .line 42
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_etserver:Landroid/widget/EditText;
 
-    .line 49
+    .line 43
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_etaccount:Landroid/widget/EditText;
 
-    .line 50
+    .line 44
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_etpwd:Landroid/widget/EditText;
 
-    .line 51
+    .line 45
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_ivremember:Landroid/widget/ImageView;
 
-    .line 52
+    .line 46
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_linearremember:Landroid/widget/LinearLayout;
 
-    .line 53
+    .line 47
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_btnlogin:Landroid/widget/Button;
 
-    .line 55
+    .line 49
     iput-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_iParent:Lcom/tvt/ui/MainViewLayout;
 
-    .line 57
+    .line 51
     const-string v0, "-1"
 
     iput-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_iServerlistIndex:Ljava/lang/String;
 
-    .line 58
+    .line 52
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_strServerName:Ljava/lang/String;
 
-    .line 59
+    .line 53
     const-string v0, ""
 
     iput-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_strServerAddress:Ljava/lang/String;
 
-    .line 64
+    .line 58
     iput-object p2, p0, Lcom/tvt/ui/LoginViewLayout;->m_context:Landroid/content/Context;
 
-    .line 65
+    .line 59
     iput-object p1, p0, Lcom/tvt/ui/LoginViewLayout;->m_iParent:Lcom/tvt/ui/MainViewLayout;
 
-    .line 66
+    .line 60
     iput-object p0, p0, Lcom/tvt/ui/LoginViewLayout;->m_loginlayout:Lcom/tvt/ui/LoginViewLayout;
 
-    .line 67
+    .line 61
     return-void
 .end method
 
@@ -173,7 +173,7 @@
     .registers 2
 
     .prologue
-    .line 37
+    .line 31
     iget-boolean v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_bremember:Z
 
     return v0
@@ -183,7 +183,7 @@
     .registers 2
 
     .prologue
-    .line 37
+    .line 31
     iput-boolean p1, p0, Lcom/tvt/ui/LoginViewLayout;->m_bremember:Z
 
     return-void
@@ -193,7 +193,7 @@
     .registers 2
 
     .prologue
-    .line 51
+    .line 45
     iget-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_ivremember:Landroid/widget/ImageView;
 
     return-object v0
@@ -203,7 +203,7 @@
     .registers 2
 
     .prologue
-    .line 46
+    .line 40
     iget-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_context:Landroid/content/Context;
 
     return-object v0
@@ -213,7 +213,7 @@
     .registers 2
 
     .prologue
-    .line 47
+    .line 41
     iget-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_loginlayout:Lcom/tvt/ui/LoginViewLayout;
 
     return-object v0
@@ -225,10 +225,10 @@
     .registers 8
 
     .prologue
-    .line 197
+    .line 193
     iget-object v1, p0, Lcom/tvt/ui/LoginViewLayout;->m_strServerName:Ljava/lang/String;
 
-    .line 198
+    .line 194
     .local v1, "strServerName":Ljava/lang/String;
     iget-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_etserver:Landroid/widget/EditText;
 
@@ -244,7 +244,7 @@
 
     move-result-object v2
 
-    .line 199
+    .line 195
     .local v2, "strServerAddress":Ljava/lang/String;
     iget-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_etaccount:Landroid/widget/EditText;
 
@@ -256,7 +256,7 @@
 
     move-result-object v3
 
-    .line 200
+    .line 196
     .local v3, "strUserName":Ljava/lang/String;
     iget-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_etpwd:Landroid/widget/EditText;
 
@@ -268,7 +268,7 @@
 
     move-result-object v4
 
-    .line 202
+    .line 199
     .local v4, "strPassword":Ljava/lang/String;
     iget-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_strServerAddress:Ljava/lang/String;
 
@@ -278,10 +278,10 @@
 
     if-nez v0, :cond_2e
 
-    .line 203
+    .line 200
     const-string v1, ""
 
-    .line 207
+    .line 204
     :cond_2e
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -289,7 +289,7 @@
 
     if-gtz v0, :cond_47
 
-    .line 209
+    .line 206
     invoke-virtual {p0}, Lcom/tvt/ui/LoginViewLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -298,7 +298,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f060041
+    const v6, 0x7f060048
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -306,11 +306,11 @@
 
     invoke-virtual {p0, v0, v5}, Lcom/tvt/ui/LoginViewLayout;->ShowMessageBox(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 220
+    .line 217
     :goto_46
     return-void
 
-    .line 213
+    .line 210
     :cond_47
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -326,7 +326,7 @@
 
     if-le v0, v5, :cond_68
 
-    .line 215
+    .line 212
     :cond_55
     invoke-virtual {p0}, Lcom/tvt/ui/LoginViewLayout;->getContext()Landroid/content/Context;
 
@@ -336,7 +336,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f060042
+    const v6, 0x7f060049
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -346,7 +346,7 @@
 
     goto :goto_46
 
-    .line 219
+    .line 216
     :cond_68
     iget-object v0, p0, Lcom/tvt/ui/LoginViewLayout;->m_iParent:Lcom/tvt/ui/MainViewLayout;
 
@@ -372,11 +372,11 @@
 
     .prologue
     .local p1, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    const v12, 0x7f09006a
+    const v12, 0x7f0a0073
 
     const/high16 v11, 0x41700000    # 15.0f
 
-    .line 83
+    .line 78
     invoke-virtual {p0}, Lcom/tvt/ui/LoginViewLayout;->getContext()Landroid/content/Context;
 
     move-result-object v8
@@ -387,10 +387,10 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_inflater:Landroid/view/LayoutInflater;
 
-    .line 85
+    .line 80
     iget-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_inflater:Landroid/view/LayoutInflater;
 
-    const v9, 0x7f03001b
+    const v9, 0x7f03001f
 
     const/4 v10, 0x0
 
@@ -404,7 +404,7 @@
 
     check-cast v5, Landroid/widget/RelativeLayout;
 
-    .line 90
+    .line 85
     .local v5, "layout":Landroid/widget/RelativeLayout;
     invoke-virtual {p0}, Lcom/tvt/ui/LoginViewLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -420,14 +420,14 @@
 
     invoke-virtual {p0, v5, v8, v9}, Lcom/tvt/ui/LoginViewLayout;->addView(Landroid/view/View;II)V
 
-    .line 92
+    .line 87
     invoke-virtual {p0}, Lcom/tvt/ui/LoginViewLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v8
 
     iget v7, v8, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 93
+    .line 88
     .local v7, "w":I
     invoke-virtual {p0}, Lcom/tvt/ui/LoginViewLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -435,9 +435,9 @@
 
     iget v0, v8, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 97
+    .line 92
     .local v0, "h":I
-    const v8, 0x7f09006d
+    const v8, 0x7f0a0076
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -447,13 +447,13 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_etserver:Landroid/widget/EditText;
 
-    .line 98
+    .line 93
     iget-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_etserver:Landroid/widget/EditText;
 
     invoke-virtual {v8, v11}, Landroid/widget/EditText;->setTextSize(F)V
 
-    .line 100
-    const v8, 0x7f090070
+    .line 95
+    const v8, 0x7f0a0079
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -463,13 +463,13 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_etaccount:Landroid/widget/EditText;
 
-    .line 101
+    .line 96
     iget-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_etaccount:Landroid/widget/EditText;
 
     invoke-virtual {v8, v11}, Landroid/widget/EditText;->setTextSize(F)V
 
-    .line 103
-    const v8, 0x7f09000c
+    .line 98
+    const v8, 0x7f0a000c
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -479,13 +479,13 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_etpwd:Landroid/widget/EditText;
 
-    .line 104
+    .line 99
     iget-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_etpwd:Landroid/widget/EditText;
 
     invoke-virtual {v8, v11}, Landroid/widget/EditText;->setTextSize(F)V
 
-    .line 106
-    const v8, 0x7f09006c
+    .line 101
+    const v8, 0x7f0a0075
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -493,12 +493,12 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 107
+    .line 102
     .local v4, "itvServer":Landroid/widget/TextView;
     invoke-virtual {v4, v11}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 109
-    const v8, 0x7f09006f
+    .line 104
+    const v8, 0x7f0a0078
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -506,12 +506,12 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 110
+    .line 105
     .local v1, "itvAccount":Landroid/widget/TextView;
     invoke-virtual {v1, v11}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 112
-    const v8, 0x7f09000b
+    .line 107
+    const v8, 0x7f0a000b
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -519,12 +519,12 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 113
+    .line 108
     .local v2, "itvPassword":Landroid/widget/TextView;
     invoke-virtual {v2, v11}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 115
-    const v8, 0x7f090067
+    .line 110
+    const v8, 0x7f0a0070
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -532,12 +532,12 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 116
+    .line 111
     .local v3, "itvRemember":Landroid/widget/TextView;
     invoke-virtual {v3, v11}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 118
-    const v8, 0x7f090072
+    .line 113
+    const v8, 0x7f0a007b
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -547,8 +547,8 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_ivremember:Landroid/widget/ImageView;
 
-    .line 119
-    const v8, 0x7f09006e
+    .line 114
+    const v8, 0x7f0a0077
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -558,8 +558,8 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_ivserverlist:Landroid/widget/ImageView;
 
-    .line 120
-    const v8, 0x7f090071
+    .line 115
+    const v8, 0x7f0a007a
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -569,8 +569,8 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_linearremember:Landroid/widget/LinearLayout;
 
-    .line 121
-    const v8, 0x7f090068
+    .line 116
+    const v8, 0x7f0a0071
 
     invoke-virtual {p0, v8}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
@@ -580,15 +580,34 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_btnlogin:Landroid/widget/Button;
 
-    .line 122
+    .line 117
     iget-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_btnlogin:Landroid/widget/Button;
 
     invoke-virtual {v8, v11}, Landroid/widget/Button;->setTextSize(F)V
 
-    .line 124
-    if-eqz p1, :cond_118
+    .line 119
+    if-eqz p1, :cond_12c
 
-    .line 125
+    .line 120
+    const-string v8, "info"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, "LoginViewLayout:map--"
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 121
     const-string v8, "name"
 
     invoke-virtual {p1, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -599,7 +618,7 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_strServerName:Ljava/lang/String;
 
-    .line 126
+    .line 122
     const-string v8, "server"
 
     invoke-virtual {p1, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -622,14 +641,14 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_strServerAddress:Ljava/lang/String;
 
-    .line 127
+    .line 123
     iget-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_etserver:Landroid/widget/EditText;
 
     iget-object v9, p0, Lcom/tvt/ui/LoginViewLayout;->m_strServerAddress:Ljava/lang/String;
 
     invoke-virtual {v8, v9}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 128
+    .line 124
     iget-object v9, p0, Lcom/tvt/ui/LoginViewLayout;->m_etaccount:Landroid/widget/EditText;
 
     const-string v8, "account"
@@ -642,7 +661,7 @@
 
     invoke-virtual {v9, v8}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 129
+    .line 125
     iget-object v9, p0, Lcom/tvt/ui/LoginViewLayout;->m_etpwd:Landroid/widget/EditText;
 
     const-string v8, "password"
@@ -655,7 +674,7 @@
 
     invoke-virtual {v9, v8}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 130
+    .line 126
     const-string v8, "index"
 
     invoke-virtual {p1, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -666,8 +685,8 @@
 
     iput-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_iServerlistIndex:Ljava/lang/String;
 
-    .line 133
-    :cond_118
+    .line 129
+    :cond_12c
     iget-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_linearremember:Landroid/widget/LinearLayout;
 
     new-instance v9, Lcom/tvt/ui/LoginViewLayout$1;
@@ -676,7 +695,7 @@
 
     invoke-virtual {v8, v9}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 144
+    .line 140
     iget-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_ivserverlist:Landroid/widget/ImageView;
 
     new-instance v9, Lcom/tvt/ui/LoginViewLayout$2;
@@ -685,7 +704,7 @@
 
     invoke-virtual {v8, v9}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 152
+    .line 148
     iget-object v8, p0, Lcom/tvt/ui/LoginViewLayout;->m_btnlogin:Landroid/widget/Button;
 
     new-instance v9, Lcom/tvt/ui/LoginViewLayout$3;
@@ -694,14 +713,14 @@
 
     invoke-virtual {v8, v9}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 174
+    .line 170
     invoke-virtual {p0, v12}, Lcom/tvt/ui/LoginViewLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/RelativeLayout;
 
-    .line 194
+    .line 190
     .local v6, "layout1":Landroid/widget/RelativeLayout;
     return-void
 .end method

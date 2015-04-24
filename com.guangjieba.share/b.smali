@@ -109,7 +109,7 @@
 
     .prologue
     .line 19
-    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->b()V
+    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->a()V
 
     return-void
 .end method
@@ -119,7 +119,7 @@
 
     .prologue
     .line 19
-    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->c()V
+    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->b()V
 
     return-void
 .end method
@@ -129,7 +129,7 @@
 
     .prologue
     .line 19
-    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->a()V
+    invoke-super {p0}, Lcom/guangjieba/share/model/e/a;->c()V
 
     return-void
 .end method
@@ -137,6 +137,42 @@
 
 # virtual methods
 .method public final a()V
+    .registers 3
+
+    .prologue
+    .line 69
+    iget-object v0, p0, Lcom/guangjieba/share/model/b/b;->d:Landroid/os/Handler;
+
+    new-instance v1, Lcom/guangjieba/share/model/b/c;
+
+    invoke-direct {v1, p0}, Lcom/guangjieba/share/model/b/c;-><init>(Lcom/guangjieba/share/model/b/b;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 79
+    return-void
+.end method
+
+.method public final b()V
+    .registers 5
+
+    .prologue
+    .line 83
+    iget-object v0, p0, Lcom/guangjieba/share/model/b/b;->d:Landroid/os/Handler;
+
+    new-instance v1, Lcom/guangjieba/share/model/b/d;
+
+    invoke-direct {v1, p0}, Lcom/guangjieba/share/model/b/d;-><init>(Lcom/guangjieba/share/model/b/b;)V
+
+    const-wide/16 v2, 0x3e8
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 93
+    return-void
+.end method
+
+.method public final c()V
     .registers 3
 
     .prologue
@@ -150,42 +186,6 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 107
-    return-void
-.end method
-
-.method public final b()V
-    .registers 5
-
-    .prologue
-    .line 69
-    iget-object v0, p0, Lcom/guangjieba/share/model/b/b;->d:Landroid/os/Handler;
-
-    new-instance v1, Lcom/guangjieba/share/model/b/c;
-
-    invoke-direct {v1, p0}, Lcom/guangjieba/share/model/b/c;-><init>(Lcom/guangjieba/share/model/b/b;)V
-
-    const-wide/16 v2, 0x3e8
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 79
-    return-void
-.end method
-
-.method public final c()V
-    .registers 3
-
-    .prologue
-    .line 83
-    iget-object v0, p0, Lcom/guangjieba/share/model/b/b;->d:Landroid/os/Handler;
-
-    new-instance v1, Lcom/guangjieba/share/model/b/d;
-
-    invoke-direct {v1, p0}, Lcom/guangjieba/share/model/b/d;-><init>(Lcom/guangjieba/share/model/b/b;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 93
     return-void
 .end method
 

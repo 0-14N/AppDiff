@@ -1465,9 +1465,9 @@
 
     sget v2, Lcom/quvideo/xiaoying/R$string;->xiaoying_str_com_rate_xiaoying_desc:I
 
-    new-instance v3, Laqv;
+    new-instance v3, Lakb;
 
-    invoke-direct {v3, p0}, Laqv;-><init>(Lcom/quvideo/xiaoying/studio/StudioFragment;)V
+    invoke-direct {v3, p0}, Lakb;-><init>(Lcom/quvideo/xiaoying/studio/StudioFragment;)V
 
     invoke-direct {v0, v1, v2, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -1730,9 +1730,9 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 423
-    new-instance v1, Laqt;
+    new-instance v1, Lajz;
 
-    invoke-direct {v1, p0}, Laqt;-><init>(Lcom/quvideo/xiaoying/studio/StudioFragment;)V
+    invoke-direct {v1, p0}, Lajz;-><init>(Lcom/quvideo/xiaoying/studio/StudioFragment;)V
 
     iput-object v1, p0, Lcom/quvideo/xiaoying/studio/StudioFragment;->ag:Landroid/content/BroadcastReceiver;
 

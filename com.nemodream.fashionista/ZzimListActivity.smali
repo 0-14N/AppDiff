@@ -26,54 +26,80 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 23
+    .line 24
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 25
+    .line 26
     iput v1, p0, Lcom/nemodream/fashionista/ZzimListActivity;->FEMALE:I
 
-    .line 26
+    .line 27
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->MALE:I
 
-    .line 31
-    iput v1, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mNowPage:I
-
     .line 32
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mTotalCount:I
+    iput v1, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mNowPage:I
 
     .line 33
     const/4 v0, 0x0
 
+    iput v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mTotalCount:I
+
+    .line 34
+    const/4 v0, 0x0
+
     iput-object v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mZzimListView:Lcom/nemodream/fashionista/customUi/zzimListView;
 
-    .line 23
+    .line 24
     return-void
 .end method
 
 
 # virtual methods
+.method public getlanguage()Ljava/lang/String;
+    .registers 4
+
+    .prologue
+    .line 105
+    invoke-virtual {p0}, Lcom/nemodream/fashionista/ZzimListActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v2
+
+    iget-object v1, v2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    .line 106
+    .local v1, "systemLocale":Ljava/util/Locale;
+    invoke-virtual {v1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 107
+    .local v0, "strLanguage":Ljava/lang/String;
+    return-object v0
+.end method
+
 .method public initListView()V
     .registers 2
 
     .prologue
-    .line 85
+    .line 87
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mTotalCount:I
 
-    .line 86
+    .line 88
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mNowPage:I
 
-    .line 87
+    .line 89
     invoke-virtual {p0}, Lcom/nemodream/fashionista/ZzimListActivity;->showList()V
 
-    .line 88
+    .line 90
     return-void
 .end method
 
@@ -81,10 +107,10 @@
     .registers 1
 
     .prologue
-    .line 98
+    .line 100
     invoke-static {p0}, Lcom/nemodream/fashionista/customUi/PopUps;->exitPopUp(Landroid/app/Activity;)V
 
-    .line 100
+    .line 102
     return-void
 .end method
 
@@ -93,16 +119,16 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 37
+    .line 38
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 38
-    const v1, 0x7f03001b
+    .line 39
+    const v1, 0x7f03001d
 
     invoke-virtual {p0, v1}, Lcom/nemodream/fashionista/ZzimListActivity;->setContentView(I)V
 
-    .line 40
-    const v1, 0x7f080065
+    .line 41
+    const v1, 0x7f08006b
 
     invoke-virtual {p0, v1}, Lcom/nemodream/fashionista/ZzimListActivity;->findViewById(I)Landroid/view/View;
 
@@ -112,33 +138,33 @@
 
     iput-object v1, p0, Lcom/nemodream/fashionista/ZzimListActivity;->listView:Landroid/widget/ListView;
 
-    .line 43
+    .line 44
     new-instance v1, Lcom/nemodream/fashionista/customUi/TitleBar;
 
     invoke-direct {v1, p0}, Lcom/nemodream/fashionista/customUi/TitleBar;-><init>(Landroid/app/Activity;)V
 
     iput-object v1, p0, Lcom/nemodream/fashionista/ZzimListActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
 
-    .line 44
+    .line 45
     iget-object v1, p0, Lcom/nemodream/fashionista/ZzimListActivity;->tb:Lcom/nemodream/fashionista/customUi/TitleBar;
 
     invoke-virtual {v1}, Lcom/nemodream/fashionista/customUi/TitleBar;->showZzimListTitleBar()V
 
-    .line 47
+    .line 48
     new-instance v0, Lcom/nemodream/fashionista/customUi/MainMenu;
 
     invoke-direct {v0, p0}, Lcom/nemodream/fashionista/customUi/MainMenu;-><init>(Landroid/app/Activity;)V
 
-    .line 48
+    .line 49
     .local v0, "mm":Lcom/nemodream/fashionista/customUi/MainMenu;
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcom/nemodream/fashionista/customUi/MainMenu;->selectMenu(I)V
 
-    .line 50
+    .line 51
     invoke-virtual {p0}, Lcom/nemodream/fashionista/ZzimListActivity;->showList()V
 
-    .line 51
+    .line 52
     return-void
 .end method
 
@@ -147,12 +173,12 @@
     .param p1, "seq"    # Ljava/lang/String;
 
     .prologue
-    .line 75
+    .line 77
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 76
+    .line 78
     .local v1, "pref":Landroid/content/SharedPreferences;
     const-string v3, "accessToken"
 
@@ -162,11 +188,11 @@
 
     move-result-object v0
 
-    .line 77
+    .line 79
     .local v0, "accessToken":Ljava/lang/String;
     const-string v2, "http://fashionista.widepics.co.kr/fapi2/deleteProductZzim.action?apiKey=2bcf61709f6511e1a8b00800200c9a66"
 
-    .line 78
+    .line 80
     .local v2, "url":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -190,7 +216,7 @@
 
     move-result-object v2
 
-    .line 79
+    .line 81
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -225,7 +251,7 @@
 
     move-result-object v2
 
-    .line 80
+    .line 82
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -248,7 +274,7 @@
 
     move-result-object v2
 
-    .line 81
+    .line 83
     new-instance v3, Lcom/nemodream/fashionista/task/CommonResultTask;
 
     const-string v4, "ZzimListActivity"
@@ -261,7 +287,7 @@
 
     invoke-virtual {v3, v4}, Lcom/nemodream/fashionista/task/CommonResultTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 82
+    .line 84
     return-void
 .end method
 
@@ -278,13 +304,13 @@
     .end annotation
 
     .prologue
-    .line 65
+    .line 67
     .local p1, "alData":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/nemodream/fashionista/bean/ProductBean;>;"
     iget v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mTotalCount:I
 
     if-nez v0, :cond_29
 
-    .line 66
+    .line 68
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -303,7 +329,7 @@
 
     iput v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mTotalCount:I
 
-    .line 67
+    .line 69
     iget-object v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mZzimListView:Lcom/nemodream/fashionista/customUi/zzimListView;
 
     if-nez v0, :cond_23
@@ -316,11 +342,11 @@
 
     iput-object v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mZzimListView:Lcom/nemodream/fashionista/customUi/zzimListView;
 
-    .line 72
+    .line 74
     :goto_22
     return-void
 
-    .line 68
+    .line 70
     :cond_23
     iget-object v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mZzimListView:Lcom/nemodream/fashionista/customUi/zzimListView;
 
@@ -328,7 +354,7 @@
 
     goto :goto_22
 
-    .line 70
+    .line 72
     :cond_29
     iget-object v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mZzimListView:Lcom/nemodream/fashionista/customUi/zzimListView;
 
@@ -341,17 +367,17 @@
     .registers 2
 
     .prologue
-    .line 91
+    .line 93
     iget-object v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mZzimListView:Lcom/nemodream/fashionista/customUi/zzimListView;
 
     if-eqz v0, :cond_9
 
-    .line 92
+    .line 94
     iget-object v0, p0, Lcom/nemodream/fashionista/ZzimListActivity;->mZzimListView:Lcom/nemodream/fashionista/customUi/zzimListView;
 
     invoke-virtual {v0}, Lcom/nemodream/fashionista/customUi/zzimListView;->hideListView()V
 
-    .line 93
+    .line 95
     :cond_9
     return-void
 .end method
@@ -360,12 +386,12 @@
     .registers 7
 
     .prologue
-    .line 54
+    .line 55
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 55
+    .line 56
     .local v1, "pref":Landroid/content/SharedPreferences;
     const-string v3, "accessToken"
 
@@ -375,11 +401,11 @@
 
     move-result-object v0
 
-    .line 56
+    .line 57
     .local v0, "accessToken":Ljava/lang/String;
     const-string v2, "http://fashionista.widepics.co.kr/fapi2/getProductZzimList.action?apiKey=2bcf61709f6511e1a8b00800200c9a66"
 
-    .line 57
+    .line 58
     .local v2, "url":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -403,7 +429,7 @@
 
     move-result-object v2
 
-    .line 58
+    .line 59
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -438,7 +464,7 @@
 
     move-result-object v2
 
-    .line 59
+    .line 60
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -467,7 +493,34 @@
 
     move-result-object v2
 
-    .line 60
+    .line 61
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v4, "&language="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lcom/nemodream/fashionista/ZzimListActivity;->getlanguage()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 62
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -486,7 +539,7 @@
 
     move-result-object v2
 
-    .line 61
+    .line 63
     new-instance v3, Lcom/nemodream/fashionista/task/ZzimListTask;
 
     invoke-direct {v3, v2, p0}, Lcom/nemodream/fashionista/task/ZzimListTask;-><init>(Ljava/lang/String;Landroid/app/Activity;)V
@@ -497,6 +550,6 @@
 
     invoke-virtual {v3, v4}, Lcom/nemodream/fashionista/task/ZzimListTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 62
+    .line 64
     return-void
 .end method

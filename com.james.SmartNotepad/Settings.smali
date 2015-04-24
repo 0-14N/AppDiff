@@ -21,9 +21,7 @@
 
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
-    .registers 6
-
-    const/4 v3, 0x3
+    .registers 5
 
     const-string v0, "Settings"
 
@@ -33,17 +31,11 @@
 
     invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v3}, Lcom/james/SmartNotepad/Settings;->requestWindowFeature(I)Z
-
     invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
     const v0, 0x7f040001
 
     invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/Settings;->addPreferencesFromResource(I)V
-
-    const v0, 0x7f020028
-
-    invoke-virtual {p0, v3, v0}, Lcom/james/SmartNotepad/Settings;->setFeatureDrawableResource(II)V
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -109,36 +101,42 @@
 .method public onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .registers 8
 
-    const-string v0, "PREFERENCE_STATUSBAR_INTEGRATION"
+    const-string v4, "PREFERENCE_INVERSE_VIEW_COLOR"
 
-    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v3, "0"
 
-    move-result v0
-
-    if-nez v0, :cond_18
+    const-string v1, "PREFERENCE_STATUSBAR_INTEGRATION"
 
     const-string v0, "PREFERENCE_STATUSBAR_INTEGRATION"
 
-    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_18
+    if-nez v0, :cond_1e
+
+    const-string v0, "PREFERENCE_STATUSBAR_INTEGRATION"
+
+    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1e
 
     const-string v0, "PREFERENCE_INVERSE_VIEW_COLOR"
 
-    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_50
+    if-eqz v0, :cond_56
 
-    :cond_18
+    :cond_1e
     const-string v0, "PREFERENCE_STATUSBAR_INTEGRATION"
 
-    const-string v1, "0"
+    const-string v0, "0"
 
-    invoke-interface {p1, v0, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -150,7 +148,7 @@
 
     const-string v2, "0"
 
-    invoke-interface {p1, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -160,9 +158,9 @@
 
     const-string v2, "PREFERENCE_INVERSE_VIEW_COLOR"
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-interface {p1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {p1, v4, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
@@ -186,6 +184,6 @@
 
     invoke-virtual {p0, v3}, Lcom/james/SmartNotepad/Settings;->sendBroadcast(Landroid/content/Intent;)V
 
-    :cond_50
+    :cond_56
     return-void
 .end method

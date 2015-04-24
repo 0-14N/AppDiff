@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/a/g;
+.field final synthetic a:Lcom/a/d;
 
 .field final synthetic b:Lcom/hy/minifetion/ui/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/hy/minifetion/ui/i;Lcom/a/g;)V
+.method constructor <init>(Lcom/hy/minifetion/ui/i;Lcom/a/d;)V
     .registers 3
 
     iput-object p1, p0, Lcom/hy/minifetion/ui/k;->b:Lcom/hy/minifetion/ui/i;
 
-    iput-object p2, p0, Lcom/hy/minifetion/ui/k;->a:Lcom/a/g;
+    iput-object p2, p0, Lcom/hy/minifetion/ui/k;->a:Lcom/a/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,9 +29,9 @@
 .method public final onClick(Landroid/view/View;)V
     .registers 5
 
-    iget-object v0, p0, Lcom/hy/minifetion/ui/k;->a:Lcom/a/g;
+    iget-object v0, p0, Lcom/hy/minifetion/ui/k;->a:Lcom/a/d;
 
-    invoke-virtual {v0}, Lcom/a/g;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/a/d;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -45,9 +45,9 @@
 
     const-string v1, "android.intent.action.VIEW"
 
-    iget-object v2, p0, Lcom/hy/minifetion/ui/k;->a:Lcom/a/g;
+    iget-object v2, p0, Lcom/hy/minifetion/ui/k;->a:Lcom/a/d;
 
-    invoke-virtual {v2}, Lcom/a/g;->e()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/a/d;->e()Ljava/lang/String;
 
     move-result-object v2
 

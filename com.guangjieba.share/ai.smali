@@ -17,7 +17,7 @@
     .registers 3
 
     .prologue
-    .line 292
+    .line 334
     iput-object p1, p0, Lcom/guangjieba/share/model/h/ai;->b:Lcom/guangjieba/share/model/h/af;
 
     iput-object p2, p0, Lcom/guangjieba/share/model/h/ai;->a:Lcom/guangjieba/share/model/bean/UserModel$User;
@@ -33,13 +33,13 @@
     .registers 3
 
     .prologue
-    .line 297
+    .line 339
     iget-object v0, p0, Lcom/guangjieba/share/model/h/ai;->b:Lcom/guangjieba/share/model/h/af;
 
     iget-object v1, p0, Lcom/guangjieba/share/model/h/ai;->a:Lcom/guangjieba/share/model/bean/UserModel$User;
 
-    invoke-static {v0, v1}, Lcom/guangjieba/share/model/h/af;->b(Lcom/guangjieba/share/model/h/af;Lcom/guangjieba/share/model/bean/UserModel$User;)V
+    invoke-static {v0, v1}, Lcom/guangjieba/share/model/h/af;->c(Lcom/guangjieba/share/model/h/af;Lcom/guangjieba/share/model/bean/UserModel$User;)V
 
-    .line 298
+    .line 340
     return-void
 .end method

@@ -24,7 +24,7 @@
     .registers 1
 
     .prologue
-    .line 33
+    .line 37
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/SunnycombActivityBase;-><init>()V
 
     return-void
@@ -34,43 +34,33 @@
     .registers 1
 
     .prologue
-    .line 80
-    invoke-direct {p0}, Lcom/weathernews/sunnycomb/SplashActivity;->getRegistrationKey()V
-
-    return-void
-.end method
-
-.method static synthetic access$1(Lcom/weathernews/sunnycomb/SplashActivity;)V
-    .registers 1
-
-    .prologue
-    .line 101
+    .line 147
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/SplashActivity;->checkLoginStatus()V
 
     return-void
 .end method
 
-.method static synthetic access$2(Lcom/weathernews/sunnycomb/SplashActivity;)Lcom/weathernews/sunnycomb/loader/ProfileDataLoader;
+.method static synthetic access$1(Lcom/weathernews/sunnycomb/SplashActivity;)Lcom/weathernews/sunnycomb/loader/ProfileDataLoader;
     .registers 2
 
     .prologue
-    .line 36
+    .line 40
     iget-object v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profileDataLoader:Lcom/weathernews/sunnycomb/loader/ProfileDataLoader;
 
     return-object v0
 .end method
 
-.method static synthetic access$3(Lcom/weathernews/sunnycomb/SplashActivity;)Lcom/weathernews/sunnycomb/common/ProfileManager;
+.method static synthetic access$2(Lcom/weathernews/sunnycomb/SplashActivity;)Lcom/weathernews/sunnycomb/common/ProfileManager;
     .registers 2
 
     .prologue
-    .line 35
+    .line 39
     iget-object v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$4(Lcom/weathernews/sunnycomb/SplashActivity;Lorg/json/JSONObject;)Z
+.method static synthetic access$3(Lcom/weathernews/sunnycomb/SplashActivity;Lorg/json/JSONObject;)Z
     .registers 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -79,7 +69,7 @@
     .end annotation
 
     .prologue
-    .line 180
+    .line 231
     invoke-direct {p0, p1}, Lcom/weathernews/sunnycomb/SplashActivity;->showLaunchMsgDialog(Lorg/json/JSONObject;)Z
 
     move-result v0
@@ -87,24 +77,100 @@
     return v0
 .end method
 
-.method static synthetic access$5(Lcom/weathernews/sunnycomb/SplashActivity;Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;)V
+.method static synthetic access$4(Lcom/weathernews/sunnycomb/SplashActivity;Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;)V
     .registers 2
 
     .prologue
-    .line 230
+    .line 281
     invoke-direct {p0, p1}, Lcom/weathernews/sunnycomb/SplashActivity;->gotoHexActivity(Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;)V
 
     return-void
+.end method
+
+.method private changeLogo()V
+    .registers 5
+
+    .prologue
+    const v3, 0x7f020153
+
+    .line 112
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/util/Locale;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 114
+    .local v0, "locale":Ljava/lang/String;
+    const v2, 0x7f090019
+
+    invoke-virtual {p0, v2}, Lcom/weathernews/sunnycomb/SplashActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    .line 115
+    .local v1, "logo":Landroid/widget/ImageView;
+    const-string v2, "zh_CN"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_23
+
+    .line 116
+    const v2, 0x7f020152
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 122
+    :cond_22
+    :goto_22
+    return-void
+
+    .line 117
+    :cond_23
+    const-string v2, "zh_HK"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2f
+
+    .line 118
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    goto :goto_22
+
+    .line 119
+    :cond_2f
+    const-string v2, "zh_TW"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_22
+
+    .line 120
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    goto :goto_22
 .end method
 
 .method private checkLoginStatus()V
     .registers 4
 
     .prologue
-    .line 102
+    .line 148
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/SplashActivity;->updateProfile()V
 
-    .line 103
+    .line 149
     iget-object v1, p0, Lcom/weathernews/sunnycomb/SplashActivity;->utilProf:Lcom/weathernews/sunnycomb/util/UtilProf;
 
     invoke-virtual {v1}, Lcom/weathernews/sunnycomb/util/UtilProf;->validAkey()Z
@@ -121,23 +187,53 @@
 
     if-eqz v1, :cond_17
 
-    .line 105
+    .line 151
     :cond_13
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/SplashActivity;->loadLaunchMessage()V
 
-    .line 113
+    .line 164
     :goto_16
     return-void
 
-    .line 109
+    .line 155
     :cond_17
+    iget-object v1, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
+
+    const-string v2, "C"
+
+    invoke-virtual {v1, v2}, Lcom/weathernews/sunnycomb/common/ProfileManager;->setTempUnits(Ljava/lang/String;)V
+
+    .line 156
+    iget-object v1, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
+
+    const-string v2, "MPS"
+
+    invoke-virtual {v1, v2}, Lcom/weathernews/sunnycomb/common/ProfileManager;->setWindUnits(Ljava/lang/String;)V
+
+    .line 157
+    iget-object v1, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
+
+    const-string v2, "mm"
+
+    invoke-virtual {v1, v2}, Lcom/weathernews/sunnycomb/common/ProfileManager;->setPrecUnits(Ljava/lang/String;)V
+
+    .line 158
+    iget-object v1, p0, Lcom/weathernews/sunnycomb/SplashActivity;->utilProf:Lcom/weathernews/sunnycomb/util/UtilProf;
+
+    invoke-virtual {v1}, Lcom/weathernews/sunnycomb/util/UtilProf;->getAkey()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Lcom/weathernews/sunnycomb/util/UtilBaiduPush;->sendId(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 160
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/weathernews/sunnycomb/login/IntroActivity;
+    const-class v1, Lcom/weathernews/sunnycomb/hex/HexActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 110
+    .line 161
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "from"
 
@@ -145,85 +241,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 111
+    .line 162
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/SplashActivity;->startActivityWithAlpha(Landroid/content/Intent;)V
 
-    .line 112
+    .line 163
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/SplashActivity;->finish()V
 
     goto :goto_16
-.end method
-
-.method private getRegistrationKey()V
-    .registers 5
-
-    .prologue
-    .line 83
-    :try_start_0
-    invoke-static {p0}, Lcom/google/android/gcm/GCMRegistrar;->checkDevice(Landroid/content/Context;)V
-
-    .line 84
-    invoke-static {p0}, Lcom/google/android/gcm/GCMRegistrar;->checkManifest(Landroid/content/Context;)V
-
-    .line 85
-    invoke-static {p0}, Lcom/google/android/gcm/GCMRegistrar;->getRegistrationId(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 87
-    .local v0, "regId":Ljava/lang/String;
-    if-eqz v0, :cond_14
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_25
-
-    .line 88
-    :cond_14
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    const-string v3, "826303782884"
-
-    aput-object v3, v1, v2
-
-    invoke-static {p0, v1}, Lcom/google/android/gcm/GCMRegistrar;->register(Landroid/content/Context;[Ljava/lang/String;)V
-
-    .line 92
-    :goto_1f
-    iget-object v1, p0, Lcom/weathernews/sunnycomb/SplashActivity;->utilProf:Lcom/weathernews/sunnycomb/util/UtilProf;
-
-    invoke-virtual {v1, v0}, Lcom/weathernews/sunnycomb/util/UtilProf;->sendRegId(Ljava/lang/String;)V
-
-    .line 96
-    .end local v0    # "regId":Ljava/lang/String;
-    :goto_24
-    return-void
-
-    .line 90
-    .restart local v0    # "regId":Ljava/lang/String;
-    :cond_25
-    iget-object v1, p0, Lcom/weathernews/sunnycomb/SplashActivity;->utilProf:Lcom/weathernews/sunnycomb/util/UtilProf;
-
-    invoke-virtual {v1, v0}, Lcom/weathernews/sunnycomb/util/UtilProf;->setGcmRegId(Ljava/lang/String;)Z
-    :try_end_2a
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_2a} :catch_2b
-
-    goto :goto_1f
-
-    .line 93
-    .end local v0    # "regId":Ljava/lang/String;
-    :catch_2b
-    move-exception v1
-
-    goto :goto_24
 .end method
 
 .method private gotoHexActivity(Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;)V
@@ -231,26 +255,26 @@
     .param p1, "tag"    # Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;
 
     .prologue
-    .line 231
+    .line 282
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/weathernews/sunnycomb/hex/HexActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 232
+    .line 283
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "tag_from"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    .line 233
+    .line 284
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/SplashActivity;->startActivityWithAlpha(Landroid/content/Intent;)V
 
-    .line 234
+    .line 285
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/SplashActivity;->finish()V
 
-    .line 235
+    .line 286
     return-void
 .end method
 
@@ -258,7 +282,7 @@
     .registers 8
 
     .prologue
-    .line 143
+    .line 194
     new-instance v0, Lcom/weathernews/libwnihttp/HttpGetTask;
 
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/SplashActivity;->getApplicationContext()Landroid/content/Context;
@@ -271,17 +295,17 @@
 
     invoke-direct {v0, v4, v5}, Lcom/weathernews/libwnihttp/HttpGetTask;-><init>(Landroid/content/Context;Lcom/weathernews/libwnihttp/HttpListener$OnHttpTaskListener;)V
 
-    .line 167
+    .line 218
     .local v0, "httpGetTask":Lcom/weathernews/libwnihttp/HttpGetTask;
     new-instance v3, Lcom/weathernews/libwniutil/UtilTime;
 
     invoke-direct {v3, p0}, Lcom/weathernews/libwniutil/UtilTime;-><init>(Landroid/content/Context;)V
 
-    .line 168
+    .line 219
     .local v3, "utilTime":Lcom/weathernews/libwniutil/UtilTime;
     const-string v2, "http://g.sunnycomb.com/sunnycomb/api_launch_message.fcgi?carrier=GOOG&akey=%s&locale=%s&tz=%s"
 
-    .line 169
+    .line 220
     .local v2, "url_format":Ljava/lang/String;
     const/4 v4, 0x3
 
@@ -321,11 +345,11 @@
 
     move-result-object v1
 
-    .line 170
+    .line 221
     .local v1, "url":Ljava/lang/String;
     invoke-virtual {v0, v1}, Lcom/weathernews/libwnihttp/HttpGetTask;->start(Ljava/lang/String;)V
 
-    .line 171
+    .line 222
     return-void
 .end method
 
@@ -339,14 +363,14 @@
     .end annotation
 
     .prologue
-    .line 181
+    .line 232
     const-string v0, "title"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 182
+    .line 233
     .local v5, "title":Ljava/lang/String;
     const-string v0, "message"
 
@@ -354,7 +378,7 @@
 
     move-result-object v6
 
-    .line 183
+    .line 234
     .local v6, "message":Ljava/lang/String;
     const-string v0, "menu"
 
@@ -362,13 +386,13 @@
 
     move-result-object v3
 
-    .line 184
+    .line 235
     .local v3, "menu":Ljava/lang/String;
     invoke-static {v3}, Lcom/weathernews/sunnycomb/common/Key2Class;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 185
+    .line 236
     .local v2, "openActivity":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v0, "args"
 
@@ -376,20 +400,20 @@
 
     move-result-object v4
 
-    .line 187
+    .line 238
     .local v4, "args":Ljava/lang/String;
     new-instance v8, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v8, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 188
+    .line 239
     .local v8, "builder":Landroid/app/AlertDialog$Builder;
     invoke-virtual {v8, v5}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 189
+    .line 240
     invoke-virtual {v8, v6}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 190
+    .line 241
     const-string v9, "OK"
 
     new-instance v0, Lcom/weathernews/sunnycomb/SplashActivity$3;
@@ -400,7 +424,7 @@
 
     invoke-virtual {v8, v9, v0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 213
+    .line 264
     const-string v0, "Close"
 
     new-instance v1, Lcom/weathernews/sunnycomb/SplashActivity$4;
@@ -409,16 +433,16 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 222
+    .line 273
     invoke-virtual {v8}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v7
 
-    .line 223
+    .line 274
     .local v7, "alertDialog":Landroid/app/AlertDialog;
     invoke-virtual {v7}, Landroid/app/AlertDialog;->show()V
 
-    .line 224
+    .line 275
     const/4 v0, 0x1
 
     return v0
@@ -428,7 +452,7 @@
     .registers 4
 
     .prologue
-    .line 119
+    .line 170
     iget-object v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/common/ProfileManager;->getAkey()Ljava/lang/String;
@@ -441,11 +465,11 @@
 
     if-eqz v0, :cond_d
 
-    .line 137
+    .line 188
     :goto_c
     return-void
 
-    .line 122
+    .line 173
     :cond_d
     new-instance v0, Lcom/weathernews/sunnycomb/loader/ProfileDataLoader;
 
@@ -453,7 +477,7 @@
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profileDataLoader:Lcom/weathernews/sunnycomb/loader/ProfileDataLoader;
 
-    .line 123
+    .line 174
     iget-object v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profileDataLoader:Lcom/weathernews/sunnycomb/loader/ProfileDataLoader;
 
     const/4 v1, 0x0
@@ -466,7 +490,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/weathernews/sunnycomb/loader/ProfileDataLoader;->setParam(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 125
+    .line 176
     iget-object v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profileDataLoader:Lcom/weathernews/sunnycomb/loader/ProfileDataLoader;
 
     new-instance v1, Lcom/weathernews/sunnycomb/SplashActivity$1;
@@ -484,10 +508,10 @@
     .registers 1
 
     .prologue
-    .line 74
+    .line 105
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/SplashActivity;->finish()V
 
-    .line 75
+    .line 106
     return-void
 .end method
 
@@ -495,7 +519,7 @@
     .registers 2
 
     .prologue
-    .line 268
+    .line 319
     const/high16 v0, 0x7f020000
 
     return v0
@@ -505,7 +529,7 @@
     .registers 2
 
     .prologue
-    .line 258
+    .line 309
     sget-object v0, Lcom/weathernews/sunnycomb/SunnycombActivityBase$NaviBarAlpha;->ALPHA_0:Lcom/weathernews/sunnycomb/SunnycombActivityBase$NaviBarAlpha;
 
     return-object v0
@@ -516,49 +540,63 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 40
+    .line 44
     invoke-super {p0, p1}, Lcom/weathernews/sunnycomb/SunnycombActivityBase;->onCreate(Landroid/os/Bundle;)V
 
-    .line 41
+    .line 46
     invoke-static {p0}, Lcom/weathernews/sunnycomb/debug/DebugMode2;->update(Landroid/content/Context;)V
 
-    .line 42
+    .line 47
     invoke-static {}, Lcom/weathernews/sunnycomb/debug/DebugMode2;->isDebug()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->isDebug:Z
 
-    .line 43
-    const v0, 0x7f030047
+    .line 49
+    const v0, 0x7f030048
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/SplashActivity;->setContentView(I)V
 
-    .line 53
+    .line 50
+    const v0, 0x7f0901d0
+
+    invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/SplashActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 60
+    invoke-direct {p0}, Lcom/weathernews/sunnycomb/SplashActivity;->changeLogo()V
+
+    .line 63
     new-instance v0, Lcom/weathernews/sunnycomb/util/UtilProf;
 
     invoke-direct {v0, p0}, Lcom/weathernews/sunnycomb/util/UtilProf;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->utilProf:Lcom/weathernews/sunnycomb/util/UtilProf;
 
-    .line 54
+    .line 64
     invoke-static {}, Lcom/weathernews/sunnycomb/common/ProfileManager;->getInstance()Lcom/weathernews/sunnycomb/common/ProfileManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
-    .line 55
+    .line 65
     iget-object v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->profMngr:Lcom/weathernews/sunnycomb/common/ProfileManager;
 
     invoke-virtual {v0, p0}, Lcom/weathernews/sunnycomb/common/ProfileManager;->init(Landroid/app/Activity;)V
 
-    .line 57
+    .line 67
     iget-boolean v0, p0, Lcom/weathernews/sunnycomb/SplashActivity;->isDebug:Z
 
-    if-eqz v0, :cond_42
+    if-eqz v0, :cond_51
 
-    .line 58
+    .line 68
     const-string v0, "Splash"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -583,13 +621,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
-    :cond_42
+    .line 70
+    :cond_51
     sget-object v0, Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;->STARTUP:Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/SplashActivity;->countLog(Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;)V
 
-    .line 61
+    .line 71
     return-void
 .end method
 
@@ -598,18 +636,18 @@
     .param p1, "hasFocus"    # Z
 
     .prologue
-    .line 65
+    .line 75
     invoke-super {p0, p1}, Lcom/weathernews/sunnycomb/SunnycombActivityBase;->onWindowFocusChanged(Z)V
 
-    .line 66
+    .line 76
     if-nez p1, :cond_6
 
-    .line 70
+    .line 101
     :cond_5
     :goto_5
     return-void
 
-    .line 68
+    .line 80
     :cond_6
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/SplashActivity;->checkNetworkConnection()Z
 
@@ -617,7 +655,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 69
+    .line 81
     new-instance v0, Lcom/weathernews/sunnycomb/SplashActivity$splashHandler;
 
     invoke-direct {v0, p0}, Lcom/weathernews/sunnycomb/SplashActivity$splashHandler;-><init>(Lcom/weathernews/sunnycomb/SplashActivity;)V
@@ -633,6 +671,6 @@
     .registers 1
 
     .prologue
-    .line 264
+    .line 315
     return-void
 .end method

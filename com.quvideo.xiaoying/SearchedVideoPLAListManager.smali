@@ -126,16 +126,16 @@
     iput-boolean v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;->m:Z
 
     .line 257
-    new-instance v0, Lrb;
+    new-instance v0, Lki;
 
-    invoke-direct {v0, p0}, Lrb;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;)V
+    invoke-direct {v0, p0}, Lki;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;->n:Lcom/quvideo/xiaoying/common/ui/widgets/waterfall/PLA_AbsListView$OnScrollListener;
 
     .line 347
-    new-instance v0, Lrc;
+    new-instance v0, Lkj;
 
-    invoke-direct {v0, p0}, Lrc;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;)V
+    invoke-direct {v0, p0}, Lkj;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;->o:Lcom/quvideo/xiaoying/app/community/utils/VideoInfoPLAAdapter$VideoInfoPLAAdapterListener;
 
@@ -216,16 +216,16 @@
     iput-boolean v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;->m:Z
 
     .line 257
-    new-instance v0, Lrb;
+    new-instance v0, Lki;
 
-    invoke-direct {v0, p0}, Lrb;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;)V
+    invoke-direct {v0, p0}, Lki;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;->n:Lcom/quvideo/xiaoying/common/ui/widgets/waterfall/PLA_AbsListView$OnScrollListener;
 
     .line 347
-    new-instance v0, Lrc;
+    new-instance v0, Lkj;
 
-    invoke-direct {v0, p0}, Lrc;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;)V
+    invoke-direct {v0, p0}, Lkj;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;->o:Lcom/quvideo/xiaoying/app/community/utils/VideoInfoPLAAdapter$VideoInfoPLAAdapterListener;
 
@@ -321,7 +321,7 @@
     .line 177
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;->mHintView:Landroid/view/View;
 
-    const v1, 0x7f06052b
+    const v1, 0x7f060516
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -332,7 +332,7 @@
     .line 178
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;->mHintView:Landroid/view/View;
 
-    const v2, 0x7f06052c
+    const v2, 0x7f060517
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -341,12 +341,12 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 179
-    const v2, 0x7f020600
+    const v2, 0x7f0205e0
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 180
-    const v0, 0x7f0a0390
+    const v0, 0x7f0a036d
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
 
@@ -915,9 +915,9 @@
 
     const-string/jumbo v1, "search.video"
 
-    new-instance v2, Lrd;
+    new-instance v2, Lkk;
 
-    invoke-direct {v2, p0, p1, p2}, Lrd;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;Ljava/lang/String;I)V
+    invoke-direct {v2, p0, p1, p2}, Lkk;-><init>(Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;Ljava/lang/String;I)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -957,7 +957,7 @@
     .line 169
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;->mHintView:Landroid/view/View;
 
-    const v1, 0x7f06052b
+    const v1, 0x7f060516
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -968,7 +968,7 @@
     .line 170
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/community/search/SearchedVideoPLAListManager;->mHintView:Landroid/view/View;
 
-    const v2, 0x7f06052c
+    const v2, 0x7f060517
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -977,12 +977,12 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 171
-    const v2, 0x7f020603
+    const v2, 0x7f0205e3
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 172
-    const v0, 0x7f0a038f
+    const v0, 0x7f0a036c
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
 

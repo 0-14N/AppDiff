@@ -30,7 +30,7 @@
 
 .field private l:Landroid/os/Handler;
 
-.field private m:Lorg/gdb/android/client/mp;
+.field private m:Lorg/gdb/android/client/mm;
 
 .field private n:Lorg/gdb/android/client/remote/y;
 
@@ -74,30 +74,30 @@
     iput-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->b:Ljava/util/List;
 
     .line 66
-    new-instance v0, Lorg/gdb/android/client/mh;
+    new-instance v0, Lorg/gdb/android/client/me;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/mh;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/me;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->n:Lorg/gdb/android/client/remote/y;
 
     .line 88
-    new-instance v0, Lorg/gdb/android/client/mi;
+    new-instance v0, Lorg/gdb/android/client/mf;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/mi;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/mf;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->o:Lorg/gdb/android/client/remote/x;
 
     .line 95
-    new-instance v0, Lorg/gdb/android/client/mj;
+    new-instance v0, Lorg/gdb/android/client/mg;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/mj;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/mg;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->p:Lorg/gdb/android/client/remote/y;
 
     .line 124
-    new-instance v0, Lorg/gdb/android/client/mk;
+    new-instance v0, Lorg/gdb/android/client/mh;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/mk;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/mh;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->q:Lorg/gdb/android/client/remote/x;
 
@@ -105,12 +105,12 @@
     return-void
 .end method
 
-.method static synthetic a(Lorg/gdb/android/client/SinaFriendActivity;)Lorg/gdb/android/client/mp;
+.method static synthetic a(Lorg/gdb/android/client/SinaFriendActivity;)Lorg/gdb/android/client/mm;
     .registers 2
 
     .prologue
     .line 64
-    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mp;
+    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mm;
 
     return-object v0
 .end method
@@ -134,9 +134,9 @@
 
     if-eqz v0, :cond_63
 
-    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mp;
+    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mm;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/mp;->c()Z
+    invoke-virtual {v0}, Lorg/gdb/android/client/mm;->c()Z
 
     move-result v0
 
@@ -178,9 +178,9 @@
 
     iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->d:Lorg/gdb/android/client/widget/CustomEmptyLoading;
 
-    new-instance v1, Lorg/gdb/android/client/ml;
+    new-instance v1, Lorg/gdb/android/client/mi;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/ml;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/mi;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
 
     invoke-virtual {v0, v1}, Lorg/gdb/android/client/widget/CustomEmptyLoading;->a(Landroid/view/View$OnClickListener;)V
 
@@ -205,9 +205,9 @@
 
     iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->d:Lorg/gdb/android/client/widget/CustomEmptyLoading;
 
-    new-instance v1, Lorg/gdb/android/client/mm;
+    new-instance v1, Lorg/gdb/android/client/mj;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/mm;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/mj;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
 
     invoke-virtual {v0, v1}, Lorg/gdb/android/client/widget/CustomEmptyLoading;->a(Landroid/view/View$OnClickListener;)V
 
@@ -364,9 +364,9 @@
 
     iget-object v1, p0, Lorg/gdb/android/client/SinaFriendActivity;->g:Landroid/widget/Button;
 
-    new-instance v2, Lorg/gdb/android/client/mn;
+    new-instance v2, Lorg/gdb/android/client/mk;
 
-    invoke-direct {v2, p0}, Lorg/gdb/android/client/mn;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
+    invoke-direct {v2, p0}, Lorg/gdb/android/client/mk;-><init>(Lorg/gdb/android/client/SinaFriendActivity;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -497,7 +497,7 @@
 
     if-eqz v0, :cond_23
 
-    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mp;
+    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mm;
 
     const/4 v1, 0x1
 
@@ -515,7 +515,7 @@
 
     aput-object v3, v1, v2
 
-    invoke-virtual {v0, p0, v1}, Lorg/gdb/android/client/mp;->a(Lorg/gdb/android/client/SinaFriendActivity;[Ljava/lang/String;)V
+    invoke-virtual {v0, p0, v1}, Lorg/gdb/android/client/mm;->a(Lorg/gdb/android/client/SinaFriendActivity;[Ljava/lang/String;)V
 
     :cond_23
     return-void
@@ -559,46 +559,46 @@
     invoke-super {p0, p1}, Lorg/gdb/android/client/NullImageActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 207
-    new-instance v0, Lorg/gdb/android/client/mp;
+    new-instance v0, Lorg/gdb/android/client/mm;
 
-    invoke-direct {v0, v2}, Lorg/gdb/android/client/mp;-><init>(B)V
+    invoke-direct {v0, v2}, Lorg/gdb/android/client/mm;-><init>(B)V
 
-    iput-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mp;
+    iput-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mm;
 
     .line 208
-    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mp;
+    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mm;
 
     iget-object v1, p0, Lorg/gdb/android/client/SinaFriendActivity;->n:Lorg/gdb/android/client/remote/y;
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/mp;->a(Lorg/gdb/android/client/remote/y;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/mm;->a(Lorg/gdb/android/client/remote/y;)V
 
     .line 209
-    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mp;
+    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mm;
 
     iget-object v1, p0, Lorg/gdb/android/client/SinaFriendActivity;->q:Lorg/gdb/android/client/remote/x;
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/mp;->a(Lorg/gdb/android/client/remote/x;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/mm;->a(Lorg/gdb/android/client/remote/x;)V
 
     .line 210
-    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mp;
+    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mm;
 
     iget-object v1, p0, Lorg/gdb/android/client/SinaFriendActivity;->p:Lorg/gdb/android/client/remote/y;
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/mp;->b(Lorg/gdb/android/client/remote/y;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/mm;->b(Lorg/gdb/android/client/remote/y;)V
 
     .line 211
-    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mp;
+    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mm;
 
     iget-object v1, p0, Lorg/gdb/android/client/SinaFriendActivity;->o:Lorg/gdb/android/client/remote/x;
 
-    invoke-virtual {v0, v1}, Lorg/gdb/android/client/mp;->b(Lorg/gdb/android/client/remote/x;)V
+    invoke-virtual {v0, v1}, Lorg/gdb/android/client/mm;->b(Lorg/gdb/android/client/remote/x;)V
 
     .line 212
     new-instance v0, Landroid/os/Handler;
 
-    new-instance v1, Lorg/gdb/android/client/mo;
+    new-instance v1, Lorg/gdb/android/client/ml;
 
-    invoke-direct {v1, p0, v2}, Lorg/gdb/android/client/mo;-><init>(Lorg/gdb/android/client/SinaFriendActivity;B)V
+    invoke-direct {v1, p0, v2}, Lorg/gdb/android/client/ml;-><init>(Lorg/gdb/android/client/SinaFriendActivity;B)V
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Handler$Callback;)V
 
@@ -715,14 +715,14 @@
 
     .prologue
     .line 349
-    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mp;
+    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mm;
 
     if-eqz v0, :cond_9
 
     .line 350
-    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mp;
+    iget-object v0, p0, Lorg/gdb/android/client/SinaFriendActivity;->m:Lorg/gdb/android/client/mm;
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/mp;->d()V
+    invoke-virtual {v0}, Lorg/gdb/android/client/mm;->d()V
 
     .line 352
     :cond_9

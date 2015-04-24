@@ -104,58 +104,58 @@
     iput v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->a:I
 
     .line 532
-    new-instance v0, Laos;
+    new-instance v0, Lahy;
 
-    invoke-direct {v0, p0}, Laos;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Lahy;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->b:Lcom/quvideo/xiaoying/scenenavigator/QAdapterView$OnItemClickListener;
 
     .line 540
-    new-instance v0, Laot;
+    new-instance v0, Lahz;
 
-    invoke-direct {v0, p0}, Laot;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Lahz;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->c:Lcom/quvideo/xiaoying/scenenavigator/QAdapterView$OnItemLongClickListener;
 
     .line 548
-    new-instance v0, Laou;
+    new-instance v0, Laia;
 
-    invoke-direct {v0, p0}, Laou;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laia;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->d:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     .line 562
-    new-instance v0, Laov;
+    new-instance v0, Laib;
 
-    invoke-direct {v0, p0}, Laov;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laib;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->e:Lcom/quvideo/xiaoying/scenenavigator/QGallery$OnGalleryMoveListener;
 
     .line 580
-    new-instance v0, Laow;
+    new-instance v0, Laic;
 
-    invoke-direct {v0, p0}, Laow;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laic;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->f:Lcom/quvideo/xiaoying/scenenavigator/QGallery$OnPinchZoomGestureListener;
 
     .line 597
-    new-instance v0, Laox;
+    new-instance v0, Laid;
 
-    invoke-direct {v0, p0}, Laox;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laid;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->g:Lcom/quvideo/xiaoying/scenenavigator/QGallery$OnChildRelocationListener;
 
     .line 604
-    new-instance v0, Laoy;
+    new-instance v0, Laie;
 
-    invoke-direct {v0, p0}, Laoy;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laie;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->h:Lcom/quvideo/xiaoying/scenenavigator/QAdapterView$OnItemSelectedListener;
 
     .line 858
-    new-instance v0, Laoz;
+    new-instance v0, Laif;
 
-    invoke-direct {v0, p0}, Laoz;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laif;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->i:Landroid/view/View$OnTouchListener;
 
@@ -222,58 +222,58 @@
     iput v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->a:I
 
     .line 532
-    new-instance v0, Laos;
+    new-instance v0, Lahy;
 
-    invoke-direct {v0, p0}, Laos;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Lahy;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->b:Lcom/quvideo/xiaoying/scenenavigator/QAdapterView$OnItemClickListener;
 
     .line 540
-    new-instance v0, Laot;
+    new-instance v0, Lahz;
 
-    invoke-direct {v0, p0}, Laot;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Lahz;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->c:Lcom/quvideo/xiaoying/scenenavigator/QAdapterView$OnItemLongClickListener;
 
     .line 548
-    new-instance v0, Laou;
+    new-instance v0, Laia;
 
-    invoke-direct {v0, p0}, Laou;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laia;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->d:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     .line 562
-    new-instance v0, Laov;
+    new-instance v0, Laib;
 
-    invoke-direct {v0, p0}, Laov;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laib;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->e:Lcom/quvideo/xiaoying/scenenavigator/QGallery$OnGalleryMoveListener;
 
     .line 580
-    new-instance v0, Laow;
+    new-instance v0, Laic;
 
-    invoke-direct {v0, p0}, Laow;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laic;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->f:Lcom/quvideo/xiaoying/scenenavigator/QGallery$OnPinchZoomGestureListener;
 
     .line 597
-    new-instance v0, Laox;
+    new-instance v0, Laid;
 
-    invoke-direct {v0, p0}, Laox;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laid;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->g:Lcom/quvideo/xiaoying/scenenavigator/QGallery$OnChildRelocationListener;
 
     .line 604
-    new-instance v0, Laoy;
+    new-instance v0, Laie;
 
-    invoke-direct {v0, p0}, Laoy;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laie;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->h:Lcom/quvideo/xiaoying/scenenavigator/QAdapterView$OnItemSelectedListener;
 
     .line 858
-    new-instance v0, Laoz;
+    new-instance v0, Laif;
 
-    invoke-direct {v0, p0}, Laoz;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
+    invoke-direct {v0, p0}, Laif;-><init>(Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/SceneAdapter;->i:Landroid/view/View$OnTouchListener;
 

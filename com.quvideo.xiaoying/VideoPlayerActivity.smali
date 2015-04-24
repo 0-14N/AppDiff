@@ -197,9 +197,9 @@
     iput-boolean v1, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoPlayerActivity;->K:Z
 
     .line 134
-    new-instance v0, Lamq;
+    new-instance v0, Lafw;
 
-    invoke-direct {v0, p0}, Lamq;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoPlayerActivity;)V
+    invoke-direct {v0, p0}, Lafw;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoPlayerActivity;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/common/ui/custom/VideoPlayerActivity;->M:Lcom/quvideo/xiaoying/common/ui/custom/VideoMgrBase$StateChangeListener;
 
@@ -1307,9 +1307,9 @@
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 411
-    new-instance v2, Lamr;
+    new-instance v2, Lafx;
 
-    invoke-direct {v2, p0}, Lamr;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoPlayerActivity;)V
+    invoke-direct {v2, p0}, Lafx;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoPlayerActivity;)V
 
     .line 410
     invoke-direct {v1, p0, v0, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -1631,9 +1631,9 @@
 
     const-string/jumbo v4, "video.setlike"
 
-    new-instance v5, Lams;
+    new-instance v5, Lafy;
 
-    invoke-direct {v5, p0, v2, v0}, Lams;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoPlayerActivity;Ljava/lang/String;I)V
+    invoke-direct {v5, p0, v2, v0}, Lafy;-><init>(Lcom/quvideo/xiaoying/common/ui/custom/VideoPlayerActivity;Ljava/lang/String;I)V
 
     invoke-virtual {v1, v4, v5}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 

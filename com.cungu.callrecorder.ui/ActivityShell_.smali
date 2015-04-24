@@ -26,45 +26,21 @@
 
     const v5, 0x7f0e0014
 
-    const v4, 0x7f0e0013
+    const v1, 0x7f0e0013
 
-    const v3, 0x7f0e0012
+    const v4, 0x7f0e0012
 
-    const v2, 0x7f0e000f
+    const v3, 0x7f0e000f
 
-    const v1, 0x7f0e000d
+    const v2, 0x7f0e000d
 
-    invoke-virtual {p0, v4}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityShell_;->o:Landroid/widget/Button;
-
-    invoke-virtual {p0, v1}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityShell_;->t:Landroid/widget/Button;
-
-    invoke-virtual {p0, v2}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ToggleButton;
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityShell_;->s:Landroid/widget/ToggleButton;
-
-    invoke-virtual {p0, v3}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityShell_;->p:Landroid/widget/Button;
 
     const v0, 0x7f0e0011
 
@@ -75,6 +51,22 @@
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityShell_;->q:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v2}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityShell_;->t:Landroid/widget/Button;
+
+    invoke-virtual {p0, v4}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityShell_;->p:Landroid/widget/Button;
 
     invoke-virtual {p0, v5}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
 
@@ -98,6 +90,14 @@
 
     move-result-object v0
 
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityShell_;->o:Landroid/widget/Button;
+
+    invoke-virtual {p0, v1}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
     if-eqz v0, :cond_5b
 
     new-instance v1, Lcom/cungo/callrecorder/ui/lo;
@@ -107,7 +107,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_5b
-    invoke-virtual {p0, v4}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -120,7 +120,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_69
-    invoke-virtual {p0, v5}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -133,7 +133,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_77
-    invoke-virtual {p0, v2}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Lcom/cungo/callrecorder/ui/ActivityShell_;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -273,7 +273,7 @@
 .method static synthetic a(Lcom/cungo/callrecorder/ui/ActivityShell_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
 
     return-void
 .end method
@@ -305,7 +305,7 @@
 .method static synthetic b(Lcom/cungo/callrecorder/ui/ActivityShell_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
 
     return-void
 .end method
@@ -343,9 +343,9 @@
 .method public o()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/lv;
+    new-instance v0, Lcom/cungo/callrecorder/ui/lw;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/lv;-><init>(Lcom/cungo/callrecorder/ui/ActivityShell_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/lw;-><init>(Lcom/cungo/callrecorder/ui/ActivityShell_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -423,9 +423,9 @@
 .method public p()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/lw;
+    new-instance v0, Lcom/cungo/callrecorder/ui/lv;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/lw;-><init>(Lcom/cungo/callrecorder/ui/ActivityShell_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/lv;-><init>(Lcom/cungo/callrecorder/ui/ActivityShell_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 

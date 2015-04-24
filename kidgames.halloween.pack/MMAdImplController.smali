@@ -69,14 +69,14 @@
     .registers 1
 
     .prologue
-    .line 28
+    .line 29
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
 
-    .line 31
+    .line 32
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -91,22 +91,22 @@
     .param p1, "adImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 60
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
+    .line 62
     const-string v0, "**************** creating new controller."
 
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 62
+    .line 63
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
 
-    .line 64
+    .line 65
     iget-wide v0, p1, Lcom/millennialmedia/android/MMAdImpl;->linkForExpansionId:J
 
     const-wide/16 v2, 0x0
@@ -115,29 +115,35 @@
 
     if-eqz v0, :cond_21
 
-    .line 66
+    .line 67
     invoke-virtual {p0, p1}, Lcom/millennialmedia/android/MMAdImplController;->linkForExpansion(Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 67
+    .line 68
     invoke-static {p1}, Lcom/millennialmedia/android/MMAdImplController;->getWebViewFromExistingAdImpl(Lcom/millennialmedia/android/MMAdImpl;)Lcom/millennialmedia/android/MMWebView;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
-    .line 82
+    .line 83
+    :cond_20
     :goto_20
     return-void
 
-    .line 72
+    .line 70
     :cond_21
+    instance-of v0, p1, Lcom/millennialmedia/android/MMInterstitial$MMInterstitialAdImpl;
+
+    if-nez v0, :cond_20
+
+    .line 73
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->isBanner()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3e
+    if-eqz v0, :cond_42
 
-    .line 74
+    .line 75
     new-instance v0, Lcom/millennialmedia/android/MMWebView;
 
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
@@ -154,7 +160,7 @@
 
     iput-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
-    .line 75
+    .line 76
     iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     const/4 v1, 0x1
@@ -163,8 +169,8 @@
 
     goto :goto_20
 
-    .line 79
-    :cond_3e
+    .line 80
+    :cond_42
     new-instance v0, Lcom/millennialmedia/android/MMWebView;
 
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
@@ -185,7 +191,7 @@
     .param p0, "adImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 101
+    .line 102
     const-class v3, Lcom/millennialmedia/android/MMAdImplController;
 
     monitor-enter v3
@@ -195,7 +201,7 @@
 
     if-eqz v2, :cond_79
 
-    .line 103
+    .line 104
     sget-object v2, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
 
     iget-object v4, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
@@ -206,14 +212,14 @@
 
     if-nez v2, :cond_3d
 
-    .line 105
+    .line 106
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMAdImpl;->isLifecycleObservable()Z
 
     move-result v2
 
     if-eqz v2, :cond_55
 
-    .line 107
+    .line 108
     sget-object v2, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
 
     iget-wide v4, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -226,7 +232,7 @@
 
     invoke-interface {v2, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 108
+    .line 109
     sget-object v2, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
     iget-wide v4, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -241,7 +247,7 @@
 
     if-eqz v2, :cond_3d
 
-    .line 109
+    .line 110
     sget-object v2, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
     iget-wide v4, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -252,7 +258,7 @@
 
     invoke-interface {v2, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 114
+    .line 115
     :cond_3d
     :goto_3d
     new-instance v2, Ljava/lang/StringBuilder;
@@ -277,14 +283,14 @@
     :try_end_53
     .catchall {:try_start_3 .. :try_end_53} :catchall_76
 
-    .line 142
+    .line 143
     :cond_53
     :goto_53
     monitor-exit v3
 
     return-void
 
-    .line 111
+    .line 112
     :cond_55
     :try_start_55
     sget-object v2, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
@@ -301,7 +307,7 @@
 
     if-nez v2, :cond_3d
 
-    .line 112
+    .line 113
     sget-object v2, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
     iget-wide v4, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -322,7 +328,7 @@
 
     goto :goto_3d
 
-    .line 101
+    .line 102
     :catchall_76
     move-exception v2
 
@@ -330,7 +336,7 @@
 
     throw v2
 
-    .line 117
+    .line 118
     :cond_79
     :try_start_79
     new-instance v2, Ljava/lang/StringBuilder;
@@ -353,7 +359,7 @@
 
     invoke-static {v2}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 118
+    .line 119
     sget-object v2, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
 
     iget-wide v4, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -368,11 +374,11 @@
 
     check-cast v0, Lcom/millennialmedia/android/MMAdImplController;
 
-    .line 119
+    .line 120
     .local v0, "controller":Lcom/millennialmedia/android/MMAdImplController;
     if-nez v0, :cond_cd
 
-    .line 121
+    .line 122
     sget-object v2, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
     iget-wide v4, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -387,11 +393,11 @@
 
     check-cast v1, Ljava/lang/ref/WeakReference;
 
-    .line 122
+    .line 123
     .local v1, "controllerRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/millennialmedia/android/MMAdImplController;>;"
     if-eqz v1, :cond_b5
 
-    .line 123
+    .line 124
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -399,26 +405,26 @@
     .end local v0    # "controller":Lcom/millennialmedia/android/MMAdImplController;
     check-cast v0, Lcom/millennialmedia/android/MMAdImplController;
 
-    .line 124
+    .line 125
     .restart local v0    # "controller":Lcom/millennialmedia/android/MMAdImplController;
     :cond_b5
     if-nez v0, :cond_cd
 
-    .line 126
+    .line 127
     new-instance v0, Lcom/millennialmedia/android/MMAdImplController;
 
     .end local v0    # "controller":Lcom/millennialmedia/android/MMAdImplController;
     invoke-direct {v0, p0}, Lcom/millennialmedia/android/MMAdImplController;-><init>(Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 127
+    .line 128
     .restart local v0    # "controller":Lcom/millennialmedia/android/MMAdImplController;
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMAdImpl;->isLifecycleObservable()Z
 
     move-result v2
 
-    if-eqz v2, :cond_df
+    if-eqz v2, :cond_e3
 
-    .line 128
+    .line 129
     sget-object v2, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
 
     iget-wide v4, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -429,32 +435,36 @@
 
     invoke-interface {v2, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
+    .line 136
     .end local v1    # "controllerRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/millennialmedia/android/MMAdImplController;>;"
     :cond_cd
     :goto_cd
     iput-object v0, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
-    .line 136
+    .line 137
     new-instance v2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v2, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v2, v0, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
 
-    .line 138
+    .line 139
     iget-object v2, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     if-eqz v2, :cond_53
 
-    .line 140
+    instance-of v2, p0, Lcom/millennialmedia/android/MMInterstitial$MMInterstitialAdImpl;
+
+    if-nez v2, :cond_53
+
+    .line 141
     invoke-static {p0}, Lcom/millennialmedia/android/MMAdImplController;->setupWebView(Lcom/millennialmedia/android/MMAdImpl;)V
 
     goto/16 :goto_53
 
-    .line 130
+    .line 131
     .restart local v1    # "controllerRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/millennialmedia/android/MMAdImplController;>;"
-    :cond_df
+    :cond_e3
     sget-object v2, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
     iget-wide v4, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -468,66 +478,98 @@
     invoke-direct {v5, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-interface {v2, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_ef
-    .catchall {:try_start_79 .. :try_end_ef} :catchall_76
+    :try_end_f3
+    .catchall {:try_start_79 .. :try_end_f3} :catchall_76
 
     goto :goto_cd
 .end method
 
-.method static declared-synchronized attachWebViewFromOverlay(Lcom/millennialmedia/android/MMAdImpl;)V
+.method static declared-synchronized attachWebViewFromOverlay(Lcom/millennialmedia/android/MMAdImpl;)Z
     .registers 6
     .param p0, "overlayAdImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 169
+    const/4 v1, 0x0
+
+    .line 170
     const-class v2, Lcom/millennialmedia/android/MMAdImplController;
 
     monitor-enter v2
 
-    :try_start_3
-    new-instance v1, Ljava/lang/StringBuilder;
+    if-nez p0, :cond_8
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    .line 189
+    :cond_6
+    :goto_6
+    monitor-exit v2
 
-    const-string v3, "attachWebViewFromOverlay with "
+    return v1
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 172
+    :cond_8
+    :try_start_8
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v4, "attachWebViewFromOverlay with "
 
-    move-result-object v1
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v1
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
+    move-result-object v3
 
-    .line 170
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
+
+    .line 173
+    iget-object v3, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
+
+    if-eqz v3, :cond_2f
+
+    iget-object v3, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
+
+    iget-object v3, v3, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
+
+    if-eqz v3, :cond_2f
+
+    .line 174
+    iget-object v3, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
+
+    iget-object v3, v3, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
+
+    invoke-virtual {v3}, Lcom/millennialmedia/android/MMWebView;->resetSpeechKit()V
+
+    .line 175
+    :cond_2f
     iget-wide v3, p0, Lcom/millennialmedia/android/MMAdImpl;->linkForExpansionId:J
 
     invoke-static {v3, v4}, Lcom/millennialmedia/android/MMAdImplController;->getAdImplWithId(J)Lcom/millennialmedia/android/MMAdImpl;
 
     move-result-object v0
 
-    .line 171
+    .line 176
     .local v0, "bannerAdImpl":Lcom/millennialmedia/android/MMAdImpl;
-    if-eqz v0, :cond_51
+    if-eqz v0, :cond_6
 
-    iget-object v1, v0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
+    iget-object v3, v0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
-    if-eqz v1, :cond_51
+    if-eqz v3, :cond_6
 
-    .line 173
+    .line 178
     iget-object v1, v0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
     iget-object v1, v1, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
-    if-nez v1, :cond_3f
+    if-nez v1, :cond_55
 
-    .line 175
+    .line 180
     iget-object v1, v0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
     iget-object v3, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
@@ -536,29 +578,29 @@
 
     iput-object v3, v1, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
-    .line 176
+    .line 181
     iget-object v1, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
     iget-object v1, v1, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     invoke-virtual {p0, v1}, Lcom/millennialmedia/android/MMAdImpl;->removeView(Lcom/millennialmedia/android/MMWebView;)V
 
-    .line 177
+    .line 182
     iget-object v1, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
     const/4 v3, 0x0
 
     iput-object v3, v1, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
-    .line 180
-    :cond_3f
+    .line 185
+    :cond_55
     iget-object v1, v0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
     iget-object v1, v1, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     invoke-virtual {v1}, Lcom/millennialmedia/android/MMWebView;->setMraidDefault()V
 
-    .line 181
+    .line 186
     iget-object v1, v0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
     iget-object v1, v1, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
@@ -568,18 +610,17 @@
     move-result-object v3
 
     invoke-virtual {v1, v3}, Lcom/millennialmedia/android/MMWebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
-    :try_end_51
-    .catchall {:try_start_3 .. :try_end_51} :catchall_53
+    :try_end_67
+    .catchall {:try_start_8 .. :try_end_67} :catchall_69
 
-    .line 183
-    :cond_51
-    monitor-exit v2
+    .line 187
+    const/4 v1, 0x1
 
-    return-void
+    goto :goto_6
 
-    .line 169
+    .line 170
     .end local v0    # "bannerAdImpl":Lcom/millennialmedia/android/MMAdImpl;
-    :catchall_53
+    :catchall_69
     move-exception v1
 
     monitor-exit v2
@@ -587,41 +628,11 @@
     throw v1
 .end method
 
-.method static clearControllers()V
-    .registers 1
-
-    .prologue
-    .line 37
-    sget-object v0, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
-
-    if-eqz v0, :cond_9
-
-    .line 39
-    sget-object v0, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
-
-    .line 41
-    :cond_9
-    sget-object v0, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
-
-    if-eqz v0, :cond_12
-
-    .line 43
-    sget-object v0, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
-
-    .line 45
-    :cond_12
-    return-void
-.end method
-
 .method static controllersToString()Ljava/lang/String;
     .registers 2
 
     .prologue
-    .line 775
+    .line 820
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -664,7 +675,7 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 832
+    .line 861
     sget-object v6, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
 
     invoke-interface {v6}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -690,7 +701,7 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 834
+    .line 863
     .local v3, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Lcom/millennialmedia/android/MMAdImplController;>;"
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -698,11 +709,11 @@
 
     check-cast v2, Lcom/millennialmedia/android/MMAdImplController;
 
-    .line 835
+    .line 864
     .local v2, "controller":Lcom/millennialmedia/android/MMAdImplController;
     if-eqz v2, :cond_a
 
-    .line 837
+    .line 866
     iget-object v6, v2, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v6}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -711,16 +722,16 @@
 
     check-cast v1, Lcom/millennialmedia/android/MMAdImpl;
 
-    .line 838
+    .line 867
     .local v1, "adImpl":Lcom/millennialmedia/android/MMAdImpl;
     if-eqz v1, :cond_a
 
-    .line 840
+    .line 869
     invoke-virtual {v1}, Lcom/millennialmedia/android/MMAdImpl;->getCallingAd()Lcom/millennialmedia/android/MMAd;
 
     move-result-object v0
 
-    .line 841
+    .line 870
     .local v0, "ad":Lcom/millennialmedia/android/MMAd;
     if-eqz v0, :cond_a
 
@@ -730,16 +741,16 @@
 
     move-object v5, v0
 
-    .line 843
+    .line 872
     check-cast v5, Lcom/millennialmedia/android/MMLayout;
 
-    .line 844
+    .line 873
     .local v5, "layout":Lcom/millennialmedia/android/MMLayout;
     invoke-virtual {v5}, Lcom/millennialmedia/android/MMLayout;->removeVideo()V
 
     goto :goto_a
 
-    .line 850
+    .line 879
     .end local v0    # "ad":Lcom/millennialmedia/android/MMAd;
     .end local v1    # "adImpl":Lcom/millennialmedia/android/MMAdImpl;
     .end local v2    # "controller":Lcom/millennialmedia/android/MMAdImplController;
@@ -756,7 +767,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 200
+    .line 207
     const-class v3, Lcom/millennialmedia/android/MMAdImplController;
 
     monitor-enter v3
@@ -767,14 +778,14 @@
 
     if-nez v4, :cond_c
 
-    .line 211
+    .line 218
     :cond_a
     :goto_a
     monitor-exit v3
 
     return-object v2
 
-    .line 202
+    .line 209
     :cond_c
     :try_start_c
     sget-object v4, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
@@ -789,11 +800,11 @@
 
     check-cast v0, Lcom/millennialmedia/android/MMAdImplController;
 
-    .line 203
+    .line 210
     .local v0, "controller":Lcom/millennialmedia/android/MMAdImplController;
     if-nez v0, :cond_2e
 
-    .line 205
+    .line 212
     sget-object v4, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -806,11 +817,11 @@
 
     check-cast v1, Ljava/lang/ref/WeakReference;
 
-    .line 206
+    .line 213
     .local v1, "controllerRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/millennialmedia/android/MMAdImplController;>;"
     if-eqz v1, :cond_2e
 
-    .line 207
+    .line 214
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -818,13 +829,13 @@
     .end local v0    # "controller":Lcom/millennialmedia/android/MMAdImplController;
     check-cast v0, Lcom/millennialmedia/android/MMAdImplController;
 
-    .line 209
+    .line 216
     .end local v1    # "controllerRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/millennialmedia/android/MMAdImplController;>;"
     .restart local v0    # "controller":Lcom/millennialmedia/android/MMAdImplController;
     :cond_2e
     if-eqz v0, :cond_a
 
-    .line 210
+    .line 217
     iget-object v2, v0, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -837,7 +848,7 @@
 
     goto :goto_a
 
-    .line 200
+    .line 207
     .end local v0    # "controller":Lcom/millennialmedia/android/MMAdImplController;
     :catchall_39
     move-exception v2
@@ -852,7 +863,7 @@
     .param p0, "requestorAdImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 187
+    .line 194
     const-class v3, Lcom/millennialmedia/android/MMAdImplController;
 
     monitor-enter v3
@@ -898,10 +909,10 @@
 
     invoke-static {v2}, Lcom/millennialmedia/android/MMSDK$Log;->i(Ljava/lang/String;)V
 
-    .line 188
+    .line 195
     const/4 v1, 0x0
 
-    .line 189
+    .line 196
     .local v1, "mmWebView":Lcom/millennialmedia/android/MMWebView;
     iget-wide v4, p0, Lcom/millennialmedia/android/MMAdImpl;->linkForExpansionId:J
 
@@ -909,7 +920,7 @@
 
     move-result-object v0
 
-    .line 190
+    .line 197
     .local v0, "holderAdImpl":Lcom/millennialmedia/android/MMAdImpl;
     if-eqz v0, :cond_43
 
@@ -917,12 +928,12 @@
 
     if-eqz v2, :cond_43
 
-    .line 192
+    .line 199
     iget-object v2, v0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
     iget-object v1, v2, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
-    .line 193
+    .line 200
     iget-object v2, v0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
     const/4 v4, 0x0
@@ -931,13 +942,13 @@
     :try_end_43
     .catchall {:try_start_3 .. :try_end_43} :catchall_45
 
-    .line 195
+    .line 202
     :cond_43
     monitor-exit v3
 
     return-object v1
 
-    .line 187
+    .line 194
     .end local v0    # "holderAdImpl":Lcom/millennialmedia/android/MMAdImpl;
     .end local v1    # "mmWebView":Lcom/millennialmedia/android/MMWebView;
     :catchall_45
@@ -955,7 +966,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 330
+    .line 338
     monitor-enter p0
 
     :try_start_2
@@ -963,7 +974,7 @@
 
     move-result-object v0
 
-    .line 332
+    .line 340
     .local v0, "context":Landroid/content/Context;
     invoke-static {v0}, Lcom/millennialmedia/android/HandShake;->sharedHandShake(Landroid/content/Context;)Lcom/millennialmedia/android/HandShake;
 
@@ -977,12 +988,12 @@
 
     if-eqz v3, :cond_23
 
-    .line 334
+    .line 342
     const-string v3, "There is a download in progress. Defering call for new ad"
 
     invoke-static {v3}, Lcom/millennialmedia/android/MMSDK$Log;->i(Ljava/lang/String;)V
 
-    .line 335
+    .line 343
     new-instance v3, Lcom/millennialmedia/android/MMException;
 
     const/16 v4, 0xc
@@ -993,20 +1004,20 @@
     :try_end_21
     .catchall {:try_start_2 .. :try_end_21} :catchall_42
 
-    .line 357
+    .line 365
     :goto_21
     monitor-exit p0
 
     return v2
 
-    .line 340
+    .line 348
     :cond_23
     :try_start_23
     const-string v3, "No download in progress."
 
     invoke-static {v3}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 344
+    .line 352
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getCachedName()Ljava/lang/String;
 
     move-result-object v3
@@ -1015,19 +1026,19 @@
 
     move-result-object v1
 
-    .line 345
+    .line 353
     .local v1, "incompleteAd":Lcom/millennialmedia/android/CachedAd;
     if-eqz v1, :cond_45
 
-    .line 348
+    .line 356
     const-string v3, "Last ad wasn\'t fully downloaded. Download again."
 
     invoke-static {v3}, Lcom/millennialmedia/android/MMSDK$Log;->i(Ljava/lang/String;)V
 
-    .line 349
+    .line 357
     invoke-static {p1}, Lcom/millennialmedia/android/MMSDK$Event;->fetchStartedCaching(Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 350
+    .line 358
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getCachedName()Ljava/lang/String;
 
     move-result-object v3
@@ -1038,7 +1049,7 @@
 
     goto :goto_21
 
-    .line 330
+    .line 338
     .end local v0    # "context":Landroid/content/Context;
     .end local v1    # "incompleteAd":Lcom/millennialmedia/android/CachedAd;
     :catchall_42
@@ -1048,7 +1059,7 @@
 
     throw v2
 
-    .line 355
+    .line 363
     .restart local v0    # "context":Landroid/content/Context;
     .restart local v1    # "incompleteAd":Lcom/millennialmedia/android/CachedAd;
     :cond_45
@@ -1059,7 +1070,7 @@
     :try_end_4a
     .catchall {:try_start_45 .. :try_end_4a} :catchall_42
 
-    .line 357
+    .line 365
     const/4 v2, 0x0
 
     goto :goto_21
@@ -1070,7 +1081,7 @@
     .param p0, "adImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 222
+    .line 229
     const-class v2, Lcom/millennialmedia/android/MMAdImplController;
 
     monitor-enter v2
@@ -1078,27 +1089,27 @@
     :try_start_3
     iget-object v1, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
     :try_end_5
-    .catchall {:try_start_3 .. :try_end_5} :catchall_bd
+    .catchall {:try_start_3 .. :try_end_5} :catchall_c2
 
     if-nez v1, :cond_9
 
-    .line 257
+    .line 265
     :cond_7
     :goto_7
     monitor-exit v2
 
     return-void
 
-    .line 224
+    .line 231
     :cond_9
     :try_start_9
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMAdImpl;->isLifecycleObservable()Z
 
     move-result v1
 
-    if-eqz v1, :cond_c0
+    if-eqz v1, :cond_c5
 
-    .line 226
+    .line 233
     sget-object v1, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
 
     iget-wide v3, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -1111,7 +1122,7 @@
 
     invoke-interface {v1, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 227
+    .line 234
     sget-object v1, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
     iget-wide v3, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -1126,7 +1137,7 @@
 
     if-eqz v1, :cond_35
 
-    .line 228
+    .line 235
     sget-object v1, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
     iget-wide v3, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -1137,7 +1148,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
+    .line 241
     :cond_35
     :goto_35
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1160,12 +1171,12 @@
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 236
+    .line 243
     iget-boolean v1, p0, Lcom/millennialmedia/android/MMAdImpl;->isFinishing:Z
 
     if-eqz v1, :cond_65
 
-    .line 238
+    .line 245
     sget-object v1, Lcom/millennialmedia/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
 
     iget-wide v3, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -1176,7 +1187,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 239
+    .line 246
     sget-object v1, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
     iget-wide v3, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -1187,17 +1198,17 @@
 
     invoke-interface {v1, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
+    .line 249
     :cond_65
     iget-object v0, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
-    .line 243
+    .line 250
     .local v0, "controller":Lcom/millennialmedia/android/MMAdImplController;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
-    .line 245
+    .line 252
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1222,12 +1233,12 @@
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 247
+    .line 254
     iget-object v1, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     if-eqz v1, :cond_7
 
-    .line 249
+    .line 256
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1252,19 +1263,19 @@
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 250
+    .line 257
     iget-object v1, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     invoke-virtual {p0, v1}, Lcom/millennialmedia/android/MMAdImpl;->removeView(Lcom/millennialmedia/android/MMWebView;)V
 
-    .line 252
+    .line 258
     iget-object v1, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     const/4 v3, 0x0
 
     iput-boolean v3, v1, Lcom/millennialmedia/android/MMWebView;->isExpanding:Z
 
-    .line 254
+    .line 259
     iget-boolean v1, p0, Lcom/millennialmedia/android/MMAdImpl;->isFinishing:Z
 
     if-eqz v1, :cond_7
@@ -1277,27 +1288,32 @@
 
     if-nez v1, :cond_7
 
-    .line 255
+    .line 261
+    iget-object v1, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
+
+    invoke-virtual {v1}, Lcom/millennialmedia/android/MMWebView;->destroy()V
+
+    .line 262
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
-    :try_end_bb
-    .catchall {:try_start_9 .. :try_end_bb} :catchall_bd
+    :try_end_c0
+    .catchall {:try_start_9 .. :try_end_c0} :catchall_c2
 
     goto/16 :goto_7
 
-    .line 222
+    .line 229
     .end local v0    # "controller":Lcom/millennialmedia/android/MMAdImplController;
-    :catchall_bd
+    :catchall_c2
     move-exception v1
 
     monitor-exit v2
 
     throw v1
 
-    .line 231
-    :cond_c0
-    :try_start_c0
+    .line 238
+    :cond_c5
+    :try_start_c5
     sget-object v1, Lcom/millennialmedia/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
     iget-wide v3, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -1313,8 +1329,8 @@
     invoke-direct {v4, v5}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-interface {v1, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_d2
-    .catchall {:try_start_c0 .. :try_end_d2} :catchall_bd
+    :try_end_d7
+    .catchall {:try_start_c5 .. :try_end_d7} :catchall_c2
 
     goto/16 :goto_35
 .end method
@@ -1324,12 +1340,12 @@
     .param p1, "adImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 304
+    .line 312
     iget-object v1, p1, Lcom/millennialmedia/android/MMAdImpl;->apid:Ljava/lang/String;
 
     if-nez v1, :cond_13
 
-    .line 306
+    .line 314
     new-instance v0, Lcom/millennialmedia/android/MMException;
 
     const-string v1, "MMAdView found with a null apid. New ad requests on this MMAdView are disabled until an apid has been assigned."
@@ -1338,20 +1354,20 @@
 
     invoke-direct {v0, v1, v2}, Lcom/millennialmedia/android/MMException;-><init>(Ljava/lang/String;I)V
 
-    .line 307
+    .line 315
     .local v0, "error":Lcom/millennialmedia/android/MMException;
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/Throwable;)V
 
-    .line 308
+    .line 316
     invoke-static {p1, v0}, Lcom/millennialmedia/android/MMSDK$Event;->requestFailed(Lcom/millennialmedia/android/MMAdImpl;Lcom/millennialmedia/android/MMException;)V
 
-    .line 326
+    .line 334
     .end local v0    # "error":Lcom/millennialmedia/android/MMException;
     :cond_12
     :goto_12
     return-void
 
-    .line 312
+    .line 320
     :cond_13
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->isBanner()Z
 
@@ -1365,17 +1381,17 @@
 
     if-nez v1, :cond_12
 
-    .line 315
+    .line 323
     :cond_1f
     monitor-enter p0
 
-    .line 317
+    .line 325
     :try_start_20
     iget-object v1, p0, Lcom/millennialmedia/android/MMAdImplController;->requestAdRunnable:Lcom/millennialmedia/android/MMAdImplController$RequestAdRunnable;
 
     if-eqz v1, :cond_3c
 
-    .line 319
+    .line 327
     const/16 v1, 0xc
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMException;->getErrorCodeMessage(I)Ljava/lang/String;
@@ -1384,7 +1400,7 @@
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->i(Ljava/lang/String;)V
 
-    .line 320
+    .line 328
     new-instance v1, Lcom/millennialmedia/android/MMException;
 
     const/16 v2, 0xc
@@ -1393,12 +1409,12 @@
 
     invoke-static {p1, v1}, Lcom/millennialmedia/android/MMSDK$Event;->requestFailed(Lcom/millennialmedia/android/MMAdImpl;Lcom/millennialmedia/android/MMException;)V
 
-    .line 321
+    .line 329
     monitor-exit p0
 
     goto :goto_12
 
-    .line 325
+    .line 333
     :catchall_39
     move-exception v1
 
@@ -1408,7 +1424,7 @@
 
     throw v1
 
-    .line 323
+    .line 331
     :cond_3c
     :try_start_3c
     new-instance v1, Lcom/millennialmedia/android/MMAdImplController$RequestAdRunnable;
@@ -1419,12 +1435,12 @@
 
     iput-object v1, p0, Lcom/millennialmedia/android/MMAdImplController;->requestAdRunnable:Lcom/millennialmedia/android/MMAdImplController$RequestAdRunnable;
 
-    .line 324
+    .line 332
     iget-object v1, p0, Lcom/millennialmedia/android/MMAdImplController;->requestAdRunnable:Lcom/millennialmedia/android/MMAdImplController$RequestAdRunnable;
 
     invoke-static {v1}, Lcom/millennialmedia/android/Utils$ThreadUtils;->execute(Ljava/lang/Runnable;)V
 
-    .line 325
+    .line 333
     monitor-exit p0
     :try_end_4a
     .catchall {:try_start_3c .. :try_end_4a} :catchall_39
@@ -1437,7 +1453,7 @@
     .param p0, "adImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 146
+    .line 147
     const-class v3, Lcom/millennialmedia/android/MMAdImplController;
 
     monitor-enter v3
@@ -1445,7 +1461,7 @@
     :try_start_3
     iget-object v0, p0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
-    .line 147
+    .line 148
     .local v0, "controller":Lcom/millennialmedia/android/MMAdImplController;
     iget-object v2, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
@@ -1455,7 +1471,7 @@
 
     invoke-virtual {v2, v4}, Lcom/millennialmedia/android/MMWebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 148
+    .line 149
     iget-object v2, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     iget-wide v4, p0, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
@@ -1466,10 +1482,10 @@
 
     if-nez v2, :cond_3d
 
-    .line 150
+    .line 151
     const/4 v1, 0x0
 
-    .line 151
+    .line 152
     .local v1, "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {p0}, Lcom/millennialmedia/android/MMAdImpl;->isBanner()Z
 
@@ -1477,7 +1493,7 @@
 
     if-eqz v2, :cond_3f
 
-    .line 153
+    .line 154
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
     .end local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
@@ -1487,7 +1503,7 @@
 
     invoke-direct {v1, v2, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 154
+    .line 155
     .restart local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v2, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
@@ -1497,33 +1513,33 @@
 
     if-eqz v2, :cond_33
 
-    .line 155
+    .line 156
     iget-object v2, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     invoke-virtual {v2, p0}, Lcom/millennialmedia/android/MMWebView;->unresizeToDefault(Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 161
+    .line 162
     :cond_33
     :goto_33
     iget-object v2, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     invoke-virtual {v2}, Lcom/millennialmedia/android/MMWebView;->removeFromParent()V
 
-    .line 162
+    .line 163
     iget-object v2, v0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     invoke-virtual {p0, v2, v1}, Lcom/millennialmedia/android/MMAdImpl;->addView(Lcom/millennialmedia/android/MMWebView;Landroid/widget/RelativeLayout$LayoutParams;)V
     :try_end_3d
     .catchall {:try_start_3 .. :try_end_3d} :catchall_47
 
-    .line 164
+    .line 165
     .end local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_3d
     monitor-exit v3
 
     return-void
 
-    .line 159
+    .line 160
     .restart local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_3f
     :try_start_3f
@@ -1541,7 +1557,7 @@
     .restart local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     goto :goto_33
 
-    .line 146
+    .line 147
     .end local v0    # "controller":Lcom/millennialmedia/android/MMAdImplController;
     .end local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     :catchall_47
@@ -1564,14 +1580,14 @@
 
     const/4 v4, 0x0
 
-    .line 385
+    .line 393
     invoke-virtual {p2}, Lcom/millennialmedia/android/CachedAd;->isExpired()Z
 
     move-result v0
 
     if-eqz v0, :cond_18
 
-    .line 387
+    .line 395
     const-string v0, "%s is expired."
 
     new-array v1, v5, [Ljava/lang/Object;
@@ -1584,14 +1600,14 @@
 
     invoke-static {v0, v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 388
+    .line 396
     const/16 v0, 0x15
 
-    .line 400
+    .line 408
     :goto_17
     return v0
 
-    .line 390
+    .line 398
     :cond_18
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
@@ -1603,7 +1619,7 @@
 
     if-nez v0, :cond_32
 
-    .line 392
+    .line 400
     const-string v0, "%s is not on disk."
 
     new-array v1, v5, [Ljava/lang/Object;
@@ -1616,12 +1632,12 @@
 
     invoke-static {v0, v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 393
+    .line 401
     const/16 v0, 0x16
 
     goto :goto_17
 
-    .line 395
+    .line 403
     :cond_32
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
@@ -1641,7 +1657,7 @@
 
     if-nez v0, :cond_54
 
-    .line 397
+    .line 405
     const-string v0, "%s cannot be shown at this time."
 
     new-array v1, v5, [Ljava/lang/Object;
@@ -1654,12 +1670,12 @@
 
     invoke-static {v0, v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 398
+    .line 406
     const/16 v0, 0x18
 
     goto :goto_17
 
-    .line 400
+    .line 408
     :cond_54
     const/16 v0, 0x64
 
@@ -1671,7 +1687,7 @@
     .param p1, "adImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 422
+    .line 430
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1684,11 +1700,11 @@
 
     move-result-object v0
 
-    .line 423
+    .line 431
     .local v0, "ad":Lcom/millennialmedia/android/CachedAd;
     if-eqz v0, :cond_49
 
-    .line 425
+    .line 433
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1701,10 +1717,10 @@
 
     if-eqz v1, :cond_44
 
-    .line 427
+    .line 435
     invoke-static {p1}, Lcom/millennialmedia/android/MMSDK$Event;->displayStarted(Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 428
+    .line 436
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1717,7 +1733,7 @@
 
     invoke-static {v1, v2, v3}, Lcom/millennialmedia/android/AdCache;->setNextCachedAd(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 429
+    .line 437
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1726,7 +1742,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/millennialmedia/android/CachedAd;->show(Landroid/content/Context;J)V
 
-    .line 430
+    .line 438
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1743,14 +1759,14 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/millennialmedia/android/HandShake;->updateLastVideoViewedTime(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 431
+    .line 439
     const/4 v1, 0x0
 
-    .line 438
+    .line 446
     :goto_43
     return v1
 
-    .line 435
+    .line 443
     :cond_44
     invoke-virtual {p0, p1, v0}, Lcom/millennialmedia/android/MMAdImplController;->checkReason(Lcom/millennialmedia/android/MMAdImpl;Lcom/millennialmedia/android/CachedAd;)I
 
@@ -1758,7 +1774,7 @@
 
     goto :goto_43
 
-    .line 438
+    .line 446
     :cond_49
     const/16 v1, 0x14
 
@@ -1771,7 +1787,7 @@
     .param p2, "success"    # Z
 
     .prologue
-    .line 369
+    .line 377
     iget-object v1, p0, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1780,11 +1796,11 @@
 
     check-cast v0, Lcom/millennialmedia/android/MMAdImpl;
 
-    .line 370
+    .line 378
     .local v0, "adImpl":Lcom/millennialmedia/android/MMAdImpl;
     if-nez v0, :cond_14
 
-    .line 372
+    .line 380
     const/16 v1, 0x19
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMException;->getErrorCodeMessage(I)Ljava/lang/String;
@@ -1793,15 +1809,15 @@
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;)V
 
-    .line 381
+    .line 389
     :goto_13
     return-void
 
-    .line 375
+    .line 383
     :cond_14
     if-eqz p2, :cond_25
 
-    .line 376
+    .line 384
     invoke-virtual {v0}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1816,16 +1832,16 @@
 
     invoke-static {v1, v2, v3}, Lcom/millennialmedia/android/AdCache;->setNextCachedAd(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 377
+    .line 385
     :cond_25
     if-eqz p2, :cond_2b
 
-    .line 378
+    .line 386
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Event;->requestCompleted(Lcom/millennialmedia/android/MMAdImpl;)V
 
     goto :goto_13
 
-    .line 380
+    .line 388
     :cond_2b
     new-instance v1, Lcom/millennialmedia/android/MMException;
 
@@ -1843,34 +1859,101 @@
     .param p1, "ad"    # Lcom/millennialmedia/android/CachedAd;
 
     .prologue
-    .line 795
+    .line 840
     return-void
 .end method
 
-.method getUserAgent()Ljava/lang/String;
-    .registers 2
+.method public getDefaultUserAgentString(Landroid/content/Context;)Ljava/lang/String;
+    .registers 3
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 768
-    iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
+    .line 796
+    const-string v0, "http.agent"
 
-    if-eqz v0, :cond_b
-
-    .line 769
-    iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
-
-    invoke-virtual {v0}, Lcom/millennialmedia/android/MMWebView;->getUserAgent()Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 770
-    :goto_a
+    return-object v0
+.end method
+
+.method getLastHeaders()Lcom/millennialmedia/android/HttpMMHeaders;
+    .registers 2
+
+    .prologue
+    .line 789
+    iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
+
+    if-nez v0, :cond_6
+
+    .line 790
+    const/4 v0, 0x0
+
+    .line 791
+    :goto_5
     return-object v0
 
-    :cond_b
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    :cond_6
+    iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
-    goto :goto_a
+    invoke-virtual {v0}, Lcom/millennialmedia/android/MMWebView;->getLastHeaders()Lcom/millennialmedia/android/HttpMMHeaders;
+
+    move-result-object v0
+
+    goto :goto_5
+.end method
+
+.method getUserAgent()Ljava/lang/String;
+    .registers 5
+
+    .prologue
+    .line 801
+    const/4 v2, 0x0
+
+    .line 802
+    .local v2, "userAgent":Ljava/lang/String;
+    iget-object v3, p0, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/millennialmedia/android/MMAdImpl;
+
+    .line 803
+    .local v0, "adImpl":Lcom/millennialmedia/android/MMAdImpl;
+    if-eqz v0, :cond_15
+
+    .line 805
+    invoke-virtual {v0}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    .line 806
+    .local v1, "context":Landroid/content/Context;
+    if-eqz v1, :cond_15
+
+    .line 808
+    invoke-virtual {p0, v1}, Lcom/millennialmedia/android/MMAdImplController;->getDefaultUserAgentString(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 811
+    .end local v1    # "context":Landroid/content/Context;
+    :cond_15
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1d
+
+    .line 813
+    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    .line 815
+    :cond_1d
+    return-object v2
 .end method
 
 .method isAdAvailable(Lcom/millennialmedia/android/MMAdImpl;)I
@@ -1878,7 +1961,7 @@
     .param p1, "adImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 405
+    .line 413
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1891,11 +1974,11 @@
 
     move-result-object v0
 
-    .line 406
+    .line 414
     .local v0, "ad":Lcom/millennialmedia/android/CachedAd;
     if-eqz v0, :cond_20
 
-    .line 408
+    .line 416
     invoke-virtual {p1}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1908,14 +1991,14 @@
 
     if-eqz v1, :cond_1b
 
-    .line 409
+    .line 417
     const/4 v1, 0x0
 
-    .line 417
+    .line 425
     :goto_1a
     return v1
 
-    .line 411
+    .line 419
     :cond_1b
     invoke-virtual {p0, p1, v0}, Lcom/millennialmedia/android/MMAdImplController;->checkReason(Lcom/millennialmedia/android/MMAdImpl;Lcom/millennialmedia/android/CachedAd;)I
 
@@ -1923,13 +2006,13 @@
 
     goto :goto_1a
 
-    .line 415
+    .line 423
     :cond_20
     const-string v1, "No next ad."
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->i(Ljava/lang/String;)V
 
-    .line 417
+    .line 425
     const/16 v1, 0x14
 
     goto :goto_1a
@@ -1940,35 +2023,35 @@
     .param p1, "expansionAdImpl"    # Lcom/millennialmedia/android/MMAdImpl;
 
     .prologue
-    .line 86
+    .line 87
     iget-wide v1, p1, Lcom/millennialmedia/android/MMAdImpl;->linkForExpansionId:J
 
     invoke-static {v1, v2}, Lcom/millennialmedia/android/MMAdImplController;->getAdImplWithId(J)Lcom/millennialmedia/android/MMAdImpl;
 
     move-result-object v0
 
-    .line 87
+    .line 88
     .local v0, "adImpl":Lcom/millennialmedia/android/MMAdImpl;
     if-eqz v0, :cond_16
 
-    .line 89
+    .line 90
     iget-wide v1, p1, Lcom/millennialmedia/android/MMAdImpl;->linkForExpansionId:J
 
     iput-wide v1, p0, Lcom/millennialmedia/android/MMAdImplController;->linkedAdImplId:J
 
-    .line 90
+    .line 91
     iget-object v1, v0, Lcom/millennialmedia/android/MMAdImpl;->controller:Lcom/millennialmedia/android/MMAdImplController;
 
     iget-wide v2, p1, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
 
     iput-wide v2, v1, Lcom/millennialmedia/android/MMAdImplController;->linkedAdImplId:J
 
-    .line 91
+    .line 92
     iget-wide v1, p1, Lcom/millennialmedia/android/MMAdImpl;->internalId:J
 
     iput-wide v1, v0, Lcom/millennialmedia/android/MMAdImpl;->linkForExpansionId:J
 
-    .line 93
+    .line 94
     :cond_16
     return-void
 .end method
@@ -1978,7 +2061,7 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 362
+    .line 370
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1989,12 +2072,12 @@
 
     if-eqz v0, :cond_f
 
-    .line 363
+    .line 371
     iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     invoke-virtual {v0, p1}, Lcom/millennialmedia/android/MMWebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 364
+    .line 372
     :cond_f
     return-void
 .end method
@@ -2005,7 +2088,7 @@
     .param p2, "adUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 807
+    .line 852
     iget-object v1, p0, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -2014,7 +2097,7 @@
 
     check-cast v0, Lcom/millennialmedia/android/MMAdImpl;
 
-    .line 808
+    .line 853
     .local v0, "adImpl":Lcom/millennialmedia/android/MMAdImpl;
     if-eqz v0, :cond_13
 
@@ -2022,32 +2105,13 @@
 
     if-eqz v1, :cond_13
 
-    .line 810
+    .line 855
     iget-object v1, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     invoke-virtual {v1, p1, p2, v0}, Lcom/millennialmedia/android/MMWebView;->setWebViewContent(Ljava/lang/String;Ljava/lang/String;Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 812
+    .line 857
     :cond_13
-    return-void
-.end method
-
-.method pauseWebViewVideo()V
-    .registers 2
-
-    .prologue
-    .line 824
-    iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
-
-    if-eqz v0, :cond_9
-
-    .line 826
-    iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
-
-    invoke-virtual {v0}, Lcom/millennialmedia/android/MMWebView;->onPauseWebViewVideo()V
-
-    .line 828
-    :cond_9
     return-void
 .end method
 
@@ -2061,7 +2125,7 @@
 
     const/4 v3, 0x3
 
-    .line 261
+    .line 269
     iget-object v2, p0, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -2070,29 +2134,29 @@
 
     check-cast v0, Lcom/millennialmedia/android/MMAdImpl;
 
-    .line 263
+    .line 271
     .local v0, "adImpl":Lcom/millennialmedia/android/MMAdImpl;
     if-nez v0, :cond_1f
 
-    .line 265
+    .line 273
     invoke-static {v5}, Lcom/millennialmedia/android/MMException;->getErrorCodeMessage(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v2}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;)V
 
-    .line 266
+    .line 274
     new-instance v2, Lcom/millennialmedia/android/MMException;
 
     invoke-direct {v2, v5}, Lcom/millennialmedia/android/MMException;-><init>(I)V
 
     invoke-static {v0, v2}, Lcom/millennialmedia/android/MMSDK$Event;->requestFailed(Lcom/millennialmedia/android/MMAdImpl;Lcom/millennialmedia/android/MMException;)V
 
-    .line 299
+    .line 307
     :goto_1e
     return-void
 
-    .line 270
+    .line 278
     :cond_1f
     invoke-virtual {v0}, Lcom/millennialmedia/android/MMAdImpl;->isRefreshable()Z
 
@@ -2100,7 +2164,7 @@
 
     if-nez v2, :cond_2e
 
-    .line 272
+    .line 280
     new-instance v2, Lcom/millennialmedia/android/MMException;
 
     invoke-direct {v2, v4}, Lcom/millennialmedia/android/MMException;-><init>(I)V
@@ -2109,7 +2173,7 @@
 
     goto :goto_1e
 
-    .line 276
+    .line 284
     :cond_2e
     invoke-static {}, Lcom/millennialmedia/android/MMSDK;->isUiThread()Z
 
@@ -2117,14 +2181,14 @@
 
     if-nez v2, :cond_44
 
-    .line 278
+    .line 286
     invoke-static {v3}, Lcom/millennialmedia/android/MMException;->getErrorCodeMessage(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v2}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;)V
 
-    .line 279
+    .line 287
     new-instance v2, Lcom/millennialmedia/android/MMException;
 
     invoke-direct {v2, v3}, Lcom/millennialmedia/android/MMException;-><init>(I)V
@@ -2133,7 +2197,7 @@
 
     goto :goto_1e
 
-    .line 283
+    .line 291
     :cond_44
     invoke-virtual {v0}, Lcom/millennialmedia/android/MMAdImpl;->getContext()Landroid/content/Context;
 
@@ -2147,12 +2211,12 @@
 
     if-eqz v2, :cond_5e
 
-    .line 285
+    .line 293
     const-string v2, "The server is no longer allowing ads."
 
     invoke-static {v2}, Lcom/millennialmedia/android/MMSDK$Log;->i(Ljava/lang/String;)V
 
-    .line 286
+    .line 294
     new-instance v2, Lcom/millennialmedia/android/MMException;
 
     invoke-direct {v2, v4}, Lcom/millennialmedia/android/MMException;-><init>(I)V
@@ -2161,25 +2225,25 @@
 
     goto :goto_1e
 
-    .line 291
+    .line 299
     :cond_5e
     :try_start_5e
     const-string v2, "adLayout - requestAd"
 
     invoke-static {v2}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 292
+    .line 300
     invoke-direct {p0, v0}, Lcom/millennialmedia/android/MMAdImplController;->requestAdInternal(Lcom/millennialmedia/android/MMAdImpl;)V
     :try_end_66
     .catch Ljava/lang/Exception; {:try_start_5e .. :try_end_66} :catch_67
 
     goto :goto_1e
 
-    .line 294
+    .line 302
     :catch_67
     move-exception v1
 
-    .line 296
+    .line 304
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "There was an exception with the ad request. %s"
 
@@ -2197,27 +2261,28 @@
 
     invoke-static {v2, v3}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 297
+    .line 305
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1e
 .end method
 
-.method resumeWebViewVideo()V
-    .registers 2
+.method setLastHeaders(Lcom/millennialmedia/android/HttpMMHeaders;)V
+    .registers 3
+    .param p1, "lastHeaders"    # Lcom/millennialmedia/android/HttpMMHeaders;
 
     .prologue
-    .line 816
+    .line 783
     iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     if-eqz v0, :cond_9
 
-    .line 818
+    .line 784
     iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
-    invoke-virtual {v0}, Lcom/millennialmedia/android/MMWebView;->onResumeWebViewVideo()V
+    invoke-virtual {v0, p1}, Lcom/millennialmedia/android/MMWebView;->setLastHeaders(Lcom/millennialmedia/android/HttpMMHeaders;)V
 
-    .line 820
+    .line 785
     :cond_9
     return-void
 .end method
@@ -2228,7 +2293,12 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 763
+    .line 775
+    iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
+
+    if-eqz v0, :cond_11
+
+    .line 777
     iget-object v1, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
@@ -2241,7 +2311,8 @@
 
     invoke-virtual {v1, p1, p2, v0}, Lcom/millennialmedia/android/MMWebView;->setWebViewContent(Ljava/lang/String;Ljava/lang/String;Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 764
+    .line 779
+    :cond_11
     return-void
 .end method
 
@@ -2249,7 +2320,7 @@
     .registers 6
 
     .prologue
-    .line 781
+    .line 826
     iget-object v2, p0, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -2258,17 +2329,17 @@
 
     check-cast v0, Lcom/millennialmedia/android/MMAdImpl;
 
-    .line 782
+    .line 827
     .local v0, "adImpl":Lcom/millennialmedia/android/MMAdImpl;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 783
+    .line 828
     .local v1, "sb":Ljava/lang/StringBuilder;
     if-eqz v0, :cond_2b
 
-    .line 785
+    .line 830
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2295,7 +2366,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 788
+    .line 833
     :cond_2b
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2332,12 +2403,12 @@
     .registers 3
 
     .prologue
-    .line 799
+    .line 844
     iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     if-eqz v0, :cond_11
 
-    .line 801
+    .line 846
     iget-object v1, p0, Lcom/millennialmedia/android/MMAdImplController;->webView:Lcom/millennialmedia/android/MMWebView;
 
     iget-object v0, p0, Lcom/millennialmedia/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
@@ -2350,7 +2421,7 @@
 
     invoke-virtual {v1, v0}, Lcom/millennialmedia/android/MMWebView;->unresizeToDefault(Lcom/millennialmedia/android/MMAdImpl;)V
 
-    .line 803
+    .line 848
     :cond_11
     return-void
 .end method

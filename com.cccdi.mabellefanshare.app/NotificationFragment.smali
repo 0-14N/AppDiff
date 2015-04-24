@@ -16,17 +16,17 @@
     .registers 2
 
     .prologue
-    .line 41
+    .line 39
     invoke-direct {p0}, Landroid/support/v4/app/Fragment;-><init>()V
 
-    .line 72
+    .line 71
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$1;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$1;-><init>(Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;)V
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->onNotificaitonClicked:Landroid/widget/AdapterView$OnItemClickListener;
 
-    .line 43
+    .line 41
     return-void
 .end method
 
@@ -35,7 +35,7 @@
     .param p0, "x0"    # Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;
 
     .prologue
-    .line 34
+    .line 32
     iget-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->listView:Landroid/widget/ListView;
 
     return-object v0
@@ -45,88 +45,63 @@
     .registers 1
 
     .prologue
-    .line 37
+    .line 35
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;
 
     invoke-direct {v0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;-><init>()V
 
-    .line 38
+    .line 36
     .local v0, "fragment":Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;
     return-object v0
 .end method
 
 .method private retrieveNotification()V
-    .registers 7
+    .registers 5
 
     .prologue
+    .line 95
+    invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v1
+
+    instance-of v1, v1, Lcom/cccdi/mabellefanshare/MainActivity;
+
+    if-eqz v1, :cond_11
+
     .line 96
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
-    move-result-object v2
+    move-result-object v1
 
-    instance-of v2, v2, Lcom/cccdi/mabellefanshare/MainActivity;
+    check-cast v1, Lcom/cccdi/mabellefanshare/MainActivity;
 
-    if-eqz v2, :cond_11
+    invoke-virtual {v1}, Lcom/cccdi/mabellefanshare/MainActivity;->showProgressDialog()V
 
-    .line 97
-    invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/cccdi/mabellefanshare/MainActivity;
-
-    invoke-virtual {v2}, Lcom/cccdi/mabellefanshare/MainActivity;->showProgressDialog()V
-
-    .line 101
+    .line 99
     :cond_11
-    new-instance v1, Lcom/cccdi/mabellefanshare/request/MabelleJsonObjectRequest;
-
-    invoke-static {}, Lcom/cccdi/mabellefanshare/Constant;->getReadMessageURL()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    new-instance v4, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$2;
-
-    invoke-direct {v4, p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$2;-><init>(Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;)V
-
-    new-instance v5, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$3;
-
-    invoke-direct {v5, p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$3;-><init>(Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;)V
-
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/cccdi/mabellefanshare/request/MabelleJsonObjectRequest;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
-
-    .line 113
-    .local v1, "updateRequest":Lcom/cccdi/mabellefanshare/request/MabelleJsonObjectRequest;
-    sget-object v2, Lcom/cccdi/mabellefanshare/AppApplication;->volleyQueue:Lcom/android/volley/RequestQueue;
-
-    invoke-virtual {v2, v1}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
-
-    .line 115
     new-instance v0, Lcom/cccdi/mabellefanshare/request/MabelleUserInfoRequest;
 
     invoke-static {}, Lcom/cccdi/mabellefanshare/Constant;->getNotificationURL()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    new-instance v3, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$4;
+    new-instance v2, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$2;
 
-    invoke-direct {v3, p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$4;-><init>(Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;)V
+    invoke-direct {v2, p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$2;-><init>(Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;)V
 
-    new-instance v4, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$5;
+    new-instance v3, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$3;
 
-    invoke-direct {v4, p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$5;-><init>(Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;)V
+    invoke-direct {v3, p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment$3;-><init>(Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;)V
 
-    invoke-direct {v0, v2, v3, v4}, Lcom/cccdi/mabellefanshare/request/MabelleUserInfoRequest;-><init>(Ljava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/cccdi/mabellefanshare/request/MabelleUserInfoRequest;-><init>(Ljava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 150
+    .line 134
     .local v0, "notificationRequest":Lcom/cccdi/mabellefanshare/request/MabelleUserInfoRequest;
-    sget-object v2, Lcom/cccdi/mabellefanshare/AppApplication;->volleyQueue:Lcom/android/volley/RequestQueue;
+    sget-object v1, Lcom/cccdi/mabellefanshare/AppApplication;->volleyQueue:Lcom/android/volley/RequestQueue;
 
-    invoke-virtual {v2, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
+    invoke-virtual {v1, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
-    .line 153
+    .line 137
     return-void
 .end method
 
@@ -137,10 +112,10 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 157
+    .line 141
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onAttach(Landroid/app/Activity;)V
 
-    .line 158
+    .line 142
     return-void
 .end method
 
@@ -149,10 +124,10 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 47
+    .line 45
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 48
+    .line 46
     invoke-virtual {p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
@@ -161,7 +136,7 @@
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->userGreetingListener:Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;
 
-    .line 49
+    .line 47
     return-void
 .end method
 
@@ -172,8 +147,8 @@
     .param p3, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 60
-    const v1, 0x7f030053
+    .line 58
+    const v1, 0x7f030044
 
     const/4 v2, 0x0
 
@@ -181,9 +156,9 @@
 
     move-result-object v0
 
-    .line 62
+    .line 61
     .local v0, "v":Landroid/view/View;
-    const v1, 0x7f09013d
+    const v1, 0x7f0900f9
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -193,22 +168,22 @@
 
     iput-object v1, p0, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->listView:Landroid/widget/ListView;
 
-    .line 63
+    .line 62
     iget-object v1, p0, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->listView:Landroid/widget/ListView;
 
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->onNotificaitonClicked:Landroid/widget/AdapterView$OnItemClickListener;
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 65
+    .line 64
     invoke-direct {p0}, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->retrieveNotification()V
 
-    .line 67
+    .line 66
     iget-object v1, p0, Lcom/cccdi/mabellefanshare/fragment/NotificationFragment;->userGreetingListener:Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;
 
     invoke-interface {v1, v0}, Lcom/cccdi/mabellefanshare/listener/UserGreetingListener;->updateUserGreeting(Landroid/view/View;)V
 
-    .line 69
+    .line 68
     return-object v0
 .end method
 
@@ -216,9 +191,9 @@
     .registers 1
 
     .prologue
-    .line 162
+    .line 146
     invoke-super {p0}, Landroid/support/v4/app/Fragment;->onDetach()V
 
-    .line 163
+    .line 147
     return-void
 .end method

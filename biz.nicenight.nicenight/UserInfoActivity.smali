@@ -83,9 +83,9 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/ar;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/as;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/ar;-><init>(Lbiz/nicenight/nicenight/ui/UserInfoActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/as;-><init>(Lbiz/nicenight/nicenight/ui/UserInfoActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -97,9 +97,9 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/as;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/at;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/as;-><init>(Lbiz/nicenight/nicenight/ui/UserInfoActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/at;-><init>(Lbiz/nicenight/nicenight/ui/UserInfoActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -115,9 +115,9 @@
 
     iget-object v0, p0, Lbiz/nicenight/nicenight/ui/UserInfoActivity;->b:Landroid/widget/ListView;
 
-    new-instance v1, Lbiz/nicenight/nicenight/ui/at;
+    new-instance v1, Lbiz/nicenight/nicenight/ui/au;
 
-    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/at;-><init>(Lbiz/nicenight/nicenight/ui/UserInfoActivity;)V
+    invoke-direct {v1, p0}, Lbiz/nicenight/nicenight/ui/au;-><init>(Lbiz/nicenight/nicenight/ui/UserInfoActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 

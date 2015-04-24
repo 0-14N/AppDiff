@@ -4,15 +4,6 @@
 
 # static fields
 .field private static final l:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lhk/cloudtech/cloudcall/xmpp/bn;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private static n:Lorg/b/a/a/a;
 
@@ -645,11 +636,6 @@
 
 .method public declared-synchronized a(Ljava/lang/String;Ljava/lang/String;)V
     .registers 9
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
 
     monitor-enter p0
 

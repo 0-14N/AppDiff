@@ -144,9 +144,9 @@
     .line 59
     iget-object v0, p0, Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;->f:Landroid/widget/PopupWindow;
 
-    new-instance v1, Lair;
+    new-instance v1, Labx;
 
-    invoke-direct {v1, p0}, Lair;-><init>(Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;)V
+    invoke-direct {v1, p0}, Labx;-><init>(Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
 
@@ -248,9 +248,9 @@
     .line 188
     iget-object v0, p0, Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;->f:Landroid/widget/PopupWindow;
 
-    new-instance v1, Lait;
+    new-instance v1, Labz;
 
-    invoke-direct {v1, p0}, Lait;-><init>(Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;)V
+    invoke-direct {v1, p0}, Labz;-><init>(Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
 
@@ -511,9 +511,9 @@
     .line 135
     iget-object v2, p0, Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;->h:Landroid/widget/ListView;
 
-    new-instance v3, Lais;
+    new-instance v3, Laby;
 
-    invoke-direct {v3, p0}, Lais;-><init>(Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;)V
+    invoke-direct {v3, p0}, Laby;-><init>(Lcom/quvideo/xiaoying/clip/GalleryPopupMenu;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 

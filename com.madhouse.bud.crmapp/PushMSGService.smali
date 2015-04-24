@@ -20,39 +20,39 @@
     .registers 2
 
     .prologue
-    .line 21
+    .line 30
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 23
+    .line 32
     const-string v0, "PushMSGService"
 
     iput-object v0, p0, Lcom/adapps/context/PushMSGService;->TAG:Ljava/lang/String;
 
-    .line 24
+    .line 33
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/adapps/context/PushMSGService;->running:Z
 
-    .line 25
+    .line 34
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/adapps/context/PushMSGService;->pushCheckhandler:Landroid/os/Handler;
 
-    .line 140
+    .line 119
     const v0, 0x493e0
 
     iput v0, p0, Lcom/adapps/context/PushMSGService;->DELAY:I
 
-    .line 142
+    .line 121
     new-instance v0, Lcom/adapps/context/PushMSGService$1;
 
     invoke-direct {v0, p0}, Lcom/adapps/context/PushMSGService$1;-><init>(Lcom/adapps/context/PushMSGService;)V
 
     iput-object v0, p0, Lcom/adapps/context/PushMSGService;->checkTask:Ljava/lang/Runnable;
 
-    .line 21
+    .line 30
     return-void
 .end method
 
@@ -60,13 +60,13 @@
     .registers 2
 
     .prologue
-    .line 24
+    .line 33
     iget-boolean v0, p0, Lcom/adapps/context/PushMSGService;->running:Z
 
     return v0
 .end method
 
-.method static synthetic access$1(Lcom/adapps/context/PushMSGService;)Ljava/lang/String;
+.method static synthetic access$1(Lcom/adapps/context/PushMSGService;)Ljava/util/ArrayList;
     .registers 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -75,8 +75,8 @@
     .end annotation
 
     .prologue
-    .line 85
-    invoke-direct {p0}, Lcom/adapps/context/PushMSGService;->checkPushInfo()Ljava/lang/String;
+    .line 54
+    invoke-direct {p0}, Lcom/adapps/context/PushMSGService;->checkPushInfo()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
     .registers 2
 
     .prologue
-    .line 114
+    .line 95
     invoke-direct {p0, p1}, Lcom/adapps/context/PushMSGService;->notyfication(Ljava/lang/String;)V
 
     return-void
@@ -97,7 +97,7 @@
     .registers 2
 
     .prologue
-    .line 25
+    .line 34
     iget-object v0, p0, Lcom/adapps/context/PushMSGService;->pushCheckhandler:Landroid/os/Handler;
 
     return-object v0
@@ -107,14 +107,24 @@
     .registers 2
 
     .prologue
-    .line 142
+    .line 121
     iget-object v0, p0, Lcom/adapps/context/PushMSGService;->checkTask:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method private checkPushInfo()Ljava/lang/String;
-    .registers 10
+.method private checkPushInfo()Ljava/util/ArrayList;
+    .registers 18
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -122,155 +132,246 @@
     .end annotation
 
     .prologue
-    const/4 v5, 0x0
+    .line 55
+    const-string v14, "device_udid"
 
-    .line 86
-    invoke-virtual {p0}, Lcom/adapps/context/PushMSGService;->checkUUID()Ljava/lang/String;
+    const-string v15, ""
 
-    move-result-object v4
+    invoke-static {v14, v15}, Lcom/madhouse/bud/crmapp/tools/AppDataRecord;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 87
-    .local v4, "uuid":Ljava/lang/String;
-    if-eqz v4, :cond_e
+    move-result-object v13
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    .line 56
+    .local v13, "uuid":Ljava/lang/String;
+    const-string v14, "login_user"
 
-    move-result v6
+    const-string v15, ""
 
-    const/4 v7, 0x1
-
-    if-ge v6, v7, :cond_f
-
-    .line 111
-    :cond_e
-    :goto_e
-    return-object v5
-
-    .line 90
-    :cond_f
-    const-string v6, "msg uuid"
-
-    invoke-static {v6, v4}, Lcom/madhouse/bud/crmapp/tools/Utils;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 91
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "access_key="
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v7, Lcom/madhouse/bud/crmapp/service/BudWiserManager;->ACCESS_KEY:Ljava/lang/String;
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, "&uuid="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    .line 92
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    .line 91
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 93
-    .local v2, "param":Ljava/lang/String;
-    invoke-static {}, Lcom/madhouse/bud/crmapp/http/NetworkManager;->getInstance()Lcom/madhouse/bud/crmapp/http/NetworkManager;
-
-    move-result-object v6
-
-    .line 94
-    const-string v7, "http://m.bud.cn/budweiserapi/interface/mad_android_push.php"
-
-    .line 95
-    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
+    invoke-static {v14, v15}, Lcom/madhouse/bud/crmapp/tools/AppDataRecord;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 93
-    invoke-virtual {v6, v7, v8}, Lcom/madhouse/bud/crmapp/http/NetworkManager;->httpPost(Ljava/lang/String;[B)Ljava/lang/String;
+    .line 57
+    .local v8, "name":Ljava/lang/String;
+    if-eqz v13, :cond_22
 
-    move-result-object v3
+    invoke-virtual {v13}, Ljava/lang/String;->length()I
 
-    .line 96
-    .local v3, "res":Ljava/lang/String;
-    if-eqz v3, :cond_e
+    move-result v14
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    const/4 v15, 0x1
 
-    move-result v6
+    if-lt v14, v15, :cond_22
 
-    if-lez v6, :cond_e
+    if-eqz v8, :cond_22
 
-    .line 97
-    const-string v6, "msg"
+    .line 58
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
 
-    invoke-static {v6, v3}, Lcom/madhouse/bud/crmapp/tools/Utils;->log(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v14
 
-    .line 98
-    new-instance v1, Lorg/json/JSONObject;
+    const/4 v15, 0x1
 
-    invoke-direct {v1, v3}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    if-ge v14, v15, :cond_24
 
-    .line 99
-    .local v1, "mJsonObject":Lorg/json/JSONObject;
-    const-string v6, "status"
+    .line 59
+    :cond_22
+    const/4 v7, 0x0
 
-    invoke-virtual {v1, v6}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+    .line 92
+    :cond_23
+    return-object v7
 
-    move-result v6
+    .line 61
+    :cond_24
+    new-instance v7, Ljava/util/ArrayList;
 
-    if-nez v6, :cond_65
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 100
-    const-string v6, "status"
+    .line 62
+    .local v7, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v6
+    .line 65
+    .local v10, "sb":Ljava/lang/StringBuilder;
+    new-instance v14, Ljava/lang/StringBuilder;
 
-    const-string v7, "OK"
+    const-string v15, "uuid="
 
-    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v14, v15}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v6
+    invoke-virtual {v14, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v6, :cond_e
+    move-result-object v14
 
-    .line 104
-    :cond_65
-    const-string v6, "data"
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1, v6}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    move-result-object v14
 
-    move-result-object v0
+    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 105
-    .local v0, "jsonObject":Lorg/json/JSONObject;
-    const-string v6, "content"
+    .line 66
+    const-string v14, "&username="
 
-    invoke-virtual {v0, v6}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v6
+    move-result-object v14
 
-    if-nez v6, :cond_e
+    const-string v15, "utf-8"
 
-    .line 107
-    const-string v5, "content"
+    invoke-static {v8, v15}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v15
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 67
+    const-string v14, "&key="
+
+    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    .line 68
+    const-string v15, "madhouse"
+
+    const-string v16, "utf-8"
+
+    invoke-static/range {v15 .. v16}, Lcom/madhouse/bud/crmapp/http/MD5Util;->MD5Encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v15
+
+    .line 67
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 70
+    const-string v14, "PushMSGService"
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v15
+
+    invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 71
+    invoke-static {}, Lcom/madhouse/bud/crmapp/http/NetworkManager;->getInstance()Lcom/madhouse/bud/crmapp/http/NetworkManager;
+
+    move-result-object v14
+
+    .line 72
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v15
+
+    .line 71
+    invoke-virtual {v14, v15}, Lcom/madhouse/bud/crmapp/http/NetworkManager;->httpGetInputstream(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v5
 
-    goto :goto_e
+    .line 73
+    .local v5, "is":Ljava/io/InputStream;
+    invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
+
+    move-result-object v1
+
+    .line 74
+    .local v1, "dbfactory":Ljavax/xml/parsers/DocumentBuilderFactory;
+    invoke-virtual {v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
+
+    move-result-object v0
+
+    .line 76
+    .local v0, "db":Ljavax/xml/parsers/DocumentBuilder;
+    invoke-virtual {v0, v5}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
+
+    move-result-object v3
+
+    .line 77
+    .local v3, "dom":Lorg/w3c/dom/Document;
+    invoke-interface {v3}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
+
+    move-result-object v2
+
+    .line 78
+    .local v2, "docEle":Lorg/w3c/dom/Element;
+    const-string v14, "list"
+
+    invoke-interface {v2, v14}, Lorg/w3c/dom/Element;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
+
+    move-result-object v9
+
+    .line 79
+    .local v9, "noteList2":Lorg/w3c/dom/NodeList;
+    if-eqz v9, :cond_23
+
+    .line 81
+    const/4 v6, 0x0
+
+    .local v6, "j":I
+    :goto_8e
+    invoke-interface {v9}, Lorg/w3c/dom/NodeList;->getLength()I
+
+    move-result v14
+
+    if-ge v6, v14, :cond_23
+
+    .line 82
+    invoke-interface {v9, v6}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
+
+    move-result-object v4
+
+    check-cast v4, Lorg/w3c/dom/Element;
+
+    .line 84
+    .local v4, "entry":Lorg/w3c/dom/Element;
+    const-string v14, "content"
+
+    .line 83
+    invoke-interface {v4, v14}, Lorg/w3c/dom/Element;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
+
+    move-result-object v14
+
+    .line 84
+    const/4 v15, 0x0
+
+    invoke-interface {v14, v15}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
+
+    move-result-object v12
+
+    .line 83
+    check-cast v12, Lorg/w3c/dom/Element;
+
+    .line 85
+    .local v12, "textEle":Lorg/w3c/dom/Element;
+    const/4 v11, 0x0
+
+    .line 86
+    .local v11, "text":Ljava/lang/String;
+    invoke-interface {v12}, Lorg/w3c/dom/Element;->hasChildNodes()Z
+
+    move-result v14
+
+    if-eqz v14, :cond_b9
+
+    .line 87
+    invoke-interface {v12}, Lorg/w3c/dom/Element;->getFirstChild()Lorg/w3c/dom/Node;
+
+    move-result-object v14
+
+    invoke-interface {v14}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 88
+    invoke-virtual {v7, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 81
+    :cond_b9
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_8e
 .end method
 
 .method private notyfication(Ljava/lang/String;)V
@@ -280,7 +381,7 @@
     .prologue
     const/high16 v8, 0x7f090000
 
-    .line 115
+    .line 96
     const-string v4, "notification"
 
     invoke-virtual {p0, v4}, Lcom/adapps/context/PushMSGService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -289,73 +390,52 @@
 
     check-cast v3, Landroid/app/NotificationManager;
 
-    .line 116
+    .line 97
     .local v3, "nm":Landroid/app/NotificationManager;
     new-instance v2, Landroid/app/Notification;
 
     const v4, 0x7f020039
 
-    .line 117
-    new-instance v5, Ljava/lang/StringBuilder;
+    const-string v5, "\u767e\u5a01CRM\u65b0\u6d88\u606f\uff01"
 
-    invoke-virtual {p0, v8}, Lcom/adapps/context/PushMSGService;->getString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v6, " \u65b0\u6d88\u606f\uff01"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 118
+    .line 98
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .line 116
+    .line 97
     invoke-direct {v2, v4, v5, v6, v7}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
-    .line 119
+    .line 99
     .local v2, "n":Landroid/app/Notification;
     const/16 v4, 0x10
 
     iput v4, v2, Landroid/app/Notification;->flags:I
 
-    .line 120
+    .line 100
     new-instance v1, Landroid/content/Intent;
 
     invoke-static {}, Lcom/adapps/context/MyApplication;->getInstance()Lcom/adapps/context/MyApplication;
 
     move-result-object v4
 
-    .line 121
+    .line 101
     invoke-virtual {v4}, Lcom/adapps/context/MyApplication;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
 
-    const-class v5, Lcom/madhouse/bud/crmapp/MainActivity;
+    const-class v5, Lcom/adapps/context/BaseActivity;
 
-    .line 120
+    .line 100
     invoke-direct {v1, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 122
+    .line 102
     .local v1, "i":Landroid/content/Intent;
     const/high16 v4, 0x14000000
 
     invoke-virtual {v1, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 125
+    .line 105
     invoke-static {}, Lcom/adapps/context/MyApplication;->getInstance()Lcom/adapps/context/MyApplication;
 
     move-result-object v4
@@ -364,127 +444,64 @@
 
     move-result-object v4
 
-    .line 126
+    .line 106
     const/high16 v5, 0x8000000
 
-    .line 124
+    .line 104
     invoke-static {v4, v8, v1, v5}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    .line 128
+    .line 108
     .local v0, "contentIntent":Landroid/app/PendingIntent;
     invoke-static {}, Lcom/adapps/context/MyApplication;->getInstance()Lcom/adapps/context/MyApplication;
 
     move-result-object v4
 
-    .line 129
+    .line 109
     invoke-virtual {v4}, Lcom/adapps/context/MyApplication;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
 
-    .line 130
-    new-instance v5, Ljava/lang/StringBuilder;
+    const-string v5, "\u767e\u5a01CRM\u63d0\u9192\u60a8:"
 
-    invoke-virtual {p0, v8}, Lcom/adapps/context/PushMSGService;->getString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v6, " \u63d0\u9192\u60a8:"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 128
+    .line 108
     invoke-virtual {v2, v4, v5, p1, v0}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 132
+    .line 111
     iget v4, v2, Landroid/app/Notification;->defaults:I
 
     or-int/lit8 v4, v4, 0x1
 
     iput v4, v2, Landroid/app/Notification;->defaults:I
 
-    .line 134
+    .line 113
     iget v4, v2, Landroid/app/Notification;->defaults:I
 
     or-int/lit8 v4, v4, 0x2
 
     iput v4, v2, Landroid/app/Notification;->defaults:I
 
-    .line 136
+    .line 115
     const/4 v4, -0x1
 
     iput v4, v2, Landroid/app/Notification;->audioStreamType:I
 
-    .line 137
+    .line 116
     invoke-virtual {v3, v8, v2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 138
+    .line 117
     return-void
 .end method
 
 
 # virtual methods
-.method public checkUUID()Ljava/lang/String;
-    .registers 4
-
-    .prologue
-    .line 46
-    const-string v1, "device_udid"
-
-    const-string v2, ""
-
-    invoke-static {v1, v2}, Lcom/madhouse/bud/crmapp/tools/AppDataRecord;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 47
-    .local v0, "uuid":Ljava/lang/String;
-    const-string v1, "record uuid"
-
-    invoke-static {v1, v0}, Lcom/madhouse/bud/crmapp/tools/Utils;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 48
-    if-eqz v0, :cond_15
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-gtz v1, :cond_1d
-
-    .line 49
-    :cond_15
-    new-instance v1, Lcom/adapps/context/PushMSGService$2;
-
-    invoke-direct {v1, p0}, Lcom/adapps/context/PushMSGService$2;-><init>(Lcom/adapps/context/PushMSGService;)V
-
-    .line 78
-    invoke-virtual {v1}, Lcom/adapps/context/PushMSGService$2;->start()V
-
-    .line 80
-    :cond_1d
-    return-object v0
-.end method
-
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .registers 3
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 42
+    .line 49
     const/4 v0, 0x0
 
     return-object v0
@@ -494,14 +511,14 @@
     .registers 3
 
     .prologue
-    .line 31
+    .line 38
     iget-object v0, p0, Lcom/adapps/context/PushMSGService;->pushCheckhandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/adapps/context/PushMSGService;->checkTask:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 32
+    .line 39
     return-void
 .end method
 
@@ -509,11 +526,11 @@
     .registers 2
 
     .prologue
-    .line 36
+    .line 43
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/adapps/context/PushMSGService;->running:Z
 
-    .line 37
+    .line 44
     return-void
 .end method

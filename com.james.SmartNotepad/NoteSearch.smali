@@ -132,7 +132,7 @@
     goto :goto_7
 
     :pswitch_data_10
-    .packed-switch 0x7f09002c
+    .packed-switch 0x7f09002b
         :pswitch_c
         :pswitch_8
     .end packed-switch
@@ -218,29 +218,25 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
 
-    const v0, 0x7f09002c
+    const v0, 0x7f09002b
 
     invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/NoteSearch;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v0, Landroid/widget/Button;
 
-    const v1, 0x7f09002d
+    const v1, 0x7f09002c
 
     invoke-virtual {p0, v1}, Lcom/james/SmartNotepad/NoteSearch;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    check-cast v1, Lcom/james/SmartNotepad/CustomButton;
+    check-cast v1, Landroid/widget/Button;
 
-    invoke-virtual {v0, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v1, p0}, Lcom/james/SmartNotepad/CustomButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v0}, Lcom/james/SmartNotepad/CustomButton;->a()V
-
-    invoke-virtual {v1}, Lcom/james/SmartNotepad/CustomButton;->a()V
+    invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const/high16 v0, 0x7f090000
 
@@ -280,29 +276,7 @@
 
     iput-object v0, p0, Lcom/james/SmartNotepad/NoteSearch;->D:Landroid/widget/ArrayAdapter;
 
-    const v0, 0x7f090001
-
-    invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/NoteSearch;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    new-instance v1, Lcom/google/ads/AdView;
-
-    sget-object v2, Lcom/google/ads/f;->a:Lcom/google/ads/f;
-
-    const-string v3, "a14cc162731f341"
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/f;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    new-instance v0, Lcom/google/ads/e;
-
-    invoke-direct {v0}, Lcom/google/ads/e;-><init>()V
-
-    invoke-virtual {v1, v0}, Lcom/google/ads/AdView;->a(Lcom/google/ads/e;)V
+    invoke-static {}, Lcom/admob/android/ads/ak;->c()V
 
     return-void
 .end method
@@ -310,39 +284,45 @@
 .method protected onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
     .registers 13
 
+    const-string v4, "position:"
+
+    const-string v3, "SmartNotepad"
+
+    const-string v2, "NoteSearch"
+
     invoke-super/range {p0 .. p5}, Landroid/app/ListActivity;->onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
 
     const-string v0, "NoteSearch"
 
-    const-string v1, "SmartNotepad"
+    const-string v0, "SmartNotepad"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v3, "position:"
+    const-string v1, "position:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    const-string v3, ",id:"
+    const-string v1, ",id:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2, p4, p5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p4, p5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v0, v1, v2}, Lcom/james/SmartNotepad/az;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v0}, Lcom/james/SmartNotepad/az;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    :try_start_23
+    :try_start_29
     iget-object v0, p0, Lcom/james/SmartNotepad/NoteSearch;->q:[Ljava/lang/Integer;
 
     aget-object v0, v0, p3
@@ -405,7 +385,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_a0
+    if-eqz v1, :cond_a6
 
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -459,10 +439,10 @@
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    :goto_9f
+    :goto_a5
     return-void
 
-    :cond_a0
+    :cond_a6
     invoke-virtual {p0}, Lcom/james/SmartNotepad/NoteSearch;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -477,7 +457,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_b8
+    if-nez v2, :cond_be
 
     const-string v2, "android.intent.action.GET_CONTENT"
 
@@ -485,9 +465,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_cb
+    if-eqz v1, :cond_d1
 
-    :cond_b8
+    :cond_be
     const/4 v1, -0x1
 
     new-instance v2, Landroid/content/Intent;
@@ -499,20 +479,20 @@
     move-result-object v0
 
     invoke-virtual {p0, v1, v0}, Lcom/james/SmartNotepad/NoteSearch;->setResult(ILandroid/content/Intent;)V
-    :try_end_c5
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_23 .. :try_end_c5} :catch_c6
+    :try_end_cb
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_29 .. :try_end_cb} :catch_cc
 
-    goto :goto_9f
+    goto :goto_a5
 
-    :catch_c6
+    :catch_cc
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/ArrayIndexOutOfBoundsException;->printStackTrace()V
 
-    goto :goto_9f
+    goto :goto_a5
 
-    :cond_cb
-    :try_start_cb
+    :cond_d1
+    :try_start_d1
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.james.SmartNotepad.action.NoteView"
@@ -520,10 +500,10 @@
     invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     invoke-virtual {p0, v1}, Lcom/james/SmartNotepad/NoteSearch;->startActivity(Landroid/content/Intent;)V
-    :try_end_d5
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_cb .. :try_end_d5} :catch_c6
+    :try_end_db
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_d1 .. :try_end_db} :catch_cc
 
-    goto :goto_9f
+    goto :goto_a5
 .end method
 
 .method public onRestart()V
@@ -745,7 +725,7 @@
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    const v0, 0x7f090025
+    const v0, 0x7f090024
 
     invoke-virtual {p0, v0}, Lcom/james/SmartNotepad/NoteSearch;->findViewById(I)Landroid/view/View;
 

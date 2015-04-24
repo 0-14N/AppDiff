@@ -11,27 +11,78 @@
 
 # direct methods
 .method constructor <init>()V
-    .registers 2
+    .registers 3
 
     .prologue
-    .line 33
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
-    new-instance v0, Lorg/apache/http/impl/client/DefaultHttpClient;
+    .line 37
+    new-instance v0, Lorg/apache/http/params/BasicHttpParams;
 
-    invoke-direct {v0}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
+    invoke-direct {v0}, Lorg/apache/http/params/BasicHttpParams;-><init>()V
 
-    iput-object v0, p0, Lcom/millennialmedia/android/HttpGetRequest;->client:Lorg/apache/http/client/HttpClient;
+    .line 38
+    .local v0, "params":Lorg/apache/http/params/HttpParams;
+    const/16 v1, 0x2710
 
-    .line 35
-    new-instance v0, Lorg/apache/http/client/methods/HttpGet;
+    invoke-static {v0, v1}, Lorg/apache/http/params/HttpConnectionParams;->setConnectionTimeout(Lorg/apache/http/params/HttpParams;I)V
 
-    invoke-direct {v0}, Lorg/apache/http/client/methods/HttpGet;-><init>()V
+    .line 39
+    new-instance v1, Lorg/apache/http/impl/client/DefaultHttpClient;
 
-    iput-object v0, p0, Lcom/millennialmedia/android/HttpGetRequest;->getRequest:Lorg/apache/http/client/methods/HttpGet;
+    invoke-direct {v1, v0}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>(Lorg/apache/http/params/HttpParams;)V
 
-    .line 36
+    iput-object v1, p0, Lcom/millennialmedia/android/HttpGetRequest;->client:Lorg/apache/http/client/HttpClient;
+
+    .line 40
+    new-instance v1, Lorg/apache/http/client/methods/HttpGet;
+
+    invoke-direct {v1}, Lorg/apache/http/client/methods/HttpGet;-><init>()V
+
+    iput-object v1, p0, Lcom/millennialmedia/android/HttpGetRequest;->getRequest:Lorg/apache/http/client/methods/HttpGet;
+
+    .line 41
+    return-void
+.end method
+
+.method constructor <init>(I)V
+    .registers 4
+    .param p1, "timeout"    # I
+
+    .prologue
+    .line 44
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 45
+    new-instance v0, Lorg/apache/http/params/BasicHttpParams;
+
+    invoke-direct {v0}, Lorg/apache/http/params/BasicHttpParams;-><init>()V
+
+    .line 46
+    .local v0, "params":Lorg/apache/http/params/HttpParams;
+    const/16 v1, 0x2710
+
+    invoke-static {v0, v1}, Lorg/apache/http/params/HttpConnectionParams;->setConnectionTimeout(Lorg/apache/http/params/HttpParams;I)V
+
+    .line 47
+    invoke-static {v0, p1}, Lorg/apache/http/params/HttpConnectionParams;->setSoTimeout(Lorg/apache/http/params/HttpParams;I)V
+
+    .line 48
+    new-instance v1, Lorg/apache/http/impl/client/DefaultHttpClient;
+
+    invoke-direct {v1, v0}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>(Lorg/apache/http/params/HttpParams;)V
+
+    iput-object v1, p0, Lcom/millennialmedia/android/HttpGetRequest;->client:Lorg/apache/http/client/HttpClient;
+
+    .line 49
+    new-instance v1, Lorg/apache/http/client/methods/HttpGet;
+
+    invoke-direct {v1}, Lorg/apache/http/client/methods/HttpGet;-><init>()V
+
+    iput-object v1, p0, Lcom/millennialmedia/android/HttpGetRequest;->getRequest:Lorg/apache/http/client/methods/HttpGet;
+
+    .line 50
     return-void
 .end method
 
@@ -45,18 +96,18 @@
     .end annotation
 
     .prologue
-    .line 116
+    .line 136
     const/4 v2, 0x0
 
-    .line 118
+    .line 138
     .local v2, "reader":Ljava/io/BufferedReader;
     const/4 v1, 0x0
 
-    .line 120
+    .line 140
     .local v1, "line":Ljava/lang/String;
     if-nez p0, :cond_c
 
-    .line 121
+    .line 141
     new-instance v5, Ljava/io/IOException;
 
     const-string v6, "Stream is null."
@@ -65,7 +116,7 @@
 
     throw v5
 
-    .line 125
+    .line 145
     :cond_c
     :try_start_c
     new-instance v3, Ljava/io/BufferedReader;
@@ -81,7 +132,7 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_c .. :try_end_18} :catch_67
     .catchall {:try_start_c .. :try_end_18} :catchall_49
 
-    .line 126
+    .line 146
     .end local v2    # "reader":Ljava/io/BufferedReader;
     .local v3, "reader":Ljava/io/BufferedReader;
     :try_start_18
@@ -89,7 +140,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 127
+    .line 147
     .local v4, "sb":Ljava/lang/StringBuilder;
     :goto_1d
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -98,7 +149,7 @@
 
     if-eqz v1, :cond_50
 
-    .line 128
+    .line 148
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -124,29 +175,29 @@
 
     goto :goto_1d
 
-    .line 130
+    .line 150
     .end local v4    # "sb":Ljava/lang/StringBuilder;
     :catch_3a
     move-exception v0
 
     move-object v2, v3
 
-    .line 132
+    .line 152
     .end local v3    # "reader":Ljava/io/BufferedReader;
     .local v0, "e":Ljava/lang/OutOfMemoryError;
     .restart local v2    # "reader":Ljava/io/BufferedReader;
     :goto_3c
     const/4 v4, 0x0
 
-    .line 133
+    .line 153
     .restart local v4    # "sb":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
-    .line 134
+    .line 154
     :try_start_3e
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/Throwable;)V
 
-    .line 135
+    .line 155
     new-instance v5, Ljava/io/IOException;
 
     const-string v6, "Out of memory."
@@ -157,41 +208,41 @@
     :try_end_49
     .catchall {:try_start_3e .. :try_end_49} :catchall_49
 
-    .line 139
+    .line 159
     .end local v0    # "e":Ljava/lang/OutOfMemoryError;
     .end local v4    # "sb":Ljava/lang/StringBuilder;
     :catchall_49
     move-exception v5
 
-    .line 141
+    .line 161
     :goto_4a
     if-eqz v2, :cond_4f
 
-    .line 142
+    .line 162
     :try_start_4c
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_4f
     .catch Ljava/io/IOException; {:try_start_4c .. :try_end_4f} :catch_5f
 
-    .line 147
+    .line 167
     :cond_4f
     :goto_4f
     throw v5
 
-    .line 141
+    .line 161
     .end local v2    # "reader":Ljava/io/BufferedReader;
     .restart local v3    # "reader":Ljava/io/BufferedReader;
     .restart local v4    # "sb":Ljava/lang/StringBuilder;
     :cond_50
     if-eqz v3, :cond_55
 
-    .line 142
+    .line 162
     :try_start_52
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_55
     .catch Ljava/io/IOException; {:try_start_52 .. :try_end_55} :catch_5a
 
-    .line 149
+    .line 169
     :cond_55
     :goto_55
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -200,17 +251,17 @@
 
     return-object v5
 
-    .line 144
+    .line 164
     :catch_5a
     move-exception v0
 
-    .line 146
+    .line 166
     .local v0, "e":Ljava/io/IOException;
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/Throwable;)V
 
     goto :goto_55
 
-    .line 144
+    .line 164
     .end local v0    # "e":Ljava/io/IOException;
     .end local v3    # "reader":Ljava/io/BufferedReader;
     .end local v4    # "sb":Ljava/lang/StringBuilder;
@@ -218,13 +269,13 @@
     :catch_5f
     move-exception v0
 
-    .line 146
+    .line 166
     .restart local v0    # "e":Ljava/io/IOException;
     invoke-static {v0}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/Throwable;)V
 
     goto :goto_4f
 
-    .line 139
+    .line 159
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "reader":Ljava/io/BufferedReader;
     .restart local v3    # "reader":Ljava/io/BufferedReader;
@@ -237,7 +288,7 @@
     .restart local v2    # "reader":Ljava/io/BufferedReader;
     goto :goto_4a
 
-    .line 130
+    .line 150
     :catch_67
     move-exception v0
 
@@ -249,21 +300,21 @@
     .param p0, "urls"    # [Ljava/lang/String;
 
     .prologue
-    .line 154
+    .line 174
     if-eqz p0, :cond_d
 
     array-length v0, p0
 
     if-lez v0, :cond_d
 
-    .line 156
+    .line 176
     new-instance v0, Lcom/millennialmedia/android/HttpGetRequest$1;
 
     invoke-direct {v0, p0}, Lcom/millennialmedia/android/HttpGetRequest$1;-><init>([Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/millennialmedia/android/Utils$ThreadUtils;->execute(Ljava/lang/Runnable;)V
 
-    .line 177
+    .line 197
     :cond_d
     return-void
 .end method
@@ -271,7 +322,7 @@
 
 # virtual methods
 .method get(Ljava/lang/String;)Lorg/apache/http/HttpResponse;
-    .registers 6
+    .registers 8
     .param p1, "url"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -280,59 +331,96 @@
     .end annotation
 
     .prologue
-    .line 45
-    const/4 v1, 0x0
-
-    .line 46
-    .local v1, "response":Lorg/apache/http/HttpResponse;
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_19
-
-    .line 50
-    :try_start_7
-    iget-object v2, p0, Lcom/millennialmedia/android/HttpGetRequest;->getRequest:Lorg/apache/http/client/methods/HttpGet;
-
-    new-instance v3, Ljava/net/URI;
-
-    invoke-direct {v3, p1}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v3}, Lorg/apache/http/client/methods/HttpGet;->setURI(Ljava/net/URI;)V
-
-    .line 51
-    iget-object v2, p0, Lcom/millennialmedia/android/HttpGetRequest;->client:Lorg/apache/http/client/HttpClient;
-
-    iget-object v3, p0, Lcom/millennialmedia/android/HttpGetRequest;->getRequest:Lorg/apache/http/client/methods/HttpGet;
-
-    invoke-interface {v2, v3}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
-    :try_end_18
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_7 .. :try_end_18} :catch_1b
-
-    move-result-object v1
-
-    :cond_19
-    move-object v2, v1
+    const/4 v3, 0x0
 
     .line 59
-    :goto_1a
-    return-object v2
-
-    .line 53
-    :catch_1b
-    move-exception v0
-
-    .line 55
-    .local v0, "e":Ljava/lang/OutOfMemoryError;
-    const-string v2, "Out of memory!"
-
-    invoke-static {v2}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;)V
-
-    .line 56
     const/4 v2, 0x0
 
-    goto :goto_1a
+    .line 60
+    .local v2, "response":Lorg/apache/http/HttpResponse;
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1a
+
+    .line 64
+    :try_start_8
+    iget-object v4, p0, Lcom/millennialmedia/android/HttpGetRequest;->getRequest:Lorg/apache/http/client/methods/HttpGet;
+
+    new-instance v5, Ljava/net/URI;
+
+    invoke-direct {v5, p1}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v5}, Lorg/apache/http/client/methods/HttpGet;->setURI(Ljava/net/URI;)V
+
+    .line 65
+    iget-object v4, p0, Lcom/millennialmedia/android/HttpGetRequest;->client:Lorg/apache/http/client/HttpClient;
+
+    iget-object v5, p0, Lcom/millennialmedia/android/HttpGetRequest;->getRequest:Lorg/apache/http/client/methods/HttpGet;
+
+    invoke-interface {v4, v5}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
+    :try_end_19
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_8 .. :try_end_19} :catch_1c
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_19} :catch_23
+
+    move-result-object v2
+
+    :cond_1a
+    move-object v3, v2
+
+    .line 79
+    :cond_1b
+    :goto_1b
+    return-object v3
+
+    .line 67
+    :catch_1c
+    move-exception v0
+
+    .line 69
+    .local v0, "e":Ljava/lang/OutOfMemoryError;
+    const-string v4, "Out of memory!"
+
+    invoke-static {v4}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;)V
+
+    goto :goto_1b
+
+    .line 72
+    .end local v0    # "e":Ljava/lang/OutOfMemoryError;
+    :catch_23
+    move-exception v1
+
+    .line 74
+    .local v1, "ex":Ljava/lang/Exception;
+    if-eqz v1, :cond_1b
+
+    .line 75
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Error connecting:"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;)V
+
+    goto :goto_1b
 .end method
 
 .method trackConversion(Ljava/lang/String;ZJLjava/util/TreeMap;)V
@@ -360,13 +448,13 @@
     .end annotation
 
     .prologue
-    .line 74
+    .line 94
     .local p5, "extraParams":Ljava/util/TreeMap;, "Ljava/util/TreeMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p2, :cond_9d
 
     const/4 v2, 0x1
 
-    .line 76
+    .line 96
     .local v2, "i":I
     :goto_3
     :try_start_3
@@ -392,11 +480,11 @@
 
     invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 77
+    .line 97
     .local v6, "urlBuilder":Ljava/lang/StringBuilder;
     if-eqz p1, :cond_33
 
-    .line 78
+    .line 98
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -417,7 +505,7 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 79
+    .line 99
     :cond_33
     const-wide/16 v7, 0x0
 
@@ -425,7 +513,7 @@
 
     if-lez v7, :cond_53
 
-    .line 80
+    .line 100
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -450,11 +538,11 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 84
+    .line 104
     :cond_53
     if-eqz p5, :cond_a0
 
-    .line 85
+    .line 105
     invoke-virtual/range {p5 .. p5}, Ljava/util/TreeMap;->entrySet()Ljava/util/Set;
 
     move-result-object v7
@@ -477,7 +565,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 86
+    .line 106
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v8, "&%s=%s"
 
@@ -519,14 +607,14 @@
 
     goto :goto_5d
 
-    .line 101
+    .line 121
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "urlBuilder":Ljava/lang/StringBuilder;
     :catch_8c
     move-exception v0
 
-    .line 103
+    .line 123
     .local v0, "e":Ljava/io/IOException;
     const-string v7, "Conversion tracking error: %s"
 
@@ -544,19 +632,19 @@
 
     invoke-static {v7, v8}, Lcom/millennialmedia/android/MMSDK$Log;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 105
+    .line 125
     .end local v0    # "e":Ljava/io/IOException;
     :goto_9c
     return-void
 
-    .line 74
+    .line 94
     .end local v2    # "i":I
     :cond_9d
     const/4 v2, 0x0
 
     goto/16 :goto_3
 
-    .line 87
+    .line 107
     .restart local v2    # "i":I
     .restart local v6    # "urlBuilder":Ljava/lang/StringBuilder;
     :cond_a0
@@ -565,7 +653,7 @@
 
     move-result-object v5
 
-    .line 88
+    .line 108
     .local v5, "url":Ljava/lang/String;
     const-string v7, "Sending conversion tracker report: %s"
 
@@ -579,7 +667,7 @@
 
     invoke-static {v7, v8}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 90
+    .line 110
     iget-object v7, p0, Lcom/millennialmedia/android/HttpGetRequest;->getRequest:Lorg/apache/http/client/methods/HttpGet;
 
     new-instance v8, Ljava/net/URI;
@@ -588,7 +676,7 @@
 
     invoke-virtual {v7, v8}, Lorg/apache/http/client/methods/HttpGet;->setURI(Ljava/net/URI;)V
 
-    .line 91
+    .line 111
     iget-object v7, p0, Lcom/millennialmedia/android/HttpGetRequest;->client:Lorg/apache/http/client/HttpClient;
 
     iget-object v8, p0, Lcom/millennialmedia/android/HttpGetRequest;->getRequest:Lorg/apache/http/client/methods/HttpGet;
@@ -597,7 +685,7 @@
 
     move-result-object v4
 
-    .line 92
+    .line 112
     .local v4, "response":Lorg/apache/http/HttpResponse;
     invoke-interface {v4}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
@@ -611,7 +699,7 @@
 
     if-ne v7, v8, :cond_e5
 
-    .line 94
+    .line 114
     const-string v7, "Successful conversion tracking event: %d"
 
     const/4 v8, 0x1
@@ -638,7 +726,7 @@
 
     goto :goto_9c
 
-    .line 98
+    .line 118
     :cond_e5
     const-string v7, "Conversion tracking error: %d"
 

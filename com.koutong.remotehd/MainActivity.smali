@@ -33,15 +33,11 @@
 
 .field private static final TAG:Ljava/lang/String; = "MainActivity"
 
-.field private static isfirst:Z
-
 .field private static k3is:Z
 
 .field private static mRemoteView:Lcom/koutong/remote/view/RemoteView;
 
 .field public static taskbar:Lcom/koutong/remote/taskbar/Taskbar;
-
-.field private static tempstr:Ljava/lang/String;
 
 
 # instance fields
@@ -78,12 +74,10 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 2
+    .registers 1
 
     .prologue
     const/4 v0, 0x0
-
-    const/4 v1, 0x1
 
     .line 60
     sput-object v0, Lcom/koutong/remote/MainActivity;->mRemoteView:Lcom/koutong/remote/view/RemoteView;
@@ -96,16 +90,10 @@
 
     sput-boolean v0, Lcom/koutong/remote/MainActivity;->k3is:Z
 
-    .line 86
-    sput-boolean v1, Lcom/koutong/remote/MainActivity;->isfirst:Z
-
     .line 87
-    const-string v0, ""
+    const/4 v0, 0x1
 
-    sput-object v0, Lcom/koutong/remote/MainActivity;->tempstr:Ljava/lang/String;
-
-    .line 89
-    invoke-static {v1}, Lcom/koutong/remote/RDPConnection;->native_set_env(I)V
+    invoke-static {v0}, Lcom/koutong/remote/RDPConnection;->native_set_env(I)V
 
     .line 58
     return-void
@@ -160,14 +148,14 @@
 
     iput-object v0, p0, Lcom/koutong/remote/MainActivity;->dm:Landroid/util/DisplayMetrics;
 
-    .line 117
+    .line 115
     new-instance v0, Lcom/koutong/remote/MainActivity$InputHandler;
 
     invoke-direct {v0, p0}, Lcom/koutong/remote/MainActivity$InputHandler;-><init>(Lcom/koutong/remote/MainActivity;)V
 
     iput-object v0, p0, Lcom/koutong/remote/MainActivity;->mHandler:Lcom/koutong/remote/MainActivity$InputHandler;
 
-    .line 1364
+    .line 1353
     iput-object v1, p0, Lcom/koutong/remote/MainActivity;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 58
@@ -178,7 +166,7 @@
     .registers 1
 
     .prologue
-    .line 781
+    .line 770
     invoke-direct {p0}, Lcom/koutong/remote/MainActivity;->showDisconnectDialog()V
 
     return-void
@@ -188,7 +176,7 @@
     .registers 2
 
     .prologue
-    .line 117
+    .line 115
     iget-object v0, p0, Lcom/koutong/remote/MainActivity;->mHandler:Lcom/koutong/remote/MainActivity$InputHandler;
 
     return-object v0
@@ -218,7 +206,7 @@
     .registers 1
 
     .prologue
-    .line 794
+    .line 783
     invoke-direct {p0}, Lcom/koutong/remote/MainActivity;->gotoLogonActivity()V
 
     return-void
@@ -269,12 +257,12 @@
     .param p0, "cur_im"    # I
 
     .prologue
-    .line 738
+    .line 734
     invoke-static {}, Lcom/koutong/remote/inputmethod/RemoteInputMethod;->getInstance()Lcom/koutong/remote/inputmethod/RemoteInputMethod;
 
     move-result-object v0
 
-    .line 740
+    .line 736
     .local v0, "method":Lcom/koutong/remote/inputmethod/RemoteInputMethod;
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -282,10 +270,10 @@
 
     if-nez v1, :cond_d
 
-    .line 741
+    .line 737
     invoke-virtual {v0, p0}, Lcom/koutong/remote/inputmethod/RemoteInputMethod;->activeIM(I)V
 
-    .line 743
+    .line 739
     :cond_d
     return-void
 .end method
@@ -299,7 +287,7 @@
     .param p4, "data"    # [I
 
     .prologue
-    .line 679
+    .line 675
     sget-object v0, Lcom/koutong/remote/MainActivity;->mRemoteView:Lcom/koutong/remote/view/RemoteView;
 
     move v1, p0
@@ -314,7 +302,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/koutong/remote/view/RemoteView;->drawImage(IIII[I)V
 
-    .line 680
+    .line 676
     return-void
 .end method
 
@@ -322,26 +310,26 @@
     .registers 3
 
     .prologue
-    .line 795
+    .line 784
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/koutong/remotehd/LoginActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 796
+    .line 785
     .local v0, "intent":Landroid/content/Intent;
     const/16 v1, 0x4000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 797
+    .line 786
     invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 798
+    .line 787
     invoke-virtual {p0}, Lcom/koutong/remote/MainActivity;->finish()V
 
-    .line 799
+    .line 788
     return-void
 .end method
 
@@ -354,13 +342,13 @@
 
     const/4 v3, 0x0
 
-    .line 429
-    .line 430
+    .line 425
+    .line 426
     const v1, 0x7f03000a
 
     const/4 v2, 0x0
 
-    .line 429
+    .line 425
     invoke-virtual {p1, v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
@@ -369,19 +357,19 @@
 
     iput-object v1, p0, Lcom/koutong/remote/MainActivity;->directionKeyboardView:Landroid/widget/LinearLayout;
 
-    .line 431
+    .line 427
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->directionKeyboardView:Landroid/widget/LinearLayout;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 432
+    .line 428
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v0, v4, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 435
+    .line 431
     .local v0, "directionViewParams":Landroid/widget/FrameLayout$LayoutParams;
     invoke-static {}, Lcom/koutong/remote/App;->getInstance()Lcom/koutong/remote/App;
 
@@ -397,7 +385,7 @@
 
     if-eqz v1, :cond_47
 
-    .line 436
+    .line 432
     invoke-static {}, Lcom/koutong/remote/model/SettingInfo;->getInstance()Lcom/koutong/remote/model/SettingInfo;
 
     move-result-object v1
@@ -412,16 +400,16 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 437
+    .line 433
     iput v3, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 444
+    .line 440
     :goto_37
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->directionKeyboardView:Landroid/widget/LinearLayout;
 
     invoke-virtual {p0, v1, v0}, Lcom/koutong/remote/MainActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 445
+    .line 441
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->directionKeyboardView:Landroid/widget/LinearLayout;
 
     new-instance v2, Lcom/koutong/remote/MainActivity$5;
@@ -430,19 +418,19 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 484
+    .line 480
     return-void
 
-    .line 440
+    .line 436
     :cond_47
     const/16 v1, 0x50
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 441
+    .line 437
     iput v3, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
-    .line 442
+    .line 438
     const/16 v1, 0x55
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
@@ -459,13 +447,13 @@
 
     const/4 v3, -0x2
 
-    .line 565
-    .line 566
+    .line 561
+    .line 562
     const v1, 0x7f03000e
 
     const/4 v2, 0x0
 
-    .line 565
+    .line 561
     invoke-virtual {p1, v1, v2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
@@ -474,19 +462,19 @@
 
     iput-object v1, p0, Lcom/koutong/remote/MainActivity;->ffunctionKeyboardView:Landroid/widget/LinearLayout;
 
-    .line 567
+    .line 563
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->ffunctionKeyboardView:Landroid/widget/LinearLayout;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 568
+    .line 564
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v0, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 571
+    .line 567
     .local v0, "fViewParams":Landroid/widget/FrameLayout$LayoutParams;
     invoke-static {}, Lcom/koutong/remote/model/SettingInfo;->getInstance()Lcom/koutong/remote/model/SettingInfo;
 
@@ -502,15 +490,15 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 572
+    .line 568
     iput v4, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 573
+    .line 569
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->ffunctionKeyboardView:Landroid/widget/LinearLayout;
 
     invoke-virtual {p0, v1, v0}, Lcom/koutong/remote/MainActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 574
+    .line 570
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->ffunctionKeyboardView:Landroid/widget/LinearLayout;
 
     new-instance v2, Lcom/koutong/remote/MainActivity$7;
@@ -519,7 +507,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 600
+    .line 596
     return-void
 .end method
 
@@ -532,13 +520,13 @@
 
     const/4 v3, -0x2
 
-    .line 322
-    .line 323
+    .line 318
+    .line 319
     const v1, 0x7f03000f
 
     const/4 v2, 0x0
 
-    .line 322
+    .line 318
     invoke-virtual {p1, v1, v2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
@@ -547,19 +535,19 @@
 
     iput-object v1, p0, Lcom/koutong/remote/MainActivity;->gestureHelpView:Landroid/widget/LinearLayout;
 
-    .line 324
+    .line 320
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->gestureHelpView:Landroid/widget/LinearLayout;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 325
+    .line 321
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v0, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 328
+    .line 324
     .local v0, "gestureViewParams":Landroid/widget/FrameLayout$LayoutParams;
     invoke-static {}, Lcom/koutong/remote/model/SettingInfo;->getInstance()Lcom/koutong/remote/model/SettingInfo;
 
@@ -575,15 +563,15 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 330
+    .line 326
     iput v4, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 331
+    .line 327
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->gestureHelpView:Landroid/widget/LinearLayout;
 
     invoke-virtual {p0, v1, v0}, Lcom/koutong/remote/MainActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 332
+    .line 328
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->gestureHelpView:Landroid/widget/LinearLayout;
 
     new-instance v2, Lcom/koutong/remote/MainActivity$4;
@@ -592,7 +580,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 377
+    .line 373
     return-void
 .end method
 
@@ -605,7 +593,7 @@
 
     const/4 v3, -0x2
 
-    .line 509
+    .line 505
     const v1, 0x7f030018
 
     const/4 v2, 0x0
@@ -618,19 +606,19 @@
 
     iput-object v1, p0, Lcom/koutong/remote/MainActivity;->numKeyboardView:Landroid/widget/LinearLayout;
 
-    .line 510
+    .line 506
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->numKeyboardView:Landroid/widget/LinearLayout;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 511
+    .line 507
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v0, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 514
+    .line 510
     .local v0, "numViewParams":Landroid/widget/FrameLayout$LayoutParams;
     invoke-static {}, Lcom/koutong/remote/model/SettingInfo;->getInstance()Lcom/koutong/remote/model/SettingInfo;
 
@@ -646,15 +634,15 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 515
+    .line 511
     iput v4, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 516
+    .line 512
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->numKeyboardView:Landroid/widget/LinearLayout;
 
     invoke-virtual {p0, v1, v0}, Lcom/koutong/remote/MainActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 517
+    .line 513
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->numKeyboardView:Landroid/widget/LinearLayout;
 
     new-instance v2, Lcom/koutong/remote/MainActivity$6;
@@ -663,7 +651,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 556
+    .line 552
     return-void
 .end method
 
@@ -680,17 +668,17 @@
     .end annotation
 
     .prologue
-    .line 824
+    .line 813
     .local p1, "tasklist":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Lcom/koutong/remote/taskbar/Task;>;"
     move-object v0, p0
 
-    .line 825
+    .line 814
     .local v0, "context":Landroid/content/Context;
     invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
 
     move-result v1
 
-    .line 826
+    .line 815
     .local v1, "size":I
     new-instance v2, Lcom/koutong/remote/MainActivity$9;
 
@@ -698,7 +686,7 @@
 
     invoke-virtual {p0, v2}, Lcom/koutong/remote/MainActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 889
+    .line 878
     return-void
 .end method
 
@@ -717,7 +705,7 @@
 
     const/4 v3, -0x2
 
-    .line 385
+    .line 381
     invoke-static {}, Lcom/koutong/remote/App;->getInstance()Lcom/koutong/remote/App;
 
     move-result-object v1
@@ -732,10 +720,10 @@
 
     if-eqz v1, :cond_3c
 
-    .line 387
+    .line 383
     const/4 v1, 0x0
 
-    .line 386
+    .line 382
     invoke-virtual {p1, v6, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
@@ -744,10 +732,10 @@
 
     iput-object v1, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollView:Landroid/widget/HorizontalScrollView;
 
-    .line 388
+    .line 384
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollView:Landroid/widget/HorizontalScrollView;
 
-    .line 389
+    .line 385
     const v2, 0x7f0500a9
 
     invoke-virtual {v1, v2}, Landroid/widget/HorizontalScrollView;->findViewById(I)Landroid/view/View;
@@ -756,35 +744,35 @@
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    .line 388
+    .line 384
     iput-object v1, p0, Lcom/koutong/remote/MainActivity;->taskBarView:Landroid/widget/LinearLayout;
 
-    .line 390
+    .line 386
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v1, v5}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    .line 391
+    .line 387
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v0, v4, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 394
+    .line 390
     .local v0, "taskbarViewParams":Landroid/widget/FrameLayout$LayoutParams;
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {p0, v1, v0}, Lcom/koutong/remote/MainActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 420
+    .line 416
     :goto_3b
     return-void
 
-    .line 403
+    .line 399
     .end local v0    # "taskbarViewParams":Landroid/widget/FrameLayout$LayoutParams;
     :cond_3c
     const/4 v1, 0x0
 
-    .line 402
+    .line 398
     invoke-virtual {p1, v6, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
@@ -793,10 +781,10 @@
 
     iput-object v1, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollViewH:Landroid/widget/ScrollView;
 
-    .line 404
+    .line 400
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollViewH:Landroid/widget/ScrollView;
 
-    .line 405
+    .line 401
     const v2, 0x7f0500a9
 
     invoke-virtual {v1, v2}, Landroid/widget/ScrollView;->findViewById(I)Landroid/view/View;
@@ -805,20 +793,20 @@
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    .line 404
+    .line 400
     iput-object v1, p0, Lcom/koutong/remote/MainActivity;->taskBarView:Landroid/widget/LinearLayout;
 
-    .line 406
+    .line 402
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollViewH:Landroid/widget/ScrollView;
 
     invoke-virtual {v1, v5}, Landroid/widget/ScrollView;->setVisibility(I)V
 
-    .line 407
+    .line 403
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v0, v4, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 410
+    .line 406
     .restart local v0    # "taskbarViewParams":Landroid/widget/FrameLayout$LayoutParams;
     iget-object v1, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollViewH:Landroid/widget/ScrollView;
 
@@ -833,12 +821,12 @@
     .param p1, "y"    # I
 
     .prologue
-    .line 691
+    .line 687
     sget-object v0, Lcom/koutong/remote/MainActivity;->mRemoteView:Lcom/koutong/remote/view/RemoteView;
 
     invoke-virtual {v0, p0, p1}, Lcom/koutong/remote/view/RemoteView;->movePointer(II)V
 
-    .line 692
+    .line 688
     return-void
 .end method
 
@@ -849,24 +837,24 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 486
+    .line 482
     if-ne p0, v2, :cond_d
 
-    .line 488
+    .line 484
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "wwwwwwwwwwwwwwwwwwwwwwww"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 489
+    .line 485
     sput-boolean v2, Lcom/koutong/remote/MainActivity;->k3is:Z
 
-    .line 495
+    .line 491
     :goto_c
     return-void
 
-    .line 493
+    .line 489
     :cond_d
     const/4 v0, 0x0
 
@@ -882,7 +870,7 @@
     .param p2, "name"    # [B
 
     .prologue
-    .line 749
+    .line 745
     new-instance v0, Ljava/lang/String;
 
     const-string v2, "GBK"
@@ -893,7 +881,7 @@
 
     invoke-direct {v0, p2, v2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 750
+    .line 746
     .local v0, "str":Ljava/lang/String;
     const-string v2, "MainActivity"
 
@@ -917,7 +905,7 @@
 
     move-result-object v3
 
-    .line 751
+    .line 747
     const-string v4, ", name : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -932,74 +920,63 @@
 
     move-result-object v3
 
-    .line 750
+    .line 746
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 752
+    .line 748
     new-instance v1, Lcom/koutong/remote/taskbar/Task;
 
     invoke-direct {v1, p1, v0}, Lcom/koutong/remote/taskbar/Task;-><init>(ILjava/lang/String;)V
 
-    .line 753
+    .line 749
     .local v1, "task":Lcom/koutong/remote/taskbar/Task;
     sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
 
     if-eqz v2, :cond_3f
 
-    .line 754
-    packed-switch p0, :pswitch_data_8c
+    .line 750
+    packed-switch p0, :pswitch_data_68
 
-    .line 779
+    .line 768
     :cond_3f
     :goto_3f
     return-void
 
-    .line 757
+    .line 753
     :pswitch_40
     sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
 
     invoke-virtual {v2, v1}, Lcom/koutong/remote/taskbar/Taskbar;->createTask(Lcom/koutong/remote/taskbar/Task;)V
 
+    .line 754
+    sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
+
+    sget-object v3, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
+
+    invoke-virtual {v2, v3}, Lcom/koutong/remote/taskbar/Taskbar;->notifyObservers(Ljava/lang/Object;)V
+
+    goto :goto_3f
+
     .line 758
-    sget-boolean v2, Lcom/koutong/remote/MainActivity;->isfirst:Z
+    :pswitch_4d
+    sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
 
-    if-eqz v2, :cond_52
+    invoke-virtual {v2, v1}, Lcom/koutong/remote/taskbar/Taskbar;->destroyTask(Lcom/koutong/remote/taskbar/Task;)V
 
-    .line 760
-    invoke-virtual {v1}, Lcom/koutong/remote/taskbar/Task;->getName()Ljava/lang/String;
+    .line 759
+    sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
 
-    move-result-object v2
+    sget-object v3, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
 
-    sput-object v2, Lcom/koutong/remote/MainActivity;->tempstr:Ljava/lang/String;
+    invoke-virtual {v2, v3}, Lcom/koutong/remote/taskbar/Taskbar;->notifyObservers(Ljava/lang/Object;)V
 
-    .line 761
-    const/4 v2, 0x0
-
-    sput-boolean v2, Lcom/koutong/remote/MainActivity;->isfirst:Z
+    goto :goto_3f
 
     .line 763
-    :cond_52
-    sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
+    :pswitch_5a
+    sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "--------"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lcom/koutong/remote/taskbar/Task;->getName()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Lcom/koutong/remote/taskbar/Taskbar;->modifyTask(Lcom/koutong/remote/taskbar/Task;)V
 
     .line 764
     sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
@@ -1010,42 +987,14 @@
 
     goto :goto_3f
 
-    .line 768
-    :pswitch_72
-    sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
+    .line 750
+    nop
 
-    invoke-virtual {v2, v1}, Lcom/koutong/remote/taskbar/Taskbar;->destroyTask(Lcom/koutong/remote/taskbar/Task;)V
-
-    .line 769
-    sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
-
-    sget-object v3, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
-
-    invoke-virtual {v2, v3}, Lcom/koutong/remote/taskbar/Taskbar;->notifyObservers(Ljava/lang/Object;)V
-
-    goto :goto_3f
-
-    .line 773
-    :pswitch_7f
-    sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
-
-    invoke-virtual {v2, v1}, Lcom/koutong/remote/taskbar/Taskbar;->modifyTask(Lcom/koutong/remote/taskbar/Task;)V
-
-    .line 775
-    sget-object v2, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
-
-    sget-object v3, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
-
-    invoke-virtual {v2, v3}, Lcom/koutong/remote/taskbar/Taskbar;->notifyObservers(Ljava/lang/Object;)V
-
-    goto :goto_3f
-
-    .line 754
-    :pswitch_data_8c
+    :pswitch_data_68
     .packed-switch 0x0
         :pswitch_40
-        :pswitch_72
-        :pswitch_7f
+        :pswitch_4d
+        :pswitch_5a
     .end packed-switch
 .end method
 
@@ -1058,7 +1007,7 @@
     .param p4, "data"    # [I
 
     .prologue
-    .line 683
+    .line 679
     sget-object v0, Lcom/koutong/remote/MainActivity;->mRemoteView:Lcom/koutong/remote/view/RemoteView;
 
     move v1, p0
@@ -1073,7 +1022,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/koutong/remote/view/RemoteView;->setCursor(IIII[I)V
 
-    .line 684
+    .line 680
     return-void
 .end method
 
@@ -1084,52 +1033,52 @@
     .param p2, "arryName"    # [B
 
     .prologue
-    .line 696
+    .line 692
     array-length v8, p0
 
-    .line 698
+    .line 694
     .local v8, "nCount":I
     if-nez v8, :cond_4
 
-    .line 735
+    .line 731
     :cond_3
     return-void
 
-    .line 702
+    .line 698
     :cond_4
     array-length v11, p2
 
     div-int v6, v11, v8
 
-    .line 707
+    .line 703
     .local v6, "length":I
     invoke-static {}, Lcom/koutong/remote/inputmethod/RemoteInputMethod;->getInstance()Lcom/koutong/remote/inputmethod/RemoteInputMethod;
 
     move-result-object v7
 
-    .line 708
+    .line 704
     .local v7, "method":Lcom/koutong/remote/inputmethod/RemoteInputMethod;
     invoke-virtual {v7}, Lcom/koutong/remote/inputmethod/RemoteInputMethod;->cleanInputMethod()V
 
-    .line 710
+    .line 706
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_f
     if-ge v2, v8, :cond_3
 
-    .line 711
+    .line 707
     aget v3, p0, v2
 
-    .line 712
+    .line 708
     .local v3, "id":I
     aget v4, p1, v2
 
-    .line 714
+    .line 710
     .local v4, "isSelected":I
     const/4 v0, 0x0
 
-    .line 716
+    .line 712
     .local v0, "byteCount":I
     const/4 v5, 0x0
 
@@ -1137,11 +1086,11 @@
     :goto_17
     if-lt v5, v6, :cond_2b
 
-    .line 724
+    .line 720
     :cond_19
     const-string v9, ""
 
-    .line 726
+    .line 722
     .local v9, "sa":Ljava/lang/String;
     :try_start_1b
     new-instance v10, Ljava/lang/String;
@@ -1158,18 +1107,18 @@
     .local v10, "sa":Ljava/lang/String;
     move-object v9, v10
 
-    .line 733
+    .line 729
     .end local v10    # "sa":Ljava/lang/String;
     .restart local v9    # "sa":Ljava/lang/String;
     :goto_25
     invoke-virtual {v7, v3, v9, v4}, Lcom/koutong/remote/inputmethod/RemoteInputMethod;->AddMethod(ILjava/lang/String;I)V
 
-    .line 710
+    .line 706
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_f
 
-    .line 717
+    .line 713
     .end local v9    # "sa":Ljava/lang/String;
     :cond_2b
     mul-int v11, v6, v2
@@ -1180,22 +1129,22 @@
 
     if-eqz v11, :cond_19
 
-    .line 718
+    .line 714
     add-int/lit8 v0, v0, 0x1
 
-    .line 716
+    .line 712
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_17
 
-    .line 728
+    .line 724
     .restart local v9    # "sa":Ljava/lang/String;
     :catch_37
     move-exception v11
 
     move-object v1, v11
 
-    .line 730
+    .line 726
     .local v1, "e":Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v1}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
@@ -1206,12 +1155,12 @@
     .registers 1
 
     .prologue
-    .line 687
+    .line 683
     sget-object v0, Lcom/koutong/remote/MainActivity;->mRemoteView:Lcom/koutong/remote/view/RemoteView;
 
     invoke-virtual {v0}, Lcom/koutong/remote/view/RemoteView;->setNullCursor()V
 
-    .line 688
+    .line 684
     return-void
 .end method
 
@@ -1219,33 +1168,33 @@
     .registers 4
 
     .prologue
-    .line 782
+    .line 771
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 783
+    .line 772
     const-string v1, "\u7531\u4e8e\u60a8\u957f\u65f6\u95f4\u6ca1\u6709\u4efb\u4f55\u64cd\u4f5c\uff0c\u670d\u52a1\u5668\u65ad\u5f00\u8fde\u63a5\uff0c\u8bf7\u91cd\u65b0\u767b\u5f55\u670d\u52a1\u5668"
 
-    .line 782
+    .line 771
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 783
+    .line 772
     const-string v1, "\u786e\u8ba4"
 
-    .line 784
+    .line 773
     new-instance v2, Lcom/koutong/remote/MainActivity$8;
 
     invoke-direct {v2, p0}, Lcom/koutong/remote/MainActivity$8;-><init>(Lcom/koutong/remote/MainActivity;)V
 
-    .line 783
+    .line 772
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 791
+    .line 780
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
@@ -1254,7 +1203,7 @@
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 792
+    .line 781
     return-void
 .end method
 
@@ -1264,7 +1213,7 @@
     .registers 2
 
     .prologue
-    .line 922
+    .line 911
     iget-object v0, p0, Lcom/koutong/remote/MainActivity;->keyboardToolView:Landroid/widget/HorizontalScrollView;
 
     return-object v0
@@ -1276,7 +1225,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 637
+    .line 633
     invoke-static {}, Lcom/koutong/remote/model/SettingInfo;->getInstance()Lcom/koutong/remote/model/SettingInfo;
 
     move-result-object v0
@@ -1311,26 +1260,26 @@
 
     const/4 v4, 0x0
 
-    .line 894
+    .line 883
     if-nez p1, :cond_50
 
-    .line 895
+    .line 884
     if-nez p2, :cond_50
 
-    .line 896
+    .line 885
     if-eqz p3, :cond_50
 
-    .line 898
+    .line 887
     const-string v2, "remotemethodinfo"
 
     invoke-virtual {p3, v2}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;
 
     move-result-object v0
 
-    .line 897
+    .line 886
     check-cast v0, Lcom/koutong/remote/inputmethod/RemoteMethodInfo;
 
-    .line 899
+    .line 888
     .local v0, "info":Lcom/koutong/remote/inputmethod/RemoteMethodInfo;
     invoke-virtual {v0}, Lcom/koutong/remote/inputmethod/RemoteMethodInfo;->getName()Ljava/lang/String;
 
@@ -1342,24 +1291,24 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
-    .line 900
+    .line 889
     invoke-virtual {v0}, Lcom/koutong/remote/inputmethod/RemoteMethodInfo;->getId()I
 
     move-result v2
 
     if-nez v2, :cond_51
 
-    .line 901
+    .line 890
     const-string v2, "MainActivity"
 
     const-string v3, "---------local inputmethod"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 902
+    .line 891
     invoke-static {v5}, Lcom/koutong/remote/model/ServerApp;->setEnable_local_im(I)V
 
-    .line 908
+    .line 897
     :goto_2c
     sget-object v2, Lcom/koutong/remote/MainActivity;->mRemoteView:Lcom/koutong/remote/view/RemoteView;
 
@@ -1374,7 +1323,7 @@
     :goto_35
     invoke-virtual {v2, v3}, Lcom/koutong/remote/view/RemoteView;->changeInputType(Z)V
 
-    .line 910
+    .line 899
     iget-object v2, p0, Lcom/koutong/remote/MainActivity;->keyboardToolView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v2}, Landroid/widget/HorizontalScrollView;->isShown()Z
@@ -1383,12 +1332,12 @@
 
     if-nez v2, :cond_65
 
-    .line 911
+    .line 900
     iget-object v2, p0, Lcom/koutong/remote/MainActivity;->keyboardToolView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v2, v4}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    .line 915
+    .line 904
     :goto_45
     const-string v2, "input_method"
 
@@ -1398,17 +1347,17 @@
 
     check-cast v1, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 916
+    .line 905
     .local v1, "input":Landroid/view/inputmethod/InputMethodManager;
     invoke-virtual {v1, v6, v6}, Landroid/view/inputmethod/InputMethodManager;->toggleSoftInput(II)V
 
-    .line 919
+    .line 908
     .end local v0    # "info":Lcom/koutong/remote/inputmethod/RemoteMethodInfo;
     .end local v1    # "input":Landroid/view/inputmethod/InputMethodManager;
     :cond_50
     return-void
 
-    .line 904
+    .line 893
     .restart local v0    # "info":Lcom/koutong/remote/inputmethod/RemoteMethodInfo;
     :cond_51
     const-string v2, "MainActivity"
@@ -1417,10 +1366,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 905
+    .line 894
     invoke-static {v4}, Lcom/koutong/remote/model/ServerApp;->setEnable_local_im(I)V
 
-    .line 906
+    .line 895
     invoke-virtual {v0}, Lcom/koutong/remote/inputmethod/RemoteMethodInfo;->getId()I
 
     move-result v2
@@ -1432,10 +1381,10 @@
     :cond_63
     move v3, v4
 
-    .line 908
+    .line 897
     goto :goto_35
 
-    .line 913
+    .line 902
     :cond_65
     iget-object v2, p0, Lcom/koutong/remote/MainActivity;->keyboardToolView:Landroid/widget/HorizontalScrollView;
 
@@ -1450,10 +1399,10 @@
     .registers 1
 
     .prologue
-    .line 927
+    .line 916
     invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
 
-    .line 929
+    .line 918
     return-void
 .end method
 
@@ -1462,10 +1411,10 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 604
+    .line 600
     invoke-super {p0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 605
+    .line 601
     return-void
 .end method
 
@@ -1474,34 +1423,31 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/4 v4, 0x1
-
     const/4 v3, -0x1
 
     const/16 v2, -0x100
 
-    .line 122
+    .line 120
     const-string v0, "MainActivity"
 
     const-string v1, "onCreate"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
+    .line 121
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 124
-    sput-boolean v4, Lcom/koutong/remote/MainActivity;->isfirst:Z
+    .line 122
+    const/4 v0, 0x1
 
-    .line 125
-    invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->requestWindowFeature(I)Z
 
-    .line 130
+    .line 127
     const v0, 0x7f030017
 
     invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->setContentView(I)V
 
-    .line 132
+    .line 129
     const v0, 0x7f05006b
 
     invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->findViewById(I)Landroid/view/View;
@@ -1512,7 +1458,7 @@
 
     iput-object v0, p0, Lcom/koutong/remote/MainActivity;->win_view:Landroid/widget/Button;
 
-    .line 133
+    .line 130
     invoke-virtual {p0}, Lcom/koutong/remote/MainActivity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v0
@@ -1525,7 +1471,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 134
+    .line 131
     const v0, 0x7f050063
 
     invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->findViewById(I)Landroid/view/View;
@@ -1534,7 +1480,7 @@
 
     check-cast v11, Lcom/koutong/remote/view/ResizeLayout;
 
-    .line 135
+    .line 132
     .local v11, "layout":Lcom/koutong/remote/view/ResizeLayout;
     new-instance v0, Lcom/koutong/remote/MainActivity$1;
 
@@ -1542,7 +1488,7 @@
 
     invoke-virtual {v11, v0}, Lcom/koutong/remote/view/ResizeLayout;->setOnResizeListener(Lcom/koutong/remote/view/ResizeLayout$OnResizeListener;)V
 
-    .line 148
+    .line 145
     const v0, 0x7f050062
 
     invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->findViewById(I)Landroid/view/View;
@@ -1553,28 +1499,28 @@
 
     sput-object v0, Lcom/koutong/remote/MainActivity;->mRemoteView:Lcom/koutong/remote/view/RemoteView;
 
-    .line 151
+    .line 148
     invoke-virtual {p0}, Lcom/koutong/remote/MainActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v9
 
-    .line 153
+    .line 150
     .local v9, "inflater":Landroid/view/LayoutInflater;
     invoke-direct {p0, v9}, Lcom/koutong/remote/MainActivity;->initNumKeyboardView(Landroid/view/LayoutInflater;)V
 
-    .line 155
+    .line 152
     invoke-direct {p0, v9}, Lcom/koutong/remote/MainActivity;->initDirectionKeyboardView(Landroid/view/LayoutInflater;)V
 
-    .line 157
+    .line 154
     invoke-direct {p0, v9}, Lcom/koutong/remote/MainActivity;->initFfunctionKeyboardView(Landroid/view/LayoutInflater;)V
 
-    .line 159
+    .line 156
     invoke-direct {p0, v9}, Lcom/koutong/remote/MainActivity;->initTaskbarView(Landroid/view/LayoutInflater;)V
 
-    .line 161
+    .line 158
     invoke-direct {p0, v9}, Lcom/koutong/remote/MainActivity;->initGestureHelpView(Landroid/view/LayoutInflater;)V
 
-    .line 163
+    .line 160
     const v0, 0x7f050064
 
     invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->findViewById(I)Landroid/view/View;
@@ -1585,7 +1531,7 @@
 
     iput-object v0, p0, Lcom/koutong/remote/MainActivity;->slidingDrawer:Landroid/widget/SlidingDrawer;
 
-    .line 164
+    .line 161
     iget-object v0, p0, Lcom/koutong/remote/MainActivity;->slidingDrawer:Landroid/widget/SlidingDrawer;
 
     new-instance v1, Lcom/koutong/remote/MainActivity$2;
@@ -1594,7 +1540,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/SlidingDrawer;->setOnDrawerOpenListener(Landroid/widget/SlidingDrawer$OnDrawerOpenListener;)V
 
-    .line 173
+    .line 170
     iget-object v0, p0, Lcom/koutong/remote/MainActivity;->slidingDrawer:Landroid/widget/SlidingDrawer;
 
     new-instance v1, Lcom/koutong/remote/MainActivity$3;
@@ -1603,7 +1549,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/SlidingDrawer;->setOnDrawerCloseListener(Landroid/widget/SlidingDrawer$OnDrawerCloseListener;)V
 
-    .line 184
+    .line 181
     const v0, 0x7f050079
 
     invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->findViewById(I)Landroid/view/View;
@@ -1612,20 +1558,20 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 185
+    .line 182
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getAltKey()Z
 
     move-result v1
 
-    if-eqz v1, :cond_ee
+    if-eqz v1, :cond_ec
 
     move v1, v2
 
-    .line 184
-    :goto_8f
+    .line 181
+    :goto_8d
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTextColor(I)V
 
-    .line 186
+    .line 183
     const v0, 0x7f050078
 
     invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->findViewById(I)Landroid/view/View;
@@ -1634,20 +1580,20 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 187
+    .line 184
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getCtrlKey()Z
 
     move-result v1
 
-    if-eqz v1, :cond_f0
+    if-eqz v1, :cond_ee
 
     move v1, v2
 
-    .line 186
-    :goto_a2
+    .line 183
+    :goto_a0
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTextColor(I)V
 
-    .line 189
+    .line 186
     const v0, 0x7f05006e
 
     invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->findViewById(I)Landroid/view/View;
@@ -1658,12 +1604,12 @@
 
     iput-object v0, p0, Lcom/koutong/remote/MainActivity;->keyboardToolView:Landroid/widget/HorizontalScrollView;
 
-    .line 192
+    .line 189
     invoke-virtual {p0}, Lcom/koutong/remote/MainActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v10
 
-    .line 193
+    .line 190
     .local v10, "intent":Landroid/content/Intent;
     const-string v0, "ServerApp"
 
@@ -1673,7 +1619,7 @@
 
     check-cast v12, Lcom/koutong/remote/model/ServerApp;
 
-    .line 194
+    .line 191
     .local v12, "newApp":Lcom/koutong/remote/model/ServerApp;
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getInstance()Lcom/koutong/remote/RDPConnection;
 
@@ -1681,10 +1627,10 @@
 
     invoke-virtual {v0}, Lcom/koutong/remote/RDPConnection;->getState()I
 
-    .line 199
-    if-eqz v12, :cond_ed
+    .line 196
+    if-eqz v12, :cond_eb
 
-    .line 201
+    .line 198
     invoke-virtual {v12}, Lcom/koutong/remote/model/ServerApp;->getAppType()I
 
     move-result v1
@@ -1693,7 +1639,7 @@
 
     move-result-object v2
 
-    .line 202
+    .line 199
     invoke-virtual {v12}, Lcom/koutong/remote/model/ServerApp;->getAppPath()Ljava/lang/String;
 
     move-result-object v3
@@ -1702,7 +1648,7 @@
 
     move-result-object v4
 
-    .line 203
+    .line 200
     invoke-virtual {v12}, Lcom/koutong/remote/model/ServerApp;->getWorkingDir()Ljava/lang/String;
 
     move-result-object v5
@@ -1711,7 +1657,7 @@
 
     move-result v6
 
-    .line 204
+    .line 201
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
     move-result v7
@@ -1722,31 +1668,31 @@
 
     move-object v0, p0
 
-    .line 201
+    .line 198
     invoke-virtual/range {v0 .. v8}, Lcom/koutong/remote/MainActivity;->startServerApp(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
 
-    .line 205
+    .line 202
     const/4 v0, 0x0
 
     invoke-virtual {v12, v0}, Lcom/koutong/remote/model/ServerApp;->setIsFirstCall(I)V
 
-    .line 218
-    :cond_ed
+    .line 215
+    :cond_eb
     return-void
 
     .end local v10    # "intent":Landroid/content/Intent;
     .end local v12    # "newApp":Lcom/koutong/remote/model/ServerApp;
+    :cond_ec
+    move v1, v3
+
+    .line 182
+    goto :goto_8d
+
     :cond_ee
     move v1, v3
 
-    .line 185
-    goto :goto_8f
-
-    :cond_f0
-    move v1, v3
-
-    .line 187
-    goto :goto_a2
+    .line 184
+    goto :goto_a0
 .end method
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z
@@ -1754,7 +1700,7 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 614
+    .line 610
     const/4 v0, 0x0
 
     return v0
@@ -1764,17 +1710,17 @@
     .registers 3
 
     .prologue
-    .line 270
+    .line 266
     const-string v0, "MainActivity"
 
     const-string v1, "onDestroy"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
+    .line 268
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 273
+    .line 269
     return-void
 .end method
 
@@ -1783,22 +1729,22 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 619
+    .line 615
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
 
-    .line 620
+    .line 616
     .local v0, "id":I
     sparse-switch v0, :sswitch_data_1e
 
-    .line 633
+    .line 629
     :goto_7
     const/4 v2, 0x1
 
     return v2
 
-    .line 622
+    .line 618
     :sswitch_9
     new-instance v1, Landroid/content/Intent;
 
@@ -1806,7 +1752,7 @@
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 623
+    .line 619
     .local v1, "intent":Landroid/content/Intent;
     const/4 v2, 0x0
 
@@ -1814,20 +1760,20 @@
 
     goto :goto_7
 
-    .line 626
+    .line 622
     .end local v1    # "intent":Landroid/content/Intent;
     :sswitch_15
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->showServerLangBar()V
 
     goto :goto_7
 
-    .line 629
+    .line 625
     :sswitch_19
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->showServerInputDialog()V
 
     goto :goto_7
 
-    .line 620
+    .line 616
     nop
 
     :sswitch_data_1e
@@ -1842,24 +1788,24 @@
     .registers 3
 
     .prologue
-    .line 240
+    .line 237
     const-string v0, "MainActivity"
 
     const-string v1, "onPause"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
+    .line 239
     iget-object v0, p0, Lcom/koutong/remote/MainActivity;->keyboardToolView:Landroid/widget/HorizontalScrollView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    .line 243
+    .line 240
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 244
+    .line 241
     return-void
 .end method
 
@@ -1867,17 +1813,17 @@
     .registers 3
 
     .prologue
-    .line 222
+    .line 219
     const-string v0, "MainActivity"
 
     const-string v1, "onRestart"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
+    .line 220
     invoke-super {p0}, Landroid/app/Activity;->onRestart()V
 
-    .line 224
+    .line 221
     return-void
 .end method
 
@@ -1885,17 +1831,17 @@
     .registers 3
 
     .prologue
-    .line 234
+    .line 231
     const-string v0, "MainActivity"
 
     const-string v1, "onResume"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
+    .line 232
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 236
+    .line 233
     return-void
 .end method
 
@@ -1904,17 +1850,17 @@
     .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 315
+    .line 311
     const-string v0, "MainActivity"
 
     const-string v1, "onSaveInstanceState"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
+    .line 313
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 318
+    .line 314
     return-void
 .end method
 
@@ -1922,17 +1868,17 @@
     .registers 3
 
     .prologue
-    .line 228
+    .line 225
     const-string v0, "MainActivity"
 
     const-string v1, "onStart"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
+    .line 226
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
-    .line 230
+    .line 227
     return-void
 .end method
 
@@ -1940,63 +1886,52 @@
     .registers 4
 
     .prologue
-    .line 248
+    .line 245
     const-string v1, "MainActivity"
 
     const-string v2, "onStop"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
-    sget-object v1, Lcom/koutong/remote/MainActivity;->tempstr:Ljava/lang/String;
+    .line 246
+    sget-boolean v1, Lcom/koutong/remote/MainActivity;->k3is:Z
 
-    const-string v2, "K/3"
+    if-eqz v1, :cond_24
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v1
-
-    if-lez v1, :cond_2e
-
-    .line 251
+    .line 248
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/koutong/remote/MainActivity;->k3is:Z
 
-    .line 252
-    const-string v1, ""
-
-    sput-object v1, Lcom/koutong/remote/MainActivity;->tempstr:Ljava/lang/String;
-
-    .line 253
+    .line 249
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v2, "qqqqqqqqqqqqqqqqqqq"
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 254
+    .line 250
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/koutong/remote/AppChoserActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 255
+    .line 251
     .local v0, "i":Landroid/content/Intent;
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 256
+    .line 252
     invoke-virtual {p0, v0}, Lcom/koutong/remote/MainActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 265
+    .line 261
     .end local v0    # "i":Landroid/content/Intent;
-    :cond_2e
+    :cond_24
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    .line 266
+    .line 262
     return-void
 .end method
 
@@ -2005,7 +1940,7 @@
     .param p1, "hasFocus"    # Z
 
     .prologue
-    .line 277
+    .line 273
     const-string v0, "MainActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2024,29 +1959,29 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
+    .line 274
     invoke-static {}, Lcom/koutong/remote/taskbar/Taskbar;->getTaskbarInstance()Lcom/koutong/remote/taskbar/Taskbar;
 
     move-result-object v0
 
     sput-object v0, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
 
-    .line 279
+    .line 275
     if-eqz p1, :cond_32
 
-    .line 280
+    .line 276
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getInstance()Lcom/koutong/remote/RDPConnection;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/koutong/remote/RDPConnection;->addObserver(Ljava/util/Observer;)V
 
-    .line 281
+    .line 277
     sget-object v0, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
 
     invoke-virtual {v0, p0}, Lcom/koutong/remote/taskbar/Taskbar;->addObserver(Ljava/util/Observer;)V
 
-    .line 282
+    .line 278
     sget-object v0, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
 
     invoke-virtual {v0}, Lcom/koutong/remote/taskbar/Taskbar;->getTaskbar()Ljava/util/LinkedList;
@@ -2055,11 +1990,11 @@
 
     invoke-direct {p0, v0}, Lcom/koutong/remote/MainActivity;->initTaskMsg(Ljava/util/LinkedList;)V
 
-    .line 287
+    .line 283
     :goto_31
     return-void
 
-    .line 284
+    .line 280
     :cond_32
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getInstance()Lcom/koutong/remote/RDPConnection;
 
@@ -2067,7 +2002,7 @@
 
     invoke-virtual {v0, p0}, Lcom/koutong/remote/RDPConnection;->deleteObserver(Ljava/util/Observer;)V
 
-    .line 285
+    .line 281
     sget-object v0, Lcom/koutong/remote/MainActivity;->taskbar:Lcom/koutong/remote/taskbar/Taskbar;
 
     invoke-virtual {v0, p0}, Lcom/koutong/remote/taskbar/Taskbar;->deleteObserver(Ljava/util/Observer;)V
@@ -2090,29 +2025,29 @@
 
     const/4 v8, 0x0
 
-    .line 938
+    .line 927
     const-string v4, "MainActivity"
 
     const-string v5, "performOnClick"
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 939
+    .line 928
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v1
 
-    .line 940
+    .line 929
     .local v1, "id":I
     packed-switch v1, :pswitch_data_478
 
-    .line 1362
+    .line 1351
     .end local p1    # "view":Landroid/view/View;
     :goto_17
     :pswitch_17
     return-void
 
-    .line 942
+    .line 931
     .restart local p1    # "view":Landroid/view/View;
     :pswitch_18
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getCtrlKey()Z
@@ -2126,14 +2061,14 @@
     :goto_1f
     invoke-static {v4}, Lcom/koutong/remote/RDPConnection;->setCtrlKey(Z)V
 
-    .line 943
+    .line 932
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getCtrlKey()Z
 
     move-result v4
 
     if-eqz v4, :cond_32
 
-    .line 944
+    .line 933
     check-cast p1, Landroid/widget/Button;
 
     .end local p1    # "view":Landroid/view/View;
@@ -2147,10 +2082,10 @@
     :cond_30
     move v4, v9
 
-    .line 942
+    .line 931
     goto :goto_1f
 
-    .line 946
+    .line 935
     :cond_32
     check-cast p1, Landroid/widget/Button;
 
@@ -2161,7 +2096,7 @@
 
     goto :goto_17
 
-    .line 950
+    .line 939
     .restart local p1    # "view":Landroid/view/View;
     :pswitch_39
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getAltKey()Z
@@ -2175,14 +2110,14 @@
     :goto_40
     invoke-static {v4}, Lcom/koutong/remote/RDPConnection;->setAltKey(Z)V
 
-    .line 951
+    .line 940
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getAltKey()Z
 
     move-result v4
 
     if-eqz v4, :cond_53
 
-    .line 952
+    .line 941
     check-cast p1, Landroid/widget/Button;
 
     .end local p1    # "view":Landroid/view/View;
@@ -2196,10 +2131,10 @@
     :cond_51
     move v4, v9
 
-    .line 950
+    .line 939
     goto :goto_40
 
-    .line 954
+    .line 943
     :cond_53
     check-cast p1, Landroid/widget/Button;
 
@@ -2210,43 +2145,43 @@
 
     goto :goto_17
 
-    .line 958
+    .line 947
     .restart local p1    # "view":Landroid/view/View;
     :pswitch_5a
     invoke-static {v9, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 960
+    .line 949
     invoke-static {v9, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
     goto :goto_17
 
-    .line 964
+    .line 953
     :pswitch_61
     const/16 v4, 0xf
 
     invoke-static {v4, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 966
+    .line 955
     const/16 v4, 0xf
 
     invoke-static {v4, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
     goto :goto_17
 
-    .line 970
+    .line 959
     :pswitch_6c
     const/16 v4, 0x46
 
     invoke-static {v4, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 972
+    .line 961
     const/16 v4, 0x46
 
     invoke-static {v4, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
     goto :goto_17
 
-    .line 976
+    .line 965
     :pswitch_77
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->ffunctionKeyboardView:Landroid/widget/LinearLayout;
 
@@ -2256,14 +2191,14 @@
 
     if-eqz v4, :cond_85
 
-    .line 977
+    .line 966
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->ffunctionKeyboardView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     goto :goto_17
 
-    .line 979
+    .line 968
     :cond_85
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->ffunctionKeyboardView:Landroid/widget/LinearLayout;
 
@@ -2271,7 +2206,7 @@
 
     goto :goto_17
 
-    .line 983
+    .line 972
     :pswitch_8b
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->ffunctionKeyboardView:Landroid/widget/LinearLayout;
 
@@ -2279,128 +2214,128 @@
 
     goto :goto_17
 
-    .line 986
+    .line 975
     :pswitch_91
     const/16 v4, 0x47
 
     invoke-static {v4, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 988
+    .line 977
     const/16 v4, 0x47
 
     invoke-static {v4, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
     goto/16 :goto_17
 
-    .line 992
+    .line 981
     :pswitch_9d
     const/16 v4, 0x4f
 
     invoke-static {v4, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 994
+    .line 983
     const/16 v4, 0x4f
 
     invoke-static {v4, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
     goto/16 :goto_17
 
-    .line 1005
+    .line 994
     :pswitch_a9
     invoke-static {v7, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1006
+    .line 995
     const/16 v4, 0x2d
 
     invoke-static {v4, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1007
+    .line 996
     const/16 v4, 0xad
 
     invoke-static {v4, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1010
+    .line 999
     invoke-static {v7, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
     goto/16 :goto_17
 
-    .line 1013
+    .line 1002
     :pswitch_bb
     invoke-static {v7, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1014
+    .line 1003
     const/16 v4, 0x2e
 
     invoke-static {v4, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1015
+    .line 1004
     const/16 v4, 0xae
 
     invoke-static {v4, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1018
+    .line 1007
     invoke-static {v7, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
     goto/16 :goto_17
 
-    .line 1021
+    .line 1010
     :pswitch_cd
     invoke-static {v7, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1022
+    .line 1011
     const/16 v4, 0x2f
 
     invoke-static {v4, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1023
+    .line 1012
     const/16 v4, 0xaf
 
     invoke-static {v4, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1026
+    .line 1015
     invoke-static {v7, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
     goto/16 :goto_17
 
-    .line 1029
+    .line 1018
     :pswitch_df
     invoke-static {v7, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1030
+    .line 1019
     const/16 v4, 0x2c
 
     invoke-static {v4, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1031
+    .line 1020
     const/16 v4, 0xac
 
     invoke-static {v4, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1034
+    .line 1023
     invoke-static {v7, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
     goto/16 :goto_17
 
-    .line 1037
+    .line 1026
     :pswitch_f1
     invoke-static {v7, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1038
+    .line 1027
     const/16 v4, 0x15
 
     invoke-static {v4, v8}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1039
+    .line 1028
     const/16 v4, 0x95
 
     invoke-static {v4, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
-    .line 1042
+    .line 1031
     invoke-static {v7, v6}, Lcom/koutong/remote/RDPConnection;->sendScancodeInput(II)V
 
     goto/16 :goto_17
 
-    .line 1050
+    .line 1039
     :pswitch_103
     new-instance v2, Landroid/content/Intent;
 
@@ -2408,13 +2343,13 @@
 
     invoke-direct {v2, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 1051
+    .line 1040
     .local v2, "intent":Landroid/content/Intent;
     invoke-virtual {p0, v2, v8}, Lcom/koutong/remote/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto/16 :goto_17
 
-    .line 1054
+    .line 1043
     .end local v2    # "intent":Landroid/content/Intent;
     :pswitch_10f
     invoke-virtual {p1}, Landroid/view/View;->isSelected()Z
@@ -2423,10 +2358,10 @@
 
     if-eqz v4, :cond_128
 
-    .line 1055
+    .line 1044
     invoke-virtual {p1, v8}, Landroid/view/View;->setSelected(Z)V
 
-    .line 1059
+    .line 1048
     :goto_118
     sget-object v4, Lcom/koutong/remote/MainActivity;->mRemoteView:Lcom/koutong/remote/view/RemoteView;
 
@@ -2445,7 +2380,7 @@
 
     goto/16 :goto_17
 
-    .line 1057
+    .line 1046
     :cond_128
     invoke-virtual {p1, v9}, Landroid/view/View;->setSelected(Z)V
 
@@ -2454,10 +2389,10 @@
     :cond_12c
     move v5, v9
 
-    .line 1059
+    .line 1048
     goto :goto_123
 
-    .line 1062
+    .line 1051
     :pswitch_12e
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->numKeyboardView:Landroid/widget/LinearLayout;
 
@@ -2467,28 +2402,28 @@
 
     if-eqz v4, :cond_140
 
-    .line 1063
+    .line 1052
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->numKeyboardView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1064
+    .line 1053
     invoke-virtual {p1, v8}, Landroid/view/View;->setSelected(Z)V
 
     goto/16 :goto_17
 
-    .line 1066
+    .line 1055
     :cond_140
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->numKeyboardView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v8}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1067
+    .line 1056
     invoke-virtual {p1, v9}, Landroid/view/View;->setSelected(Z)V
 
     goto/16 :goto_17
 
-    .line 1071
+    .line 1060
     :pswitch_14a
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->directionKeyboardView:Landroid/widget/LinearLayout;
 
@@ -2498,41 +2433,41 @@
 
     if-eqz v4, :cond_15c
 
-    .line 1072
+    .line 1061
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->directionKeyboardView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1073
+    .line 1062
     invoke-virtual {p1, v8}, Landroid/view/View;->setSelected(Z)V
 
     goto/16 :goto_17
 
-    .line 1075
+    .line 1064
     :cond_15c
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->directionKeyboardView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v8}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1076
+    .line 1065
     invoke-virtual {p1, v9}, Landroid/view/View;->setSelected(Z)V
 
     goto/16 :goto_17
 
-    .line 1086
+    .line 1075
     :pswitch_166
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->keyboardToolView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v4, v10}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    .line 1087
+    .line 1076
     sget-object v4, Lcom/koutong/remote/MainActivity;->mRemoteView:Lcom/koutong/remote/view/RemoteView;
 
     invoke-virtual {v4}, Lcom/koutong/remote/view/RemoteView;->showInputMethod()V
 
     goto/16 :goto_17
 
-    .line 1090
+    .line 1079
     :pswitch_172
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->keyboardToolView:Landroid/widget/HorizontalScrollView;
 
@@ -2542,15 +2477,15 @@
 
     if-nez v4, :cond_189
 
-    .line 1091
+    .line 1080
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->keyboardToolView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v4, v8}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    .line 1092
+    .line 1081
     invoke-virtual {p1, v9}, Landroid/view/View;->setSelected(Z)V
 
-    .line 1097
+    .line 1086
     :goto_182
     sget-object v4, Lcom/koutong/remote/MainActivity;->mRemoteView:Lcom/koutong/remote/view/RemoteView;
 
@@ -2558,18 +2493,18 @@
 
     goto/16 :goto_17
 
-    .line 1094
+    .line 1083
     :cond_189
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->keyboardToolView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v4, v10}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    .line 1095
+    .line 1084
     invoke-virtual {p1, v8}, Landroid/view/View;->setSelected(Z)V
 
     goto :goto_182
 
-    .line 1100
+    .line 1089
     :pswitch_192
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->gestureHelpView:Landroid/widget/LinearLayout;
 
@@ -2579,34 +2514,34 @@
 
     if-eqz v4, :cond_1a4
 
-    .line 1101
+    .line 1090
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->gestureHelpView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1102
+    .line 1091
     invoke-virtual {p1, v8}, Landroid/view/View;->setSelected(Z)V
 
     goto/16 :goto_17
 
-    .line 1104
+    .line 1093
     :cond_1a4
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->gestureHelpView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v8}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1105
+    .line 1094
     invoke-virtual {p1, v9}, Landroid/view/View;->setSelected(Z)V
 
     goto/16 :goto_17
 
-    .line 1109
+    .line 1098
     :pswitch_1ae
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->gestureHelpView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1110
+    .line 1099
     const v4, 0x7f05006a
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->findViewById(I)Landroid/view/View;
@@ -2617,7 +2552,7 @@
 
     goto/16 :goto_17
 
-    .line 1113
+    .line 1102
     :pswitch_1bf
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->taskBarView:Landroid/widget/LinearLayout;
 
@@ -2627,7 +2562,7 @@
 
     if-nez v4, :cond_211
 
-    .line 1119
+    .line 1108
     invoke-static {}, Lcom/koutong/remote/App;->getInstance()Lcom/koutong/remote/App;
 
     move-result-object v4
@@ -2642,18 +2577,18 @@
 
     if-eqz v4, :cond_207
 
-    .line 1120
+    .line 1109
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v4, v8}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    .line 1121
+    .line 1110
     invoke-virtual {p1, v9}, Landroid/view/View;->setSelected(Z)V
 
-    .line 1122
+    .line 1111
     new-instance v3, Landroid/view/animation/TranslateAnimation;
 
-    .line 1123
+    .line 1112
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -2670,38 +2605,38 @@
 
     const/4 v7, 0x0
 
-    .line 1122
+    .line 1111
     invoke-direct {v3, v4, v5, v6, v7}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 1124
+    .line 1113
     .local v3, "translateAnimation":Landroid/view/animation/TranslateAnimation;
     new-instance v0, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v0, v9}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1125
+    .line 1114
     .local v0, "animationSet":Landroid/view/animation/AnimationSet;
     invoke-virtual {v0, v3}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1128
+    .line 1117
     const v4, 0x10c0008
 
-    .line 1127
+    .line 1116
     invoke-virtual {v0, p0, v4}, Landroid/view/animation/AnimationSet;->setInterpolator(Landroid/content/Context;I)V
 
-    .line 1129
+    .line 1118
     const-wide/16 v4, 0x1f4
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/AnimationSet;->setDuration(J)V
 
-    .line 1130
+    .line 1119
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v4, v0}, Landroid/widget/HorizontalScrollView;->startAnimation(Landroid/view/animation/Animation;)V
 
     goto/16 :goto_17
 
-    .line 1132
+    .line 1121
     .end local v0    # "animationSet":Landroid/view/animation/AnimationSet;
     .end local v3    # "translateAnimation":Landroid/view/animation/TranslateAnimation;
     :cond_207
@@ -2709,12 +2644,12 @@
 
     invoke-virtual {v4, v8}, Landroid/widget/ScrollView;->setVisibility(I)V
 
-    .line 1133
+    .line 1122
     invoke-virtual {p1, v9}, Landroid/view/View;->setSelected(Z)V
 
     goto/16 :goto_17
 
-    .line 1141
+    .line 1130
     :cond_211
     invoke-static {}, Lcom/koutong/remote/App;->getInstance()Lcom/koutong/remote/App;
 
@@ -2730,10 +2665,10 @@
 
     if-eqz v4, :cond_251
 
-    .line 1142
+    .line 1131
     new-instance v3, Landroid/view/animation/TranslateAnimation;
 
-    .line 1143
+    .line 1132
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -2750,46 +2685,46 @@
 
     int-to-float v7, v7
 
-    .line 1142
+    .line 1131
     invoke-direct {v3, v4, v5, v6, v7}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 1144
+    .line 1133
     .restart local v3    # "translateAnimation":Landroid/view/animation/TranslateAnimation;
     new-instance v0, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v0, v9}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 1145
+    .line 1134
     .restart local v0    # "animationSet":Landroid/view/animation/AnimationSet;
     invoke-virtual {v0, v3}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1148
+    .line 1137
     const v4, 0x10c0007
 
-    .line 1147
+    .line 1136
     invoke-virtual {v0, p0, v4}, Landroid/view/animation/AnimationSet;->setInterpolator(Landroid/content/Context;I)V
 
-    .line 1149
+    .line 1138
     const-wide/16 v4, 0x1f4
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/AnimationSet;->setDuration(J)V
 
-    .line 1150
+    .line 1139
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v4, v0}, Landroid/widget/HorizontalScrollView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1151
+    .line 1140
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->taskBarScrollView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v4, v10}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    .line 1152
+    .line 1141
     invoke-virtual {p1, v8}, Landroid/view/View;->setSelected(Z)V
 
     goto/16 :goto_17
 
-    .line 1154
+    .line 1143
     .end local v0    # "animationSet":Landroid/view/animation/AnimationSet;
     .end local v3    # "translateAnimation":Landroid/view/animation/TranslateAnimation;
     :cond_251
@@ -2797,24 +2732,24 @@
 
     invoke-virtual {v4, v10}, Landroid/widget/ScrollView;->setVisibility(I)V
 
-    .line 1155
+    .line 1144
     invoke-virtual {p1, v8}, Landroid/view/View;->setSelected(Z)V
 
     goto/16 :goto_17
 
-    .line 1162
+    .line 1151
     :pswitch_25b
     invoke-virtual {p0}, Lcom/koutong/remote/MainActivity;->onBackPressed()V
 
     goto/16 :goto_17
 
-    .line 1166
+    .line 1155
     :pswitch_260
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->numKeyboardView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1167
+    .line 1156
     const v4, 0x7f05006d
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->findViewById(I)Landroid/view/View;
@@ -2825,7 +2760,7 @@
 
     goto/16 :goto_17
 
-    .line 1170
+    .line 1159
     :pswitch_271
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -2833,14 +2768,14 @@
 
     if-eqz v4, :cond_27e
 
-    .line 1171
+    .line 1160
     const/16 v4, 0x23
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1173
+    .line 1162
     :cond_27e
     const/4 v4, 0x4
 
@@ -2848,7 +2783,7 @@
 
     goto/16 :goto_17
 
-    .line 1177
+    .line 1166
     :pswitch_284
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -2856,14 +2791,14 @@
 
     if-eqz v4, :cond_291
 
-    .line 1178
+    .line 1167
     const/16 v4, 0x28
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1180
+    .line 1169
     :cond_291
     const/16 v4, 0xa
 
@@ -2871,7 +2806,7 @@
 
     goto/16 :goto_17
 
-    .line 1184
+    .line 1173
     :pswitch_298
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -2879,14 +2814,14 @@
 
     if-eqz v4, :cond_2a5
 
-    .line 1185
+    .line 1174
     const/16 v4, 0x29
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1187
+    .line 1176
     :cond_2a5
     const/16 v4, 0xb
 
@@ -2894,7 +2829,7 @@
 
     goto/16 :goto_17
 
-    .line 1191
+    .line 1180
     :pswitch_2ac
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -2902,14 +2837,14 @@
 
     if-eqz v4, :cond_2b9
 
-    .line 1192
+    .line 1181
     const/16 v4, 0x3d
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1194
+    .line 1183
     :cond_2b9
     const/16 v4, 0xd
 
@@ -2917,7 +2852,7 @@
 
     goto/16 :goto_17
 
-    .line 1198
+    .line 1187
     :pswitch_2c0
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -2925,14 +2860,14 @@
 
     if-eqz v4, :cond_2cd
 
-    .line 1199
+    .line 1188
     const/16 v4, 0x31
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1201
+    .line 1190
     :cond_2cd
     const/4 v4, 0x2
 
@@ -2940,7 +2875,7 @@
 
     goto/16 :goto_17
 
-    .line 1205
+    .line 1194
     :pswitch_2d3
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -2948,14 +2883,14 @@
 
     if-eqz v4, :cond_2e0
 
-    .line 1206
+    .line 1195
     const/16 v4, 0x32
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1208
+    .line 1197
     :cond_2e0
     const/4 v4, 0x3
 
@@ -2963,7 +2898,7 @@
 
     goto/16 :goto_17
 
-    .line 1212
+    .line 1201
     :pswitch_2e6
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -2971,14 +2906,14 @@
 
     if-eqz v4, :cond_2f3
 
-    .line 1213
+    .line 1202
     const/16 v4, 0x33
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1215
+    .line 1204
     :cond_2f3
     const/4 v4, 0x4
 
@@ -2986,7 +2921,7 @@
 
     goto/16 :goto_17
 
-    .line 1219
+    .line 1208
     :pswitch_2f9
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -2994,14 +2929,14 @@
 
     if-eqz v4, :cond_306
 
-    .line 1220
+    .line 1209
     const/16 v4, 0x2f
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1222
+    .line 1211
     :cond_306
     const/16 v4, 0x35
 
@@ -3009,7 +2944,7 @@
 
     goto/16 :goto_17
 
-    .line 1226
+    .line 1215
     :pswitch_30d
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3017,14 +2952,14 @@
 
     if-eqz v4, :cond_31a
 
-    .line 1227
+    .line 1216
     const/16 v4, 0x34
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1229
+    .line 1218
     :cond_31a
     const/4 v4, 0x5
 
@@ -3032,7 +2967,7 @@
 
     goto/16 :goto_17
 
-    .line 1233
+    .line 1222
     :pswitch_320
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3040,14 +2975,14 @@
 
     if-eqz v4, :cond_32d
 
-    .line 1234
+    .line 1223
     const/16 v4, 0x35
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1236
+    .line 1225
     :cond_32d
     const/4 v4, 0x6
 
@@ -3055,7 +2990,7 @@
 
     goto/16 :goto_17
 
-    .line 1240
+    .line 1229
     :pswitch_333
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3063,14 +2998,14 @@
 
     if-eqz v4, :cond_340
 
-    .line 1241
+    .line 1230
     const/16 v4, 0x36
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1243
+    .line 1232
     :cond_340
     const/4 v4, 0x7
 
@@ -3078,7 +3013,7 @@
 
     goto/16 :goto_17
 
-    .line 1247
+    .line 1236
     :pswitch_346
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3086,14 +3021,14 @@
 
     if-eqz v4, :cond_353
 
-    .line 1248
+    .line 1237
     const/16 v4, 0x2a
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1250
+    .line 1239
     :cond_353
     const/16 v4, 0x9
 
@@ -3101,7 +3036,7 @@
 
     goto/16 :goto_17
 
-    .line 1254
+    .line 1243
     :pswitch_35a
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3109,20 +3044,20 @@
 
     if-eqz v4, :cond_367
 
-    .line 1255
+    .line 1244
     const/16 v4, 0x37
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1257
+    .line 1246
     :cond_367
     invoke-virtual {p0, v10, v8, v8, v8}, Lcom/koutong/remote/MainActivity;->sendKeyToServer(IZZZ)V
 
     goto/16 :goto_17
 
-    .line 1261
+    .line 1250
     :pswitch_36c
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3130,14 +3065,14 @@
 
     if-eqz v4, :cond_379
 
-    .line 1262
+    .line 1251
     const/16 v4, 0x38
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1264
+    .line 1253
     :cond_379
     const/16 v4, 0x9
 
@@ -3145,7 +3080,7 @@
 
     goto/16 :goto_17
 
-    .line 1268
+    .line 1257
     :pswitch_380
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3153,14 +3088,14 @@
 
     if-eqz v4, :cond_38d
 
-    .line 1269
+    .line 1258
     const/16 v4, 0x39
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1271
+    .line 1260
     :cond_38d
     const/16 v4, 0xa
 
@@ -3168,7 +3103,7 @@
 
     goto/16 :goto_17
 
-    .line 1275
+    .line 1264
     :pswitch_394
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3176,14 +3111,14 @@
 
     if-eqz v4, :cond_3a1
 
-    .line 1276
+    .line 1265
     const/16 v4, 0x2b
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1278
+    .line 1267
     :cond_3a1
     const/16 v4, 0xd
 
@@ -3191,7 +3126,7 @@
 
     goto/16 :goto_17
 
-    .line 1282
+    .line 1271
     :pswitch_3a8
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3199,14 +3134,14 @@
 
     if-eqz v4, :cond_3b5
 
-    .line 1283
+    .line 1272
     const/16 v4, 0x30
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1285
+    .line 1274
     :cond_3b5
     const/16 v4, 0xb
 
@@ -3214,7 +3149,7 @@
 
     goto/16 :goto_17
 
-    .line 1289
+    .line 1278
     :pswitch_3bc
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3222,14 +3157,14 @@
 
     if-eqz v4, :cond_3c9
 
-    .line 1290
+    .line 1279
     const/16 v4, 0x25
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1292
+    .line 1281
     :cond_3c9
     const/4 v4, 0x6
 
@@ -3237,7 +3172,7 @@
 
     goto/16 :goto_17
 
-    .line 1296
+    .line 1285
     :pswitch_3cf
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3245,14 +3180,14 @@
 
     if-eqz v4, :cond_3dc
 
-    .line 1297
+    .line 1286
     const/16 v4, 0x2e
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1299
+    .line 1288
     :cond_3dc
     const/16 v4, 0x34
 
@@ -3260,7 +3195,7 @@
 
     goto/16 :goto_17
 
-    .line 1303
+    .line 1292
     :pswitch_3e3
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_local_im()I
 
@@ -3268,14 +3203,14 @@
 
     if-eqz v4, :cond_3f0
 
-    .line 1304
+    .line 1293
     const/16 v4, 0x2d
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->sendCharToServer(C)V
 
     goto/16 :goto_17
 
-    .line 1306
+    .line 1295
     :cond_3f0
     const/16 v4, 0xc
 
@@ -3283,13 +3218,13 @@
 
     goto/16 :goto_17
 
-    .line 1310
+    .line 1299
     :pswitch_3f7
     iget-object v4, p0, Lcom/koutong/remote/MainActivity;->directionKeyboardView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v10}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1311
+    .line 1300
     const v4, 0x7f050068
 
     invoke-virtual {p0, v4}, Lcom/koutong/remote/MainActivity;->findViewById(I)Landroid/view/View;
@@ -3300,7 +3235,7 @@
 
     goto/16 :goto_17
 
-    .line 1314
+    .line 1303
     :pswitch_408
     const/16 v4, 0x48
 
@@ -3308,7 +3243,7 @@
 
     goto/16 :goto_17
 
-    .line 1317
+    .line 1306
     :pswitch_40f
     const/16 v4, 0x50
 
@@ -3316,7 +3251,7 @@
 
     goto/16 :goto_17
 
-    .line 1320
+    .line 1309
     :pswitch_416
     const/16 v4, 0x4b
 
@@ -3324,7 +3259,7 @@
 
     goto/16 :goto_17
 
-    .line 1323
+    .line 1312
     :pswitch_41d
     const/16 v4, 0x4d
 
@@ -3332,7 +3267,7 @@
 
     goto/16 :goto_17
 
-    .line 1326
+    .line 1315
     :pswitch_424
     const/16 v4, 0x3b
 
@@ -3340,7 +3275,7 @@
 
     goto/16 :goto_17
 
-    .line 1329
+    .line 1318
     :pswitch_42b
     const/16 v4, 0x3c
 
@@ -3348,7 +3283,7 @@
 
     goto/16 :goto_17
 
-    .line 1332
+    .line 1321
     :pswitch_432
     const/16 v4, 0x3d
 
@@ -3356,7 +3291,7 @@
 
     goto/16 :goto_17
 
-    .line 1335
+    .line 1324
     :pswitch_439
     const/16 v4, 0x3e
 
@@ -3364,7 +3299,7 @@
 
     goto/16 :goto_17
 
-    .line 1338
+    .line 1327
     :pswitch_440
     const/16 v4, 0x3f
 
@@ -3372,7 +3307,7 @@
 
     goto/16 :goto_17
 
-    .line 1341
+    .line 1330
     :pswitch_447
     const/16 v4, 0x40
 
@@ -3380,7 +3315,7 @@
 
     goto/16 :goto_17
 
-    .line 1344
+    .line 1333
     :pswitch_44e
     const/16 v4, 0x41
 
@@ -3388,7 +3323,7 @@
 
     goto/16 :goto_17
 
-    .line 1347
+    .line 1336
     :pswitch_455
     const/16 v4, 0x42
 
@@ -3396,7 +3331,7 @@
 
     goto/16 :goto_17
 
-    .line 1350
+    .line 1339
     :pswitch_45c
     const/16 v4, 0x43
 
@@ -3404,7 +3339,7 @@
 
     goto/16 :goto_17
 
-    .line 1353
+    .line 1342
     :pswitch_463
     const/16 v4, 0x44
 
@@ -3412,7 +3347,7 @@
 
     goto/16 :goto_17
 
-    .line 1356
+    .line 1345
     :pswitch_46a
     const/16 v4, 0x57
 
@@ -3420,7 +3355,7 @@
 
     goto/16 :goto_17
 
-    .line 1359
+    .line 1348
     :pswitch_471
     const/16 v4, 0x58
 
@@ -3428,7 +3363,7 @@
 
     goto/16 :goto_17
 
-    .line 940
+    .line 929
     :pswitch_data_478
     .packed-switch 0x7f050023
         :pswitch_3f7
@@ -3552,7 +3487,7 @@
     .param p1, "pxValue"    # F
 
     .prologue
-    .line 498
+    .line 494
     invoke-virtual {p0}, Lcom/koutong/remote/MainActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -3563,7 +3498,7 @@
 
     iget v0, v1, Landroid/util/DisplayMetrics;->density:F
 
-    .line 499
+    .line 495
     .local v0, "scale":F
     div-float v1, p1, v0
 
@@ -3583,7 +3518,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 641
+    .line 637
     invoke-virtual {p0}, Lcom/koutong/remote/MainActivity;->isConnected()Z
 
     move-result v0
@@ -3596,17 +3531,17 @@
 
     if-eqz v0, :cond_15
 
-    .line 643
+    .line 639
     invoke-static {}, Lcom/koutong/remote/model/ServerApp;->getEnable_clipboard_buf()I
 
     move-result v0
 
     int-to-short v1, p1
 
-    .line 642
+    .line 638
     invoke-static {v0, v1, v2, v2, v2}, Lcom/koutong/remote/RDPConnection;->sendMsgToFocusWnd(ISSSS)V
 
-    .line 646
+    .line 642
     :cond_15
     return-void
 .end method
@@ -3627,51 +3562,51 @@
 
     const/4 v0, 0x0
 
-    .line 651
+    .line 647
     if-eqz p2, :cond_c
 
-    .line 652
+    .line 648
     invoke-static {v1, v0}, Lcom/koutong/remote/RDPConnection;->rdpKeyDown(II)V
 
-    .line 655
+    .line 651
     :cond_c
     if-eqz p3, :cond_11
 
-    .line 656
+    .line 652
     invoke-static {v2, v0}, Lcom/koutong/remote/RDPConnection;->rdpKeyDown(II)V
 
-    .line 659
+    .line 655
     :cond_11
     if-eqz p4, :cond_16
 
-    .line 660
+    .line 656
     invoke-static {v3, v0}, Lcom/koutong/remote/RDPConnection;->rdpKeyDown(II)V
 
-    .line 663
+    .line 659
     :cond_16
     invoke-static {p1, v0}, Lcom/koutong/remote/RDPConnection;->rdpKeyClick(II)V
 
-    .line 665
+    .line 661
     if-eqz p2, :cond_1e
 
-    .line 666
+    .line 662
     invoke-static {v1, v0}, Lcom/koutong/remote/RDPConnection;->rdpKeyUp(II)V
 
-    .line 669
+    .line 665
     :cond_1e
     if-eqz p3, :cond_23
 
-    .line 670
+    .line 666
     invoke-static {v2, v0}, Lcom/koutong/remote/RDPConnection;->rdpKeyUp(II)V
 
-    .line 673
+    .line 669
     :cond_23
     if-eqz p4, :cond_28
 
-    .line 674
+    .line 670
     invoke-static {v3, v0}, Lcom/koutong/remote/RDPConnection;->rdpKeyUp(II)V
 
-    .line 676
+    .line 672
     :cond_28
     return-void
 .end method
@@ -3688,18 +3623,18 @@
     .param p8, "enable_clipboard_buf"    # I
 
     .prologue
-    .line 292
+    .line 288
     invoke-virtual {p0}, Lcom/koutong/remote/MainActivity;->isConnected()Z
 
     move-result v0
 
     if-nez v0, :cond_7
 
-    .line 309
+    .line 305
     :goto_6
     return-void
 
-    .line 297
+    .line 293
     :cond_7
     :try_start_7
     const-string v0, "GBK"
@@ -3708,7 +3643,7 @@
 
     move-result-object v1
 
-    .line 298
+    .line 294
     .local v1, "bAppName":[B
     const-string v0, "GBK"
 
@@ -3716,7 +3651,7 @@
 
     move-result-object v2
 
-    .line 299
+    .line 295
     .local v2, "bAppPath":[B
     const-string v0, "GBK"
 
@@ -3724,7 +3659,7 @@
 
     move-result-object v3
 
-    .line 300
+    .line 296
     .local v3, "bParameter":[B
     const-string v0, "GBK"
 
@@ -3732,7 +3667,7 @@
 
     move-result-object v4
 
-    .line 302
+    .line 298
     .local v4, "bWorkingDir":[B
     int-to-short v0, p1
 
@@ -3748,7 +3683,7 @@
 
     goto :goto_6
 
-    .line 305
+    .line 301
     .end local v1    # "bAppName":[B
     .end local v2    # "bAppPath":[B
     .end local v3    # "bParameter":[B
@@ -3758,7 +3693,7 @@
 
     move-object v8, v0
 
-    .line 307
+    .line 303
     .local v8, "e":Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v8}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
@@ -3771,7 +3706,7 @@
     .param p2, "data"    # Ljava/lang/Object;
 
     .prologue
-    .line 803
+    .line 792
     const-string v3, "MainActivity"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3780,7 +3715,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 804
+    .line 793
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getInstance()Lcom/koutong/remote/RDPConnection;
 
     move-result-object v5
@@ -3797,10 +3732,10 @@
 
     move-result-object v4
 
-    .line 803
+    .line 792
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 805
+    .line 794
     invoke-static {}, Lcom/koutong/remote/RDPConnection;->getInstance()Lcom/koutong/remote/RDPConnection;
 
     move-result-object v3
@@ -3813,29 +3748,29 @@
 
     if-ne v3, v4, :cond_35
 
-    .line 806
+    .line 795
     new-instance v1, Landroid/os/Message;
 
     invoke-direct {v1}, Landroid/os/Message;-><init>()V
 
-    .line 807
+    .line 796
     .local v1, "msg":Landroid/os/Message;
     const/4 v3, 0x3
 
     iput v3, v1, Landroid/os/Message;->what:I
 
-    .line 808
+    .line 797
     iget-object v3, p0, Lcom/koutong/remote/MainActivity;->mHandler:Lcom/koutong/remote/MainActivity$InputHandler;
 
     invoke-virtual {v3, v1}, Lcom/koutong/remote/MainActivity$InputHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 821
+    .line 810
     .end local v1    # "msg":Landroid/os/Message;
     :cond_34
     :goto_34
     return-void
 
-    .line 809
+    .line 798
     :cond_35
     invoke-static {}, Lcom/koutong/remote/model/SettingInfo;->getInstance()Lcom/koutong/remote/model/SettingInfo;
 
@@ -3849,14 +3784,14 @@
 
     if-ne v3, v4, :cond_34
 
-    .line 812
+    .line 801
     move-object v0, p2
 
     check-cast v0, Lcom/koutong/remote/taskbar/Taskbar;
 
     move-object v2, v0
 
-    .line 813
+    .line 802
     .local v2, "taskbar":Lcom/koutong/remote/taskbar/Taskbar;
     invoke-virtual {v2}, Lcom/koutong/remote/taskbar/Taskbar;->getTaskbarSize()I
 
@@ -3864,7 +3799,7 @@
 
     if-nez v3, :cond_54
 
-    .line 815
+    .line 804
     new-instance v3, Landroid/content/Intent;
 
     const-class v4, Lcom/koutong/remote/AppChoserActivity;
@@ -3873,7 +3808,7 @@
 
     invoke-virtual {p0, v3}, Lcom/koutong/remote/MainActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 817
+    .line 806
     :cond_54
     invoke-virtual {v2}, Lcom/koutong/remote/taskbar/Taskbar;->getTaskbar()Ljava/util/LinkedList;
 

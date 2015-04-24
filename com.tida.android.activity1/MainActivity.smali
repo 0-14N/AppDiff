@@ -112,14 +112,14 @@
 
     sput-object v0, Lcom/tida/android/activity/MainActivity;->title:Ljava/lang/String;
 
-    .line 509
+    .line 512
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     sput-object v0, Lcom/tida/android/activity/MainActivity;->isExit:Ljava/lang/Boolean;
 
-    .line 510
+    .line 513
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -181,14 +181,14 @@
 
     iput-object v0, p0, Lcom/tida/android/activity/MainActivity;->urls:[Ljava/lang/String;
 
-    .line 511
+    .line 514
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
     iput-object v0, p0, Lcom/tida/android/activity/MainActivity;->tExit:Ljava/util/Timer;
 
-    .line 512
+    .line 515
     new-instance v0, Lcom/tida/android/activity/MainActivity$1;
 
     invoke-direct {v0, p0}, Lcom/tida/android/activity/MainActivity$1;-><init>(Lcom/tida/android/activity/MainActivity;)V
@@ -213,7 +213,7 @@
     .registers 1
 
     .prologue
-    .line 509
+    .line 512
     sput-object p0, Lcom/tida/android/activity/MainActivity;->isExit:Ljava/lang/Boolean;
 
     return-void
@@ -223,7 +223,7 @@
     .registers 1
 
     .prologue
-    .line 510
+    .line 513
     sput-object p0, Lcom/tida/android/activity/MainActivity;->hasTask:Ljava/lang/Boolean;
 
     return-void
@@ -378,30 +378,30 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 469
+    .line 472
     sget-object v0, Lcom/tida/android/activity/MainActivity;->progressDialog:Lcom/tida/android/view/MyProgressDialog;
 
     if-nez v0, :cond_f
 
-    .line 470
+    .line 473
     invoke-static {p0}, Lcom/tida/android/view/MyProgressDialog;->createDialog(Landroid/content/Context;)Lcom/tida/android/view/MyProgressDialog;
 
     move-result-object v0
 
     sput-object v0, Lcom/tida/android/activity/MainActivity;->progressDialog:Lcom/tida/android/view/MyProgressDialog;
 
-    .line 471
+    .line 474
     sget-object v0, Lcom/tida/android/activity/MainActivity;->progressDialog:Lcom/tida/android/view/MyProgressDialog;
 
     invoke-virtual {v0, p1}, Lcom/tida/android/view/MyProgressDialog;->setMessage(Ljava/lang/String;)Lcom/tida/android/view/MyProgressDialog;
 
-    .line 473
+    .line 476
     :cond_f
     sget-object v0, Lcom/tida/android/activity/MainActivity;->progressDialog:Lcom/tida/android/view/MyProgressDialog;
 
     invoke-virtual {v0}, Lcom/tida/android/view/MyProgressDialog;->show()V
 
-    .line 474
+    .line 477
     return-void
 .end method
 
@@ -410,22 +410,22 @@
     .param p0, "mcontext"    # Landroid/content/Context;
 
     .prologue
-    .line 477
+    .line 480
     sget-object v0, Lcom/tida/android/activity/MainActivity;->progressDialog:Lcom/tida/android/view/MyProgressDialog;
 
     if-eqz v0, :cond_c
 
-    .line 478
+    .line 481
     sget-object v0, Lcom/tida/android/activity/MainActivity;->progressDialog:Lcom/tida/android/view/MyProgressDialog;
 
     invoke-virtual {v0}, Lcom/tida/android/view/MyProgressDialog;->dismiss()V
 
-    .line 479
+    .line 482
     const/4 v0, 0x0
 
     sput-object v0, Lcom/tida/android/activity/MainActivity;->progressDialog:Lcom/tida/android/view/MyProgressDialog;
 
-    .line 481
+    .line 484
     :cond_c
     return-void
 .end method
@@ -437,21 +437,21 @@
     .param p1, "strResult"    # Ljava/lang/String;
 
     .prologue
-    .line 484
+    .line 487
     move-object v4, p1
 
-    .line 486
+    .line 489
     .local v4, "json":Ljava/lang/String;
     :try_start_1
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, v4}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 487
+    .line 490
     .local v0, "dataJson":Lorg/json/JSONObject;
     if-eqz v0, :cond_35
 
-    .line 488
+    .line 491
     const/4 v11, 0x3
 
     new-array v7, v11, [Ljava/lang/String;
@@ -474,7 +474,7 @@
 
     aput-object v12, v7, v11
 
-    .line 489
+    .line 492
     .local v7, "keys":[Ljava/lang/String;
     const-string v11, "type"
 
@@ -482,7 +482,7 @@
 
     move-result-object v10
 
-    .line 490
+    .line 493
     .local v10, "state":Ljava/lang/String;
     const-string v11, "0"
 
@@ -492,20 +492,20 @@
 
     if-eqz v11, :cond_35
 
-    .line 491
+    .line 494
     const-string v11, "data"
 
     invoke-virtual {v0, v11}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v5
 
-    .line 492
+    .line 495
     .local v5, "jsonArray":Lorg/json/JSONArray;
     invoke-virtual {v5}, Lorg/json/JSONArray;->length()I
 
     move-result v8
 
-    .line 493
+    .line 496
     .local v8, "len":I
     const/4 v3, 0x0
 
@@ -513,7 +513,7 @@
     :goto_33
     if-lt v3, v8, :cond_36
 
-    .line 508
+    .line 511
     .end local v0    # "dataJson":Lorg/json/JSONObject;
     .end local v3    # "i":I
     .end local v5    # "jsonArray":Lorg/json/JSONArray;
@@ -524,7 +524,7 @@
     :goto_35
     return-void
 
-    .line 494
+    .line 497
     .restart local v0    # "dataJson":Lorg/json/JSONObject;
     .restart local v3    # "i":I
     .restart local v5    # "jsonArray":Lorg/json/JSONArray;
@@ -538,13 +538,13 @@
 
     check-cast v1, Lorg/json/JSONObject;
 
-    .line 495
+    .line 498
     .local v1, "dataJson2":Lorg/json/JSONObject;
     new-instance v9, Ljava/util/HashMap;
 
     invoke-direct {v9}, Ljava/util/HashMap;-><init>()V
 
-    .line 496
+    .line 499
     .local v9, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     array-length v12, v7
 
@@ -553,16 +553,16 @@
     :goto_43
     if-lt v11, v12, :cond_48
 
-    .line 493
+    .line 496
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_33
 
-    .line 496
+    .line 499
     :cond_48
     aget-object v6, v7, v11
 
-    .line 497
+    .line 500
     .local v6, "key":Ljava/lang/String;
     invoke-virtual {v1, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -572,12 +572,12 @@
     :try_end_51
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_51} :catch_54
 
-    .line 496
+    .line 499
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_43
 
-    .line 503
+    .line 506
     .end local v0    # "dataJson":Lorg/json/JSONObject;
     .end local v1    # "dataJson2":Lorg/json/JSONObject;
     .end local v3    # "i":I
@@ -590,11 +590,11 @@
     :catch_54
     move-exception v2
 
-    .line 505
+    .line 508
     .local v2, "e":Lorg/json/JSONException;
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 506
+    .line 509
     iget-object v11, p0, Lcom/tida/android/activity/MainActivity;->context:Landroid/content/Context;
 
     const-string v12, "\u7f51\u7edc\u4e0d\u53ef\u7528\u6216\u7f51\u7edc\u5fd9~"
@@ -615,21 +615,21 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 536
+    .line 539
     if-eqz p1, :cond_a
 
     move-object v0, p1
 
-    .line 537
+    .line 540
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 538
+    .line 541
     .local v0, "bd":Landroid/graphics/drawable/BitmapDrawable;
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 540
+    .line 543
     .end local v0    # "bd":Landroid/graphics/drawable/BitmapDrawable;
     :goto_9
     return-object v1
@@ -647,7 +647,7 @@
     const-wide v8, 0x3fa47ae147ae147bL    # 0.04
 
     .line 224
-    const v1, 0x7f09004c
+    const v1, 0x7f09004d
 
     invoke-virtual {p0, v1}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1172,7 +1172,7 @@
     iput-object v4, p0, Lcom/tida/android/activity/MainActivity;->defaultbmp:Landroid/graphics/Bitmap;
 
     .line 103
-    const v4, 0x7f0900dc
+    const v4, 0x7f0900dd
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1204,7 +1204,7 @@
 
     .line 112
     .local v2, "param1":Landroid/widget/RelativeLayout$LayoutParams;
-    const v4, 0x7f090088
+    const v4, 0x7f090089
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1215,7 +1215,7 @@
     iput-object v4, p0, Lcom/tida/android/activity/MainActivity;->llt:Landroid/widget/LinearLayout;
 
     .line 113
-    const v4, 0x7f090095
+    const v4, 0x7f090096
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1226,7 +1226,7 @@
     iput-object v4, p0, Lcom/tida/android/activity/MainActivity;->llt1:Landroid/widget/RelativeLayout;
 
     .line 114
-    const v4, 0x7f090093
+    const v4, 0x7f090094
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1251,7 +1251,7 @@
     iput v4, v1, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
     .line 118
-    const v4, 0x7f0900dd
+    const v4, 0x7f0900de
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1262,7 +1262,7 @@
     iput-object v4, p0, Lcom/tida/android/activity/MainActivity;->img1:Landroid/widget/ImageView;
 
     .line 119
-    const v4, 0x7f0900de
+    const v4, 0x7f0900df
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1273,7 +1273,7 @@
     iput-object v4, p0, Lcom/tida/android/activity/MainActivity;->img2:Landroid/widget/ImageView;
 
     .line 120
-    const v4, 0x7f0900df
+    const v4, 0x7f0900e0
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1284,7 +1284,7 @@
     iput-object v4, p0, Lcom/tida/android/activity/MainActivity;->img3:Landroid/widget/ImageView;
 
     .line 122
-    const v4, 0x7f0900e0
+    const v4, 0x7f0900e1
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1295,7 +1295,7 @@
     iput-object v4, p0, Lcom/tida/android/activity/MainActivity;->img4:Landroid/widget/ImageView;
 
     .line 123
-    const v4, 0x7f0900e1
+    const v4, 0x7f0900e2
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1306,7 +1306,7 @@
     iput-object v4, p0, Lcom/tida/android/activity/MainActivity;->img5:Landroid/widget/ImageView;
 
     .line 124
-    const v4, 0x7f0900e2
+    const v4, 0x7f0900e3
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1317,7 +1317,7 @@
     iput-object v4, p0, Lcom/tida/android/activity/MainActivity;->img6:Landroid/widget/ImageView;
 
     .line 125
-    const v4, 0x7f0900e3
+    const v4, 0x7f0900e4
 
     invoke-virtual {p0, v4}, Lcom/tida/android/activity/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1712,15 +1712,15 @@
     .registers 2
 
     .prologue
-    .line 550
+    .line 553
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 551
+    .line 554
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/tida/android/activity/MainActivity;->is:Z
 
-    .line 552
+    .line 555
     return-void
 .end method
 
@@ -1732,12 +1732,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 521
+    .line 524
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_2d
 
-    .line 522
+    .line 525
     sget-object v0, Lcom/tida/android/activity/MainActivity;->isExit:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1746,7 +1746,7 @@
 
     if-nez v0, :cond_2e
 
-    .line 523
+    .line 526
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1755,7 +1755,7 @@
 
     sput-object v0, Lcom/tida/android/activity/MainActivity;->isExit:Ljava/lang/Boolean;
 
-    .line 524
+    .line 527
     const-string v0, "\u518d\u6309\u4e00\u6b21\u9000\u51fa\u7a0b\u5e8f"
 
     invoke-static {p0, v0, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
@@ -1764,7 +1764,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 525
+    .line 528
     sget-object v0, Lcom/tida/android/activity/MainActivity;->hasTask:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1773,7 +1773,7 @@
 
     if-nez v0, :cond_2d
 
-    .line 526
+    .line 529
     iget-object v0, p0, Lcom/tida/android/activity/MainActivity;->tExit:Ljava/util/Timer;
 
     iget-object v1, p0, Lcom/tida/android/activity/MainActivity;->task:Ljava/util/TimerTask;
@@ -1782,16 +1782,16 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
-    .line 533
+    .line 536
     :cond_2d
     :goto_2d
     return v4
 
-    .line 529
+    .line 532
     :cond_2e
     invoke-virtual {p0}, Lcom/tida/android/activity/MainActivity;->finish()V
 
-    .line 530
+    .line 533
     invoke-static {v4}, Ljava/lang/System;->exit(I)V
 
     goto :goto_2d
@@ -1801,13 +1801,13 @@
     .registers 1
 
     .prologue
-    .line 559
+    .line 562
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 560
+    .line 563
     invoke-static {p0}, Lcom/baidu/mobstat/StatService;->onPause(Landroid/content/Context;)V
 
-    .line 561
+    .line 564
     return-void
 .end method
 
@@ -1816,7 +1816,7 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 544
+    .line 547
     iget-object v0, p0, Lcom/tida/android/activity/MainActivity;->context:Landroid/content/Context;
 
     const-string v1, "\u6b63\u5728\u52a0\u8f7d..."
@@ -1829,7 +1829,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 545
+    .line 548
     return-void
 .end method
 
@@ -1837,13 +1837,13 @@
     .registers 1
 
     .prologue
-    .line 554
+    .line 557
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 555
+    .line 558
     invoke-static {p0}, Lcom/baidu/mobstat/StatService;->onResume(Landroid/content/Context;)V
 
-    .line 556
+    .line 559
     return-void
 .end method
 

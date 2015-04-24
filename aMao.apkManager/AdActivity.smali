@@ -8,6 +8,8 @@
 # static fields
 .field public static final BASE_URL_PARAM:Ljava/lang/String; = "baseurl"
 
+.field public static final CUSTOM_CLOSE_PARAM:Ljava/lang/String; = "custom_close"
+
 .field public static final HTML_PARAM:Ljava/lang/String; = "html"
 
 .field public static final INTENT_ACTION_PARAM:Ljava/lang/String; = "i"
@@ -36,25 +38,29 @@
 # instance fields
 .field private h:Lcom/google/ads/internal/AdWebView;
 
-.field private i:Landroid/view/ViewGroup;
+.field private i:Landroid/widget/FrameLayout;
 
-.field private j:Z
+.field private j:I
 
-.field private k:J
+.field private k:Landroid/view/ViewGroup;
 
-.field private l:Landroid/widget/RelativeLayout;
+.field private l:Z
 
-.field private m:Lcom/google/ads/AdActivity;
+.field private m:J
 
-.field private n:Z
+.field private n:Landroid/widget/RelativeLayout;
 
-.field private o:Z
+.field private o:Lcom/google/ads/AdActivity;
 
 .field private p:Z
 
 .field private q:Z
 
-.field private r:Lcom/google/ads/internal/AdVideoView;
+.field private r:Z
+
+.field private s:Z
+
+.field private t:Lcom/google/ads/internal/AdVideoView;
 
 
 # direct methods
@@ -103,9 +109,9 @@
 
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    iput-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lcom/google/ads/AdActivity;->k:Landroid/view/ViewGroup;
 
-    iput-object v0, p0, Lcom/google/ads/AdActivity;->m:Lcom/google/ads/AdActivity;
+    iput-object v0, p0, Lcom/google/ads/AdActivity;->o:Lcom/google/ads/AdActivity;
 
     return-void
 .end method
@@ -148,20 +154,20 @@
     return-object v0
 .end method
 
-.method private a(Lcom/google/ads/internal/AdWebView;ZIZ)V
-    .registers 13
+.method private a(Lcom/google/ads/internal/AdWebView;ZIZZ)V
+    .registers 14
 
-    const/16 v7, 0xa
+    const/16 v7, 0xb
 
-    const/4 v6, -0x1
+    const/16 v6, 0xa
 
-    const/4 v5, -0x2
+    const/4 v5, -0x1
 
-    const/4 v4, 0x1
+    const/4 v4, -0x2
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    invoke-virtual {p0, v4}, Lcom/google/ads/AdActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v3}, Lcom/google/ads/AdActivity;->requestWindowFeature(I)Z
 
     invoke-virtual {p0}, Lcom/google/ads/AdActivity;->getWindow()Landroid/view/Window;
 
@@ -175,13 +181,11 @@
 
     sget v1, Lcom/google/ads/util/AdUtil;->a:I
 
-    const/16 v2, 0xb
+    if-lt v1, v7, :cond_25
 
-    if-lt v1, v2, :cond_26
+    iget-boolean v1, p0, Lcom/google/ads/AdActivity;->r:Z
 
-    iget-boolean v1, p0, Lcom/google/ads/AdActivity;->p:Z
-
-    if-eqz v1, :cond_47
+    if-eqz v1, :cond_46
 
     const-string v1, "Enabling hardware acceleration on the AdActivity window."
 
@@ -189,150 +193,152 @@
 
     invoke-static {v0}, Lcom/google/ads/util/g;->a(Landroid/view/Window;)V
 
-    :cond_26
-    :goto_26
+    :cond_25
+    :goto_25
     invoke-virtual {p1}, Lcom/google/ads/internal/AdWebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3b
+    if-eqz v0, :cond_3a
 
-    if-eqz p4, :cond_56
+    if-eqz p4, :cond_55
 
     instance-of v1, v0, Landroid/view/ViewGroup;
 
-    if-eqz v1, :cond_50
+    if-eqz v1, :cond_4f
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    iput-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lcom/google/ads/AdActivity;->k:Landroid/view/ViewGroup;
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->k:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    :cond_3b
+    :cond_3a
     invoke-virtual {p1}, Lcom/google/ads/internal/AdWebView;->d()Lcom/google/ads/AdActivity;
 
     move-result-object v0
 
-    if-eqz v0, :cond_5c
+    if-eqz v0, :cond_5b
 
     const-string v0, "Interstitial created with an AdWebView that is already in use by another AdActivity."
 
     invoke-direct {p0, v0}, Lcom/google/ads/AdActivity;->a(Ljava/lang/String;)V
 
-    :cond_46
-    :goto_46
+    :cond_45
+    :goto_45
     return-void
 
-    :cond_47
+    :cond_46
     const-string v0, "Disabling hardware acceleration on the AdActivity WebView."
 
     invoke-static {v0}, Lcom/google/ads/util/b;->a(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/google/ads/internal/AdWebView;->b()V
 
-    goto :goto_26
+    goto :goto_25
 
-    :cond_50
+    :cond_4f
     const-string v0, "MRAID banner was not a child of a ViewGroup."
 
     invoke-direct {p0, v0}, Lcom/google/ads/AdActivity;->a(Ljava/lang/String;)V
 
-    goto :goto_46
+    goto :goto_45
 
-    :cond_56
+    :cond_55
     const-string v0, "Interstitial created with an AdWebView that has a parent."
 
     invoke-direct {p0, v0}, Lcom/google/ads/AdActivity;->a(Ljava/lang/String;)V
 
-    goto :goto_46
+    goto :goto_45
 
-    :cond_5c
+    :cond_5b
     invoke-virtual {p0, p3}, Lcom/google/ads/AdActivity;->setRequestedOrientation(I)V
 
     invoke-virtual {p1, p0}, Lcom/google/ads/internal/AdWebView;->setAdActivity(Lcom/google/ads/AdActivity;)V
 
-    if-eqz p4, :cond_cf
+    if-eqz p4, :cond_cd
 
     const/16 v0, 0x32
 
-    :goto_66
-    new-instance v1, Landroid/widget/ImageButton;
-
-    invoke-virtual {p0}, Lcom/google/ads/AdActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;)V
-
-    const v2, 0x1080017
-
-    invoke-virtual {v1, v2}, Landroid/widget/ImageButton;->setImageResource(I)V
-
-    invoke-virtual {v1, v3}, Landroid/widget/ImageButton;->setBackgroundColor(I)V
-
-    invoke-virtual {v1, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v1, v3, v3, v3, v3}, Landroid/widget/ImageButton;->setPadding(IIII)V
-
+    :goto_65
     int-to-float v0, v0
 
     invoke-virtual {p0}, Lcom/google/ads/AdActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v4, v0, v2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+    invoke-static {v3, v0, v1}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
     move-result v0
 
     float-to-int v0, v0
 
-    new-instance v2, Landroid/widget/FrameLayout;
+    iput v0, p0, Lcom/google/ads/AdActivity;->j:I
+
+    new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-virtual {p0}, Lcom/google/ads/AdActivity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-direct {v2, v3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v2, v1, v0, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;II)V
+    iput-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/widget/FrameLayout;
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v0, p1, v6, v6}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;II)V
+    iget v1, p0, Lcom/google/ads/AdActivity;->j:I
 
-    new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setMinimumWidth(I)V
 
-    invoke-direct {v0, v5, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/widget/FrameLayout;
 
-    if-eqz p4, :cond_d2
+    iget v1, p0, Lcom/google/ads/AdActivity;->j:I
 
-    invoke-virtual {v0, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setMinimumHeight(I)V
 
-    const/16 v1, 0xb
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    invoke-virtual {v0, p0}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :goto_ac
-    iget-object v1, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    invoke-virtual {p0, p5}, Lcom/google/ads/AdActivity;->setCustomClose(Z)V
 
-    invoke-virtual {v1, v2, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/widget/FrameLayout;
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    iget-object v1, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout;->setKeepScreenOn(Z)V
+    invoke-virtual {v1, p1, v5, v5}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;II)V
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    invoke-direct {v1, v4, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    if-eqz p4, :cond_d0
+
+    invoke-virtual {v1, v6}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    invoke-virtual {v1, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    :goto_aa
+    iget-object v2, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v2, v0, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->setKeepScreenOn(Z)V
+
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
 
     invoke-virtual {p0, v0}, Lcom/google/ads/AdActivity;->setContentView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getRootView()Landroid/view/View;
 
@@ -342,27 +348,27 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    if-eqz p2, :cond_46
+    if-eqz p2, :cond_45
 
     sget-object v0, Lcom/google/ads/AdActivity;->a:Lcom/google/ads/internal/a;
 
     invoke-virtual {v0, p1}, Lcom/google/ads/internal/a;->a(Landroid/webkit/WebView;)V
 
-    goto/16 :goto_46
+    goto/16 :goto_45
 
-    :cond_cf
+    :cond_cd
     const/16 v0, 0x20
 
-    goto :goto_66
+    goto :goto_65
 
-    :cond_d2
-    invoke-virtual {v0, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    :cond_d0
+    invoke-virtual {v1, v6}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    const/16 v1, 0x9
+    const/16 v2, 0x9
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    goto :goto_ac
+    goto :goto_aa
 .end method
 
 .method private a(Ljava/lang/String;)V
@@ -404,11 +410,11 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/google/ads/AdActivity;->k:J
+    iput-wide v0, p0, Lcom/google/ads/AdActivity;->m:J
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/google/ads/AdActivity;->n:Z
+    iput-boolean v0, p0, Lcom/google/ads/AdActivity;->p:Z
 
     sget-object v1, Lcom/google/ads/AdActivity;->b:Ljava/lang/Object;
 
@@ -451,7 +457,7 @@
 
     const/4 v2, 0x0
 
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->j:Z
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->l:Z
 
     if-nez v0, :cond_9b
 
@@ -475,23 +481,23 @@
 
     invoke-virtual {v0, v1}, Lcom/google/ads/internal/AdWebView;->setIsExpandedMraid(Z)V
 
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->o:Z
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->q:Z
 
     if-nez v0, :cond_47
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
 
     if-eqz v0, :cond_47
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->k:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_47
 
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->p:Z
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->r:Z
 
     if-eqz v0, :cond_9c
 
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->q:Z
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->s:Z
 
     if-nez v0, :cond_9c
 
@@ -505,28 +511,28 @@
 
     :cond_39
     :goto_39
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
 
     iget-object v1, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->k:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     :cond_47
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
     if-eqz v0, :cond_52
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
     invoke-virtual {v0}, Lcom/google/ads/internal/AdVideoView;->e()V
 
-    iput-object v2, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iput-object v2, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
     :cond_52
     sget-object v0, Lcom/google/ads/AdActivity;->c:Lcom/google/ads/AdActivity;
@@ -536,7 +542,7 @@
     sput-object v2, Lcom/google/ads/AdActivity;->c:Lcom/google/ads/AdActivity;
 
     :cond_58
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->m:Lcom/google/ads/AdActivity;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->o:Lcom/google/ads/AdActivity;
 
     sput-object v0, Lcom/google/ads/AdActivity;->f:Lcom/google/ads/AdActivity;
 
@@ -549,7 +555,7 @@
 
     if-eqz v0, :cond_7f
 
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->o:Z
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->q:Z
 
     if-eqz v0, :cond_7f
 
@@ -605,7 +611,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/google/ads/AdActivity;->j:Z
+    iput-boolean v0, p0, Lcom/google/ads/AdActivity;->l:Z
 
     const-string v0, "AdActivity is closing."
 
@@ -615,11 +621,11 @@
     return-void
 
     :cond_9c
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->p:Z
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->r:Z
 
     if-nez v0, :cond_39
 
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->q:Z
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->s:Z
 
     if-eqz v0, :cond_39
 
@@ -678,7 +684,7 @@
 .method public getAdVideoView()Lcom/google/ads/internal/AdVideoView;
     .registers 2
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
     return-object v0
 .end method
@@ -688,11 +694,11 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcom/google/ads/AdActivity;->m:Lcom/google/ads/AdActivity;
+    iget-object v1, p0, Lcom/google/ads/AdActivity;->o:Lcom/google/ads/AdActivity;
 
     if-eqz v1, :cond_a
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->m:Lcom/google/ads/AdActivity;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->o:Lcom/google/ads/AdActivity;
 
     iget-object v0, v0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
 
@@ -755,11 +761,11 @@
 .method public moveAdVideoView(IIII)V
     .registers 7
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
     if-eqz v0, :cond_12
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
     invoke-static {p1, p2, p3, p4}, Lcom/google/ads/AdActivity;->a(IIII)Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -767,7 +773,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/ads/internal/AdVideoView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
     invoke-virtual {v0}, Lcom/google/ads/internal/AdVideoView;->requestLayout()V
 
@@ -780,7 +786,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
     if-nez v0, :cond_26
 
@@ -790,11 +796,11 @@
 
     invoke-direct {v0, p0, v1}, Lcom/google/ads/internal/AdVideoView;-><init>(Landroid/app/Activity;Lcom/google/ads/internal/AdWebView;)V
 
-    iput-object v0, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iput-object v0, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
 
-    iget-object v1, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iget-object v1, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
     invoke-static {p1, p2, p3, p4}, Lcom/google/ads/AdActivity;->a(IIII)Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -931,7 +937,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/google/ads/af;->a(Landroid/webkit/WebView;Z)V
+    invoke-static {v0, v1}, Lcom/google/ads/ag;->a(Landroid/webkit/WebView;Z)V
 
     :cond_55
     :goto_55
@@ -954,7 +960,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/google/ads/af;->a(Landroid/webkit/WebView;Z)V
+    invoke-static {v0, v1}, Lcom/google/ads/ag;->a(Landroid/webkit/WebView;Z)V
 
     goto :goto_55
 .end method
@@ -968,28 +974,28 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 12
+    .registers 13
 
     const/4 v5, 0x0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    const/4 v2, 0x1
+    const/4 v6, 0x1
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    iput-boolean v6, p0, Lcom/google/ads/AdActivity;->j:Z
+    iput-boolean v7, p0, Lcom/google/ads/AdActivity;->l:Z
 
-    sget-object v3, Lcom/google/ads/AdActivity;->b:Ljava/lang/Object;
+    sget-object v2, Lcom/google/ads/AdActivity;->b:Ljava/lang/Object;
 
-    monitor-enter v3
+    monitor-enter v2
 
     :try_start_b
     sget-object v0, Lcom/google/ads/AdActivity;->d:Lcom/google/ads/internal/d;
 
     if-eqz v0, :cond_a2
 
-    sget-object v7, Lcom/google/ads/AdActivity;->d:Lcom/google/ads/internal/d;
+    sget-object v8, Lcom/google/ads/AdActivity;->d:Lcom/google/ads/internal/d;
 
     sget-object v0, Lcom/google/ads/AdActivity;->e:Lcom/google/ads/AdActivity;
 
@@ -997,10 +1003,10 @@
 
     sput-object p0, Lcom/google/ads/AdActivity;->e:Lcom/google/ads/AdActivity;
 
-    invoke-virtual {v7}, Lcom/google/ads/internal/d;->u()V
+    invoke-virtual {v8}, Lcom/google/ads/internal/d;->u()V
 
     :cond_1a
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->m:Lcom/google/ads/AdActivity;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->o:Lcom/google/ads/AdActivity;
 
     if-nez v0, :cond_26
 
@@ -1010,12 +1016,12 @@
 
     sget-object v0, Lcom/google/ads/AdActivity;->f:Lcom/google/ads/AdActivity;
 
-    iput-object v0, p0, Lcom/google/ads/AdActivity;->m:Lcom/google/ads/AdActivity;
+    iput-object v0, p0, Lcom/google/ads/AdActivity;->o:Lcom/google/ads/AdActivity;
 
     :cond_26
     sput-object p0, Lcom/google/ads/AdActivity;->f:Lcom/google/ads/AdActivity;
 
-    invoke-virtual {v7}, Lcom/google/ads/internal/d;->h()Lcom/google/ads/m;
+    invoke-virtual {v8}, Lcom/google/ads/internal/d;->h()Lcom/google/ads/m;
 
     move-result-object v0
 
@@ -1030,7 +1036,7 @@
     if-eq v0, p0, :cond_46
 
     :cond_36
-    invoke-virtual {v7}, Lcom/google/ads/internal/d;->h()Lcom/google/ads/m;
+    invoke-virtual {v8}, Lcom/google/ads/internal/d;->h()Lcom/google/ads/m;
 
     move-result-object v0
 
@@ -1040,21 +1046,21 @@
 
     if-eqz v0, :cond_49
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->m:Lcom/google/ads/AdActivity;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->o:Lcom/google/ads/AdActivity;
 
     sget-object v1, Lcom/google/ads/AdActivity;->e:Lcom/google/ads/AdActivity;
 
     if-ne v0, v1, :cond_49
 
     :cond_46
-    invoke-virtual {v7}, Lcom/google/ads/internal/d;->w()V
+    invoke-virtual {v8}, Lcom/google/ads/internal/d;->w()V
 
     :cond_49
-    invoke-virtual {v7}, Lcom/google/ads/internal/d;->q()Z
+    invoke-virtual {v8}, Lcom/google/ads/internal/d;->q()Z
 
-    move-result v8
+    move-result v9
 
-    invoke-virtual {v7}, Lcom/google/ads/internal/d;->h()Lcom/google/ads/m;
+    invoke-virtual {v8}, Lcom/google/ads/internal/d;->h()Lcom/google/ads/m;
 
     move-result-object v0
 
@@ -1074,7 +1080,7 @@
 
     check-cast v0, Lcom/google/ads/l$a;
 
-    sget v4, Lcom/google/ads/util/AdUtil;->a:I
+    sget v3, Lcom/google/ads/util/AdUtil;->a:I
 
     iget-object v1, v0, Lcom/google/ads/l$a;->a:Lcom/google/ads/util/i$c;
 
@@ -1088,12 +1094,12 @@
 
     move-result v1
 
-    if-lt v4, v1, :cond_ac
+    if-lt v3, v1, :cond_ac
 
-    move v1, v2
+    move v1, v6
 
     :goto_72
-    iput-boolean v1, p0, Lcom/google/ads/AdActivity;->q:Z
+    iput-boolean v1, p0, Lcom/google/ads/AdActivity;->s:Z
 
     sget v1, Lcom/google/ads/util/AdUtil;->a:I
 
@@ -1111,22 +1117,22 @@
 
     if-lt v1, v0, :cond_ae
 
-    move v0, v2
+    move v0, v6
 
     :goto_85
-    iput-boolean v0, p0, Lcom/google/ads/AdActivity;->p:Z
+    iput-boolean v0, p0, Lcom/google/ads/AdActivity;->r:Z
 
-    monitor-exit v3
+    monitor-exit v2
     :try_end_88
     .catchall {:try_start_b .. :try_end_88} :catchall_a9
 
-    iput-object v5, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    iput-object v5, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
 
-    iput-boolean v6, p0, Lcom/google/ads/AdActivity;->n:Z
+    iput-boolean v7, p0, Lcom/google/ads/AdActivity;->p:Z
 
-    iput-boolean v2, p0, Lcom/google/ads/AdActivity;->o:Z
+    iput-boolean v6, p0, Lcom/google/ads/AdActivity;->q:Z
 
-    iput-object v5, p0, Lcom/google/ads/AdActivity;->r:Lcom/google/ads/internal/AdVideoView;
+    iput-object v5, p0, Lcom/google/ads/AdActivity;->t:Lcom/google/ads/internal/AdVideoView;
 
     invoke-virtual {p0}, Lcom/google/ads/AdActivity;->getIntent()Landroid/content/Intent;
 
@@ -1153,7 +1159,7 @@
 
     invoke-direct {p0, v0}, Lcom/google/ads/AdActivity;->a(Ljava/lang/String;)V
 
-    monitor-exit v3
+    monitor-exit v2
     :try_end_a8
     .catchall {:try_start_a2 .. :try_end_a8} :catchall_a9
 
@@ -1162,17 +1168,17 @@
     :catchall_a9
     move-exception v0
 
-    monitor-exit v3
+    monitor-exit v2
 
     throw v0
 
     :cond_ac
-    move v1, v6
+    move v1, v7
 
     goto :goto_72
 
     :cond_ae
-    move v0, v6
+    move v0, v7
 
     goto :goto_85
 
@@ -1187,7 +1193,7 @@
 
     invoke-virtual {v1}, Lcom/google/ads/internal/e;->c()Ljava/util/HashMap;
 
-    move-result-object v9
+    move-result-object v10
 
     const-string v1, "plusone"
 
@@ -1229,7 +1235,7 @@
 
     const-string v0, "u"
 
-    invoke-virtual {v9, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v10, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1239,9 +1245,9 @@
 
     const-string v0, "com.google.circles.platform.intent.extra.ENTITY_TYPE"
 
-    sget-object v2, Lcom/google/ads/ah$b;->a:Lcom/google/ads/ah$b;
+    sget-object v2, Lcom/google/ads/ai$b;->a:Lcom/google/ads/ai$b;
 
-    iget-object v2, v2, Lcom/google/ads/ah$b;->c:Ljava/lang/String;
+    iget-object v2, v2, Lcom/google/ads/ai$b;->c:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -1249,7 +1255,7 @@
 
     const-string v0, "a"
 
-    invoke-virtual {v9, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v10, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1257,7 +1263,7 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-direct {p0, v7}, Lcom/google/ads/AdActivity;->b(Lcom/google/ads/internal/d;)V
+    invoke-direct {p0, v8}, Lcom/google/ads/AdActivity;->b(Lcom/google/ads/internal/d;)V
 
     :try_start_10c
     const-string v0, "Launching Google+ intent from AdActivity."
@@ -1292,7 +1298,7 @@
 
     if-eqz v1, :cond_19b
 
-    if-nez v9, :cond_130
+    if-nez v10, :cond_130
 
     const-string v0, "Could not get the paramMap in launchIntent()"
 
@@ -1303,7 +1309,7 @@
     :cond_130
     const-string v0, "u"
 
-    invoke-virtual {v9, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v10, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1320,7 +1326,7 @@
     :cond_141
     const-string v1, "i"
 
-    invoke-virtual {v9, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v10, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1328,7 +1334,7 @@
 
     const-string v2, "m"
 
-    invoke-virtual {v9, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v10, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1352,7 +1358,7 @@
     invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
     :cond_163
-    invoke-direct {p0, v7}, Lcom/google/ads/AdActivity;->b(Lcom/google/ads/internal/d;)V
+    invoke-direct {p0, v8}, Lcom/google/ads/AdActivity;->b(Lcom/google/ads/internal/d;)V
 
     :try_start_166
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1414,11 +1420,11 @@
 
     invoke-virtual {p0}, Lcom/google/ads/AdActivity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-direct {v1, v3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    iput-object v1, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
 
     const-string v1, "webapp"
 
@@ -1426,11 +1432,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_236
+    if-eqz v1, :cond_24c
 
     new-instance v0, Lcom/google/ads/internal/AdWebView;
 
-    invoke-virtual {v7}, Lcom/google/ads/internal/d;->h()Lcom/google/ads/m;
+    invoke-virtual {v8}, Lcom/google/ads/internal/d;->h()Lcom/google/ads/m;
 
     move-result-object v1
 
@@ -1440,20 +1446,20 @@
 
     sget-object v1, Lcom/google/ads/internal/a;->c:Ljava/util/Map;
 
-    if-nez v8, :cond_209
+    if-nez v9, :cond_21d
 
-    move v0, v2
+    move v0, v6
 
     :goto_1be
-    invoke-static {v7, v1, v2, v0}, Lcom/google/ads/internal/i;->a(Lcom/google/ads/internal/d;Ljava/util/Map;ZZ)Lcom/google/ads/internal/i;
+    invoke-static {v8, v1, v6, v0}, Lcom/google/ads/internal/i;->a(Lcom/google/ads/internal/d;Ljava/util/Map;ZZ)Lcom/google/ads/internal/i;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/google/ads/internal/i;->d(Z)V
+    invoke-virtual {v0, v6}, Lcom/google/ads/internal/i;->d(Z)V
 
-    if-eqz v8, :cond_1ca
+    if-eqz v9, :cond_1ca
 
-    invoke-virtual {v0, v2}, Lcom/google/ads/internal/i;->a(Z)V
+    invoke-virtual {v0, v6}, Lcom/google/ads/internal/i;->a(Z)V
 
     :cond_1ca
     iget-object v1, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
@@ -1462,7 +1468,7 @@
 
     const-string v0, "u"
 
-    invoke-virtual {v9, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v10, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1470,7 +1476,7 @@
 
     const-string v1, "baseurl"
 
-    invoke-virtual {v9, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v10, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1478,13 +1484,13 @@
 
     const-string v2, "html"
 
-    invoke-virtual {v9, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v10, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    if-eqz v0, :cond_20b
+    if-eqz v0, :cond_21f
 
     iget-object v1, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
 
@@ -1493,7 +1499,7 @@
     :goto_1ee
     const-string v0, "o"
 
-    invoke-virtual {v9, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v10, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1505,26 +1511,51 @@
 
     move-result v1
 
-    if-eqz v1, :cond_21e
+    if-eqz v1, :cond_232
 
     invoke-static {}, Lcom/google/ads/util/AdUtil;->b()I
 
-    move-result v0
+    move-result v3
 
     :goto_202
     iget-object v1, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
 
-    invoke-direct {p0, v1, v6, v0, v8}, Lcom/google/ads/AdActivity;->a(Lcom/google/ads/internal/AdWebView;ZIZ)V
+    if-eqz v10, :cond_24a
+
+    const-string v0, "1"
+
+    const-string v2, "custom_close"
+
+    invoke-virtual {v10, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_24a
+
+    move v5, v6
+
+    :goto_215
+    move-object v0, p0
+
+    move v2, v7
+
+    move v4, v9
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/ads/AdActivity;->a(Lcom/google/ads/internal/AdWebView;ZIZZ)V
 
     goto/16 :goto_a1
 
-    :cond_209
-    move v0, v6
+    :cond_21d
+    move v0, v7
 
     goto :goto_1be
 
-    :cond_20b
-    if-eqz v2, :cond_217
+    :cond_21f
+    if-eqz v2, :cond_22b
 
     iget-object v0, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
 
@@ -1536,52 +1567,57 @@
 
     goto :goto_1ee
 
-    :cond_217
+    :cond_22b
     const-string v0, "Could not get the URL or HTML parameter to show a web app."
 
     invoke-direct {p0, v0}, Lcom/google/ads/AdActivity;->a(Ljava/lang/String;)V
 
     goto/16 :goto_a1
 
-    :cond_21e
+    :cond_232
     const-string v1, "l"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_22b
+    if-eqz v0, :cond_23f
 
     invoke-static {}, Lcom/google/ads/util/AdUtil;->a()I
 
-    move-result v0
+    move-result v3
 
     goto :goto_202
 
-    :cond_22b
+    :cond_23f
     sget-object v0, Lcom/google/ads/AdActivity;->e:Lcom/google/ads/AdActivity;
 
-    if-ne p0, v0, :cond_234
+    if-ne p0, v0, :cond_248
 
-    invoke-virtual {v7}, Lcom/google/ads/internal/d;->n()I
+    invoke-virtual {v8}, Lcom/google/ads/internal/d;->n()I
 
-    move-result v0
-
-    goto :goto_202
-
-    :cond_234
-    const/4 v0, -0x1
+    move-result v3
 
     goto :goto_202
 
-    :cond_236
+    :cond_248
+    const/4 v3, -0x1
+
+    goto :goto_202
+
+    :cond_24a
+    move v5, v7
+
+    goto :goto_215
+
+    :cond_24c
     const-string v1, "interstitial"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-nez v1, :cond_246
+    if-nez v1, :cond_25c
 
     const-string v1, "expand"
 
@@ -1589,40 +1625,59 @@
 
     move-result v1
 
-    if-eqz v1, :cond_278
+    if-eqz v1, :cond_2ab
 
-    :cond_246
-    invoke-virtual {v7}, Lcom/google/ads/internal/d;->k()Lcom/google/ads/internal/AdWebView;
+    :cond_25c
+    invoke-virtual {v8}, Lcom/google/ads/internal/d;->k()Lcom/google/ads/internal/AdWebView;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
 
-    invoke-virtual {v7}, Lcom/google/ads/internal/d;->n()I
+    invoke-virtual {v8}, Lcom/google/ads/internal/d;->n()I
 
-    move-result v1
+    move-result v3
 
-    const-string v3, "expand"
+    const-string v1, "expand"
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_271
+    if-eqz v0, :cond_2a3
 
     iget-object v0, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
 
-    invoke-virtual {v0, v2}, Lcom/google/ads/internal/AdWebView;->setIsExpandedMraid(Z)V
+    invoke-virtual {v0, v6}, Lcom/google/ads/internal/AdWebView;->setIsExpandedMraid(Z)V
 
-    iput-boolean v6, p0, Lcom/google/ads/AdActivity;->o:Z
+    iput-boolean v7, p0, Lcom/google/ads/AdActivity;->q:Z
 
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->p:Z
+    if-eqz v10, :cond_286
 
-    if-eqz v0, :cond_271
+    const-string v0, "1"
 
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->q:Z
+    const-string v1, "custom_close"
 
-    if-nez v0, :cond_271
+    invoke-virtual {v10, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_286
+
+    move v7, v6
+
+    :cond_286
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->r:Z
+
+    if-eqz v0, :cond_2c5
+
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->s:Z
+
+    if-nez v0, :cond_2c5
 
     const-string v0, "Re-enabling hardware acceleration on expanding MRAID WebView."
 
@@ -1632,14 +1687,33 @@
 
     invoke-virtual {v0}, Lcom/google/ads/internal/AdWebView;->c()V
 
-    :cond_271
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
+    move v5, v7
 
-    invoke-direct {p0, v0, v2, v1, v8}, Lcom/google/ads/AdActivity;->a(Lcom/google/ads/internal/AdWebView;ZIZ)V
+    :goto_299
+    iget-object v1, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
+
+    move-object v0, p0
+
+    move v2, v6
+
+    move v4, v9
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/ads/AdActivity;->a(Lcom/google/ads/internal/AdWebView;ZIZZ)V
 
     goto/16 :goto_a1
 
-    :cond_278
+    :cond_2a3
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->h:Lcom/google/ads/internal/AdWebView;
+
+    invoke-virtual {v0}, Lcom/google/ads/internal/AdWebView;->e()Z
+
+    move-result v7
+
+    move v5, v7
+
+    goto :goto_299
+
+    :cond_2ab
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Unknown AdOpener, <action: "
@@ -1663,16 +1737,21 @@
     invoke-direct {p0, v0}, Lcom/google/ads/AdActivity;->a(Ljava/lang/String;)V
 
     goto/16 :goto_a1
+
+    :cond_2c5
+    move v5, v7
+
+    goto :goto_299
 .end method
 
 .method public onDestroy()V
     .registers 2
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
 
     if-eqz v0, :cond_9
 
-    iget-object v0, p0, Lcom/google/ads/AdActivity;->l:Landroid/widget/RelativeLayout;
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->n:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0}, Landroid/widget/RelativeLayout;->removeAllViews()V
 
@@ -1685,7 +1764,7 @@
 
     invoke-direct {p0}, Lcom/google/ads/AdActivity;->d()V
 
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->o:Z
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->q:Z
 
     if-eqz v0, :cond_27
 
@@ -1731,7 +1810,7 @@
 .method public onWindowFocusChanged(Z)V
     .registers 6
 
-    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->n:Z
+    iget-boolean v0, p0, Lcom/google/ads/AdActivity;->p:Z
 
     if-eqz v0, :cond_1b
 
@@ -1741,7 +1820,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/google/ads/AdActivity;->k:J
+    iget-wide v2, p0, Lcom/google/ads/AdActivity;->m:J
 
     sub-long/2addr v0, v2
 
@@ -1760,5 +1839,52 @@
     :cond_1b
     invoke-super {p0, p1}, Landroid/app/Activity;->onWindowFocusChanged(Z)V
 
+    return-void
+.end method
+
+.method public setCustomClose(Z)V
+    .registers 7
+
+    const/4 v2, 0x0
+
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/widget/FrameLayout;
+
+    if-eqz v0, :cond_30
+
+    iget-object v0, p0, Lcom/google/ads/AdActivity;->i:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
+
+    if-nez p1, :cond_30
+
+    new-instance v0, Landroid/widget/ImageButton;
+
+    invoke-direct {v0, p0}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;)V
+
+    const v1, 0x1080017
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setBackgroundColor(I)V
+
+    invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/ImageButton;->setPadding(IIII)V
+
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    iget v2, p0, Lcom/google/ads/AdActivity;->j:I
+
+    iget v3, p0, Lcom/google/ads/AdActivity;->j:I
+
+    const/16 v4, 0x11
+
+    invoke-direct {v1, v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+
+    iget-object v2, p0, Lcom/google/ads/AdActivity;->i:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v2, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_30
     return-void
 .end method

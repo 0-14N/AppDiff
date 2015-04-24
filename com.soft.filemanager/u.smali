@@ -51,7 +51,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/soft/filemanager/activities/MainActivity;->k()Lcom/soft/filemanager/FileManagerApplication;
+    invoke-virtual {v0}, Lcom/soft/filemanager/activities/MainActivity;->j()Lcom/soft/filemanager/FileManagerApplication;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/soft/filemanager/activities/MainActivity;->i()Lcom/soft/filemanager/activities/AbstractBaseActivity;
+    invoke-virtual {v1}, Lcom/soft/filemanager/activities/MainActivity;->h()Lcom/soft/filemanager/activities/AbstractBaseActivity;
 
     move-result-object v1
 
@@ -135,7 +135,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/soft/filemanager/activities/MainActivity;->i()Lcom/soft/filemanager/activities/AbstractBaseActivity;
+    invoke-virtual {v1}, Lcom/soft/filemanager/activities/MainActivity;->h()Lcom/soft/filemanager/activities/AbstractBaseActivity;
 
     move-result-object v1
 
@@ -152,7 +152,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/soft/filemanager/activities/MainActivity;->i()Lcom/soft/filemanager/activities/AbstractBaseActivity;
+    invoke-virtual {v1}, Lcom/soft/filemanager/activities/MainActivity;->h()Lcom/soft/filemanager/activities/AbstractBaseActivity;
 
     move-result-object v1
 

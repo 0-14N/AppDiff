@@ -26,9 +26,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcn/dxy/idxyer/activity/W;
+    new-instance v1, Lcn/dxy/idxyer/activity/V;
 
-    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/W;-><init>(Lcn/dxy/idxyer/activity/StartupActivity;)V
+    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/V;-><init>(Lcn/dxy/idxyer/activity/StartupActivity;)V
 
     const-wide/16 v2, 0x7d0
 

@@ -50,151 +50,162 @@
     .registers 2
 
     .prologue
-    .line 31
+    .line 32
     invoke-direct {p0}, Lcom/zxcx/blst/act/BaseAct;-><init>()V
 
-    .line 38
+    .line 39
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->page:I
 
-    .line 39
+    .line 40
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->type:I
 
-    .line 42
+    .line 43
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->requestResult:[Ljava/lang/String;
 
-    .line 44
+    .line 45
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->mItems3:Ljava/util/List;
 
-    .line 47
+    .line 48
     new-instance v0, Lcom/zxcx/blst/act/MyAttention2Act$1;
 
     invoke-direct {v0, p0}, Lcom/zxcx/blst/act/MyAttention2Act$1;-><init>(Lcom/zxcx/blst/act/MyAttention2Act;)V
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->handler:Landroid/os/Handler;
 
-    .line 31
+    .line 32
     return-void
 .end method
 
-.method static synthetic access$0(Lcom/zxcx/blst/act/MyAttention2Act;)Ljava/util/List;
+.method static synthetic access$0(Lcom/zxcx/blst/act/MyAttention2Act;)Lcom/zxcx/blst/adapter/IndexLay3Adapter;
     .registers 2
 
     .prologue
-    .line 44
+    .line 46
+    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->indexLay3Adapter:Lcom/zxcx/blst/adapter/IndexLay3Adapter;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1(Lcom/zxcx/blst/act/MyAttention2Act;Z)V
+    .registers 2
+
+    .prologue
+    .line 166
+    invoke-direct {p0, p1}, Lcom/zxcx/blst/act/MyAttention2Act;->getData(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$2(Lcom/zxcx/blst/act/MyAttention2Act;)Ljava/util/List;
+    .registers 2
+
+    .prologue
+    .line 45
     iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->mItems3:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method static synthetic access$1(Lcom/zxcx/blst/act/MyAttention2Act;)V
-    .registers 1
-
-    .prologue
-    .line 157
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyAttention2Act;->getData()V
-
-    return-void
-.end method
-
-.method static synthetic access$2(Lcom/zxcx/blst/act/MyAttention2Act;)I
-    .registers 2
-
-    .prologue
-    .line 38
-    iget v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->page:I
-
-    return v0
-.end method
-
-.method static synthetic access$3(Lcom/zxcx/blst/act/MyAttention2Act;)I
+.method static synthetic access$3(Lcom/zxcx/blst/act/MyAttention2Act;I)V
     .registers 2
 
     .prologue
     .line 39
-    iget v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->type:I
-
-    return v0
-.end method
-
-.method static synthetic access$4(Lcom/zxcx/blst/act/MyAttention2Act;)Ljava/lang/String;
-    .registers 2
-
-    .prologue
-    .line 40
-    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->id:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$5(Lcom/zxcx/blst/act/MyAttention2Act;[Ljava/lang/String;)V
-    .registers 2
-
-    .prologue
-    .line 42
-    iput-object p1, p0, Lcom/zxcx/blst/act/MyAttention2Act;->requestResult:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$6(Lcom/zxcx/blst/act/MyAttention2Act;)Lcom/zxcx/blst/custom/widget/RefreshableListView;
-    .registers 2
-
-    .prologue
-    .line 43
-    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$7(Lcom/zxcx/blst/act/MyAttention2Act;)[Ljava/lang/String;
-    .registers 2
-
-    .prologue
-    .line 42
-    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->requestResult:[Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$8(Lcom/zxcx/blst/act/MyAttention2Act;I)V
-    .registers 2
-
-    .prologue
-    .line 38
     iput p1, p0, Lcom/zxcx/blst/act/MyAttention2Act;->page:I
 
     return-void
 .end method
 
-.method private getData()V
-    .registers 3
+.method static synthetic access$4(Lcom/zxcx/blst/act/MyAttention2Act;)I
+    .registers 2
 
     .prologue
-    .line 160
-    new-instance v0, Lcom/zxcx/blst/act/MyAttention2Act$4;
+    .line 39
+    iget v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->page:I
 
-    invoke-direct {v0, p0}, Lcom/zxcx/blst/act/MyAttention2Act$4;-><init>(Lcom/zxcx/blst/act/MyAttention2Act;)V
+    return v0
+.end method
+
+.method static synthetic access$5(Lcom/zxcx/blst/act/MyAttention2Act;)I
+    .registers 2
+
+    .prologue
+    .line 40
+    iget v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->type:I
+
+    return v0
+.end method
+
+.method static synthetic access$6(Lcom/zxcx/blst/act/MyAttention2Act;)Ljava/lang/String;
+    .registers 2
+
+    .prologue
+    .line 41
+    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->id:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$7(Lcom/zxcx/blst/act/MyAttention2Act;[Ljava/lang/String;)V
+    .registers 2
+
+    .prologue
+    .line 43
+    iput-object p1, p0, Lcom/zxcx/blst/act/MyAttention2Act;->requestResult:[Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$8(Lcom/zxcx/blst/act/MyAttention2Act;)[Ljava/lang/String;
+    .registers 2
+
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->requestResult:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$9(Lcom/zxcx/blst/act/MyAttention2Act;)Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .registers 2
+
+    .prologue
+    .line 44
+    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+
+    return-object v0
+.end method
+
+.method private getData(Z)V
+    .registers 4
+    .param p1, "isPull"    # Z
+
+    .prologue
+    .line 169
+    new-instance v0, Lcom/zxcx/blst/act/MyAttention2Act$5;
+
+    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/MyAttention2Act$5;-><init>(Lcom/zxcx/blst/act/MyAttention2Act;Z)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 247
-    invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/MyAttention2Act$4;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    .line 256
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/MyAttention2Act$5;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 248
+    .line 257
     return-void
 .end method
 
@@ -204,7 +215,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 73
+    .line 74
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyAttention2Act;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -221,7 +232,7 @@
 
     iput v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->type:I
 
-    .line 74
+    .line 75
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyAttention2Act;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -234,8 +245,8 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->id:Ljava/lang/String;
 
-    .line 77
-    const v0, 0x7f080168
+    .line 78
+    const v0, 0x7f090181
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyAttention2Act;->findViewById(I)Landroid/view/View;
 
@@ -243,23 +254,23 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 76
+    .line 77
     iput-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->iv_title_bar_left:Landroid/widget/ImageView;
-
-    .line 78
-    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->iv_title_bar_left:Landroid/widget/ImageView;
-
-    const v1, 0x7f020005
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     .line 79
     iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->iv_title_bar_left:Landroid/widget/ImageView;
 
+    const v1, 0x7f020006
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
+
+    .line 80
+    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->iv_title_bar_left:Landroid/widget/ImageView;
+
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 81
-    const v0, 0x7f080166
+    .line 82
+    const v0, 0x7f09017f
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyAttention2Act;->findViewById(I)Landroid/view/View;
 
@@ -267,17 +278,17 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 80
+    .line 81
     iput-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->tv_title_bar_center:Landroid/widget/TextView;
 
-    .line 82
+    .line 83
     iget v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->type:I
 
-    packed-switch v0, :pswitch_data_a8
+    packed-switch v0, :pswitch_data_ae
 
-    .line 95
+    .line 96
     :goto_45
-    const v0, 0x7f080167
+    const v0, 0x7f090180
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyAttention2Act;->findViewById(I)Landroid/view/View;
 
@@ -285,21 +296,21 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 94
+    .line 95
     iput-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->iv_title_bar_right:Landroid/widget/ImageView;
-
-    .line 96
-    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->iv_title_bar_right:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 97
     iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->iv_title_bar_right:Landroid/widget/ImageView;
 
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 98
+    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->iv_title_bar_right:Landroid/widget/ImageView;
+
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 99
-    const v0, 0x7f0800d4
+    .line 100
+    const v0, 0x7f0900e4
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyAttention2Act;->findViewById(I)Landroid/view/View;
 
@@ -309,12 +320,7 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
 
-    .line 100
-    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
-
-    invoke-virtual {v0, v2}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setCanPullRefresh(Z)V
-
-    .line 101
+    .line 102
     iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
 
     new-instance v1, Lcom/zxcx/blst/act/MyAttention2Act$2;
@@ -323,16 +329,25 @@
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnExplainListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnExplainListener;)V
 
-    .line 111
+    .line 110
     iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
 
     new-instance v1, Lcom/zxcx/blst/act/MyAttention2Act$3;
 
     invoke-direct {v1, p0}, Lcom/zxcx/blst/act/MyAttention2Act$3;-><init>(Lcom/zxcx/blst/act/MyAttention2Act;)V
 
+    invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnRefreshListener(Lcom/zxcx/blst/custom/widget/RefreshableListView$OnRefreshListener;)V
+
+    .line 120
+    iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+
+    new-instance v1, Lcom/zxcx/blst/act/MyAttention2Act$4;
+
+    invoke-direct {v1, p0}, Lcom/zxcx/blst/act/MyAttention2Act$4;-><init>(Lcom/zxcx/blst/act/MyAttention2Act;)V
+
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 132
+    .line 141
     new-instance v0, Lcom/zxcx/blst/adapter/IndexLay3Adapter;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/MyAttention2Act;->mItems3:Ljava/util/List;
@@ -341,28 +356,28 @@
 
     iput-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->indexLay3Adapter:Lcom/zxcx/blst/adapter/IndexLay3Adapter;
 
-    .line 133
+    .line 142
     iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->indexLay3Adapter:Lcom/zxcx/blst/adapter/IndexLay3Adapter;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/adapter/IndexLay3Adapter;->setType(I)V
 
-    .line 134
+    .line 143
     iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
 
     iget-object v1, p0, Lcom/zxcx/blst/act/MyAttention2Act;->indexLay3Adapter:Lcom/zxcx/blst/adapter/IndexLay3Adapter;
 
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 135
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyAttention2Act;->getData()V
+    .line 144
+    invoke-direct {p0, v2}, Lcom/zxcx/blst/act/MyAttention2Act;->getData(Z)V
 
-    .line 136
+    .line 145
     return-void
 
-    .line 84
-    :pswitch_98
+    .line 85
+    :pswitch_9d
     iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->tv_title_bar_center:Landroid/widget/TextView;
 
     const-string v1, "\u4eba\u5458\u53d1\u5e03"
@@ -371,8 +386,8 @@
 
     goto :goto_45
 
-    .line 88
-    :pswitch_a0
+    .line 89
+    :pswitch_a5
     iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->tv_title_bar_center:Landroid/widget/TextView;
 
     const-string v1, "\u54c1\u79cd\u62db\u5546"
@@ -381,59 +396,61 @@
 
     goto :goto_45
 
-    .line 82
-    :pswitch_data_a8
+    .line 83
+    nop
+
+    :pswitch_data_ae
     .packed-switch 0x1
-        :pswitch_98
-        :pswitch_a0
+        :pswitch_9d
+        :pswitch_a5
     .end packed-switch
 .end method
 
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .registers 3
+    .registers 4
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 141
+    const/4 v1, 0x0
+
+    .line 150
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_18
 
-    .line 155
-    :goto_7
+    .line 164
+    :goto_8
     return-void
 
-    .line 143
-    :pswitch_8
+    .line 152
+    :pswitch_9
     invoke-virtual {p0}, Lcom/zxcx/blst/act/MyAttention2Act;->finish()V
 
-    goto :goto_7
+    goto :goto_8
 
-    .line 147
-    :pswitch_c
-    const/4 v0, 0x0
+    .line 156
+    :pswitch_d
+    iput v1, p0, Lcom/zxcx/blst/act/MyAttention2Act;->page:I
 
-    iput v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->page:I
-
-    .line 148
+    .line 157
     iget-object v0, p0, Lcom/zxcx/blst/act/MyAttention2Act;->mItems3:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 149
-    invoke-direct {p0}, Lcom/zxcx/blst/act/MyAttention2Act;->getData()V
+    .line 158
+    invoke-direct {p0, v1}, Lcom/zxcx/blst/act/MyAttention2Act;->getData(Z)V
 
-    goto :goto_7
+    goto :goto_8
 
-    .line 141
+    .line 150
     :pswitch_data_18
-    .packed-switch 0x7f080167
-        :pswitch_c
-        :pswitch_8
+    .packed-switch 0x7f090180
+        :pswitch_d
+        :pswitch_9
     .end packed-switch
 .end method
 
@@ -442,17 +459,17 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 66
+    .line 67
     invoke-super {p0, p1}, Lcom/zxcx/blst/act/BaseAct;->onCreate(Landroid/os/Bundle;)V
 
-    .line 67
-    const v0, 0x7f030045
+    .line 68
+    const v0, 0x7f03004b
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/MyAttention2Act;->setContentView(I)V
 
-    .line 68
+    .line 69
     invoke-direct {p0}, Lcom/zxcx/blst/act/MyAttention2Act;->setupView()V
 
-    .line 69
+    .line 70
     return-void
 .end method

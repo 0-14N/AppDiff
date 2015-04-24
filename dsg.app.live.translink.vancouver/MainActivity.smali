@@ -1,5 +1,5 @@
 .class public Ldsg/app/live/translink/vancouver/view/MainActivity;
-.super Lcom/google/android/maps/MapActivity;
+.super Lcom/mapquest/android/maps/MapActivity;
 .source "MainActivity.java"
 
 
@@ -128,9 +128,9 @@
 
 .field private mLinearLayoutWait:Landroid/widget/LinearLayout;
 
-.field private mMapView:Lcom/google/android/maps/MapView;
+.field private mMapView:Lcom/mapquest/android/maps/MapView;
 
-.field private mMyLocationOverlay:Lcom/google/android/maps/MyLocationOverlay;
+.field private mMyLocationOverlay:Lcom/mapquest/android/maps/MyLocationOverlay;
 
 .field private mPaint:Landroid/graphics/Paint;
 
@@ -166,205 +166,205 @@
 
     const/4 v1, 0x0
 
-    .line 101
-    invoke-direct {p0}, Lcom/google/android/maps/MapActivity;-><init>()V
+    .line 102
+    invoke-direct {p0}, Lcom/mapquest/android/maps/MapActivity;-><init>()V
 
-    .line 109
+    .line 110
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mHandler:Landroid/os/Handler;
 
-    .line 110
+    .line 111
     iput-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRunnableLocate:Ljava/lang/Runnable;
 
-    .line 112
+    .line 113
     iput-boolean v2, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mToastShown:Z
 
-    .line 126
+    .line 128
     new-instance v0, Ldsg/app/live/translink/vancouver/view/MainActivity$1;
 
     invoke-direct {v0, p0}, Ldsg/app/live/translink/vancouver/view/MainActivity$1;-><init>(Ldsg/app/live/translink/vancouver/view/MainActivity;)V
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRunnableToast:Ljava/lang/Runnable;
 
-    .line 136
+    .line 138
     const-string v0, "MySharedPreferences"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->MYDATA_FILE_KEY:Ljava/lang/String;
 
-    .line 138
+    .line 140
     const-string v0, "COMPASS_ON_OFF"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->COMPASS_ON_OFF:Ljava/lang/String;
 
-    .line 139
+    .line 141
     const-string v0, "KEY_CURRENT_BUS_POS"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->KEY_CURRENT_BUS_POS:Ljava/lang/String;
 
-    .line 141
+    .line 143
     const-string v0, "KEY_BUS_LIST"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->KEY_BUS_LIST:Ljava/lang/String;
 
-    .line 142
+    .line 144
     const-string v0, "KEY_BUS_LIST_RESULT_KEY"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->KEY_BUS_LIST_RESULT_KEY:Ljava/lang/String;
 
-    .line 143
+    .line 145
     const-string v0, "KEY_BUS_LIST_RESULT_VALUE"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->KEY_BUS_LIST_RESULT_VALUE:Ljava/lang/String;
 
-    .line 145
+    .line 147
     const-string v0, "KEY_SHOWGADGETS"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->KEY_SHOWGADGETS:Ljava/lang/String;
 
-    .line 147
+    .line 149
     iput-boolean v3, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mCompassState:Z
 
-    .line 149
+    .line 151
     iput-boolean v2, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsSatelliteOn:Z
 
-    .line 150
+    .line 152
     iput-boolean v2, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsStreetViewOn:Z
 
-    .line 151
+    .line 153
     iput-boolean v2, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsTrafficOn:Z
 
-    .line 152
+    .line 154
     const-string v0, "KEY_SATELLITE"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->KEY_SATELLITE:Ljava/lang/String;
 
-    .line 153
+    .line 155
     const-string v0, "KEY_STREETVIEW"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->KEY_STREETVIEW:Ljava/lang/String;
 
-    .line 154
+    .line 156
     const-string v0, "KEY_TRAFFIC"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->KEY_TRAFFIC:Ljava/lang/String;
 
-    .line 224
+    .line 229
     iput-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mLinearLayoutWait:Landroid/widget/LinearLayout;
 
-    .line 226
+    .line 231
     iput-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mAdsClass:Ldsg/app/live/translink/vancouver/view/AdsClass;
 
-    .line 272
+    .line 279
     iput-boolean v3, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mAutoZoom:Z
 
-    .line 274
+    .line 281
     iput-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mImageViewCompass:Landroid/widget/ImageView;
 
-    .line 325
+    .line 333
     new-array v0, v4, [Z
 
     fill-array-data v0, :array_a6
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsShowGadgets:[Z
 
-    .line 326
+    .line 334
     new-array v0, v4, [I
 
     fill-array-data v0, :array_ae
 
-    .line 327
+    .line 335
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIdGadgets:[I
 
-    .line 328
+    .line 336
     new-array v0, v4, [I
 
     fill-array-data v0, :array_be
 
-    .line 329
+    .line 338
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIdCheckboxGadgets:[I
 
-    .line 393
+    .line 407
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->listBusesSelected:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 395
+    .line 409
     iput v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->MAX_BUS_COUNT:I
 
-    .line 396
+    .line 410
     const-string v0, ""
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->currentBus:Ljava/lang/String;
 
-    .line 398
+    .line 412
     const/4 v0, -0x1
 
     iput v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->currentBusPos:I
 
-    .line 400
+    .line 414
     iput-boolean v3, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mShowProgress:Z
 
-    .line 470
+    .line 486
     iput-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkCtrlBuses:[Landroid/widget/CheckBox;
 
-    .line 524
+    .line 543
     const-string v0, "dsg.app.live.translink.vancouver.pro"
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->PACKAGE_NAME_PRO:Ljava/lang/String;
 
-    .line 574
+    .line 595
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mCustomHandler:Landroid/os/Handler;
 
-    .line 576
+    .line 597
     new-instance v0, Ldsg/app/live/translink/vancouver/view/MainActivity$2;
 
     invoke-direct {v0, p0}, Ldsg/app/live/translink/vancouver/view/MainActivity$2;-><init>(Ldsg/app/live/translink/vancouver/view/MainActivity;)V
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->updateTimerThreadBuses:Ljava/lang/Runnable;
 
-    .line 640
+    .line 668
     iput-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mPaint:Landroid/graphics/Paint;
 
-    .line 641
+    .line 669
     iput-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->busMap:Ljava/util/HashMap;
 
-    .line 642
+    .line 670
     iput-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->busMapFlag:Ljava/util/HashMap;
 
-    .line 644
+    .line 672
     iput v2, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRequestCounter:I
 
-    .line 645
+    .line 673
     iput v2, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mDoneCounter:I
 
-    .line 647
+    .line 675
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->listBusResult:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 648
+    .line 676
     new-array v0, v5, [I
 
     fill-array-data v0, :array_ce
 
-    .line 649
+    .line 677
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mBusDrawableIds:[I
 
-    .line 101
+    .line 102
     return-void
 
-    .line 325
+    .line 333
     :array_a6
     .array-data 1
         0x1t
@@ -375,31 +375,31 @@
         0x1t
     .end array-data
 
-    .line 326
+    .line 334
     nop
 
     :array_ae
     .array-data 4
-        0x7f07002c
-        0x7f07002d
-        0x7f07002e
-        0x7f07002f
-        0x7f070030
-        0x7f070031
+        0x7f080018
+        0x7f080019
+        0x7f08001a
+        0x7f08001b
+        0x7f08001c
+        0x7f08001d
     .end array-data
 
-    .line 328
+    .line 336
     :array_be
     .array-data 4
-        0x7f070022
-        0x7f070023
-        0x7f070024
-        0x7f070025
-        0x7f070026
-        0x7f070027
+        0x7f08000e
+        0x7f08000f
+        0x7f080010
+        0x7f080011
+        0x7f080012
+        0x7f080013
     .end array-data
 
-    .line 648
+    .line 676
     :array_ce
     .array-data 4
         0x7f020002
@@ -411,69 +411,58 @@
 .end method
 
 .method private Zoom()V
-    .registers 13
+    .registers 14
 
     .prologue
-    const/high16 v11, 0x3fc00000    # 1.5f
+    const/high16 v12, 0x3fc00000    # 1.5f
 
-    .line 597
-    const v5, 0x7fffffff
-
-    .line 598
-    .local v5, "minLatitude":I
-    const/high16 v3, -0x80000000
-
-    .line 599
-    .local v3, "maxLatitude":I
+    .line 618
     const v6, 0x7fffffff
 
-    .line 600
-    .local v6, "minLongitude":I
+    .line 619
+    .local v6, "minLatitude":I
     const/high16 v4, -0x80000000
 
-    .line 602
-    .local v4, "maxLongitude":I
-    iget-object v8, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->busMap:Ljava/util/HashMap;
+    .line 620
+    .local v4, "maxLatitude":I
+    const v7, 0x7fffffff
 
-    invoke-virtual {v8}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+    .line 621
+    .local v7, "minLongitude":I
+    const/high16 v5, -0x80000000
 
-    move-result-object v8
+    .line 623
+    .local v5, "maxLongitude":I
+    iget-object v9, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->busMap:Ljava/util/HashMap;
 
-    invoke-interface {v8}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v9}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
-    move-result-object v8
+    move-result-object v9
+
+    invoke-interface {v9}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v9
 
     :goto_16
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v9
+    move-result v10
 
-    if-nez v9, :cond_50
+    if-nez v10, :cond_50
 
-    .line 612
+    .line 634
     const/high16 v0, 0x3fc00000    # 1.5f
 
-    .line 613
+    .line 635
     .local v0, "FACTOR":F
-    iget-object v8, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    :try_start_1e
+    iget-object v9, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
 
-    invoke-virtual {v8}, Lcom/google/android/maps/MapView;->getController()Lcom/google/android/maps/MapController;
+    invoke-virtual {v9}, Lcom/mapquest/android/maps/MapView;->getController()Lcom/mapquest/android/maps/MapController;
 
-    move-result-object v8
+    move-result-object v9
 
-    sub-int v9, v3, v5
-
-    invoke-static {v9}, Ljava/lang/Math;->abs(I)I
-
-    move-result v9
-
-    int-to-float v9, v9
-
-    mul-float/2addr v9, v11
-
-    float-to-int v9, v9
-
-    .line 614
+    .line 636
     sub-int v10, v4, v6
 
     invoke-static {v10}, Ljava/lang/Math;->abs(I)I
@@ -482,97 +471,129 @@
 
     int-to-float v10, v10
 
-    mul-float/2addr v10, v11
+    mul-float/2addr v10, v12
 
     float-to-int v10, v10
 
-    .line 613
-    invoke-virtual {v8, v9, v10}, Lcom/google/android/maps/MapController;->zoomToSpan(II)V
+    .line 637
+    sub-int v11, v5, v7
 
-    .line 615
-    iget-object v8, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    invoke-static {v11}, Ljava/lang/Math;->abs(I)I
 
-    invoke-virtual {v8}, Lcom/google/android/maps/MapView;->getController()Lcom/google/android/maps/MapController;
+    move-result v11
 
-    move-result-object v8
+    int-to-float v11, v11
 
-    .line 616
-    new-instance v9, Lcom/google/android/maps/GeoPoint;
+    mul-float/2addr v11, v12
 
-    add-int v10, v3, v5
+    float-to-int v11, v11
 
-    div-int/lit8 v10, v10, 0x2
+    .line 635
+    invoke-virtual {v9, v10, v11}, Lcom/mapquest/android/maps/MapController;->zoomToSpan(II)V
+
+    .line 638
+    iget-object v9, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
+
+    invoke-virtual {v9}, Lcom/mapquest/android/maps/MapView;->getController()Lcom/mapquest/android/maps/MapController;
+
+    move-result-object v9
+
+    .line 639
+    new-instance v10, Lcom/mapquest/android/maps/GeoPoint;
 
     add-int v11, v4, v6
 
     div-int/lit8 v11, v11, 0x2
 
-    invoke-direct {v9, v10, v11}, Lcom/google/android/maps/GeoPoint;-><init>(II)V
+    .line 640
+    add-int v12, v5, v7
 
-    .line 615
-    invoke-virtual {v8, v9}, Lcom/google/android/maps/MapController;->animateTo(Lcom/google/android/maps/GeoPoint;)V
+    div-int/lit8 v12, v12, 0x2
 
-    .line 617
+    .line 639
+    invoke-direct {v10, v11, v12}, Lcom/mapquest/android/maps/GeoPoint;-><init>(II)V
+
+    .line 638
+    invoke-virtual {v9, v10}, Lcom/mapquest/android/maps/MapController;->animateTo(Lcom/mapquest/android/maps/GeoPoint;)V
+    :try_end_4f
+    .catch Ljava/lang/Exception; {:try_start_1e .. :try_end_4f} :catch_77
+
+    .line 645
+    :goto_4f
     return-void
 
-    .line 602
+    .line 623
     .end local v0    # "FACTOR":F
     :cond_50
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v7
+    move-result-object v8
 
-    check-cast v7, Ldsg/app/live/translink/vancouver/view/MyOverlay;
+    check-cast v8, Ldsg/app/live/translink/vancouver/view/MyOverlay;
 
-    .line 603
-    .local v7, "mo":Ldsg/app/live/translink/vancouver/view/MyOverlay;
-    invoke-virtual {v7}, Ldsg/app/live/translink/vancouver/view/MyOverlay;->getGeoPoint()Lcom/google/android/maps/GeoPoint;
+    .line 624
+    .local v8, "mo":Ldsg/app/live/translink/vancouver/view/MyOverlay;
+    invoke-virtual {v8}, Ldsg/app/live/translink/vancouver/view/MyOverlay;->getGeoPoint()Lcom/mapquest/android/maps/GeoPoint;
 
-    move-result-object v9
+    move-result-object v10
 
-    invoke-virtual {v9}, Lcom/google/android/maps/GeoPoint;->getLatitudeE6()I
-
-    move-result v1
-
-    .line 604
-    .local v1, "lati":I
-    invoke-virtual {v7}, Ldsg/app/live/translink/vancouver/view/MyOverlay;->getGeoPoint()Lcom/google/android/maps/GeoPoint;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Lcom/google/android/maps/GeoPoint;->getLongitudeE6()I
+    invoke-virtual {v10}, Lcom/mapquest/android/maps/GeoPoint;->getLatitudeE6()I
 
     move-result v2
 
-    .line 606
-    .local v2, "lon":I
-    invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
+    .line 625
+    .local v2, "lati":I
+    invoke-virtual {v8}, Ldsg/app/live/translink/vancouver/view/MyOverlay;->getGeoPoint()Lcom/mapquest/android/maps/GeoPoint;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Lcom/mapquest/android/maps/GeoPoint;->getLongitudeE6()I
 
     move-result v3
 
-    .line 607
-    invoke-static {v1, v5}, Ljava/lang/Math;->min(II)I
-
-    move-result v5
-
-    .line 608
+    .line 627
+    .local v3, "lon":I
     invoke-static {v2, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v4
 
-    .line 609
+    .line 628
     invoke-static {v2, v6}, Ljava/lang/Math;->min(II)I
 
     move-result v6
 
+    .line 629
+    invoke-static {v3, v5}, Ljava/lang/Math;->max(II)I
+
+    move-result v5
+
+    .line 630
+    invoke-static {v3, v7}, Ljava/lang/Math;->min(II)I
+
+    move-result v7
+
     goto :goto_16
+
+    .line 641
+    .end local v2    # "lati":I
+    .end local v3    # "lon":I
+    .end local v8    # "mo":Ldsg/app/live/translink/vancouver/view/MyOverlay;
+    .restart local v0    # "FACTOR":F
+    :catch_77
+    move-exception v1
+
+    .line 642
+    .local v1, "e":Ljava/lang/Exception;
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_4f
 .end method
 
 .method static synthetic access$0(Ldsg/app/live/translink/vancouver/view/MainActivity;)I
     .registers 2
 
     .prologue
-    .line 644
+    .line 672
     iget v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRequestCounter:I
 
     return v0
@@ -582,7 +603,7 @@
     .registers 2
 
     .prologue
-    .line 645
+    .line 673
     iget v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mDoneCounter:I
 
     return v0
@@ -592,7 +613,7 @@
     .registers 2
 
     .prologue
-    .line 642
+    .line 670
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->busMapFlag:Ljava/util/HashMap;
 
     return-object v0
@@ -602,7 +623,7 @@
     .registers 2
 
     .prologue
-    .line 642
+    .line 670
     iput-object p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->busMapFlag:Ljava/util/HashMap;
 
     return-void
@@ -612,7 +633,7 @@
     .registers 2
 
     .prologue
-    .line 640
+    .line 668
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -622,7 +643,7 @@
     .registers 2
 
     .prologue
-    .line 640
+    .line 668
     iput-object p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mPaint:Landroid/graphics/Paint;
 
     return-void
@@ -632,18 +653,18 @@
     .registers 2
 
     .prologue
-    .line 648
+    .line 676
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mBusDrawableIds:[I
 
     return-object v0
 .end method
 
-.method static synthetic access$15(Ldsg/app/live/translink/vancouver/view/MainActivity;)Lcom/google/android/maps/MapView;
+.method static synthetic access$15(Ldsg/app/live/translink/vancouver/view/MainActivity;)Lcom/mapquest/android/maps/MapView;
     .registers 2
 
     .prologue
-    .line 106
-    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    .line 107
+    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
 
     return-object v0
 .end method
@@ -652,7 +673,7 @@
     .registers 2
 
     .prologue
-    .line 112
+    .line 113
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mToastShown:Z
 
     return v0
@@ -662,7 +683,7 @@
     .registers 2
 
     .prologue
-    .line 114
+    .line 115
     invoke-direct {p0, p1}, Ldsg/app/live/translink/vancouver/view/MainActivity;->showToast(I)V
 
     return-void
@@ -672,7 +693,7 @@
     .registers 1
 
     .prologue
-    .line 619
+    .line 647
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkIfAutoZoom()V
 
     return-void
@@ -682,7 +703,7 @@
     .registers 2
 
     .prologue
-    .line 400
+    .line 414
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mShowProgress:Z
 
     return v0
@@ -692,7 +713,7 @@
     .registers 2
 
     .prologue
-    .line 644
+    .line 672
     iput p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRequestCounter:I
 
     return-void
@@ -702,7 +723,7 @@
     .registers 2
 
     .prologue
-    .line 400
+    .line 414
     iput-boolean p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mShowProgress:Z
 
     return-void
@@ -712,18 +733,18 @@
     .registers 2
 
     .prologue
-    .line 224
+    .line 229
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mLinearLayoutWait:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
 
-.method static synthetic access$22(Ldsg/app/live/translink/vancouver/view/MainActivity;)Lcom/google/android/maps/MyLocationOverlay;
+.method static synthetic access$22(Ldsg/app/live/translink/vancouver/view/MainActivity;)Lcom/mapquest/android/maps/MyLocationOverlay;
     .registers 2
 
     .prologue
-    .line 107
-    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/google/android/maps/MyLocationOverlay;
+    .line 108
+    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/mapquest/android/maps/MyLocationOverlay;
 
     return-object v0
 .end method
@@ -732,7 +753,7 @@
     .registers 2
 
     .prologue
-    .line 629
+    .line 657
     invoke-direct {p0, p1}, Ldsg/app/live/translink/vancouver/view/MainActivity;->updateGadgetElement(I)V
 
     return-void
@@ -742,7 +763,7 @@
     .registers 2
 
     .prologue
-    .line 149
+    .line 151
     iput-boolean p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsSatelliteOn:Z
 
     return-void
@@ -752,7 +773,7 @@
     .registers 2
 
     .prologue
-    .line 150
+    .line 152
     iput-boolean p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsStreetViewOn:Z
 
     return-void
@@ -762,7 +783,7 @@
     .registers 2
 
     .prologue
-    .line 151
+    .line 153
     iput-boolean p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsTrafficOn:Z
 
     return-void
@@ -772,7 +793,7 @@
     .registers 2
 
     .prologue
-    .line 149
+    .line 151
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsSatelliteOn:Z
 
     return v0
@@ -782,7 +803,7 @@
     .registers 2
 
     .prologue
-    .line 150
+    .line 152
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsStreetViewOn:Z
 
     return v0
@@ -792,7 +813,7 @@
     .registers 2
 
     .prologue
-    .line 151
+    .line 153
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsTrafficOn:Z
 
     return v0
@@ -802,7 +823,7 @@
     .registers 2
 
     .prologue
-    .line 645
+    .line 673
     iput p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mDoneCounter:I
 
     return-void
@@ -812,7 +833,7 @@
     .registers 1
 
     .prologue
-    .line 156
+    .line 158
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->saveData()V
 
     return-void
@@ -822,7 +843,7 @@
     .registers 2
 
     .prologue
-    .line 396
+    .line 410
     iput-object p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->currentBus:Ljava/lang/String;
 
     return-void
@@ -832,7 +853,7 @@
     .registers 2
 
     .prologue
-    .line 393
+    .line 407
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->listBusesSelected:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object v0
@@ -842,7 +863,7 @@
     .registers 2
 
     .prologue
-    .line 396
+    .line 410
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->currentBus:Ljava/lang/String;
 
     return-object v0
@@ -852,7 +873,7 @@
     .registers 2
 
     .prologue
-    .line 473
+    .line 489
     invoke-direct {p0, p1}, Ldsg/app/live/translink/vancouver/view/MainActivity;->updateBusesCheckBoxes(Landroid/app/Dialog;)V
 
     return-void
@@ -862,7 +883,7 @@
     .registers 2
 
     .prologue
-    .line 398
+    .line 412
     iput p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->currentBusPos:I
 
     return-void
@@ -872,7 +893,7 @@
     .registers 1
 
     .prologue
-    .line 515
+    .line 533
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->onFullScreen()V
 
     return-void
@@ -882,7 +903,7 @@
     .registers 2
 
     .prologue
-    .line 647
+    .line 675
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->listBusResult:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object v0
@@ -892,7 +913,7 @@
     .registers 2
 
     .prologue
-    .line 112
+    .line 113
     iput-boolean p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mToastShown:Z
 
     return-void
@@ -902,7 +923,7 @@
     .registers 2
 
     .prologue
-    .line 574
+    .line 595
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mCustomHandler:Landroid/os/Handler;
 
     return-object v0
@@ -912,7 +933,7 @@
     .registers 2
 
     .prologue
-    .line 576
+    .line 597
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->updateTimerThreadBuses:Ljava/lang/Runnable;
 
     return-object v0
@@ -922,7 +943,7 @@
     .registers 2
 
     .prologue
-    .line 641
+    .line 669
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->busMap:Ljava/util/HashMap;
 
     return-object v0
@@ -932,7 +953,7 @@
     .registers 2
 
     .prologue
-    .line 641
+    .line 669
     iput-object p1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->busMap:Ljava/util/HashMap;
 
     return-void
@@ -942,23 +963,23 @@
     .registers 2
 
     .prologue
-    .line 620
+    .line 648
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->busMap:Ljava/util/HashMap;
 
     if-nez v0, :cond_5
 
-    .line 627
+    .line 655
     :cond_4
     :goto_4
     return-void
 
-    .line 624
+    .line 652
     :cond_5
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mAutoZoom:Z
 
     if-eqz v0, :cond_4
 
-    .line 625
+    .line 653
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->Zoom()V
 
     goto :goto_4
@@ -968,13 +989,13 @@
     .registers 2
 
     .prologue
-    .line 507
+    .line 525
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->imageViewFullscreen:Landroid/widget/ImageView;
 
     if-nez v0, :cond_f
 
-    .line 508
-    const v0, 0x7f07002d
+    .line 526
+    const v0, 0x7f080019
 
     invoke-virtual {p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -984,7 +1005,7 @@
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->imageViewFullscreen:Landroid/widget/ImageView;
 
-    .line 510
+    .line 528
     :cond_f
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->imageViewFullscreen:Landroid/widget/ImageView;
 
@@ -995,24 +1016,24 @@
     .registers 3
 
     .prologue
-    .line 516
+    .line 534
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mAutoZoom:Z
 
-    .line 517
+    .line 535
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->getFullscreenImageView()Landroid/widget/ImageView;
 
     move-result-object v0
 
-    const v1, 0x7f020023
+    const v1, 0x7f02000b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 518
+    .line 536
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkIfAutoZoom()V
 
-    .line 519
+    .line 537
     return-void
 .end method
 
@@ -1020,14 +1041,14 @@
     .registers 3
 
     .prologue
-    .line 566
+    .line 587
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mCustomHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->updateTimerThreadBuses:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 567
+    .line 588
     return-void
 .end method
 
@@ -1041,14 +1062,16 @@
 
     const/4 v7, 0x0
 
-    .line 189
+    .line 191
+    .line 192
     const-string v5, "MySharedPreferences"
 
+    .line 191
     invoke-virtual {p0, v5, v7}, Ldsg/app/live/translink/vancouver/view/MainActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v3
 
-    .line 191
+    .line 193
     .local v3, "sharedPreferences":Landroid/content/SharedPreferences;
     const-string v5, "KEY_SATELLITE"
 
@@ -1058,7 +1081,7 @@
 
     iput-boolean v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsSatelliteOn:Z
 
-    .line 192
+    .line 194
     const-string v5, "KEY_STREETVIEW"
 
     invoke-interface {v3, v5, v7}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -1067,7 +1090,7 @@
 
     iput-boolean v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsStreetViewOn:Z
 
-    .line 193
+    .line 195
     const-string v5, "KEY_TRAFFIC"
 
     invoke-interface {v3, v5, v7}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -1076,28 +1099,28 @@
 
     iput-boolean v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsTrafficOn:Z
 
-    .line 194
-    iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    .line 196
+    iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
 
     iget-boolean v6, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsSatelliteOn:Z
 
-    invoke-virtual {v5, v6}, Lcom/google/android/maps/MapView;->setSatellite(Z)V
+    invoke-virtual {v5, v6}, Lcom/mapquest/android/maps/MapView;->setSatellite(Z)V
 
-    .line 195
-    iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    .line 197
+    iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
 
     iget-boolean v6, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsStreetViewOn:Z
 
-    invoke-virtual {v5, v6}, Lcom/google/android/maps/MapView;->setStreetView(Z)V
+    invoke-virtual {v5, v6}, Lcom/mapquest/android/maps/MapView;->setStreetView(Z)V
 
-    .line 196
-    iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    .line 198
+    iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
 
     iget-boolean v6, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsTrafficOn:Z
 
-    invoke-virtual {v5, v6}, Lcom/google/android/maps/MapView;->setTraffic(Z)V
+    invoke-virtual {v5, v6}, Lcom/mapquest/android/maps/MapView;->setTraffic(Z)V
 
-    .line 197
+    .line 199
     const-string v5, "COMPASS_ON_OFF"
 
     invoke-interface {v3, v5, v8}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -1106,7 +1129,7 @@
 
     iput-boolean v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mCompassState:Z
 
-    .line 200
+    .line 202
     const-string v5, "KEY_CURRENT_BUS_POS"
 
     invoke-interface {v3, v5, v7}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -1115,7 +1138,7 @@
 
     iput v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->currentBusPos:I
 
-    .line 201
+    .line 203
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1124,7 +1147,7 @@
 
     if-lt v0, v5, :cond_54
 
-    .line 215
+    .line 219
     const/4 v0, 0x0
 
     :goto_4b
@@ -1134,13 +1157,13 @@
 
     if-lt v0, v5, :cond_ab
 
-    .line 220
+    .line 225
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->updateCompassState()V
 
-    .line 222
+    .line 227
     return-void
 
-    .line 202
+    .line 204
     :cond_54
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1160,11 +1183,11 @@
 
     move-result-object v2
 
-    .line 203
+    .line 205
     .local v2, "s":Ljava/lang/String;
     if-eqz v2, :cond_77
 
-    .line 204
+    .line 206
     iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->listBusesSelected:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->indexOf(Ljava/lang/Object;)I
@@ -1175,12 +1198,12 @@
 
     if-ne v5, v6, :cond_77
 
-    .line 205
+    .line 207
     iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->listBusesSelected:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 208
+    .line 210
     :cond_77
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1188,6 +1211,7 @@
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 211
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v5
@@ -1196,21 +1220,23 @@
 
     move-result-object v5
 
+    .line 210
     invoke-interface {v3, v5, v9}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 209
+    .line 212
     .local v1, "key":Ljava/lang/String;
     if-eqz v1, :cond_a8
 
-    .line 210
+    .line 213
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "KEY_BUS_LIST_RESULT_VALUE"
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 214
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v5
@@ -1219,6 +1245,7 @@
 
     move-result-object v5
 
+    .line 213
     invoke-interface {v3, v5, v7}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v5
@@ -1227,20 +1254,20 @@
 
     move-result-object v4
 
-    .line 211
+    .line 215
     .local v4, "v":Ljava/lang/Integer;
     iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->listBusResult:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v5, v1, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 201
+    .line 203
     .end local v4    # "v":Ljava/lang/Integer;
     :cond_a8
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_47
 
-    .line 216
+    .line 220
     .end local v1    # "key":Ljava/lang/String;
     .end local v2    # "s":Ljava/lang/String;
     :cond_ab
@@ -1252,6 +1279,7 @@
 
     invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 221
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -1260,16 +1288,17 @@
 
     move-result-object v6
 
+    .line 220
     invoke-interface {v3, v6, v8}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v6
 
     aput-boolean v6, v5, v0
 
-    .line 217
+    .line 222
     invoke-direct {p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->updateGadgetElement(I)V
 
-    .line 215
+    .line 219
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4b
@@ -1279,10 +1308,10 @@
     .registers 5
 
     .prologue
-    .line 553
+    .line 574
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->pauseThread()V
 
-    .line 554
+    .line 575
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mCustomHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->updateTimerThreadBuses:Ljava/lang/Runnable;
@@ -1291,7 +1320,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 555
+    .line 576
     return-void
 .end method
 
@@ -1299,66 +1328,66 @@
     .registers 9
 
     .prologue
-    .line 157
+    .line 159
+    .line 160
     const-string v5, "MySharedPreferences"
 
-    .line 158
     const/4 v6, 0x0
 
-    .line 157
+    .line 159
     invoke-virtual {p0, v5, v6}, Ldsg/app/live/translink/vancouver/view/MainActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v4
 
-    .line 159
+    .line 161
     .local v4, "sharedPreferences":Landroid/content/SharedPreferences;
     invoke-interface {v4}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 160
+    .line 162
     .local v0, "edit":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
 
-    .line 161
+    .line 163
     const-string v5, "KEY_SATELLITE"
 
     iget-boolean v6, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsSatelliteOn:Z
 
     invoke-interface {v0, v5, v6}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 162
+    .line 164
     const-string v5, "KEY_STREETVIEW"
 
     iget-boolean v6, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsStreetViewOn:Z
 
     invoke-interface {v0, v5, v6}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 163
+    .line 165
     const-string v5, "KEY_TRAFFIC"
 
     iget-boolean v6, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsTrafficOn:Z
 
     invoke-interface {v0, v5, v6}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 164
+    .line 166
     const-string v5, "COMPASS_ON_OFF"
 
     iget-boolean v6, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mCompassState:Z
 
     invoke-interface {v0, v5, v6}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 165
+    .line 167
     const-string v5, "KEY_CURRENT_BUS_POS"
 
     iget v6, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->currentBusPos:I
 
     invoke-interface {v0, v5, v6}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 167
+    .line 169
     const/4 v3, 0x0
 
-    .line 168
+    .line 170
     .local v3, "idx":I
     iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->listBusResult:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1377,7 +1406,7 @@
 
     if-nez v5, :cond_55
 
-    .line 176
+    .line 178
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -1390,7 +1419,7 @@
 
     if-lt v2, v5, :cond_92
 
-    .line 180
+    .line 182
     const/4 v2, 0x0
 
     :goto_4c
@@ -1400,13 +1429,13 @@
 
     if-lt v2, v5, :cond_af
 
-    .line 184
+    .line 186
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 185
+    .line 187
     return-void
 
-    .line 168
+    .line 170
     .end local v2    # "i":I
     :cond_55
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -1415,7 +1444,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 169
+    .line 171
     .local v1, "esi":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1439,7 +1468,7 @@
 
     invoke-interface {v0, v7, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 170
+    .line 172
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v7, "KEY_BUS_LIST_RESULT_VALUE"
@@ -1466,12 +1495,12 @@
 
     invoke-interface {v0, v7, v5}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 171
+    .line 173
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_3c
 
-    .line 177
+    .line 179
     .end local v1    # "esi":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     .restart local v2    # "i":I
     :cond_92
@@ -1499,12 +1528,12 @@
 
     invoke-interface {v0, v6, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 176
+    .line 178
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_43
 
-    .line 181
+    .line 183
     :cond_af
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1526,7 +1555,7 @@
 
     invoke-interface {v0, v5, v6}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 180
+    .line 182
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4c
@@ -1538,74 +1567,77 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 337
+    .line 346
     new-instance v2, Landroid/app/Dialog;
 
     invoke-direct {v2, p0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
-    .line 338
+    .line 347
     .local v2, "dialog":Landroid/app/Dialog;
     invoke-virtual {v2, v1}, Landroid/app/Dialog;->requestWindowFeature(I)Z
 
-    .line 339
+    .line 348
     const v0, 0x7f030004
 
     invoke-virtual {v2, v0}, Landroid/app/Dialog;->setContentView(I)V
 
-    .line 340
+    .line 349
     const-string v0, ""
 
     invoke-virtual {v2, v0}, Landroid/app/Dialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 341
+    .line 350
     invoke-virtual {v2, v1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 343
-    const v0, 0x7f070028
+    .line 353
+    const v0, 0x7f080014
 
     invoke-virtual {v2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
+    .line 352
     check-cast v3, Landroid/widget/CheckBox;
 
-    .line 344
+    .line 355
     .local v3, "checkSat":Landroid/widget/CheckBox;
-    const v0, 0x7f070029
+    const v0, 0x7f080015
 
     invoke-virtual {v2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
+    .line 354
     check-cast v4, Landroid/widget/CheckBox;
 
-    .line 345
+    .line 357
     .local v4, "checkStreet":Landroid/widget/CheckBox;
-    const v0, 0x7f07002a
+    const v0, 0x7f080016
 
     invoke-virtual {v2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
+    .line 356
     check-cast v5, Landroid/widget/CheckBox;
 
-    .line 347
+    .line 359
     .local v5, "checkTraf":Landroid/widget/CheckBox;
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsSatelliteOn:Z
 
     invoke-virtual {v3, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 348
+    .line 360
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsStreetViewOn:Z
 
     invoke-virtual {v4, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 349
+    .line 361
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsTrafficOn:Z
 
     invoke-virtual {v5, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 351
+    .line 363
     const/4 v7, 0x0
 
     .local v7, "i":I
@@ -1616,16 +1648,17 @@
 
     if-lt v7, v0, :cond_5d
 
-    .line 355
-    const v0, 0x7f07002b
+    .line 369
+    const v0, 0x7f080017
 
     invoke-virtual {v2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
+    .line 368
     check-cast v6, Landroid/widget/Button;
 
-    .line 357
+    .line 371
     .local v6, "dialogButton":Landroid/widget/Button;
     new-instance v0, Ldsg/app/live/translink/vancouver/view/MainActivity$5;
 
@@ -1635,13 +1668,13 @@
 
     invoke-virtual {v6, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 381
+    .line 395
     invoke-virtual {v2}, Landroid/app/Dialog;->show()V
 
-    .line 382
+    .line 396
     return-void
 
-    .line 352
+    .line 364
     .end local v6    # "dialogButton":Landroid/widget/Button;
     :cond_5d
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIdCheckboxGadgets:[I
@@ -1654,13 +1687,14 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
+    .line 365
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsShowGadgets:[Z
 
     aget-boolean v1, v1, v7
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 351
+    .line 363
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_42
@@ -1671,21 +1705,21 @@
     .param p1, "show"    # I
 
     .prologue
-    .line 115
+    .line 116
     new-instance v0, Ldsg/app/live/translink/vancouver/view/MainActivity$3;
 
     invoke-direct {v0, p0, p1}, Ldsg/app/live/translink/vancouver/view/MainActivity$3;-><init>(Ldsg/app/live/translink/vancouver/view/MainActivity;I)V
 
     invoke-virtual {p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 123
+    .line 125
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRunnableToast:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 124
+    .line 126
     return-void
 .end method
 
@@ -1696,31 +1730,31 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 474
+    .line 490
     const/4 v4, 0x5
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_66
 
-    .line 476
+    .line 493
     .local v0, "checkboxBuses":[I
     iget-object v4, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkCtrlBuses:[Landroid/widget/CheckBox;
 
     if-nez v4, :cond_10
 
-    .line 477
+    .line 494
     array-length v4, v0
 
     new-array v4, v4, [Landroid/widget/CheckBox;
 
     iput-object v4, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkCtrlBuses:[Landroid/widget/CheckBox;
 
-    .line 484
+    .line 501
     :cond_10
     const/4 v2, 0x0
 
-    .line 485
+    .line 502
     .local v2, "idxBus":I
     iget-object v4, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->listBusesSelected:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -1728,7 +1762,7 @@
 
     move-result v3
 
-    .line 486
+    .line 503
     .local v3, "sizeBus":I
     const/4 v1, 0x0
 
@@ -1738,13 +1772,14 @@
 
     if-lt v1, v4, :cond_1c
 
-    .line 504
+    .line 522
     return-void
 
-    .line 487
+    .line 504
     :cond_1c
     iget-object v5, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkCtrlBuses:[Landroid/widget/CheckBox;
 
+    .line 505
     aget v4, v0, v1
 
     invoke-virtual {p1, v4}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
@@ -1753,12 +1788,13 @@
 
     check-cast v4, Landroid/widget/CheckBox;
 
+    .line 504
     aput-object v4, v5, v1
 
-    .line 488
+    .line 506
     if-ge v2, v3, :cond_54
 
-    .line 490
+    .line 508
     iget-object v4, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkCtrlBuses:[Landroid/widget/CheckBox;
 
     aget-object v4, v4, v1
@@ -1773,7 +1809,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 492
+    .line 510
     iget-object v4, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkCtrlBuses:[Landroid/widget/CheckBox;
 
     aget-object v5, v4, v1
@@ -1788,23 +1824,23 @@
 
     invoke-virtual {v5, v4}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
 
-    .line 494
+    .line 512
     iget-object v4, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkCtrlBuses:[Landroid/widget/CheckBox;
 
     aget-object v4, v4, v1
 
     invoke-virtual {v4, v6}, Landroid/widget/CheckBox;->setVisibility(I)V
 
-    .line 496
+    .line 514
     add-int/lit8 v2, v2, 0x1
 
-    .line 486
+    .line 503
     :goto_51
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_18
 
-    .line 498
+    .line 516
     :cond_54
     iget-object v4, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkCtrlBuses:[Landroid/widget/CheckBox;
 
@@ -1814,7 +1850,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/CheckBox;->setVisibility(I)V
 
-    .line 499
+    .line 517
     iget-object v4, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->checkCtrlBuses:[Landroid/widget/CheckBox;
 
     aget-object v4, v4, v1
@@ -1823,16 +1859,16 @@
 
     goto :goto_51
 
-    .line 474
+    .line 490
     nop
 
     :array_66
     .array-data 4
-        0x7f070017
-        0x7f070018
-        0x7f070019
-        0x7f07001a
-        0x7f07001b
+        0x7f080003
+        0x7f080004
+        0x7f080005
+        0x7f080006
+        0x7f080007
     .end array-data
 .end method
 
@@ -1840,13 +1876,13 @@
     .registers 5
 
     .prologue
-    .line 278
+    .line 285
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mImageViewCompass:Landroid/widget/ImageView;
 
     if-nez v0, :cond_f
 
-    .line 279
-    const v0, 0x7f070031
+    .line 286
+    const v0, 0x7f08001d
 
     invoke-virtual {p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1856,43 +1892,44 @@
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mImageViewCompass:Landroid/widget/ImageView;
 
-    .line 282
+    .line 289
     :cond_f
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mImageViewCompass:Landroid/widget/ImageView;
 
     if-nez v0, :cond_14
 
-    .line 296
+    .line 304
     :goto_13
     return-void
 
-    .line 286
+    .line 293
     :cond_14
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mCompassState:Z
 
     if-eqz v0, :cond_31
 
-    .line 287
+    .line 294
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mImageViewCompass:Landroid/widget/ImageView;
 
-    const v1, 0x7f020021
+    const v1, 0x7f020009
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 288
+    .line 295
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRotateView:Ldsg/app/live/translink/vancouver/view/RotateView;
 
+    .line 296
     const/4 v2, 0x1
 
-    .line 289
+    .line 297
     const/4 v3, 0x2
 
-    .line 288
+    .line 295
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorListener;II)Z
 
-    .line 290
+    .line 298
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRotateView:Ldsg/app/live/translink/vancouver/view/RotateView;
 
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mImageViewCompass:Landroid/widget/ImageView;
@@ -1901,22 +1938,22 @@
 
     goto :goto_13
 
-    .line 292
+    .line 300
     :cond_31
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mImageViewCompass:Landroid/widget/ImageView;
 
-    const v1, 0x7f020020
+    const v1, 0x7f020008
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 293
+    .line 301
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRotateView:Ldsg/app/live/translink/vancouver/view/RotateView;
 
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorListener;)V
 
-    .line 294
+    .line 302
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRotateView:Ldsg/app/live/translink/vancouver/view/RotateView;
 
     const/4 v1, 0x0
@@ -1931,7 +1968,7 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 630
+    .line 658
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIdGadgets:[I
 
     aget v1, v1, p1
@@ -1942,28 +1979,28 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 631
+    .line 659
     .local v0, "iv":Landroid/widget/ImageView;
     if-eqz v0, :cond_16
 
-    .line 632
+    .line 660
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mIsShowGadgets:[Z
 
     aget-boolean v1, v1, p1
 
     if-eqz v1, :cond_17
 
-    .line 633
+    .line 661
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 638
+    .line 666
     :cond_16
     :goto_16
     return-void
 
-    .line 635
+    .line 663
     :cond_17
     const/16 v1, 0x8
 
@@ -1979,26 +2016,26 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 528
+    .line 548
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
 
-    .line 529
+    .line 549
     const-string v2, "http://market.android.com/details?id=dsg.app.live.translink.vancouver.pro"
 
-    .line 528
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
+    .line 548
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 530
+    .line 551
     .local v0, "marketIntent":Landroid/content/Intent;
     invoke-virtual {p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 533
+    .line 554
     return-void
 .end method
 
@@ -2009,55 +2046,56 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 404
+    .line 418
     new-instance v0, Landroid/app/Dialog;
 
     invoke-direct {v0, p0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
-    .line 405
+    .line 419
     .local v0, "dialog":Landroid/app/Dialog;
     invoke-virtual {v0, v4}, Landroid/app/Dialog;->requestWindowFeature(I)Z
 
-    .line 406
+    .line 420
     const v3, 0x7f030001
 
     invoke-virtual {v0, v3}, Landroid/app/Dialog;->setContentView(I)V
 
-    .line 407
+    .line 421
     const-string v3, ""
 
     invoke-virtual {v0, v3}, Landroid/app/Dialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 408
+    .line 422
     invoke-virtual {v0, v4}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 409
+    .line 423
     invoke-direct {p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->updateBusesCheckBoxes(Landroid/app/Dialog;)V
 
-    .line 411
-    const v3, 0x7f07001c
+    .line 426
+    const v3, 0x7f080008
 
     invoke-virtual {v0, v3}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 425
     check-cast v2, Landroid/widget/Spinner;
 
-    .line 412
+    .line 427
     .local v2, "spinnerbus1":Landroid/widget/Spinner;
     iget v3, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->currentBusPos:I
 
     invoke-virtual {v2, v3}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 413
+    .line 428
     new-instance v3, Ldsg/app/live/translink/vancouver/view/MainActivity$6;
 
     invoke-direct {v3, p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity$6;-><init>(Ldsg/app/live/translink/vancouver/view/MainActivity;Landroid/app/Dialog;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 438
-    const v3, 0x7f070016
+    .line 454
+    const v3, 0x7f080002
 
     invoke-virtual {v0, v3}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -2065,7 +2103,7 @@
 
     check-cast v1, Landroid/widget/Button;
 
-    .line 440
+    .line 456
     .local v1, "dialogButton":Landroid/widget/Button;
     new-instance v3, Ldsg/app/live/translink/vancouver/view/MainActivity$7;
 
@@ -2073,10 +2111,10 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 466
+    .line 482
     invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    .line 468
+    .line 484
     return-void
 .end method
 
@@ -2085,7 +2123,7 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 385
+    .line 399
     iget-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mCompassState:Z
 
     if-eqz v0, :cond_b
@@ -2095,13 +2133,13 @@
     :goto_5
     iput-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mCompassState:Z
 
-    .line 386
+    .line 400
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->updateCompassState()V
 
-    .line 387
+    .line 401
     return-void
 
-    .line 385
+    .line 399
     :cond_b
     const/4 v0, 0x1
 
@@ -2113,22 +2151,22 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 267
+    .line 274
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mAutoZoom:Z
 
-    .line 268
+    .line 275
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->getFullscreenImageView()Landroid/widget/ImageView;
 
     move-result-object v0
 
-    const v1, 0x7f020022
+    const v1, 0x7f02000a
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 269
-    invoke-super {p0, p1}, Lcom/google/android/maps/MapActivity;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    .line 276
+    invoke-super {p0, p1}, Lcom/mapquest/android/maps/MapActivity;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -2140,21 +2178,21 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 522
+    .line 540
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->onFullScreen()V
 
-    .line 523
+    .line 541
     return-void
 .end method
 
-.method public getLocation()Lcom/google/android/maps/GeoPoint;
+.method public getLocation()Lcom/mapquest/android/maps/GeoPoint;
     .registers 2
 
     .prologue
-    .line 261
-    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/google/android/maps/MyLocationOverlay;
+    .line 268
+    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/mapquest/android/maps/MyLocationOverlay;
 
-    invoke-virtual {v0}, Lcom/google/android/maps/MyLocationOverlay;->getMyLocation()Lcom/google/android/maps/GeoPoint;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MyLocationOverlay;->getMyLocation()Lcom/mapquest/android/maps/GeoPoint;
 
     move-result-object v0
 
@@ -2165,7 +2203,7 @@
     .registers 2
 
     .prologue
-    .line 571
+    .line 592
     const/4 v0, 0x0
 
     return v0
@@ -2176,14 +2214,14 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 390
+    .line 404
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRunnableLocate:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 391
+    .line 405
     return-void
 .end method
 
@@ -2192,10 +2230,10 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 231
-    invoke-super {p0, p1}, Lcom/google/android/maps/MapActivity;->onCreate(Landroid/os/Bundle;)V
+    .line 236
+    invoke-super {p0, p1}, Lcom/mapquest/android/maps/MapActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 232
+    .line 237
     invoke-virtual {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -2204,7 +2242,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    .line 233
+    .line 238
     const-string v0, "sensor"
 
     invoke-virtual {p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2215,31 +2253,29 @@
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 235
-    new-instance v0, Lcom/google/android/maps/MapView;
+    .line 240
+    new-instance v0, Lcom/mapquest/android/maps/MapView;
 
-    const-string v1, "0jiAJ85bZ9OOtyiu4FOeWj3pBw5_41huGj2uVWQ"
+    const-string v1, "api_key"
 
-    invoke-direct {v0, p0, v1}, Lcom/google/android/maps/MapView;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, p0, v1}, Lcom/mapquest/android/maps/MapView;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
 
-    .line 236
+    .line 241
     const v0, 0x7f030003
 
     invoke-virtual {p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->setContentView(I)V
 
-    .line 238
+    .line 243
     new-instance v0, Ldsg/app/live/translink/vancouver/view/AdsClass;
 
-    const v1, 0x7f070014
-
-    invoke-direct {v0, p0, v1}, Ldsg/app/live/translink/vancouver/view/AdsClass;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, p0}, Ldsg/app/live/translink/vancouver/view/AdsClass;-><init>(Landroid/app/Activity;)V
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mAdsClass:Ldsg/app/live/translink/vancouver/view/AdsClass;
 
-    .line 240
-    const v0, 0x7f07001e
+    .line 245
+    const v0, 0x7f08000a
 
     invoke-virtual {p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -2249,8 +2285,8 @@
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRotateView:Ldsg/app/live/translink/vancouver/view/RotateView;
 
-    .line 241
-    const v0, 0x7f070020
+    .line 247
+    const v0, 0x7f08000c
 
     invoke-virtual {p0, v0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -2258,69 +2294,70 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
+    .line 246
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mLinearLayoutWait:Landroid/widget/LinearLayout;
 
-    .line 242
+    .line 248
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mLinearLayoutWait:Landroid/widget/LinearLayout;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 243
+    .line 249
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mShowProgress:Z
 
-    .line 244
+    .line 250
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRotateView:Ldsg/app/live/translink/vancouver/view/RotateView;
 
-    iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
 
     invoke-virtual {v0, v1}, Ldsg/app/live/translink/vancouver/view/RotateView;->addView(Landroid/view/View;)V
 
-    .line 246
-    new-instance v0, Lcom/google/android/maps/MyLocationOverlay;
+    .line 252
+    new-instance v0, Lcom/mapquest/android/maps/MyLocationOverlay;
 
-    iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
 
-    invoke-direct {v0, p0, v1}, Lcom/google/android/maps/MyLocationOverlay;-><init>(Landroid/content/Context;Lcom/google/android/maps/MapView;)V
+    invoke-direct {v0, p0, v1}, Lcom/mapquest/android/maps/MyLocationOverlay;-><init>(Landroid/content/Context;Lcom/mapquest/android/maps/MapView;)V
 
-    iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/google/android/maps/MyLocationOverlay;
+    iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/mapquest/android/maps/MyLocationOverlay;
 
-    .line 247
+    .line 253
     new-instance v0, Ldsg/app/live/translink/vancouver/view/MainActivity$4;
 
     invoke-direct {v0, p0}, Ldsg/app/live/translink/vancouver/view/MainActivity$4;-><init>(Ldsg/app/live/translink/vancouver/view/MainActivity;)V
 
     iput-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRunnableLocate:Ljava/lang/Runnable;
 
-    .line 253
-    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/google/android/maps/MyLocationOverlay;
+    .line 260
+    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/mapquest/android/maps/MyLocationOverlay;
 
     iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mRunnableLocate:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/maps/MyLocationOverlay;->runOnFirstFix(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/MyLocationOverlay;->runOnFirstFix(Ljava/lang/Runnable;)Z
 
-    .line 254
-    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    .line 261
+    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
 
-    invoke-virtual {v0}, Lcom/google/android/maps/MapView;->getOverlays()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getOverlays()Ljava/util/List;
 
     move-result-object v0
 
-    iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/google/android/maps/MyLocationOverlay;
+    iget-object v1, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/mapquest/android/maps/MyLocationOverlay;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 256
-    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/google/android/maps/MapView;
+    .line 263
+    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMapView:Lcom/mapquest/android/maps/MapView;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/google/android/maps/MapView;->setClickable(Z)V
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/MapView;->setClickable(Z)V
 
-    .line 258
+    .line 265
     return-void
 .end method
 
@@ -2329,17 +2366,17 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 309
+    .line 317
     invoke-virtual {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
 
-    const/high16 v1, 0x7f0b0000
+    const/high16 v1, 0x7f070000
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    .line 310
-    invoke-super {p0, p1}, Lcom/google/android/maps/MapActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .line 318
+    invoke-super {p0, p1}, Lcom/mapquest/android/maps/MapActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     move-result v0
 
@@ -2350,15 +2387,15 @@
     .registers 2
 
     .prologue
-    .line 538
-    invoke-super {p0}, Lcom/google/android/maps/MapActivity;->onDestroy()V
+    .line 559
+    invoke-super {p0}, Lcom/mapquest/android/maps/MapActivity;->onDestroy()V
 
-    .line 539
+    .line 560
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mAdsClass:Ldsg/app/live/translink/vancouver/view/AdsClass;
 
     invoke-virtual {v0}, Ldsg/app/live/translink/vancouver/view/AdsClass;->onDestroy()V
 
-    .line 540
+    .line 561
     return-void
 .end method
 
@@ -2367,35 +2404,35 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 315
+    .line 323
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_12
 
-    .line 321
-    invoke-super {p0, p1}, Lcom/google/android/maps/MapActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .line 329
+    invoke-super {p0, p1}, Lcom/mapquest/android/maps/MapActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
     :goto_b
     return v0
 
-    .line 317
+    .line 325
     :pswitch_c
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->setting_call()V
 
-    .line 319
+    .line 327
     const/4 v0, 0x1
 
     goto :goto_b
 
-    .line 315
+    .line 323
     nop
 
     :pswitch_data_12
-    .packed-switch 0x7f070032
+    .packed-switch 0x7f08001e
         :pswitch_c
     .end packed-switch
 .end method
@@ -2404,18 +2441,18 @@
     .registers 2
 
     .prologue
-    .line 301
-    invoke-super {p0}, Lcom/google/android/maps/MapActivity;->onPause()V
+    .line 309
+    invoke-super {p0}, Lcom/mapquest/android/maps/MapActivity;->onPause()V
 
-    .line 302
+    .line 310
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->saveData()V
 
-    .line 303
+    .line 311
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mAdsClass:Ldsg/app/live/translink/vancouver/view/AdsClass;
 
     invoke-virtual {v0}, Ldsg/app/live/translink/vancouver/view/AdsClass;->onPause()V
 
-    .line 304
+    .line 312
     return-void
 .end method
 
@@ -2423,26 +2460,26 @@
     .registers 2
 
     .prologue
-    .line 544
-    invoke-super {p0}, Lcom/google/android/maps/MapActivity;->onResume()V
+    .line 565
+    invoke-super {p0}, Lcom/mapquest/android/maps/MapActivity;->onResume()V
 
-    .line 545
+    .line 566
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->restoreData()V
 
-    .line 547
-    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/google/android/maps/MyLocationOverlay;
+    .line 568
+    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/mapquest/android/maps/MyLocationOverlay;
 
-    invoke-virtual {v0}, Lcom/google/android/maps/MyLocationOverlay;->enableMyLocation()Z
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MyLocationOverlay;->enableMyLocation()Z
 
-    .line 548
+    .line 569
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->resumeThread()V
 
-    .line 549
+    .line 570
     iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mAdsClass:Ldsg/app/live/translink/vancouver/view/AdsClass;
 
     invoke-virtual {v0}, Ldsg/app/live/translink/vancouver/view/AdsClass;->onResume()V
 
-    .line 550
+    .line 571
     return-void
 .end method
 
@@ -2450,18 +2487,18 @@
     .registers 2
 
     .prologue
-    .line 560
-    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/google/android/maps/MyLocationOverlay;
+    .line 581
+    iget-object v0, p0, Ldsg/app/live/translink/vancouver/view/MainActivity;->mMyLocationOverlay:Lcom/mapquest/android/maps/MyLocationOverlay;
 
-    invoke-virtual {v0}, Lcom/google/android/maps/MyLocationOverlay;->disableMyLocation()V
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MyLocationOverlay;->disableMyLocation()V
 
-    .line 561
-    invoke-super {p0}, Lcom/google/android/maps/MapActivity;->onStop()V
+    .line 582
+    invoke-super {p0}, Lcom/mapquest/android/maps/MapActivity;->onStop()V
 
-    .line 562
+    .line 583
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->pauseThread()V
 
-    .line 563
+    .line 584
     return-void
 .end method
 
@@ -2470,9 +2507,9 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 333
+    .line 342
     invoke-direct {p0}, Ldsg/app/live/translink/vancouver/view/MainActivity;->setting_call()V
 
-    .line 334
+    .line 343
     return-void
 .end method

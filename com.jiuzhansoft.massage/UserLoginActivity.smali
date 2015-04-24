@@ -26,7 +26,7 @@
 
 .field private forgot_password:Landroid/widget/TextView;
 
-.field private mLoginCancel:Landroid/widget/ImageButton;
+.field private mLoginCancel:Landroid/widget/Button;
 
 .field private mLoginConfirm:Landroid/widget/Button;
 
@@ -52,10 +52,10 @@
     .registers 1
 
     .prologue
-    .line 68
+    .line 69
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;-><init>()V
 
-    .line 69
+    .line 71
     return-void
 .end method
 
@@ -64,7 +64,7 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 72
+    .line 75
     return-object p1
 .end method
 
@@ -73,7 +73,7 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 93
+    .line 120
     return-object p0
 .end method
 
@@ -82,19 +82,19 @@
     .param p1, "tip"    # Ljava/lang/String;
 
     .prologue
-    .line 121
+    .line 169
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 122
+    .line 170
     const-string v0, "LoginActivity"
 
     const-string v1, "LoginError"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 125
+    .line 173
     :cond_b
     new-instance v0, Lcom/jiuzhansoft/massage/user/UserLoginActivity$1;
 
@@ -102,7 +102,7 @@
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->post(Ljava/lang/Runnable;)V
 
-    .line 167
+    .line 238
     return-void
 .end method
 
@@ -111,19 +111,19 @@
     .param p1, "pinName"    # Ljava/lang/String;
 
     .prologue
-    .line 170
+    .line 242
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 171
+    .line 243
     const-string v0, "LoginActivity"
 
     const-string v1, "LoginSuccess"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 174
+    .line 246
     :cond_b
     new-instance v0, Lcom/jiuzhansoft/massage/user/UserLoginActivity$2;
 
@@ -131,7 +131,7 @@
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->post(Ljava/lang/Runnable;)V
 
-    .line 288
+    .line 367
     return-void
 .end method
 
@@ -139,7 +139,7 @@
     .registers 2
 
     .prologue
-    .line 60
+    .line 62
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mRememberMe:Landroid/widget/CheckBox;
 
     return-object v0
@@ -149,7 +149,7 @@
     .registers 2
 
     .prologue
-    .line 55
+    .line 57
     iget-boolean v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->bRememberMe:Z
 
     return v0
@@ -159,7 +159,7 @@
     .registers 2
 
     .prologue
-    .line 64
+    .line 66
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->sUserName:Ljava/lang/String;
 
     return-object v0
@@ -169,7 +169,7 @@
     .registers 1
 
     .prologue
-    .line 336
+    .line 438
     invoke-static {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->clearRemember(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V
 
     return-void
@@ -179,7 +179,7 @@
     .registers 1
 
     .prologue
-    .line 496
+    .line 624
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->onLogin()V
 
     return-void
@@ -189,7 +189,7 @@
     .registers 2
 
     .prologue
-    .line 55
+    .line 57
     iput-boolean p1, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->bRememberMe:Z
 
     return-void
@@ -199,7 +199,7 @@
     .registers 2
 
     .prologue
-    .line 169
+    .line 240
     invoke-direct {p0, p1}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->LoginSuccess(Ljava/lang/String;)V
 
     return-void
@@ -209,7 +209,7 @@
     .registers 2
 
     .prologue
-    .line 120
+    .line 167
     invoke-direct {p0, p1}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->LoginError(Ljava/lang/String;)V
 
     return-void
@@ -221,19 +221,19 @@
     .param p1, "listener"    # Lcom/jiuzhansoft/massage/user/UserLoginActivity$LoginListener;
 
     .prologue
-    .line 291
+    .line 371
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 292
+    .line 372
     const-string v0, "LoginActivity"
 
     const-string v1, "autoLoginError"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 295
+    .line 375
     :cond_b
     new-instance v0, Lcom/jiuzhansoft/massage/user/UserLoginActivity$3;
 
@@ -241,7 +241,7 @@
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->post(Ljava/lang/Runnable;)V
 
-    .line 334
+    .line 436
     return-void
 .end method
 
@@ -250,19 +250,19 @@
     .param p0, "myactivity"    # Lcom/jiuzhansoft/massage/activity/BaseActivity;
 
     .prologue
-    .line 337
+    .line 440
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 338
+    .line 441
     const-string v0, "LoginActivity"
 
     const-string v1, "clearRemember"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 341
+    .line 444
     :cond_b
     const-string v0, "userName"
 
@@ -270,14 +270,14 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->putStringToPreference(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 342
+    .line 445
     const-string v0, "password"
 
     const-string v1, ""
 
     invoke-virtual {p0, v0, v1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->putStringToPreference(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 343
+    .line 446
     const-string v0, "remember"
 
     const/4 v1, 0x0
@@ -288,7 +288,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->putBooleanToPreference(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 344
+    .line 447
     return-void
 .end method
 
@@ -296,19 +296,19 @@
     .registers 3
 
     .prologue
-    .line 347
+    .line 451
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 348
+    .line 452
     const-string v0, "LoginActivity"
 
     const-string v1, "getRememberedUser"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 351
+    .line 455
     :cond_b
     const-string v0, "remember"
 
@@ -318,7 +318,7 @@
 
     if-eqz v0, :cond_29
 
-    .line 352
+    .line 457
     const-string v0, "userName"
 
     const-string v1, ""
@@ -329,7 +329,7 @@
 
     invoke-direct {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->setUserName(Ljava/lang/String;)V
 
-    .line 353
+    .line 458
     const-string v0, "password"
 
     const-string v1, ""
@@ -340,7 +340,7 @@
 
     invoke-direct {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->setUserPassword(Ljava/lang/String;)V
 
-    .line 355
+    .line 460
     :cond_29
     return-void
 .end method
@@ -349,7 +349,7 @@
     .registers 2
 
     .prologue
-    .line 358
+    .line 464
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserNameTxt:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -362,7 +362,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->sUserName:Ljava/lang/String;
 
-    .line 359
+    .line 465
     return-void
 .end method
 
@@ -370,7 +370,7 @@
     .registers 2
 
     .prologue
-    .line 362
+    .line 469
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserPassword:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -387,7 +387,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->sUserPassword:Ljava/lang/String;
 
-    .line 363
+    .line 470
     return-void
 .end method
 
@@ -395,7 +395,7 @@
     .registers 2
 
     .prologue
-    .line 366
+    .line 474
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserPassword:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -408,7 +408,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->sUserPassword:Ljava/lang/String;
 
-    .line 367
+    .line 475
     return-void
 .end method
 
@@ -416,29 +416,29 @@
     .registers 3
 
     .prologue
-    .line 370
+    .line 479
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 371
+    .line 480
     const-string v0, "LoginActivity"
 
     const-string v1, "handleClickEvent"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 374
+    .line 483
     :cond_b
-    iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mLoginCancel:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mLoginCancel:Landroid/widget/Button;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/UserLoginActivity$4;
 
     invoke-direct {v1, p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity$4;-><init>(Lcom/jiuzhansoft/massage/user/UserLoginActivity;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 392
+    .line 505
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mLoginConfirm:Landroid/widget/Button;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/UserLoginActivity$5;
@@ -447,7 +447,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 407
+    .line 524
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mRegLink:Landroid/widget/Button;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/UserLoginActivity$6;
@@ -456,7 +456,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 420
+    .line 538
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mRememberMe:Landroid/widget/CheckBox;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/UserLoginActivity$7;
@@ -465,14 +465,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 433
+    .line 552
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mRememberMe:Landroid/widget/CheckBox;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 434
+    .line 553
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->forgot_password:Landroid/widget/TextView;
 
     new-instance v1, Lcom/jiuzhansoft/massage/user/UserLoginActivity$8;
@@ -481,7 +481,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 449
+    .line 568
     return-void
 .end method
 
@@ -489,32 +489,32 @@
     .registers 3
 
     .prologue
-    .line 452
+    .line 572
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 453
+    .line 573
     const-string v0, "LoginActivity"
 
     const-string v1, "initBtn"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 456
+    .line 576
     :cond_b
-    const v0, 0x7f070263
+    const v0, 0x7f0800f4
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageButton;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mLoginCancel:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mLoginCancel:Landroid/widget/Button;
 
-    .line 457
-    const v0, 0x7f0701ca
+    .line 577
+    const v0, 0x7f0800bf
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -524,8 +524,8 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mLoginConfirm:Landroid/widget/Button;
 
-    .line 458
-    const v0, 0x7f0701cb
+    .line 578
+    const v0, 0x7f0800c2
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -535,8 +535,8 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mRegLink:Landroid/widget/Button;
 
-    .line 459
-    const v0, 0x7f0701c7
+    .line 579
+    const v0, 0x7f0800be
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -546,8 +546,8 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mRememberMe:Landroid/widget/CheckBox;
 
-    .line 460
-    const v0, 0x7f070262
+    .line 580
+    const v0, 0x7f0800f3
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -557,15 +557,15 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mTitle:Landroid/widget/TextView;
 
-    .line 461
+    .line 581
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f0d008a
+    const v1, 0x7f090060
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 462
-    const v0, 0x7f0701c8
+    .line 582
+    const v0, 0x7f0800c0
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -575,7 +575,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->forgot_password:Landroid/widget/TextView;
 
-    .line 463
+    .line 583
     return-void
 .end method
 
@@ -583,21 +583,21 @@
     .registers 3
 
     .prologue
-    .line 466
+    .line 587
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 467
+    .line 588
     const-string v0, "LoginActivity"
 
     const-string v1, "initEditTxt"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 470
+    .line 591
     :cond_b
-    const v0, 0x7f0701c4
+    const v0, 0x7f0800bb
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -607,8 +607,8 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserNameTxt:Landroid/widget/EditText;
 
-    .line 471
-    const v0, 0x7f0701c6
+    .line 592
+    const v0, 0x7f0800bd
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -618,7 +618,7 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserPassword:Landroid/widget/EditText;
 
-    .line 472
+    .line 593
     const-string v0, "remember"
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->getBooleanFromPreference(Ljava/lang/String;)Z
@@ -627,11 +627,11 @@
 
     if-eqz v0, :cond_38
 
-    .line 473
+    .line 595
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->getRememberedUser()V
 
-    .line 474
-    const v0, 0x7f0701c7
+    .line 596
+    const v0, 0x7f0800be
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -641,11 +641,11 @@
 
     iput-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mRememberMe:Landroid/widget/CheckBox;
 
-    .line 479
+    .line 602
     :goto_37
     return-void
 
-    .line 476
+    .line 599
     :cond_38
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserNameTxt:Landroid/widget/EditText;
 
@@ -653,7 +653,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 477
+    .line 600
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserPassword:Landroid/widget/EditText;
 
     const-string v1, ""
@@ -667,23 +667,23 @@
     .registers 6
 
     .prologue
-    .line 482
+    .line 606
     sget-boolean v1, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v1, :cond_b
 
-    .line 483
+    .line 607
     const-string v1, "LoginActivity"
 
     const-string v2, "nameCheck"
 
     invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 486
+    .line 610
     :cond_b
     const/4 v0, 0x0
 
-    .line 487
+    .line 611
     .local v0, "flag":Z
     iget-object v1, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserNameTxt:Landroid/widget/EditText;
 
@@ -705,23 +705,25 @@
 
     if-eqz v1, :cond_4a
 
-    .line 488
+    .line 613
     const/4 v0, 0x1
 
-    .line 490
+    .line 615
     iget-object v1, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserNameTxt:Landroid/widget/EditText;
 
+    .line 616
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "<font color=#00ff00>"
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 617
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0d0072
+    const v4, 0x7f090048
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -731,12 +733,14 @@
 
     move-result-object v2
 
+    .line 618
     const-string v3, "</font>"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
+    .line 616
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -745,9 +749,10 @@
 
     move-result-object v2
 
+    .line 615
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
-    .line 493
+    .line 621
     :cond_4a
     return v0
 .end method
@@ -756,19 +761,19 @@
     .registers 14
 
     .prologue
-    .line 497
+    .line 626
     sget-boolean v11, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v11, :cond_b
 
-    .line 498
+    .line 627
     const-string v11, "LoginActivity"
 
     const-string v12, "onLogin"
 
     invoke-static {v11, v12}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 501
+    .line 630
     :cond_b
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->nameCheck()Z
 
@@ -782,7 +787,7 @@
 
     if-nez v11, :cond_c8
 
-    .line 502
+    .line 632
     const-string v11, "input_method"
 
     invoke-virtual {p0, v11}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -791,7 +796,7 @@
 
     check-cast v3, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 503
+    .line 633
     .local v3, "inputmethodmanager":Landroid/view/inputmethod/InputMethodManager;
     iget-object v11, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserPassword:Landroid/widget/EditText;
 
@@ -799,28 +804,28 @@
 
     move-result-object v2
 
-    .line 504
+    .line 634
     .local v2, "ibinder":Landroid/os/IBinder;
     const/4 v11, 0x0
 
     invoke-virtual {v3, v2, v11}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 505
+    .line 635
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->getUserName()V
 
-    .line 506
+    .line 636
     sget-boolean v11, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v11, :cond_6a
 
-    .line 507
+    .line 638
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v11, "input-password:"
 
     invoke-direct {v9, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 508
+    .line 639
     .local v9, "stringbuilder":Ljava/lang/StringBuilder;
     iget-object v11, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserPassword:Landroid/widget/EditText;
 
@@ -840,20 +845,20 @@
 
     move-result-object v5
 
-    .line 509
+    .line 640
     .local v5, "s1":Ljava/lang/String;
     const-string v11, "LoginActivity"
 
     invoke-static {v11, v5}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 510
+    .line 641
     new-instance v10, Ljava/lang/StringBuilder;
 
     const-string v11, "file-password:"
 
     invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 511
+    .line 642
     .local v10, "stringbuilder1":Ljava/lang/StringBuilder;
     const-string v11, "password"
 
@@ -871,13 +876,13 @@
 
     move-result-object v6
 
-    .line 512
+    .line 643
     .local v6, "s3":Ljava/lang/String;
     const-string v11, "LoginActivity"
 
     invoke-static {v11, v6}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 514
+    .line 645
     .end local v5    # "s1":Ljava/lang/String;
     .end local v6    # "s3":Ljava/lang/String;
     .end local v9    # "stringbuilder":Ljava/lang/StringBuilder;
@@ -893,7 +898,7 @@
 
     move-result-object v7
 
-    .line 515
+    .line 646
     .local v7, "s4":Ljava/lang/String;
     const-string v11, "password"
 
@@ -903,7 +908,7 @@
 
     move-result-object v8
 
-    .line 517
+    .line 648
     .local v8, "s5":Ljava/lang/String;
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -911,10 +916,10 @@
 
     if-eqz v11, :cond_c9
 
-    .line 518
+    .line 649
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->getUserPasswordNoCode()V
 
-    .line 522
+    .line 653
     :goto_85
     iget-object v11, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->sUserPassword:Ljava/lang/String;
 
@@ -932,13 +937,13 @@
 
     if-lez v11, :cond_c8
 
-    .line 524
+    .line 657
     :try_start_95
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
-    .line 525
+    .line 658
     .local v4, "jsonobject":Lorg/json/JSONObject;
     const-string v11, "password"
 
@@ -946,40 +951,40 @@
 
     invoke-virtual {v4, v11, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 526
+    .line 659
     const-string v11, "username"
 
     iget-object v12, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->sUserName:Ljava/lang/String;
 
     invoke-virtual {v4, v11, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 527
+    .line 660
     new-instance v1, Lcom/massage/utils/http/HttpSetting;
 
     invoke-direct {v1}, Lcom/massage/utils/http/HttpSetting;-><init>()V
 
-    .line 528
+    .line 661
     .local v1, "httpsetting":Lcom/massage/utils/http/HttpSetting;
     const-string v11, "user.login"
 
     invoke-virtual {v1, v11}, Lcom/massage/utils/http/HttpSetting;->setFunctionId(Ljava/lang/String;)V
 
-    .line 529
+    .line 662
     invoke-virtual {v1, v4}, Lcom/massage/utils/http/HttpSetting;->setJsonParams(Lorg/json/JSONObject;)V
 
-    .line 530
+    .line 663
     new-instance v11, Lcom/jiuzhansoft/massage/user/UserLoginActivity$9;
 
     invoke-direct {v11, p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity$9;-><init>(Lcom/jiuzhansoft/massage/user/UserLoginActivity;)V
 
     invoke-virtual {v1, v11}, Lcom/massage/utils/http/HttpSetting;->setListener(Lcom/massage/utils/http/HttpGroup$HttpTaskListener;)V
 
-    .line 579
+    .line 754
     const/4 v11, 0x1
 
     invoke-virtual {v1, v11}, Lcom/massage/utils/http/HttpSetting;->setNotifyUser(Z)V
 
-    .line 580
+    .line 755
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->getHttpGroupaAsynPool()Lcom/massage/utils/http/HttpGroup;
 
     move-result-object v11
@@ -988,7 +993,7 @@
     :try_end_c8
     .catch Lorg/json/JSONException; {:try_start_95 .. :try_end_c8} :catch_cd
 
-    .line 586
+    .line 763
     .end local v1    # "httpsetting":Lcom/massage/utils/http/HttpSetting;
     .end local v2    # "ibinder":Landroid/os/IBinder;
     .end local v3    # "inputmethodmanager":Landroid/view/inputmethod/InputMethodManager;
@@ -999,7 +1004,7 @@
     :goto_c8
     return-void
 
-    .line 520
+    .line 651
     .restart local v2    # "ibinder":Landroid/os/IBinder;
     .restart local v3    # "inputmethodmanager":Landroid/view/inputmethod/InputMethodManager;
     .restart local v7    # "s4":Ljava/lang/String;
@@ -1009,11 +1014,13 @@
 
     goto :goto_85
 
-    .line 581
+    .line 757
     :catch_cd
-    move-exception v0
+    move-exception v11
 
-    .line 582
+    move-object v0, v11
+
+    .line 759
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
@@ -1028,27 +1035,27 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 589
+    .line 767
     sget-boolean v6, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v6, :cond_c
 
-    .line 590
+    .line 768
     const-string v6, "LoginActivity"
 
     const-string v7, "onLogin(activity, listener)"
 
     invoke-static {v6, v7}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 593
+    .line 771
     :cond_c
     const-string v3, ""
 
-    .line 594
+    .line 772
     .local v3, "s":Ljava/lang/String;
     const-string v4, ""
 
-    .line 596
+    .line 774
     .local v4, "s1":Ljava/lang/String;
     const-string v6, "remember"
 
@@ -1058,14 +1065,14 @@
 
     if-eqz v6, :cond_5a
 
-    .line 597
+    .line 776
     new-instance v6, Lcom/jiuzhansoft/massage/user/UserLoginActivity$10;
 
     invoke-direct {v6, p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity$10;-><init>(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V
 
     invoke-virtual {p0, v6}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->post(Ljava/lang/Runnable;)V
 
-    .line 603
+    .line 783
     const-string v6, "userName"
 
     const-string v7, ""
@@ -1074,7 +1081,7 @@
 
     move-result-object v4
 
-    .line 604
+    .line 784
     const-string v6, "password"
 
     const-string v7, ""
@@ -1083,7 +1090,7 @@
 
     move-result-object v3
 
-    .line 608
+    .line 790
     :goto_30
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1097,29 +1104,29 @@
 
     if-lt v6, v8, :cond_59
 
-    .line 610
+    .line 794
     :try_start_3c
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    .line 611
+    .line 795
     .local v2, "jsonobject":Lorg/json/JSONObject;
     const-string v6, "loginpwd"
 
     invoke-virtual {v2, v6, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 612
+    .line 796
     const-string v6, "loginname"
 
     invoke-virtual {v2, v6, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 613
+    .line 797
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->getHttpGroupaAsynPool()Lcom/massage/utils/http/HttpGroup;
 
     move-result-object v0
 
-    .line 614
+    .line 798
     .local v0, "httpgroup":Lcom/massage/utils/http/HttpGroup;
     const-string v6, "user.login"
 
@@ -1131,35 +1138,37 @@
     :try_end_59
     .catch Lorg/json/JSONException; {:try_start_3c .. :try_end_59} :catch_5e
 
-    .line 691
+    .line 894
     .end local v0    # "httpgroup":Lcom/massage/utils/http/HttpGroup;
     .end local v2    # "jsonobject":Lorg/json/JSONObject;
     :cond_59
     :goto_59
     return-void
 
-    .line 606
+    .line 788
     :cond_5a
     invoke-interface {p1}, Lcom/jiuzhansoft/massage/user/UserLoginActivity$LoginListener;->loginCompletedNotify()V
 
     goto :goto_30
 
-    .line 684
+    .line 885
     :catch_5e
-    move-exception v1
+    move-exception v6
 
-    .line 685
+    move-object v1, v6
+
+    .line 887
     .local v1, "jsonexception":Lorg/json/JSONException;
     sget-boolean v6, Lcom/massage/utils/log/Log;->V:Z
 
     if-eqz v6, :cond_59
 
-    .line 686
+    .line 889
     invoke-virtual {v1}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 687
+    .line 890
     .local v5, "s4":Ljava/lang/String;
     const-string v6, "login_activity"
 
@@ -1172,23 +1181,23 @@
     .registers 6
 
     .prologue
-    .line 694
+    .line 898
     sget-boolean v1, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v1, :cond_b
 
-    .line 695
+    .line 899
     const-string v1, "LoginActivity"
 
     const-string v2, "passWordCheck"
 
     invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 698
+    .line 902
     :cond_b
     const/4 v0, 0x0
 
-    .line 699
+    .line 903
     .local v0, "flag":Z
     iget-object v1, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserPassword:Landroid/widget/EditText;
 
@@ -1210,23 +1219,25 @@
 
     if-eqz v1, :cond_4a
 
-    .line 700
+    .line 905
     const/4 v0, 0x1
 
-    .line 702
+    .line 907
     iget-object v1, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserPassword:Landroid/widget/EditText;
 
+    .line 908
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "<font color=#00ff00>"
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 909
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0d0073
+    const v4, 0x7f090049
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1236,12 +1247,14 @@
 
     move-result-object v2
 
+    .line 910
     const-string v3, "</font>"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
+    .line 908
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -1250,9 +1263,10 @@
 
     move-result-object v2
 
+    .line 907
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
-    .line 704
+    .line 912
     :cond_4a
     return v0
 .end method
@@ -1262,19 +1276,19 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 708
+    .line 917
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-lez v0, :cond_b
 
-    .line 709
+    .line 918
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserNameTxt:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 710
+    .line 919
     :cond_b
     return-void
 .end method
@@ -1284,19 +1298,19 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 713
+    .line 923
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-lez v0, :cond_b
 
-    .line 714
+    .line 924
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->mUserPassword:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 715
+    .line 925
     :cond_b
     return-void
 .end method
@@ -1308,37 +1322,37 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 718
+    .line 929
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 719
+    .line 930
     const-string v0, "LoginActivity"
 
     const-string v1, "onCreate"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 722
+    .line 933
     :cond_b
     invoke-super {p0, p1}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 723
-    const v0, 0x7f03004b
+    .line 934
+    const v0, 0x7f030027
 
     invoke-virtual {p0, v0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->setContentView(I)V
 
-    .line 724
+    .line 935
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->initBtn()V
 
-    .line 725
+    .line 936
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->initEditTxt()V
 
-    .line 726
+    .line 937
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->handleClickEvent()V
 
-    .line 727
+    .line 938
     return-void
 .end method
 
@@ -1348,19 +1362,19 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 759
+    .line 975
     const/4 v1, 0x4
 
-    if-ne p1, v1, :cond_2b
+    if-ne p1, v1, :cond_2c
 
-    .line 761
+    .line 978
     :try_start_3
     invoke-static {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->clearRemember(Lcom/jiuzhansoft/massage/activity/BaseActivity;)V
 
-    .line 762
+    .line 979
     invoke-virtual {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->finish()V
 
-    .line 764
+    .line 981
     sget-object v1, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1375,28 +1389,30 @@
 
     if-lt v1, v2, :cond_1f
 
-    .line 765
-    const v1, 0x7f040006
+    .line 982
+    const v1, 0x7f040003
 
-    const v2, 0x7f04000b
+    const v2, 0x7f040008
 
     invoke-virtual {p0, v1, v2}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->overridePendingTransition(II)V
     :try_end_1f
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_1f} :catch_21
 
-    .line 766
+    .line 983
     :cond_1f
     const/4 v1, 0x1
 
-    .line 771
+    .line 990
     :goto_20
     return v1
 
-    .line 767
+    .line 985
     :catch_21
-    move-exception v0
+    move-exception v1
 
-    .line 768
+    move-object v0, v1
+
+    .line 987
     .local v0, "localException":Ljava/lang/Exception;
     const-string v1, "CancleFailed"
 
@@ -1406,9 +1422,9 @@
 
     invoke-static {v1, v2}, Lcom/massage/utils/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 771
+    .line 990
     .end local v0    # "localException":Ljava/lang/Exception;
-    :cond_2b
+    :cond_2c
     invoke-super {p0, p1, p2}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v1
@@ -1420,19 +1436,19 @@
     .registers 3
 
     .prologue
-    .line 730
+    .line 942
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 731
+    .line 943
     const-string v0, "LoginActivity"
 
     const-string v1, "onRemember"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 734
+    .line 946
     :cond_b
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->nameCheck()Z
 
@@ -1446,13 +1462,13 @@
 
     if-nez v0, :cond_4d
 
-    .line 735
+    .line 948
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->getUserName()V
 
-    .line 736
+    .line 949
     invoke-direct {p0}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->getUserPassword()V
 
-    .line 737
+    .line 950
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->sUserName:Ljava/lang/String;
 
     if-eqz v0, :cond_30
@@ -1465,14 +1481,14 @@
 
     if-lez v0, :cond_30
 
-    .line 738
+    .line 952
     const-string v0, "userName"
 
     iget-object v1, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->sUserName:Ljava/lang/String;
 
     invoke-virtual {p0, v0, v1}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->putStringToPreference(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 740
+    .line 954
     :cond_30
     iget-object v0, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->sUserPassword:Ljava/lang/String;
 
@@ -1486,14 +1502,14 @@
 
     if-lez v0, :cond_43
 
-    .line 741
+    .line 956
     const-string v0, "password"
 
     iget-object v1, p0, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->sUserPassword:Ljava/lang/String;
 
     invoke-virtual {p0, v0, v1}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->putStringToPreference(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 744
+    .line 959
     :cond_43
     const-string v0, "remember"
 
@@ -1505,7 +1521,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/jiuzhansoft/massage/user/UserLoginActivity;->putBooleanToPreference(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 746
+    .line 961
     :cond_4d
     return-void
 .end method
@@ -1514,22 +1530,22 @@
     .registers 3
 
     .prologue
-    .line 749
+    .line 965
     sget-boolean v0, Lcom/massage/utils/log/Log;->D:Z
 
     if-eqz v0, :cond_b
 
-    .line 750
+    .line 966
     const-string v0, "LoginActivity"
 
     const-string v1, "onStart"
 
     invoke-static {v0, v1}, Lcom/massage/utils/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 753
+    .line 969
     :cond_b
     invoke-super {p0}, Lcom/jiuzhansoft/massage/activity/BaseActivity;->onStart()V
 
-    .line 754
+    .line 970
     return-void
 .end method

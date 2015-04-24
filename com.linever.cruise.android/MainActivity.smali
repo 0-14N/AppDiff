@@ -4,37 +4,37 @@
 
 
 # static fields
-.field static final KEY_PAGE:Ljava/lang/String; = "MAIN_PAGE"
+.field public static final KEY_PAGE:Ljava/lang/String; = "MAIN_PAGE"
 
-.field static final KEY_PICURI:Ljava/lang/String; = "pic_uri"
+.field public static final KEY_PICURI:Ljava/lang/String; = "pic_uri"
 
-.field static final KEY_SCOPE:Ljava/lang/String; = "MAIN_SCOPE"
+.field public static final KEY_SCOPE:Ljava/lang/String; = "MAIN_SCOPE"
 
-.field static final PAGE_CRUISE:I = 0x1
+.field public static final PAGE_CRUISE:I = 0x1
 
-.field static final PAGE_MY_SHARED:I = 0x2
+.field public static final PAGE_MY_SHARED:I = 0x2
 
-.field static final PAGE_MY_SUTEKI:I = 0x3
+.field public static final PAGE_MY_SUTEKI:I = 0x3
 
-.field private static final REQ_GOOGLEPLAY_DIALOG:I = 0x2328
+.field public static final REQ_GOOGLEPLAY_DIALOG:I = 0x2328
 
-.field static final REQ_MAP_ACTIVITY:I = 0x3e9
+.field public static final REQ_MAP_ACTIVITY:I = 0x3e9
 
-.field static final REQ_MARK_ACTIVITY:I = 0x3ea
+.field public static final REQ_MARK_ACTIVITY:I = 0x3ea
 
-.field private static final REQ_SPLASH:I = 0x1
+.field public static final REQ_SPLASH:I = 0x1
 
-.field private static final REQ_TAKE_PICTURE:I = 0x1b59
+.field public static final REQ_TAKE_PICTURE:I = 0x1b59
 
-.field private static final TAG_CRUISE_GALLERY_FRAGMENT:Ljava/lang/String; = "CRUISE_GALLERY_FRAGMENT"
+.field public static final TAG_CRUISE_GALLERY_FRAGMENT:Ljava/lang/String; = "CRUISE_GALLERY_FRAGMENT"
 
-.field private static final TAG_MY_PAGE_FRAGMENT:Ljava/lang/String; = "MY_PAGE_FRAGMENT"
+.field public static final TAG_MY_PAGE_FRAGMENT:Ljava/lang/String; = "MY_PAGE_FRAGMENT"
 
-.field private static final TAG_SUTEKI_GALLERY_FRAGMENT:Ljava/lang/String; = "SUTEKI_GALLERY_FRAGMENT"
+.field public static final TAG_SUTEKI_GALLERY_FRAGMENT:Ljava/lang/String; = "SUTEKI_GALLERY_FRAGMENT"
 
 
 # instance fields
-.field private app:Lcom/linever/cruise/android/CruiseApp;
+.field public app:Lcom/linever/cruise/android/CruiseApp;
 
 .field private mDrawerCallIntent:Landroid/content/Intent;
 
@@ -68,9 +68,9 @@
 
 .field private mDrawerToggle:Landroid/support/v4/app/ActionBarDrawerToggle;
 
-.field private mFm:Landroid/app/FragmentManager;
+.field public mFm:Landroid/app/FragmentManager;
 
-.field private mGpsLib:Lcom/linever/cruise/android/GPSLib;
+.field private mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
 .field private mInitFin:Z
 
@@ -98,17 +98,17 @@
     .registers 2
 
     .prologue
-    .line 46
+    .line 50
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 102
+    .line 106
     new-instance v0, Lcom/linever/cruise/android/MainActivity$1;
 
     invoke-direct {v0, p0}, Lcom/linever/cruise/android/MainActivity$1;-><init>(Lcom/linever/cruise/android/MainActivity;)V
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 46
+    .line 50
     return-void
 .end method
 
@@ -116,97 +116,87 @@
     .registers 2
 
     .prologue
-    .line 94
+    .line 98
     iget-boolean v0, p0, Lcom/linever/cruise/android/MainActivity;->mSystemPageChangingFlag:Z
 
     return v0
 .end method
 
-.method static synthetic access$1(Lcom/linever/cruise/android/MainActivity;)Lcom/linever/cruise/android/CruiseApp;
-    .registers 2
-
-    .prologue
-    .line 66
-    iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2(Lcom/linever/cruise/android/MainActivity;)V
+.method static synthetic access$1(Lcom/linever/cruise/android/MainActivity;)V
     .registers 1
 
     .prologue
-    .line 353
+    .line 381
     invoke-direct {p0}, Lcom/linever/cruise/android/MainActivity;->iniCheck()V
 
     return-void
 .end method
 
-.method static synthetic access$3(Lcom/linever/cruise/android/MainActivity;)Landroid/content/Intent;
+.method static synthetic access$2(Lcom/linever/cruise/android/MainActivity;)Landroid/content/Intent;
     .registers 2
 
     .prologue
-    .line 73
+    .line 77
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerCallIntent:Landroid/content/Intent;
 
     return-object v0
 .end method
 
-.method static synthetic access$4(Lcom/linever/cruise/android/MainActivity;)I
+.method static synthetic access$3(Lcom/linever/cruise/android/MainActivity;)I
     .registers 2
 
     .prologue
-    .line 84
+    .line 88
     iget v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerRequesCode:I
 
     return v0
 .end method
 
-.method static synthetic access$5(Lcom/linever/cruise/android/MainActivity;)Ljava/lang/CharSequence;
+.method static synthetic access$4(Lcom/linever/cruise/android/MainActivity;)Ljava/lang/CharSequence;
     .registers 2
 
     .prologue
-    .line 91
+    .line 95
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mTitle:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
 
-.method static synthetic access$6(Lcom/linever/cruise/android/MainActivity;Landroid/content/Intent;)V
+.method static synthetic access$5(Lcom/linever/cruise/android/MainActivity;Landroid/content/Intent;)V
     .registers 2
 
     .prologue
-    .line 73
+    .line 77
     iput-object p1, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerCallIntent:Landroid/content/Intent;
 
     return-void
 .end method
 
-.method static synthetic access$7(Lcom/linever/cruise/android/MainActivity;I)V
+.method static synthetic access$6(Lcom/linever/cruise/android/MainActivity;I)V
     .registers 2
 
     .prologue
-    .line 84
+    .line 88
     iput p1, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerRequesCode:I
 
     return-void
 .end method
 
-.method static synthetic access$8(Lcom/linever/cruise/android/MainActivity;)Ljava/lang/CharSequence;
+.method static synthetic access$7(Lcom/linever/cruise/android/MainActivity;)Ljava/lang/CharSequence;
     .registers 2
 
     .prologue
-    .line 90
+    .line 94
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerTitle:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
 
-.method static synthetic access$9(Lcom/linever/cruise/android/MainActivity;)Landroid/content/Intent;
+.method static synthetic access$8(Lcom/linever/cruise/android/MainActivity;)Landroid/content/Intent;
     .registers 2
 
     .prologue
-    .line 476
+    .line 503
     invoke-direct {p0}, Lcom/linever/cruise/android/MainActivity;->setCameraIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -219,10 +209,10 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 508
+    .line 537
     const-wide/16 v15, 0x0
 
-    .line 509
+    .line 538
     .local v15, "delId":J
     new-instance v29, Ljava/io/File;
 
@@ -232,19 +222,19 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 512
+    .line 541
     .local v29, "takefile":Ljava/io/File;
     invoke-virtual/range {v29 .. v29}, Ljava/io/File;->lastModified()J
 
     move-result-wide v9
 
-    .line 513
+    .line 542
     .local v9, "date":J
     invoke-virtual/range {v29 .. v29}, Ljava/io/File;->length()J
 
     move-result-wide v23
 
-    .line 515
+    .line 544
     .local v23, "size":J
     invoke-virtual/range {p0 .. p0}, Lcom/linever/cruise/android/MainActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -254,56 +244,54 @@
 
     move-result-object v2
 
-    .line 516
+    .line 545
     .local v2, "cr":Landroid/content/ContentResolver;
     sget-object v3, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 517
     const/4 v4, 0x4
 
     new-array v4, v4, [Ljava/lang/String;
 
     const/4 v5, 0x0
 
-    .line 518
+    .line 546
     const-string v6, "_id"
 
     aput-object v6, v4, v5
 
     const/4 v5, 0x1
 
-    .line 519
     const-string v6, "_data"
 
     aput-object v6, v4, v5
 
     const/4 v5, 0x2
 
-    .line 520
+    .line 547
     const-string v6, "datetaken"
 
     aput-object v6, v4, v5
 
     const/4 v5, 0x3
 
-    .line 521
+    .line 548
     const-string v6, "_size"
 
     aput-object v6, v4, v5
 
-    .line 522
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
+    .line 549
     const-string v7, "datetaken DESC"
 
-    .line 516
+    .line 545
     invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v8
 
-    .line 524
+    .line 551
     .local v8, "c":Landroid/database/Cursor;
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -311,14 +299,14 @@
 
     if-eqz v3, :cond_8a
 
-    .line 526
+    .line 553
     const/4 v3, 0x0
 
     invoke-interface {v8, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v17
 
-    .line 527
+    .line 554
     .local v17, "id1":J
     const/4 v3, 0x1
 
@@ -326,7 +314,7 @@
 
     move-result-object v21
 
-    .line 528
+    .line 555
     .local v21, "path1":Ljava/lang/String;
     const/4 v3, 0x2
 
@@ -334,7 +322,7 @@
 
     move-result-wide v11
 
-    .line 529
+    .line 556
     .local v11, "date1":J
     const/4 v3, 0x3
 
@@ -342,7 +330,7 @@
 
     move-result-wide v25
 
-    .line 530
+    .line 557
     .local v25, "size1":J
     move-object/from16 v0, p1
 
@@ -368,14 +356,15 @@
 
     if-gez v3, :cond_8b
 
+    .line 558
     cmp-long v3, v23, v25
 
     if-nez v3, :cond_8b
 
-    .line 531
+    .line 559
     move-wide/from16 v15, v17
 
-    .line 545
+    .line 573
     :cond_76
     :goto_76
     const-wide/16 v3, 0x0
@@ -384,16 +373,17 @@
 
     if-lez v3, :cond_8a
 
-    .line 546
+    .line 575
     sget-object v3, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
+    .line 574
     move-wide v0, v15
 
     invoke-static {v3, v0, v1}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v30
 
-    .line 547
+    .line 576
     .local v30, "uri":Landroid/net/Uri;
     const/4 v3, 0x0
 
@@ -403,7 +393,7 @@
 
     invoke-virtual {v2, v0, v3, v4}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 551
+    .line 581
     .end local v11    # "date1":J
     .end local v17    # "id1":J
     .end local v21    # "path1":Ljava/lang/String;
@@ -412,7 +402,7 @@
     :cond_8a
     return-void
 
-    .line 534
+    .line 561
     .restart local v11    # "date1":J
     .restart local v17    # "id1":J
     .restart local v21    # "path1":Ljava/lang/String;
@@ -424,14 +414,14 @@
 
     if-eqz v3, :cond_76
 
-    .line 535
+    .line 562
     const/4 v3, 0x0
 
     invoke-interface {v8, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v19
 
-    .line 536
+    .line 563
     .local v19, "id2":J
     const/4 v3, 0x1
 
@@ -439,7 +429,7 @@
 
     move-result-object v22
 
-    .line 537
+    .line 564
     .local v22, "path2":Ljava/lang/String;
     const/4 v3, 0x2
 
@@ -447,7 +437,7 @@
 
     move-result-wide v13
 
-    .line 538
+    .line 565
     .local v13, "date2":J
     const/4 v3, 0x3
 
@@ -455,7 +445,7 @@
 
     move-result-wide v27
 
-    .line 539
+    .line 566
     .local v27, "size2":J
     move-object/from16 v0, p1
 
@@ -481,11 +471,12 @@
 
     if-gez v3, :cond_76
 
+    .line 567
     cmp-long v3, v23, v27
 
     if-nez v3, :cond_76
 
-    .line 540
+    .line 568
     move-wide/from16 v15, v19
 
     goto :goto_76
@@ -499,7 +490,7 @@
 
     const/4 v5, 0x0
 
-    .line 354
+    .line 382
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
     iget-object v3, v3, Lcom/linever/cruise/android/CruiseApp;->lineverId:Ljava/lang/String;
@@ -518,16 +509,16 @@
 
     if-nez v3, :cond_18
 
-    .line 355
+    .line 383
     :cond_14
     invoke-direct {p0}, Lcom/linever/cruise/android/MainActivity;->setupAccount()V
 
-    .line 390
+    .line 418
     :cond_17
     :goto_17
     return-void
 
-    .line 357
+    .line 384
     :cond_18
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
@@ -541,111 +532,117 @@
 
     if-nez v3, :cond_28
 
-    .line 358
+    .line 385
     :cond_24
     invoke-direct {p0}, Lcom/linever/cruise/android/MainActivity;->setupBook()V
 
     goto :goto_17
 
-    .line 362
+    .line 388
     :cond_28
     iput-boolean v6, p0, Lcom/linever/cruise/android/MainActivity;->mInitFin:Z
 
-    .line 363
+    .line 389
     iget v3, p0, Lcom/linever/cruise/android/MainActivity;->mPage:I
 
     packed-switch v3, :pswitch_data_82
 
-    .line 379
+    .line 407
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
+    .line 408
     const-string v4, "CRUISE_GALLERY_FRAGMENT"
 
     invoke-virtual {v3, v4}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
 
     move-result-object v0
 
+    .line 407
     check-cast v0, Lcom/linever/cruise/android/CruiseGalleryFragment;
 
-    .line 380
+    .line 409
     .local v0, "f":Lcom/linever/cruise/android/CruiseGalleryFragment;
     if-eqz v0, :cond_76
 
-    .line 381
+    .line 410
     const-string v3, "MainActivity"
 
     const-string v4, "iniCheck CruiseGalleryFragment=True"
 
     invoke-static {v3, v4}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 382
+    .line 411
     invoke-virtual {v0}, Lcom/linever/cruise/android/CruiseGalleryFragment;->cruiseListStart()V
 
     goto :goto_17
 
-    .line 365
+    .line 391
     .end local v0    # "f":Lcom/linever/cruise/android/CruiseGalleryFragment;
     :pswitch_46
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
+    .line 392
     const-string v4, "MY_PAGE_FRAGMENT"
 
     invoke-virtual {v3, v4}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
 
     move-result-object v1
 
+    .line 391
     check-cast v1, Lcom/linever/cruise/android/MySharedGalleryFragment;
 
-    .line 366
+    .line 393
     .local v1, "msf":Lcom/linever/cruise/android/MySharedGalleryFragment;
     if-nez v1, :cond_17
 
-    .line 367
+    .line 394
     const-string v3, "MainActivity"
 
     const-string v4, "iniCheck CruiseGalleryFragment=NULL"
 
     invoke-static {v3, v4}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 368
+    .line 395
     const/4 v3, 0x2
 
     invoke-virtual {p0, v3, v5}, Lcom/linever/cruise/android/MainActivity;->changePage(ILcom/linever/cruise/android/Scope;)V
 
     goto :goto_17
 
-    .line 372
+    .line 399
     .end local v1    # "msf":Lcom/linever/cruise/android/MySharedGalleryFragment;
     :pswitch_5e
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
+    .line 400
     const-string v4, "SUTEKI_GALLERY_FRAGMENT"
 
     invoke-virtual {v3, v4}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
 
     move-result-object v2
 
+    .line 399
     check-cast v2, Lcom/linever/cruise/android/SutekiGalleryFragment;
 
-    .line 373
+    .line 401
     .local v2, "skf":Lcom/linever/cruise/android/SutekiGalleryFragment;
     if-nez v2, :cond_17
 
-    .line 374
+    .line 402
     const-string v3, "MainActivity"
 
     const-string v4, "iniCheck CruiseGalleryFragment=NULL"
 
     invoke-static {v3, v4}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 375
+    .line 403
     const/4 v3, 0x3
 
     invoke-virtual {p0, v3, v5}, Lcom/linever/cruise/android/MainActivity;->changePage(ILcom/linever/cruise/android/Scope;)V
 
     goto :goto_17
 
-    .line 385
+    .line 413
     .end local v2    # "skf":Lcom/linever/cruise/android/SutekiGalleryFragment;
     .restart local v0    # "f":Lcom/linever/cruise/android/CruiseGalleryFragment;
     :cond_76
@@ -655,12 +652,12 @@
 
     invoke-static {v3, v4}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 386
+    .line 414
     invoke-virtual {p0, v6, v5}, Lcom/linever/cruise/android/MainActivity;->changePage(ILcom/linever/cruise/android/Scope;)V
 
     goto :goto_17
 
-    .line 363
+    .line 389
     nop
 
     :pswitch_data_82
@@ -674,14 +671,14 @@
     .registers 8
 
     .prologue
-    .line 558
+    .line 587
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mTitle:Ljava/lang/CharSequence;
 
-    .line 559
+    .line 588
     const v0, 0x7f090180
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->getString(I)Ljava/lang/String;
@@ -690,8 +687,8 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerTitle:Ljava/lang/CharSequence;
 
-    .line 560
-    const v0, 0x7f060028
+    .line 589
+    const v0, 0x7f06003a
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -701,8 +698,8 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenu:Landroid/widget/LinearLayout;
 
-    .line 561
-    const v0, 0x7f060022
+    .line 590
+    const v0, 0x7f060035
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -712,24 +709,28 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
-    .line 562
+    .line 591
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
     const v1, 0x7f0200e1
 
+    .line 592
     const v2, 0x800003
 
+    .line 591
     invoke-virtual {v0, v1, v2}, Landroid/support/v4/widget/DrawerLayout;->setDrawerShadow(II)V
 
-    .line 563
+    .line 593
     new-instance v0, Lcom/linever/cruise/android/MainActivity$6;
 
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
+    .line 594
     const v4, 0x7f0200ec
 
     const v5, 0x7f090181
 
+    .line 595
     const v6, 0x7f090182
 
     move-object v1, p0
@@ -738,17 +739,18 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/linever/cruise/android/MainActivity$6;-><init>(Lcom/linever/cruise/android/MainActivity;Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;III)V
 
+    .line 593
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerToggle:Landroid/support/v4/app/ActionBarDrawerToggle;
 
-    .line 603
+    .line 637
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerToggle:Landroid/support/v4/app/ActionBarDrawerToggle;
 
     invoke-virtual {v0, v1}, Landroid/support/v4/widget/DrawerLayout;->setDrawerListener(Landroid/support/v4/widget/DrawerLayout$DrawerListener;)V
 
-    .line 605
-    const v0, 0x7f0600f5
+    .line 639
+    const v0, 0x7f0600f6
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -758,7 +760,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuCruise:Landroid/widget/LinearLayout;
 
-    .line 606
+    .line 640
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuCruise:Landroid/widget/LinearLayout;
 
     new-instance v1, Lcom/linever/cruise/android/MainActivity$7;
@@ -767,8 +769,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 615
-    const v0, 0x7f0600f6
+    .line 649
+    const v0, 0x7f0600f7
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -778,7 +780,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuMyPage:Landroid/widget/LinearLayout;
 
-    .line 616
+    .line 650
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuMyPage:Landroid/widget/LinearLayout;
 
     new-instance v1, Lcom/linever/cruise/android/MainActivity$8;
@@ -787,8 +789,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 625
-    const v0, 0x7f0600f8
+    .line 659
+    const v0, 0x7f0600f9
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -798,7 +800,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuCamera:Landroid/widget/TextView;
 
-    .line 626
+    .line 660
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuCamera:Landroid/widget/TextView;
 
     new-instance v1, Lcom/linever/cruise/android/MainActivity$9;
@@ -807,8 +809,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 635
-    const v0, 0x7f0600f9
+    .line 669
+    const v0, 0x7f0600fa
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -818,7 +820,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuPickup:Landroid/widget/TextView;
 
-    .line 636
+    .line 670
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuPickup:Landroid/widget/TextView;
 
     new-instance v1, Lcom/linever/cruise/android/MainActivity$10;
@@ -827,8 +829,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 645
-    const v0, 0x7f0600fa
+    .line 681
+    const v0, 0x7f0600fb
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -838,7 +840,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuSetting:Landroid/widget/TextView;
 
-    .line 646
+    .line 682
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuSetting:Landroid/widget/TextView;
 
     new-instance v1, Lcom/linever/cruise/android/MainActivity$11;
@@ -847,8 +849,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 655
-    const v0, 0x7f0600fc
+    .line 692
+    const v0, 0x7f0600fd
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -858,7 +860,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuInvite:Landroid/widget/TextView;
 
-    .line 656
+    .line 693
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuInvite:Landroid/widget/TextView;
 
     new-instance v1, Lcom/linever/cruise/android/MainActivity$12;
@@ -867,8 +869,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 668
-    const v0, 0x7f0600fb
+    .line 712
+    const v0, 0x7f0600fc
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -878,7 +880,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuGuide:Landroid/widget/TextView;
 
-    .line 669
+    .line 713
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuGuide:Landroid/widget/TextView;
 
     new-instance v1, Lcom/linever/cruise/android/MainActivity$13;
@@ -887,8 +889,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 691
-    const v0, 0x7f0600fd
+    .line 747
+    const v0, 0x7f0600fe
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -898,7 +900,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuTerms:Landroid/widget/TextView;
 
-    .line 692
+    .line 748
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuTerms:Landroid/widget/TextView;
 
     new-instance v1, Lcom/linever/cruise/android/MainActivity$14;
@@ -907,8 +909,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 714
-    const v0, 0x7f0600fe
+    .line 782
+    const v0, 0x7f0600ff
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -918,7 +920,7 @@
 
     iput-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuQuit:Landroid/widget/TextView;
 
-    .line 715
+    .line 783
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenuQuit:Landroid/widget/TextView;
 
     new-instance v1, Lcom/linever/cruise/android/MainActivity$15;
@@ -927,7 +929,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 722
+    .line 790
     return-void
 .end method
 
@@ -935,7 +937,7 @@
     .registers 5
 
     .prologue
-    .line 477
+    .line 504
     new-instance v1, Ljava/io/File;
 
     iget-object v2, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
@@ -946,39 +948,41 @@
 
     move-result-object v2
 
+    .line 505
     invoke-static {}, Lcom/o1soft/lib/base/MediaUtils326;->getDefaultPictureFileName()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 504
     invoke-static {v1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mTakePictureUri:Landroid/net/Uri;
 
-    .line 478
+    .line 506
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.media.action.IMAGE_CAPTURE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 479
+    .line 507
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "android.intent.category.DEFAULT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 480
+    .line 508
     const-string v1, "output"
 
     iget-object v2, p0, Lcom/linever/cruise/android/MainActivity;->mTakePictureUri:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 481
+    .line 509
     return-object v0
 .end method
 
@@ -988,14 +992,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 397
+    .line 424
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/linever/cruise/android/SplashActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 398
+    .line 425
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
@@ -1003,24 +1007,24 @@
 
     if-nez v1, :cond_1c
 
-    .line 399
+    .line 426
     const-string v1, "KEY_PAGE"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 404
+    .line 430
     :goto_13
     const/high16 v1, 0x4000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 405
+    .line 431
     invoke-virtual {p0, v0, v3}, Lcom/linever/cruise/android/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 406
+    .line 432
     return-void
 
-    .line 402
+    .line 428
     :cond_1c
     const-string v1, "KEY_PAGE"
 
@@ -1037,10 +1041,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 413
+    .line 439
     const-string v0, "CREATE_BOOK"
 
-    .line 415
+    .line 441
     .local v0, "REQ_TAG":Ljava/lang/String;
     iget-object v2, p0, Lcom/linever/cruise/android/MainActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
@@ -1048,12 +1052,11 @@
 
     move-result-object v2
 
-    .line 416
     invoke-virtual {v2, v4}, Lcom/linever/cruise/android/OverlayLayout;->setType(I)Lcom/linever/cruise/android/OverlayLayout;
 
     move-result-object v2
 
-    .line 417
+    .line 442
     const v3, 0x7f0900de
 
     invoke-virtual {p0, v3}, Lcom/linever/cruise/android/MainActivity;->getString(I)Ljava/lang/String;
@@ -1064,12 +1067,12 @@
 
     move-result-object v2
 
-    .line 418
+    .line 443
     invoke-virtual {v2, v4}, Lcom/linever/cruise/android/OverlayLayout;->setKeepOnScreen(Z)Lcom/linever/cruise/android/OverlayLayout;
 
     move-result-object v2
 
-    .line 419
+    .line 444
     const/high16 v3, 0x1040000
 
     invoke-virtual {p0, v3}, Lcom/linever/cruise/android/MainActivity;->getString(I)Ljava/lang/String;
@@ -1080,7 +1083,7 @@
 
     move-result-object v2
 
-    .line 420
+    .line 445
     new-instance v3, Lcom/linever/cruise/android/MainActivity$4;
 
     invoke-direct {v3, p0}, Lcom/linever/cruise/android/MainActivity$4;-><init>(Lcom/linever/cruise/android/MainActivity;)V
@@ -1089,21 +1092,23 @@
 
     move-result-object v2
 
-    .line 427
+    .line 451
     invoke-virtual {v2}, Lcom/linever/cruise/android/OverlayLayout;->show()V
 
-    .line 429
+    .line 453
     new-instance v1, Lcom/linever/cruise/android/MainActivity$5;
 
+    .line 454
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
     sget v3, Lcom/linever/cruise/android/CruiseConfig;->DEV_FLAG:I
 
+    .line 453
     invoke-direct {v1, p0, v2, v3}, Lcom/linever/cruise/android/MainActivity$5;-><init>(Lcom/linever/cruise/android/MainActivity;Landroid/content/Context;I)V
 
-    .line 446
+    .line 473
     .local v1, "createBook":Lcom/linever/cruise/android/CruiseCreateBook;
     iget-object v2, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
@@ -1121,7 +1126,7 @@
 
     move-result-object v2
 
-    .line 447
+    .line 474
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
     iget-object v3, v3, Lcom/linever/cruise/android/CruiseApp;->rqueue:Lcom/android/volley/RequestQueue;
@@ -1132,9 +1137,10 @@
 
     const-string v5, "CREATE_BOOK"
 
+    .line 473
     invoke-virtual {v2, v3, v4, v5}, Lcom/linever/cruise/android/CruiseCreateBook;->exec(Lcom/android/volley/RequestQueue;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 448
+    .line 475
     return-void
 .end method
 
@@ -1142,18 +1148,18 @@
     .registers 3
 
     .prologue
-    .line 472
+    .line 499
     invoke-direct {p0}, Lcom/linever/cruise/android/MainActivity;->setCameraIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 473
+    .line 500
     .local v0, "intent":Landroid/content/Intent;
     const/16 v1, 0x1b59
 
     invoke-virtual {p0, v0, v1}, Lcom/linever/cruise/android/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 474
+    .line 501
     return-void
 .end method
 
@@ -1164,46 +1170,46 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 488
+    .line 516
     if-nez p1, :cond_4
 
-    .line 501
+    .line 530
     :goto_3
     return-void
 
-    .line 489
+    .line 518
     :cond_4
     invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 490
+    .line 519
     .local v6, "path":Ljava/lang/String;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
 
-    .line 491
+    .line 520
     .local v7, "time":J
-    iget-object v9, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    iget-object v9, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
-    invoke-virtual {v9, v11}, Lcom/linever/cruise/android/GPSLib;->getCurrentLocation(Z)Landroid/location/Location;
+    invoke-virtual {v9, v11}, Lcom/linever/cruise/baidu/GPSBase;->getCurrentLocation(Z)Lcom/linever/cruise/baidu/GPSBase$CruLocation;
 
     move-result-object v5
 
-    .line 492
-    .local v5, "loc":Landroid/location/Location;
-    invoke-virtual {v5}, Landroid/location/Location;->getLatitude()D
+    .line 521
+    .local v5, "loc":Lcom/linever/cruise/baidu/GPSBase$CruLocation;
+    invoke-virtual {v5}, Lcom/linever/cruise/baidu/GPSBase$CruLocation;->getLatitude()D
 
     move-result-wide v1
 
-    .line 493
+    .line 522
     .local v1, "lat":D
-    invoke-virtual {v5}, Landroid/location/Location;->getLongitude()D
+    invoke-virtual {v5}, Lcom/linever/cruise/baidu/GPSBase$CruLocation;->getLongitude()D
 
     move-result-wide v3
 
-    .line 494
+    .line 523
     .local v3, "lng":D
     new-instance v0, Landroid/content/Intent;
 
@@ -1215,13 +1221,13 @@
 
     invoke-direct {v0, v9, v10}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 495
+    .line 524
     .local v0, "intent":Landroid/content/Intent;
     const-string v9, "PICTURE_PATH"
 
     invoke-virtual {v0, v9, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 496
+    .line 525
     const v9, 0x7f090184
 
     invoke-virtual {p0, v9}, Lcom/linever/cruise/android/MainActivity;->getString(I)Ljava/lang/String;
@@ -1230,7 +1236,7 @@
 
     invoke-virtual {v0, v9, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 497
+    .line 526
     const v9, 0x7f090185
 
     invoke-virtual {p0, v9}, Lcom/linever/cruise/android/MainActivity;->getString(I)Ljava/lang/String;
@@ -1239,7 +1245,7 @@
 
     invoke-virtual {v0, v9, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 498
+    .line 527
     const v9, 0x7f090186
 
     invoke-virtual {p0, v9}, Lcom/linever/cruise/android/MainActivity;->getString(I)Ljava/lang/String;
@@ -1248,12 +1254,12 @@
 
     invoke-virtual {v0, v9, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 499
+    .line 528
     const-string v9, "MODE"
 
     invoke-virtual {v0, v9, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 500
+    .line 529
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_3
@@ -1271,40 +1277,42 @@
 
     const/4 v8, 0x2
 
-    const v7, 0x7f060024
+    const v7, 0x7f060036
 
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 782
+    .line 849
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 784
+    .line 851
     .local v0, "actionbar":Landroid/app/ActionBar;
     packed-switch p1, :pswitch_data_100
 
-    .line 825
+    .line 894
     const-string v3, "MainActivity ChangePage"
 
     const-string v4, "CRUISE"
 
     invoke-static {v3, v4}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 826
+    .line 895
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
+    .line 896
     const-string v4, "CRUISE_GALLERY_FRAGMENT"
 
     invoke-virtual {v3, v4}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
 
     move-result-object v1
 
+    .line 895
     check-cast v1, Lcom/linever/cruise/android/CruiseGalleryFragment;
 
-    .line 827
+    .line 897
     .local v1, "cfg":Lcom/linever/cruise/android/CruiseGalleryFragment;
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mRdgMyPageMode:Landroid/widget/RadioGroup;
 
@@ -1312,15 +1320,15 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/RadioGroup;->setVisibility(I)V
 
-    .line 828
+    .line 898
     if-nez v1, :cond_f8
 
-    .line 829
+    .line 899
     iget v3, p0, Lcom/linever/cruise/android/MainActivity;->mPage:I
 
     if-eq v3, v6, :cond_3a
 
-    .line 830
+    .line 900
     const v3, 0x7f0900c6
 
     invoke-virtual {p0, v3}, Lcom/linever/cruise/android/MainActivity;->getString(I)Ljava/lang/String;
@@ -1329,12 +1337,12 @@
 
     iput-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mTitle:Ljava/lang/CharSequence;
 
-    .line 831
+    .line 901
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mTitle:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 833
+    .line 903
     :cond_3a
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
@@ -1342,7 +1350,7 @@
 
     move-result-object v2
 
-    .line 834
+    .line 905
     .local v2, "ft":Landroid/app/FragmentTransaction;
     iget-boolean v3, p0, Lcom/linever/cruise/android/MainActivity;->mInitFin:Z
 
@@ -1350,24 +1358,26 @@
 
     move-result-object v3
 
+    .line 906
     const-string v4, "CRUISE_GALLERY_FRAGMENT"
 
+    .line 904
     invoke-virtual {v2, v7, v3, v4}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
 
-    .line 835
+    .line 907
     invoke-virtual {v2}, Landroid/app/FragmentTransaction;->commit()I
 
-    .line 841
+    .line 913
     .end local v1    # "cfg":Lcom/linever/cruise/android/CruiseGalleryFragment;
     .end local v2    # "ft":Landroid/app/FragmentTransaction;
     :cond_4e
     :goto_4e
     iput p1, p0, Lcom/linever/cruise/android/MainActivity;->mPage:I
 
-    .line 842
+    .line 914
     return-void
 
-    .line 787
+    .line 854
     :pswitch_51
     const-string v3, "MainActivity ChangePage"
 
@@ -1375,12 +1385,12 @@
 
     invoke-static {v3, v4}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 788
+    .line 855
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mRdgMyPageMode:Landroid/widget/RadioGroup;
 
     invoke-virtual {v3, v5}, Landroid/widget/RadioGroup;->setVisibility(I)V
 
-    .line 789
+    .line 856
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mRdoShared:Landroid/widget/RadioButton;
 
     invoke-virtual {v3}, Landroid/widget/RadioButton;->isChecked()Z
@@ -1389,20 +1399,20 @@
 
     if-nez v3, :cond_71
 
-    .line 790
+    .line 857
     iput-boolean v6, p0, Lcom/linever/cruise/android/MainActivity;->mSystemPageChangingFlag:Z
 
-    .line 791
+    .line 858
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mRdgMyPageMode:Landroid/widget/RadioGroup;
 
-    const v4, 0x7f060026
+    const v4, 0x7f060038
 
     invoke-virtual {v3, v4}, Landroid/widget/RadioGroup;->check(I)V
 
-    .line 792
+    .line 859
     iput-boolean v5, p0, Lcom/linever/cruise/android/MainActivity;->mSystemPageChangingFlag:Z
 
-    .line 794
+    .line 861
     :cond_71
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
@@ -1414,7 +1424,7 @@
 
     if-nez v3, :cond_4e
 
-    .line 795
+    .line 862
     iget v3, p0, Lcom/linever/cruise/android/MainActivity;->mPage:I
 
     if-eq v3, v9, :cond_91
@@ -1423,7 +1433,7 @@
 
     if-eq v3, v8, :cond_91
 
-    .line 796
+    .line 863
     const v3, 0x7f0900c7
 
     invoke-virtual {p0, v3}, Lcom/linever/cruise/android/MainActivity;->getString(I)Ljava/lang/String;
@@ -1432,12 +1442,12 @@
 
     iput-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mTitle:Ljava/lang/CharSequence;
 
-    .line 797
+    .line 864
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mTitle:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 799
+    .line 866
     :cond_91
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
@@ -1445,22 +1455,24 @@
 
     move-result-object v2
 
-    .line 800
+    .line 867
     .restart local v2    # "ft":Landroid/app/FragmentTransaction;
     invoke-static {}, Lcom/linever/cruise/android/MySharedGalleryFragment;->newInstance()Lcom/linever/cruise/android/MySharedGalleryFragment;
 
     move-result-object v3
 
+    .line 868
     const-string v4, "MY_PAGE_FRAGMENT"
 
+    .line 867
     invoke-virtual {v2, v7, v3, v4}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
 
-    .line 801
+    .line 869
     invoke-virtual {v2}, Landroid/app/FragmentTransaction;->commit()I
 
     goto :goto_4e
 
-    .line 806
+    .line 874
     .end local v2    # "ft":Landroid/app/FragmentTransaction;
     :pswitch_a4
     const-string v3, "MainActivity ChangePage"
@@ -1469,12 +1481,12 @@
 
     invoke-static {v3, v4}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 807
+    .line 875
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mRdgMyPageMode:Landroid/widget/RadioGroup;
 
     invoke-virtual {v3, v5}, Landroid/widget/RadioGroup;->setVisibility(I)V
 
-    .line 808
+    .line 876
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mRdoSuteki:Landroid/widget/RadioButton;
 
     invoke-virtual {v3}, Landroid/widget/RadioButton;->isChecked()Z
@@ -1483,20 +1495,20 @@
 
     if-nez v3, :cond_c4
 
-    .line 809
+    .line 877
     iput-boolean v6, p0, Lcom/linever/cruise/android/MainActivity;->mSystemPageChangingFlag:Z
 
-    .line 810
+    .line 878
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mRdgMyPageMode:Landroid/widget/RadioGroup;
 
-    const v4, 0x7f060027
+    const v4, 0x7f060039
 
     invoke-virtual {v3, v4}, Landroid/widget/RadioGroup;->check(I)V
 
-    .line 811
+    .line 879
     iput-boolean v5, p0, Lcom/linever/cruise/android/MainActivity;->mSystemPageChangingFlag:Z
 
-    .line 813
+    .line 881
     :cond_c4
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
@@ -1508,7 +1520,7 @@
 
     if-nez v3, :cond_4e
 
-    .line 814
+    .line 882
     iget v3, p0, Lcom/linever/cruise/android/MainActivity;->mPage:I
 
     if-eq v3, v9, :cond_e4
@@ -1517,7 +1529,7 @@
 
     if-eq v3, v8, :cond_e4
 
-    .line 815
+    .line 883
     const v3, 0x7f0900c7
 
     invoke-virtual {p0, v3}, Lcom/linever/cruise/android/MainActivity;->getString(I)Ljava/lang/String;
@@ -1526,12 +1538,12 @@
 
     iput-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mTitle:Ljava/lang/CharSequence;
 
-    .line 816
+    .line 884
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mTitle:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 818
+    .line 886
     :cond_e4
     iget-object v3, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
@@ -1539,32 +1551,35 @@
 
     move-result-object v2
 
-    .line 819
+    .line 887
     .restart local v2    # "ft":Landroid/app/FragmentTransaction;
     invoke-static {}, Lcom/linever/cruise/android/SutekiGalleryFragment;->newInstance()Lcom/linever/cruise/android/SutekiGalleryFragment;
 
     move-result-object v3
 
+    .line 888
     const-string v4, "SUTEKI_GALLERY_FRAGMENT"
 
+    .line 887
     invoke-virtual {v2, v7, v3, v4}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
 
-    .line 820
+    .line 889
     invoke-virtual {v2}, Landroid/app/FragmentTransaction;->commit()I
 
     goto/16 :goto_4e
 
-    .line 838
+    .line 909
     .end local v2    # "ft":Landroid/app/FragmentTransaction;
     .restart local v1    # "cfg":Lcom/linever/cruise/android/CruiseGalleryFragment;
     :cond_f8
     if-eqz p2, :cond_4e
 
+    .line 910
     invoke-virtual {v1, p2, v6}, Lcom/linever/cruise/android/CruiseGalleryFragment;->changeScope(Lcom/linever/cruise/android/Scope;Z)V
 
     goto/16 :goto_4e
 
-    .line 784
+    .line 851
     nop
 
     :pswitch_data_100
@@ -1574,35 +1589,35 @@
     .end packed-switch
 .end method
 
-.method getBestCurrentLocation(Lcom/linever/cruise/android/GPSLib$MyLocationChangeListener;)V
+.method getBestCurrentLocation(Lcom/linever/cruise/baidu/GPSBase$MyLocationChangeListener;)V
     .registers 7
-    .param p1, "listener"    # Lcom/linever/cruise/android/GPSLib$MyLocationChangeListener;
+    .param p1, "listener"    # Lcom/linever/cruise/baidu/GPSBase$MyLocationChangeListener;
 
     .prologue
-    .line 454
+    .line 481
     const-string v1, "MainActivity"
 
     const-string v2, "getBestCurrentLocation"
 
     invoke-static {v1, v2}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 455
-    iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    .line 482
+    iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
-    invoke-virtual {v1}, Lcom/linever/cruise/android/GPSLib;->getCurrentLocation()Landroid/location/Location;
+    invoke-virtual {v1}, Lcom/linever/cruise/baidu/GPSBase;->getCurrentLocation()Lcom/linever/cruise/baidu/GPSBase$CruLocation;
 
     move-result-object v0
 
-    .line 456
-    .local v0, "location":Landroid/location/Location;
+    .line 483
+    .local v0, "location":Lcom/linever/cruise/baidu/GPSBase$CruLocation;
     if-eqz v0, :cond_28
 
-    .line 457
+    .line 484
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    invoke-virtual {v0}, Landroid/location/Location;->getTime()J
+    invoke-virtual {v0}, Lcom/linever/cruise/baidu/GPSBase$CruLocation;->getTime()J
 
     move-result-wide v3
 
@@ -1614,8 +1629,8 @@
 
     if-gtz v1, :cond_28
 
-    .line 458
-    invoke-virtual {v0}, Landroid/location/Location;->getAccuracy()F
+    .line 485
+    invoke-virtual {v0}, Lcom/linever/cruise/baidu/GPSBase$CruLocation;->getAccuracy()F
 
     move-result v1
 
@@ -1625,35 +1640,37 @@
 
     if-lez v1, :cond_3c
 
-    .line 459
+    .line 486
     :cond_28
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
-    iget-object v2, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    .line 487
+    iget-object v2, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
-    invoke-virtual {v2}, Lcom/linever/cruise/android/GPSLib;->getEnableLocationService()I
+    invoke-virtual {v2}, Lcom/linever/cruise/baidu/GPSBase;->getEnableLocationService()I
 
     move-result v2
 
-    invoke-virtual {v1, v2, p1}, Lcom/linever/cruise/android/LocationOverlayLayout;->showLocationWaitScreen(ILcom/linever/cruise/android/GPSLib$MyLocationChangeListener;)Z
+    .line 486
+    invoke-virtual {v1, v2, p1}, Lcom/linever/cruise/android/LocationOverlayLayout;->showLocationWaitScreen(ILcom/linever/cruise/baidu/GPSBase$MyLocationChangeListener;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3b
 
-    .line 460
-    iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    .line 488
+    iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
-    invoke-virtual {v1, p1}, Lcom/linever/cruise/android/GPSLib;->reqNewLocation(Lcom/linever/cruise/android/GPSLib$MyLocationChangeListener;)V
+    invoke-virtual {v1, p1}, Lcom/linever/cruise/baidu/GPSBase;->reqNewLocation(Lcom/linever/cruise/baidu/GPSBase$MyLocationChangeListener;)V
 
-    .line 466
+    .line 493
     :cond_3b
     :goto_3b
     return-void
 
-    .line 464
+    .line 491
     :cond_3c
-    invoke-interface {p1, v0}, Lcom/linever/cruise/android/GPSLib$MyLocationChangeListener;->onMyLocationChange(Landroid/location/Location;)V
+    invoke-interface {p1, v0}, Lcom/linever/cruise/baidu/GPSBase$MyLocationChangeListener;->onMyLocationChange(Lcom/linever/cruise/baidu/GPSBase$CruLocation;)V
 
     goto :goto_3b
 .end method
@@ -1671,52 +1688,53 @@
 
     const/4 v3, 0x1
 
-    .line 250
+    .line 271
     const-string v1, "MainActivity"
 
     const-string v2, "\u2605onActivityResult"
 
     invoke-static {v1, v2}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 252
+    .line 273
     sparse-switch p1, :sswitch_data_82
 
-    .line 281
+    .line 305
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 283
+    .line 307
     :cond_10
     :goto_10
     return-void
 
-    .line 254
+    .line 275
     :sswitch_11
     if-eq p2, v4, :cond_10
 
+    .line 276
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->finish()V
 
     goto :goto_10
 
-    .line 258
+    .line 280
     :sswitch_17
-    iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/linever/cruise/android/GPSLib;->isGooglePlayServiceEnabled(Landroid/content/Context;)Z
+    invoke-virtual {v1, v2}, Lcom/linever/cruise/baidu/GPSBase;->isGooglePlayServiceEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_10
 
-    .line 259
+    .line 281
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->finish()V
 
     goto :goto_10
 
-    .line 263
+    .line 285
     :sswitch_27
     if-ne p2, v4, :cond_10
 
@@ -1724,7 +1742,7 @@
 
     if-eqz v1, :cond_10
 
-    .line 264
+    .line 287
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mTakePictureUri:Landroid/net/Uri;
@@ -1735,7 +1753,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 265
+    .line 288
     .local v0, "f":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1743,7 +1761,7 @@
 
     if-eqz v1, :cond_5f
 
-    .line 266
+    .line 289
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mTakePictureUri:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
@@ -1752,12 +1770,12 @@
 
     invoke-direct {p0, v1}, Lcom/linever/cruise/android/MainActivity;->checkWPicture(Ljava/lang/String;)V
 
-    .line 267
+    .line 290
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mTakePictureUri:Landroid/net/Uri;
 
     invoke-direct {p0, v1}, Lcom/linever/cruise/android/MainActivity;->startShare(Landroid/net/Uri;)V
 
-    .line 268
+    .line 292
     new-array v1, v3, [Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -1766,6 +1784,7 @@
 
     aput-object v2, v1, v5
 
+    .line 293
     new-array v2, v3, [Ljava/lang/String;
 
     const-string v3, "image/jpeg"
@@ -1774,11 +1793,12 @@
 
     const/4 v3, 0x0
 
+    .line 291
     invoke-static {p0, v1, v2, v3}, Landroid/media/MediaScannerConnection;->scanFile(Landroid/content/Context;[Ljava/lang/String;[Ljava/lang/String;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
 
     goto :goto_10
 
-    .line 270
+    .line 294
     :cond_5f
     if-eqz p3, :cond_73
 
@@ -1788,37 +1808,40 @@
 
     if-eqz v1, :cond_73
 
-    .line 271
+    .line 295
     invoke-virtual {p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mTakePictureUri:Landroid/net/Uri;
 
-    .line 272
+    .line 296
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mTakePictureUri:Landroid/net/Uri;
 
     invoke-direct {p0, v1}, Lcom/linever/cruise/android/MainActivity;->startShare(Landroid/net/Uri;)V
 
     goto :goto_10
 
-    .line 276
+    .line 299
     :cond_73
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
+    .line 300
     const v2, 0x7f09015b
 
+    .line 299
     invoke-static {v1, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v1
 
+    .line 300
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
     goto :goto_10
 
-    .line 252
+    .line 273
     :sswitch_data_82
     .sparse-switch
         0x1 -> :sswitch_11
@@ -1831,7 +1854,7 @@
     .registers 4
 
     .prologue
-    .line 337
+    .line 364
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
     iget-object v2, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenu:Landroid/widget/LinearLayout;
@@ -1842,42 +1865,44 @@
 
     if-eqz v1, :cond_12
 
-    .line 338
+    .line 365
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
     iget-object v2, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenu:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v2}, Landroid/support/v4/widget/DrawerLayout;->closeDrawer(Landroid/view/View;)V
 
-    .line 348
+    .line 376
     :cond_11
     :goto_11
     return-void
 
-    .line 342
+    .line 368
     :cond_12
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
+    .line 369
     const-string v2, "CRUISE_GALLERY_FRAGMENT"
 
     invoke-virtual {v1, v2}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
 
     move-result-object v0
 
+    .line 368
     check-cast v0, Lcom/linever/cruise/android/CruiseGalleryFragment;
 
-    .line 343
+    .line 370
     .local v0, "f":Lcom/linever/cruise/android/CruiseGalleryFragment;
     if-eqz v0, :cond_24
 
-    .line 344
+    .line 371
     invoke-virtual {v0}, Lcom/linever/cruise/android/CruiseGalleryFragment;->onBackPressed()Z
 
     move-result v1
 
     if-nez v1, :cond_11
 
-    .line 347
+    .line 375
     :cond_24
     invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
 
@@ -1889,15 +1914,15 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 226
+    .line 246
     invoke-super {p0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 227
+    .line 247
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerToggle:Landroid/support/v4/app/ActionBarDrawerToggle;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/app/ActionBarDrawerToggle;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 228
+    .line 248
     return-void
 .end method
 
@@ -1910,58 +1935,61 @@
 
     const/4 v8, 0x0
 
-    .line 139
+    .line 152
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 140
+    .line 153
     const-string v5, "MainActivity"
 
     const-string v6, "\u2605onCreate"
 
     invoke-static {v5, v6}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 142
+    .line 155
     const v5, 0x7f0a001d
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/MainActivity;->setTheme(I)V
 
-    .line 143
-    const v5, 0x7f030004
+    .line 156
+    const v5, 0x7f030005
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/MainActivity;->setContentView(I)V
 
-    .line 145
+    .line 158
     sget v5, Lcom/linever/cruise/android/CruiseConfig;->DEV_FLAG:I
 
     if-lez v5, :cond_28
 
+    .line 159
     new-instance v5, Lcom/o1soft/lib/base/ErrorReporter;
 
+    .line 160
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v6
 
+    .line 159
     invoke-direct {v5, v6}, Lcom/o1soft/lib/base/ErrorReporter;-><init>(Landroid/content/Context;)V
 
     invoke-static {v5}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
-    .line 147
+    .line 162
     :cond_28
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 148
+    .line 163
     .local v0, "actionbar":Landroid/app/ActionBar;
     if-eqz v0, :cond_34
 
-    .line 149
+    .line 164
     invoke-virtual {v0, v9}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    .line 150
+    .line 165
     invoke-virtual {v0, v9}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 152
+    .line 167
     :cond_34
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getApplication()Landroid/app/Application;
 
@@ -1971,23 +1999,25 @@
 
     iput-object v5, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
-    .line 153
+    .line 168
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v5
 
+    .line 169
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lcom/linever/cruise/android/GPSLib;->getNewInstance(Landroid/content/Context;Ljava/util/Locale;)Lcom/linever/cruise/android/GPSLib;
+    .line 168
+    invoke-static {v5, v6}, Lcom/linever/cruise/baidu/GPSUtil;->getNewInstance(Landroid/content/Context;Ljava/util/Locale;)Lcom/linever/cruise/baidu/GPSBase;
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    iput-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
-    .line 156
-    const v5, 0x7f060023
+    .line 172
+    const v5, 0x7f060014
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -1997,10 +2027,11 @@
 
     iput-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
-    .line 157
+    .line 173
     iget-object v7, p0, Lcom/linever/cruise/android/MainActivity;->mOverlay:Lcom/linever/cruise/android/LocationOverlayLayout;
 
-    const v5, 0x7f060024
+    .line 174
+    const v5, 0x7f060036
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -2008,7 +2039,8 @@
 
     check-cast v5, Lcom/linever/cruise/android/BaselayerLinearLayout;
 
-    const v6, 0x7f06005f
+    .line 175
+    const v6, 0x7f060060
 
     invoke-virtual {p0, v6}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -2016,10 +2048,11 @@
 
     check-cast v6, Landroid/widget/LinearLayout;
 
+    .line 173
     invoke-virtual {v7, p0, v5, v6}, Lcom/linever/cruise/android/LocationOverlayLayout;->setLayer(Landroid/app/Activity;Landroid/view/ViewGroup;Landroid/widget/LinearLayout;)V
 
-    .line 159
-    const v5, 0x7f060025
+    .line 177
+    const v5, 0x7f060037
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -2029,8 +2062,8 @@
 
     iput-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mRdgMyPageMode:Landroid/widget/RadioGroup;
 
-    .line 160
-    const v5, 0x7f060026
+    .line 178
+    const v5, 0x7f060038
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -2040,8 +2073,8 @@
 
     iput-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mRdoShared:Landroid/widget/RadioButton;
 
-    .line 161
-    const v5, 0x7f060027
+    .line 179
+    const v5, 0x7f060039
 
     invoke-virtual {p0, v5}, Lcom/linever/cruise/android/MainActivity;->findViewById(I)Landroid/view/View;
 
@@ -2051,10 +2084,10 @@
 
     iput-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mRdoSuteki:Landroid/widget/RadioButton;
 
-    .line 162
+    .line 180
     iput-boolean v8, p0, Lcom/linever/cruise/android/MainActivity;->mSystemPageChangingFlag:Z
 
-    .line 165
+    .line 183
     iget-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mRdoShared:Landroid/widget/RadioButton;
 
     new-instance v6, Lcom/linever/cruise/android/MainActivity$2;
@@ -2063,7 +2096,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/RadioButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 174
+    .line 193
     iget-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mRdoSuteki:Landroid/widget/RadioButton;
 
     new-instance v6, Lcom/linever/cruise/android/MainActivity$3;
@@ -2072,34 +2105,34 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/RadioButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 184
+    .line 204
     invoke-direct {p0}, Lcom/linever/cruise/android/MainActivity;->iniDrawMenu()V
 
-    .line 187
-    iget-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    .line 207
+    iget-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
     const/16 v6, 0x2328
 
-    invoke-virtual {v5, p0, v6}, Lcom/linever/cruise/android/GPSLib;->checkGooglePlayService(Landroid/app/Activity;I)V
+    invoke-virtual {v5, p0, v6}, Lcom/linever/cruise/baidu/GPSBase;->checkGooglePlayService(Landroid/app/Activity;I)V
 
-    .line 189
+    .line 209
     iput-boolean v8, p0, Lcom/linever/cruise/android/MainActivity;->mInitFin:Z
 
-    .line 190
+    .line 210
     iput v8, p0, Lcom/linever/cruise/android/MainActivity;->mPage:I
 
-    .line 191
+    .line 211
     const/4 v4, 0x0
 
-    .line 192
+    .line 212
     .local v4, "scp":Lcom/linever/cruise/android/Scope;
     const/4 v3, 0x0
 
-    .line 193
+    .line 213
     .local v3, "pg":I
     if-eqz p1, :cond_ef
 
-    .line 194
+    .line 214
     const-string v5, "pic_uri"
 
     invoke-virtual {p1, v5}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -2110,14 +2143,14 @@
 
     iput-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mTakePictureUri:Landroid/net/Uri;
 
-    .line 195
+    .line 215
     const-string v5, "MAIN_PAGE"
 
     invoke-virtual {p1, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 204
+    .line 223
     :goto_c5
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
@@ -2125,54 +2158,55 @@
 
     iput-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mFm:Landroid/app/FragmentManager;
 
-    .line 205
+    .line 224
     invoke-virtual {p0, v3, v4}, Lcom/linever/cruise/android/MainActivity;->changePage(ILcom/linever/cruise/android/Scope;)V
 
-    .line 207
+    .line 226
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 208
+    .line 227
     .local v1, "filter":Landroid/content/IntentFilter;
     const-string v5, "com.linever.cruise.android.ACTION_UPLOAD_STATUS"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 209
+    .line 228
     const-string v5, "com.linever.cruise.android.ACTION_UPDATE_MY_SHARED"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 210
+    .line 229
     const-string v5, "com.linever.cruise.android.ACTION_EXIST_CHECK"
 
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 211
+    .line 230
     iget-object v5, p0, Lcom/linever/cruise/android/MainActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v5, v1}, Lcom/linever/cruise/android/MainActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 213
+    .line 232
     sget v5, Lcom/linever/cruise/android/CruiseConfig;->DEV_FLAG:I
 
     if-lez v5, :cond_ee
 
+    .line 233
     invoke-static {p0}, Lcom/o1soft/lib/base/ErrorReporter;->SendBugReport(Landroid/app/Activity;)V
 
-    .line 215
+    .line 235
     :cond_ee
     return-void
 
-    .line 198
+    .line 217
     .end local v1    # "filter":Landroid/content/IntentFilter;
     :cond_ef
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 199
+    .line 218
     .local v2, "intent":Landroid/content/Intent;
     const-string v5, "MAIN_PAGE"
 
@@ -2180,7 +2214,7 @@
 
     move-result v3
 
-    .line 200
+    .line 219
     const-string v5, "MAIN_SCOPE"
 
     invoke-virtual {v2, v5}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -2199,7 +2233,7 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 731
+    .line 798
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     move-result v0
@@ -2211,27 +2245,27 @@
     .registers 3
 
     .prologue
-    .line 329
-    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
-
-    .line 330
+    .line 355
     const-string v0, "MainActivity"
 
     const-string v1, "\u2605onDestroy"
 
     invoke-static {v0, v1}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 331
-    iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    .line 357
+    iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
-    invoke-virtual {v0}, Lcom/linever/cruise/android/GPSLib;->stopLocationClient()V
+    invoke-virtual {v0}, Lcom/linever/cruise/baidu/GPSBase;->stopLocationClient()V
 
-    .line 332
+    .line 358
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Lcom/linever/cruise/android/MainActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 333
+    .line 359
+    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    .line 360
     return-void
 .end method
 
@@ -2240,33 +2274,34 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 233
+    .line 253
     invoke-super {p0, p1}, Landroid/app/Activity;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 234
+    .line 254
     invoke-virtual {p0, p1}, Lcom/linever/cruise/android/MainActivity;->setIntent(Landroid/content/Intent;)V
 
-    .line 235
+    .line 255
     const-string v2, "MainActivity"
 
     const-string v3, "\u2605onNewIntent"
 
     invoke-static {v2, v3}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 236
+    .line 256
     iget-object v2, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
     iget-object v2, v2, Lcom/linever/cruise/android/CruiseApp;->token:Ljava/lang/String;
 
     if-nez v2, :cond_17
 
+    .line 257
     invoke-direct {p0}, Lcom/linever/cruise/android/MainActivity;->iniCheck()V
 
-    .line 242
+    .line 263
     :goto_16
     return-void
 
-    .line 238
+    .line 259
     :cond_17
     const-string v2, "MAIN_PAGE"
 
@@ -2276,7 +2311,7 @@
 
     move-result v0
 
-    .line 239
+    .line 260
     .local v0, "pg":I
     const-string v2, "MAIN_SCOPE"
 
@@ -2286,7 +2321,7 @@
 
     check-cast v1, Lcom/linever/cruise/android/Scope;
 
-    .line 240
+    .line 261
     .local v1, "scp":Lcom/linever/cruise/android/Scope;
     invoke-virtual {p0, v0, v1}, Lcom/linever/cruise/android/MainActivity;->changePage(ILcom/linever/cruise/android/Scope;)V
 
@@ -2302,7 +2337,7 @@
 
     const/4 v0, 0x1
 
-    .line 743
+    .line 810
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerToggle:Landroid/support/v4/app/ActionBarDrawerToggle;
 
     invoke-virtual {v1, p1}, Landroid/support/v4/app/ActionBarDrawerToggle;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
@@ -2311,7 +2346,7 @@
 
     if-eqz v1, :cond_1e
 
-    .line 744
+    .line 811
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
     iget-object v2, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerMenu:Landroid/widget/LinearLayout;
@@ -2322,17 +2357,17 @@
 
     if-nez v1, :cond_1a
 
-    .line 745
+    .line 812
     iput-boolean v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerPreOpen:Z
 
-    .line 746
+    .line 813
     invoke-virtual {p0}, Lcom/linever/cruise/android/MainActivity;->invalidateOptionsMenu()V
 
-    .line 772
+    .line 839
     :goto_19
     return v0
 
-    .line 749
+    .line 816
     :cond_1a
     const/4 v1, 0x0
 
@@ -2340,7 +2375,7 @@
 
     goto :goto_19
 
-    .line 755
+    .line 822
     :cond_1e
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
@@ -2348,20 +2383,20 @@
 
     packed-switch v1, :pswitch_data_44
 
-    .line 772
+    .line 839
     invoke-super {p0, p1}, Landroid/app/Activity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
     goto :goto_19
 
-    .line 757
+    .line 824
     :pswitch_2a
     invoke-virtual {p0, v0, v2}, Lcom/linever/cruise/android/MainActivity;->changePage(ILcom/linever/cruise/android/Scope;)V
 
     goto :goto_19
 
-    .line 760
+    .line 827
     :pswitch_2e
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
@@ -2369,14 +2404,14 @@
 
     packed-switch v1, :pswitch_data_4e
 
-    .line 765
+    .line 832
     const/4 v1, 0x2
 
     invoke-virtual {p0, v1, v2}, Lcom/linever/cruise/android/MainActivity;->changePage(ILcom/linever/cruise/android/Scope;)V
 
     goto :goto_19
 
-    .line 762
+    .line 829
     :pswitch_3a
     const/4 v1, 0x3
 
@@ -2384,23 +2419,23 @@
 
     goto :goto_19
 
-    .line 769
+    .line 836
     :pswitch_3f
     invoke-direct {p0}, Lcom/linever/cruise/android/MainActivity;->startCamera()V
 
     goto :goto_19
 
-    .line 755
+    .line 822
     nop
 
     :pswitch_data_44
-    .packed-switch 0x7f060121
+    .packed-switch 0x7f060122
         :pswitch_2a
         :pswitch_2e
         :pswitch_3f
     .end packed-switch
 
-    .line 760
+    .line 827
     :pswitch_data_4e
     .packed-switch 0x3
         :pswitch_3a
@@ -2411,28 +2446,29 @@
     .registers 3
 
     .prologue
-    .line 315
+    .line 339
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 316
+    .line 340
     const-string v0, "MainActivity"
 
     const-string v1, "\u2605onPause"
 
     invoke-static {v0, v1}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 318
+    .line 343
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
     iget-boolean v0, v0, Lcom/linever/cruise/android/CruiseApp;->continuousPos:Z
 
     if-nez v0, :cond_15
 
-    iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    .line 344
+    iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
-    invoke-virtual {v0}, Lcom/linever/cruise/android/GPSLib;->pauseLocationClient()V
+    invoke-virtual {v0}, Lcom/linever/cruise/baidu/GPSBase;->pauseLocationClient()V
 
-    .line 319
+    .line 345
     :cond_15
     return-void
 .end method
@@ -2442,15 +2478,15 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 219
+    .line 239
     invoke-super {p0, p1}, Landroid/app/Activity;->onPostCreate(Landroid/os/Bundle;)V
 
-    .line 221
+    .line 241
     iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mDrawerToggle:Landroid/support/v4/app/ActionBarDrawerToggle;
 
     invoke-virtual {v0}, Landroid/support/v4/app/ActionBarDrawerToggle;->syncState()V
 
-    .line 222
+    .line 242
     return-void
 .end method
 
@@ -2459,7 +2495,7 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 736
+    .line 803
     invoke-super {p0, p1}, Landroid/app/Activity;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
     move-result v0
@@ -2471,17 +2507,17 @@
     .registers 3
 
     .prologue
-    .line 295
+    .line 319
     invoke-super {p0}, Landroid/app/Activity;->onRestart()V
 
-    .line 296
+    .line 320
     const-string v0, "MainActivity"
 
     const-string v1, "\u2605onRestart"
 
     invoke-static {v0, v1}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 297
+    .line 321
     return-void
 .end method
 
@@ -2489,18 +2525,18 @@
     .registers 5
 
     .prologue
-    .line 308
+    .line 332
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 309
+    .line 333
     const-string v0, "MainActivity"
 
     const-string v1, "\u2605onResume"
 
     invoke-static {v0, v1}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 310
-    iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/android/GPSLib;
+    .line 334
+    iget-object v0, p0, Lcom/linever/cruise/android/MainActivity;->mGpsLib:Lcom/linever/cruise/baidu/GPSBase;
 
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->app:Lcom/linever/cruise/android/CruiseApp;
 
@@ -2512,9 +2548,9 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/linever/cruise/android/GPSLib;->startLocationClient(ZZZ)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/linever/cruise/baidu/GPSBase;->startLocationClient(ZZZ)V
 
-    .line 311
+    .line 335
     return-void
 .end method
 
@@ -2523,24 +2559,24 @@
     .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 301
+    .line 325
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 302
+    .line 326
     const-string v0, "MAIN_PAGE"
 
     iget v1, p0, Lcom/linever/cruise/android/MainActivity;->mPage:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 303
+    .line 327
     const-string v0, "pic_uri"
 
     iget-object v1, p0, Lcom/linever/cruise/android/MainActivity;->mTakePictureUri:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 304
+    .line 328
     return-void
 .end method
 
@@ -2548,20 +2584,20 @@
     .registers 3
 
     .prologue
-    .line 287
+    .line 311
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
-    .line 288
+    .line 312
     const-string v0, "MainActivity"
 
     const-string v1, "\u2605onStart"
 
     invoke-static {v0, v1}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 290
+    .line 314
     invoke-direct {p0}, Lcom/linever/cruise/android/MainActivity;->iniCheck()V
 
-    .line 291
+    .line 315
     return-void
 .end method
 
@@ -2569,16 +2605,16 @@
     .registers 3
 
     .prologue
-    .line 323
+    .line 349
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    .line 324
+    .line 350
     const-string v0, "MainActivity"
 
     const-string v1, "\u2605onStop"
 
     invoke-static {v0, v1}, Lcom/o1soft/lib/base/Log;->d(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 325
+    .line 351
     return-void
 .end method

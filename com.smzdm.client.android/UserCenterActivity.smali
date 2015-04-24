@@ -218,43 +218,103 @@
 .end method
 
 .method private a()V
-    .registers 4
+    .registers 5
 
-    :try_start_0
-    invoke-static {p0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    const-class v1, Landroid/view/ViewConfiguration;
-
-    const-string v2, "sHasPermanentMenuKey"
-
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    :try_start_1
+    invoke-virtual {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    if-eqz v1, :cond_16
+    invoke-virtual {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->getPackageName()Ljava/lang/String;
 
-    const/4 v2, 0x1
+    move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    const/16 v3, 0x4080
 
-    const/4 v2, 0x0
+    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
-    invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Field;->setBoolean(Ljava/lang/Object;Z)V
-    :try_end_16
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_16} :catch_17
+    move-result-object v1
 
-    :cond_16
-    :goto_16
+    if-eqz v1, :cond_3f
+
+    iget-object v2, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    if-eqz v2, :cond_3f
+
+    iget-object v2, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    if-eqz v2, :cond_3f
+
+    iget-object v1, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    const-string v2, "UMENG_CHANNEL"
+
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    move v1, v0
+
+    :goto_26
+    sget-object v3, Lcom/smzdm/client/android/a;->c:[Ljava/lang/String;
+
+    array-length v3, v3
+
+    if-ge v1, v3, :cond_36
+
+    sget-object v3, Lcom/smzdm/client/android/a;->c:[Ljava/lang/String;
+
+    aget-object v3, v3, v1
+
+    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_40
+
+    const/4 v0, 0x1
+
+    :cond_36
+    if-eqz v0, :cond_43
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->B:Landroid/widget/RelativeLayout;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    :cond_3f
+    :goto_3f
     return-void
 
-    :catch_17
+    :cond_40
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_26
+
+    :cond_43
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->B:Landroid/widget/RelativeLayout;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    :try_end_49
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_49} :catch_4a
+
+    goto :goto_3f
+
+    :catch_4a
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_16
+    goto :goto_3f
 .end method
 
 .method private a(Landroid/content/Intent;)V
@@ -786,493 +846,43 @@
 .end method
 
 .method private b()V
-    .registers 3
+    .registers 4
 
-    const v0, 0x7f0a0111
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->N:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a0116
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+    :try_start_0
+    invoke-static {p0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
 
-    check-cast v0, Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
+    const-class v1, Landroid/view/ViewConfiguration;
 
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->q:Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
+    const-string v2, "sHasPermanentMenuKey"
 
-    const v0, 0x7f0a0133
+    invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+    move-result-object v1
 
-    move-result-object v0
+    if-eqz v1, :cond_16
 
-    check-cast v0, Landroid/widget/RelativeLayout;
+    const/4 v2, 0x1
 
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->r:Landroid/widget/RelativeLayout;
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    const v0, 0x7f0a0135
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Field;->setBoolean(Ljava/lang/Object;Z)V
+    :try_end_16
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_16} :catch_17
 
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->s:Landroid/widget/LinearLayout;
-
-    const v0, 0x7f0a0137
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->t:Landroid/widget/LinearLayout;
-
-    const v0, 0x7f0a013a
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->u:Landroid/widget/LinearLayout;
-
-    const v0, 0x7f0a0142
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->x:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a014d
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->y:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a0152
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->z:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a0159
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->A:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a015c
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->B:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a015f
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->C:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a0120
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->h:Landroid/widget/LinearLayout;
-
-    const v0, 0x7f0a0123
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->i:Landroid/widget/TextView;
-
-    const v0, 0x7f0a0126
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->j:Landroid/widget/TextView;
-
-    const v0, 0x7f0a011b
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->k:Landroid/widget/TextView;
-
-    const v0, 0x7f0a0130
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->n:Landroid/widget/Button;
-
-    const v0, 0x7f0a0127
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->D:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a011d
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->E:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a0155
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->l:Landroid/widget/TextView;
-
-    const v0, 0x7f0a0150
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->m:Landroid/widget/TextView;
-
-    const v0, 0x7f0a0156
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->F:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a0121
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->S:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a0124
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->T:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a0129
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->U:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a012c
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->V:Landroid/widget/TextView;
-
-    const v0, 0x7f0a012f
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->W:Landroid/widget/TextView;
-
-    const v0, 0x7f0a011c
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->R:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a0134
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->o:Landroid/widget/ImageView;
-
-    const v0, 0x7f0a0149
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->G:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a013c
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->v:Landroid/widget/LinearLayout;
-
-    const v0, 0x7f0a013e
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->w:Landroid/widget/LinearLayout;
-
-    const v0, 0x7f0a0148
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/support/v7/widget/SwitchCompat;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ab:Landroid/support/v7/widget/SwitchCompat;
-
-    const v0, 0x7f0a0145
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->M:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0a013f
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->p:Landroid/widget/ImageView;
-
-    const v0, 0x7f0a0113
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ad:Landroid/widget/ImageView;
-
-    const v0, 0x7f0a0118
-
-    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ac:Landroid/widget/ImageView;
-
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->j()V
-
-    iget-boolean v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->K:Z
-
-    if-eqz v0, :cond_210
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->q:Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
-
-    iget-object v1, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->af:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0, v1}, Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->q:Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
-
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    invoke-virtual {v0, v1}, Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;->setAlpha(F)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ab:Landroid/support/v7/widget/SwitchCompat;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/SwitchCompat;->setChecked(Z)V
-
-    :goto_1b2
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->q:Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
-
-    invoke-virtual {v0, p0}, Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->r:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->s:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->t:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->u:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->x:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->y:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->z:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->A:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->B:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->C:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->n:Landroid/widget/Button;
-
-    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->F:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->G:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->v:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->w:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->M:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ab:Landroid/support/v7/widget/SwitchCompat;
-
-    invoke-virtual {v0, p0}, Landroid/support/v7/widget/SwitchCompat;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
-
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->k()V
-
+    :cond_16
+    :goto_16
     return-void
 
-    :cond_210
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->q:Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
+    :catch_17
+    move-exception v0
 
-    iget-object v1, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->af:Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    invoke-virtual {v0, v1}, Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ab:Landroid/support/v7/widget/SwitchCompat;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/SwitchCompat;->setChecked(Z)V
-
-    goto :goto_1b2
+    goto :goto_16
 .end method
 
 .method private b(Landroid/content/Intent;)V
@@ -1923,7 +1533,7 @@
 .method static synthetic f(Lcom/smzdm/client/android/activity/UserCenterActivity;)V
     .registers 1
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->p()V
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
 
     return-void
 .end method
@@ -1931,7 +1541,7 @@
 .method static synthetic g(Lcom/smzdm/client/android/activity/UserCenterActivity;)V
     .registers 1
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->r()V
 
     return-void
 .end method
@@ -1953,6 +1563,504 @@
 .end method
 
 .method private j()V
+    .registers 3
+
+    const v0, 0x7f0a0111
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->N:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a0116
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->q:Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
+
+    const v0, 0x7f0a0133
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->r:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a0135
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->s:Landroid/widget/LinearLayout;
+
+    const v0, 0x7f0a0137
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->t:Landroid/widget/LinearLayout;
+
+    const v0, 0x7f0a013a
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->u:Landroid/widget/LinearLayout;
+
+    const v0, 0x7f0a0142
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->x:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a014d
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->y:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a0152
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->z:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a0159
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->A:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a015c
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->B:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a015f
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->C:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a0120
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->h:Landroid/widget/LinearLayout;
+
+    const v0, 0x7f0a0123
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->i:Landroid/widget/TextView;
+
+    const v0, 0x7f0a0126
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->j:Landroid/widget/TextView;
+
+    const v0, 0x7f0a011b
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->k:Landroid/widget/TextView;
+
+    const v0, 0x7f0a0130
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->n:Landroid/widget/Button;
+
+    const v0, 0x7f0a0127
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->D:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a011d
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->E:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a0155
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->l:Landroid/widget/TextView;
+
+    const v0, 0x7f0a0150
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->m:Landroid/widget/TextView;
+
+    const v0, 0x7f0a0156
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->F:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a0121
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->S:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a0124
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->T:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a0129
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->U:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a012c
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->V:Landroid/widget/TextView;
+
+    const v0, 0x7f0a012f
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->W:Landroid/widget/TextView;
+
+    const v0, 0x7f0a011c
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->R:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a0134
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->o:Landroid/widget/ImageView;
+
+    const v0, 0x7f0a0149
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->G:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a013c
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->v:Landroid/widget/LinearLayout;
+
+    const v0, 0x7f0a013e
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->w:Landroid/widget/LinearLayout;
+
+    const v0, 0x7f0a0148
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/SwitchCompat;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ab:Landroid/support/v7/widget/SwitchCompat;
+
+    const v0, 0x7f0a0145
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->M:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0a013f
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->p:Landroid/widget/ImageView;
+
+    const v0, 0x7f0a0113
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ad:Landroid/widget/ImageView;
+
+    const v0, 0x7f0a0118
+
+    invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ac:Landroid/widget/ImageView;
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->k()V
+
+    iget-boolean v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->K:Z
+
+    if-eqz v0, :cond_210
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->q:Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
+
+    iget-object v1, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->af:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, v1}, Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->q:Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
+
+    const/high16 v1, 0x3f000000    # 0.5f
+
+    invoke-virtual {v0, v1}, Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;->setAlpha(F)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ab:Landroid/support/v7/widget/SwitchCompat;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/SwitchCompat;->setChecked(Z)V
+
+    :goto_1b2
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->q:Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
+
+    invoke-virtual {v0, p0}, Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->r:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->s:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->t:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->u:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->x:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->y:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->z:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->A:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->B:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->C:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->n:Landroid/widget/Button;
+
+    invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->F:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->G:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->v:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->w:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->M:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ab:Landroid/support/v7/widget/SwitchCompat;
+
+    invoke-virtual {v0, p0}, Landroid/support/v7/widget/SwitchCompat;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->l()V
+
+    return-void
+
+    :cond_210
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->q:Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;
+
+    iget-object v1, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->af:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, v1}, Lcom/smzdm/client/android/extend/circleimageview/CircleImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ab:Landroid/support/v7/widget/SwitchCompat;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/SwitchCompat;->setChecked(Z)V
+
+    goto :goto_1b2
+.end method
+
+.method static synthetic j(Lcom/smzdm/client/android/activity/UserCenterActivity;)V
+    .registers 1
+
+    invoke-virtual {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->g()V
+
+    return-void
+.end method
+
+.method private k()V
     .registers 3
 
     invoke-static {}, Lcom/smzdm/client/android/b/c;->T()Ljava/lang/String;
@@ -2063,46 +2171,6 @@
     goto :goto_57
 .end method
 
-.method static synthetic j(Lcom/smzdm/client/android/activity/UserCenterActivity;)V
-    .registers 1
-
-    invoke-virtual {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->g()V
-
-    return-void
-.end method
-
-.method private k()V
-    .registers 2
-
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->n()V
-
-    invoke-static {}, Lcom/smzdm/client/android/b/c;->i()Z
-
-    move-result v0
-
-    if-nez v0, :cond_10
-
-    const/4 v0, 0x1
-
-    sput v0, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
-
-    :goto_c
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->p()V
-
-    return-void
-
-    :cond_10
-    const/4 v0, 0x0
-
-    sput v0, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
-
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->o()V
-
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
-
-    goto :goto_c
-.end method
-
 .method static synthetic k(Lcom/smzdm/client/android/activity/UserCenterActivity;)V
     .registers 1
 
@@ -2120,6 +2188,46 @@
 .end method
 
 .method private l()V
+    .registers 2
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->o()V
+
+    invoke-static {}, Lcom/smzdm/client/android/b/c;->i()Z
+
+    move-result v0
+
+    if-nez v0, :cond_10
+
+    const/4 v0, 0x1
+
+    sput v0, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
+
+    :goto_c
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
+
+    return-void
+
+    :cond_10
+    const/4 v0, 0x0
+
+    sput v0, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->p()V
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->r()V
+
+    goto :goto_c
+.end method
+
+.method static synthetic m(Lcom/smzdm/client/android/activity/UserCenterActivity;)Lcom/smzdm/client/android/extend/g/a;
+    .registers 2
+
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ai:Lcom/smzdm/client/android/extend/g/a;
+
+    return-object v0
+.end method
+
+.method private m()V
     .registers 3
 
     sget-object v0, Lcom/smzdm/client/android/activity/cn;->a:[I
@@ -2176,15 +2284,15 @@
     .end packed-switch
 .end method
 
-.method static synthetic m(Lcom/smzdm/client/android/activity/UserCenterActivity;)Lcom/smzdm/client/android/extend/g/a;
+.method static synthetic n(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/graphics/Bitmap;
     .registers 2
 
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ai:Lcom/smzdm/client/android/extend/g/a;
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ah:Landroid/graphics/Bitmap;
 
     return-object v0
 .end method
 
-.method private m()V
+.method private n()V
     .registers 9
 
     new-instance v0, Lcom/smzdm/client/android/extend/c/b/a;
@@ -2216,15 +2324,15 @@
     return-void
 .end method
 
-.method static synthetic n(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/graphics/Bitmap;
+.method static synthetic o(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/widget/ImageView;
     .registers 2
 
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ah:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ad:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method private n()V
+.method private o()V
     .registers 3
 
     new-instance v0, Ljava/lang/Thread;
@@ -2240,15 +2348,15 @@
     return-void
 .end method
 
-.method static synthetic o(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/widget/ImageView;
+.method static synthetic p(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/graphics/Bitmap;
     .registers 2
 
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ad:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ae:Landroid/graphics/Bitmap;
 
     return-object v0
 .end method
 
-.method private o()V
+.method private p()V
     .registers 7
 
     const/4 v3, 0x1
@@ -2468,15 +2576,15 @@
     goto :goto_84
 .end method
 
-.method static synthetic p(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/graphics/Bitmap;
+.method static synthetic q(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/graphics/Bitmap;
     .registers 2
 
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ae:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ag:Landroid/graphics/Bitmap;
 
     return-object v0
 .end method
 
-.method private p()V
+.method private q()V
     .registers 4
 
     const/16 v2, 0x8
@@ -2531,15 +2639,15 @@
     .end packed-switch
 .end method
 
-.method static synthetic q(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/graphics/Bitmap;
+.method static synthetic r(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/widget/ImageView;
     .registers 2
 
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ag:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ac:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method private q()V
+.method private r()V
     .registers 9
 
     invoke-static {}, Lcom/smzdm/client/android/b/c;->i()Z
@@ -2581,15 +2689,15 @@
     goto :goto_6
 .end method
 
-.method static synthetic r(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/widget/ImageView;
+.method static synthetic s(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/widget/TextView;
     .registers 2
 
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ac:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->i:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method private r()V
+.method private s()V
     .registers 9
 
     const/16 v0, 0x46d
@@ -2631,14 +2739,6 @@
     invoke-virtual {p0, v0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->a(Lcom/smzdm/client/android/extend/c/r;)V
 
     return-void
-.end method
-
-.method static synthetic s(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/widget/TextView;
-    .registers 2
-
-    iget-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->i:Landroid/widget/TextView;
-
-    return-object v0
 .end method
 
 .method static synthetic t(Lcom/smzdm/client/android/activity/UserCenterActivity;)Landroid/widget/TextView;
@@ -2883,18 +2983,18 @@
 
     sput v3, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->p()V
-
     invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->r()V
 
     goto :goto_4
 
     :cond_35
     sput v3, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->p()V
-
     invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->r()V
 
     goto :goto_4
 
@@ -2930,9 +3030,9 @@
 
     sput v3, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->p()V
-
     invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->r()V
 
     goto :goto_4
 
@@ -2953,9 +3053,9 @@
 
     sput v3, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->p()V
-
     invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->r()V
 
     goto :goto_4
 
@@ -2976,9 +3076,9 @@
 
     sput v3, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->p()V
-
     invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->r()V
 
     goto/16 :goto_4
 
@@ -2997,9 +3097,9 @@
 
     sput v3, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->p()V
-
     invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->r()V
 
     goto/16 :goto_4
 
@@ -3163,7 +3263,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->r()V
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->s()V
 
     goto :goto_e
 
@@ -3826,7 +3926,9 @@
 
     iput-object v0, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->ai:Lcom/smzdm/client/android/extend/g/a;
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->b()V
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->j()V
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->a()V
 
     invoke-virtual {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -3840,7 +3942,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_6a
+    if-eqz v1, :cond_6d
 
     new-instance v1, Lcom/smzdm/client/android/g/ak;
 
@@ -3862,7 +3964,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6a
+    if-eqz v0, :cond_6d
 
     invoke-static {}, Lcom/smzdm/client/android/application/SMZDMApplication;->b()Lcom/smzdm/client/android/application/SMZDMApplication;
 
@@ -3870,8 +3972,8 @@
 
     invoke-virtual {v0}, Lcom/smzdm/client/android/application/SMZDMApplication;->f()V
 
-    :cond_6a
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->a()V
+    :cond_6d
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->b()V
 
     return-void
 .end method
@@ -4114,7 +4216,7 @@
 
     invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onResume(Landroid/content/Context;)V
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->l()V
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->m()V
 
     iget-object v1, p0, Lcom/smzdm/client/android/activity/UserCenterActivity;->i:Landroid/widget/TextView;
 
@@ -4154,7 +4256,7 @@
 
     if-eqz v0, :cond_44
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->m()V
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->n()V
 
     :cond_44
     sget-boolean v0, Lcom/smzdm/client/android/activity/UserCenterActivity;->b:Z
@@ -4163,9 +4265,9 @@
 
     sput v3, Lcom/smzdm/client/android/activity/UserCenterActivity;->a:I
 
-    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->p()V
-
     invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->q()V
+
+    invoke-direct {p0}, Lcom/smzdm/client/android/activity/UserCenterActivity;->r()V
 
     sput-boolean v3, Lcom/smzdm/client/android/activity/UserCenterActivity;->b:Z
 

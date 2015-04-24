@@ -84,12 +84,12 @@
     .registers 4
 
     .prologue
-    .line 76
+    .line 75
     const/16 v0, 0x32
 
     sput v0, Lcom/cheney/compass/Main;->FILING_LENGTH:I
 
-    .line 83
+    .line 82
     const-string v0, "fe606569a5ac4fe8"
 
     const-string v1, "c31d053156026b0d"
@@ -100,7 +100,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lnet/youmi/android/AdManager;->init(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 55
+    .line 54
     return-void
 .end method
 
@@ -108,20 +108,20 @@
     .registers 2
 
     .prologue
-    .line 55
+    .line 54
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 66
+    .line 65
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/cheney/compass/Main;->od:F
 
-    .line 78
+    .line 77
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/cheney/compass/Main;->i:I
 
-    .line 55
+    .line 54
     return-void
 .end method
 
@@ -129,7 +129,7 @@
     .registers 2
 
     .prologue
-    .line 68
+    .line 67
     iget-object v0, p0, Lcom/cheney/compass/Main;->speed_data:Landroid/widget/TextView;
 
     return-object v0
@@ -139,7 +139,7 @@
     .registers 2
 
     .prologue
-    .line 80
+    .line 79
     iget-object v0, p0, Lcom/cheney/compass/Main;->df:Ljava/text/DecimalFormat;
 
     return-object v0
@@ -149,7 +149,7 @@
     .registers 2
 
     .prologue
-    .line 68
+    .line 67
     iget-object v0, p0, Lcom/cheney/compass/Main;->altitude_data:Landroid/widget/TextView;
 
     return-object v0
@@ -159,7 +159,7 @@
     .registers 2
 
     .prologue
-    .line 72
+    .line 71
     iget-object v0, p0, Lcom/cheney/compass/Main;->gps_state:Landroid/widget/ImageView;
 
     return-object v0
@@ -169,7 +169,7 @@
     .registers 2
 
     .prologue
-    .line 69
+    .line 68
     iget-object v0, p0, Lcom/cheney/compass/Main;->resource:Landroid/content/res/Resources;
 
     return-object v0
@@ -179,7 +179,7 @@
     .registers 2
 
     .prologue
-    .line 58
+    .line 57
     iget-object v0, p0, Lcom/cheney/compass/Main;->handler:Lcom/cheney/compass/Main$ViewHandler;
 
     return-object v0
@@ -189,7 +189,7 @@
     .registers 2
 
     .prologue
-    .line 70
+    .line 69
     iget-object v0, p0, Lcom/cheney/compass/Main;->textView:Landroid/widget/TextView;
 
     return-object v0
@@ -206,7 +206,7 @@
 
     const/4 v3, 0x1
 
-    .line 286
+    .line 285
     new-instance v0, Landroid/view/animation/RotateAnimation;
 
     iget v1, p0, Lcom/cheney/compass/Main;->od:F
@@ -217,28 +217,28 @@
 
     move v6, v4
 
-    .line 287
+    .line 286
     invoke-direct/range {v0 .. v6}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
 
-    .line 286
+    .line 285
     iput-object v0, p0, Lcom/cheney/compass/Main;->rotateAnimation:Landroid/view/animation/RotateAnimation;
 
-    .line 289
+    .line 288
     iget-object v0, p0, Lcom/cheney/compass/Main;->rotateAnimation:Landroid/view/animation/RotateAnimation;
 
     invoke-virtual {v0, v3}, Landroid/view/animation/RotateAnimation;->setFillAfter(Z)V
 
-    .line 290
+    .line 289
     iget-object v0, p0, Lcom/cheney/compass/Main;->imageView:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/cheney/compass/Main;->rotateAnimation:Landroid/view/animation/RotateAnimation;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 291
+    .line 290
     iput p1, p0, Lcom/cheney/compass/Main;->od:F
 
-    .line 292
+    .line 291
     return-void
 .end method
 
@@ -253,28 +253,28 @@
 
     const/16 v4, 0x5a
 
-    .line 296
+    .line 295
     if-nez p1, :cond_11
 
-    .line 297
+    .line 296
     iget-object v0, p0, Lcom/cheney/compass/Main;->directionView:Landroid/widget/TextView;
 
     const v1, 0x7f040002
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 313
+    .line 312
     :cond_10
     :goto_10
     return-void
 
-    .line 298
+    .line 297
     :cond_11
     if-lez p1, :cond_41
 
     if-ge p1, v4, :cond_41
 
-    .line 299
+    .line 298
     iget-object v0, p0, Lcom/cheney/compass/Main;->directionView:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -317,11 +317,11 @@
 
     goto :goto_10
 
-    .line 300
+    .line 299
     :cond_41
     if-ne p1, v4, :cond_4c
 
-    .line 301
+    .line 300
     iget-object v0, p0, Lcom/cheney/compass/Main;->directionView:Landroid/widget/TextView;
 
     const v1, 0x7f040004
@@ -330,13 +330,13 @@
 
     goto :goto_10
 
-    .line 302
+    .line 301
     :cond_4c
     if-le p1, v4, :cond_7e
 
     if-ge p1, v5, :cond_7e
 
-    .line 303
+    .line 302
     iget-object v0, p0, Lcom/cheney/compass/Main;->directionView:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -381,11 +381,11 @@
 
     goto :goto_10
 
-    .line 304
+    .line 303
     :cond_7e
     if-ne p1, v5, :cond_89
 
-    .line 305
+    .line 304
     iget-object v0, p0, Lcom/cheney/compass/Main;->directionView:Landroid/widget/TextView;
 
     const v1, 0x7f040006
@@ -394,13 +394,13 @@
 
     goto :goto_10
 
-    .line 306
+    .line 305
     :cond_89
     if-le p1, v5, :cond_bc
 
     if-ge p1, v6, :cond_bc
 
-    .line 307
+    .line 306
     iget-object v0, p0, Lcom/cheney/compass/Main;->directionView:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -445,11 +445,11 @@
 
     goto/16 :goto_10
 
-    .line 308
+    .line 307
     :cond_bc
     if-ne p1, v6, :cond_c8
 
-    .line 309
+    .line 308
     iget-object v0, p0, Lcom/cheney/compass/Main;->directionView:Landroid/widget/TextView;
 
     const v1, 0x7f040008
@@ -458,7 +458,7 @@
 
     goto/16 :goto_10
 
-    .line 310
+    .line 309
     :cond_c8
     if-le p1, v6, :cond_10
 
@@ -466,7 +466,7 @@
 
     if-ge p1, v0, :cond_10
 
-    .line 311
+    .line 310
     iget-object v0, p0, Lcom/cheney/compass/Main;->directionView:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -512,30 +512,6 @@
     goto/16 :goto_10
 .end method
 
-.method public haveScore()Z
-    .registers 3
-
-    .prologue
-    .line 423
-    invoke-static {p0}, Lnet/youmi/android/appoffers/AppOffersManager;->getPoints(Landroid/content/Context;)I
-
-    move-result v0
-
-    const/16 v1, 0x64
-
-    if-lt v0, v1, :cond_a
-
-    const/4 v0, 0x1
-
-    :goto_9
-    return v0
-
-    :cond_a
-    const/4 v0, 0x0
-
-    goto :goto_9
-.end method
-
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .registers 4
     .param p1, "requestCode"    # I
@@ -543,10 +519,10 @@
     .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
-    .line 318
+    .line 317
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 319
+    .line 318
     return-void
 .end method
 
@@ -561,43 +537,43 @@
 
     const/4 v2, 0x0
 
-    .line 87
+    .line 86
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 88
+    .line 87
     invoke-virtual {p0}, Lcom/cheney/compass/Main;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
     invoke-virtual {v0, v3, v3}, Landroid/view/Window;->setFlags(II)V
 
-    .line 89
+    .line 88
     const/high16 v0, 0x7f030000
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->setContentView(I)V
 
-    .line 91
+    .line 90
     invoke-virtual {p0}, Lcom/cheney/compass/Main;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
     invoke-virtual {v0, v1, v1}, Landroid/view/Window;->setFlags(II)V
 
-    .line 92
+    .line 91
     invoke-virtual {p0}, Lcom/cheney/compass/Main;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->resource:Landroid/content/res/Resources;
 
-    .line 93
+    .line 92
     invoke-virtual {p0, v2}, Lcom/cheney/compass/Main;->getPreferences(I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->preferences:Landroid/content/SharedPreferences;
 
-    .line 94
+    .line 93
     iget-object v0, p0, Lcom/cheney/compass/Main;->preferences:Landroid/content/SharedPreferences;
 
     const-string v1, "num"
@@ -608,10 +584,10 @@
 
     iput v0, p0, Lcom/cheney/compass/Main;->i:I
 
-    .line 95
+    .line 94
     invoke-virtual {p0}, Lcom/cheney/compass/Main;->setViews()V
 
-    .line 96
+    .line 95
     const-string v0, "sensor"
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -622,7 +598,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->sensorManager:Landroid/hardware/SensorManager;
 
-    .line 97
+    .line 96
     const-string v0, "location"
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -633,7 +609,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->locationManager:Landroid/location/LocationManager;
 
-    .line 98
+    .line 97
     const-string v0, "phone"
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -644,7 +620,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->telephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 99
+    .line 98
     iget-object v0, p0, Lcom/cheney/compass/Main;->sensorManager:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x3
@@ -655,7 +631,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->oriSensor:Landroid/hardware/Sensor;
 
-    .line 100
+    .line 99
     iget-object v0, p0, Lcom/cheney/compass/Main;->sensorManager:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x7
@@ -666,15 +642,15 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->temprSensor:Landroid/hardware/Sensor;
 
-    .line 101
+    .line 100
     invoke-virtual {p0}, Lcom/cheney/compass/Main;->setListeners()V
 
-    .line 102
+    .line 101
     iget-object v0, p0, Lcom/cheney/compass/Main;->oriSensor:Landroid/hardware/Sensor;
 
     if-nez v0, :cond_75
 
-    .line 103
+    .line 102
     const v0, 0x7f04000e
 
     invoke-static {p0, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
@@ -683,7 +659,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 105
+    .line 104
     :cond_75
     new-instance v0, Landroid/view/GestureDetector;
 
@@ -691,25 +667,18 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->mGestureDetector:Landroid/view/GestureDetector;
 
-    .line 108
+    .line 107
     sget-object v0, Lcom/feedback/NotificationType;->AlertDialog:Lcom/feedback/NotificationType;
 
     invoke-static {p0, v0}, Lcom/feedback/UMFeedbackService;->enableNewReplyNotification(Landroid/content/Context;Lcom/feedback/NotificationType;)V
 
-    .line 110
+    .line 109
     invoke-static {p0}, Lcom/mobclick/android/MobclickAgent;->update(Landroid/content/Context;)V
 
-    .line 112
+    .line 111
     invoke-static {v2}, Lcom/mobclick/android/MobclickAgent;->setUpdateOnlyWifi(Z)V
 
     .line 113
-    const-string v0, "fe606569a5ac4fe8"
-
-    const-string v1, "c31d053156026b0d"
-
-    invoke-static {p0, v0, v1, v2}, Lnet/youmi/android/appoffers/AppOffersManager;->init(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    .line 114
     new-instance v0, Ljava/text/DecimalFormat;
 
     const-string v1, "#.00"
@@ -718,7 +687,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->df:Ljava/text/DecimalFormat;
 
-    .line 115
+    .line 114
     return-void
 .end method
 
@@ -731,17 +700,17 @@
 
     const/4 v1, 0x0
 
-    .line 400
+    .line 399
     const v0, 0x7f04000f
 
     invoke-interface {p1, v1, v1, v1, v0}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 401
+    .line 400
     const v0, 0x7f040010
 
     invoke-interface {p1, v1, v2, v1, v0}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 402
+    .line 401
     return v2
 .end method
 
@@ -750,7 +719,7 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 337
+    .line 336
     const/4 v0, 0x0
 
     return v0
@@ -768,7 +737,7 @@
 
     const/4 v6, 0x0
 
-    .line 343
+    .line 342
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v2
@@ -779,7 +748,7 @@
 
     sub-float v1, v2, v3
 
-    .line 344
+    .line 343
     .local v1, "length":F
     invoke-static {v1}, Ljava/lang/Math;->abs(F)F
 
@@ -793,28 +762,28 @@
 
     if-lez v2, :cond_4d
 
-    .line 345
+    .line 344
     const/4 v2, 0x0
 
     cmpl-float v2, v1, v2
 
     if-lez v2, :cond_4e
 
-    .line 347
+    .line 346
     iget v2, p0, Lcom/cheney/compass/Main;->i:I
 
     sub-int/2addr v2, v4
 
     iput v2, p0, Lcom/cheney/compass/Main;->i:I
 
-    .line 348
+    .line 347
     iget v2, p0, Lcom/cheney/compass/Main;->i:I
 
     const/4 v3, -0x1
 
     if-ne v2, v3, :cond_2c
 
-    .line 349
+    .line 348
     iget-object v2, p0, Lcom/cheney/compass/Main;->backgrounds:[I
 
     array-length v2, v2
@@ -823,7 +792,7 @@
 
     iput v2, p0, Lcom/cheney/compass/Main;->i:I
 
-    .line 350
+    .line 349
     :cond_2c
     iget-object v2, p0, Lcom/cheney/compass/Main;->mainRelativeLayout:Landroid/widget/RelativeLayout;
 
@@ -841,14 +810,14 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 351
+    .line 350
     iget-object v2, p0, Lcom/cheney/compass/Main;->preferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 352
+    .line 351
     .local v0, "edit":Landroid/content/SharedPreferences$Editor;
     const-string v2, "num"
 
@@ -856,16 +825,16 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 353
+    .line 352
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 365
+    .line 364
     .end local v0    # "edit":Landroid/content/SharedPreferences$Editor;
     :cond_4d
     :goto_4d
     return v6
 
-    .line 356
+    .line 355
     :cond_4e
     iget v2, p0, Lcom/cheney/compass/Main;->i:I
 
@@ -873,7 +842,7 @@
 
     iput v2, p0, Lcom/cheney/compass/Main;->i:I
 
-    .line 357
+    .line 356
     iget v2, p0, Lcom/cheney/compass/Main;->i:I
 
     iget-object v3, p0, Lcom/cheney/compass/Main;->backgrounds:[I
@@ -882,10 +851,10 @@
 
     if-ne v2, v3, :cond_5d
 
-    .line 358
+    .line 357
     iput v6, p0, Lcom/cheney/compass/Main;->i:I
 
-    .line 359
+    .line 358
     :cond_5d
     iget-object v2, p0, Lcom/cheney/compass/Main;->mainRelativeLayout:Landroid/widget/RelativeLayout;
 
@@ -903,14 +872,14 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 360
+    .line 359
     iget-object v2, p0, Lcom/cheney/compass/Main;->preferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 361
+    .line 360
     .restart local v0    # "edit":Landroid/content/SharedPreferences$Editor;
     const-string v2, "num"
 
@@ -918,7 +887,7 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 362
+    .line 361
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     goto :goto_4d
@@ -929,7 +898,7 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 372
+    .line 371
     return-void
 .end method
 
@@ -938,26 +907,26 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 407
+    .line 406
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_18
 
-    .line 419
+    .line 418
     :goto_7
     const/4 v1, 0x1
 
     return v1
 
-    .line 409
+    .line 408
     :pswitch_9
     invoke-static {p0}, Lcom/feedback/UMFeedbackService;->openUmengFeedbackSDK(Landroid/content/Context;)V
 
     goto :goto_7
 
-    .line 414
+    .line 413
     :pswitch_d
     new-instance v0, Landroid/content/Intent;
 
@@ -965,13 +934,13 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 415
+    .line 414
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_7
 
-    .line 407
+    .line 406
     :pswitch_data_18
     .packed-switch 0x0
         :pswitch_9
@@ -983,27 +952,27 @@
     .registers 3
 
     .prologue
-    .line 195
+    .line 194
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 196
+    .line 195
     invoke-static {p0}, Lcom/mobclick/android/MobclickAgent;->onPause(Landroid/content/Context;)V
 
-    .line 197
+    .line 196
     iget-object v0, p0, Lcom/cheney/compass/Main;->sensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/cheney/compass/Main;->sensorChangeListener:Lcom/cheney/compass/Main$SensorChangeListener;
 
     invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 198
+    .line 197
     iget-object v0, p0, Lcom/cheney/compass/Main;->locationManager:Landroid/location/LocationManager;
 
     iget-object v1, p0, Lcom/cheney/compass/Main;->locationListener:Lcom/cheney/compass/Main$GPSLocationListener;
 
     invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
-    .line 199
+    .line 198
     return-void
 .end method
 
@@ -1011,40 +980,25 @@
     .registers 7
 
     .prologue
-    .line 172
+    .line 171
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 173
+    .line 172
     invoke-static {p0}, Lcom/mobclick/android/MobclickAgent;->onResume(Landroid/content/Context;)V
 
-    .line 175
-    invoke-virtual {p0}, Lcom/cheney/compass/Main;->haveScore()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_12
-
-    .line 176
-    iget-object v0, p0, Lcom/cheney/compass/Main;->adView:Lnet/youmi/android/AdView;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Lnet/youmi/android/AdView;->setVisibility(I)V
-
-    .line 178
-    :cond_12
+    .line 177
     iget-object v0, p0, Lcom/cheney/compass/Main;->oriSensor:Landroid/hardware/Sensor;
 
-    if-eqz v0, :cond_27
+    if-eqz v0, :cond_1b
 
-    .line 179
+    .line 178
     new-instance v0, Lcom/cheney/compass/Main$SensorChangeListener;
 
     invoke-direct {v0, p0}, Lcom/cheney/compass/Main$SensorChangeListener;-><init>(Lcom/cheney/compass/Main;)V
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->sensorChangeListener:Lcom/cheney/compass/Main$SensorChangeListener;
 
-    .line 180
+    .line 179
     iget-object v0, p0, Lcom/cheney/compass/Main;->sensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/cheney/compass/Main;->sensorChangeListener:Lcom/cheney/compass/Main$SensorChangeListener;
@@ -1055,20 +1009,20 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 185
-    :cond_27
+    .line 184
+    :cond_1b
     iget-object v0, p0, Lcom/cheney/compass/Main;->locationManager:Landroid/location/LocationManager;
 
-    if-eqz v0, :cond_3f
+    if-eqz v0, :cond_33
 
-    .line 186
+    .line 185
     new-instance v0, Lcom/cheney/compass/Main$GPSLocationListener;
 
     invoke-direct {v0, p0}, Lcom/cheney/compass/Main$GPSLocationListener;-><init>(Lcom/cheney/compass/Main;)V
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->locationListener:Lcom/cheney/compass/Main$GPSLocationListener;
 
-    .line 187
+    .line 186
     iget-object v0, p0, Lcom/cheney/compass/Main;->locationManager:Landroid/location/LocationManager;
 
     const-string v1, "gps"
@@ -1081,8 +1035,8 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
-    .line 189
-    :cond_3f
+    .line 188
+    :cond_33
     return-void
 .end method
 
@@ -1094,7 +1048,7 @@
     .param p4, "distanceY"    # F
 
     .prologue
-    .line 378
+    .line 377
     const/4 v0, 0x0
 
     return v0
@@ -1105,7 +1059,7 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 385
+    .line 384
     return-void
 .end method
 
@@ -1114,7 +1068,7 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 390
+    .line 389
     const/4 v0, 0x0
 
     return v0
@@ -1124,17 +1078,17 @@
     .registers 2
 
     .prologue
-    .line 119
+    .line 118
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
-    .line 120
+    .line 119
     new-instance v0, Lcom/cheney/compass/Main$LocationThread;
 
     invoke-direct {v0, p0}, Lcom/cheney/compass/Main$LocationThread;-><init>(Lcom/cheney/compass/Main;)V
 
     invoke-virtual {v0}, Lcom/cheney/compass/Main$LocationThread;->start()V
 
-    .line 121
+    .line 120
     return-void
 .end method
 
@@ -1144,7 +1098,7 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 395
+    .line 394
     iget-object v0, p0, Lcom/cheney/compass/Main;->mGestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -1158,7 +1112,7 @@
     .registers 4
 
     .prologue
-    .line 140
+    .line 139
     iget-object v0, p0, Lcom/cheney/compass/Main;->telescope:Landroid/widget/ImageView;
 
     new-instance v1, Lcom/cheney/compass/Main$1;
@@ -1167,20 +1121,20 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 147
+    .line 146
     iget-object v0, p0, Lcom/cheney/compass/Main;->telephonyManager:Landroid/telephony/TelephonyManager;
 
     new-instance v1, Lcom/cheney/compass/Main$2;
 
     invoke-direct {v1, p0}, Lcom/cheney/compass/Main$2;-><init>(Lcom/cheney/compass/Main;)V
 
-    .line 156
+    .line 155
     const/16 v2, 0x40
 
-    .line 147
+    .line 146
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 157
+    .line 156
     iget-object v0, p0, Lcom/cheney/compass/Main;->gps_state:Landroid/widget/ImageView;
 
     new-instance v1, Lcom/cheney/compass/Main$3;
@@ -1189,19 +1143,19 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 165
+    .line 164
     iget-object v0, p0, Lcom/cheney/compass/Main;->mainRelativeLayout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 166
+    .line 165
     iget-object v0, p0, Lcom/cheney/compass/Main;->mainRelativeLayout:Landroid/widget/RelativeLayout;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setLongClickable(Z)V
 
-    .line 167
+    .line 166
     return-void
 .end method
 
@@ -1209,7 +1163,7 @@
     .registers 5
 
     .prologue
-    .line 125
+    .line 124
     const v0, 0x7f060007
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->findViewById(I)Landroid/view/View;
@@ -1220,7 +1174,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->imageView:Landroid/widget/ImageView;
 
-    .line 126
+    .line 125
     const v0, 0x7f060009
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->findViewById(I)Landroid/view/View;
@@ -1231,7 +1185,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->telescope:Landroid/widget/ImageView;
 
-    .line 127
+    .line 126
     const v0, 0x7f060006
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->findViewById(I)Landroid/view/View;
@@ -1242,7 +1196,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->directionView:Landroid/widget/TextView;
 
-    .line 128
+    .line 127
     const v0, 0x7f060003
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->findViewById(I)Landroid/view/View;
@@ -1253,7 +1207,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->speed_data:Landroid/widget/TextView;
 
-    .line 129
+    .line 128
     const v0, 0x7f060005
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->findViewById(I)Landroid/view/View;
@@ -1264,7 +1218,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->altitude_data:Landroid/widget/TextView;
 
-    .line 130
+    .line 129
     const v0, 0x7f06000a
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->findViewById(I)Landroid/view/View;
@@ -1275,14 +1229,14 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->textView:Landroid/widget/TextView;
 
-    .line 131
+    .line 130
     new-instance v0, Lcom/cheney/compass/Main$ViewHandler;
 
     invoke-direct {v0, p0}, Lcom/cheney/compass/Main$ViewHandler;-><init>(Lcom/cheney/compass/Main;)V
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->handler:Lcom/cheney/compass/Main$ViewHandler;
 
-    .line 132
+    .line 131
     const v0, 0x7f060008
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->findViewById(I)Landroid/view/View;
@@ -1293,7 +1247,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->gps_state:Landroid/widget/ImageView;
 
-    .line 133
+    .line 132
     const/high16 v0, 0x7f060000
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->findViewById(I)Landroid/view/View;
@@ -1304,7 +1258,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->mainRelativeLayout:Landroid/widget/RelativeLayout;
 
-    .line 135
+    .line 134
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -1313,7 +1267,7 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->backgrounds:[I
 
-    .line 136
+    .line 135
     iget-object v0, p0, Lcom/cheney/compass/Main;->mainRelativeLayout:Landroid/widget/RelativeLayout;
 
     iget-object v1, p0, Lcom/cheney/compass/Main;->resource:Landroid/content/res/Resources;
@@ -1330,7 +1284,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 137
+    .line 136
     const v0, 0x7f060001
 
     invoke-virtual {p0, v0}, Lcom/cheney/compass/Main;->findViewById(I)Landroid/view/View;
@@ -1341,10 +1295,10 @@
 
     iput-object v0, p0, Lcom/cheney/compass/Main;->adView:Lnet/youmi/android/AdView;
 
-    .line 138
+    .line 137
     return-void
 
-    .line 135
+    .line 134
     nop
 
     :array_84

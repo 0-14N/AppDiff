@@ -86,9 +86,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter;->g:Lcom/quvideo/xiaoying/app/im/OnAvatarClickListener;
 
     .line 158
-    new-instance v0, Lvd;
+    new-instance v0, Lok;
 
-    invoke-direct {v0, p0}, Lvd;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter;)V
+    invoke-direct {v0, p0}, Lok;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter;->h:Landroid/view/View$OnClickListener;
 
@@ -306,7 +306,7 @@
     invoke-direct {v1, v5}, Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter$b;-><init>(Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter$b;)V
 
     .line 69
-    const v0, 0x7f0604dc
+    const v0, 0x7f0604c7
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -317,7 +317,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter$b;->g:Landroid/widget/TextView;
 
     .line 70
-    const v0, 0x7f0604e0
+    const v0, 0x7f0604cb
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -328,7 +328,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter$b;->a:Landroid/widget/ImageView;
 
     .line 71
-    const v0, 0x7f0604e1
+    const v0, 0x7f0604cc
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -339,7 +339,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter$b;->b:Landroid/widget/ImageView;
 
     .line 72
-    const v0, 0x7f0604e5
+    const v0, 0x7f0604d0
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -350,7 +350,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter$b;->c:Landroid/widget/ImageView;
 
     .line 73
-    const v0, 0x7f0604e4
+    const v0, 0x7f0604cf
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -361,7 +361,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter$b;->d:Landroid/widget/TextView;
 
     .line 74
-    const v0, 0x7f0604e6
+    const v0, 0x7f0604d1
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -372,7 +372,7 @@
     iput-object v0, v1, Lcom/quvideo/xiaoying/app/im/view/ChatAllHistoryAdapter$b;->e:Landroid/widget/TextView;
 
     .line 75
-    const v0, 0x7f0604e2
+    const v0, 0x7f0604cd
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

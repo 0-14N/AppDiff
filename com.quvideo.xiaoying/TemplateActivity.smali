@@ -79,9 +79,9 @@
     .line 131
     iget-object v0, p0, Lcom/quvideo/xiaoying/template/TemplateActivity;->a:Landroid/widget/TabHost;
 
-    new-instance v1, Larv;
+    new-instance v1, Lalb;
 
-    invoke-direct {v1, p0}, Larv;-><init>(Lcom/quvideo/xiaoying/template/TemplateActivity;)V
+    invoke-direct {v1, p0}, Lalb;-><init>(Lcom/quvideo/xiaoying/template/TemplateActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TabHost;->setOnTabChangedListener(Landroid/widget/TabHost$OnTabChangeListener;)V
 

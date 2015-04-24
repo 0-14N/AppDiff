@@ -22,7 +22,7 @@
     .registers 1
 
     .prologue
-    .line 33
+    .line 31
     const-class v0, Lorg/gdb/android/client/StartActivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -31,7 +31,7 @@
 
     sput-object v0, Lorg/gdb/android/client/StartActivity;->a:Ljava/lang/String;
 
-    .line 31
+    .line 29
     return-void
 .end method
 
@@ -39,7 +39,7 @@
     .registers 1
 
     .prologue
-    .line 31
+    .line 29
     invoke-direct {p0}, Lorg/gdb/android/client/NullImageActivity;-><init>()V
 
     return-void
@@ -49,12 +49,12 @@
     .registers 2
 
     .prologue
-    .line 208
+    .line 206
     iget-object v0, p0, Lorg/gdb/android/client/StartActivity;->d:Landroid/app/Dialog;
 
     if-eqz v0, :cond_9
 
-    .line 210
+    .line 208
     :try_start_4
     iget-object v0, p0, Lorg/gdb/android/client/StartActivity;->d:Landroid/app/Dialog;
 
@@ -62,7 +62,7 @@
     :try_end_9
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_9} :catch_a
 
-    .line 215
+    .line 213
     :cond_9
     :goto_9
     return-void
@@ -77,7 +77,7 @@
     .registers 1
 
     .prologue
-    .line 207
+    .line 205
     invoke-direct {p0}, Lorg/gdb/android/client/StartActivity;->a()V
 
     return-void
@@ -87,7 +87,7 @@
     .registers 6
 
     .prologue
-    .line 76
+    .line 74
     new-instance v0, Lorg/gdb/android/client/remote/ad;
 
     invoke-direct {v0, p0}, Lorg/gdb/android/client/remote/ad;-><init>(Landroid/content/Context;)V
@@ -96,9 +96,9 @@
 
     iget-object v0, p0, Lorg/gdb/android/client/StartActivity;->e:Lorg/gdb/android/client/remote/ad;
 
-    new-instance v1, Lorg/gdb/android/client/mr;
+    new-instance v1, Lorg/gdb/android/client/mo;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/mr;-><init>(Lorg/gdb/android/client/StartActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/mo;-><init>(Lorg/gdb/android/client/StartActivity;)V
 
     invoke-virtual {v0, v1}, Lorg/gdb/android/client/remote/ad;->a(Lorg/gdb/android/client/remote/y;)V
 
@@ -125,14 +125,14 @@
     .registers 4
 
     .prologue
-    .line 144
+    .line 142
     new-instance v0, Lorg/gdb/android/client/remote/ac;
 
     invoke-direct {v0, p0}, Lorg/gdb/android/client/remote/ac;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Lorg/gdb/android/client/mu;
+    new-instance v1, Lorg/gdb/android/client/mr;
 
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/mu;-><init>(Lorg/gdb/android/client/StartActivity;)V
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/mr;-><init>(Lorg/gdb/android/client/StartActivity;)V
 
     invoke-virtual {v0, v1}, Lorg/gdb/android/client/remote/ac;->a(Lorg/gdb/android/client/remote/y;)V
 
@@ -145,7 +145,7 @@
     .registers 3
 
     .prologue
-    .line 67
+    .line 65
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lorg/gdb/android/client/MainActivity;
@@ -169,33 +169,33 @@
     .registers 5
 
     .prologue
-    .line 133
+    .line 131
     :try_start_0
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 134
+    .line 132
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.VIEW"
 
     invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 135
+    .line 133
     invoke-virtual {p0, v1}, Lorg/gdb/android/client/StartActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_e
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_e} :catch_f
 
-    .line 142
+    .line 140
     :goto_e
     return-void
 
-    .line 137
+    .line 135
     :catch_f
     move-exception v0
 
-    .line 138
+    .line 136
     invoke-static {}, Lorg/gdb/android/client/h/a;->a()Lorg/gdb/android/client/h/a;
 
     move-result-object v1
@@ -204,7 +204,7 @@
 
     invoke-virtual {v1, v2, v0}, Lorg/gdb/android/client/h/a;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 139
+    .line 137
     new-instance v0, Ljava/lang/StringBuilder;
 
     const v1, 0x7f08005e
@@ -227,7 +227,7 @@
 
     move-result-object v0
 
-    .line 140
+    .line 138
     const/4 v1, 0x0
 
     invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
@@ -243,53 +243,46 @@
     .registers 6
 
     .prologue
-    .line 40
+    .line 38
     invoke-super {p0, p1}, Lorg/gdb/android/client/NullImageActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 43
+    .line 41
     invoke-static {p0}, Lcom/umeng/analytics/a;->c(Landroid/content/Context;)V
 
     .line 45
-    const-string v0, "e807eb9e2ec0b8e7"
-
-    const-string v1, "016a013aabb30bed"
-
-    invoke-static {p0, v0, v1}, Lnet/youmi/android/appoffers/YoumiOffersManager;->init(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 47
     const v0, 0x7f080061
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/StartActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46
+    .line 44
     invoke-static {p0, v0}, Lorg/gdb/android/client/utils/v;->b(Landroid/content/Context;Ljava/lang/String;)Lorg/gdb/android/client/widget/FullScreenProgressDialog;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/gdb/android/client/StartActivity;->d:Landroid/app/Dialog;
 
-    .line 48
+    .line 46
     iget-object v0, p0, Lorg/gdb/android/client/StartActivity;->d:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    .line 50
-    new-instance v0, Lorg/gdb/android/client/mq;
+    .line 48
+    new-instance v0, Lorg/gdb/android/client/mn;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/mq;-><init>(Lorg/gdb/android/client/StartActivity;)V
+    invoke-direct {v0, p0}, Lorg/gdb/android/client/mn;-><init>(Lorg/gdb/android/client/StartActivity;)V
 
     iput-object v0, p0, Lorg/gdb/android/client/StartActivity;->b:Ljava/lang/Runnable;
 
-    .line 63
+    .line 61
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lorg/gdb/android/client/StartActivity;->c:Landroid/os/Handler;
 
-    .line 64
+    .line 62
     iget-object v0, p0, Lorg/gdb/android/client/StartActivity;->c:Landroid/os/Handler;
 
     iget-object v1, p0, Lorg/gdb/android/client/StartActivity;->b:Ljava/lang/Runnable;
@@ -298,7 +291,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 65
+    .line 63
     return-void
 .end method
 
@@ -306,7 +299,7 @@
     .registers 3
 
     .prologue
-    .line 200
+    .line 198
     iget-object v0, p0, Lorg/gdb/android/client/StartActivity;->c:Landroid/os/Handler;
 
     if-eqz v0, :cond_f
@@ -315,20 +308,20 @@
 
     if-eqz v0, :cond_f
 
-    .line 201
+    .line 199
     iget-object v0, p0, Lorg/gdb/android/client/StartActivity;->c:Landroid/os/Handler;
 
     iget-object v1, p0, Lorg/gdb/android/client/StartActivity;->b:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 203
+    .line 201
     :cond_f
     invoke-direct {p0}, Lorg/gdb/android/client/StartActivity;->a()V
 
-    .line 204
+    .line 202
     invoke-super {p0}, Lorg/gdb/android/client/NullImageActivity;->onDestroy()V
 
-    .line 205
+    .line 203
     return-void
 .end method

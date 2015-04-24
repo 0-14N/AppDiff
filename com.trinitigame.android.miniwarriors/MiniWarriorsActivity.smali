@@ -88,50 +88,9 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const-string v1, "com.trinitigame.miniwarriors.499centsv172"
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
     sget-object v1, Lcom/trinitigame/android/miniwarriors/MiniWarriorsActivity;->a:Ljava/lang/String;
 
     invoke-super {p0, v1, v0}, Lcom/trinitigame/android/Triniti2DActivity;->InitBilling(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->platform:Ljava/lang/String;
-
-    const-string v1, "amazon"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_50
-
-    const-string v0, "53587696C26Ee40740Ca25A5"
-
-    const-string v1, "b4f8be4d1c0b30370bb83072f3a8a532fae1abb1"
-
-    invoke-super {p0, v0, v1}, Lcom/trinitigame/android/Triniti2DActivity;->InitChartboost(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_4f
-    :goto_4f
     return-void
-
-    :cond_50
-    iget-object v0, p0, Lcom/trinitigame/android/Triniti2DActivity;->platform:Ljava/lang/String;
-
-    const-string v1, "google"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4f
-
-    const-string v0, "5330e7249ddc350fce1b4d9d"
-
-    const-string v1, "de6e1d7cc0db83922520d1fcd077848b72a0e9da"
-
-    invoke-super {p0, v0, v1}, Lcom/trinitigame/android/Triniti2DActivity;->InitChartboost(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_4f
 .end method

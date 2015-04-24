@@ -12,144 +12,107 @@
     .registers 1
 
     .prologue
-    .line 20
+    .line 21
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
 .end method
 
 .method private initAd()V
-    .registers 3
+    .registers 1
 
     .prologue
-    .line 77
-    sget-object v0, Lcom/sysapk/weighter/MainActivity;->goodBoy:Ljava/lang/String;
+    .line 83
+    invoke-static {p0}, Lcom/fivefeiwo/coverscreen/CPManager;->showAd(Landroid/content/Context;)I
 
-    const-string v1, "1"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_15
-
-    sget-boolean v0, Lcom/sysapk/weighter/MainActivity;->isCloseBoy:Z
-
-    if-nez v0, :cond_15
-
-    .line 78
-    invoke-static {p0}, Lcom/sysapk/comm/AppConnect;->getInstance(Landroid/content/Context;)Lcom/sysapk/comm/AppConnect;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/sysapk/comm/AppConnect;->showPopAd(Landroid/content/Context;)V
-
-    .line 80
-    :cond_15
+    .line 84
     return-void
 .end method
 
 .method private initScreen()V
-    .registers 9
+    .registers 8
 
     .prologue
-    .line 43
-    const v4, 0x7f080008
+    .line 53
+    const v3, 0x7f080007
 
-    invoke-virtual {p0, v4}, Lcom/sysapk/weighter/AboutActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/sysapk/weighter/AboutActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 44
-    .local v0, "btnClose":Landroid/widget/Button;
-    new-instance v4, Lcom/sysapk/weighter/AboutActivity$1;
+    .line 54
+    .local v0, "btnSubmit":Landroid/widget/Button;
+    new-instance v3, Lcom/sysapk/weighter/AboutActivity$1;
 
-    invoke-direct {v4, p0}, Lcom/sysapk/weighter/AboutActivity$1;-><init>(Lcom/sysapk/weighter/AboutActivity;)V
+    invoke-direct {v3, p0}, Lcom/sysapk/weighter/AboutActivity$1;-><init>(Lcom/sysapk/weighter/AboutActivity;)V
 
-    invoke-virtual {v0, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 52
-    const v4, 0x7f080007
+    .line 66
+    const v3, 0x7f080004
 
-    invoke-virtual {p0, v4}, Lcom/sysapk/weighter/AboutActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/sysapk/weighter/AboutActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/widget/Button;
+    check-cast v2, Landroid/widget/TextView;
 
-    .line 53
-    .local v1, "btnSubmit":Landroid/widget/Button;
-    new-instance v4, Lcom/sysapk/weighter/AboutActivity$2;
+    .line 68
+    .local v2, "textVersion":Landroid/widget/TextView;
+    :try_start_1a
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4, p0}, Lcom/sysapk/weighter/AboutActivity$2;-><init>(Lcom/sysapk/weighter/AboutActivity;)V
+    const-string v4, "v"
 
-    invoke-virtual {v1, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 63
-    const v4, 0x7f080004
-
-    invoke-virtual {p0, v4}, Lcom/sysapk/weighter/AboutActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/TextView;
-
-    .line 65
-    .local v3, "textVersion":Landroid/widget/TextView;
-    :try_start_2b
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "v"
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/sysapk/weighter/AboutActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    move-result-object v5
+    move-result-object v4
 
     invoke-virtual {p0}, Lcom/sysapk/weighter/AboutActivity;->getPackageName()Ljava/lang/String;
 
-    move-result-object v6
-
-    const/4 v7, 0x0
-
-    invoke-virtual {v5, v6, v7}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-
     move-result-object v5
 
-    iget-object v5, v5, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+    const/4 v6, 0x0
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4, v5, v6}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-    :try_end_4c
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2b .. :try_end_4c} :catch_4d
+    iget-object v4, v4, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
-    .line 70
-    :goto_4c
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    :try_end_3b
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1a .. :try_end_3b} :catch_3c
+
+    .line 73
+    :goto_3b
     return-void
 
-    .line 66
-    :catch_4d
-    move-exception v2
+    .line 69
+    :catch_3c
+    move-exception v1
 
-    .line 67
-    .local v2, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
-    const-string v4, "AboutActivity"
+    .line 70
+    .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
+    const-string v3, "AboutActivity"
 
-    const-string v5, "\u83b7\u53d6\u7248\u672c\u53f7\u5f02\u5e38."
+    const-string v4, "\u83b7\u53d6\u7248\u672c\u53f7\u5f02\u5e38."
 
-    invoke-static {v4, v5, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_4c
+    goto :goto_3b
 .end method
 
 
@@ -159,21 +122,21 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 27
+    .line 28
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 32
+    .line 33
     const/high16 v0, 0x7f030000
 
     invoke-virtual {p0, v0}, Lcom/sysapk/weighter/AboutActivity;->setContentView(I)V
 
-    .line 34
+    .line 35
     invoke-direct {p0}, Lcom/sysapk/weighter/AboutActivity;->initScreen()V
 
-    .line 36
+    .line 37
     invoke-direct {p0}, Lcom/sysapk/weighter/AboutActivity;->initAd()V
 
-    .line 37
+    .line 38
     return-void
 .end method
 
@@ -181,10 +144,10 @@
     .registers 1
 
     .prologue
-    .line 86
+    .line 90
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 87
+    .line 91
     return-void
 .end method
 
@@ -192,9 +155,9 @@
     .registers 1
 
     .prologue
-    .line 83
+    .line 87
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 84
+    .line 88
     return-void
 .end method

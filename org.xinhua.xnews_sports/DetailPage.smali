@@ -12,7 +12,7 @@
     value = {
         Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;,
         Lorg/xinhua/xnews_sports/activity/DetailPage$MetaDataBindedToJS;,
-        Lorg/xinhua/xnews_sports/activity/DetailPage$MyInternetGalleryAdapter;,
+        Lorg/xinhua/xnews_sports/activity/DetailPage$MyGalleryAdapter;,
         Lorg/xinhua/xnews_sports/activity/DetailPage$NewsMetaDataBindedToJS;,
         Lorg/xinhua/xnews_sports/activity/DetailPage$PlayVideoTask;,
         Lorg/xinhua/xnews_sports/activity/DetailPage$VideoMetaDataBindedToJS;
@@ -55,6 +55,8 @@
 
 .field private gobackButton:Landroid/widget/ImageButton;
 
+.field private gobackButton_gallery:Landroid/widget/ImageButton;
+
 .field private imageButton_favorite:Landroid/widget/ImageButton;
 
 .field private imageButton_leftarrow:Landroid/widget/ImageButton;
@@ -62,6 +64,8 @@
 .field private imageButton_rightarrow:Landroid/widget/ImageButton;
 
 .field private imageButton_sharethis:Landroid/widget/ImageButton;
+
+.field private imageButton_sharethis_gallery:Landroid/widget/ImageButton;
 
 .field private imageView_big:Landroid/widget/ImageView;
 
@@ -82,6 +86,8 @@
     .end annotation
 .end field
 
+.field private myGalleryAdapter:Lorg/xinhua/xnews_sports/activity/DetailPage$MyGalleryAdapter;
+
 .field private myImageURL:[Ljava/lang/String;
 
 .field mygesture:Landroid/view/GestureDetector;
@@ -90,9 +96,13 @@
 
 .field private progressBar:Landroid/widget/ProgressBar;
 
+.field private relativeLayout_gallery:Landroid/widget/RelativeLayout;
+
 .field private table:Ljava/lang/String;
 
 .field private textView_pagination:Landroid/widget/TextView;
+
+.field private textView_pagination_gallery:Landroid/widget/TextView;
 
 .field private textsize:I
 
@@ -104,32 +114,32 @@
     .registers 2
 
     .prologue
-    .line 74
+    .line 79
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/BaseActivity;-><init>()V
 
-    .line 83
+    .line 88
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->myImageURL:[Ljava/lang/String;
 
-    .line 98
+    .line 103
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->multiImages:Ljava/util/List;
 
-    .line 102
+    .line 107
     const-string v0, ""
 
     iput-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->content:Ljava/lang/String;
 
-    .line 103
+    .line 108
     const/16 v0, 0xa
 
     iput v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->textsize:I
 
-    .line 106
+    .line 111
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -138,21 +148,21 @@
 
     iput-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->favoriteChange:Ljava/lang/Boolean;
 
-    .line 110
+    .line 120
     new-instance v0, Lorg/xinhua/xnews_sports/activity/DetailPage$1;
 
     invoke-direct {v0, p0}, Lorg/xinhua/xnews_sports/activity/DetailPage$1;-><init>(Lorg/xinhua/xnews_sports/activity/DetailPage;)V
 
     iput-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->mHandler:Landroid/os/Handler;
 
-    .line 879
+    .line 913
     new-instance v0, Landroid/view/GestureDetector;
 
     invoke-direct {v0, p0}, Landroid/view/GestureDetector;-><init>(Landroid/view/GestureDetector$OnGestureListener;)V
 
     iput-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->mygesture:Landroid/view/GestureDetector;
 
-    .line 74
+    .line 79
     return-void
 .end method
 
@@ -160,7 +170,7 @@
     .registers 2
 
     .prologue
-    .line 108
+    .line 113
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->playVideoTask:Lorg/xinhua/xnews_sports/activity/DetailPage$PlayVideoTask;
 
     return-object v0
@@ -170,18 +180,18 @@
     .registers 2
 
     .prologue
-    .line 108
+    .line 113
     iput-object p1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->playVideoTask:Lorg/xinhua/xnews_sports/activity/DetailPage$PlayVideoTask;
 
     return-void
 .end method
 
-.method static synthetic access$10(Lorg/xinhua/xnews_sports/activity/DetailPage;)Ljava/lang/String;
+.method static synthetic access$10(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/widget/TextView;
     .registers 2
 
     .prologue
-    .line 99
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->classname:Ljava/lang/String;
+    .line 101
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->textView_pagination:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -190,189 +200,7 @@
     .registers 2
 
     .prologue
-    .line 103
-    iget v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->textsize:I
-
-    return v0
-.end method
-
-.method static synthetic access$12(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/os/Handler;
-    .registers 2
-
-    .prologue
-    .line 110
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->mHandler:Landroid/os/Handler;
-
-    return-object v0
-.end method
-
-.method static synthetic access$13(Lorg/xinhua/xnews_sports/activity/DetailPage;)Lorg/xinhua/xnews_sports/util/BaseImageDownloader;
-    .registers 2
-
-    .prologue
-    .line 109
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->baseImageDownloader:Lorg/xinhua/xnews_sports/util/BaseImageDownloader;
-
-    return-object v0
-.end method
-
-.method static synthetic access$14(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/view/View;
-    .registers 2
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->mask:Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method static synthetic access$15(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/os/Bundle;
-    .registers 2
-
-    .prologue
-    .line 101
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
-
-    return-object v0
-.end method
-
-.method static synthetic access$16(Lorg/xinhua/xnews_sports/activity/DetailPage;)Ljava/lang/Boolean;
-    .registers 2
-
-    .prologue
-    .line 106
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->favoriteChange:Ljava/lang/Boolean;
-
-    return-object v0
-.end method
-
-.method static synthetic access$17(Lorg/xinhua/xnews_sports/activity/DetailPage;Ljava/lang/Boolean;)V
-    .registers 2
-
-    .prologue
-    .line 106
-    iput-object p1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->favoriteChange:Ljava/lang/Boolean;
-
-    return-void
-.end method
-
-.method static synthetic access$18(Lorg/xinhua/xnews_sports/activity/DetailPage;)Ljava/lang/String;
-    .registers 2
-
-    .prologue
-    .line 100
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->table:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$19(Lorg/xinhua/xnews_sports/activity/DetailPage;)Ljava/lang/String;
-    .registers 2
-
-    .prologue
-    .line 102
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->content:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/widget/Gallery;
-    .registers 2
-
-    .prologue
-    .line 97
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->gallery_photo:Landroid/widget/Gallery;
-
-    return-object v0
-.end method
-
-.method static synthetic access$20(Lorg/xinhua/xnews_sports/activity/DetailPage;I)Landroid/os/Bundle;
-    .registers 3
-
-    .prologue
-    .line 493
-    invoke-direct {p0, p1}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getMetadata(I)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$21(Lorg/xinhua/xnews_sports/activity/DetailPage;Landroid/os/Bundle;)V
-    .registers 2
-
-    .prologue
-    .line 101
-    iput-object p1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
-
-    return-void
-.end method
-
-.method static synthetic access$22(Lorg/xinhua/xnews_sports/activity/DetailPage;)Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
-    .registers 2
-
-    .prologue
-    .line 107
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
-
-    return-object v0
-.end method
-
-.method static synthetic access$23(Lorg/xinhua/xnews_sports/activity/DetailPage;Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;)V
-    .registers 2
-
-    .prologue
-    .line 107
-    iput-object p1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
-
-    return-void
-.end method
-
-.method static synthetic access$3(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/webkit/WebView;
-    .registers 2
-
-    .prologue
-    .line 87
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->webView:Landroid/webkit/WebView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$4(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/widget/ProgressBar;
-    .registers 2
-
-    .prologue
-    .line 89
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->progressBar:Landroid/widget/ProgressBar;
-
-    return-object v0
-.end method
-
-.method static synthetic access$5(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/widget/ImageButton;
-    .registers 2
-
-    .prologue
-    .line 93
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_favorite:Landroid/widget/ImageButton;
-
-    return-object v0
-.end method
-
-.method static synthetic access$6(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/widget/TextView;
-    .registers 2
-
-    .prologue
-    .line 95
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->textView_pagination:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$7(Lorg/xinhua/xnews_sports/activity/DetailPage;)I
-    .registers 2
-
-    .prologue
-    .line 529
+    .line 577
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getPosition()I
 
     move-result v0
@@ -380,11 +208,11 @@
     return v0
 .end method
 
-.method static synthetic access$8(Lorg/xinhua/xnews_sports/activity/DetailPage;)I
+.method static synthetic access$12(Lorg/xinhua/xnews_sports/activity/DetailPage;)I
     .registers 2
 
     .prologue
-    .line 525
+    .line 573
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getCount()I
 
     move-result v0
@@ -392,21 +220,243 @@
     return v0
 .end method
 
-.method static synthetic access$9(Lorg/xinhua/xnews_sports/activity/DetailPage;Ljava/lang/String;)V
+.method static synthetic access$13(Lorg/xinhua/xnews_sports/activity/DetailPage;Ljava/lang/String;)V
     .registers 2
 
     .prologue
-    .line 102
+    .line 107
     iput-object p1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->content:Ljava/lang/String;
 
     return-void
+.end method
+
+.method static synthetic access$14(Lorg/xinhua/xnews_sports/activity/DetailPage;)Ljava/lang/String;
+    .registers 2
+
+    .prologue
+    .line 104
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->classname:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$15(Lorg/xinhua/xnews_sports/activity/DetailPage;)I
+    .registers 2
+
+    .prologue
+    .line 108
+    iget v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->textsize:I
+
+    return v0
+.end method
+
+.method static synthetic access$16(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/os/Handler;
+    .registers 2
+
+    .prologue
+    .line 120
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->mHandler:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method static synthetic access$17(Lorg/xinhua/xnews_sports/activity/DetailPage;)Lorg/xinhua/xnews_sports/util/BaseImageDownloader;
+    .registers 2
+
+    .prologue
+    .line 115
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->baseImageDownloader:Lorg/xinhua/xnews_sports/util/BaseImageDownloader;
+
+    return-object v0
+.end method
+
+.method static synthetic access$18(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/view/View;
+    .registers 2
+
+    .prologue
+    .line 95
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->mask:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method static synthetic access$19(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/os/Bundle;
+    .registers 2
+
+    .prologue
+    .line 106
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2(Lorg/xinhua/xnews_sports/activity/DetailPage;Lorg/xinhua/xnews_sports/activity/DetailPage$MyGalleryAdapter;)V
+    .registers 2
+
+    .prologue
+    .line 114
+    iput-object p1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->myGalleryAdapter:Lorg/xinhua/xnews_sports/activity/DetailPage$MyGalleryAdapter;
+
+    return-void
+.end method
+
+.method static synthetic access$20(Lorg/xinhua/xnews_sports/activity/DetailPage;)Ljava/lang/String;
+    .registers 2
+
+    .prologue
+    .line 107
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->content:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$21(Lorg/xinhua/xnews_sports/activity/DetailPage;)Ljava/lang/Boolean;
+    .registers 2
+
+    .prologue
+    .line 111
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->favoriteChange:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method static synthetic access$22(Lorg/xinhua/xnews_sports/activity/DetailPage;Ljava/lang/Boolean;)V
+    .registers 2
+
+    .prologue
+    .line 111
+    iput-object p1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->favoriteChange:Ljava/lang/Boolean;
+
+    return-void
+.end method
+
+.method static synthetic access$23(Lorg/xinhua/xnews_sports/activity/DetailPage;)Ljava/lang/String;
+    .registers 2
+
+    .prologue
+    .line 105
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->table:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$24(Lorg/xinhua/xnews_sports/activity/DetailPage;I)Landroid/os/Bundle;
+    .registers 3
+
+    .prologue
+    .line 541
+    invoke-direct {p0, p1}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getMetadata(I)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$25(Lorg/xinhua/xnews_sports/activity/DetailPage;Landroid/os/Bundle;)V
+    .registers 2
+
+    .prologue
+    .line 106
+    iput-object p1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
+
+    return-void
+.end method
+
+.method static synthetic access$26(Lorg/xinhua/xnews_sports/activity/DetailPage;)Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
+    .registers 2
+
+    .prologue
+    .line 112
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
+
+    return-object v0
+.end method
+
+.method static synthetic access$27(Lorg/xinhua/xnews_sports/activity/DetailPage;Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;)V
+    .registers 2
+
+    .prologue
+    .line 112
+    iput-object p1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
+
+    return-void
+.end method
+
+.method static synthetic access$3(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/widget/Gallery;
+    .registers 2
+
+    .prologue
+    .line 119
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->gallery_photo:Landroid/widget/Gallery;
+
+    return-object v0
+.end method
+
+.method static synthetic access$4(Lorg/xinhua/xnews_sports/activity/DetailPage;)Lorg/xinhua/xnews_sports/activity/DetailPage$MyGalleryAdapter;
+    .registers 2
+
+    .prologue
+    .line 114
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->myGalleryAdapter:Lorg/xinhua/xnews_sports/activity/DetailPage$MyGalleryAdapter;
+
+    return-object v0
+.end method
+
+.method static synthetic access$5(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/widget/TextView;
+    .registers 2
+
+    .prologue
+    .line 118
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->textView_pagination_gallery:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$6(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/widget/RelativeLayout;
+    .registers 2
+
+    .prologue
+    .line 116
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->relativeLayout_gallery:Landroid/widget/RelativeLayout;
+
+    return-object v0
+.end method
+
+.method static synthetic access$7(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/webkit/WebView;
+    .registers 2
+
+    .prologue
+    .line 92
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->webView:Landroid/webkit/WebView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$8(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/widget/ProgressBar;
+    .registers 2
+
+    .prologue
+    .line 94
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->progressBar:Landroid/widget/ProgressBar;
+
+    return-object v0
+.end method
+
+.method static synthetic access$9(Lorg/xinhua/xnews_sports/activity/DetailPage;)Landroid/widget/ImageButton;
+    .registers 2
+
+    .prologue
+    .line 98
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_favorite:Landroid/widget/ImageButton;
+
+    return-object v0
 .end method
 
 .method private getCount()I
     .registers 3
 
     .prologue
-    .line 526
+    .line 574
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
 
     const-string v1, "count"
@@ -423,18 +473,18 @@
     .param p1, "expected"    # I
 
     .prologue
-    .line 494
+    .line 542
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 495
+    .line 543
     .local v1, "metadata":Landroid/os/Bundle;
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->db:Landroid/database/sqlite/SQLiteDatabase;
 
     iget-object v3, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->table:Ljava/lang/String;
 
-    .line 496
+    .line 544
     iget-object v4, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
 
     const-string v5, "colcatcode"
@@ -445,12 +495,12 @@
 
     const/4 v5, 0x0
 
-    .line 495
+    .line 543
     invoke-static {v2, v3, v4, p1, v5}, Lorg/xinhua/xnews_sports/db/DBUtils;->getSpecifiedDataFromSpecifiedTable(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;IIZ)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 498
+    .line 546
     .local v0, "cursor":Landroid/database/Cursor;
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -458,10 +508,10 @@
 
     if-eqz v2, :cond_b1
 
-    .line 499
+    .line 547
     const-string v2, "articleid"
 
-    .line 500
+    .line 548
     const-string v3, "articleid"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -472,13 +522,13 @@
 
     move-result-wide v3
 
-    .line 499
+    .line 547
     invoke-virtual {v1, v2, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 501
+    .line 549
     const-string v2, "colcatcode"
 
-    .line 502
+    .line 550
     const-string v3, "colcatcode"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -489,13 +539,13 @@
 
     move-result v3
 
-    .line 501
+    .line 549
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 503
+    .line 551
     const-string v2, "abstract"
 
-    .line 504
+    .line 552
     const-string v3, "abstract"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -506,13 +556,13 @@
 
     move-result-object v3
 
-    .line 503
+    .line 551
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 505
+    .line 553
     const-string v2, "contenturi"
 
-    .line 506
+    .line 554
     const-string v3, "contenturi"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -523,13 +573,13 @@
 
     move-result-object v3
 
-    .line 505
+    .line 553
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 508
+    .line 556
     const-string v2, "pubtime"
 
-    .line 509
+    .line 557
     const-string v3, "pubtime"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -540,13 +590,13 @@
 
     move-result-object v3
 
-    .line 508
+    .line 556
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 511
+    .line 559
     const-string v2, "ruleid"
 
-    .line 512
+    .line 560
     const-string v3, "ruleid"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -557,13 +607,13 @@
 
     move-result-object v3
 
-    .line 511
+    .line 559
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 513
+    .line 561
     const-string v2, "thumburi"
 
-    .line 514
+    .line 562
     const-string v3, "thumburi"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -574,13 +624,13 @@
 
     move-result-object v3
 
-    .line 513
+    .line 561
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 515
+    .line 563
     const-string v2, "title"
 
-    .line 516
+    .line 564
     const-string v3, "title"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -591,13 +641,13 @@
 
     move-result-object v3
 
-    .line 515
+    .line 563
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 517
+    .line 565
     const-string v2, "topview"
 
-    .line 518
+    .line 566
     const-string v3, "topview"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -608,10 +658,10 @@
 
     move-result v3
 
-    .line 517
+    .line 565
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 519
+    .line 567
     const-string v2, "count"
 
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getCount()I
@@ -620,12 +670,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 520
+    .line 568
     const-string v2, "position"
 
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 522
+    .line 570
     :cond_b1
     return-object v1
 .end method
@@ -634,7 +684,7 @@
     .registers 3
 
     .prologue
-    .line 530
+    .line 578
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
 
     const-string v1, "position"
@@ -650,8 +700,8 @@
     .registers 3
 
     .prologue
-    .line 225
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->gobackButton:Landroid/widget/ImageButton;
+    .line 251
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_sharethis_gallery:Landroid/widget/ImageButton;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/DetailPage$3;
 
@@ -659,8 +709,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 238
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_favorite:Landroid/widget/ImageButton;
+    .line 266
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->gobackButton_gallery:Landroid/widget/ImageButton;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/DetailPage$4;
 
@@ -668,8 +718,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 276
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_sharethis:Landroid/widget/ImageButton;
+    .line 270
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->gobackButton:Landroid/widget/ImageButton;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/DetailPage$5;
 
@@ -677,8 +727,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 292
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_leftarrow:Landroid/widget/ImageButton;
+    .line 283
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_favorite:Landroid/widget/ImageButton;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/DetailPage$6;
 
@@ -686,8 +736,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 311
-    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_rightarrow:Landroid/widget/ImageButton;
+    .line 321
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_sharethis:Landroid/widget/ImageButton;
 
     new-instance v1, Lorg/xinhua/xnews_sports/activity/DetailPage$7;
 
@@ -695,7 +745,25 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 329
+    .line 340
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_leftarrow:Landroid/widget/ImageButton;
+
+    new-instance v1, Lorg/xinhua/xnews_sports/activity/DetailPage$8;
+
+    invoke-direct {v1, p0}, Lorg/xinhua/xnews_sports/activity/DetailPage$8;-><init>(Lorg/xinhua/xnews_sports/activity/DetailPage;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 359
+    iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_rightarrow:Landroid/widget/ImageButton;
+
+    new-instance v1, Lorg/xinhua/xnews_sports/activity/DetailPage$9;
+
+    invoke-direct {v1, p0}, Lorg/xinhua/xnews_sports/activity/DetailPage$9;-><init>(Lorg/xinhua/xnews_sports/activity/DetailPage;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 377
     return-void
 .end method
 
@@ -710,18 +778,18 @@
 
     const/4 v6, 0x0
 
-    .line 131
+    .line 153
     invoke-super {p0, p1}, Lorg/xinhua/xnews_sports/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 133
+    .line 155
     invoke-virtual {p0, v4}, Lorg/xinhua/xnews_sports/activity/DetailPage;->requestWindowFeature(I)Z
 
-    .line 134
+    .line 156
     const v2, 0x7f030003
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->setContentView(I)V
 
-    .line 136
+    .line 158
     invoke-virtual {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -732,7 +800,7 @@
 
     move-result-object v0
 
-    .line 137
+    .line 159
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v2, Lorg/xinhua/xnews_sports/util/BaseImageDownloader;
 
@@ -740,12 +808,12 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->baseImageDownloader:Lorg/xinhua/xnews_sports/util/BaseImageDownloader;
 
-    .line 140
+    .line 162
     invoke-virtual {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 141
+    .line 163
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "table"
 
@@ -755,7 +823,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->table:Ljava/lang/String;
 
-    .line 142
+    .line 164
     const-string v2, "classname"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -764,14 +832,14 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->classname:Ljava/lang/String;
 
-    .line 143
+    .line 165
     invoke-virtual {v1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
 
-    .line 145
+    .line 166
     const v2, 0x7f06000e
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
@@ -782,7 +850,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->gobackButton:Landroid/widget/ImageButton;
 
-    .line 146
+    .line 167
     const v2, 0x7f060018
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
@@ -793,7 +861,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->progressBar:Landroid/widget/ProgressBar;
 
-    .line 147
+    .line 168
     const v2, 0x7f060019
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
@@ -802,7 +870,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->mask:Landroid/view/View;
 
-    .line 148
+    .line 169
     const v2, 0x7f060017
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
@@ -813,12 +881,12 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->webView:Landroid/webkit/WebView;
 
-    .line 149
+    .line 170
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v2, v6}, Landroid/webkit/WebView;->setBackgroundColor(I)V
 
-    .line 150
+    .line 171
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -829,7 +897,7 @@
 
     invoke-virtual {v2, v3}, Landroid/webkit/WebSettings;->setCacheMode(I)V
 
-    .line 151
+    .line 172
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -838,7 +906,7 @@
 
     invoke-virtual {v2, v4}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 152
+    .line 173
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -847,13 +915,24 @@
 
     invoke-virtual {v2, v4}, Landroid/webkit/WebSettings;->setUseWideViewPort(Z)V
 
-    .line 153
+    .line 174
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v2, p0}, Landroid/webkit/WebView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 154
+    .line 175
     const v2, 0x7f06001a
+
+    invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/RelativeLayout;
+
+    iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->relativeLayout_gallery:Landroid/widget/RelativeLayout;
+
+    .line 176
+    const v2, 0x7f06001f
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
 
@@ -863,7 +942,29 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->gallery_photo:Landroid/widget/Gallery;
 
-    .line 155
+    .line 177
+    const v2, 0x7f06001c
+
+    invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/ImageButton;
+
+    iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->gobackButton_gallery:Landroid/widget/ImageButton;
+
+    .line 178
+    const v2, 0x7f06001e
+
+    invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/ImageButton;
+
+    iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_sharethis_gallery:Landroid/widget/ImageButton;
+
+    .line 179
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->webView:Landroid/webkit/WebView;
 
     new-instance v3, Lorg/xinhua/xnews_sports/activity/DetailPage$2;
@@ -872,7 +973,7 @@
 
     invoke-virtual {v2, v3}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 167
+    .line 191
     const v2, 0x7f060010
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
@@ -883,7 +984,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_sharethis:Landroid/widget/ImageButton;
 
-    .line 168
+    .line 192
     const v2, 0x7f060011
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
@@ -894,37 +995,37 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_favorite:Landroid/widget/ImageButton;
 
-    .line 169
+    .line 193
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->classname:Ljava/lang/String;
 
-    if-eqz v2, :cond_ce
+    if-eqz v2, :cond_ef
 
-    .line 170
+    .line 194
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->classname:Ljava/lang/String;
 
     const-class v3, Lorg/xinhua/xnews_sports/activity/DetailPage$VideoMetaDataBindedToJS;
 
-    .line 171
+    .line 195
     invoke-virtual {v3}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 170
+    .line 194
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_ce
+    if-eqz v2, :cond_ef
 
-    .line 172
+    .line 196
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_favorite:Landroid/widget/ImageButton;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 173
-    :cond_ce
+    .line 197
+    :cond_ef
     const v2, 0x7f060014
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
@@ -935,7 +1036,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_leftarrow:Landroid/widget/ImageButton;
 
-    .line 174
+    .line 198
     const v2, 0x7f060015
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
@@ -946,7 +1047,7 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->imageButton_rightarrow:Landroid/widget/ImageButton;
 
-    .line 175
+    .line 199
     const v2, 0x7f06000f
 
     invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
@@ -957,23 +1058,34 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->textView_pagination:Landroid/widget/TextView;
 
-    .line 176
+    .line 200
+    const v2, 0x7f06001d
+
+    invoke-virtual {p0, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->textView_pagination_gallery:Landroid/widget/TextView;
+
+    .line 201
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->table:Ljava/lang/String;
 
-    if-nez v2, :cond_f7
+    if-nez v2, :cond_123
 
-    .line 177
+    .line 202
     const-string v2, "news_list"
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->table:Ljava/lang/String;
 
-    .line 178
-    :cond_f7
+    .line 203
+    :cond_123
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->classname:Ljava/lang/String;
 
-    if-nez v2, :cond_162
+    if-nez v2, :cond_18e
 
-    .line 179
+    .line 204
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-class v3, Lorg/xinhua/xnews_sports/activity/DetailPage$NewsMetaDataBindedToJS;
@@ -982,21 +1094,21 @@
 
     move-result-object v3
 
-    .line 182
+    .line 207
     const-class v4, Lorg/xinhua/xnews_sports/activity/DetailPage$NewsMetaDataBindedToJS;
 
     invoke-virtual {v4}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 183
+    .line 208
     const-string v5, "."
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 180
+    .line 205
     invoke-virtual {v3, v6, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
@@ -1007,44 +1119,44 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 184
+    .line 209
     const-string v3, "$"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 185
+    .line 210
     const-class v3, Lorg/xinhua/xnews_sports/activity/DetailPage$NewsMetaDataBindedToJS;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 187
+    .line 212
     const-class v4, Lorg/xinhua/xnews_sports/activity/DetailPage$NewsMetaDataBindedToJS;
 
-    .line 188
+    .line 213
     invoke-virtual {v4}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 189
+    .line 214
     const-string v5, "."
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 187
+    .line 212
     add-int/lit8 v4, v4, 0x1
 
-    .line 186
+    .line 211
     invoke-virtual {v3, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 185
+    .line 210
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -1053,15 +1165,15 @@
 
     move-result-object v2
 
-    .line 179
+    .line 204
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->classname:Ljava/lang/String;
 
-    .line 195
-    :cond_142
-    :goto_142
+    .line 220
+    :cond_16e
+    :goto_16e
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->setListeners()V
 
-    .line 197
+    .line 222
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->sp:Landroid/content/SharedPreferences;
 
     const-string v3, "textsize"
@@ -1074,7 +1186,7 @@
 
     iput v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->textsize:I
 
-    .line 199
+    .line 224
     new-instance v2, Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
     iget-object v3, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
@@ -1083,18 +1195,18 @@
 
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
-    .line 200
+    .line 225
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
     new-array v3, v6, [Ljava/lang/Void;
 
     invoke-virtual {v2, v3}, Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 202
+    .line 227
     return-void
 
-    .line 190
-    :cond_162
+    .line 215
+    :cond_18e
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->classname:Ljava/lang/String;
 
     const-string v3, "$"
@@ -1103,9 +1215,9 @@
 
     move-result v2
 
-    if-nez v2, :cond_142
+    if-nez v2, :cond_16e
 
-    .line 191
+    .line 216
     new-instance v2, Ljava/lang/StringBuilder;
 
     iget-object v3, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->classname:Ljava/lang/String;
@@ -1128,7 +1240,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 192
+    .line 217
     const-string v3, "$"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1159,10 +1271,10 @@
 
     move-result-object v2
 
-    .line 191
+    .line 216
     iput-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->classname:Ljava/lang/String;
 
-    goto :goto_142
+    goto :goto_16e
 .end method
 
 .method public onDown(Landroid/view/MotionEvent;)Z
@@ -1170,7 +1282,7 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 824
+    .line 862
     const/4 v0, 0x0
 
     return v0
@@ -1188,7 +1300,7 @@
 
     const/high16 v2, 0x42f00000    # 120.0f
 
-    .line 841
+    .line 875
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -1203,7 +1315,7 @@
 
     if-lez v0, :cond_1c
 
-    .line 842
+    .line 876
     invoke-static {p3}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -1212,10 +1324,10 @@
 
     if-lez v0, :cond_1c
 
-    .line 843
+    .line 877
     invoke-virtual {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->showNextImage()V
 
-    .line 846
+    .line 880
     :cond_1c
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -1231,7 +1343,7 @@
 
     if-lez v0, :cond_34
 
-    .line 847
+    .line 881
     invoke-static {p3}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -1240,10 +1352,10 @@
 
     if-lez v0, :cond_34
 
-    .line 848
+    .line 882
     invoke-virtual {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->showLastImage()V
 
-    .line 850
+    .line 884
     :cond_34
     const/4 v0, 0x0
 
@@ -1256,36 +1368,36 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 207
-    iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->gallery_photo:Landroid/widget/Gallery;
+    .line 232
+    iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->relativeLayout_gallery:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v1}, Landroid/widget/Gallery;->getVisibility()I
+    invoke-virtual {v1}, Landroid/widget/RelativeLayout;->getVisibility()I
 
     move-result v1
 
     if-nez v1, :cond_11
 
-    .line 208
-    iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->gallery_photo:Landroid/widget/Gallery;
+    .line 233
+    iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->relativeLayout_gallery:Landroid/widget/RelativeLayout;
 
     const/16 v2, 0x8
 
-    invoke-virtual {v1, v2}, Landroid/widget/Gallery;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 209
+    .line 234
     const/4 v1, 0x0
 
-    .line 220
+    .line 245
     :goto_10
     return v1
 
-    .line 210
+    .line 235
     :cond_11
     const/4 v1, 0x4
 
     if-ne p1, v1, :cond_35
 
-    .line 211
+    .line 236
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->favoriteChange:Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1294,12 +1406,12 @@
 
     if-eqz v1, :cond_20
 
-    .line 212
+    .line 237
     const/4 v1, -0x1
 
     invoke-virtual {p0, v1}, Lorg/xinhua/xnews_sports/activity/DetailPage;->setResult(I)V
 
-    .line 214
+    .line 239
     :cond_20
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->sp:Landroid/content/SharedPreferences;
 
@@ -1307,7 +1419,7 @@
 
     move-result-object v0
 
-    .line 215
+    .line 240
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v1, "textsize"
 
@@ -1315,17 +1427,17 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 216
+    .line 241
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 217
+    .line 242
     invoke-super {p0, p1, p2}, Lorg/xinhua/xnews_sports/activity/BaseActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v1
 
     goto :goto_10
 
-    .line 220
+    .line 245
     .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
     :cond_35
     invoke-super {p0, p1, p2}, Lorg/xinhua/xnews_sports/activity/BaseActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -1340,7 +1452,7 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 857
+    .line 891
     return-void
 .end method
 
@@ -1352,7 +1464,7 @@
     .param p4, "distanceY"    # F
 
     .prologue
-    .line 863
+    .line 897
     const/4 v0, 0x0
 
     return v0
@@ -1363,7 +1475,7 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 870
+    .line 904
     return-void
 .end method
 
@@ -1372,7 +1484,7 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 875
+    .line 909
     const/4 v0, 0x0
 
     return v0
@@ -1384,7 +1496,7 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 883
+    .line 917
     iget-object v0, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->mygesture:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -1400,7 +1512,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 351
+    .line 399
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getPosition()I
 
     move-result v1
@@ -1409,14 +1521,14 @@
 
     if-gez v1, :cond_35
 
-    .line 352
+    .line 400
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getCount()I
 
     move-result v1
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 356
+    .line 404
     .local v0, "currentPosition":I
     :goto_f
     invoke-direct {p0, v0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getMetadata(I)Landroid/os/Bundle;
@@ -1425,7 +1537,7 @@
 
     iput-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
 
-    .line 357
+    .line 405
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
 
     const-string v2, "contenturi"
@@ -1436,12 +1548,12 @@
 
     if-eqz v1, :cond_34
 
-    .line 358
+    .line 406
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
     invoke-virtual {v1, v3}, Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;->cancel(Z)Z
 
-    .line 359
+    .line 407
     new-instance v1, Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
@@ -1450,18 +1562,18 @@
 
     iput-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
-    .line 360
+    .line 408
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
     new-array v2, v3, [Ljava/lang/Void;
 
     invoke-virtual {v1, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 362
+    .line 410
     :cond_34
     return-void
 
-    .line 354
+    .line 402
     .end local v0    # "currentPosition":I
     :cond_35
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getPosition()I
@@ -1480,7 +1592,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 335
+    .line 383
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getPosition()I
 
     move-result v1
@@ -1493,10 +1605,10 @@
 
     if-le v1, v2, :cond_34
 
-    .line 336
+    .line 384
     const/4 v0, 0x0
 
-    .line 340
+    .line 388
     .local v0, "currentPosition":I
     :goto_e
     invoke-direct {p0, v0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getMetadata(I)Landroid/os/Bundle;
@@ -1505,7 +1617,7 @@
 
     iput-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
 
-    .line 341
+    .line 389
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
 
     const-string v2, "contenturi"
@@ -1516,12 +1628,12 @@
 
     if-eqz v1, :cond_33
 
-    .line 342
+    .line 390
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
     invoke-virtual {v1, v3}, Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;->cancel(Z)Z
 
-    .line 343
+    .line 391
     new-instance v1, Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
     iget-object v2, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->metadata:Landroid/os/Bundle;
@@ -1530,18 +1642,18 @@
 
     iput-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
-    .line 344
+    .line 392
     iget-object v1, p0, Lorg/xinhua/xnews_sports/activity/DetailPage;->getContentTask:Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;
 
     new-array v2, v3, [Ljava/lang/Void;
 
     invoke-virtual {v1, v2}, Lorg/xinhua/xnews_sports/activity/DetailPage$GetContentTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 346
+    .line 394
     :cond_33
     return-void
 
-    .line 338
+    .line 386
     .end local v0    # "currentPosition":I
     :cond_34
     invoke-direct {p0}, Lorg/xinhua/xnews_sports/activity/DetailPage;->getPosition()I

@@ -62,7 +62,7 @@
     if-eqz p3, :cond_26
 
     .line 119
-    new-instance v0, Ljj;
+    new-instance v0, Lcj;
 
     move-object v1, p0
 
@@ -74,7 +74,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Ljj;-><init>(Lcom/loopj/android/http/BaseJsonHttpResponseHandler;Ljava/lang/String;I[Lorg/apache/http/Header;Ljava/lang/Throwable;)V
+    invoke-direct/range {v0 .. v5}, Lcj;-><init>(Lcom/loopj/android/http/BaseJsonHttpResponseHandler;Ljava/lang/String;I[Lorg/apache/http/Header;Ljava/lang/Throwable;)V
 
     .line 141
     invoke-virtual {p0}, Lcom/loopj/android/http/BaseJsonHttpResponseHandler;->getUseSynchronousMode()Z
@@ -147,9 +147,9 @@
     if-eq p1, v0, :cond_23
 
     .line 83
-    new-instance v0, Ljg;
+    new-instance v0, Lcg;
 
-    invoke-direct {v0, p0, p3, p1, p2}, Ljg;-><init>(Lcom/loopj/android/http/BaseJsonHttpResponseHandler;Ljava/lang/String;I[Lorg/apache/http/Header;)V
+    invoke-direct {v0, p0, p3, p1, p2}, Lcg;-><init>(Lcom/loopj/android/http/BaseJsonHttpResponseHandler;Ljava/lang/String;I[Lorg/apache/http/Header;)V
 
     .line 105
     invoke-virtual {p0}, Lcom/loopj/android/http/BaseJsonHttpResponseHandler;->getUseSynchronousMode()Z

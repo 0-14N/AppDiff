@@ -6,8 +6,6 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "Chartboost"
 
-.field private static cb:Lcom/chartboost/sdk/Chartboost;
-
 .field private static chartBoostDelegate:Lcom/chartboost/sdk/ChartboostDelegate;
 
 .field private static interstitial:Lcom/google/android/gms/ads/InterstitialAd;
@@ -27,19 +25,19 @@
 
     sput-object v0, Lcom/enjoygame/tool/MyScreenAdManager;->mActivity:Landroid/app/Activity;
 
-    .line 30
+    .line 29
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/enjoygame/tool/MyScreenAdManager;->isCnUser:Z
 
-    .line 150
+    .line 149
     new-instance v0, Lcom/enjoygame/tool/MyScreenAdManager$1;
 
     invoke-direct {v0}, Lcom/enjoygame/tool/MyScreenAdManager$1;-><init>()V
 
     sput-object v0, Lcom/enjoygame/tool/MyScreenAdManager;->chartBoostDelegate:Lcom/chartboost/sdk/ChartboostDelegate;
 
-    .line 289
+    .line 288
     return-void
 .end method
 
@@ -57,7 +55,7 @@
     .registers 1
 
     .prologue
-    .line 29
+    .line 28
     sget-object v0, Lcom/enjoygame/tool/MyScreenAdManager;->interstitial:Lcom/google/android/gms/ads/InterstitialAd;
 
     return-object v0
@@ -67,7 +65,7 @@
     .registers 1
 
     .prologue
-    .line 33
+    .line 32
     sget-object v0, Lcom/enjoygame/tool/MyScreenAdManager;->mActivity:Landroid/app/Activity;
 
     return-object v0
@@ -77,7 +75,7 @@
     .registers 1
 
     .prologue
-    .line 144
+    .line 143
     sget-boolean v0, Lcom/enjoygame/tool/MyScreenAdManager;->isCnUser:Z
 
     if-nez v0, :cond_c
@@ -88,10 +86,10 @@
 
     if-eqz v0, :cond_c
 
-    .line 146
+    .line 145
     const/4 v0, 0x1
 
-    .line 147
+    .line 146
     :goto_b
     return v0
 
@@ -105,17 +103,17 @@
     .registers 1
 
     .prologue
-    .line 128
+    .line 127
     sget-boolean v0, Lcom/enjoygame/tool/MyScreenAdManager;->isCnUser:Z
 
     if-nez v0, :cond_9
 
-    .line 129
+    .line 128
     sget-object v0, Lcom/enjoygame/tool/MyScreenAdManager;->mActivity:Landroid/app/Activity;
 
     invoke-static {v0}, Lcom/chartboost/sdk/Chartboost;->onDestroy(Landroid/app/Activity;)V
 
-    .line 131
+    .line 130
     :cond_9
     return-void
 .end method
@@ -124,17 +122,17 @@
     .registers 1
 
     .prologue
-    .line 106
+    .line 105
     sget-boolean v0, Lcom/enjoygame/tool/MyScreenAdManager;->isCnUser:Z
 
     if-nez v0, :cond_9
 
-    .line 107
+    .line 106
     sget-object v0, Lcom/enjoygame/tool/MyScreenAdManager;->mActivity:Landroid/app/Activity;
 
     invoke-static {v0}, Lcom/chartboost/sdk/Chartboost;->onStart(Landroid/app/Activity;)V
 
-    .line 109
+    .line 108
     :cond_9
     return-void
 .end method
@@ -143,17 +141,17 @@
     .registers 1
 
     .prologue
-    .line 117
+    .line 116
     sget-boolean v0, Lcom/enjoygame/tool/MyScreenAdManager;->isCnUser:Z
 
     if-nez v0, :cond_9
 
-    .line 118
+    .line 117
     sget-object v0, Lcom/enjoygame/tool/MyScreenAdManager;->mActivity:Landroid/app/Activity;
 
     invoke-static {v0}, Lcom/chartboost/sdk/Chartboost;->onStop(Landroid/app/Activity;)V
 
-    .line 120
+    .line 119
     :cond_9
     return-void
 .end method
@@ -163,55 +161,55 @@
     .param p0, "mActivity"    # Landroid/app/Activity;
 
     .prologue
-    .line 37
+    .line 36
     sput-object p0, Lcom/enjoygame/tool/MyScreenAdManager;->mActivity:Landroid/app/Activity;
 
-    .line 38
-    const/4 v2, 0x1
+    .line 37
+    const/4 v2, 0x0
 
     sput-boolean v2, Lcom/enjoygame/tool/MyScreenAdManager;->isCnUser:Z
 
-    .line 42
+    .line 41
     const-string v0, "5403434ac26ee42f84cfa7f7"
 
-    .line 43
+    .line 42
     .local v0, "appId":Ljava/lang/String;
     const-string v1, "d0d91546135a52905d73b0d9ec376fb523d9d583"
 
-    .line 46
+    .line 45
     .local v1, "appSignature":Ljava/lang/String;
     invoke-static {p0, v0, v1}, Lcom/chartboost/sdk/Chartboost;->startWithAppId(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 47
+    .line 46
     sget-object v2, Lcom/enjoygame/tool/MyScreenAdManager;->chartBoostDelegate:Lcom/chartboost/sdk/ChartboostDelegate;
 
     invoke-static {v2}, Lcom/chartboost/sdk/Chartboost;->setDelegate(Lcom/chartboost/sdk/ChartboostDelegate;)V
 
-    .line 48
+    .line 47
     invoke-static {p0}, Lcom/chartboost/sdk/Chartboost;->onCreate(Landroid/app/Activity;)V
 
-    .line 52
+    .line 51
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x9
 
     if-lt v2, v3, :cond_32
 
-    .line 54
+    .line 53
     new-instance v2, Lcom/google/android/gms/ads/InterstitialAd;
 
     invoke-direct {v2, p0}, Lcom/google/android/gms/ads/InterstitialAd;-><init>(Landroid/content/Context;)V
 
     sput-object v2, Lcom/enjoygame/tool/MyScreenAdManager;->interstitial:Lcom/google/android/gms/ads/InterstitialAd;
 
-    .line 55
+    .line 54
     sget-object v2, Lcom/enjoygame/tool/MyScreenAdManager;->interstitial:Lcom/google/android/gms/ads/InterstitialAd;
 
     const-string v3, "ca-app-pub-1329574336519263/5719859239"
 
     invoke-virtual {v2, v3}, Lcom/google/android/gms/ads/InterstitialAd;->setAdUnitId(Ljava/lang/String;)V
 
-    .line 56
+    .line 55
     sget-object v2, Lcom/enjoygame/tool/MyScreenAdManager;->interstitial:Lcom/google/android/gms/ads/InterstitialAd;
 
     new-instance v3, Lcom/enjoygame/tool/MyScreenAdManager$2;
@@ -220,7 +218,7 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/gms/ads/InterstitialAd;->setAdListener(Lcom/google/android/gms/ads/AdListener;)V
 
-    .line 71
+    .line 70
     :cond_32
     return-void
 .end method
@@ -229,7 +227,7 @@
     .registers 2
 
     .prologue
-    .line 77
+    .line 76
     sget-object v0, Lcom/enjoygame/tool/MyScreenAdManager;->mActivity:Landroid/app/Activity;
 
     new-instance v1, Lcom/enjoygame/tool/MyScreenAdManager$3;
@@ -238,6 +236,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 98
+    .line 97
     return-void
 .end method

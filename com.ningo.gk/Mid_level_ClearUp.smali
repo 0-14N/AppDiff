@@ -24,8 +24,6 @@
 
 .field private fieldTypes:[[Ljava/lang/String;
 
-.field private from:Ljava/lang/String;
-
 .field private listView:Landroid/widget/ListView;
 
 .field mydb:Lcom/ningo/gk/MySQLiteOpenHelper;
@@ -48,35 +46,35 @@
     .registers 2
 
     .prologue
-    .line 20
+    .line 21
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 28
+    .line 29
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/ningo/gk/Mid_level_ClearUp;->mydb:Lcom/ningo/gk/MySQLiteOpenHelper;
 
-    .line 32
+    .line 33
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/ningo/gk/Mid_level_ClearUp;->version:I
 
-    .line 33
+    .line 34
     sget-object v0, Ldb/DBParameter;->tables:[Ljava/lang/String;
 
     iput-object v0, p0, Lcom/ningo/gk/Mid_level_ClearUp;->tables:[Ljava/lang/String;
 
-    .line 34
+    .line 35
     sget-object v0, Ldb/DBParameter;->fieldNames:[[Ljava/lang/String;
 
     iput-object v0, p0, Lcom/ningo/gk/Mid_level_ClearUp;->fieldNames:[[Ljava/lang/String;
 
-    .line 35
+    .line 36
     sget-object v0, Ldb/DBParameter;->fieldTypes:[[Ljava/lang/String;
 
     iput-object v0, p0, Lcom/ningo/gk/Mid_level_ClearUp;->fieldTypes:[[Ljava/lang/String;
 
-    .line 20
+    .line 21
     return-void
 .end method
 
@@ -99,12 +97,12 @@
 
     const/4 v3, 0x0
 
-    .line 85
+    .line 83
     new-instance v12, Ljava/util/ArrayList;
 
     invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
 
-    .line 88
+    .line 86
     .local v12, "data":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v0, Lcom/ningo/gk/MySQLiteOpenHelper;
 
@@ -124,14 +122,14 @@
 
     iput-object v0, p0, Lcom/ningo/gk/Mid_level_ClearUp;->mydb:Lcom/ningo/gk/MySQLiteOpenHelper;
 
-    .line 90
+    .line 88
     new-array v6, v9, [Ljava/lang/String;
 
     const-string v0, "word"
 
     aput-object v0, v6, v14
 
-    .line 91
+    .line 89
     .local v6, "fIdForWord":[Ljava/lang/String;
     new-array v8, v9, [Ljava/lang/String;
 
@@ -139,7 +137,7 @@
 
     aput-object v0, v8, v14
 
-    .line 92
+    .line 90
     .local v8, "selectionArg":[Ljava/lang/String;
     iget-object v4, p0, Lcom/ningo/gk/Mid_level_ClearUp;->mydb:Lcom/ningo/gk/MySQLiteOpenHelper;
 
@@ -161,7 +159,7 @@
 
     move-result-object v13
 
-    .line 94
+    .line 92
     .local v13, "hardWordsCollector":Landroid/database/Cursor;
     :goto_37
     invoke-interface {v13}, Landroid/database/Cursor;->moveToNext()Z
@@ -170,10 +168,10 @@
 
     if-nez v0, :cond_3e
 
-    .line 101
+    .line 99
     return-object v12
 
-    .line 96
+    .line 94
     :cond_3e
     invoke-interface {v13, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -191,10 +189,10 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 58
+    .line 57
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 59
+    .line 58
     invoke-virtual {p0}, Lcom/ningo/gk/Mid_level_ClearUp;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -203,7 +201,7 @@
 
     move-result-object v0
 
-    .line 60
+    .line 59
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "tablePosition"
 
@@ -213,7 +211,7 @@
 
     iput v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->tablePosition:I
 
-    .line 61
+    .line 60
     const-string v1, "pinTablePosition"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -222,7 +220,7 @@
 
     iput v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->pinTablePosition:I
 
-    .line 62
+    .line 61
     const-string v1, "strTitle"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -231,7 +229,7 @@
 
     iput-object v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->strTitle:Ljava/lang/String;
 
-    .line 63
+    .line 62
     const-string v1, "source"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -241,22 +239,13 @@
     iput-object v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->source:Ljava/lang/String;
 
     .line 64
-    const-string v1, "from"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->from:Ljava/lang/String;
-
-    .line 66
     new-instance v1, Landroid/widget/ListView;
 
     invoke-direct {v1, p0}, Landroid/widget/ListView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->listView:Landroid/widget/ListView;
 
-    .line 68
+    .line 66
     iget-object v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->listView:Landroid/widget/ListView;
 
     new-instance v2, Landroid/widget/ArrayAdapter;
@@ -271,40 +260,17 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 69
+    .line 67
     iget-object v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->listView:Landroid/widget/ListView;
 
     invoke-virtual {v1, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 70
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/ningo/gk/Mid_level_ClearUp;->strTitle:Ljava/lang/String;
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "\u4e2d\u6211\u7684\u6a21\u7cca\u8bcd"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/ningo/gk/Mid_level_ClearUp;->setTitle(Ljava/lang/CharSequence;)V
-
-    .line 71
+    .line 69
     iget-object v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->listView:Landroid/widget/ListView;
 
     invoke-virtual {p0, v1}, Lcom/ningo/gk/Mid_level_ClearUp;->setContentView(Landroid/view/View;)V
 
-    .line 73
+    .line 71
     return-void
 .end method
 
@@ -313,18 +279,18 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 109
+    .line 107
     const/4 v0, 0x0
 
-    .line 112
+    .line 110
     .local v0, "idGroup1":I
     const/4 v1, 0x0
 
-    .line 116
+    .line 114
     .local v1, "orderItem1":I
     const/4 v2, 0x1
 
-    const v3, 0x7f04000a
+    const v3, 0x7f04000b
 
     invoke-interface {p1, v0, v2, v1, v3}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -334,7 +300,7 @@
 
     invoke-interface {v2, v3}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
-    .line 119
+    .line 117
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     move-result v2
@@ -358,7 +324,7 @@
     .end annotation
 
     .prologue
-    .line 151
+    .line 149
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v2, 0x1
 
@@ -378,7 +344,7 @@
 
     aput-object v2, v6, v3
 
-    .line 152
+    .line 150
     .local v6, "strItem":[Ljava/lang/String;
     const/4 v2, 0x3
 
@@ -402,7 +368,7 @@
 
     aput-object v3, v4, v2
 
-    .line 153
+    .line 151
     .local v4, "fields":[Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -430,18 +396,18 @@
 
     move-result-object v11
 
-    .line 154
+    .line 152
     .local v11, "c":Landroid/database/Cursor;
     invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 156
+    .line 154
     const/4 v2, 0x0
 
     invoke-interface {v11, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v15
 
-    .line 157
+    .line 155
     .local v15, "parameterWord":Ljava/lang/String;
     const/4 v2, 0x1
 
@@ -449,7 +415,7 @@
 
     move-result-object v13
 
-    .line 158
+    .line 156
     .local v13, "parameterChinese":Ljava/lang/String;
     const/4 v2, 0x2
 
@@ -457,13 +423,13 @@
 
     move-result-object v14
 
-    .line 161
+    .line 159
     .local v14, "parameterPos":Ljava/lang/String;
     new-instance v12, Landroid/content/Intent;
 
     invoke-direct {v12}, Landroid/content/Intent;-><init>()V
 
-    .line 162
+    .line 160
     .local v12, "intent":Landroid/content/Intent;
     const-class v2, Lcom/ningo/gk/MLWordPage;
 
@@ -471,28 +437,28 @@
 
     invoke-virtual {v12, v0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 163
+    .line 161
     new-instance v10, Landroid/os/Bundle;
 
     invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
 
-    .line 164
+    .line 162
     .local v10, "bundle":Landroid/os/Bundle;
     const-string v2, "parameterWord"
 
     invoke-virtual {v10, v2, v15}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 165
+    .line 163
     const-string v2, "parameterChinese"
 
     invoke-virtual {v10, v2, v13}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 166
+    .line 164
     const-string v2, "parameterPos"
 
     invoke-virtual {v10, v2, v14}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 169
+    .line 167
     const-string v2, "tablePosition"
 
     move-object/from16 v0, p0
@@ -501,7 +467,7 @@
 
     invoke-virtual {v10, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 170
+    .line 168
     const-string v2, "pinTablePosition"
 
     move-object/from16 v0, p0
@@ -510,7 +476,7 @@
 
     invoke-virtual {v10, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 171
+    .line 169
     const-string v2, "strTitle"
 
     move-object/from16 v0, p0
@@ -519,7 +485,7 @@
 
     invoke-virtual {v10, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 172
+    .line 170
     const-string v2, "source"
 
     move-object/from16 v0, p0
@@ -528,30 +494,21 @@
 
     invoke-virtual {v10, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 173
-    const-string v2, "from"
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/ningo/gk/Mid_level_ClearUp;->from:Ljava/lang/String;
-
-    invoke-virtual {v10, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 175
+    .line 172
     invoke-virtual {v12, v10}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 176
+    .line 173
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v12}, Lcom/ningo/gk/Mid_level_ClearUp;->startActivity(Landroid/content/Intent;)V
 
-    .line 177
+    .line 174
     invoke-virtual/range {p0 .. p0}, Lcom/ningo/gk/Mid_level_ClearUp;->finish()V
 
-    .line 178
+    .line 175
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 180
+    .line 177
     return-void
 .end method
 
@@ -561,78 +518,28 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 186
+    .line 183
     const/4 v2, 0x4
 
-    if-ne p1, v2, :cond_5e
+    if-ne p1, v2, :cond_39
+
+    .line 187
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
     .line 188
-    iget-object v2, p0, Lcom/ningo/gk/Mid_level_ClearUp;->from:Ljava/lang/String;
-
-    const-string v3, "log"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1f
-
-    .line 190
-    new-instance v1, Landroid/content/Intent;
-
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
-
-    .line 191
     .local v1, "intent":Landroid/content/Intent;
-    const-class v2, Lcom/ningo/gk/LogView;
-
-    invoke-virtual {v1, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    .line 192
-    invoke-virtual {p0, v1}, Lcom/ningo/gk/Mid_level_ClearUp;->startActivity(Landroid/content/Intent;)V
-
-    .line 193
-    invoke-virtual {p0}, Lcom/ningo/gk/Mid_level_ClearUp;->finish()V
-
-    .line 215
-    .end local v1    # "intent":Landroid/content/Intent;
-    :cond_1d
-    :goto_1d
-    const/4 v2, 0x1
-
-    .line 219
-    :goto_1e
-    return v2
-
-    .line 195
-    :cond_1f
-    iget-object v2, p0, Lcom/ningo/gk/Mid_level_ClearUp;->from:Ljava/lang/String;
-
-    const-string v3, "word"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1d
-
-    .line 197
-    new-instance v1, Landroid/content/Intent;
-
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
-
-    .line 198
-    .restart local v1    # "intent":Landroid/content/Intent;
     const-class v2, Lcom/ningo/gk/WordPage;
 
     invoke-virtual {v1, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 202
+    .line 192
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 203
+    .line 193
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v2, "tablePosition"
 
@@ -640,47 +547,51 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 204
+    .line 194
     const-string v2, "pinTablePosition"
 
     iget v3, p0, Lcom/ningo/gk/Mid_level_ClearUp;->pinTablePosition:I
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 205
+    .line 195
     const-string v2, "strTitle"
 
     iget-object v3, p0, Lcom/ningo/gk/Mid_level_ClearUp;->strTitle:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 206
+    .line 196
     const-string v2, "source"
 
     iget-object v3, p0, Lcom/ningo/gk/Mid_level_ClearUp;->source:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 207
+    .line 197
     invoke-virtual {v1, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 212
+    .line 202
     invoke-virtual {p0, v1}, Lcom/ningo/gk/Mid_level_ClearUp;->startActivity(Landroid/content/Intent;)V
 
-    .line 213
+    .line 203
     invoke-virtual {p0}, Lcom/ningo/gk/Mid_level_ClearUp;->finish()V
 
-    goto :goto_1d
+    .line 205
+    const/4 v2, 0x1
 
-    .line 219
+    .line 209
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "intent":Landroid/content/Intent;
-    :cond_5e
+    :goto_38
+    return v2
+
+    :cond_39
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v2
 
-    goto :goto_1e
+    goto :goto_38
 .end method
 
 .method public onMenuItemSelected(ILandroid/view/MenuItem;)Z
@@ -689,12 +600,12 @@
     .param p2, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 127
+    .line 125
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 128
+    .line 126
     .local v0, "intent":Landroid/content/Intent;
     invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
 
@@ -702,7 +613,7 @@
 
     packed-switch v1, :pswitch_data_32
 
-    .line 146
+    .line 144
     :goto_c
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
@@ -710,7 +621,7 @@
 
     return v1
 
-    .line 133
+    .line 131
     :pswitch_11
     iget-object v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->mydb:Lcom/ningo/gk/MySQLiteOpenHelper;
 
@@ -728,26 +639,26 @@
 
     if-eqz v1, :cond_26
 
-    .line 135
+    .line 133
     iget-object v1, p0, Lcom/ningo/gk/Mid_level_ClearUp;->mydb:Lcom/ningo/gk/MySQLiteOpenHelper;
 
     invoke-virtual {v1}, Lcom/ningo/gk/MySQLiteOpenHelper;->close()V
 
-    .line 138
+    .line 136
     :cond_26
     const-class v1, Lcom/ningo/gk/MainPage;
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 139
+    .line 137
     invoke-virtual {p0, v0}, Lcom/ningo/gk/Mid_level_ClearUp;->startActivity(Landroid/content/Intent;)V
 
-    .line 140
+    .line 138
     invoke-virtual {p0}, Lcom/ningo/gk/Mid_level_ClearUp;->finish()V
 
     goto :goto_c
 
-    .line 128
+    .line 126
     :pswitch_data_32
     .packed-switch 0x1
         :pswitch_11

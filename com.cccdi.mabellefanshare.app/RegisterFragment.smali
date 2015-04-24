@@ -36,14 +36,14 @@
 
     iput v0, p0, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;->type:I
 
-    .line 98
+    .line 100
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment$1;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment$1;-><init>(Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;)V
 
     iput-object v0, p0, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;->webChromeClient:Landroid/webkit/WebChromeClient;
 
-    .line 148
+    .line 150
     new-instance v0, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment$2;
 
     invoke-direct {v0, p0}, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment$2;-><init>(Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;)V
@@ -86,10 +86,10 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 184
+    .line 186
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onAttach(Landroid/app/Activity;)V
 
-    .line 185
+    .line 187
     return-void
 .end method
 
@@ -115,7 +115,7 @@
     const/4 v4, 0x1
 
     .line 59
-    const v2, 0x7f03005c
+    const v2, 0x7f03004d
 
     const/4 v3, 0x0
 
@@ -125,7 +125,7 @@
 
     .line 61
     .local v0, "v":Landroid/view/View;
-    const v2, 0x7f09016d
+    const v2, 0x7f090129
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -136,7 +136,7 @@
     iput-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;->progressBar:Landroid/widget/ProgressBar;
 
     .line 63
-    const v2, 0x7f09016c
+    const v2, 0x7f090128
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -177,12 +177,7 @@
 
     invoke-virtual {v2, v3}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 74
-    sget v2, Lcom/cccdi/mabellefanshare/AppApplication;->userType:I
-
-    packed-switch v2, :pswitch_data_60
-
-    .line 77
+    .line 95
     iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;->webView:Landroid/webkit/WebView;
 
     invoke-static {}, Lcom/cccdi/mabellefanshare/Constant;->getSignUpURL()Ljava/lang/String;
@@ -191,52 +186,17 @@
 
     invoke-virtual {v2, v3}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 95
-    :goto_4a
+    .line 97
     return-object v0
-
-    .line 81
-    :pswitch_4b
-    iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;->webView:Landroid/webkit/WebView;
-
-    invoke-static {}, Lcom/cccdi/mabellefanshare/Constant;->getFanSharerGeneralURL()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
-
-    goto :goto_4a
-
-    .line 86
-    :pswitch_55
-    iget-object v2, p0, Lcom/cccdi/mabellefanshare/fragment/RegisterFragment;->webView:Landroid/webkit/WebView;
-
-    invoke-static {}, Lcom/cccdi/mabellefanshare/Constant;->getFanSharerURL()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
-
-    goto :goto_4a
-
-    .line 74
-    nop
-
-    :pswitch_data_60
-    .packed-switch 0x1
-        :pswitch_4b
-        :pswitch_55
-        :pswitch_55
-    .end packed-switch
 .end method
 
 .method public onDetach()V
     .registers 1
 
     .prologue
-    .line 189
+    .line 191
     invoke-super {p0}, Landroid/support/v4/app/Fragment;->onDetach()V
 
-    .line 190
+    .line 192
     return-void
 .end method

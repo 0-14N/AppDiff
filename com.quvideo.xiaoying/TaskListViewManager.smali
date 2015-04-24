@@ -154,9 +154,9 @@
     iput-boolean v2, p0, Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;->x:Z
 
     .line 1059
-    new-instance v0, Laak;
+    new-instance v0, Ltr;
 
-    invoke-direct {v0, p0}, Laak;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;)V
+    invoke-direct {v0, p0}, Ltr;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;->y:Landroid/widget/AbsListView$OnScrollListener;
 
@@ -372,9 +372,9 @@
     const-string/jumbo v4, "video.change.permission"
 
     .line 604
-    new-instance v5, Laal;
+    new-instance v5, Lts;
 
-    invoke-direct {v5, p0, v0, p1, v1}, Laal;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;ZLcom/quvideo/xiaoying/common/VideoDetailInfo;I)V
+    invoke-direct {v5, p0, v0, p1, v1}, Lts;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;ZLcom/quvideo/xiaoying/common/VideoDetailInfo;I)V
 
     .line 602
     invoke-virtual {v3, v4, v5}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -444,11 +444,11 @@
     :cond_13
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
-    const v2, 0x7f0a0381
+    const v2, 0x7f0a035e
 
-    new-instance v3, Laas;
+    new-instance v3, Ltz;
 
-    invoke-direct {v3, p0, v0, p1}, Laas;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;Landroid/app/Activity;Lcom/quvideo/xiaoying/common/VideoDetailInfo;)V
+    invoke-direct {v3, p0, v0, p1}, Ltz;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;Landroid/app/Activity;Lcom/quvideo/xiaoying/common/VideoDetailInfo;)V
 
     invoke-direct {v1, v0, v2, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -500,9 +500,9 @@
     .line 633
     new-instance v2, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
-    new-instance v3, Laam;
+    new-instance v3, Ltt;
 
-    invoke-direct {v3, p0, v0, p1, p2}, Laam;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;Landroid/app/Activity;Lcom/quvideo/xiaoying/common/VideoDetailInfo;Ljava/lang/String;)V
+    invoke-direct {v3, p0, v0, p1, p2}, Ltt;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;Landroid/app/Activity;Lcom/quvideo/xiaoying/common/VideoDetailInfo;Ljava/lang/String;)V
 
     invoke-direct {v2, v0, v1, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -581,9 +581,9 @@
     move-result-object v4
 
     .line 809
-    new-instance v5, Laao;
+    new-instance v5, Ltv;
 
-    invoke-direct {v5, p0}, Laao;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;)V
+    invoke-direct {v5, p0}, Ltv;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;)V
 
     invoke-direct/range {v0 .. v5}, Lcom/quvideo/xiaoying/dialog/ComProgressDialog;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Landroid/view/View$OnClickListener;)V
 
@@ -593,9 +593,9 @@
     .line 819
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;->n:Lcom/quvideo/xiaoying/dialog/ComProgressDialog;
 
-    new-instance v1, Laap;
+    new-instance v1, Ltw;
 
-    invoke-direct {v1, p0}, Laap;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;)V
+    invoke-direct {v1, p0}, Ltw;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/dialog/ComProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -1232,7 +1232,7 @@
 
     .line 723
     :cond_107
-    new-instance v0, Laan;
+    new-instance v0, Ltu;
 
     new-instance v2, Landroid/os/Handler;
 
@@ -1244,7 +1244,7 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v6}, Laan;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;Landroid/os/Handler;Landroid/app/Activity;JLjava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Ltu;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;Landroid/os/Handler;Landroid/app/Activity;JLjava/lang/String;)V
 
     .line 787
     const-string/jumbo v1, "Download"
@@ -1359,9 +1359,9 @@
 
     const v2, 0x7f0a0162
 
-    new-instance v3, Laaq;
+    new-instance v3, Ltx;
 
-    invoke-direct {v3, p0, v0, p1}, Laaq;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;Landroid/app/Activity;Lcom/quvideo/xiaoying/common/VideoDetailInfo;)V
+    invoke-direct {v3, p0, v0, p1}, Ltx;-><init>(Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;Landroid/app/Activity;Lcom/quvideo/xiaoying/common/VideoDetailInfo;)V
 
     invoke-direct {v1, v0, v2, v3}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 
@@ -1604,7 +1604,7 @@
     invoke-virtual {v1}, Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshCustomScrollView;->onRefreshComplete()V
 
     .line 147
-    const v1, 0x7f0605d1
+    const v1, 0x7f0605bc
 
     invoke-virtual {p4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1615,7 +1615,7 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/app/studio/TaskListViewManager;->a:Landroid/widget/ListView;
 
     .line 148
-    const v1, 0x7f0605d0
+    const v1, 0x7f0605bb
 
     invoke-virtual {p4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

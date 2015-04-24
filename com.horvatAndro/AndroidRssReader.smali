@@ -179,27 +179,33 @@
     .registers 2
 
     .prologue
-    .line 417
+    .line 410
     invoke-direct {p0, p1}, Lcom/horvatAndro/AndroidRssReader;->loadFling(I)V
 
     return-void
 .end method
 
 .method private loadFling(I)V
-    .registers 11
+    .registers 14
     .param p1, "pos"    # I
 
     .prologue
-    const/4 v8, 0x1
-
     const/high16 v7, 0x10000
 
-    .line 419
+    const-string v11, "groupPosition"
+
+    const-string v10, "groupName"
+
+    const-string v9, "childrenNo"
+
+    const-string v8, "childPosition"
+
+    .line 412
     iget-boolean v5, p0, Lcom/horvatAndro/AndroidRssReader;->favorites:Z
 
-    if-eqz v5, :cond_29a
+    if-eqz v5, :cond_2a3
 
-    .line 421
+    .line 414
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
     iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
@@ -220,26 +226,26 @@
 
     move-result v5
 
-    if-eqz v5, :cond_28
+    if-eqz v5, :cond_2f
 
-    .line 422
+    .line 415
     new-instance v4, Landroid/content/Intent;
 
     const-class v5, Lcom/horvatAndro/TecajActivity;
 
     invoke-direct {v4, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 423
+    .line 416
     .local v4, "tl":Landroid/content/Intent;
     invoke-virtual {p0, v4}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
-    .line 553
+    .line 546
     .end local v4    # "tl":Landroid/content/Intent;
-    :goto_27
+    :goto_2e
     return-void
 
-    .line 424
-    :cond_28
+    .line 417
+    :cond_2f
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
     iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
@@ -260,24 +266,24 @@
 
     move-result v5
 
-    if-eqz v5, :cond_49
+    if-eqz v5, :cond_50
 
-    .line 425
+    .line 418
     new-instance v1, Landroid/content/Intent;
 
     const-class v5, Lcom/horvatAndro/DioniceActivity;
 
     invoke-direct {v1, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 426
+    .line 419
     .local v1, "dionice":Landroid/content/Intent;
     invoke-virtual {p0, v1}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_27
+    goto :goto_2e
 
-    .line 427
+    .line 420
     .end local v1    # "dionice":Landroid/content/Intent;
-    :cond_49
+    :cond_50
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
     iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
@@ -298,22 +304,22 @@
 
     move-result v5
 
-    if-eqz v5, :cond_bd
+    if-eqz v5, :cond_c4
 
-    .line 428
+    .line 421
     new-instance v3, Landroid/content/Intent;
 
     const-class v5, Lcom/horvatAndro/GoogleWeather;
 
     invoke-direct {v3, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 429
+    .line 422
     .local v3, "loadProg":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 430
+    .line 423
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v6, "feedURL"
 
@@ -353,7 +359,7 @@
 
     invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 431
+    .line 424
     const-string v6, "feedName"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -386,18 +392,18 @@
 
     invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 432
+    .line 425
     invoke-virtual {v3, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 433
+    .line 426
     invoke-virtual {p0, v3}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_27
+    goto/16 :goto_2e
 
-    .line 434
+    .line 427
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v3    # "loadProg":Landroid/content/Intent;
-    :cond_bd
+    :cond_c4
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
     iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
@@ -418,22 +424,22 @@
 
     move-result v5
 
-    if-eqz v5, :cond_fa
+    if-eqz v5, :cond_101
 
-    .line 435
+    .line 428
     new-instance v2, Landroid/content/Intent;
 
     const-class v5, Lcom/horvatAndro/WebViewActivity;
 
     invoke-direct {v2, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 436
+    .line 429
     .local v2, "loadLink":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 437
+    .line 430
     .restart local v0    # "bundle":Landroid/os/Bundle;
     const-string v6, "link"
 
@@ -453,18 +459,18 @@
 
     invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 438
+    .line 431
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 439
+    .line 432
     invoke-virtual {p0, v2}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_27
+    goto/16 :goto_2e
 
-    .line 440
+    .line 433
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v2    # "loadLink":Landroid/content/Intent;
-    :cond_fa
+    :cond_101
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
     iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
@@ -485,22 +491,22 @@
 
     move-result v5
 
-    if-eqz v5, :cond_137
+    if-eqz v5, :cond_13e
 
-    .line 441
+    .line 434
     new-instance v2, Landroid/content/Intent;
 
     const-class v5, Lcom/horvatAndro/NoAddWebViewActivity;
 
     invoke-direct {v2, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 442
+    .line 435
     .restart local v2    # "loadLink":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 443
+    .line 436
     .restart local v0    # "bundle":Landroid/os/Bundle;
     const-string v6, "link"
 
@@ -520,18 +526,18 @@
 
     invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 444
+    .line 437
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 445
+    .line 438
     invoke-virtual {p0, v2}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_27
+    goto/16 :goto_2e
 
-    .line 446
+    .line 439
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v2    # "loadLink":Landroid/content/Intent;
-    :cond_137
+    :cond_13e
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
     iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
@@ -552,22 +558,22 @@
 
     move-result v5
 
-    if-eqz v5, :cond_174
+    if-eqz v5, :cond_17b
 
-    .line 447
+    .line 440
     new-instance v2, Landroid/content/Intent;
 
     const-class v5, Lcom/horvatAndro/ChatViewActivity;
 
     invoke-direct {v2, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 448
+    .line 441
     .restart local v2    # "loadLink":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 449
+    .line 442
     .restart local v0    # "bundle":Landroid/os/Bundle;
     const-string v6, "link"
 
@@ -587,18 +593,109 @@
 
     invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 450
+    .line 443
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    .line 444
+    invoke-virtual {p0, v2}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_2e
+
+    .line 445
+    .end local v0    # "bundle":Landroid/os/Bundle;
+    .end local v2    # "loadLink":Landroid/content/Intent;
+    :cond_17b
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/horvatAndro/Link;
+
+    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getSource()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "tvprofil.net"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_21a
+
+    .line 446
+    new-instance v2, Landroid/content/Intent;
+
+    const-class v5, Lcom/horvatAndro/tvElistCBox;
+
+    invoke-direct {v2, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 447
+    .restart local v2    # "loadLink":Landroid/content/Intent;
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 448
+    .restart local v0    # "bundle":Landroid/os/Bundle;
+    const-string v5, "fav"
+
+    const/4 v6, 0x1
+
+    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 449
+    const-string v5, "topLink"
+
+    const-string v6, "Favoriti"
+
+    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 450
+    const-string v5, "groupName"
+
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/horvatAndro/Link;
+
+    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getGroupName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v10, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 451
-    invoke-virtual {p0, v2}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
+    const-string v6, "linkNo"
 
-    goto/16 :goto_27
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/horvatAndro/Link;
+
+    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getLinkNo()I
+
+    move-result v5
+
+    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 452
-    .end local v0    # "bundle":Landroid/os/Bundle;
-    .end local v2    # "loadLink":Landroid/content/Intent;
-    :cond_174
+    const-string v5, "groupPosition"
+
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
     iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
@@ -609,103 +706,14 @@
 
     check-cast v5, Lcom/horvatAndro/Link;
 
-    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getSource()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "tvprofil.net"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getGroupNo()I
 
     move-result v5
 
-    if-eqz v5, :cond_212
+    invoke-virtual {v0, v11, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 453
-    new-instance v2, Landroid/content/Intent;
-
-    const-class v5, Lcom/horvatAndro/tvElistCBox;
-
-    invoke-direct {v2, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 454
-    .restart local v2    # "loadLink":Landroid/content/Intent;
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    .line 455
-    .restart local v0    # "bundle":Landroid/os/Bundle;
-    const-string v5, "fav"
-
-    invoke-virtual {v0, v5, v8}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
-
-    .line 456
-    const-string v5, "topLink"
-
-    const-string v6, "Favoriti"
-
-    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 457
-    const-string v6, "groupName"
-
-    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
-
-    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/horvatAndro/Link;
-
-    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getGroupName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 458
-    const-string v6, "linkNo"
-
-    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
-
-    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/horvatAndro/Link;
-
-    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getLinkNo()I
-
-    move-result v5
-
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 459
-    const-string v6, "groupPosition"
-
-    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
-
-    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/horvatAndro/Link;
-
-    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getGroupNo()I
-
-    move-result v5
-
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 460
-    const-string v6, "childPosition"
+    const-string v5, "childPosition"
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
@@ -721,77 +729,79 @@
 
     move-result v5
 
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v8, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 461
+    .line 454
     const-string v5, "favPosition"
 
     invoke-virtual {v0, v5, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 462
+    .line 455
     const-string v5, "childrenNo"
 
-    iget-object v6, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
-    iget-object v6, v6, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
 
-    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 463
+    .line 456
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 465
+    .line 458
     iget v5, p0, Lcom/horvatAndro/AndroidRssReader;->favPosition:I
 
-    if-ge p1, v5, :cond_20a
+    if-ge p1, v5, :cond_212
 
-    .line 466
+    .line 459
     invoke-virtual {v2, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 468
-    :cond_20a
+    .line 461
+    :cond_212
     invoke-virtual {p0, v2}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
-    .line 469
+    .line 462
     invoke-virtual {p0}, Lcom/horvatAndro/AndroidRssReader;->finish()V
 
-    goto/16 :goto_27
+    goto/16 :goto_2e
 
-    .line 471
+    .line 464
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v2    # "loadLink":Landroid/content/Intent;
-    :cond_212
+    :cond_21a
     new-instance v2, Landroid/content/Intent;
 
     const-class v5, Lcom/horvatAndro/AndroidRssReader;
 
     invoke-direct {v2, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 472
+    .line 465
     .restart local v2    # "loadLink":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 473
+    .line 466
     .restart local v0    # "bundle":Landroid/os/Bundle;
     const-string v5, "fav"
 
-    invoke-virtual {v0, v5, v8}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+    const/4 v6, 0x1
 
-    .line 474
+    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 467
     const-string v5, "topLink"
 
     const-string v6, "Favoriti"
 
     invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 475
-    const-string v6, "groupName"
+    .line 468
+    const-string v5, "groupName"
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
@@ -807,9 +817,9 @@
 
     move-result-object v5
 
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v10, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 476
+    .line 469
     const-string v6, "linkNo"
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
@@ -828,8 +838,8 @@
 
     invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 477
-    const-string v6, "groupPosition"
+    .line 470
+    const-string v5, "groupPosition"
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
@@ -845,10 +855,10 @@
 
     move-result v5
 
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v11, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 478
-    const-string v6, "childPosition"
+    .line 471
+    const-string v5, "childPosition"
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
@@ -864,55 +874,55 @@
 
     move-result v5
 
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v8, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 479
+    .line 472
     const-string v5, "favPosition"
 
     invoke-virtual {v0, v5, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 480
+    .line 473
     const-string v5, "childrenNo"
 
-    iget-object v6, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
-    iget-object v6, v6, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->favoriteListItems:Ljava/util/ArrayList;
 
-    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 481
+    .line 474
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 483
+    .line 476
     iget v5, p0, Lcom/horvatAndro/AndroidRssReader;->favPosition:I
 
-    if-ge p1, v5, :cond_292
+    if-ge p1, v5, :cond_29b
 
-    .line 484
+    .line 477
     invoke-virtual {v2, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 486
-    :cond_292
+    .line 479
+    :cond_29b
     invoke-virtual {p0, v2}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
-    .line 487
+    .line 480
     invoke-virtual {p0}, Lcom/horvatAndro/AndroidRssReader;->finish()V
 
-    goto/16 :goto_27
+    goto/16 :goto_2e
 
-    .line 491
+    .line 484
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v2    # "loadLink":Landroid/content/Intent;
-    :cond_29a
+    :cond_2a3
     iget-boolean v5, p0, Lcom/horvatAndro/AndroidRssReader;->arhiva:Z
 
-    if-eqz v5, :cond_3c4
+    if-eqz v5, :cond_3cf
 
-    .line 493
+    .line 486
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
     iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
@@ -933,179 +943,183 @@
 
     move-result v5
 
-    if-eqz v5, :cond_33c
+    if-eqz v5, :cond_346
 
-    .line 494
+    .line 487
     new-instance v2, Landroid/content/Intent;
 
     const-class v5, Lcom/horvatAndro/tvElistCBox;
 
     invoke-direct {v2, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 495
+    .line 488
     .restart local v2    # "loadLink":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 489
+    .restart local v0    # "bundle":Landroid/os/Bundle;
+    const-string v5, "arh"
+
+    const/4 v6, 0x1
+
+    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 490
+    const-string v5, "topLink"
+
+    const-string v6, "Arhiva"
+
+    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 491
+    const-string v5, "groupName"
+
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/horvatAndro/Link;
+
+    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getGroupName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v10, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 492
+    const-string v6, "linkNo"
+
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/horvatAndro/Link;
+
+    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getLinkNo()I
+
+    move-result v5
+
+    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 493
+    const-string v5, "groupPosition"
+
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/horvatAndro/Link;
+
+    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getGroupNo()I
+
+    move-result v5
+
+    invoke-virtual {v0, v11, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 494
+    const-string v5, "childPosition"
+
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/horvatAndro/Link;
+
+    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getFeedNo()I
+
+    move-result v5
+
+    invoke-virtual {v0, v8, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 495
+    const-string v5, "arhPosition"
+
+    invoke-virtual {v0, v5, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 496
-    .restart local v0    # "bundle":Landroid/os/Bundle;
-    const-string v5, "arh"
+    const-string v5, "childrenNo"
 
-    invoke-virtual {v0, v5, v8}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    invoke-virtual {v0, v9, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 497
-    const-string v5, "topLink"
-
-    const-string v6, "Arhiva"
-
-    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 498
-    const-string v6, "groupName"
-
-    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
-
-    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/horvatAndro/Link;
-
-    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getGroupName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 499
-    const-string v6, "linkNo"
-
-    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
-
-    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/horvatAndro/Link;
-
-    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getLinkNo()I
-
-    move-result v5
-
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 500
-    const-string v6, "groupPosition"
-
-    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
-
-    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/horvatAndro/Link;
-
-    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getGroupNo()I
-
-    move-result v5
-
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 501
-    const-string v6, "childPosition"
-
-    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
-
-    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/horvatAndro/Link;
-
-    invoke-virtual {v5}, Lcom/horvatAndro/Link;->getFeedNo()I
-
-    move-result v5
-
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 502
-    const-string v5, "arhPosition"
-
-    invoke-virtual {v0, v5, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 503
-    const-string v5, "childrenNo"
-
-    iget-object v6, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
-
-    iget-object v6, v6, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
-
-    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
-
-    move-result v6
-
-    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 504
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 506
+    .line 499
     iget v5, p0, Lcom/horvatAndro/AndroidRssReader;->favPosition:I
 
-    if-ge p1, v5, :cond_334
+    if-ge p1, v5, :cond_33e
 
-    .line 507
+    .line 500
     invoke-virtual {v2, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 509
-    :cond_334
+    .line 502
+    :cond_33e
     invoke-virtual {p0, v2}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
-    .line 510
+    .line 503
     invoke-virtual {p0}, Lcom/horvatAndro/AndroidRssReader;->finish()V
 
-    goto/16 :goto_27
+    goto/16 :goto_2e
 
-    .line 514
+    .line 507
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v2    # "loadLink":Landroid/content/Intent;
-    :cond_33c
+    :cond_346
     new-instance v2, Landroid/content/Intent;
 
     const-class v5, Lcom/horvatAndro/AndroidRssReader;
 
     invoke-direct {v2, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 515
+    .line 508
     .restart local v2    # "loadLink":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 516
+    .line 509
     .restart local v0    # "bundle":Landroid/os/Bundle;
     const-string v5, "arh"
 
-    invoke-virtual {v0, v5, v8}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+    const/4 v6, 0x1
 
-    .line 517
+    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 510
     const-string v5, "topLink"
 
     const-string v6, "Arhiva"
 
     invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 518
-    const-string v6, "groupName"
+    .line 511
+    const-string v5, "groupName"
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
@@ -1121,9 +1135,9 @@
 
     move-result-object v5
 
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v10, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 519
+    .line 512
     const-string v6, "linkNo"
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
@@ -1142,8 +1156,8 @@
 
     invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 520
-    const-string v6, "groupPosition"
+    .line 513
+    const-string v5, "groupPosition"
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
@@ -1159,10 +1173,10 @@
 
     move-result v5
 
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v11, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 521
-    const-string v6, "childPosition"
+    .line 514
+    const-string v5, "childPosition"
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
@@ -1178,63 +1192,63 @@
 
     move-result v5
 
-    invoke-virtual {v0, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v8, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 522
+    .line 515
     const-string v5, "arhPosition"
 
     invoke-virtual {v0, v5, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 523
+    .line 516
     const-string v5, "childrenNo"
 
-    iget-object v6, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->appState:Lcom/horvatAndro/DataHolder;
 
-    iget-object v6, v6, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
+    iget-object v5, v5, Lcom/horvatAndro/DataHolder;->arhivaListItems:Ljava/util/ArrayList;
 
-    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 524
+    .line 517
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 526
+    .line 519
     iget v5, p0, Lcom/horvatAndro/AndroidRssReader;->favPosition:I
 
-    if-ge p1, v5, :cond_3bc
+    if-ge p1, v5, :cond_3c7
 
-    .line 527
+    .line 520
     invoke-virtual {v2, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 529
-    :cond_3bc
+    .line 522
+    :cond_3c7
     invoke-virtual {p0, v2}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
-    .line 530
+    .line 523
     invoke-virtual {p0}, Lcom/horvatAndro/AndroidRssReader;->finish()V
 
-    goto/16 :goto_27
+    goto/16 :goto_2e
 
-    .line 533
+    .line 526
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v2    # "loadLink":Landroid/content/Intent;
-    :cond_3c4
+    :cond_3cf
     new-instance v2, Landroid/content/Intent;
 
     const-class v5, Lcom/horvatAndro/AndroidRssReader;
 
     invoke-direct {v2, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 534
+    .line 527
     .restart local v2    # "loadLink":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 535
+    .line 528
     .restart local v0    # "bundle":Landroid/os/Bundle;
     const-string v5, "topLink"
 
@@ -1242,58 +1256,58 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 536
+    .line 529
     const-string v5, "groupName"
 
-    iget-object v6, p0, Lcom/horvatAndro/AndroidRssReader;->groupName:Ljava/lang/String;
+    iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->groupName:Ljava/lang/String;
 
-    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v10, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 537
+    .line 530
     const-string v5, "linkNo"
 
     iget v6, p0, Lcom/horvatAndro/AndroidRssReader;->linkNo:I
 
     invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 538
+    .line 531
     const-string v5, "groupPosition"
 
-    iget v6, p0, Lcom/horvatAndro/AndroidRssReader;->groupPosition:I
+    iget v5, p0, Lcom/horvatAndro/AndroidRssReader;->groupPosition:I
 
-    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v11, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 539
+    .line 532
     const-string v5, "childPosition"
 
-    invoke-virtual {v0, v5, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v8, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 540
+    .line 533
     const-string v5, "childrenNo"
 
-    iget v6, p0, Lcom/horvatAndro/AndroidRssReader;->childrenNo:I
+    iget v5, p0, Lcom/horvatAndro/AndroidRssReader;->childrenNo:I
 
-    invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 541
+    .line 534
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 543
+    .line 536
     iget v5, p0, Lcom/horvatAndro/AndroidRssReader;->childPosition:I
 
-    if-ge p1, v5, :cond_402
+    if-ge p1, v5, :cond_40d
 
-    .line 544
+    .line 537
     invoke-virtual {v2, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 546
-    :cond_402
+    .line 539
+    :cond_40d
     invoke-virtual {p0, v2}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
-    .line 547
+    .line 540
     invoke-virtual {p0}, Lcom/horvatAndro/AndroidRssReader;->finish()V
 
-    goto/16 :goto_27
+    goto/16 :goto_2e
 .end method
 
 
@@ -1313,7 +1327,7 @@
 
     const/4 v6, 0x0
 
-    .line 709
+    .line 702
     const/16 v4, 0xc
 
     new-array v1, v4, [Ljava/lang/String;
@@ -1380,7 +1394,7 @@
 
     aput-object v5, v1, v4
 
-    .line 710
+    .line 703
     .local v1, "mEng":[Ljava/lang/String;
     const/16 v4, 0xc
 
@@ -1448,7 +1462,7 @@
 
     aput-object v5, v2, v4
 
-    .line 711
+    .line 704
     .local v2, "mHr":[Ljava/lang/String;
     const-string v4, "GMT"
 
@@ -1458,7 +1472,7 @@
 
     move-result-object v3
 
-    .line 712
+    .line 705
     .local v3, "t":Ljava/lang/String;
     const-string v4, "Mon"
 
@@ -1468,7 +1482,7 @@
 
     move-result-object v3
 
-    .line 713
+    .line 706
     const-string v4, "Tue"
 
     const-string v5, "Uto"
@@ -1477,7 +1491,7 @@
 
     move-result-object v3
 
-    .line 714
+    .line 707
     const-string v4, "Wed"
 
     const-string v5, "Sri"
@@ -1486,7 +1500,7 @@
 
     move-result-object v3
 
-    .line 715
+    .line 708
     const-string v4, "Thu"
 
     const-string v5, "\u010cet"
@@ -1495,7 +1509,7 @@
 
     move-result-object v3
 
-    .line 716
+    .line 709
     const-string v4, "Fri"
 
     const-string v5, "Pet"
@@ -1504,7 +1518,7 @@
 
     move-result-object v3
 
-    .line 717
+    .line 710
     const-string v4, "Sat"
 
     const-string v5, "Sub"
@@ -1513,7 +1527,7 @@
 
     move-result-object v3
 
-    .line 718
+    .line 711
     const-string v4, "Sun"
 
     const-string v5, "Ned"
@@ -1522,7 +1536,7 @@
 
     move-result-object v3
 
-    .line 720
+    .line 713
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1531,7 +1545,7 @@
 
     if-lt v0, v4, :cond_14c
 
-    .line 724
+    .line 717
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -1554,7 +1568,7 @@
 
     if-eqz v4, :cond_eb
 
-    .line 725
+    .line 718
     const-string v4, "Z"
 
     const-string v5, ""
@@ -1563,7 +1577,7 @@
 
     move-result-object v3
 
-    .line 726
+    .line 719
     const-string v4, "T"
 
     const-string v5, " "
@@ -1572,7 +1586,7 @@
 
     move-result-object v3
 
-    .line 728
+    .line 721
     :cond_eb
     invoke-virtual {v3, v9}, Ljava/lang/String;->charAt(I)C
 
@@ -1590,7 +1604,7 @@
 
     if-eqz v4, :cond_10c
 
-    .line 729
+    .line 722
     const-string v4, "T"
 
     const-string v5, " "
@@ -1599,7 +1613,7 @@
 
     move-result-object v3
 
-    .line 730
+    .line 723
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -1610,7 +1624,7 @@
 
     move-result-object v3
 
-    .line 732
+    .line 725
     :cond_10c
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1656,7 +1670,7 @@
 
     if-eqz v4, :cond_158
 
-    .line 733
+    .line 726
     :cond_136
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1668,7 +1682,7 @@
 
     move-result-object v3
 
-    .line 737
+    .line 730
     :cond_13f
     :goto_13f
     const-string v4, "\\<.*?>"
@@ -1679,15 +1693,15 @@
 
     move-result-object v3
 
-    .line 738
+    .line 731
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 739
+    .line 732
     return-object v3
 
-    .line 721
+    .line 714
     :cond_14c
     aget-object v4, v1, v0
 
@@ -1697,12 +1711,12 @@
 
     move-result-object v3
 
-    .line 720
+    .line 713
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_c3
 
-    .line 734
+    .line 727
     :cond_158
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1748,7 +1762,7 @@
 
     if-eqz v4, :cond_13f
 
-    .line 735
+    .line 728
     :cond_182
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1764,22 +1778,30 @@
 .end method
 
 .method public cleanString(Ljava/lang/String;)Ljava/lang/String;
-    .registers 10
+    .registers 14
     .param p1, "pHTMLString"    # Ljava/lang/String;
 
     .prologue
-    const/4 v7, 0x1
+    const-string v11, "\u0161"
 
-    .line 577
+    const-string v10, " "
+
+    const-string v9, "\n"
+
+    const-string v8, "\'"
+
+    const-string v7, "\""
+
+    .line 570
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 579
+    .line 572
     .local v4, "t":Ljava/lang/String;
     iget v5, p0, Lcom/horvatAndro/AndroidRssReader;->imgCntr:I
 
-    if-nez v5, :cond_1c
+    if-nez v5, :cond_26
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
@@ -1789,27 +1811,29 @@
 
     move-result v5
 
-    if-eqz v5, :cond_1c
+    if-eqz v5, :cond_26
 
-    .line 580
-    iput v7, p0, Lcom/horvatAndro/AndroidRssReader;->imgCntr:I
+    .line 573
+    const/4 v5, 0x1
 
-    .line 581
+    iput v5, p0, Lcom/horvatAndro/AndroidRssReader;->imgCntr:I
+
+    .line 574
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->imgList:Ljava/util/ArrayList;
 
     const-string v6, "-"
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 585
-    :cond_1c
+    .line 578
+    :cond_26
     const-string v5, "<img"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
-    if-nez v5, :cond_2c
+    if-nez v5, :cond_36
 
     const-string v5, "&lt;img"
 
@@ -1817,10 +1841,10 @@
 
     move-result v5
 
-    if-eqz v5, :cond_10b
+    if-eqz v5, :cond_116
 
-    .line 587
-    :cond_2c
+    .line 580
+    :cond_36
     const-string v5, "src=\""
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -1829,21 +1853,21 @@
 
     add-int/lit8 v3, v5, 0x5
 
-    .line 588
+    .line 581
     .local v3, "start":I
     const-string v5, "\""
 
-    invoke-virtual {v4, v5, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
+    invoke-virtual {v4, v7, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 590
+    .line 583
     .local v0, "end":I
     const/4 v5, 0x4
 
-    if-ne v3, v5, :cond_4b
+    if-ne v3, v5, :cond_55
 
-    .line 591
+    .line 584
     const-string v5, "src=\'"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -1852,18 +1876,18 @@
 
     add-int/lit8 v3, v5, 0x5
 
-    .line 592
+    .line 585
     const-string v5, "\'"
 
-    invoke-virtual {v4, v5, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
+    invoke-virtual {v4, v8, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 595
-    :cond_4b
+    .line 588
+    :cond_55
     iget v5, p0, Lcom/horvatAndro/AndroidRssReader;->imgCntr:I
 
-    if-nez v5, :cond_10b
+    if-nez v5, :cond_116
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
@@ -1873,7 +1897,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_10b
+    if-nez v5, :cond_116
 
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
@@ -1883,20 +1907,20 @@
 
     move-result v5
 
-    if-nez v5, :cond_10b
+    if-nez v5, :cond_116
 
-    .line 596
+    .line 589
     invoke-virtual {v4, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 597
+    .line 590
     .local v1, "imgURL":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 600
+    .line 593
     .local v2, "lowerURL":Ljava/lang/String;
     const-string v5, "resize.aspx"
 
@@ -1904,7 +1928,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_9c
+    if-eqz v5, :cond_a6
 
     const-string v5, "she.hr"
 
@@ -1912,9 +1936,9 @@
 
     move-result v5
 
-    if-eqz v5, :cond_9c
+    if-eqz v5, :cond_a6
 
-    .line 601
+    .line 594
     const-string v5, "resize.aspx?filename="
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -1923,14 +1947,14 @@
 
     add-int/lit8 v3, v5, 0x15
 
-    .line 602
+    .line 595
     const-string v5, "&"
 
     invoke-virtual {v1, v5, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 603
+    .line 596
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "http://www.she.hr/UserDocsImages/"
@@ -1949,15 +1973,15 @@
 
     move-result-object v1
 
-    .line 605
-    :cond_9c
+    .line 598
+    :cond_a6
     const-string v5, "imgSizer.aspx"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_bc
+    if-eqz v5, :cond_c6
 
     const-string v5, "budi.in"
 
@@ -1965,9 +1989,9 @@
 
     move-result v5
 
-    if-eqz v5, :cond_bc
+    if-eqz v5, :cond_c6
 
-    .line 606
+    .line 599
     const-string v5, "w=120"
 
     const-string v6, "w=240"
@@ -1976,7 +2000,7 @@
 
     move-result-object v1
 
-    .line 607
+    .line 600
     const-string v5, "h=80"
 
     const-string v6, "h=160"
@@ -1985,17 +2009,17 @@
 
     move-result-object v1
 
-    .line 609
-    :cond_bc
+    .line 602
+    :cond_c6
     const-string v5, "centarnekretnina.net/user-images/classifieds/"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_cc
+    if-eqz v5, :cond_d6
 
-    .line 610
+    .line 603
     const-string v5, "classifieds/"
 
     const-string v6, "classifieds/1150000/"
@@ -2004,24 +2028,24 @@
 
     move-result-object v1
 
-    .line 612
-    :cond_cc
+    .line 605
+    :cond_d6
     const-string v5, " "
 
-    const-string v6, "%20"
+    const-string v5, "%20"
 
-    invoke-virtual {v1, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v1, v10, v5}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 614
+    .line 607
     const-string v5, "www."
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
-    if-nez v5, :cond_e4
+    if-nez v5, :cond_ee
 
     const-string v5, "http://"
 
@@ -2029,16 +2053,16 @@
 
     move-result v5
 
-    if-eqz v5, :cond_10b
+    if-eqz v5, :cond_116
 
-    :cond_e4
+    :cond_ee
     const-string v5, "jpg"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
-    if-nez v5, :cond_104
+    if-nez v5, :cond_10e
 
     const-string v5, "gif"
 
@@ -2046,7 +2070,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_104
+    if-nez v5, :cond_10e
 
     const-string v5, "png"
 
@@ -2054,7 +2078,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_104
+    if-nez v5, :cond_10e
 
     const-string v5, "budi.in"
 
@@ -2062,23 +2086,25 @@
 
     move-result v5
 
-    if-eqz v5, :cond_10b
+    if-eqz v5, :cond_116
 
-    .line 615
-    :cond_104
+    .line 608
+    :cond_10e
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->imgList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 616
-    iput v7, p0, Lcom/horvatAndro/AndroidRssReader;->imgCntr:I
+    .line 609
+    const/4 v5, 0x1
 
-    .line 621
+    iput v5, p0, Lcom/horvatAndro/AndroidRssReader;->imgCntr:I
+
+    .line 614
     .end local v0    # "end":I
     .end local v1    # "imgURL":Ljava/lang/String;
     .end local v2    # "lowerURL":Ljava/lang/String;
     .end local v3    # "start":I
-    :cond_10b
+    :cond_116
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "burzarada"
@@ -2087,9 +2113,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 622
+    .line 615
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "hak.hr"
@@ -2098,9 +2124,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 623
+    .line 616
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "index.hr/sport"
@@ -2109,9 +2135,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 624
+    .line 617
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "index.hr/xmag"
@@ -2120,9 +2146,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 625
+    .line 618
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "hrsport"
@@ -2131,9 +2157,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 626
+    .line 619
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "crochef"
@@ -2142,9 +2168,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 627
+    .line 620
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "MojPosao"
@@ -2153,9 +2179,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 628
+    .line 621
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "osijek031.com"
@@ -2164,9 +2190,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 629
+    .line 622
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "www.r-1.hr"
@@ -2175,9 +2201,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 630
+    .line 623
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "sbonline.net"
@@ -2186,9 +2212,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 631
+    .line 624
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "sibenik-hr.info"
@@ -2197,9 +2223,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 632
+    .line 625
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "glas-slavonije.hr"
@@ -2208,9 +2234,9 @@
 
     move-result v5
 
-    if-nez v5, :cond_18d
+    if-nez v5, :cond_198
 
-    .line 633
+    .line 626
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "dubrovnikportal.com"
@@ -2219,15 +2245,15 @@
 
     move-result v5
 
-    if-eqz v5, :cond_205
+    if-eqz v5, :cond_210
 
-    .line 634
-    :cond_18d
+    .line 627
+    :cond_198
     invoke-static {v4}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 635
+    .line 628
     const-string v5, "%C2%8E"
 
     const-string v6, "\u017d"
@@ -2236,7 +2262,7 @@
 
     move-result-object v4
 
-    .line 636
+    .line 629
     const-string v5, "%C2%AE"
 
     const-string v6, "\u017d"
@@ -2245,7 +2271,7 @@
 
     move-result-object v4
 
-    .line 637
+    .line 630
     const-string v5, "%C2%BE"
 
     const-string v6, "\u017e"
@@ -2254,7 +2280,7 @@
 
     move-result-object v4
 
-    .line 638
+    .line 631
     const-string v5, "%C2%9E"
 
     const-string v6, "\u017e"
@@ -2263,7 +2289,7 @@
 
     move-result-object v4
 
-    .line 639
+    .line 632
     const-string v5, "%C3%88"
 
     const-string v6, "\u010c"
@@ -2272,7 +2298,7 @@
 
     move-result-object v4
 
-    .line 640
+    .line 633
     const-string v5, "%C3%A8"
 
     const-string v6, "\u010d"
@@ -2281,7 +2307,7 @@
 
     move-result-object v4
 
-    .line 641
+    .line 634
     const-string v5, "%C3%86"
 
     const-string v6, "\u0106"
@@ -2290,7 +2316,7 @@
 
     move-result-object v4
 
-    .line 642
+    .line 635
     const-string v5, "%C3%A6"
 
     const-string v6, "\u0107"
@@ -2299,7 +2325,7 @@
 
     move-result-object v4
 
-    .line 643
+    .line 636
     const-string v5, "%C3%90"
 
     const-string v6, "\u0110"
@@ -2308,7 +2334,7 @@
 
     move-result-object v4
 
-    .line 644
+    .line 637
     const-string v5, "%C3%B0"
 
     const-string v6, "\u0111"
@@ -2317,7 +2343,7 @@
 
     move-result-object v4
 
-    .line 645
+    .line 638
     const-string v5, "%C2%8A"
 
     const-string v6, "\u0160"
@@ -2326,7 +2352,7 @@
 
     move-result-object v4
 
-    .line 646
+    .line 639
     const-string v5, "%C2%A9"
 
     const-string v6, "\u0160"
@@ -2335,31 +2361,31 @@
 
     move-result-object v4
 
-    .line 647
+    .line 640
     const-string v5, "%C2%B9"
 
     const-string v6, "\u0161"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v11}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 648
+    .line 641
     const-string v5, "%C2%9A"
 
     const-string v6, "\u0161"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v11}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 649
+    .line 642
     invoke-static {v4}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 652
-    :cond_205
+    .line 645
+    :cond_210
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "mmfino"
@@ -2368,19 +2394,19 @@
 
     move-result v5
 
-    if-eqz v5, :cond_217
+    if-eqz v5, :cond_222
 
-    .line 653
+    .line 646
     const-string v5, "<br />"
 
     const-string v6, "\n"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v9}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 656
-    :cond_217
+    .line 649
+    :cond_222
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "tortekolaci.com"
@@ -2389,19 +2415,19 @@
 
     move-result v5
 
-    if-eqz v5, :cond_229
+    if-eqz v5, :cond_234
 
-    .line 657
+    .line 650
     const-string v5, "\n"
 
-    const-string v6, " "
+    const-string v5, " "
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v9, v10}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 660
-    :cond_229
+    .line 653
+    :cond_234
     iget-object v5, p0, Lcom/horvatAndro/AndroidRssReader;->feedURL:Ljava/lang/String;
 
     const-string v6, "tvprofil"
@@ -2410,18 +2436,18 @@
 
     move-result v5
 
-    if-nez v5, :cond_387
+    if-nez v5, :cond_392
 
-    .line 661
+    .line 654
     const-string v5, "<p>"
 
     const-string v6, "\n"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v9}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 662
+    .line 655
     const-string v5, "<li>"
 
     const-string v6, "\n- "
@@ -2430,7 +2456,7 @@
 
     move-result-object v4
 
-    .line 663
+    .line 656
     const-string v5, "\\<.*?>"
 
     const-string v6, ""
@@ -2439,102 +2465,102 @@
 
     move-result-object v4
 
-    .line 664
+    .line 657
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 665
+    .line 658
     const-string v5, "&amp;amp;quot;"
 
     const-string v6, "\""
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 666
+    .line 659
     const-string v5, "&quot;"
 
     const-string v6, "\""
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 667
+    .line 660
     const-string v5, "&sbquo;"
 
     const-string v6, "\""
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 668
+    .line 661
     const-string v5, "&rdquo;"
 
     const-string v6, "\""
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 669
+    .line 662
     const-string v5, "&bdquo;"
 
     const-string v6, "\""
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 670
+    .line 663
     const-string v5, "&ldquo;"
 
     const-string v6, "\""
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 671
+    .line 664
     const-string v5, "&rsaquo;"
 
     const-string v6, "\""
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 672
+    .line 665
     const-string v5, "&lsaquo;"
 
     const-string v6, "\""
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 673
+    .line 666
     const-string v5, "&raquo;"
 
     const-string v6, "\""
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 674
+    .line 667
     const-string v5, "&laquo;"
 
     const-string v6, "\""
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 675
+    .line 668
     const-string v5, "&ndash;"
 
     const-string v6, "-"
@@ -2543,25 +2569,25 @@
 
     move-result-object v4
 
-    .line 676
+    .line 669
     const-string v5, "&scaron;"
 
     const-string v6, "\u0161"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v11}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 677
+    .line 670
     const-string v5, "&Scaron;"
 
     const-string v6, "\u0161"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v11}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 678
+    .line 671
     const-string v5, "&#382;"
 
     const-string v6, "\u017e"
@@ -2570,7 +2596,7 @@
 
     move-result-object v4
 
-    .line 679
+    .line 672
     const-string v5, "&#268;"
 
     const-string v6, "\u010d"
@@ -2579,7 +2605,7 @@
 
     move-result-object v4
 
-    .line 680
+    .line 673
     const-string v5, "&#269;"
 
     const-string v6, "\u010d"
@@ -2588,7 +2614,7 @@
 
     move-result-object v4
 
-    .line 681
+    .line 674
     const-string v5, "&#262;"
 
     const-string v6, "\u0106"
@@ -2597,7 +2623,7 @@
 
     move-result-object v4
 
-    .line 682
+    .line 675
     const-string v5, "&#263;"
 
     const-string v6, "\u0107"
@@ -2606,7 +2632,7 @@
 
     move-result-object v4
 
-    .line 683
+    .line 676
     const-string v5, "&#382;"
 
     const-string v6, "\u017e"
@@ -2615,7 +2641,7 @@
 
     move-result-object v4
 
-    .line 684
+    .line 677
     const-string v5, "&#138;"
 
     const-string v6, "\u0160"
@@ -2624,7 +2650,7 @@
 
     move-result-object v4
 
-    .line 685
+    .line 678
     const-string v5, "&#142;"
 
     const-string v6, "\u017d"
@@ -2633,7 +2659,7 @@
 
     move-result-object v4
 
-    .line 686
+    .line 679
     const-string v5, "&#381;"
 
     const-string v6, "\u017d"
@@ -2642,7 +2668,7 @@
 
     move-result-object v4
 
-    .line 687
+    .line 680
     const-string v5, "&#272;"
 
     const-string v6, "\u0110"
@@ -2651,7 +2677,7 @@
 
     move-result-object v4
 
-    .line 688
+    .line 681
     const-string v5, "&#273;"
 
     const-string v6, "\u0111"
@@ -2660,34 +2686,34 @@
 
     move-result-object v4
 
-    .line 689
+    .line 682
     const-string v5, "&#8216;"
 
     const-string v6, "\'"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 690
+    .line 683
     const-string v5, "&#8217;"
 
     const-string v6, "\'"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 691
+    .line 684
     const-string v5, "&#8220;"
 
     const-string v6, "\'"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 692
+    .line 685
     const-string v5, "&#8230;"
 
     const-string v6, "..."
@@ -2696,16 +2722,16 @@
 
     move-result-object v4
 
-    .line 693
+    .line 686
     const-string v5, "&#8221;"
 
     const-string v6, "\'"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 694
+    .line 687
     const-string v5, "&#8211;"
 
     const-string v6, "-"
@@ -2714,25 +2740,25 @@
 
     move-result-object v4
 
-    .line 695
+    .line 688
     const-string v5, "\\&#039;"
 
     const-string v6, "\'"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 696
+    .line 689
     const-string v5, "&apos;"
 
     const-string v6, "\'"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 697
+    .line 690
     const-string v5, "&amp;"
 
     const-string v6, "&"
@@ -2741,43 +2767,43 @@
 
     move-result-object v4
 
-    .line 698
+    .line 691
     const-string v5, "&#39;"
 
     const-string v6, "\'"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 699
+    .line 692
     const-string v5, "&#039;"
 
     const-string v6, "\'"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 700
+    .line 693
     const-string v5, "&nbsp;"
 
     const-string v6, " "
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v10}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 701
+    .line 694
     const-string v5, "[info]"
 
     const-string v6, " "
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v10}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 702
+    .line 695
     const-string v5, "&hellip;"
 
     const-string v6, "."
@@ -2786,17 +2812,17 @@
 
     move-result-object v4
 
-    .line 703
+    .line 696
     const-string v5, "\n"
 
-    const-string v6, "<br>"
+    const-string v5, "<br>"
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v9, v5}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 705
-    :cond_387
+    .line 698
+    :cond_392
     return-object v4
 .end method
 
@@ -3405,7 +3431,7 @@
     .line 237
     invoke-virtual {v11}, Lcom/horvatAndro/MyProgressDialog;->dismiss()V
 
-    .line 353
+    .line 346
     .end local v14    # "toast":Landroid/widget/Toast;
     :goto_233
     const v17, 0x7f090036
@@ -3420,7 +3446,7 @@
 
     check-cast v7, Landroid/widget/ImageButton;
 
-    .line 354
+    .line 347
     .local v7, "buttonPrev":Landroid/widget/ImageButton;
     new-instance v17, Lcom/horvatAndro/AndroidRssReader$4;
 
@@ -3436,7 +3462,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 377
+    .line 370
     const v17, 0x7f090037
 
     move-object/from16 v0, p0
@@ -3449,7 +3475,7 @@
 
     check-cast v6, Landroid/widget/ImageButton;
 
-    .line 378
+    .line 371
     .local v6, "buttonNext":Landroid/widget/ImageButton;
     new-instance v17, Lcom/horvatAndro/AndroidRssReader$5;
 
@@ -3465,7 +3491,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 402
+    .line 395
     const v17, 0x7f090001
 
     move-object/from16 v0, p0
@@ -3478,7 +3504,7 @@
 
     check-cast v9, Landroid/widget/ImageButton;
 
-    .line 403
+    .line 396
     .local v9, "homeBtn":Landroid/widget/ImageButton;
     new-instance v17, Lcom/horvatAndro/AndroidRssReader$6;
 
@@ -3494,7 +3520,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 410
+    .line 403
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/horvatAndro/AndroidRssReader;->childrenNo:I
@@ -3509,7 +3535,7 @@
 
     if-ne v0, v1, :cond_2a5
 
-    .line 411
+    .line 404
     const/16 v17, 0x8
 
     move-object v0, v6
@@ -3518,7 +3544,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 412
+    .line 405
     const/16 v17, 0x8
 
     move-object v0, v7
@@ -3527,7 +3553,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 415
+    .line 408
     :cond_2a5
     return-void
 
@@ -4254,12 +4280,12 @@
 
     invoke-direct {v0, v1, v2}, Lcom/horvatAndro/AndroidRssReader$2;-><init>(Lcom/horvatAndro/AndroidRssReader;Lcom/horvatAndro/MyProgressDialog;)V
 
-    .line 319
+    .line 312
     invoke-virtual/range {v17 .. v17}, Lcom/horvatAndro/AndroidRssReader$2;->start()V
     :try_end_53a
     .catch Ljava/lang/Exception; {:try_start_52d .. :try_end_53a} :catch_54c
 
-    .line 325
+    .line 318
     :goto_53a
     invoke-virtual/range {p0 .. p0}, Lcom/horvatAndro/AndroidRssReader;->getListView()Landroid/widget/ListView;
 
@@ -4277,7 +4303,7 @@
 
     goto/16 :goto_233
 
-    .line 321
+    .line 314
     :catch_54c
     move-exception v17
 
@@ -4289,18 +4315,18 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 953
+    .line 946
     invoke-virtual {p0}, Lcom/horvatAndro/AndroidRssReader;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v0
 
-    .line 954
+    .line 947
     .local v0, "inflater":Landroid/view/MenuInflater;
     const/high16 v1, 0x7f080000
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    .line 955
+    .line 948
     const/4 v1, 0x1
 
     return v1
@@ -4313,14 +4339,14 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 961
+    .line 954
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v6
 
     packed-switch v6, :pswitch_data_6e
 
-    .line 987
+    .line 980
     invoke-super {p0, p1}, Landroid/app/ListActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v6
@@ -4328,7 +4354,7 @@
     :goto_c
     return v6
 
-    .line 963
+    .line 956
     :pswitch_d
     new-instance v0, Landroid/content/Intent;
 
@@ -4340,16 +4366,16 @@
 
     invoke-direct {v0, v6, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 964
+    .line 957
     .local v0, "arhiva":Landroid/content/Intent;
     invoke-virtual {p0, v0}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
     move v6, v8
 
-    .line 965
+    .line 958
     goto :goto_c
 
-    .line 967
+    .line 960
     .end local v0    # "arhiva":Landroid/content/Intent;
     :pswitch_1d
     new-instance v2, Landroid/content/Intent;
@@ -4362,16 +4388,16 @@
 
     invoke-direct {v2, v6, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 968
+    .line 961
     .local v2, "home":Landroid/content/Intent;
     invoke-virtual {p0, v2}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
     move v6, v8
 
-    .line 969
+    .line 962
     goto :goto_c
 
-    .line 971
+    .line 964
     .end local v2    # "home":Landroid/content/Intent;
     :pswitch_2d
     new-instance v3, Landroid/content/Intent;
@@ -4384,16 +4410,16 @@
 
     invoke-direct {v3, v6, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 972
+    .line 965
     .local v3, "imp":Landroid/content/Intent;
     invoke-virtual {p0, v3}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
     move v6, v8
 
-    .line 973
+    .line 966
     goto :goto_c
 
-    .line 975
+    .line 968
     .end local v3    # "imp":Landroid/content/Intent;
     :pswitch_3d
     new-instance v5, Landroid/content/Intent;
@@ -4406,16 +4432,16 @@
 
     invoke-direct {v5, v6, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 976
+    .line 969
     .local v5, "prefs":Landroid/content/Intent;
     invoke-virtual {p0, v5}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
     move v6, v8
 
-    .line 977
+    .line 970
     goto :goto_c
 
-    .line 979
+    .line 972
     .end local v5    # "prefs":Landroid/content/Intent;
     :pswitch_4d
     new-instance v4, Landroid/content/Intent;
@@ -4428,16 +4454,16 @@
 
     invoke-direct {v4, v6, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 980
+    .line 973
     .local v4, "links":Landroid/content/Intent;
     invoke-virtual {p0, v4}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
     move v6, v8
 
-    .line 981
+    .line 974
     goto :goto_c
 
-    .line 983
+    .line 976
     .end local v4    # "links":Landroid/content/Intent;
     :pswitch_5d
     new-instance v1, Landroid/content/Intent;
@@ -4450,16 +4476,16 @@
 
     invoke-direct {v1, v6, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 984
+    .line 977
     .local v1, "favs":Landroid/content/Intent;
     invoke-virtual {p0, v1}, Lcom/horvatAndro/AndroidRssReader;->startActivity(Landroid/content/Intent;)V
 
     move v6, v8
 
-    .line 985
+    .line 978
     goto :goto_c
 
-    .line 961
+    .line 954
     nop
 
     :pswitch_data_6e
@@ -4478,27 +4504,27 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 556
+    .line 549
     const-string v1, ""
 
-    .line 557
+    .line 550
     .local v1, "msg":Ljava/lang/String;
     if-nez p1, :cond_1c
 
-    .line 558
+    .line 551
     const-string v1, "Za u\u010ditavanje sadr\u017eaja potrebna je internet veza!"
 
-    .line 566
+    .line 559
     :goto_6
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 567
+    .line 560
     .local v0, "alertbox":Landroid/app/AlertDialog$Builder;
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 568
+    .line 561
     const-string v2, "OK"
 
     new-instance v3, Lcom/horvatAndro/AndroidRssReader$7;
@@ -4507,25 +4533,25 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setNeutralButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 573
+    .line 566
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 574
+    .line 567
     return-void
 
-    .line 559
+    .line 552
     .end local v0    # "alertbox":Landroid/app/AlertDialog$Builder;
     :cond_1c
     const/4 v2, 0x5
 
     if-ne p1, v2, :cond_22
 
-    .line 560
+    .line 553
     const-string v1, "U\u010ditani \u010dlanci imaju gre\u0161ku. Andro \u0107e bez obzira poku\u0161ati prikazati sadr\u017eaj."
 
     goto :goto_6
 
-    .line 562
+    .line 555
     :cond_22
     const-string v1, "\u017dao mi je, do\u0161lo je do gre\u0161ke pri u\u010ditavanju sadr\u017eaja."
 

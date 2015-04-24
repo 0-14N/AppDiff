@@ -58,130 +58,33 @@
     .registers 2
 
     .prologue
-    .line 32
+    .line 28
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 35
+    .line 31
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sysapk/weighter/ResultActivity;->dataListAd:Ljava/util/List;
 
-    .line 32
+    .line 28
     return-void
-.end method
-
-.method static synthetic access$0(Lcom/sysapk/weighter/ResultActivity;)Ljava/util/List;
-    .registers 2
-
-    .prologue
-    .line 35
-    iget-object v0, p0, Lcom/sysapk/weighter/ResultActivity;->dataListAd:Ljava/util/List;
-
-    return-object v0
 .end method
 
 .method private initAd()V
-    .registers 4
+    .registers 1
 
     .prologue
-    .line 140
-    const v1, 0x7f08001c
-
-    invoke-virtual {p0, v1}, Lcom/sysapk/weighter/ResultActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ListView;
-
-    iput-object v1, p0, Lcom/sysapk/weighter/ResultActivity;->listView2:Landroid/widget/ListView;
-
-    .line 142
-    sget-boolean v1, Lcom/sysapk/weighter/MainActivity;->isCloseBoy:Z
-
-    if-nez v1, :cond_48
-
-    sget-object v1, Lcom/sysapk/weighter/MainActivity;->goodBoy:Ljava/lang/String;
-
-    const-string v2, "1"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_48
-
-    .line 143
-    iget-object v1, p0, Lcom/sysapk/weighter/ResultActivity;->listView2:Landroid/widget/ListView;
-
-    new-instance v2, Lcom/sysapk/weighter/ResultActivity$1;
-
-    invoke-direct {v2, p0}, Lcom/sysapk/weighter/ResultActivity$1;-><init>(Lcom/sysapk/weighter/ResultActivity;)V
-
-    invoke-virtual {v1, v2}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    .line 167
-    invoke-direct {p0}, Lcom/sysapk/weighter/ResultActivity;->initDataListAd()V
-
-    .line 169
-    iget-object v1, p0, Lcom/sysapk/weighter/ResultActivity;->dataListAd:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-lez v1, :cond_40
-
-    .line 170
-    iget-object v1, p0, Lcom/sysapk/weighter/ResultActivity;->listView2:Landroid/widget/ListView;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/widget/ListView;->setVisibility(I)V
-
-    .line 171
-    new-instance v0, Lcom/sysapk/weighter/ResultActivity$ImageListAdapter;
-
-    iget-object v1, p0, Lcom/sysapk/weighter/ResultActivity;->dataListAd:Ljava/util/List;
-
-    invoke-direct {v0, p0, v1}, Lcom/sysapk/weighter/ResultActivity$ImageListAdapter;-><init>(Landroid/content/Context;Ljava/util/List;)V
-
-    .line 172
-    .local v0, "adapterAd":Lcom/sysapk/weighter/ResultActivity$ImageListAdapter;
-    iget-object v1, p0, Lcom/sysapk/weighter/ResultActivity;->listView2:Landroid/widget/ListView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
-
     .line 176
-    .end local v0    # "adapterAd":Lcom/sysapk/weighter/ResultActivity$ImageListAdapter;
-    :cond_40
-    invoke-static {p0}, Lcom/sysapk/comm/AppConnect;->getInstance(Landroid/content/Context;)Lcom/sysapk/comm/AppConnect;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Lcom/sysapk/comm/AppConnect;->showPopAd(Landroid/content/Context;)V
-
-    .line 180
-    :goto_47
     return-void
-
-    .line 178
-    :cond_48
-    iget-object v1, p0, Lcom/sysapk/weighter/ResultActivity;->listView2:Landroid/widget/ListView;
-
-    const/16 v2, 0x8
-
-    invoke-virtual {v1, v2}, Landroid/widget/ListView;->setVisibility(I)V
-
-    goto :goto_47
 .end method
 
 .method private initDataListAd()V
     .registers 7
 
     .prologue
-    .line 183
+    .line 179
     iget-object v3, p0, Lcom/sysapk/weighter/ResultActivity;->dataListAd:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
@@ -190,17 +93,17 @@
 
     if-lez v3, :cond_9
 
-    .line 209
+    .line 205
     :goto_8
     return-void
 
-    .line 188
+    .line 184
     :cond_9
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 189
+    .line 185
     .local v0, "mapt":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v3, "image"
 
@@ -216,38 +119,38 @@
 
     invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 190
+    .line 186
     const-string v3, "textViewName"
 
     const-string v4, "Wifi\u4fe1\u53f7\u589e\u5668"
 
     invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 191
+    .line 187
     const-string v3, "textViewInfo"
 
     const-string v4, "\u63d0\u5347\u7f51\u901f100%\uff0c\u4e0b\u8f7d\u6162\uff1f\u8d76\u5feb\u8bd5\u8bd5\u5427"
 
     invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 192
+    .line 188
     const-string v3, "adId"
 
     const-string v4, "0"
 
     invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 193
+    .line 189
     iget-object v3, p0, Lcom/sysapk/weighter/ResultActivity;->dataListAd:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 195
+    .line 191
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 196
+    .line 192
     .local v1, "mapt1":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v3, "image"
 
@@ -263,38 +166,38 @@
 
     invoke-interface {v1, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 197
+    .line 193
     const-string v3, "textViewName"
 
     const-string v4, "\u624b\u673a\u4fe1\u53f7\u589e\u5f3a\u5668"
 
     invoke-interface {v1, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
+    .line 194
     const-string v3, "textViewInfo"
 
     const-string v4, "\u663e\u8457\u63d0\u9ad8\u901a\u8bdd\u8d28\u91cf\uff0c\u76d1\u63a7\u4fe1\u53f7\u5f3a\u5ea6"
 
     invoke-interface {v1, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 199
+    .line 195
     const-string v3, "adId"
 
     const-string v4, "1"
 
     invoke-interface {v1, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 200
+    .line 196
     iget-object v3, p0, Lcom/sysapk/weighter/ResultActivity;->dataListAd:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 202
+    .line 198
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 203
+    .line 199
     .local v2, "mapt2":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v3, "image"
 
@@ -310,28 +213,28 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 204
+    .line 200
     const-string v3, "textViewName"
 
     const-string v4, "\u514d\u8d39\u6fc0\u6d3b\u5e94\u7528\uff0c\u5220\u9664\u5e7f\u544a"
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 205
+    .line 201
     const-string v3, "textViewInfo"
 
     const-string v4, "\u6fc0\u6d3b\u540e\u5c06\u6c38\u4e45\u5173\u95ed\u5168\u90e8\u5e7f\u544a\u3002"
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 206
+    .line 202
     const-string v3, "adId"
 
     const-string v4, "2"
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 207
+    .line 203
     iget-object v3, p0, Lcom/sysapk/weighter/ResultActivity;->dataListAd:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -346,10 +249,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 126
+    .line 122
     invoke-virtual {p0}, Lcom/sysapk/weighter/ResultActivity;->finish()V
 
-    .line 127
+    .line 123
     return-void
 .end method
 
@@ -358,27 +261,27 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 130
+    .line 126
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.SEND"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 132
+    .line 128
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "text/plain"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 133
+    .line 129
     const-string v1, "android.intent.extra.SUBJECT"
 
     const-string v2, "\u624b\u673a\u6807\u51c6\u79f0"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 134
+    .line 130
     const-string v1, "android.intent.extra.TEXT"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -405,7 +308,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 135
+    .line 131
     invoke-virtual {p0}, Lcom/sysapk/weighter/ResultActivity;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -416,7 +319,7 @@
 
     invoke-virtual {p0, v1}, Lcom/sysapk/weighter/ResultActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 136
+    .line 132
     return-void
 .end method
 
@@ -431,20 +334,20 @@
 
     const/4 v11, 0x2
 
-    .line 57
+    .line 53
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 59
+    .line 55
     const v7, 0x7f030002
 
     invoke-virtual {p0, v7}, Lcom/sysapk/weighter/ResultActivity;->setContentView(I)V
 
-    .line 61
+    .line 57
     const-string v7, "ResultActivity onCreate."
 
     invoke-static {p0, v7}, Lcom/sysapk/weighter/MainActivity;->checkWhite(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 64
+    .line 60
     const v7, 0x7f080012
 
     invoke-virtual {p0, v7}, Lcom/sysapk/weighter/ResultActivity;->findViewById(I)Landroid/view/View;
@@ -455,7 +358,7 @@
 
     iput-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtPhoneWeight:Landroid/widget/TextView;
 
-    .line 65
+    .line 61
     const v7, 0x7f080013
 
     invoke-virtual {p0, v7}, Lcom/sysapk/weighter/ResultActivity;->findViewById(I)Landroid/view/View;
@@ -466,7 +369,7 @@
 
     iput-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtBaifenbi:Landroid/widget/TextView;
 
-    .line 66
+    .line 62
     const v7, 0x7f080015
 
     invoke-virtual {p0, v7}, Lcom/sysapk/weighter/ResultActivity;->findViewById(I)Landroid/view/View;
@@ -477,7 +380,7 @@
 
     iput-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtWeight:Landroid/widget/TextView;
 
-    .line 67
+    .line 63
     const v7, 0x7f080016
 
     invoke-virtual {p0, v7}, Lcom/sysapk/weighter/ResultActivity;->findViewById(I)Landroid/view/View;
@@ -488,7 +391,7 @@
 
     iput-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtPrice:Landroid/widget/TextView;
 
-    .line 68
+    .line 64
     const v7, 0x7f080017
 
     invoke-virtual {p0, v7}, Lcom/sysapk/weighter/ResultActivity;->findViewById(I)Landroid/view/View;
@@ -499,7 +402,7 @@
 
     iput-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtWeight_s:Landroid/widget/TextView;
 
-    .line 69
+    .line 65
     const v7, 0x7f080019
 
     invoke-virtual {p0, v7}, Lcom/sysapk/weighter/ResultActivity;->findViewById(I)Landroid/view/View;
@@ -510,7 +413,7 @@
 
     iput-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtPrice_s:Landroid/widget/TextView;
 
-    .line 70
+    .line 66
     const v7, 0x7f08001a
 
     invoke-virtual {p0, v7}, Lcom/sysapk/weighter/ResultActivity;->findViewById(I)Landroid/view/View;
@@ -521,19 +424,19 @@
 
     iput-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtInfo:Landroid/widget/TextView;
 
-    .line 73
+    .line 69
     invoke-virtual {p0}, Lcom/sysapk/weighter/ResultActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v7
 
     if-eqz v7, :cond_1b4
 
-    .line 74
+    .line 70
     invoke-virtual {p0}, Lcom/sysapk/weighter/ResultActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 76
+    .line 72
     .local v2, "intent":Landroid/content/Intent;
     const-string v7, "phoneWeight"
 
@@ -541,7 +444,7 @@
 
     move-result-object v5
 
-    .line 77
+    .line 73
     .local v5, "spw":Ljava/lang/String;
     if-eqz v5, :cond_7f
 
@@ -553,14 +456,14 @@
 
     if-nez v7, :cond_7f
 
-    .line 78
+    .line 74
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v7
 
     iput v7, p0, Lcom/sysapk/weighter/ResultActivity;->phoneWeight:I
 
-    .line 81
+    .line 77
     :cond_7f
     const-string v7, "price"
 
@@ -568,7 +471,7 @@
 
     move-result-object v4
 
-    .line 82
+    .line 78
     .local v4, "sp":Ljava/lang/String;
     if-eqz v4, :cond_95
 
@@ -580,14 +483,14 @@
 
     if-nez v7, :cond_95
 
-    .line 83
+    .line 79
     invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v7
 
     iput v7, p0, Lcom/sysapk/weighter/ResultActivity;->price:F
 
-    .line 86
+    .line 82
     :cond_95
     const-string v7, "weight"
 
@@ -595,7 +498,7 @@
 
     move-result-object v6
 
-    .line 87
+    .line 83
     .local v6, "sw":Ljava/lang/String;
     if-eqz v6, :cond_ab
 
@@ -607,14 +510,14 @@
 
     if-nez v7, :cond_ab
 
-    .line 88
+    .line 84
     invoke-static {v6}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v7
 
     iput v7, p0, Lcom/sysapk/weighter/ResultActivity;->weight:F
 
-    .line 93
+    .line 89
     :cond_ab
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -628,18 +531,18 @@
 
     move-result v0
 
-    .line 95
+    .line 91
     .local v0, "b_phoneWeight":I
     iget v7, p0, Lcom/sysapk/weighter/ResultActivity;->phoneWeight:I
 
     if-eqz v7, :cond_127
 
-    .line 96
+    .line 92
     iget v7, p0, Lcom/sysapk/weighter/ResultActivity;->phoneWeight:I
 
     sub-int v1, v7, v0
 
-    .line 97
+    .line 93
     .local v1, "bweight":I
     iget-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtPhoneWeight:Landroid/widget/TextView;
 
@@ -663,7 +566,7 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 99
+    .line 95
     int-to-float v7, v1
 
     iget v8, p0, Lcom/sysapk/weighter/ResultActivity;->phoneWeight:I
@@ -674,7 +577,7 @@
 
     iput v7, p0, Lcom/sysapk/weighter/ResultActivity;->baifenbi:F
 
-    .line 101
+    .line 97
     iget-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtBaifenbi:Landroid/widget/TextView;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -709,7 +612,7 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 103
+    .line 99
     iget v7, p0, Lcom/sysapk/weighter/ResultActivity;->baifenbi:F
 
     mul-float/2addr v7, v13
@@ -722,7 +625,7 @@
 
     iput v7, p0, Lcom/sysapk/weighter/ResultActivity;->realkg:F
 
-    .line 104
+    .line 100
     iget-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtInfo:Landroid/widget/TextView;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -749,7 +652,7 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 107
+    .line 103
     .end local v1    # "bweight":I
     :cond_127
     iget v7, p0, Lcom/sysapk/weighter/ResultActivity;->weight:F
@@ -758,7 +661,7 @@
 
     if-eqz v7, :cond_1b1
 
-    .line 108
+    .line 104
     iget-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtWeight:Landroid/widget/TextView;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -783,14 +686,14 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 110
+    .line 106
     iget v7, p0, Lcom/sysapk/weighter/ResultActivity;->price:F
 
     cmpl-float v7, v7, v12
 
     if-eqz v7, :cond_1b1
 
-    .line 111
+    .line 107
     iget-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtPrice:Landroid/widget/TextView;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -819,12 +722,12 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 113
+    .line 109
     iget v7, p0, Lcom/sysapk/weighter/ResultActivity;->phoneWeight:I
 
     if-eqz v7, :cond_1b1
 
-    .line 114
+    .line 110
     iget v7, p0, Lcom/sysapk/weighter/ResultActivity;->weight:F
 
     iget v8, p0, Lcom/sysapk/weighter/ResultActivity;->weight:F
@@ -839,7 +742,7 @@
 
     move-result v3
 
-    .line 115
+    .line 111
     .local v3, "sjweight":F
     iget-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtWeight_s:Landroid/widget/TextView;
 
@@ -863,7 +766,7 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 116
+    .line 112
     iget-object v7, p0, Lcom/sysapk/weighter/ResultActivity;->txtPrice_s:Landroid/widget/TextView;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -894,12 +797,12 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 121
+    .line 117
     .end local v3    # "sjweight":F
     :cond_1b1
     invoke-direct {p0}, Lcom/sysapk/weighter/ResultActivity;->initAd()V
 
-    .line 123
+    .line 119
     .end local v0    # "b_phoneWeight":I
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v4    # "sp":Ljava/lang/String;

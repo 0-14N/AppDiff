@@ -20,15 +20,13 @@
 
 # virtual methods
 .method public final handleMessage(Landroid/os/Message;)V
-    .registers 6
-
-    const/4 v2, 0x0
+    .registers 4
 
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_11
+    if-ne v0, v1, :cond_10
 
     new-instance v0, Lcom/taxm/crazy/bbydt1/ui/k;
 
@@ -38,80 +36,29 @@
 
     invoke-virtual {v0}, Lcom/taxm/crazy/bbydt1/ui/k;->show()V
 
-    :cond_10
-    :goto_10
+    :cond_f
+    :goto_f
     return-void
 
-    :cond_11
+    :cond_10
     iget v0, p1, Landroid/os/Message;->what:I
 
-    if-nez v0, :cond_4d
+    if-nez v0, :cond_18
 
-    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/l;->a:Lcom/taxm/crazy/bbydt1/ui/Login;
+    invoke-static {}, Lcom/feiwo/view/FwInterstitialManager;->showInterstitial()V
 
-    iget-object v0, v0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Lcom/baidu/mobads/InterstitialAd;
+    goto :goto_f
 
-    if-eqz v0, :cond_36
-
-    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/l;->a:Lcom/taxm/crazy/bbydt1/ui/Login;
-
-    iget-object v0, v0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0}, Lcom/baidu/mobads/InterstitialAd;->isAdReady()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_36
-
-    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/l;->a:Lcom/taxm/crazy/bbydt1/ui/Login;
-
-    iget-object v0, v0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Lcom/baidu/mobads/InterstitialAd;
-
-    iget-object v1, p0, Lcom/taxm/crazy/bbydt1/ui/l;->a:Lcom/taxm/crazy/bbydt1/ui/Login;
-
-    invoke-virtual {v0, v1}, Lcom/baidu/mobads/InterstitialAd;->showAd(Landroid/app/Activity;)V
-
-    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/l;->a:Lcom/taxm/crazy/bbydt1/ui/Login;
-
-    iget-object v0, v0, Lcom/taxm/crazy/bbydt1/ui/Login;->r:Landroid/os/Handler;
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
-
-    goto :goto_10
-
-    :cond_36
-    iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/l;->a:Lcom/taxm/crazy/bbydt1/ui/Login;
-
-    iget-object v0, v0, Lcom/taxm/crazy/bbydt1/ui/Login;->q:Lcom/baidu/mobads/InterstitialAd;
-
-    invoke-virtual {v0}, Lcom/baidu/mobads/InterstitialAd;->loadAd()V
-
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object v0
-
-    iput v2, v0, Landroid/os/Message;->what:I
-
-    iget-object v1, p0, Lcom/taxm/crazy/bbydt1/ui/l;->a:Lcom/taxm/crazy/bbydt1/ui/Login;
-
-    iget-object v1, v1, Lcom/taxm/crazy/bbydt1/ui/Login;->r:Landroid/os/Handler;
-
-    const-wide/16 v2, 0x3e8
-
-    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    goto :goto_10
-
-    :cond_4d
+    :cond_18
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_10
+    if-ne v0, v1, :cond_f
 
     iget-object v0, p0, Lcom/taxm/crazy/bbydt1/ui/l;->a:Lcom/taxm/crazy/bbydt1/ui/Login;
 
     invoke-static {}, Lcom/taxm/crazy/bbydt1/b/c;->d()V
 
-    goto :goto_10
+    goto :goto_f
 .end method

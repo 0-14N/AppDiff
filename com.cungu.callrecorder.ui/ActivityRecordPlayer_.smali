@@ -30,7 +30,7 @@
 .method static synthetic a(Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
 
     return-void
 .end method
@@ -62,43 +62,13 @@
 .method static synthetic b(Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
 
     return-void
 .end method
 
 .method private g()V
     .registers 2
-
-    const v0, 0x7f0e007c
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->s:Landroid/widget/ImageView;
-
-    const v0, 0x7f0e007d
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageButton;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->n:Landroid/widget/ImageButton;
-
-    const v0, 0x7f0e0080
-
-    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->r:Landroid/widget/TextView;
 
     const v0, 0x7f0e007e
 
@@ -109,6 +79,16 @@
     check-cast v0, Landroid/widget/SeekBar;
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->o:Landroid/widget/SeekBar;
+
+    const v0, 0x7f0e007c
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->s:Landroid/widget/ImageView;
 
     const v0, 0x7f0e007f
 
@@ -129,6 +109,26 @@
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->q:Landroid/widget/TextView;
+
+    const v0, 0x7f0e007d
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageButton;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->n:Landroid/widget/ImageButton;
+
+    const v0, 0x7f0e0080
+
+    invoke-virtual {p0, v0}, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->r:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;->u()V
 
@@ -168,9 +168,9 @@
 .method public o()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/jc;
+    new-instance v0, Lcom/cungo/callrecorder/ui/jb;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/jc;-><init>(Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/jb;-><init>(Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -248,9 +248,9 @@
 .method public p()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/jb;
+    new-instance v0, Lcom/cungo/callrecorder/ui/jc;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/jb;-><init>(Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/jc;-><init>(Lcom/cungo/callrecorder/ui/ActivityRecordPlayer_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 

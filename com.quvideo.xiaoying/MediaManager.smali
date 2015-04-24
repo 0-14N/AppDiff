@@ -235,13 +235,13 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;->s:Ljava/lang/String;
 
     .line 207
-    new-instance v0, Layc;
+    new-instance v0, Lari;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Layc;-><init>(Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;Landroid/os/Looper;)V
+    invoke-direct {v0, p0, v1}, Lari;-><init>(Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;->g:Landroid/os/Handler;
 
@@ -3018,9 +3018,9 @@
     .line 388
     iget-object v0, v4, Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$MediaGroupItem;->mediaItemList:Ljava/util/ArrayList;
 
-    new-instance v1, Layd;
+    new-instance v1, Larj;
 
-    invoke-direct {v1, p0}, Layd;-><init>(Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;)V
+    invoke-direct {v1, p0}, Larj;-><init>(Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;)V
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -3362,9 +3362,9 @@
     .line 634
     iget-object v0, v0, Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager$MediaGroupItem;->mediaItemList:Ljava/util/ArrayList;
 
-    new-instance v2, Laye;
+    new-instance v2, Lark;
 
-    invoke-direct {v2, p0}, Laye;-><init>(Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;)V
+    invoke-direct {v2, p0}, Lark;-><init>(Lcom/quvideo/xiaoying/videoeditor/explorer/MediaManager;)V
 
     invoke-static {v0, v2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 

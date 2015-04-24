@@ -33,7 +33,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/soft/filemanager/activities/MainActivity;->k()Lcom/soft/filemanager/FileManagerApplication;
+    invoke-virtual {v0}, Lcom/soft/filemanager/activities/MainActivity;->j()Lcom/soft/filemanager/FileManagerApplication;
 
     move-result-object v0
 

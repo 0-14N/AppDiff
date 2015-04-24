@@ -43,7 +43,7 @@
 
     iget-object v0, p0, Lcom/nexstreaming/app/bach/widget/f;->a:Lcom/nexstreaming/app/bach/widget/NexAdImageView;
 
-    invoke-static {v0}, Lcom/nexstreaming/app/bach/widget/NexAdImageView;->b(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)I
+    invoke-static {v0}, Lcom/nexstreaming/app/bach/widget/NexAdImageView;->a(Lcom/nexstreaming/app/bach/widget/NexAdImageView;)I
 
     move-result v0
 

@@ -31,13 +31,13 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 28
+    .line 29
     invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 29
+    .line 30
     iput-object p1, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->context:Landroid/content/Context;
 
-    .line 30
+    .line 31
     return-void
 .end method
 
@@ -47,13 +47,13 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 38
+    .line 39
     invoke-direct {p0, p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 39
+    .line 40
     iput-object p1, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->context:Landroid/content/Context;
 
-    .line 40
+    .line 41
     return-void
 .end method
 
@@ -64,13 +64,13 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 33
+    .line 34
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 34
+    .line 35
     iput-object p1, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->context:Landroid/content/Context;
 
-    .line 35
+    .line 36
     return-void
 .end method
 
@@ -82,24 +82,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 67
+    .line 68
     monitor-enter p0
 
-    .line 68
+    .line 69
     const/4 v0, 0x1
 
     :try_start_3
     iput-boolean v0, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->recycled:Z
 
-    .line 67
+    .line 68
     monitor-exit p0
     :try_end_6
     .catchall {:try_start_3 .. :try_end_6} :catchall_16
 
-    .line 70
+    .line 71
     invoke-virtual {p0, v1}, Lcom/tapindata/happyfamousface/view/HeadImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 71
+    .line 72
     iget-object v0, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->bitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_15
@@ -112,12 +112,12 @@
 
     if-eqz v0, :cond_19
 
-    .line 75
+    .line 76
     :cond_15
     :goto_15
     return-void
 
-    .line 67
+    .line 68
     :catchall_16
     move-exception v0
 
@@ -128,13 +128,13 @@
 
     throw v0
 
-    .line 73
+    .line 74
     :cond_19
     iget-object v0, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->bitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 74
+    .line 75
     iput-object v1, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->bitmap:Landroid/graphics/Bitmap;
 
     goto :goto_15
@@ -144,28 +144,28 @@
     .registers 2
 
     .prologue
-    .line 81
+    .line 82
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->recycled:Z
 
-    .line 82
+    .line 83
     iget-object v0, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->bitmap:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_10
 
-    .line 83
+    .line 84
     new-instance v0, Lcom/tapindata/happyfamousface/view/HeadImageView$LoadImageThread;
 
     invoke-direct {v0, p0}, Lcom/tapindata/happyfamousface/view/HeadImageView$LoadImageThread;-><init>(Lcom/tapindata/happyfamousface/view/HeadImageView;)V
 
     invoke-virtual {v0}, Lcom/tapindata/happyfamousface/view/HeadImageView$LoadImageThread;->start()V
 
-    .line 87
+    .line 88
     :goto_f
     return-void
 
-    .line 85
+    .line 86
     :cond_10
     iget-object v0, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->bitmap:Landroid/graphics/Bitmap;
 
@@ -181,27 +181,27 @@
     .param p3, "snsId"    # Ljava/lang/String;
 
     .prologue
-    .line 43
+    .line 44
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->recycled:Z
 
-    .line 44
+    .line 45
     iput-object p1, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->url:Ljava/lang/String;
 
-    .line 45
+    .line 46
     iput-object p2, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->snsType:Ljava/lang/String;
 
-    .line 46
+    .line 47
     iput-object p3, p0, Lcom/tapindata/happyfamousface/view/HeadImageView;->snsId:Ljava/lang/String;
 
-    .line 47
+    .line 48
     new-instance v0, Lcom/tapindata/happyfamousface/view/HeadImageView$LoadImageThread;
 
     invoke-direct {v0, p0}, Lcom/tapindata/happyfamousface/view/HeadImageView$LoadImageThread;-><init>(Lcom/tapindata/happyfamousface/view/HeadImageView;)V
 
     invoke-virtual {v0}, Lcom/tapindata/happyfamousface/view/HeadImageView$LoadImageThread;->start()V
 
-    .line 48
+    .line 49
     return-void
 .end method

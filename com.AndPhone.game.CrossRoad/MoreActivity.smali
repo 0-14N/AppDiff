@@ -48,13 +48,13 @@
 
     invoke-virtual {p0, v0}, Lcom/AndPhone/game/CrossRoad/MoreActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroid/webkit/WebView;
+    check-cast p0, Landroid/webkit/WebView;
 
-    const-string v1, "http://www.anbeans.com/"
+    const-string v0, "http://www.anbeans.com/"
 
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    invoke-static {p0}, Lcom/a/a/i/a;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/a/a/e/c;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    invoke-static {p0}, Lcom/a/a/i/a;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/a/a/e/c;->b(Landroid/content/Context;)V
 
     return-void
 .end method

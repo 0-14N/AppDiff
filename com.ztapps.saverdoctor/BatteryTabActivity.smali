@@ -2288,6 +2288,11 @@
     .line 94
     invoke-direct {p0}, Lcom/ztapps/saverdoctor/activity/BatteryTabActivity;->c()V
 
+    .line 97
+    iget-object v0, p0, Lcom/ztapps/saverdoctor/activity/BatteryTabActivity;->F:Lcom/ztapps/saverdoctor/h/a;
+
+    invoke-virtual {v0, p0}, Lcom/ztapps/saverdoctor/h/a;->a(Landroid/app/Activity;)V
+
     .line 100
     invoke-virtual {p0}, Lcom/ztapps/saverdoctor/activity/BatteryTabActivity;->getIntent()Landroid/content/Intent;
 

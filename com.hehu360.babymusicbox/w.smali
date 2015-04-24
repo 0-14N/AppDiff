@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/hehu360/babymusicbox/activity/w;->a:Lcom/hehu360/babymusicbox/activity/MainActivity_;
 
-    invoke-virtual {v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->k()V
+    invoke-virtual {v0}, Lcom/hehu360/babymusicbox/activity/MainActivity_;->i()V
 
     return-void
 .end method

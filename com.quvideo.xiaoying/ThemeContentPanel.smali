@@ -70,9 +70,9 @@
     iput-boolean v1, p0, Lcom/quvideo/xiaoying/videoeditor/ui/ThemeContentPanel;->o:Z
 
     .line 270
-    new-instance v0, Lbcv;
+    new-instance v0, Lawb;
 
-    invoke-direct {v0, p0}, Lbcv;-><init>(Lcom/quvideo/xiaoying/videoeditor/ui/ThemeContentPanel;)V
+    invoke-direct {v0, p0}, Lawb;-><init>(Lcom/quvideo/xiaoying/videoeditor/ui/ThemeContentPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/ui/ThemeContentPanel;->p:Lcom/quvideo/xiaoying/videoeditor/adaptor/ThemeGalleryAdaptor$OnContentNavigatorListener;
 

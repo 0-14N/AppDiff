@@ -1999,6 +1999,8 @@
     .line 87
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     .line 92
     invoke-virtual {p0}, Lcom/ansca/corona/CoronaActivity;->getIntent()Landroid/content/Intent;
 
@@ -2034,7 +2036,7 @@
     invoke-direct {p0}, Lcom/ansca/corona/CoronaActivity;->initializeOrientation()V
 
     .line 111
-    :try_start_26
+    :try_start_29
     const-string v7, "Corona"
 
     const/4 v8, 0x0
@@ -2045,7 +2047,7 @@
 
     .line 112
     .local v5, "preferencesReader":Landroid/content/SharedPreferences;
-    if-eqz v5, :cond_64
+    if-eqz v5, :cond_67
 
     .line 113
     new-instance v0, Ljava/io/File;
@@ -2076,7 +2078,7 @@
     .local v3, "lastTimestamp":J
     cmp-long v7, v1, v3
 
-    if-eqz v7, :cond_64
+    if-eqz v7, :cond_67
 
     .line 118
     const-string v7, "coronaResources"
@@ -2107,8 +2109,8 @@
 
     .line 124
     invoke-interface {v6}, Landroid/content/SharedPreferences$Editor;->commit()Z
-    :try_end_64
-    .catch Ljava/lang/Exception; {:try_start_26 .. :try_end_64} :catch_e2
+    :try_end_67
+    .catch Ljava/lang/Exception; {:try_start_29 .. :try_end_67} :catch_e5
 
     .line 131
     .end local v0    # "apkFile":Ljava/io/File;
@@ -2116,8 +2118,8 @@
     .end local v3    # "lastTimestamp":J
     .end local v5    # "preferencesReader":Landroid/content/SharedPreferences;
     .end local v6    # "preferencesWriter":Landroid/content/SharedPreferences$Editor;
-    :cond_64
-    :goto_64
+    :cond_67
+    :goto_67
     invoke-static {p0}, Lcom/ansca/corona/CoronaEnvironment;->setCoronaActivity(Lcom/ansca/corona/CoronaActivity;)V
 
     .line 135
@@ -2252,10 +2254,10 @@
     return-void
 
     .line 128
-    :catch_e2
+    :catch_e5
     move-exception v7
 
-    goto :goto_64
+    goto :goto_67
 .end method
 
 .method protected onDestroy()V

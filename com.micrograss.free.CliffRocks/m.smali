@@ -1,25 +1,68 @@
 .class final Lcom/adsmogo/adapters/api/M;
-.super Ljava/lang/Object;
+.super Landroid/webkit/WebViewClient;
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+
+# instance fields
+.field private synthetic a:Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/adsmogo/adapters/api/PublicCustomAdapter;)V
+.method private constructor <init>(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;)V
     .registers 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/adsmogo/adapters/api/M;->a:Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;
+
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;B)V
+    .registers 3
+
+    invoke-direct {p0, p1}, Lcom/adsmogo/adapters/api/M;-><init>(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .registers 3
+.method public final onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .registers 7
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/adsmogo/adapters/api/M;->a:Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1, p1}, Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;->a(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;ZLandroid/view/ViewGroup;)V
+
+    iget-object v0, p0, Lcom/adsmogo/adapters/api/M;->a:Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;
+
+    invoke-static {v0}, Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;->a(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;)Lcom/adsmogo/adapters/api/I;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/adsmogo/adapters/api/M;->a:Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;
+
+    invoke-static {v1}, Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;->b(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;)Lcom/adsmogo/model/obj/SuizongAD;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/adsmogo/model/obj/SuizongAD;->sid:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/adsmogo/adapters/api/M;->a:Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;
+
+    invoke-static {v2}, Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;->b(Lcom/adsmogo/adapters/api/SXuXiXzXoXnXgAPIAdapter;)Lcom/adsmogo/model/obj/SuizongAD;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/adsmogo/model/obj/SuizongAD;->adid:Ljava/lang/String;
+
+    const-string v3, ""
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/adsmogo/adapters/api/I;->sendShowlog(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

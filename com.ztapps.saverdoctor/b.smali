@@ -1,160 +1,134 @@
 .class public Lcom/ztapps/saverdoctor/h/b;
 .super Lcom/ztapps/saverdoctor/h/a;
-.source "GaStatistics.java"
-
-
-# static fields
-.field private static b:Lcom/ztapps/saverdoctor/h/b;
-
-
-# instance fields
-.field private a:Lcom/google/a/a/a/bf;
+.source "UmStatistics.java"
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;)V
-    .registers 3
+.method public constructor <init>()V
+    .registers 1
 
     .prologue
-    .line 35
+    .line 14
     invoke-direct {p0}, Lcom/ztapps/saverdoctor/h/a;-><init>()V
 
-    .line 36
-    invoke-static {p1}, Lcom/google/a/a/a/p;->a(Landroid/content/Context;)Lcom/google/a/a/a/p;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/ztapps/saverdoctor/h/b;->a:Lcom/google/a/a/a/bf;
-
-    .line 37
     return-void
-.end method
-
-.method public static declared-synchronized b(Landroid/content/Context;)Lcom/ztapps/saverdoctor/h/b;
-    .registers 3
-
-    .prologue
-    .line 29
-    const-class v1, Lcom/ztapps/saverdoctor/h/b;
-
-    monitor-enter v1
-
-    :try_start_3
-    sget-object v0, Lcom/ztapps/saverdoctor/h/b;->b:Lcom/ztapps/saverdoctor/h/b;
-
-    if-nez v0, :cond_e
-
-    .line 30
-    new-instance v0, Lcom/ztapps/saverdoctor/h/b;
-
-    invoke-direct {v0, p0}, Lcom/ztapps/saverdoctor/h/b;-><init>(Landroid/content/Context;)V
-
-    sput-object v0, Lcom/ztapps/saverdoctor/h/b;->b:Lcom/ztapps/saverdoctor/h/b;
-
-    .line 32
-    :cond_e
-    sget-object v0, Lcom/ztapps/saverdoctor/h/b;->b:Lcom/ztapps/saverdoctor/h/b;
-    :try_end_10
-    .catchall {:try_start_3 .. :try_end_10} :catchall_12
-
-    monitor-exit v1
-
-    return-object v0
-
-    .line 29
-    :catchall_12
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
 .end method
 
 
 # virtual methods
 .method public a(Landroid/app/Activity;)V
-    .registers 2
+    .registers 7
 
     .prologue
-    .line 59
-    invoke-static {p1}, Lcom/ztapps/saverdoctor/a/a;->a(Landroid/content/Context;)V
+    const/4 v4, 0x0
 
-    .line 60
+    .line 19
+    invoke-static {p1}, Lcom/ztapps/saverdoctor/g/a;->a(Landroid/content/Context;)Lcom/ztapps/saverdoctor/g/a;
+
+    move-result-object v0
+
+    .line 20
+    const-string v1, "AUTO_UPDATE_TIME"
+
+    const-wide/16 v2, 0x0
+
+    .line 19
+    invoke-virtual {v0, v1, v2, v3}, Lcom/ztapps/saverdoctor/g/a;->a(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    .line 22
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    sub-long v0, v2, v0
+
+    const-wide/32 v2, 0xa4cb800
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_38
+
+    .line 23
+    invoke-static {v4}, Lcom/umeng/b/c;->a(Z)V
+
+    .line 24
+    invoke-static {v4}, Lcom/umeng/b/c;->b(Z)V
+
+    .line 25
+    new-instance v0, Lcom/ztapps/saverdoctor/h/c;
+
+    invoke-direct {v0, p0, p1}, Lcom/ztapps/saverdoctor/h/c;-><init>(Lcom/ztapps/saverdoctor/h/b;Landroid/app/Activity;)V
+
+    invoke-static {v0}, Lcom/umeng/b/c;->a(Lcom/umeng/b/e;)V
+
+    .line 36
+    invoke-static {p1}, Lcom/umeng/b/c;->a(Landroid/content/Context;)V
+
+    .line 38
+    invoke-static {p1}, Lcom/ztapps/saverdoctor/g/a;->a(Landroid/content/Context;)Lcom/ztapps/saverdoctor/g/a;
+
+    move-result-object v0
+
+    .line 39
+    const-string v1, "AUTO_UPDATE_TIME"
+
+    .line 40
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    .line 38
+    invoke-virtual {v0, v1, v2, v3}, Lcom/ztapps/saverdoctor/g/a;->b(Ljava/lang/String;J)V
+
+    .line 43
+    :cond_38
     return-void
 .end method
 
 .method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
-    .registers 7
+    .registers 5
 
     .prologue
-    .line 42
-    iget-object v0, p0, Lcom/ztapps/saverdoctor/h/b;->a:Lcom/google/a/a/a/bf;
-
-    if-eqz v0, :cond_12
-
-    .line 44
-    :try_start_4
-    iget-object v0, p0, Lcom/ztapps/saverdoctor/h/b;->a:Lcom/google/a/a/a/bf;
-
-    .line 48
-    const/4 v1, 0x0
-
-    .line 44
-    invoke-static {p1, p2, p3, v1}, Lcom/google/a/a/a/au;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Lcom/google/a/a/a/au;
-
-    move-result-object v1
-
-    .line 48
-    invoke-virtual {v1}, Lcom/google/a/a/a/au;->a()Ljava/util/Map;
-
-    move-result-object v1
-
-    .line 44
-    invoke-virtual {v0, v1}, Lcom/google/a/a/a/bf;->a(Ljava/util/Map;)V
-    :try_end_12
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_12} :catch_13
-
-    .line 55
-    :cond_12
-    :goto_12
+    .line 66
     return-void
-
-    .line 50
-    :catch_13
-    move-exception v0
-
-    .line 51
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_12
 .end method
 
 .method public b(Landroid/app/Activity;)V
+    .registers 2
+
+    .prologue
+    .line 47
+    invoke-static {p1}, Lcom/umeng/a/a;->b(Landroid/content/Context;)V
+
+    .line 48
+    return-void
+.end method
+
+.method public b(Landroid/content/Context;)V
     .registers 3
 
     .prologue
-    .line 64
-    invoke-static {p1}, Lcom/google/a/a/a/p;->a(Landroid/content/Context;)Lcom/google/a/a/a/p;
+    .line 57
+    new-instance v0, Lcom/umeng/fb/c;
 
-    move-result-object v0
+    invoke-direct {v0, p1}, Lcom/umeng/fb/c;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0, p1}, Lcom/google/a/a/a/p;->a(Landroid/app/Activity;)V
+    .line 58
+    invoke-virtual {v0}, Lcom/umeng/fb/c;->e()V
 
-    .line 65
+    .line 59
     return-void
 .end method
 
 .method public c(Landroid/app/Activity;)V
-    .registers 3
+    .registers 2
 
     .prologue
-    .line 69
-    invoke-static {p1}, Lcom/google/a/a/a/p;->a(Landroid/content/Context;)Lcom/google/a/a/a/p;
+    .line 52
+    invoke-static {p1}, Lcom/umeng/a/a;->a(Landroid/content/Context;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/google/a/a/a/p;->b(Landroid/app/Activity;)V
-
-    .line 70
+    .line 53
     return-void
 .end method

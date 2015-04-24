@@ -1114,7 +1114,7 @@
     :cond_13
     sget-boolean v6, Lcom/xnview/XnGifBase/Config;->isPro:Z
 
-    if-nez v6, :cond_9e
+    if-nez v6, :cond_98
 
     .line 336
     sget v6, Lcom/xnview/XnGifBase/R$id;->purchase_button:I
@@ -1142,13 +1142,13 @@
     :cond_2d
     sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-le v6, v9, :cond_9d
+    if-le v6, v9, :cond_97
 
     invoke-static {p0}, Lcom/google/android/gms/common/GooglePlayServicesUtil;->isGooglePlayServicesAvailable(Landroid/content/Context;)I
 
     move-result v6
 
-    if-nez v6, :cond_9d
+    if-nez v6, :cond_97
 
     .line 358
     new-instance v1, Lcom/google/android/gms/ads/AdView;
@@ -1188,8 +1188,6 @@
 
     move-result-object v6
 
-    invoke-virtual {v1, v6}, Lcom/google/android/gms/ads/AdView;->loadAd(Lcom/google/android/gms/ads/AdRequest;)V
-
     .line 366
     iput-object v1, p0, Lcom/xnview/XnGifBase/ShareActivity;->mAdView:Lcom/google/android/gms/ads/AdView;
 
@@ -1220,7 +1218,7 @@
     .line 373
     rem-int/lit8 v6, v0, 0x6
 
-    if-nez v6, :cond_9d
+    if-nez v6, :cond_97
 
     .line 375
     new-instance v6, Lcom/google/android/gms/ads/InterstitialAd;
@@ -1247,8 +1245,6 @@
 
     move-result-object v7
 
-    invoke-virtual {v6, v7}, Lcom/google/android/gms/ads/InterstitialAd;->loadAd(Lcom/google/android/gms/ads/AdRequest;)V
-
     .line 378
     iget-object v6, p0, Lcom/xnview/XnGifBase/ShareActivity;->mInterstitial:Lcom/google/android/gms/ads/InterstitialAd;
 
@@ -1263,19 +1259,19 @@
     .end local v1    # "appView":Lcom/google/android/gms/ads/AdView;
     .end local v2    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v4    # "layout":Landroid/widget/LinearLayout;
-    :cond_9d
-    :goto_9d
+    :cond_97
+    :goto_97
     return-void
 
     .line 424
-    :cond_9e
+    :cond_98
     sget v6, Lcom/xnview/XnGifBase/R$id;->purchase_button:I
 
     invoke-virtual {p0, v6}, Lcom/xnview/XnGifBase/ShareActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
-    if-eqz v6, :cond_9d
+    if-eqz v6, :cond_97
 
     .line 425
     sget v6, Lcom/xnview/XnGifBase/R$id;->purchase_button:I
@@ -1286,7 +1282,7 @@
 
     invoke-virtual {v6, v9}, Landroid/view/View;->setVisibility(I)V
 
-    goto :goto_9d
+    goto :goto_97
 .end method
 
 .method private initUI()V

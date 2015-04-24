@@ -230,30 +230,30 @@
     iput-object v2, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->ad:Ljava/lang/String;
 
     .line 457
-    new-instance v0, Lns;
+    new-instance v0, Lgz;
 
-    invoke-direct {v0, p0}, Lns;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v0, p0}, Lgz;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->ae:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshListViewEx$OnScrollListenerEx;
 
     .line 503
-    new-instance v0, Lod;
+    new-instance v0, Lhk;
 
-    invoke-direct {v0, p0}, Lod;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v0, p0}, Lhk;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->af:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshListViewEx$OnSizeChangeListener;
 
     .line 516
-    new-instance v0, Lof;
+    new-instance v0, Lhm;
 
-    invoke-direct {v0, p0}, Lof;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v0, p0}, Lhm;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->ag:Landroid/text/TextWatcher;
 
     .line 869
-    new-instance v0, Log;
+    new-instance v0, Lhn;
 
-    invoke-direct {v0, p0}, Log;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v0, p0}, Lhn;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->ah:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshListViewEx$OnRefreshListener;
 
@@ -503,9 +503,9 @@
 
     const-string/jumbo v1, "comment.get"
 
-    new-instance v2, Lnx;
+    new-instance v2, Lhe;
 
-    invoke-direct {v2, p0}, Lnx;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v2, p0}, Lhe;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -647,9 +647,9 @@
 
     const-string/jumbo v1, "comment.commend"
 
-    new-instance v2, Lnv;
+    new-instance v2, Lhc;
 
-    invoke-direct {v2, p0, p1, p3, p2}, Lnv;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;ZI)V
+    invoke-direct {v2, p0, p1, p3, p2}, Lhc;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;ZI)V
 
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 
@@ -709,9 +709,9 @@
     const-string/jumbo v1, "comment.add"
 
     .line 1189
-    new-instance v2, Lny;
+    new-instance v2, Lhf;
 
-    invoke-direct {v2, p0, p2}, Lny;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p2}, Lhf;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;)V
 
     .line 1187
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -777,7 +777,7 @@
     const-string/jumbo v7, "comment.reply"
 
     .line 1093
-    new-instance v0, Lnw;
+    new-instance v0, Lhd;
 
     move-object v1, p0
 
@@ -789,7 +789,7 @@
 
     move-object v5, p1
 
-    invoke-direct/range {v0 .. v5}, Lnw;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lhd;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1091
     invoke-virtual {v6, v7, v0}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -869,7 +869,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 633
-    const v0, 0x7f060454
+    const v0, 0x7f06043f
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -890,7 +890,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 636
-    const v0, 0x7f060455
+    const v0, 0x7f060440
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -910,14 +910,14 @@
     .line 638
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->A:Landroid/widget/EditText;
 
-    new-instance v1, Loh;
+    new-instance v1, Lho;
 
-    invoke-direct {v1, p0}, Loh;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v1, p0}, Lho;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 653
-    const v0, 0x7f060453
+    const v0, 0x7f06043e
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -933,7 +933,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 656
-    const v0, 0x7f060443
+    const v0, 0x7f06042e
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -984,7 +984,7 @@
 
     .line 672
     :goto_90
-    const v0, 0x7f060450
+    const v0, 0x7f06043b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -995,7 +995,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->C:Landroid/widget/TextView;
 
     .line 673
-    const v0, 0x7f060451
+    const v0, 0x7f06043c
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1006,7 +1006,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->D:Landroid/widget/TextView;
 
     .line 675
-    const v0, 0x7f06044f
+    const v0, 0x7f06043a
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1036,9 +1036,9 @@
     .line 681
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->p:Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView;
 
-    new-instance v2, Loi;
+    new-instance v2, Lhp;
 
-    invoke-direct {v2, p0}, Loi;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v2, p0}, Lhp;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     invoke-virtual {v0, v2}, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView;->setCommentBtnClickListener(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView$CommentBtnClickListener;)V
 
@@ -1052,9 +1052,9 @@
     .line 692
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->p:Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView;
 
-    new-instance v2, Loj;
+    new-instance v2, Lhq;
 
-    invoke-direct {v2, p0}, Loj;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v2, p0}, Lhq;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     invoke-virtual {v0, v2}, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView;->setDataChangeListener(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView$DataChangeListener;)V
 
@@ -1204,7 +1204,7 @@
     .line 1364
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->E:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0604a4
+    const v1, 0x7f06048f
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -1215,7 +1215,7 @@
     .line 1365
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->E:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f0604a5
+    const v2, 0x7f060490
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -1227,7 +1227,7 @@
     if-nez p1, :cond_6b
 
     .line 1367
-    const v2, 0x7f0a034d
+    const v2, 0x7f0a032a
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -1251,7 +1251,7 @@
     .line 1371
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->E:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f020565
+    const v1, 0x7f02054b
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
@@ -1342,9 +1342,9 @@
     const-string/jumbo v1, "comment.report"
 
     .line 1239
-    new-instance v2, Lnz;
+    new-instance v2, Lhg;
 
-    invoke-direct {v2, p0}, Lnz;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v2, p0}, Lhg;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     .line 1237
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1422,7 +1422,7 @@
     :cond_2c
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->A:Landroid/widget/EditText;
 
-    const v1, 0x7f0a0366
+    const v1, 0x7f0a0343
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(I)V
 
@@ -1609,9 +1609,9 @@
     const-string/jumbo v1, "comment.delete"
 
     .line 1023
-    new-instance v2, Lnu;
+    new-instance v2, Lhb;
 
-    invoke-direct {v2, p0, p1}, Lnu;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Lhb;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;)V
 
     .line 1021
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1691,12 +1691,12 @@
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 1267
-    const v1, 0x7f0a0368
+    const v1, 0x7f0a0345
 
     .line 1268
-    new-instance v2, Loa;
+    new-instance v2, Lhh;
 
-    invoke-direct {v2, p0, p1}, Loa;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Lhh;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;)V
 
     .line 1266
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -1789,9 +1789,9 @@
     .line 809
     const-string/jumbo v1, "follow.add"
 
-    new-instance v2, Lok;
+    new-instance v2, Lhr;
 
-    invoke-direct {v2, p0}, Lok;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v2, p0}, Lhr;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     .line 808
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1846,12 +1846,12 @@
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 1285
-    const v1, 0x7f0a0369
+    const v1, 0x7f0a0346
 
     .line 1286
-    new-instance v2, Lob;
+    new-instance v2, Lhi;
 
-    invoke-direct {v2, p0, p1}, Lob;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Lhi;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Ljava/lang/String;)V
 
     .line 1284
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;ILcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -1970,9 +1970,9 @@
     const-string/jumbo v1, "follow.state"
 
     .line 1330
-    new-instance v2, Loc;
+    new-instance v2, Lhj;
 
-    invoke-direct {v2, p0}, Loc;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v2, p0}, Lhj;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     .line 1328
     invoke-virtual {v0, v1, v2}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1996,7 +1996,7 @@
     .line 1381
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->E:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0604a4
+    const v1, 0x7f06048f
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2007,7 +2007,7 @@
     .line 1382
     iget-object v1, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->E:Landroid/widget/RelativeLayout;
 
-    const v2, 0x7f0604a5
+    const v2, 0x7f060490
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -2016,7 +2016,7 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 1383
-    const v2, 0x7f0a034e
+    const v2, 0x7f0a032b
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -2042,7 +2042,7 @@
     .line 1387
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->E:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f020564
+    const v1, 0x7f02054a
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
@@ -2059,9 +2059,9 @@
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->setAnimation(Landroid/view/animation/Animation;)V
 
     .line 1390
-    new-instance v1, Loe;
+    new-instance v1, Lhl;
 
-    invoke-direct {v1, p0}, Loe;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
+    invoke-direct {v1, p0}, Lhl;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -2531,7 +2531,7 @@
     if-eqz v1, :cond_56
 
     .line 746
-    const v0, 0x7f0a0384
+    const v0, 0x7f0a0361
 
     invoke-static {p0, v0, v2}, Lcom/quvideo/xiaoying/videoeditor/util/ToastUtils;->show(Landroid/content/Context;II)V
 
@@ -2760,11 +2760,11 @@
     invoke-virtual {v5, p1, p2}, Lcom/quvideo/xiaoying/app/community/comment/CommentPopupMenu;->show(Landroid/view/View;Landroid/view/MotionEvent;)V
 
     .line 943
-    new-instance v0, Lnt;
+    new-instance v0, Lha;
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lnt;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Lcom/quvideo/xiaoying/app/community/comment/CommentInfoMgr$CommentInfo;Ljava/lang/String;ZLcom/quvideo/xiaoying/app/community/comment/CommentPopupMenu;)V
+    invoke-direct/range {v0 .. v5}, Lha;-><init>(Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;Lcom/quvideo/xiaoying/app/community/comment/CommentInfoMgr$CommentInfo;Ljava/lang/String;ZLcom/quvideo/xiaoying/app/community/comment/CommentPopupMenu;)V
 
     invoke-virtual {v5, v0}, Lcom/quvideo/xiaoying/app/community/comment/CommentPopupMenu;->setMenuItemSelectListener(Lcom/quvideo/xiaoying/app/community/comment/CommentPopupMenu$onMenuItemSelectListener;)V
 
@@ -2840,7 +2840,7 @@
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;->setImageFadeIn(I)V
 
     .line 419
-    const v0, 0x7f060452
+    const v0, 0x7f06043d
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -2851,7 +2851,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->v:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshListViewEx;
 
     .line 420
-    const v0, 0x7f060445
+    const v0, 0x7f060430
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -2862,7 +2862,7 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->G:Landroid/widget/LinearLayout;
 
     .line 421
-    const v0, 0x7f060456
+    const v0, 0x7f060441
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/activity/VideoDetailActivityNew;->findViewById(I)Landroid/view/View;
 

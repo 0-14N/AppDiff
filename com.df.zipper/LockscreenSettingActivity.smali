@@ -21,7 +21,7 @@
     .registers 5
 
     .prologue
-    .line 77
+    .line 79
     invoke-virtual {p0}, Lcom/df/zipper/LockscreenSettingActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -38,7 +38,7 @@
 
     move-result v0
 
-    .line 78
+    .line 80
     .local v0, "enable":Z
     return v0
 .end method
@@ -47,12 +47,12 @@
     .registers 4
 
     .prologue
-    .line 82
+    .line 84
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 83
+    .line 85
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {p0}, Lcom/df/zipper/LockscreenSettingActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -62,21 +62,21 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 84
+    .line 86
     invoke-direct {p0}, Lcom/df/zipper/LockscreenSettingActivity;->getEnableLockscreen()Z
 
     move-result v1
 
     if-eqz v1, :cond_18
 
-    .line 85
+    .line 87
     invoke-virtual {p0, v0}, Lcom/df/zipper/LockscreenSettingActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 89
+    .line 91
     :goto_17
     return-void
 
-    .line 87
+    .line 89
     :cond_18
     invoke-virtual {p0, v0}, Lcom/df/zipper/LockscreenSettingActivity;->stopService(Landroid/content/Intent;)Z
 
@@ -89,29 +89,29 @@
     .registers 5
 
     .prologue
-    .line 92
+    .line 94
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 93
+    .line 95
     .local v0, "chooseLock":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
     const-string v2, "com.android.settings"
 
-    .line 94
+    .line 96
     const-string v3, "com.android.settings.ChooseLockGeneric"
 
     invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 93
+    .line 95
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 95
+    .line 97
     invoke-virtual {p0, v0}, Lcom/df/zipper/LockscreenSettingActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 96
+    .line 98
     const v1, 0x7f060022
 
     const/4 v2, 0x1
@@ -120,15 +120,15 @@
 
     move-result-object v1
 
-    .line 97
+    .line 99
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 98
+    .line 100
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 5
+    .registers 4
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
@@ -136,32 +136,32 @@
     invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 25
-    const v2, 0x7f03000d
+    const v1, 0x7f03000d
 
-    invoke-virtual {p0, v2}, Lcom/df/zipper/LockscreenSettingActivity;->setContentView(I)V
+    invoke-virtual {p0, v1}, Lcom/df/zipper/LockscreenSettingActivity;->setContentView(I)V
 
     .line 26
-    const/high16 v2, 0x7f050000
+    const/high16 v1, 0x7f050000
 
-    invoke-virtual {p0, v2}, Lcom/df/zipper/LockscreenSettingActivity;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/df/zipper/LockscreenSettingActivity;->addPreferencesFromResource(I)V
 
     .line 27
-    const-string v2, "enable_lockscreen"
+    const-string v1, "enable_lockscreen"
 
-    invoke-virtual {p0, v2}, Lcom/df/zipper/LockscreenSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/df/zipper/LockscreenSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 28
-    const-string v2, "close_system_lock"
+    const-string v1, "close_system_lock"
 
-    invoke-virtual {p0, v2}, Lcom/df/zipper/LockscreenSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/df/zipper/LockscreenSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 30
     invoke-direct {p0}, Lcom/df/zipper/LockscreenSettingActivity;->startServiceWhenEnableScreenLock()V
@@ -170,25 +170,28 @@
     invoke-static {p0}, Lcom/umeng/update/UmengUpdateAgent;->forceUpdate(Landroid/content/Context;)V
 
     .line 42
-    const v2, 0x7f0a001a
+    const v1, 0x7f0a001a
 
-    invoke-virtual {p0, v2}, Lcom/df/zipper/LockscreenSettingActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/df/zipper/LockscreenSettingActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Landroid/widget/LinearLayout;
+    check-cast v0, Landroid/widget/LinearLayout;
 
-    .line 43
-    .local v1, "ll":Landroid/widget/LinearLayout;
-    new-instance v0, Lcom/baidu/mobads/AdView;
+    .line 45
+    .local v0, "ll":Landroid/widget/LinearLayout;
+    invoke-static {p0}, Lcom/fw/tzthree/core/FwInterstitialManager;->init(Landroid/content/Context;)V
 
-    invoke-direct {v0, p0}, Lcom/baidu/mobads/AdView;-><init>(Landroid/content/Context;)V
+    .line 46
+    invoke-static {p0}, Lcom/fw/tzthree/core/FwInterstitialManager;->show(Landroid/content/Context;)V
 
-    .line 44
-    .local v0, "ad":Lcom/baidu/mobads/AdView;
-    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    .line 48
+    invoke-static {p0}, Lcom/fw/tzthree/core/FwBannerManager;->init(Landroid/content/Context;)V
 
     .line 49
+    invoke-static {p0, v0}, Lcom/fw/tzthree/core/FwBannerManager;->loadBannerAD(Landroid/content/Context;Landroid/view/ViewGroup;)V
+
+    .line 50
     return-void
 .end method
 
@@ -196,10 +199,10 @@
     .registers 1
 
     .prologue
-    .line 73
+    .line 75
     invoke-super {p0}, Landroid/preference/PreferenceActivity;->onDestroy()V
 
-    .line 74
+    .line 76
     return-void
 .end method
 
@@ -207,13 +210,13 @@
     .registers 1
 
     .prologue
-    .line 67
+    .line 69
     invoke-super {p0}, Landroid/preference/PreferenceActivity;->onPause()V
 
-    .line 68
+    .line 70
     invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onPause(Landroid/content/Context;)V
 
-    .line 69
+    .line 71
     return-void
 .end method
 
@@ -222,7 +225,7 @@
     .param p1, "preference"    # Landroid/preference/Preference;
 
     .prologue
-    .line 102
+    .line 104
     invoke-virtual {p1}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -235,17 +238,17 @@
 
     if-eqz v0, :cond_11
 
-    .line 103
+    .line 105
     invoke-direct {p0}, Lcom/df/zipper/LockscreenSettingActivity;->startServiceWhenEnableScreenLock()V
 
-    .line 107
+    .line 109
     :cond_f
     :goto_f
     const/4 v0, 0x0
 
     return v0
 
-    .line 104
+    .line 106
     :cond_11
     invoke-virtual {p1}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
 
@@ -259,7 +262,7 @@
 
     if-eqz v0, :cond_f
 
-    .line 105
+    .line 107
     invoke-virtual {p0}, Lcom/df/zipper/LockscreenSettingActivity;->onClickCloseSystemLockscreen()V
 
     goto :goto_f
@@ -269,12 +272,12 @@
     .registers 1
 
     .prologue
-    .line 63
+    .line 65
     invoke-super {p0}, Landroid/preference/PreferenceActivity;->onResume()V
 
-    .line 64
+    .line 66
     invoke-static {p0}, Lcom/umeng/analytics/MobclickAgent;->onResume(Landroid/content/Context;)V
 
-    .line 65
+    .line 67
     return-void
 .end method

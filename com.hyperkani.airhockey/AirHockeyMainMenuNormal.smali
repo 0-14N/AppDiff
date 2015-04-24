@@ -2843,12 +2843,14 @@
     .line 107
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 109
     invoke-static {}, Lcom/blutrumpet/sdk/BluTrumpet;->isInitialized()Z
 
     move-result v4
 
-    if-nez v4, :cond_13
+    if-nez v4, :cond_16
 
     .line 110
     const-string v4, "8520aea1-51a7-3b0a-86c8-79ff46a796af"
@@ -2856,7 +2858,7 @@
     invoke-static {v4, p0}, Lcom/blutrumpet/sdk/BluTrumpet;->initWithAppId(Ljava/lang/String;Landroid/app/Activity;)V
 
     .line 112
-    :cond_13
+    :cond_16
     new-instance v4, Landroid/app/ProgressDialog;
 
     invoke-direct {v4, p0}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
@@ -2889,13 +2891,13 @@
     .line 120
     const/4 v4, 0x3
 
-    :try_start_32
+    :try_start_35
     invoke-virtual {p0, v4}, Lcom/hyperkani/airhockey/AirHockeyMainMenuNormal;->setVolumeControlStream(I)V
-    :try_end_35
-    .catch Ljava/lang/Exception; {:try_start_32 .. :try_end_35} :catch_81
+    :try_end_38
+    .catch Ljava/lang/Exception; {:try_start_35 .. :try_end_38} :catch_84
 
     .line 128
-    :goto_35
+    :goto_38
     sget-object v4, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -2906,7 +2908,7 @@
     .local v3, "sdkVersion":I
     const/4 v4, 0x4
 
-    if-le v3, v4, :cond_86
+    if-le v3, v4, :cond_89
 
     .line 134
     invoke-virtual {p0}, Lcom/hyperkani/airhockey/AirHockeyMainMenuNormal;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2934,7 +2936,7 @@
 
     .line 152
     .end local v1    # "m":Landroid/content/pm/PackageManager;
-    :goto_52
+    :goto_55
     iput-boolean v7, p0, Lcom/hyperkani/airhockey/AirHockeyMainMenuNormal;->mQuitting:Z
 
     .line 155
@@ -2994,25 +2996,25 @@
     .line 122
     .end local v2    # "msg":Landroid/os/Message;
     .end local v3    # "sdkVersion":I
-    :catch_81
+    :catch_84
     move-exception v0
 
     .line 124
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_35
+    goto :goto_38
 
     .line 146
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v3    # "sdkVersion":I
-    :cond_86
+    :cond_89
     iput-boolean v7, p0, Lcom/hyperkani/airhockey/AirHockeyMainMenuNormal;->mDeviceHasMultiTouch:Z
 
     .line 147
     iput-boolean v7, p0, Lcom/hyperkani/airhockey/AirHockeyMainMenuNormal;->mDeviceHasDistinctMultiTouch:Z
 
-    goto :goto_52
+    goto :goto_55
 .end method
 
 .method protected onDestroy()V
@@ -3021,6 +3023,8 @@
     .prologue
     .line 55
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
+
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
 
     .line 56
     return-void

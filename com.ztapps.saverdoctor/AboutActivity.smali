@@ -449,7 +449,7 @@
     :goto_5c
     const-string v1, ""
 
-    .line 275
+    .line 270
     new-instance v1, Ljava/lang/StringBuilder;
 
     const v2, 0x7f060023
@@ -464,14 +464,14 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 276
+    .line 271
     const-string v2, ","
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 277
+    .line 272
     const v2, 0x7f060024
 
     const/4 v3, 0x1
@@ -480,12 +480,12 @@
 
     const/4 v4, 0x0
 
-    .line 278
-    const-string v5, "http://goo.gl/dx38Z1"
+    .line 273
+    const-string v5, "http://zhushou.360.cn/detail/index/soft_id/847754"
 
     aput-object v5, v3, v4
 
-    .line 277
+    .line 272
     invoke-virtual {p0, v2, v3}, Lcom/ztapps/saverdoctor/activity/AboutActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -494,7 +494,7 @@
 
     move-result-object v1
 
-    .line 275
+    .line 270
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -668,11 +668,11 @@
 
     .line 231
     :pswitch_49
-    new-instance v0, Lcom/ztapps/saverdoctor/h/c;
+    new-instance v0, Lcom/ztapps/saverdoctor/h/b;
 
-    invoke-direct {v0}, Lcom/ztapps/saverdoctor/h/c;-><init>()V
+    invoke-direct {v0}, Lcom/ztapps/saverdoctor/h/b;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/ztapps/saverdoctor/h/c;->b(Landroid/content/Context;)V
+    invoke-virtual {v0, p0}, Lcom/ztapps/saverdoctor/h/b;->b(Landroid/content/Context;)V
 
     goto :goto_7
 
@@ -780,25 +780,25 @@
     .line 68
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 73
+    .line 70
     const v0, 0x7f0e0002
 
     invoke-virtual {p0, v0}, Lcom/ztapps/saverdoctor/activity/AboutActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    const/16 v2, 0x8
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 74
+    .line 71
     const v0, 0x7f0e0007
 
     invoke-virtual {p0, v0}, Lcom/ztapps/saverdoctor/activity/AboutActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const/16 v2, 0x8
+    const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 

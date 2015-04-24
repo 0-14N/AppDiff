@@ -7,7 +7,7 @@
 
 .field private b:Ljava/util/List;
 
-.field private c:LOurBirdMan/Pandora/UI/o;
+.field private c:LOurBirdMan/Pandora/UI/r;
 
 .field private d:I
 
@@ -38,11 +38,11 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030004
+    const v0, 0x7f030005
 
     invoke-virtual {p0, v0}, LOurBirdMan/Pandora/UI/AcMore;->setContentView(I)V
 
-    const v0, 0x7f0b0010
+    const v0, 0x7f0b001c
 
     invoke-virtual {p0, v0}, LOurBirdMan/Pandora/UI/AcMore;->findViewById(I)Landroid/view/View;
 
@@ -54,9 +54,9 @@
 
     iget-object v0, p0, LOurBirdMan/Pandora/UI/AcMore;->a:Landroid/widget/ListView;
 
-    new-instance v2, LOurBirdMan/Pandora/UI/h;
+    new-instance v2, LOurBirdMan/Pandora/UI/j;
 
-    invoke-direct {v2, p0}, LOurBirdMan/Pandora/UI/h;-><init>(LOurBirdMan/Pandora/UI/AcMore;)V
+    invoke-direct {v2, p0}, LOurBirdMan/Pandora/UI/j;-><init>(LOurBirdMan/Pandora/UI/AcMore;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
@@ -93,17 +93,17 @@
 
     iput-object v0, p0, LOurBirdMan/Pandora/UI/AcMore;->b:Ljava/util/List;
 
-    new-instance v0, LOurBirdMan/Pandora/UI/o;
+    new-instance v0, LOurBirdMan/Pandora/UI/r;
 
     iget-object v1, p0, LOurBirdMan/Pandora/UI/AcMore;->b:Ljava/util/List;
 
-    invoke-direct {v0, v1, p0}, LOurBirdMan/Pandora/UI/o;-><init>(Ljava/util/List;Landroid/content/Context;)V
+    invoke-direct {v0, v1, p0}, LOurBirdMan/Pandora/UI/r;-><init>(Ljava/util/List;Landroid/content/Context;)V
 
-    iput-object v0, p0, LOurBirdMan/Pandora/UI/AcMore;->c:LOurBirdMan/Pandora/UI/o;
+    iput-object v0, p0, LOurBirdMan/Pandora/UI/AcMore;->c:LOurBirdMan/Pandora/UI/r;
 
     iget-object v0, p0, LOurBirdMan/Pandora/UI/AcMore;->a:Landroid/widget/ListView;
 
-    iget-object v1, p0, LOurBirdMan/Pandora/UI/AcMore;->c:LOurBirdMan/Pandora/UI/o;
+    iget-object v1, p0, LOurBirdMan/Pandora/UI/AcMore;->c:LOurBirdMan/Pandora/UI/r;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 

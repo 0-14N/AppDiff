@@ -27,6 +27,8 @@
     .end annotation
 .end field
 
+.field private app:Lcom/weathernews/sunnycomb/Sunnycomb;
+
 .field private button_share:Lcom/weathernews/sunnycomb/view/FlatButtonView;
 
 .field private cameraButtonView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
@@ -48,8 +50,6 @@
 .field private frame_lock:Landroid/widget/FrameLayout;
 
 .field private frame_top:Landroid/widget/RelativeLayout;
-
-.field private gpsLocation:Lcom/weathernews/sunnycomb/gps/GpsLocation;
 
 .field private hasAdjectiveAlreadySent:Z
 
@@ -104,125 +104,56 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 104
+    .line 108
     invoke-direct {p0, p1}, Lcom/weathernews/libwniview/layout/ModRelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 53
+    .line 55
     invoke-static {}, Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;->getInstance()Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->localWeatherDataLoader:Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;
 
-    .line 74
+    .line 78
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->adjectiveDataList:Ljava/util/List;
 
-    .line 75
+    .line 79
     iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->dispWidth:I
 
     iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->dispHeight:I
 
-    .line 78
+    .line 82
     iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
-    .line 79
+    .line 83
     iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
 
-    .line 80
+    .line 84
     iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfData:I
 
-    .line 81
+    .line 85
     iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->cameraIconOrder:I
 
-    .line 83
+    .line 87
     iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isOpen:Z
 
-    .line 84
+    .line 88
     iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasAdjectiveAlreadySent:Z
 
-    .line 85
+    .line 89
     iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasCameraIconAlreadyGenerated:Z
 
-    .line 86
+    .line 90
     iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isEnterYourOwnCurrentlySelected:Z
 
-    .line 88
+    .line 92
     iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isAddingAdjectiveToLinearLayout:Z
 
-    .line 90
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
-
-    .line 105
-    iput-object p0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->instance:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;
-
-    .line 106
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .registers 5
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "attrs"    # Landroid/util/AttributeSet;
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 108
-    invoke-direct {p0, p1, p2}, Lcom/weathernews/libwniview/layout/ModRelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 53
-    invoke-static {}, Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;->getInstance()Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->localWeatherDataLoader:Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;
-
-    .line 74
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->adjectiveDataList:Ljava/util/List;
-
-    .line 75
-    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->dispWidth:I
-
-    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->dispHeight:I
-
-    .line 78
-    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
-
-    .line 79
-    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
-
-    .line 80
-    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfData:I
-
-    .line 81
-    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->cameraIconOrder:I
-
-    .line 83
-    iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isOpen:Z
-
-    .line 84
-    iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasAdjectiveAlreadySent:Z
-
-    .line 85
-    iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasCameraIconAlreadyGenerated:Z
-
-    .line 86
-    iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isEnterYourOwnCurrentlySelected:Z
-
-    .line 88
-    iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isAddingAdjectiveToLinearLayout:Z
-
-    .line 90
+    .line 94
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
@@ -234,11 +165,80 @@
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .registers 5
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 112
+    invoke-direct {p0, p1, p2}, Lcom/weathernews/libwniview/layout/ModRelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 55
+    invoke-static {}, Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;->getInstance()Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->localWeatherDataLoader:Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;
+
+    .line 78
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->adjectiveDataList:Ljava/util/List;
+
+    .line 79
+    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->dispWidth:I
+
+    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->dispHeight:I
+
+    .line 82
+    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
+
+    .line 83
+    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
+
+    .line 84
+    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfData:I
+
+    .line 85
+    iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->cameraIconOrder:I
+
+    .line 87
+    iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isOpen:Z
+
+    .line 88
+    iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasAdjectiveAlreadySent:Z
+
+    .line 89
+    iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasCameraIconAlreadyGenerated:Z
+
+    .line 90
+    iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isEnterYourOwnCurrentlySelected:Z
+
+    .line 92
+    iput-boolean v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isAddingAdjectiveToLinearLayout:Z
+
+    .line 94
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
+
+    .line 113
+    iput-object p0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->instance:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;
+
+    .line 114
+    return-void
+.end method
+
 .method static synthetic access$0(Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;)Lcom/weathernews/libwniview/view/ModHorizontalScrollView;
     .registers 2
 
     .prologue
-    .line 57
+    .line 61
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->horizontal:Lcom/weathernews/libwniview/view/ModHorizontalScrollView;
 
     return-object v0
@@ -248,7 +248,7 @@
     .registers 2
 
     .prologue
-    .line 75
+    .line 79
     iget v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->dispWidth:I
 
     return v0
@@ -258,7 +258,7 @@
     .registers 2
 
     .prologue
-    .line 60
+    .line 64
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->enterYourOwn:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     return-object v0
@@ -268,7 +268,7 @@
     .registers 2
 
     .prologue
-    .line 84
+    .line 88
     iget-boolean v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasAdjectiveAlreadySent:Z
 
     return v0
@@ -278,7 +278,7 @@
     .registers 2
 
     .prologue
-    .line 69
+    .line 73
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->context:Landroid/content/Context;
 
     return-object v0
@@ -288,7 +288,7 @@
     .registers 2
 
     .prologue
-    .line 90
+    .line 94
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
 
     return-object v0
@@ -298,7 +298,7 @@
     .registers 2
 
     .prologue
-    .line 61
+    .line 65
     iput-object p1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->cameraButtonView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     return-void
@@ -308,7 +308,7 @@
     .registers 2
 
     .prologue
-    .line 61
+    .line 65
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->cameraButtonView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     return-object v0
@@ -318,7 +318,7 @@
     .registers 2
 
     .prologue
-    .line 76
+    .line 80
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestAdjective:Ljava/lang/String;
 
     return-object v0
@@ -328,7 +328,7 @@
     .registers 2
 
     .prologue
-    .line 77
+    .line 81
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestFeelingIconValue:Ljava/lang/String;
 
     return-object v0
@@ -338,7 +338,7 @@
     .registers 2
 
     .prologue
-    .line 73
+    .line 77
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->instance:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;
 
     return-object v0
@@ -348,7 +348,7 @@
     .registers 2
 
     .prologue
-    .line 78
+    .line 82
     iget v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
     return v0
@@ -358,7 +358,7 @@
     .registers 2
 
     .prologue
-    .line 79
+    .line 83
     iget v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
 
     return v0
@@ -368,7 +368,7 @@
     .registers 2
 
     .prologue
-    .line 81
+    .line 85
     iput p1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->cameraIconOrder:I
 
     return-void
@@ -378,7 +378,7 @@
     .registers 2
 
     .prologue
-    .line 85
+    .line 89
     iput-boolean p1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasCameraIconAlreadyGenerated:Z
 
     return-void
@@ -388,7 +388,7 @@
     .registers 2
 
     .prologue
-    .line 53
+    .line 55
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->localWeatherDataLoader:Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;
 
     return-object v0
@@ -398,7 +398,7 @@
     .registers 2
 
     .prologue
-    .line 70
+    .line 74
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     return-object v0
@@ -408,7 +408,7 @@
     .registers 2
 
     .prologue
-    .line 72
+    .line 76
     iput-object p1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->sentHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     return-void
@@ -418,7 +418,7 @@
     .registers 2
 
     .prologue
-    .line 80
+    .line 84
     iget v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfData:I
 
     return v0
@@ -428,7 +428,7 @@
     .registers 1
 
     .prologue
-    .line 167
+    .line 173
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->addHexToRightEnd()V
 
     return-void
@@ -438,7 +438,7 @@
     .registers 1
 
     .prologue
-    .line 199
+    .line 205
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->addHexToLeftEnd()V
 
     return-void
@@ -448,7 +448,7 @@
     .registers 2
 
     .prologue
-    .line 59
+    .line 63
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
     return-object v0
@@ -470,7 +470,7 @@
     .registers 2
 
     .prologue
-    .line 88
+    .line 92
     iput-boolean p1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isAddingAdjectiveToLinearLayout:Z
 
     return-void
@@ -480,7 +480,7 @@
     .registers 2
 
     .prologue
-    .line 66
+    .line 70
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_flick:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -494,22 +494,22 @@
 
     const/4 v2, 0x0
 
-    .line 200
+    .line 206
     iget-boolean v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isAddingAdjectiveToLinearLayout:Z
 
     if-eqz v0, :cond_7
 
-    .line 223
+    .line 229
     :goto_6
     return-void
 
-    .line 202
+    .line 208
     :cond_7
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isAddingAdjectiveToLinearLayout:Z
 
-    .line 203
+    .line 209
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->adjectiveDataList:Ljava/util/List;
 
     iget v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
@@ -520,11 +520,11 @@
 
     check-cast v8, Lcom/weathernews/sunnycomb/loader/data/AdjectiveData;
 
-    .line 204
+    .line 210
     .local v8, "adjectiveData":Lcom/weathernews/sunnycomb/loader/data/AdjectiveData;
     if-nez v8, :cond_1d
 
-    .line 205
+    .line 211
     iget v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
 
     add-int/lit8 v0, v0, 0x1
@@ -533,7 +533,7 @@
 
     goto :goto_6
 
-    .line 208
+    .line 214
     :cond_1d
     new-instance v9, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
@@ -543,11 +543,11 @@
 
     invoke-direct {v9, v0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;-><init>(Landroid/content/Context;Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;)V
 
-    .line 209
+    .line 215
     .local v9, "hexPieChartView":Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
     invoke-virtual {v9, p0}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 210
+    .line 216
     invoke-virtual {v8}, Lcom/weathernews/sunnycomb/loader/data/AdjectiveData;->getAdjective()Ljava/lang/String;
 
     move-result-object v0
@@ -558,20 +558,20 @@
 
     invoke-virtual {v9, v0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setAdjective(Ljava/lang/String;I)V
 
-    .line 211
+    .line 217
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v9, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
 
-    .line 213
+    .line 219
     iget v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
 
-    .line 215
-    const v0, 0x7f0b0040
+    .line 221
+    const v0, 0x7f0b0041
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->getDimen(I)I
 
@@ -595,7 +595,7 @@
 
     float-to-int v10, v0
 
-    .line 216
+    .line 222
     .local v10, "hexWidth":I
     iget-object v11, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
@@ -626,22 +626,22 @@
     .registers 5
 
     .prologue
-    .line 168
+    .line 174
     iget-boolean v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isAddingAdjectiveToLinearLayout:Z
 
     if-eqz v2, :cond_5
 
-    .line 197
+    .line 203
     :goto_4
     return-void
 
-    .line 170
+    .line 176
     :cond_5
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isAddingAdjectiveToLinearLayout:Z
 
-    .line 171
+    .line 177
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->adjectiveDataList:Ljava/util/List;
 
     iget v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
@@ -652,11 +652,11 @@
 
     check-cast v0, Lcom/weathernews/sunnycomb/loader/data/AdjectiveData;
 
-    .line 172
+    .line 178
     .local v0, "adjectiveData":Lcom/weathernews/sunnycomb/loader/data/AdjectiveData;
     if-nez v0, :cond_1b
 
-    .line 173
+    .line 179
     iget v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
 
     add-int/lit8 v2, v2, 0x1
@@ -665,7 +665,7 @@
 
     goto :goto_4
 
-    .line 176
+    .line 182
     :cond_1b
     new-instance v1, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
@@ -675,11 +675,11 @@
 
     invoke-direct {v1, v2, v3}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;-><init>(Landroid/content/Context;Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;)V
 
-    .line 177
+    .line 183
     .local v1, "hexPieChartView":Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
     invoke-virtual {v1, p0}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 178
+    .line 184
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/loader/data/AdjectiveData;->getAdjective()Ljava/lang/String;
 
     move-result-object v2
@@ -690,19 +690,19 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setAdjective(Ljava/lang/String;I)V
 
-    .line 179
+    .line 185
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 181
+    .line 187
     iget v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
 
-    .line 183
+    .line 189
     new-instance v2, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$3;
 
     invoke-direct {v2, p0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$3;-><init>(Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;)V
@@ -720,7 +720,7 @@
 
     const/4 v2, -0x1
 
-    .line 226
+    .line 232
     const v1, 0x7f09001f
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->findViewById(I)Landroid/view/View;
@@ -731,7 +731,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->horizontal:Lcom/weathernews/libwniview/view/ModHorizontalScrollView;
 
-    .line 227
+    .line 233
     const v1, 0x7f090020
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->findViewById(I)Landroid/view/View;
@@ -742,7 +742,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
-    .line 228
+    .line 234
     invoke-virtual {p0, v3}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -751,7 +751,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_top:Landroid/widget/RelativeLayout;
 
-    .line 229
+    .line 235
     const v1, 0x7f090023
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->findViewById(I)Landroid/view/View;
@@ -762,7 +762,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_bottom:Landroid/widget/RelativeLayout;
 
-    .line 230
+    .line 236
     const v1, 0x7f090022
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->findViewById(I)Landroid/view/View;
@@ -773,7 +773,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_lock:Landroid/widget/FrameLayout;
 
-    .line 231
+    .line 237
     const v1, 0x7f090025
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->findViewById(I)Landroid/view/View;
@@ -784,7 +784,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->button_share:Lcom/weathernews/sunnycomb/view/FlatButtonView;
 
-    .line 232
+    .line 238
     const v1, 0x7f09001e
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->findViewById(I)Landroid/view/View;
@@ -795,7 +795,7 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_flick:Landroid/widget/RelativeLayout;
 
-    .line 233
+    .line 239
     const v1, 0x7f09001c
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->findViewById(I)Landroid/view/View;
@@ -804,12 +804,12 @@
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->separator:Landroid/view/View;
 
-    .line 235
+    .line 241
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v0, v2, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 236
+    .line 242
     .local v0, "frame_bottom_params":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-static {}, Lcom/weathernews/sunnycomb/common/CommonParams;->getInstance()Lcom/weathernews/sunnycomb/common/CommonParams;
 
@@ -823,17 +823,17 @@
 
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    .line 237
+    .line 243
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 238
+    .line 244
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_bottom:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 239
+    .line 245
     return-void
 .end method
 
@@ -841,7 +841,7 @@
     .registers 5
 
     .prologue
-    .line 280
+    .line 286
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->button_share:Lcom/weathernews/sunnycomb/view/FlatButtonView;
 
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->getResources()Landroid/content/res/Resources;
@@ -864,7 +864,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/weathernews/sunnycomb/view/FlatButtonView;->setBtnParam(Ljava/lang/String;II)V
 
-    .line 281
+    .line 287
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->button_share:Lcom/weathernews/sunnycomb/view/FlatButtonView;
 
     const v1, 0x7f08002e
@@ -875,12 +875,12 @@
 
     invoke-virtual {v0, v1}, Lcom/weathernews/sunnycomb/view/FlatButtonView;->setTouchColor(I)V
 
-    .line 282
+    .line 288
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->button_share:Lcom/weathernews/sunnycomb/view/FlatButtonView;
 
     invoke-virtual {v0, p0}, Lcom/weathernews/sunnycomb/view/FlatButtonView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 283
+    .line 289
     return-void
 .end method
 
@@ -890,29 +890,29 @@
     .prologue
     const/16 v2, 0x8
 
-    .line 268
+    .line 274
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_top:Landroid/widget/RelativeLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 269
+    .line 275
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_bottom:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 270
+    .line 276
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_lock:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 271
+    .line 277
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_lock:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p0}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 272
+    .line 278
     return-void
 .end method
 
@@ -920,7 +920,7 @@
     .registers 3
 
     .prologue
-    .line 275
+    .line 281
     const v0, 0x7f090028
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->findViewById(I)Landroid/view/View;
@@ -931,14 +931,14 @@
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->mood_icon_selector:Lcom/weathernews/sunnycomb/view/MoodIconSelectorView;
 
-    .line 276
+    .line 282
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->mood_icon_selector:Lcom/weathernews/sunnycomb/view/MoodIconSelectorView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->context:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Lcom/weathernews/sunnycomb/view/MoodIconSelectorView;->init(Landroid/content/Context;)V
 
-    .line 277
+    .line 283
     return-void
 .end method
 
@@ -947,17 +947,17 @@
     .param p1, "adjective"    # Ljava/lang/String;
 
     .prologue
-    .line 299
+    .line 305
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
 
     if-eqz v0, :cond_9
 
-    .line 300
+    .line 306
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
 
     invoke-interface {v0, p1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;->onClickAdjective(Ljava/lang/String;)V
 
-    .line 302
+    .line 308
     :cond_9
     return-void
 .end method
@@ -966,12 +966,12 @@
     .registers 4
 
     .prologue
-    .line 323
+    .line 329
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
 
     if-eqz v0, :cond_d
 
-    .line 324
+    .line 330
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestAdjective:Ljava/lang/String;
@@ -980,31 +980,12 @@
 
     invoke-interface {v0, v1, v2}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;->onClickCameraButton(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 325
+    .line 331
     :cond_d
     return-void
 .end method
 
 .method private notifyOnClickEnterYourOwn()V
-    .registers 2
-
-    .prologue
-    .line 312
-    iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
-
-    if-eqz v0, :cond_9
-
-    .line 313
-    iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
-
-    invoke-interface {v0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;->onClickEnterYourOwn()V
-
-    .line 315
-    :cond_9
-    return-void
-.end method
-
-.method private notifyOnClosed()V
     .registers 2
 
     .prologue
@@ -1016,9 +997,28 @@
     .line 319
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
 
+    invoke-interface {v0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;->onClickEnterYourOwn()V
+
+    .line 321
+    :cond_9
+    return-void
+.end method
+
+.method private notifyOnClosed()V
+    .registers 2
+
+    .prologue
+    .line 324
+    iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
+
+    if-eqz v0, :cond_9
+
+    .line 325
+    iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
+
     invoke-interface {v0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;->onClosed()V
 
-    .line 320
+    .line 326
     :cond_9
     return-void
 .end method
@@ -1028,18 +1028,18 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 262
+    .line 268
     invoke-virtual {p0, p1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 263
+    .line 269
     .local v0, "textView":Landroid/widget/TextView;
     if-eqz v0, :cond_13
 
-    .line 264
+    .line 270
     invoke-static {}, Lcom/weathernews/sunnycomb/common/SCFontStyle;->getInstance()Lcom/weathernews/sunnycomb/common/SCFontStyle;
 
     move-result-object v1
@@ -1050,7 +1050,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 265
+    .line 271
     :cond_13
     return-void
 .end method
@@ -1061,7 +1061,7 @@
     .registers 3
 
     .prologue
-    .line 757
+    .line 763
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     if-eqz v0, :cond_12
@@ -1074,45 +1074,45 @@
 
     if-nez v0, :cond_12
 
-    .line 758
+    .line 764
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->hideHexLine()V
 
-    .line 775
+    .line 781
     :cond_11
     :goto_11
     return-void
 
-    .line 763
+    .line 769
     :cond_12
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->sentHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     if-eqz v0, :cond_11
 
-    .line 766
+    .line 772
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexPieChartViewBuf:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     if-eqz v0, :cond_11
 
-    .line 769
+    .line 775
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->sentHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     if-eq v0, v1, :cond_11
 
-    .line 770
+    .line 776
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexPieChartViewBuf:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setHexLine()V
 
-    .line 771
+    .line 777
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->hideHexLine()V
 
-    .line 772
+    .line 778
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexPieChartViewBuf:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
@@ -1134,35 +1134,35 @@
 
     const/4 v1, 0x0
 
-    .line 352
+    .line 358
     iget-boolean v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isOpen:Z
 
     if-nez v0, :cond_c
 
-    .line 365
+    .line 371
     :goto_b
     return v5
 
-    .line 354
+    .line 360
     :cond_c
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_lock:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 355
+    .line 361
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_bottom:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 356
+    .line 362
     iput-boolean v5, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isOpen:Z
 
-    .line 357
+    .line 363
     new-instance v8, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v8, v2, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 358
+    .line 364
     .local v8, "params":Landroid/widget/RelativeLayout$LayoutParams;
     const/4 v0, 0x3
 
@@ -1170,19 +1170,19 @@
 
     invoke-virtual {v8, v0, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 359
+    .line 365
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_top:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v8}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 360
+    .line 366
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->getHeight()I
 
     move-result v0
 
     div-int/lit8 v7, v0, 0x2
 
-    .line 361
+    .line 367
     .local v7, "h":I
     iget-object v9, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_top:Landroid/widget/RelativeLayout;
 
@@ -1200,7 +1200,7 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 362
+    .line 368
     iget-object v9, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_bottom:Landroid/widget/RelativeLayout;
 
     new-instance v0, Lcom/weathernews/libwnianim/ModTranslateAnim;
@@ -1215,15 +1215,15 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 363
+    .line 369
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->enterYourOwn:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setUnFocus()V
 
-    .line 364
+    .line 370
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->notifyOnClosed()V
 
-    .line 365
+    .line 371
     const/4 v5, 0x1
 
     goto :goto_b
@@ -1233,7 +1233,7 @@
     .registers 2
 
     .prologue
-    .line 752
+    .line 758
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->horizontal:Lcom/weathernews/libwniview/view/ModHorizontalScrollView;
 
     invoke-virtual {v0}, Lcom/weathernews/libwniview/view/ModHorizontalScrollView;->getTop()I
@@ -1243,63 +1243,63 @@
     return v0
 .end method
 
-.method public init(Landroid/content/Context;ZLcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;)V
-    .registers 6
+.method public init(Landroid/content/Context;Landroid/app/Application;ZLcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;)V
+    .registers 7
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "shouldDisplayEnterYourOwn"    # Z
-    .param p3, "l"    # Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
+    .param p2, "app"    # Landroid/app/Application;
+    .param p3, "shouldDisplayEnterYourOwn"    # Z
+    .param p4, "l"    # Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
 
     .prologue
-    .line 119
+    .line 123
     iput-object p1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->context:Landroid/content/Context;
 
-    .line 120
-    iput-object p3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
+    .line 124
+    iput-object p4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->onAdjectiveClickListener:Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;
 
-    .line 121
-    iput-boolean p2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->shouldDisplayEnterYourOwn:Z
+    .line 125
+    iput-boolean p3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->shouldDisplayEnterYourOwn:Z
 
-    .line 122
+    .line 126
     new-instance v0, Lcom/weathernews/sunnycomb/util/UtilProf;
 
     invoke-direct {v0, p1}, Lcom/weathernews/sunnycomb/util/UtilProf;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->utilProf:Lcom/weathernews/sunnycomb/util/UtilProf;
 
-    .line 123
-    invoke-static {}, Lcom/weathernews/sunnycomb/gps/GpsLocation;->getInstance()Lcom/weathernews/sunnycomb/gps/GpsLocation;
+    .line 128
+    check-cast p2, Lcom/weathernews/sunnycomb/Sunnycomb;
 
-    move-result-object v0
+    .end local p2    # "app":Landroid/app/Application;
+    iput-object p2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->app:Lcom/weathernews/sunnycomb/Sunnycomb;
 
-    iput-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->gpsLocation:Lcom/weathernews/sunnycomb/gps/GpsLocation;
-
-    .line 125
+    .line 131
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->find()V
 
-    .line 127
-    if-eqz p2, :cond_42
+    .line 133
+    if-eqz p3, :cond_40
 
-    .line 128
+    .line 134
     const v0, 0x7f090021
 
     invoke-direct {p0, v0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->setFontTypeface(I)V
 
-    .line 132
-    :goto_1e
+    .line 138
+    :goto_1c
     const v0, 0x7f090027
 
     invoke-direct {p0, v0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->setFontTypeface(I)V
 
-    .line 134
+    .line 140
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->initFrames()V
 
-    .line 135
+    .line 141
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->initMoodIconSelector()V
 
-    .line 137
+    .line 143
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->initButtonShare()V
 
-    .line 138
+    .line 144
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->horizontal:Lcom/weathernews/libwniview/view/ModHorizontalScrollView;
 
     new-instance v1, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$1;
@@ -1308,7 +1308,7 @@
 
     invoke-virtual {v0, v1}, Lcom/weathernews/libwniview/view/ModHorizontalScrollView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 149
+    .line 155
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->horizontal:Lcom/weathernews/libwniview/view/ModHorizontalScrollView;
 
     new-instance v1, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$2;
@@ -1317,23 +1317,23 @@
 
     invoke-virtual {v0, v1}, Lcom/weathernews/libwniview/view/ModHorizontalScrollView;->setOnScrollStoppedListener(Lcom/weathernews/libwniview/view/ModHorizontalScrollView$OnScrollStoppedListener;)V
 
-    .line 165
+    .line 171
     return-void
 
-    .line 130
-    :cond_42
+    .line 136
+    :cond_40
     const v0, 0x7f070098
 
     invoke-direct {p0, v0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->setFontTypeface(I)V
 
-    goto :goto_1e
+    goto :goto_1c
 .end method
 
 .method public isEnterYourOwnCurrentlySelected()Z
     .registers 2
 
     .prologue
-    .line 722
+    .line 728
     iget-boolean v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isEnterYourOwnCurrentlySelected:Z
 
     return v0
@@ -1343,7 +1343,7 @@
     .registers 2
 
     .prologue
-    .line 286
+    .line 292
     iget-boolean v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isOpen:Z
 
     return v0
@@ -1354,17 +1354,17 @@
     .param p1, "pos"    # F
 
     .prologue
-    .line 683
+    .line 689
     iget v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->dispWidth:I
 
     if-nez v2, :cond_14
 
-    .line 684
+    .line 690
     invoke-static {}, Lcom/weathernews/sunnycomb/common/CommonParams;->getInstance()Lcom/weathernews/sunnycomb/common/CommonParams;
 
     move-result-object v0
 
-    .line 685
+    .line 691
     .local v0, "commonParams":Lcom/weathernews/sunnycomb/common/CommonParams;
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/common/CommonParams;->getDispWidth()I
 
@@ -1372,14 +1372,14 @@
 
     iput v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->dispWidth:I
 
-    .line 686
+    .line 692
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/common/CommonParams;->getDispHeight()I
 
     move-result v2
 
     iput v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->dispHeight:I
 
-    .line 689
+    .line 695
     .end local v0    # "commonParams":Lcom/weathernews/sunnycomb/common/CommonParams;
     :cond_14
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
@@ -1390,7 +1390,7 @@
 
     invoke-direct {v1, v2, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 690
+    .line 696
     .local v1, "lp":Landroid/widget/RelativeLayout$LayoutParams;
     const/high16 v2, 0x3f800000    # 1.0f
 
@@ -1398,7 +1398,7 @@
 
     if-gez v2, :cond_31
 
-    .line 691
+    .line 697
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->getWidth()I
 
     move-result v2
@@ -1413,14 +1413,14 @@
 
     iput v2, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    .line 694
+    .line 700
     :goto_2d
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 695
+    .line 701
     return-void
 
-    .line 693
+    .line 699
     :cond_31
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->getWidth()I
 
@@ -1442,17 +1442,17 @@
 
     const/4 v5, 0x0
 
-    .line 575
+    .line 581
     iget-boolean v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->shouldDisplayEnterYourOwn:Z
 
     if-nez v2, :cond_7
 
-    .line 680
+    .line 686
     :cond_6
     :goto_6
     return-void
 
-    .line 579
+    .line 585
     :cond_7
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->utilProf:Lcom/weathernews/sunnycomb/util/UtilProf;
 
@@ -1462,36 +1462,36 @@
 
     if-nez v2, :cond_15
 
-    .line 580
+    .line 586
     const-string v2, "NO_AKEY"
 
     invoke-direct {p0, v2}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->notifyOnClickAdjective(Ljava/lang/String;)V
 
     goto :goto_6
 
-    .line 584
+    .line 590
     :cond_15
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->cameraButtonView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     if-ne p1, v2, :cond_1d
 
-    .line 585
+    .line 591
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->notifyOnClickCameraButton()V
 
     goto :goto_6
 
-    .line 589
+    .line 595
     :cond_1d
     instance-of v2, p1, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     if-eqz v2, :cond_97
 
-    .line 591
+    .line 597
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestFeelingIconValue:Ljava/lang/String;
 
     if-eqz v2, :cond_29
 
-    .line 592
+    .line 598
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     iput-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexPieChartViewBuf:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
@@ -1499,12 +1499,12 @@
     :cond_29
     move-object v2, p1
 
-    .line 594
+    .line 600
     check-cast v2, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     iput-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
-    .line 595
+    .line 601
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -1517,7 +1517,7 @@
 
     if-lt v1, v2, :cond_48
 
-    .line 602
+    .line 608
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {v2}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->isEnterYourOwn()Z
@@ -1526,17 +1526,17 @@
 
     if-eqz v2, :cond_6a
 
-    .line 603
+    .line 609
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->notifyOnClickEnterYourOwn()V
 
-    .line 604
+    .line 610
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {p0, v2}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->setHexLine(Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;)V
 
     goto :goto_6
 
-    .line 596
+    .line 602
     :cond_48
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
@@ -1550,7 +1550,7 @@
 
     if-eqz v2, :cond_60
 
-    .line 597
+    .line 603
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
@@ -1559,13 +1559,13 @@
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setSelected(Z)V
 
-    .line 595
+    .line 601
     :goto_5d
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2f
 
-    .line 599
+    .line 605
     :cond_60
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
@@ -1577,7 +1577,7 @@
 
     goto :goto_5d
 
-    .line 606
+    .line 612
     :cond_6a
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1599,23 +1599,23 @@
 
     if-eqz v2, :cond_87
 
-    .line 607
+    .line 613
     invoke-direct {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->notifyOnClickEnterYourOwn()V
 
-    .line 608
+    .line 614
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {p0, v2}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->setHexLine(Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;)V
 
     goto :goto_6
 
-    .line 611
+    .line 617
     :cond_87
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {p0, v2}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->setHexLine(Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;)V
 
-    .line 612
+    .line 618
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {v2}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->getAdjective()Ljava/lang/String;
@@ -1626,7 +1626,7 @@
 
     goto/16 :goto_6
 
-    .line 620
+    .line 626
     .end local v1    # "i":I
     :cond_97
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->button_share:Lcom/weathernews/sunnycomb/view/FlatButtonView;
@@ -1637,12 +1637,12 @@
 
     if-eqz v2, :cond_6
 
-    .line 622
+    .line 628
     iget-boolean v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isEnterYourOwnCurrentlySelected:Z
 
     if-eqz v2, :cond_cf
 
-    .line 623
+    .line 629
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->enterYourOwn:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {v2}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->getEditedText()Ljava/lang/String;
@@ -1651,7 +1651,7 @@
 
     iput-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestAdjective:Ljava/lang/String;
 
-    .line 629
+    .line 635
     :goto_ab
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestAdjective:Ljava/lang/String;
 
@@ -1667,7 +1667,7 @@
 
     if-eqz v2, :cond_d8
 
-    .line 630
+    .line 636
     :cond_b9
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->context:Landroid/content/Context;
 
@@ -1689,7 +1689,7 @@
 
     goto/16 :goto_6
 
-    .line 626
+    .line 632
     :cond_cf
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
@@ -1701,7 +1701,7 @@
 
     goto :goto_ab
 
-    .line 633
+    .line 639
     :cond_d8
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->mood_icon_selector:Lcom/weathernews/sunnycomb/view/MoodIconSelectorView;
 
@@ -1713,7 +1713,7 @@
 
     if-ne v2, v3, :cond_f7
 
-    .line 634
+    .line 640
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->context:Landroid/content/Context;
 
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->getResources()Landroid/content/res/Resources;
@@ -1734,7 +1734,7 @@
 
     goto/16 :goto_6
 
-    .line 638
+    .line 644
     :cond_f7
     const/4 v1, 0x0
 
@@ -1748,7 +1748,7 @@
 
     if-lt v1, v2, :cond_178
 
-    .line 647
+    .line 653
     new-instance v0, Lcom/weathernews/libwnihttp/HttpPostTask;
 
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->context:Landroid/content/Context;
@@ -1759,7 +1759,7 @@
 
     invoke-direct {v0, v2, v3}, Lcom/weathernews/libwnihttp/HttpPostTask;-><init>(Landroid/content/Context;Lcom/weathernews/libwnihttp/HttpListener$OnHttpTaskListener;)V
 
-    .line 666
+    .line 672
     .local v0, "httpPostTask":Lcom/weathernews/libwnihttp/HttpPostTask;
     const-string v2, "akey"
 
@@ -1771,7 +1771,7 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/weathernews/libwnihttp/HttpPostTask;->setPostValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 667
+    .line 673
     const-string v2, "tz"
 
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
@@ -1784,7 +1784,7 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/weathernews/libwnihttp/HttpPostTask;->setPostValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 668
+    .line 674
     const-string v2, "locale"
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -1797,47 +1797,47 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/weathernews/libwnihttp/HttpPostTask;->setPostValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 669
+    .line 675
     const-string v2, "lat"
 
-    iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->gpsLocation:Lcom/weathernews/sunnycomb/gps/GpsLocation;
+    iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->app:Lcom/weathernews/sunnycomb/Sunnycomb;
 
-    invoke-virtual {v3}, Lcom/weathernews/sunnycomb/gps/GpsLocation;->getLat()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/weathernews/sunnycomb/Sunnycomb;->getStrLat()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v0, v2, v3}, Lcom/weathernews/libwnihttp/HttpPostTask;->setPostValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 670
+    .line 676
     const-string v2, "lon"
 
-    iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->gpsLocation:Lcom/weathernews/sunnycomb/gps/GpsLocation;
+    iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->app:Lcom/weathernews/sunnycomb/Sunnycomb;
 
-    invoke-virtual {v3}, Lcom/weathernews/sunnycomb/gps/GpsLocation;->getLon()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/weathernews/sunnycomb/Sunnycomb;->getStrLon()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v0, v2, v3}, Lcom/weathernews/libwnihttp/HttpPostTask;->setPostValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 671
+    .line 677
     const-string v2, "location"
 
-    iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->gpsLocation:Lcom/weathernews/sunnycomb/gps/GpsLocation;
+    iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->app:Lcom/weathernews/sunnycomb/Sunnycomb;
 
-    invoke-virtual {v3}, Lcom/weathernews/sunnycomb/gps/GpsLocation;->getCity()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/weathernews/sunnycomb/Sunnycomb;->getCity()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v0, v2, v3}, Lcom/weathernews/libwnihttp/HttpPostTask;->setPostValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 672
+    .line 678
     const-string v2, "adjective"
 
     iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestAdjective:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Lcom/weathernews/libwnihttp/HttpPostTask;->setPostValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 673
+    .line 679
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->mood_icon_selector:Lcom/weathernews/sunnycomb/view/MoodIconSelectorView;
 
     invoke-virtual {v2}, Lcom/weathernews/sunnycomb/view/MoodIconSelectorView;->getMoodIconIndex()I
@@ -1850,27 +1850,27 @@
 
     iput-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestFeelingIconValue:Ljava/lang/String;
 
-    .line 674
+    .line 680
     const-string v2, "feeling"
 
     iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestFeelingIconValue:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Lcom/weathernews/libwnihttp/HttpPostTask;->setPostValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 675
+    .line 681
     const-string v2, "http://g.sunnycomb.com/sunnycomb/api_feeling_submit.cgi"
 
     invoke-virtual {v0, v2}, Lcom/weathernews/libwnihttp/HttpPostTask;->start(Ljava/lang/String;)V
 
-    .line 676
+    .line 682
     iput-boolean v4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasAdjectiveAlreadySent:Z
 
-    .line 677
+    .line 683
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->close()Z
 
     goto/16 :goto_6
 
-    .line 639
+    .line 645
     .end local v0    # "httpPostTask":Lcom/weathernews/libwnihttp/HttpPostTask;
     :cond_178
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
@@ -1887,10 +1887,10 @@
 
     if-eqz v2, :cond_19a
 
-    .line 640
+    .line 646
     iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
-    .line 641
+    .line 647
     iget v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
     iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
@@ -1903,14 +1903,14 @@
 
     if-ne v2, v3, :cond_19a
 
-    .line 642
+    .line 648
     iget v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
     add-int/lit8 v2, v2, -0x1
 
     iput v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
-    .line 638
+    .line 644
     :cond_19a
     add-int/lit8 v1, v1, 0x1
 
@@ -1925,17 +1925,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 702
+    .line 708
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->enterYourOwn:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     if-nez v0, :cond_6
 
-    .line 708
+    .line 714
     :cond_5
     :goto_5
     return v1
 
-    .line 705
+    .line 711
     :cond_6
     const/4 v0, 0x1
 
@@ -1949,7 +1949,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 706
+    .line 712
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->enterYourOwn:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {p0, v0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->setHexLine(Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;)V
@@ -1968,7 +1968,7 @@
 
     const/4 v1, 0x0
 
-    .line 331
+    .line 337
     new-instance v0, Lcom/weathernews/sunnycomb/common/LogCountTag;
 
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->context:Landroid/content/Context;
@@ -1983,7 +1983,7 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/weathernews/sunnycomb/common/LogCountTag;->countLog(Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;Lcom/weathernews/sunnycomb/common/LogCountTag$CountTag;)V
 
-    .line 333
+    .line 339
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->utilProf:Lcom/weathernews/sunnycomb/util/UtilProf;
 
     invoke-virtual {v0}, Lcom/weathernews/sunnycomb/util/UtilProf;->getAkey()Ljava/lang/String;
@@ -1992,24 +1992,24 @@
 
     if-nez v0, :cond_1c
 
-    .line 346
+    .line 352
     :goto_1b
     return-void
 
-    .line 335
+    .line 341
     :cond_1c
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->separator:Landroid/view/View;
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 336
+    .line 342
     invoke-virtual {p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->getHeight()I
 
     move-result v0
 
     div-int/lit8 v9, v0, 0x2
 
-    .line 337
+    .line 343
     .local v9, "h":I
     new-instance v8, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -2017,23 +2017,23 @@
 
     invoke-direct {v8, v0, v9}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 338
+    .line 344
     .local v8, "frame_top_params":Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_top:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v8}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 339
+    .line 345
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_lock:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v5}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 340
+    .line 346
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_bottom:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v5}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 342
+    .line 348
     iget-object v10, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_top:Landroid/widget/RelativeLayout;
 
     new-instance v0, Lcom/weathernews/libwnianim/ModTranslateAnim;
@@ -2050,7 +2050,7 @@
 
     invoke-virtual {v10, v0}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 343
+    .line 349
     iget-object v7, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_bottom:Landroid/widget/RelativeLayout;
 
     new-instance v0, Lcom/weathernews/libwnianim/ModTranslateAnim;
@@ -2065,7 +2065,7 @@
 
     invoke-virtual {v7, v0}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 345
+    .line 351
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isOpen:Z
@@ -2078,29 +2078,29 @@
     .param p1, "isEnterYourOwnCurrentlySelected"    # Z
 
     .prologue
-    .line 725
+    .line 731
     iput-boolean p1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->isEnterYourOwnCurrentlySelected:Z
 
-    .line 726
+    .line 732
     if-eqz p1, :cond_27
 
-    .line 727
+    .line 733
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     if-eqz v1, :cond_c
 
-    .line 728
+    .line 734
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexPieChartViewBuf:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
-    .line 729
+    .line 735
     :cond_c
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->enterYourOwn:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     iput-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestSelectedHexPieChartView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
-    .line 730
+    .line 736
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2113,7 +2113,7 @@
 
     if-lt v0, v1, :cond_28
 
-    .line 737
+    .line 743
     const/4 v0, 0x0
 
     :goto_1a
@@ -2125,17 +2125,17 @@
 
     if-lt v0, v1, :cond_4e
 
-    .line 745
+    .line 751
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->enterYourOwn:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {p0, v1}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->setHexLine(Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;)V
 
-    .line 747
+    .line 753
     .end local v0    # "i":I
     :cond_27
     return-void
 
-    .line 731
+    .line 737
     .restart local v0    # "i":I
     :cond_28
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
@@ -2152,7 +2152,7 @@
 
     if-eqz v1, :cond_43
 
-    .line 732
+    .line 738
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
@@ -2163,13 +2163,13 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setSelected(Z)V
 
-    .line 730
+    .line 736
     :goto_40
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_11
 
-    .line 734
+    .line 740
     :cond_43
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
@@ -2183,7 +2183,7 @@
 
     goto :goto_40
 
-    .line 738
+    .line 744
     :cond_4e
     iget-object v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
@@ -2199,10 +2199,10 @@
 
     if-eqz v1, :cond_70
 
-    .line 739
+    .line 745
     iput v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
-    .line 740
+    .line 746
     iget v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
     iget-object v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
@@ -2215,14 +2215,14 @@
 
     if-ne v1, v2, :cond_70
 
-    .line 741
+    .line 747
     iget v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
-    .line 737
+    .line 743
     :cond_70
     add-int/lit8 v0, v0, 0x1
 
@@ -2234,14 +2234,14 @@
     .param p1, "view"    # Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     .prologue
-    .line 712
+    .line 718
     iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
-    .line 713
+    .line 719
     .local v0, "counter":I
     const/4 v2, 0x0
 
@@ -2249,13 +2249,13 @@
     :goto_7
     if-lt v2, v0, :cond_d
 
-    .line 718
+    .line 724
     invoke-virtual {p1}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setHexLine()V
 
-    .line 719
+    .line 725
     return-void
 
-    .line 714
+    .line 720
     :cond_d
     iget-object v3, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
@@ -2265,7 +2265,7 @@
 
     check-cast v1, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
-    .line 715
+    .line 721
     .local v1, "element":Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
     invoke-virtual {v1}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->isHexLined()Z
 
@@ -2273,10 +2273,10 @@
 
     if-eqz v3, :cond_1e
 
-    .line 716
+    .line 722
     invoke-virtual {v1}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->hideHexLine()V
 
-    .line 713
+    .line 719
     :cond_1e
     add-int/lit8 v2, v2, 0x1
 
@@ -2288,10 +2288,10 @@
     .param p1, "adjective"    # Ljava/lang/String;
 
     .prologue
-    .line 749
+    .line 755
     iput-object p1, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->latestAdjective:Ljava/lang/String;
 
-    .line 750
+    .line 756
     return-void
 .end method
 
@@ -2306,36 +2306,36 @@
 
     const/4 v5, 0x0
 
-    .line 242
+    .line 248
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_flick:Landroid/widget/RelativeLayout;
 
     if-nez v0, :cond_7
 
-    .line 254
+    .line 260
     :goto_6
     return-void
 
-    .line 244
+    .line 250
     :cond_7
     if-eqz p1, :cond_26
 
     move v8, p2
 
-    .line 245
+    .line 251
     .local v8, "fm":I
     :goto_a
     if-eqz p1, :cond_28
 
     move v9, v5
 
-    .line 246
+    .line 252
     .local v9, "to":I
     :goto_d
     iget-object v0, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_flick:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v5}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 247
+    .line 253
     iget-object v10, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->frame_flick:Landroid/widget/RelativeLayout;
 
     new-instance v0, Lcom/weathernews/libwnianim/ModTranslateAnim;
@@ -2363,14 +2363,14 @@
     :cond_26
     move v8, v5
 
-    .line 244
+    .line 250
     goto :goto_a
 
     .restart local v8    # "fm":I
     :cond_28
     move v9, p2
 
-    .line 245
+    .line 251
     goto :goto_d
 .end method
 
@@ -2378,14 +2378,14 @@
     .registers 21
 
     .prologue
-    .line 371
+    .line 377
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasAdjectiveAlreadySent:Z
 
     if-eqz v2, :cond_8e
 
-    .line 372
+    .line 378
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->localWeatherDataLoader:Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;
@@ -2398,7 +2398,7 @@
 
     iput-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->adjectiveDataList:Ljava/util/List;
 
-    .line 374
+    .line 380
     const/4 v14, 0x0
 
     .local v14, "i":I
@@ -2413,16 +2413,16 @@
 
     if-lt v14, v2, :cond_21
 
-    .line 385
+    .line 391
     invoke-virtual/range {p0 .. p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->startCameraIconAnim()V
 
-    .line 462
+    .line 468
     .end local v14    # "i":I
     :cond_20
     :goto_20
     return-void
 
-    .line 375
+    .line 381
     .restart local v14    # "i":I
     :cond_21
     const/4 v15, 0x0
@@ -2439,12 +2439,12 @@
 
     if-lt v15, v2, :cond_2f
 
-    .line 374
+    .line 380
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_13
 
-    .line 376
+    .line 382
     :cond_2f
     move-object/from16 v0, p0
 
@@ -2462,14 +2462,14 @@
 
     if-eqz v2, :cond_42
 
-    .line 375
+    .line 381
     :cond_3f
     :goto_3f
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_22
 
-    .line 380
+    .line 386
     :cond_42
     move-object/from16 v0, p0
 
@@ -2505,7 +2505,7 @@
 
     if-eqz v2, :cond_3f
 
-    .line 381
+    .line 387
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
@@ -2548,7 +2548,7 @@
 
     goto :goto_3f
 
-    .line 388
+    .line 394
     .end local v14    # "i":I
     .end local v15    # "j":I
     :cond_8e
@@ -2562,7 +2562,7 @@
 
     if-nez v2, :cond_a4
 
-    .line 389
+    .line 395
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->localWeatherDataLoader:Lcom/weathernews/sunnycomb/loader/LocalWeatherDataLoader;
@@ -2575,7 +2575,7 @@
 
     iput-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->adjectiveDataList:Ljava/util/List;
 
-    .line 392
+    .line 398
     :cond_a4
     move-object/from16 v0, p0
 
@@ -2589,7 +2589,7 @@
 
     if-nez v2, :cond_16d
 
-    .line 393
+    .line 399
     new-instance v2, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     move-object/from16 v0, p0
@@ -2606,7 +2606,7 @@
 
     iput-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->enterYourOwn:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
-    .line 394
+    .line 400
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->enterYourOwn:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
@@ -2617,7 +2617,7 @@
 
     invoke-virtual {v2, v3}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setEnterYourOwn(Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;)V
 
-    .line 395
+    .line 401
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->enterYourOwn:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
@@ -2626,7 +2626,7 @@
 
     invoke-virtual {v2, v0}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 396
+    .line 402
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
@@ -2637,17 +2637,17 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 410
+    .line 416
     :cond_e0
     const/4 v7, 0x0
 
-    .line 411
+    .line 417
     .local v7, "maxOffset":I
     invoke-virtual/range {p0 .. p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0b0040
+    const v3, 0x7f0b0041
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -2655,7 +2655,7 @@
 
     float-to-int v11, v2
 
-    .line 412
+    .line 418
     .local v11, "hexHeight":I
     int-to-float v2, v11
 
@@ -2675,7 +2675,7 @@
 
     float-to-int v13, v2
 
-    .line 414
+    .line 420
     .local v13, "hexWidth":I
     move-object/from16 v0, p0
 
@@ -2693,7 +2693,7 @@
 
     move/from16 v16, v0
 
-    .line 415
+    .line 421
     .local v16, "numberOfHexToFillDisplay":I
     move-object/from16 v0, p0
 
@@ -2707,10 +2707,10 @@
 
     iput v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfData:I
 
-    .line 417
+    .line 423
     const/16 v17, 0x0
 
-    .line 418
+    .line 424
     .local v17, "numberOfHexToGenerate":I
     move-object/from16 v0, p0
 
@@ -2718,7 +2718,7 @@
 
     if-nez v2, :cond_1ab
 
-    .line 419
+    .line 425
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfData:I
@@ -2729,7 +2729,7 @@
 
     move/from16 v17, v16
 
-    .line 423
+    .line 429
     :goto_125
     move-object/from16 v0, p0
 
@@ -2737,14 +2737,14 @@
 
     if-eqz v2, :cond_131
 
-    .line 424
+    .line 430
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
 
     move/from16 v17, v0
 
-    .line 426
+    .line 432
     :cond_131
     const/4 v14, 0x0
 
@@ -2754,21 +2754,21 @@
 
     if-lt v14, v0, :cond_1b3
 
-    .line 443
+    .line 449
     move/from16 v0, v17
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->numberOfGeneratedHex:I
 
-    .line 445
+    .line 451
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->shouldDisplayEnterYourOwn:Z
 
     if-eqz v2, :cond_20
 
-    .line 446
+    .line 452
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
@@ -2783,7 +2783,7 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 447
+    .line 453
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
@@ -2818,7 +2818,7 @@
 
     goto/16 :goto_20
 
-    .line 399
+    .line 405
     .end local v7    # "maxOffset":I
     .end local v11    # "hexHeight":I
     .end local v13    # "hexWidth":I
@@ -2836,7 +2836,7 @@
 
     if-nez v2, :cond_e0
 
-    .line 400
+    .line 406
     new-instance v12, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     move-object/from16 v0, p0
@@ -2849,7 +2849,7 @@
 
     invoke-direct {v12, v2, v3}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;-><init>(Landroid/content/Context;Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;)V
 
-    .line 402
+    .line 408
     .local v12, "hexPieChartView":Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
     invoke-virtual/range {p0 .. p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->getResources()Landroid/content/res/Resources;
 
@@ -2865,24 +2865,24 @@
 
     invoke-virtual {v12, v2, v3}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setAdjective(Ljava/lang/String;I)V
 
-    .line 403
+    .line 409
     invoke-virtual {v12}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->hideTextPercentage()V
 
-    .line 404
+    .line 410
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v12}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 405
+    .line 411
     const/4 v2, 0x0
 
     invoke-virtual {v12, v2}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->startAnim(I)I
 
     goto/16 :goto_20
 
-    .line 419
+    .line 425
     .end local v12    # "hexPieChartView":Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
     .restart local v7    # "maxOffset":I
     .restart local v11    # "hexHeight":I
@@ -2898,7 +2898,7 @@
 
     goto/16 :goto_125
 
-    .line 421
+    .line 427
     :cond_1ab
     move-object/from16 v0, p0
 
@@ -2908,7 +2908,7 @@
 
     goto/16 :goto_125
 
-    .line 427
+    .line 433
     .restart local v14    # "i":I
     :cond_1b3
     move-object/from16 v0, p0
@@ -2921,18 +2921,18 @@
 
     check-cast v10, Lcom/weathernews/sunnycomb/loader/data/AdjectiveData;
 
-    .line 428
+    .line 434
     .local v10, "adjectiveData":Lcom/weathernews/sunnycomb/loader/data/AdjectiveData;
     if-nez v10, :cond_1c3
 
-    .line 426
+    .line 432
     :cond_1bf
     :goto_1bf
     add-int/lit8 v14, v14, 0x1
 
     goto/16 :goto_132
 
-    .line 430
+    .line 436
     :cond_1c3
     new-instance v12, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
@@ -2946,7 +2946,7 @@
 
     invoke-direct {v12, v2, v3}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;-><init>(Landroid/content/Context;Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$OnAdjectiveClickListener;)V
 
-    .line 431
+    .line 437
     .restart local v12    # "hexPieChartView":Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
     move-object/from16 v0, p0
 
@@ -2954,12 +2954,12 @@
 
     if-eqz v2, :cond_1db
 
-    .line 432
+    .line 438
     move-object/from16 v0, p0
 
     invoke-virtual {v12, v0}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 434
+    .line 440
     :cond_1db
     invoke-virtual {v10}, Lcom/weathernews/sunnycomb/loader/data/AdjectiveData;->getAdjective()Ljava/lang/String;
 
@@ -2971,17 +2971,17 @@
 
     invoke-virtual {v12, v2, v3}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setAdjective(Ljava/lang/String;I)V
 
-    .line 435
+    .line 441
     invoke-virtual {v10}, Lcom/weathernews/sunnycomb/loader/data/AdjectiveData;->isSelected()Z
 
     move-result v2
 
     if-eqz v2, :cond_1ef
 
-    .line 436
+    .line 442
     invoke-virtual {v12}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->setHexLine()V
 
-    .line 438
+    .line 444
     :cond_1ef
     move-object/from16 v0, p0
 
@@ -2989,18 +2989,18 @@
 
     invoke-virtual {v2, v12}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 439
+    .line 445
     invoke-virtual {v12, v14}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->startAnim(I)I
 
     move-result v18
 
-    .line 440
+    .line 446
     .local v18, "offset":I
     move/from16 v0, v18
 
     if-ge v7, v0, :cond_1bf
 
-    .line 441
+    .line 447
     move/from16 v7, v18
 
     goto :goto_1bf
@@ -3014,7 +3014,7 @@
 
     const/4 v7, 0x0
 
-    .line 466
+    .line 472
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -3027,8 +3027,8 @@
 
     if-lt v2, v4, :cond_42
 
-    .line 471
-    const v4, 0x7f0b0040
+    .line 477
+    const v4, 0x7f0b0041
 
     invoke-virtual {p0, v4}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->getDimen(I)I
 
@@ -3052,30 +3052,30 @@
 
     float-to-int v1, v4
 
-    .line 472
+    .line 478
     .local v1, "hexWidth":I
     iget-boolean v4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->hasCameraIconAlreadyGenerated:Z
 
     if-eqz v4, :cond_a9
 
-    .line 473
+    .line 479
     iget-object v4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
     iget-object v5, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->cameraButtonView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
     invoke-virtual {v4, v5}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
-    .line 475
+    .line 481
     iget v4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->cameraIconOrder:I
 
     iget v5, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
     if-ge v4, v5, :cond_7b
 
-    .line 476
+    .line 482
     const/4 v3, 0x0
 
-    .line 477
+    .line 483
     .local v3, "isListenerGenerated":Z
     const/4 v2, 0x0
 
@@ -3088,7 +3088,7 @@
 
     if-lt v2, v4, :cond_55
 
-    .line 537
+    .line 543
     :cond_3b
     iget-object v4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->cameraButtonView:Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;
 
@@ -3096,11 +3096,11 @@
 
     invoke-virtual {v4, v5}, Lcom/weathernews/sunnycomb/localweather/adjective/HexPieChartView;->startAnim(I)I
 
-    .line 569
+    .line 575
     :cond_41
     return-void
 
-    .line 467
+    .line 473
     .end local v1    # "hexWidth":I
     .end local v3    # "isListenerGenerated":Z
     :cond_42
@@ -3118,16 +3118,16 @@
 
     if-eqz v4, :cond_52
 
-    .line 468
+    .line 474
     iput v2, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
-    .line 466
+    .line 472
     :cond_52
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
 
-    .line 478
+    .line 484
     .restart local v1    # "hexWidth":I
     .restart local v3    # "isListenerGenerated":Z
     :cond_55
@@ -3137,31 +3137,31 @@
 
     if-le v2, v4, :cond_78
 
-    .line 479
+    .line 485
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     int-to-float v4, v1
 
     invoke-direct {v0, v7, v4, v7, v7}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 480
+    .line 486
     .local v0, "anim":Landroid/view/animation/TranslateAnimation;
     invoke-virtual {v0, v8, v9}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 481
+    .line 487
     if-nez v3, :cond_6f
 
-    .line 482
+    .line 488
     new-instance v4, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$7;
 
     invoke-direct {v4, p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$7;-><init>(Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;)V
 
     invoke-virtual {v0, v4}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 500
+    .line 506
     const/4 v3, 0x1
 
-    .line 502
+    .line 508
     :cond_6f
     iget-object v4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
@@ -3171,19 +3171,19 @@
 
     invoke-virtual {v4, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 477
+    .line 483
     .end local v0    # "anim":Landroid/view/animation/TranslateAnimation;
     :cond_78
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_33
 
-    .line 507
+    .line 513
     .end local v3    # "isListenerGenerated":Z
     :cond_7b
     const/4 v3, 0x0
 
-    .line 508
+    .line 514
     .restart local v3    # "isListenerGenerated":Z
     const/4 v2, 0x0
 
@@ -3196,36 +3196,36 @@
 
     if-ge v2, v4, :cond_3b
 
-    .line 509
+    .line 515
     iget v4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
     if-lt v2, v4, :cond_a6
 
-    .line 510
+    .line 516
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     int-to-float v4, v1
 
     invoke-direct {v0, v7, v4, v7, v7}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 511
+    .line 517
     .restart local v0    # "anim":Landroid/view/animation/TranslateAnimation;
     invoke-virtual {v0, v8, v9}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 512
+    .line 518
     if-nez v3, :cond_9d
 
-    .line 513
+    .line 519
     new-instance v4, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$8;
 
     invoke-direct {v4, p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$8;-><init>(Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;)V
 
     invoke-virtual {v0, v4}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 531
+    .line 537
     const/4 v3, 0x1
 
-    .line 533
+    .line 539
     :cond_9d
     iget-object v4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
@@ -3235,19 +3235,19 @@
 
     invoke-virtual {v4, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 508
+    .line 514
     .end local v0    # "anim":Landroid/view/animation/TranslateAnimation;
     :cond_a6
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_7d
 
-    .line 539
+    .line 545
     .end local v3    # "isListenerGenerated":Z
     :cond_a9
     const/4 v3, 0x0
 
-    .line 540
+    .line 546
     .restart local v3    # "isListenerGenerated":Z
     const/4 v2, 0x0
 
@@ -3260,38 +3260,38 @@
 
     if-ge v2, v4, :cond_41
 
-    .line 541
+    .line 547
     iget v4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->selectedHexOrder:I
 
     add-int/lit8 v4, v4, -0x1
 
     if-le v2, v4, :cond_d6
 
-    .line 542
+    .line 548
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     int-to-float v4, v1
 
     invoke-direct {v0, v7, v4, v7, v7}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 543
+    .line 549
     .restart local v0    # "anim":Landroid/view/animation/TranslateAnimation;
     invoke-virtual {v0, v8, v9}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 544
+    .line 550
     if-nez v3, :cond_cd
 
-    .line 545
+    .line 551
     new-instance v4, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$9;
 
     invoke-direct {v4, p0}, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView$9;-><init>(Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;)V
 
     invoke-virtual {v0, v4}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 563
+    .line 569
     const/4 v3, 0x1
 
-    .line 565
+    .line 571
     :cond_cd
     iget-object v4, p0, Lcom/weathernews/sunnycomb/localweather/adjective/AdjectiveView;->linearLayout:Landroid/widget/LinearLayout;
 
@@ -3301,7 +3301,7 @@
 
     invoke-virtual {v4, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 540
+    .line 546
     .end local v0    # "anim":Landroid/view/animation/TranslateAnimation;
     :cond_d6
     add-int/lit8 v2, v2, 0x1

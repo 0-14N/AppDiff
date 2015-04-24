@@ -7,56 +7,70 @@
 
 
 # instance fields
-.field final synthetic a:Lorg/gdb/android/client/kl;
-
-.field private final synthetic b:Lorg/gdb/android/client/widget/ConfirmDialog;
+.field final synthetic a:Lorg/gdb/android/client/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lorg/gdb/android/client/kl;Lorg/gdb/android/client/widget/ConfirmDialog;)V
-    .registers 3
+.method constructor <init>(Lorg/gdb/android/client/SettingsActivity;)V
+    .registers 2
 
     .prologue
     .line 1
-    iput-object p1, p0, Lorg/gdb/android/client/km;->a:Lorg/gdb/android/client/kl;
+    iput-object p1, p0, Lorg/gdb/android/client/km;->a:Lorg/gdb/android/client/SettingsActivity;
 
-    iput-object p2, p0, Lorg/gdb/android/client/km;->b:Lorg/gdb/android/client/widget/ConfirmDialog;
-
-    .line 159
+    .line 180
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lorg/gdb/android/client/km;)Lorg/gdb/android/client/kl;
-    .registers 2
-
-    .prologue
-    .line 159
-    iget-object v0, p0, Lorg/gdb/android/client/km;->a:Lorg/gdb/android/client/kl;
-
-    return-object v0
-.end method
-
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .registers 3
+    .registers 7
 
     .prologue
-    .line 162
-    new-instance v0, Lorg/gdb/android/client/kn;
+    .line 184
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-direct {v0, p0}, Lorg/gdb/android/client/kn;-><init>(Lorg/gdb/android/client/km;)V
+    iget-object v1, p0, Lorg/gdb/android/client/km;->a:Lorg/gdb/android/client/SettingsActivity;
 
-    .line 170
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+    const-class v2, Lorg/gdb/android/client/AboutAndHelpAtivity;
 
-    .line 171
-    iget-object v0, p0, Lorg/gdb/android/client/km;->b:Lorg/gdb/android/client/widget/ConfirmDialog;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {v0}, Lorg/gdb/android/client/widget/ConfirmDialog;->dismiss()V
+    .line 185
+    const-string v1, "url"
 
-    .line 172
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "http://api2.guangdianbao.com/gdb/"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lorg/gdb/android/client/km;->a:Lorg/gdb/android/client/SettingsActivity;
+
+    const v4, 0x7f080186
+
+    invoke-virtual {v3, v4}, Lorg/gdb/android/client/SettingsActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 186
+    iget-object v1, p0, Lorg/gdb/android/client/km;->a:Lorg/gdb/android/client/SettingsActivity;
+
+    invoke-virtual {v1, v0}, Lorg/gdb/android/client/SettingsActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 187
     return-void
 .end method

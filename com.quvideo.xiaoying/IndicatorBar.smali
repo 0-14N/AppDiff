@@ -418,16 +418,16 @@
 
     .line 197
     :cond_be
-    new-instance v0, Lafc;
+    new-instance v0, Lyi;
 
-    invoke-direct {v0, p0}, Lafc;-><init>(Lcom/quvideo/xiaoying/camera/ui/IndicatorBar;)V
+    invoke-direct {v0, p0}, Lyi;-><init>(Lcom/quvideo/xiaoying/camera/ui/IndicatorBar;)V
 
     invoke-virtual {v7, v0}, Lcom/quvideo/xiaoying/camera/ui/IndicatorPopupMenu;->setOnItemSelectedListener(Lcom/quvideo/xiaoying/camera/ui/CameraPopupMenuBase$OnItemSelectedListener;)V
 
     .line 206
-    new-instance v0, Lafd;
+    new-instance v0, Lyj;
 
-    invoke-direct {v0, p0}, Lafd;-><init>(Lcom/quvideo/xiaoying/camera/ui/IndicatorBar;)V
+    invoke-direct {v0, p0}, Lyj;-><init>(Lcom/quvideo/xiaoying/camera/ui/IndicatorBar;)V
 
     invoke-virtual {v7, v0}, Lcom/quvideo/xiaoying/camera/ui/IndicatorPopupMenu;->setOnMenuDismissListener(Lcom/quvideo/xiaoying/camera/ui/CameraPopupMenuBase$OnMenuDismissListener;)V
 

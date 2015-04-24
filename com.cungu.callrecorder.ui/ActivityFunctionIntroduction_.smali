@@ -30,7 +30,7 @@
 .method static synthetic a(Lcom/cungo/callrecorder/ui/ActivityFunctionIntroduction_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 .method static synthetic b(Lcom/cungo/callrecorder/ui/ActivityFunctionIntroduction_;)V
     .registers 1
 
-    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->o()V
+    invoke-super {p0}, Lcom/cungo/callrecorder/ui/ActivityBase;->p()V
 
     return-void
 .end method
@@ -118,9 +118,9 @@
 .method public o()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/es;
+    new-instance v0, Lcom/cungo/callrecorder/ui/er;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/es;-><init>(Lcom/cungo/callrecorder/ui/ActivityFunctionIntroduction_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/er;-><init>(Lcom/cungo/callrecorder/ui/ActivityFunctionIntroduction_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 
@@ -198,9 +198,9 @@
 .method public p()V
     .registers 2
 
-    new-instance v0, Lcom/cungo/callrecorder/ui/er;
+    new-instance v0, Lcom/cungo/callrecorder/ui/es;
 
-    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/er;-><init>(Lcom/cungo/callrecorder/ui/ActivityFunctionIntroduction_;)V
+    invoke-direct {v0, p0}, Lcom/cungo/callrecorder/ui/es;-><init>(Lcom/cungo/callrecorder/ui/ActivityFunctionIntroduction_;)V
 
     invoke-static {v0}, Lcom/b/a/a/a;->a(Ljava/lang/Runnable;)V
 

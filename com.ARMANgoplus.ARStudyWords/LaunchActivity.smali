@@ -54,44 +54,44 @@
     .registers 2
 
     .prologue
-    .line 37
+    .line 34
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 40
+    .line 37
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenImageResource:I
 
-    .line 48
+    .line 45
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->UPDATA_CLIENT:I
 
-    .line 49
+    .line 46
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->GET_UNDATAINFO_ERROR:I
 
-    .line 50
+    .line 47
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->DOWN_ERROR:I
 
-    .line 176
+    .line 156
     new-instance v0, Lcom/ARMANgoplus/ARStudyWords/util/VersionUtil;
 
     invoke-direct {v0}, Lcom/ARMANgoplus/ARStudyWords/util/VersionUtil;-><init>()V
 
     iput-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->vu:Lcom/ARMANgoplus/ARStudyWords/util/VersionUtil;
 
-    .line 208
+    .line 188
     new-instance v0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$1;
 
     invoke-direct {v0, p0}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$1;-><init>(Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;)V
 
     iput-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->msgHandler:Landroid/os/Handler;
 
-    .line 37
+    .line 34
     return-void
 .end method
 
@@ -99,7 +99,7 @@
     .registers 2
 
     .prologue
-    .line 43
+    .line 40
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->goButton:Landroid/widget/ImageButton;
 
     return-object v0
@@ -109,7 +109,7 @@
     .registers 2
 
     .prologue
-    .line 55
+    .line 51
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->sp:Landroid/media/SoundPool;
 
     return-object v0
@@ -119,7 +119,7 @@
     .registers 2
 
     .prologue
-    .line 45
+    .line 42
     iput-object p1, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->aboutUsButton:Landroid/widget/ImageButton;
 
     return-void
@@ -129,7 +129,7 @@
     .registers 2
 
     .prologue
-    .line 46
+    .line 43
     iput-object p1, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->buyMoreButton:Landroid/widget/ImageButton;
 
     return-void
@@ -139,7 +139,7 @@
     .registers 2
 
     .prologue
-    .line 47
+    .line 44
     iput-object p1, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->exitButton:Landroid/widget/ImageButton;
 
     return-void
@@ -149,7 +149,7 @@
     .registers 1
 
     .prologue
-    .line 327
+    .line 307
     invoke-direct {p0}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->showHowTo()V
 
     return-void
@@ -159,7 +159,7 @@
     .registers 2
 
     .prologue
-    .line 39
+    .line 36
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenView:Landroid/widget/ImageView;
 
     return-object v0
@@ -169,7 +169,7 @@
     .registers 2
 
     .prologue
-    .line 56
+    .line 52
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->soundID:[I
 
     return-object v0
@@ -179,7 +179,7 @@
     .registers 2
 
     .prologue
-    .line 44
+    .line 41
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->helpButton:Landroid/widget/ImageButton;
 
     return-object v0
@@ -189,7 +189,7 @@
     .registers 2
 
     .prologue
-    .line 45
+    .line 42
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->aboutUsButton:Landroid/widget/ImageButton;
 
     return-object v0
@@ -199,7 +199,7 @@
     .registers 2
 
     .prologue
-    .line 46
+    .line 43
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->buyMoreButton:Landroid/widget/ImageButton;
 
     return-object v0
@@ -209,7 +209,7 @@
     .registers 2
 
     .prologue
-    .line 47
+    .line 44
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->exitButton:Landroid/widget/ImageButton;
 
     return-object v0
@@ -219,7 +219,7 @@
     .registers 2
 
     .prologue
-    .line 51
+    .line 48
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->path:Ljava/lang/String;
 
     return-object v0
@@ -229,7 +229,7 @@
     .registers 2
 
     .prologue
-    .line 43
+    .line 40
     iput-object p1, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->goButton:Landroid/widget/ImageButton;
 
     return-void
@@ -239,7 +239,7 @@
     .registers 2
 
     .prologue
-    .line 44
+    .line 41
     iput-object p1, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->helpButton:Landroid/widget/ImageButton;
 
     return-void
@@ -251,14 +251,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 328
+    .line 308
     const-string v3, "app_setting"
 
     invoke-virtual {p0, v3, v5}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
-    .line 329
+    .line 309
     .local v2, "sp":Landroid/content/SharedPreferences;
     const-string v3, "firstRun"
 
@@ -268,24 +268,24 @@
 
     move-result v0
 
-    .line 330
+    .line 310
     .local v0, "firstRun":Z
     if-eqz v0, :cond_27
 
-    .line 331
+    .line 311
     new-instance v1, Landroid/content/Intent;
 
-    .line 332
+    .line 312
     const-class v3, Lcom/ARMANgoplus/ARStudyWords/activity/HelpActivity;
 
-    .line 331
+    .line 311
     invoke-direct {v1, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 333
+    .line 313
     .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {p0, v1}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 334
+    .line 314
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v3
@@ -298,7 +298,7 @@
 
     invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 336
+    .line 316
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_27
     return-void
@@ -310,34 +310,34 @@
     .registers 3
 
     .prologue
-    .line 274
+    .line 254
     new-instance v0, Landroid/app/ProgressDialog;
 
     invoke-direct {v0, p0}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    .line 275
+    .line 255
     .local v0, "pd":Landroid/app/ProgressDialog;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setProgressStyle(I)V
 
-    .line 276
+    .line 256
     const-string v1, "\u6b63\u5728\u4e0b\u8f7d\u66f4\u65b0"
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 277
+    .line 257
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
-    .line 278
+    .line 258
     new-instance v1, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$5;
 
     invoke-direct {v1, p0, v0}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$5;-><init>(Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;Landroid/app/ProgressDialog;)V
 
-    .line 297
+    .line 277
     invoke-virtual {v1}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$5;->start()V
 
-    .line 298
+    .line 278
     return-void
 .end method
 
@@ -346,32 +346,32 @@
     .param p1, "file"    # Ljava/io/File;
 
     .prologue
-    .line 302
+    .line 282
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 304
+    .line 284
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "android.intent.action.VIEW"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 306
+    .line 286
     invoke-static {p1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 307
+    .line 287
     const-string v2, "application/vnd.android.package-archive"
 
-    .line 306
+    .line 286
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 308
+    .line 288
     invoke-virtual {p0, v0}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 309
+    .line 289
     return-void
 .end method
 
@@ -386,10 +386,10 @@
 
     const/4 v5, -0x1
 
-    .line 61
+    .line 57
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 63
+    .line 59
     const v3, 0x7f060013
 
     invoke-virtual {p0, v3}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->getString(I)Ljava/lang/String;
@@ -398,26 +398,19 @@
 
     iput-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->path:Ljava/lang/String;
 
-    .line 66
-    const-string v3, "a1e7a4df354e473c"
-
-    const-string v4, "c987d879b4f92df1"
-
-    invoke-static {p0, v3, v4}, Lnet/youmi/android/appoffers/YoumiOffersManager;->init(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 70
-    :try_start_16
+    .line 63
+    :try_start_f
     new-instance v2, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$CheckVersionTask;
 
     invoke-direct {v2, p0}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$CheckVersionTask;-><init>(Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;)V
 
-    .line 72
+    .line 65
     .local v2, "versionTask":Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$CheckVersionTask;
     new-instance v1, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$UnzipTrackablePic;
 
     invoke-direct {v1, p0}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$UnzipTrackablePic;-><init>(Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;)V
 
-    .line 73
+    .line 66
     .local v1, "unzipTask":Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$UnzipTrackablePic;
     new-instance v3, Ljava/lang/Thread;
 
@@ -425,63 +418,63 @@
 
     invoke-virtual {v3}, Ljava/lang/Thread;->start()V
 
-    .line 74
+    .line 67
     new-instance v3, Ljava/lang/Thread;
 
     invoke-direct {v3, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     invoke-virtual {v3}, Ljava/lang/Thread;->start()V
-    :try_end_30
-    .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_30} :catch_7e
+    :try_end_29
+    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_29} :catch_77
 
-    .line 83
+    .line 73
     .end local v1    # "unzipTask":Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$UnzipTrackablePic;
     .end local v2    # "versionTask":Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$CheckVersionTask;
-    :goto_30
+    :goto_29
     const v3, 0x7f020004
 
     iput v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenImageResource:I
 
-    .line 84
+    .line 74
     new-instance v3, Landroid/widget/ImageView;
 
     invoke-direct {v3, p0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenView:Landroid/widget/ImageView;
 
-    .line 85
+    .line 75
     iget-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenView:Landroid/widget/ImageView;
 
     iget v4, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenImageResource:I
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 86
+    .line 76
     iget-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenView:Landroid/widget/ImageView;
 
     new-instance v4, Landroid/view/ViewGroup$LayoutParams;
 
-    .line 87
+    .line 77
     invoke-direct {v4, v5, v5}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 86
+    .line 76
     invoke-virtual {p0, v3, v4}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 90
+    .line 80
     new-instance v3, Landroid/os/Handler;
 
     invoke-direct {v3}, Landroid/os/Handler;-><init>()V
 
     iput-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenHandler:Landroid/os/Handler;
 
-    .line 91
+    .line 81
     new-instance v3, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$2;
 
     invoke-direct {v3, p0}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$2;-><init>(Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;)V
 
     iput-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenRunnable:Ljava/lang/Runnable;
 
-    .line 122
+    .line 102
     iget-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenHandler:Landroid/os/Handler;
 
     iget-object v4, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->mSplashScreenRunnable:Ljava/lang/Runnable;
@@ -490,7 +483,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 124
+    .line 104
     new-instance v3, Landroid/media/SoundPool;
 
     const/4 v4, 0x1
@@ -501,12 +494,12 @@
 
     iput-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->sp:Landroid/media/SoundPool;
 
-    .line 125
+    .line 105
     new-array v3, v8, [I
 
     iput-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->soundID:[I
 
-    .line 126
+    .line 106
     iget-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->soundID:[I
 
     iget-object v4, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->sp:Landroid/media/SoundPool;
@@ -519,14 +512,14 @@
 
     aput v4, v3, v7
 
-    .line 128
+    .line 108
     return-void
 
-    .line 75
-    :catch_7e
+    .line 68
+    :catch_77
     move-exception v0
 
-    .line 77
+    .line 70
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "Check version"
 
@@ -536,27 +529,27 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_30
+    goto :goto_29
 .end method
 
 .method protected onDestroy()V
     .registers 2
 
     .prologue
-    .line 340
+    .line 320
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 341
+    .line 321
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->sp:Landroid/media/SoundPool;
 
     if-eqz v0, :cond_c
 
-    .line 342
+    .line 322
     iget-object v0, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->sp:Landroid/media/SoundPool;
 
     invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
 
-    .line 344
+    .line 324
     :cond_c
     return-void
 .end method
@@ -565,10 +558,10 @@
     .registers 1
 
     .prologue
-    .line 172
+    .line 152
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 174
+    .line 154
     return-void
 .end method
 
@@ -576,23 +569,23 @@
     .registers 6
 
     .prologue
-    .line 240
+    .line 220
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 241
+    .line 221
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
     const-string v3, "\u7248\u672c\u5347\u7ea7"
 
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 243
+    .line 223
     new-instance v2, Lcom/ARMANgoplus/ARStudyWords/util/NetworkInfoUtil;
 
     invoke-direct {v2, p0}, Lcom/ARMANgoplus/ARStudyWords/util/NetworkInfoUtil;-><init>(Landroid/content/Context;)V
 
-    .line 245
+    .line 225
     .local v2, "networkInfoUtil":Lcom/ARMANgoplus/ARStudyWords/util/NetworkInfoUtil;
     invoke-virtual {v2}, Lcom/ARMANgoplus/ARStudyWords/util/NetworkInfoUtil;->getNetworkState()I
 
@@ -602,7 +595,7 @@
 
     if-ne v3, v4, :cond_40
 
-    .line 246
+    .line 226
     invoke-virtual {p0}, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -615,7 +608,7 @@
 
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 251
+    .line 231
     :goto_24
     const-string v3, "\u786e\u5b9a"
 
@@ -625,7 +618,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 258
+    .line 238
     const-string v3, "\u53d6\u6d88"
 
     new-instance v4, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity$4;
@@ -634,19 +627,19 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 263
+    .line 243
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
-    .line 264
+    .line 244
     .local v1, "dialog":Landroid/app/AlertDialog;
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 265
+    .line 245
     return-void
 
-    .line 248
+    .line 228
     .end local v1    # "dialog":Landroid/app/AlertDialog;
     :cond_40
     iget-object v3, p0, Lcom/ARMANgoplus/ARStudyWords/activity/LaunchActivity;->vu:Lcom/ARMANgoplus/ARStudyWords/util/VersionUtil;

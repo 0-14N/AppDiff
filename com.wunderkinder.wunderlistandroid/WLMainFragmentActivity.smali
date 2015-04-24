@@ -2026,21 +2026,24 @@
 
     move-result v0
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_c
 
     sget-object v0, Lcom/wunderkinder/wlapi/util/BuildConstants;->K_WL_STORE_TYPE:Lcom/wunderkinder/wunderlistandroid/util/WLConstants$StoreType;
 
     sget-object v1, Lcom/wunderkinder/wunderlistandroid/util/WLConstants$StoreType;->NONE:Lcom/wunderkinder/wunderlistandroid/util/WLConstants$StoreType;
 
-    if-ne v0, v1, :cond_c
-
-    .line 1026
-    :cond_c
-    invoke-static {p0}, Lcom/wunderkinder/wunderlistandroid/util/WLAppUtil;->showRateDialog(Landroid/content/Context;)V
+    if-ne v0, v1, :cond_d
 
     .line 1028
-    :cond_f
+    :cond_c
+    :goto_c
     return-void
+
+    .line 1026
+    :cond_d
+    invoke-static {p0}, Lcom/wunderkinder/wunderlistandroid/util/WLAppUtil;->showRateDialog(Landroid/content/Context;)V
+
+    goto :goto_c
 .end method
 
 .method public closeAllModes()Z
@@ -3534,11 +3537,11 @@
     iput-object v1, p0, Lcom/wunderkinder/wunderlistandroid/activity/WLMainFragmentActivity;->mConnectivityReceiver:Lcom/wunderkinder/wunderlistandroid/receiver/WLConnectivityReceiver;
 
     .line 296
-    invoke-static {p0}, Lcom/wunderkinder/wunderlistandroid/util/push/PushHelper;->with(Landroid/content/Context;)Lcom/wunderkinder/wunderlistandroid/util/push/GcmHelper;
+    invoke-static {p0}, Lcom/wunderkinder/wunderlistandroid/util/push/PushHelper;->with(Landroid/content/Context;)Lcom/wunderkinder/wunderlistandroid/util/push/BaiduHelper;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/wunderkinder/wunderlistandroid/util/push/GcmHelper;->initializePushNotifications()V
+    invoke-virtual {v1}, Lcom/wunderkinder/wunderlistandroid/util/push/BaiduHelper;->initializePushNotifications()V
 
     .line 299
     invoke-virtual {p0}, Lcom/wunderkinder/wunderlistandroid/activity/WLMainFragmentActivity;->getIntent()Landroid/content/Intent;
@@ -5827,7 +5830,7 @@
 
     if-eqz v3, :cond_71
 
-    const-string v3, "production"
+    const-string v3, "china"
 
     const-string v5, "china"
 
@@ -5970,7 +5973,7 @@
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 1332
-    const-string v3, "production"
+    const-string v3, "china"
 
     const-string v4, "china"
 

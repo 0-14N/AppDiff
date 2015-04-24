@@ -130,12 +130,12 @@
     return-object v0
 .end method
 
-.method static synthetic access$4(Lcom/zxcx/blst/act/SearchAct;Ljava/lang/String;)V
-    .registers 2
+.method static synthetic access$4(Lcom/zxcx/blst/act/SearchAct;Ljava/lang/String;Z)V
+    .registers 3
 
     .prologue
     .line 161
-    invoke-direct {p0, p1}, Lcom/zxcx/blst/act/SearchAct;->getData(Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/zxcx/blst/act/SearchAct;->getData(Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -160,17 +160,7 @@
     return-void
 .end method
 
-.method static synthetic access$7(Lcom/zxcx/blst/act/SearchAct;)Lcom/zxcx/blst/custom/widget/RefreshableListView;
-    .registers 2
-
-    .prologue
-    .line 50
-    iget-object v0, p0, Lcom/zxcx/blst/act/SearchAct;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$8(Lcom/zxcx/blst/act/SearchAct;)[Ljava/lang/String;
+.method static synthetic access$7(Lcom/zxcx/blst/act/SearchAct;)[Ljava/lang/String;
     .registers 2
 
     .prologue
@@ -180,9 +170,20 @@
     return-object v0
 .end method
 
-.method private getData(Ljava/lang/String;)V
-    .registers 4
+.method static synthetic access$8(Lcom/zxcx/blst/act/SearchAct;)Lcom/zxcx/blst/custom/widget/RefreshableListView;
+    .registers 2
+
+    .prologue
+    .line 50
+    iget-object v0, p0, Lcom/zxcx/blst/act/SearchAct;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+
+    return-object v0
+.end method
+
+.method private getData(Ljava/lang/String;Z)V
+    .registers 5
     .param p1, "key"    # Ljava/lang/String;
+    .param p2, "isPull"    # Z
 
     .prologue
     .line 162
@@ -194,7 +195,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_1a
 
     .line 163
     :cond_a
@@ -208,24 +209,29 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 244
-    :goto_14
+    .line 164
+    iget-object v0, p0, Lcom/zxcx/blst/act/SearchAct;->lv_refresh:Lcom/zxcx/blst/custom/widget/RefreshableListView;
+
+    invoke-virtual {v0}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->completeRefreshing()V
+
+    .line 247
+    :goto_19
     return-void
 
-    .line 167
-    :cond_15
+    .line 168
+    :cond_1a
     new-instance v0, Lcom/zxcx/blst/act/SearchAct$5;
 
-    invoke-direct {v0, p0, p1}, Lcom/zxcx/blst/act/SearchAct$5;-><init>(Lcom/zxcx/blst/act/SearchAct;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/zxcx/blst/act/SearchAct$5;-><init>(Lcom/zxcx/blst/act/SearchAct;Ljava/lang/String;Z)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 243
+    .line 246
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/act/SearchAct$5;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    goto :goto_14
+    goto :goto_19
 .end method
 
 .method private setupView()V
@@ -233,7 +239,7 @@
 
     .prologue
     .line 82
-    const v0, 0x7f080168
+    const v0, 0x7f090181
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SearchAct;->findViewById(I)Landroid/view/View;
 
@@ -246,7 +252,7 @@
     .line 83
     iget-object v0, p0, Lcom/zxcx/blst/act/SearchAct;->iv_title_bar_left:Landroid/widget/ImageView;
 
-    const v1, 0x7f020005
+    const v1, 0x7f020006
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -256,7 +262,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 85
-    const v0, 0x7f080166
+    const v0, 0x7f09017f
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SearchAct;->findViewById(I)Landroid/view/View;
 
@@ -274,7 +280,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 87
-    const v0, 0x7f080167
+    const v0, 0x7f090180
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SearchAct;->findViewById(I)Landroid/view/View;
 
@@ -292,7 +298,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 90
-    const v0, 0x7f0800d4
+    const v0, 0x7f0900e4
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SearchAct;->findViewById(I)Landroid/view/View;
 
@@ -346,7 +352,7 @@
     invoke-virtual {v0, v1}, Lcom/zxcx/blst/custom/widget/RefreshableListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 135
-    const v0, 0x7f0800e6
+    const v0, 0x7f0900f6
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SearchAct;->findViewById(I)Landroid/view/View;
 
@@ -357,7 +363,7 @@
     iput-object v0, p0, Lcom/zxcx/blst/act/SearchAct;->btn_search:Landroid/widget/Button;
 
     .line 136
-    const v0, 0x7f08014e
+    const v0, 0x7f090163
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SearchAct;->findViewById(I)Landroid/view/View;
 
@@ -379,10 +385,12 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .registers 3
+    .registers 4
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
+    const/4 v1, 0x0
+
     .line 143
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -391,20 +399,18 @@
     sparse-switch v0, :sswitch_data_30
 
     .line 159
-    :goto_7
+    :goto_8
     return-void
 
     .line 145
-    :sswitch_8
+    :sswitch_9
     invoke-virtual {p0}, Lcom/zxcx/blst/act/SearchAct;->finish()V
 
-    goto :goto_7
+    goto :goto_8
 
     .line 148
-    :sswitch_c
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/zxcx/blst/act/SearchAct;->page:I
+    :sswitch_d
+    iput v1, p0, Lcom/zxcx/blst/act/SearchAct;->page:I
 
     .line 149
     iget-object v0, p0, Lcom/zxcx/blst/act/SearchAct;->mItems3:Ljava/util/List;
@@ -414,9 +420,9 @@
     .line 150
     iget-object v0, p0, Lcom/zxcx/blst/act/SearchAct;->key:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lcom/zxcx/blst/act/SearchAct;->getData(Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/zxcx/blst/act/SearchAct;->getData(Ljava/lang/String;Z)V
 
-    goto :goto_7
+    goto :goto_8
 
     .line 153
     :sswitch_1a
@@ -439,16 +445,16 @@
     .line 154
     iget-object v0, p0, Lcom/zxcx/blst/act/SearchAct;->key:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lcom/zxcx/blst/act/SearchAct;->getData(Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/zxcx/blst/act/SearchAct;->getData(Ljava/lang/String;Z)V
 
-    goto :goto_7
+    goto :goto_8
 
     .line 143
     :sswitch_data_30
     .sparse-switch
-        0x7f0800e6 -> :sswitch_1a
-        0x7f080167 -> :sswitch_c
-        0x7f080168 -> :sswitch_8
+        0x7f0900f6 -> :sswitch_1a
+        0x7f090180 -> :sswitch_d
+        0x7f090181 -> :sswitch_9
     .end sparse-switch
 .end method
 
@@ -461,7 +467,7 @@
     invoke-super {p0, p1}, Lcom/zxcx/blst/act/BaseAct;->onCreate(Landroid/os/Bundle;)V
 
     .line 77
-    const v0, 0x7f030062
+    const v0, 0x7f030069
 
     invoke-virtual {p0, v0}, Lcom/zxcx/blst/act/SearchAct;->setContentView(I)V
 

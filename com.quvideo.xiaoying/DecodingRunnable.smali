@@ -70,9 +70,9 @@
     iput v0, p0, Lcom/quvideo/xiaoying/scenenavigator/DecodingRunnable;->b:I
 
     .line 83
-    new-instance v0, Laon;
+    new-instance v0, Laht;
 
-    invoke-direct {v0, p0}, Laon;-><init>(Lcom/quvideo/xiaoying/scenenavigator/DecodingRunnable;)V
+    invoke-direct {v0, p0}, Laht;-><init>(Lcom/quvideo/xiaoying/scenenavigator/DecodingRunnable;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/scenenavigator/DecodingRunnable;->a:Landroid/os/Handler;
 

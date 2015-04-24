@@ -78,6 +78,8 @@
 
 .field private static Contacts_custom_ringtone:Ljava/lang/String;
 
+.field private static Contacts_display_name:Ljava/lang/String;
+
 .field private static Contacts_extra_group:Ljava/lang/String;
 
 .field private static Contacts_firstName:Ljava/lang/String;
@@ -154,12 +156,10 @@
 
 .field private static SMS_type:Ljava/lang/String;
 
-.field private static mhCursor:Landroid/database/Cursor;
-
-.field private static mhSoundDB:Lmobilehome/backup/SoundToDB;
-
 
 # instance fields
+.field private BackUP_filename:Ljava/lang/String;
+
 .field private Contacts_aux_data_items:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -283,11 +283,15 @@
 
 .field private Cur_Volume:I
 
+.field private DEBUG_Line:Ljava/lang/String;
+
 .field audioManager:Landroid/media/AudioManager;
 
-.field private counter:I
+.field private counter:J
 
 .field private mAdImageView:Landroid/widget/ImageView;
+
+.field private mBackupLocation:Ljava/lang/String;
 
 .field private mCalendarButton:Landroid/widget/Button;
 
@@ -319,1470 +323,1766 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 59
+    .line 62
     sput-object v0, Lmobilehome/backup/Restore;->SMS_toa:Ljava/lang/String;
 
-    .line 60
+    .line 63
     sput-object v0, Lmobilehome/backup/Restore;->SMS_address:Ljava/lang/String;
 
-    .line 61
+    .line 64
     sput-object v0, Lmobilehome/backup/Restore;->SMS_person:Ljava/lang/String;
 
-    .line 62
+    .line 65
     sput-object v0, Lmobilehome/backup/Restore;->SMS_date:Ljava/lang/String;
 
-    .line 63
+    .line 66
     sput-object v0, Lmobilehome/backup/Restore;->SMS_protocol:Ljava/lang/String;
 
-    .line 64
+    .line 67
     sput-object v0, Lmobilehome/backup/Restore;->SMS_read:Ljava/lang/String;
 
-    .line 65
+    .line 68
     sput-object v0, Lmobilehome/backup/Restore;->SMS_status:Ljava/lang/String;
 
-    .line 66
+    .line 69
     sput-object v0, Lmobilehome/backup/Restore;->SMS_type:Ljava/lang/String;
 
-    .line 67
+    .line 70
     sput-object v0, Lmobilehome/backup/Restore;->SMS_reply_path_present:Ljava/lang/String;
 
-    .line 68
+    .line 71
     sput-object v0, Lmobilehome/backup/Restore;->SMS_subject:Ljava/lang/String;
 
-    .line 69
+    .line 72
     sput-object v0, Lmobilehome/backup/Restore;->SMS_body:Ljava/lang/String;
 
-    .line 70
+    .line 73
     sput-object v0, Lmobilehome/backup/Restore;->SMS_sc_toa:Ljava/lang/String;
 
-    .line 71
+    .line 74
     sput-object v0, Lmobilehome/backup/Restore;->SMS_service_center:Ljava/lang/String;
 
-    .line 73
+    .line 76
     sput-object v0, Lmobilehome/backup/Restore;->CallLog_new:Ljava/lang/String;
 
-    .line 74
+    .line 77
     sput-object v0, Lmobilehome/backup/Restore;->CallLog_numbertype:Ljava/lang/String;
 
-    .line 75
+    .line 78
     sput-object v0, Lmobilehome/backup/Restore;->CallLog_duration:Ljava/lang/String;
 
-    .line 76
+    .line 79
     sput-object v0, Lmobilehome/backup/Restore;->CallLog_person:Ljava/lang/String;
 
-    .line 77
+    .line 80
     sput-object v0, Lmobilehome/backup/Restore;->CallLog_number:Ljava/lang/String;
 
-    .line 78
+    .line 81
     sput-object v0, Lmobilehome/backup/Restore;->CallLog_type:Ljava/lang/String;
 
-    .line 79
+    .line 82
     sput-object v0, Lmobilehome/backup/Restore;->CallLog_numberlabel:Ljava/lang/String;
 
-    .line 80
+    .line 83
     sput-object v0, Lmobilehome/backup/Restore;->CallLog_name:Ljava/lang/String;
 
-    .line 81
+    .line 84
     sput-object v0, Lmobilehome/backup/Restore;->CallLog_date:Ljava/lang/String;
 
-    .line 84
+    .line 87
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_sync_id:Ljava/lang/String;
 
-    .line 87
+    .line 90
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_hasExtendedProperties:Ljava/lang/String;
 
-    .line 88
+    .line 91
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_originalEvent:Ljava/lang/String;
 
-    .line 89
+    .line 92
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_dtend:Ljava/lang/String;
 
-    .line 90
+    .line 93
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_sync_dirty:Ljava/lang/String;
 
-    .line 91
+    .line 94
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_dtstart:Ljava/lang/String;
 
-    .line 92
+    .line 95
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_visibility:Ljava/lang/String;
 
-    .line 93
+    .line 96
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_sync_version:Ljava/lang/String;
 
-    .line 94
+    .line 97
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_sync_local_id:Ljava/lang/String;
 
-    .line 95
+    .line 98
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_duration:Ljava/lang/String;
 
-    .line 96
+    .line 99
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_hasAlarm:Ljava/lang/String;
 
-    .line 97
+    .line 100
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_commentsUri:Ljava/lang/String;
 
-    .line 98
+    .line 101
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_title:Ljava/lang/String;
 
-    .line 99
+    .line 102
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_transparency:Ljava/lang/String;
 
-    .line 100
+    .line 103
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_last_update_time:Ljava/lang/String;
 
-    .line 109
+    .line 112
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_originalAllDay:Ljava/lang/String;
 
-    .line 110
+    .line 113
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_iCalGUID:Ljava/lang/String;
 
-    .line 111
+    .line 114
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_rrule:Ljava/lang/String;
 
-    .line 113
+    .line 116
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_eventLocation:Ljava/lang/String;
 
-    .line 114
+    .line 117
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_exrule:Ljava/lang/String;
 
-    .line 115
+    .line 118
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_sync_time:Ljava/lang/String;
 
-    .line 116
+    .line 119
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_eventTimezone:Ljava/lang/String;
 
-    .line 117
+    .line 120
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_originalInstanceTime:Ljava/lang/String;
 
-    .line 120
+    .line 123
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_allDay:Ljava/lang/String;
 
-    .line 122
+    .line 125
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_description:Ljava/lang/String;
 
-    .line 123
+    .line 126
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_minutes:Ljava/lang/String;
 
-    .line 124
+    .line 127
     sput-object v0, Lmobilehome/backup/Restore;->Calendar_method:Ljava/lang/String;
 
-    .line 128
+    .line 130
+    sput-object v0, Lmobilehome/backup/Restore;->Contacts_display_name:Ljava/lang/String;
+
+    .line 131
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_primary_organization:Ljava/lang/String;
 
-    .line 129
+    .line 132
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_lastName:Ljava/lang/String;
 
-    .line 132
+    .line 135
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_times_contacted:Ljava/lang/String;
 
-    .line 133
+    .line 136
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_sync_dirty:Ljava/lang/String;
 
-    .line 135
+    .line 138
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_last_time_contacted:Ljava/lang/String;
 
-    .line 137
+    .line 140
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_extra_group:Ljava/lang/String;
 
-    .line 138
+    .line 141
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_notes:Ljava/lang/String;
 
-    .line 139
+    .line 142
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_name:Ljava/lang/String;
 
-    .line 140
+    .line 143
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_sync_version:Ljava/lang/String;
 
-    .line 141
+    .line 144
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_starred:Ljava/lang/String;
 
-    .line 143
+    .line 146
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_phonetic_name:Ljava/lang/String;
 
-    .line 145
+    .line 148
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_sync_account:Ljava/lang/String;
 
-    .line 147
+    .line 150
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_firstName:Ljava/lang/String;
 
-    .line 148
+    .line 151
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_custom_ringtone:Ljava/lang/String;
 
-    .line 150
+    .line 153
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_sync_time:Ljava/lang/String;
 
-    .line 151
+    .line 154
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_sync_id:Ljava/lang/String;
 
-    .line 153
+    .line 156
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_send_to_voicemail:Ljava/lang/String;
 
-    .line 154
+    .line 157
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_primary_email:Ljava/lang/String;
 
-    .line 155
+    .line 158
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_sync_local_id:Ljava/lang/String;
 
-    .line 156
+    .line 159
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_last_update_time:Ljava/lang/String;
 
-    .line 157
+    .line 160
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_primary_phone:Ljava/lang/String;
 
-    .line 159
-    sput-object v0, Lmobilehome/backup/Restore;->Contacts_number_key:Ljava/lang/String;
-
-    .line 160
-    const-string v0, "empty"
-
-    sput-object v0, Lmobilehome/backup/Restore;->Contacts_kind:Ljava/lang/String;
-
-    .line 161
-    const-string v0, "empty"
-
-    sput-object v0, Lmobilehome/backup/Restore;->Contacts_org:Ljava/lang/String;
-
     .line 162
-    const-string v0, "empty"
-
-    sput-object v0, Lmobilehome/backup/Restore;->Contacts_phone_number:Ljava/lang/String;
+    sput-object v0, Lmobilehome/backup/Restore;->Contacts_number_key:Ljava/lang/String;
 
     .line 163
     const-string v0, "empty"
 
+    sput-object v0, Lmobilehome/backup/Restore;->Contacts_kind:Ljava/lang/String;
+
+    .line 164
+    const-string v0, "empty"
+
+    sput-object v0, Lmobilehome/backup/Restore;->Contacts_org:Ljava/lang/String;
+
+    .line 165
+    const-string v0, "empty"
+
+    sput-object v0, Lmobilehome/backup/Restore;->Contacts_phone_number:Ljava/lang/String;
+
+    .line 166
+    const-string v0, "empty"
+
     sput-object v0, Lmobilehome/backup/Restore;->Contacts_group:Ljava/lang/String;
 
-    .line 44
+    .line 46
     return-void
 .end method
 
 .method public constructor <init>()V
-    .registers 3
+    .registers 5
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    .line 44
+    .line 46
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 49
-    iput v1, p0, Lmobilehome/backup/Restore;->counter:I
+    const-wide/16 v0, 0x0
 
-    iput v1, p0, Lmobilehome/backup/Restore;->select:I
-
-    iput v1, p0, Lmobilehome/backup/Restore;->Cur_Volume:I
+    iput-wide v0, p0, Lmobilehome/backup/Restore;->counter:J
 
     .line 50
-    iput-object v0, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
+    iput v3, p0, Lmobilehome/backup/Restore;->select:I
 
-    .line 165
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_kind_items:Ljava/util/List;
+    iput v3, p0, Lmobilehome/backup/Restore;->Cur_Volume:I
 
-    .line 166
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_data_items:Ljava/util/List;
+    .line 51
+    const-string v0, "[Line NO.#0000]"
 
-    .line 167
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_aux_data_items:Ljava/util/List;
+    iput-object v0, p0, Lmobilehome/backup/Restore;->DEBUG_Line:Ljava/lang/String;
+
+    .line 52
+    iput-object v2, p0, Lmobilehome/backup/Restore;->BackUP_filename:Ljava/lang/String;
+
+    const-string v0, "/sdcard"
+
+    iput-object v0, p0, Lmobilehome/backup/Restore;->mBackupLocation:Ljava/lang/String;
+
+    .line 53
+    iput-object v2, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
     .line 168
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_mType_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_kind_items:Ljava/util/List;
 
     .line 169
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_number_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_data_items:Ljava/util/List;
 
     .line 170
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_pType_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_aux_data_items:Ljava/util/List;
 
     .line 171
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_label_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_mType_items:Ljava/util/List;
 
     .line 172
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_title_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_number_items:Ljava/util/List;
 
     .line 173
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_company_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_pType_items:Ljava/util/List;
 
     .line 174
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_oType_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_label_items:Ljava/util/List;
 
     .line 175
-    iput-object v0, p0, Lmobilehome/backup/Restore;->Contacts_groupid_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_title_items:Ljava/util/List;
 
-    .line 754
+    .line 176
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_company_items:Ljava/util/List;
+
+    .line 177
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_oType_items:Ljava/util/List;
+
+    .line 178
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_groupid_items:Ljava/util/List;
+
+    .line 952
     new-instance v0, Lmobilehome/backup/Restore$1;
 
     invoke-direct {v0, p0}, Lmobilehome/backup/Restore$1;-><init>(Lmobilehome/backup/Restore;)V
 
     iput-object v0, p0, Lmobilehome/backup/Restore;->mOkHandler:Landroid/os/Handler;
 
-    .line 762
+    .line 960
     new-instance v0, Lmobilehome/backup/Restore$2;
 
     invoke-direct {v0, p0}, Lmobilehome/backup/Restore$2;-><init>(Lmobilehome/backup/Restore;)V
 
     iput-object v0, p0, Lmobilehome/backup/Restore;->mFailHandler:Landroid/os/Handler;
 
-    .line 1135
+    .line 1425
     new-instance v0, Lmobilehome/backup/Restore$3;
 
     invoke-direct {v0, p0}, Lmobilehome/backup/Restore$3;-><init>(Lmobilehome/backup/Restore;)V
 
     iput-object v0, p0, Lmobilehome/backup/Restore;->mProgressHandler:Landroid/os/Handler;
 
-    .line 44
+    .line 46
+    return-void
+.end method
+
+.method private RestoreCheck(Ljava/lang/String;)V
+    .registers 9
+    .param p1, "mDate"    # Ljava/lang/String;
+
+    .prologue
+    .line 417
+    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f070021
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 418
+    .local v2, "important":Ljava/lang/String;
+    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f070033
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 419
+    .local v0, "checkMsg1":Ljava/lang/String;
+    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f070034
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 420
+    .local v1, "checkMsg2":Ljava/lang/String;
+    new-instance v3, Landroid/widget/TextView;
+
+    invoke-direct {v3, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 421
+    .local v3, "tv":Landroid/widget/TextView;
+    const/16 v4, 0x11
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setGravity(I)V
+
+    .line 422
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v5, " "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "\n"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 423
+    const/high16 v4, 0x41700000    # 15.0f
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextSize(F)V
+
+    .line 424
+    new-instance v4, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v4, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 425
+    invoke-virtual {v4, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v4
+
+    .line 426
+    invoke-virtual {v4, v3}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v4
+
+    .line 427
+    const v5, 0x7f02000b
+
+    invoke-virtual {v4, v5}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v4
+
+    .line 428
+    const-string v5, "YES"
+
+    new-instance v6, Lmobilehome/backup/Restore$9;
+
+    invoke-direct {v6, p0}, Lmobilehome/backup/Restore$9;-><init>(Lmobilehome/backup/Restore;)V
+
+    invoke-virtual {v4, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v4
+
+    .line 450
+    const-string v5, "NO"
+
+    new-instance v6, Lmobilehome/backup/Restore$10;
+
+    invoke-direct {v6, p0}, Lmobilehome/backup/Restore$10;-><init>(Lmobilehome/backup/Restore;)V
+
+    invoke-virtual {v4, v5, v6}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v4
+
+    .line 456
+    invoke-virtual {v4}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
+
+    .line 457
     return-void
 .end method
 
 .method private Restore_Calendar()V
-    .registers 7
+    .registers 5
 
     .prologue
-    const/4 v5, 0x0
-
-    .line 612
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 613
-    .local v2, "state":Ljava/lang/String;
-    const-string v3, "mounted"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_17
-
-    .line 615
-    const-string v3, "Please insert an SD card."
-
-    invoke-static {p0, v3, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
-
-    .line 752
-    :goto_16
-    return-void
-
-    .line 618
-    :cond_17
+    .line 794
     new-instance v0, Ljava/io/File;
 
-    const-string v3, "/sdcard/Backup-Calendar.txt"
+    iget-object v2, p0, Lmobilehome/backup/Restore;->BackUP_filename:Ljava/lang/String;
 
-    invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 620
+    .line 796
     .local v0, "Calendarfile":Ljava/io/File;
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getBaseContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v2
 
-    const v4, 0x7f060025
+    const v3, 0x7f070032
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-interface {v3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 625
+    .line 801
     .local v1, "RestoreTitle":Ljava/lang/String;
-    const-string v3, "Calendar Restoring ..."
+    const-string v2, "Calendar Restoring ..."
 
-    .line 626
-    const/4 v4, 0x1
+    .line 802
+    const/4 v3, 0x1
 
-    .line 621
-    invoke-static {p0, v1, v3, v4}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
+    .line 797
+    invoke-static {p0, v1, v2, v3}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
 
-    move-result-object v3
+    move-result-object v2
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
-    .line 629
+    .line 805
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_4e
+    if-eqz v2, :cond_37
 
-    .line 631
-    new-instance v3, Ljava/lang/Thread;
+    .line 807
+    new-instance v2, Ljava/lang/Thread;
 
-    new-instance v4, Lmobilehome/backup/Restore$10;
+    new-instance v3, Lmobilehome/backup/Restore$12;
 
-    invoke-direct {v4, p0}, Lmobilehome/backup/Restore$10;-><init>(Lmobilehome/backup/Restore;)V
+    invoke-direct {v3, p0}, Lmobilehome/backup/Restore$12;-><init>(Lmobilehome/backup/Restore;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 746
-    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
+    .line 944
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    goto :goto_16
+    .line 950
+    :goto_36
+    return-void
 
-    .line 749
-    :cond_4e
-    iget-object v3, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
+    .line 947
+    :cond_37
+    iget-object v2, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
-    invoke-virtual {v3}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v2}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 750
-    const-string v3, "NO Calendar backup file"
+    .line 948
+    const-string v2, "NO Calendar backup file"
 
-    invoke-static {p0, v3, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    const/4 v3, 0x0
 
-    move-result-object v3
+    invoke-static {p0, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
+    move-result-object v2
 
-    goto :goto_16
+    invoke-virtual {v2}, Landroid/widget/Toast;->show()V
+
+    goto :goto_36
 .end method
 
 .method private Restore_CallLog()V
-    .registers 7
+    .registers 5
 
     .prologue
-    const/4 v5, 0x0
-
-    .line 901
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 902
-    .local v2, "state":Ljava/lang/String;
-    const-string v3, "mounted"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_17
-
-    .line 904
-    const-string v3, "Please insert an SD card."
-
-    invoke-static {p0, v3, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
-
-    .line 983
-    :goto_16
-    return-void
-
-    .line 907
-    :cond_17
+    .line 1164
     new-instance v0, Ljava/io/File;
 
-    const-string v3, "/sdcard/Backup-CallLog.txt"
+    iget-object v2, p0, Lmobilehome/backup/Restore;->BackUP_filename:Ljava/lang/String;
 
-    invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 909
+    .line 1166
     .local v0, "CallLogfile":Ljava/io/File;
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getBaseContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v2
 
-    const v4, 0x7f060025
+    const v3, 0x7f070032
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-interface {v3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 914
+    .line 1171
     .local v1, "RestoreTitle":Ljava/lang/String;
-    const-string v3, "CallLog Restoring ..."
+    const-string v2, "CallLog Restoring ..."
 
-    .line 915
-    const/4 v4, 0x1
+    .line 1172
+    const/4 v3, 0x1
 
-    .line 910
-    invoke-static {p0, v1, v3, v4}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
+    .line 1167
+    invoke-static {p0, v1, v2, v3}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
 
-    move-result-object v3
+    move-result-object v2
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
-    .line 918
+    .line 1175
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_4e
+    if-eqz v2, :cond_37
 
-    .line 920
-    new-instance v3, Ljava/lang/Thread;
+    .line 1177
+    new-instance v2, Ljava/lang/Thread;
 
-    new-instance v4, Lmobilehome/backup/Restore$11;
+    new-instance v3, Lmobilehome/backup/Restore$13;
 
-    invoke-direct {v4, p0}, Lmobilehome/backup/Restore$11;-><init>(Lmobilehome/backup/Restore;)V
+    invoke-direct {v3, p0}, Lmobilehome/backup/Restore$13;-><init>(Lmobilehome/backup/Restore;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 977
-    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
+    .line 1249
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    goto :goto_16
+    .line 1255
+    :goto_36
+    return-void
 
-    .line 980
-    :cond_4e
-    iget-object v3, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
+    .line 1252
+    :cond_37
+    iget-object v2, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
-    invoke-virtual {v3}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v2}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 981
-    const-string v3, "- NO CallLog File -"
+    .line 1253
+    const-string v2, "- NO CallLog File -"
 
-    invoke-static {p0, v3, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    const/4 v3, 0x0
 
-    move-result-object v3
+    invoke-static {p0, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
+    move-result-object v2
 
-    goto :goto_16
+    invoke-virtual {v2}, Landroid/widget/Toast;->show()V
+
+    goto :goto_36
 .end method
 
 .method private Restore_Contacts()V
-    .registers 7
+    .registers 5
 
     .prologue
-    const/4 v5, 0x0
-
-    .line 319
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 320
-    .local v2, "state":Ljava/lang/String;
-    const-string v3, "mounted"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_17
-
-    .line 322
-    const-string v3, "Please insert an SD card."
-
-    invoke-static {p0, v3, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
-
-    .line 509
-    :goto_16
-    return-void
-
-    .line 325
-    :cond_17
+    .line 464
     new-instance v0, Ljava/io/File;
 
-    const-string v3, "/sdcard/Backup-Contacts.txt"
+    iget-object v2, p0, Lmobilehome/backup/Restore;->BackUP_filename:Ljava/lang/String;
 
-    invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 327
+    .line 466
     .local v0, "Contactsfile":Ljava/io/File;
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getBaseContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v2
 
-    const v4, 0x7f060025
+    const v3, 0x7f070032
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-interface {v3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 332
+    .line 471
     .local v1, "RestoreTitle":Ljava/lang/String;
-    const-string v3, "Contacts Restoring ..."
+    const-string v2, "Contacts Restoring ..."
 
-    .line 333
-    const/4 v4, 0x1
+    .line 472
+    const/4 v3, 0x1
 
-    .line 328
-    invoke-static {p0, v1, v3, v4}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
+    .line 467
+    invoke-static {p0, v1, v2, v3}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
 
-    move-result-object v3
+    move-result-object v2
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
-    .line 336
+    .line 475
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_4e
+    if-eqz v2, :cond_37
 
-    .line 338
-    new-instance v3, Ljava/lang/Thread;
+    .line 477
+    new-instance v2, Ljava/lang/Thread;
 
-    new-instance v4, Lmobilehome/backup/Restore$9;
+    new-instance v3, Lmobilehome/backup/Restore$11;
 
-    invoke-direct {v4, p0}, Lmobilehome/backup/Restore$9;-><init>(Lmobilehome/backup/Restore;)V
+    invoke-direct {v3, p0}, Lmobilehome/backup/Restore$11;-><init>(Lmobilehome/backup/Restore;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 502
-    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
+    .line 681
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    goto :goto_16
+    .line 688
+    :goto_36
+    return-void
 
-    .line 506
-    :cond_4e
-    iget-object v3, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
+    .line 685
+    :cond_37
+    iget-object v2, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
-    invoke-virtual {v3}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v2}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 507
-    const-string v3, "- NO Contacts backup File -"
+    .line 686
+    const-string v2, "- NO Contacts backup File -"
 
-    invoke-static {p0, v3, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    const/4 v3, 0x0
 
-    move-result-object v3
+    invoke-static {p0, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
+    move-result-object v2
 
-    goto :goto_16
+    invoke-virtual {v2}, Landroid/widget/Toast;->show()V
+
+    goto :goto_36
 .end method
 
 .method private Restore_SMS()V
-    .registers 7
+    .registers 5
 
     .prologue
-    const/4 v5, 0x0
-
-    .line 1010
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 1011
-    .local v2, "state":Ljava/lang/String;
-    const-string v3, "mounted"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_17
-
-    .line 1013
-    const-string v3, "Please insert an SD card."
-
-    invoke-static {p0, v3, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
-
-    .line 1106
-    :goto_16
-    return-void
-
-    .line 1016
-    :cond_17
+    .line 1285
     new-instance v1, Ljava/io/File;
 
-    const-string v3, "/sdcard/Backup-SMS.txt"
+    iget-object v2, p0, Lmobilehome/backup/Restore;->BackUP_filename:Ljava/lang/String;
 
-    invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1018
+    .line 1287
     .local v1, "SMSfile":Ljava/io/File;
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getBaseContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f060025
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 1023
-    .local v0, "RestoreTitle":Ljava/lang/String;
-    const-string v3, "SMS Restoring ..."
-
-    .line 1024
-    const/4 v4, 0x1
-
-    .line 1019
-    invoke-static {p0, v0, v3, v4}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
-
-    .line 1027
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4e
-
-    .line 1029
-    new-instance v3, Ljava/lang/Thread;
-
-    new-instance v4, Lmobilehome/backup/Restore$12;
-
-    invoke-direct {v4, p0}, Lmobilehome/backup/Restore$12;-><init>(Lmobilehome/backup/Restore;)V
-
-    invoke-direct {v3, v4}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    .line 1100
-    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
-
-    goto :goto_16
-
-    .line 1103
-    :cond_4e
-    iget-object v3, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
-
-    invoke-virtual {v3}, Landroid/app/ProgressDialog;->dismiss()V
-
-    .line 1104
-    const-string v3, "- NO SMS File -"
-
-    invoke-static {p0, v3, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
-
-    goto :goto_16
-.end method
-
-.method private ShowFailMsg()V
-    .registers 3
-
-    .prologue
-    .line 830
-    const-string v0, "- Read file Fail -"
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    .line 831
-    return-void
-.end method
-
-.method private ShowOkMsg()V
-    .registers 10
-
-    .prologue
-    const/4 v8, 0x1
-
-    const/4 v7, 0x0
-
-    .line 772
-    sget-object v3, Lmobilehome/backup/Restore;->mhSoundDB:Lmobilehome/backup/SoundToDB;
-
-    invoke-virtual {v3}, Lmobilehome/backup/SoundToDB;->select()Landroid/database/Cursor;
-
-    move-result-object v3
-
-    sput-object v3, Lmobilehome/backup/Restore;->mhCursor:Landroid/database/Cursor;
-
-    .line 773
-    sget-object v3, Lmobilehome/backup/Restore;->mhCursor:Landroid/database/Cursor;
-
-    if-eqz v3, :cond_62
-
-    sget-object v3, Lmobilehome/backup/Restore;->mhCursor:Landroid/database/Cursor;
-
-    invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
-
-    move-result v3
-
-    if-lez v3, :cond_62
-
-    .line 775
-    sget-object v3, Lmobilehome/backup/Restore;->mhCursor:Landroid/database/Cursor;
-
-    invoke-interface {v3}, Landroid/database/Cursor;->requery()Z
-
-    .line 776
-    sget-object v3, Lmobilehome/backup/Restore;->mhCursor:Landroid/database/Cursor;
-
-    invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 777
-    sget-object v3, Lmobilehome/backup/Restore;->mhCursor:Landroid/database/Cursor;
-
-    invoke-interface {v3, v8}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v3
-
-    if-eqz v3, :cond_30
-
-    sget-object v3, Lmobilehome/backup/Restore;->mhCursor:Landroid/database/Cursor;
-
-    invoke-interface {v3, v8}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v3
-
-    if-ne v3, v8, :cond_3d
-
-    .line 779
-    :cond_30
-    const-string v3, "vibrator"
-
-    invoke-virtual {p0, v3}, Lmobilehome/backup/Restore;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/os/Vibrator;
-
-    .line 780
-    .local v1, "mVibrator":Landroid/os/Vibrator;
-    const-wide/16 v3, 0x1f4
-
-    invoke-virtual {v1, v3, v4}, Landroid/os/Vibrator;->vibrate(J)V
-
-    .line 782
-    .end local v1    # "mVibrator":Landroid/os/Vibrator;
-    :cond_3d
-    sget-object v3, Lmobilehome/backup/Restore;->mhCursor:Landroid/database/Cursor;
-
-    invoke-interface {v3, v8}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v3
-
-    if-nez v3, :cond_62
-
-    .line 784
-    iget-object v3, p0, Lmobilehome/backup/Restore;->audioManager:Landroid/media/AudioManager;
-
-    const/4 v4, 0x3
-
-    const/16 v5, 0xa
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v3, v4, v5, v6}, Landroid/media/AudioManager;->setStreamVolume(III)V
-
-    .line 787
-    :try_start_4e
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mMediaPlayer:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v3}, Landroid/media/MediaPlayer;->start()V
-    :try_end_53
-    .catch Ljava/lang/IllegalStateException; {:try_start_4e .. :try_end_53} :catch_82
-
-    .line 789
-    :try_start_53
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mMediaPlayer:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v3}, Landroid/media/MediaPlayer;->getDuration()I
-
-    move-result v3
-
-    int-to-long v3, v3
-
-    invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_5d
-    .catch Ljava/lang/Throwable; {:try_start_53 .. :try_end_5d} :catch_cb
-    .catch Ljava/lang/IllegalStateException; {:try_start_53 .. :try_end_5d} :catch_82
-
-    .line 795
-    :goto_5d
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mMediaPlayer:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v3}, Landroid/media/MediaPlayer;->release()V
-
-    .line 799
-    :cond_62
-    iget v3, p0, Lmobilehome/backup/Restore;->select:I
-
-    packed-switch v3, :pswitch_data_ce
-
-    .line 823
-    :goto_67
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f060014
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 824
-    .local v2, "m_str":Ljava/lang/String;
-    invoke-static {p0, v2, v8}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    const v3, 0x7f070032
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1292
+    .local v0, "RestoreTitle":Ljava/lang/String;
+    const-string v2, "SMS Restoring ..."
+
+    .line 1293
+    const/4 v3, 0x1
+
+    .line 1288
+    invoke-static {p0, v0, v2, v3}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
+
+    .line 1296
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_37
+
+    .line 1298
+    new-instance v2, Ljava/lang/Thread;
+
+    new-instance v3, Lmobilehome/backup/Restore$14;
+
+    invoke-direct {v3, p0}, Lmobilehome/backup/Restore$14;-><init>(Lmobilehome/backup/Restore;)V
+
+    invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    .line 1387
+    invoke-virtual {v2}, Ljava/lang/Thread;->start()V
+
+    .line 1393
+    :goto_36
+    return-void
+
+    .line 1390
+    :cond_37
+    iget-object v2, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v2}, Landroid/app/ProgressDialog;->dismiss()V
+
+    .line 1391
+    const-string v2, "- NO SMS File -"
+
+    const/4 v3, 0x0
+
+    invoke-static {p0, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/widget/Toast;->show()V
+
+    goto :goto_36
+.end method
+
+.method private ShowOkMsg()V
+    .registers 23
+
+    .prologue
+    .line 997
+    invoke-static/range {p0 .. p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v9
+
+    .line 998
+    .local v9, "mPerf":Landroid/content/SharedPreferences;
+    const-string v17, "soundProf"
+
+    const-string v18, "1"
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, v18
+
+    invoke-interface {v9, v0, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 999
+    .local v11, "mSoundProf":Ljava/lang/String;
+    const-string v17, "1"
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v11, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v17
+
+    if-nez v17, :cond_24
+
+    const-string v17, "2"
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v11, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v17
+
+    if-eqz v17, :cond_37
+
+    .line 1001
+    :cond_24
+    const-string v17, "vibrator"
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v17
+
+    invoke-virtual {v0, v1}, Lmobilehome/backup/Restore;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Landroid/os/Vibrator;
+
+    .line 1002
+    .local v12, "mVibrator":Landroid/os/Vibrator;
+    const-wide/16 v17, 0x1f4
+
+    move-wide/from16 v0, v17
+
+    invoke-virtual {v12, v0, v1}, Landroid/os/Vibrator;->vibrate(J)V
+
+    .line 1004
+    .end local v12    # "mVibrator":Landroid/os/Vibrator;
+    :cond_37
+    const-string v17, "1"
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v11, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v17
+
+    if-eqz v17, :cond_74
+
+    .line 1006
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lmobilehome/backup/Restore;->audioManager:Landroid/media/AudioManager;
+
+    move-object/from16 v17, v0
+
+    const/16 v18, 0x3
+
+    const/16 v19, 0xa
+
+    const/16 v20, 0x0
+
+    invoke-virtual/range {v17 .. v20}, Landroid/media/AudioManager;->setStreamVolume(III)V
+
+    .line 1009
+    :try_start_50
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lmobilehome/backup/Restore;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    move-object/from16 v17, v0
+
+    invoke-virtual/range {v17 .. v17}, Landroid/media/MediaPlayer;->start()V
+    :try_end_59
+    .catch Ljava/lang/IllegalStateException; {:try_start_50 .. :try_end_59} :catch_e5
+
+    .line 1011
+    :try_start_59
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lmobilehome/backup/Restore;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    move-object/from16 v17, v0
+
+    invoke-virtual/range {v17 .. v17}, Landroid/media/MediaPlayer;->getDuration()I
+
+    move-result v17
+
+    move/from16 v0, v17
+
+    int-to-long v0, v0
+
+    move-wide/from16 v17, v0
+
+    invoke-static/range {v17 .. v18}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_6b
+    .catch Ljava/lang/Throwable; {:try_start_59 .. :try_end_6b} :catch_27e
+    .catch Ljava/lang/IllegalStateException; {:try_start_59 .. :try_end_6b} :catch_e5
+
+    .line 1017
+    :goto_6b
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lmobilehome/backup/Restore;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    move-object/from16 v17, v0
+
+    invoke-virtual/range {v17 .. v17}, Landroid/media/MediaPlayer;->release()V
+
+    .line 1022
+    :cond_74
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
+    .line 1023
+    .local v3, "c":Ljava/util/Calendar;
+    invoke-static/range {p0 .. p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    .line 825
+    move-result-object v10
+
+    .line 1024
+    .local v10, "mPerferences":Landroid/content/SharedPreferences;
+    invoke-interface {v10}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v7
+
+    .line 1025
+    .local v7, "mEditor":Landroid/content/SharedPreferences$Editor;
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lmobilehome/backup/Restore;->select:I
+
+    move/from16 v17, v0
+
+    packed-switch v17, :pswitch_data_282
+
+    .line 1073
+    :goto_89
+    const-string v17, "layout_inflater"
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v17
+
+    invoke-virtual {v0, v1}, Lmobilehome/backup/Restore;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/view/LayoutInflater;
+
+    .line 1074
+    .local v5, "li":Landroid/view/LayoutInflater;
+    const v17, 0x7f030006
+
+    const/16 v18, 0x0
+
+    move/from16 v0, v17
+
+    move-object/from16 v1, v18
+
+    invoke-virtual {v5, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v16
+
+    .line 1075
+    .local v16, "tview":Landroid/view/View;
+    const v17, 0x7f08000f
+
+    invoke-virtual/range {v16 .. v17}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v15
+
+    check-cast v15, Landroid/widget/TextView;
+
+    .line 1076
+    .local v15, "tv":Landroid/widget/TextView;
+    invoke-virtual/range {p0 .. p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v17
+
+    const v18, 0x7f070014
+
+    invoke-virtual/range {v17 .. v18}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v17
+
+    invoke-interface/range {v17 .. v17}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v17
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v15, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1077
+    new-instance v14, Landroid/widget/Toast;
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v14, v0}, Landroid/widget/Toast;-><init>(Landroid/content/Context;)V
+
+    .line 1078
+    .local v14, "toast":Landroid/widget/Toast;
+    move-object/from16 v0, v16
+
+    invoke-virtual {v14, v0}, Landroid/widget/Toast;->setView(Landroid/view/View;)V
+
+    .line 1079
+    const/16 v17, 0x11
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    move/from16 v0, v17
+
+    move/from16 v1, v18
+
+    move/from16 v2, v19
+
+    invoke-virtual {v14, v0, v1, v2}, Landroid/widget/Toast;->setGravity(III)V
+
+    .line 1080
+    const/16 v17, 0x0
+
+    move/from16 v0, v17
+
+    invoke-virtual {v14, v0}, Landroid/widget/Toast;->setDuration(I)V
+
+    .line 1081
+    invoke-virtual {v14}, Landroid/widget/Toast;->show()V
+
+    .line 1082
     return-void
 
-    .line 793
-    .end local v2    # "m_str":Ljava/lang/String;
-    :catch_82
-    move-exception v0
+    .line 1015
+    .end local v3    # "c":Ljava/util/Calendar;
+    .end local v5    # "li":Landroid/view/LayoutInflater;
+    .end local v7    # "mEditor":Landroid/content/SharedPreferences$Editor;
+    .end local v10    # "mPerferences":Landroid/content/SharedPreferences;
+    .end local v14    # "toast":Landroid/widget/Toast;
+    .end local v15    # "tv":Landroid/widget/TextView;
+    .end local v16    # "tview":Landroid/view/View;
+    :catch_e5
+    move-exception v4
 
-    .line 794
-    .local v0, "e":Ljava/lang/IllegalStateException;
-    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
+    .line 1016
+    .local v4, "e":Ljava/lang/IllegalStateException;
+    invoke-virtual {v4}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
-    goto :goto_5d
+    goto :goto_6b
 
-    .line 803
-    .end local v0    # "e":Ljava/lang/IllegalStateException;
-    :pswitch_87
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mCalendarButton:Landroid/widget/Button;
+    .line 1029
+    .end local v4    # "e":Ljava/lang/IllegalStateException;
+    .restart local v3    # "c":Ljava/util/Calendar;
+    .restart local v7    # "mEditor":Landroid/content/SharedPreferences$Editor;
+    .restart local v10    # "mPerferences":Landroid/content/SharedPreferences;
+    :pswitch_ea
+    move-object/from16 v0, p0
 
-    .line 804
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+    iget-object v0, v0, Lmobilehome/backup/Restore;->mCalendarButton:Landroid/widget/Button;
 
-    move-result-object v4
+    move-object/from16 v17, v0
 
-    const v5, 0x7f02000e
+    .line 1030
+    invoke-virtual/range {p0 .. p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    move-result-object v18
 
-    move-result-object v4
+    const v19, 0x7f02000e
 
-    .line 803
-    invoke-virtual {v3, v4, v7, v7, v7}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual/range {v18 .. v19}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    goto :goto_67
+    move-result-object v18
 
-    .line 808
-    :pswitch_98
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mContactsButton:Landroid/widget/Button;
+    const/16 v19, 0x0
 
-    .line 809
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+    const/16 v20, 0x0
 
-    move-result-object v4
+    const/16 v21, 0x0
 
-    const v5, 0x7f020010
+    .line 1029
+    invoke-virtual/range {v17 .. v21}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    .line 1032
+    const/16 v17, 0x1
 
-    move-result-object v4
+    move/from16 v0, v17
 
-    .line 808
-    invoke-virtual {v3, v4, v7, v7, v7}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
 
-    goto :goto_67
+    move-result v13
 
-    .line 813
-    :pswitch_a9
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mSMSButton:Landroid/widget/Button;
+    .line 1033
+    .local v13, "mYear":I
+    const/16 v17, 0x2
 
-    .line 814
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+    move/from16 v0, v17
 
-    move-result-object v4
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
 
-    const v5, 0x7f020011
+    move-result v8
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    .line 1034
+    .local v8, "mMonth":I
+    const/16 v17, 0x5
 
-    move-result-object v4
+    move/from16 v0, v17
 
-    .line 813
-    invoke-virtual {v3, v4, v7, v7, v7}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
 
-    goto :goto_67
+    move-result v6
 
-    .line 818
-    :pswitch_ba
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mCallLogButton:Landroid/widget/Button;
+    .line 1035
+    .local v6, "mDay":I
+    const-string v17, "calendar_date"
 
-    .line 819
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+    new-instance v18, Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    invoke-static {v13}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    const v5, 0x7f02000f
+    move-result-object v19
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-direct/range {v18 .. v19}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v4
+    const-string v19, "/"
 
-    .line 818
-    invoke-virtual {v3, v4, v7, v7, v7}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_67
+    move-result-object v18
 
-    .line 791
-    :catch_cb
-    move-exception v3
+    add-int/lit8 v19, v8, 0x1
 
-    goto :goto_5d
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 799
+    move-result-object v18
+
+    const-string v19, "/"
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v18
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, v18
+
+    invoke-interface {v7, v0, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1036
+    invoke-interface {v7}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto/16 :goto_89
+
+    .line 1040
+    .end local v6    # "mDay":I
+    .end local v8    # "mMonth":I
+    .end local v13    # "mYear":I
+    :pswitch_14f
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lmobilehome/backup/Restore;->mContactsButton:Landroid/widget/Button;
+
+    move-object/from16 v17, v0
+
+    .line 1041
+    invoke-virtual/range {p0 .. p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v18
+
+    const v19, 0x7f020010
+
+    invoke-virtual/range {v18 .. v19}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v18
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    .line 1040
+    invoke-virtual/range {v17 .. v21}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    .line 1043
+    const/16 v17, 0x1
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v13
+
+    .line 1044
+    .restart local v13    # "mYear":I
+    const/16 v17, 0x2
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v8
+
+    .line 1045
+    .restart local v8    # "mMonth":I
+    const/16 v17, 0x5
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v6
+
+    .line 1046
+    .restart local v6    # "mDay":I
+    const-string v17, "contacts_date"
+
+    new-instance v18, Ljava/lang/StringBuilder;
+
+    invoke-static {v13}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    invoke-direct/range {v18 .. v19}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v19, "/"
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    add-int/lit8 v19, v8, 0x1
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    const-string v19, "/"
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v18
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, v18
+
+    invoke-interface {v7, v0, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1047
+    invoke-interface {v7}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto/16 :goto_89
+
+    .line 1051
+    .end local v6    # "mDay":I
+    .end local v8    # "mMonth":I
+    .end local v13    # "mYear":I
+    :pswitch_1b4
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lmobilehome/backup/Restore;->mSMSButton:Landroid/widget/Button;
+
+    move-object/from16 v17, v0
+
+    .line 1052
+    invoke-virtual/range {p0 .. p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v18
+
+    const v19, 0x7f020011
+
+    invoke-virtual/range {v18 .. v19}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v18
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    .line 1051
+    invoke-virtual/range {v17 .. v21}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    .line 1054
+    const/16 v17, 0x1
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v13
+
+    .line 1055
+    .restart local v13    # "mYear":I
+    const/16 v17, 0x2
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v8
+
+    .line 1056
+    .restart local v8    # "mMonth":I
+    const/16 v17, 0x5
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v6
+
+    .line 1057
+    .restart local v6    # "mDay":I
+    const-string v17, "sms_date"
+
+    new-instance v18, Ljava/lang/StringBuilder;
+
+    invoke-static {v13}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    invoke-direct/range {v18 .. v19}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v19, "/"
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    add-int/lit8 v19, v8, 0x1
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    const-string v19, "/"
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v18
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, v18
+
+    invoke-interface {v7, v0, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1058
+    invoke-interface {v7}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto/16 :goto_89
+
+    .line 1062
+    .end local v6    # "mDay":I
+    .end local v8    # "mMonth":I
+    .end local v13    # "mYear":I
+    :pswitch_219
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lmobilehome/backup/Restore;->mCallLogButton:Landroid/widget/Button;
+
+    move-object/from16 v17, v0
+
+    .line 1063
+    invoke-virtual/range {p0 .. p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v18
+
+    const v19, 0x7f02000f
+
+    invoke-virtual/range {v18 .. v19}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v18
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    .line 1062
+    invoke-virtual/range {v17 .. v21}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    .line 1065
+    const/16 v17, 0x1
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v13
+
+    .line 1066
+    .restart local v13    # "mYear":I
+    const/16 v17, 0x2
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v8
+
+    .line 1067
+    .restart local v8    # "mMonth":I
+    const/16 v17, 0x5
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v6
+
+    .line 1068
+    .restart local v6    # "mDay":I
+    const-string v17, "callLog_date"
+
+    new-instance v18, Ljava/lang/StringBuilder;
+
+    invoke-static {v13}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    invoke-direct/range {v18 .. v19}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v19, "/"
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    add-int/lit8 v19, v8, 0x1
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    const-string v19, "/"
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v18
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, v18
+
+    invoke-interface {v7, v0, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1069
+    invoke-interface {v7}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    goto/16 :goto_89
+
+    .line 1013
+    .end local v3    # "c":Ljava/util/Calendar;
+    .end local v6    # "mDay":I
+    .end local v7    # "mEditor":Landroid/content/SharedPreferences$Editor;
+    .end local v8    # "mMonth":I
+    .end local v10    # "mPerferences":Landroid/content/SharedPreferences;
+    .end local v13    # "mYear":I
+    :catch_27e
+    move-exception v17
+
+    goto/16 :goto_6b
+
+    .line 1025
     nop
 
-    :pswitch_data_ce
+    :pswitch_data_282
     .packed-switch 0x1
-        :pswitch_87
-        :pswitch_98
-        :pswitch_a9
-        :pswitch_ba
+        :pswitch_ea
+        :pswitch_14f
+        :pswitch_1b4
+        :pswitch_219
     .end packed-switch
 .end method
 
 .method private ShowProgressMsg1()V
-    .registers 5
+    .registers 7
 
     .prologue
-    .line 1151
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+    .line 1441
+    iget-object v0, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
-    move-result-object v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    iget-wide v2, p0, Lmobilehome/backup/Restore;->counter:J
 
-    move-result-object v1
+    const-wide/16 v4, 0x1
 
-    iget-object v1, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    add-long/2addr v2, v4
 
-    invoke-virtual {v1}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
+    iput-wide v2, p0, Lmobilehome/backup/Restore;->counter:J
 
-    move-result-object v0
-
-    .line 1152
-    .local v0, "Locale":Ljava/lang/String;
-    const-string v1, "TW"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_35
-
-    .line 1153
-    iget-object v1, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    iget v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v3, "  \u500b\u6d3b\u52d5\u5df2\u9084\u539f"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    const-string v2, "  \u4e2a\u6d3b\u52a8\u5df2\u8fd8\u539f"
 
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1156
-    :goto_34
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+
+    .line 1442
     return-void
-
-    .line 1155
-    :cond_35
-    iget-object v1, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, " Restore  "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "  Calendar"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
-
-    goto :goto_34
 .end method
 
 .method private ShowProgressMsg2()V
-    .registers 5
+    .registers 7
 
     .prologue
-    .line 1159
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+    .line 1445
+    iget-object v0, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
-    move-result-object v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    iget-wide v2, p0, Lmobilehome/backup/Restore;->counter:J
 
-    move-result-object v1
+    const-wide/16 v4, 0x1
 
-    iget-object v1, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    add-long/2addr v2, v4
 
-    invoke-virtual {v1}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
+    iput-wide v2, p0, Lmobilehome/backup/Restore;->counter:J
 
-    move-result-object v0
-
-    .line 1160
-    .local v0, "Locale":Ljava/lang/String;
-    const-string v1, "TW"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_35
-
-    .line 1161
-    iget-object v1, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    iget v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v3, "  \u500b\u9023\u7d61\u4eba\u5df2\u9084\u539f"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    const-string v2, "  \u4e2a\u8054\u7cfb\u4eba\u5df2\u8fd8\u539f"
 
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1164
-    :goto_34
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+
+    .line 1446
     return-void
-
-    .line 1163
-    :cond_35
-    iget-object v1, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, " Restore  "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "  Contacts"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
-
-    goto :goto_34
 .end method
 
 .method private ShowProgressMsg3()V
-    .registers 5
+    .registers 7
 
     .prologue
-    .line 1167
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+    .line 1449
+    iget-object v0, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
-    move-result-object v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    iget-wide v2, p0, Lmobilehome/backup/Restore;->counter:J
 
-    move-result-object v1
+    const-wide/16 v4, 0x1
 
-    iget-object v1, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    add-long/2addr v2, v4
 
-    invoke-virtual {v1}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
+    iput-wide v2, p0, Lmobilehome/backup/Restore;->counter:J
 
-    move-result-object v0
-
-    .line 1168
-    .local v0, "Locale":Ljava/lang/String;
-    const-string v1, "TW"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_35
-
-    .line 1169
-    iget-object v1, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    iget v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v3, "  \u5247\u7c21\u8a0a\u5df2\u9084\u539f"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    const-string v2, "  \u4e2a\u4fe1\u606f\u5df2\u8fd8\u539f"
 
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1172
-    :goto_34
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+
+    .line 1450
     return-void
-
-    .line 1171
-    :cond_35
-    iget-object v1, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, " Restore  "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "  SMS"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
-
-    goto :goto_34
 .end method
 
 .method private ShowProgressMsg4()V
-    .registers 5
+    .registers 7
 
     .prologue
-    .line 1175
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
+    .line 1453
+    iget-object v0, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
 
-    move-result-object v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    iget-wide v2, p0, Lmobilehome/backup/Restore;->counter:J
 
-    move-result-object v1
+    const-wide/16 v4, 0x1
 
-    iget-object v1, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    add-long/2addr v2, v4
 
-    invoke-virtual {v1}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
+    iput-wide v2, p0, Lmobilehome/backup/Restore;->counter:J
 
-    move-result-object v0
-
-    .line 1176
-    .local v0, "Locale":Ljava/lang/String;
-    const-string v1, "TW"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_35
-
-    .line 1177
-    iget-object v1, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    iget v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v3, "  \u7b46\u901a\u8a71\u8a18\u9304\u5df2\u9084\u539f"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    const-string v2, "  \u4e2a\u901a\u8bdd\u8bb0\u5f55\u5df2\u8fd8\u539f"
 
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1180
-    :goto_34
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+
+    .line 1454
     return-void
-
-    .line 1179
-    :cond_35
-    iget-object v1, p0, Lmobilehome/backup/Restore;->threadProgress:Landroid/app/ProgressDialog;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, " Restore  "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, p0, Lmobilehome/backup/Restore;->counter:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "  Call Log"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
-
-    goto :goto_34
 .end method
 
 .method private Write_Calendar()V
     .registers 8
 
     .prologue
-    .line 837
+    .line 1094
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 839
+    .line 1096
     .local v0, "HTC_Calendar":Landroid/content/ContentValues;
     const-string v5, "calendar_id"
 
@@ -1790,21 +2090,21 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 840
+    .line 1097
     const-string v5, "title"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_title:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 841
+    .line 1098
     const-string v5, "dtstart"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_dtstart:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 842
+    .line 1099
     sget-object v5, Lmobilehome/backup/Restore;->Calendar_dtend:Ljava/lang/String;
 
     const-string v6, "null"
@@ -1813,85 +2113,76 @@
 
     move-result v5
 
-    if-nez v5, :cond_2b
+    if-nez v5, :cond_10f
 
-    .line 843
+    sget-object v5, Lmobilehome/backup/Restore;->Calendar_dtend:Ljava/lang/String;
+
+    const-string v6, "0"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_10f
+
+    .line 1100
     const-string v5, "dtend"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_dtend:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 844
-    :cond_2b
+    .line 1106
+    :goto_35
     const-string v5, "eventTimezone"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_eventTimezone:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 852
+    .line 1114
     const-string v5, "hasExtendedProperties"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_hasExtendedProperties:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 854
+    .line 1116
     const-string v5, "_sync_dirty"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_sync_dirty:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 855
+    .line 1117
     const-string v5, "visibility"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_visibility:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 856
+    .line 1118
     const-string v5, "_sync_version"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_sync_version:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 857
+    .line 1119
     const-string v5, "_sync_local_id"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_sync_local_id:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 858
-    sget-object v5, Lmobilehome/backup/Restore;->Calendar_duration:Ljava/lang/String;
-
-    const-string v6, "null"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_66
-
-    .line 859
-    const-string v5, "duration"
-
-    sget-object v6, Lmobilehome/backup/Restore;->Calendar_duration:Ljava/lang/String;
-
-    invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 860
-    :cond_66
+    .line 1121
     const-string v5, "hasAlarm"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_hasAlarm:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 861
+    .line 1122
     sget-object v5, Lmobilehome/backup/Restore;->Calendar_commentsUri:Ljava/lang/String;
 
     const-string v6, "null"
@@ -1900,31 +2191,31 @@
 
     move-result v5
 
-    if-nez v5, :cond_7e
+    if-nez v5, :cond_77
 
-    .line 862
+    .line 1123
     const-string v5, "commentsUri"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_commentsUri:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 863
-    :cond_7e
+    .line 1124
+    :cond_77
     const-string v5, "transparency"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_transparency:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 870
+    .line 1131
     const-string v5, "originalAllDay"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_originalAllDay:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 872
+    .line 1133
     sget-object v5, Lmobilehome/backup/Restore;->Calendar_rrule:Ljava/lang/String;
 
     const-string v6, "null"
@@ -1933,52 +2224,76 @@
 
     move-result v5
 
-    if-nez v5, :cond_102
+    if-nez v5, :cond_12b
 
-    .line 873
+    .line 1134
     const-string v5, "rrule"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_rrule:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 876
-    :goto_9d
+    .line 1137
+    :goto_96
+    sget-object v5, Lmobilehome/backup/Restore;->Calendar_eventLocation:Ljava/lang/String;
+
+    const-string v6, "null"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_a7
+
+    .line 1138
     const-string v5, "eventLocation"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_eventLocation:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 877
+    .line 1139
+    :cond_a7
     const-string v5, "_sync_time"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_sync_time:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 878
+    .line 1140
     const-string v5, "originalInstanceTime"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_originalInstanceTime:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 880
+    .line 1142
     const-string v5, "allDay"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_allDay:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 881
+    .line 1143
+    sget-object v5, Lmobilehome/backup/Restore;->Calendar_description:Ljava/lang/String;
+
+    const-string v6, "null"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_cd
+
+    .line 1144
     const-string v5, "description"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_description:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 883
+    .line 1146
+    :cond_cd
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -1993,11 +2308,11 @@
 
     move-result-object v3
 
-    .line 886
+    .line 1149
     .local v3, "newEvent":Landroid/net/Uri;
-    if-eqz v3, :cond_101
+    if-eqz v3, :cond_10e
 
-    .line 887
+    .line 1150
     invoke-virtual {v3}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v5
@@ -2006,13 +2321,13 @@
 
     move-result-wide v1
 
-    .line 888
+    .line 1151
     .local v1, "id":J
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 889
+    .line 1152
     .local v4, "reminder_values":Landroid/content/ContentValues;
     const-string v5, "event_id"
 
@@ -2022,21 +2337,21 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 890
+    .line 1153
     const-string v5, "method"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_method:Ljava/lang/String;
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 891
+    .line 1154
     const-string v5, "minutes"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_minutes:Ljava/lang/String;
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 893
+    .line 1156
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -2049,34 +2364,65 @@
 
     invoke-virtual {v5, v6, v4}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 895
+    .line 1158
     .end local v1    # "id":J
     .end local v4    # "reminder_values":Landroid/content/ContentValues;
-    :cond_101
+    :cond_10e
     return-void
 
-    .line 875
+    .line 1101
     .end local v3    # "newEvent":Landroid/net/Uri;
-    :cond_102
+    :cond_10f
+    sget-object v5, Lmobilehome/backup/Restore;->Calendar_duration:Ljava/lang/String;
+
+    const-string v6, "null"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_122
+
+    .line 1102
+    const-string v5, "duration"
+
+    sget-object v6, Lmobilehome/backup/Restore;->Calendar_duration:Ljava/lang/String;
+
+    invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_35
+
+    .line 1104
+    :cond_122
+    const-string v5, "duration"
+
+    const-string v6, "P3600S"
+
+    invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_35
+
+    .line 1136
+    :cond_12b
     const-string v5, "exrule"
 
     sget-object v6, Lmobilehome/backup/Restore;->Calendar_exrule:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_9d
+    goto/16 :goto_96
 .end method
 
 .method private Write_CallLog()V
     .registers 4
 
     .prologue
-    .line 989
+    .line 1261
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 992
+    .line 1264
     .local v0, "HTC_CallLog":Landroid/content/ContentValues;
     const-string v1, "new"
 
@@ -2084,56 +2430,82 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 993
+    .line 1265
     const-string v1, "numbertype"
 
     sget-object v2, Lmobilehome/backup/Restore;->CallLog_numbertype:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 994
+    .line 1266
     const-string v1, "duration"
 
     sget-object v2, Lmobilehome/backup/Restore;->CallLog_duration:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 996
+    .line 1268
     const-string v1, "number"
 
     sget-object v2, Lmobilehome/backup/Restore;->CallLog_number:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 997
+    .line 1269
+    sget-object v1, Lmobilehome/backup/Restore;->CallLog_type:Ljava/lang/String;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    if-le v1, v2, :cond_32
+
+    .line 1270
+    const-string v1, "3"
+
+    sput-object v1, Lmobilehome/backup/Restore;->CallLog_type:Ljava/lang/String;
+
+    .line 1271
+    :cond_32
     const-string v1, "type"
 
     sget-object v2, Lmobilehome/backup/Restore;->CallLog_type:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 998
+    .line 1272
     const-string v1, "numberlabel"
 
     sget-object v2, Lmobilehome/backup/Restore;->CallLog_numberlabel:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 999
+    .line 1273
     const-string v1, "name"
 
     sget-object v2, Lmobilehome/backup/Restore;->CallLog_name:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1000
+    .line 1274
     const-string v1, "date"
 
     sget-object v2, Lmobilehome/backup/Restore;->CallLog_date:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1002
+    .line 1276
+    const-string v1, "[Line NO.#1229]"
+
+    iput-object v1, p0, Lmobilehome/backup/Restore;->DEBUG_Line:Ljava/lang/String;
+
+    .line 1277
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -2142,7 +2514,12 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 1004
+    .line 1278
+    const-string v1, "[Line NO.#1231]"
+
+    iput-object v1, p0, Lmobilehome/backup/Restore;->DEBUG_Line:Ljava/lang/String;
+
+    .line 1279
     return-void
 .end method
 
@@ -2150,20 +2527,32 @@
     .registers 10
 
     .prologue
-    .line 514
+    .line 693
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 516
+    .line 695
     .local v0, "HTC_Contacts":Landroid/content/ContentValues;
+    sget-object v7, Lmobilehome/backup/Restore;->Contacts_name:Ljava/lang/String;
+
+    const-string v8, "null"
+
+    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_123
+
+    .line 696
     const-string v7, "name"
 
-    sget-object v8, Lmobilehome/backup/Restore;->Contacts_name:Ljava/lang/String;
+    sget-object v8, Lmobilehome/backup/Restore;->Contacts_display_name:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 517
+    .line 699
+    :goto_16
     sget-object v7, Lmobilehome/backup/Restore;->Contacts_custom_ringtone:Ljava/lang/String;
 
     const-string v8, "null"
@@ -2172,17 +2561,17 @@
 
     move-result v7
 
-    if-nez v7, :cond_1d
+    if-nez v7, :cond_27
 
-    .line 518
+    .line 700
     const-string v7, "custom_ringtone"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_custom_ringtone:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 519
-    :cond_1d
+    .line 701
+    :cond_27
     sget-object v7, Lmobilehome/backup/Restore;->Contacts_notes:Ljava/lang/String;
 
     const-string v8, "null"
@@ -2191,115 +2580,115 @@
 
     move-result v7
 
-    if-nez v7, :cond_2e
+    if-nez v7, :cond_38
 
-    .line 520
+    .line 702
     const-string v7, "notes"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_notes:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 521
-    :cond_2e
+    .line 703
+    :cond_38
     const-string v7, "phonetic_name"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_phonetic_name:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 523
+    .line 705
     const-string v7, "send_to_voicemail"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_send_to_voicemail:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 524
+    .line 706
     const-string v7, "starred"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_starred:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 525
+    .line 707
     const-string v7, "times_contacted"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_times_contacted:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 526
+    .line 708
     const-string v7, "primary_organization"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_primary_organization:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 528
+    .line 710
     const-string v7, "_sync_dirty"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_sync_dirty:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 529
+    .line 711
     const-string v7, "last_time_contacted"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_last_time_contacted:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 533
+    .line 715
     const-string v7, "_sync_version"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_sync_version:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 534
+    .line 716
     const-string v7, "_sync_account"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_sync_account:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 536
+    .line 718
     const-string v7, "_sync_time"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_sync_time:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 537
+    .line 719
     const-string v7, "_sync_id"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_sync_id:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 538
+    .line 720
     const-string v7, "primary_email"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_primary_email:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 539
+    .line 721
     const-string v7, "_sync_local_id"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_sync_local_id:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 542
+    .line 724
     const-string v7, "primary_phone"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_primary_phone:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 543
+    .line 725
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
@@ -2310,7 +2699,7 @@
 
     move-result-object v5
 
-    .line 545
+    .line 727
     .local v5, "uri":Landroid/net/Uri;
     sget-object v7, Lmobilehome/backup/Restore;->Contacts_phone_number:Ljava/lang/String;
 
@@ -2320,52 +2709,52 @@
 
     move-result v7
 
-    if-nez v7, :cond_ca
+    if-nez v7, :cond_d4
 
-    .line 547
+    .line 729
     const-string v7, "phones"
 
     invoke-static {v5, v7}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
 
-    .line 548
+    .line 730
     .local v4, "phoneUri":Landroid/net/Uri;
     invoke-virtual {v0}, Landroid/content/ContentValues;->clear()V
 
-    .line 549
+    .line 731
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_number_items:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v7
 
-    if-nez v7, :cond_119
+    if-nez v7, :cond_12c
 
-    .line 551
+    .line 733
     const-string v7, "number"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_phone_number:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 552
+    .line 734
     const-string v7, "type"
 
     const-string v8, "7"
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 553
+    .line 735
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
     invoke-virtual {v7, v4, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 565
+    .line 747
     .end local v4    # "phoneUri":Landroid/net/Uri;
-    :cond_ca
+    :cond_d4
     sget-object v7, Lmobilehome/backup/Restore;->Contacts_kind:Ljava/lang/String;
 
     const-string v8, "empty"
@@ -2374,33 +2763,33 @@
 
     move-result v7
 
-    if-nez v7, :cond_e3
+    if-nez v7, :cond_ed
 
-    .line 567
+    .line 749
     const-string v7, "contact_methods"
 
     invoke-static {v5, v7}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 569
+    .line 751
     .local v1, "MethodUri":Landroid/net/Uri;
     const/4 v6, 0x0
 
     .local v6, "x":I
-    :goto_db
+    :goto_e5
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_kind_items:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v7
 
-    if-lt v6, v7, :cond_14d
+    if-lt v6, v7, :cond_160
 
-    .line 581
+    .line 763
     .end local v1    # "MethodUri":Landroid/net/Uri;
     .end local v6    # "x":I
-    :cond_e3
+    :cond_ed
     sget-object v7, Lmobilehome/backup/Restore;->Contacts_org:Ljava/lang/String;
 
     const-string v8, "empty"
@@ -2409,33 +2798,33 @@
 
     move-result v7
 
-    if-nez v7, :cond_fc
+    if-nez v7, :cond_106
 
-    .line 583
+    .line 765
     const-string v7, "organizations"
 
     invoke-static {v5, v7}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 585
+    .line 767
     .local v2, "OrgUri":Landroid/net/Uri;
     const/4 v6, 0x0
 
     .restart local v6    # "x":I
-    :goto_f4
+    :goto_fe
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_label_items:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v7
 
-    if-lt v6, v7, :cond_19f
+    if-lt v6, v7, :cond_1b2
 
-    .line 597
+    .line 779
     .end local v2    # "OrgUri":Landroid/net/Uri;
     .end local v6    # "x":I
-    :cond_fc
+    :cond_106
     sget-object v7, Lmobilehome/backup/Restore;->Contacts_group:Ljava/lang/String;
 
     const-string v8, "empty"
@@ -2444,54 +2833,66 @@
 
     move-result v7
 
-    if-nez v7, :cond_118
+    if-nez v7, :cond_122
 
-    .line 599
+    .line 781
     const-string v7, "groupmembership"
 
     invoke-static {v5, v7}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 600
+    .line 782
     .local v3, "groupUri":Landroid/net/Uri;
     invoke-virtual {v0}, Landroid/content/ContentValues;->clear()V
 
-    .line 601
+    .line 783
     const/4 v6, 0x0
 
     .restart local v6    # "x":I
-    :goto_110
+    :goto_11a
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_groupid_items:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v7
 
-    if-lt v6, v7, :cond_1f1
+    if-lt v6, v7, :cond_204
 
-    .line 607
+    .line 789
     .end local v3    # "groupUri":Landroid/net/Uri;
     .end local v6    # "x":I
-    :cond_118
+    :cond_122
     return-void
 
-    .line 556
+    .line 698
+    .end local v5    # "uri":Landroid/net/Uri;
+    :cond_123
+    const-string v7, "name"
+
+    sget-object v8, Lmobilehome/backup/Restore;->Contacts_name:Ljava/lang/String;
+
+    invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_16
+
+    .line 738
     .restart local v4    # "phoneUri":Landroid/net/Uri;
-    :cond_119
+    .restart local v5    # "uri":Landroid/net/Uri;
+    :cond_12c
     const/4 v6, 0x0
 
     .restart local v6    # "x":I
-    :goto_11a
+    :goto_12d
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_number_items:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v7
 
-    if-ge v6, v7, :cond_ca
+    if-ge v6, v7, :cond_d4
 
-    .line 558
+    .line 740
     const-string v8, "number"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_number_items:Ljava/util/List;
@@ -2504,14 +2905,14 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 559
+    .line 741
     const-string v7, "number_key"
 
     sget-object v8, Lmobilehome/backup/Restore;->Contacts_number_key:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 560
+    .line 742
     const-string v8, "type"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_pType_items:Ljava/util/List;
@@ -2524,25 +2925,25 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 561
+    .line 743
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
     invoke-virtual {v7, v4, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 556
+    .line 738
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_11a
+    goto :goto_12d
 
-    .line 571
+    .line 753
     .end local v4    # "phoneUri":Landroid/net/Uri;
     .restart local v1    # "MethodUri":Landroid/net/Uri;
-    :cond_14d
+    :cond_160
     invoke-virtual {v0}, Landroid/content/ContentValues;->clear()V
 
-    .line 572
+    .line 754
     const-string v8, "kind"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_kind_items:Ljava/util/List;
@@ -2555,7 +2956,7 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 573
+    .line 755
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_kind_items:Ljava/util/List;
 
     invoke-interface {v7, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2570,9 +2971,9 @@
 
     move-result v7
 
-    if-eqz v7, :cond_17a
+    if-eqz v7, :cond_18d
 
-    .line 574
+    .line 756
     const-string v8, "aux_data"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_aux_data_items:Ljava/util/List;
@@ -2585,8 +2986,8 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 575
-    :cond_17a
+    .line 757
+    :cond_18d
     const-string v8, "data"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_data_items:Ljava/util/List;
@@ -2599,7 +3000,7 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 576
+    .line 758
     const-string v8, "type"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_mType_items:Ljava/util/List;
@@ -2612,25 +3013,25 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 577
+    .line 759
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
     invoke-virtual {v7, v1, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 569
+    .line 751
     add-int/lit8 v6, v6, 0x1
 
-    goto/16 :goto_db
+    goto/16 :goto_e5
 
-    .line 587
+    .line 769
     .end local v1    # "MethodUri":Landroid/net/Uri;
     .restart local v2    # "OrgUri":Landroid/net/Uri;
-    :cond_19f
+    :cond_1b2
     invoke-virtual {v0}, Landroid/content/ContentValues;->clear()V
 
-    .line 588
+    .line 770
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_label_items:Ljava/util/List;
 
     invoke-interface {v7, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2645,9 +3046,9 @@
 
     move-result v7
 
-    if-nez v7, :cond_1bf
+    if-nez v7, :cond_1d2
 
-    .line 589
+    .line 771
     const-string v8, "label"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_label_items:Ljava/util/List;
@@ -2660,8 +3061,8 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 590
-    :cond_1bf
+    .line 772
+    :cond_1d2
     const-string v8, "company"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_company_items:Ljava/util/List;
@@ -2674,7 +3075,7 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 591
+    .line 773
     const-string v8, "title"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_title_items:Ljava/util/List;
@@ -2687,7 +3088,7 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 592
+    .line 774
     const-string v8, "type"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_oType_items:Ljava/util/List;
@@ -2700,22 +3101,22 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 593
+    .line 775
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
     invoke-virtual {v7, v2, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 585
+    .line 767
     add-int/lit8 v6, v6, 0x1
 
-    goto/16 :goto_f4
+    goto/16 :goto_fe
 
-    .line 603
+    .line 785
     .end local v2    # "OrgUri":Landroid/net/Uri;
     .restart local v3    # "groupUri":Landroid/net/Uri;
-    :cond_1f1
+    :cond_204
     const-string v8, "group_id"
 
     iget-object v7, p0, Lmobilehome/backup/Restore;->Contacts_groupid_items:Ljava/util/List;
@@ -2728,29 +3129,29 @@
 
     invoke-virtual {v0, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 604
+    .line 786
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
     invoke-virtual {v7, v3, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 601
+    .line 783
     add-int/lit8 v6, v6, 0x1
 
-    goto/16 :goto_110
+    goto/16 :goto_11a
 .end method
 
 .method private Write_SMS()V
     .registers 4
 
     .prologue
-    .line 1111
+    .line 1398
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1116
+    .line 1403
     .local v0, "HTCsms":Landroid/content/ContentValues;
     const-string v1, "address"
 
@@ -2758,77 +3159,94 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1117
+    .line 1404
     const-string v1, "person"
 
     sget-object v2, Lmobilehome/backup/Restore;->SMS_person:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1118
+    .line 1405
     const-string v1, "date"
 
     sget-object v2, Lmobilehome/backup/Restore;->SMS_date:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1119
+    .line 1406
     const-string v1, "protocol"
 
     sget-object v2, Lmobilehome/backup/Restore;->SMS_protocol:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1120
+    .line 1407
     const-string v1, "read"
 
     sget-object v2, Lmobilehome/backup/Restore;->SMS_read:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1121
+    .line 1408
     const-string v1, "status"
 
     sget-object v2, Lmobilehome/backup/Restore;->SMS_status:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1122
+    .line 1409
+    sget-object v1, Lmobilehome/backup/Restore;->SMS_type:Ljava/lang/String;
+
+    const-string v2, "null"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_40
+
+    .line 1410
     const-string v1, "type"
 
     sget-object v2, Lmobilehome/backup/Restore;->SMS_type:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1123
+    .line 1411
+    :cond_40
     const-string v1, "reply_path_present"
 
     sget-object v2, Lmobilehome/backup/Restore;->SMS_reply_path_present:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1124
+    .line 1412
     const-string v1, "subject"
 
     sget-object v2, Lmobilehome/backup/Restore;->SMS_subject:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1125
+    .line 1413
     const-string v1, "body"
 
     sget-object v2, Lmobilehome/backup/Restore;->SMS_body:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1128
+    .line 1416
     const-string v1, "service_center"
 
     sget-object v2, Lmobilehome/backup/Restore;->SMS_service_center:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1131
+    .line 1419
+    const-string v1, "[Line NO.#1378]"
+
+    iput-object v1, p0, Lmobilehome/backup/Restore;->DEBUG_Line:Ljava/lang/String;
+
+    .line 1420
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -2841,7 +3259,12 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 1132
+    .line 1421
+    const-string v1, "[Line NO.#1380]"
+
+    iput-object v1, p0, Lmobilehome/backup/Restore;->DEBUG_Line:Ljava/lang/String;
+
+    .line 1422
     return-void
 .end method
 
@@ -2849,138 +3272,348 @@
     .registers 1
 
     .prologue
-    .line 770
+    .line 995
     invoke-direct {p0}, Lmobilehome/backup/Restore;->ShowOkMsg()V
 
     return-void
 .end method
 
-.method static synthetic access$1(Lmobilehome/backup/Restore;)V
-    .registers 1
+.method static synthetic access$1(Lmobilehome/backup/Restore;)I
+    .registers 2
 
     .prologue
-    .line 828
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->ShowFailMsg()V
+    .line 50
+    iget v0, p0, Lmobilehome/backup/Restore;->select:I
+
+    return v0
+.end method
+
+.method static synthetic access$10(Lmobilehome/backup/Restore;J)V
+    .registers 3
+
+    .prologue
+    .line 49
+    iput-wide p1, p0, Lmobilehome/backup/Restore;->counter:J
 
     return-void
 .end method
 
-.method static synthetic access$10(Lmobilehome/backup/Restore;)V
+.method static synthetic access$100()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 610
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->Restore_Calendar()V
-
-    return-void
-.end method
-
-.method static synthetic access$100(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 64
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_read:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$101(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 65
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_status:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$102(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 66
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_type:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$103(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 67
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_reply_path_present:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$104(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 68
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_subject:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$105(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 70
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_sc_toa:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$106(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 71
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_service_center:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$107(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 69
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_body:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$108()Ljava/lang/String;
-    .registers 1
-
-    .prologue
-    .line 69
-    sget-object v0, Lmobilehome/backup/Restore;->SMS_body:Ljava/lang/String;
+    .line 90
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_hasExtendedProperties:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$11(Lmobilehome/backup/Restore;)V
+.method static synthetic access$101()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 317
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->Restore_Contacts()V
+    .line 99
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_hasAlarm:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$102()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 112
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_originalAllDay:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$103()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 114
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_rrule:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$104()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 117
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_exrule:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$105()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 116
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_eventLocation:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$106()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 120
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_originalInstanceTime:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$107()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 123
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_allDay:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$108(Lmobilehome/backup/Restore;)V
+    .registers 1
+
+    .prologue
+    .line 1259
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->Write_CallLog()V
 
     return-void
 .end method
 
-.method static synthetic access$12(Lmobilehome/backup/Restore;)V
+.method static synthetic access$109(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 1008
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->Restore_SMS()V
+    .line 76
+    sput-object p0, Lmobilehome/backup/Restore;->CallLog_new:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$11(Lmobilehome/backup/Restore;I)V
+    .registers 2
+
+    .prologue
+    .line 50
+    iput p1, p0, Lmobilehome/backup/Restore;->select:I
+
+    return-void
+.end method
+
+.method static synthetic access$110(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 77
+    sput-object p0, Lmobilehome/backup/Restore;->CallLog_numbertype:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$111(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 78
+    sput-object p0, Lmobilehome/backup/Restore;->CallLog_duration:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$112(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 79
+    sput-object p0, Lmobilehome/backup/Restore;->CallLog_person:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$113(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 80
+    sput-object p0, Lmobilehome/backup/Restore;->CallLog_number:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$114(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 81
+    sput-object p0, Lmobilehome/backup/Restore;->CallLog_type:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$115(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 82
+    sput-object p0, Lmobilehome/backup/Restore;->CallLog_numberlabel:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$116(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 83
+    sput-object p0, Lmobilehome/backup/Restore;->CallLog_name:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$117(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 84
+    sput-object p0, Lmobilehome/backup/Restore;->CallLog_date:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$118()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 76
+    sget-object v0, Lmobilehome/backup/Restore;->CallLog_new:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$119()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 77
+    sget-object v0, Lmobilehome/backup/Restore;->CallLog_numbertype:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$12(Lmobilehome/backup/Restore;Landroid/media/MediaPlayer;)V
+    .registers 2
+
+    .prologue
+    .line 56
+    iput-object p1, p0, Lmobilehome/backup/Restore;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    return-void
+.end method
+
+.method static synthetic access$120()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 78
+    sget-object v0, Lmobilehome/backup/Restore;->CallLog_duration:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$121()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 80
+    sget-object v0, Lmobilehome/backup/Restore;->CallLog_number:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$122()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 81
+    sget-object v0, Lmobilehome/backup/Restore;->CallLog_type:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$123()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 82
+    sget-object v0, Lmobilehome/backup/Restore;->CallLog_numberlabel:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$124()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 83
+    sget-object v0, Lmobilehome/backup/Restore;->CallLog_name:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$125()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 84
+    sget-object v0, Lmobilehome/backup/Restore;->CallLog_date:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$126(Lmobilehome/backup/Restore;)V
+    .registers 1
+
+    .prologue
+    .line 1396
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->Write_SMS()V
+
+    return-void
+.end method
+
+.method static synthetic access$127(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 62
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_toa:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$128(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 63
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_address:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$129(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 64
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_person:Ljava/lang/String;
 
     return-void
 .end method
@@ -2989,88 +3622,298 @@
     .registers 1
 
     .prologue
-    .line 899
+    .line 792
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->Restore_Calendar()V
+
+    return-void
+.end method
+
+.method static synthetic access$130(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 65
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_date:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$131(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 66
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_protocol:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$132(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 67
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_read:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$133(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 68
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_status:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$134(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 69
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_type:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$135(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 70
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_reply_path_present:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$136(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 71
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_subject:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$137(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 73
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_sc_toa:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$138(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 74
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_service_center:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$139(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 72
+    sput-object p0, Lmobilehome/backup/Restore;->SMS_body:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$14(Lmobilehome/backup/Restore;Ljava/lang/String;)V
+    .registers 2
+
+    .prologue
+    .line 415
+    invoke-direct {p0, p1}, Lmobilehome/backup/Restore;->RestoreCheck(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic access$140()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 72
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_body:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$141()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 63
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_address:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$142()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 64
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_person:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$143()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 65
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_date:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$144()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 66
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_protocol:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$145()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 67
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_read:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$146()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 68
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_status:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$147()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 69
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_type:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$148()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 70
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_reply_path_present:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$149()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 71
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_subject:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$15(Lmobilehome/backup/Restore;)V
+    .registers 1
+
+    .prologue
+    .line 462
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->Restore_Contacts()V
+
+    return-void
+.end method
+
+.method static synthetic access$150()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 74
+    sget-object v0, Lmobilehome/backup/Restore;->SMS_service_center:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$16(Lmobilehome/backup/Restore;)V
+    .registers 1
+
+    .prologue
+    .line 1283
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->Restore_SMS()V
+
+    return-void
+.end method
+
+.method static synthetic access$17(Lmobilehome/backup/Restore;)V
+    .registers 1
+
+    .prologue
+    .line 1162
     invoke-direct {p0}, Lmobilehome/backup/Restore;->Restore_CallLog()V
 
     return-void
 .end method
 
-.method static synthetic access$14(Lmobilehome/backup/Restore;)V
-    .registers 1
+.method static synthetic access$18(Lmobilehome/backup/Restore;)Ljava/util/List;
+    .registers 2
 
     .prologue
-    .line 512
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->Write_Contacts()V
+    .line 174
+    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_label_items:Ljava/util/List;
 
-    return-void
-.end method
-
-.method static synthetic access$15(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 160
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_kind:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$16(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 162
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_phone_number:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$17(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 161
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_org:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$18(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 163
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_group:Ljava/lang/String;
-
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$19(Lmobilehome/backup/Restore;)Ljava/util/List;
     .registers 2
 
     .prologue
-    .line 171
-    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_label_items:Ljava/util/List;
+    .line 175
+    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_title_items:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method static synthetic access$2(Lmobilehome/backup/Restore;)I
-    .registers 2
+.method static synthetic access$2(Lmobilehome/backup/Restore;)V
+    .registers 1
 
     .prologue
-    .line 49
-    iget v0, p0, Lmobilehome/backup/Restore;->select:I
+    .line 1439
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->ShowProgressMsg1()V
 
-    return v0
+    return-void
 .end method
 
 .method static synthetic access$20(Lmobilehome/backup/Restore;)Ljava/util/List;
     .registers 2
 
     .prologue
-    .line 172
-    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_title_items:Ljava/util/List;
+    .line 176
+    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_company_items:Ljava/util/List;
 
     return-object v0
 .end method
@@ -3079,8 +3922,8 @@
     .registers 2
 
     .prologue
-    .line 173
-    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_company_items:Ljava/util/List;
+    .line 177
+    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_oType_items:Ljava/util/List;
 
     return-object v0
 .end method
@@ -3089,8 +3932,8 @@
     .registers 2
 
     .prologue
-    .line 174
-    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_oType_items:Ljava/util/List;
+    .line 168
+    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_kind_items:Ljava/util/List;
 
     return-object v0
 .end method
@@ -3099,8 +3942,8 @@
     .registers 2
 
     .prologue
-    .line 165
-    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_kind_items:Ljava/util/List;
+    .line 169
+    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_data_items:Ljava/util/List;
 
     return-object v0
 .end method
@@ -3109,8 +3952,8 @@
     .registers 2
 
     .prologue
-    .line 166
-    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_data_items:Ljava/util/List;
+    .line 170
+    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_aux_data_items:Ljava/util/List;
 
     return-object v0
 .end method
@@ -3119,8 +3962,8 @@
     .registers 2
 
     .prologue
-    .line 167
-    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_aux_data_items:Ljava/util/List;
+    .line 171
+    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_mType_items:Ljava/util/List;
 
     return-object v0
 .end method
@@ -3129,8 +3972,8 @@
     .registers 2
 
     .prologue
-    .line 168
-    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_mType_items:Ljava/util/List;
+    .line 172
+    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_number_items:Ljava/util/List;
 
     return-object v0
 .end method
@@ -3139,38 +3982,38 @@
     .registers 2
 
     .prologue
-    .line 169
-    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_number_items:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method static synthetic access$28(Lmobilehome/backup/Restore;)Ljava/util/List;
-    .registers 2
-
-    .prologue
-    .line 170
+    .line 173
     iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_pType_items:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method static synthetic access$29(Lmobilehome/backup/Restore;)Ljava/util/List;
-    .registers 2
+.method static synthetic access$28(Lmobilehome/backup/Restore;)V
+    .registers 1
 
     .prologue
-    .line 175
-    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_groupid_items:Ljava/util/List;
+    .line 691
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->Write_Contacts()V
 
-    return-object v0
+    return-void
+.end method
+
+.method static synthetic access$29(Ljava/lang/String;)V
+    .registers 1
+
+    .prologue
+    .line 142
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_name:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method static synthetic access$3(Lmobilehome/backup/Restore;)V
     .registers 1
 
     .prologue
-    .line 1149
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->ShowProgressMsg1()V
+    .line 1443
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->ShowProgressMsg2()V
 
     return-void
 .end method
@@ -3179,8 +4022,8 @@
     .registers 1
 
     .prologue
-    .line 128
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_primary_organization:Ljava/lang/String;
+    .line 130
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_display_name:Ljava/lang/String;
 
     return-void
 .end method
@@ -3189,8 +4032,8 @@
     .registers 1
 
     .prologue
-    .line 129
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_lastName:Ljava/lang/String;
+    .line 163
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_kind:Ljava/lang/String;
 
     return-void
 .end method
@@ -3199,8 +4042,8 @@
     .registers 1
 
     .prologue
-    .line 159
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_number_key:Ljava/lang/String;
+    .line 165
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_phone_number:Ljava/lang/String;
 
     return-void
 .end method
@@ -3209,8 +4052,8 @@
     .registers 1
 
     .prologue
-    .line 132
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_times_contacted:Ljava/lang/String;
+    .line 164
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_org:Ljava/lang/String;
 
     return-void
 .end method
@@ -3219,28 +4062,28 @@
     .registers 1
 
     .prologue
-    .line 133
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_dirty:Ljava/lang/String;
+    .line 166
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_group:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$35(Ljava/lang/String;)V
-    .registers 1
+.method static synthetic access$35(Lmobilehome/backup/Restore;)Ljava/util/List;
+    .registers 2
 
     .prologue
-    .line 135
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_last_time_contacted:Ljava/lang/String;
+    .line 178
+    iget-object v0, p0, Lmobilehome/backup/Restore;->Contacts_groupid_items:Ljava/util/List;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$36(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 137
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_extra_group:Ljava/lang/String;
+    .line 131
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_primary_organization:Ljava/lang/String;
 
     return-void
 .end method
@@ -3249,8 +4092,8 @@
     .registers 1
 
     .prologue
-    .line 138
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_notes:Ljava/lang/String;
+    .line 132
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_lastName:Ljava/lang/String;
 
     return-void
 .end method
@@ -3259,8 +4102,8 @@
     .registers 1
 
     .prologue
-    .line 140
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_version:Ljava/lang/String;
+    .line 162
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_number_key:Ljava/lang/String;
 
     return-void
 .end method
@@ -3269,8 +4112,8 @@
     .registers 1
 
     .prologue
-    .line 141
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_starred:Ljava/lang/String;
+    .line 135
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_times_contacted:Ljava/lang/String;
 
     return-void
 .end method
@@ -3279,8 +4122,8 @@
     .registers 1
 
     .prologue
-    .line 1157
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->ShowProgressMsg2()V
+    .line 1447
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->ShowProgressMsg3()V
 
     return-void
 .end method
@@ -3289,8 +4132,8 @@
     .registers 1
 
     .prologue
-    .line 143
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_phonetic_name:Ljava/lang/String;
+    .line 136
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_dirty:Ljava/lang/String;
 
     return-void
 .end method
@@ -3299,8 +4142,8 @@
     .registers 1
 
     .prologue
-    .line 145
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_account:Ljava/lang/String;
+    .line 138
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_last_time_contacted:Ljava/lang/String;
 
     return-void
 .end method
@@ -3309,8 +4152,8 @@
     .registers 1
 
     .prologue
-    .line 147
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_firstName:Ljava/lang/String;
+    .line 140
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_extra_group:Ljava/lang/String;
 
     return-void
 .end method
@@ -3319,8 +4162,8 @@
     .registers 1
 
     .prologue
-    .line 148
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_custom_ringtone:Ljava/lang/String;
+    .line 141
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_notes:Ljava/lang/String;
 
     return-void
 .end method
@@ -3329,8 +4172,8 @@
     .registers 1
 
     .prologue
-    .line 150
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_time:Ljava/lang/String;
+    .line 143
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_version:Ljava/lang/String;
 
     return-void
 .end method
@@ -3339,8 +4182,8 @@
     .registers 1
 
     .prologue
-    .line 151
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_id:Ljava/lang/String;
+    .line 144
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_starred:Ljava/lang/String;
 
     return-void
 .end method
@@ -3349,8 +4192,8 @@
     .registers 1
 
     .prologue
-    .line 153
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_send_to_voicemail:Ljava/lang/String;
+    .line 146
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_phonetic_name:Ljava/lang/String;
 
     return-void
 .end method
@@ -3359,8 +4202,8 @@
     .registers 1
 
     .prologue
-    .line 139
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_name:Ljava/lang/String;
+    .line 148
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_account:Ljava/lang/String;
 
     return-void
 .end method
@@ -3369,8 +4212,8 @@
     .registers 1
 
     .prologue
-    .line 154
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_primary_email:Ljava/lang/String;
+    .line 150
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_firstName:Ljava/lang/String;
 
     return-void
 .end method
@@ -3379,8 +4222,8 @@
     .registers 1
 
     .prologue
-    .line 155
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_local_id:Ljava/lang/String;
+    .line 151
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_custom_ringtone:Ljava/lang/String;
 
     return-void
 .end method
@@ -3389,8 +4232,8 @@
     .registers 1
 
     .prologue
-    .line 1165
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->ShowProgressMsg3()V
+    .line 1451
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->ShowProgressMsg4()V
 
     return-void
 .end method
@@ -3399,8 +4242,8 @@
     .registers 1
 
     .prologue
-    .line 156
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_last_update_time:Ljava/lang/String;
+    .line 153
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_time:Ljava/lang/String;
 
     return-void
 .end method
@@ -3409,18 +4252,18 @@
     .registers 1
 
     .prologue
-    .line 157
-    sput-object p0, Lmobilehome/backup/Restore;->Contacts_primary_phone:Ljava/lang/String;
+    .line 154
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_id:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$52(Lmobilehome/backup/Restore;)V
+.method static synthetic access$52(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 835
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->Write_Calendar()V
+    .line 156
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_send_to_voicemail:Ljava/lang/String;
 
     return-void
 .end method
@@ -3429,28 +4272,28 @@
     .registers 1
 
     .prologue
-    .line 84
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_sync_id:Ljava/lang/String;
+    .line 157
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_primary_email:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$54()Ljava/lang/String;
+.method static synthetic access$54(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 84
-    sget-object v0, Lmobilehome/backup/Restore;->Calendar_sync_id:Ljava/lang/String;
+    .line 158
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_sync_local_id:Ljava/lang/String;
 
-    return-object v0
+    return-void
 .end method
 
 .method static synthetic access$55(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 87
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_hasExtendedProperties:Ljava/lang/String;
+    .line 159
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_last_update_time:Ljava/lang/String;
 
     return-void
 .end method
@@ -3459,88 +4302,88 @@
     .registers 1
 
     .prologue
-    .line 88
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_originalEvent:Ljava/lang/String;
+    .line 160
+    sput-object p0, Lmobilehome/backup/Restore;->Contacts_primary_phone:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$57(Ljava/lang/String;)V
-    .registers 1
+.method static synthetic access$57(Lmobilehome/backup/Restore;Ljava/lang/String;)V
+    .registers 2
 
     .prologue
-    .line 89
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_dtend:Ljava/lang/String;
+    .line 51
+    iput-object p1, p0, Lmobilehome/backup/Restore;->DEBUG_Line:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$58(Ljava/lang/String;)V
+.method static synthetic access$58()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 90
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_sync_dirty:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$59(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 91
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_dtstart:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$6(Lmobilehome/backup/Restore;)V
-    .registers 1
-
-    .prologue
-    .line 1173
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->ShowProgressMsg4()V
-
-    return-void
-.end method
-
-.method static synthetic access$60(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 92
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_visibility:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$61(Ljava/lang/String;)V
-    .registers 1
-
-    .prologue
-    .line 93
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_sync_version:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic access$62()Ljava/lang/String;
-    .registers 1
-
-    .prologue
-    .line 93
-    sget-object v0, Lmobilehome/backup/Restore;->Calendar_sync_version:Ljava/lang/String;
+    .line 151
+    sget-object v0, Lmobilehome/backup/Restore;->Contacts_custom_ringtone:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$63(Ljava/lang/String;)V
+.method static synthetic access$59()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 94
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_sync_local_id:Ljava/lang/String;
+    .line 156
+    sget-object v0, Lmobilehome/backup/Restore;->Contacts_send_to_voicemail:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$6(Lmobilehome/backup/Restore;Ljava/lang/String;)V
+    .registers 2
+
+    .prologue
+    .line 52
+    iput-object p1, p0, Lmobilehome/backup/Restore;->mBackupLocation:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic access$60()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 135
+    sget-object v0, Lmobilehome/backup/Restore;->Contacts_times_contacted:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$61()Ljava/lang/String;
+    .registers 1
+
+    .prologue
+    .line 144
+    sget-object v0, Lmobilehome/backup/Restore;->Contacts_starred:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$62(Lmobilehome/backup/Restore;)Ljava/lang/String;
+    .registers 2
+
+    .prologue
+    .line 51
+    iget-object v0, p0, Lmobilehome/backup/Restore;->DEBUG_Line:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$63(Lmobilehome/backup/Restore;)V
+    .registers 1
+
+    .prologue
+    .line 1092
+    invoke-direct {p0}, Lmobilehome/backup/Restore;->Write_Calendar()V
 
     return-void
 .end method
@@ -3549,48 +4392,48 @@
     .registers 1
 
     .prologue
-    .line 95
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_duration:Ljava/lang/String;
+    .line 87
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_sync_id:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$65(Ljava/lang/String;)V
+.method static synthetic access$65()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 96
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_hasAlarm:Ljava/lang/String;
+    .line 87
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_sync_id:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$66(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 97
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_commentsUri:Ljava/lang/String;
+    .line 90
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_hasExtendedProperties:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$67()Ljava/lang/String;
+.method static synthetic access$67(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 97
-    sget-object v0, Lmobilehome/backup/Restore;->Calendar_commentsUri:Ljava/lang/String;
+    .line 91
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_originalEvent:Ljava/lang/String;
 
-    return-object v0
+    return-void
 .end method
 
 .method static synthetic access$68(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 98
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_title:Ljava/lang/String;
+    .line 92
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_dtend:Ljava/lang/String;
 
     return-void
 .end method
@@ -3599,28 +4442,28 @@
     .registers 1
 
     .prologue
-    .line 99
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_transparency:Ljava/lang/String;
+    .line 93
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_sync_dirty:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$7(Lmobilehome/backup/Restore;I)V
+.method static synthetic access$7(Lmobilehome/backup/Restore;)Ljava/lang/String;
     .registers 2
 
     .prologue
-    .line 49
-    iput p1, p0, Lmobilehome/backup/Restore;->counter:I
+    .line 52
+    iget-object v0, p0, Lmobilehome/backup/Restore;->mBackupLocation:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$70(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 100
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_last_update_time:Ljava/lang/String;
+    .line 94
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_dtstart:Ljava/lang/String;
 
     return-void
 .end method
@@ -3629,8 +4472,8 @@
     .registers 1
 
     .prologue
-    .line 109
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_originalAllDay:Ljava/lang/String;
+    .line 95
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_visibility:Ljava/lang/String;
 
     return-void
 .end method
@@ -3639,28 +4482,28 @@
     .registers 1
 
     .prologue
-    .line 110
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_iCalGUID:Ljava/lang/String;
+    .line 96
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_sync_version:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$73(Ljava/lang/String;)V
+.method static synthetic access$73()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 111
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_rrule:Ljava/lang/String;
+    .line 96
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_sync_version:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$74(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 113
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_eventLocation:Ljava/lang/String;
+    .line 97
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_sync_local_id:Ljava/lang/String;
 
     return-void
 .end method
@@ -3669,8 +4512,8 @@
     .registers 1
 
     .prologue
-    .line 114
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_exrule:Ljava/lang/String;
+    .line 98
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_duration:Ljava/lang/String;
 
     return-void
 .end method
@@ -3679,8 +4522,8 @@
     .registers 1
 
     .prologue
-    .line 115
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_sync_time:Ljava/lang/String;
+    .line 99
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_hasAlarm:Ljava/lang/String;
 
     return-void
 .end method
@@ -3689,38 +4532,38 @@
     .registers 1
 
     .prologue
-    .line 116
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_eventTimezone:Ljava/lang/String;
+    .line 100
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_commentsUri:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$78(Ljava/lang/String;)V
+.method static synthetic access$78()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 117
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_originalInstanceTime:Ljava/lang/String;
+    .line 100
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_commentsUri:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$79(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 120
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_allDay:Ljava/lang/String;
+    .line 101
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_title:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$8(Lmobilehome/backup/Restore;I)V
+.method static synthetic access$8(Lmobilehome/backup/Restore;Ljava/lang/String;)V
     .registers 2
 
     .prologue
-    .line 49
-    iput p1, p0, Lmobilehome/backup/Restore;->select:I
+    .line 52
+    iput-object p1, p0, Lmobilehome/backup/Restore;->BackUP_filename:Ljava/lang/String;
 
     return-void
 .end method
@@ -3729,28 +4572,28 @@
     .registers 1
 
     .prologue
-    .line 122
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_description:Ljava/lang/String;
+    .line 102
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_transparency:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$81()Ljava/lang/String;
+.method static synthetic access$81(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 122
-    sget-object v0, Lmobilehome/backup/Restore;->Calendar_description:Ljava/lang/String;
+    .line 103
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_last_update_time:Ljava/lang/String;
 
-    return-object v0
+    return-void
 .end method
 
 .method static synthetic access$82(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 123
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_minutes:Ljava/lang/String;
+    .line 112
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_originalAllDay:Ljava/lang/String;
 
     return-void
 .end method
@@ -3759,18 +4602,18 @@
     .registers 1
 
     .prologue
-    .line 124
-    sput-object p0, Lmobilehome/backup/Restore;->Calendar_method:Ljava/lang/String;
+    .line 113
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_iCalGUID:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$84(Lmobilehome/backup/Restore;)V
+.method static synthetic access$84(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 987
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->Write_CallLog()V
+    .line 114
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_rrule:Ljava/lang/String;
 
     return-void
 .end method
@@ -3779,8 +4622,8 @@
     .registers 1
 
     .prologue
-    .line 73
-    sput-object p0, Lmobilehome/backup/Restore;->CallLog_new:Ljava/lang/String;
+    .line 116
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_eventLocation:Ljava/lang/String;
 
     return-void
 .end method
@@ -3789,8 +4632,8 @@
     .registers 1
 
     .prologue
-    .line 74
-    sput-object p0, Lmobilehome/backup/Restore;->CallLog_numbertype:Ljava/lang/String;
+    .line 117
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_exrule:Ljava/lang/String;
 
     return-void
 .end method
@@ -3799,8 +4642,8 @@
     .registers 1
 
     .prologue
-    .line 75
-    sput-object p0, Lmobilehome/backup/Restore;->CallLog_duration:Ljava/lang/String;
+    .line 118
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_sync_time:Ljava/lang/String;
 
     return-void
 .end method
@@ -3809,8 +4652,8 @@
     .registers 1
 
     .prologue
-    .line 76
-    sput-object p0, Lmobilehome/backup/Restore;->CallLog_person:Ljava/lang/String;
+    .line 119
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_eventTimezone:Ljava/lang/String;
 
     return-void
 .end method
@@ -3819,28 +4662,28 @@
     .registers 1
 
     .prologue
-    .line 77
-    sput-object p0, Lmobilehome/backup/Restore;->CallLog_number:Ljava/lang/String;
+    .line 120
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_originalInstanceTime:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$9(Lmobilehome/backup/Restore;Landroid/media/MediaPlayer;)V
+.method static synthetic access$9(Lmobilehome/backup/Restore;)Ljava/lang/String;
     .registers 2
 
     .prologue
-    .line 53
-    iput-object p1, p0, Lmobilehome/backup/Restore;->mMediaPlayer:Landroid/media/MediaPlayer;
+    .line 52
+    iget-object v0, p0, Lmobilehome/backup/Restore;->BackUP_filename:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$90(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 78
-    sput-object p0, Lmobilehome/backup/Restore;->CallLog_type:Ljava/lang/String;
+    .line 123
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_allDay:Ljava/lang/String;
 
     return-void
 .end method
@@ -3849,425 +4692,395 @@
     .registers 1
 
     .prologue
-    .line 79
-    sput-object p0, Lmobilehome/backup/Restore;->CallLog_numberlabel:Ljava/lang/String;
+    .line 125
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_description:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$92(Ljava/lang/String;)V
+.method static synthetic access$92()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 80
-    sput-object p0, Lmobilehome/backup/Restore;->CallLog_name:Ljava/lang/String;
+    .line 125
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_description:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$93(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 81
-    sput-object p0, Lmobilehome/backup/Restore;->CallLog_date:Ljava/lang/String;
+    .line 126
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_minutes:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$94(Lmobilehome/backup/Restore;)V
+.method static synthetic access$94(Ljava/lang/String;)V
     .registers 1
 
     .prologue
-    .line 1109
-    invoke-direct {p0}, Lmobilehome/backup/Restore;->Write_SMS()V
+    .line 127
+    sput-object p0, Lmobilehome/backup/Restore;->Calendar_method:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$95(Ljava/lang/String;)V
+.method static synthetic access$95()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 59
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_toa:Ljava/lang/String;
+    .line 101
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_title:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method static synthetic access$96(Ljava/lang/String;)V
+.method static synthetic access$96()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 60
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_address:Ljava/lang/String;
+    .line 94
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_dtstart:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method static synthetic access$97(Ljava/lang/String;)V
+.method static synthetic access$97()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 61
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_person:Ljava/lang/String;
+    .line 92
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_dtend:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method static synthetic access$98(Ljava/lang/String;)V
+.method static synthetic access$98()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 62
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_date:Ljava/lang/String;
+    .line 98
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_duration:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method static synthetic access$99(Ljava/lang/String;)V
+.method static synthetic access$99()Ljava/lang/String;
     .registers 1
 
     .prologue
-    .line 63
-    sput-object p0, Lmobilehome/backup/Restore;->SMS_protocol:Ljava/lang/String;
+    .line 119
+    sget-object v0, Lmobilehome/backup/Restore;->Calendar_eventTimezone:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .registers 7
+    .registers 6
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 182
+    .line 185
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 183
-    new-instance v3, Lmobilehome/backup/SoundToDB;
-
-    invoke-direct {v3, p0}, Lmobilehome/backup/SoundToDB;-><init>(Landroid/content/Context;)V
-
-    sput-object v3, Lmobilehome/backup/Restore;->mhSoundDB:Lmobilehome/backup/SoundToDB;
-
-    .line 185
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v3
-
-    iget-object v3, v3, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
-
-    invoke-virtual {v3}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 186
-    .local v0, "Locale":Ljava/lang/String;
-    const-string v3, "TW"
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_12b
-
     .line 187
-    const v3, 0x7f030004
-
-    invoke-virtual {p0, v3}, Lmobilehome/backup/Restore;->setContentView(I)V
-
-    .line 190
-    :goto_26
-    const v3, 0x7f050004
-
-    invoke-virtual {p0, v3}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/Button;
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->mCalendarButton:Landroid/widget/Button;
-
-    .line 191
-    const v3, 0x7f050005
-
-    invoke-virtual {p0, v3}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/Button;
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->mContactsButton:Landroid/widget/Button;
-
-    .line 192
-    const v3, 0x7f050006
-
-    invoke-virtual {p0, v3}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/Button;
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->mSMSButton:Landroid/widget/Button;
-
-    .line 193
-    const v3, 0x7f050007
-
-    invoke-virtual {p0, v3}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/Button;
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->mCallLogButton:Landroid/widget/Button;
-
-    .line 195
-    const v3, 0x7f050008
-
-    invoke-virtual {p0, v3}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/TextView;
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->mText:Landroid/widget/TextView;
-
-    .line 196
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mText:Landroid/widget/TextView;
-
-    const-string v4, "\u00a9 2010  MobileHome"
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 197
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mText:Landroid/widget/TextView;
-
-    const/4 v4, -0x1
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 199
-    new-instance v3, Landroid/media/MediaPlayer;
-
-    invoke-direct {v3}, Landroid/media/MediaPlayer;-><init>()V
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->mMediaPlayer:Landroid/media/MediaPlayer;
-
-    .line 200
-    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    const-string v4, "audio"
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/media/AudioManager;
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->audioManager:Landroid/media/AudioManager;
-
-    .line 204
     invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f020002
-
-    invoke-static {v3, v4}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 205
-    .local v2, "bmp":Landroid/graphics/Bitmap;
-    const v3, 0x7f05000a
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    invoke-virtual {p0, v3}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
+    move-result-object v2
 
-    move-result-object v3
+    iget-object v2, v2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    check-cast v3, Landroid/widget/ImageView;
+    invoke-virtual {v2}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->mAdImageView:Landroid/widget/ImageView;
+    move-result-object v0
+
+    .line 188
+    .local v0, "Locale":Ljava/lang/String;
+    const-string v2, "TW"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_112
+
+    .line 189
+    const v2, 0x7f030004
+
+    invoke-virtual {p0, v2}, Lmobilehome/backup/Restore;->setContentView(I)V
+
+    .line 192
+    :goto_1f
+    const/high16 v2, 0x7f080000
+
+    invoke-virtual {p0, v2}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/Button;
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->mCalendarButton:Landroid/widget/Button;
+
+    .line 193
+    const v2, 0x7f080001
+
+    invoke-virtual {p0, v2}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/Button;
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->mContactsButton:Landroid/widget/Button;
+
+    .line 194
+    const v2, 0x7f080002
+
+    invoke-virtual {p0, v2}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/Button;
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->mSMSButton:Landroid/widget/Button;
+
+    .line 195
+    const v2, 0x7f080003
+
+    invoke-virtual {p0, v2}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/Button;
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->mCallLogButton:Landroid/widget/Button;
+
+    .line 197
+    const v2, 0x7f080004
+
+    invoke-virtual {p0, v2}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->mText:Landroid/widget/TextView;
+
+    .line 198
+    iget-object v2, p0, Lmobilehome/backup/Restore;->mText:Landroid/widget/TextView;
+
+    const-string v3, "\u00a9 2012  MobileHome"
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 199
+    iget-object v2, p0, Lmobilehome/backup/Restore;->mText:Landroid/widget/TextView;
+
+    const/4 v3, -0x1
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 201
+    new-instance v2, Landroid/media/MediaPlayer;
+
+    invoke-direct {v2}, Landroid/media/MediaPlayer;-><init>()V
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    .line 202
+    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-string v3, "audio"
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/media/AudioManager;
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->audioManager:Landroid/media/AudioManager;
 
     .line 206
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mAdImageView:Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lmobilehome/backup/Restore;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {v3, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    move-result-object v2
 
-    .line 207
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mAdImageView:Landroid/widget/ImageView;
+    const v3, 0x7f020002
 
-    new-instance v4, Lmobilehome/backup/Restore$4;
-
-    invoke-direct {v4, p0}, Lmobilehome/backup/Restore$4;-><init>(Lmobilehome/backup/Restore;)V
-
-    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 225
-    const v3, 0x7f050013
-
-    invoke-virtual {p0, v3}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
+    invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    check-cast v1, Lcom/google/ads/AdView;
+    .line 207
+    .local v1, "bmp":Landroid/graphics/Bitmap;
+    const v2, 0x7f080006
+
+    invoke-virtual {p0, v2}, Lmobilehome/backup/Restore;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/ImageView;
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->mAdImageView:Landroid/widget/ImageView;
+
+    .line 208
+    iget-object v2, p0, Lmobilehome/backup/Restore;->mAdImageView:Landroid/widget/ImageView;
+
+    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    .line 209
+    iget-object v2, p0, Lmobilehome/backup/Restore;->mAdImageView:Landroid/widget/ImageView;
+
+    new-instance v3, Lmobilehome/backup/Restore$4;
+
+    invoke-direct {v3, p0}, Lmobilehome/backup/Restore$4;-><init>(Lmobilehome/backup/Restore;)V
+
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 220
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_kind_items:Ljava/util/List;
+
+    .line 221
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_data_items:Ljava/util/List;
+
+    .line 222
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_aux_data_items:Ljava/util/List;
+
+    .line 223
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_mType_items:Ljava/util/List;
+
+    .line 224
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_number_items:Ljava/util/List;
+
+    .line 225
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_pType_items:Ljava/util/List;
 
     .line 226
-    .local v1, "adView":Lcom/google/ads/AdView;
-    new-instance v3, Lcom/google/ads/AdRequest;
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-direct {v3}, Lcom/google/ads/AdRequest;-><init>()V
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v1, v3}, Lcom/google/ads/AdView;->loadAd(Lcom/google/ads/AdRequest;)V
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_label_items:Ljava/util/List;
+
+    .line 227
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_title_items:Ljava/util/List;
 
     .line 228
-    new-instance v3, Ljava/util/ArrayList;
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_kind_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_company_items:Ljava/util/List;
 
     .line 229
-    new-instance v3, Ljava/util/ArrayList;
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_data_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_oType_items:Ljava/util/List;
 
     .line 230
-    new-instance v3, Ljava/util/ArrayList;
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_aux_data_items:Ljava/util/List;
-
-    .line 231
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_mType_items:Ljava/util/List;
-
-    .line 232
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_number_items:Ljava/util/List;
+    iput-object v2, p0, Lmobilehome/backup/Restore;->Contacts_groupid_items:Ljava/util/List;
 
     .line 233
-    new-instance v3, Ljava/util/ArrayList;
+    iget-object v2, p0, Lmobilehome/backup/Restore;->mCalendarButton:Landroid/widget/Button;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    new-instance v3, Lmobilehome/backup/Restore$5;
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_pType_items:Ljava/util/List;
+    invoke-direct {v3, p0}, Lmobilehome/backup/Restore$5;-><init>(Lmobilehome/backup/Restore;)V
 
-    .line 234
-    new-instance v3, Ljava/util/ArrayList;
+    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    .line 273
+    iget-object v2, p0, Lmobilehome/backup/Restore;->mContactsButton:Landroid/widget/Button;
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_label_items:Ljava/util/List;
+    new-instance v3, Lmobilehome/backup/Restore$6;
 
-    .line 235
-    new-instance v3, Ljava/util/ArrayList;
+    invoke-direct {v3, p0}, Lmobilehome/backup/Restore$6;-><init>(Lmobilehome/backup/Restore;)V
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_title_items:Ljava/util/List;
+    .line 331
+    iget-object v2, p0, Lmobilehome/backup/Restore;->mSMSButton:Landroid/widget/Button;
 
-    .line 236
-    new-instance v3, Ljava/util/ArrayList;
+    new-instance v3, Lmobilehome/backup/Restore$7;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v3, p0}, Lmobilehome/backup/Restore$7;-><init>(Lmobilehome/backup/Restore;)V
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_company_items:Ljava/util/List;
+    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 237
-    new-instance v3, Ljava/util/ArrayList;
+    .line 371
+    iget-object v2, p0, Lmobilehome/backup/Restore;->mCallLogButton:Landroid/widget/Button;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    new-instance v3, Lmobilehome/backup/Restore$8;
 
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_oType_items:Ljava/util/List;
+    invoke-direct {v3, p0}, Lmobilehome/backup/Restore$8;-><init>(Lmobilehome/backup/Restore;)V
 
-    .line 238
-    new-instance v3, Ljava/util/ArrayList;
+    invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v3, p0, Lmobilehome/backup/Restore;->Contacts_groupid_items:Ljava/util/List;
-
-    .line 241
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mCalendarButton:Landroid/widget/Button;
-
-    new-instance v4, Lmobilehome/backup/Restore$5;
-
-    invoke-direct {v4, p0}, Lmobilehome/backup/Restore$5;-><init>(Lmobilehome/backup/Restore;)V
-
-    invoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 250
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mContactsButton:Landroid/widget/Button;
-
-    new-instance v4, Lmobilehome/backup/Restore$6;
-
-    invoke-direct {v4, p0}, Lmobilehome/backup/Restore$6;-><init>(Lmobilehome/backup/Restore;)V
-
-    invoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 293
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mSMSButton:Landroid/widget/Button;
-
-    new-instance v4, Lmobilehome/backup/Restore$7;
-
-    invoke-direct {v4, p0}, Lmobilehome/backup/Restore$7;-><init>(Lmobilehome/backup/Restore;)V
-
-    invoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 302
-    iget-object v3, p0, Lmobilehome/backup/Restore;->mCallLogButton:Landroid/widget/Button;
-
-    new-instance v4, Lmobilehome/backup/Restore$8;
-
-    invoke-direct {v4, p0}, Lmobilehome/backup/Restore$8;-><init>(Lmobilehome/backup/Restore;)V
-
-    invoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 312
+    .line 412
     return-void
 
-    .line 188
-    .end local v1    # "adView":Lcom/google/ads/AdView;
-    .end local v2    # "bmp":Landroid/graphics/Bitmap;
-    :cond_12b
-    const v3, 0x7f030003
+    .line 190
+    .end local v1    # "bmp":Landroid/graphics/Bitmap;
+    :cond_112
+    const v2, 0x7f030003
 
-    invoke-virtual {p0, v3}, Lmobilehome/backup/Restore;->setContentView(I)V
+    invoke-virtual {p0, v2}, Lmobilehome/backup/Restore;->setContentView(I)V
 
-    goto/16 :goto_26
+    goto/16 :goto_1f
 .end method
 
 .method public onPause()V
     .registers 5
 
     .prologue
-    .line 1194
+    .line 1468
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 1195
-    sget-object v0, Lmobilehome/backup/Restore;->mhSoundDB:Lmobilehome/backup/SoundToDB;
-
-    invoke-virtual {v0}, Lmobilehome/backup/SoundToDB;->close()V
-
-    .line 1197
+    .line 1470
     iget-object v0, p0, Lmobilehome/backup/Restore;->audioManager:Landroid/media/AudioManager;
 
     const/4 v1, 0x3
@@ -4278,7 +5091,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 1198
+    .line 1471
     return-void
 .end method
 
@@ -4286,10 +5099,10 @@
     .registers 3
 
     .prologue
-    .line 1186
+    .line 1460
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 1188
+    .line 1462
     iget-object v0, p0, Lmobilehome/backup/Restore;->audioManager:Landroid/media/AudioManager;
 
     const/4 v1, 0x3
@@ -4300,6 +5113,6 @@
 
     iput v0, p0, Lmobilehome/backup/Restore;->Cur_Volume:I
 
-    .line 1189
+    .line 1463
     return-void
 .end method

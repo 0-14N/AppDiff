@@ -50,9 +50,9 @@
     iput v0, p0, Lcom/quvideo/xiaoying/app/im/IMContactMgr;->d:I
 
     .line 175
-    new-instance v0, Luk;
+    new-instance v0, Lnr;
 
-    invoke-direct {v0, p0}, Luk;-><init>(Lcom/quvideo/xiaoying/app/im/IMContactMgr;)V
+    invoke-direct {v0, p0}, Lnr;-><init>(Lcom/quvideo/xiaoying/app/im/IMContactMgr;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/im/IMContactMgr;->f:Lcom/quvideo/xiaoying/im/IMListener;
 
@@ -174,9 +174,9 @@
 
     .line 188
     :cond_b
-    new-instance v1, Lum;
+    new-instance v1, Lnt;
 
-    invoke-direct {v1, p0, p1}, Lum;-><init>(Lcom/quvideo/xiaoying/app/im/IMContactMgr;I)V
+    invoke-direct {v1, p0, p1}, Lnt;-><init>(Lcom/quvideo/xiaoying/app/im/IMContactMgr;I)V
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -240,9 +240,9 @@
 
     const-string/jumbo v2, "user.info"
 
-    new-instance v3, Lul;
+    new-instance v3, Lns;
 
-    invoke-direct {v3, p0}, Lul;-><init>(Lcom/quvideo/xiaoying/app/im/IMContactMgr;)V
+    invoke-direct {v3, p0}, Lns;-><init>(Lcom/quvideo/xiaoying/app/im/IMContactMgr;)V
 
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
 

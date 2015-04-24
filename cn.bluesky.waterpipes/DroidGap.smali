@@ -2,9 +2,6 @@
 .super Lcom/phonegap/api/PhonegapActivity;
 .source "DroidGap.java"
 
-# interfaces
-.implements Lcom/adsmogo/controller/listener/AdsMogoListener;
-
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -44,8 +41,6 @@
 .field adPosition:I
 
 .field public adView:Landroid/widget/LinearLayout;
-
-.field adsmogoFullListener:Lcom/adsmogo/interstitial/AdsMogoInterstitialListener;
 
 .field protected appView:Landroid/webkit/WebView;
 
@@ -171,32 +166,32 @@
     .registers 1
 
     .prologue
-    .line 219
+    .line 211
     const-string v0, "DroidGap"
 
     sput-object v0, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
-    .line 220
+    .line 212
     const-string v0, "gap"
 
     sput-object v0, Lcom/phonegap/DroidGap;->key:Ljava/lang/String;
 
-    .line 269
+    .line 261
     const/4 v0, 0x0
 
     sput v0, Lcom/phonegap/DroidGap;->ACTIVITY_STARTING:I
 
-    .line 270
+    .line 262
     const/4 v0, 0x1
 
     sput v0, Lcom/phonegap/DroidGap;->ACTIVITY_RUNNING:I
 
-    .line 271
+    .line 263
     const/4 v0, 0x2
 
     sput v0, Lcom/phonegap/DroidGap;->ACTIVITY_EXITING:I
 
-    .line 3210
+    .line 3032
     return-void
 .end method
 
@@ -210,135 +205,128 @@
 
     const/4 v2, 0x0
 
-    .line 216
+    .line 209
     invoke-direct {p0}, Lcom/phonegap/api/PhonegapActivity;-><init>()V
 
-    .line 218
+    .line 210
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/phonegap/DroidGap;->currentTime:J
 
-    .line 221
+    .line 213
     const-string v0, "reversi.bluesky.cn"
 
     iput-object v0, p0, Lcom/phonegap/DroidGap;->serverIpAddress:Ljava/lang/String;
 
-    .line 223
+    .line 215
     const/16 v0, 0x2ee1
 
     iput-short v0, p0, Lcom/phonegap/DroidGap;->serverPortValue:S
 
-    .line 224
+    .line 216
     const-string v0, ""
 
     iput-object v0, p0, Lcom/phonegap/DroidGap;->loginMsg:Ljava/lang/String;
 
-    .line 225
+    .line 217
     iput-boolean v2, p0, Lcom/phonegap/DroidGap;->connected:Z
 
-    .line 226
+    .line 218
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/phonegap/DroidGap;->handler:Landroid/os/Handler;
 
-    .line 231
+    .line 223
     iput v4, p0, Lcom/phonegap/DroidGap;->fullsetting_out:I
 
-    .line 233
+    .line 225
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     iput-wide v0, p0, Lcom/phonegap/DroidGap;->density:D
 
-    .line 234
+    .line 226
     const/16 v0, 0x140
 
     iput v0, p0, Lcom/phonegap/DroidGap;->scaledAdWidth:I
 
-    .line 235
+    .line 227
     const/16 v0, 0x32
 
     iput v0, p0, Lcom/phonegap/DroidGap;->scaledAdHeight:I
 
-    .line 236
+    .line 228
     iput v2, p0, Lcom/phonegap/DroidGap;->isTablet:I
 
-    .line 241
+    .line 233
     iput v2, p0, Lcom/phonegap/DroidGap;->adPosition:I
 
-    .line 251
+    .line 243
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/phonegap/DroidGap;->whiteList:Ljava/util/ArrayList;
 
-    .line 252
+    .line 244
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/phonegap/DroidGap;->whiteListCache:Ljava/util/HashMap;
 
-    .line 255
+    .line 247
     iput-boolean v2, p0, Lcom/phonegap/DroidGap;->bound:Z
 
-    .line 258
+    .line 250
     iput-boolean v2, p0, Lcom/phonegap/DroidGap;->cancelLoadUrl:Z
 
-    .line 259
+    .line 251
     iput-object v3, p0, Lcom/phonegap/DroidGap;->spinnerDialog:Landroid/app/ProgressDialog;
 
-    .line 263
+    .line 255
     iput-object v3, p0, Lcom/phonegap/DroidGap;->url:Ljava/lang/String;
 
-    .line 264
+    .line 256
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
 
     iput-object v0, p0, Lcom/phonegap/DroidGap;->urls:Ljava/util/Stack;
 
-    .line 267
+    .line 259
     iput-object v3, p0, Lcom/phonegap/DroidGap;->initUrl:Ljava/lang/String;
 
-    .line 272
+    .line 264
     iput v2, p0, Lcom/phonegap/DroidGap;->activityState:I
 
-    .line 277
+    .line 269
     iput-object v3, p0, Lcom/phonegap/DroidGap;->baseUrl:Ljava/lang/String;
 
-    .line 280
+    .line 272
     iput-object v3, p0, Lcom/phonegap/DroidGap;->activityResultCallback:Lcom/phonegap/api/IPlugin;
 
-    .line 284
+    .line 276
     iput v2, p0, Lcom/phonegap/DroidGap;->loadUrlTimeout:I
 
-    .line 288
+    .line 280
     const/high16 v0, -0x1000000
 
     iput v0, p0, Lcom/phonegap/DroidGap;->backgroundColor:I
 
-    .line 296
+    .line 288
     iput v2, p0, Lcom/phonegap/DroidGap;->splashscreen:I
 
-    .line 299
+    .line 291
     const/16 v0, 0x4e20
 
     iput v0, p0, Lcom/phonegap/DroidGap;->loadUrlTimeoutValue:I
 
-    .line 304
+    .line 296
     iput-boolean v4, p0, Lcom/phonegap/DroidGap;->keepRunning:Z
 
-    .line 584
-    new-instance v0, Lcom/phonegap/DroidGap$1;
-
-    invoke-direct {v0, p0}, Lcom/phonegap/DroidGap$1;-><init>(Lcom/phonegap/DroidGap;)V
-
-    iput-object v0, p0, Lcom/phonegap/DroidGap;->adsmogoFullListener:Lcom/adsmogo/interstitial/AdsMogoInterstitialListener;
-
-    .line 216
+    .line 209
     return-void
 .end method
 
@@ -346,7 +334,7 @@
     .registers 2
 
     .prologue
-    .line 277
+    .line 269
     iget-object v0, p0, Lcom/phonegap/DroidGap;->baseUrl:Ljava/lang/String;
 
     return-object v0
@@ -356,7 +344,7 @@
     .registers 3
 
     .prologue
-    .line 2379
+    .line 2201
     invoke-direct {p0, p1}, Lcom/phonegap/DroidGap;->isUrlWhiteListed(Ljava/lang/String;)Z
 
     move-result v0
@@ -368,7 +356,7 @@
     .registers 2
 
     .prologue
-    .line 225
+    .line 217
     iget-boolean v0, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     return v0
@@ -378,7 +366,7 @@
     .registers 2
 
     .prologue
-    .line 3212
+    .line 3034
     invoke-direct {p0, p1}, Lcom/phonegap/DroidGap;->translateBuffer([B)V
 
     return-void
@@ -388,7 +376,7 @@
     .registers 1
 
     .prologue
-    .line 827
+    .line 648
     invoke-direct {p0}, Lcom/phonegap/DroidGap;->handleActivityParameters()V
 
     return-void
@@ -398,7 +386,7 @@
     .registers 2
 
     .prologue
-    .line 264
+    .line 256
     iget-object v0, p0, Lcom/phonegap/DroidGap;->urls:Ljava/util/Stack;
 
     return-object v0
@@ -408,7 +396,7 @@
     .registers 2
 
     .prologue
-    .line 872
+    .line 693
     invoke-direct {p0, p1}, Lcom/phonegap/DroidGap;->loadUrlIntoView(Ljava/lang/String;)V
 
     return-void
@@ -418,7 +406,7 @@
     .registers 2
 
     .prologue
-    .line 284
+    .line 276
     iget v0, p0, Lcom/phonegap/DroidGap;->loadUrlTimeout:I
 
     return v0
@@ -428,7 +416,7 @@
     .registers 2
 
     .prologue
-    .line 284
+    .line 276
     iput p1, p0, Lcom/phonegap/DroidGap;->loadUrlTimeout:I
 
     return-void
@@ -438,7 +426,7 @@
     .registers 2
 
     .prologue
-    .line 221
+    .line 213
     iget-object v0, p0, Lcom/phonegap/DroidGap;->serverIpAddress:Ljava/lang/String;
 
     return-object v0
@@ -448,7 +436,7 @@
     .registers 2
 
     .prologue
-    .line 226
+    .line 218
     iget-object v0, p0, Lcom/phonegap/DroidGap;->handler:Landroid/os/Handler;
 
     return-object v0
@@ -458,7 +446,7 @@
     .registers 2
 
     .prologue
-    .line 223
+    .line 215
     iget-short v0, p0, Lcom/phonegap/DroidGap;->serverPortValue:S
 
     return v0
@@ -468,7 +456,7 @@
     .registers 2
 
     .prologue
-    .line 227
+    .line 219
     iput-object p1, p0, Lcom/phonegap/DroidGap;->socket:Ljava/net/Socket;
 
     return-void
@@ -478,7 +466,7 @@
     .registers 2
 
     .prologue
-    .line 227
+    .line 219
     iget-object v0, p0, Lcom/phonegap/DroidGap;->socket:Ljava/net/Socket;
 
     return-object v0
@@ -488,7 +476,7 @@
     .registers 2
 
     .prologue
-    .line 225
+    .line 217
     iput-boolean p1, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     return-void
@@ -504,7 +492,7 @@
 
     const/4 v5, 0x0
 
-    .line 2344
+    .line 2166
     :try_start_2
     const-string v1, "*"
 
@@ -514,14 +502,14 @@
 
     if-nez v1, :cond_1d
 
-    .line 2345
+    .line 2167
     sget-object v1, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
     const-string v2, "Unlimited access to network resources"
 
     invoke-static {v1, v2}, Lcom/phonegap/api/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2346
+    .line 2168
     iget-object v1, p0, Lcom/phonegap/DroidGap;->whiteList:Ljava/util/ArrayList;
 
     const-string v2, "*"
@@ -532,15 +520,15 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2371
+    .line 2193
     :goto_1c
     return-void
 
-    .line 2350
+    .line 2172
     :cond_1d
     if-eqz p2, :cond_6c
 
-    .line 2352
+    .line 2174
     const-string v1, "http"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -549,7 +537,7 @@
 
     if-eqz v1, :cond_53
 
-    .line 2353
+    .line 2175
     iget-object v1, p0, Lcom/phonegap/DroidGap;->whiteList:Ljava/util/ArrayList;
 
     const-string v2, "https{0,1}://"
@@ -566,7 +554,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2357
+    .line 2179
     :goto_38
     sget-object v1, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
@@ -586,11 +574,11 @@
 
     goto :goto_1c
 
-    .line 2368
+    .line 2190
     :catch_46
     move-exception v0
 
-    .line 2369
+    .line 2191
     .local v0, "e":Ljava/lang/Exception;
     sget-object v1, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
@@ -604,7 +592,7 @@
 
     goto :goto_1c
 
-    .line 2355
+    .line 2177
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_53
     :try_start_53
@@ -632,7 +620,7 @@
 
     goto :goto_38
 
-    .line 2360
+    .line 2182
     :cond_6c
     const-string v1, "http"
 
@@ -642,7 +630,7 @@
 
     if-eqz v1, :cond_93
 
-    .line 2361
+    .line 2183
     iget-object v1, p0, Lcom/phonegap/DroidGap;->whiteList:Ljava/util/ArrayList;
 
     const-string v2, "https{0,1}://"
@@ -659,7 +647,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2365
+    .line 2187
     :goto_85
     sget-object v1, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
@@ -677,7 +665,7 @@
 
     goto :goto_1c
 
-    .line 2363
+    .line 2185
     :cond_93
     iget-object v1, p0, Lcom/phonegap/DroidGap;->whiteList:Ljava/util/ArrayList;
 
@@ -711,19 +699,19 @@
     .param p0, "dir"    # Ljava/io/File;
 
     .prologue
-    .line 3284
+    .line 3106
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v3
 
     if-eqz v3, :cond_e
 
-    .line 3285
+    .line 3107
     invoke-virtual {p0}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3286
+    .line 3108
     .local v0, "children":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -733,7 +721,7 @@
 
     if-lt v1, v3, :cond_13
 
-    .line 3295
+    .line 3117
     .end local v0    # "children":[Ljava/lang/String;
     .end local v1    # "i":I
     :cond_e
@@ -744,7 +732,7 @@
     :goto_12
     return v3
 
-    .line 3287
+    .line 3109
     .restart local v0    # "children":[Ljava/lang/String;
     .restart local v1    # "i":I
     :cond_13
@@ -758,16 +746,16 @@
 
     move-result v2
 
-    .line 3288
+    .line 3110
     .local v2, "success":Z
     if-nez v2, :cond_22
 
-    .line 3289
+    .line 3111
     const/4 v3, 0x0
 
     goto :goto_12
 
-    .line 3286
+    .line 3108
     :cond_22
     add-int/lit8 v1, v1, 0x1
 
@@ -778,7 +766,7 @@
     .registers 4
 
     .prologue
-    .line 841
+    .line 662
     const-string v1, "loadUrlTimeoutValue"
 
     const/4 v2, 0x0
@@ -787,14 +775,14 @@
 
     move-result v0
 
-    .line 842
+    .line 663
     .local v0, "timeout":I
     if-lez v0, :cond_b
 
-    .line 843
+    .line 664
     iput v0, p0, Lcom/phonegap/DroidGap;->loadUrlTimeoutValue:I
 
-    .line 847
+    .line 668
     :cond_b
     const-string v1, "keepRunning"
 
@@ -806,7 +794,7 @@
 
     iput-boolean v1, p0, Lcom/phonegap/DroidGap;->keepRunning:Z
 
-    .line 848
+    .line 669
     return-void
 .end method
 
@@ -817,7 +805,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 2382
+    .line 2204
     iget-object v4, p0, Lcom/phonegap/DroidGap;->whiteListCache:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -826,11 +814,11 @@
 
     if-eqz v4, :cond_a
 
-    .line 2398
+    .line 2220
     :goto_9
     return v3
 
-    .line 2387
+    .line 2209
     :cond_a
     iget-object v4, p0, Lcom/phonegap/DroidGap;->whiteList:Ljava/util/ArrayList;
 
@@ -838,7 +826,7 @@
 
     move-result-object v2
 
-    .line 2388
+    .line 2210
     .local v2, "pit":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/regex/Pattern;>;"
     :cond_10
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -847,12 +835,12 @@
 
     if-nez v4, :cond_18
 
-    .line 2398
+    .line 2220
     const/4 v3, 0x0
 
     goto :goto_9
 
-    .line 2389
+    .line 2211
     :cond_18
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -860,13 +848,13 @@
 
     check-cast v1, Ljava/util/regex/Pattern;
 
-    .line 2390
+    .line 2212
     .local v1, "p":Ljava/util/regex/Pattern;
     invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 2393
+    .line 2215
     .local v0, "m":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
@@ -874,7 +862,7 @@
 
     if-eqz v4, :cond_10
 
-    .line 2394
+    .line 2216
     iget-object v4, p0, Lcom/phonegap/DroidGap;->whiteListCache:Ljava/util/HashMap;
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -890,7 +878,7 @@
     .registers 14
 
     .prologue
-    .line 2292
+    .line 2114
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
@@ -907,22 +895,22 @@
 
     move-result v3
 
-    .line 2293
+    .line 2115
     .local v3, "id":I
     if-nez v3, :cond_1a
 
-    .line 2294
+    .line 2116
     const-string v9, "PhoneGapLog"
 
     const-string v10, "phonegap.xml missing. Ignoring..."
 
     invoke-static {v9, v10}, Lcom/phonegap/api/LOG;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2333
+    .line 2155
     :cond_19
     return-void
 
-    .line 2297
+    .line 2119
     :cond_1a
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getResources()Landroid/content/res/Resources;
 
@@ -932,28 +920,28 @@
 
     move-result-object v8
 
-    .line 2298
+    .line 2120
     .local v8, "xml":Landroid/content/res/XmlResourceParser;
     const/4 v2, -0x1
 
-    .line 2299
+    .line 2121
     .local v2, "eventType":I
     :goto_23
     const/4 v9, 0x1
 
     if-eq v2, v9, :cond_19
 
-    .line 2300
+    .line 2122
     const/4 v9, 0x2
 
     if-ne v2, v9, :cond_53
 
-    .line 2301
+    .line 2123
     invoke-interface {v8}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 2302
+    .line 2124
     .local v6, "strNode":Ljava/lang/String;
     const-string v9, "access"
 
@@ -963,7 +951,7 @@
 
     if-eqz v9, :cond_5a
 
-    .line 2303
+    .line 2125
     const/4 v9, 0x0
 
     const-string v10, "origin"
@@ -972,7 +960,7 @@
 
     move-result-object v5
 
-    .line 2304
+    .line 2126
     .local v5, "origin":Ljava/lang/String;
     const/4 v9, 0x0
 
@@ -982,11 +970,11 @@
 
     move-result-object v7
 
-    .line 2305
+    .line 2127
     .local v7, "subdomains":Ljava/lang/String;
     if-eqz v5, :cond_53
 
-    .line 2306
+    .line 2128
     if-eqz v7, :cond_58
 
     const-string v9, "true"
@@ -1002,7 +990,7 @@
     :goto_50
     invoke-direct {p0, v5, v9}, Lcom/phonegap/DroidGap;->addWhiteListEntry(Ljava/lang/String;Z)V
 
-    .line 2326
+    .line 2148
     .end local v5    # "origin":Ljava/lang/String;
     .end local v6    # "strNode":Ljava/lang/String;
     .end local v7    # "subdomains":Ljava/lang/String;
@@ -1018,7 +1006,7 @@
 
     goto :goto_23
 
-    .line 2306
+    .line 2128
     .restart local v5    # "origin":Ljava/lang/String;
     .restart local v6    # "strNode":Ljava/lang/String;
     .restart local v7    # "subdomains":Ljava/lang/String;
@@ -1027,7 +1015,7 @@
 
     goto :goto_50
 
-    .line 2309
+    .line 2131
     .end local v5    # "origin":Ljava/lang/String;
     .end local v7    # "subdomains":Ljava/lang/String;
     :cond_5a
@@ -1039,7 +1027,7 @@
 
     if-eqz v9, :cond_7c
 
-    .line 2310
+    .line 2132
     const/4 v9, 0x0
 
     const-string v10, "level"
@@ -1048,7 +1036,7 @@
 
     move-result-object v4
 
-    .line 2311
+    .line 2133
     .local v4, "level":Ljava/lang/String;
     const-string v9, "PhoneGapLog"
 
@@ -1064,15 +1052,15 @@
 
     invoke-static {v9, v10, v11}, Lcom/phonegap/api/LOG;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2312
+    .line 2134
     if-eqz v4, :cond_53
 
-    .line 2313
+    .line 2135
     invoke-static {v4}, Lcom/phonegap/api/LOG;->setLogLevel(Ljava/lang/String;)V
 
     goto :goto_53
 
-    .line 2316
+    .line 2138
     .end local v4    # "level":Ljava/lang/String;
     :cond_7c
     const-string v9, "render"
@@ -1083,7 +1071,7 @@
 
     if-eqz v9, :cond_53
 
-    .line 2317
+    .line 2139
     const/4 v9, 0x0
 
     const-string v10, "enabled"
@@ -1092,11 +1080,11 @@
 
     move-result-object v1
 
-    .line 2318
+    .line 2140
     .local v1, "enabled":Ljava/lang/String;
     if-eqz v1, :cond_53
 
-    .line 2320
+    .line 2142
     const-string v9, "true"
 
     invoke-virtual {v1, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1107,24 +1095,24 @@
 
     goto :goto_53
 
-    .line 2327
+    .line 2149
     .end local v1    # "enabled":Ljava/lang/String;
     .end local v6    # "strNode":Ljava/lang/String;
     :catch_96
     move-exception v0
 
-    .line 2328
+    .line 2150
     .local v0, "e":Lorg/xmlpull/v1/XmlPullParserException;
     invoke-virtual {v0}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
 
     goto :goto_23
 
-    .line 2329
+    .line 2151
     .end local v0    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_9b
     move-exception v0
 
-    .line 2330
+    .line 2152
     .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
@@ -1140,7 +1128,7 @@
 
     const/4 v5, 0x0
 
-    .line 873
+    .line 694
     const-string v2, "javascript:"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1149,7 +1137,7 @@
 
     if-nez v2, :cond_15
 
-    .line 874
+    .line 695
     sget-object v2, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
     const-string v3, "DroidGap.loadUrl(%s)"
@@ -1160,27 +1148,27 @@
 
     invoke-static {v2, v3, v4}, Lcom/phonegap/api/LOG;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 877
+    .line 698
     :cond_15
     iput-object p1, p0, Lcom/phonegap/DroidGap;->url:Ljava/lang/String;
 
-    .line 878
+    .line 699
     iget-object v2, p0, Lcom/phonegap/DroidGap;->baseUrl:Ljava/lang/String;
 
     if-nez v2, :cond_2b
 
-    .line 879
+    .line 700
     const/16 v2, 0x2f
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v0
 
-    .line 880
+    .line 701
     .local v0, "i":I
     if-lez v0, :cond_4d
 
-    .line 881
+    .line 702
     add-int/lit8 v2, v0, 0x1
 
     invoke-virtual {p1, v5, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1189,7 +1177,7 @@
 
     iput-object v2, p0, Lcom/phonegap/DroidGap;->baseUrl:Ljava/lang/String;
 
-    .line 887
+    .line 708
     .end local v0    # "i":I
     :cond_2b
     :goto_2b
@@ -1201,7 +1189,7 @@
 
     if-nez v2, :cond_43
 
-    .line 888
+    .line 709
     sget-object v2, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
     const-string v3, "DroidGap: url=%s baseUrl=%s"
@@ -1218,22 +1206,22 @@
 
     invoke-static {v2, v3, v4}, Lcom/phonegap/api/LOG;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 892
+    .line 713
     :cond_43
     move-object v1, p0
 
-    .line 893
+    .line 714
     .local v1, "me":Lcom/phonegap/DroidGap;
-    new-instance v2, Lcom/phonegap/DroidGap$7;
+    new-instance v2, Lcom/phonegap/DroidGap$6;
 
-    invoke-direct {v2, p0, v1, p1}, Lcom/phonegap/DroidGap$7;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V
+    invoke-direct {v2, p0, v1, p1}, Lcom/phonegap/DroidGap$6;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V
 
     invoke-virtual {p0, v2}, Lcom/phonegap/DroidGap;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 975
+    .line 796
     return-void
 
-    .line 884
+    .line 705
     .end local v1    # "me":Lcom/phonegap/DroidGap;
     .restart local v0    # "i":I
     :cond_4d
@@ -1270,10 +1258,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1006
+    .line 827
     iput-boolean v6, p0, Lcom/phonegap/DroidGap;->cancelLoadUrl:Z
 
-    .line 1009
+    .line 830
     iget-object v3, p0, Lcom/phonegap/DroidGap;->urls:Ljava/util/Stack;
 
     invoke-virtual {v3}, Ljava/util/Stack;->size()I
@@ -1282,10 +1270,10 @@
 
     if-lez v3, :cond_e
 
-    .line 1010
+    .line 831
     invoke-direct {p0, p1}, Lcom/phonegap/DroidGap;->loadUrlIntoView(Ljava/lang/String;)V
 
-    .line 1013
+    .line 834
     :cond_e
     const-string v3, "javascript:"
 
@@ -1295,7 +1283,7 @@
 
     if-nez v3, :cond_29
 
-    .line 1014
+    .line 835
     sget-object v3, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
     const-string v4, "DroidGap.loadUrl(%s, %d)"
@@ -1316,34 +1304,34 @@
 
     invoke-static {v3, v4, v5}, Lcom/phonegap/api/LOG;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1016
+    .line 837
     :cond_29
     move-object v0, p0
 
-    .line 1019
+    .line 840
     .local v0, "me":Lcom/phonegap/DroidGap;
-    new-instance v3, Lcom/phonegap/DroidGap$8;
+    new-instance v3, Lcom/phonegap/DroidGap$7;
 
-    invoke-direct {v3, p0, v0}, Lcom/phonegap/DroidGap$8;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V
+    invoke-direct {v3, p0, v0}, Lcom/phonegap/DroidGap$7;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V
 
     invoke-virtual {p0, v3}, Lcom/phonegap/DroidGap;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 1028
-    new-instance v1, Lcom/phonegap/DroidGap$9;
+    .line 849
+    new-instance v1, Lcom/phonegap/DroidGap$8;
 
-    invoke-direct {v1, p0, p2, v0, p1}, Lcom/phonegap/DroidGap$9;-><init>(Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p2, v0, p1}, Lcom/phonegap/DroidGap$8;-><init>(Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;Ljava/lang/String;)V
 
-    .line 1046
+    .line 867
     .local v1, "runnable":Ljava/lang/Runnable;
     new-instance v2, Ljava/lang/Thread;
 
     invoke-direct {v2, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 1047
+    .line 868
     .local v2, "thread":Ljava/lang/Thread;
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    .line 1048
+    .line 869
     return-void
 .end method
 
@@ -1352,7 +1340,7 @@
     .param p1, "buffer"    # [B
 
     .prologue
-    .line 3213
+    .line 3035
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1361,10 +1349,10 @@
 
     if-lt v0, v1, :cond_5
 
-    .line 3216
+    .line 3038
     return-void
 
-    .line 3214
+    .line 3036
     :cond_5
     aget-byte v1, p1, v0
 
@@ -1374,7 +1362,7 @@
 
     aput-byte v1, p1, v0
 
-    .line 3213
+    .line 3035
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -1390,12 +1378,12 @@
     .end annotation
 
     .prologue
-    .line 1362
+    .line 1184
     iget-object v0, p0, Lcom/phonegap/DroidGap;->pluginManager:Lcom/phonegap/api/PluginManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/phonegap/api/PluginManager;->addService(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1363
+    .line 1185
     return-void
 .end method
 
@@ -1404,22 +1392,22 @@
     .param p1, "b"    # I
 
     .prologue
-    .line 3502
+    .line 3324
     move-object v1, p0
 
-    .line 3503
+    .line 3325
     .local v1, "me":Lcom/phonegap/DroidGap;
     move v0, p1
 
-    .line 3504
+    .line 3326
     .local v0, "bb":I
-    new-instance v2, Lcom/phonegap/DroidGap$14;
+    new-instance v2, Lcom/phonegap/DroidGap$13;
 
-    invoke-direct {v2, p0, v0, v1}, Lcom/phonegap/DroidGap$14;-><init>(Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;)V
+    invoke-direct {v2, p0, v0, v1}, Lcom/phonegap/DroidGap$13;-><init>(Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;)V
 
     invoke-virtual {v1, v2}, Lcom/phonegap/DroidGap;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 3517
+    .line 3339
     return-void
 .end method
 
@@ -1429,7 +1417,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1089
+    .line 910
     iget-object v2, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->canGoBack()Z
@@ -1438,16 +1426,16 @@
 
     if-eqz v2, :cond_f
 
-    .line 1090
+    .line 911
     iget-object v2, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->goBack()V
 
-    .line 1102
+    .line 923
     :goto_e
     return v1
 
-    .line 1095
+    .line 916
     :cond_f
     iget-object v2, p0, Lcom/phonegap/DroidGap;->urls:Ljava/util/Stack;
 
@@ -1457,12 +1445,12 @@
 
     if-le v2, v1, :cond_28
 
-    .line 1096
+    .line 917
     iget-object v2, p0, Lcom/phonegap/DroidGap;->urls:Ljava/util/Stack;
 
     invoke-virtual {v2}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
-    .line 1097
+    .line 918
     iget-object v2, p0, Lcom/phonegap/DroidGap;->urls:Ljava/util/Stack;
 
     invoke-virtual {v2}, Ljava/util/Stack;->pop()Ljava/lang/Object;
@@ -1471,13 +1459,13 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1098
+    .line 919
     .local v0, "url":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->loadUrl(Ljava/lang/String;)V
 
     goto :goto_e
 
-    .line 1102
+    .line 923
     .end local v0    # "url":Ljava/lang/String;
     :cond_28
     const/4 v1, 0x0
@@ -1489,12 +1477,12 @@
     .registers 2
 
     .prologue
-    .line 1054
+    .line 875
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/phonegap/DroidGap;->cancelLoadUrl:Z
 
-    .line 1055
+    .line 876
     return-void
 .end method
 
@@ -1502,16 +1490,16 @@
     .registers 4
 
     .prologue
-    .line 2430
+    .line 2252
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getCacheDir()Ljava/io/File;
 
     move-result-object v1
 
-    .line 2431
+    .line 2253
     .local v1, "pathCacheDir":Ljava/io/File;
     const-string v0, "data/"
 
-    .line 2432
+    .line 2254
     .local v0, "filePath":Ljava/lang/String;
     new-instance v2, Ljava/io/File;
 
@@ -1519,7 +1507,7 @@
 
     invoke-static {v2}, Lcom/phonegap/DroidGap;->deleteDir(Ljava/io/File;)Z
 
-    .line 2433
+    .line 2255
     return-void
 .end method
 
@@ -1527,15 +1515,15 @@
     .registers 3
 
     .prologue
-    .line 1061
+    .line 882
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     if-nez v0, :cond_7
 
-    .line 1062
+    .line 883
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->init()V
 
-    .line 1064
+    .line 885
     :cond_7
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
@@ -1543,7 +1531,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->clearCache(Z)V
 
-    .line 1065
+    .line 886
     return-void
 .end method
 
@@ -1551,29 +1539,29 @@
     .registers 3
 
     .prologue
-    .line 1071
+    .line 892
     iget-object v0, p0, Lcom/phonegap/DroidGap;->urls:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->clear()V
 
-    .line 1072
+    .line 893
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->clearHistory()V
 
-    .line 1075
+    .line 896
     iget-object v0, p0, Lcom/phonegap/DroidGap;->url:Ljava/lang/String;
 
     if-eqz v0, :cond_15
 
-    .line 1076
+    .line 897
     iget-object v0, p0, Lcom/phonegap/DroidGap;->urls:Ljava/util/Stack;
 
     iget-object v1, p0, Lcom/phonegap/DroidGap;->url:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1078
+    .line 899
     :cond_15
     return-void
 .end method
@@ -1582,12 +1570,12 @@
     .registers 4
 
     .prologue
-    .line 2750
+    .line 2572
     iget-boolean v1, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-nez v1, :cond_1b
 
-    .line 2751
+    .line 2573
     iget-object v1, p0, Lcom/phonegap/DroidGap;->serverIpAddress:Ljava/lang/String;
 
     const-string v2, ""
@@ -1598,7 +1586,7 @@
 
     if-nez v1, :cond_1b
 
-    .line 2752
+    .line 2574
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/phonegap/DroidGap$ClientThread;
@@ -1607,11 +1595,11 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 2753
+    .line 2575
     .local v0, "cThread":Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 2756
+    .line 2578
     .end local v0    # "cThread":Ljava/lang/Thread;
     :cond_1b
     return-void
@@ -1625,12 +1613,12 @@
     .param p4, "exit"    # Z
 
     .prologue
-    .line 2179
+    .line 2001
     move-object v2, p0
 
-    .line 2180
+    .line 2002
     .local v2, "me":Lcom/phonegap/DroidGap;
-    new-instance v0, Lcom/phonegap/DroidGap$13;
+    new-instance v0, Lcom/phonegap/DroidGap$12;
 
     move-object v1, p0
 
@@ -1642,11 +1630,11 @@
 
     move v6, p4
 
-    invoke-direct/range {v0 .. v6}, Lcom/phonegap/DroidGap$13;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-direct/range {v0 .. v6}, Lcom/phonegap/DroidGap$12;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     invoke-virtual {v2, v0}, Lcom/phonegap/DroidGap;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2199
+    .line 2021
     return-void
 .end method
 
@@ -1654,15 +1642,15 @@
     .registers 2
 
     .prologue
-    .line 2002
+    .line 1824
     sget v0, Lcom/phonegap/DroidGap;->ACTIVITY_EXITING:I
 
     iput v0, p0, Lcom/phonegap/DroidGap;->activityState:I
 
-    .line 2003
+    .line 1825
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->finish()V
 
-    .line 2004
+    .line 1826
     return-void
 .end method
 
@@ -1673,17 +1661,17 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2575
+    .line 2397
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_22
 
-    .line 2576
+    .line 2398
     if-eqz p1, :cond_9
 
     if-ne p1, v4, :cond_22
 
-    .line 2579
+    .line 2401
     :cond_9
     :try_start_9
     const-string v3, "007%1$d"
@@ -1704,7 +1692,7 @@
 
     move-result-object v2
 
-    .line 2580
+    .line 2402
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -1712,24 +1700,24 @@
 
     move-result-object v0
 
-    .line 2581
+    .line 2403
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_22
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_22} :catch_23
 
-    .line 2587
+    .line 2409
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_22
     :goto_22
     return-void
 
-    .line 2582
+    .line 2404
     :catch_23
     move-exception v1
 
-    .line 2583
+    .line 2405
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -1745,12 +1733,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 2602
+    .line 2424
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_19
 
-    .line 2605
+    .line 2427
     :try_start_4
     const-string v3, "009%1$s"
 
@@ -1766,7 +1754,7 @@
 
     move-result-object v2
 
-    .line 2606
+    .line 2428
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -1774,24 +1762,24 @@
 
     move-result-object v0
 
-    .line 2607
+    .line 2429
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_19
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_19} :catch_1a
 
-    .line 2612
+    .line 2434
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_19
     :goto_19
     return-void
 
-    .line 2608
+    .line 2430
     :catch_1a
     move-exception v1
 
-    .line 2609
+    .line 2431
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -1810,12 +1798,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2560
+    .line 2382
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_2c
 
-    .line 2561
+    .line 2383
     if-eqz p1, :cond_9
 
     if-ne p1, v4, :cond_2c
@@ -1829,7 +1817,7 @@
 
     if-ne v3, v4, :cond_2c
 
-    .line 2564
+    .line 2386
     :try_start_10
     const-string v3, "006%1$d%2$s"
 
@@ -1853,7 +1841,7 @@
 
     move-result-object v2
 
-    .line 2565
+    .line 2387
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -1861,24 +1849,24 @@
 
     move-result-object v0
 
-    .line 2566
+    .line 2388
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_2c
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_2c} :catch_2d
 
-    .line 2572
+    .line 2394
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_2c
     :goto_2c
     return-void
 
-    .line 2567
+    .line 2389
     :catch_2d
     move-exception v1
 
-    .line 2568
+    .line 2390
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -1893,12 +1881,12 @@
     .registers 5
 
     .prologue
-    .line 2474
+    .line 2296
     iget-boolean v2, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v2, :cond_f
 
-    .line 2476
+    .line 2298
     :try_start_4
     const-string v2, "997"
 
@@ -1908,23 +1896,23 @@
 
     move-result-object v0
 
-    .line 2477
+    .line 2299
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_f
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_f} :catch_10
 
-    .line 2482
+    .line 2304
     .end local v0    # "buf":[B
     :cond_f
     :goto_f
     return-void
 
-    .line 2478
+    .line 2300
     :catch_10
     move-exception v1
 
-    .line 2479
+    .line 2301
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "ClientActivity"
 
@@ -1941,18 +1929,18 @@
     .param p2, "logintype"    # I
 
     .prologue
-    .line 2436
+    .line 2258
     iput-object p1, p0, Lcom/phonegap/DroidGap;->loginMsg:Ljava/lang/String;
 
-    .line 2450
+    .line 2272
     const/16 v0, 0x2ee1
 
     iput-short v0, p0, Lcom/phonegap/DroidGap;->serverPortValue:S
 
-    .line 2451
+    .line 2273
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->createSocket()V
 
-    .line 2452
+    .line 2274
     return-void
 .end method
 
@@ -1964,12 +1952,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2508
+    .line 2330
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_2c
 
-    .line 2509
+    .line 2331
     if-eqz p1, :cond_9
 
     if-ne p1, v4, :cond_2c
@@ -1983,7 +1971,7 @@
 
     if-ne v3, v4, :cond_2c
 
-    .line 2512
+    .line 2334
     :try_start_10
     const-string v3, "003%1$d%2$s"
 
@@ -2007,7 +1995,7 @@
 
     move-result-object v2
 
-    .line 2513
+    .line 2335
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2015,24 +2003,24 @@
 
     move-result-object v0
 
-    .line 2514
+    .line 2336
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_2c
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_2c} :catch_2d
 
-    .line 2520
+    .line 2342
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_2c
     :goto_2c
     return-void
 
-    .line 2515
+    .line 2337
     :catch_2d
     move-exception v1
 
-    .line 2516
+    .line 2338
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2047,12 +2035,12 @@
     .registers 6
 
     .prologue
-    .line 2522
+    .line 2344
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_16
 
-    .line 2525
+    .line 2347
     :try_start_4
     const-string v3, "004"
 
@@ -2064,7 +2052,7 @@
 
     move-result-object v2
 
-    .line 2526
+    .line 2348
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2072,24 +2060,24 @@
 
     move-result-object v0
 
-    .line 2527
+    .line 2349
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_16
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_16} :catch_17
 
-    .line 2532
+    .line 2354
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_16
     :goto_16
     return-void
 
-    .line 2528
+    .line 2350
     :catch_17
     move-exception v1
 
-    .line 2529
+    .line 2351
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2104,12 +2092,12 @@
     .registers 5
 
     .prologue
-    .line 2454
+    .line 2276
     iget-boolean v2, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v2, :cond_f
 
-    .line 2456
+    .line 2278
     :try_start_4
     const-string v2, "999X"
 
@@ -2119,23 +2107,23 @@
 
     move-result-object v0
 
-    .line 2457
+    .line 2279
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_f
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_f} :catch_10
 
-    .line 2462
+    .line 2284
     .end local v0    # "buf":[B
     :cond_f
     :goto_f
     return-void
 
-    .line 2458
+    .line 2280
     :catch_10
     move-exception v1
 
-    .line 2459
+    .line 2281
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "ClientActivity"
 
@@ -2150,12 +2138,12 @@
     .registers 5
 
     .prologue
-    .line 2464
+    .line 2286
     iget-boolean v2, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v2, :cond_f
 
-    .line 2466
+    .line 2288
     :try_start_4
     const-string v2, "998"
 
@@ -2165,23 +2153,23 @@
 
     move-result-object v0
 
-    .line 2467
+    .line 2289
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_f
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_f} :catch_10
 
-    .line 2472
+    .line 2294
     .end local v0    # "buf":[B
     :cond_f
     :goto_f
     return-void
 
-    .line 2468
+    .line 2290
     :catch_10
     move-exception v1
 
-    .line 2469
+    .line 2291
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "ClientActivity"
 
@@ -2196,12 +2184,12 @@
     .registers 6
 
     .prologue
-    .line 2614
+    .line 2436
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_16
 
-    .line 2617
+    .line 2439
     :try_start_4
     const-string v3, "010"
 
@@ -2213,7 +2201,7 @@
 
     move-result-object v2
 
-    .line 2618
+    .line 2440
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2221,24 +2209,24 @@
 
     move-result-object v0
 
-    .line 2619
+    .line 2441
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_16
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_16} :catch_17
 
-    .line 2624
+    .line 2446
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_16
     :goto_16
     return-void
 
-    .line 2620
+    .line 2442
     :catch_17
     move-exception v1
 
-    .line 2621
+    .line 2443
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2254,12 +2242,12 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 2484
+    .line 2306
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_1d
 
-    .line 2487
+    .line 2309
     :try_start_4
     const-string v3, "013%1$01d"
 
@@ -2279,7 +2267,7 @@
 
     move-result-object v2
 
-    .line 2488
+    .line 2310
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2287,24 +2275,24 @@
 
     move-result-object v0
 
-    .line 2489
+    .line 2311
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_1d
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_1d} :catch_1e
 
-    .line 2494
+    .line 2316
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_1d
     :goto_1d
     return-void
 
-    .line 2490
+    .line 2312
     :catch_1e
     move-exception v1
 
-    .line 2491
+    .line 2313
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2319,10 +2307,10 @@
     .registers 1
 
     .prologue
-    .line 2746
+    .line 2568
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->finish()V
 
-    .line 2747
+    .line 2569
     return-void
 .end method
 
@@ -2331,12 +2319,12 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 2690
+    .line 2512
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_20
 
-    .line 2691
+    .line 2513
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -2345,7 +2333,7 @@
 
     if-ne v3, v4, :cond_20
 
-    .line 2694
+    .line 2516
     :try_start_b
     const-string v3, "018%1$s"
 
@@ -2361,7 +2349,7 @@
 
     move-result-object v2
 
-    .line 2695
+    .line 2517
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2369,24 +2357,24 @@
 
     move-result-object v0
 
-    .line 2696
+    .line 2518
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_20
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_20} :catch_21
 
-    .line 2702
+    .line 2524
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_20
     :goto_20
     return-void
 
-    .line 2697
+    .line 2519
     :catch_21
     move-exception v1
 
-    .line 2698
+    .line 2520
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2403,12 +2391,12 @@
     .param p2, "page"    # I
 
     .prologue
-    .line 2496
+    .line 2318
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_24
 
-    .line 2499
+    .line 2321
     :try_start_4
     const-string v3, "002%1$01d%2$02d"
 
@@ -2436,7 +2424,7 @@
 
     move-result-object v2
 
-    .line 2500
+    .line 2322
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2444,24 +2432,24 @@
 
     move-result-object v0
 
-    .line 2501
+    .line 2323
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_24
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_24} :catch_25
 
-    .line 2506
+    .line 2328
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_24
     :goto_24
     return-void
 
-    .line 2502
+    .line 2324
     :catch_25
     move-exception v1
 
-    .line 2503
+    .line 2325
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2477,12 +2465,12 @@
     .param p1, "page"    # I
 
     .prologue
-    .line 2664
+    .line 2486
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_1d
 
-    .line 2667
+    .line 2489
     :try_start_4
     const-string v3, "016%1$02d"
 
@@ -2502,7 +2490,7 @@
 
     move-result-object v2
 
-    .line 2668
+    .line 2490
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2510,24 +2498,24 @@
 
     move-result-object v0
 
-    .line 2669
+    .line 2491
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_1d
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_1d} :catch_1e
 
-    .line 2674
+    .line 2496
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_1d
     :goto_1d
     return-void
 
-    .line 2670
+    .line 2492
     :catch_1e
     move-exception v1
 
-    .line 2671
+    .line 2493
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2542,12 +2530,12 @@
     .registers 6
 
     .prologue
-    .line 2534
+    .line 2356
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_16
 
-    .line 2537
+    .line 2359
     :try_start_4
     const-string v3, "014"
 
@@ -2559,7 +2547,7 @@
 
     move-result-object v2
 
-    .line 2538
+    .line 2360
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2567,24 +2555,24 @@
 
     move-result-object v0
 
-    .line 2539
+    .line 2361
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_16
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_16} :catch_17
 
-    .line 2544
+    .line 2366
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_16
     :goto_16
     return-void
 
-    .line 2540
+    .line 2362
     :catch_17
     move-exception v1
 
-    .line 2541
+    .line 2363
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2600,12 +2588,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 2650
+    .line 2472
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_21
 
-    .line 2651
+    .line 2473
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -2614,7 +2602,7 @@
 
     if-ge v3, v4, :cond_21
 
-    .line 2654
+    .line 2476
     :try_start_c
     const-string v3, "012%1$s"
 
@@ -2630,7 +2618,7 @@
 
     move-result-object v2
 
-    .line 2655
+    .line 2477
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2638,24 +2626,24 @@
 
     move-result-object v0
 
-    .line 2656
+    .line 2478
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_21
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_21} :catch_22
 
-    .line 2662
+    .line 2484
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_21
     :goto_21
     return-void
 
-    .line 2657
+    .line 2479
     :catch_22
     move-exception v1
 
-    .line 2658
+    .line 2480
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2671,12 +2659,12 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 2590
+    .line 2412
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_19
 
-    .line 2593
+    .line 2415
     :try_start_4
     const-string v3, "008%1$s"
 
@@ -2692,7 +2680,7 @@
 
     move-result-object v2
 
-    .line 2594
+    .line 2416
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2700,24 +2688,24 @@
 
     move-result-object v0
 
-    .line 2595
+    .line 2417
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_19
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_19} :catch_1a
 
-    .line 2600
+    .line 2422
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_19
     :goto_19
     return-void
 
-    .line 2596
+    .line 2418
     :catch_1a
     move-exception v1
 
-    .line 2597
+    .line 2419
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2739,12 +2727,12 @@
 
     const/4 v4, 0x1
 
-    .line 2546
+    .line 2368
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_35
 
-    .line 2547
+    .line 2369
     if-eqz p1, :cond_a
 
     if-ne p1, v4, :cond_35
@@ -2762,7 +2750,7 @@
 
     if-ne v3, v5, :cond_35
 
-    .line 2550
+    .line 2372
     :try_start_16
     const-string v3, "005%1$d%2$s%3$s"
 
@@ -2790,7 +2778,7 @@
 
     move-result-object v2
 
-    .line 2551
+    .line 2373
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2798,24 +2786,24 @@
 
     move-result-object v0
 
-    .line 2552
+    .line 2374
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_35
     .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_35} :catch_36
 
-    .line 2558
+    .line 2380
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_35
     :goto_35
     return-void
 
-    .line 2553
+    .line 2375
     :catch_36
     move-exception v1
 
-    .line 2554
+    .line 2376
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2831,12 +2819,12 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 2732
+    .line 2554
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_20
 
-    .line 2733
+    .line 2555
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -2845,7 +2833,7 @@
 
     if-ne v3, v4, :cond_20
 
-    .line 2736
+    .line 2558
     :try_start_b
     const-string v3, "021%1$s"
 
@@ -2861,7 +2849,7 @@
 
     move-result-object v2
 
-    .line 2737
+    .line 2559
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2869,24 +2857,24 @@
 
     move-result-object v0
 
-    .line 2738
+    .line 2560
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_20
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_20} :catch_21
 
-    .line 2744
+    .line 2566
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_20
     :goto_20
     return-void
 
-    .line 2739
+    .line 2561
     :catch_21
     move-exception v1
 
-    .line 2740
+    .line 2562
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2903,12 +2891,12 @@
     .param p2, "boarddata"    # Ljava/lang/String;
 
     .prologue
-    .line 2718
+    .line 2540
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_23
 
-    .line 2719
+    .line 2541
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -2917,7 +2905,7 @@
 
     if-ne v3, v4, :cond_23
 
-    .line 2722
+    .line 2544
     :try_start_b
     const-string v3, "020%1$s%2$s"
 
@@ -2937,7 +2925,7 @@
 
     move-result-object v2
 
-    .line 2723
+    .line 2545
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -2945,24 +2933,24 @@
 
     move-result-object v0
 
-    .line 2724
+    .line 2546
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_23
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_23} :catch_24
 
-    .line 2730
+    .line 2552
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_23
     :goto_23
     return-void
 
-    .line 2725
+    .line 2547
     :catch_24
     move-exception v1
 
-    .line 2726
+    .line 2548
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -2979,12 +2967,12 @@
     .param p2, "nameelo"    # Ljava/lang/String;
 
     .prologue
-    .line 2704
+    .line 2526
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_23
 
-    .line 2705
+    .line 2527
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -2993,7 +2981,7 @@
 
     if-ne v3, v4, :cond_23
 
-    .line 2708
+    .line 2530
     :try_start_b
     const-string v3, "019%1$s%2$s"
 
@@ -3013,7 +3001,7 @@
 
     move-result-object v2
 
-    .line 2709
+    .line 2531
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -3021,24 +3009,24 @@
 
     move-result-object v0
 
-    .line 2710
+    .line 2532
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_23
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_23} :catch_24
 
-    .line 2716
+    .line 2538
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_23
     :goto_23
     return-void
 
-    .line 2711
+    .line 2533
     :catch_24
     move-exception v1
 
-    .line 2712
+    .line 2534
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -3054,12 +3042,12 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 2676
+    .line 2498
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_20
 
-    .line 2677
+    .line 2499
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -3068,7 +3056,7 @@
 
     if-ne v3, v4, :cond_20
 
-    .line 2680
+    .line 2502
     :try_start_b
     const-string v3, "017%1$s"
 
@@ -3084,7 +3072,7 @@
 
     move-result-object v2
 
-    .line 2681
+    .line 2503
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -3092,24 +3080,24 @@
 
     move-result-object v0
 
-    .line 2682
+    .line 2504
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_20
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_20} :catch_21
 
-    .line 2688
+    .line 2510
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_20
     :goto_20
     return-void
 
-    .line 2683
+    .line 2505
     :catch_21
     move-exception v1
 
-    .line 2684
+    .line 2506
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -3125,12 +3113,12 @@
     .param p1, "elo"    # I
 
     .prologue
-    .line 2626
+    .line 2448
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_1d
 
-    .line 2629
+    .line 2451
     :try_start_4
     const-string v3, "011%1$04d"
 
@@ -3150,7 +3138,7 @@
 
     move-result-object v2
 
-    .line 2630
+    .line 2452
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -3158,24 +3146,24 @@
 
     move-result-object v0
 
-    .line 2631
+    .line 2453
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_1d
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_1d} :catch_1e
 
-    .line 2636
+    .line 2458
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_1d
     :goto_1d
     return-void
 
-    .line 2632
+    .line 2454
     :catch_1e
     move-exception v1
 
-    .line 2633
+    .line 2455
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -3191,12 +3179,12 @@
     .param p1, "elo"    # I
 
     .prologue
-    .line 2638
+    .line 2460
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_1d
 
-    .line 2641
+    .line 2463
     :try_start_4
     const-string v3, "015%1$04d"
 
@@ -3216,7 +3204,7 @@
 
     move-result-object v2
 
-    .line 2642
+    .line 2464
     .local v2, "s":Ljava/lang/String;
     const-string v3, "UTF-8"
 
@@ -3224,24 +3212,24 @@
 
     move-result-object v0
 
-    .line 2643
+    .line 2465
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_1d
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_1d} :catch_1e
 
-    .line 2648
+    .line 2470
     .end local v0    # "buf":[B
     .end local v2    # "s":Ljava/lang/String;
     :cond_1d
     :goto_1d
     return-void
 
-    .line 2644
+    .line 2466
     :catch_1e
     move-exception v1
 
-    .line 2645
+    .line 2467
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -3257,7 +3245,7 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 3497
+    .line 3319
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -3276,7 +3264,7 @@
 
     move-result-object v0
 
-    .line 3498
+    .line 3320
     .local v0, "data":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
@@ -3286,7 +3274,7 @@
 
     move-result-object v1
 
-    .line 3499
+    .line 3321
     .local v1, "r":Ljava/lang/String;
     return-object v1
 .end method
@@ -3297,7 +3285,7 @@
     .param p2, "defaultValue"    # Z
 
     .prologue
-    .line 1124
+    .line 945
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
@@ -3306,17 +3294,17 @@
 
     move-result-object v0
 
-    .line 1125
+    .line 946
     .local v0, "bundle":Landroid/os/Bundle;
     if-nez v0, :cond_b
 
-    .line 1132
+    .line 953
     .end local p2    # "defaultValue":Z
     :cond_a
     :goto_a
     return p2
 
-    .line 1128
+    .line 949
     .restart local p2    # "defaultValue":Z
     :cond_b
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -3325,40 +3313,16 @@
 
     check-cast v1, Ljava/lang/Boolean;
 
-    .line 1129
+    .line 950
     .local v1, "p":Ljava/lang/Boolean;
     if-eqz v1, :cond_a
 
-    .line 1132
+    .line 953
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
 
     goto :goto_a
-.end method
-
-.method public getCustomEvemtPlatformAdapterClass(Lcom/adsmogo/adapters/AdsMogoCustomEventPlatformEnum;)Ljava/lang/Class;
-    .registers 3
-    .param p1, "enumIndex"    # Lcom/adsmogo/adapters/AdsMogoCustomEventPlatformEnum;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/adsmogo/adapters/AdsMogoCustomEventPlatformEnum;",
-            ")",
-            "Ljava/lang/Class",
-            "<+",
-            "Lcom/adsmogo/adapters/AdsMogoAdapter;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 791
-    const/4 v0, 0x0
-
-    .line 798
-    .local v0, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/adsmogo/adapters/AdsMogoAdapter;>;"
-    return-object v0
 .end method
 
 .method public getDoubleProperty(Ljava/lang/String;D)D
@@ -3367,7 +3331,7 @@
     .param p2, "defaultValue"    # D
 
     .prologue
-    .line 1181
+    .line 1002
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
@@ -3376,17 +3340,17 @@
 
     move-result-object v0
 
-    .line 1182
+    .line 1003
     .local v0, "bundle":Landroid/os/Bundle;
     if-nez v0, :cond_b
 
-    .line 1189
+    .line 1010
     .end local p2    # "defaultValue":D
     :cond_a
     :goto_a
     return-wide p2
 
-    .line 1185
+    .line 1006
     .restart local p2    # "defaultValue":D
     :cond_b
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -3395,11 +3359,11 @@
 
     check-cast v1, Ljava/lang/Double;
 
-    .line 1186
+    .line 1007
     .local v1, "p":Ljava/lang/Double;
     if-eqz v1, :cond_a
 
-    .line 1189
+    .line 1010
     invoke-virtual {v1}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide p2
@@ -3413,7 +3377,7 @@
     .param p2, "defaultValue"    # I
 
     .prologue
-    .line 1143
+    .line 964
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
@@ -3422,17 +3386,17 @@
 
     move-result-object v0
 
-    .line 1144
+    .line 965
     .local v0, "bundle":Landroid/os/Bundle;
     if-nez v0, :cond_b
 
-    .line 1151
+    .line 972
     .end local p2    # "defaultValue":I
     :cond_a
     :goto_a
     return p2
 
-    .line 1147
+    .line 968
     .restart local p2    # "defaultValue":I
     :cond_b
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -3441,11 +3405,11 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 1148
+    .line 969
     .local v1, "p":Ljava/lang/Integer;
     if-eqz v1, :cond_a
 
-    .line 1151
+    .line 972
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
@@ -3457,10 +3421,10 @@
     .registers 3
 
     .prologue
-    .line 3489
+    .line 3311
     const-string v0, ""
 
-    .line 3491
+    .line 3313
     .local v0, "data":Ljava/lang/String;
     const v1, 0x7f060002
 
@@ -3471,11 +3435,11 @@
 
     move-result-object v0
 
-    .line 3493
+    .line 3315
     :goto_9
     return-object v0
 
-    .line 3492
+    .line 3314
     :catch_a
     move-exception v1
 
@@ -3488,7 +3452,7 @@
     .param p2, "defaultValue"    # Ljava/lang/String;
 
     .prologue
-    .line 1162
+    .line 983
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
@@ -3497,30 +3461,30 @@
 
     move-result-object v0
 
-    .line 1163
+    .line 984
     .local v0, "bundle":Landroid/os/Bundle;
     if-nez v0, :cond_b
 
-    .line 1170
+    .line 991
     .end local p2    # "defaultValue":Ljava/lang/String;
     :cond_a
     :goto_a
     return-object p2
 
-    .line 1166
+    .line 987
     .restart local p2    # "defaultValue":Ljava/lang/String;
     :cond_b
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1167
+    .line 988
     .local v1, "p":Ljava/lang/String;
     if-eqz v1, :cond_a
 
     move-object p2, v1
 
-    .line 1170
+    .line 991
     goto :goto_a
 .end method
 
@@ -3529,7 +3493,7 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 3461
+    .line 3283
     return-void
 .end method
 
@@ -3537,7 +3501,7 @@
     .registers 1
 
     .prologue
-    .line 714
+    .line 619
     return-void
 .end method
 
@@ -3545,14 +3509,14 @@
     .registers 16
 
     .prologue
-    .line 428
+    .line 420
     sget-object v10, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
     const-string v11, "DroidGap.init()"
 
     invoke-static {v10, v11}, Lcom/phonegap/api/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 431
+    .line 423
     const v10, 0x7f070003
 
     invoke-virtual {p0, v10}, Lcom/phonegap/DroidGap;->findViewById(I)Landroid/view/View;
@@ -3563,7 +3527,7 @@
 
     iput-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
-    .line 433
+    .line 425
     iget-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     new-instance v11, Lcom/phonegap/DroidGap$GapClient;
@@ -3572,7 +3536,7 @@
 
     invoke-virtual {v10, v11}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 434
+    .line 426
     iget-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     new-instance v11, Lcom/phonegap/DroidGap$GapViewClient;
@@ -3581,7 +3545,7 @@
 
     invoke-virtual {p0, v10, v11}, Lcom/phonegap/DroidGap;->setWebViewClient(Landroid/webkit/WebView;Landroid/webkit/WebViewClient;)V
 
-    .line 438
+    .line 430
     sget-object v10, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
 
     invoke-static {v10}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -3590,13 +3554,13 @@
 
     const/16 v11, 0xe
 
-    if-ge v10, v11, :cond_15b
+    if-ge v10, v11, :cond_13a
 
     iget-boolean v10, p0, Lcom/phonegap/DroidGap;->classicRender:Z
 
-    if-eqz v10, :cond_15b
+    if-eqz v10, :cond_13a
 
-    .line 442
+    .line 434
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
@@ -3605,25 +3569,25 @@
 
     move-result-object v10
 
-    iget v7, v10, Landroid/util/DisplayMetrics;->density:F
+    iget v8, v10, Landroid/util/DisplayMetrics;->density:F
 
-    .line 443
-    .local v7, "scale":F
+    .line 435
+    .local v8, "scale":F
     const/high16 v10, 0x42c80000    # 100.0f
 
-    mul-float/2addr v10, v7
+    mul-float/2addr v10, v8
 
     float-to-int v3, v10
 
-    .line 444
+    .line 436
     .local v3, "initialScale":I
     iget-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     invoke-virtual {v10, v3}, Landroid/webkit/WebView;->setInitialScale(I)V
 
-    .line 451
+    .line 443
     .end local v3    # "initialScale":I
-    .end local v7    # "scale":F
+    .end local v8    # "scale":F
     :goto_47
     iget-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
@@ -3631,88 +3595,88 @@
 
     invoke-virtual {v10, v11}, Landroid/webkit/WebView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 452
+    .line 444
     iget-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     const/4 v11, 0x0
 
     invoke-virtual {v10, v11}, Landroid/webkit/WebView;->setHorizontalScrollBarEnabled(Z)V
 
-    .line 453
+    .line 445
     iget-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     invoke-virtual {v10}, Landroid/webkit/WebView;->requestFocusFromTouch()Z
 
-    .line 455
+    .line 447
     iget-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
-    new-instance v11, Lcom/phonegap/DroidGap$3;
+    new-instance v11, Lcom/phonegap/DroidGap$2;
 
-    invoke-direct {v11, p0}, Lcom/phonegap/DroidGap$3;-><init>(Lcom/phonegap/DroidGap;)V
+    invoke-direct {v11, p0}, Lcom/phonegap/DroidGap$2;-><init>(Lcom/phonegap/DroidGap;)V
 
     invoke-virtual {v10, v11}, Landroid/webkit/WebView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 480
+    .line 472
     iget-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     invoke-virtual {v10}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
-    move-result-object v8
+    move-result-object v9
 
-    .line 481
-    .local v8, "settings":Landroid/webkit/WebSettings;
+    .line 473
+    .local v9, "settings":Landroid/webkit/WebSettings;
     const/4 v10, 0x1
 
-    invoke-virtual {v8, v10}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
+    invoke-virtual {v9, v10}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
+
+    .line 474
+    const/4 v10, 0x1
+
+    invoke-virtual {v9, v10}, Landroid/webkit/WebSettings;->setJavaScriptCanOpenWindowsAutomatically(Z)V
+
+    .line 475
+    sget-object v10, Landroid/webkit/WebSettings$LayoutAlgorithm;->NORMAL:Landroid/webkit/WebSettings$LayoutAlgorithm;
+
+    invoke-virtual {v9, v10}, Landroid/webkit/WebSettings;->setLayoutAlgorithm(Landroid/webkit/WebSettings$LayoutAlgorithm;)V
+
+    .line 477
+    const/4 v10, 0x0
+
+    invoke-virtual {v9, v10}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
+
+    .line 478
+    const/4 v10, 0x0
+
+    invoke-virtual {v9, v10}, Landroid/webkit/WebSettings;->setLightTouchEnabled(Z)V
+
+    .line 479
+    const/4 v10, 0x0
+
+    invoke-virtual {v9, v10}, Landroid/webkit/WebSettings;->setSupportZoom(Z)V
 
     .line 482
     const/4 v10, 0x1
 
-    invoke-virtual {v8, v10}, Landroid/webkit/WebSettings;->setJavaScriptCanOpenWindowsAutomatically(Z)V
+    invoke-virtual {v9, v10}, Landroid/webkit/WebSettings;->setNavDump(Z)V
 
-    .line 483
-    sget-object v10, Landroid/webkit/WebSettings$LayoutAlgorithm;->NORMAL:Landroid/webkit/WebSettings$LayoutAlgorithm;
-
-    invoke-virtual {v8, v10}, Landroid/webkit/WebSettings;->setLayoutAlgorithm(Landroid/webkit/WebSettings$LayoutAlgorithm;)V
-
-    .line 485
-    const/4 v10, 0x0
-
-    invoke-virtual {v8, v10}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
-
-    .line 486
-    const/4 v10, 0x0
-
-    invoke-virtual {v8, v10}, Landroid/webkit/WebSettings;->setLightTouchEnabled(Z)V
-
-    .line 487
-    const/4 v10, 0x0
-
-    invoke-virtual {v8, v10}, Landroid/webkit/WebSettings;->setSupportZoom(Z)V
-
-    .line 490
-    const/4 v10, 0x1
-
-    invoke-virtual {v8, v10}, Landroid/webkit/WebSettings;->setNavDump(Z)V
-
-    .line 504
+    .line 496
     iget-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     const/4 v11, 0x4
 
     invoke-virtual {v10, v11}, Landroid/webkit/WebView;->setVisibility(I)V
 
-    .line 509
+    .line 501
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Lcom/phonegap/DroidGap;->cancelLoadUrl:Z
 
-    .line 521
+    .line 513
     const/4 v10, 0x3
 
     invoke-virtual {p0, v10}, Lcom/phonegap/DroidGap;->setVolumeControlStream(I)V
 
-    .line 522
+    .line 514
     new-instance v10, Landroid/media/SoundPool;
 
     const/4 v11, 0x3
@@ -3725,14 +3689,14 @@
 
     iput-object v10, p0, Lcom/phonegap/DroidGap;->soundPool:Landroid/media/SoundPool;
 
-    .line 523
+    .line 515
     new-instance v10, Ljava/util/HashMap;
 
     invoke-direct {v10}, Ljava/util/HashMap;-><init>()V
 
     iput-object v10, p0, Lcom/phonegap/DroidGap;->soundPoolMap:Ljava/util/HashMap;
 
-    .line 524
+    .line 516
     iget-object v10, p0, Lcom/phonegap/DroidGap;->soundPoolMap:Ljava/util/HashMap;
 
     const/4 v11, 0x0
@@ -3757,7 +3721,7 @@
 
     invoke-virtual {v10, v11, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 525
+    .line 517
     iget-object v10, p0, Lcom/phonegap/DroidGap;->soundPoolMap:Ljava/util/HashMap;
 
     const/4 v11, 0x1
@@ -3782,7 +3746,7 @@
 
     invoke-virtual {v10, v11, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 526
+    .line 518
     iget-object v10, p0, Lcom/phonegap/DroidGap;->soundPoolMap:Ljava/util/HashMap;
 
     const/4 v11, 0x2
@@ -3807,12 +3771,12 @@
 
     invoke-virtual {v10, v11, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 529
+    .line 521
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
 
-    .line 530
+    .line 522
     .local v2, "c":Ljava/util/Calendar;
     const/4 v10, 0x1
 
@@ -3820,7 +3784,7 @@
 
     move-result v6
 
-    .line 531
+    .line 523
     .local v6, "mYear":I
     const/4 v10, 0x2
 
@@ -3830,7 +3794,7 @@
 
     add-int/lit8 v5, v10, 0x1
 
-    .line 532
+    .line 524
     .local v5, "mMonth":I
     const/4 v10, 0x5
 
@@ -3838,46 +3802,14 @@
 
     move-result v4
 
-    .line 539
+    .line 527
     .local v4, "mDay":I
-    sget-object v10, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
+    new-instance v7, Lcom/fw/bn/AdBanner;
 
-    invoke-static {v10}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-direct {v7, p0}, Lcom/fw/bn/AdBanner;-><init>(Landroid/content/Context;)V
 
-    move-result v10
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    .line 540
-    .local v9, "v":Ljava/lang/Integer;
-    invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
-
-    move-result v10
-
-    const/16 v11, 0x9
-
-    if-ge v10, v11, :cond_163
-
-    .line 541
-    new-instance v0, Lcom/adsmogo/adview/AdsMogoLayout;
-
-    const-string v10, "aec76bee3bad462698ed323030e1c433"
-
-    invoke-direct {v0, p0, v10}, Lcom/adsmogo/adview/AdsMogoLayout;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
-
-    .line 547
-    .local v0, "adsMogoLayoutCode":Lcom/adsmogo/adview/AdsMogoLayout;
-    :goto_11a
-    invoke-virtual {v0, p0}, Lcom/adsmogo/adview/AdsMogoLayout;->setAdsMogoListener(Lcom/adsmogo/controller/listener/AdsMogoListener;)V
-
-    .line 548
-    const/4 v10, 0x1
-
-    iput-boolean v10, v0, Lcom/adsmogo/adview/AdsMogoLayout;->downloadIsShowDialog:Z
-
-    .line 551
+    .line 530
+    .local v7, "myAdView":Lcom/fw/bn/AdBanner;
     const/high16 v10, 0x7f070000
 
     invoke-virtual {p0, v10}, Lcom/phonegap/DroidGap;->findViewById(I)Landroid/view/View;
@@ -3886,14 +3818,37 @@
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    .line 552
+    .line 531
     .local v1, "adviewLayer":Landroid/widget/LinearLayout;
-    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v1, v7}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 553
+    .line 532
+    const-string v10, "64GlcrmsEXhFfdI9AW6Ei7Ed"
+
+    invoke-virtual {v7, v10}, Lcom/fw/bn/AdBanner;->setAppKey(Ljava/lang/String;)V
+
+    .line 533
+    new-instance v0, Lcom/phonegap/DroidGap$3;
+
+    invoke-direct {v0, p0}, Lcom/phonegap/DroidGap$3;-><init>(Lcom/phonegap/DroidGap;)V
+
+    .line 543
+    .local v0, "adListener":Lcom/fw/bn/RecevieAdListener;
+    invoke-virtual {v7, v0}, Lcom/fw/bn/AdBanner;->setRecevieAdListener(Lcom/fw/bn/RecevieAdListener;)V
+
+    .line 544
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->invalidate()V
 
-    .line 555
+    .line 546
+    invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v10
+
+    const-string v11, "64GlcrmsEXhFfdI9AW6Ei7Ed"
+
+    invoke-static {v10, v11}, Lcom/fivefeiwo/coverscreen/CPManager;->init(Landroid/content/Context;Ljava/lang/String;)Lcom/fivefeiwo/coverscreen/CPManager;
+
+    .line 548
     new-instance v10, Landroid/os/Handler;
 
     invoke-direct {v10}, Landroid/os/Handler;-><init>()V
@@ -3902,56 +3857,25 @@
 
     invoke-direct {v11, p0}, Lcom/phonegap/DroidGap$4;-><init>(Lcom/phonegap/DroidGap;)V
 
-    .line 560
+    .line 553
     const-wide/16 v12, 0x1388
 
-    .line 555
+    .line 548
     invoke-virtual {v10, v11, v12, v13}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 562
-    invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
-
-    move-result v10
-
-    const/16 v11, 0x9
-
-    if-ge v10, v11, :cond_16b
-
-    .line 563
-    const-string v10, "aec76bee3bad462698ed323030e1c433"
-
-    invoke-static {v10}, Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;->setDefaultInitAppKey(Ljava/lang/String;)V
-
     .line 567
-    :goto_14a
-    invoke-static {p0}, Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;->setInitActivity(Landroid/app/Activity;)V
-
-    .line 569
-    invoke-static {}, Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;->shareInstance()Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;->defaultInterstitial()Lcom/adsmogo/interstitial/AdsMogoInterstitial;
-
-    move-result-object v10
-
-    iget-object v11, p0, Lcom/phonegap/DroidGap;->adsmogoFullListener:Lcom/adsmogo/interstitial/AdsMogoInterstitialListener;
-
-    invoke-virtual {v10, v11}, Lcom/adsmogo/interstitial/AdsMogoInterstitial;->setAdsMogoInterstitialListener(Lcom/adsmogo/interstitial/AdsMogoInterstitialListener;)V
-
-    .line 582
     return-void
 
-    .line 448
-    .end local v0    # "adsMogoLayoutCode":Lcom/adsmogo/adview/AdsMogoLayout;
+    .line 440
+    .end local v0    # "adListener":Lcom/fw/bn/RecevieAdListener;
     .end local v1    # "adviewLayer":Landroid/widget/LinearLayout;
     .end local v2    # "c":Ljava/util/Calendar;
     .end local v4    # "mDay":I
     .end local v5    # "mMonth":I
     .end local v6    # "mYear":I
-    .end local v8    # "settings":Landroid/webkit/WebSettings;
-    .end local v9    # "v":Ljava/lang/Integer;
-    :cond_15b
+    .end local v7    # "myAdView":Lcom/fw/bn/AdBanner;
+    .end local v9    # "settings":Landroid/webkit/WebSettings;
+    :cond_13a
     iget-object v10, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     const/4 v11, 0x0
@@ -3959,32 +3883,6 @@
     invoke-virtual {v10, v11}, Landroid/webkit/WebView;->setInitialScale(I)V
 
     goto/16 :goto_47
-
-    .line 543
-    .restart local v2    # "c":Ljava/util/Calendar;
-    .restart local v4    # "mDay":I
-    .restart local v5    # "mMonth":I
-    .restart local v6    # "mYear":I
-    .restart local v8    # "settings":Landroid/webkit/WebSettings;
-    .restart local v9    # "v":Ljava/lang/Integer;
-    :cond_163
-    new-instance v0, Lcom/adsmogo/adview/AdsMogoLayout;
-
-    const-string v10, "ee7c0c85be9d479092ae00b34d0c5cd5"
-
-    invoke-direct {v0, p0, v10}, Lcom/adsmogo/adview/AdsMogoLayout;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
-
-    .restart local v0    # "adsMogoLayoutCode":Lcom/adsmogo/adview/AdsMogoLayout;
-    goto :goto_11a
-
-    .line 565
-    .restart local v1    # "adviewLayer":Landroid/widget/LinearLayout;
-    :cond_16b
-    const-string v10, "ee7c0c85be9d479092ae00b34d0c5cd5"
-
-    invoke-static {v10}, Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;->setDefaultInitAppKey(Ljava/lang/String;)V
-
-    goto :goto_14a
 .end method
 
 .method public loadUrl(Ljava/lang/String;)V
@@ -3992,7 +3890,7 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 858
+    .line 679
     iget-object v0, p0, Lcom/phonegap/DroidGap;->initUrl:Ljava/lang/String;
 
     if-eqz v0, :cond_c
@@ -4005,15 +3903,15 @@
 
     if-lez v0, :cond_10
 
-    .line 859
+    .line 680
     :cond_c
     invoke-direct {p0, p1}, Lcom/phonegap/DroidGap;->loadUrlIntoView(Ljava/lang/String;)V
 
-    .line 865
+    .line 686
     :goto_f
     return-void
 
-    .line 863
+    .line 684
     :cond_10
     iget-object v0, p0, Lcom/phonegap/DroidGap;->initUrl:Ljava/lang/String;
 
@@ -4028,7 +3926,7 @@
     .param p2, "time"    # I
 
     .prologue
-    .line 987
+    .line 808
     iget-object v0, p0, Lcom/phonegap/DroidGap;->initUrl:Ljava/lang/String;
 
     if-eqz v0, :cond_c
@@ -4041,15 +3939,15 @@
 
     if-lez v0, :cond_10
 
-    .line 988
+    .line 809
     :cond_c
     invoke-direct {p0, p1, p2}, Lcom/phonegap/DroidGap;->loadUrlIntoView(Ljava/lang/String;I)V
 
-    .line 994
+    .line 815
     :goto_f
     return-void
 
-    .line 992
+    .line 813
     :cond_10
     iget-object v0, p0, Lcom/phonegap/DroidGap;->initUrl:Ljava/lang/String;
 
@@ -4064,7 +3962,7 @@
     .param p2, "paramInt2"    # I
 
     .prologue
-    .line 3345
+    .line 3167
     return-void
 .end method
 
@@ -4075,69 +3973,21 @@
     .param p3, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 2124
+    .line 1946
     invoke-super {p0, p1, p2, p3}, Lcom/phonegap/api/PhonegapActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 2125
+    .line 1947
     iget-object v0, p0, Lcom/phonegap/DroidGap;->activityResultCallback:Lcom/phonegap/api/IPlugin;
 
-    .line 2126
+    .line 1948
     .local v0, "callback":Lcom/phonegap/api/IPlugin;
     if-eqz v0, :cond_a
 
-    .line 2127
+    .line 1949
     invoke-interface {v0, p1, p2, p3}, Lcom/phonegap/api/IPlugin;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 2129
+    .line 1951
     :cond_a
-    return-void
-.end method
-
-.method public onClickAd(Ljava/lang/String;)V
-    .registers 4
-    .param p1, "arg0"    # Ljava/lang/String;
-
-    .prologue
-    .line 720
-    const-string v0, "AdsMOGO SDK"
-
-    const-string v1, "-=onClickAd=-"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 721
-    return-void
-.end method
-
-.method public onCloseAd()Z
-    .registers 3
-
-    .prologue
-    .line 728
-    const-string v0, "AdsMOGO SDK"
-
-    const-string v1, "-=onCloseAd=-"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 729
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public onCloseMogoDialog()V
-    .registers 3
-
-    .prologue
-    .line 737
-    const-string v0, "AdsMOGO SDK"
-
-    const-string v1, "-=onCloseMogoDialog=-"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 738
     return-void
 .end method
 
@@ -4146,10 +3996,10 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 1113
+    .line 934
     invoke-super {p0, p1}, Lcom/phonegap/api/PhonegapActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 1114
+    .line 935
     return-void
 .end method
 
@@ -4158,17 +4008,17 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 331
+    .line 323
     sget-object v6, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
     const-string v7, "DroidGap.onCreate()"
 
     invoke-static {v6, v7}, Lcom/phonegap/api/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 332
+    .line 324
     invoke-super {p0, p1}, Lcom/phonegap/api/PhonegapActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 340
+    .line 332
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getWindow()Landroid/view/Window;
 
     move-result-object v6
@@ -4177,12 +4027,12 @@
 
     invoke-virtual {v6, v7}, Landroid/view/Window;->requestFeature(I)Z
 
-    .line 341
+    .line 333
     new-instance v2, Landroid/util/DisplayMetrics;
 
     invoke-direct {v2}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 342
+    .line 334
     .local v2, "metrics":Landroid/util/DisplayMetrics;
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getWindowManager()Landroid/view/WindowManager;
 
@@ -4194,7 +4044,7 @@
 
     invoke-virtual {v6, v2}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 343
+    .line 335
     iget v6, v2, Landroid/util/DisplayMetrics;->heightPixels:I
 
     int-to-double v6, v6
@@ -4211,7 +4061,7 @@
 
     iput-wide v6, p0, Lcom/phonegap/DroidGap;->ratio:D
 
-    .line 347
+    .line 339
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getWindow()Landroid/view/Window;
 
     move-result-object v6
@@ -4220,7 +4070,7 @@
 
     invoke-virtual {v6, v7}, Landroid/view/Window;->addFlags(I)V
 
-    .line 348
+    .line 340
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getWindow()Landroid/view/Window;
 
     move-result-object v6
@@ -4229,7 +4079,7 @@
 
     invoke-virtual {v6, v7}, Landroid/view/Window;->clearFlags(I)V
 
-    .line 350
+    .line 342
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -4244,7 +4094,7 @@
 
     iput-wide v6, p0, Lcom/phonegap/DroidGap;->density:D
 
-    .line 353
+    .line 345
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -4255,7 +4105,7 @@
 
     iget v4, v6, Landroid/content/res/Configuration;->screenLayout:I
 
-    .line 354
+    .line 346
     .local v4, "sl":I
     and-int/lit8 v6, v4, 0x3
 
@@ -4263,10 +4113,10 @@
 
     if-ne v6, v7, :cond_f9
 
-    .line 355
+    .line 347
     const/4 v1, 0x1
 
-    .line 364
+    .line 356
     .local v1, "large":I
     :goto_5d
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getResources()Landroid/content/res/Resources;
@@ -4279,7 +4129,7 @@
 
     iget v3, v6, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 365
+    .line 357
     .local v3, "screenwidth":I
     int-to-double v6, v3
 
@@ -4289,27 +4139,27 @@
 
     double-to-int v3, v6
 
-    .line 366
+    .line 358
     const/4 v6, 0x1
 
     if-lt v1, v6, :cond_134
 
-    .line 367
+    .line 359
     const/16 v6, 0x320
 
     if-lt v3, v6, :cond_10c
 
-    .line 368
+    .line 360
     const v6, 0x7f030003
 
     invoke-virtual {p0, v6}, Lcom/phonegap/DroidGap;->setContentView(I)V
 
-    .line 369
+    .line 361
     const/4 v6, 0x2
 
     iput v6, p0, Lcom/phonegap/DroidGap;->isTablet:I
 
-    .line 385
+    .line 377
     :goto_7c
     const v6, 0x7f070001
 
@@ -4321,7 +4171,7 @@
 
     iput-object v6, p0, Lcom/phonegap/DroidGap;->chatView0:Landroid/widget/ScrollView;
 
-    .line 386
+    .line 378
     const v6, 0x7f070002
 
     invoke-virtual {p0, v6}, Lcom/phonegap/DroidGap;->findViewById(I)Landroid/view/View;
@@ -4332,7 +4182,7 @@
 
     iput-object v6, p0, Lcom/phonegap/DroidGap;->chatView:Landroid/widget/TextView;
 
-    .line 387
+    .line 379
     const/high16 v6, 0x7f070000
 
     invoke-virtual {p0, v6}, Lcom/phonegap/DroidGap;->findViewById(I)Landroid/view/View;
@@ -4343,71 +4193,71 @@
 
     iput-object v6, p0, Lcom/phonegap/DroidGap;->adView:Landroid/widget/LinearLayout;
 
-    .line 389
+    .line 381
     iget-object v6, p0, Lcom/phonegap/DroidGap;->chatView0:Landroid/widget/ScrollView;
 
     const/4 v7, 0x0
 
     invoke-virtual {v6, v7}, Landroid/widget/ScrollView;->setVerticalFadingEdgeEnabled(Z)V
 
-    .line 390
+    .line 382
     iget-object v6, p0, Lcom/phonegap/DroidGap;->chatView:Landroid/widget/TextView;
 
     const-string v7, ""
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 392
+    .line 384
     iget-object v6, p0, Lcom/phonegap/DroidGap;->chatView0:Landroid/widget/ScrollView;
 
     const/high16 v7, -0x1000000
 
     invoke-virtual {v6, v7}, Landroid/widget/ScrollView;->setBackgroundColor(I)V
 
-    .line 393
+    .line 385
     iget-object v6, p0, Lcom/phonegap/DroidGap;->chatView:Landroid/widget/TextView;
 
     const/high16 v7, -0x1000000
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setBackgroundColor(I)V
 
-    .line 394
+    .line 386
     iget-object v6, p0, Lcom/phonegap/DroidGap;->chatView:Landroid/widget/TextView;
 
     const/4 v7, -0x1
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 395
+    .line 387
     iget-object v6, p0, Lcom/phonegap/DroidGap;->chatView:Landroid/widget/TextView;
 
     const/high16 v7, 0x41400000    # 12.0f
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 397
+    .line 389
     const/4 v6, 0x0
 
     iput-boolean v6, p0, Lcom/phonegap/DroidGap;->chatshowing:Z
 
-    .line 398
+    .line 390
     iget-object v6, p0, Lcom/phonegap/DroidGap;->adView:Landroid/widget/LinearLayout;
 
     const/4 v7, 0x0
 
     invoke-virtual {v6, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 399
+    .line 391
     iget-object v6, p0, Lcom/phonegap/DroidGap;->chatView0:Landroid/widget/ScrollView;
 
     const/16 v7, 0x8
 
     invoke-virtual {v6, v7}, Landroid/widget/ScrollView;->setVisibility(I)V
 
-    .line 404
+    .line 396
     invoke-direct {p0}, Lcom/phonegap/DroidGap;->loadConfiguration()V
 
-    .line 407
+    .line 399
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getIntent()Landroid/content/Intent;
 
     move-result-object v6
@@ -4416,46 +4266,46 @@
 
     move-result-object v0
 
-    .line 408
+    .line 400
     .local v0, "bundle":Landroid/os/Bundle;
     if-eqz v0, :cond_eb
 
-    .line 409
+    .line 401
     const-string v6, "url"
 
     invoke-virtual {v0, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 410
+    .line 402
     .local v5, "url":Ljava/lang/String;
     if-eqz v5, :cond_eb
 
-    .line 411
+    .line 403
     iput-object v5, p0, Lcom/phonegap/DroidGap;->initUrl:Ljava/lang/String;
 
-    .line 415
+    .line 407
     .end local v5    # "url":Ljava/lang/String;
     :cond_eb
     const/4 v6, 0x3
 
     invoke-virtual {p0, v6}, Lcom/phonegap/DroidGap;->setVolumeControlStream(I)V
 
-    .line 417
+    .line 409
     iget v6, p0, Lcom/phonegap/DroidGap;->isTablet:I
 
     if-lez v6, :cond_13e
 
-    .line 418
+    .line 410
     const-string v6, "file:///android_asset/www/tablet/index.html"
 
     invoke-virtual {p0, v6}, Lcom/phonegap/DroidGap;->loadUrl(Ljava/lang/String;)V
 
-    .line 422
+    .line 414
     :goto_f8
     return-void
 
-    .line 356
+    .line 348
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "large":I
     .end local v3    # "screenwidth":I
@@ -4466,10 +4316,10 @@
 
     if-ne v6, v7, :cond_101
 
-    .line 357
+    .line 349
     const/4 v1, 0x2
 
-    .line 358
+    .line 350
     .restart local v1    # "large":I
     goto/16 :goto_5d
 
@@ -4481,14 +4331,14 @@
 
     if-ne v6, v7, :cond_109
 
-    .line 359
+    .line 351
     const/4 v1, 0x0
 
-    .line 360
+    .line 352
     .restart local v1    # "large":I
     goto/16 :goto_5d
 
-    .line 361
+    .line 353
     .end local v1    # "large":I
     :cond_109
     const/4 v1, -0x1
@@ -4496,70 +4346,70 @@
     .restart local v1    # "large":I
     goto/16 :goto_5d
 
-    .line 370
+    .line 362
     .restart local v3    # "screenwidth":I
     :cond_10c
     const/16 v6, 0x258
 
     if-lt v3, v6, :cond_11b
 
-    .line 371
+    .line 363
     const v6, 0x7f030002
 
     invoke-virtual {p0, v6}, Lcom/phonegap/DroidGap;->setContentView(I)V
 
-    .line 372
+    .line 364
     const/4 v6, 0x1
 
     iput v6, p0, Lcom/phonegap/DroidGap;->isTablet:I
 
     goto/16 :goto_7c
 
-    .line 373
+    .line 365
     :cond_11b
     const/16 v6, 0x215
 
     if-lt v3, v6, :cond_12a
 
-    .line 374
+    .line 366
     const v6, 0x7f030001
 
     invoke-virtual {p0, v6}, Lcom/phonegap/DroidGap;->setContentView(I)V
 
-    .line 375
+    .line 367
     const/4 v6, 0x3
 
     iput v6, p0, Lcom/phonegap/DroidGap;->isTablet:I
 
     goto/16 :goto_7c
 
-    .line 377
+    .line 369
     :cond_12a
     const/high16 v6, 0x7f030000
 
     invoke-virtual {p0, v6}, Lcom/phonegap/DroidGap;->setContentView(I)V
 
-    .line 378
+    .line 370
     const/4 v6, 0x0
 
     iput v6, p0, Lcom/phonegap/DroidGap;->isTablet:I
 
     goto/16 :goto_7c
 
-    .line 381
+    .line 373
     :cond_134
     const/high16 v6, 0x7f030000
 
     invoke-virtual {p0, v6}, Lcom/phonegap/DroidGap;->setContentView(I)V
 
-    .line 382
+    .line 374
     const/4 v6, 0x0
 
     iput v6, p0, Lcom/phonegap/DroidGap;->isTablet:I
 
     goto/16 :goto_7c
 
-    .line 420
+    .line 412
     .restart local v0    # "bundle":Landroid/os/Bundle;
     :cond_13e
     const-string v6, "file:///android_asset/www/phone/index.html"
@@ -4574,12 +4424,12 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 2409
+    .line 2231
     const-string v0, "onCreateOptionsMenu"
 
     invoke-virtual {p0, v0, p1}, Lcom/phonegap/DroidGap;->postMessage(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 2410
+    .line 2232
     invoke-super {p0, p1}, Lcom/phonegap/api/PhonegapActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     move-result v0
@@ -4591,74 +4441,55 @@
     .registers 3
 
     .prologue
-    .line 1315
+    .line 1136
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->game_2_disconnectServer()V
 
-    .line 1317
+    .line 1138
     invoke-super {p0}, Lcom/phonegap/api/PhonegapActivity;->onDestroy()V
 
-    .line 1319
-    invoke-static {}, Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;->shareInstance()Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;
+    .line 1141
+    invoke-static {p0}, Lcom/fivefeiwo/coverscreen/CPManager;->destory(Landroid/content/Context;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/adsmogo/interstitial/AdsMogoInterstitialManager;->removeDefaultInterstitialInstance()V
-
-    .line 1321
+    .line 1143
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
-    if-eqz v0, :cond_2c
+    if-eqz v0, :cond_28
 
-    .line 1325
+    .line 1147
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     const-string v1, "javascript:try{PhoneGap.onDestroy.fire();}catch(e){};"
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 1328
+    .line 1150
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     const-string v1, "about:blank"
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 1331
+    .line 1153
     iget-object v0, p0, Lcom/phonegap/DroidGap;->pluginManager:Lcom/phonegap/api/PluginManager;
 
     invoke-virtual {v0}, Lcom/phonegap/api/PluginManager;->onDestroy()V
 
-    .line 1336
-    :goto_24
+    .line 1158
+    :goto_20
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
     invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
 
-    .line 1337
+    .line 1159
     return-void
 
-    .line 1334
-    :cond_2c
+    .line 1156
+    :cond_28
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->endActivity()V
 
-    goto :goto_24
-.end method
-
-.method public onFailedReceiveAd()V
-    .registers 3
-
-    .prologue
-    .line 745
-    const-string v0, "AdsMOGO SDK"
-
-    const-string v1, "-=onFailedReceiveAd=-"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 747
-    return-void
+    goto :goto_20
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -4669,38 +4500,38 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2014
+    .line 1836
     iget-object v1, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     if-nez v1, :cond_a
 
-    .line 2015
+    .line 1837
     invoke-super {p0, p1, p2}, Lcom/phonegap/api/PhonegapActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
-    .line 2032
+    .line 1854
     :cond_9
     :goto_9
     return v0
 
-    .line 2017
+    .line 1839
     :cond_a
     const/16 v1, 0x52
 
     if-eq p1, v1, :cond_9
 
-    .line 2022
+    .line 1844
     const/16 v1, 0x54
 
     if-eq p1, v1, :cond_9
 
-    .line 2026
+    .line 1848
     const/4 v1, 0x4
 
     if-ne p1, v1, :cond_1d
 
-    .line 2029
+    .line 1851
     iget-object v1, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     const-string v2, "javascript:game_2_processBack()"
@@ -4709,7 +4540,7 @@
 
     goto :goto_9
 
-    .line 2032
+    .line 1854
     :cond_1d
     invoke-super {p0, p1, p2}, Lcom/phonegap/api/PhonegapActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -4723,15 +4554,15 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1268
+    .line 1089
     invoke-super {p0, p1}, Lcom/phonegap/api/PhonegapActivity;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 1271
+    .line 1092
     iget-object v0, p0, Lcom/phonegap/DroidGap;->pluginManager:Lcom/phonegap/api/PluginManager;
 
     invoke-virtual {v0, p1}, Lcom/phonegap/api/PluginManager;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 1272
+    .line 1093
     return-void
 .end method
 
@@ -4740,12 +4571,12 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 2423
+    .line 2245
     const-string v0, "onOptionsItemSelected"
 
     invoke-virtual {p0, v0, p1}, Lcom/phonegap/DroidGap;->postMessage(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 2424
+    .line 2246
     const/4 v0, 0x1
 
     return v0
@@ -4755,54 +4586,54 @@
     .registers 3
 
     .prologue
-    .line 1237
+    .line 1058
     invoke-super {p0}, Lcom/phonegap/api/PhonegapActivity;->onPause()V
 
-    .line 1238
+    .line 1059
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     const-string v1, "javascript:pauseGame()"
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 1241
+    .line 1062
     iget v0, p0, Lcom/phonegap/DroidGap;->activityState:I
 
     sget v1, Lcom/phonegap/DroidGap;->ACTIVITY_EXITING:I
 
     if-ne v0, v1, :cond_11
 
-    .line 1261
+    .line 1082
     :cond_10
     :goto_10
     return-void
 
-    .line 1245
+    .line 1066
     :cond_11
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_10
 
-    .line 1250
+    .line 1071
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     const-string v1, "javascript:try{PhoneGap.fireDocumentEvent(\'pause\');}catch(e){};"
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 1253
+    .line 1074
     iget-object v0, p0, Lcom/phonegap/DroidGap;->pluginManager:Lcom/phonegap/api/PluginManager;
 
     iget-boolean v1, p0, Lcom/phonegap/DroidGap;->keepRunning:Z
 
     invoke-virtual {v0, v1}, Lcom/phonegap/api/PluginManager;->onPause(Z)V
 
-    .line 1256
+    .line 1077
     iget-boolean v0, p0, Lcom/phonegap/DroidGap;->keepRunning:Z
 
     if-nez v0, :cond_10
 
-    .line 1259
+    .line 1080
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->pauseTimers()V
@@ -4815,58 +4646,17 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 2416
+    .line 2238
     const-string v0, "onPrepareOptionsMenu"
 
     invoke-virtual {p0, v0, p1}, Lcom/phonegap/DroidGap;->postMessage(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 2417
+    .line 2239
     invoke-super {p0, p1}, Lcom/phonegap/api/PhonegapActivity;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
     move-result v0
 
     return v0
-.end method
-
-.method public onRealClickAd()V
-    .registers 3
-
-    .prologue
-    .line 754
-    const-string v0, "AdsMOGO SDK"
-
-    const-string v1, "-=onRealClickAd=-"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 756
-    return-void
-.end method
-
-.method public onReceiveAd(Landroid/view/ViewGroup;Ljava/lang/String;)V
-    .registers 5
-    .param p1, "arg0"    # Landroid/view/ViewGroup;
-    .param p2, "arg1"    # Ljava/lang/String;
-
-    .prologue
-    .line 764
-    const-string v0, "AdsMOGO SDK"
-
-    const-string v1, "-=onReceiveAd=-"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 766
-    iget-object v0, p0, Lcom/phonegap/DroidGap;->handler:Landroid/os/Handler;
-
-    new-instance v1, Lcom/phonegap/DroidGap$6;
-
-    invoke-direct {v1, p0}, Lcom/phonegap/DroidGap$6;-><init>(Lcom/phonegap/DroidGap;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 772
-    return-void
 .end method
 
 .method public onReceivedError(ILjava/lang/String;Ljava/lang/String;)V
@@ -4876,10 +4666,10 @@
     .param p3, "failingUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 2145
+    .line 1967
     move-object v1, p0
 
-    .line 2148
+    .line 1970
     .local v1, "me":Lcom/phonegap/DroidGap;
     const-string v2, "errorUrl"
 
@@ -4889,7 +4679,7 @@
 
     move-result-object v0
 
-    .line 2149
+    .line 1971
     .local v0, "errorUrl":Ljava/lang/String;
     if-eqz v0, :cond_2f
 
@@ -4922,55 +4712,39 @@
 
     if-nez v2, :cond_2f
 
-    .line 2152
-    new-instance v2, Lcom/phonegap/DroidGap$11;
+    .line 1974
+    new-instance v2, Lcom/phonegap/DroidGap$10;
 
-    invoke-direct {v2, p0, v1, v0}, Lcom/phonegap/DroidGap$11;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V
+    invoke-direct {v2, p0, v1, v0}, Lcom/phonegap/DroidGap$10;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2}, Lcom/phonegap/DroidGap;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2168
+    .line 1990
     :goto_2e
     return-void
 
-    .line 2161
+    .line 1983
     :cond_2f
-    new-instance v2, Lcom/phonegap/DroidGap$12;
+    new-instance v2, Lcom/phonegap/DroidGap$11;
 
-    invoke-direct {v2, p0, v1, p2, p3}, Lcom/phonegap/DroidGap$12;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, p0, v1, p2, p3}, Lcom/phonegap/DroidGap$11;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2}, Lcom/phonegap/DroidGap;->runOnUiThread(Ljava/lang/Runnable;)V
 
     goto :goto_2e
 .end method
 
-.method public onRequestAd(Ljava/lang/String;)V
-    .registers 4
-    .param p1, "arg0"    # Ljava/lang/String;
-
-    .prologue
-    .line 779
-    const-string v0, "AdsMOGO SDK"
-
-    const-string v1, "-=onRequestAd=-"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 781
-    return-void
-.end method
-
 .method protected onRestart()V
     .registers 1
 
     .prologue
-    .line 3189
+    .line 3011
     invoke-super {p0}, Lcom/phonegap/api/PhonegapActivity;->onRestart()V
 
-    .line 3190
+    .line 3012
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->game_2_comeBackToServer()V
 
-    .line 3191
+    .line 3013
     return-void
 .end method
 
@@ -4980,40 +4754,40 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1279
+    .line 1100
     invoke-super {p0}, Lcom/phonegap/api/PhonegapActivity;->onResume()V
 
-    .line 1281
+    .line 1102
     iget v0, p0, Lcom/phonegap/DroidGap;->activityState:I
 
     sget v2, Lcom/phonegap/DroidGap;->ACTIVITY_STARTING:I
 
     if-ne v0, v2, :cond_f
 
-    .line 1282
+    .line 1103
     sget v0, Lcom/phonegap/DroidGap;->ACTIVITY_RUNNING:I
 
     iput v0, p0, Lcom/phonegap/DroidGap;->activityState:I
 
-    .line 1308
+    .line 1129
     :cond_e
     :goto_e
     return-void
 
-    .line 1286
+    .line 1107
     :cond_f
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_e
 
-    .line 1291
+    .line 1112
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
     const-string v2, "javascript:try{PhoneGap.fireDocumentEvent(\'resume\');}catch(e){};"
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 1294
+    .line 1115
     iget-object v2, p0, Lcom/phonegap/DroidGap;->pluginManager:Lcom/phonegap/api/PluginManager;
 
     iget-boolean v0, p0, Lcom/phonegap/DroidGap;->keepRunning:Z
@@ -5029,7 +4803,7 @@
     :goto_25
     invoke-virtual {v2, v0}, Lcom/phonegap/api/PluginManager;->onResume(Z)V
 
-    .line 1297
+    .line 1118
     iget-boolean v0, p0, Lcom/phonegap/DroidGap;->keepRunning:Z
 
     if-eqz v0, :cond_30
@@ -5038,21 +4812,21 @@
 
     if-eqz v0, :cond_e
 
-    .line 1300
+    .line 1121
     :cond_30
     iget-boolean v0, p0, Lcom/phonegap/DroidGap;->activityResultKeepRunning:Z
 
     if-eqz v0, :cond_3a
 
-    .line 1301
+    .line 1122
     iget-boolean v0, p0, Lcom/phonegap/DroidGap;->activityResultKeepRunning:Z
 
     iput-boolean v0, p0, Lcom/phonegap/DroidGap;->keepRunning:Z
 
-    .line 1302
+    .line 1123
     iput-boolean v1, p0, Lcom/phonegap/DroidGap;->activityResultKeepRunning:Z
 
-    .line 1306
+    .line 1127
     :cond_3a
     iget-object v0, p0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
 
@@ -5060,7 +4834,7 @@
 
     goto :goto_e
 
-    .line 1294
+    .line 1115
     :cond_40
     const/4 v0, 0x1
 
@@ -5071,7 +4845,7 @@
     .registers 1
 
     .prologue
-    .line 3348
+    .line 3170
     return-void
 .end method
 
@@ -5079,7 +4853,7 @@
     .registers 1
 
     .prologue
-    .line 3354
+    .line 3176
     return-void
 .end method
 
@@ -5087,13 +4861,13 @@
     .registers 1
 
     .prologue
-    .line 3185
+    .line 3007
     invoke-super {p0}, Lcom/phonegap/api/PhonegapActivity;->onStop()V
 
-    .line 3186
+    .line 3008
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->game_2_leaveFromServer()V
 
-    .line 3187
+    .line 3009
     return-void
 .end method
 
@@ -5101,7 +4875,7 @@
     .registers 2
 
     .prologue
-    .line 3426
+    .line 3248
     const-string v0, ""
 
     return-object v0
@@ -5111,7 +4885,7 @@
     .registers 1
 
     .prologue
-    .line 3447
+    .line 3269
     return-void
 .end method
 
@@ -5119,7 +4893,7 @@
     .registers 1
 
     .prologue
-    .line 3394
+    .line 3216
     return-void
 .end method
 
@@ -5128,7 +4902,7 @@
     .param p1, "score"    # I
 
     .prologue
-    .line 3415
+    .line 3237
     return-void
 .end method
 
@@ -5136,7 +4910,7 @@
     .registers 1
 
     .prologue
-    .line 3437
+    .line 3259
     return-void
 .end method
 
@@ -5144,7 +4918,7 @@
     .registers 1
 
     .prologue
-    .line 3401
+    .line 3223
     return-void
 .end method
 
@@ -5152,7 +4926,7 @@
     .registers 1
 
     .prologue
-    .line 3423
+    .line 3245
     return-void
 .end method
 
@@ -5165,7 +4939,7 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 3464
+    .line 3286
     iget-object v0, p0, Lcom/phonegap/DroidGap;->soundPoolMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -5174,12 +4948,12 @@
 
     if-lt p1, v0, :cond_c
 
-    .line 3486
+    .line 3308
     :cond_b
     :goto_b
     return-void
 
-    .line 3467
+    .line 3289
     :cond_c
     iget-object v0, p0, Lcom/phonegap/DroidGap;->soundPoolMap:Ljava/util/HashMap;
 
@@ -5197,13 +4971,13 @@
 
     move-result v1
 
-    .line 3468
+    .line 3290
     .local v1, "i":I
     const/4 v0, -0x1
 
     if-eq v1, v0, :cond_b
 
-    .line 3469
+    .line 3291
     iget-object v0, p0, Lcom/phonegap/DroidGap;->soundPool:Landroid/media/SoundPool;
 
     move v3, v2
@@ -5223,12 +4997,12 @@
     .param p2, "data"    # Ljava/lang/Object;
 
     .prologue
-    .line 1348
+    .line 1170
     iget-object v0, p0, Lcom/phonegap/DroidGap;->pluginManager:Lcom/phonegap/api/PluginManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/phonegap/api/PluginManager;->postMessage(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1349
+    .line 1171
     return-void
 .end method
 
@@ -5236,10 +5010,10 @@
     .registers 16
 
     .prologue
-    .line 3300
+    .line 3122
     const/16 v0, 0x2000
 
-    .line 3301
+    .line 3123
     .local v0, "BUFFER":I
     :try_start_2
     new-instance v8, Ljava/io/BufferedInputStream;
@@ -5252,34 +5026,34 @@
 
     invoke-direct {v8, v13, v14}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
 
-    .line 3302
+    .line 3124
     .local v8, "ins":Ljava/io/InputStream;
     const-wide/16 v13, 0x4
 
     invoke-virtual {v8, v13, v14}, Ljava/io/InputStream;->skip(J)J
 
-    .line 3303
+    .line 3125
     new-instance v12, Ljava/util/zip/ZipInputStream;
 
     invoke-direct {v12, v8}, Ljava/util/zip/ZipInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 3305
+    .line 3127
     .local v12, "zins":Ljava/util/zip/ZipInputStream;
     const/16 v13, 0x2000
 
     new-array v2, v13, [B
 
-    .line 3306
+    .line 3128
     .local v2, "data":[B
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getCacheDir()Ljava/io/File;
 
     move-result-object v9
 
-    .line 3308
+    .line 3130
     .local v9, "pathCacheDir":Ljava/io/File;
     const-string v4, "data/"
 
-    .line 3309
+    .line 3131
     .local v4, "filePath":Ljava/lang/String;
     new-instance v13, Ljava/io/File;
 
@@ -5287,7 +5061,7 @@
 
     invoke-static {v13}, Lcom/phonegap/DroidGap;->deleteDir(Ljava/io/File;)Z
 
-    .line 3311
+    .line 3133
     :goto_2a
     invoke-virtual {v12}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
 
@@ -5296,13 +5070,13 @@
     .local v10, "ze":Ljava/util/zip/ZipEntry;
     if-nez v10, :cond_37
 
-    .line 3336
+    .line 3158
     invoke-virtual {v12}, Ljava/util/zip/ZipInputStream;->close()V
 
-    .line 3337
+    .line 3159
     invoke-virtual {v8}, Ljava/io/InputStream;->close()V
 
-    .line 3341
+    .line 3163
     .end local v2    # "data":[B
     .end local v4    # "filePath":Ljava/lang/String;
     .end local v8    # "ins":Ljava/io/InputStream;
@@ -5312,7 +5086,7 @@
     :goto_36
     return-void
 
-    .line 3312
+    .line 3134
     .restart local v2    # "data":[B
     .restart local v4    # "filePath":Ljava/lang/String;
     .restart local v8    # "ins":Ljava/io/InputStream;
@@ -5324,7 +5098,7 @@
 
     move-result-object v5
 
-    .line 3313
+    .line 3135
     .local v5, "fname":Ljava/lang/String;
     new-instance v11, Ljava/io/File;
 
@@ -5350,7 +5124,7 @@
 
     invoke-direct {v11, v9, v13}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 3314
+    .line 3136
     .local v11, "zfile":Ljava/io/File;
     new-instance v7, Ljava/io/File;
 
@@ -5364,7 +5138,7 @@
 
     invoke-direct {v7, v13}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3315
+    .line 3137
     .local v7, "fpath":Ljava/io/File;
     invoke-virtual {v10}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
@@ -5372,23 +5146,23 @@
 
     if-eqz v13, :cond_77
 
-    .line 3316
+    .line 3138
     invoke-virtual {v11}, Ljava/io/File;->exists()Z
 
     move-result v13
 
     if-nez v13, :cond_71
 
-    .line 3317
+    .line 3139
     invoke-virtual {v11}, Ljava/io/File;->mkdirs()Z
 
-    .line 3318
+    .line 3140
     :cond_71
     invoke-virtual {v12}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
     goto :goto_2a
 
-    .line 3338
+    .line 3160
     .end local v2    # "data":[B
     .end local v4    # "filePath":Ljava/lang/String;
     .end local v5    # "fname":Ljava/lang/String;
@@ -5403,7 +5177,7 @@
 
     goto :goto_36
 
-    .line 3320
+    .line 3142
     .restart local v2    # "data":[B
     .restart local v4    # "filePath":Ljava/lang/String;
     .restart local v5    # "fname":Ljava/lang/String;
@@ -5420,16 +5194,16 @@
 
     if-nez v13, :cond_80
 
-    .line 3321
+    .line 3143
     invoke-virtual {v7}, Ljava/io/File;->mkdirs()Z
 
-    .line 3322
+    .line 3144
     :cond_80
     new-instance v6, Ljava/io/FileOutputStream;
 
     invoke-direct {v6, v11}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 3323
+    .line 3145
     .local v6, "fouts":Ljava/io/FileOutputStream;
     new-instance v3, Ljava/io/BufferedOutputStream;
 
@@ -5437,7 +5211,7 @@
 
     invoke-direct {v3, v6, v13}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;I)V
 
-    .line 3325
+    .line 3147
     .local v3, "dest":Ljava/io/BufferedOutputStream;
     :goto_8c
     const/4 v13, 0x0
@@ -5453,21 +5227,21 @@
 
     if-ne v1, v13, :cond_a3
 
-    .line 3328
+    .line 3150
     invoke-virtual {v3}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 3329
+    .line 3151
     invoke-virtual {v3}, Ljava/io/BufferedOutputStream;->close()V
 
-    .line 3330
+    .line 3152
     invoke-virtual {v12}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
-    .line 3331
+    .line 3153
     invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
 
     goto :goto_2a
 
-    .line 3326
+    .line 3148
     :cond_a3
     const/4 v13, 0x0
 
@@ -5483,7 +5257,7 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 2915
+    .line 2737
     :try_start_0
     new-instance v3, Ljava/io/ByteArrayInputStream;
 
@@ -5491,13 +5265,13 @@
 
     invoke-direct {v3, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 2916
+    .line 2738
     .local v3, "bin":Ljava/io/ByteArrayInputStream;
     new-instance v8, Ljava/io/DataInputStream;
 
     invoke-direct {v8, v3}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 2917
+    .line 2739
     .local v8, "dis":Ljava/io/DataInputStream;
     const/16 v83, 0x3
 
@@ -5505,7 +5279,7 @@
 
     new-array v4, v0, [B
 
-    .line 2918
+    .line 2740
     .local v4, "ctype":[B
     const/16 v83, 0x0
 
@@ -5517,7 +5291,7 @@
 
     invoke-virtual {v8, v4, v0, v1}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2919
+    .line 2741
     new-instance v83, Ljava/lang/String;
 
     move-object/from16 v0, v83
@@ -5528,18 +5302,18 @@
 
     move-result v81
 
-    .line 2920
+    .line 2742
     .local v81, "type":I
     sparse-switch v81, :sswitch_data_b70
 
-    .line 3177
+    .line 2999
     :goto_2b
     invoke-virtual {v8}, Ljava/io/DataInputStream;->close()V
 
-    .line 3178
+    .line 3000
     invoke-virtual {v3}, Ljava/io/ByteArrayInputStream;->close()V
 
-    .line 3182
+    .line 3004
     .end local v3    # "bin":Ljava/io/ByteArrayInputStream;
     .end local v4    # "ctype":[B
     .end local v8    # "dis":Ljava/io/DataInputStream;
@@ -5547,7 +5321,7 @@
     :goto_31
     return-void
 
-    .line 2922
+    .line 2744
     .restart local v3    # "bin":Ljava/io/ByteArrayInputStream;
     .restart local v4    # "ctype":[B
     .restart local v8    # "dis":Ljava/io/DataInputStream;
@@ -5561,7 +5335,7 @@
 
     move-object/from16 v62, v0
 
-    .line 2923
+    .line 2745
     .local v62, "pass1":[B
     const/16 v83, 0x0
 
@@ -5575,7 +5349,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2924
+    .line 2746
     new-instance v83, Ljava/lang/String;
 
     move-object/from16 v0, v83
@@ -5590,25 +5364,25 @@
 
     iput-object v0, v1, Lcom/phonegap/DroidGap;->client_pass:Ljava/lang/String;
 
-    .line 2925
+    .line 2747
     invoke-virtual {v8}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v13
 
-    .line 2926
+    .line 2748
     .local v13, "id":I
     move-object/from16 v0, p0
 
     iput v13, v0, Lcom/phonegap/DroidGap;->client_id:I
 
-    .line 2927
+    .line 2749
     const/16 v83, 0x1
 
     move/from16 v0, v83
 
     new-array v10, v0, [B
 
-    .line 2928
+    .line 2750
     .local v10, "filtered1":[B
     const/16 v83, 0x0
 
@@ -5620,7 +5394,7 @@
 
     invoke-virtual {v8, v10, v0, v1}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2929
+    .line 2751
     const/16 v83, 0x0
 
     aget-byte v83, v10, v83
@@ -5633,7 +5407,7 @@
 
     if-ne v0, v1, :cond_94
 
-    .line 2930
+    .line 2752
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -5648,7 +5422,7 @@
 
     goto :goto_2b
 
-    .line 3179
+    .line 3001
     .end local v3    # "bin":Ljava/io/ByteArrayInputStream;
     .end local v4    # "ctype":[B
     .end local v8    # "dis":Ljava/io/DataInputStream;
@@ -5659,7 +5433,7 @@
     :catch_87
     move-exception v9
 
-    .line 3180
+    .line 3002
     .local v9, "e":Ljava/lang/Exception;
     const-string v83, "ClientActivity"
 
@@ -5673,7 +5447,7 @@
 
     goto :goto_31
 
-    .line 2932
+    .line 2754
     .end local v9    # "e":Ljava/lang/Exception;
     .restart local v3    # "bin":Ljava/io/ByteArrayInputStream;
     .restart local v4    # "ctype":[B
@@ -5696,7 +5470,7 @@
 
     goto :goto_2b
 
-    .line 2940
+    .line 2762
     .end local v10    # "filtered1":[B
     .end local v13    # "id":I
     .end local v62    # "pass1":[B
@@ -5707,11 +5481,11 @@
 
     move/from16 v19, v0
 
-    .line 2941
+    .line 2763
     .local v19, "len2":I
     add-int/lit8 v19, v19, -0x3
 
-    .line 2942
+    .line 2764
     const/16 v83, 0x1
 
     move/from16 v0, v83
@@ -5720,7 +5494,7 @@
 
     move-object/from16 v78, v0
 
-    .line 2943
+    .line 2765
     .local v78, "tabletype2":[B
     const/16 v83, 0x0
 
@@ -5734,18 +5508,18 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2944
+    .line 2766
     const/16 v83, 0x0
 
     aget-byte v83, v78, v83
 
     add-int/lit8 v7, v83, -0x30
 
-    .line 2945
+    .line 2767
     .local v7, "currenttype2":I
     add-int/lit8 v19, v19, -0x1
 
-    .line 2946
+    .line 2768
     const/16 v83, 0x2
 
     move/from16 v0, v83
@@ -5754,7 +5528,7 @@
 
     move-object/from16 v77, v0
 
-    .line 2947
+    .line 2769
     .local v77, "tablepage2":[B
     const/16 v83, 0x0
 
@@ -5768,7 +5542,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2948
+    .line 2770
     const/16 v83, 0x0
 
     aget-byte v83, v77, v83
@@ -5785,11 +5559,11 @@
 
     add-int/lit8 v6, v83, -0x30
 
-    .line 2949
+    .line 2771
     .local v6, "currentpage2":I
     add-int/lit8 v19, v19, -0x2
 
-    .line 2950
+    .line 2772
     const/16 v83, 0x1
 
     move/from16 v0, v83
@@ -5798,7 +5572,7 @@
 
     move-object/from16 v60, v0
 
-    .line 2951
+    .line 2773
     .local v60, "nextpage2":[B
     const/16 v83, 0x0
 
@@ -5812,18 +5586,18 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2952
+    .line 2774
     const/16 v83, 0x0
 
     aget-byte v83, v60, v83
 
     add-int/lit8 v12, v83, -0x30
 
-    .line 2953
+    .line 2775
     .local v12, "hasnextpage2":I
     add-int/lit8 v19, v19, -0x1
 
-    .line 2955
+    .line 2777
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -5834,7 +5608,7 @@
 
     invoke-virtual/range {v83 .. v84}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 2956
+    .line 2778
     const/16 v83, 0x3
 
     move/from16 v0, v83
@@ -5843,12 +5617,12 @@
 
     move-object/from16 v26, v0
 
-    .line 2958
+    .line 2780
     .local v26, "length2":[B
     :goto_11b
     if-gtz v19, :cond_157
 
-    .line 2977
+    .line 2799
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -5905,7 +5679,7 @@
 
     goto/16 :goto_2b
 
-    .line 2959
+    .line 2781
     :cond_157
     const/16 v83, 0x0
 
@@ -5919,10 +5693,10 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2960
+    .line 2782
     add-int/lit8 v19, v19, -0x3
 
-    .line 2961
+    .line 2783
     const/16 v83, 0x0
 
     aget-byte v83, v26, v83
@@ -5949,7 +5723,7 @@
 
     add-int/lit8 v75, v83, -0x30
 
-    .line 2962
+    .line 2784
     .local v75, "tableinfolength":I
     const/16 v83, 0x64
 
@@ -5961,7 +5735,7 @@
 
     if-lez v19, :cond_26a
 
-    .line 2963
+    .line 2785
     const/16 v83, 0x1
 
     move/from16 v0, v83
@@ -5970,7 +5744,7 @@
 
     move-object/from16 v79, v0
 
-    .line 2964
+    .line 2786
     .local v79, "tabletype22":[B
     const/16 v83, 0x0
 
@@ -5984,7 +5758,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2965
+    .line 2787
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -5993,7 +5767,7 @@
 
     move-object/from16 v63, v0
 
-    .line 2966
+    .line 2788
     .local v63, "pass22":[B
     const/16 v83, 0x0
 
@@ -6007,7 +5781,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2967
+    .line 2789
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -6016,7 +5790,7 @@
 
     move-object/from16 v73, v0
 
-    .line 2968
+    .line 2790
     .local v73, "tableid22":[B
     const/16 v83, 0x0
 
@@ -6030,7 +5804,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2969
+    .line 2791
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -6039,7 +5813,7 @@
 
     move-object/from16 v34, v0
 
-    .line 2970
+    .line 2792
     .local v34, "levelscore22":[B
     const/16 v83, 0x0
 
@@ -6053,7 +5827,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2971
+    .line 2793
     add-int/lit8 v83, v75, -0xd
 
     move/from16 v0, v83
@@ -6062,7 +5836,7 @@
 
     move-object/from16 v48, v0
 
-    .line 2972
+    .line 2794
     .local v48, "name22":[B
     const/16 v83, 0x0
 
@@ -6076,7 +5850,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2973
+    .line 2795
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -6189,7 +5963,7 @@
 
     invoke-virtual/range {v83 .. v84}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 2975
+    .line 2797
     .end local v34    # "levelscore22":[B
     .end local v48    # "name22":[B
     .end local v63    # "pass22":[B
@@ -6200,7 +5974,7 @@
 
     goto/16 :goto_11b
 
-    .line 2980
+    .line 2802
     .end local v6    # "currentpage2":I
     .end local v7    # "currenttype2":I
     .end local v12    # "hasnextpage2":I
@@ -6219,7 +5993,7 @@
 
     move-object/from16 v80, v0
 
-    .line 2981
+    .line 2803
     .local v80, "tabletype3":[B
     const/16 v83, 0x0
 
@@ -6233,7 +6007,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2982
+    .line 2804
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -6242,7 +6016,7 @@
 
     move-object/from16 v64, v0
 
-    .line 2983
+    .line 2805
     .local v64, "pass3":[B
     const/16 v83, 0x0
 
@@ -6256,7 +6030,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2984
+    .line 2806
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -6265,7 +6039,7 @@
 
     move-object/from16 v74, v0
 
-    .line 2985
+    .line 2807
     .local v74, "tableid3":[B
     const/16 v83, 0x0
 
@@ -6279,7 +6053,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2986
+    .line 2808
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -6288,7 +6062,7 @@
 
     move-object/from16 v35, v0
 
-    .line 2987
+    .line 2809
     .local v35, "levelscore3":[B
     const/16 v83, 0x0
 
@@ -6302,7 +6076,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2988
+    .line 2810
     move-object/from16 v0, p1
 
     array-length v0, v0
@@ -6311,7 +6085,7 @@
 
     add-int/lit8 v23, v83, -0x3
 
-    .line 2989
+    .line 2811
     .local v23, "len3":I
     add-int/lit8 v83, v23, -0xd
 
@@ -6321,7 +6095,7 @@
 
     move-object/from16 v49, v0
 
-    .line 2990
+    .line 2812
     .local v49, "name3":[B
     const/16 v83, 0x0
 
@@ -6335,7 +6109,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2991
+    .line 2813
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -6450,7 +6224,7 @@
 
     goto/16 :goto_2b
 
-    .line 2994
+    .line 2816
     .end local v23    # "len3":I
     .end local v35    # "levelscore3":[B
     .end local v49    # "name3":[B
@@ -6470,7 +6244,7 @@
 
     goto/16 :goto_2b
 
-    .line 2997
+    .line 2819
     :sswitch_364
     const/16 v83, 0x1
 
@@ -6480,7 +6254,7 @@
 
     move-object/from16 v70, v0
 
-    .line 2998
+    .line 2820
     .local v70, "r5":[B
     const/16 v83, 0x0
 
@@ -6494,7 +6268,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 2999
+    .line 2821
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -6533,7 +6307,7 @@
 
     goto/16 :goto_2b
 
-    .line 3002
+    .line 2824
     .end local v70    # "r5":[B
     :sswitch_3a2
     const/16 v83, 0x4
@@ -6544,7 +6318,7 @@
 
     move-object/from16 v36, v0
 
-    .line 3003
+    .line 2825
     .local v36, "levelscore6":[B
     const/16 v83, 0x0
 
@@ -6558,7 +6332,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3004
+    .line 2826
     move-object/from16 v0, p1
 
     array-length v0, v0
@@ -6567,7 +6341,7 @@
 
     add-int/lit8 v24, v83, -0x3
 
-    .line 3005
+    .line 2827
     .local v24, "len6":I
     add-int/lit8 v83, v24, -0x4
 
@@ -6577,7 +6351,7 @@
 
     move-object/from16 v50, v0
 
-    .line 3006
+    .line 2828
     .local v50, "name6":[B
     const/16 v83, 0x0
 
@@ -6591,7 +6365,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3007
+    .line 2829
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -6652,7 +6426,7 @@
 
     goto/16 :goto_2b
 
-    .line 3010
+    .line 2832
     .end local v24    # "len6":I
     .end local v36    # "levelscore6":[B
     .end local v50    # "name6":[B
@@ -6665,7 +6439,7 @@
 
     move-object/from16 v71, v0
 
-    .line 3011
+    .line 2833
     .local v71, "r7":[B
     const/16 v83, 0x0
 
@@ -6679,7 +6453,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3012
+    .line 2834
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -6718,7 +6492,7 @@
 
     goto/16 :goto_2b
 
-    .line 3015
+    .line 2837
     .end local v71    # "r7":[B
     :sswitch_451
     move-object/from16 v0, p0
@@ -6733,7 +6507,7 @@
 
     goto/16 :goto_2b
 
-    .line 3018
+    .line 2840
     :sswitch_45e
     move-object/from16 v0, p0
 
@@ -6747,7 +6521,7 @@
 
     goto/16 :goto_2b
 
-    .line 3021
+    .line 2843
     :sswitch_46b
     move-object/from16 v0, p0
 
@@ -6761,7 +6535,7 @@
 
     goto/16 :goto_2b
 
-    .line 3024
+    .line 2846
     :sswitch_478
     move-object/from16 v0, p0
 
@@ -6775,7 +6549,7 @@
 
     goto/16 :goto_2b
 
-    .line 3027
+    .line 2849
     :sswitch_485
     const/16 v83, 0x1
 
@@ -6785,7 +6559,7 @@
 
     move-object/from16 v76, v0
 
-    .line 3028
+    .line 2850
     .local v76, "tableowner12":[B
     const/16 v83, 0x0
 
@@ -6799,7 +6573,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3029
+    .line 2851
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -6808,7 +6582,7 @@
 
     move-object/from16 v29, v0
 
-    .line 3030
+    .line 2852
     .local v29, "levelscore12":[B
     const/16 v83, 0x0
 
@@ -6822,7 +6596,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3031
+    .line 2853
     move-object/from16 v0, p1
 
     array-length v0, v0
@@ -6831,7 +6605,7 @@
 
     add-int/lit8 v14, v83, -0x3
 
-    .line 3032
+    .line 2854
     .local v14, "len12":I
     add-int/lit8 v83, v14, -0x5
 
@@ -6841,7 +6615,7 @@
 
     move-object/from16 v44, v0
 
-    .line 3033
+    .line 2855
     .local v44, "name12":[B
     const/16 v83, 0x0
 
@@ -6855,7 +6629,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3034
+    .line 2856
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -6934,7 +6708,7 @@
 
     goto/16 :goto_2b
 
-    .line 3037
+    .line 2859
     .end local v14    # "len12":I
     .end local v29    # "levelscore12":[B
     .end local v44    # "name12":[B
@@ -6948,13 +6722,13 @@
 
     add-int/lit8 v15, v83, -0x3
 
-    .line 3038
+    .line 2860
     .local v15, "len13":I
     new-array v0, v15, [B
 
     move-object/from16 v37, v0
 
-    .line 3039
+    .line 2861
     .local v37, "msg13":[B
     const/16 v83, 0x0
 
@@ -6964,7 +6738,7 @@
 
     invoke-virtual {v8, v0, v1, v15}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3040
+    .line 2862
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -7007,7 +6781,7 @@
 
     goto/16 :goto_2b
 
-    .line 3043
+    .line 2865
     .end local v15    # "len13":I
     .end local v37    # "msg13":[B
     :sswitch_55f
@@ -7021,7 +6795,7 @@
 
     goto/16 :goto_2b
 
-    .line 3046
+    .line 2868
     :sswitch_56a
     move-object/from16 v0, p1
 
@@ -7031,7 +6805,7 @@
 
     add-int/lit8 v16, v83, -0x3
 
-    .line 3047
+    .line 2869
     .local v16, "len14":I
     move/from16 v0, v16
 
@@ -7039,7 +6813,7 @@
 
     move-object/from16 v38, v0
 
-    .line 3048
+    .line 2870
     .local v38, "msg14":[B
     const/16 v83, 0x0
 
@@ -7051,7 +6825,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3049
+    .line 2871
     const/16 v83, 0x1
 
     move-object/from16 v0, p0
@@ -7060,7 +6834,7 @@
 
     invoke-virtual {v0, v1}, Lcom/phonegap/DroidGap;->showHideChat(Z)V
 
-    .line 3050
+    .line 2872
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->chatView:Landroid/widget/TextView;
@@ -7099,7 +6873,7 @@
 
     invoke-virtual/range {v83 .. v84}, Landroid/widget/TextView;->append(Ljava/lang/CharSequence;)V
 
-    .line 3051
+    .line 2873
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->chatView0:Landroid/widget/ScrollView;
@@ -7136,7 +6910,7 @@
 
     goto/16 :goto_2b
 
-    .line 3054
+    .line 2876
     .end local v16    # "len14":I
     .end local v38    # "msg14":[B
     :sswitch_5d9
@@ -7148,7 +6922,7 @@
 
     move-object/from16 v31, v0
 
-    .line 3055
+    .line 2877
     .local v31, "levelscore16":[B
     const/16 v83, 0x0
 
@@ -7162,7 +6936,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3056
+    .line 2878
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -7201,7 +6975,7 @@
 
     goto/16 :goto_2b
 
-    .line 3059
+    .line 2881
     .end local v31    # "levelscore16":[B
     :sswitch_617
     const/16 v83, 0x4
@@ -7212,7 +6986,7 @@
 
     move-object/from16 v72, v0
 
-    .line 3060
+    .line 2882
     .local v72, "tableid17":[B
     const/16 v83, 0x0
 
@@ -7226,7 +7000,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3061
+    .line 2883
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -7235,7 +7009,7 @@
 
     move-object/from16 v32, v0
 
-    .line 3062
+    .line 2884
     .local v32, "levelscore17":[B
     const/16 v83, 0x0
 
@@ -7249,7 +7023,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3063
+    .line 2885
     move-object/from16 v0, p1
 
     array-length v0, v0
@@ -7258,7 +7032,7 @@
 
     add-int/lit8 v17, v83, -0x3
 
-    .line 3064
+    .line 2886
     .local v17, "len17":I
     add-int/lit8 v83, v17, -0x4
 
@@ -7270,7 +7044,7 @@
 
     move-object/from16 v46, v0
 
-    .line 3065
+    .line 2887
     .local v46, "name17":[B
     const/16 v83, 0x0
 
@@ -7286,7 +7060,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3066
+    .line 2888
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -7365,7 +7139,7 @@
 
     goto/16 :goto_2b
 
-    .line 3072
+    .line 2894
     .end local v17    # "len17":I
     .end local v32    # "levelscore17":[B
     .end local v46    # "name17":[B
@@ -7377,14 +7151,14 @@
 
     move/from16 v18, v0
 
-    .line 3073
+    .line 2895
     .local v18, "len18":I
     add-int/lit8 v18, v18, -0x3
 
-    .line 3074
+    .line 2896
     const/4 v5, 0x0
 
-    .line 3075
+    .line 2897
     .local v5, "currentpage18":I
     const/16 v83, 0x2
 
@@ -7394,7 +7168,7 @@
 
     move-object/from16 v61, v0
 
-    .line 3076
+    .line 2898
     .local v61, "pagetxt18":[B
     const/16 v83, 0x0
 
@@ -7408,7 +7182,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3077
+    .line 2899
     const/16 v83, 0x0
 
     aget-byte v83, v61, v83
@@ -7425,10 +7199,10 @@
 
     add-int/lit8 v5, v83, -0x30
 
-    .line 3078
+    .line 2900
     add-int/lit8 v18, v18, -0x2
 
-    .line 3079
+    .line 2901
     const/16 v83, 0x1
 
     move/from16 v0, v83
@@ -7437,7 +7211,7 @@
 
     move-object/from16 v59, v0
 
-    .line 3080
+    .line 2902
     .local v59, "nextpage18":[B
     const/16 v83, 0x0
 
@@ -7451,18 +7225,18 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3081
+    .line 2903
     const/16 v83, 0x0
 
     aget-byte v83, v59, v83
 
     add-int/lit8 v11, v83, -0x30
 
-    .line 3082
+    .line 2904
     .local v11, "hasnextpage18":I
     add-int/lit8 v18, v18, -0x1
 
-    .line 3083
+    .line 2905
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -7473,7 +7247,7 @@
 
     invoke-virtual/range {v83 .. v84}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 3084
+    .line 2906
     const/16 v83, 0x3
 
     move/from16 v0, v83
@@ -7482,12 +7256,12 @@
 
     move-object/from16 v25, v0
 
-    .line 3086
+    .line 2908
     .local v25, "length18":[B
     :goto_713
     if-gtz v18, :cond_743
 
-    .line 3111
+    .line 2933
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -7532,7 +7306,7 @@
 
     goto/16 :goto_2b
 
-    .line 3087
+    .line 2909
     :cond_743
     const/16 v83, 0x0
 
@@ -7546,10 +7320,10 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3088
+    .line 2910
     add-int/lit8 v18, v18, -0x3
 
-    .line 3089
+    .line 2911
     const/16 v83, 0x0
 
     aget-byte v83, v25, v83
@@ -7576,7 +7350,7 @@
 
     add-int/lit8 v68, v83, -0x30
 
-    .line 3090
+    .line 2912
     .local v68, "playinginfolength":I
     const/16 v83, 0xc8
 
@@ -7588,7 +7362,7 @@
 
     if-lez v18, :cond_89c
 
-    .line 3091
+    .line 2913
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -7597,7 +7371,7 @@
 
     move-object/from16 v66, v0
 
-    .line 3092
+    .line 2914
     .local v66, "playingid18":[B
     const/16 v83, 0x0
 
@@ -7611,7 +7385,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3093
+    .line 2915
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -7620,7 +7394,7 @@
 
     move-object/from16 v28, v0
 
-    .line 3094
+    .line 2916
     .local v28, "levelscore118":[B
     const/16 v83, 0x0
 
@@ -7634,7 +7408,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3095
+    .line 2917
     const/16 v83, 0x2
 
     move/from16 v0, v83
@@ -7643,7 +7417,7 @@
 
     move-object/from16 v56, v0
 
-    .line 3096
+    .line 2918
     .local v56, "namelengthtxt118":[B
     const/16 v83, 0x0
 
@@ -7657,7 +7431,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3097
+    .line 2919
     const/16 v83, 0x0
 
     aget-byte v83, v56, v83
@@ -7674,7 +7448,7 @@
 
     add-int/lit8 v52, v83, -0x30
 
-    .line 3098
+    .line 2920
     .local v52, "namelength118":I
     move/from16 v0, v52
 
@@ -7682,7 +7456,7 @@
 
     move-object/from16 v43, v0
 
-    .line 3099
+    .line 2921
     .local v43, "name118":[B
     const/16 v83, 0x0
 
@@ -7694,7 +7468,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3100
+    .line 2922
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -7703,7 +7477,7 @@
 
     move-object/from16 v33, v0
 
-    .line 3101
+    .line 2923
     .local v33, "levelscore218":[B
     const/16 v83, 0x0
 
@@ -7717,7 +7491,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3102
+    .line 2924
     const/16 v83, 0x2
 
     move/from16 v0, v83
@@ -7726,7 +7500,7 @@
 
     move-object/from16 v58, v0
 
-    .line 3103
+    .line 2925
     .local v58, "namelengthtxt218":[B
     const/16 v83, 0x0
 
@@ -7740,7 +7514,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3104
+    .line 2926
     const/16 v83, 0x0
 
     aget-byte v83, v58, v83
@@ -7757,7 +7531,7 @@
 
     add-int/lit8 v54, v83, -0x30
 
-    .line 3105
+    .line 2927
     .local v54, "namelength218":I
     move/from16 v0, v54
 
@@ -7765,7 +7539,7 @@
 
     move-object/from16 v47, v0
 
-    .line 3106
+    .line 2928
     .local v47, "name218":[B
     const/16 v83, 0x0
 
@@ -7777,7 +7551,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3107
+    .line 2929
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -7894,7 +7668,7 @@
 
     invoke-virtual/range {v83 .. v84}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 3109
+    .line 2931
     .end local v28    # "levelscore118":[B
     .end local v33    # "levelscore218":[B
     .end local v43    # "name118":[B
@@ -7909,7 +7683,7 @@
 
     goto/16 :goto_713
 
-    .line 3114
+    .line 2936
     .end local v5    # "currentpage18":I
     .end local v11    # "hasnextpage18":I
     .end local v18    # "len18":I
@@ -7926,7 +7700,7 @@
 
     move-object/from16 v69, v0
 
-    .line 3115
+    .line 2937
     .local v69, "r19":[B
     const/16 v83, 0x0
 
@@ -7940,7 +7714,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3116
+    .line 2938
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -7979,7 +7753,7 @@
 
     goto/16 :goto_2b
 
-    .line 3119
+    .line 2941
     .end local v69    # "r19":[B
     :sswitch_8de
     const/16 v83, 0x4
@@ -7990,7 +7764,7 @@
 
     move-object/from16 v67, v0
 
-    .line 3120
+    .line 2942
     .local v67, "playingid20":[B
     const/16 v83, 0x0
 
@@ -8004,7 +7778,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3121
+    .line 2943
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -8013,7 +7787,7 @@
 
     move-object/from16 v27, v0
 
-    .line 3122
+    .line 2944
     .local v27, "levelscore020":[B
     const/16 v83, 0x0
 
@@ -8027,7 +7801,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3123
+    .line 2945
     const/16 v83, 0x2
 
     move/from16 v0, v83
@@ -8036,7 +7810,7 @@
 
     move-object/from16 v55, v0
 
-    .line 3124
+    .line 2946
     .local v55, "namelengthtxt020":[B
     const/16 v83, 0x0
 
@@ -8050,7 +7824,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3125
+    .line 2947
     const/16 v83, 0x0
 
     aget-byte v83, v55, v83
@@ -8067,7 +7841,7 @@
 
     add-int/lit8 v51, v83, -0x30
 
-    .line 3126
+    .line 2948
     .local v51, "namelength020":I
     move/from16 v0, v51
 
@@ -8075,7 +7849,7 @@
 
     move-object/from16 v42, v0
 
-    .line 3127
+    .line 2949
     .local v42, "name020":[B
     const/16 v83, 0x0
 
@@ -8087,7 +7861,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3128
+    .line 2950
     const/16 v83, 0x4
 
     move/from16 v0, v83
@@ -8096,7 +7870,7 @@
 
     move-object/from16 v30, v0
 
-    .line 3129
+    .line 2951
     .local v30, "levelscore120":[B
     const/16 v83, 0x0
 
@@ -8110,7 +7884,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3130
+    .line 2952
     const/16 v83, 0x2
 
     move/from16 v0, v83
@@ -8119,7 +7893,7 @@
 
     move-object/from16 v57, v0
 
-    .line 3131
+    .line 2953
     .local v57, "namelengthtxt120":[B
     const/16 v83, 0x0
 
@@ -8133,7 +7907,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3132
+    .line 2954
     const/16 v83, 0x0
 
     aget-byte v83, v57, v83
@@ -8150,7 +7924,7 @@
 
     add-int/lit8 v53, v83, -0x30
 
-    .line 3133
+    .line 2955
     .local v53, "namelength120":I
     move/from16 v0, v53
 
@@ -8158,7 +7932,7 @@
 
     move-object/from16 v45, v0
 
-    .line 3134
+    .line 2956
     .local v45, "name120":[B
     const/16 v83, 0x0
 
@@ -8170,7 +7944,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3135
+    .line 2957
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -8289,7 +8063,7 @@
 
     goto/16 :goto_2b
 
-    .line 3138
+    .line 2960
     .end local v27    # "levelscore020":[B
     .end local v30    # "levelscore120":[B
     .end local v42    # "name020":[B
@@ -8308,7 +8082,7 @@
 
     move-object/from16 v82, v0
 
-    .line 3139
+    .line 2961
     .local v82, "watchingid21":[B
     const/16 v83, 0x0
 
@@ -8322,7 +8096,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3140
+    .line 2962
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -8361,7 +8135,7 @@
 
     goto/16 :goto_2b
 
-    .line 3143
+    .line 2965
     .end local v82    # "watchingid21":[B
     :sswitch_a44
     move-object/from16 v0, p1
@@ -8372,7 +8146,7 @@
 
     add-int/lit8 v20, v83, -0x3
 
-    .line 3144
+    .line 2966
     .local v20, "len22":I
     move/from16 v0, v20
 
@@ -8380,7 +8154,7 @@
 
     move-object/from16 v39, v0
 
-    .line 3145
+    .line 2967
     .local v39, "msg22":[B
     const/16 v83, 0x0
 
@@ -8392,7 +8166,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3146
+    .line 2968
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -8435,7 +8209,7 @@
 
     goto/16 :goto_2b
 
-    .line 3149
+    .line 2971
     .end local v20    # "len22":I
     .end local v39    # "msg22":[B
     :sswitch_a89
@@ -8447,7 +8221,7 @@
 
     add-int/lit8 v21, v83, -0x3
 
-    .line 3150
+    .line 2972
     .local v21, "len23":I
     move/from16 v0, v21
 
@@ -8455,7 +8229,7 @@
 
     move-object/from16 v40, v0
 
-    .line 3151
+    .line 2973
     .local v40, "msg23":[B
     const/16 v83, 0x0
 
@@ -8467,7 +8241,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3152
+    .line 2974
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -8510,7 +8284,7 @@
 
     goto/16 :goto_2b
 
-    .line 3155
+    .line 2977
     .end local v21    # "len23":I
     .end local v40    # "msg23":[B
     :sswitch_ace
@@ -8522,7 +8296,7 @@
 
     move-object/from16 v65, v0
 
-    .line 3156
+    .line 2978
     .local v65, "player24":[B
     const/16 v83, 0x0
 
@@ -8536,7 +8310,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3157
+    .line 2979
     move-object/from16 v0, p1
 
     array-length v0, v0
@@ -8545,7 +8319,7 @@
 
     add-int/lit8 v22, v83, -0x4
 
-    .line 3158
+    .line 2980
     .local v22, "len24":I
     move/from16 v0, v22
 
@@ -8553,7 +8327,7 @@
 
     move-object/from16 v41, v0
 
-    .line 3159
+    .line 2981
     .local v41, "msg24":[B
     const/16 v83, 0x0
 
@@ -8565,7 +8339,7 @@
 
     invoke-virtual {v8, v0, v1, v2}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 3160
+    .line 2982
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/phonegap/DroidGap;->appView:Landroid/webkit/WebView;
@@ -8626,7 +8400,7 @@
 
     goto/16 :goto_2b
 
-    .line 3163
+    .line 2985
     .end local v22    # "len24":I
     .end local v41    # "msg24":[B
     .end local v65    # "player24":[B
@@ -8643,7 +8417,7 @@
 
     goto/16 :goto_2b
 
-    .line 3166
+    .line 2988
     :sswitch_b48
     move-object/from16 v0, p0
 
@@ -8657,7 +8431,7 @@
 
     goto/16 :goto_2b
 
-    .line 3169
+    .line 2991
     :sswitch_b55
     move-object/from16 v0, p0
 
@@ -8671,7 +8445,7 @@
 
     goto/16 :goto_2b
 
-    .line 3172
+    .line 2994
     :sswitch_b62
     move-object/from16 v0, p0
 
@@ -8687,7 +8461,7 @@
 
     goto/16 :goto_2b
 
-    .line 2920
+    .line 2742
     nop
 
     :sswitch_data_b70
@@ -8728,18 +8502,18 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 315
+    .line 307
     move-object v0, p0
 
-    .line 316
+    .line 308
     .local v0, "me":Lcom/phonegap/DroidGap;
-    new-instance v1, Lcom/phonegap/DroidGap$2;
+    new-instance v1, Lcom/phonegap/DroidGap$1;
 
-    invoke-direct {v1, p0, v0, p1}, Lcom/phonegap/DroidGap$2;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v0, p1}, Lcom/phonegap/DroidGap$1;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/phonegap/DroidGap;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 322
+    .line 314
     return-void
 .end method
 
@@ -8748,12 +8522,12 @@
     .param p1, "buf"    # [B
 
     .prologue
-    .line 2844
+    .line 2666
     iget-boolean v3, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v3, :cond_25
 
-    .line 2846
+    .line 2668
     :try_start_4
     iget-object v3, p0, Lcom/phonegap/DroidGap;->socket:Ljava/net/Socket;
 
@@ -8761,7 +8535,7 @@
 
     move-result-object v2
 
-    .line 2848
+    .line 2670
     .local v2, "socketOutputStream":Ljava/io/OutputStream;
     const-string v3, "ER%1$d "
 
@@ -8783,7 +8557,7 @@
 
     move-result-object v1
 
-    .line 2849
+    .line 2671
     .local v1, "s":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
 
@@ -8791,23 +8565,23 @@
 
     invoke-virtual {v2, v3}, Ljava/io/OutputStream;->write([B)V
 
-    .line 2850
+    .line 2672
     invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write([B)V
     :try_end_25
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_25} :catch_26
 
-    .line 2855
+    .line 2677
     .end local v1    # "s":Ljava/lang/String;
     .end local v2    # "socketOutputStream":Ljava/io/OutputStream;
     :cond_25
     :goto_25
     return-void
 
-    .line 2851
+    .line 2673
     :catch_26
     move-exception v0
 
-    .line 2852
+    .line 2674
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "ClientActivity"
 
@@ -8823,12 +8597,12 @@
     .param p1, "statement"    # Ljava/lang/String;
 
     .prologue
-    .line 1372
+    .line 1194
     iget-object v0, p0, Lcom/phonegap/DroidGap;->callbackServer:Lcom/phonegap/CallbackServer;
 
     invoke-virtual {v0, p1}, Lcom/phonegap/CallbackServer;->sendJavascript(Ljava/lang/String;)V
 
-    .line 1373
+    .line 1195
     return-void
 .end method
 
@@ -8836,12 +8610,12 @@
     .registers 5
 
     .prologue
-    .line 2857
+    .line 2679
     iget-boolean v2, p0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v2, :cond_2f
 
-    .line 2858
+    .line 2680
     iget-object v2, p0, Lcom/phonegap/DroidGap;->loginMsg:Ljava/lang/String;
 
     const-string v3, ""
@@ -8852,7 +8626,7 @@
 
     if-nez v2, :cond_2f
 
-    .line 2860
+    .line 2682
     :try_start_e
     const-string v2, "ClientActivity"
 
@@ -8860,7 +8634,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2861
+    .line 2683
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "001"
@@ -8883,23 +8657,23 @@
 
     move-result-object v0
 
-    .line 2862
+    .line 2684
     .local v0, "buf":[B
     invoke-virtual {p0, v0}, Lcom/phonegap/DroidGap;->sendByteArray([B)V
     :try_end_2f
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_2f} :catch_30
 
-    .line 2868
+    .line 2690
     .end local v0    # "buf":[B
     :cond_2f
     :goto_2f
     return-void
 
-    .line 2863
+    .line 2685
     :catch_30
     move-exception v1
 
-    .line 2864
+    .line 2686
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "ClientActivity"
 
@@ -8915,14 +8689,14 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 2870
+    .line 2692
     move-object/from16 v0, p0
 
     iget-boolean v13, v0, Lcom/phonegap/DroidGap;->connected:Z
 
     if-eqz v13, :cond_7b
 
-    .line 2871
+    .line 2693
     const-string v13, ""
 
     move-object/from16 v0, p1
@@ -8933,7 +8707,7 @@
 
     if-nez v13, :cond_7b
 
-    .line 2873
+    .line 2695
     :try_start_10
     const-string v13, "ClientActivity"
 
@@ -8941,56 +8715,56 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2874
+    .line 2696
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v12
 
-    .line 2875
+    .line 2697
     .local v12, "uuid":Ljava/util/UUID;
     const/4 v6, 0x1
 
-    .line 2876
+    .line 2698
     .local v6, "id":I
     const-string v8, "xxxxx"
 
-    .line 2877
+    .line 2699
     .local v8, "pass":Ljava/lang/String;
     invoke-virtual {v12}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 2878
+    .line 2700
     .local v11, "uid":Ljava/lang/String;
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 2879
+    .line 2701
     .local v2, "bout":Ljava/io/ByteArrayOutputStream;
     new-instance v4, Ljava/io/DataOutputStream;
 
     invoke-direct {v4, v2}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 2880
+    .line 2702
     .local v4, "dos":Ljava/io/DataOutputStream;
     const-string v13, "001"
 
     invoke-virtual {v4, v13}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 2881
+    .line 2703
     invoke-virtual {v4, v6}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 2882
+    .line 2704
     invoke-virtual {v4, v8}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 2883
+    .line 2705
     invoke-virtual {v4, v11}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 2885
+    .line 2707
     const-string v7, "\u6d4b\u8bd5|pass"
 
-    .line 2886
+    .line 2708
     .local v7, "mm":Ljava/lang/String;
     const-string v13, "UTF-8"
 
@@ -8998,23 +8772,23 @@
 
     move-result-object v1
 
-    .line 2887
+    .line 2709
     .local v1, "b":[B
     invoke-virtual {v4, v1}, Ljava/io/DataOutputStream;->write([B)V
 
-    .line 2889
+    .line 2711
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v3
 
-    .line 2890
+    .line 2712
     .local v3, "buf":[B
     invoke-virtual {v4}, Ljava/io/DataOutputStream;->close()V
 
-    .line 2891
+    .line 2713
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->close()V
 
-    .line 2897
+    .line 2719
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/phonegap/DroidGap;->socket:Ljava/net/Socket;
@@ -9023,7 +8797,7 @@
 
     move-result-object v10
 
-    .line 2899
+    .line 2721
     .local v10, "socketOutputStream":Ljava/io/OutputStream;
     const-string v13, "ER%1$d "
 
@@ -9047,7 +8821,7 @@
 
     move-result-object v9
 
-    .line 2900
+    .line 2722
     .local v9, "s":Ljava/lang/String;
     invoke-virtual {v9}, Ljava/lang/String;->getBytes()[B
 
@@ -9055,10 +8829,10 @@
 
     invoke-virtual {v10, v13}, Ljava/io/OutputStream;->write([B)V
 
-    .line 2901
+    .line 2723
     invoke-virtual {v10, v3}, Ljava/io/OutputStream;->write([B)V
 
-    .line 2903
+    .line 2725
     const-string v13, "ClientActivity"
 
     const-string v14, "C: Sent."
@@ -9067,7 +8841,7 @@
     :try_end_7b
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_7b} :catch_7c
 
-    .line 2910
+    .line 2732
     .end local v1    # "b":[B
     .end local v2    # "bout":Ljava/io/ByteArrayOutputStream;
     .end local v3    # "buf":[B
@@ -9083,11 +8857,11 @@
     :goto_7b
     return-void
 
-    .line 2904
+    .line 2726
     :catch_7c
     move-exception v5
 
-    .line 2905
+    .line 2727
     .local v5, "e":Ljava/lang/Exception;
     const-string v13, "ClientActivity"
 
@@ -9103,10 +8877,10 @@
     .param p1, "plugin"    # Lcom/phonegap/api/IPlugin;
 
     .prologue
-    .line 2133
+    .line 1955
     iput-object p1, p0, Lcom/phonegap/DroidGap;->activityResultCallback:Lcom/phonegap/api/IPlugin;
 
-    .line 2134
+    .line 1956
     return-void
 .end method
 
@@ -9116,14 +8890,14 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1199
+    .line 1020
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1200
+    .line 1021
     return-void
 .end method
 
@@ -9133,14 +8907,14 @@
     .param p2, "value"    # D
 
     .prologue
-    .line 1229
+    .line 1050
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 1230
+    .line 1051
     return-void
 .end method
 
@@ -9148,7 +8922,7 @@
     .registers 5
 
     .prologue
-    .line 802
+    .line 623
     iget-wide v0, p0, Lcom/phonegap/DroidGap;->ratio:D
 
     const-wide v2, 0x3ffa8f5c28f5c28fL    # 1.66
@@ -9157,14 +8931,14 @@
 
     if-gez v0, :cond_22
 
-    .line 806
+    .line 627
     iget v0, p0, Lcom/phonegap/DroidGap;->fullsetting_out:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_22
 
-    .line 807
+    .line 628
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -9173,7 +8947,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    .line 808
+    .line 629
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -9182,7 +8956,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->clearFlags(I)V
 
-    .line 811
+    .line 632
     :cond_22
     return-void
 .end method
@@ -9193,14 +8967,14 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 1209
+    .line 1030
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1210
+    .line 1031
     return-void
 .end method
 
@@ -9210,14 +8984,14 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1219
+    .line 1040
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1220
+    .line 1041
     return-void
 .end method
 
@@ -9227,13 +9001,13 @@
     .param p2, "client"    # Landroid/webkit/WebViewClient;
 
     .prologue
-    .line 819
+    .line 640
     iput-object p2, p0, Lcom/phonegap/DroidGap;->webViewClient:Landroid/webkit/WebViewClient;
 
-    .line 820
+    .line 641
     invoke-virtual {p1, p2}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 821
+    .line 642
     return-void
 .end method
 
@@ -9242,15 +9016,15 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 680
+    .line 595
     if-nez p1, :cond_11
 
-    .line 681
+    .line 596
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 682
+    .line 597
     .local v0, "time":J
     iget-wide v2, p0, Lcom/phonegap/DroidGap;->currentTime:J
 
@@ -9262,18 +9036,18 @@
 
     if-gez v2, :cond_12
 
-    .line 704
+    .line 609
     .end local v0    # "time":J
     :cond_11
     :goto_11
     return-void
 
-    .line 685
+    .line 600
     .restart local v0    # "time":J
     :cond_12
     iput-wide v0, p0, Lcom/phonegap/DroidGap;->currentTime:J
 
-    .line 687
+    .line 602
     iget-object v2, p0, Lcom/phonegap/DroidGap;->handler:Landroid/os/Handler;
 
     new-instance v3, Lcom/phonegap/DroidGap$5;
@@ -9294,58 +9068,58 @@
 
     const/4 v1, 0x0
 
-    .line 3194
+    .line 3016
     if-eqz p1, :cond_1e
 
-    .line 3195
+    .line 3017
     iget-boolean v0, p0, Lcom/phonegap/DroidGap;->chatshowing:Z
 
     if-nez v0, :cond_1d
 
-    .line 3196
+    .line 3018
     iget-object v0, p0, Lcom/phonegap/DroidGap;->adView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 3197
+    .line 3019
     iget-object v0, p0, Lcom/phonegap/DroidGap;->chatView0:Landroid/widget/ScrollView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ScrollView;->setVisibility(I)V
 
-    .line 3198
+    .line 3020
     iget-object v0, p0, Lcom/phonegap/DroidGap;->chatView:Landroid/widget/TextView;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 3199
+    .line 3021
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/phonegap/DroidGap;->chatshowing:Z
 
-    .line 3208
+    .line 3030
     :cond_1d
     :goto_1d
     return-void
 
-    .line 3202
+    .line 3024
     :cond_1e
     iget-boolean v0, p0, Lcom/phonegap/DroidGap;->chatshowing:Z
 
     if-eqz v0, :cond_1d
 
-    .line 3203
+    .line 3025
     iget-object v0, p0, Lcom/phonegap/DroidGap;->adView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 3204
+    .line 3026
     iget-object v0, p0, Lcom/phonegap/DroidGap;->chatView0:Landroid/widget/ScrollView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ScrollView;->setVisibility(I)V
 
-    .line 3205
+    .line 3027
     iput-boolean v1, p0, Lcom/phonegap/DroidGap;->chatshowing:Z
 
     goto :goto_1d
@@ -9370,7 +9144,7 @@
     .end annotation
 
     .prologue
-    .line 1386
+    .line 1208
     .local p4, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     sget-object v2, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
@@ -9402,17 +9176,17 @@
 
     invoke-static {v2, v3, v4}, Lcom/phonegap/api/LOG;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1389
+    .line 1211
     if-eqz p3, :cond_20
 
-    .line 1390
+    .line 1212
     invoke-virtual {p0}, Lcom/phonegap/DroidGap;->clearHistory()V
 
-    .line 1394
+    .line 1216
     :cond_20
     if-nez p2, :cond_85
 
-    .line 1397
+    .line 1219
     const-string v2, "file://"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -9435,24 +9209,24 @@
 
     if-eqz v2, :cond_43
 
-    .line 1401
+    .line 1223
     :cond_38
     if-eqz p3, :cond_3f
 
-    .line 1402
+    .line 1224
     iget-object v2, p0, Lcom/phonegap/DroidGap;->urls:Ljava/util/Stack;
 
     invoke-virtual {v2}, Ljava/util/Stack;->clear()V
 
-    .line 1406
+    .line 1228
     :cond_3f
     invoke-virtual {p0, p1}, Lcom/phonegap/DroidGap;->loadUrl(Ljava/lang/String;)V
 
-    .line 1431
+    .line 1253
     :goto_42
     return-void
 
-    .line 1410
+    .line 1232
     :cond_43
     sget-object v2, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
@@ -9478,7 +9252,7 @@
 
     invoke-static {v2, v3}, Lcom/phonegap/api/LOG;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1412
+    .line 1234
     :try_start_5d
     new-instance v1, Landroid/content/Intent;
 
@@ -9486,7 +9260,7 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1413
+    .line 1235
     .local v1, "intent":Landroid/content/Intent;
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -9494,19 +9268,19 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 1414
+    .line 1236
     invoke-virtual {p0, v1}, Lcom/phonegap/DroidGap;->startActivity(Landroid/content/Intent;)V
     :try_end_6e
     .catch Landroid/content/ActivityNotFoundException; {:try_start_5d .. :try_end_6e} :catch_6f
 
     goto :goto_42
 
-    .line 1415
+    .line 1237
     .end local v1    # "intent":Landroid/content/Intent;
     :catch_6f
     move-exception v0
 
-    .line 1416
+    .line 1238
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     sget-object v2, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
@@ -9528,7 +9302,7 @@
 
     goto :goto_42
 
-    .line 1424
+    .line 1246
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     :cond_85
     :try_start_85
@@ -9538,7 +9312,7 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1425
+    .line 1247
     .restart local v1    # "intent":Landroid/content/Intent;
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -9546,19 +9320,19 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 1426
+    .line 1248
     invoke-virtual {p0, v1}, Lcom/phonegap/DroidGap;->startActivity(Landroid/content/Intent;)V
     :try_end_96
     .catch Landroid/content/ActivityNotFoundException; {:try_start_85 .. :try_end_96} :catch_97
 
     goto :goto_42
 
-    .line 1427
+    .line 1249
     .end local v1    # "intent":Landroid/content/Intent;
     :catch_97
     move-exception v0
 
-    .line 1428
+    .line 1250
     .restart local v0    # "e":Landroid/content/ActivityNotFoundException;
     sget-object v2, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
@@ -9589,30 +9363,30 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1440
+    .line 1262
     iget-object v0, p0, Lcom/phonegap/DroidGap;->spinnerDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_d
 
-    .line 1441
+    .line 1263
     iget-object v0, p0, Lcom/phonegap/DroidGap;->spinnerDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 1442
+    .line 1264
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/phonegap/DroidGap;->spinnerDialog:Landroid/app/ProgressDialog;
 
-    .line 1444
+    .line 1266
     :cond_d
     move-object v6, p0
 
-    .line 1446
+    .line 1268
     .local v6, "me":Lcom/phonegap/DroidGap;
-    new-instance v5, Lcom/phonegap/DroidGap$10;
+    new-instance v5, Lcom/phonegap/DroidGap$9;
 
-    invoke-direct {v5, p0, v6}, Lcom/phonegap/DroidGap$10;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V
+    invoke-direct {v5, p0, v6}, Lcom/phonegap/DroidGap$9;-><init>(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V
 
     move-object v0, p0
 
@@ -9622,14 +9396,14 @@
 
     move v4, v3
 
-    .line 1445
+    .line 1267
     invoke-static/range {v0 .. v5}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZLandroid/content/DialogInterface$OnCancelListener;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/phonegap/DroidGap;->spinnerDialog:Landroid/app/ProgressDialog;
 
-    .line 1451
+    .line 1273
     return-void
 .end method
 
@@ -9637,22 +9411,22 @@
     .registers 2
 
     .prologue
-    .line 1457
+    .line 1279
     iget-object v0, p0, Lcom/phonegap/DroidGap;->spinnerDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_c
 
-    .line 1458
+    .line 1280
     iget-object v0, p0, Lcom/phonegap/DroidGap;->spinnerDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 1459
+    .line 1281
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/phonegap/DroidGap;->spinnerDialog:Landroid/app/ProgressDialog;
 
-    .line 1461
+    .line 1283
     :cond_c
     return-void
 .end method
@@ -9668,7 +9442,7 @@
     .end annotation
 
     .prologue
-    .line 2088
+    .line 1910
     sget-object v0, Lcom/phonegap/DroidGap;->TAG:Ljava/lang/String;
 
     const-string v1, "DroidGap.startActivityForResult(intent,%d)"
@@ -9687,10 +9461,10 @@
 
     invoke-static {v0, v1, v2}, Lcom/phonegap/api/LOG;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2089
+    .line 1911
     invoke-super {p0, p1, p2}, Lcom/phonegap/api/PhonegapActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 2090
+    .line 1912
     return-void
 .end method
 
@@ -9701,26 +9475,26 @@
     .param p3, "requestCode"    # I
 
     .prologue
-    .line 2101
+    .line 1923
     iput-object p1, p0, Lcom/phonegap/DroidGap;->activityResultCallback:Lcom/phonegap/api/IPlugin;
 
-    .line 2102
+    .line 1924
     iget-boolean v0, p0, Lcom/phonegap/DroidGap;->keepRunning:Z
 
     iput-boolean v0, p0, Lcom/phonegap/DroidGap;->activityResultKeepRunning:Z
 
-    .line 2105
+    .line 1927
     if-eqz p1, :cond_b
 
-    .line 2106
+    .line 1928
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/phonegap/DroidGap;->keepRunning:Z
 
-    .line 2110
+    .line 1932
     :cond_b
     invoke-super {p0, p2, p3}, Lcom/phonegap/api/PhonegapActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 2111
+    .line 1933
     return-void
 .end method

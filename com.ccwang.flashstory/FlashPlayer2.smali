@@ -45,15 +45,13 @@
 
 .field t:Lcom/ccwang/flashstory/AppVar;
 
-.field u:Lcom/google/ads/h;
+.field private u:Landroid/webkit/WebView;
 
-.field private v:Landroid/webkit/WebView;
+.field private v:Landroid/os/Handler;
 
-.field private w:Landroid/os/Handler;
+.field private w:Landroid/app/Dialog;
 
-.field private x:Landroid/app/Dialog;
-
-.field private y:Landroid/content/ServiceConnection;
+.field private x:Landroid/content/ServiceConnection;
 
 
 # direct methods
@@ -84,9 +82,9 @@
 
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    iput-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iput-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
-    iput-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iput-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     iput-boolean v2, p0, Lcom/ccwang/flashstory/FlashPlayer2;->c:Z
 
@@ -106,7 +104,7 @@
 
     invoke-direct {v0, p0}, Lcom/ccwang/flashstory/t;-><init>(Lcom/ccwang/flashstory/FlashPlayer2;)V
 
-    iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->y:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/content/ServiceConnection;
 
     return-void
 .end method
@@ -114,7 +112,7 @@
 .method static synthetic a(Lcom/ccwang/flashstory/FlashPlayer2;)Landroid/content/ServiceConnection;
     .registers 2
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->y:Landroid/content/ServiceConnection;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/content/ServiceConnection;
 
     return-object v0
 .end method
@@ -122,7 +120,7 @@
 .method static synthetic b(Lcom/ccwang/flashstory/FlashPlayer2;)Landroid/app/Dialog;
     .registers 2
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     return-object v0
 .end method
@@ -130,7 +128,7 @@
 .method static synthetic c(Lcom/ccwang/flashstory/FlashPlayer2;)Landroid/webkit/WebView;
     .registers 2
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     return-object v0
 .end method
@@ -146,7 +144,7 @@
 .method static synthetic e(Lcom/ccwang/flashstory/FlashPlayer2;)Landroid/os/Handler;
     .registers 2
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -188,7 +186,7 @@
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    iget-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/os/Handler;
 
     const-wide/16 v2, 0xbb8
 
@@ -298,7 +296,7 @@
 .method public b()V
     .registers 3
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
@@ -436,7 +434,7 @@
 .method public c()V
     .registers 3
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
@@ -615,7 +613,7 @@
 
     invoke-direct {v0, p0}, Lcom/ccwang/flashstory/aa;-><init>(Lcom/ccwang/flashstory/FlashPlayer2;)V
 
-    iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/os/Handler;
 
     invoke-virtual {p0}, Lcom/ccwang/flashstory/FlashPlayer2;->getApplicationContext()Landroid/content/Context;
 
@@ -631,7 +629,7 @@
 
     invoke-direct {v0, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iget-object v2, p0, Lcom/ccwang/flashstory/FlashPlayer2;->y:Landroid/content/ServiceConnection;
+    iget-object v2, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/content/ServiceConnection;
 
     invoke-virtual {p0, v0, v2, v6}, Lcom/ccwang/flashstory/FlashPlayer2;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
@@ -703,7 +701,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     if-nez v0, :cond_8c
 
@@ -713,24 +711,24 @@
 
     invoke-direct {v0, p0, v1}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     :cond_8c
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     iget-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->n:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     invoke-virtual {v0, v4}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     invoke-virtual {v0, v4}, Landroid/app/Dialog;->setCancelable(Z)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -748,7 +746,7 @@
 
     iput v5, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    iget-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     invoke-virtual {v1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -756,7 +754,7 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     new-instance v1, Lcom/ccwang/flashstory/v;
 
@@ -775,32 +773,6 @@
     check-cast v0, Landroid/widget/RelativeLayout;
 
     iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->o:Landroid/widget/RelativeLayout;
-
-    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v1, -0x2
-
-    invoke-direct {v0, v5, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/16 v1, 0x11
-
-    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    new-instance v1, Lcom/google/ads/h;
-
-    sget-object v2, Lcom/google/ads/g;->c:Lcom/google/ads/g;
-
-    const-string v3, "a1525f3ddd677ac"
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/google/ads/h;-><init>(Landroid/app/Activity;Lcom/google/ads/g;Ljava/lang/String;)V
-
-    iput-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Lcom/google/ads/h;
-
-    iget-object v1, p0, Lcom/ccwang/flashstory/FlashPlayer2;->o:Landroid/widget/RelativeLayout;
-
-    iget-object v2, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Lcom/google/ads/h;
-
-    invoke-virtual {v1, v2, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->n:Landroid/view/View;
 
@@ -838,9 +810,9 @@
 
     iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->j:Landroid/widget/TextView;
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
-    if-nez v0, :cond_122
+    if-nez v0, :cond_106
 
     const v0, 0x7f06005c
 
@@ -850,10 +822,10 @@
 
     check-cast v0, Landroid/webkit/WebView;
 
-    iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
-    :cond_122
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    :cond_106
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -861,7 +833,7 @@
 
     invoke-virtual {v0, v6}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -871,7 +843,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setPluginState(Landroid/webkit/WebSettings$PluginState;)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -879,7 +851,7 @@
 
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setAppCacheEnabled(Z)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -889,7 +861,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setDefaultTextEncodingName(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -897,7 +869,7 @@
 
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setUseWideViewPort(Z)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -905,11 +877,11 @@
 
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0, v4}, Landroid/webkit/WebView;->setScrollBarStyle(I)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -917,7 +889,7 @@
 
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setSupportZoom(Z)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     new-instance v1, Lcom/ccwang/flashstory/z;
 
@@ -927,7 +899,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     new-instance v1, Lcom/ccwang/flashstory/w;
 
@@ -935,7 +907,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     const-string v1, "file:///android_asset/sample/index.html"
 
@@ -969,7 +941,7 @@
 .method protected onDestroy()V
     .registers 2
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->y:Landroid/content/ServiceConnection;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/content/ServiceConnection;
 
     invoke-virtual {p0, v0}, Lcom/ccwang/flashstory/FlashPlayer2;->unbindService(Landroid/content/ServiceConnection;)V
 
@@ -1022,31 +994,31 @@
     iput-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->l:Lcom/ccwang/flashstory/p;
 
     :cond_22
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_2b
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->pauseTimers()V
 
     :cond_2b
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_36
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     const-string v1, "about:blank"
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     :cond_36
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     if-eqz v0, :cond_3f
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->x:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->w:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
@@ -1107,17 +1079,17 @@
 
     if-nez v0, :cond_14
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_14
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     const-string v1, "javascript:Pause()"
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->pauseTimers()V
 
@@ -1142,7 +1114,7 @@
 
     if-nez v0, :cond_18
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_18
 
@@ -1150,14 +1122,14 @@
 
     if-eqz v0, :cond_13
 
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     const-string v1, "javascript:Play()"
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     :cond_13
-    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->v:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/ccwang/flashstory/FlashPlayer2;->u:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->resumeTimers()V
 

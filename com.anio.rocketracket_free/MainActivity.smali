@@ -1020,6 +1020,8 @@
     .line 82
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     .line 84
     new-instance v0, Lcom/anio/rocketracket_free/GameDataManager;
 
@@ -1102,7 +1104,7 @@
 
     cmpl-float v0, v0, v1
 
-    if-lez v0, :cond_54
+    if-lez v0, :cond_57
 
     .line 100
     int-to-float v0, v9
@@ -1114,7 +1116,7 @@
     iput v0, p0, Lcom/anio/rocketracket_free/MainActivity;->scale:F
 
     .line 102
-    :cond_54
+    :cond_57
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V

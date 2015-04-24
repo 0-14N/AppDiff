@@ -736,14 +736,14 @@
     :catch_ae
     move-exception v0
 
-    const v0, 0x7f090168
+    const v0, 0x7f090185
 
     invoke-static {v0}, Lxcxin/filexpert/n/bh;->a(I)V
 
     goto :goto_90
 
     :cond_b6
-    const v0, 0x7f0902c5
+    const v0, 0x7f0902b2
 
     :try_start_b9
     invoke-static {p0, v0}, Lxcxin/filexpert/n/bh;->a(Landroid/content/Context;I)V
@@ -1554,7 +1554,7 @@
 
     if-eqz v0, :cond_30
 
-    const v0, 0x7f0900ab
+    const v0, 0x7f0900b4
 
     invoke-static {p0, v0}, Lxcxin/filexpert/n/bh;->a(Landroid/content/Context;I)V
 
@@ -1839,7 +1839,7 @@
 
     const/4 v6, 0x2
 
-    const v5, 0x7f090124
+    const v5, 0x7f09013d
 
     const/4 v4, 0x1
 
@@ -2355,7 +2355,7 @@
     if-nez v0, :cond_209
 
     :cond_1fd
-    const v0, 0x7f0904cb
+    const v0, 0x7f090464
 
     invoke-static {p0, v0, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -2412,7 +2412,7 @@
 
     if-nez v1, :cond_241
 
-    const v0, 0x7f09038e
+    const v0, 0x7f090393
 
     invoke-static {p0, v5, v0}, Lxcxin/filexpert/n/p;->a(Landroid/content/Context;II)V
 
@@ -2499,7 +2499,7 @@
 
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    const v0, 0x7f09036f
+    const v0, 0x7f09037b
 
     invoke-static {p0, v5, v0}, Lxcxin/filexpert/n/p;->a(Landroid/content/Context;II)V
 
@@ -2510,7 +2510,7 @@
 
     if-ne v0, v1, :cond_2a9
 
-    const v0, 0x7f090372
+    const v0, 0x7f09037e
 
     invoke-static {p0, v5, v0}, Lxcxin/filexpert/n/p;->a(Landroid/content/Context;II)V
 
@@ -2544,7 +2544,7 @@
 
     if-eqz v0, :cond_2e5
 
-    const v1, 0x7f090384
+    const v1, 0x7f09038d
 
     invoke-static {p0, v1, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -2579,7 +2579,7 @@
 
     invoke-virtual {v0, v3}, Lxcxin/filexpert/settings/i;->x(Z)V
 
-    const v0, 0x7f090383
+    const v0, 0x7f09038e
 
     invoke-static {p0, v5, v0}, Lxcxin/filexpert/n/p;->a(Landroid/content/Context;II)V
 
@@ -2598,7 +2598,7 @@
 
     invoke-virtual {v0, v3}, Lxcxin/filexpert/settings/i;->y(Z)V
 
-    const v0, 0x7f090385
+    const v0, 0x7f09038f
 
     invoke-static {p0, v5, v0}, Lxcxin/filexpert/n/p;->a(Landroid/content/Context;II)V
 
@@ -2869,7 +2869,7 @@
 
     if-eqz v0, :cond_7c
 
-    invoke-static {p0}, Lxcxin/filexpert/baidupush/a;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lxcxin/filexpert/n/cp;->a(Landroid/content/Context;)V
 
     :cond_7c
     invoke-static {p0, v3}, Lxcxin/filexpert/n/bc;->a(Landroid/content/Context;Z)V
@@ -3011,7 +3011,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0901f1
+    const v4, 0x7f0901fa
 
     invoke-virtual {p0, v4}, Lxcxin/filexpert/FileLister;->getString(I)Ljava/lang/String;
 
@@ -3121,7 +3121,7 @@
 
     iget-object v0, p0, Lxcxin/filexpert/FileLister;->i:Lcom/actionbarsherlock/widget/SearchView;
 
-    const v1, 0x7f0901f0
+    const v1, 0x7f0901f9
 
     invoke-virtual {p0, v1}, Lxcxin/filexpert/FileLister;->getString(I)Ljava/lang/String;
 
@@ -3946,7 +3946,7 @@
     :catch_1ec
     move-exception v0
 
-    const v0, 0x7f090132
+    const v0, 0x7f09014b
 
     invoke-virtual {p0, v0}, Lxcxin/filexpert/FileLister;->getString(I)Ljava/lang/String;
 
@@ -4040,7 +4040,7 @@
 
     invoke-static {v0, v1, v2}, Lxcxin/filexpert/statistics/b;->a(III)V
 
-    const v0, 0x7f090369
+    const v0, 0x7f090300
 
     invoke-static {p0, v0}, Lxcxin/filexpert/n/bh;->a(Landroid/content/Context;I)V
 
@@ -4085,7 +4085,7 @@
     if-eqz v0, :cond_76
 
     :cond_6f
-    const v0, 0x7f09027a
+    const v0, 0x7f090278
 
     invoke-static {v0}, Lxcxin/filexpert/n/bh;->a(I)V
 
@@ -4133,7 +4133,7 @@
 
     if-nez v0, :cond_ac
 
-    const v0, 0x7f09017f
+    const v0, 0x7f09019d
 
     invoke-virtual {p0, v0}, Lxcxin/filexpert/FileLister;->getString(I)Ljava/lang/String;
 
@@ -4382,7 +4382,7 @@
     invoke-virtual {v0}, Lcom/geeksoft/fejmdns/a;->e()V
 
     :cond_1a9
-    const v0, 0x7f0904ae
+    const v0, 0x7f090443
 
     invoke-static {p0, v0}, Lxcxin/filexpert/n/bh;->a(Landroid/content/Context;I)V
 

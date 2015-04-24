@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/ox;->a:Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;
 
-    invoke-virtual {v0}, Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;->N()V
+    invoke-virtual {v0}, Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;->O()V
 
     return-void
 .end method

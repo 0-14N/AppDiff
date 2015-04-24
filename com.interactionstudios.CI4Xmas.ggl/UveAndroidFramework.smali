@@ -48,6 +48,8 @@
     .line 92
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     .line 94
     new-instance v0, Lcom/interactionstudios/uveandroidframework/ah;
 
@@ -59,7 +61,7 @@
     const-string v1, "unknown"
 
     .line 99
-    :try_start_c
+    :try_start_f
     invoke-virtual {p0}, Lcom/interactionstudios/uveandroidframework/UveAndroidFramework;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -76,11 +78,11 @@
 
     .line 100
     iget-object v1, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
-    :try_end_1b
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_c .. :try_end_1b} :catch_ec
+    :try_end_1e
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_f .. :try_end_1e} :catch_ef
 
     .line 116
-    :goto_1b
+    :goto_1e
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/interactionstudios/uveandroidframework/UveAndroidFramework;->getCacheDir()Ljava/io/File;
@@ -286,7 +288,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_eb
+    if-nez v0, :cond_ee
 
     .line 221
     const-string v0, "Can\'t connect to Market"
@@ -298,14 +300,14 @@
     invoke-static {p0, v0, v1}, Lcom/interactionstudios/uveandroidframework/ab;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 226
-    :cond_eb
+    :cond_ee
     return-void
 
     .line 101
-    :catch_ec
+    :catch_ef
     move-exception v0
 
-    goto/16 :goto_1b
+    goto/16 :goto_1e
 .end method
 
 .method protected onDestroy()V

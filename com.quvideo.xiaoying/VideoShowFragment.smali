@@ -240,23 +240,23 @@
     iput-boolean v1, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;->az:Z
 
     .line 697
-    new-instance v0, Lact;
+    new-instance v0, Lvz;
 
-    invoke-direct {v0, p0}, Lact;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;)V
+    invoke-direct {v0, p0}, Lvz;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;->aA:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     .line 717
-    new-instance v0, Lacu;
+    new-instance v0, Lwa;
 
-    invoke-direct {v0, p0}, Lacu;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;)V
+    invoke-direct {v0, p0}, Lwa;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;->aB:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshBase$OnPullEventListener;
 
     .line 733
-    new-instance v0, Lacv;
+    new-instance v0, Lwb;
 
-    invoke-direct {v0, p0}, Lacv;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;)V
+    invoke-direct {v0, p0}, Lwb;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;->aC:Lcom/quvideo/xiaoying/common/ui/widgets/waterfall/PLA_AbsListView$OnScrollListener;
 
@@ -749,9 +749,9 @@
     .line 355
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;->h:Landroid/app/ProgressDialog;
 
-    new-instance v1, Lacw;
+    new-instance v1, Lwc;
 
-    invoke-direct {v1, p0}, Lacw;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;)V
+    invoke-direct {v1, p0}, Lwc;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -916,7 +916,7 @@
     if-gez v3, :cond_5f
 
     .line 670
-    const v0, 0x7f0a032c
+    const v0, 0x7f0a0309
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -946,7 +946,7 @@
     div-long v0, v1, v8
 
     .line 673
-    const v2, 0x7f0a032d
+    const v2, 0x7f0a030a
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -976,7 +976,7 @@
     div-long v0, v1, v10
 
     .line 676
-    const v2, 0x7f0a032e
+    const v2, 0x7f0a030b
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -1002,7 +1002,7 @@
     div-long v0, v1, v12
 
     .line 679
-    const v2, 0x7f0a032f
+    const v2, 0x7f0a030c
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -1266,7 +1266,7 @@
     :cond_64
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;->ao:Landroid/view/View;
 
-    const v1, 0x7f0605d5
+    const v1, 0x7f0605c0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1373,7 +1373,7 @@
     .line 464
     iget-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;->ao:Landroid/view/View;
 
-    const v1, 0x7f060445
+    const v1, 0x7f060430
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1441,9 +1441,9 @@
 
     iget v3, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;->aa:I
 
-    new-instance v4, Lacy;
+    new-instance v4, Lwe;
 
-    invoke-direct {v4, p0, v0}, Lacy;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;Landroid/widget/BaseAdapter;)V
+    invoke-direct {v4, p0, v0}, Lwe;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;Landroid/widget/BaseAdapter;)V
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowInfoMgr;->dbVideoInfoQuery(Landroid/content/Context;ILcom/quvideo/xiaoying/app/v3/fregment/VideoShowInfoMgr$QueryDataListener;)V
 
@@ -1609,9 +1609,9 @@
     invoke-virtual {p0}, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;->init()V
 
     .line 392
-    new-instance v0, Lacx;
+    new-instance v0, Lwd;
 
-    invoke-direct {v0, p0}, Lacx;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;)V
+    invoke-direct {v0, p0}, Lwd;-><init>(Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/v3/fregment/VideoShowFragment;->aw:Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;
 

@@ -7,22 +7,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/quvideo/xiaoying/camera/mode/CamModeGridViewAdapter;
-
-.field private final synthetic b:Lcom/quvideo/xiaoying/common/ui/widgets/GridViewAdapter$GridItem;
+.field final synthetic a:Lcom/quvideo/xiaoying/common/ui/LoadingMoreFooterView;
 
 
 # direct methods
-.method public constructor <init>(Lcom/quvideo/xiaoying/camera/mode/CamModeGridViewAdapter;Lcom/quvideo/xiaoying/common/ui/widgets/GridViewAdapter$GridItem;)V
-    .registers 3
+.method public constructor <init>(Lcom/quvideo/xiaoying/common/ui/LoadingMoreFooterView;)V
+    .registers 2
 
     .prologue
     .line 1
-    iput-object p1, p0, Laek;->a:Lcom/quvideo/xiaoying/camera/mode/CamModeGridViewAdapter;
+    iput-object p1, p0, Laek;->a:Lcom/quvideo/xiaoying/common/ui/LoadingMoreFooterView;
 
-    iput-object p2, p0, Laek;->b:Lcom/quvideo/xiaoying/common/ui/widgets/GridViewAdapter$GridItem;
-
-    .line 63
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,21 +30,25 @@
     .registers 3
 
     .prologue
-    .line 68
-    iget-object v0, p0, Laek;->b:Lcom/quvideo/xiaoying/common/ui/widgets/GridViewAdapter$GridItem;
+    .line 59
+    iget-object v0, p0, Laek;->a:Lcom/quvideo/xiaoying/common/ui/LoadingMoreFooterView;
 
-    iget-object v0, v0, Lcom/quvideo/xiaoying/common/ui/widgets/GridViewAdapter$GridItem;->listener:Landroid/view/View$OnClickListener;
+    invoke-static {v0}, Lcom/quvideo/xiaoying/common/ui/LoadingMoreFooterView;->a(Lcom/quvideo/xiaoying/common/ui/LoadingMoreFooterView;)Landroid/view/View$OnClickListener;
 
-    if-eqz v0, :cond_d
+    move-result-object v0
 
-    .line 69
-    iget-object v0, p0, Laek;->b:Lcom/quvideo/xiaoying/common/ui/widgets/GridViewAdapter$GridItem;
+    if-eqz v0, :cond_11
 
-    iget-object v0, v0, Lcom/quvideo/xiaoying/common/ui/widgets/GridViewAdapter$GridItem;->listener:Landroid/view/View$OnClickListener;
+    .line 60
+    iget-object v0, p0, Laek;->a:Lcom/quvideo/xiaoying/common/ui/LoadingMoreFooterView;
+
+    invoke-static {v0}, Lcom/quvideo/xiaoying/common/ui/LoadingMoreFooterView;->a(Lcom/quvideo/xiaoying/common/ui/LoadingMoreFooterView;)Landroid/view/View$OnClickListener;
+
+    move-result-object v0
 
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 71
-    :cond_d
+    .line 63
+    :cond_11
     return-void
 .end method

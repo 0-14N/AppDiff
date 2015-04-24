@@ -1620,9 +1620,9 @@
     .line 2434
     iget-object v0, p0, Lcom/quvideo/xiaoying/common/ProjectMgr;->c:Lcom/quvideo/xiaoying/videoeditor/ui/SaveDialog;
 
-    new-instance v1, Lajl;
+    new-instance v1, Lacr;
 
-    invoke-direct {v1, p0, v8, v9, p2}, Lajl;-><init>(Lcom/quvideo/xiaoying/common/ProjectMgr;JLcom/quvideo/xiaoying/common/ProjectMgr$ExportOpListener;)V
+    invoke-direct {v1, p0, v8, v9, p2}, Lacr;-><init>(Lcom/quvideo/xiaoying/common/ProjectMgr;JLcom/quvideo/xiaoying/common/ProjectMgr$ExportOpListener;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/videoeditor/ui/SaveDialog;->setExportListener(Lcom/quvideo/xiaoying/videoeditor/util/AbstractExportUtil$ExportListener;)V
 
@@ -2022,9 +2022,9 @@
 
     .line 1349
     :cond_90
-    new-instance v2, Lajj;
+    new-instance v2, Lacp;
 
-    invoke-direct {v2, v1}, Lajj;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lacp;-><init>(Ljava/lang/String;)V
 
     .line 1356
     new-instance v1, Ljava/io/File;
@@ -5436,7 +5436,7 @@
 
     move-result-object v10
 
-    new-instance v0, Lajk;
+    new-instance v0, Lacq;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -5454,7 +5454,7 @@
 
     move-object/from16 v8, p5
 
-    invoke-direct/range {v0 .. v8}, Lajk;-><init>(Lcom/quvideo/xiaoying/common/ProjectMgr;Landroid/os/Looper;Lcom/quvideo/xiaoying/studio/ProjectItem;Landroid/app/Activity;Lcom/quvideo/xiaoying/common/ProjectMgr$ExportOpListener;Lcom/quvideo/xiaoying/videoeditor/util/AppContext;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v8}, Lacq;-><init>(Lcom/quvideo/xiaoying/common/ProjectMgr;Landroid/os/Looper;Lcom/quvideo/xiaoying/studio/ProjectItem;Landroid/app/Activity;Lcom/quvideo/xiaoying/common/ProjectMgr$ExportOpListener;Lcom/quvideo/xiaoying/videoeditor/util/AppContext;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v9, v10, v0}, Lcom/quvideo/xiaoying/common/ProjectMgr;->loadStoryBoard(Ljava/lang/String;Lxiaoying/engine/QEngine;Landroid/os/Handler;)V
 
@@ -12428,12 +12428,12 @@
 
     .line 553
     :cond_43
-    new-instance v0, Laji;
+    new-instance v0, Laco;
 
-    invoke-direct {v0, p0, v2, p2, p3}, Laji;-><init>(Lcom/quvideo/xiaoying/common/ProjectMgr;Lcom/quvideo/xiaoying/studio/ProjectItem;Lcom/quvideo/xiaoying/videoeditor/util/AppContext;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v2, p2, p3}, Laco;-><init>(Lcom/quvideo/xiaoying/common/ProjectMgr;Lcom/quvideo/xiaoying/studio/ProjectItem;Lcom/quvideo/xiaoying/videoeditor/util/AppContext;Landroid/os/Handler;)V
 
     .line 567
-    invoke-virtual {v0}, Laji;->start()V
+    invoke-virtual {v0}, Laco;->start()V
 
     goto :goto_c
 .end method

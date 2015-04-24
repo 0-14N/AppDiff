@@ -81,16 +81,16 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/studio/TaskListAdapter;->k:Ljava/lang/String;
 
     .line 179
-    new-instance v0, Laqx;
+    new-instance v0, Lakd;
 
-    invoke-direct {v0, p0}, Laqx;-><init>(Lcom/quvideo/xiaoying/studio/TaskListAdapter;)V
+    invoke-direct {v0, p0}, Lakd;-><init>(Lcom/quvideo/xiaoying/studio/TaskListAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/studio/TaskListAdapter;->l:Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView$MoreButtonClickListener;
 
     .line 231
-    new-instance v0, Laqy;
+    new-instance v0, Lake;
 
-    invoke-direct {v0, p0}, Laqy;-><init>(Lcom/quvideo/xiaoying/studio/TaskListAdapter;)V
+    invoke-direct {v0, p0}, Lake;-><init>(Lcom/quvideo/xiaoying/studio/TaskListAdapter;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/studio/TaskListAdapter;->m:Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView$VideoMgrCallback;
 
@@ -241,9 +241,9 @@
     .line 207
     iget-object v2, p0, Lcom/quvideo/xiaoying/studio/TaskListAdapter;->d:Landroid/app/Activity;
 
-    new-instance v3, Lara;
+    new-instance v3, Lakg;
 
-    invoke-direct {v3, p0, p1}, Lara;-><init>(Lcom/quvideo/xiaoying/studio/TaskListAdapter;I)V
+    invoke-direct {v3, p0, p1}, Lakg;-><init>(Lcom/quvideo/xiaoying/studio/TaskListAdapter;I)V
 
     .line 206
     invoke-direct {v0, v2, v1, v3}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
@@ -424,9 +424,9 @@
     invoke-virtual/range {v0 .. v6}, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView;->updateDetailInfo(ILcom/quvideo/xiaoying/common/VideoDetailInfo;ILcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;Lcom/quvideo/xiaoying/common/bitmapfun/util/ImageFetcherWithListener;Z)V
 
     .line 152
-    new-instance v1, Laqz;
+    new-instance v1, Lakf;
 
-    invoke-direct {v1, p0}, Laqz;-><init>(Lcom/quvideo/xiaoying/studio/TaskListAdapter;)V
+    invoke-direct {v1, p0}, Lakf;-><init>(Lcom/quvideo/xiaoying/studio/TaskListAdapter;)V
 
     invoke-virtual {v0, v1}, Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView;->setDataChangeListener(Lcom/quvideo/xiaoying/common/ui/custom/UserVideoDetailBaseView$DataChangeListener;)V
 

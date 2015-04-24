@@ -58,21 +58,21 @@
 
     iput-object p0, p0, Lcn/dxy/idxyer/activity/MainActivity;->e:Landroid/content/Context;
 
+    new-instance v0, Lcn/dxy/idxyer/activity/l;
+
+    invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/l;-><init>(Lcn/dxy/idxyer/activity/MainActivity;)V
+
+    iput-object v0, p0, Lcn/dxy/idxyer/activity/MainActivity;->x:Lcn/dxy/idxyer/a/c/g;
+
     new-instance v0, Lcn/dxy/idxyer/activity/m;
 
     invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/m;-><init>(Lcn/dxy/idxyer/activity/MainActivity;)V
 
-    iput-object v0, p0, Lcn/dxy/idxyer/activity/MainActivity;->x:Lcn/dxy/idxyer/a/c/g;
+    iput-object v0, p0, Lcn/dxy/idxyer/activity/MainActivity;->y:Lcn/dxy/idxyer/a/c/g;
 
     new-instance v0, Lcn/dxy/idxyer/activity/n;
 
     invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/n;-><init>(Lcn/dxy/idxyer/activity/MainActivity;)V
-
-    iput-object v0, p0, Lcn/dxy/idxyer/activity/MainActivity;->y:Lcn/dxy/idxyer/a/c/g;
-
-    new-instance v0, Lcn/dxy/idxyer/activity/o;
-
-    invoke-direct {v0, p0}, Lcn/dxy/idxyer/activity/o;-><init>(Lcn/dxy/idxyer/activity/MainActivity;)V
 
     iput-object v0, p0, Lcn/dxy/idxyer/activity/MainActivity;->z:Landroid/view/View$OnClickListener;
 
@@ -119,7 +119,7 @@
 
     invoke-direct {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->c(Landroid/view/View;)V
 
-    const v0, 0x7f0c011c
+    const v0, 0x7f0c011b
 
     invoke-virtual {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->setTitle(I)V
 
@@ -156,7 +156,7 @@
 
     invoke-direct {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->c(Landroid/view/View;)V
 
-    const v0, 0x7f0c01f9
+    const v0, 0x7f0c01f8
 
     invoke-virtual {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->setTitle(I)V
 
@@ -193,7 +193,7 @@
 
     invoke-direct {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->c(Landroid/view/View;)V
 
-    const v0, 0x7f0c011d
+    const v0, 0x7f0c011c
 
     invoke-virtual {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->setTitle(I)V
 
@@ -230,7 +230,7 @@
 
     invoke-direct {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->c(Landroid/view/View;)V
 
-    const v0, 0x7f0c011e
+    const v0, 0x7f0c011d
 
     invoke-virtual {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->setTitle(I)V
 
@@ -926,9 +926,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/dxy/idxyer/activity/k;
+    new-instance v1, Lcn/dxy/idxyer/activity/j;
 
-    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/k;-><init>(Lcn/dxy/idxyer/activity/MainActivity;)V
+    invoke-direct {v1, p0}, Lcn/dxy/idxyer/activity/j;-><init>(Lcn/dxy/idxyer/activity/MainActivity;)V
 
     invoke-static {p0, v0, v1}, Lcn/jpush/android/api/JPushInterface;->setAlias(Landroid/content/Context;Ljava/lang/String;Lcn/jpush/android/api/TagAliasCallback;)V
 
@@ -948,7 +948,7 @@
 
     if-eqz v1, :cond_47
 
-    const v1, 0x7f0c00c8
+    const v1, 0x7f0c00c7
 
     invoke-virtual {p0, v1}, Lcn/dxy/idxyer/activity/MainActivity;->getString(I)Ljava/lang/String;
 
@@ -1083,19 +1083,19 @@
 
     invoke-direct {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->a(I)V
 
-    new-instance v0, Lcn/dxy/idxyer/activity/l;
+    new-instance v0, Lcn/dxy/idxyer/activity/k;
 
     iget-object v3, p0, Lcn/dxy/idxyer/activity/MainActivity;->f:Landroid/support/v4/widget/DrawerLayout;
 
-    const v4, 0x7f0c0120
+    const v4, 0x7f0c011f
 
-    const v5, 0x7f0c011b
+    const v5, 0x7f0c011a
 
     move-object v1, p0
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v5}, Lcn/dxy/idxyer/activity/l;-><init>(Lcn/dxy/idxyer/activity/MainActivity;Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;II)V
+    invoke-direct/range {v0 .. v5}, Lcn/dxy/idxyer/activity/k;-><init>(Lcn/dxy/idxyer/activity/MainActivity;Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;II)V
 
     iget-object v1, p0, Lcn/dxy/idxyer/activity/MainActivity;->f:Landroid/support/v4/widget/DrawerLayout;
 
@@ -1400,7 +1400,7 @@
 
     if-lez v0, :cond_2d
 
-    const v0, 0x7f0c0074
+    const v0, 0x7f0c0073
 
     invoke-virtual {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->getString(I)Ljava/lang/String;
 
@@ -1435,7 +1435,7 @@
 
     invoke-virtual {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->setContentView(I)V
 
-    const v0, 0x7f0c011c
+    const v0, 0x7f0c011b
 
     invoke-virtual {p0, v0}, Lcn/dxy/idxyer/activity/MainActivity;->setTitle(I)V
 
@@ -1806,7 +1806,7 @@
 
     iget-object v0, p0, Lcn/dxy/idxyer/activity/MainActivity;->g:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0123
+    const v1, 0x7f0c0122
 
     invoke-virtual {p0, v1}, Lcn/dxy/idxyer/activity/MainActivity;->getString(I)Ljava/lang/String;
 

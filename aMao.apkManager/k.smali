@@ -33,7 +33,7 @@
 
     iget-boolean v1, p0, Lcom/google/ads/k;->a:Z
 
-    invoke-static {v0, v1}, Lcom/google/ads/af;->a(Landroid/webkit/WebView;Z)V
+    invoke-static {v0, v1}, Lcom/google/ads/ag;->a(Landroid/webkit/WebView;Z)V
 
     return-void
 .end method

@@ -7,6 +7,15 @@
 .implements Ljava/io/Externalizable;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/millennialmedia/android/VideoAd$VideoFilenameFilter;,
+        Lcom/millennialmedia/android/VideoAd$VideoIterator;
+    }
+.end annotation
+
+
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
@@ -91,10 +100,10 @@
     .registers 1
 
     .prologue
-    .line 504
-    new-instance v0, Lcom/millennialmedia/android/VideoAd$3;
+    .line 542
+    new-instance v0, Lcom/millennialmedia/android/VideoAd$1;
 
-    invoke-direct {v0}, Lcom/millennialmedia/android/VideoAd$3;-><init>()V
+    invoke-direct {v0}, Lcom/millennialmedia/android/VideoAd$1;-><init>()V
 
     sput-object v0, Lcom/millennialmedia/android/VideoAd;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -105,24 +114,24 @@
     .registers 2
 
     .prologue
-    .line 59
+    .line 60
     invoke-direct {p0}, Lcom/millennialmedia/android/CachedAd;-><init>()V
-
-    .line 54
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     .line 55
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    iput-object v0, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
+
+    .line 56
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
     iput-object v0, p0, Lcom/millennialmedia/android/VideoAd;->activities:Ljava/util/ArrayList;
 
-    .line 60
+    .line 61
     return-void
 .end method
 
@@ -131,156 +140,156 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 66
+    .line 67
     invoke-direct {p0, p1}, Lcom/millennialmedia/android/CachedAd;-><init>(Landroid/os/Parcel;)V
-
-    .line 54
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     .line 55
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
+    iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
+
+    .line 56
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->activities:Ljava/util/ArrayList;
 
-    .line 70
+    .line 71
     :try_start_11
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 71
+    .line 72
     .local v2, "len":I
     new-array v3, v2, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
-    .line 72
+    .line 73
     iget-object v3, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readStringArray([Ljava/lang/String;)V
 
-    .line 73
+    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 74
+    .line 75
     new-array v3, v2, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
-    .line 75
+    .line 76
     iget-object v3, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readStringArray([Ljava/lang/String;)V
 
-    .line 76
+    .line 77
     const/4 v3, 0x5
 
     new-array v0, v3, [Z
 
-    .line 77
+    .line 78
     .local v0, "boolArray":[Z
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBooleanArray([Z)V
 
-    .line 78
+    .line 79
     const/4 v3, 0x0
 
     aget-boolean v3, v0, v3
 
     iput-boolean v3, p0, Lcom/millennialmedia/android/VideoAd;->showControls:Z
 
-    .line 79
+    .line 80
     const/4 v3, 0x1
 
     aget-boolean v3, v0, v3
 
     iput-boolean v3, p0, Lcom/millennialmedia/android/VideoAd;->stayInPlayer:Z
 
-    .line 80
+    .line 81
     const/4 v3, 0x2
 
     aget-boolean v3, v0, v3
 
     iput-boolean v3, p0, Lcom/millennialmedia/android/VideoAd;->showCountdown:Z
 
-    .line 81
+    .line 82
     const/4 v3, 0x3
 
     aget-boolean v3, v0, v3
 
     iput-boolean v3, p0, Lcom/millennialmedia/android/VideoAd;->reloadNonEndOverlayOnRestart:Z
 
-    .line 82
+    .line 83
     const/4 v3, 0x4
 
     aget-boolean v3, v0, v3
 
     iput-boolean v3, p0, Lcom/millennialmedia/android/VideoAd;->usingInternalStorage:Z
 
-    .line 83
+    .line 84
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->onCompletionUrl:Ljava/lang/String;
 
-    .line 84
+    .line 85
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->webOverlayURL:Ljava/lang/String;
 
-    .line 85
+    .line 86
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->endOverlayURL:Ljava/lang/String;
 
-    .line 86
+    .line 87
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->cacheMissURL:Ljava/lang/String;
 
-    .line 87
+    .line 88
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->videoFileId:Ljava/lang/String;
 
-    .line 88
+    .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v3
 
     iput-wide v3, p0, Lcom/millennialmedia/android/VideoAd;->duration:J
 
-    .line 89
+    .line 90
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v3
 
     iput-wide v3, p0, Lcom/millennialmedia/android/VideoAd;->contentLength:J
 
-    .line 90
+    .line 91
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v3
 
     iput-wide v3, p0, Lcom/millennialmedia/android/VideoAd;->closeDelayMillis:J
 
-    .line 91
+    .line 92
     const-class v3, Lcom/millennialmedia/android/VideoImage;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -293,7 +302,7 @@
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
-    .line 92
+    .line 93
     const-class v3, Lcom/millennialmedia/android/VideoLogEvent;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -306,64 +315,64 @@
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->activities:Ljava/util/ArrayList;
 
-    .line 93
+    .line 94
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 94
+    .line 95
     new-array v3, v2, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
-    .line 95
+    .line 96
     iget-object v3, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readStringArray([Ljava/lang/String;)V
 
-    .line 96
+    .line 97
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 97
+    .line 98
     new-array v3, v2, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
-    .line 98
+    .line 99
     iget-object v3, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readStringArray([Ljava/lang/String;)V
 
-    .line 99
+    .line 100
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 100
+    .line 101
     new-array v3, v2, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
 
-    .line 101
+    .line 102
     iget-object v3, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->readStringArray([Ljava/lang/String;)V
     :try_end_b9
     .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_b9} :catch_ba
 
-    .line 107
+    .line 108
     .end local v0    # "boolArray":[Z
     .end local v2    # "len":I
     :goto_b9
     return-void
 
-    .line 103
+    .line 104
     :catch_ba
     move-exception v1
 
-    .line 105
+    .line 106
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -375,30 +384,30 @@
     .param p1, "jsonString"    # Ljava/lang/String;
 
     .prologue
-    .line 115
+    .line 116
     invoke-direct {p0}, Lcom/millennialmedia/android/CachedAd;-><init>()V
-
-    .line 54
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     .line 55
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
+    iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
+
+    .line 56
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->activities:Ljava/util/ArrayList;
 
-    .line 116
+    .line 117
     if-eqz p1, :cond_28
 
-    .line 119
+    .line 120
     const/4 v1, 0x0
 
-    .line 123
+    .line 124
     .local v1, "jsonAdObject":Lorg/json/JSONObject;
     :try_start_14
     new-instance v2, Lorg/json/JSONObject;
@@ -411,16 +420,16 @@
     .local v2, "jsonAdObject":Lorg/json/JSONObject;
     move-object v1, v2
 
-    .line 130
+    .line 131
     .end local v2    # "jsonAdObject":Lorg/json/JSONObject;
     .restart local v1    # "jsonAdObject":Lorg/json/JSONObject;
     :goto_1a
     if-eqz v1, :cond_28
 
-    .line 132
+    .line 133
     const/4 v3, 0x0
 
-    .line 133
+    .line 134
     .local v3, "videoObject":Lorg/json/JSONObject;
     const-string v4, "video"
 
@@ -428,24 +437,24 @@
 
     move-result-object v3
 
-    .line 134
+    .line 135
     if-eqz v3, :cond_28
 
-    .line 135
+    .line 136
     invoke-virtual {p0, v3}, Lcom/millennialmedia/android/VideoAd;->deserializeFromObj(Lorg/json/JSONObject;)V
 
-    .line 138
+    .line 139
     .end local v1    # "jsonAdObject":Lorg/json/JSONObject;
     .end local v3    # "videoObject":Lorg/json/JSONObject;
     :cond_28
     return-void
 
-    .line 125
+    .line 126
     .restart local v1    # "jsonAdObject":Lorg/json/JSONObject;
     :catch_29
     move-exception v0
 
-    .line 127
+    .line 128
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
@@ -457,74 +466,10 @@
     .param p0, "x0"    # Lcom/millennialmedia/android/VideoAd;
 
     .prologue
-    .line 26
+    .line 27
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->videoFileId:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method static synthetic access$100(Lcom/millennialmedia/android/VideoAd;Landroid/content/Context;)V
-    .registers 2
-    .param p0, "x0"    # Lcom/millennialmedia/android/VideoAd;
-    .param p1, "x1"    # Landroid/content/Context;
-
-    .prologue
-    .line 26
-    invoke-direct {p0, p1}, Lcom/millennialmedia/android/VideoAd;->deleteVideoFile(Landroid/content/Context;)V
-
-    return-void
-.end method
-
-.method private deleteVideoFile(Landroid/content/Context;)V
-    .registers 6
-    .param p1, "context"    # Landroid/content/Context;
-
-    .prologue
-    .line 386
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lcom/millennialmedia/android/VideoAd;->videoFileId:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "video.dat"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lcom/millennialmedia/android/AdCache;->deleteFile(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_28
-
-    .line 387
-    const-string v0, "VideoAd video file %s was deleted."
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lcom/millennialmedia/android/VideoAd;->videoFileId:Ljava/lang/String;
-
-    aput-object v3, v1, v2
-
-    invoke-static {v0, v1}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 388
-    :cond_28
-    return-void
 .end method
 
 .method static downloadVideoFile(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
@@ -538,12 +483,12 @@
 
     const/4 v2, 0x0
 
-    .line 271
+    .line 272
     invoke-static {p0}, Lcom/millennialmedia/android/AdCache;->getCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 273
+    .line 274
     .local v0, "dir":Ljava/io/File;
     if-eqz v0, :cond_e
 
@@ -556,11 +501,11 @@
     :cond_e
     move v1, v2
 
-    .line 281
+    .line 282
     :goto_f
     return v1
 
-    .line 277
+    .line 278
     :cond_10
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -598,7 +543,7 @@
 
     invoke-static {v3, v4}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 279
+    .line 280
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -621,7 +566,7 @@
 
     move-result v1
 
-    .line 280
+    .line 281
     .local v1, "success":Z
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -672,7 +617,7 @@
     .param p1, "videoFileId"    # Ljava/lang/String;
 
     .prologue
-    .line 291
+    .line 292
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -707,16 +652,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 354
+    .line 355
     const/4 v0, 0x2
 
-    new-instance v1, Lcom/millennialmedia/android/VideoAd$1;
+    new-instance v1, Lcom/millennialmedia/android/VideoAd$VideoIterator;
 
-    invoke-direct {v1, p0, p1}, Lcom/millennialmedia/android/VideoAd$1;-><init>(Lcom/millennialmedia/android/VideoAd;Landroid/content/Context;)V
+    invoke-direct {v1, p1, p0}, Lcom/millennialmedia/android/VideoAd$VideoIterator;-><init>(Landroid/content/Context;Lcom/millennialmedia/android/VideoAd;)V
 
     invoke-static {p1, v0, v1}, Lcom/millennialmedia/android/AdCache;->iterateCachedAds(Landroid/content/Context;ILcom/millennialmedia/android/AdCache$Iterator;)V
 
-    .line 382
+    .line 356
     return-void
 .end method
 
@@ -726,7 +671,7 @@
     .param p1, "videoFileId"    # Ljava/lang/String;
 
     .prologue
-    .line 286
+    .line 287
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -763,17 +708,17 @@
 
     const/4 v3, 0x0
 
-    .line 648
+    .line 686
     if-eqz p1, :cond_27
 
-    .line 650
+    .line 688
     invoke-static {p0, p1}, Lcom/millennialmedia/android/AdCache;->load(Landroid/content/Context;Ljava/lang/String;)Lcom/millennialmedia/android/CachedAd;
 
     move-result-object v0
 
     check-cast v0, Lcom/millennialmedia/android/VideoAd;
 
-    .line 651
+    .line 689
     .local v0, "videoAd":Lcom/millennialmedia/android/VideoAd;
     if-eqz v0, :cond_28
 
@@ -785,10 +730,10 @@
 
     if-eqz v1, :cond_28
 
-    .line 653
+    .line 691
     invoke-virtual {p2}, Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;->updateLastVideoViewedTime()V
 
-    .line 654
+    .line 692
     const-string v1, "mmvideo: attempting to play video %s"
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -797,21 +742,21 @@
 
     invoke-static {v1, v2}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 655
+    .line 693
     iget-wide v1, p2, Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;->creatorAdImplInternalId:J
 
     invoke-virtual {v0, p0, v1, v2}, Lcom/millennialmedia/android/VideoAd;->show(Landroid/content/Context;J)V
 
-    .line 656
+    .line 694
     invoke-virtual {p2}, Lcom/millennialmedia/android/HttpRedirection$RedirectionListenerImpl;->startingVideo()V
 
-    .line 663
+    .line 701
     .end local v0    # "videoAd":Lcom/millennialmedia/android/VideoAd;
     :cond_27
     :goto_27
     return-void
 
-    .line 660
+    .line 698
     .restart local v0    # "videoAd":Lcom/millennialmedia/android/VideoAd;
     :cond_28
     const-string v1, "mmvideo: Ad %s cannot be shown at this time."
@@ -838,10 +783,10 @@
 
     const/4 v1, 0x0
 
-    .line 445
+    .line 483
     if-eqz p3, :cond_21
 
-    .line 446
+    .line 484
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoAd;->isExpired()Z
 
     move-result v2
@@ -868,7 +813,7 @@
 
     if-eqz v2, :cond_1f
 
-    .line 448
+    .line 486
     :cond_1e
     :goto_1e
     return v0
@@ -876,10 +821,10 @@
     :cond_1f
     move v0, v1
 
-    .line 446
+    .line 484
     goto :goto_1e
 
-    .line 448
+    .line 486
     :cond_21
     invoke-virtual {p0}, Lcom/millennialmedia/android/VideoAd;->isExpired()Z
 
@@ -904,18 +849,18 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 346
+    .line 347
     invoke-super {p0, p1}, Lcom/millennialmedia/android/CachedAd;->delete(Landroid/content/Context;)V
 
-    .line 347
+    .line 348
     invoke-direct {p0, p1}, Lcom/millennialmedia/android/VideoAd;->handleSharedVideoFile(Landroid/content/Context;)V
 
-    .line 348
+    .line 349
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->acid:Ljava/lang/String;
 
     invoke-static {p1, v0}, Lcom/millennialmedia/android/AdCache;->cachedVideoWasRemoved(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 349
+    .line 350
     const-string v0, "Ad %s was deleted."
 
     const/4 v1, 0x1
@@ -932,7 +877,7 @@
 
     invoke-static {v0, v1}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 350
+    .line 351
     return-void
 .end method
 
@@ -940,7 +885,7 @@
     .registers 2
 
     .prologue
-    .line 472
+    .line 510
     const/4 v0, 0x0
 
     return v0
@@ -955,17 +900,17 @@
 
     const/4 v7, 0x0
 
-    .line 150
+    .line 151
     invoke-super {p0, p1}, Lcom/millennialmedia/android/CachedAd;->deserializeFromObj(Lorg/json/JSONObject;)V
 
-    .line 151
+    .line 152
     const-string v5, "startActivity"
 
     invoke-virtual {p1, v5}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
-    .line 152
+    .line 153
     .local v1, "jsonArray":Lorg/json/JSONArray;
     const-string v5, "overlayURL"
 
@@ -975,7 +920,7 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->webOverlayURL:Ljava/lang/String;
 
-    .line 153
+    .line 154
     const-string v5, "endURL"
 
     invoke-virtual {p1, v5, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -984,7 +929,7 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->endOverlayURL:Ljava/lang/String;
 
-    .line 154
+    .line 155
     const-string v5, "cacheMissURL"
 
     invoke-virtual {p1, v5, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -993,7 +938,7 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheMissURL:Ljava/lang/String;
 
-    .line 155
+    .line 156
     const-string v5, "videoFileId"
 
     invoke-virtual {p1, v5, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1002,10 +947,10 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->videoFileId:Ljava/lang/String;
 
-    .line 156
+    .line 157
     if-eqz v1, :cond_47
 
-    .line 158
+    .line 159
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v5
@@ -1014,7 +959,7 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
-    .line 159
+    .line 160
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1025,7 +970,7 @@
 
     if-ge v0, v5, :cond_4b
 
-    .line 160
+    .line 161
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
@@ -1034,19 +979,19 @@
 
     aput-object v6, v5, v0
 
-    .line 159
+    .line 160
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_36
 
-    .line 164
+    .line 165
     .end local v0    # "i":I
     :cond_47
     new-array v5, v7, [Ljava/lang/String;
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
-    .line 166
+    .line 167
     :cond_4b
     const-string v5, "endActivity"
 
@@ -1054,10 +999,10 @@
 
     move-result-object v1
 
-    .line 167
+    .line 168
     if-eqz v1, :cond_6d
 
-    .line 169
+    .line 170
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v5
@@ -1066,7 +1011,7 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
-    .line 170
+    .line 171
     const/4 v0, 0x0
 
     .restart local v0    # "i":I
@@ -1077,7 +1022,7 @@
 
     if-ge v0, v5, :cond_71
 
-    .line 171
+    .line 172
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
@@ -1086,19 +1031,19 @@
 
     aput-object v6, v5, v0
 
-    .line 170
+    .line 171
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_5c
 
-    .line 175
+    .line 176
     .end local v0    # "i":I
     :cond_6d
     new-array v5, v7, [Ljava/lang/String;
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
-    .line 177
+    .line 178
     :cond_71
     const-string v5, "cacheComplete"
 
@@ -1106,10 +1051,10 @@
 
     move-result-object v1
 
-    .line 178
+    .line 179
     if-eqz v1, :cond_93
 
-    .line 180
+    .line 181
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v5
@@ -1118,7 +1063,7 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
-    .line 181
+    .line 182
     const/4 v0, 0x0
 
     .restart local v0    # "i":I
@@ -1129,7 +1074,7 @@
 
     if-ge v0, v5, :cond_97
 
-    .line 182
+    .line 183
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
@@ -1138,19 +1083,19 @@
 
     aput-object v6, v5, v0
 
-    .line 181
+    .line 182
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_82
 
-    .line 186
+    .line 187
     .end local v0    # "i":I
     :cond_93
     new-array v5, v7, [Ljava/lang/String;
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
-    .line 188
+    .line 189
     :cond_97
     const-string v5, "cacheFailed"
 
@@ -1158,10 +1103,10 @@
 
     move-result-object v1
 
-    .line 189
+    .line 190
     if-eqz v1, :cond_b9
 
-    .line 191
+    .line 192
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v5
@@ -1170,7 +1115,7 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
-    .line 192
+    .line 193
     const/4 v0, 0x0
 
     .restart local v0    # "i":I
@@ -1181,7 +1126,7 @@
 
     if-ge v0, v5, :cond_bd
 
-    .line 193
+    .line 194
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
@@ -1190,19 +1135,19 @@
 
     aput-object v6, v5, v0
 
-    .line 192
+    .line 193
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_a8
 
-    .line 197
+    .line 198
     .end local v0    # "i":I
     :cond_b9
     new-array v5, v7, [Ljava/lang/String;
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
-    .line 199
+    .line 200
     :cond_bd
     const-string v5, "videoError"
 
@@ -1210,10 +1155,10 @@
 
     move-result-object v1
 
-    .line 200
+    .line 201
     if-eqz v1, :cond_df
 
-    .line 202
+    .line 203
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v5
@@ -1222,7 +1167,7 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
 
-    .line 203
+    .line 204
     const/4 v0, 0x0
 
     .restart local v0    # "i":I
@@ -1233,7 +1178,7 @@
 
     if-ge v0, v5, :cond_e3
 
-    .line 204
+    .line 205
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
@@ -1242,19 +1187,19 @@
 
     aput-object v6, v5, v0
 
-    .line 203
+    .line 204
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_ce
 
-    .line 208
+    .line 209
     .end local v0    # "i":I
     :cond_df
     new-array v5, v7, [Ljava/lang/String;
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
 
-    .line 210
+    .line 211
     :cond_e3
     const-string v5, "showVideoPlayerControls"
 
@@ -1264,7 +1209,7 @@
 
     iput-boolean v5, p0, Lcom/millennialmedia/android/VideoAd;->showControls:Z
 
-    .line 211
+    .line 212
     const-string v5, "showCountdownHUD"
 
     invoke-virtual {p1, v5}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
@@ -1273,7 +1218,7 @@
 
     iput-boolean v5, p0, Lcom/millennialmedia/android/VideoAd;->showCountdown:Z
 
-    .line 212
+    .line 213
     const-string v5, "reloadOverlayOnRestart"
 
     invoke-virtual {p1, v5}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
@@ -1282,18 +1227,18 @@
 
     iput-boolean v5, p0, Lcom/millennialmedia/android/VideoAd;->reloadNonEndOverlayOnRestart:Z
 
-    .line 213
+    .line 214
     const-string v5, "onCompletion"
 
     invoke-virtual {p1, v5}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    .line 214
+    .line 215
     .local v2, "jsonObject":Lorg/json/JSONObject;
     if-eqz v2, :cond_113
 
-    .line 216
+    .line 217
     const-string v5, "url"
 
     invoke-virtual {v2, v5, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1302,7 +1247,7 @@
 
     iput-object v5, p0, Lcom/millennialmedia/android/VideoAd;->onCompletionUrl:Ljava/lang/String;
 
-    .line 217
+    .line 218
     const-string v5, "stayInPlayer"
 
     invoke-virtual {v2, v5}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
@@ -1311,7 +1256,7 @@
 
     iput-boolean v5, p0, Lcom/millennialmedia/android/VideoAd;->stayInPlayer:Z
 
-    .line 219
+    .line 220
     :cond_113
     const-string v5, "duration"
 
@@ -1329,7 +1274,7 @@
 
     iput-wide v5, p0, Lcom/millennialmedia/android/VideoAd;->duration:J
 
-    .line 220
+    .line 221
     const-string v5, "contentLength"
 
     invoke-virtual {p1, v5}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
@@ -1338,7 +1283,7 @@
 
     iput-wide v5, p0, Lcom/millennialmedia/android/VideoAd;->contentLength:J
 
-    .line 221
+    .line 222
     const-string v5, "closeAfterDelay"
 
     invoke-virtual {p1, v5}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
@@ -1347,17 +1292,17 @@
 
     iput-wide v5, p0, Lcom/millennialmedia/android/VideoAd;->closeDelayMillis:J
 
-    .line 222
+    .line 223
     const-string v5, "buttons"
 
     invoke-virtual {p1, v5}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
-    .line 223
+    .line 224
     if-eqz v1, :cond_156
 
-    .line 225
+    .line 226
     const/4 v0, 0x0
 
     .restart local v0    # "i":I
@@ -1368,33 +1313,33 @@
 
     if-ge v0, v5, :cond_156
 
-    .line 227
+    .line 228
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    .line 228
+    .line 229
     if-eqz v2, :cond_153
 
-    .line 230
+    .line 231
     new-instance v3, Lcom/millennialmedia/android/VideoImage;
 
     invoke-direct {v3, v2}, Lcom/millennialmedia/android/VideoImage;-><init>(Lorg/json/JSONObject;)V
 
-    .line 231
+    .line 232
     .local v3, "vb":Lcom/millennialmedia/android/VideoImage;
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 225
+    .line 226
     .end local v3    # "vb":Lcom/millennialmedia/android/VideoImage;
     :cond_153
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_13d
 
-    .line 235
+    .line 236
     .end local v0    # "i":I
     :cond_156
     const-string v5, "log"
@@ -1403,10 +1348,10 @@
 
     move-result-object v1
 
-    .line 236
+    .line 237
     if-eqz v1, :cond_178
 
-    .line 238
+    .line 239
     const/4 v0, 0x0
 
     .restart local v0    # "i":I
@@ -1417,33 +1362,33 @@
 
     if-ge v0, v5, :cond_178
 
-    .line 240
+    .line 241
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    .line 241
+    .line 242
     if-eqz v2, :cond_175
 
-    .line 243
+    .line 244
     new-instance v4, Lcom/millennialmedia/android/VideoLogEvent;
 
     invoke-direct {v4, v2}, Lcom/millennialmedia/android/VideoLogEvent;-><init>(Lorg/json/JSONObject;)V
 
-    .line 244
+    .line 245
     .local v4, "videoLogEvent":Lcom/millennialmedia/android/VideoLogEvent;
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 238
+    .line 239
     .end local v4    # "videoLogEvent":Lcom/millennialmedia/android/VideoLogEvent;
     :cond_175
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_15f
 
-    .line 248
+    .line 249
     .end local v0    # "i":I
     :cond_178
     return-void
@@ -1458,16 +1403,16 @@
 
     const/4 v4, 0x0
 
-    .line 300
+    .line 301
     const/4 v3, 0x0
 
-    .line 301
+    .line 302
     .local v3, "success":Z
     invoke-static {p1}, Lcom/millennialmedia/android/AdCache;->getCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 303
+    .line 304
     .local v1, "dir":Ljava/io/File;
     if-eqz v1, :cond_f
 
@@ -1477,12 +1422,12 @@
 
     if-nez v5, :cond_10
 
-    .line 340
+    .line 341
     :cond_f
     :goto_f
     return v4
 
-    .line 307
+    .line 308
     :cond_10
     invoke-static {p1, v1}, Lcom/millennialmedia/android/AdCache;->isInternalDir(Landroid/content/Context;Ljava/io/File;)Z
 
@@ -1490,7 +1435,7 @@
 
     iput-boolean v5, p0, Lcom/millennialmedia/android/VideoAd;->usingInternalStorage:Z
 
-    .line 308
+    .line 309
     const-string v5, "Downloading content to %s"
 
     new-array v6, v8, [Ljava/lang/Object;
@@ -1499,7 +1444,7 @@
 
     invoke-static {v5, v6}, Lcom/millennialmedia/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 311
+    .line 312
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->contentUrl:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1526,10 +1471,10 @@
 
     move-result v3
 
-    .line 312
+    .line 313
     if-eqz v3, :cond_6e
 
-    .line 315
+    .line 316
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -1542,7 +1487,7 @@
 
     if-ge v2, v5, :cond_6e
 
-    .line 317
+    .line 318
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1551,7 +1496,7 @@
 
     check-cast v0, Lcom/millennialmedia/android/VideoImage;
 
-    .line 318
+    .line 319
     .local v0, "button":Lcom/millennialmedia/android/VideoImage;
     iget-object v5, v0, Lcom/millennialmedia/android/VideoImage;->imageUrl:Ljava/lang/String;
 
@@ -1583,30 +1528,30 @@
 
     move-result v3
 
-    .line 319
+    .line 320
     if-nez v3, :cond_8b
 
-    .line 324
+    .line 325
     .end local v0    # "button":Lcom/millennialmedia/android/VideoImage;
     .end local v2    # "i":I
     :cond_6e
     if-nez v3, :cond_8e
 
-    .line 326
+    .line 327
     iget-boolean v5, p0, Lcom/millennialmedia/android/VideoAd;->downloadAllOrNothing:Z
 
     if-eqz v5, :cond_77
 
-    .line 327
+    .line 328
     invoke-virtual {p0, p1}, Lcom/millennialmedia/android/VideoAd;->delete(Landroid/content/Context;)V
 
-    .line 328
+    .line 329
     :cond_77
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
     invoke-static {v5}, Lcom/millennialmedia/android/HttpGetRequest;->log([Ljava/lang/String;)V
 
-    .line 339
+    .line 340
     :cond_7c
     :goto_7c
     const-string v5, "Caching completed successfully? %b"
@@ -1623,10 +1568,10 @@
 
     move v4, v3
 
-    .line 340
+    .line 341
     goto :goto_f
 
-    .line 315
+    .line 316
     .restart local v0    # "button":Lcom/millennialmedia/android/VideoImage;
     .restart local v2    # "i":I
     :cond_8b
@@ -1634,13 +1579,13 @@
 
     goto :goto_3d
 
-    .line 330
+    .line 331
     .end local v0    # "button":Lcom/millennialmedia/android/VideoImage;
     .end local v2    # "i":I
     :cond_8e
     if-eqz v3, :cond_7c
 
-    .line 333
+    .line 334
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->acid:Ljava/lang/String;
 
     if-eqz v5, :cond_a1
@@ -1653,12 +1598,12 @@
 
     if-lez v5, :cond_a1
 
-    .line 334
+    .line 335
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->acid:Ljava/lang/String;
 
     invoke-static {p1, v5}, Lcom/millennialmedia/android/AdCache;->cachedVideoWasAdded(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 336
+    .line 337
     :cond_a1
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
@@ -1671,7 +1616,7 @@
     .registers 2
 
     .prologue
-    .line 253
+    .line 254
     const/4 v0, 0x1
 
     return v0
@@ -1681,7 +1626,7 @@
     .registers 2
 
     .prologue
-    .line 259
+    .line 260
     const-string v0, "Video"
 
     return-object v0
@@ -1693,12 +1638,12 @@
     .param p2, "adImplInternalId"    # J
 
     .prologue
-    .line 459
+    .line 497
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 460
+    .line 498
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "videoId"
 
@@ -1708,19 +1653,19 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 461
+    .line 499
     const-wide/16 v2, -0x4
 
     cmp-long v2, p2, v2
 
     if-eqz v2, :cond_19
 
-    .line 462
+    .line 500
     const-string v2, "internalId"
 
     invoke-virtual {v0, v2, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 463
+    .line 501
     :cond_19
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1760,7 +1705,7 @@
 
     move-result-object v1
 
-    .line 464
+    .line 502
     .local v1, "internalVideoAd":Ljava/lang/String;
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1768,7 +1713,7 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 465
+    .line 503
     return-object v0
 .end method
 
@@ -1776,7 +1721,7 @@
     .registers 4
 
     .prologue
-    .line 674
+    .line 712
     iget-object v2, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1797,16 +1742,16 @@
 
     check-cast v0, Lcom/millennialmedia/android/VideoImage;
 
-    .line 676
+    .line 714
     .local v0, "button":Lcom/millennialmedia/android/VideoImage;
     iget-boolean v2, v0, Lcom/millennialmedia/android/VideoImage;->isLeaveBehind:Z
 
     if-eqz v2, :cond_6
 
-    .line 678
+    .line 716
     const/4 v2, 0x1
 
-    .line 681
+    .line 719
     .end local v0    # "button":Lcom/millennialmedia/android/VideoImage;
     :goto_17
     return v2
@@ -1822,16 +1767,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 396
+    .line 421
     const/4 v2, 0x0
 
-    .line 399
+    .line 424
     .local v2, "existsInFilesystem":Z
     invoke-static {p1}, Lcom/millennialmedia/android/AdCache;->getCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 402
+    .line 427
     .local v0, "adDir":Ljava/io/File;
     if-eqz v0, :cond_47
 
@@ -1841,16 +1786,16 @@
 
     if-eqz v7, :cond_47
 
-    .line 404
-    new-instance v7, Lcom/millennialmedia/android/VideoAd$2;
+    .line 429
+    new-instance v7, Lcom/millennialmedia/android/VideoAd$VideoFilenameFilter;
 
-    invoke-direct {v7, p0}, Lcom/millennialmedia/android/VideoAd$2;-><init>(Lcom/millennialmedia/android/VideoAd;)V
+    invoke-direct {v7, p0}, Lcom/millennialmedia/android/VideoAd$VideoFilenameFilter;-><init>(Lcom/millennialmedia/android/VideoAd;)V
 
     invoke-virtual {v0, v7}, Ljava/io/File;->list(Ljava/io/FilenameFilter;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 416
+    .line 430
     .local v5, "list":[Ljava/lang/String;
     if-eqz v5, :cond_24
 
@@ -1866,14 +1811,14 @@
 
     if-lt v7, v8, :cond_24
 
-    .line 417
+    .line 431
     const/4 v2, 0x1
 
-    .line 418
+    .line 432
     :cond_24
     if-eqz v2, :cond_47
 
-    .line 420
+    .line 434
     new-instance v6, Ljava/io/File;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1898,7 +1843,7 @@
 
     invoke-direct {v6, v0, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 421
+    .line 435
     .local v6, "videoFile":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
@@ -1906,17 +1851,17 @@
 
     if-nez v7, :cond_48
 
-    .line 423
+    .line 437
     const/4 v2, 0x0
 
-    .line 439
+    .line 453
     .end local v5    # "list":[Ljava/lang/String;
     .end local v6    # "videoFile":Ljava/io/File;
     :cond_47
     :goto_47
     return v2
 
-    .line 427
+    .line 441
     .restart local v5    # "list":[Ljava/lang/String;
     .restart local v6    # "videoFile":Ljava/io/File;
     :cond_48
@@ -1940,7 +1885,7 @@
 
     check-cast v1, Lcom/millennialmedia/android/VideoImage;
 
-    .line 429
+    .line 443
     .local v1, "button":Lcom/millennialmedia/android/VideoImage;
     new-instance v4, Ljava/io/File;
 
@@ -1970,7 +1915,7 @@
 
     invoke-direct {v4, v0, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 430
+    .line 444
     .local v4, "imageFile":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -1978,10 +1923,10 @@
 
     if-nez v7, :cond_4e
 
-    .line 432
+    .line 446
     const/4 v2, 0x0
 
-    .line 433
+    .line 447
     goto :goto_47
 .end method
 
@@ -1989,17 +1934,17 @@
     .registers 3
 
     .prologue
-    .line 624
+    .line 662
     iget-object v1, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
     if-eqz v1, :cond_19
 
-    .line 626
+    .line 664
     const-string v1, "Cached video begin event logged"
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 627
+    .line 665
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2010,19 +1955,19 @@
 
     if-ge v0, v1, :cond_19
 
-    .line 628
+    .line 666
     iget-object v1, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Event;->logEvent(Ljava/lang/String;)V
 
-    .line 627
+    .line 665
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_a
 
-    .line 630
+    .line 668
     .end local v0    # "i":I
     :cond_19
     return-void
@@ -2032,17 +1977,17 @@
     .registers 3
 
     .prologue
-    .line 638
+    .line 676
     iget-object v1, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
     if-eqz v1, :cond_19
 
-    .line 640
+    .line 678
     const-string v1, "Cached video end event logged"
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
-    .line 641
+    .line 679
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2053,19 +1998,19 @@
 
     if-ge v0, v1, :cond_19
 
-    .line 642
+    .line 680
     iget-object v1, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 
     invoke-static {v1}, Lcom/millennialmedia/android/MMSDK$Event;->logEvent(Ljava/lang/String;)V
 
-    .line 641
+    .line 679
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_a
 
-    .line 644
+    .line 682
     .end local v0    # "i":I
     :cond_19
     return-void
@@ -2082,17 +2027,17 @@
     .end annotation
 
     .prologue
-    .line 526
+    .line 564
     invoke-super {p0, p1}, Lcom/millennialmedia/android/CachedAd;->readExternal(Ljava/io/ObjectInput;)V
 
-    .line 527
+    .line 565
     invoke-interface {p1}, Ljava/io/ObjectInput;->readBoolean()Z
 
     move-result v4
 
     iput-boolean v4, p0, Lcom/millennialmedia/android/VideoAd;->showControls:Z
 
-    .line 528
+    .line 566
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
 
     move-result-object v4
@@ -2101,7 +2046,7 @@
 
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->onCompletionUrl:Ljava/lang/String;
 
-    .line 529
+    .line 567
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
 
     move-result-object v4
@@ -2110,7 +2055,7 @@
 
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->webOverlayURL:Ljava/lang/String;
 
-    .line 530
+    .line 568
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
 
     move-result-object v4
@@ -2119,7 +2064,7 @@
 
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->endOverlayURL:Ljava/lang/String;
 
-    .line 531
+    .line 569
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
 
     move-result-object v4
@@ -2128,7 +2073,7 @@
 
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->cacheMissURL:Ljava/lang/String;
 
-    .line 532
+    .line 570
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
 
     move-result-object v4
@@ -2137,46 +2082,46 @@
 
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->videoFileId:Ljava/lang/String;
 
-    .line 533
+    .line 571
     invoke-interface {p1}, Ljava/io/ObjectInput;->readBoolean()Z
 
     move-result v4
 
     iput-boolean v4, p0, Lcom/millennialmedia/android/VideoAd;->stayInPlayer:Z
 
-    .line 534
+    .line 572
     invoke-interface {p1}, Ljava/io/ObjectInput;->readBoolean()Z
 
     move-result v4
 
     iput-boolean v4, p0, Lcom/millennialmedia/android/VideoAd;->showCountdown:Z
 
-    .line 535
+    .line 573
     invoke-interface {p1}, Ljava/io/ObjectInput;->readBoolean()Z
 
     move-result v4
 
     iput-boolean v4, p0, Lcom/millennialmedia/android/VideoAd;->reloadNonEndOverlayOnRestart:Z
 
-    .line 536
+    .line 574
     invoke-interface {p1}, Ljava/io/ObjectInput;->readInt()I
 
     move-result v0
 
-    .line 537
+    .line 575
     .local v0, "count":I
     new-array v4, v0, [Ljava/lang/String;
 
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
-    .line 538
+    .line 576
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_4c
     if-ge v1, v0, :cond_5b
 
-    .line 539
+    .line 577
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
@@ -2187,29 +2132,29 @@
 
     aput-object v4, v5, v1
 
-    .line 538
+    .line 576
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_4c
 
-    .line 540
+    .line 578
     :cond_5b
     invoke-interface {p1}, Ljava/io/ObjectInput;->readInt()I
 
     move-result v0
 
-    .line 541
+    .line 579
     new-array v4, v0, [Ljava/lang/String;
 
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
-    .line 542
+    .line 580
     const/4 v1, 0x0
 
     :goto_64
     if-ge v1, v0, :cond_73
 
-    .line 543
+    .line 581
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
@@ -2220,12 +2165,12 @@
 
     aput-object v4, v5, v1
 
-    .line 542
+    .line 580
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_64
 
-    .line 544
+    .line 582
     :cond_73
     invoke-interface {p1}, Ljava/io/ObjectInput;->readLong()J
 
@@ -2233,44 +2178,44 @@
 
     iput-wide v4, p0, Lcom/millennialmedia/android/VideoAd;->duration:J
 
-    .line 545
+    .line 583
     invoke-interface {p1}, Ljava/io/ObjectInput;->readBoolean()Z
 
     move-result v4
 
     iput-boolean v4, p0, Lcom/millennialmedia/android/VideoAd;->usingInternalStorage:Z
 
-    .line 546
+    .line 584
     invoke-interface {p1}, Ljava/io/ObjectInput;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcom/millennialmedia/android/VideoAd;->contentLength:J
 
-    .line 547
+    .line 585
     invoke-interface {p1}, Ljava/io/ObjectInput;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcom/millennialmedia/android/VideoAd;->closeDelayMillis:J
 
-    .line 548
+    .line 586
     invoke-interface {p1}, Ljava/io/ObjectInput;->readInt()I
 
     move-result v0
 
-    .line 549
+    .line 587
     new-array v4, v0, [Ljava/lang/String;
 
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
-    .line 550
+    .line 588
     const/4 v1, 0x0
 
     :goto_94
     if-ge v1, v0, :cond_a3
 
-    .line 551
+    .line 589
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
@@ -2281,29 +2226,29 @@
 
     aput-object v4, v5, v1
 
-    .line 550
+    .line 588
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_94
 
-    .line 552
+    .line 590
     :cond_a3
     invoke-interface {p1}, Ljava/io/ObjectInput;->readInt()I
 
     move-result v0
 
-    .line 553
+    .line 591
     new-array v4, v0, [Ljava/lang/String;
 
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
-    .line 554
+    .line 592
     const/4 v1, 0x0
 
     :goto_ac
     if-ge v1, v0, :cond_bb
 
-    .line 555
+    .line 593
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
@@ -2314,29 +2259,29 @@
 
     aput-object v4, v5, v1
 
-    .line 554
+    .line 592
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_ac
 
-    .line 556
+    .line 594
     :cond_bb
     invoke-interface {p1}, Ljava/io/ObjectInput;->readInt()I
 
     move-result v0
 
-    .line 557
+    .line 595
     new-array v4, v0, [Ljava/lang/String;
 
     iput-object v4, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
 
-    .line 558
+    .line 596
     const/4 v1, 0x0
 
     :goto_c4
     if-ge v1, v0, :cond_d3
 
-    .line 559
+    .line 597
     iget-object v5, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
 
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
@@ -2347,83 +2292,83 @@
 
     aput-object v4, v5, v1
 
-    .line 558
+    .line 596
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_c4
 
-    .line 561
+    .line 599
     :cond_d3
     iget-object v4, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 562
+    .line 600
     invoke-interface {p1}, Ljava/io/ObjectInput;->readInt()I
 
     move-result v0
 
-    .line 563
+    .line 601
     const/4 v1, 0x0
 
     :goto_dd
     if-ge v1, v0, :cond_ed
 
-    .line 565
+    .line 603
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/millennialmedia/android/VideoImage;
 
-    .line 566
+    .line 604
     .local v2, "videoImage":Lcom/millennialmedia/android/VideoImage;
     iget-object v4, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 563
+    .line 601
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_dd
 
-    .line 569
+    .line 607
     .end local v2    # "videoImage":Lcom/millennialmedia/android/VideoImage;
     :cond_ed
     iget-object v4, p0, Lcom/millennialmedia/android/VideoAd;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 570
+    .line 608
     invoke-interface {p1}, Ljava/io/ObjectInput;->readInt()I
 
     move-result v0
 
-    .line 571
+    .line 609
     const/4 v1, 0x0
 
     :goto_f7
     if-ge v1, v0, :cond_107
 
-    .line 573
+    .line 611
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/millennialmedia/android/VideoLogEvent;
 
-    .line 574
+    .line 612
     .local v3, "videoLogEvent":Lcom/millennialmedia/android/VideoLogEvent;
     iget-object v4, p0, Lcom/millennialmedia/android/VideoAd;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 571
+    .line 609
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_f7
 
-    .line 576
+    .line 614
     .end local v3    # "videoLogEvent":Lcom/millennialmedia/android/VideoLogEvent;
     :cond_107
     return-void
@@ -2434,7 +2379,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 265
+    .line 266
     const/4 v0, 0x1
 
     return v0
@@ -2445,10 +2390,10 @@
     .param p1, "dto"    # Lcom/millennialmedia/android/DTOCachedVideo;
 
     .prologue
-    .line 669
+    .line 707
     iput-object p1, p0, Lcom/millennialmedia/android/VideoAd;->cachedVideoDto:Lcom/millennialmedia/android/DTOCachedVideo;
 
-    .line 670
+    .line 708
     return-void
 .end method
 
@@ -2458,14 +2403,14 @@
     .param p2, "adImplInternalId"    # J
 
     .prologue
-    .line 454
+    .line 492
     invoke-virtual {p0, p1, p2, p3}, Lcom/millennialmedia/android/VideoAd;->getVideoExtrasIntent(Landroid/content/Context;J)Landroid/content/Intent;
 
     move-result-object v0
 
     invoke-static {p1, v0}, Lcom/millennialmedia/android/Utils$IntentUtils;->startCachedVideoPlayerActivity(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 455
+    .line 493
     return-void
 .end method
 
@@ -2479,62 +2424,62 @@
     .end annotation
 
     .prologue
-    .line 581
+    .line 619
     invoke-super {p0, p1}, Lcom/millennialmedia/android/CachedAd;->writeExternal(Ljava/io/ObjectOutput;)V
 
-    .line 582
+    .line 620
     iget-boolean v10, p0, Lcom/millennialmedia/android/VideoAd;->showControls:Z
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeBoolean(Z)V
 
-    .line 583
+    .line 621
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->onCompletionUrl:Ljava/lang/String;
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 584
+    .line 622
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->webOverlayURL:Ljava/lang/String;
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 585
+    .line 623
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->endOverlayURL:Ljava/lang/String;
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 586
+    .line 624
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->cacheMissURL:Ljava/lang/String;
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 587
+    .line 625
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->videoFileId:Ljava/lang/String;
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 588
+    .line 626
     iget-boolean v10, p0, Lcom/millennialmedia/android/VideoAd;->stayInPlayer:Z
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeBoolean(Z)V
 
-    .line 589
+    .line 627
     iget-boolean v10, p0, Lcom/millennialmedia/android/VideoAd;->showCountdown:Z
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeBoolean(Z)V
 
-    .line 590
+    .line 628
     iget-boolean v10, p0, Lcom/millennialmedia/android/VideoAd;->reloadNonEndOverlayOnRestart:Z
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeBoolean(Z)V
 
-    .line 591
+    .line 629
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
     array-length v10, v10
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeInt(I)V
 
-    .line 592
+    .line 630
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -2549,16 +2494,16 @@
 
     aget-object v8, v0, v5
 
-    .line 593
+    .line 631
     .local v8, "sa":Ljava/lang/String;
     invoke-interface {p1, v8}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 592
+    .line 630
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_3a
 
-    .line 594
+    .line 632
     .end local v8    # "sa":Ljava/lang/String;
     :cond_44
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
@@ -2567,7 +2512,7 @@
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeInt(I)V
 
-    .line 595
+    .line 633
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
     array-length v6, v0
@@ -2579,45 +2524,45 @@
 
     aget-object v4, v0, v5
 
-    .line 596
+    .line 634
     .local v4, "ea":Ljava/lang/String;
     invoke-interface {p1, v4}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 595
+    .line 633
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_4e
 
-    .line 597
+    .line 635
     .end local v4    # "ea":Ljava/lang/String;
     :cond_58
     iget-wide v10, p0, Lcom/millennialmedia/android/VideoAd;->duration:J
 
     invoke-interface {p1, v10, v11}, Ljava/io/ObjectOutput;->writeLong(J)V
 
-    .line 598
+    .line 636
     iget-boolean v10, p0, Lcom/millennialmedia/android/VideoAd;->usingInternalStorage:Z
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeBoolean(Z)V
 
-    .line 599
+    .line 637
     iget-wide v10, p0, Lcom/millennialmedia/android/VideoAd;->contentLength:J
 
     invoke-interface {p1, v10, v11}, Ljava/io/ObjectOutput;->writeLong(J)V
 
-    .line 600
+    .line 638
     iget-wide v10, p0, Lcom/millennialmedia/android/VideoAd;->closeDelayMillis:J
 
     invoke-interface {p1, v10, v11}, Ljava/io/ObjectOutput;->writeLong(J)V
 
-    .line 601
+    .line 639
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
     array-length v10, v10
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeInt(I)V
 
-    .line 602
+    .line 640
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
     array-length v6, v0
@@ -2629,16 +2574,16 @@
 
     aget-object v2, v0, v5
 
-    .line 603
+    .line 641
     .local v2, "cc":Ljava/lang/String;
     invoke-interface {p1, v2}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 602
+    .line 640
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_76
 
-    .line 604
+    .line 642
     .end local v2    # "cc":Ljava/lang/String;
     :cond_80
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
@@ -2647,7 +2592,7 @@
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeInt(I)V
 
-    .line 605
+    .line 643
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
     array-length v6, v0
@@ -2659,16 +2604,16 @@
 
     aget-object v3, v0, v5
 
-    .line 606
+    .line 644
     .local v3, "cf":Ljava/lang/String;
     invoke-interface {p1, v3}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 605
+    .line 643
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_8a
 
-    .line 607
+    .line 645
     .end local v3    # "cf":Ljava/lang/String;
     :cond_94
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
@@ -2677,7 +2622,7 @@
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeInt(I)V
 
-    .line 608
+    .line 646
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
 
     array-length v6, v0
@@ -2689,16 +2634,16 @@
 
     aget-object v9, v0, v5
 
-    .line 609
+    .line 647
     .local v9, "ve":Ljava/lang/String;
     invoke-interface {p1, v9}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 608
+    .line 646
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_9e
 
-    .line 610
+    .line 648
     .end local v9    # "ve":Ljava/lang/String;
     :cond_a8
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
@@ -2709,7 +2654,7 @@
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeInt(I)V
 
-    .line 611
+    .line 649
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2730,13 +2675,13 @@
 
     check-cast v1, Lcom/millennialmedia/android/VideoImage;
 
-    .line 612
+    .line 650
     .local v1, "button":Lcom/millennialmedia/android/VideoImage;
     invoke-interface {p1, v1}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     goto :goto_b7
 
-    .line 613
+    .line 651
     .end local v1    # "button":Lcom/millennialmedia/android/VideoImage;
     :cond_c7
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->activities:Ljava/util/ArrayList;
@@ -2747,7 +2692,7 @@
 
     invoke-interface {p1, v10}, Ljava/io/ObjectOutput;->writeInt(I)V
 
-    .line 614
+    .line 652
     iget-object v10, p0, Lcom/millennialmedia/android/VideoAd;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2767,13 +2712,13 @@
 
     check-cast v7, Lcom/millennialmedia/android/VideoLogEvent;
 
-    .line 615
+    .line 653
     .local v7, "logEvent":Lcom/millennialmedia/android/VideoLogEvent;
     invoke-interface {p1, v7}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     goto :goto_d6
 
-    .line 616
+    .line 654
     .end local v7    # "logEvent":Lcom/millennialmedia/android/VideoLogEvent;
     :cond_e6
     return-void
@@ -2785,34 +2730,34 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 479
+    .line 517
     invoke-super {p0, p1, p2}, Lcom/millennialmedia/android/CachedAd;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 480
+    .line 518
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 481
+    .line 519
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->startActivity:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 482
+    .line 520
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 483
+    .line 521
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->endActivity:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 484
+    .line 522
     const/4 v0, 0x5
 
     new-array v0, v0, [Z
@@ -2849,92 +2794,92 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBooleanArray([Z)V
 
-    .line 485
+    .line 523
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->onCompletionUrl:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 486
+    .line 524
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->endOverlayURL:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 487
+    .line 525
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->webOverlayURL:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 488
+    .line 526
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->cacheMissURL:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 489
+    .line 527
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->videoFileId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 490
+    .line 528
     iget-wide v0, p0, Lcom/millennialmedia/android/VideoAd;->duration:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 491
+    .line 529
     iget-wide v0, p0, Lcom/millennialmedia/android/VideoAd;->contentLength:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 492
+    .line 530
     iget-wide v0, p0, Lcom/millennialmedia/android/VideoAd;->closeDelayMillis:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 493
+    .line 531
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 494
+    .line 532
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 495
+    .line 533
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 496
+    .line 534
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->cacheComplete:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 497
+    .line 535
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 498
+    .line 536
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 499
+    .line 537
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 500
+    .line 538
     iget-object v0, p0, Lcom/millennialmedia/android/VideoAd;->videoError:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 501
+    .line 539
     return-void
 .end method

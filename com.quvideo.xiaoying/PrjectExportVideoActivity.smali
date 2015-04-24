@@ -149,9 +149,9 @@
 
     .prologue
     .line 131
-    new-instance v2, Lbav;
+    new-instance v2, Laub;
 
-    invoke-direct {v2, p0}, Lbav;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/PrjectExportVideoActivity;)V
+    invoke-direct {v2, p0}, Laub;-><init>(Lcom/quvideo/xiaoying/videoeditor/simpleedit/PrjectExportVideoActivity;)V
 
     .line 166
     const-string/jumbo v1, ""

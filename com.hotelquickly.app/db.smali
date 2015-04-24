@@ -42,7 +42,7 @@
     .line 48
     iput-boolean v1, p0, Lcom/hotelquickly/app/ui/db;->h:Z
 
-    .line 186
+    .line 185
     return-void
 .end method
 
@@ -70,23 +70,23 @@
     .registers 7
 
     .prologue
-    .line 154
+    .line 153
     new-instance v0, Lcom/google/android/gms/maps/model/g;
 
     invoke-direct {v0}, Lcom/google/android/gms/maps/model/g;-><init>()V
 
-    .line 155
+    .line 154
     invoke-virtual {v0, p1}, Lcom/google/android/gms/maps/model/g;->a(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/g;
 
-    .line 156
+    .line 155
     invoke-virtual {v0, p2}, Lcom/google/android/gms/maps/model/g;->a(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/g;
 
-    .line 158
+    .line 157
     invoke-virtual {v0}, Lcom/google/android/gms/maps/model/g;->a()Lcom/google/android/gms/maps/model/LatLngBounds;
 
     move-result-object v0
 
-    .line 159
+    .line 158
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/db;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -97,14 +97,14 @@
 
     move-result-object v1
 
-    .line 160
+    .line 159
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
     mul-int/lit8 v1, v1, 0x2
 
-    .line 162
+    .line 161
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/db;->a()Lcom/google/android/gms/maps/c;
 
     move-result-object v2
@@ -115,7 +115,7 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/h;)V
 
-    .line 173
+    .line 172
     return-void
 .end method
 
@@ -153,12 +153,12 @@
     .registers 6
 
     .prologue
-    .line 176
+    .line 175
     new-instance v0, Lcom/google/android/gms/maps/model/MarkerOptions;
 
     invoke-direct {v0}, Lcom/google/android/gms/maps/model/MarkerOptions;-><init>()V
 
-    .line 177
+    .line 176
     invoke-virtual {v0, p2}, Lcom/google/android/gms/maps/model/MarkerOptions;->a(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/MarkerOptions;
 
     move-result-object v1
@@ -169,14 +169,14 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/gms/maps/model/MarkerOptions;->a(Lcom/google/android/gms/maps/model/a;)Lcom/google/android/gms/maps/model/MarkerOptions;
 
-    .line 178
+    .line 177
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/db;->a()Lcom/google/android/gms/maps/c;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/model/MarkerOptions;)Lcom/google/android/gms/maps/model/j;
 
-    .line 179
+    .line 178
     return-void
 .end method
 
@@ -240,11 +240,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/android/gms/common/g;->a(Landroid/content/Context;)I
+    invoke-static {v0}, Lcom/hotelquickly/app/e/x;->a(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-nez v0, :cond_ad
+    if-eqz v0, :cond_ad
 
     .line 60
     invoke-virtual {p0}, Lcom/hotelquickly/app/ui/db;->getArguments()Landroid/os/Bundle;

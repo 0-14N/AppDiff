@@ -59,13 +59,55 @@
 
     check-cast v0, Landroid/widget/Button;
 
+    new-instance v1, Lorg/gdb/android/client/mu;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/mu;-><init>(Lorg/gdb/android/client/TestActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f0b01eb
+
+    invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    new-instance v1, Lorg/gdb/android/client/mv;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/mv;-><init>(Lorg/gdb/android/client/TestActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f0b01ec
+
+    invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    new-instance v1, Lorg/gdb/android/client/mw;
+
+    invoke-direct {v1, p0}, Lorg/gdb/android/client/mw;-><init>(Lorg/gdb/android/client/TestActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f0b01ed
+
+    invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
     new-instance v1, Lorg/gdb/android/client/mx;
 
     invoke-direct {v1, p0}, Lorg/gdb/android/client/mx;-><init>(Lorg/gdb/android/client/TestActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b01eb
+    const v0, 0x7f0b01ee
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
 
@@ -79,7 +121,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b01ec
+    const v0, 0x7f0b01ef
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
 
@@ -93,7 +135,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b01ed
+    const v0, 0x7f0b01f0
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
 
@@ -107,7 +149,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b01ee
+    const v0, 0x7f0b01f1
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
 
@@ -121,7 +163,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b01ef
+    const v0, 0x7f0b01f2
 
     invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
 
@@ -132,48 +174,6 @@
     new-instance v1, Lorg/gdb/android/client/nc;
 
     invoke-direct {v1, p0}, Lorg/gdb/android/client/nc;-><init>(Lorg/gdb/android/client/TestActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0b01f0
-
-    invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    new-instance v1, Lorg/gdb/android/client/nd;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/nd;-><init>(Lorg/gdb/android/client/TestActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0b01f1
-
-    invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    new-instance v1, Lorg/gdb/android/client/ne;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/ne;-><init>(Lorg/gdb/android/client/TestActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0b01f2
-
-    invoke-virtual {p0, v0}, Lorg/gdb/android/client/TestActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    new-instance v1, Lorg/gdb/android/client/nf;
-
-    invoke-direct {v1, p0}, Lorg/gdb/android/client/nf;-><init>(Lorg/gdb/android/client/TestActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

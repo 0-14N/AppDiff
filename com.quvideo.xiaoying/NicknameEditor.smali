@@ -79,9 +79,9 @@
     iput v0, p0, Lcom/quvideo/xiaoying/app/studio/NicknameEditor;->f:I
 
     .line 137
-    new-instance v0, Laaa;
+    new-instance v0, Lth;
 
-    invoke-direct {v0, p0}, Laaa;-><init>(Lcom/quvideo/xiaoying/app/studio/NicknameEditor;)V
+    invoke-direct {v0, p0}, Lth;-><init>(Lcom/quvideo/xiaoying/app/studio/NicknameEditor;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/NicknameEditor;->g:Landroid/text/TextWatcher;
 
@@ -170,9 +170,9 @@
     const-string/jumbo v3, "studio.profileUp"
 
     .line 97
-    new-instance v4, Laab;
+    new-instance v4, Lti;
 
-    invoke-direct {v4, p0, v1}, Laab;-><init>(Lcom/quvideo/xiaoying/app/studio/NicknameEditor;Ljava/lang/String;)V
+    invoke-direct {v4, p0, v1}, Lti;-><init>(Lcom/quvideo/xiaoying/app/studio/NicknameEditor;Ljava/lang/String;)V
 
     .line 95
     invoke-virtual {v2, v3, v4}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V

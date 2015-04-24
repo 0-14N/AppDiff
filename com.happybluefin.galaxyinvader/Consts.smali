@@ -78,7 +78,6 @@
 
     sput-wide v0, Lcom/happybluefin/pay/google/Consts;->BILLING_RESPONSE_INVALID_REQUEST_ID:J
 
-    .line 110
     return-void
 .end method
 
@@ -89,5 +88,6 @@
     .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 45
     return-void
 .end method

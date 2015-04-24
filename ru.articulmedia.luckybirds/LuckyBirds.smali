@@ -308,6 +308,8 @@
     .line 56
     invoke-super {p0, p1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     .line 59
     invoke-virtual {p0}, Lru/articulmedia/luckybirds/LuckyBirds;->getApplication()Landroid/app/Application;
 
@@ -328,13 +330,13 @@
 
     .line 64
     .local v0, "dbHelper":Lru/articulmedia/luckybirds/DataBaseHelper;
-    :try_start_13
+    :try_start_16
     invoke-virtual {v0}, Lru/articulmedia/luckybirds/DataBaseHelper;->createDataBase()V
-    :try_end_16
-    .catch Ljava/io/IOException; {:try_start_13 .. :try_end_16} :catch_51
+    :try_end_19
+    .catch Ljava/io/IOException; {:try_start_16 .. :try_end_19} :catch_54
 
     .line 69
-    :goto_16
+    :goto_19
     const/high16 v5, 0x7f030000
 
     invoke-virtual {p0, v5}, Lru/articulmedia/luckybirds/LuckyBirds;->setContentView(I)V
@@ -401,14 +403,14 @@
     .line 65
     .end local v1    # "deviceid":Ljava/lang/String;
     .end local v4    # "tm":Landroid/telephony/TelephonyManager;
-    :catch_51
+    :catch_54
     move-exception v2
 
     .line 66
     .local v2, "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
-    goto :goto_16
+    goto :goto_19
 .end method
 
 .method protected onPause()V

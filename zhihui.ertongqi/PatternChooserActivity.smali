@@ -36,7 +36,7 @@
 
     check-cast v0, Landroid/widget/GridView;
 
-    if-nez p1, :cond_29
+    if-nez p1, :cond_2c
 
     invoke-virtual {p0}, Lzhihui/ertongqi/PatternChooserActivity;->getIntent()Landroid/content/Intent;
 
@@ -57,9 +57,11 @@
 
     invoke-direct {v1, v0, v2}, Lzhihui/ertongqi/j;-><init>(Landroid/widget/GridView;Z)V
 
+    invoke-static {p0}, Lcom/anzhi/ad/coverscreen/CoverAdComponent;->showAd(Landroid/content/Context;)I
+
     return-void
 
-    :cond_29
+    :cond_2c
     const-string v1, "againstMachine"
 
     invoke-virtual {p1, v1, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z

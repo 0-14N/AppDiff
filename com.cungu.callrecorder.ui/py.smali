@@ -8,20 +8,20 @@
 # instance fields
 .field final synthetic a:Lcom/cungu/lib/callrecorder/p;
 
-.field final synthetic b:J
+.field final synthetic b:I
 
 .field final synthetic c:Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;
 
 
 # direct methods
-.method constructor <init>(Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;Lcom/cungu/lib/callrecorder/p;J)V
-    .registers 5
+.method constructor <init>(Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;Lcom/cungu/lib/callrecorder/p;I)V
+    .registers 4
 
     iput-object p1, p0, Lcom/cungo/callrecorder/ui/py;->c:Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;
 
     iput-object p2, p0, Lcom/cungo/callrecorder/ui/py;->a:Lcom/cungu/lib/callrecorder/p;
 
-    iput-wide p3, p0, Lcom/cungo/callrecorder/ui/py;->b:J
+    iput p3, p0, Lcom/cungo/callrecorder/ui/py;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,16 +31,16 @@
 
 # virtual methods
 .method public run()V
-    .registers 5
+    .registers 4
 
     :try_start_0
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/py;->c:Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;
 
     iget-object v1, p0, Lcom/cungo/callrecorder/ui/py;->a:Lcom/cungu/lib/callrecorder/p;
 
-    iget-wide v2, p0, Lcom/cungo/callrecorder/ui/py;->b:J
+    iget v2, p0, Lcom/cungo/callrecorder/ui/py;->b:I
 
-    invoke-static {v0, v1, v2, v3}, Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;->a(Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;Lcom/cungu/lib/callrecorder/p;J)V
+    invoke-static {v0, v1, v2}, Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;->a(Lcom/cungo/callrecorder/ui/FragmentLiveRecording_;Lcom/cungu/lib/callrecorder/p;I)V
     :try_end_9
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_9} :catch_a
 

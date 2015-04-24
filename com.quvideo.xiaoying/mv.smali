@@ -9,16 +9,20 @@
 # instance fields
 .field final synthetic a:Lmu;
 
+.field private final synthetic b:Ljava/lang/String;
+
 
 # direct methods
-.method constructor <init>(Lmu;)V
-    .registers 2
+.method constructor <init>(Lmu;Ljava/lang/String;)V
+    .registers 3
 
     .prologue
     .line 1
     iput-object p1, p0, Lmv;->a:Lmu;
 
-    .line 835
+    iput-object p2, p0, Lmv;->b:Ljava/lang/String;
+
+    .line 823
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,19 +34,33 @@
     .registers 4
 
     .prologue
-    .line 838
+    const/4 v2, 0x0
+
+    .line 826
     iget-object v0, p0, Lmv;->a:Lmu;
 
-    invoke-static {v0}, Lmu;->a(Lmu;)Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;
+    invoke-static {v0}, Lmu;->a(Lmu;)Lcom/quvideo/xiaoying/app/im/ChatActivity;
 
     move-result-object v0
 
-    const v1, 0x7f0a01de
+    invoke-static {v0, v2}, Lcom/quvideo/xiaoying/app/im/ChatActivity;->a(Lcom/quvideo/xiaoying/app/im/ChatActivity;Z)V
 
-    const/16 v2, 0x7d0
+    .line 827
+    iget-object v0, p0, Lmv;->b:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/quvideo/xiaoying/IMClient/IMClient;->deleteUserFromBlackList(Ljava/lang/String;)V
+
+    .line 828
+    iget-object v0, p0, Lmv;->a:Lmu;
+
+    invoke-static {v0}, Lmu;->a(Lmu;)Lcom/quvideo/xiaoying/app/im/ChatActivity;
+
+    move-result-object v0
+
+    const v1, 0x7f0a038c
 
     invoke-static {v0, v1, v2}, Lcom/quvideo/xiaoying/videoeditor/util/ToastUtils;->show(Landroid/content/Context;II)V
 
-    .line 839
+    .line 829
     return-void
 .end method

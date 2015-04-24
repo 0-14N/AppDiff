@@ -6,22 +6,22 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/Exception;
+.field final synthetic a:Z
 
-.field final synthetic b:Ljava/lang/String;
+.field final synthetic b:Ljava/util/List;
 
 .field final synthetic c:Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;
 
 
 # direct methods
-.method constructor <init>(Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;Ljava/lang/Exception;Ljava/lang/String;)V
+.method constructor <init>(Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;ZLjava/util/List;)V
     .registers 4
 
     iput-object p1, p0, Lcom/cungo/callrecorder/ui/oz;->c:Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;
 
-    iput-object p2, p0, Lcom/cungo/callrecorder/ui/oz;->a:Ljava/lang/Exception;
+    iput-boolean p2, p0, Lcom/cungo/callrecorder/ui/oz;->a:Z
 
-    iput-object p3, p0, Lcom/cungo/callrecorder/ui/oz;->b:Ljava/lang/String;
+    iput-object p3, p0, Lcom/cungo/callrecorder/ui/oz;->b:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,11 +36,11 @@
     :try_start_0
     iget-object v0, p0, Lcom/cungo/callrecorder/ui/oz;->c:Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;
 
-    iget-object v1, p0, Lcom/cungo/callrecorder/ui/oz;->a:Ljava/lang/Exception;
+    iget-boolean v1, p0, Lcom/cungo/callrecorder/ui/oz;->a:Z
 
-    iget-object v2, p0, Lcom/cungo/callrecorder/ui/oz;->b:Ljava/lang/String;
+    iget-object v2, p0, Lcom/cungo/callrecorder/ui/oz;->b:Ljava/util/List;
 
-    invoke-static {v0, v1, v2}, Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;->a(Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;Ljava/lang/Exception;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;->a(Lcom/cungo/callrecorder/ui/FragmentCoinExchange_;ZLjava/util/List;)V
     :try_end_9
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_9} :catch_a
 

@@ -268,7 +268,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a030d
+    const v4, 0x7f0a02ea
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -279,7 +279,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0a0329
+    const v5, 0x7f0a0306
 
     new-array v6, v6, [Ljava/lang/Object;
 
@@ -293,9 +293,9 @@
     new-instance v4, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 172
-    new-instance v5, Lym;
+    new-instance v5, Lrt;
 
-    invoke-direct {v5, p0, v1, v0}, Lym;-><init>(Lcom/quvideo/xiaoying/app/setting/sns/SettingBindSNSActivity;Lcom/quvideo/xiaoying/AppMiscListener;I)V
+    invoke-direct {v5, p0, v1, v0}, Lrt;-><init>(Lcom/quvideo/xiaoying/app/setting/sns/SettingBindSNSActivity;Lcom/quvideo/xiaoying/AppMiscListener;I)V
 
     .line 171
     invoke-direct {v4, p0, v2, v5}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -361,7 +361,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 68
-    const v0, 0x7f06055c
+    const v0, 0x7f060547
 
     invoke-virtual {p0, v0}, Lcom/quvideo/xiaoying/app/setting/sns/SettingBindSNSActivity;->findViewById(I)Landroid/view/View;
 

@@ -107,30 +107,30 @@
     iput-boolean v1, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;->x:Z
 
     .line 279
-    new-instance v0, Lbfv;
+    new-instance v0, Lazb;
 
-    invoke-direct {v0, p0}, Lbfv;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;)V
+    invoke-direct {v0, p0}, Lazb;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;->y:Lcom/quvideo/xiaoying/videoeditor/ui/VeGallery$OnLayoutListener;
 
     .line 343
-    new-instance v0, Lbfw;
+    new-instance v0, Lazc;
 
-    invoke-direct {v0, p0}, Lbfw;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;)V
+    invoke-direct {v0, p0}, Lazc;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;->z:Lcom/quvideo/xiaoying/videoeditor2/ui/VeAdvanceTrimGallery$OnTrimGalleryListener;
 
     .line 468
-    new-instance v0, Lbfx;
+    new-instance v0, Lazd;
 
-    invoke-direct {v0, p0}, Lbfx;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;)V
+    invoke-direct {v0, p0}, Lazd;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;->A:Landroid/view/animation/Animation$AnimationListener;
 
     .line 490
-    new-instance v0, Lbfy;
+    new-instance v0, Laze;
 
-    invoke-direct {v0, p0}, Lbfy;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;)V
+    invoke-direct {v0, p0}, Laze;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;->B:Lcom/quvideo/xiaoying/videoeditor/ui/VeGallery$OnGalleryOperationListener;
 
@@ -142,9 +142,9 @@
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;->C:Landroid/os/Handler;
 
     .line 750
-    new-instance v0, Lbfz;
+    new-instance v0, Lazf;
 
-    invoke-direct {v0, p0}, Lbfz;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;)V
+    invoke-direct {v0, p0}, Lazf;-><init>(Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/ui/TrimContentPanel;->a:Landroid/view/View$OnTouchListener;
 

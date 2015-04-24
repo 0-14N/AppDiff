@@ -80,7 +80,7 @@
 
     iput-object v0, p0, Lcom/soft/filemanager/activities/SearchActivity;->n:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/SearchActivity;->j()V
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/SearchActivity;->i()V
 
     iget-object v0, p0, Lcom/soft/filemanager/activities/SearchActivity;->m:Lcom/soft/filemanager/a/e;
 
@@ -88,7 +88,7 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/soft/filemanager/a/e;->a(Lcom/soft/filemanager/activities/AbstractBaseActivity;Landroid/widget/LinearLayout;)V
 
-    invoke-virtual {p0}, Lcom/soft/filemanager/activities/SearchActivity;->h()V
+    invoke-virtual {p0}, Lcom/soft/filemanager/activities/SearchActivity;->g()V
 
     invoke-virtual {p0, v2}, Lcom/soft/filemanager/activities/SearchActivity;->findViewById(I)Landroid/view/View;
 

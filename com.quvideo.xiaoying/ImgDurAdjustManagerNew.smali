@@ -53,9 +53,9 @@
     iput-object v1, p0, Lcom/quvideo/xiaoying/videoeditor/ui/ImgDurAdjustManagerNew;->e:Lcom/quvideo/xiaoying/videoeditor/ui/ImgDurAdjustManagerNew$OnFocusItemChangeListener;
 
     .line 40
-    new-instance v0, Lbcf;
+    new-instance v0, Lavl;
 
-    invoke-direct {v0, p0}, Lbcf;-><init>(Lcom/quvideo/xiaoying/videoeditor/ui/ImgDurAdjustManagerNew;)V
+    invoke-direct {v0, p0}, Lavl;-><init>(Lcom/quvideo/xiaoying/videoeditor/ui/ImgDurAdjustManagerNew;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor/ui/ImgDurAdjustManagerNew;->f:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 

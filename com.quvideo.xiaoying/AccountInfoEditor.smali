@@ -156,16 +156,16 @@
     iput v2, p0, Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;->s:I
 
     .line 188
-    new-instance v0, Lzb;
+    new-instance v0, Lsi;
 
-    invoke-direct {v0, p0}, Lzb;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
+    invoke-direct {v0, p0}, Lsi;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;->t:Ljava/lang/Runnable;
 
     .line 205
-    new-instance v0, Lzg;
+    new-instance v0, Lsn;
 
-    invoke-direct {v0, p0}, Lzg;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
+    invoke-direct {v0, p0}, Lsn;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;->u:Landroid/widget/AdapterView$OnItemClickListener;
 
@@ -284,9 +284,9 @@
     const-string/jumbo v2, "studio.profileUp"
 
     .line 770
-    new-instance v3, Lze;
+    new-instance v3, Lsl;
 
-    invoke-direct {v3, p0}, Lze;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
+    invoke-direct {v3, p0}, Lsl;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
 
     .line 768
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -370,9 +370,9 @@
 
     .line 564
     :try_start_25
-    new-instance v0, Lzl;
+    new-instance v0, Lss;
 
-    invoke-direct {v0, p0}, Lzl;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
+    invoke-direct {v0, p0}, Lss;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
 
     const/4 v1, 0x1
 
@@ -383,7 +383,7 @@
     .line 575
     aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1}, Lzl;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
+    invoke-virtual {v0, v1}, Lss;->execute([Ljava/lang/Object;)Lcom/quvideo/xiaoying/common/ExAsyncTask;
     :try_end_33
     .catch Ljava/lang/Throwable; {:try_start_25 .. :try_end_33} :catch_34
 
@@ -537,9 +537,9 @@
     .line 402
     sget-object v1, Lcom/quvideo/xiaoying/app/studio/AccountInfoAdapter;->SEX_STRING_IDS:[I
 
-    new-instance v2, Lzj;
+    new-instance v2, Lsq;
 
-    invoke-direct {v2, p0}, Lzj;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
+    invoke-direct {v2, p0}, Lsq;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
 
     .line 401
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
@@ -630,9 +630,9 @@
     const-string/jumbo v2, "studio.profileUp"
 
     .line 655
-    new-instance v3, Lzd;
+    new-instance v3, Lsk;
 
-    invoke-direct {v3, p0, p1}, Lzd;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;Lcom/quvideo/xiaoying/app/studio/UserInfoMgr$UserInfo;)V
+    invoke-direct {v3, p0, p1}, Lsk;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;Lcom/quvideo/xiaoying/app/studio/UserInfoMgr$UserInfo;)V
 
     .line 653
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -746,9 +746,9 @@
     const-string/jumbo v2, "studio.profileUp"
 
     .line 811
-    new-instance v3, Lzf;
+    new-instance v3, Lsm;
 
-    invoke-direct {v3, p0}, Lzf;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
+    invoke-direct {v3, p0}, Lsm;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
 
     .line 809
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -1344,9 +1344,9 @@
     .line 387
     sget-object v1, Lcom/quvideo/xiaoying/app/studio/AccountInfoAdapter;->EQUIPMENT_STRING_IDS:[I
 
-    new-instance v2, Lzi;
+    new-instance v2, Lsp;
 
-    invoke-direct {v2, p0}, Lzi;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
+    invoke-direct {v2, p0}, Lsp;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
 
     .line 386
     invoke-direct {v0, p0, v1, v2}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
@@ -1383,9 +1383,9 @@
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComListDialog;
 
     .line 429
-    new-instance v2, Lzk;
+    new-instance v2, Lsr;
 
-    invoke-direct {v2, p0}, Lzk;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
+    invoke-direct {v2, p0}, Lsr;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
 
     .line 428
     invoke-direct {v1, p0, v0, v2}, Lcom/quvideo/xiaoying/dialog/ComListDialog;-><init>(Landroid/content/Context;[ILcom/quvideo/xiaoying/dialog/ComListDialog$OnListItemClickListener;)V
@@ -1470,9 +1470,9 @@
     const-string/jumbo v2, "studio.profileUp"
 
     .line 591
-    new-instance v3, Lzc;
+    new-instance v3, Lsj;
 
-    invoke-direct {v3, p0}, Lzc;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
+    invoke-direct {v3, p0}, Lsj;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
 
     .line 589
     invoke-virtual {v1, v2, v3}, Lcom/quvideo/xiaoying/social/ServiceNotificationObserverMgr;->registerObserver(Ljava/lang/String;Lcom/quvideo/xiaoying/social/ServiceObserverBridge$BaseSocialObserver;)V
@@ -2012,9 +2012,9 @@
     :cond_4a
     const v0, 0x7f0a0006
 
-    new-instance v1, Lzh;
+    new-instance v1, Lso;
 
-    invoke-direct {v1, p0}, Lzh;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
+    invoke-direct {v1, p0}, Lso;-><init>(Lcom/quvideo/xiaoying/app/studio/AccountInfoEditor;)V
 
     .line 276
     invoke-static {p0, v0, v1, v2}, Lcom/quvideo/xiaoying/common/DialogueUtils;->showModalProgressDialogue(Landroid/content/Context;ILandroid/content/DialogInterface$OnCancelListener;Z)V

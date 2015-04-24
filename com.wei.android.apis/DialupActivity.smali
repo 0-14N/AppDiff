@@ -189,7 +189,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/DialupActivity;->j:Lcom/wei/android/apis/ui/c/c;
 
     .line 230
-    const v0, 0x7f0b0057
+    const v0, 0x7f0c0057
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -460,7 +460,7 @@
     if-nez v0, :cond_21
 
     .line 292
-    const v0, 0x7f0b0050
+    const v0, 0x7f0c0050
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -639,7 +639,7 @@
     move-result-object v1
 
     .line 344
-    const v2, 0x7f080069
+    const v2, 0x7f090069
 
     .line 343
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -657,7 +657,7 @@
     move-result-object v0
 
     .line 345
-    const v1, 0x7f080067
+    const v1, 0x7f090067
 
     .line 343
     invoke-static {p0, v0, v1}, Lcom/wei/android/apis/a/w;->a(Landroid/content/Context;Ljava/lang/String;I)V
@@ -671,7 +671,7 @@
     if-nez v0, :cond_44
 
     .line 349
-    invoke-static {v6, p0}, Lcom/wei/android/apis/c/e;->a(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v6, p0}, Lcom/wei/android/apis/c/f;->a(Ljava/lang/String;Landroid/content/Context;)V
 
     goto :goto_13
 
@@ -691,7 +691,7 @@
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 354
-    invoke-static {v6, p0}, Lcom/wei/android/apis/c/e;->a(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v6, p0}, Lcom/wei/android/apis/c/f;->a(Ljava/lang/String;Landroid/content/Context;)V
 
     .line 355
     iget-object v0, p0, Lcom/wei/android/apis/ui/DialupActivity;->j:Lcom/wei/android/apis/ui/c/c;
@@ -734,7 +734,7 @@
     move-result-object v1
 
     .line 363
-    sget-object v2, Lcom/wei/android/apis/b/f;->g:[Ljava/lang/String;
+    sget-object v2, Lcom/wei/android/apis/b/g;->g:[Ljava/lang/String;
 
     move-object v4, v3
 
@@ -795,7 +795,7 @@
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 373
-    invoke-static {v6, p0}, Lcom/wei/android/apis/c/e;->a(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v6, p0}, Lcom/wei/android/apis/c/f;->a(Ljava/lang/String;Landroid/content/Context;)V
 
     .line 374
     iget-object v0, p0, Lcom/wei/android/apis/ui/DialupActivity;->l:Ljava/util/List;
@@ -852,10 +852,10 @@
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
     .line 385
-    sget-object v2, Lcom/wei/android/apis/b/f;->e:[Ljava/lang/String;
+    sget-object v2, Lcom/wei/android/apis/b/g;->e:[Ljava/lang/String;
 
     .line 386
-    sget-object v5, Lcom/wei/android/apis/b/f;->f:Ljava/lang/String;
+    sget-object v5, Lcom/wei/android/apis/b/g;->f:Ljava/lang/String;
 
     move-object v4, v3
 
@@ -1035,7 +1035,7 @@
 
     .prologue
     .line 446
-    const v0, 0x7f0b0056
+    const v0, 0x7f0c0056
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1051,7 +1051,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 448
-    const v0, 0x7f0b0055
+    const v0, 0x7f0c0055
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1062,7 +1062,7 @@
     iput-object v0, p0, Lcom/wei/android/apis/ui/DialupActivity;->g:Landroid/widget/LinearLayout;
 
     .line 449
-    const v0, 0x7f0b005a
+    const v0, 0x7f0c005a
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1080,7 +1080,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/content/Intent;)V
 
     .line 451
-    const v0, 0x7f0b005d
+    const v0, 0x7f0c005d
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1091,7 +1091,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 452
-    const v0, 0x7f0b005e
+    const v0, 0x7f0c005e
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1102,7 +1102,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 453
-    const v0, 0x7f0b005f
+    const v0, 0x7f0c005f
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1113,7 +1113,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 454
-    const v0, 0x7f0b0060
+    const v0, 0x7f0c0060
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1124,7 +1124,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 455
-    const v0, 0x7f0b0061
+    const v0, 0x7f0c0061
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1135,7 +1135,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 456
-    const v0, 0x7f0b0062
+    const v0, 0x7f0c0062
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1146,7 +1146,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 457
-    const v0, 0x7f0b0063
+    const v0, 0x7f0c0063
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1157,7 +1157,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 458
-    const v0, 0x7f0b0064
+    const v0, 0x7f0c0064
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1168,7 +1168,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 459
-    const v0, 0x7f0b0065
+    const v0, 0x7f0c0065
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1179,7 +1179,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 460
-    const v0, 0x7f0b0067
+    const v0, 0x7f0c0067
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1190,7 +1190,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 461
-    const v0, 0x7f0b0066
+    const v0, 0x7f0c0066
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1201,7 +1201,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 462
-    const v0, 0x7f0b0068
+    const v0, 0x7f0c0068
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1212,7 +1212,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 463
-    const v0, 0x7f0b005b
+    const v0, 0x7f0c005b
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1223,7 +1223,7 @@
     invoke-direct {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->a(Landroid/widget/ImageButton;)V
 
     .line 464
-    const v0, 0x7f0b0069
+    const v0, 0x7f0c0069
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1235,7 +1235,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 466
-    const v0, 0x7f0b006a
+    const v0, 0x7f0c006a
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1247,7 +1247,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 468
-    const v0, 0x7f0b006b
+    const v0, 0x7f0c006b
 
     invoke-virtual {p0, v0}, Lcom/wei/android/apis/ui/DialupActivity;->findViewById(I)Landroid/view/View;
 
@@ -1487,7 +1487,7 @@
 
     .line 177
     :cond_7c
-    invoke-static {v1, p0}, Lcom/wei/android/apis/c/e;->a(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v1, p0}, Lcom/wei/android/apis/c/f;->a(Ljava/lang/String;Landroid/content/Context;)V
 
     .line 178
     invoke-static {p0}, Lcom/wei/android/apis/a/aa;->b(Landroid/content/Context;)V
@@ -1505,7 +1505,7 @@
     nop
 
     :pswitch_data_88
-    .packed-switch 0x7f0b0056
+    .packed-switch 0x7f0c0056
         :pswitch_12
         :pswitch_8
         :pswitch_8
@@ -1576,7 +1576,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0005
+    const v1, 0x7f0b0005
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
@@ -1610,7 +1610,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lcom/wei/android/apis/c/e;->a(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v0, p0}, Lcom/wei/android/apis/c/f;->a(Ljava/lang/String;Landroid/content/Context;)V
 
     move v0, v2
 
@@ -1709,7 +1709,7 @@
     if-eqz v0, :cond_15
 
     .line 191
-    invoke-static {p0}, Lcom/wei/android/apis/c/e;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/wei/android/apis/c/f;->a(Landroid/content/Context;)V
 
     goto :goto_7
 
@@ -1783,7 +1783,7 @@
 
     .line 212
     :cond_4e
-    invoke-static {v0, p0}, Lcom/wei/android/apis/c/f;->b(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v0, p0}, Lcom/wei/android/apis/c/g;->b(Ljava/lang/String;Landroid/content/Context;)V
 
     goto :goto_7
 
@@ -1815,7 +1815,7 @@
     nop
 
     :pswitch_data_68
-    .packed-switch 0x7f0b005b
+    .packed-switch 0x7f0c005b
         :pswitch_5d
         :pswitch_7
         :pswitch_9
@@ -1882,7 +1882,7 @@
 
     .line 122
     :pswitch_data_18
-    .packed-switch 0x7f0b00ec
+    .packed-switch 0x7f0c00ec
         :pswitch_c
     .end packed-switch
 .end method

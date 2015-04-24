@@ -114,16 +114,16 @@
     iput-wide v0, p0, Lcom/quvideo/xiaoying/studio/DraftListView;->j:J
 
     .line 677
-    new-instance v0, Laqi;
+    new-instance v0, Lajo;
 
-    invoke-direct {v0, p0}, Laqi;-><init>(Lcom/quvideo/xiaoying/studio/DraftListView;)V
+    invoke-direct {v0, p0}, Lajo;-><init>(Lcom/quvideo/xiaoying/studio/DraftListView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/studio/DraftListView;->m:Lcom/quvideo/xiaoying/common/ui/widgets/pulltorefresh/PullToRefreshBase$OnRefreshListener;
 
     .line 686
-    new-instance v0, Laqj;
+    new-instance v0, Lajp;
 
-    invoke-direct {v0, p0}, Laqj;-><init>(Lcom/quvideo/xiaoying/studio/DraftListView;)V
+    invoke-direct {v0, p0}, Lajp;-><init>(Lcom/quvideo/xiaoying/studio/DraftListView;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/studio/DraftListView;->n:Landroid/widget/AbsListView$OnScrollListener;
 
@@ -875,7 +875,7 @@
     new-instance v9, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
     .line 455
-    new-instance v0, Laqn;
+    new-instance v0, Lajt;
 
     move-object v1, p0
 
@@ -883,7 +883,7 @@
 
     move-wide v3, p2
 
-    invoke-direct/range {v0 .. v5}, Laqn;-><init>(Lcom/quvideo/xiaoying/studio/DraftListView;Landroid/app/Activity;JLjava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lajt;-><init>(Lcom/quvideo/xiaoying/studio/DraftListView;Landroid/app/Activity;JLjava/lang/String;)V
 
     .line 454
     invoke-direct {v9, v6, v8, v0}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
@@ -1210,9 +1210,9 @@
     if-eqz v0, :cond_34
 
     .line 391
-    new-instance v0, Laqk;
+    new-instance v0, Lajq;
 
-    invoke-direct {v0, p0}, Laqk;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0}, Lajq;-><init>(Landroid/app/Activity;)V
 
     .line 399
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
@@ -1272,9 +1272,9 @@
     if-nez v0, :cond_6d
 
     .line 405
-    new-instance v0, Laql;
+    new-instance v0, Lajr;
 
-    invoke-direct {v0, p0}, Laql;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0}, Lajr;-><init>(Landroid/app/Activity;)V
 
     .line 413
     new-instance v1, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
@@ -1321,9 +1321,9 @@
     :cond_6d
     new-instance v0, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;
 
-    new-instance v1, Laqm;
+    new-instance v1, Lajs;
 
-    invoke-direct {v1, p0, p1}, Laqm;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lajs;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
 
     invoke-direct {v0, p0, p2, v1}, Lcom/quvideo/xiaoying/dialog/ComAltertDialog;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/quvideo/xiaoying/dialog/ComAltertDialog$OnAlertDialogClickListener;)V
 

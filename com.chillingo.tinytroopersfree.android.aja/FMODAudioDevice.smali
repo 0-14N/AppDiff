@@ -6,44 +6,58 @@
 
 
 # static fields
-.field private static h:I
+.field private static a:I
 
-.field private static i:I
+.field private static n:I
 
-.field private static j:I
+.field private static o:I
+
+.field private static p:I
 
 
 # instance fields
-.field private volatile a:Ljava/lang/Thread;
-
-.field private volatile b:Z
+.field private b:Ljava/lang/Thread;
 
 .field private c:Landroid/media/AudioTrack;
 
 .field private d:Z
 
-.field private e:Ljava/nio/ByteBuffer;
+.field private e:Z
 
-.field private f:[B
+.field private f:Ljava/nio/ByteBuffer;
 
-.field private volatile g:Lorg/fmod/a;
+.field private g:Landroid/media/AudioRecord;
+
+.field private h:Z
+
+.field private i:Z
+
+.field private j:I
+
+.field private k:I
+
+.field private l:I
+
+.field private m:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 1
+    .registers 2
+
+    const/4 v1, 0x2
+
+    sput v1, Lorg/fmod/FMODAudioDevice;->a:I
 
     const/4 v0, 0x1
 
-    sput v0, Lorg/fmod/FMODAudioDevice;->h:I
+    sput v0, Lorg/fmod/FMODAudioDevice;->n:I
 
-    const/4 v0, 0x2
-
-    sput v0, Lorg/fmod/FMODAudioDevice;->i:I
+    sput v1, Lorg/fmod/FMODAudioDevice;->o:I
 
     const/4 v0, 0x3
 
-    sput v0, Lorg/fmod/FMODAudioDevice;->j:I
+    sput v0, Lorg/fmod/FMODAudioDevice;->p:I
 
     return-void
 .end method
@@ -57,17 +71,29 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->a:Ljava/lang/Thread;
+    iput-object v1, p0, Lorg/fmod/FMODAudioDevice;->b:Ljava/lang/Thread;
 
-    iput-boolean v1, p0, Lorg/fmod/FMODAudioDevice;->b:Z
+    iput-object v1, p0, Lorg/fmod/FMODAudioDevice;->c:Landroid/media/AudioTrack;
 
-    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->c:Landroid/media/AudioTrack;
+    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->d:Z
 
-    iput-boolean v1, p0, Lorg/fmod/FMODAudioDevice;->d:Z
+    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->e:Z
 
-    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->e:Ljava/nio/ByteBuffer;
+    iput-object v1, p0, Lorg/fmod/FMODAudioDevice;->f:Ljava/nio/ByteBuffer;
 
-    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->f:[B
+    iput-object v1, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->h:Z
+
+    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->i:Z
+
+    iput v0, p0, Lorg/fmod/FMODAudioDevice;->j:I
+
+    iput v0, p0, Lorg/fmod/FMODAudioDevice;->k:I
+
+    iput v0, p0, Lorg/fmod/FMODAudioDevice;->l:I
+
+    iput v0, p0, Lorg/fmod/FMODAudioDevice;->m:I
 
     return-void
 .end method
@@ -81,10 +107,11 @@
 .method private native fmodProcess(Ljava/nio/ByteBuffer;)I
 .end method
 
-.method private releaseAudioTrack()V
-    .registers 4
+.method private native fmodProcessMicData(Ljava/nio/ByteBuffer;I)I
+.end method
 
-    const/4 v2, 0x0
+.method private releaseAudioTrack()V
+    .registers 3
 
     iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->c:Landroid/media/AudioTrack;
 
@@ -98,171 +125,131 @@
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_13
+    if-ne v0, v1, :cond_12
 
     iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->c:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->stop()V
 
-    :cond_13
+    :cond_12
     iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->c:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
 
-    iput-object v2, p0, Lorg/fmod/FMODAudioDevice;->c:Landroid/media/AudioTrack;
-
-    :cond_1a
-    iput-object v2, p0, Lorg/fmod/FMODAudioDevice;->e:Ljava/nio/ByteBuffer;
-
-    iput-object v2, p0, Lorg/fmod/FMODAudioDevice;->f:[B
-
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->d:Z
+    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->c:Landroid/media/AudioTrack;
 
+    :cond_1a
     return-void
+.end method
+
+.method private sleep(I)V
+    .registers 4
+
+    int-to-long v0, p1
+
+    :try_start_1
+    invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_4
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_4} :catch_5
+
+    :goto_4
+    return-void
+
+    :catch_5
+    move-exception v0
+
+    goto :goto_4
 .end method
 
 
 # virtual methods
-.method native fmodProcessMicData(Ljava/nio/ByteBuffer;I)I
-.end method
-
-.method public isInitialized()Z
-    .registers 3
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lorg/fmod/FMODAudioDevice;->fmodGetInfo(I)I
-
-    move-result v1
-
-    if-lez v1, :cond_8
-
-    const/4 v0, 0x1
-
-    :cond_8
-    return v0
-.end method
-
-.method public isRunning()Z
-    .registers 2
-
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->a:Ljava/lang/Thread;
-
-    if-eqz v0, :cond_e
-
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->a:Ljava/lang/Thread;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->isAlive()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    const/4 v0, 0x1
-
-    :goto_d
-    return v0
-
-    :cond_e
-    const/4 v0, 0x0
-
-    goto :goto_d
-.end method
-
 .method public run()V
-    .registers 11
+    .registers 14
 
     const/4 v4, 0x2
 
-    const/4 v6, 0x1
-
     const/4 v1, 0x3
 
-    const/4 v8, 0x0
+    const/4 v12, 0x0
 
-    move v7, v1
+    const/4 v6, 0x1
 
-    :goto_5
-    iget-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->b:Z
+    const/4 v11, 0x0
 
-    if-eqz v0, :cond_e1
+    move-object v0, v12
 
-    invoke-virtual {p0}, Lorg/fmod/FMODAudioDevice;->isInitialized()Z
+    move-object v3, v12
 
-    move-result v0
+    :goto_7
+    iget-boolean v2, p0, Lorg/fmod/FMODAudioDevice;->e:Z
 
-    if-nez v0, :cond_19
+    if-eqz v2, :cond_16b
 
-    const-wide/16 v2, 0xa
+    iget-boolean v2, p0, Lorg/fmod/FMODAudioDevice;->d:Z
 
-    :try_start_11
-    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_14
-    .catch Ljava/lang/InterruptedException; {:try_start_11 .. :try_end_14} :catch_15
+    if-nez v2, :cond_94
 
-    goto :goto_5
-
-    :catch_15
-    move-exception v0
-
-    iput-boolean v8, p0, Lorg/fmod/FMODAudioDevice;->b:Z
-
-    goto :goto_5
-
-    :cond_19
-    iget-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->d:Z
-
-    if-nez v0, :cond_e8
-
-    if-lez v7, :cond_e8
-
-    invoke-direct {p0}, Lorg/fmod/FMODAudioDevice;->releaseAudioTrack()V
-
-    invoke-direct {p0, v8}, Lorg/fmod/FMODAudioDevice;->fmodGetInfo(I)I
+    invoke-direct {p0, v11}, Lorg/fmod/FMODAudioDevice;->fmodGetInfo(I)I
 
     move-result v2
 
+    if-lez v2, :cond_8f
+
+    invoke-direct {p0}, Lorg/fmod/FMODAudioDevice;->releaseAudioTrack()V
+
     invoke-static {v2, v1, v4}, Landroid/media/AudioTrack;->getMinBufferSize(III)I
 
-    move-result v0
+    move-result v5
 
-    int-to-float v0, v0
-
-    const v3, 0x3f8ccccd    # 1.1f
-
-    mul-float/2addr v0, v3
-
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    move-result v0
-
-    and-int/lit8 v5, v0, -0x4
-
-    sget v0, Lorg/fmod/FMODAudioDevice;->h:I
-
-    invoke-direct {p0, v0}, Lorg/fmod/FMODAudioDevice;->fmodGetInfo(I)I
-
-    move-result v9
-
-    sget v0, Lorg/fmod/FMODAudioDevice;->i:I
+    sget v0, Lorg/fmod/FMODAudioDevice;->n:I
 
     invoke-direct {p0, v0}, Lorg/fmod/FMODAudioDevice;->fmodGetInfo(I)I
 
     move-result v0
 
-    mul-int v3, v9, v0
+    sget v3, Lorg/fmod/FMODAudioDevice;->o:I
 
-    mul-int/lit8 v3, v3, 0x4
+    invoke-direct {p0, v3}, Lorg/fmod/FMODAudioDevice;->fmodGetInfo(I)I
 
-    if-le v3, v5, :cond_4a
+    move-result v3
 
-    mul-int/2addr v0, v9
+    mul-int v7, v0, v3
 
-    mul-int/lit8 v5, v0, 0x4
+    mul-int/lit8 v7, v7, 0x2
 
-    :cond_4a
+    sget v8, Lorg/fmod/FMODAudioDevice;->a:I
+
+    mul-int/2addr v7, v8
+
+    if-le v7, v5, :cond_37
+
+    mul-int/2addr v3, v0
+
+    mul-int/lit8 v3, v3, 0x2
+
+    sget v5, Lorg/fmod/FMODAudioDevice;->a:I
+
+    mul-int/2addr v5, v3
+
+    :cond_37
+    mul-int/lit8 v0, v0, 0x2
+
+    sget v3, Lorg/fmod/FMODAudioDevice;->a:I
+
+    mul-int/2addr v0, v3
+
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/nio/ByteBuffer;->capacity()I
+
+    move-result v0
+
+    new-array v7, v0, [B
+
     new-instance v0, Landroid/media/AudioTrack;
 
     move v3, v1
@@ -277,98 +264,33 @@
 
     move-result v0
 
-    if-ne v0, v6, :cond_ae
+    if-ne v0, v6, :cond_65
 
     move v0, v6
 
-    :goto_5b
+    :goto_57
     iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->d:Z
 
     iget-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->d:Z
 
-    if-eqz v0, :cond_b0
-
-    mul-int/lit8 v0, v9, 0x2
-
-    mul-int/lit8 v0, v0, 0x2
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->e:Ljava/nio/ByteBuffer;
-
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->e:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->capacity()I
-
-    move-result v0
-
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->f:[B
+    if-eqz v0, :cond_67
 
     iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->c:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->play()V
 
-    move v0, v1
+    move-object v0, v7
 
-    :goto_7b
-    iget-boolean v2, p0, Lorg/fmod/FMODAudioDevice;->d:Z
+    move-object v3, v8
 
-    if-eqz v2, :cond_e5
+    goto :goto_7
 
-    sget v2, Lorg/fmod/FMODAudioDevice;->j:I
+    :cond_65
+    move v0, v11
 
-    invoke-direct {p0, v2}, Lorg/fmod/FMODAudioDevice;->fmodGetInfo(I)I
+    goto :goto_57
 
-    move-result v2
-
-    if-ne v2, v6, :cond_db
-
-    iget-object v2, p0, Lorg/fmod/FMODAudioDevice;->e:Ljava/nio/ByteBuffer;
-
-    invoke-direct {p0, v2}, Lorg/fmod/FMODAudioDevice;->fmodProcess(Ljava/nio/ByteBuffer;)I
-
-    iget-object v2, p0, Lorg/fmod/FMODAudioDevice;->e:Ljava/nio/ByteBuffer;
-
-    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->f:[B
-
-    iget-object v5, p0, Lorg/fmod/FMODAudioDevice;->e:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->capacity()I
-
-    move-result v5
-
-    invoke-virtual {v2, v3, v8, v5}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
-
-    iget-object v2, p0, Lorg/fmod/FMODAudioDevice;->c:Landroid/media/AudioTrack;
-
-    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->f:[B
-
-    iget-object v5, p0, Lorg/fmod/FMODAudioDevice;->e:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->capacity()I
-
-    move-result v5
-
-    invoke-virtual {v2, v3, v8, v5}, Landroid/media/AudioTrack;->write([BII)I
-
-    iget-object v2, p0, Lorg/fmod/FMODAudioDevice;->e:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2, v8}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    move v7, v0
-
-    goto/16 :goto_5
-
-    :cond_ae
-    move v0, v8
-
-    goto :goto_5b
-
-    :cond_b0
+    :cond_67
     const-string v0, "FMOD"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -403,59 +325,271 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {p0}, Lorg/fmod/FMODAudioDevice;->releaseAudioTrack()V
+    move-object v0, v7
 
-    add-int/lit8 v7, v7, -0x1
+    move-object v3, v8
 
-    move v0, v7
+    goto/16 :goto_7
 
-    goto :goto_7b
+    :cond_8f
+    invoke-direct {p0, v6}, Lorg/fmod/FMODAudioDevice;->sleep(I)V
 
-    :cond_db
-    invoke-direct {p0}, Lorg/fmod/FMODAudioDevice;->releaseAudioTrack()V
+    goto/16 :goto_7
 
-    move v7, v0
+    :cond_94
+    sget v2, Lorg/fmod/FMODAudioDevice;->p:I
 
-    goto/16 :goto_5
+    invoke-direct {p0, v2}, Lorg/fmod/FMODAudioDevice;->fmodGetInfo(I)I
 
-    :cond_e1
+    move-result v2
+
+    if-ne v2, v6, :cond_101
+
+    invoke-direct {p0, v3}, Lorg/fmod/FMODAudioDevice;->fmodProcess(Ljava/nio/ByteBuffer;)I
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->capacity()I
+
+    move-result v2
+
+    invoke-virtual {v3, v0, v11, v2}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
+
+    iget-object v2, p0, Lorg/fmod/FMODAudioDevice;->c:Landroid/media/AudioTrack;
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->capacity()I
+
+    move-result v5
+
+    invoke-virtual {v2, v0, v11, v5}, Landroid/media/AudioTrack;->write([BII)I
+
+    invoke-virtual {v3, v11}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-object v2, v3
+
+    :goto_b3
+    iget-boolean v3, p0, Lorg/fmod/FMODAudioDevice;->i:Z
+
+    if-eqz v3, :cond_e6
+
+    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    if-nez v3, :cond_ca
+
+    new-instance v5, Landroid/media/AudioRecord;
+
+    iget v7, p0, Lorg/fmod/FMODAudioDevice;->l:I
+
+    iget v8, p0, Lorg/fmod/FMODAudioDevice;->m:I
+
+    iget v9, p0, Lorg/fmod/FMODAudioDevice;->k:I
+
+    iget v10, p0, Lorg/fmod/FMODAudioDevice;->j:I
+
+    invoke-direct/range {v5 .. v10}, Landroid/media/AudioRecord;-><init>(IIIII)V
+
+    iput-object v5, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    :cond_ca
+    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    invoke-virtual {v3}, Landroid/media/AudioRecord;->getState()I
+
+    move-result v3
+
+    if-ne v3, v6, :cond_e4
+
+    iget v3, p0, Lorg/fmod/FMODAudioDevice;->j:I
+
+    invoke-static {v3}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lorg/fmod/FMODAudioDevice;->f:Ljava/nio/ByteBuffer;
+
+    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->f:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v3, v11}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    :try_start_df
+    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    invoke-virtual {v3}, Landroid/media/AudioRecord;->startRecording()V
+    :try_end_e4
+    .catch Ljava/lang/IllegalStateException; {:try_start_df .. :try_end_e4} :catch_106
+
+    :cond_e4
+    :goto_e4
+    iput-boolean v11, p0, Lorg/fmod/FMODAudioDevice;->i:Z
+
+    :cond_e6
+    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    if-eqz v3, :cond_168
+
+    iget-boolean v3, p0, Lorg/fmod/FMODAudioDevice;->h:Z
+
+    if-eqz v3, :cond_142
+
+    :try_start_ee
+    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    invoke-virtual {v3}, Landroid/media/AudioRecord;->stop()V
+    :try_end_f3
+    .catch Ljava/lang/IllegalStateException; {:try_start_ee .. :try_end_f3} :catch_124
+
+    :goto_f3
+    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    invoke-virtual {v3}, Landroid/media/AudioRecord;->release()V
+
+    iput-object v12, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    iput-object v12, p0, Lorg/fmod/FMODAudioDevice;->f:Ljava/nio/ByteBuffer;
+
+    iput-boolean v11, p0, Lorg/fmod/FMODAudioDevice;->h:Z
+
+    move-object v3, v2
+
+    goto/16 :goto_7
+
+    :cond_101
+    iput-boolean v11, p0, Lorg/fmod/FMODAudioDevice;->d:Z
+
+    move-object v0, v12
+
+    move-object v2, v12
+
+    goto :goto_b3
+
+    :catch_106
+    move-exception v3
+
+    const-string v5, "FMOD"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "failed to startRecording(): "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v3}, Ljava/lang/IllegalStateException;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v5, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_e4
+
+    :catch_124
+    move-exception v3
+
+    const-string v5, "FMOD"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "failed to stop(): "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v3}, Ljava/lang/IllegalStateException;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v5, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_f3
+
+    :cond_142
+    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    invoke-virtual {v3}, Landroid/media/AudioRecord;->getRecordingState()I
+
+    move-result v3
+
+    if-ne v3, v1, :cond_165
+
+    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->g:Landroid/media/AudioRecord;
+
+    iget-object v5, p0, Lorg/fmod/FMODAudioDevice;->f:Ljava/nio/ByteBuffer;
+
+    iget-object v7, p0, Lorg/fmod/FMODAudioDevice;->f:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v7}, Ljava/nio/ByteBuffer;->capacity()I
+
+    move-result v7
+
+    invoke-virtual {v3, v5, v7}, Landroid/media/AudioRecord;->read(Ljava/nio/ByteBuffer;I)I
+
+    move-result v3
+
+    iget-object v5, p0, Lorg/fmod/FMODAudioDevice;->f:Ljava/nio/ByteBuffer;
+
+    invoke-direct {p0, v5, v3}, Lorg/fmod/FMODAudioDevice;->fmodProcessMicData(Ljava/nio/ByteBuffer;I)I
+
+    iget-object v3, p0, Lorg/fmod/FMODAudioDevice;->f:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v3, v11}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-object v3, v2
+
+    goto/16 :goto_7
+
+    :cond_165
+    invoke-direct {p0, v6}, Lorg/fmod/FMODAudioDevice;->sleep(I)V
+
+    :cond_168
+    move-object v3, v2
+
+    goto/16 :goto_7
+
+    :cond_16b
     invoke-direct {p0}, Lorg/fmod/FMODAudioDevice;->releaseAudioTrack()V
 
     return-void
-
-    :cond_e5
-    move v7, v0
-
-    goto/16 :goto_5
-
-    :cond_e8
-    move v0, v7
-
-    goto :goto_7b
 .end method
 
-.method public declared-synchronized start()V
+.method public start()V
     .registers 3
 
-    monitor-enter p0
+    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->b:Ljava/lang/Thread;
 
-    :try_start_1
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->a:Ljava/lang/Thread;
-
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
 
     invoke-virtual {p0}, Lorg/fmod/FMODAudioDevice;->stop()V
 
-    :cond_8
+    :cond_7
     new-instance v0, Ljava/lang/Thread;
 
     const-string v1, "FMODAudioDevice"
 
     invoke-direct {v0, p0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->a:Ljava/lang/Thread;
+    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->b:Ljava/lang/Thread;
 
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->a:Ljava/lang/Thread;
+    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->b:Ljava/lang/Thread;
 
     const/16 v1, 0xa
 
@@ -463,168 +597,89 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->b:Z
+    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->e:Z
 
     invoke-direct {p0}, Lorg/fmod/FMODAudioDevice;->fmodInitJni()I
 
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->a:Ljava/lang/Thread;
+    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->b:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
-
-    if-eqz v0, :cond_2c
-
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
-
-    invoke-virtual {v0}, Lorg/fmod/a;->b()V
-    :try_end_2c
-    .catchall {:try_start_1 .. :try_end_2c} :catchall_2e
-
-    :cond_2c
-    monitor-exit p0
-
     return-void
-
-    :catchall_2e
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
 .end method
 
-.method public declared-synchronized startAudioRecord(III)I
-    .registers 5
+.method public startAudioRecord(III)I
+    .registers 6
 
-    monitor-enter p0
+    const/4 v0, 0x2
 
-    :try_start_1
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
+    iput v0, p0, Lorg/fmod/FMODAudioDevice;->k:I
 
-    if-nez v0, :cond_11
+    iput p1, p0, Lorg/fmod/FMODAudioDevice;->l:I
 
-    new-instance v0, Lorg/fmod/a;
+    iput p2, p0, Lorg/fmod/FMODAudioDevice;->m:I
 
-    invoke-direct {v0, p0, p1, p2}, Lorg/fmod/a;-><init>(Lorg/fmod/FMODAudioDevice;II)V
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
+    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->i:Z
 
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
+    iget v0, p0, Lorg/fmod/FMODAudioDevice;->k:I
 
-    invoke-virtual {v0}, Lorg/fmod/a;->b()V
-
-    :cond_11
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
-
-    invoke-virtual {v0}, Lorg/fmod/a;->a()I
-    :try_end_16
-    .catchall {:try_start_1 .. :try_end_16} :catchall_19
+    invoke-static {p1, p2, v0}, Landroid/media/AudioRecord;->getMinBufferSize(III)I
 
     move-result v0
 
-    monitor-exit p0
+    div-int/lit16 v1, p1, 0x113a
+
+    mul-int/2addr v0, v1
+
+    iput v0, p0, Lorg/fmod/FMODAudioDevice;->j:I
+
+    iget v0, p0, Lorg/fmod/FMODAudioDevice;->j:I
 
     return v0
-
-    :catchall_19
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
 .end method
 
-.method public declared-synchronized stop()V
+.method public stop()V
     .registers 2
 
-    monitor-enter p0
+    :goto_0
+    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->b:Ljava/lang/Thread;
 
-    :goto_1
-    :try_start_1
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->a:Ljava/lang/Thread;
-
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_12
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->b:Z
-    :try_end_8
-    .catchall {:try_start_1 .. :try_end_8} :catchall_1e
+    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->e:Z
 
-    :try_start_8
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->a:Ljava/lang/Thread;
+    :try_start_7
+    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->b:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->join()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->a:Ljava/lang/Thread;
-    :try_end_10
-    .catch Ljava/lang/InterruptedException; {:try_start_8 .. :try_end_10} :catch_11
-    .catchall {:try_start_8 .. :try_end_10} :catchall_1e
+    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->b:Ljava/lang/Thread;
+    :try_end_f
+    .catch Ljava/lang/InterruptedException; {:try_start_7 .. :try_end_f} :catch_10
 
-    goto :goto_1
+    goto :goto_0
 
-    :catch_11
+    :catch_10
     move-exception v0
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_13
-    :try_start_13
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
-
-    if-eqz v0, :cond_1c
-
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
-
-    invoke-virtual {v0}, Lorg/fmod/a;->c()V
-    :try_end_1c
-    .catchall {:try_start_13 .. :try_end_1c} :catchall_1e
-
-    :cond_1c
-    monitor-exit p0
-
+    :cond_12
     return-void
-
-    :catchall_1e
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
 .end method
 
-.method public declared-synchronized stopAudioRecord()V
+.method public stopAudioRecord()V
     .registers 2
 
-    monitor-enter p0
+    const/4 v0, 0x1
 
-    :try_start_1
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
-
-    if-eqz v0, :cond_d
-
-    iget-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
-
-    invoke-virtual {v0}, Lorg/fmod/a;->c()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lorg/fmod/FMODAudioDevice;->g:Lorg/fmod/a;
-    :try_end_d
-    .catchall {:try_start_1 .. :try_end_d} :catchall_f
-
-    :cond_d
-    monitor-exit p0
+    iput-boolean v0, p0, Lorg/fmod/FMODAudioDevice;->h:Z
 
     return-void
-
-    :catchall_f
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
 .end method

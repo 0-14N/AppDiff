@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field a:Lcom/feedback/ui/f;
+.field private a:Lcom/feedback/ui/i;
 
-.field b:Landroid/widget/ImageButton;
+.field private b:Landroid/widget/ImageButton;
 
 
 # direct methods
@@ -28,15 +28,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/feedback/ui/g;
+    check-cast v0, Lcom/feedback/ui/b;
 
-    invoke-static {p0}, Lcom/a/a/g/c;->a(Landroid/content/Context;)Ljava/util/List;
+    invoke-static {p0}, Lcom/a/a/f/a;->a(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/feedback/ui/g;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/feedback/ui/b;->a(Ljava/util/List;)V
 
-    invoke-virtual {v0}, Lcom/feedback/ui/g;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/feedback/ui/b;->notifyDataSetChanged()V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     return-object v0
 
     :cond_5
-    invoke-static {}, Lcom/a/a/f/e;->values()[Lcom/a/a/f/e;
+    invoke-static {}, Lcom/a/a/g/c;->values()[Lcom/a/a/g/c;
 
     move-result-object v0
 
@@ -61,9 +61,9 @@
     new-array v0, v0, [I
 
     :try_start_c
-    sget-object v1, Lcom/a/a/f/e;->c:Lcom/a/a/f/e;
+    sget-object v1, Lcom/a/a/g/c;->c:Lcom/a/a/g/c;
 
-    invoke-virtual {v1}, Lcom/a/a/f/e;->ordinal()I
+    invoke-virtual {v1}, Lcom/a/a/g/c;->ordinal()I
 
     move-result v1
 
@@ -71,71 +71,52 @@
 
     aput v2, v0, v1
     :try_end_15
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_15} :catch_39
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_15} :catch_2e
 
     :goto_15
     :try_start_15
-    sget-object v1, Lcom/a/a/f/e;->d:Lcom/a/a/f/e;
+    sget-object v1, Lcom/a/a/g/c;->b:Lcom/a/a/g/c;
 
-    invoke-virtual {v1}, Lcom/a/a/f/e;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_1e
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_15 .. :try_end_1e} :catch_37
-
-    :goto_1e
-    :try_start_1e
-    sget-object v1, Lcom/a/a/f/e;->b:Lcom/a/a/f/e;
-
-    invoke-virtual {v1}, Lcom/a/a/f/e;->ordinal()I
+    invoke-virtual {v1}, Lcom/a/a/g/c;->ordinal()I
 
     move-result v1
 
     const/4 v2, 0x2
 
     aput v2, v0, v1
-    :try_end_27
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1e .. :try_end_27} :catch_35
+    :try_end_1e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_15 .. :try_end_1e} :catch_2c
 
-    :goto_27
-    :try_start_27
-    sget-object v1, Lcom/a/a/f/e;->a:Lcom/a/a/f/e;
+    :goto_1e
+    :try_start_1e
+    sget-object v1, Lcom/a/a/g/c;->a:Lcom/a/a/g/c;
 
-    invoke-virtual {v1}, Lcom/a/a/f/e;->ordinal()I
+    invoke-virtual {v1}, Lcom/a/a/g/c;->ordinal()I
 
     move-result v1
 
     const/4 v2, 0x1
 
     aput v2, v0, v1
-    :try_end_30
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_27 .. :try_end_30} :catch_33
+    :try_end_27
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1e .. :try_end_27} :catch_2a
 
-    :goto_30
+    :goto_27
     sput-object v0, Lcom/feedback/ui/FeedbackConversations;->c:[I
 
     goto :goto_4
 
-    :catch_33
-    move-exception v1
-
-    goto :goto_30
-
-    :catch_35
+    :catch_2a
     move-exception v1
 
     goto :goto_27
 
-    :catch_37
+    :catch_2c
     move-exception v1
 
     goto :goto_1e
 
-    :catch_39
+    :catch_2e
     move-exception v1
 
     goto :goto_15
@@ -158,9 +139,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/feedback/ui/g;
+    check-cast v0, Lcom/feedback/ui/b;
 
-    invoke-virtual {v0, v1}, Lcom/feedback/ui/g;->a(I)Lcom/a/a/f/d;
+    invoke-virtual {v0, v1}, Lcom/feedback/ui/b;->a(I)Lcom/a/a/g/b;
 
     move-result-object v0
 
@@ -168,7 +149,7 @@
 
     move-result v1
 
-    packed-switch v1, :pswitch_data_3e
+    packed-switch v1, :pswitch_data_40
 
     :goto_19
     invoke-super {p0, p1}, Landroid/app/ListActivity;->onContextItemSelected(Landroid/view/MenuItem;)Z
@@ -178,46 +159,50 @@
     return v0
 
     :pswitch_1e
-    iget-object v1, v0, Lcom/a/a/f/d;->c:Ljava/lang/String;
+    iget-object v1, v0, Lcom/a/a/g/b;->b:Ljava/lang/String;
 
-    invoke-static {p0, v1}, Lcom/a/a/g/c;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lcom/a/a/f/a;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-static {p0, v0}, Lcom/a/a/g/a;->b(Landroid/content/Context;Lcom/a/a/f/d;)V
+    invoke-static {p0, v0}, Lcom/a/a/f/c;->b(Landroid/content/Context;Lcom/a/a/g/b;)V
 
     goto :goto_19
 
     :pswitch_27
-    iget-object v0, v0, Lcom/a/a/f/d;->c:Ljava/lang/String;
+    iget-object v0, v0, Lcom/a/a/g/b;->b:Ljava/lang/String;
 
-    invoke-static {p0, v0}, Lcom/a/a/g/c;->c(Landroid/content/Context;Ljava/lang/String;)V
+    const/4 v1, 0x1
 
-    invoke-direct {p0}, Lcom/feedback/ui/FeedbackConversations;->a()V
-
-    goto :goto_19
-
-    :pswitch_30
-    iget-object v0, v0, Lcom/a/a/f/d;->c:Ljava/lang/String;
-
-    invoke-static {p0, v0}, Lcom/a/a/g/c;->c(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcom/a/a/f/a;->a(Landroid/content/Context;Ljava/lang/String;Z)V
 
     invoke-direct {p0}, Lcom/feedback/ui/FeedbackConversations;->a()V
 
     goto :goto_19
 
-    :pswitch_39
-    invoke-static {p0, v0}, Lcom/a/a/g/a;->a(Landroid/content/Context;Lcom/a/a/f/d;)V
+    :pswitch_31
+    iget-object v0, v0, Lcom/a/a/g/b;->b:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Lcom/a/a/f/a;->a(Landroid/content/Context;Ljava/lang/String;Z)V
+
+    invoke-direct {p0}, Lcom/feedback/ui/FeedbackConversations;->a()V
+
+    goto :goto_19
+
+    :pswitch_3b
+    invoke-static {p0, v0}, Lcom/a/a/f/c;->a(Landroid/content/Context;Lcom/a/a/g/b;)V
 
     goto :goto_19
 
     nop
 
-    :pswitch_data_3e
+    :pswitch_data_40
     .packed-switch 0x0
         :pswitch_1e
         :pswitch_27
         :pswitch_1e
-        :pswitch_39
-        :pswitch_30
+        :pswitch_3b
+        :pswitch_31
     .end packed-switch
 .end method
 
@@ -234,7 +219,7 @@
 
     const-string v1, "umeng_analyse_feedback_conversations"
 
-    invoke-static {p0, v0, v1}, Lcom/a/a/i/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0, v1}, Lcom/a/a/e/m;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -244,7 +229,7 @@
 
     const-string v1, "umeng_analyse_imgBtn_submitFb"
 
-    invoke-static {p0, v0, v1}, Lcom/a/a/i/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0, v1}, Lcom/a/a/e/m;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -262,9 +247,9 @@
 
     iget-object v0, p0, Lcom/feedback/ui/FeedbackConversations;->b:Landroid/widget/ImageButton;
 
-    new-instance v1, Lcom/feedback/ui/e;
+    new-instance v1, Lcom/feedback/ui/j;
 
-    invoke-direct {v1, p0}, Lcom/feedback/ui/e;-><init>(Lcom/feedback/ui/FeedbackConversations;)V
+    invoke-direct {v1, p0}, Lcom/feedback/ui/j;-><init>(Lcom/feedback/ui/FeedbackConversations;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -273,7 +258,7 @@
 
     const-string v1, "umeng_analyse_um_feedbacklist_title"
 
-    invoke-static {p0, v0, v1}, Lcom/a/a/i/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0, v1}, Lcom/a/a/e/m;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -289,7 +274,7 @@
 
     const-string v2, "UMFeedbackListTitle"
 
-    invoke-static {p0, v1, v2}, Lcom/a/a/i/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v1, v2}, Lcom/a/a/e/m;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -300,11 +285,11 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_4f
-    invoke-static {}, Lcom/a/a/e/a;->a()Z
+    invoke-static {}, Lcom/a/a/i/a;->a()Z
 
     move-result v0
 
-    if-nez v0, :cond_65
+    if-nez v0, :cond_5d
 
     new-instance v0, Lcom/a/a/h/b;
 
@@ -312,26 +297,20 @@
 
     invoke-virtual {v0}, Lcom/a/a/h/b;->start()V
 
-    new-instance v0, Lcom/a/a/h/a;
-
-    invoke-direct {v0, p0}, Lcom/a/a/h/a;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    :cond_65
+    :cond_5d
     invoke-virtual {p0}, Lcom/feedback/ui/FeedbackConversations;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/feedback/ui/FeedbackConversations;->registerForContextMenu(Landroid/view/View;)V
 
-    invoke-static {p0}, Lcom/a/a/g/c;->a(Landroid/content/Context;)Ljava/util/List;
+    invoke-static {p0}, Lcom/a/a/f/a;->a(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v0
 
-    new-instance v1, Lcom/feedback/ui/g;
+    new-instance v1, Lcom/feedback/ui/b;
 
-    invoke-direct {v1, p0, v0}, Lcom/feedback/ui/g;-><init>(Landroid/content/Context;Ljava/util/List;)V
+    invoke-direct {v1, p0, v0}, Lcom/feedback/ui/b;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
     invoke-virtual {p0, v1}, Lcom/feedback/ui/FeedbackConversations;->setListAdapter(Landroid/widget/ListAdapter;)V
 
@@ -355,15 +334,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/feedback/ui/g;
+    check-cast v0, Lcom/feedback/ui/b;
 
-    invoke-virtual {v0, v1}, Lcom/feedback/ui/g;->a(I)Lcom/a/a/f/d;
+    invoke-virtual {v0, v1}, Lcom/feedback/ui/b;->a(I)Lcom/a/a/g/b;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/a/a/f/d;->b:Lcom/a/a/f/e;
+    iget-object v0, v0, Lcom/a/a/g/b;->a:Lcom/a/a/g/c;
 
-    sget-object v1, Lcom/a/a/f/e;->d:Lcom/a/a/f/e;
+    sget-object v1, Lcom/a/a/g/c;->c:Lcom/a/a/g/c;
 
     if-ne v0, v1, :cond_39
 
@@ -371,7 +350,7 @@
 
     const-string v1, "UMViewThread"
 
-    invoke-static {p0, v0, v1}, Lcom/a/a/i/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0, v1}, Lcom/a/a/e/m;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -387,7 +366,7 @@
 
     const-string v2, "UMDeleteThread"
 
-    invoke-static {p0, v1, v2}, Lcom/a/a/i/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v1, v2}, Lcom/a/a/e/m;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -402,7 +381,7 @@
     return-void
 
     :cond_39
-    sget-object v1, Lcom/a/a/f/e;->a:Lcom/a/a/f/e;
+    sget-object v1, Lcom/a/a/g/c;->a:Lcom/a/a/g/c;
 
     if-ne v0, v1, :cond_5d
 
@@ -412,7 +391,7 @@
 
     const-string v2, "UMViewFeedback"
 
-    invoke-static {p0, v1, v2}, Lcom/a/a/i/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v1, v2}, Lcom/a/a/e/m;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -426,7 +405,7 @@
 
     const-string v1, "UMDeleteFeedback"
 
-    invoke-static {p0, v0, v1}, Lcom/a/a/i/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0, v1}, Lcom/a/a/e/m;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -439,7 +418,7 @@
     goto :goto_38
 
     :cond_5d
-    sget-object v1, Lcom/a/a/f/e;->b:Lcom/a/a/f/e;
+    sget-object v1, Lcom/a/a/g/c;->b:Lcom/a/a/g/c;
 
     if-ne v0, v1, :cond_38
 
@@ -449,7 +428,7 @@
 
     const-string v2, "UMResendFeedback"
 
-    invoke-static {p0, v1, v2}, Lcom/a/a/i/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v1, v2}, Lcom/a/a/e/m;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -463,7 +442,7 @@
 
     const-string v1, "UMDeleteFeedback"
 
-    invoke-static {p0, v0, v1}, Lcom/a/a/i/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0, v1}, Lcom/a/a/e/m;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -485,9 +464,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/feedback/ui/g;
+    check-cast v0, Lcom/feedback/ui/b;
 
-    invoke-virtual {v0, p3}, Lcom/feedback/ui/g;->a(I)Lcom/a/a/f/d;
+    invoke-virtual {v0, p3}, Lcom/feedback/ui/b;->a(I)Lcom/a/a/g/b;
 
     move-result-object v1
 
@@ -498,23 +477,23 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/feedback/ui/g;
+    check-cast v0, Lcom/feedback/ui/b;
 
-    invoke-virtual {v0, p3}, Lcom/feedback/ui/g;->a(I)Lcom/a/a/f/d;
+    invoke-virtual {v0, p3}, Lcom/feedback/ui/b;->a(I)Lcom/a/a/g/b;
 
     move-result-object v0
 
-    iget-object v2, v0, Lcom/a/a/f/d;->b:Lcom/a/a/f/e;
+    iget-object v2, v0, Lcom/a/a/g/b;->a:Lcom/a/a/g/c;
 
-    iget-object v3, v0, Lcom/a/a/f/d;->c:Ljava/lang/String;
+    iget-object v3, v0, Lcom/a/a/g/b;->b:Ljava/lang/String;
 
-    invoke-static {p0, v3}, Lcom/a/a/g/c;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v3}, Lcom/a/a/f/a;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/feedback/ui/FeedbackConversations;->b()[I
 
     move-result-object v3
 
-    invoke-virtual {v2}, Lcom/a/a/f/e;->ordinal()I
+    invoke-virtual {v2}, Lcom/a/a/g/c;->ordinal()I
 
     move-result v2
 
@@ -522,7 +501,7 @@
 
     packed-switch v2, :pswitch_data_38
 
-    invoke-static {p0, v0}, Lcom/a/a/g/a;->b(Landroid/content/Context;Lcom/a/a/f/d;)V
+    invoke-static {p0, v0}, Lcom/a/a/f/c;->b(Landroid/content/Context;Lcom/a/a/g/b;)V
 
     :goto_2f
     monitor-exit v1
@@ -530,9 +509,7 @@
     return-void
 
     :pswitch_31
-    invoke-static {p0, v0}, Lcom/a/a/g/a;->a(Landroid/content/Context;Lcom/a/a/f/d;)V
-    :try_end_34
-    .catchall {:try_start_e .. :try_end_34} :catchall_35
+    invoke-static {p0, v0}, Lcom/a/a/f/c;->a(Landroid/content/Context;Lcom/a/a/g/b;)V
 
     goto :goto_2f
 
@@ -540,6 +517,8 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_37
+    .catchall {:try_start_e .. :try_end_37} :catchall_35
 
     throw v0
 
@@ -564,17 +543,17 @@
 
     invoke-super {p0}, Landroid/app/ListActivity;->onStart()V
 
-    new-instance v1, Lcom/feedback/ui/f;
+    new-instance v1, Lcom/feedback/ui/i;
 
     invoke-virtual {p0}, Lcom/feedback/ui/FeedbackConversations;->getListAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
 
-    check-cast v0, Lcom/feedback/ui/g;
+    check-cast v0, Lcom/feedback/ui/b;
 
-    invoke-direct {v1, p0, v0}, Lcom/feedback/ui/f;-><init>(Lcom/feedback/ui/FeedbackConversations;Lcom/feedback/ui/g;)V
+    invoke-direct {v1, p0, v0}, Lcom/feedback/ui/i;-><init>(Lcom/feedback/ui/FeedbackConversations;Lcom/feedback/ui/b;)V
 
-    iput-object v1, p0, Lcom/feedback/ui/FeedbackConversations;->a:Lcom/feedback/ui/f;
+    iput-object v1, p0, Lcom/feedback/ui/FeedbackConversations;->a:Lcom/feedback/ui/i;
 
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -588,7 +567,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/feedback/ui/FeedbackConversations;->a:Lcom/feedback/ui/f;
+    iget-object v1, p0, Lcom/feedback/ui/FeedbackConversations;->a:Lcom/feedback/ui/i;
 
     invoke-virtual {p0, v1, v0}, Lcom/feedback/ui/FeedbackConversations;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -600,7 +579,7 @@
 
     invoke-super {p0}, Landroid/app/ListActivity;->onStop()V
 
-    iget-object v0, p0, Lcom/feedback/ui/FeedbackConversations;->a:Lcom/feedback/ui/f;
+    iget-object v0, p0, Lcom/feedback/ui/FeedbackConversations;->a:Lcom/feedback/ui/i;
 
     invoke-virtual {p0, v0}, Lcom/feedback/ui/FeedbackConversations;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 

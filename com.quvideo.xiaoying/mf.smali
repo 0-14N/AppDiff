@@ -9,20 +9,32 @@
 # instance fields
 .field final synthetic a:Lme;
 
-.field private final synthetic b:Ljava/lang/String;
+.field private final synthetic b:I
+
+.field private final synthetic c:I
+
+.field private final synthetic d:I
+
+.field private final synthetic e:Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>(Lme;Ljava/lang/String;)V
-    .registers 3
+.method constructor <init>(Lme;IIILjava/lang/Object;)V
+    .registers 6
 
     .prologue
     .line 1
     iput-object p1, p0, Lmf;->a:Lme;
 
-    iput-object p2, p0, Lmf;->b:Ljava/lang/String;
+    iput p2, p0, Lmf;->b:I
 
-    .line 943
+    iput p3, p0, Lmf;->c:I
+
+    iput p4, p0, Lmf;->d:I
+
+    iput-object p5, p0, Lmf;->e:Ljava/lang/Object;
+
+    .line 325
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,38 +43,26 @@
 
 # virtual methods
 .method public run()V
-    .registers 4
+    .registers 6
 
     .prologue
-    const/4 v1, 0x1
-
-    .line 946
+    .line 328
     iget-object v0, p0, Lmf;->a:Lme;
 
-    invoke-static {v0}, Lme;->a(Lme;)Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;
+    invoke-static {v0}, Lme;->a(Lme;)Lcom/quvideo/xiaoying/app/homepage/HomeView;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;->a(Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;Z)V
+    iget v1, p0, Lmf;->b:I
 
-    .line 947
-    iget-object v0, p0, Lmf;->b:Ljava/lang/String;
+    iget v2, p0, Lmf;->c:I
 
-    invoke-static {v0, v1}, Lcom/quvideo/xiaoying/IMClient/IMClient;->addUserToBlackList(Ljava/lang/String;I)V
+    iget v3, p0, Lmf;->d:I
 
-    .line 948
-    iget-object v0, p0, Lmf;->a:Lme;
+    iget-object v4, p0, Lmf;->e:Ljava/lang/Object;
 
-    invoke-static {v0}, Lme;->a(Lme;)Lcom/quvideo/xiaoying/app/activity/UserVideoDetailActivityForViewPager;
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/quvideo/xiaoying/app/homepage/HomeView;->a(Lcom/quvideo/xiaoying/app/homepage/HomeView;IIILjava/lang/Object;)V
 
-    move-result-object v0
-
-    const v1, 0x7f0a03ae
-
-    const/16 v2, 0x7d0
-
-    invoke-static {v0, v1, v2}, Lcom/quvideo/xiaoying/videoeditor/util/ToastUtils;->show(Landroid/content/Context;II)V
-
-    .line 949
+    .line 329
     return-void
 .end method

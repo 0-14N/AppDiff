@@ -28,9 +28,9 @@
 
     if-nez v0, :cond_2b
 
-    invoke-static {p1}, Lcom/google/android/gms/internal/dm;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/android/gms/internal/dl;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p1}, Lcom/google/android/gms/common/c;->c(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/google/android/gms/common/b;->b(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 

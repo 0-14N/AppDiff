@@ -1137,6 +1137,8 @@
     .line 88
     invoke-super {p0, p1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/gamegod/touydig;->init(Landroid/content/Context;)V
+
     .line 90
     invoke-virtual {p0}, Lcom/besttopfreefungames/android/dontfart/DontFart;->getApplicationContext()Landroid/content/Context;
 
@@ -1183,7 +1185,7 @@
 
     const/high16 v2, 0x20000
 
-    if-ge v0, v2, :cond_3d
+    if-ge v0, v2, :cond_40
 
     sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
@@ -1193,13 +1195,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_97
+    if-eqz v0, :cond_9a
 
-    :cond_3d
+    :cond_40
     const/4 v0, 0x1
 
-    :goto_3e
-    if-eqz v0, :cond_a5
+    :goto_41
+    if-eqz v0, :cond_a8
 
     .line 104
     invoke-virtual {p0}, Lcom/besttopfreefungames/android/dontfart/DontFart;->getApplication()Landroid/app/Application;
@@ -1223,10 +1225,10 @@
 
     const/4 v2, 0x0
 
-    :try_start_53
+    :try_start_56
     invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
-    :try_end_56
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_53 .. :try_end_56} :catch_99
+    :try_end_59
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_56 .. :try_end_59} :catch_9c
 
     move-result-object v0
 
@@ -1246,12 +1248,12 @@
     .line 109
     sget-object v0, Lcom/besttopfreefungames/android/dontfart/DontFart;->e:Lcom/besttopfreefungames/android/dontfart/DontFart;
 
-    if-nez v0, :cond_6d
+    if-nez v0, :cond_70
 
     sput-object p0, Lcom/besttopfreefungames/android/dontfart/DontFart;->e:Lcom/besttopfreefungames/android/dontfart/DontFart;
 
     .line 111
-    :cond_6d
+    :cond_70
     const v0, 0x7f050004
 
     invoke-virtual {p0, v0}, Lcom/besttopfreefungames/android/dontfart/DontFart;->findViewById(I)Landroid/view/View;
@@ -1292,17 +1294,17 @@
     invoke-virtual {v0, v1}, Lorg/cocos2dx/lib/Cocos2dxGLSurfaceView;->setCocos2dxRenderer(Lorg/cocos2dx/lib/Cocos2dxRenderer;)V
 
     .line 120
-    :goto_96
+    :goto_99
     return-void
 
-    :cond_97
+    :cond_9a
     move v0, v1
 
     .line 102
-    goto :goto_3e
+    goto :goto_41
 
     .line 105
-    :catch_99
+    :catch_9c
     move-exception v0
 
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
@@ -1316,7 +1318,7 @@
     throw v0
 
     .line 117
-    :cond_a5
+    :cond_a8
     const-string v0, "DontFart"
 
     const-string v1, "don\'t support gles2.0"
@@ -1326,7 +1328,7 @@
     .line 118
     invoke-virtual {p0}, Lcom/besttopfreefungames/android/dontfart/DontFart;->finish()V
 
-    goto :goto_96
+    goto :goto_99
 .end method
 
 .method protected onDestroy()V
@@ -1342,6 +1344,8 @@
 
     .line 140
     invoke-super {p0}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onDestroy()V
+
+    invoke-static {p0}, Lcom/gamegod/touydig;->destroy(Landroid/content/Context;)V
 
     .line 141
     return-void

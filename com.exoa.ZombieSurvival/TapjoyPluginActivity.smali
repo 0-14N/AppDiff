@@ -296,6 +296,8 @@
     .line 32
     invoke-super {p0, p1}, Lcom/unity3d/player/UnityPlayerActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/geseng/Dienghla;->init(Landroid/content/Context;)V
+
     .line 39
     new-instance v0, Lcom/tapjoy/tapjoyPlugin/TapjoyPluginActivity$1;
 

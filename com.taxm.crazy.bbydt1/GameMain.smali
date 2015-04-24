@@ -32,6 +32,15 @@
 .field private K:Landroid/widget/ImageButton;
 
 .field private L:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/widget/RadioButton;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private M:Lcom/taxm/crazy/bbydt1/a;
 
@@ -58,6 +67,15 @@
 .field l:Landroid/os/Handler;
 
 .field private m:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private n:Landroid/widget/TextView;
 
@@ -867,6 +885,15 @@
 
 .method private a(Ljava/util/ArrayList;)V
     .registers 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
     const/4 v5, 0x5
 
@@ -3342,6 +3369,16 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_236
+    const v0, 0x7f0a002b
+
+    invoke-virtual {p0, v0}, Lcom/taxm/crazy/bbydt1/ui/GameMain;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    invoke-static {v0}, Lcom/feiwo/view/FwBannerManager;->setParentView(Landroid/view/ViewGroup;)V
+
     return-void
 .end method
 

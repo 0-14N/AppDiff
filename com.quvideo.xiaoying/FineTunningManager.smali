@@ -72,9 +72,9 @@
     iput-boolean v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/FineTunningManager;->g:Z
 
     .line 106
-    new-instance v0, Lbeq;
+    new-instance v0, Laxw;
 
-    invoke-direct {v0, p0}, Lbeq;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/FineTunningManager;)V
+    invoke-direct {v0, p0}, Laxw;-><init>(Lcom/quvideo/xiaoying/videoeditor2/manager/FineTunningManager;)V
 
     iput-object v0, p0, Lcom/quvideo/xiaoying/videoeditor2/manager/FineTunningManager;->i:Landroid/view/View$OnTouchListener;
 

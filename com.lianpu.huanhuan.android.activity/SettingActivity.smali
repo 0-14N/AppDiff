@@ -78,7 +78,7 @@
 .end method
 
 .method private m()V
-    .registers 3
+    .registers 4
 
     const-string v0, "layout_inflater"
 
@@ -160,15 +160,23 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0c0193
+    const v1, 0x7f0c0193
 
-    invoke-virtual {p0, v0}, Lcom/lianpu/huanhuan/android/activity/ui/SettingActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/lianpu/huanhuan/android/activity/ui/SettingActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/lianpu/huanhuan/android/activity/ui/SettingActivity;->e:Landroid/view/View$OnClickListener;
+    iget-object v2, p0, Lcom/lianpu/huanhuan/android/activity/ui/SettingActivity;->e:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const/16 v2, 0x8
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    const v1, 0x7f0200f1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
     return-void
 .end method
